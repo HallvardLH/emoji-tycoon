@@ -1,7 +1,7 @@
 import { useSelector } from 'react-redux';
 import { RootState } from '../../scripts/redux/reduxStore';
 import Text from '../generalUI/Text';
-import AnimatedNumber from '../misc/AnimatedNumber';
+import AnimatedNumber from './AnimatedNumber';
 
 interface EmojisAmountProps {
     fontSize: number;

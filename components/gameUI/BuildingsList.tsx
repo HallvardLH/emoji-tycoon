@@ -1,7 +1,7 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
 import { RootState } from '../../scripts/redux/reduxStore';
-import BuildingListItem from '../listItem/BuildingListItem';
+import BuildingListItem from './BuildingListItem';
 import { buildingData } from '../../scripts/data/buildingData';
 import { buyBuilding } from '../../scripts/game/buildings';
 import { formatNumber } from '../../scripts/misc';
