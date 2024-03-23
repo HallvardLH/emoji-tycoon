@@ -1,10 +1,11 @@
-// app/store.ts
 import { configureStore } from '@reduxjs/toolkit';
 import valuesSlice from './valuesSlice';
+import buildingsSlice from './buildingsSlice';
 
 export const store = configureStore({
     reducer: {
         values: valuesSlice,
+        buildings: buildingsSlice,
     },
 });
 

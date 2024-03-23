@@ -1,5 +1,6 @@
 import { useDispatch } from 'react-redux';
-import { resetState } from '../../scripts/redux/valuesSlice';
+import { resetValues } from '../../scripts/redux/valuesSlice';
+import { resetBuildings } from '../../scripts/redux/buildingsSlice';
 import Button from '../buttons/Button';
 
 interface ResetButtonProps {
@@ -10,7 +11,8 @@ export default function ResetButton({ onPress }: ResetButtonProps) {
     const dispatch = useDispatch();
 
     const handleReset = () => {
-        dispatch(resetState());
+        dispatch(resetValues());
+        dispatch(resetBuildings());
     };
     return (
         <Button label="Reset game" onPress={() => {

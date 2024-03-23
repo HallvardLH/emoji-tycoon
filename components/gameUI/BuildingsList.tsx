@@ -15,8 +15,7 @@ export interface BuildingInfo {
 }
 
 export default function BuildingsList() {
-    const { buildings, emojis } = useSelector((state: RootState) => state.values);
-
+    const { buildings } = useSelector((state: RootState) => state.buildings);
     return (
         <>
             {buildingData.map((building: BuildingInfo) => {
@@ -32,7 +31,7 @@ export default function BuildingsList() {
                         eps={formatNumber(dynamicData.eps)}
                         amount={dynamicData ? dynamicData.amount : 0}
                         amountFontSize={dynamicData.amount < 1000 ? 30 : 26}
-                        buttonActive={emojis >= dynamicData.price}
+                        buttonActive={dynamicData.canBuy}
                         onPress={() => buyBuilding(building.name)}
                     />
                 );

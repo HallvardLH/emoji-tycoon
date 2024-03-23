@@ -20,6 +20,11 @@ export const upgrades = {
             icon: "🦾",
             description: "Bionic arms to draw emojis super fast!",
         },
+        {
+            name: "Tongue",
+            icon: "👅",
+            description: "With years of practice, you too can learn to draw with your tongue!",
+        },
     ],
 
     "Graphic design studio": [
@@ -47,6 +52,52 @@ export const upgrades = {
             name: "Rulers",
             icon: "📏",
             description: "How else would you draw a straight line?",
+        },
+    ],
+
+    "Farm": [
+        {
+            name: "Carrots",
+            icon: "🥕",
+            description: "Farms now grow carrots!",
+        },
+        {
+            name: "Tomatoes",
+            icon: "🍅",
+            description: "Juicy!",
+        },
+        {
+            name: "Watermelons",
+            icon: "🍉",
+            description: "Tastes so good!",
+        },
+    ],
+
+    "Flying saucers": [
+        {
+            name: "Telescopes",
+            icon: "🔭",
+            description: "Look into the stars to discover prospective planets.",
+        },
+        {
+            name: "Satellite antennas",
+            icon: "📡",
+            description: "Look beyond the Milky Way toward the Emojiway galaxy.",
+        },
+        {
+            name: "Astronauts",
+            icon: "👩‍🚀",
+            description: "Pilots the flying saucers to distant planets.",
+        },
+        {
+            name: "Rockets",
+            icon: "🚀",
+            description: "Flies really fast.",
+        },
+        {
+            name: "⍙⟒ ☊⍜⋔⟒ ⟟⋏ ⌿⟒⏃☊⟒...",
+            icon: "👽",
+            description: "...⏃⋏⎅ ⍙⟒ ⏚⍀⟟⋏☌ ☊⍀⏃⋉⊬ ⋏⟒⍙ ⟒⋔⍜⟊⟟⌇.",
         },
     ]
 }

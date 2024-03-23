@@ -1,15 +1,16 @@
 import { store } from '../redux/reduxStore';
-import { updateBuilding, BuildingProps, updateEps, updateEmojis } from '../redux/valuesSlice';
+import { updateBuilding, BuildingProps } from '../redux/buildingsSlice';
+import { updateEps, updateEmojis } from '../redux/valuesSlice';
 import { buildingData } from '../data/buildingData';
 
 // Get building from store shorthand
 function getBuilding(name: string) {
-    return store.getState().values.buildings[name];
+    return store.getState().buildings.buildings[name];
 }
 
 // A generic function to update properties of a building in the local state
 export const updateBuildingValue = (buildingName: string, key: keyof BuildingProps, value: number) => {
-    const buildings = store.getState().values.buildings;
+    const buildings = store.getState().buildings.buildings;
 
     // Check if the building exists
     if (buildings[buildingName]) {
@@ -48,6 +49,9 @@ export const buyBuilding = (buildingName: string, incrementBy: number = 1) => {
 
             // Recalculate eps
             calculateBuildingsEps();
+
+            // Update buy button right away
+            canBuyBuilding()
         }
     } else {
         console.error("Building not found or 'amount' is undefined");
@@ -56,7 +60,7 @@ export const buyBuilding = (buildingName: string, incrementBy: number = 1) => {
 
 
 export const calculateBuildingsEps = () => {
-    const buildings = store.getState().values.buildings;
+    const buildings = store.getState().buildings.buildings;
     let totalEps = 0;
     Object.keys(buildings).forEach(buildingName => {
         const building = buildings[buildingName];
@@ -71,3 +75,11 @@ export const calculateBuildingsEps = () => {
 
     store.dispatch(updateEps(totalEps));
 };
+
+export const canBuyBuilding = () => {
+    const buildings = store.getState().buildings.buildings;
+    const emojis = store.getState().values.emojis;
+    Object.keys(buildings).forEach(buildingName => {
+        updateBuildingValue(buildingName, "canBuy", emojis >= buildings[buildingName].price);
+    });
+}
