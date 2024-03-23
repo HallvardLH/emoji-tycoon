@@ -3,6 +3,7 @@ import Text from "../generalUI/Text";
 import Button from "../buttons/Button";
 import ContentBox from "../generalUI/ContentBox";
 import { colors } from "../misc/Colors";
+import CircularButton from "../buttons/CircularButton";
 
 interface BuildingListItemProps {
     name: string;
@@ -34,11 +35,18 @@ export default function BuildingListItem(props: BuildingListItemProps) {
             <View style={listItemStyles.container}>
                 <View style={listItemStyles.left}>
                     <RNText style={{ fontSize: 40 }}>{icon}</RNText>
+                    {/* <CircularButton variant="minimize" /> */}
                 </View>
                 <View style={listItemStyles.center}>
                     <Text shadow={false} color={colors.purple.dark} size={20}>{name}</Text>
                     <Text style={{ letterSpacing: 0.1 }} shadow={false} color={colors.purple.medium} size={15}>{description}</Text>
-                    <Button disabled={!buttonActive} shadowHeight={8} onPress={onPress} height={34} width={100} variant={"blue"} label={"Buy"} />
+                    <View style={{
+                        flexDirection: "row",
+                        gap: 10,
+                    }}>
+                        <Button disabled={!buttonActive} shadowHeight={8} onPress={onPress} height={34} width={110} variant={"blue"} label={"Buy"} />
+                        <Button shadowHeight={8} onPress={() => null} height={34} width={110} variant="submit" label={"Details"} />
+                    </View>
                 </View>
                 <View style={listItemStyles.right}>
                     <Text style={{ lineHeight: 30 }} shadow={false} size={amountFontSize} color={colors.purple.medium}>{amount}</Text>
@@ -58,6 +66,8 @@ const listItemStyles = StyleSheet.create({
 
     left: {
         flexBasis: 56,
+        gap: 12,
+        alignItems: "center",
     },
 
     center: {

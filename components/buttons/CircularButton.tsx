@@ -5,7 +5,7 @@ import { percentageOf as p } from "../../utils/utils";
 
 interface CircularButtonProps {
     onPress?: () => void;
-    variant?: "yes" | "no" | "close" | "back" | "hamburger" | "superlike";
+    variant?: "yes" | "no" | "close" | "back" | "hamburger" | "minimize";
     iconComponent?: ReactNode;
     backgroundColor?: string;
     highlightColor?: string;
@@ -43,8 +43,8 @@ const variants = {
         highlightColor: componentColors.backButton.highlight,
     },
 
-    superlike: {
-        icon: require("../../assets/icons/superlike.png"),
+    minimize: {
+        icon: require("../../assets/icons/minimize.png"),
         backgroundColor: componentColors.superlikeButton.background,
         highlightColor: componentColors.superlikeButton.highlight,
     },

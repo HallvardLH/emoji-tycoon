@@ -48,9 +48,9 @@ export default function TabBar(props: TabBarProps) {
                 highlight={componentColors.tabBar.profile.highlight}
             />
             <TabButton
-                onPress={() => navigation.navigate("Browse")}
-                label="Browse"
-                icon="😧"
+                onPress={() => navigation.navigate("Upgrades")}
+                label="Upgrades"
+                icon="⬆️"
                 background={componentColors.tabBar.browse.background}
                 highlight={componentColors.tabBar.browse.highlight}
             />

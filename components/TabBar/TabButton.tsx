@@ -11,11 +11,11 @@ interface TabButtonProps {
     icon: string;
 }
 
-const width = 64;
+const width = 70;
 const borderWidth = 3;
 const shadowWidth = width + borderWidth * 2;
 
-const innerButtonHeight = 60;
+const innerButtonHeight = 64;
 const backgroundHeight = innerButtonHeight + 12;
 
 const borderRadius = 15;

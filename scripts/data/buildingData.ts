@@ -15,6 +15,8 @@ function getBaseEps(num: number, noRound?: boolean) {
     else { return Math.ceil(0.1 * Math.pow(9, num)) }
 }
 
+// TODO: In each building's Details, you can see all the upgrades you have bought for the building
+
 export const buildingData: BuildingData[] = [
     {
         name: "Drawing hand",
