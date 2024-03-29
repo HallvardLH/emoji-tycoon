@@ -72,7 +72,7 @@ const initialState: ValuesState = {
             eps: buildingData[6].baseEps,
             upgrades: [],
         },
-        "Flying saucers": {
+        "Flying saucer": {
             buildingId: 7,
             amount: 0,
             canBuy: false,

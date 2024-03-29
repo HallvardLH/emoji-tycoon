@@ -28,6 +28,7 @@ export default function BuildingsList() {
                         icon={building.icon}
                         description={building.description}
                         price={formatNumber(dynamicData.price)}
+                        baseEps={building.baseEps}
                         eps={formatNumber(dynamicData.eps)}
                         amount={dynamicData ? dynamicData.amount : 0}
                         amountFontSize={dynamicData.amount < 1000 ? 30 : 26}

@@ -68,7 +68,7 @@ export const buildingData: BuildingData[] = [
         baseEps: getBaseEps(6),
     },
     {
-        name: "Flying saucers",
+        name: "Flying saucer",
         icon: "🛸",
         description: "Conquer new worlds and take their emojis.",
         basePrice: getBasePrice(7),

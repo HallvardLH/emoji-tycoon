@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { ReactNode } from 'react';
-import { View, Dimensions, KeyboardAvoidingView, ScrollView, StyleSheet, StyleProp, TextStyle, StatusBar } from 'react-native';
+import { View, Dimensions, KeyboardAvoidingView, SafeAreaView, ScrollView, StyleSheet, StyleProp, TextStyle, StatusBar } from 'react-native';
 import GradientBackground from './GradientBackground';
 import TabBar from '../TabBar/TabBar';
 
@@ -22,17 +22,19 @@ export default function ScreenView(props: ScreenViewProps) {
     return (
         <View style={styles.container}>
             <GradientBackground />
-            <KeyboardAvoidingView style={{ flex: 1 }}>
-                {scrollView ? (
-                    <ScrollView contentContainerStyle={[styles.screenContainer, style]}>
-                        {children}
-                    </ScrollView>
-                ) : (
-                    <View style={[styles.screenContainer, style]}>
-                        {children}
-                    </View>
-                )}
-            </KeyboardAvoidingView>
+            <SafeAreaView style={{ flex: 1 }}>
+                <KeyboardAvoidingView style={{ flex: 1 }}>
+                    {scrollView ? (
+                        <ScrollView contentContainerStyle={[styles.screenContainer, style]}>
+                            {children}
+                        </ScrollView>
+                    ) : (
+                        <View style={[styles.screenContainer, style]}>
+                            {children}
+                        </View>
+                    )}
+                </KeyboardAvoidingView>
+            </SafeAreaView>
             {!hideTabBar && (
                 <TabBar />
             )}

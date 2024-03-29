@@ -1,7 +1,7 @@
 import { createStackNavigator } from "@react-navigation/stack";
 import HeaderOptions from "../components/header/HeaderOptions";
 import Home from "./Home";
-import Shop from "./Shop";
+import Shop from "./Shop/Shop";
 
 export type StackParamsList = {
     Home: undefined;
