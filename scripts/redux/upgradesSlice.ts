@@ -3,11 +3,13 @@ import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 interface UpgradesState {
     owned: number[];
     unlocked: number[];
+    notifications: number;
 }
 
 const initialState: UpgradesState = {
     owned: [],
     unlocked: [],
+    notifications: 0,
 };
 
 export const upgradesSlice = createSlice({
@@ -27,8 +29,12 @@ export const upgradesSlice = createSlice({
                 // Only unlock if not owned
                 if (!state.owned.includes(action.payload)) {
                     state.unlocked.push(action.payload);
+                    state.notifications++;
                 }
             }
+        },
+        clearNotifications: (state) => {
+            state.notifications = 0;
         },
         resetUpgrades: (state) => {
             // Directly return the initialState
@@ -39,6 +45,6 @@ export const upgradesSlice = createSlice({
 });
 
 // Export the generated action creators
-export const { addUpgrade, unlockUpgrade, resetUpgrades } = upgradesSlice.actions;
+export const { addUpgrade, unlockUpgrade, clearNotifications, resetUpgrades } = upgradesSlice.actions;
 
 export default upgradesSlice.reducer;

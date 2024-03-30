@@ -1,7 +1,7 @@
 import { updateEmojis } from "../redux/valuesSlice";
 import { store } from '../redux/reduxStore';
 import { canBuyBuilding } from "./buildings";
-import { unlockUpgrades } from "./upgrades";
+import { unlockUpgrades } from "./checks";
 
 let lastUpdateTime = Date.now();
 let i = 0
@@ -15,7 +15,7 @@ export function gameLoop() {
     // Runs once every 2.5 seconds
     if (i % 25 == 0) {
         canBuyBuilding();
-        unlockUpgrades();
+        // unlockUpgrades();
     }
     i++
 }

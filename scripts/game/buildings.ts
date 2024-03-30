@@ -2,7 +2,8 @@ import { store } from '../redux/reduxStore';
 import { updateBuilding, BuildingProps } from '../redux/buildingsSlice';
 import { updateEps, updateEmojis } from '../redux/valuesSlice';
 import { buildingData } from '../data/buildingData';
-import { unlockUpgrades } from './upgrades';
+import { getBuilding } from './shorthands';
+import { unlockUpgrades } from './checks';
 
 type PluralNames = {
     [key: string]: string;
@@ -17,11 +18,6 @@ export const pluralNames: PluralNames = {
     "Bank": "Banks",
     "Emoji assembly": "Emoji assemblies",
     "Flying saucer": "Flying saucers",
-}
-
-// Get building from store shorthand
-export function getBuilding(name: string) {
-    return store.getState().buildings.buildings[name];
 }
 
 // A generic function to update properties of a building in the local state
@@ -60,7 +56,7 @@ export const buyBuilding = (buildingName: string, incrementBy: number = 1) => {
             updateBuildingValue(buildingName, "amount", newAmount);
 
             // Increase building price
-            const price = Math.round(data.basePrice * Math.pow(1.2, newAmount));
+            const price = Math.round(data.basePrice * Math.pow(1.125, newAmount));
             updateBuildingValue(buildingName, "price", price);
 
             // Recalculate eps
@@ -70,7 +66,7 @@ export const buyBuilding = (buildingName: string, incrementBy: number = 1) => {
             canBuyBuilding();
 
             // Check if upgrades should be unlocked
-            // unlockUpgrades();
+            unlockUpgrades();
         }
     } else {
         console.error("Building not found or 'amount' is undefined");

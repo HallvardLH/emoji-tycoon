@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from "react";
 import { View, StyleSheet, TouchableOpacity, Animated, StyleProp, ViewStyle } from "react-native";
-import { componentColors } from "../misc/Colors";
+import { componentColors, colors } from "../misc/Colors";
 import Text from "../generalUI/Text";
 import Shadow from "../misc/Shadow";
 
@@ -8,6 +8,8 @@ interface ContentTabProps {
     tabs: Array<{
         name: string;
         component: React.ReactNode;
+        notification?: number;
+        onNavigateTo?: () => void;
     }>;
     contentSpacing?: number;
     containerStyle?: StyleProp<ViewStyle>;
@@ -55,9 +57,28 @@ export default function ContentTab(props: ContentTabProps) {
                     <TouchableOpacity
                         style={[styles.tabButton, { width: `${tabWidthPercent}%` }]}
                         key={"TabButton-" + index}
-                        onPress={() => setActiveTab(index)}
+                        onPress={() => {
+                            setActiveTab(index);
+                            if (tab.onNavigateTo) {
+                                tab.onNavigateTo();
+                            }
+                        }}
                     >
                         <Text>{tab.name}</Text>
+                        {tab.notification && tab.notification > 0 ? (
+                            <View style={{
+                                height: 22,
+                                width: 22,
+                                borderRadius: 100,
+                                backgroundColor: colors.red.medium,
+                                borderWidth: 1,
+                                borderColor: "white",
+                                justifyContent: "center",
+                                alignItems: "center",
+                            }}>
+                                <Text style={{ position: "absolute", }} size={12}>{tab.notification}</Text>
+                            </View>
+                        ) : null}
                     </TouchableOpacity>
                 )}
             </View>
@@ -119,6 +140,8 @@ const styles = StyleSheet.create({
         height: buttonHeight,
         justifyContent: "center",
         alignItems: "center",
+        flexDirection: "row",
+        gap: 10,
     },
 
     buttonContainer: {
