@@ -13,6 +13,11 @@ const unlockReq: UnlockReq = {
     2: 50,
     3: 100,
     4: 200,
+    // 0: 1,
+    // 1: 2,
+    // 2: 3,
+    // 3: 4,
+    // 4: 5,
 }
 
 // Unlocks upgrades if the requirements are met

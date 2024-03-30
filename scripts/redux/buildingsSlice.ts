@@ -87,7 +87,7 @@ const initialState: ValuesState = {
 interface UpdateBuildingPayload {
     buildingName: string;
     key: keyof BuildingProps; // Ensure that the key is a valid property of Building
-    value: number | boolean | any[]; // The type of 'value' depends on what 'key' is. It could be a number or any[] based on your current structure
+    value: number | boolean | any[];
 }
 
 export const buildingsSlice = createSlice({

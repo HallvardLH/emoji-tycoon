@@ -58,7 +58,7 @@ export default function BaseButton(props: BaseButtonProps) {
         ${p(widthPercentage, 100)},${p(heightPercentage, 100)}`;
 
     return (
-        <TouchableOpacity disabled={disabled} style={style} onPress={onPress}>
+        <TouchableOpacity style={style} onPress={onPress}>
             <Shadow height={buttonHeight + shadowHeight} width={buttonContainerWidth} borderRadius={borderRadius} />
             <View style={[
                 styles.container,

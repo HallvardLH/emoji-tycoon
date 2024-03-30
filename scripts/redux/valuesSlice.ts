@@ -7,7 +7,7 @@ interface ValuesState {
 }
 
 const initialState: ValuesState = {
-    emojis: 1000,
+    emojis: 1000000000000000000000,
     bigEmoji: "😀",
     eps: 0,
 };
