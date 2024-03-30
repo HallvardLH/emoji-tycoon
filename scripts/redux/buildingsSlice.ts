@@ -7,7 +7,7 @@ export interface BuildingProps {
     canBuy: boolean;
     price: number;
     eps: number;
-    upgrades: any[]; // For now
+    upgrades: number;
 }
 
 interface ValuesState {
@@ -22,7 +22,7 @@ const initialState: ValuesState = {
             canBuy: false,
             price: buildingData[0].basePrice,
             eps: buildingData[0].baseEps,
-            upgrades: [],
+            upgrades: 0,
         },
         "Graphic design studio": {
             buildingId: 1,
@@ -30,7 +30,7 @@ const initialState: ValuesState = {
             canBuy: false,
             price: buildingData[1].basePrice,
             eps: buildingData[1].baseEps,
-            upgrades: [],
+            upgrades: 0,
         },
         "Farm": {
             buildingId: 2,
@@ -38,7 +38,7 @@ const initialState: ValuesState = {
             canBuy: false,
             price: buildingData[2].basePrice,
             eps: buildingData[2].baseEps,
-            upgrades: [],
+            upgrades: 0,
         },
         "Kitchen": {
             buildingId: 3,
@@ -46,7 +46,7 @@ const initialState: ValuesState = {
             canBuy: false,
             price: buildingData[3].basePrice,
             eps: buildingData[3].baseEps,
-            upgrades: [],
+            upgrades: 0,
         },
         "Factory": {
             buildingId: 4,
@@ -54,7 +54,7 @@ const initialState: ValuesState = {
             canBuy: false,
             price: buildingData[4].basePrice,
             eps: buildingData[4].baseEps,
-            upgrades: [],
+            upgrades: 0,
         },
         "Bank": {
             buildingId: 5,
@@ -62,7 +62,7 @@ const initialState: ValuesState = {
             canBuy: false,
             price: buildingData[5].basePrice,
             eps: buildingData[5].baseEps,
-            upgrades: [],
+            upgrades: 0,
         },
         "Emoji assembly": {
             buildingId: 6,
@@ -70,7 +70,7 @@ const initialState: ValuesState = {
             canBuy: false,
             price: buildingData[6].basePrice,
             eps: buildingData[6].baseEps,
-            upgrades: [],
+            upgrades: 0,
         },
         "Flying saucer": {
             buildingId: 7,
@@ -78,7 +78,7 @@ const initialState: ValuesState = {
             canBuy: false,
             price: buildingData[7].basePrice,
             eps: buildingData[7].baseEps,
-            upgrades: [],
+            upgrades: 0,
         },
     }
 };
@@ -107,7 +107,7 @@ export const buildingsSlice = createSlice({
                         state.buildings[buildingName][key] = value as boolean;
                         break;
                     case 'upgrades':
-                        state.buildings[buildingName][key] = value as any[];
+                        state.buildings[buildingName][key] = value as number;
                         break;
                     default:
                         console.warn(`Key '${key}' not recognized or not supported for direct updates.`);

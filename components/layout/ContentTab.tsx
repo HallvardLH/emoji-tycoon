@@ -136,7 +136,7 @@ const styles = StyleSheet.create({
     },
 
     child: {
-        justifyContent: "center",
+        justifyContent: "flex-start",
         // alignItems: "center",
         flex: 1,
         marginBottom: 50,

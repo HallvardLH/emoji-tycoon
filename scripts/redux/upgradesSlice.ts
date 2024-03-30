@@ -24,7 +24,10 @@ export const upgradesSlice = createSlice({
         },
         unlockUpgrade: (state, action: PayloadAction<number>) => {
             if (!state.unlocked.includes(action.payload)) {
-                state.unlocked.push(action.payload);
+                // Only unlock if not owned
+                if (!state.owned.includes(action.payload)) {
+                    state.unlocked.push(action.payload);
+                }
             }
         },
         resetUpgrades: (state) => {

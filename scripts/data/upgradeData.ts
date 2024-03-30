@@ -6,6 +6,7 @@ export const buildingUpgrades = [
         description: "A stronger arm makes for drawing emojis faster.",
         price: 100,
         tier: 0,
+        effect: "2x building production",
     },
     {
         building: "Drawing hand",
@@ -14,6 +15,7 @@ export const buildingUpgrades = [
         description: "Flexible fingers allow for more intricate emojis.",
         price: 1000,
         tier: 1,
+        effect: "2x building production",
     },
     {
         building: "Drawing hand",
@@ -22,6 +24,7 @@ export const buildingUpgrades = [
         description: "Double the hands, double the emojis!",
         price: 5000,
         tier: 2,
+        effect: "2x building production",
     },
     {
         building: "Drawing hand",
@@ -30,6 +33,7 @@ export const buildingUpgrades = [
         description: "Bionic arms to draw emojis super fast!",
         price: 10000,
         tier: 3,
+        effect: "2x building production",
     },
     {
         building: "Drawing hand",
@@ -38,6 +42,7 @@ export const buildingUpgrades = [
         description: "With years of practice, you too can learn to draw with your tongue!",
         price: 50000,
         tier: 4,
+        effect: "2x building production",
     },
     // Graphic design studio
     {
@@ -47,6 +52,7 @@ export const buildingUpgrades = [
         description: "Better pencils for more detailed emojis.",
         price: 100,
         tier: 0,
+        effect: "2x building production",
     },
     {
         building: "Graphic design studio",
@@ -55,6 +61,7 @@ export const buildingUpgrades = [
         description: "These special crayons allow artists to access their inner child.",
         price: 100,
         tier: 1,
+        effect: "2x building production",
     },
     {
         building: "Graphic design studio",
@@ -63,6 +70,7 @@ export const buildingUpgrades = [
         description: "",
         price: 100,
         tier: 2,
+        effect: "2x building production",
     },
     {
         building: "Graphic design studio",
@@ -71,6 +79,7 @@ export const buildingUpgrades = [
         description: "Allows for more distinguished emojis.",
         price: 100,
         tier: 3,
+        effect: "2x building production",
     },
     {
         building: "Graphic design studio",
@@ -79,6 +88,7 @@ export const buildingUpgrades = [
         description: "How else would you draw a straight line?",
         price: 100,
         tier: 4,
+        effect: "2x building production",
     },
     // Farms
     {
@@ -88,6 +98,7 @@ export const buildingUpgrades = [
         description: "Farms now grow carrots!",
         price: 100,
         tier: 0,
+        effect: "2x building production",
     },
     {
         building: "Farm",
@@ -96,6 +107,7 @@ export const buildingUpgrades = [
         description: "Juicy!",
         price: 100,
         tier: 1,
+        effect: "2x building production",
     },
     {
         building: "Farm",
@@ -104,6 +116,7 @@ export const buildingUpgrades = [
         description: "Tastes so good!",
         price: 100,
         tier: 2,
+        effect: "2x building production",
     },
     {
         building: "Farm",
@@ -112,6 +125,7 @@ export const buildingUpgrades = [
         description: "Description",
         price: 100,
         tier: 3,
+        effect: "2x building production",
     },
     {
         building: "Farm",
@@ -120,6 +134,7 @@ export const buildingUpgrades = [
         description: "Description",
         price: 100,
         tier: 4,
+        effect: "2x building production",
     },
     // Kitchen
     {
@@ -129,6 +144,7 @@ export const buildingUpgrades = [
         description: "Description",
         price: 100,
         tier: 0,
+        effect: "2x building production",
     },
     {
         building: "Kitchen",
@@ -137,6 +153,7 @@ export const buildingUpgrades = [
         description: "Description",
         price: 100,
         tier: 1,
+        effect: "2x building production",
     },
     {
         building: "Kitchen",
@@ -145,6 +162,7 @@ export const buildingUpgrades = [
         description: "Description",
         price: 100,
         tier: 2,
+        effect: "2x building production",
     },
     {
         building: "Kitchen",
@@ -153,6 +171,7 @@ export const buildingUpgrades = [
         description: "Description",
         price: 100,
         tier: 3,
+        effect: "2x building production",
     },
     {
         building: "Kitchen",
@@ -161,6 +180,7 @@ export const buildingUpgrades = [
         description: "Description",
         price: 100,
         tier: 4,
+        effect: "2x building production",
     },
     // Factory
     {
@@ -170,6 +190,7 @@ export const buildingUpgrades = [
         description: "Description",
         price: 100,
         tier: 0,
+        effect: "2x building production",
     },
     {
         building: "Factory",
@@ -178,6 +199,7 @@ export const buildingUpgrades = [
         description: "Description",
         price: 100,
         tier: 1,
+        effect: "2x building production",
     },
     {
         building: "Factory",
@@ -186,6 +208,7 @@ export const buildingUpgrades = [
         description: "Description",
         price: 100,
         tier: 2,
+        effect: "2x building production",
     },
     {
         building: "Factory",
@@ -194,6 +217,7 @@ export const buildingUpgrades = [
         description: "Description",
         price: 100,
         tier: 3,
+        effect: "2x building production",
     },
     {
         building: "Factory",
@@ -202,6 +226,7 @@ export const buildingUpgrades = [
         description: "Description",
         price: 100,
         tier: 4,
+        effect: "2x building production",
     },
     // Bank
     {
@@ -211,6 +236,7 @@ export const buildingUpgrades = [
         description: "Description",
         price: 100,
         tier: 0,
+        effect: "2x building production",
     },
     {
         building: "Bank",
@@ -219,6 +245,7 @@ export const buildingUpgrades = [
         description: "Description",
         price: 100,
         tier: 1,
+        effect: "2x building production",
     },
     {
         building: "Bank",
@@ -227,6 +254,7 @@ export const buildingUpgrades = [
         description: "Description",
         price: 100,
         tier: 2,
+        effect: "2x building production",
     },
     {
         building: "Bank",
@@ -235,6 +263,7 @@ export const buildingUpgrades = [
         description: "Description",
         price: 100,
         tier: 3,
+        effect: "2x building production",
     },
     {
         building: "Bank",
@@ -243,6 +272,7 @@ export const buildingUpgrades = [
         description: "Description",
         price: 100,
         tier: 4,
+        effect: "2x building production",
     },
     // Emoji assembly
     {
@@ -252,6 +282,7 @@ export const buildingUpgrades = [
         description: "Description",
         price: 100,
         tier: 0,
+        effect: "2x building production",
     },
     {
         building: "Emoji assembly",
@@ -268,6 +299,7 @@ export const buildingUpgrades = [
         description: "Description",
         price: 100,
         tier: 2,
+        effect: "2x building production",
     },
     {
         building: "Emoji assembly",
@@ -276,6 +308,7 @@ export const buildingUpgrades = [
         description: "Description",
         price: 100,
         tier: 3,
+        effect: "2x building production",
     },
     {
         building: "Emoji assembly",
@@ -284,6 +317,7 @@ export const buildingUpgrades = [
         description: "Description",
         price: 100,
         tier: 4,
+        effect: "2x building production",
     },
     // Flying saucers
     {
@@ -293,6 +327,7 @@ export const buildingUpgrades = [
         description: "Look into the stars to discover prospective planets.",
         price: 100,
         tier: 0,
+        effect: "2x building production",
     },
     {
         building: "Flying saucer",
@@ -301,6 +336,7 @@ export const buildingUpgrades = [
         description: "Look beyond the Milky Way toward the Emojiway galaxy.",
         price: 100,
         tier: 1,
+        effect: "2x building production",
     },
     {
         building: "Flying saucer",
@@ -309,6 +345,7 @@ export const buildingUpgrades = [
         description: "Pilots the flying saucers to distant planets.",
         price: 100,
         tier: 2,
+        effect: "2x building production",
     },
     {
         building: "Flying saucer",
@@ -317,6 +354,7 @@ export const buildingUpgrades = [
         description: "Flies really fast.",
         price: 100,
         tier: 3,
+        effect: "2x building production",
     },
     {
         building: "Flying saucer",
@@ -325,5 +363,6 @@ export const buildingUpgrades = [
         description: "...⏃⋏⎅ ⍙⟒ ⏚⍀⟟⋏☌ ☊⍀⏃⋉⊬ ⋏⟒⍙ ⟒⋔⍜⟊⟟⌇.",
         price: 100,
         tier: 4,
+        effect: "2x building production",
     },
 ]

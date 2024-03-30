@@ -2,9 +2,25 @@ import { store } from '../redux/reduxStore';
 import { updateBuilding, BuildingProps } from '../redux/buildingsSlice';
 import { updateEps, updateEmojis } from '../redux/valuesSlice';
 import { buildingData } from '../data/buildingData';
+import { unlockUpgrades } from './upgrades';
+
+type PluralNames = {
+    [key: string]: string;
+}
+
+export const pluralNames: PluralNames = {
+    "Drawing hand": "Drawing hands",
+    "Graphic design studio": "Graphic design studios",
+    "Farm": "Farms",
+    "Kitchen": "Kitchens",
+    "Factory": "Factories",
+    "Bank": "Banks",
+    "Emoji assembly": "Emoji assemblies",
+    "Flying saucer": "Flying saucers",
+}
 
 // Get building from store shorthand
-function getBuilding(name: string) {
+export function getBuilding(name: string) {
     return store.getState().buildings.buildings[name];
 }
 
@@ -51,7 +67,10 @@ export const buyBuilding = (buildingName: string, incrementBy: number = 1) => {
             calculateBuildingsEps();
 
             // Update buy button right away
-            canBuyBuilding()
+            canBuyBuilding();
+
+            // Check if upgrades should be unlocked
+            // unlockUpgrades();
         }
     } else {
         console.error("Building not found or 'amount' is undefined");
@@ -66,7 +85,7 @@ export const calculateBuildingsEps = () => {
         const building = buildings[buildingName];
         const baseEps = buildingData[building.buildingId].baseEps;
 
-        const eps = baseEps * building.amount;
+        const eps = (baseEps * building.amount) * Math.pow(2, building.upgrades);
 
         totalEps += eps;
 

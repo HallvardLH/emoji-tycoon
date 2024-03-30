@@ -1,24 +1,12 @@
-import { StyleSheet, View, Text as RNText } from "react-native";
+import { StyleSheet, View } from "react-native";
 import Text from "../generalUI/Text";
 import Button from "../buttons/Button";
 import ContentBox from "../generalUI/ContentBox";
+import Emoji from "./Emoji";
 import { colors } from "../misc/Colors";
-import CircularButton from "../buttons/CircularButton";
 import { useState } from "react";
-
-type PluralNames = {
-    [key: string]: string;
-}
-const pluralNames: PluralNames = {
-    "Drawing hand": "Drawing hands",
-    "Graphic design studio": "Graphic design studios",
-    "Farm": "Farms",
-    "Kitchen": "Kitchens",
-    "Factory": "Factories",
-    "Bank": "Banks",
-    "Emoji assembly": "Emoji assemblies",
-    "Flying saucer": "Flying saucers",
-}
+import { pluralNames } from "../../scripts/game/buildings";
+import DisplayUpgrades from "./DisplayUpgrades";
 
 interface BuildingListItemProps {
     name: string;
@@ -26,9 +14,9 @@ interface BuildingListItemProps {
     description: string;
     price: number | string;
     baseEps: number | string;
+    upgradeAmount: number;
     eps: number | string;
     amount: number;
-    amountFontSize?: number;
     buttonActive?: boolean;
     onPress: () => void;
 }
@@ -40,9 +28,9 @@ export default function BuildingListItem(props: BuildingListItemProps) {
         description,
         price,
         baseEps,
+        upgradeAmount,
         eps,
         amount,
-        amountFontSize = 30,
         buttonActive = true,
         onPress,
     } = props;
@@ -53,16 +41,14 @@ export default function BuildingListItem(props: BuildingListItemProps) {
         <ContentBox style={{ marginBottom: 18 }}>
             <View style={listItemStyles.container}>
                 <View style={listItemStyles.left}>
-                    <RNText style={{ fontSize: 40 }}>{icon}</RNText>
-                    {/* <CircularButton variant="minimize" /> */}
-
+                    <Emoji icon={icon} />
                 </View>
                 <View style={listItemStyles.center}>
                     <Text shadow={false} color={colors.purple.dark} size={20}>{name}</Text>
                     <Text style={{ letterSpacing: 0.1 }} shadow={false} color={colors.purple.medium} size={15}>{description}</Text>
                 </View>
                 <View style={listItemStyles.right}>
-                    <Text style={{ lineHeight: 30 }} shadow={false} size={amountFontSize} color={colors.purple.medium}>{amount}</Text>
+                    <Text style={{ lineHeight: 30 }} shadow={false} size={amount < 1000 ? 30 : 26} color={colors.purple.medium}>{amount}</Text>
                     <Text style={{ textAlign: "center", lineHeight: 15 }} shadow={false} color={colors.purple.medium} size={14}>{price} 💵</Text>
                 </View>
             </View>
@@ -87,6 +73,16 @@ export default function BuildingListItem(props: BuildingListItemProps) {
                     <Text shadow={false} color={colors.purple.dark} size={15}>
                         {'\u2022'} For a total of <Text shadow={false} color={colors.yellow.dark} size={15}>{eps}</Text> emojis per second!
                     </Text>
+                    {upgradeAmount > 0 && (
+                        <View style={{
+                            justifyContent: "center",
+                            alignItems: "center",
+                            marginVertical: 10,
+                        }}>
+                            <Text shadow={false} color={colors.purple.dark} size={20}>Owned upgrades</Text>
+                            <DisplayUpgrades buildingName={name} />
+                        </View>
+                    )}
                 </View>
             )}
         </ContentBox>

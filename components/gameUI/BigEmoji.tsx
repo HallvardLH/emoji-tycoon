@@ -79,7 +79,6 @@ export default function BigEmoji() {
             setAnimatingEmojis(current => current.filter(item => item.key !== uniqueKey));
         });
 
-        // Call your existing tap handler if needed
         tapEmoji();
     };
 
@@ -127,7 +126,7 @@ const styles = StyleSheet.create({
         // width: 100,
     },
     bigEmoji: {
-        fontSize: 100,
+        fontSize: 150,
         position: 'absolute', // Position absolutely to allow overlapping
     },
 });
