@@ -3,7 +3,7 @@ import Svg, { Polygon } from "react-native-svg";
 import Text from "../generalUI/Text";
 import { componentColors } from "../misc/Colors";
 import Shadow from "../misc/Shadow";
-import { percentageOf as p } from "../../utils/utils";
+import { percentageOf as p } from "../../scripts/utils";
 
 interface BaseButtonProps {
     leftColor?: string;

@@ -2,9 +2,8 @@ import React, { useState, useEffect } from 'react';
 import { StyleSheet, Pressable, Text, Animated, View } from 'react-native';
 import { useSelector } from 'react-redux';
 import { RootState } from '../../scripts/redux/reduxStore';
-import { tapEmoji } from '../../scripts/game/bigEmoji';
-import emojis from 'emoji.json';
-import { percentageOf } from '../../utils/utils';
+import { tapEmoji, pickNextEmoji } from '../../scripts/game/bigEmoji';
+import { percentageOf } from '../../scripts/utils';
 import PulseAnimation from '../animations/PulseAnimation';
 
 export default function BigEmoji() {
@@ -22,9 +21,9 @@ export default function BigEmoji() {
         const animatingEmoji = staticEmoji;
 
         // Select a random emoji to animate
-        const nextEmoji = emojis[Math.floor(Math.random() * emojis.length)].char;
+        const nextEmoji = pickNextEmoji();
 
-        setStaticEmoji(nextEmoji);
+        setStaticEmoji(nextEmoji as string);
 
         // Create new animated values for the animating emoji
         const newYAnimValue = new Animated.Value(0); // For vertical movement

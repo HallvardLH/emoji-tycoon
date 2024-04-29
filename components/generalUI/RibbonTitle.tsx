@@ -1,7 +1,7 @@
 import React, { useEffect, useRef } from 'react';
 import { View, Image, StyleSheet, Animated } from 'react-native';
 import Text from './Text';
-import { percentageOf as p } from '../../utils/utils';
+import { percentageOf as p } from '../../scripts/utils';
 import { colors } from '../misc/Colors';
 
 const originalRibbonHeight = 68;
