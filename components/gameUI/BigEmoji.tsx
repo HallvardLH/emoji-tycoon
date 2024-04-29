@@ -1,53 +1,79 @@
-import React, { useState, useEffect } from 'react';
-import { StyleSheet, Pressable, Text, Animated, View } from 'react-native';
+import React, { useState } from 'react';
+import { StyleSheet, Pressable, Text, Animated, View, Easing } from 'react-native';
 import { useSelector } from 'react-redux';
 import { RootState } from '../../scripts/redux/reduxStore';
 import { tapEmoji, pickNextEmoji } from '../../scripts/game/bigEmoji';
-import { percentageOf } from '../../scripts/utils';
 import PulseAnimation from '../animations/PulseAnimation';
+import { useFonts } from "expo-font";
+
+interface AnimatedEmoji {
+    key: string;
+    emoji: string;
+    yAnimValue: Animated.Value;
+    xAnimValue: Animated.Value;
+}
+
+interface AnimatedNumber {
+    key: string;
+    number: string;
+    yAnimValue: Animated.Value;
+    xAnimValue: Animated.Value;
+}
 
 export default function BigEmoji() {
-    const { bigEmoji } = useSelector((state: RootState) => state.values);
+    const { bigEmoji, emojisPerTap } = useSelector((state: RootState) => state.bigEmoji);
+
+    // Necssary for using font
+    useFonts({
+        "Digitalt": require("../../assets/fonts/Digitalt.otf"),
+    });
 
     // State for the currently displayed static emoji
-    const [staticEmoji, setStaticEmoji] = useState(bigEmoji);
+    const [staticEmoji, setStaticEmoji] = useState<string>(bigEmoji);
 
-    // State to keep track of multiple animating emojis
-    const [animatingEmojis, setAnimatingEmojis] = useState([]);
+    // State to keep track of multiple animating emojis and numbers
+    const [animatingEmojis, setAnimatingEmojis] = useState<AnimatedEmoji[]>([]);
+    const [animatingNumbers, setAnimatingNumbers] = useState<AnimatedNumber[]>([]);
 
-    // Function to handle emoji tap
     const onEmojiTap = () => {
-        // Get the current emoji
         const animatingEmoji = staticEmoji;
-
-        // Select a random emoji to animate
         const nextEmoji = pickNextEmoji();
-
         setStaticEmoji(nextEmoji as string);
 
-        // Create new animated values for the animating emoji
-        const newYAnimValue = new Animated.Value(0); // For vertical movement
-        const newXAnimValue = new Animated.Value(0); // For horizontal movement
+        // Create new animated values for the animating emoji and number
+        const newYAnimValue = new Animated.Value(0);
+        const newXAnimValue = new Animated.Value(0);
+        const numberYAnimValue = new Animated.Value(0);
+        const numberXAnimValue = new Animated.Value(0);
 
-        // Random horizontal target value between -200 and 200
-        const randomXToValue = Math.floor(Math.random() * 401) - 200;
+        // Random horizontal target value between -200 and 200 for emoji
+        const randomXToValueEmoji = Math.floor(Math.random() * 401) - 200;
 
-        // Generate a unique key for the animating emoji using the current timestamp
+        // Random movement for number
+        const randomYToValueNumber = -(Math.floor(Math.random() * 131) + 110); // Moves up between 50 and 150
+        const randomXToValueNumber = Math.floor(Math.random() * 201) - 100;
+
+        // Generate a unique key for the animating emoji and number using the current timestamp
         const uniqueKey = `${nextEmoji}-${Date.now()}`;
 
-        // Add the animating emoji to the state with both animated values
+        // Add the animating emoji and number to the state
         const newAnimatingEmoji = {
             key: uniqueKey,
             emoji: animatingEmoji,
             yAnimValue: newYAnimValue,
             xAnimValue: newXAnimValue,
         };
+        const newAnimatingNumber = {
+            key: `${uniqueKey}-num`,
+            number: `+${emojisPerTap}`,
+            yAnimValue: numberYAnimValue,
+            xAnimValue: numberXAnimValue,
+        };
         setAnimatingEmojis(current => [...current, newAnimatingEmoji]);
+        setAnimatingNumbers(current => [...current, newAnimatingNumber]);
 
-
-        // Start simultaneous animations for vertical and horizontal movements
         Animated.parallel([
-            // Vertical bounce and fall
+            // Emoji animations
             Animated.sequence([
                 Animated.timing(newYAnimValue, {
                     toValue: -30,
@@ -60,23 +86,30 @@ export default function BigEmoji() {
                     useNativeDriver: true,
                 }),
             ]),
-            // Horizontal random movement
-            Animated.sequence([
-                Animated.timing(newXAnimValue, {
-                    toValue: percentageOf(33, randomXToValue),
-                    duration: 100, // Match the duration of the initial bounce for synchronized effect
-                    useNativeDriver: true,
-                }),
-                Animated.timing(newXAnimValue, {
-                    toValue: percentageOf(66, randomXToValue),
-                    duration: 200,
-                    useNativeDriver: true,
-                }),
-            ]),
+            Animated.timing(newXAnimValue, {
+                toValue: randomXToValueEmoji,
+                duration: 300,
+                useNativeDriver: true,
+            }),
+            // Number animations
+            Animated.timing(numberYAnimValue, {
+                toValue: randomYToValueNumber,
+                duration: 800,
+                useNativeDriver: true,
+                easing: Easing.out(Easing.cubic),
+            }),
+            Animated.timing(numberXAnimValue, {
+                toValue: randomXToValueNumber,
+                duration: 800,
+                useNativeDriver: true,
+                easing: Easing.out(Easing.cubic),
+            }),
         ]).start(() => {
-            // Update the static emoji and remove the completed animation
+            // Clean up after animations complete
             setAnimatingEmojis(current => current.filter(item => item.key !== uniqueKey));
+            setAnimatingNumbers(current => current.filter(item => item.key !== `${uniqueKey}-num`));
         });
+
 
         tapEmoji();
     };
@@ -95,11 +128,7 @@ export default function BigEmoji() {
                         style={[
                             styles.bigEmoji,
                             {
-                                transform: [
-                                    { translateY: yAnimValue },
-                                    { translateX: xAnimValue },
-                                ],
-                                // Getting error: Property 'interpolate' does not exist on type 'never'.ts(2339)
+                                transform: [{ translateY: yAnimValue }, { translateX: xAnimValue }],
                                 opacity: yAnimValue.interpolate({
                                     inputRange: [0, 30, 100],
                                     outputRange: [1, 0.7, 0],
@@ -108,6 +137,24 @@ export default function BigEmoji() {
                         ]}
                     >
                         {emoji}
+                    </Animated.Text>
+                ))}
+                {/* Animating Numbers */}
+                {animatingNumbers.map(({ key, number, yAnimValue, xAnimValue }) => (
+                    <Animated.Text
+                        key={key}
+                        style={[
+                            styles.number,
+                            {
+                                transform: [{ translateY: yAnimValue }, { translateX: xAnimValue }],
+                                opacity: yAnimValue.interpolate({
+                                    inputRange: [0, 50, 100],
+                                    outputRange: [1, 0.5, 0],
+                                }),
+                            },
+                        ]}
+                    >
+                        {number}
                     </Animated.Text>
                 ))}
             </View>
@@ -120,12 +167,19 @@ const styles = StyleSheet.create({
         flex: 1,
         justifyContent: 'center',
         alignItems: 'center',
-        // maxHeight: 100,
         height: 100,
-        // width: 100,
     },
     bigEmoji: {
         fontSize: 150,
-        position: 'absolute', // Position absolutely to allow overlapping
+        position: 'absolute',
+    },
+    number: {
+        fontSize: 40,
+        fontFamily: "Digitalt",
+        color: '#FFD700', // Gold color for the number
+        position: 'absolute',
+        textShadowColor: "rgba(0, 0, 0, 0.2)",
+        textShadowOffset: { width: 0, height: 2.5 },
+        textShadowRadius: 4
     },
 });

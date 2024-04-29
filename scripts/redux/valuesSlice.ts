@@ -2,13 +2,11 @@ import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 
 interface ValuesState {
     emojis: number;
-    bigEmoji: string;
     eps: number;
 }
 
 const initialState: ValuesState = {
     emojis: 0,
-    bigEmoji: "😀",
     eps: 0,
 };
 
@@ -19,9 +17,6 @@ export const valuesSlice = createSlice({
     reducers: {
         updateEmojis: (state, action: PayloadAction<number>) => {
             state.emojis = action.payload;
-        },
-        updateBigEmoji: (state, action: PayloadAction<string>) => {
-            state.bigEmoji = action.payload;
         },
         updateEps: (state, action: PayloadAction<number>) => {
             state.eps = action.payload;
@@ -35,6 +30,6 @@ export const valuesSlice = createSlice({
 });
 
 // Export the generated action creators
-export const { updateEmojis, updateBigEmoji, updateEps, resetValues } = valuesSlice.actions;
+export const { updateEmojis, updateEps, resetValues } = valuesSlice.actions;
 
 export default valuesSlice.reducer;

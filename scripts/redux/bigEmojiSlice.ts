@@ -1,26 +1,39 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 
-interface ValuesState {
+interface BigEmojiState {
     bigEmoji: string;
     nextEmoji: string;
     nextEffect: string;
+    baseEmojisPerTap: number,
+    emojisPerTap: number;
+    eptMult: number;
+    eptAdd: number;
 }
 
-const initialState: ValuesState = {
+const initialState: BigEmojiState = {
     bigEmoji: "😀",
     nextEmoji: "",
-    nextEffect: "none"
+    nextEffect: "none",
+    baseEmojisPerTap: 1,
+    emojisPerTap: 1,
+    eptMult: 1,
+    eptAdd: 0,
 };
 
-// Create the slice with reducers properly typed
-export const valuesSlice = createSlice({
-    name: "values",
+export const bigEmojiSlice = createSlice({
+    name: "bigEmoji",
     initialState,
     reducers: {
         updateBigEmoji: (state, action: PayloadAction<string>) => {
             state.bigEmoji = action.payload;
         },
-        resetValues: (state) => {
+        updateEmojisPerTap: (state, action: PayloadAction<number>) => {
+            state.emojisPerTap = action.payload;
+        },
+        updateBaseEmojisPerTap: (state, action: PayloadAction<number>) => {
+            state.emojisPerTap = action.payload;
+        },
+        resetBigEmoji: (state) => {
             // Directly return the initialState
             return initialState;
         },
@@ -28,7 +41,6 @@ export const valuesSlice = createSlice({
     },
 });
 
-// Export the generated action creators
-export const { updateBigEmoji, resetValues } = valuesSlice.actions;
+export const { updateBigEmoji, updateEmojisPerTap, updateBaseEmojisPerTap, resetBigEmoji } = bigEmojiSlice.actions;
 
-export default valuesSlice.reducer;
+export default bigEmojiSlice.reducer;

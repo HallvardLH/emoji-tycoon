@@ -5,12 +5,14 @@ import AsyncStorage from '@react-native-async-storage/async-storage';
 import valuesSlice from './valuesSlice';
 import buildingsSlice from './buildingsSlice';
 import upgradesSlice from './upgradesSlice';
+import bigEmojiSlice from './bigEmojiSlice';
 
 // Combine reducers
 const rootReducer = combineReducers({
     values: valuesSlice,
     buildings: buildingsSlice,
     upgrades: upgradesSlice,
+    bigEmoji: bigEmojiSlice,
 });
 
 const persistConfig = {

@@ -1,5 +1,6 @@
 import { store } from '../redux/reduxStore';
 import { updateEmojis } from '../redux/valuesSlice';
+import { updateEmojisPerTap } from '../redux/bigEmojiSlice';
 import faces from '../../assets/emojis/faces.json';
 import symbols from '../../assets/emojis/symbols.json';
 import people from '../../assets/emojis/people.json';
@@ -13,8 +14,27 @@ import vehicles from '../../assets/emojis/vehicles.json';
 import weather from '../../assets/emojis/weather.json';
 
 export function tapEmoji() {
-    store.dispatch(updateEmojis(store.getState().values.emojis + 1));
+    store.dispatch(updateEmojis(
+        store.getState().values.emojis + store.getState().bigEmoji.emojisPerTap
+    ));
 }
+
+export function calculateEpt() {
+    // Base emojis per tap
+    const baseEmojisPerTap = store.getState().bigEmoji.baseEmojisPerTap;
+    // Adds emojis to base per tap
+    const emojisPerTapAdd = store.getState().bigEmoji.eptAdd;
+    // Multiplies emojis per tap
+    const emojisPerTapMultiplier = store.getState().bigEmoji.eptMult;
+
+    let ept = (baseEmojisPerTap + emojisPerTapAdd) * emojisPerTapMultiplier
+
+    console.log(baseEmojisPerTap, emojisPerTapAdd, emojisPerTapMultiplier, ept)
+
+    store.dispatch(updateEmojisPerTap(ept));
+}
+
+calculateEpt()
 
 type effectTypes = "none" | "doubleGain"
 

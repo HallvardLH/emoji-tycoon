@@ -2,6 +2,7 @@ import { updateEmojis } from "../redux/valuesSlice";
 import { store } from '../redux/reduxStore';
 import { canBuyBuilding } from "./buildings";
 import { unlockUpgrades } from "./checks";
+import { calculateEpt } from "./bigEmoji";
 
 let lastUpdateTime = Date.now();
 let i = 0
@@ -18,6 +19,8 @@ export function gameLoop() {
         // unlockUpgrades();
     }
     i++
+
+    // calculateEpt()
 }
 
 export function giveEmojis(delta: number) {
