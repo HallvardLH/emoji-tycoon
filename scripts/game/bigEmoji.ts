@@ -1,6 +1,6 @@
 import { store } from '../redux/reduxStore';
 import { updateEmojis } from '../redux/valuesSlice';
-import { updateEmojisPerTap } from '../redux/bigEmojiSlice';
+import { updateNextEmoji, updateNextEffect, updateEmojisPerTap, updateEptMult, updateTimeSinceLastEffect } from '../redux/bigEmojiSlice';
 import faces from '../../assets/emojis/faces.json';
 import symbols from '../../assets/emojis/symbols.json';
 import people from '../../assets/emojis/people.json';
@@ -28,8 +28,6 @@ export function calculateEpt() {
     const emojisPerTapMultiplier = store.getState().bigEmoji.eptMult;
 
     let ept = (baseEmojisPerTap + emojisPerTapAdd) * emojisPerTapMultiplier
-
-    console.log(baseEmojisPerTap, emojisPerTapAdd, emojisPerTapMultiplier, ept)
 
     store.dispatch(updateEmojisPerTap(ept));
 }
@@ -74,7 +72,39 @@ const emojiData = {
     weather
 };
 
+// Randomly selects the next big emoji, with weighted probabilities for each emoji type
 export function pickNextEmoji() {
+    const nextEffect = store.getState().bigEmoji.nextEffect;
+    if (nextEffect != "none") {
+        giveEffect(nextEffect);
+    }
+    const effectEmojis = [
+        "🚀",
+        "💎",
+        "🌟",
+        // "⚡",
+        "🍀",
+        "💰",
+        // "📈",
+        "🏆"
+    ];
+    const lastEffect = store.getState().bigEmoji.timeSinceLastEffect;
+    console.log(lastEffect)
+    if (lastEffect >= 0) {
+        if (lastEffect / 100 - Math.random() > Math.random()) {
+            store.dispatch(
+                updateNextEmoji(effectEmojis[Math.floor(Math.random() * effectEmojis.length)])
+
+            );
+            store.dispatch(
+                updateNextEffect("double")
+            );
+
+            return
+        }
+    }
+
+
     // Generate cumulative weights
     let cumulativeWeights: number[] = [];
     let total = 0;
@@ -91,7 +121,39 @@ export function pickNextEmoji() {
             const type = emojiTypes[i];
             const emojis = emojiData[type as keyof typeof emojiData];
             const randomEmojiIndex = Math.floor(Math.random() * emojis.length);
-            return emojis[randomEmojiIndex]; // Return a random emoji from the selected type
+            // Set the next emoji
+            store.dispatch(updateNextEmoji(emojis[randomEmojiIndex]));
+            return
         }
     }
 }
+
+export function giveEffect(effect?: string) {
+    store.dispatch(updateTimeSinceLastEffect(0));
+    store.dispatch(updateNextEffect("none"));
+    switch (effect) {
+        case "double":
+            // Dispatch the initial effect to increment eptMult by 2
+            store.dispatch(updateEptMult(store.getState().bigEmoji.eptMult * 2));
+
+            calculateEpt();
+
+            // Retrieve the duration for which the effect should last
+            const effectDuration = store.getState().bigEmoji.effectDuration;
+
+            // Set a timeout to decrement the eptMult after the effect duration
+            setTimeout(() => {
+                if (store.getState().bigEmoji.eptMult > 1) {
+                    store.dispatch(updateEptMult(store.getState().bigEmoji.eptMult / 2));
+                }
+                calculateEpt();
+            }, effectDuration * 1000); // convert duration from seconds to milliseconds
+
+            break;
+
+        default:
+            // Handle other cases or do nothing if no valid effect is provided
+            console.log("No effect or unknown effect specified.");
+    }
+}
+

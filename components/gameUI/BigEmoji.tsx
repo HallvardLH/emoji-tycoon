@@ -21,7 +21,7 @@ interface AnimatedNumber {
 }
 
 export default function BigEmoji() {
-    const { bigEmoji, emojisPerTap } = useSelector((state: RootState) => state.bigEmoji);
+    const { bigEmoji, nextEmoji, emojisPerTap } = useSelector((state: RootState) => state.bigEmoji);
 
     // Necssary for using font
     useFonts({
@@ -31,14 +31,18 @@ export default function BigEmoji() {
     // State for the currently displayed static emoji
     const [staticEmoji, setStaticEmoji] = useState<string>(bigEmoji);
 
+    const [emojisPerTapDisplay, setEmojisPerTapDisplay] = useState<number>(emojisPerTap);
+
     // State to keep track of multiple animating emojis and numbers
     const [animatingEmojis, setAnimatingEmojis] = useState<AnimatedEmoji[]>([]);
     const [animatingNumbers, setAnimatingNumbers] = useState<AnimatedNumber[]>([]);
 
     const onEmojiTap = () => {
         const animatingEmoji = staticEmoji;
-        const nextEmoji = pickNextEmoji();
-        setStaticEmoji(nextEmoji as string);
+        pickNextEmoji();
+        console.log(nextEmoji)
+        setStaticEmoji(nextEmoji);
+        setEmojisPerTapDisplay(emojisPerTap);
 
         // Create new animated values for the animating emoji and number
         const newYAnimValue = new Animated.Value(0);
@@ -50,8 +54,8 @@ export default function BigEmoji() {
         const randomXToValueEmoji = Math.floor(Math.random() * 401) - 200;
 
         // Random movement for number
-        const randomYToValueNumber = -(Math.floor(Math.random() * 131) + 110); // Moves up between 50 and 150
-        const randomXToValueNumber = Math.floor(Math.random() * 201) - 100;
+        const randomYToValueNumber = -(Math.floor(Math.random() * 111) + 110);
+        const randomXToValueNumber = Math.floor(Math.random() * 101) - 50;
 
         // Generate a unique key for the animating emoji and number using the current timestamp
         const uniqueKey = `${nextEmoji}-${Date.now()}`;
@@ -65,7 +69,7 @@ export default function BigEmoji() {
         };
         const newAnimatingNumber = {
             key: `${uniqueKey}-num`,
-            number: `+${emojisPerTap}`,
+            number: `+${emojisPerTapDisplay}`,
             yAnimValue: numberYAnimValue,
             xAnimValue: numberXAnimValue,
         };

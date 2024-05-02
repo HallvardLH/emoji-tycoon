@@ -24,8 +24,6 @@ export function buyUpgrade(upgradeId: number) {
         // Recalculate eps
         calculateBuildingsEps();
 
-        console.log(store.getState().buildings.buildings[upgrade.building].upgrades)
-
     }
 }
 
@@ -58,5 +56,3 @@ export function getDisplayUpgrades(buildingName: string) {
 
     return upgradeArray
 }
-
-console.log(getDisplayUpgrades("Drawing hand"));
