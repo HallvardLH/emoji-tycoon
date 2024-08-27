@@ -3,6 +3,7 @@ import CircularButton from "../buttons/CircularButton";
 import Drawer from "../drawer/Drawer";
 import DrawerLink from "../drawer/DrawerLink";
 import ResetButton from "../gameUI/ResetButton";
+import Cheats from "../gameUI/Cheats";
 
 type DrawerRef = {
     openDrawer: () => void;
@@ -20,6 +21,7 @@ export default function HomeNavigation() {
                 side="left"
             >
                 <ResetButton onPress={() => navigationDrawerRef.current?.closeDrawer()} />
+                <Cheats />
                 <DrawerLink
                     text="Notifications"
                     linkTo="Notifications"

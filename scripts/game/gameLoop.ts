@@ -1,9 +1,10 @@
 import { updateEmojis } from "../redux/valuesSlice";
 import { store } from '../redux/reduxStore';
-import { canBuyBuilding } from "./buildings";
-import { unlockUpgrades } from "./checks";
-import { calculateEpt } from "./bigEmoji";
-import { updateTimeSinceLastEffect } from "../redux/bigEmojiSlice";
+import { canBuyBuilding, unlockBuilding } from "./buildings/checks";
+import { unlockUpgrades, } from "./checks";
+import { decrementEffects } from "./effects/effects";
+import { decrementEffectsOnScreen, spawnEffect } from "./effects/onScreenEffects";
+import { updateTimeSinceLastEffect } from "../redux/effectsSlice";
 
 let lastUpdateTime = Date.now();
 let i = 0
@@ -17,15 +18,17 @@ export function gameLoop() {
     // Runs once every 2.5 seconds
     if (i % 25 == 0) {
         canBuyBuilding();
+        unlockBuilding();
         // unlockUpgrades();
     }
     // Runs once every second
     if (i % 10 == 0) {
-        store.dispatch(updateTimeSinceLastEffect(store.getState().bigEmoji.timeSinceLastEffect + 1));
+        store.dispatch(updateTimeSinceLastEffect(store.getState().effects.timeSinceLastEffect + 1));
+        decrementEffects();
+        decrementEffectsOnScreen();
+        spawnEffect();
     }
     i++
-
-    // calculateEpt()
 }
 
 export function giveEmojis(delta: number) {

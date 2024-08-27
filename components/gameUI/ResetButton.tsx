@@ -3,6 +3,7 @@ import { resetValues } from '../../scripts/redux/valuesSlice';
 import { resetBuildings } from '../../scripts/redux/buildingsSlice';
 import { resetUpgrades } from '../../scripts/redux/upgradesSlice';
 import { resetBigEmoji } from '../../scripts/redux/bigEmojiSlice';
+import { resetEffects } from '../../scripts/redux/effectsSlice';
 import Button from '../buttons/Button';
 
 interface ResetButtonProps {
@@ -17,6 +18,7 @@ export default function ResetButton({ onPress }: ResetButtonProps) {
         dispatch(resetBuildings());
         dispatch(resetUpgrades());
         dispatch(resetBigEmoji());
+        dispatch(resetEffects());
     };
     return (
         <Button label="Reset game" onPress={() => {

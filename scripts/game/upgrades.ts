@@ -1,7 +1,8 @@
 import { buildingUpgrades } from "../data/upgradeData";
 import { store } from '../redux/reduxStore';
 import { unlockUpgrade, addUpgrade, clearNotifications } from "../redux/upgradesSlice";
-import { pluralNames, updateBuildingValue, calculateBuildingsEps } from "./buildings";
+import { pluralNames, calculateBuildingsEps } from "./buildings/buildings";
+import { updateBuildingValue } from "./buildings/shorthands";
 import { getBuilding } from "./shorthands";
 import { updateEmojis } from "../redux/valuesSlice";
 

@@ -5,7 +5,7 @@ import ContentBox from "../generalUI/ContentBox";
 import Emoji from "./Emoji";
 import { colors } from "../misc/Colors";
 import { useState } from "react";
-import { pluralNames } from "../../scripts/game/buildings";
+import { pluralNames } from "../../scripts/game/buildings/buildings";
 import DisplayUpgrades from "./DisplayUpgrades";
 
 interface BuildingListItemProps {

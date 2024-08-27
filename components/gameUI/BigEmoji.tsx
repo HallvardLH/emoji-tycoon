@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { StyleSheet, Pressable, Text, Animated, View, Easing } from 'react-native';
 import { useSelector } from 'react-redux';
 import { RootState } from '../../scripts/redux/reduxStore';
@@ -37,12 +37,15 @@ export default function BigEmoji() {
     const [animatingEmojis, setAnimatingEmojis] = useState<AnimatedEmoji[]>([]);
     const [animatingNumbers, setAnimatingNumbers] = useState<AnimatedNumber[]>([]);
 
+    useEffect(() => {
+        setEmojisPerTapDisplay(emojisPerTap);
+    }, [emojisPerTap]);
+
     const onEmojiTap = () => {
         const animatingEmoji = staticEmoji;
         pickNextEmoji();
-        console.log(nextEmoji)
         setStaticEmoji(nextEmoji);
-        setEmojisPerTapDisplay(emojisPerTap);
+        // setEmojisPerTapDisplay(emojisPerTap);
 
         // Create new animated values for the animating emoji and number
         const newYAnimValue = new Animated.Value(0);

@@ -1,14 +1,14 @@
-import { store } from '../redux/reduxStore';
-import { updateBuilding, BuildingProps } from '../redux/buildingsSlice';
-import { updateEps, updateEmojis } from '../redux/valuesSlice';
-import { buildingData } from '../data/buildingData';
-import { getBuilding } from './shorthands';
-import { unlockUpgrades } from './checks';
+import { store } from '../../redux/reduxStore';
+import { updateEps, updateEmojis } from '../../redux/valuesSlice';
+import { buildingData } from '../../data/buildingData';
+import { getBuilding } from '../shorthands';
+import { unlockUpgrades } from '../checks';
+import { updateBuildingValue } from './shorthands';
+import { canBuyBuilding } from './checks';
 
 type PluralNames = {
     [key: string]: string;
 }
-
 export const pluralNames: PluralNames = {
     "Drawing hand": "Drawing hands",
     "Graphic design studio": "Graphic design studios",
@@ -20,25 +20,16 @@ export const pluralNames: PluralNames = {
     "Flying saucer": "Flying saucers",
 }
 
-// A generic function to update properties of a building in the local state
-export const updateBuildingValue = (buildingName: string, key: keyof BuildingProps, value: number) => {
-    const buildings = store.getState().buildings.buildings;
 
-    // Check if the building exists
-    if (buildings[buildingName]) {
-        // Dispatch an action to update the specified property with the new value
-        store.dispatch(updateBuilding({
-            buildingName: buildingName,
-            key: key,
-            value: value
-        }));
-    } else {
-        console.error("Building not found");
-    }
-};
-
+/**
+ * Buys a building, subtracting the price from the player's emojis
+ *
+ * Description. (use period)
+ *
+ * @param buildingName the name of the building.
+ * @param incrementBy the amount of buildings that will be bought (default is 1).
+ */
 export const buyBuilding = (buildingName: string, incrementBy: number = 1) => {
-
     const building = getBuilding(buildingName);
     const data = buildingData[building.buildingId];
     const currentAmount = building.amount;
@@ -62,7 +53,8 @@ export const buyBuilding = (buildingName: string, incrementBy: number = 1) => {
             // Recalculate eps
             calculateBuildingsEps();
 
-            // Update buy button right away
+            // This function is reguarly run at an interval, but running it immediatley eliminates potential lag in updating the front end
+            // Determines if buy button should be visually disabled or enabled
             canBuyBuilding();
 
             // Check if upgrades should be unlocked
@@ -91,10 +83,4 @@ export const calculateBuildingsEps = () => {
     store.dispatch(updateEps(totalEps));
 };
 
-export const canBuyBuilding = () => {
-    const buildings = store.getState().buildings.buildings;
-    const emojis = store.getState().values.emojis;
-    Object.keys(buildings).forEach(buildingName => {
-        updateBuildingValue(buildingName, "canBuy", emojis >= buildings[buildingName].price);
-    });
-}
+

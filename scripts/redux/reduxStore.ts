@@ -6,6 +6,7 @@ import valuesSlice from './valuesSlice';
 import buildingsSlice from './buildingsSlice';
 import upgradesSlice from './upgradesSlice';
 import bigEmojiSlice from './bigEmojiSlice';
+import effectsSlice from './effectsSlice';
 
 // Combine reducers
 const rootReducer = combineReducers({
@@ -13,6 +14,7 @@ const rootReducer = combineReducers({
     buildings: buildingsSlice,
     upgrades: upgradesSlice,
     bigEmoji: bigEmojiSlice,
+    effects: effectsSlice,
 });
 
 const persistConfig = {
