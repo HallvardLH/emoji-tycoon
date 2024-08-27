@@ -1,9 +1,9 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
 import { RootState } from '../../scripts/redux/reduxStore';
-import { buildingUpgrades } from '../../scripts/data/upgradeData';
+import { buildingUpgrades } from '../../scripts/game/upgrades/upgradeData';
 import UpgradeListItem from './UpgradeListItem';
-import { getEffectText, buyUpgrade } from '../../scripts/game/upgrades';
+import { getEffectText, buyUpgrade } from '../../scripts/game/upgrades/upgrades';
 
 export default function UpgradesList() {
     const { unlocked } = useSelector((state: RootState) => state.upgrades);

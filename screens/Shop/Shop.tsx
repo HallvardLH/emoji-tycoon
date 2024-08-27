@@ -8,7 +8,7 @@ import Buildings from "./Buildings";
 import Upgrades from "./Upgrades";
 import { useSelector } from 'react-redux';
 import { RootState } from '../../scripts/redux/reduxStore';
-import { clearUpgradeNotifications } from "../../scripts/game/upgrades";
+import { clearUpgradeNotifications } from "../../scripts/game/upgrades/upgrades";
 
 interface ShopProps {
     navigation: {

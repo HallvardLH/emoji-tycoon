@@ -1,7 +1,7 @@
 import { updateEmojis } from "../redux/valuesSlice";
 import { store } from '../redux/reduxStore';
 import { canBuyBuilding, unlockBuilding } from "./buildings/checks";
-import { unlockUpgrades, } from "./checks";
+import { unlockUpgrades } from "./upgrades/checks";
 import { decrementEffects } from "./effects/effects";
 import { decrementEffectsOnScreen, spawnEffect } from "./effects/onScreenEffects";
 import { updateTimeSinceLastEffect } from "../redux/effectsSlice";

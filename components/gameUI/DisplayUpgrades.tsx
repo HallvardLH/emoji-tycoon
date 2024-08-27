@@ -1,5 +1,5 @@
 import Emoji from "./Emoji";
-import { getDisplayUpgrades } from "../../scripts/game/upgrades";
+import { getDisplayUpgrades } from "../../scripts/game/upgrades/upgrades";
 import { View } from "react-native";
 
 interface DisplayUpgradesProps {

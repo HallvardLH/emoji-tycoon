@@ -1,4 +1,4 @@
-import { getBaseBuildingPrice } from "./buildingData"
+import { getBaseBuildingPrice } from "../buildings/buildingData"
 
 function getUpgradePrice(tier: number, buildingId: number) {
 

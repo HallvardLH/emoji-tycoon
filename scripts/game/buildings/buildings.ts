@@ -1,8 +1,8 @@
 import { store } from '../../redux/reduxStore';
 import { updateEps, updateEmojis } from '../../redux/valuesSlice';
-import { buildingData } from '../../data/buildingData';
+import { buildingData } from './buildingData';
 import { getBuilding } from '../shorthands';
-import { unlockUpgrades } from '../checks';
+import { unlockUpgrades } from '../upgrades/checks';
 import { updateBuildingValue } from './shorthands';
 import { canBuyBuilding } from './checks';
 
@@ -19,7 +19,6 @@ export const pluralNames: PluralNames = {
     "Emoji assembly": "Emoji assemblies",
     "Flying saucer": "Flying saucers",
 }
-
 
 /**
  * Buys a building, subtracting the price from the player's emojis

@@ -45,7 +45,7 @@ export function decrementEffectsOnScreen() {
 }
 
 /**
- * Attempts to spawn an effect
+ * Attempts to spawn an effect emoji
  *
  * Based on the time since last effect was given (tapped by the player), a random check is done,
  * where time since last effect / 100 - a random number between 0 and 1 is put against 0.5.

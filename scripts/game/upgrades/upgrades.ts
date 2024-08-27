@@ -1,10 +1,10 @@
-import { buildingUpgrades } from "../data/upgradeData";
-import { store } from '../redux/reduxStore';
-import { unlockUpgrade, addUpgrade, clearNotifications } from "../redux/upgradesSlice";
-import { pluralNames, calculateBuildingsEps } from "./buildings/buildings";
-import { updateBuildingValue } from "./buildings/shorthands";
-import { getBuilding } from "./shorthands";
-import { updateEmojis } from "../redux/valuesSlice";
+import { buildingUpgrades } from "./upgradeData";
+import { store } from '../../redux/reduxStore';
+import { unlockUpgrade, addUpgrade, clearNotifications } from "../../redux/upgradesSlice";
+import { pluralNames, calculateBuildingsEps } from "../buildings/buildings";
+import { updateBuildingValue } from "../buildings/shorthands";
+import { getBuilding } from "../shorthands";
+import { updateEmojis } from "../../redux/valuesSlice";
 
 export function clearUpgradeNotifications() {
     store.dispatch(clearNotifications());
@@ -24,7 +24,6 @@ export function buyUpgrade(upgradeId: number) {
 
         // Recalculate eps
         calculateBuildingsEps();
-
     }
 }
 
@@ -35,11 +34,9 @@ export function getEffectText(upgradeId: number) {
     } else {
         return ""
     }
-
 }
 
 export function getDisplayUpgrades(buildingName: string) {
-
     let upgradeArray: string[] = [];
     let i = 0;
     const ownedUpgrades = store.getState().upgrades.owned;

@@ -1,5 +1,5 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
-import { buildingData } from '../data/buildingData';
+import { buildingData } from '../game/buildings/buildingData';
 
 export interface BuildingProps {
     buildingId: number;

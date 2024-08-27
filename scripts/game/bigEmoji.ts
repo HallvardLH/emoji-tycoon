@@ -22,12 +22,6 @@ export function tapEmoji() {
 
 calculateEpt();
 
-type effectTypes = "none" | "doubleGain";
-
-export function getEffect(effect: effectTypes) {
-
-}
-
 interface EmojiWeights {
     [key: string]: number;
 }
@@ -84,6 +78,3 @@ export function pickNextEmoji() {
         }
     }
 }
-
-
-
