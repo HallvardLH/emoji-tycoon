@@ -1,6 +1,7 @@
 import { store } from '../redux/reduxStore';
 import { updateEmojis } from '../redux/valuesSlice';
-import { updateNextEmoji } from '../redux/bigEmojiSlice';
+import { updateBigEmoji, updateNextEmoji } from '../redux/bigEmojiSlice';
+import { addToCollection, CollectionState } from '../redux/collectionSlice';
 import { calculateEpt } from './checks';
 import faces from '../../assets/emojis/faces.json';
 import symbols from '../../assets/emojis/symbols.json';
@@ -18,6 +19,19 @@ export function tapEmoji() {
     store.dispatch(updateEmojis(
         store.getState().values.emojis + store.getState().bigEmoji.emojisPerTap
     ));
+
+    const currentEmoji = store.getState().bigEmoji.bigEmoji;
+    store.dispatch(addToCollection({
+        category: currentEmoji.category as keyof CollectionState,
+        id: currentEmoji.id,
+    }));
+
+    const nextEmoji = store.getState().bigEmoji.nextEmoji;
+    store.dispatch(updateBigEmoji({
+        emoji: nextEmoji.emoji,
+        category: nextEmoji.category,
+        id: nextEmoji.id,
+    }));
 }
 
 calculateEpt();
@@ -54,27 +68,35 @@ const emojiData = {
     weather
 };
 
-// Randomly selects the next big emoji, with weighted probabilities for each emoji type
+/**
+ * Randomly selects the next big emoji, with weighted probabilities for each emoji type
+ *
+ * Description. (use period)
+ *
+ */
 export function pickNextEmoji() {
-    // Generate cumulative weights
-    let cumulativeWeights: number[] = [];
-    let total = 0;
-    const emojiTypes = Object.keys(emojiWeights); // Extract keys to an array
-    emojiTypes.forEach(type => {
-        total += emojiWeights[type];
-        cumulativeWeights.push(total);
-    });
+    const emojiCategories = Object.keys(emojiWeights);
 
-    // Random selection based on cumulative weights
-    let randomNum = Math.random() * total;
-    for (let i = 0; i < cumulativeWeights.length; i++) {
-        if (randomNum < cumulativeWeights[i]) {
-            const type = emojiTypes[i];
-            const emojis = emojiData[type as keyof typeof emojiData];
+    // Calculate the total weight
+    const totalWeight = emojiCategories.reduce((total, category) => total + emojiWeights[category], 0);
+
+    // Generate a random number up to the total weight
+    let randomNum = Math.random() * totalWeight;
+
+    // Find the emoji type corresponding to the random number
+    for (const category of emojiCategories) {
+        // Check if the random number falls within the current category's weight
+        if (randomNum < emojiWeights[category]) {
+            const emojis = emojiData[category as keyof typeof emojiData];
+            // Randomly select an emoji from the chosen category
             const randomEmojiIndex = Math.floor(Math.random() * emojis.length);
-            // Set the next emoji
-            store.dispatch(updateNextEmoji(emojis[randomEmojiIndex]));
-            return
+            store.dispatch(updateNextEmoji({
+                emoji: emojis[randomEmojiIndex],
+                category: category,
+                id: randomEmojiIndex,
+            }))
+            return emojis[randomEmojiIndex] as string;
         }
+        randomNum -= emojiWeights[category];  // Decrease randomNum by the current weight
     }
 }

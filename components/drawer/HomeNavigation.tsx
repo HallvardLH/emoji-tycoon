@@ -1,9 +1,9 @@
 import { useRef } from "react";
 import CircularButton from "../buttons/CircularButton";
-import Drawer from "../drawer/Drawer";
-import DrawerLink from "../drawer/DrawerLink";
-import ResetButton from "../gameUI/ResetButton";
-import Cheats from "../gameUI/Cheats";
+import Drawer from "./Drawer";
+import DrawerLink from "./DrawerLink";
+import ResetButton from "./ResetButton";
+import Cheats from "./Cheats";
 
 type DrawerRef = {
     openDrawer: () => void;

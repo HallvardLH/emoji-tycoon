@@ -1,4 +1,4 @@
-import { ReactNode, useRef, useEffect } from "react";
+import React, { ReactNode, useRef, useEffect } from "react";
 import { Animated } from "react-native";
 
 interface PulseAnimationProps {
@@ -8,11 +8,11 @@ interface PulseAnimationProps {
     maxSize?: number;
 }
 
-export default function PulseAnimation({ children, duration = 4000, minSize = 1, maxSize = 1.075 }: PulseAnimationProps) {
+const PulseAnimation = React.memo(({ children, duration = 4000, minSize = 1, maxSize = 1.075 }: PulseAnimationProps) => {
     const pulseAnim = useRef(new Animated.Value(minSize)).current;
 
     useEffect(() => {
-        Animated.loop(
+        const pulseAnimation = Animated.loop(
             Animated.sequence([
                 Animated.timing(pulseAnim, {
                     toValue: maxSize,
@@ -25,12 +25,18 @@ export default function PulseAnimation({ children, duration = 4000, minSize = 1,
                     useNativeDriver: true,
                 })
             ])
-        ).start();
-    }, [pulseAnim]);
+        );
+        pulseAnimation.start();
+
+        // Cleanup on unmount
+        return () => pulseAnimation.stop();
+    }, [minSize, maxSize, duration]);
 
     return (
         <Animated.View style={[{ transform: [{ scale: pulseAnim }] }, { alignItems: "center", justifyContent: "center" }]}>
             {children}
         </Animated.View>
-    )
-}
+    );
+});
+
+export default PulseAnimation;

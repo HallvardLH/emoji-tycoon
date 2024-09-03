@@ -1,21 +1,6 @@
 import { Dimensions } from "react-native";
 import { effectData } from "./effectData";
-
-export type EffectTypes = "tap";
-
-export interface Effect {
-    title: string;
-    description: string;
-    emoji: string;
-    eptMult: number;
-    eptAdd: number;
-    timeLeft: number;
-    timeLeftOnScreen: number;
-    id: number;
-    xPos: number;
-    yPos: number;
-    type: EffectTypes;
-}
+import { Effect } from "./effectType";
 
 /**
  * Creates an effect
@@ -29,21 +14,25 @@ export function createEffect() {
     const margin = 0;
 
     // Generate random positions with a margin
+    // TODO: Make this work properly
     const xPos = Math.random() * (Dimensions.get("window").width - 2 * margin) + margin;
     const yPos = Math.random() * (Dimensions.get("window").height - 2 * margin) + margin;
 
+    // const chosenEffect = effectData[Math.floor(Math.random() * 3)];
+    const chosenEffect = effectData[2];
     const effect: Effect = {
-        title: effectData[0].title,
-        description: effectData[0].description,
-        emoji: effectData[0].emoji,
-        eptMult: effectData[0].eptMult ? effectData[0].eptMult : 0,
-        eptAdd: effectData[0].eptAdd ? effectData[0].eptAdd : 0,
-        timeLeft: effectData[0].timeLeft,
-        timeLeftOnScreen: effectData[0].timeLeftOnScreen,
+        title: chosenEffect.title,
+        description: chosenEffect.description,
+        emoji: chosenEffect.emoji,
+        eptMult: chosenEffect.eptMult,
+        eptAdd: chosenEffect.eptAdd,
+        epsMult: chosenEffect.epsMult,
+        timeLeft: chosenEffect.timeLeft,
+        timeLeftOnScreen: chosenEffect.timeLeftOnScreen,
         id: Date.now(),
         xPos: xPos,
         yPos: yPos,
-        type: effectData[0].type
+        type: chosenEffect.type
     }
 
     return effect

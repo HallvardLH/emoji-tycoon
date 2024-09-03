@@ -18,7 +18,7 @@ export function tapEffect(id: number) {
     store.dispatch(addEffect(newEffect!));
 
     // Adds the values of the effect, giving the player their boost
-    addEffectValues(newEffect.type, newEffect.eptMult, newEffect.eptAdd!)
+    addEffectValues(newEffect.type, newEffect.eptMult, newEffect.eptAdd, newEffect.epsMult);
     // Removes the effect from the onScreen array
     store.dispatch(removeEffectOnScreen(id));
 
@@ -54,10 +54,10 @@ export function decrementEffectsOnScreen() {
  * @param guaranteed can be passed to bypass the chance check.
  */
 export function spawnEffect(guaranteed?: boolean) {
-    const lastEffect = store.getState().effects.timeSinceLastEffect;
-    if (lastEffect >= 0) {
+    const timeSinceLastEffect = store.getState().effects.timeSinceLastEffect;
+    if (timeSinceLastEffect >= 0) {
         // Increasing chance each second, with a guaranteed spawn at 150 seconds
-        const chance = lastEffect / 100 - Math.random();
+        const chance = timeSinceLastEffect / 100 - Math.random();
         const threshold = 0.5;
         if (chance > threshold || guaranteed) {
             store.dispatch(addEffectOnScreen(createEffect()));

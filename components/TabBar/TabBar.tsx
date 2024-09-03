@@ -48,14 +48,14 @@ export default function TabBar(props: TabBarProps) {
                 highlight={componentColors.tabBar.profile.highlight}
             />
             <TabButton
-                onPress={() => navigation.navigate("Upgrades")}
-                label="Upgrades"
-                icon="⬆️"
+                onPress={() => navigation.navigate("Collection")}
+                label="Emojidex"
+                icon="📖"
                 background={componentColors.tabBar.browse.background}
                 highlight={componentColors.tabBar.browse.highlight}
             />
             <TabButton
-                onPress={() => navigation.navigate("Profile")}
+                onPress={() => navigation.navigate("Settings")}
                 label="Settings"
                 icon="⚙️"
                 background={componentColors.tabBar.home.background}

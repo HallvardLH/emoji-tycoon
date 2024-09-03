@@ -1,8 +1,8 @@
-import ScreenView from "../components/layout/ScreenView";
+import ScreenView from "../../components/layout/ScreenView";
 import React from 'react';
-import BigEmoji from "../components/gameUI/BigEmoji";
-import EffectBanner from "../components/gameUI/EffectBanner";
-import EffectPopup from "../components/gameUI/EffectPopup";
+import BigEmoji from "../../components/gameUI/BigEmoji";
+import EffectBanner from "../../components/gameUI/EffectBanner";
+import EffectPopup from "../../components/gameUI/EffectPopup";
 
 interface HomeProps {
     navigation: {

@@ -1,10 +1,11 @@
 import React, { useState, useEffect } from 'react';
-import { StyleSheet, Pressable, Text, Animated, View, Easing } from 'react-native';
+import { StyleSheet, Pressable, Text, Animated, View, Easing, Platform } from 'react-native';
 import { useSelector } from 'react-redux';
 import { RootState } from '../../scripts/redux/reduxStore';
 import { tapEmoji, pickNextEmoji } from '../../scripts/game/bigEmoji';
 import PulseAnimation from '../animations/PulseAnimation';
 import { useFonts } from "expo-font";
+import { useCallback } from 'react';
 
 interface AnimatedEmoji {
     key: string;
@@ -20,6 +21,9 @@ interface AnimatedNumber {
     xAnimValue: Animated.Value;
 }
 
+
+let i = 0;
+
 export default function BigEmoji() {
     const { bigEmoji, nextEmoji, emojisPerTap } = useSelector((state: RootState) => state.bigEmoji);
 
@@ -29,7 +33,11 @@ export default function BigEmoji() {
     });
 
     // State for the currently displayed static emoji
-    const [staticEmoji, setStaticEmoji] = useState<string>(bigEmoji);
+    const [staticEmoji, setStaticEmoji] = useState<string>(bigEmoji.emoji);
+
+    // useEffect(() => {
+    //     setStaticEmoji(bigEmoji.emoji);
+    // }, [bigEmoji.emoji]);
 
     const [emojisPerTapDisplay, setEmojisPerTapDisplay] = useState<number>(emojisPerTap);
 
@@ -41,11 +49,13 @@ export default function BigEmoji() {
         setEmojisPerTapDisplay(emojisPerTap);
     }, [emojisPerTap]);
 
-    const onEmojiTap = () => {
+    console.log(i)
+    i++
+
+    const onEmojiTap = useCallback(() => {
         const animatingEmoji = staticEmoji;
-        pickNextEmoji();
-        setStaticEmoji(nextEmoji);
-        // setEmojisPerTapDisplay(emojisPerTap);
+        const nextPickedEmoji = pickNextEmoji();
+        setStaticEmoji(nextPickedEmoji as string);
 
         // Create new animated values for the animating emoji and number
         const newYAnimValue = new Animated.Value(0);
@@ -64,20 +74,19 @@ export default function BigEmoji() {
         const uniqueKey = `${nextEmoji}-${Date.now()}`;
 
         // Add the animating emoji and number to the state
-        const newAnimatingEmoji = {
+        setAnimatingEmojis(current => [...current, {
             key: uniqueKey,
             emoji: animatingEmoji,
             yAnimValue: newYAnimValue,
             xAnimValue: newXAnimValue,
-        };
-        const newAnimatingNumber = {
+        }]);
+
+        setAnimatingNumbers(current => [...current, {
             key: `${uniqueKey}-num`,
             number: `+${emojisPerTapDisplay}`,
             yAnimValue: numberYAnimValue,
             xAnimValue: numberXAnimValue,
-        };
-        setAnimatingEmojis(current => [...current, newAnimatingEmoji]);
-        setAnimatingNumbers(current => [...current, newAnimatingNumber]);
+        }]);
 
         Animated.parallel([
             // Emoji animations
@@ -117,9 +126,9 @@ export default function BigEmoji() {
             setAnimatingNumbers(current => current.filter(item => item.key !== `${uniqueKey}-num`));
         });
 
-
         tapEmoji();
-    };
+    }, [staticEmoji, emojisPerTapDisplay, nextEmoji]);
+
 
     return (
         <Pressable onPress={onEmojiTap} style={styles.container}>
@@ -177,7 +186,7 @@ const styles = StyleSheet.create({
         height: 100,
     },
     bigEmoji: {
-        fontSize: 150,
+        fontSize: Platform.OS == "android" ? 150 : 200,
         position: 'absolute',
     },
     number: {

@@ -1,21 +1,14 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
-import { Effect } from '../game/effects/createEffect';
+import { Effect } from '../game/effects/effectType';
 
 interface EffectsState {
-    nextEffect: string;
-    eptMult: number;
-    eptAdd: number;
     timeSinceLastEffect: number;
     effectDuration: number;
-
     effects: Effect[];
     effectsOnScreen: Effect[];
 }
 
 const initialState: EffectsState = {
-    nextEffect: "none",
-    eptMult: 1,
-    eptAdd: 0,
     timeSinceLastEffect: 0,
     effectDuration: 10,
     effects: [],
@@ -26,12 +19,6 @@ export const effectsSlice = createSlice({
     name: "effects",
     initialState,
     reducers: {
-        updateNextEffect: (state, action: PayloadAction<string>) => {
-            state.nextEffect = action.payload;
-        },
-        updateEptMult: (state, action: PayloadAction<number>) => {
-            state.eptMult = action.payload;
-        },
         updateEffectDuration: (state, action: PayloadAction<number>) => {
             state.effectDuration = action.payload;
         },
@@ -73,6 +60,16 @@ export const effectsSlice = createSlice({
     },
 });
 
-export const { updateNextEffect, updateEptMult, updateEffectDuration, updateTimeSinceLastEffect, removeEffect, addEffect, updateTimeLeft, removeEffectOnScreen, addEffectOnScreen, updateTimeLeftOnScreen, resetEffects } = effectsSlice.actions;
+export const {
+    updateEffectDuration,
+    updateTimeSinceLastEffect,
+    removeEffect,
+    addEffect,
+    updateTimeLeft,
+    removeEffectOnScreen,
+    addEffectOnScreen,
+    updateTimeLeftOnScreen,
+    resetEffects
+} = effectsSlice.actions;
 
 export default effectsSlice.reducer;

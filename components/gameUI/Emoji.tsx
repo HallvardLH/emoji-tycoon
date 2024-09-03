@@ -1,4 +1,4 @@
-import { Text } from "react-native";
+import { Text, Platform } from "react-native";
 
 interface EmojiProps {
     icon: string;
@@ -8,7 +8,7 @@ interface EmojiProps {
 export default function Emoji(props: EmojiProps) {
     const {
         icon,
-        size = 40
+        size = Platform.OS == "android" ? 40 : 40
     } = props;
 
     return (

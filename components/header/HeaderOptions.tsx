@@ -3,7 +3,7 @@ import HeaderCenter from "./HeaderCenter";
 import CircularButton from "../buttons/CircularButton";
 import { NavigationProp, RouteProp } from '@react-navigation/native';
 import { StackParamsList } from "../../screens/AppNavigationStack";
-import HomeNavigation from "./HomeNavigation";
+import HomeNavigation from "../drawer/HomeNavigation";
 
 type HeaderOptionsProps = {
     navigation: NavigationProp<StackParamsList>;
