@@ -1,15 +1,15 @@
 import { createStackNavigator } from "@react-navigation/stack";
 import HeaderOptions from "../components/header/HeaderOptions";
 import Home from "./Home/Home";
-import Shop from "./Shop/Shop";
-import Collection from "./Collection/Collection";
-import Settings from "./Settings/Settings";
+import Buildings from "./Buildings/Buildings";
+import Emojidex from "./Emojidex/Emojidex";
+import Upgrades from "./Upgrades/Upgrades";
 
 export type StackParamsList = {
-    Home: undefined;
-    Shop: undefined;
-    Collection: undefined;
-    Settings: undefined;
+    Emoji: undefined;
+    Buildings: undefined;
+    Upgrades: undefined;
+    Emojidex: undefined;
 }
 
 const Stack = createStackNavigator<StackParamsList>();
@@ -17,25 +17,25 @@ const Stack = createStackNavigator<StackParamsList>();
 export default function AppNavigationStack() {
 
     return (
-        <Stack.Navigator initialRouteName="Home">
+        <Stack.Navigator initialRouteName="Emoji">
             <Stack.Screen
-                name="Home"
+                name="Emoji"
                 component={Home}
                 options={({ navigation, route }) => HeaderOptions({ navigation, route })}
             />
             <Stack.Screen
-                name="Shop"
-                component={Shop}
+                name="Buildings"
+                component={Buildings}
                 options={({ navigation, route }) => HeaderOptions({ navigation, route })}
             />
             <Stack.Screen
-                name="Collection"
-                component={Collection}
+                name="Emojidex"
+                component={Emojidex}
                 options={({ navigation, route }) => HeaderOptions({ navigation, route })}
             />
             <Stack.Screen
-                name="Settings"
-                component={Settings}
+                name="Upgrades"
+                component={Upgrades}
                 options={({ navigation, route }) => HeaderOptions({ navigation, route })}
             />
         </Stack.Navigator>

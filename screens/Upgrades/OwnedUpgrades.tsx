@@ -1,12 +1,12 @@
 import ScrollToTopView from "../../components/layout/ScrollToTopView";
 import { View } from "react-native";
-import BuildingsList from "../../components/gameUI/Buildings/BuildingsList";
+import UpgradesList from "../../components/gameUI/Upgrades/UpgradesList";
 
-export default function Buildings() {
+export default function OwnedUpgrades() {
     return (
         <View style={{ width: "100%" }}>
             <ScrollToTopView scrollToTopThreshold={Infinity}>
-                <BuildingsList />
+                {/* <UpgradesList /> */}
             </ScrollToTopView>
         </View>
     )

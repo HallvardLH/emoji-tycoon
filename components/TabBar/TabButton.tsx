@@ -2,26 +2,28 @@ import { View, TouchableOpacity, StyleSheet, Image, Text as RNText } from "react
 import Text from "../generalUI/Text";
 import Shadow from "../misc/Shadow";
 import { componentColors } from "../misc/Colors";
+import Emoji from "../gameUI/Emoji";
 
 interface TabButtonProps {
     label: string;
+    labelColor?: string;
     background: string;
     highlight: string;
     onPress?: () => void;
     icon: string;
 }
 
-const width = 70;
+const width = 74;
 const borderWidth = 3;
 const shadowWidth = width + borderWidth * 2;
 
-const innerButtonHeight = 64;
+const innerButtonHeight = 68;
 const backgroundHeight = innerButtonHeight + 12;
 
 const borderRadius = 15;
 
 export default function TabButton(props: TabButtonProps) {
-    const { label, background, highlight, onPress, icon } = props;
+    const { label, labelColor, background, highlight, onPress, icon } = props;
     return (
         <TouchableOpacity onPress={onPress}>
             <Shadow width={shadowWidth} height={backgroundHeight} shadowHeight={4} borderRadius={borderRadius} />
@@ -29,8 +31,8 @@ export default function TabButton(props: TabButtonProps) {
                 <View style={[styles.background, { backgroundColor: highlight }]} />
                 <View style={[styles.outerButtonContainer, { backgroundColor: background }]}>
                     <View style={styles.innerButtonContainer}>
-                        <RNText style={{ fontSize: 26 }}>{icon}</RNText>
-                        <Text size={14} style={{ textAlign: "center" }}>{label}</Text>
+                        <Emoji size={32} icon={icon} />
+                        <Text size={14} color={labelColor} style={{ textAlign: "center" }}>{label}</Text>
                     </View>
                 </View>
             </View>
@@ -62,7 +64,7 @@ const styles = StyleSheet.create({
 
     innerButtonContainer: {
         height: innerButtonHeight,
-        marginTop: 4,
+        marginTop: 0,
         alignItems: "center",
         justifyContent: "center",
     },
