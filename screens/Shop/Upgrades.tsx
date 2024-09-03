@@ -1,6 +1,6 @@
 import ScrollToTopView from "../../components/layout/ScrollToTopView";
 import { View } from "react-native";
-import UpgradesList from "../../components/gameUI/UpgradesList";
+import UpgradesList from "../../components/gameUI/Upgrades/UpgradesList";
 
 export default function Upgrades() {
     return (

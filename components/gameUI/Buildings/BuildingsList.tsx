@@ -1,10 +1,10 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
-import { RootState } from '../../scripts/redux/reduxStore';
+import { RootState } from '../../../scripts/redux/reduxStore';
 import BuildingListItem from './BuildingListItem';
-import { buildingData } from '../../scripts/game/buildings/buildingData';
-import { buyBuilding } from '../../scripts/game/buildings/buildings';
-import { formatNumber } from '../../scripts/misc';
+import { buildingData } from '../../../scripts/game/buildings/buildingData';
+import { buyBuilding } from '../../../scripts/game/buildings/buildings';
+import { formatNumber } from '../../../scripts/misc';
 
 export interface BuildingInfo {
     name: string,
@@ -19,7 +19,7 @@ export default function BuildingsList() {
     return (
         <>
             {buildingData.map((building: BuildingInfo) => {
-                // Match the building from Redux state to get the dynamic data, like amount
+                // Match the building from Redux state to get the dynamic data, such as amount
                 const dynamicData = buildings[building.name];
                 return (
                     <>

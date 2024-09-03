@@ -16,8 +16,24 @@ export const pluralNames: PluralNames = {
     "Kitchen": "Kitchens",
     "Factory": "Factories",
     "Bank": "Banks",
+    "Emoji theme park": "Emoji theme parks",
     "Emoji assembly": "Emoji assemblies",
     "Flying saucer": "Flying saucers",
+}
+
+type buildingName = {
+    [key: string]: string;
+}
+export const buildingEmojis: buildingName = {
+    "Drawing hand": "✍️",
+    "Graphic design studio": "🎨",
+    "Farm": "🌽",
+    "Kitchen": "🔪",
+    "Factory": "🏭",
+    "Bank": "🏦",
+    "Emoji theme park": "🎢",
+    "Emoji assembly": "🏛️",
+    "Flying saucer": "🛸",
 }
 
 /**

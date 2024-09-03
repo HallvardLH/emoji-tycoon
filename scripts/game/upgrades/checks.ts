@@ -1,6 +1,6 @@
 import { store } from "../../redux/reduxStore";
 import { getBuilding } from "../shorthands";
-import { buildingUpgrades } from "./upgradeData";
+import { buildingUpgrades } from "./buildingUpgradeData";
 import { unlockUpgrade } from "../../redux/upgradesSlice";
 
 type UnlockReq = {

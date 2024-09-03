@@ -1,6 +1,6 @@
 import ScreenView from "../../components/layout/ScreenView";
 import React from 'react';
-import BuildingsList from "../../components/gameUI/BuildingsList";
+import BuildingsList from "../../components/gameUI/Buildings/BuildingsList";
 import ScrollToTopView from "../../components/layout/ScrollToTopView";
 import { View } from "react-native";
 import ContentTab from "../../components/layout/ContentTab";

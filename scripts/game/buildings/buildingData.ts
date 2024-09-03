@@ -61,17 +61,24 @@ export const buildingData: BuildingData[] = [
         baseEps: getBaseEps(5),
     },
     {
+        name: "Emoji theme park",
+        icon: "🎢",
+        description: '"Welcome to EmojiLand: Where dreams and emotions come to life!"',
+        basePrice: getBaseBuildingPrice(6),
+        baseEps: getBaseEps(6),
+    },
+    {
         name: "Emoji assembly",
         icon: "🏛️",
         description: "Where emojis get together to decide how to make more emojis.",
-        basePrice: getBaseBuildingPrice(6),
-        baseEps: getBaseEps(6),
+        basePrice: getBaseBuildingPrice(7),
+        baseEps: getBaseEps(7),
     },
     {
         name: "Flying saucer",
         icon: "🛸",
         description: "Conquer new worlds and take their emojis.",
-        basePrice: getBaseBuildingPrice(7),
-        baseEps: getBaseEps(7),
+        basePrice: getBaseBuildingPrice(8),
+        baseEps: getBaseEps(8),
     },
 ];

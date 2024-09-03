@@ -1,12 +1,12 @@
 import { StyleSheet, View } from "react-native";
-import Text from "../generalUI/Text";
-import Button from "../buttons/Button";
-import ContentBox from "../generalUI/ContentBox";
-import Emoji from "./Emoji";
-import { colors } from "../misc/Colors";
+import Text from "../../generalUI/Text";
+import Button from "../../buttons/Button";
+import ContentBox from "../../generalUI/ContentBox";
+import Emoji from "../Emoji";
+import { colors } from "../../misc/Colors";
 import { useState } from "react";
-import { pluralNames } from "../../scripts/game/buildings/buildings";
-import DisplayUpgrades from "./DisplayUpgrades";
+import { pluralNames } from "../../../scripts/game/buildings/buildings";
+import DisplayUpgrades from "../DisplayUpgrades";
 
 interface BuildingListItemProps {
     name: string;
@@ -45,7 +45,8 @@ export default function BuildingListItem(props: BuildingListItemProps) {
                 </View>
                 <View style={listItemStyles.center}>
                     <Text shadow={false} color={colors.purple.dark} size={20}>{name}</Text>
-                    <Text style={{ letterSpacing: 0.1 }} shadow={false} color={colors.purple.medium} size={15}>{description}</Text>
+                    <Text style={{ letterSpacing: 0.5, marginVertical: -4 }} shadow={false} color={colors.blue.medium} size={14}>{baseEps} eps</Text>
+                    <Text style={{ letterSpacing: 0.05 }} shadow={false} color={colors.purple.medium} size={15}>{description}</Text>
                 </View>
                 <View style={listItemStyles.right}>
                     <Text style={{ lineHeight: 30 }} shadow={false} size={amount < 1000 ? 30 : 26} color={colors.purple.medium}>{amount}</Text>

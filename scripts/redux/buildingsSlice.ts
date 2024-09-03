@@ -71,7 +71,7 @@ const initialState: ValuesState = {
             upgrades: 0,
             unlocked: false,
         },
-        "Emoji assembly": {
+        "Emoji theme park": {
             buildingId: 6,
             amount: 0,
             canBuy: false,
@@ -80,12 +80,21 @@ const initialState: ValuesState = {
             upgrades: 0,
             unlocked: false,
         },
-        "Flying saucer": {
+        "Emoji assembly": {
             buildingId: 7,
             amount: 0,
             canBuy: false,
             price: buildingData[7].basePrice,
             eps: buildingData[7].baseEps,
+            upgrades: 0,
+            unlocked: false,
+        },
+        "Flying saucer": {
+            buildingId: 8,
+            amount: 0,
+            canBuy: false,
+            price: buildingData[8].basePrice,
+            eps: buildingData[8].baseEps,
             upgrades: 0,
             unlocked: false,
         },

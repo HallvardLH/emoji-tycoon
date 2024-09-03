@@ -1,6 +1,6 @@
 import ScrollToTopView from "../../components/layout/ScrollToTopView";
 import { View } from "react-native";
-import BuildingsList from "../../components/gameUI/BuildingsList";
+import BuildingsList from "../../components/gameUI/Buildings/BuildingsList";
 
 export default function Buildings() {
     return (

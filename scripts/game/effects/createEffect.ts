@@ -18,8 +18,8 @@ export function createEffect() {
     const xPos = Math.random() * (Dimensions.get("window").width - 2 * margin) + margin;
     const yPos = Math.random() * (Dimensions.get("window").height - 2 * margin) + margin;
 
-    // const chosenEffect = effectData[Math.floor(Math.random() * 3)];
-    const chosenEffect = effectData[2];
+    const chosenEffect = effectData[Math.floor(Math.random() * 3)];
+    // const chosenEffect = effectData[2];
     const effect: Effect = {
         title: chosenEffect.title,
         description: chosenEffect.description,
