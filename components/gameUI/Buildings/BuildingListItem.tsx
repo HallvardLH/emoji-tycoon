@@ -7,13 +7,14 @@ import { colors } from "../../misc/Colors";
 import { useState } from "react";
 import { pluralNames } from "../../../scripts/game/buildings/buildings";
 import DisplayUpgrades from "../DisplayUpgrades";
+import { formatNumber } from "../../../scripts/misc";
 
 interface BuildingListItemProps {
     name: string;
     icon: string;
     description: string;
     price: number | string;
-    baseEps: number | string;
+    baseEps: number;
     upgradeAmount: number;
     eps: number | string;
     amount: number;
@@ -45,7 +46,7 @@ export default function BuildingListItem(props: BuildingListItemProps) {
                 </View>
                 <View style={listItemStyles.center}>
                     <Text shadow={false} color={colors.purple.dark} size={20}>{name}</Text>
-                    <Text style={{ letterSpacing: 0.5, marginVertical: -4 }} shadow={false} color={colors.blue.medium} size={14}>{baseEps} eps</Text>
+                    <Text style={{ letterSpacing: 0.5, marginVertical: -4 }} shadow={false} color={colors.blue.medium} size={14}>{formatNumber(baseEps)} eps</Text>
                     <Text style={{ letterSpacing: 0.05 }} shadow={false} color={colors.purple.medium} size={15}>{description}</Text>
                 </View>
                 <View style={listItemStyles.right}>

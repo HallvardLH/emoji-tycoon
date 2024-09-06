@@ -9,9 +9,8 @@ export function calculateEpt() {
     const emojisPerTapAdd = store.getState().bigEmoji.eptAdd;
     // Multiplies emojis per tap
     let emojisPerTapMultiplier = store.getState().bigEmoji.eptMult;
-    if (emojisPerTapMultiplier == 0) { emojisPerTapMultiplier = 1 }
 
-    let ept = (baseEmojisPerTap + emojisPerTapAdd) * emojisPerTapMultiplier
+    let ept = (baseEmojisPerTap + emojisPerTapAdd) * Math.pow(2, emojisPerTapMultiplier)
 
     store.dispatch(updateEmojisPerTap(ept));
 }

@@ -7,6 +7,7 @@ export interface BuildingProps {
     canBuy: boolean;
     price: number;
     eps: number;
+    epsMultiplier: number;
     upgrades: number;
     unlocked: boolean;
 }
@@ -23,6 +24,7 @@ const initialState: ValuesState = {
             canBuy: false,
             price: buildingData[0].basePrice,
             eps: buildingData[0].baseEps,
+            epsMultiplier: 0,
             upgrades: 0,
             unlocked: true,
         },
@@ -32,6 +34,7 @@ const initialState: ValuesState = {
             canBuy: false,
             price: buildingData[1].basePrice,
             eps: buildingData[1].baseEps,
+            epsMultiplier: 0,
             upgrades: 0,
             unlocked: false,
         },
@@ -41,6 +44,7 @@ const initialState: ValuesState = {
             canBuy: false,
             price: buildingData[2].basePrice,
             eps: buildingData[2].baseEps,
+            epsMultiplier: 0,
             upgrades: 0,
             unlocked: false,
         },
@@ -50,6 +54,7 @@ const initialState: ValuesState = {
             canBuy: false,
             price: buildingData[3].basePrice,
             eps: buildingData[3].baseEps,
+            epsMultiplier: 0,
             upgrades: 0,
             unlocked: false,
         },
@@ -59,6 +64,7 @@ const initialState: ValuesState = {
             canBuy: false,
             price: buildingData[4].basePrice,
             eps: buildingData[4].baseEps,
+            epsMultiplier: 0,
             upgrades: 0,
             unlocked: false,
         },
@@ -68,6 +74,7 @@ const initialState: ValuesState = {
             canBuy: false,
             price: buildingData[5].basePrice,
             eps: buildingData[5].baseEps,
+            epsMultiplier: 0,
             upgrades: 0,
             unlocked: false,
         },
@@ -77,6 +84,7 @@ const initialState: ValuesState = {
             canBuy: false,
             price: buildingData[6].basePrice,
             eps: buildingData[6].baseEps,
+            epsMultiplier: 0,
             upgrades: 0,
             unlocked: false,
         },
@@ -86,6 +94,7 @@ const initialState: ValuesState = {
             canBuy: false,
             price: buildingData[7].basePrice,
             eps: buildingData[7].baseEps,
+            epsMultiplier: 0,
             upgrades: 0,
             unlocked: false,
         },
@@ -95,6 +104,7 @@ const initialState: ValuesState = {
             canBuy: false,
             price: buildingData[8].basePrice,
             eps: buildingData[8].baseEps,
+            epsMultiplier: 0,
             upgrades: 0,
             unlocked: false,
         },
@@ -119,6 +129,9 @@ export const buildingsSlice = createSlice({
                     case 'amount':
                     case 'price':
                     case 'eps':
+                        state.buildings[buildingName][key] = value as number;
+                        break;
+                    case 'epsMultiplier':
                         state.buildings[buildingName][key] = value as number;
                         break;
                     case 'canBuy':

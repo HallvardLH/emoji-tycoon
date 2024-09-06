@@ -49,7 +49,7 @@ export default function BigEmoji() {
         setEmojisPerTapDisplay(emojisPerTap);
     }, [emojisPerTap]);
 
-    console.log(i)
+    // console.log(i)
     i++
 
     const onEmojiTap = useCallback(() => {

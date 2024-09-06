@@ -83,12 +83,13 @@ export const buyBuilding = (buildingName: string, incrementBy: number = 1) => {
 
 export const calculateBuildingsEps = () => {
     const buildings = store.getState().buildings.buildings;
+    const upgrades = store.getState().upgrades.owned;
     let totalEps = 0;
     Object.keys(buildings).forEach(buildingName => {
         const building = buildings[buildingName];
         const baseEps = buildingData[building.buildingId].baseEps;
 
-        const eps = (baseEps * building.amount) * Math.pow(2, building.upgrades);
+        const eps = (baseEps * building.amount) * Math.pow(2, building.epsMultiplier);
 
         totalEps += eps;
 

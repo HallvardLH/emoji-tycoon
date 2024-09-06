@@ -55,6 +55,8 @@ export const componentColors = {
     mainBg: {
         start: "#A559FE",
         end: "#7053FD",
+        // start: colors.blue.light,
+        // end: "#0986b8",
     },
 
     button: { // The default color for all buttons if their color has not been specifically specified

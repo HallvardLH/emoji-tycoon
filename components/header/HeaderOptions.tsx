@@ -25,7 +25,7 @@ const HeaderOptions = ({ navigation, route }: HeaderOptionsProps) => ({
         const { onPress } = props;  // Extract default onPress
         return (
             <View style={{ marginLeft: 20 }}>
-                {route.name == "Home" ? (
+                {route.name == "Emoji" ? (
                     <HomeNavigation />
                 ) : (
                     <CircularButton variant="back" onPress={onPress} />

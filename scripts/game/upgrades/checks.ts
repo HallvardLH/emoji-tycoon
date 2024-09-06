@@ -10,9 +10,9 @@ type UnlockReq = {
 const unlockReq: UnlockReq = {
     0: 1,
     1: 10,
-    2: 50,
-    3: 100,
-    4: 200,
+    2: 25,
+    3: 50,
+    4: 100,
 }
 
 /**

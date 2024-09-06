@@ -15,7 +15,7 @@ export const effectData: Effect[] = [
     {
         title: "x2 tapping power",
         description: "Emojis per tap doubled!",
-        eptMult: 2,
+        eptMult: 1,
         eptAdd: 0,
         epsMult: 0,
         timeLeft: 10,
@@ -29,7 +29,7 @@ export const effectData: Effect[] = [
     {
         title: "x3 tapping power",
         description: "Emojis per tap tripled!",
-        eptMult: 3,
+        eptMult: 2,
         eptAdd: 0,
         epsMult: 0,
         timeLeft: 10,

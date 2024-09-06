@@ -1,49 +1,62 @@
 export function formatNumber(num: number) {
     const round = (num: number) => Math.round(num * 1000) / 1000;
 
+    const form: "compact" | "grouped" | "space" = "grouped"; // Set the form here
+
+    const formatWithSeparators = (n: number) => {
+        if (form === "grouped") {
+            return n.toLocaleString("en-US"); // Comma grouping
+        } else if (form === "space") {
+            return n.toLocaleString("en-US").replace(/,/g, " "); // Space grouping
+        } else {
+            return n.toString(); // Compact form, no separators
+        }
+    };
+
     if (num < 1e3) {
-        return round(num).toString();
+        return formatWithSeparators(round(num));
     } else if (num < 1e6) {
-        return round(num).toString();
+        return formatWithSeparators(round(num));
     } else if (num < 1e9) {
-        return round(num / 1e6) + " million";
+        return formatWithSeparators(round(num / 1e6)) + " million";
     } else if (num < 1e12) {
-        return round(num / 1e9) + " billion";
+        return formatWithSeparators(round(num / 1e9)) + " billion";
     } else if (num < 1e15) {
-        return round(num / 1e12) + " trillion";
+        return formatWithSeparators(round(num / 1e12)) + " trillion";
     } else if (num < 1e18) {
-        return round(num / 1e15) + " quadrillion";
+        return formatWithSeparators(round(num / 1e15)) + " quadrillion";
     } else if (num < 1e21) {
-        return round(num / 1e18) + " quintillion";
+        return formatWithSeparators(round(num / 1e18)) + " quintillion";
     } else if (num < 1e24) {
-        return round(num / 1e21) + " sextillion";
+        return formatWithSeparators(round(num / 1e21)) + " sextillion";
     } else if (num < 1e27) {
-        return round(num / 1e24) + " septillion";
+        return formatWithSeparators(round(num / 1e24)) + " septillion";
     } else if (num < 1e30) {
-        return round(num / 1e27) + " octillion";
+        return formatWithSeparators(round(num / 1e27)) + " octillion";
     } else if (num < 1e33) {
-        return round(num / 1e30) + " nonillion";
+        return formatWithSeparators(round(num / 1e30)) + " nonillion";
     } else if (num < 1e36) {
-        return round(num / 1e33) + " decillion";
+        return formatWithSeparators(round(num / 1e33)) + " decillion";
     } else if (num < 1e39) {
-        return round(num / 1e36) + " undecillion";
+        return formatWithSeparators(round(num / 1e36)) + " undecillion";
     } else if (num < 1e42) {
-        return round(num / 1e39) + " duodecillion";
+        return formatWithSeparators(round(num / 1e39)) + " duodecillion";
     } else if (num < 1e45) {
-        return round(num / 1e42) + " tredecillion";
+        return formatWithSeparators(round(num / 1e42)) + " tredecillion";
     } else if (num < 1e48) {
-        return round(num / 1e45) + " quattuordecillion";
+        return formatWithSeparators(round(num / 1e45)) + " quattuordecillion";
     } else if (num < 1e51) {
-        return round(num / 1e48) + " quindecillion";
+        return formatWithSeparators(round(num / 1e48)) + " quindecillion";
     } else if (num < 1e54) {
-        return round(num / 1e51) + " sexdecillion";
+        return formatWithSeparators(round(num / 1e51)) + " sexdecillion";
     } else if (num < 1e57) {
-        return round(num / 1e54) + " septendecillion";
+        return formatWithSeparators(round(num / 1e54)) + " septendecillion";
     } else if (num < 1e60) {
-        return round(num / 1e57) + " octodecillion";
+        return formatWithSeparators(round(num / 1e57)) + " octodecillion";
     } else if (num < 1e63) {
-        return round(num / 1e60) + " novemdecillion";
+        return formatWithSeparators(round(num / 1e60)) + " novemdecillion";
     } else {
-        return round(num / 1e63) + " vigintillion";
+        return formatWithSeparators(round(num / 1e63)) + " vigintillion";
     }
 }
+

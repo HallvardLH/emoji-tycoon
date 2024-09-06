@@ -47,7 +47,7 @@ export default function UpgradeListItem(props: UpgradeListItemProps) {
                 </View>
                 <View style={listItemStyles.center}>
                     <Text shadow={false} color={colors.yellow.highlight} size={20}>{name}</Text>
-                    <Text style={{ letterSpacing: 0.1 }} shadow={false} color={colors.yellow.highlight} size={15}>{effect}</Text>
+                    <Text style={{ letterSpacing: 0.1 }} shadow={false} color={colors.yellow.highlight} size={15}>{description}</Text>
                 </View>
                 <View style={listItemStyles.right}>
                     {/* <Text style={{ lineHeight: 30 }} shadow={false} size={amountFontSize} color={colors.purple.medium}>{amount}</Text> */}
@@ -59,15 +59,16 @@ export default function UpgradeListItem(props: UpgradeListItemProps) {
                 // gap: 10,
                 justifyContent: "space-between",
                 marginHorizontal: 10,
+                gap: 10
             }}>
                 <View style={{
                     flex: 1,
                     justifyContent: "center",
                 }}>
+                    <Text style={{ letterSpacing: 0.1 }} shadow={false} color={colors.purple.medium} size={15}>{effect}</Text>
                     <Text shadow={false} color={colors.purple.dark} size={15}>
                         <Text shadow={false} color={"gray"} size={15}>+{bonus}</Text> eps <Text shadow={false} color={"gray"} size={15}>+{bonusPercentage}</Text>
                     </Text>
-                    <Text style={{ letterSpacing: 0.1 }} shadow={false} color={colors.purple.medium} size={15}>{description}</Text>
                 </View>
                 <View style={{
                     flexBasis: 90,

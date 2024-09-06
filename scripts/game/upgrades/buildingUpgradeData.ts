@@ -5,6 +5,8 @@ function getUpgradePrice(tier: number, buildingId: number) {
     return Math.round((getBaseBuildingPrice(buildingId) / 2) * Math.pow(10, tier + 1))
 }
 
+export const BUILDING_UPGRADE_TIERS = [0, 1, 2, 3, 4];
+
 export const buildingUpgrades = [
     {
         building: "Drawing hand",
@@ -13,7 +15,7 @@ export const buildingUpgrades = [
         description: "A stronger arm makes for drawing emojis faster.",
         price: getUpgradePrice(0, 0),
         tier: 0,
-        effect: "2x building production",
+        effect: "2x building production and tap",
     },
     {
         building: "Drawing hand",
@@ -22,7 +24,7 @@ export const buildingUpgrades = [
         description: "Flexible fingers allow for more intricate emojis.",
         price: getUpgradePrice(1, 0),
         tier: 1,
-        effect: "2x building production",
+        effect: "2x building production and tap",
     },
     {
         building: "Drawing hand",
@@ -31,7 +33,7 @@ export const buildingUpgrades = [
         description: "Double the hands, double the emojis!",
         price: getUpgradePrice(2, 0),
         tier: 2,
-        effect: "2x building production",
+        effect: "2x building production and tap",
     },
     {
         building: "Drawing hand",
@@ -40,7 +42,7 @@ export const buildingUpgrades = [
         description: "Bionic arms to draw emojis super fast!",
         price: getUpgradePrice(3, 0),
         tier: 3,
-        effect: "2x building production",
+        effect: "2x building production and tap",
     },
     {
         building: "Drawing hand",
@@ -49,7 +51,7 @@ export const buildingUpgrades = [
         description: "With years of practice, you too can learn to draw with your tongue!",
         price: getUpgradePrice(4, 0),
         tier: 4,
-        effect: "2x building production",
+        effect: "2x building production and tap",
     },
     // Graphic design studio
     {
@@ -298,6 +300,7 @@ export const buildingUpgrades = [
         description: "Do you slide on all your nights like this? (I might)",
         price: getUpgradePrice(1, 6),
         tier: 1,
+        effect: "2x building production",
     },
     {
         building: "Emoji theme park",
@@ -343,6 +346,7 @@ export const buildingUpgrades = [
         description: "You get an emoji, and you, and you, everybody gets emojis!",
         price: getUpgradePrice(1, 7),
         tier: 1,
+        effect: "2x building production",
     },
     {
         building: "Emoji assembly",
