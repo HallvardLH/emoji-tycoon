@@ -1,3 +1,4 @@
+import React from "react";
 import { View, StyleSheet } from "react-native";
 import Emoji from "../Emoji";
 import ContentBox from "../../generalUI/ContentBox";
@@ -10,7 +11,7 @@ import { buildingEmojis } from "../../../scripts/game/buildings/buildings";
 
 interface UpgradeListItemProps {
     name: string;
-    buildingName: string;
+    buildingName: string | undefined;
     id: number;
     description: string;
     effect: string;
@@ -22,25 +23,26 @@ interface UpgradeListItemProps {
 
 export default function UpgradeListItem(props: UpgradeListItemProps) {
     const { name, buildingName, id, description, effect, price, icon, buttonActive, onPress } = props;
-    const bonus = getUpgradeBonus(id);
-    const bonusPercentage = getUpgradeBonus(id, true);
+    const [bonuses, bonusPercentages] = getUpgradeBonus(id);
     return (
         <ContentBox style={{ marginBottom: 32 }}>
-            <View style={{
-                position: "absolute",
-                top: -30,
-                left: 6,
-                backgroundColor: "white",
-                paddingVertical: 4,
-                paddingHorizontal: 14,
-                borderRadius: 20,
-                flexDirection: "row",
-                alignItems: "center",
-                gap: 16,
-            }}>
-                <Emoji size={24} icon={buildingEmojis[buildingName]} />
-                <Text shadow={false} color={colors.yellow.highlight} size={14}>{buildingName}</Text>
-            </View>
+            {buildingName && (
+                <View style={{
+                    position: "absolute",
+                    top: -30,
+                    left: 6,
+                    backgroundColor: "white",
+                    paddingVertical: 4,
+                    paddingHorizontal: 14,
+                    borderRadius: 20,
+                    flexDirection: "row",
+                    alignItems: "center",
+                    gap: 16,
+                }}>
+                    <Emoji size={24} icon={buildingEmojis[buildingName]} />
+                    <Text shadow={false} color={colors.yellow.highlight} size={14}>{buildingName}</Text>
+                </View>
+            )}
             <View style={listItemStyles.container}>
                 <View style={listItemStyles.left}>
                     <Emoji icon={icon} />
@@ -66,9 +68,13 @@ export default function UpgradeListItem(props: UpgradeListItemProps) {
                     justifyContent: "center",
                 }}>
                     <Text style={{ letterSpacing: 0.1 }} shadow={false} color={colors.purple.medium} size={15}>{effect}</Text>
-                    <Text shadow={false} color={colors.purple.dark} size={15}>
-                        <Text shadow={false} color={"gray"} size={15}>+{bonus}</Text> eps <Text shadow={false} color={"gray"} size={15}>+{bonusPercentage}</Text>
-                    </Text>
+                    {bonuses.map((bonus, index) => (
+                        <React.Fragment key={index}>
+                            <Text shadow={false} color={colors.purple.dark} size={15}>
+                                <Text shadow={false} color={"gray"} size={15}>+{bonus}</Text> eps <Text shadow={false} color={"gray"} size={15}>+{bonusPercentages[index]}</Text>
+                            </Text>
+                        </React.Fragment>
+                    ))}
                 </View>
                 <View style={{
                     flexBasis: 90,

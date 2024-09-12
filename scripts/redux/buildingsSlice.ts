@@ -3,118 +3,42 @@ import { buildingData } from '../game/buildings/buildingData';
 
 export interface BuildingProps {
     buildingId: number;
+    name: string;
+    icon: string;
     amount: number;
     canBuy: boolean;
     price: number;
     eps: number;
-    epsMultiplier: number;
+    epsMultipliers: number[];
     upgrades: number;
     unlocked: boolean;
+    unlockedHelpers: boolean;
 }
 
-interface ValuesState {
-    buildings: Record<string, BuildingProps>;
+interface BuildingsState {
+    buildings: BuildingProps[];
 }
 
-const initialState: ValuesState = {
-    buildings: {
-        "Drawing hand": {
-            buildingId: 0,
-            amount: 0,
-            canBuy: false,
-            price: buildingData[0].basePrice,
-            eps: buildingData[0].baseEps,
-            epsMultiplier: 0,
-            upgrades: 0,
-            unlocked: true,
-        },
-        "Graphic design studio": {
-            buildingId: 1,
-            amount: 0,
-            canBuy: false,
-            price: buildingData[1].basePrice,
-            eps: buildingData[1].baseEps,
-            epsMultiplier: 0,
-            upgrades: 0,
-            unlocked: false,
-        },
-        "Farm": {
-            buildingId: 2,
-            amount: 0,
-            canBuy: false,
-            price: buildingData[2].basePrice,
-            eps: buildingData[2].baseEps,
-            epsMultiplier: 0,
-            upgrades: 0,
-            unlocked: false,
-        },
-        "Kitchen": {
-            buildingId: 3,
-            amount: 0,
-            canBuy: false,
-            price: buildingData[3].basePrice,
-            eps: buildingData[3].baseEps,
-            epsMultiplier: 0,
-            upgrades: 0,
-            unlocked: false,
-        },
-        "Factory": {
-            buildingId: 4,
-            amount: 0,
-            canBuy: false,
-            price: buildingData[4].basePrice,
-            eps: buildingData[4].baseEps,
-            epsMultiplier: 0,
-            upgrades: 0,
-            unlocked: false,
-        },
-        "Bank": {
-            buildingId: 5,
-            amount: 0,
-            canBuy: false,
-            price: buildingData[5].basePrice,
-            eps: buildingData[5].baseEps,
-            epsMultiplier: 0,
-            upgrades: 0,
-            unlocked: false,
-        },
-        "Emoji theme park": {
-            buildingId: 6,
-            amount: 0,
-            canBuy: false,
-            price: buildingData[6].basePrice,
-            eps: buildingData[6].baseEps,
-            epsMultiplier: 0,
-            upgrades: 0,
-            unlocked: false,
-        },
-        "Emoji assembly": {
-            buildingId: 7,
-            amount: 0,
-            canBuy: false,
-            price: buildingData[7].basePrice,
-            eps: buildingData[7].baseEps,
-            epsMultiplier: 0,
-            upgrades: 0,
-            unlocked: false,
-        },
-        "Flying saucer": {
-            buildingId: 8,
-            amount: 0,
-            canBuy: false,
-            price: buildingData[8].basePrice,
-            eps: buildingData[8].baseEps,
-            epsMultiplier: 0,
-            upgrades: 0,
-            unlocked: false,
-        },
-    }
+const initialState: BuildingsState = {
+    buildings: buildingData.map((building, index) => ({
+        buildingId: building.buildingId,
+        name: building.name,
+        icon: building.icon,
+        amount: 0,
+        canBuy: false,
+        price: building.basePrice,
+        eps: building.baseEps,
+        epsMultipliers: [],
+        upgrades: 0,
+        unlocked: index === 0, // unlock only the first building
+        unlockedHelpers: false,
+    }))
 };
 
 // Define the payload types for actions that require more than one value
 interface UpdateBuildingPayload {
-    buildingName: string;
-    key: keyof BuildingProps; // Ensure that the key is a valid property of Building
+    buildingId: number;
+    key: keyof BuildingProps; // Ensure that the key is a valid property of BuildingProps
     value: number | boolean | any[];
 }
 
@@ -123,25 +47,24 @@ export const buildingsSlice = createSlice({
     initialState,
     reducers: {
         updateBuilding: (state, action: PayloadAction<UpdateBuildingPayload>) => {
-            const { buildingName, key, value } = action.payload;
-            if (state.buildings[buildingName]) {
+            const { buildingId, key, value } = action.payload;
+            const building = state.buildings.find(b => b.buildingId === buildingId);
+
+            if (building) {
                 switch (key) {
+                    case 'epsMultipliers':
+                        building.epsMultipliers.push(value as number)
+                        break
                     case 'amount':
                     case 'price':
                     case 'eps':
-                        state.buildings[buildingName][key] = value as number;
-                        break;
-                    case 'epsMultiplier':
-                        state.buildings[buildingName][key] = value as number;
+                    case 'upgrades':
+                        building[key] = value as number;
                         break;
                     case 'canBuy':
-                        state.buildings[buildingName][key] = value as boolean;
-                        break;
-                    case 'upgrades':
-                        state.buildings[buildingName][key] = value as number;
-                        break;
                     case 'unlocked':
-                        state.buildings[buildingName][key] = value as boolean;
+                    case 'unlockedHelpers':
+                        building[key] = value as boolean;
                         break;
                     default:
                         console.warn(`Key '${key}' not recognized or not supported for direct updates.`);
@@ -150,7 +73,14 @@ export const buildingsSlice = createSlice({
             }
         },
         resetBuildings: (state) => {
-            return initialState;
+            // Reset the entire buildings state to the initial state
+            state.buildings = initialState.buildings.map(building => ({
+                ...building,
+                amount: 0, // Reset specific properties
+                canBuy: false,
+                upgrades: 0,
+                unlocked: building.buildingId === 0, // Unlock only the first building
+            }));
         },
     },
 });

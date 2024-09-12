@@ -2,14 +2,20 @@ import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 
 interface ValuesState {
     emojis: number;
-    eps: number;
-    epsMult: number;
+    emojisPerSecond: number;
+    emojisPerSecondPercentages: number[],
+    // The total amunt of emojis per second from all buildings combined
+    totalBuildingEps: number;
+    funValue: number;
 }
 
 const initialState: ValuesState = {
-    emojis: 10000,
-    eps: 0,
-    epsMult: 0,
+    emojis: 1000000000000,
+    emojisPerSecond: 0,
+    emojisPerSecondPercentages: [],
+    totalBuildingEps: 0,
+    funValue: Math.floor(Math.random() * 100) + 1,
+    // funValue: 17
 };
 
 // Create the slice with reducers properly typed
@@ -20,21 +26,34 @@ export const valuesSlice = createSlice({
         updateEmojis: (state, action: PayloadAction<number>) => {
             state.emojis = action.payload;
         },
-        updateEps: (state, action: PayloadAction<number>) => {
-            state.eps = action.payload;
+        updateEmojisPerSecond: (state, action: PayloadAction<number>) => {
+            state.emojisPerSecond = action.payload;
         },
-        updateEpsMult: (state, action: PayloadAction<number>) => {
-            state.epsMult = action.payload;
+        updateTotalBuildingEps: (state, action: PayloadAction<number>) => {
+            state.totalBuildingEps = action.payload;
         },
+
+        addEmojisPerSecondPercentage: (state, action: PayloadAction<number>) => {
+            state.emojisPerSecondPercentages.push(action.payload);
+        },
+        removeEmojisPerSecondPercentage: (state, action: PayloadAction<number>) => {
+            const index = state.emojisPerSecondPercentages.indexOf(action.payload);
+            if (index !== -1) {
+                state.emojisPerSecondPercentages.splice(index, 1);
+            }
+        },
+
         resetValues: (state) => {
-            // Directly return the initialState
-            return initialState;
+            return {
+                ...initialState,
+                funValue: Math.floor(Math.random() * 100) + 1, // Recalculate funValue on reset
+            };
         },
 
     },
 });
 
 // Export the generated action creators
-export const { updateEmojis, updateEps, updateEpsMult, resetValues } = valuesSlice.actions;
+export const { updateEmojis, updateEmojisPerSecond, updateTotalBuildingEps, addEmojisPerSecondPercentage, removeEmojisPerSecondPercentage, resetValues } = valuesSlice.actions;
 
 export default valuesSlice.reducer;

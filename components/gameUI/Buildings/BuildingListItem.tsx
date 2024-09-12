@@ -46,12 +46,13 @@ export default function BuildingListItem(props: BuildingListItemProps) {
                 </View>
                 <View style={listItemStyles.center}>
                     <Text shadow={false} color={colors.purple.dark} size={20}>{name}</Text>
-                    <Text style={{ letterSpacing: 0.5, marginVertical: -4 }} shadow={false} color={colors.blue.medium} size={14}>{formatNumber(baseEps)} eps</Text>
+                    <Text style={{ letterSpacing: 0.5, marginVertical: -4 }} shadow={false} color={colors.blue.medium} size={14}>Produces {formatNumber(baseEps)} eps</Text>
                     <Text style={{ letterSpacing: 0.05 }} shadow={false} color={colors.purple.medium} size={15}>{description}</Text>
                 </View>
                 <View style={listItemStyles.right}>
                     <Text style={{ lineHeight: 30 }} shadow={false} size={amount < 1000 ? 30 : 26} color={colors.purple.medium}>{amount}</Text>
-                    <Text style={{ textAlign: "center", lineHeight: 15 }} shadow={false} color={colors.purple.medium} size={14}>{price} 💵</Text>
+                    <Text style={{ textAlign: "center", lineHeight: 15 }} shadow={false} color={colors.purple.medium} size={14}>{price}</Text>
+                    <Text style={{ textAlign: "center", lineHeight: 15 }} shadow={false} color={colors.purple.medium} size={14}>💵</Text>
                 </View>
             </View>
             <View style={{

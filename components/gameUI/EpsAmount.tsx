@@ -8,9 +8,9 @@ interface EpsAmountProps {
 }
 
 export default function EpsAmount({ fontSize = 20 }: EpsAmountProps) {
-    const { eps, epsMult } = useSelector((state: RootState) => state.values);
+    const { emojisPerSecond } = useSelector((state: RootState) => state.values);
 
     return (
-        <Text style={{ fontSize: fontSize }}>Per second: {formatNumber(eps * (epsMult > 0 ? epsMult : 1))}</Text>
+        <Text style={{ fontSize: fontSize }}>Per second: {formatNumber(emojisPerSecond)}</Text>
     )
 }

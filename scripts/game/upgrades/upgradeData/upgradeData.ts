@@ -1,0 +1,25 @@
+import { drawingHandUpgrades } from "./buildings/drawingHand";
+import { graphicDesignStudioUpgrades } from "./buildings/graphicDesignStudio";
+import { farmUpgrades } from "./buildings/farm";
+import { restaurantUpgrades } from "./buildings/restaurant";
+import { pettingZooUpgrades } from "./buildings/pettingZoo";
+import { factoryUpgrades } from "./buildings/factory";
+import { bankUpgrades } from "./buildings/bank";
+import { emojiThemeParkUpgrades } from "./buildings/emojiThemePark";
+import { emojiAssemblyUpgrades } from "./buildings/emojiAssembly";
+import { flyingSaucerUpgrades } from "./buildings/flyingSaucer";
+
+import { UpgradeType } from "./helpers";
+
+export const upgradeData: UpgradeType[] = [
+    ...drawingHandUpgrades,
+    ...graphicDesignStudioUpgrades,
+    ...farmUpgrades,
+    ...restaurantUpgrades,
+    ...pettingZooUpgrades,
+    ...factoryUpgrades,
+    ...bankUpgrades,
+    ...emojiThemeParkUpgrades,
+    ...emojiAssemblyUpgrades,
+    ...flyingSaucerUpgrades,
+];

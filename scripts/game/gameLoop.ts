@@ -7,6 +7,8 @@ import { decrementEffectsOnScreen, spawnEffect } from "./effects/onScreenEffects
 import { updateTimeSinceLastEffect } from "../redux/effectsSlice";
 import { generateCollection } from "./collection/emojiCategories";
 import { pickNextEmoji } from "./bigEmoji";
+import { calculateEpt } from "./calculations";
+import { canBuyUpgrade } from "./upgrades/checks";
 
 let lastUpdateTime = Date.now();
 let i = 0
@@ -25,12 +27,15 @@ export function gameLoop() {
         generateCollection();
 
         pickNextEmoji();
+
+        calculateEpt();
     }
 
     // Runs once every 2.5 seconds
     if (i % 25 == 0) {
         canBuyBuilding();
         unlockBuilding();
+        canBuyUpgrade();
         // unlockUpgrades();
     }
     // Runs once every second
@@ -44,11 +49,8 @@ export function gameLoop() {
 }
 
 export function giveEmojis(delta: number) {
-    const eps = store.getState().values.eps;
+    const emojisPerSecond = store.getState().values.emojisPerSecond;
     const emojis = store.getState().values.emojis;
 
-    let epsMult = store.getState().values.epsMult;
-    if (epsMult == 0) { epsMult = 1 }
-
-    store.dispatch(updateEmojis(emojis + (eps * epsMult) * delta))
+    store.dispatch(updateEmojis(emojis + emojisPerSecond * delta))
 }

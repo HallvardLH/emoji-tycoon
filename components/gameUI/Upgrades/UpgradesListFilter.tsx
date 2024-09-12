@@ -17,7 +17,7 @@ export default function UpgradesListFilter() {
 
         }}>
             {buildingData.map((building: BuildingInfo) => {
-                const dynamicData = buildings[building.name];
+                const dynamicData = buildings[building.buildingId];
                 return (
                     <>
                         {dynamicData.unlocked && (

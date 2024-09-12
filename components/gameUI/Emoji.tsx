@@ -8,7 +8,7 @@ interface EmojiProps {
 export default function Emoji(props: EmojiProps) {
     const {
         icon,
-        size = Platform.OS == "android" ? 40 : 40
+        size = Platform.OS == "android" ? 40 : 54
     } = props;
 
     return (

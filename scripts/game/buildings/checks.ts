@@ -10,23 +10,24 @@ import { updateBuildingValue } from './shorthands';
 export const canBuyBuilding = () => {
     const buildings = store.getState().buildings.buildings;
     const emojis = store.getState().values.emojis;
-    Object.keys(buildings).forEach(buildingName => {
-        updateBuildingValue(buildingName, "canBuy", emojis >= buildings[buildingName].price);
+    buildings.forEach(building => {
+        updateBuildingValue(building.buildingId, "canBuy", emojis >= buildings[building.buildingId].price);
     });
 }
 
 /**
  * Checks if a building should be unlocked
  *
- * Is called form the gameLoop module every 2.5 seconds
- *
+ * Is called from the gameLoop module every 2.5 seconds
  */
 export function unlockBuilding() {
     const buildings = store.getState().buildings.buildings;
     const emojis = store.getState().values.emojis;
-    for (const building in buildings) {
-        if (emojis >= buildings[building].price / 10) {
-            updateBuildingValue(building, "unlocked", true)
+
+    buildings.forEach(building => {
+        // Check if the building is locked and if the player has enough emojis to unlock it
+        if (!building.unlocked && emojis >= building.price / 10) {
+            updateBuildingValue(building.buildingId, "unlocked", true);
         }
-    }
+    });
 }

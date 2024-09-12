@@ -2,7 +2,6 @@ import { store } from '../redux/reduxStore';
 import { updateEmojis } from '../redux/valuesSlice';
 import { updateBigEmoji, updateNextEmoji } from '../redux/bigEmojiSlice';
 import { addToCollection, CollectionState } from '../redux/collectionSlice';
-import { calculateEpt } from './checks';
 import faces from '../../assets/emojis/faces.json';
 import symbols from '../../assets/emojis/symbols.json';
 import people from '../../assets/emojis/people.json';
@@ -33,8 +32,6 @@ export function tapEmoji() {
         id: nextEmoji.id,
     }));
 }
-
-calculateEpt();
 
 interface EmojiWeights {
     [key: string]: number;
@@ -71,7 +68,10 @@ const emojiData = {
 /**
  * Randomly selects the next big emoji, with weighted probabilities for each emoji type
  *
- * Description. (use period)
+ * The function calculates the total weight based on the weights assigned to different emoji categories. 
+ * It then generates a random number and selects an emoji category based on the weighted probabilities. 
+ * After selecting a category, it picks a random emoji from that category and dispatches it to the store.
+ * This is the next emoji!
  *
  */
 export function pickNextEmoji() {

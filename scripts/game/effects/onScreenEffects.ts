@@ -1,7 +1,7 @@
 import { store } from '../../redux/reduxStore';
 import { addEffectOnScreen, removeEffectOnScreen, addEffect, updateTimeSinceLastEffect, updateTimeLeftOnScreen } from '../../redux/effectsSlice';
 import { createEffect } from './createEffect';
-import { addEffectValues } from './effects';
+import { calculateEmojisPerSecond, calculateEpt } from '../calculations';
 
 /**
  * Called when the player taps an effect emoji
@@ -17,10 +17,11 @@ export function tapEffect(id: number) {
     const newEffect = effectsOnScreen.find(effect => effect.id === id)!;
     store.dispatch(addEffect(newEffect!));
 
-    // Adds the values of the effect, giving the player their boost
-    addEffectValues(newEffect.type, newEffect.eptMult, newEffect.eptAdd, newEffect.epsMult);
     // Removes the effect from the onScreen array
     store.dispatch(removeEffectOnScreen(id));
+
+    calculateEmojisPerSecond();
+    calculateEpt();
 
 }
 

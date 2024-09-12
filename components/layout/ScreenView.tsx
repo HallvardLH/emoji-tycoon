@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { ReactNode } from 'react';
-import { View, Dimensions, KeyboardAvoidingView, SafeAreaView, ScrollView, StyleSheet, StyleProp, TextStyle, StatusBar } from 'react-native';
+import { View, Dimensions, KeyboardAvoidingView, SafeAreaView, ScrollView, StyleSheet, StyleProp, TextStyle, StatusBar, Platform } from 'react-native';
 import GradientBackground from './GradientBackground';
 import TabBar from '../TabBar/TabBar';
 
@@ -12,7 +12,7 @@ interface ScreenViewProps {
 }
 
 export const HEADER_HEIGHT = 64 + (StatusBar.currentHeight ? StatusBar.currentHeight : 0);
-export const TAB_BAR_HEIGHT = 100;
+export const TAB_BAR_HEIGHT = Platform.OS == "android" ? 100 : 120;
 
 export const SCREEN_HEIGHT = Dimensions.get("screen").height - (HEADER_HEIGHT + TAB_BAR_HEIGHT + 20);
 

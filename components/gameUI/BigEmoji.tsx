@@ -6,6 +6,7 @@ import { tapEmoji, pickNextEmoji } from '../../scripts/game/bigEmoji';
 import PulseAnimation from '../animations/PulseAnimation';
 import { useFonts } from "expo-font";
 import { useCallback } from 'react';
+import { formatNumber } from '../../scripts/misc';
 
 interface AnimatedEmoji {
     key: string;
@@ -83,7 +84,7 @@ export default function BigEmoji() {
 
         setAnimatingNumbers(current => [...current, {
             key: `${uniqueKey}-num`,
-            number: `+${emojisPerTapDisplay}`,
+            number: `+${formatNumber(emojisPerTapDisplay)}`,
             yAnimValue: numberYAnimValue,
             xAnimValue: numberXAnimValue,
         }]);

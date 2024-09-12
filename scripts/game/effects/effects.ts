@@ -1,9 +1,6 @@
 import { store } from '../../redux/reduxStore';
-import { updateEptMult, updateEptAdd } from '../../redux/bigEmojiSlice';
-import { calculateEpt } from '../checks';
 import { removeEffect, updateTimeLeft } from '../../redux/effectsSlice';
-import { EffectTypes } from "./effectType";
-import { updateEpsMult } from '../../redux/valuesSlice';
+import { calculateEpt } from '../calculations';
 
 /**
  * Decrements the timer on all active effects
@@ -21,62 +18,8 @@ export function decrementEffects() {
 
         // If timeLeft has reached 0, remove the effect
         if (effect.timeLeft <= 0) {
-            removeEffectValues(effect.type, effect.eptMult, effect.eptAdd, effect.epsMult)
             store.dispatch(removeEffect(effect.id!));
+            calculateEpt();
         }
     })
-}
-
-/**
- * Adds the values of a given effect
- *
- * Called when an effect emoji is tapped, and alters the intended values.
- * For example, "tap" effects alter either ept (emojis per tap) multiplier, addition or both
- *
- * @param type the type of effect.
- * @param eptMult the factor by which the emojis per tap is multiplied.
- * @param eptAdd the amount of emojis added to each tap.
- * @param epsMult the factor by which the emojis per second is multiplied.
- */
-export function addEffectValues(type: EffectTypes, eptMult: number, eptAdd: number, epsMult: number) {
-    switch (type) {
-        case "tap":
-            store.dispatch(updateEptMult(store.getState().bigEmoji.eptMult + eptMult));
-            store.dispatch(updateEptAdd(store.getState().bigEmoji.eptAdd + eptAdd));
-            calculateEpt();
-            break;
-
-        case "production":
-            store.dispatch(updateEpsMult(store.getState().values.epsMult + epsMult));
-            break;
-        default:
-            console.error("No effect for type " + type);
-    }
-}
-
-/**
- * Removes the values of a given effect
- *
- * Called when the duration of an effect runs out.
- * 
- * @param type the type of effect.
- * @param eptMult the multiplication factor to be removed from emojis per tap.
- * @param eptAdd the amount of emojis removed from each tap.
- * @param epsMult the multiplication factor to be removed from emojis per second.
- */
-export function removeEffectValues(type: EffectTypes, eptMult: number, eptAdd: number, epsMult: number) {
-    switch (type) {
-        case "tap":
-            store.dispatch(updateEptMult(store.getState().bigEmoji.eptMult - eptMult));
-            store.dispatch(updateEptAdd(store.getState().bigEmoji.eptAdd - eptAdd));
-            calculateEpt();
-            break;
-
-        case "production":
-            store.dispatch(updateEpsMult(store.getState().values.epsMult - epsMult));
-            break;
-
-        default:
-            console.error("No effect for type " + type);
-    }
 }

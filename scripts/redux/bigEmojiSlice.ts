@@ -15,11 +15,10 @@ interface BigEmojiState {
     * @property The emoji that is to be displayed next
     */
     nextEmoji: BigEmoji;
-
     baseEmojisPerTap: number,
     emojisPerTap: number;
-    eptMult: number;
-    eptAdd: number;
+    emojisPerTapMultipliers: number[];
+    emojisPerTapPercentages: number[]
 }
 
 const initialState: BigEmojiState = {
@@ -35,8 +34,8 @@ const initialState: BigEmojiState = {
     },
     baseEmojisPerTap: 1,
     emojisPerTap: 1,
-    eptMult: 0,
-    eptAdd: 0,
+    emojisPerTapMultipliers: [],
+    emojisPerTapPercentages: [],
 };
 
 export const bigEmojiSlice = createSlice({
@@ -55,11 +54,25 @@ export const bigEmojiSlice = createSlice({
         updateBaseEmojisPerTap: (state, action: PayloadAction<number>) => {
             state.emojisPerTap = action.payload;
         },
-        updateEptMult: (state, action: PayloadAction<number>) => {
-            state.eptMult = action.payload;
+
+        addTapMultiplier: (state, action: PayloadAction<number>) => {
+            state.emojisPerTapMultipliers.push(action.payload);
         },
-        updateEptAdd: (state, action: PayloadAction<number>) => {
-            state.eptAdd = action.payload;
+        removeTapMultiplier: (state, action: PayloadAction<number>) => {
+            const index = state.emojisPerTapMultipliers.indexOf(action.payload);
+            if (index !== -1) {
+                state.emojisPerTapMultipliers.splice(index, 1);
+            }
+        },
+
+        addTapPercentage: (state, action: PayloadAction<number>) => {
+            state.emojisPerTapPercentages.push(action.payload);
+        },
+        removeTapPercentage: (state, action: PayloadAction<number>) => {
+            const index = state.emojisPerTapPercentages.indexOf(action.payload);
+            if (index !== -1) {
+                state.emojisPerTapPercentages.splice(index, 1);
+            }
         },
         resetBigEmoji: (state) => {
             // Directly return the initialState
@@ -69,6 +82,6 @@ export const bigEmojiSlice = createSlice({
     },
 });
 
-export const { updateBigEmoji, updateNextEmoji, updateEmojisPerTap, updateBaseEmojisPerTap, updateEptMult, updateEptAdd, resetBigEmoji } = bigEmojiSlice.actions;
+export const { updateBigEmoji, updateNextEmoji, updateEmojisPerTap, updateBaseEmojisPerTap, addTapMultiplier, removeTapMultiplier, addTapPercentage, removeTapPercentage, resetBigEmoji } = bigEmojiSlice.actions;
 
 export default bigEmojiSlice.reducer;

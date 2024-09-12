@@ -3,12 +3,14 @@ import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 interface UpgradesState {
     owned: number[];
     unlocked: number[];
+    canBuy: number[]
     notifications: number;
 }
 
 const initialState: UpgradesState = {
     owned: [],
     unlocked: [],
+    canBuy: [],
     notifications: 0,
 };
 
@@ -33,6 +35,18 @@ export const upgradesSlice = createSlice({
                 }
             }
         },
+        addCanBuyUpgrade: (state, action: PayloadAction<number>) => {
+            if (!state.canBuy.includes(action.payload)) {
+                state.canBuy.push(action.payload);
+            }
+        },
+        removeCanBuyUpgrade: (state, action: PayloadAction<number>) => {
+            if (state.canBuy.includes(action.payload)) {
+                // Remove the upgrade from canBuy
+                state.canBuy = state.canBuy.filter(element => element !== action.payload);
+            }
+
+        },
         clearNotifications: (state) => {
             state.notifications = 0;
         },
@@ -45,6 +59,6 @@ export const upgradesSlice = createSlice({
 });
 
 // Export the generated action creators
-export const { addUpgrade, unlockUpgrade, clearNotifications, resetUpgrades } = upgradesSlice.actions;
+export const { addUpgrade, unlockUpgrade, addCanBuyUpgrade, removeCanBuyUpgrade, clearNotifications, resetUpgrades } = upgradesSlice.actions;
 
 export default upgradesSlice.reducer;
