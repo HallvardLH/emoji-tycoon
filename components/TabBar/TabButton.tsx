@@ -14,7 +14,7 @@ interface TabButtonProps {
 }
 
 const width = 74;
-const borderWidth = 3;
+const borderWidth = 2.5;
 const shadowWidth = width + borderWidth * 2;
 
 const innerButtonHeight = 68;

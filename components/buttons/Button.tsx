@@ -20,7 +20,7 @@ const variants = {
         leftColor: componentColors.playButton.bgLeft,
         rightColor: componentColors.playButton.bgRight,
         highlightColor: componentColors.playButton.highlight,
-        borderRadius: 22,
+        borderRadius: 10,
     },
     "toggle": {
         leftColor: componentColors.toggleButton.bgLeft,

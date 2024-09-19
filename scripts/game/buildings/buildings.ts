@@ -75,7 +75,6 @@ export const buyBuilding = (buildingId: number, buyAmount: number = store.getSta
                 emojis = store.getState().values.emojis;
 
             } else {
-                console.error("Not enough emojis to buy the building");
                 break; // Stop if the player can't afford the next building
             }
         }

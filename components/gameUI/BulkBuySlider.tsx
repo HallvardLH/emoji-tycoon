@@ -89,38 +89,46 @@ export default function BulkBuySlider(props: BulkBuySliderProps) {
     };
 
     return (
-        <View style={styles.container}>
-            <Shadow style={{ alignSelf: "center" }} height={buttonContainerHeight} shadowHeight={5} width={"88%"} borderRadius={50} />
-            <View style={styles.buttonContainer}>
-                <Animated.View style={[styles.focusedContainer, animatedStyle, { width: `${tabWidthPercent}%` }]} />
-                {tabs.map((tab, index) =>
-                    <TouchableOpacity
-                        style={[styles.tabButton, { width: `${tabWidthPercent}%` }]}
-                        key={"TabButton-" + index}
-                        onPress={() => {
-                            setActiveTab(index);
-                            tab.onPress();
-                        }}
-                    >
-                        <Text size={16}>{tab.name}</Text>
-                    </TouchableOpacity>
-                )}
+        <View style={{
+            flexDirection: "row",
+            alignItems: "center",
+            justifyContent: "flex-end",
+            width: "100%"
+        }}>
+            <Text>Buy buildings in bulk</Text>
+            <View style={styles.container}>
+                <Shadow style={{ alignSelf: "center" }} height={buttonContainerHeight} shadowHeight={5} width={"88%"} borderRadius={50} />
+                <View style={styles.buttonContainer}>
+                    <Animated.View style={[styles.focusedContainer, animatedStyle, { width: `${tabWidthPercent}%` }]} />
+                    {tabs.map((tab, index) =>
+                        <TouchableOpacity
+                            style={[styles.tabButton, { width: `${tabWidthPercent}%` }]}
+                            key={"TabButton-" + index}
+                            onPress={() => {
+                                setActiveTab(index);
+                                tab.onPress();
+                            }}
+                        >
+                            <Text size={16}>{tab.name}</Text>
+                        </TouchableOpacity>
+                    )}
+                </View>
+
+                {tabs.map((tab, index) => (
+                    <Animated.View
+                        key={index}
+                        style={[
+                            {
+                                opacity: activeTab === index ? 1 : 0,
+                                top: 50 + contentSpacing,
+                                // Ensure only the active tab is interactable
+                                zIndex: activeTab === index ? 1 : 0,
+                            },
+                        ]}
+                    />
+                ))}
+
             </View>
-
-            {tabs.map((tab, index) => (
-                <Animated.View
-                    key={index}
-                    style={[
-                        {
-                            opacity: activeTab === index ? 1 : 0,
-                            top: 50 + contentSpacing,
-                            // Ensure only the active tab is interactable
-                            zIndex: activeTab === index ? 1 : 0,
-                        },
-                    ]}
-                />
-            ))}
-
         </View>
     );
 }

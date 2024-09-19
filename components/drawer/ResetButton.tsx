@@ -9,7 +9,7 @@ import { resetPreferences } from '../../scripts/redux/preferencesSlice';
 import Button from '../buttons/Button';
 
 interface ResetButtonProps {
-    onPress: () => void;
+    onPress?: () => void;
 }
 
 export default function ResetButton({ onPress }: ResetButtonProps) {
@@ -25,9 +25,11 @@ export default function ResetButton({ onPress }: ResetButtonProps) {
         dispatch(resetPreferences());
     };
     return (
-        <Button label="Reset game" onPress={() => {
+        <Button variant="blue" width={200} label="Reset game" onPress={() => {
             handleReset();
-            onPress();
+            if (onPress) {
+                onPress();
+            }
         }} />
     )
 }

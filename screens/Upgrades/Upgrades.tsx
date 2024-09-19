@@ -16,8 +16,9 @@ interface UpgradesProps {
 export default function Upgrades({ navigation }: UpgradesProps) {
     const { notifications } = useSelector((state: RootState) => state.upgrades);
     return (
-        <ScreenView>
+        <ScreenView scrollView={false}>
             <ContentTab
+                contentSpacing={5}
                 tabs={[
                     {
                         name: "Upgrades",

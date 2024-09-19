@@ -8,14 +8,20 @@ import { BuildingInfo } from '../Buildings/BuildingsList';
 
 export default function UpgradesListFilter() {
     const { buildings } = useSelector((state: RootState) => state.buildings);
+    return null
     return (
         <View style={{
             flexDirection: "row",
-            flex: 1,
+            // flex: 1,
             gap: 6,
             justifyContent: "center",
-
+            flexWrap: "wrap",
+            paddingHorizontal: 10,
         }}>
+            {/* <View>
+                <Emoji size={25} icon={"#"} />
+            </View> */}
+
             {buildingData.map((building: BuildingInfo) => {
                 const dynamicData = buildings[building.buildingId];
                 return (

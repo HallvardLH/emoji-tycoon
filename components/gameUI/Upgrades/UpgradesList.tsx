@@ -37,8 +37,11 @@ export default function UpgradesList() {
 
     return (
         <>
-            <UpgradesListFilter />
+            {/* <UpgradesListFilter /> */}
             <FlatList
+                contentContainerStyle={{
+                    paddingTop: 24,
+                }}
                 data={sortedUnlockedUpgrades}
                 renderItem={renderItem}
                 keyExtractor={(item) => item.originalIndex.toString()}
