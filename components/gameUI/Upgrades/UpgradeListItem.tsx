@@ -11,7 +11,8 @@ import { buildingEmojis } from "../../../scripts/game/buildings/buildings";
 
 interface UpgradeListItemProps {
     name: string;
-    buildingName: string | undefined;
+    buildingName?: string;
+    buildingIcon?: string;
     id: number;
     description: string;
     effect: string;
@@ -22,7 +23,7 @@ interface UpgradeListItemProps {
 }
 
 export default function UpgradeListItem(props: UpgradeListItemProps) {
-    const { name, buildingName, id, description, effect, price, icon, buttonActive, onPress } = props;
+    const { name, buildingName, buildingIcon, id, description, effect, price, icon, buttonActive, onPress } = props;
     const [bonuses, bonusPercentages] = getUpgradeBonus(id);
     return (
         <ContentBox style={{ marginBottom: 32 }}>
@@ -39,7 +40,7 @@ export default function UpgradeListItem(props: UpgradeListItemProps) {
                     alignItems: "center",
                     gap: 16,
                 }}>
-                    <Emoji size={24} icon={buildingEmojis[buildingName]} />
+                    <Emoji size={24} icon={buildingIcon ? buildingIcon : buildingEmojis[buildingName]} />
                     <Text shadow={false} color={colors.yellow.highlight} size={14}>{buildingName}</Text>
                 </View>
             )}

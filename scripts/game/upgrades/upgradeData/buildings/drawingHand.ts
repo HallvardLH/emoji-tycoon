@@ -1,5 +1,6 @@
-import { UpgradeType, getBuildingUpgradePrice, UnlockConditionType, UpgradeVariantsType } from "../helpers";
+import { getBuildingUpgradePrice } from "../helpers";
 import { BuildingNames } from "../../../buildings/buildingNamesType";
+import { UpgradeType, UnlockConditionType, UpgradeVariantsType } from "../UpgradeType";
 
 const baseDrawingHandUpgrade = {
     building: "Drawing hand" as BuildingNames,

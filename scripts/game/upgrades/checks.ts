@@ -36,19 +36,18 @@ export function unlockUpgrades() {
                 }
                 break;
             case "Building helper":
-                // const helperUnlockReq: UnlockReq = {
-                //     0: 1,
-                //     1: 20,
-                //     2: 30,
-                //     3: 40,
-                //     4: 50,
-                // }
                 // Upgrades are unlocked for every tenth building, unless there are no more in that tier, then it waits until the next 100
                 // For example, tier 0 ugrades are unlocked between 1 - 100 buildings
                 // Tier 1 is 101 - 200 etc.
                 if (building.amount >= (upgrade.tier * 100) + (upgrade.tierPosition! * 10) && building.amount > 0) {
                     store.dispatch(unlockUpgrade(upgrade.id));
                 }
+                break;
+            case "Emojis from tapping":
+                if (store.getState().stats.emojisEarnedFromTap >= Math.pow(10, upgrade.tierPosition! + 4)) {
+                    store.dispatch(unlockUpgrade(upgrade.id));
+                }
+                break;
         }
         i++;
     }

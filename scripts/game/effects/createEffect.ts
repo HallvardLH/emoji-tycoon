@@ -53,8 +53,7 @@ export function createEffect() {
         const filteredEffects = effectData.filter(effect => effect.type === chosenEffectType);
         chosenEffect = filteredEffects[Math.floor(Math.random() * filteredEffects.length)];
 
-        // Check if effect.id is 101 and howFun() is 17
-        if (chosenEffect.id === 101 && howFun() === 17) {
+        if (chosenEffect.id === 101 && howFun(17)) {
             // 5% chance to accept this effect
             const randomChance = Math.random();
             console.log("Tried to give fun effect, and chance was: ", randomChance, " did it work?")

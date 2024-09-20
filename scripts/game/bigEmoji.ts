@@ -13,11 +13,16 @@ import placesBuildings from '../../assets/emojis/placesBuildings.json';
 import plants from '../../assets/emojis/plants.json';
 import vehicles from '../../assets/emojis/vehicles.json';
 import weather from '../../assets/emojis/weather.json';
+import { addBigEmojiTaps, addEmojisEarnedFromTap } from '../redux/statsSlice';
 
 export function tapEmoji() {
     store.dispatch(updateEmojis(
         store.getState().values.emojis + store.getState().bigEmoji.emojisPerTap
     ));
+
+    // Updating stats
+    store.dispatch(addBigEmojiTaps(1));
+    store.dispatch(addEmojisEarnedFromTap(store.getState().bigEmoji.emojisPerTap));
 
     const currentEmoji = store.getState().bigEmoji.bigEmoji;
     store.dispatch(addToCollection({

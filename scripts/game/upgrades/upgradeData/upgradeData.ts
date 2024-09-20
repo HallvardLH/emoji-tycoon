@@ -8,8 +8,9 @@ import { bankUpgrades } from "./buildings/bank";
 import { emojiThemeParkUpgrades } from "./buildings/emojiThemePark";
 import { emojiAssemblyUpgrades } from "./buildings/emojiAssembly";
 import { flyingSaucerUpgrades } from "./buildings/flyingSaucer";
+import { bigEmojiUpgrades } from "./nonBuilding/bigEmoji";
 
-import { UpgradeType } from "./helpers";
+import { UpgradeType } from "./UpgradeType";
 
 export const upgradeData: UpgradeType[] = [
     ...drawingHandUpgrades,
@@ -22,4 +23,5 @@ export const upgradeData: UpgradeType[] = [
     ...emojiThemeParkUpgrades,
     ...emojiAssemblyUpgrades,
     ...flyingSaucerUpgrades,
+    ...bigEmojiUpgrades
 ];

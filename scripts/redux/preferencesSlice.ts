@@ -6,8 +6,6 @@ interface PreferencesState {
     * @property The amount of buildings that are bought by clicking the buy button
     */
     bulkBuy: 1 | 10 | 100,
-
-
 }
 
 const initialState: PreferencesState = {

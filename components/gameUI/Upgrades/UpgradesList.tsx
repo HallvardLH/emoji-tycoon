@@ -9,6 +9,7 @@ import { FlatList } from 'react-native';
 
 export default function UpgradesList() {
     const { unlocked, canBuy } = useSelector((state: RootState) => state.upgrades);
+    const { bigEmoji } = useSelector((state: RootState) => state.bigEmoji);
 
     // Retrieve the corresponding upgrades from buildingUpgrades based on the unlocked indices,
     // including the original index in the object for later reference
@@ -26,6 +27,7 @@ export default function UpgradesList() {
             id={upgrade.originalIndex}
             name={upgrade.name}
             buildingName={upgrade.building}
+            buildingIcon={upgrade.building == "Big emoji" ? bigEmoji.emoji : undefined}
             description={upgrade.description}
             effect={getEffectText(upgrade.originalIndex)}
             price={getUpgradePrice(upgrade.tier, upgrade.variant, upgrade.buildingId, upgrade.tierPosition)}

@@ -95,7 +95,7 @@ export default function BulkBuySlider(props: BulkBuySliderProps) {
             justifyContent: "flex-end",
             width: "100%"
         }}>
-            <Text>Buy buildings in bulk</Text>
+            <Text size={14}>Buying {bulkBuy} building{bulkBuy == 1 ? null : "s"} at a time</Text>
             <View style={styles.container}>
                 <Shadow style={{ alignSelf: "center" }} height={buttonContainerHeight} shadowHeight={5} width={"88%"} borderRadius={50} />
                 <View style={styles.buttonContainer}>
@@ -138,7 +138,7 @@ const buttonContainerHeight = buttonHeight + 4
 
 const styles = StyleSheet.create({
     container: {
-        width: "40%",
+        width: "36%",
         position: 'relative',
         alignSelf: "flex-end",
         marginRight: 12,

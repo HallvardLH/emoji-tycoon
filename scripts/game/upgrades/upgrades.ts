@@ -6,7 +6,7 @@ import { updateBuildingValue } from "../buildings/shorthands";
 import { getBuilding, getBuildingIdFromName } from "../buildings/shorthands";
 import { updateEmojis } from "../../redux/valuesSlice";
 import { formatNumber } from "../../misc";
-import { addTapMultiplier, addTapPercentage } from '../../redux/bigEmojiSlice';
+import { addTapMultiplier, addTapPercentage, addEmojisPerTapPercentageOfEps } from '../../redux/bigEmojiSlice';
 import { calculateEpt } from "../calculations";
 import { getUpgradeDataById } from './shorthands';
 import { canBuyUpgrade } from './checks';
@@ -26,14 +26,16 @@ export function buyUpgrade(upgradeId: number) {
 
         store.dispatch(updateEmojis(emojis - price));
 
-        if (upgrade.building) {
+        if (upgrade.building && upgrade.buildingId) {
             // Increment upgrades owned by building
-            updateBuildingValue(upgrade.buildingId, "upgrades", getBuilding(upgrade.building).upgrades + 1);
+            if (upgrade.buildingId != 1000) {
+                updateBuildingValue(upgrade.buildingId, "upgrades", getBuilding(upgrade.building).upgrades + 1);
+            }
         }
         upgrade.categories.forEach((category) => {
             switch (category) {
                 case "Multiply building production":
-                    if (upgrade.building && upgrade.emojisPerSecondMultiplier) {
+                    if (upgrade.building && upgrade.buildingId && upgrade.emojisPerSecondMultiplier) {
                         updateBuildingValue(upgrade.buildingId, "epsMultipliers", upgrade.emojisPerSecondMultiplier);
                     }
                     break;
@@ -50,6 +52,11 @@ export function buyUpgrade(upgradeId: number) {
                 case "Percentage increase production":
                     if (upgrade.emojisPerSecondPercentageIncrease) {
                         store.dispatch(addEmojisPerSecondPercentage(upgrade.emojisPerSecondPercentageIncrease));
+                    }
+                    break;
+                case 'Tap percentage of eps':
+                    if (upgrade.emojisPerTapPercentageOfEps) {
+                        store.dispatch(addEmojisPerTapPercentageOfEps(upgrade.emojisPerTapPercentageOfEps));
                     }
                     break;
                 default:

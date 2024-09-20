@@ -10,12 +10,11 @@ interface ValuesState {
 }
 
 const initialState: ValuesState = {
-    emojis: 1000000000000,
+    emojis: 10000000000000,
     emojisPerSecond: 0,
     emojisPerSecondPercentages: [],
     totalBuildingEps: 0,
     funValue: Math.floor(Math.random() * 100) + 1,
-    // funValue: 17
 };
 
 // Create the slice with reducers properly typed

@@ -1,5 +1,6 @@
-import { UpgradeType, getBuildingUpgradePrice, UnlockConditionType, UpgradeCateogoriesType, UpgradeVariantsType } from "../helpers";
+import { getBuildingUpgradePrice } from "../helpers";
 import { BuildingNames } from "../../../buildings/buildingNamesType";
+import { UpgradeType, UnlockConditionType, UpgradeVariantsType, UpgradeCateogoriesType } from "../UpgradeType";
 
 const baseGraphicDesignStudioUpgrade = {
     building: "Graphic design studio" as BuildingNames,

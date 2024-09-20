@@ -6,6 +6,7 @@ import { resetBigEmoji } from '../../scripts/redux/bigEmojiSlice';
 import { resetEffects } from '../../scripts/redux/effectsSlice';
 import { resetCollection } from '../../scripts/redux/collectionSlice';
 import { resetPreferences } from '../../scripts/redux/preferencesSlice';
+import { resetStats } from '../../scripts/redux/statsSlice';
 import Button from '../buttons/Button';
 
 interface ResetButtonProps {
@@ -23,6 +24,7 @@ export default function ResetButton({ onPress }: ResetButtonProps) {
         dispatch(resetEffects());
         dispatch(resetCollection());
         dispatch(resetPreferences());
+        dispatch(resetStats());
     };
     return (
         <Button variant="blue" width={200} label="Reset game" onPress={() => {

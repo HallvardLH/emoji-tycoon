@@ -12,6 +12,7 @@ import { canBuyUpgrade } from "./upgrades/checks";
 
 let lastUpdateTime = Date.now();
 let i = 0
+let loggedBigEmojiTaps = 0;
 export function gameLoop() {
     const now = Date.now();
     const delta = (now - lastUpdateTime) / 1000; // time in seconds since last update
@@ -29,6 +30,8 @@ export function gameLoop() {
         pickNextEmoji();
 
         calculateEpt();
+
+        loggedBigEmojiTaps = store.getState().stats.bigEmojiTaps;
     }
 
     // Runs once every 2.5 seconds
@@ -36,7 +39,11 @@ export function gameLoop() {
         canBuyBuilding();
         unlockBuilding();
         canBuyUpgrade();
-        // unlockUpgrades();
+        // If big emoji taps are not the same as the logged value, we know the emoji has been tapped
+        if (loggedBigEmojiTaps != store.getState().stats.bigEmojiTaps) {
+            loggedBigEmojiTaps = store.getState().stats.bigEmojiTaps;
+            unlockUpgrades();
+        }
     }
     // Runs once every second
     if (i % 10 == 0) {

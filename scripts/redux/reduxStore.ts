@@ -9,6 +9,7 @@ import bigEmojiSlice from './bigEmojiSlice';
 import effectsSlice from './effectsSlice';
 import collectionSlice from './collectionSlice';
 import preferencesSlice from './preferencesSlice';
+import statsSlice from './statsSlice';
 
 // Combine reducers
 const rootReducer = combineReducers({
@@ -19,6 +20,7 @@ const rootReducer = combineReducers({
     effects: effectsSlice,
     collection: collectionSlice,
     preferences: preferencesSlice,
+    stats: statsSlice,
 });
 
 const persistConfig = {

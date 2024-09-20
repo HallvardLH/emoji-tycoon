@@ -6,9 +6,9 @@ import { formatNumber } from "../misc";
 // Recalculates emojis per tap
 export function calculateEpt() {
     // Gets all active effects
-    let allEffects = store.getState().effects.effects;
+    const allEffects = store.getState().effects.effects;
     // Extracts their tap multiplier to an array
-    let activeEffects = allEffects.map(effect => effect.eptMult);
+    const activeEffects = allEffects.map(effect => effect.eptMult);
 
     // Gets multipliers from upgrades
     let tapMultipliers = store.getState().bigEmoji.emojisPerTapMultipliers;
@@ -29,11 +29,23 @@ export function calculateEpt() {
         .filter(perc => perc !== 0)
         .reduce((acc, perc) => acc * (1 + perc), 1);
 
+    // Gets epsPercentages
+    const tapPercentageOfEps = store.getState().bigEmoji.emojisPerTapPercentageOfEps;
+    // const totalPercentageOfEps = tapPercentageOfEps
+    //     .filter(perc => perc !== 0)
+    //     .reduce((acc, perc) => acc * (1 + perc), 1);
+    const totalPercentageOfEps = tapPercentageOfEps.reduce((acc, perc) => acc + perc, 0);
+
+    // Gets a certain percentage of emojis per second and adds it as a bonus
+    // This allows tapping to keep up with eps
+    const eps = store.getState().values.emojisPerSecond;
+    const epsBonus = eps * totalPercentageOfEps;
+
     // Base emojis per tap
     const baseEmojisPerTap = store.getState().bigEmoji.baseEmojisPerTap;
 
     // Calculate emojis per tap with the total multiplier and compounded percentage increases
-    let ept = (baseEmojisPerTap * totalMultiplier) * compoundedPercentageMultiplier;
+    let ept = ((baseEmojisPerTap * totalMultiplier) + epsBonus) * compoundedPercentageMultiplier;
 
     // Dispatch the updated value to the store
     store.dispatch(updateEmojisPerTap(ept));

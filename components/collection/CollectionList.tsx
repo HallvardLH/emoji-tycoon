@@ -18,7 +18,7 @@ export default function CollectionList() {
                         margin: 10,
                         alignItems: "center"
                     }}>
-                        <Emoji icon={item.emoji} />
+                        <Emoji icon={item.emoji!} />
                         <Text> x {item.amount}</Text>
                         {/* <Text> (Rarity: {item.rarity})</Text> */}
                     </View>

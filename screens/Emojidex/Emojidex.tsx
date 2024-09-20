@@ -2,6 +2,7 @@ import ScreenView from "../../components/layout/ScreenView";
 import React from 'react';
 import ContentTab from "../../components/layout/ContentTab";
 import Collection from "./Collection";
+import Stats from "./Stats";
 
 interface EmojidexProps {
     navigation: {
@@ -16,11 +17,11 @@ export default function Emojidex({ navigation }: EmojidexProps) {
                 tabs={[
                     {
                         name: "Achievements",
-                        component: <Collection />,
+                        component: <Stats />,
                     },
                     {
                         name: "Stats",
-                        component: <Collection />,
+                        component: <Stats />,
                     },
                     {
                         name: "Collection",

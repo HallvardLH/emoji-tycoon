@@ -2,6 +2,8 @@ import { store } from '../../redux/reduxStore';
 import { addEffectOnScreen, removeEffectOnScreen, addEffect, updateTimeSinceLastEffect, updateTimeLeftOnScreen } from '../../redux/effectsSlice';
 import { createEffect } from './createEffect';
 import { calculateEmojisPerSecond, calculateEpt } from '../calculations';
+import { howFun } from '../shorthands';
+import { addEffectEmojisCollected } from '../../redux/statsSlice';
 
 /**
  * Called when the player taps an effect emoji
@@ -22,6 +24,9 @@ export function tapEffect(id: number) {
 
     calculateEmojisPerSecond();
     calculateEpt();
+
+    // Add to stats
+    store.dispatch(addEffectEmojisCollected(1));
 
 }
 
@@ -56,12 +61,21 @@ export function decrementEffectsOnScreen() {
  */
 export function spawnEffect(guaranteed?: boolean) {
     const timeSinceLastEffect = store.getState().effects.timeSinceLastEffect;
+    const spawnChanceIncreases = store.getState().effects.effectSpawnChanceIncreasers;
+    const spawnChanceIncrease = spawnChanceIncreases.reduce((acc, val) => acc + val)
     if (timeSinceLastEffect >= 0) {
-        // Increasing chance each second, with a guaranteed spawn at 150 seconds
+        // Increasing chance each second, with a guaranteed spawn at 300 seconds
         const chance = timeSinceLastEffect / 100 - Math.random();
-        const threshold = 0.5;
-        if (chance > threshold || guaranteed) {
+        // Threshold of 2 means at least 200 seconds must have passed for there to
+        // even be a chance at all of something spawning
+        let threshold = 2 - (howFun(70, 75) ? 0.2 : 0);
+        // console.log(chance, threshold / spawnChanceIncrease)
+        if (chance >= threshold / spawnChanceIncrease || guaranteed) {
             store.dispatch(addEffectOnScreen(createEffect()));
+            // Lucky you! Like, really lucky
+            if (howFun(76) && Math.random() > 0.9) {
+                store.dispatch(addEffectOnScreen(createEffect()));
+            }
             store.dispatch(updateTimeSinceLastEffect(0));
         }
     }

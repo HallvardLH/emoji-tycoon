@@ -5,7 +5,7 @@ import { getBuilding, getBuildingById } from './shorthands';
 import { unlockUpgrades } from '../upgrades/checks';
 import { updateBuildingValue } from './shorthands';
 import { canBuyBuilding } from './checks';
-import { calculateEmojisPerSecond } from '../calculations';
+import { calculateEmojisPerSecond, calculateEpt } from '../calculations';
 
 type PluralNames = {
     [key: string]: string;
@@ -90,6 +90,9 @@ export const buyBuilding = (buildingId: number, buyAmount: number = store.getSta
 
     // Check if any upgrades should be unlocked after the purchase
     unlockUpgrades();
+
+    // Recalculate emojis per tap
+    calculateEpt();
 };
 
 
