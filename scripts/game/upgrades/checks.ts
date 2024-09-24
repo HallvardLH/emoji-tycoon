@@ -44,7 +44,11 @@ export function unlockUpgrades() {
                 }
                 break;
             case "Emojis from tapping":
-                if (store.getState().stats.emojisEarnedFromTap >= Math.pow(10, upgrade.tierPosition! + 4)) {
+                // if (store.getState().stats.emojisGained >= 10000 && upgrade.tierPosition == 0) {
+                //     store.dispatch(unlockUpgrade(upgrade.id));
+                // }
+                // Unlocks the most powerful tapping upgrades, starting at 100 emojis gained from taps
+                if (store.getState().stats.emojisEarnedFromTap >= Math.pow(10, upgrade.tierPosition! + 2)) {
                     store.dispatch(unlockUpgrade(upgrade.id));
                 }
                 break;

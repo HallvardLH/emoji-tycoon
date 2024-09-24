@@ -14,6 +14,7 @@ import plants from '../../assets/emojis/plants.json';
 import vehicles from '../../assets/emojis/vehicles.json';
 import weather from '../../assets/emojis/weather.json';
 import { addBigEmojiTaps, addEmojisEarnedFromTap } from '../redux/statsSlice';
+import { addEmojisGained } from '../redux/statsSlice';
 
 export function tapEmoji() {
     store.dispatch(updateEmojis(
@@ -21,6 +22,7 @@ export function tapEmoji() {
     ));
 
     // Updating stats
+    store.dispatch(addEmojisGained(store.getState().bigEmoji.emojisPerTap));
     store.dispatch(addBigEmojiTaps(1));
     store.dispatch(addEmojisEarnedFromTap(store.getState().bigEmoji.emojisPerTap));
 

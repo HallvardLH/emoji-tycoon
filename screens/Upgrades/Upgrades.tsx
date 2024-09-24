@@ -3,7 +3,6 @@ import React from 'react';
 import ContentTab from "../../components/layout/ContentTab";
 import { useSelector } from 'react-redux';
 import { RootState } from '../../scripts/redux/reduxStore';
-import { clearUpgradeNotifications } from "../../scripts/game/upgrades/upgrades";
 import BuyUpgrades from "./BuyUpgrades";
 import OwnedUpgrades from "./OwnedUpgrades";
 
@@ -14,7 +13,7 @@ interface UpgradesProps {
 }
 
 export default function Upgrades({ navigation }: UpgradesProps) {
-    const { notifications } = useSelector((state: RootState) => state.upgrades);
+
     return (
         <ScreenView scrollView={false}>
             <ContentTab
@@ -27,8 +26,6 @@ export default function Upgrades({ navigation }: UpgradesProps) {
                     {
                         name: "Owned",
                         component: <OwnedUpgrades />,
-                        notification: notifications,
-                        onNavigateTo: clearUpgradeNotifications,
                     }
                 ]}
             />

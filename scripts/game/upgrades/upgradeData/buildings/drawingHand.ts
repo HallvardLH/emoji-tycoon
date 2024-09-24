@@ -38,7 +38,7 @@ export const drawingHandUpgrades: UpgradeType[] = [
         ...baseDrawingHandUpgrade,
         name: "Two hands",
         icon: "👐",
-        description: "Double the hands, double the emojis!",
+        description: "Twice the hands, double the emojis.",
         price: getBuildingUpgradePrice(2, 0),
         categories: ["Multiply building production", "Multiply tap"],
         emojisPerSecondMultiplier: 2,

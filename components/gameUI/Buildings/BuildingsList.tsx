@@ -38,7 +38,7 @@ export default function BuildingsList() {
                             price={formatNumber(dynamicData.price)}
                             baseEps={building.baseEps * Math.pow(2, dynamicData.upgrades)}
                             upgradeAmount={dynamicData.upgrades}
-                            eps={formatNumber(dynamicData.eps)}
+                            eps={dynamicData.eps}
                             amount={dynamicData.amount}
                             buttonActive={dynamicData.canBuy}
                             onPress={() => buyBuilding(building.buildingId)}

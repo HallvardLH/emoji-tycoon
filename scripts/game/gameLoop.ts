@@ -9,6 +9,7 @@ import { generateCollection } from "./collection/emojiCategories";
 import { pickNextEmoji } from "./bigEmoji";
 import { calculateEpt } from "./calculations";
 import { canBuyUpgrade } from "./upgrades/checks";
+import { addEmojisGained } from "../redux/statsSlice";
 
 let lastUpdateTime = Date.now();
 let i = 0
@@ -59,5 +60,6 @@ export function giveEmojis(delta: number) {
     const emojisPerSecond = store.getState().values.emojisPerSecond;
     const emojis = store.getState().values.emojis;
 
-    store.dispatch(updateEmojis(emojis + emojisPerSecond * delta))
+    store.dispatch(updateEmojis(emojis + emojisPerSecond * delta));
+    store.dispatch(addEmojisGained(emojisPerSecond * delta));
 }

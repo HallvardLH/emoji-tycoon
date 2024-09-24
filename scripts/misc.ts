@@ -1,5 +1,5 @@
-export function formatNumber(num: number) {
-    const round = (num: number) => Math.round(num * 1000) / 1000;
+export function formatNumber(num: number, decimals: number = 2) {
+    const round = (num: number) => Math.round(num * Math.pow(10, decimals)) / Math.pow(10, decimals);
 
     const form: "compact" | "grouped" | "space" = "grouped"; // Set the form here
 

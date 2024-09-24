@@ -31,6 +31,7 @@ export function calculateEpt() {
 
     // Gets epsPercentages
     const tapPercentageOfEps = store.getState().bigEmoji.emojisPerTapPercentageOfEps;
+    // This would compound percentages
     // const totalPercentageOfEps = tapPercentageOfEps
     //     .filter(perc => perc !== 0)
     //     .reduce((acc, perc) => acc * (1 + perc), 1);

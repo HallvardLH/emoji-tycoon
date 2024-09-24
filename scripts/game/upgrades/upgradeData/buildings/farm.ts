@@ -191,7 +191,7 @@ export const farmUpgrades: UpgradeType[] = [
         name: "Peanuts",
         icon: "🥜",
         description: "Expand production with peanuts!",
-        quote: "Jimmy Carter's favorite.",
+        quote: "They say Jimmy liked these.",
         variant: "Helper",
         emojisPerSecondPercentageIncrease: 0.02,
         tier: 1,

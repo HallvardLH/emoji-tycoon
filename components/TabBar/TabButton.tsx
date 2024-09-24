@@ -11,6 +11,7 @@ interface TabButtonProps {
     highlight: string;
     onPress?: () => void;
     icon: string;
+    notifications?: number;
 }
 
 const width = 74;
@@ -23,9 +24,10 @@ const backgroundHeight = innerButtonHeight + 12;
 const borderRadius = 15;
 
 export default function TabButton(props: TabButtonProps) {
-    const { label, labelColor, background, highlight, onPress, icon } = props;
+    const { label, labelColor, background, highlight, onPress, icon, notifications } = props;
     return (
         <TouchableOpacity onPress={onPress}>
+
             <Shadow width={shadowWidth} height={backgroundHeight} shadowHeight={4} borderRadius={borderRadius} />
             <View style={styles.container}>
                 <View style={[styles.background, { backgroundColor: highlight }]} />
@@ -36,6 +38,14 @@ export default function TabButton(props: TabButtonProps) {
                     </View>
                 </View>
             </View>
+            {(typeof notifications === 'number' && notifications > 0) && (
+                <View style={styles.notificationContainer}>
+                    <View style={[styles.notification3DEffect, { width: notifications < 100 ? 26 : 34 }]} />
+                    <View style={[styles.notification, { width: notifications < 100 ? 26 : 34 }]}>
+                        <Text style={{ position: "absolute" }} size={13}>{notifications < 100 ? notifications : "+99"}</Text>
+                    </View>
+                </View>
+            )}
         </TouchableOpacity>
     )
 }
@@ -72,5 +82,33 @@ const styles = StyleSheet.create({
     icon: {
         height: 26,
         width: 26,
+    },
+
+    notificationContainer: {
+        position: "absolute",
+        top: -8,
+        right: -10,
+    },
+
+    notification: {
+
+        padding: 4,
+        height: 26,
+        width: 26,
+        justifyContent: "center",
+        alignItems: "center",
+        borderRadius: 100,
+        backgroundColor: "#FF335F",
+    },
+
+    notification3DEffect: {
+        position: "absolute",
+        backgroundColor: "#D40633",
+        top: 1.3,
+        height: 26,
+        width: 26,
+        borderRadius: 100,
     }
 })
+
+

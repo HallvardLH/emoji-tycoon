@@ -4,14 +4,14 @@ interface UpgradesState {
     owned: number[];
     unlocked: number[];
     canBuy: number[]
-    notifications: number;
+    unlockedUpgradeNotification: number;
 }
 
 const initialState: UpgradesState = {
     owned: [],
     unlocked: [],
     canBuy: [],
-    notifications: 0,
+    unlockedUpgradeNotification: 0,
 };
 
 export const upgradesSlice = createSlice({
@@ -31,7 +31,7 @@ export const upgradesSlice = createSlice({
                 // Only unlock if not owned
                 if (!state.owned.includes(action.payload)) {
                     state.unlocked.push(action.payload);
-                    state.notifications++;
+                    state.unlockedUpgradeNotification++;
                 }
             }
         },
@@ -47,8 +47,8 @@ export const upgradesSlice = createSlice({
             }
 
         },
-        clearNotifications: (state) => {
-            state.notifications = 0;
+        clearUnlockedUpgradeNotifications: (state) => {
+            state.unlockedUpgradeNotification = 0;
         },
         resetUpgrades: (state) => {
             // Directly return the initialState
@@ -59,6 +59,6 @@ export const upgradesSlice = createSlice({
 });
 
 // Export the generated action creators
-export const { addUpgrade, unlockUpgrade, addCanBuyUpgrade, removeCanBuyUpgrade, clearNotifications, resetUpgrades } = upgradesSlice.actions;
+export const { addUpgrade, unlockUpgrade, addCanBuyUpgrade, removeCanBuyUpgrade, clearUnlockedUpgradeNotifications, resetUpgrades } = upgradesSlice.actions;
 
 export default upgradesSlice.reducer;

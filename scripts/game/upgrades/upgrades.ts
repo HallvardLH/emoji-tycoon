@@ -1,6 +1,6 @@
 import { upgradeData } from './upgradeData/upgradeData';
 import { store } from '../../redux/reduxStore';
-import { unlockUpgrade, addUpgrade, clearNotifications } from "../../redux/upgradesSlice";
+import { unlockUpgrade, addUpgrade } from "../../redux/upgradesSlice";
 import { pluralNames, calculateBuildingsEps } from "../buildings/buildings";
 import { updateBuildingValue } from "../buildings/shorthands";
 import { getBuilding, getBuildingIdFromName } from "../buildings/shorthands";
@@ -13,10 +13,6 @@ import { canBuyUpgrade } from './checks';
 import { getUpgradePrice } from './upgradePrice';
 import { addEmojisPerSecondPercentage } from '../../redux/valuesSlice';
 import { calculateEpsBonus } from '../calculations';
-
-export function clearUpgradeNotifications() {
-    store.dispatch(clearNotifications());
-}
 
 export function buyUpgrade(upgradeId: number) {
     const upgrade = getUpgradeDataById(upgradeId);
@@ -35,7 +31,7 @@ export function buyUpgrade(upgradeId: number) {
         upgrade.categories.forEach((category) => {
             switch (category) {
                 case "Multiply building production":
-                    if (upgrade.building && upgrade.buildingId && upgrade.emojisPerSecondMultiplier) {
+                    if (upgrade.building && upgrade.buildingId != undefined && upgrade.emojisPerSecondMultiplier) {
                         updateBuildingValue(upgrade.buildingId, "epsMultipliers", upgrade.emojisPerSecondMultiplier);
                     }
                     break;
@@ -82,7 +78,7 @@ export function getEffectText(upgradeId: number) {
     upgrade.categories.forEach((category) => {
         switch (category) {
             case "Multiply building production":
-                text += `\u2022 ${pluralNames[upgrade.building!]} are twice as effective.\n`;
+                text += `\u2022 ${pluralNames[upgrade.building!]} are twice as efficient.\n`;
                 break
             case "Multiply tap":
                 text += `\u2022 Tapping is twice as efficient.\n`;

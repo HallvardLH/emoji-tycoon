@@ -1,5 +1,6 @@
 import { store } from '../../redux/reduxStore';
 import { updateBuildingValue } from './shorthands';
+import { unlockedBuildingNotificaiton } from '../../redux/buildingsSlice';
 
 /**
  * Checks if the player can afford each building
@@ -28,6 +29,7 @@ export function unlockBuilding() {
         // Check if the building is locked and if the player has enough emojis to unlock it
         if (!building.unlocked && emojis >= building.price / 10) {
             updateBuildingValue(building.buildingId, "unlocked", true);
+            store.dispatch(unlockedBuildingNotificaiton());
         }
     });
 }

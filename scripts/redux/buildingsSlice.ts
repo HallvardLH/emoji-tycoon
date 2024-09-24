@@ -17,6 +17,7 @@ export interface BuildingProps {
 
 interface BuildingsState {
     buildings: BuildingProps[];
+    unlockedBuildingsNotification: number;
 }
 
 const initialState: BuildingsState = {
@@ -30,9 +31,10 @@ const initialState: BuildingsState = {
         eps: building.baseEps,
         epsMultipliers: [],
         upgrades: 0,
-        unlocked: index === 0, // unlock only the first building
+        unlocked: false,
         unlockedHelpers: false,
-    }))
+    })),
+    unlockedBuildingsNotification: 0,
 };
 
 // Define the payload types for actions that require more than one value
@@ -72,6 +74,12 @@ export const buildingsSlice = createSlice({
                 }
             }
         },
+        unlockedBuildingNotificaiton: (state) => {
+            state.unlockedBuildingsNotification++;
+        },
+        clearUnlockedBuildingsNotifications: (state) => {
+            state.unlockedBuildingsNotification = 0;
+        },
         resetBuildings: (state) => {
             // Reset the entire buildings state to the initial state
             state.buildings = initialState.buildings.map(building => ({
@@ -79,12 +87,12 @@ export const buildingsSlice = createSlice({
                 amount: 0, // Reset specific properties
                 canBuy: false,
                 upgrades: 0,
-                unlocked: building.buildingId === 0, // Unlock only the first building
+                unlocked: false, // Unlock only the first building
             }));
         },
     },
 });
 
-export const { updateBuilding, resetBuildings } = buildingsSlice.actions;
+export const { updateBuilding, clearUnlockedBuildingsNotifications, unlockedBuildingNotificaiton, resetBuildings } = buildingsSlice.actions;
 
 export default buildingsSlice.reducer;

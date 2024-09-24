@@ -28,6 +28,7 @@ export default function Text(props: TextProps) {
 
     return (
         <RNText
+            // textBreakStrategy="highQuality"
             onLayout={onLayout}
             style={[
                 textStyles.text,

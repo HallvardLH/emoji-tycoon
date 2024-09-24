@@ -28,7 +28,7 @@ let i = 0;
 export default function BigEmoji() {
     const { bigEmoji, nextEmoji, emojisPerTap } = useSelector((state: RootState) => state.bigEmoji);
 
-    // Necssary for using font
+    // Necessary for using font
     useFonts({
         "Digitalt": require("../../assets/fonts/Digitalt.otf"),
     });
@@ -135,7 +135,7 @@ export default function BigEmoji() {
         <Pressable onPress={onEmojiTap} style={styles.container}>
             <View style={styles.container}>
                 {/* Static Emoji */}
-                <PulseAnimation maxSize={1.06} duration={5000}>
+                <PulseAnimation maxSize={1.06} duration={4000}>
                     <Text style={styles.bigEmoji}>{staticEmoji}</Text>
                 </PulseAnimation>
                 {/* Animating Emojis */}

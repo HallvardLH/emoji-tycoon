@@ -4,6 +4,7 @@ import { farmUpgrades } from "./buildings/farm";
 import { restaurantUpgrades } from "./buildings/restaurant";
 import { pettingZooUpgrades } from "./buildings/pettingZoo";
 import { factoryUpgrades } from "./buildings/factory";
+import { sportsCenterUpgrades } from "./buildings/sportsCenter";
 import { bankUpgrades } from "./buildings/bank";
 import { emojiThemeParkUpgrades } from "./buildings/emojiThemePark";
 import { emojiAssemblyUpgrades } from "./buildings/emojiAssembly";
@@ -19,6 +20,7 @@ export const upgradeData: UpgradeType[] = [
     ...restaurantUpgrades,
     ...pettingZooUpgrades,
     ...factoryUpgrades,
+    ...sportsCenterUpgrades,
     ...bankUpgrades,
     ...emojiThemeParkUpgrades,
     ...emojiAssemblyUpgrades,

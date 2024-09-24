@@ -13,7 +13,6 @@ const basePettingZooUpgrade = {
 };
 
 export const pettingZooUpgrades: UpgradeType[] = [
-    // Flying Saucer upgrades
     {
         ...basePettingZooUpgrade,
         name: "Brooms",

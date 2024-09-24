@@ -8,7 +8,6 @@ import Buildings from "./Buildings";
 import Upgrades from "./Upgrades";
 import { useSelector } from 'react-redux';
 import { RootState } from '../../scripts/redux/reduxStore';
-import { clearUpgradeNotifications } from "../../scripts/game/upgrades/upgrades";
 
 interface ShopProps {
     navigation: {
@@ -17,7 +16,7 @@ interface ShopProps {
 }
 
 export default function Shop({ navigation }: ShopProps) {
-    const { notifications } = useSelector((state: RootState) => state.upgrades);
+    // const { notifications } = useSelector((state: RootState) => state.upgrades);
     return (
         <ScreenView>
             <ContentTab
@@ -29,8 +28,8 @@ export default function Shop({ navigation }: ShopProps) {
                     {
                         name: "Upgrades",
                         component: <Upgrades />,
-                        notification: notifications,
-                        onNavigateTo: clearUpgradeNotifications,
+                        // notification: notifications,
+                        // onNavigateTo: clearUpgradeNotifications,
                     }
                 ]}
             />

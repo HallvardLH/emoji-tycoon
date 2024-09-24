@@ -5,7 +5,7 @@ import { UpgradeType, UnlockConditionType, UpgradeVariantsType, UpgradeCateogori
 // Base object for Emoji Theme Park upgrades
 const baseEmojiThemeParkUpgrade = {
     building: "Emoji theme park" as BuildingNames,
-    buildingId: 7,
+    buildingId: 8,
     unlockCondition: "Building amount" as UnlockConditionType,
     categories: ["Multiply building production" as UpgradeCateogoriesType],
     emojisPerSecondMultiplier: 2,

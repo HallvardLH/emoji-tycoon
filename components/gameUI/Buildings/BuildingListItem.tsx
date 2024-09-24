@@ -16,7 +16,7 @@ interface BuildingListItemProps {
     price: number | string;
     baseEps: number;
     upgradeAmount: number;
-    eps: number | string;
+    eps: number;
     amount: number;
     buttonActive?: boolean;
     onPress: () => void;
@@ -46,13 +46,14 @@ export default function BuildingListItem(props: BuildingListItemProps) {
                 </View>
                 <View style={listItemStyles.center}>
                     <Text shadow={false} color={colors.purple.dark} size={20}>{name}</Text>
-                    <Text style={{ letterSpacing: 0.5, marginVertical: -4 }} shadow={false} color={colors.blue.medium} size={14}>Produces {formatNumber(baseEps)} eps</Text>
-                    <Text style={{ letterSpacing: 0.05 }} shadow={false} color={colors.purple.medium} size={15}>{description}</Text>
+                    {/* <Text style={{ letterSpacing: 0.5, marginVertical: -4 }} shadow={false} color={colors.blue.medium} size={14}>Produces {formatNumber(baseEps)} eps</Text> */}
+                    <Text style={{ lineHeight: 15 }} shadow={false} color={colors.yellow.highlight} size={16}>💵 {price}</Text>
+                    <Text style={{ lineHeight: 14 }} shadow={false} color={colors.purple.dark} size={14}><Text style={{ lineHeight: 14 }} shadow={false} color={colors.yellow.highlight} size={14}>{formatNumber(eps)}</Text> EPS</Text>
+                    <Text style={{ letterSpacing: 0.05 }} shadow={false} color={"gray"} size={14}>{description}</Text>
                 </View>
                 <View style={listItemStyles.right}>
                     <Text style={{ lineHeight: 30 }} shadow={false} size={amount < 1000 ? 30 : 26} color={colors.purple.medium}>{amount}</Text>
-                    <Text style={{ textAlign: "center", lineHeight: 15 }} shadow={false} color={colors.purple.medium} size={14}>{price}</Text>
-                    <Text style={{ textAlign: "center", lineHeight: 15 }} shadow={false} color={colors.purple.medium} size={14}>💵</Text>
+                    <Text style={{ lineHeight: 15 }} shadow={false} color={colors.purple.medium} size={14}>owned</Text>
                 </View>
             </View>
             <View style={{
@@ -68,13 +69,13 @@ export default function BuildingListItem(props: BuildingListItemProps) {
                     marginHorizontal: 10,
                 }}>
                     <Text shadow={false} color={colors.purple.dark} size={15}>
-                        {'\u2022'} You have <Text shadow={false} color={colors.yellow.dark} size={15}>{amount}</Text> {amount == 1 ? name : pluralNames[name]}
+                        {'\u2022'} You have <Text shadow={false} color={colors.yellow.highlight} size={15}>{formatNumber(amount)}</Text> {amount == 1 ? name : pluralNames[name]}
                     </Text>
                     <Text shadow={false} color={colors.purple.dark} size={15}>
-                        {'\u2022'} Each produces <Text shadow={false} color={colors.yellow.dark} size={15}>{baseEps}</Text> emojis per second
+                        {'\u2022'} Each produces <Text shadow={false} color={colors.yellow.highlight} size={15}>{formatNumber(baseEps)}</Text> emojis per second
                     </Text>
                     <Text shadow={false} color={colors.purple.dark} size={15}>
-                        {'\u2022'} For a total of <Text shadow={false} color={colors.yellow.dark} size={15}>{eps}</Text> emojis per second!
+                        {'\u2022'} For a total of <Text shadow={false} color={colors.yellow.highlight} size={15}>{formatNumber(eps)}</Text> emojis per second!
                     </Text>
                     {upgradeAmount > 0 && (
                         <View style={{

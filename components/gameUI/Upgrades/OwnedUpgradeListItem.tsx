@@ -1,5 +1,5 @@
 import React from "react";
-import { View, TouchableOpacity, StyleSheet } from "react-native";
+import { View, StyleSheet } from "react-native";
 import Emoji from "../Emoji";
 import ContentBox from "../../generalUI/ContentBox";
 import Text from "../../generalUI/Text";
@@ -9,24 +9,20 @@ import { formatNumber } from "../../../scripts/misc";
 import { getUpgradeBonus } from "../../../scripts/game/upgrades/upgrades";
 import { buildingEmojis } from "../../../scripts/game/buildings/buildings";
 
-interface UpgradeListItemProps {
+interface OwnedUpgradeListItemProps {
     name: string;
     buildingName?: string;
     buildingIcon?: string;
     id: number;
     description: string;
-    quote?: string;
     effect: string;
     price: number;
     icon: string;
-    buttonActive: boolean;
     onPress: () => void;
-    onEmojiPress?: () => void;
 }
 
-export default function UpgradeListItem(props: UpgradeListItemProps) {
-    const { name, buildingName, buildingIcon, id, description, quote, effect, price, icon, buttonActive, onPress, onEmojiPress } = props;
-    const [bonuses, bonusPercentages] = getUpgradeBonus(id);
+export default function OwnedUpgradeListItem(props: OwnedUpgradeListItemProps) {
+    const { name, buildingName, buildingIcon, id, description, effect, price, icon, onPress } = props;
     return (
         <ContentBox style={{ marginBottom: 32 }}>
             {buildingName && (
@@ -47,30 +43,16 @@ export default function UpgradeListItem(props: UpgradeListItemProps) {
                 </View>
             )}
             <View style={listItemStyles.container}>
-                {onEmojiPress ? (
-                    <TouchableOpacity style={listItemStyles.left} onPress={onEmojiPress}>
-                        <Emoji icon={icon} />
-                    </TouchableOpacity>
-                ) : (
-                    <View style={listItemStyles.left}>
-                        <Emoji icon={icon} />
-                    </View>
-                )}
+                <View style={listItemStyles.left}>
+                    <Emoji icon={icon} />
+                </View>
                 <View style={listItemStyles.center}>
                     <Text shadow={false} color={colors.yellow.highlight} size={20}>{name}</Text>
-                    <Text style={{ lineHeight: 16 }} shadow={false} color={colors.purple.medium} size={16}>💵 {formatNumber(price)}</Text>
-                    {quote && (
-                        <Text style={{ letterSpacing: 0.1, }} shadow={false} color={colors.pink.dark} size={13}>
-                            <Text shadow={false} color={colors.pink.highlight} size={15}>"</Text>
-                            {quote}
-                            <Text shadow={false} color={colors.pink.highlight} size={15}>"</Text>
-                        </Text>
-                    )}
-                    <Text style={{ letterSpacing: 0.1 }} shadow={false} color={"gray"} size={14}>{description}</Text>
+                    <Text style={{ letterSpacing: 0.1 }} shadow={false} color={colors.pink.dark} size={15}>{description}</Text>
                 </View>
                 <View style={listItemStyles.right}>
                     {/* <Text style={{ lineHeight: 30 }} shadow={false} size={amountFontSize} color={colors.purple.medium}>{amount}</Text> */}
-                    {/* <Text style={{ textAlign: "center", lineHeight: 15 }} shadow={false} color={colors.purple.medium} size={14}>{formatNumber(price)} 💵</Text> */}
+                    <Text style={{ textAlign: "center", lineHeight: 15 }} shadow={false} color={colors.purple.medium} size={14}>{formatNumber(price)} 💵</Text>
                 </View>
             </View>
             <View style={{
@@ -84,28 +66,20 @@ export default function UpgradeListItem(props: UpgradeListItemProps) {
                     flex: 1,
                     justifyContent: "center",
                 }}>
-                    <Text style={{ letterSpacing: 0.1 }} shadow={false} color={colors.purple.medium} size={14}>{effect}</Text>
-                    {bonuses.map((bonus, index) => (
-                        <React.Fragment key={index}>
-                            <Text shadow={false} color={colors.purple.dark} size={14}>
-                                <Text shadow={false} color={"gray"} size={14}>+{bonus}</Text> eps <Text shadow={false} color={"gray"} size={14}>+{bonusPercentages[index]}</Text>
-                            </Text>
-                        </React.Fragment>
-                    ))}
+                    <Text style={{ letterSpacing: 0.1 }} shadow={false} color={colors.purple.medium} size={15}>{effect}</Text>
                 </View>
-                <View style={{
+                {/* <View style={{
                     flexBasis: 90,
                     justifyContent: "center",
                     alignItems: "center",
                     gap: 6,
                 }}>
                     <Button disabled={!buttonActive} shadowHeight={8} onPress={onPress} height={34} width={90} variant={"blue"} label={"Buy"} />
-                    {/* <Button shadowHeight={8} onPress={() => setShowDetails(!showDetails)} height={34} width={90} variant="submit" label={"Details"} /> */}
-
-                </View>
+                    <Button shadowHeight={8} onPress={() => setShowDetails(!showDetails)} height={34} width={90} variant="submit" label={"Details"} />
+                </View> */}
 
             </View>
-        </ContentBox >
+        </ContentBox>
     )
 }
 
@@ -117,7 +91,7 @@ const listItemStyles = StyleSheet.create({
     },
 
     left: {
-        flexBasis: 50,
+        flexBasis: 56,
         gap: 12,
         alignItems: "center",
     },
@@ -127,7 +101,7 @@ const listItemStyles = StyleSheet.create({
     },
 
     right: {
-        flexBasis: 0,
+        flexBasis: 56,
         alignItems: "center",
     },
 })
