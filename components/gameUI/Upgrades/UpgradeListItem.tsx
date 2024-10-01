@@ -8,6 +8,7 @@ import { colors } from "../../misc/Colors";
 import { formatNumber } from "../../../scripts/misc";
 import { getUpgradeBonus } from "../../../scripts/game/upgrades/upgrades";
 import { buildingEmojis } from "../../../scripts/game/buildings/buildings";
+import { howFun } from "../../../scripts/game/shorthands";
 
 interface UpgradeListItemProps {
     name: string;
@@ -26,7 +27,7 @@ interface UpgradeListItemProps {
 
 export default function UpgradeListItem(props: UpgradeListItemProps) {
     const { name, buildingName, buildingIcon, id, description, quote, effect, price, icon, buttonActive, onPress, onEmojiPress } = props;
-    const [bonuses, bonusPercentages] = getUpgradeBonus(id);
+    const [bonuses, bonusPercentages, suffixes] = getUpgradeBonus(id);
     return (
         <ContentBox style={{ marginBottom: 32 }}>
             {buildingName && (
@@ -58,7 +59,8 @@ export default function UpgradeListItem(props: UpgradeListItemProps) {
                 )}
                 <View style={listItemStyles.center}>
                     <Text shadow={false} color={colors.yellow.highlight} size={20}>{name}</Text>
-                    <Text style={{ lineHeight: 16 }} shadow={false} color={colors.purple.medium} size={16}>💵 {formatNumber(price)}</Text>
+                    <Text shadow={false} color={colors.purple.medium} size={16}>
+                        {howFun(77) ? "💸" : "💵"} {formatNumber(price)}</Text>
                     {quote && (
                         <Text style={{ letterSpacing: 0.1, }} shadow={false} color={colors.pink.dark} size={13}>
                             <Text shadow={false} color={colors.pink.highlight} size={15}>"</Text>
@@ -88,7 +90,7 @@ export default function UpgradeListItem(props: UpgradeListItemProps) {
                     {bonuses.map((bonus, index) => (
                         <React.Fragment key={index}>
                             <Text shadow={false} color={colors.purple.dark} size={14}>
-                                <Text shadow={false} color={"gray"} size={14}>+{bonus}</Text> eps <Text shadow={false} color={"gray"} size={14}>+{bonusPercentages[index]}</Text>
+                                <Text shadow={false} color={"gray"} size={14}>+{bonus}</Text> {suffixes[index]} <Text shadow={false} color={"gray"} size={14}>{bonusPercentages[index]}</Text>
                             </Text>
                         </React.Fragment>
                     ))}

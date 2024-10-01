@@ -10,6 +10,7 @@ import { pickNextEmoji } from "./bigEmoji";
 import { calculateEpt } from "./calculations";
 import { canBuyUpgrade } from "./upgrades/checks";
 import { addEmojisGained } from "../redux/statsSlice";
+import { calculateBuildingsEps } from "./buildings/buildings";
 
 let lastUpdateTime = Date.now();
 let i = 0
@@ -31,6 +32,8 @@ export function gameLoop() {
         pickNextEmoji();
 
         calculateEpt();
+
+        calculateBuildingsEps();
 
         loggedBigEmojiTaps = store.getState().stats.bigEmojiTaps;
     }

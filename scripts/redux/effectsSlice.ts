@@ -38,26 +38,26 @@ export const effectsSlice = createSlice({
         },
 
         removeEffect: (state, action: PayloadAction<number>) => {
-            state.effects = state.effects.filter(effect => effect.id !== action.payload);
+            state.effects = state.effects.filter(effect => effect.instanceId !== action.payload);
         },
         addEffect: (state, action: PayloadAction<Effect>) => {
             state.effects.push(action.payload);
         },
         updateTimeLeft: (state, action: PayloadAction<{ id: number; timeLeft: number }>) => {
-            const effect = state.effects.find(effect => effect.id === action.payload.id);
+            const effect = state.effects.find(effect => effect.instanceId === action.payload.id);
             if (effect) {
                 effect.timeLeft = action.payload.timeLeft;
             }
         },
 
         removeEffectOnScreen: (state, action: PayloadAction<number>) => {
-            state.effectsOnScreen = state.effectsOnScreen.filter(effect => effect.id !== action.payload);
+            state.effectsOnScreen = state.effectsOnScreen.filter(effect => effect.instanceId !== action.payload);
         },
         addEffectOnScreen: (state, action: PayloadAction<Effect>) => {
             state.effectsOnScreen.push(action.payload);
         },
         updateTimeLeftOnScreen: (state, action: PayloadAction<{ id: number; timeLeftOnScreen: number }>) => {
-            const effect = state.effectsOnScreen.find(effect => effect.id === action.payload.id);
+            const effect = state.effectsOnScreen.find(effect => effect.instanceId === action.payload.id);
             if (effect) {
                 effect.timeLeftOnScreen = action.payload.timeLeftOnScreen;
             }

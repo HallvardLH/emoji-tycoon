@@ -11,7 +11,12 @@ export interface Effect {
     // Emojis per second multiplier
     epsMult: number;
     timeLeft: number;
+    // The timeLeft, before being decremented, used for percentage calculation
+    originalDuration?: number,
     timeLeftOnScreen: number;
+    // A unique id for each instance of effect
+    instanceId?: number;
+    // The id of the effect, in relation to effectData
     id: number;
     xPos: number;
     yPos: number;

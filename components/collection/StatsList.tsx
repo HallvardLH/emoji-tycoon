@@ -6,6 +6,7 @@ import { formatNumber } from "../../scripts/misc";
 
 export default function StatsList() {
     const { bigEmojiTaps, emojisEarnedFromTap, effectEmojisCollected, emojisGained } = useSelector((state: RootState) => state.stats);
+    const { funValue } = useSelector((state: RootState) => state.values);
     return (
         <View style={styles.container}>
             <View style={styles.statContainer}>
@@ -24,6 +25,12 @@ export default function StatsList() {
                 <Text>Magical emojis tapped</Text>
                 <Text>{formatNumber(effectEmojisCollected)}</Text>
             </View>
+            {funValue == 100 && (
+                <View style={styles.statContainer}>
+                    <Text>Fun value</Text>
+                    <Text>{formatNumber(funValue)}😭</Text>
+                </View>
+            )}
         </View>
     )
 }

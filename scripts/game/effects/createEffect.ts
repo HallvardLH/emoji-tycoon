@@ -1,15 +1,15 @@
 import { Dimensions } from "react-native";
 import { effectData } from "./effectData";
-import { Effect } from "./effectType";
 import { howFun } from "../shorthands";
+import { Effect } from "./effectType";
 
 interface EffectWeights {
     [key: string]: number;
 }
 
 const effectWeights: EffectWeights = {
-    tap: 100,
-    production: 0,
+    tap: 50,
+    production: 50,
 };
 
 // Function to pick an effect type based on weights
@@ -59,7 +59,7 @@ export function createEffect() {
             console.log("Tried to give fun effect, and chance was: ", randomChance, " did it work?")
             if (randomChance <= 0.05) {
                 console.log("It did!")
-                break; // Exit the loop and accept this effect
+                break;
             }
         }
 
@@ -73,8 +73,10 @@ export function createEffect() {
         eptAdd: chosenEffect.eptAdd,
         epsMult: chosenEffect.epsMult,
         timeLeft: chosenEffect.timeLeft,
+        originalDuration: chosenEffect.timeLeft,
         timeLeftOnScreen: chosenEffect.timeLeftOnScreen,
-        id: Date.now(),
+        instanceId: Date.now(),
+        id: chosenEffect.id,
         xPos: xPos,
         yPos: yPos,
         type: chosenEffect.type

@@ -84,7 +84,7 @@ export default function BigEmoji() {
 
         setAnimatingNumbers(current => [...current, {
             key: `${uniqueKey}-num`,
-            number: `+${formatNumber(emojisPerTapDisplay)}`,
+            number: `+${formatNumber(emojisPerTapDisplay, 1)}`,
             yAnimValue: numberYAnimValue,
             xAnimValue: numberXAnimValue,
         }]);

@@ -28,7 +28,7 @@ const initialState: BuildingsState = {
         amount: 0,
         canBuy: false,
         price: building.basePrice,
-        eps: building.baseEps,
+        eps: 0,
         epsMultipliers: [],
         upgrades: 0,
         unlocked: false,

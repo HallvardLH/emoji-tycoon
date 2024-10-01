@@ -16,7 +16,7 @@ export function tapEffect(id: number) {
     const effectsOnScreen = store.getState().effects.effectsOnScreen;
 
     // Finds the effect based on id and adds it to the effects array
-    const newEffect = effectsOnScreen.find(effect => effect.id === id)!;
+    const newEffect = effectsOnScreen.find(effect => effect.instanceId === id)!;
     store.dispatch(addEffect(newEffect!));
 
     // Removes the effect from the onScreen array
@@ -40,12 +40,12 @@ export function decrementEffectsOnScreen() {
     const effectsOnScreen = store.getState().effects.effectsOnScreen;
     effectsOnScreen.forEach(effect => {
         if (effect.timeLeftOnScreen > 0) {
-            store.dispatch(updateTimeLeftOnScreen({ id: effect.id!, timeLeftOnScreen: effect.timeLeftOnScreen - 1 }))
+            store.dispatch(updateTimeLeftOnScreen({ id: effect.instanceId!, timeLeftOnScreen: effect.timeLeftOnScreen - 1 }))
         }
 
         // If timeLeft has reached 0, remove the effect
         if (effect.timeLeftOnScreen <= 0) {
-            store.dispatch(removeEffectOnScreen(effect.id!));
+            store.dispatch(removeEffectOnScreen(effect.instanceId!));
         }
     })
 }

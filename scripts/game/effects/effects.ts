@@ -1,6 +1,6 @@
 import { store } from '../../redux/reduxStore';
 import { removeEffect, updateTimeLeft } from '../../redux/effectsSlice';
-import { calculateEpt } from '../calculations';
+import { calculateEpt, calculateEmojisPerSecond } from '../calculations';
 
 /**
  * Decrements the timer on all active effects
@@ -13,13 +13,14 @@ export function decrementEffects() {
 
     effects.forEach(effect => {
         if (effect.timeLeft > 0) {
-            store.dispatch(updateTimeLeft({ id: effect.id!, timeLeft: effect.timeLeft - 1 }))
+            store.dispatch(updateTimeLeft({ id: effect.instanceId!, timeLeft: effect.timeLeft - 1 }))
         }
 
         // If timeLeft has reached 0, remove the effect
         if (effect.timeLeft <= 0) {
-            store.dispatch(removeEffect(effect.id!));
+            store.dispatch(removeEffect(effect.instanceId!));
             calculateEpt();
+            calculateEmojisPerSecond();
         }
     })
 }

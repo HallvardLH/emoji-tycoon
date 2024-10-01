@@ -10,7 +10,7 @@ interface ValuesState {
 }
 
 const initialState: ValuesState = {
-    emojis: 0,
+    emojis: 1e62,
     emojisPerSecond: 0,
     emojisPerSecondPercentages: [],
     totalBuildingEps: 0,

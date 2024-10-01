@@ -1,3 +1,5 @@
+import { howFun } from "../shorthands";
+
 interface BuildingData {
     name: string;
     buildingId: number;

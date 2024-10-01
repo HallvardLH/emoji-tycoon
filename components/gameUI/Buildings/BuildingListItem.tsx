@@ -8,6 +8,7 @@ import { useState } from "react";
 import { pluralNames } from "../../../scripts/game/buildings/buildings";
 import DisplayUpgrades from "../DisplayUpgrades";
 import { formatNumber } from "../../../scripts/misc";
+import { howFun } from "../../../scripts/game/shorthands";
 
 interface BuildingListItemProps {
     name: string;
@@ -47,8 +48,10 @@ export default function BuildingListItem(props: BuildingListItemProps) {
                 <View style={listItemStyles.center}>
                     <Text shadow={false} color={colors.purple.dark} size={20}>{name}</Text>
                     {/* <Text style={{ letterSpacing: 0.5, marginVertical: -4 }} shadow={false} color={colors.blue.medium} size={14}>Produces {formatNumber(baseEps)} eps</Text> */}
-                    <Text style={{ lineHeight: 15 }} shadow={false} color={colors.yellow.highlight} size={16}>💵 {price}</Text>
-                    <Text style={{ lineHeight: 14 }} shadow={false} color={colors.purple.dark} size={14}><Text style={{ lineHeight: 14 }} shadow={false} color={colors.yellow.highlight} size={14}>{formatNumber(eps)}</Text> EPS</Text>
+                    <Text shadow={false} color={colors.yellow.highlight} size={16}>{howFun(77) ? "💸" : "💵"} {price}</Text>
+                    {eps > 0 && (
+                        <Text style={{ lineHeight: 14 }} shadow={false} color={colors.purple.dark} size={14}><Text style={{ lineHeight: 14 }} shadow={false} color={colors.yellow.highlight} size={14}>{formatNumber(eps)}</Text> EPS</Text>
+                    )}
                     <Text style={{ letterSpacing: 0.05 }} shadow={false} color={"gray"} size={14}>{description}</Text>
                 </View>
                 <View style={listItemStyles.right}>

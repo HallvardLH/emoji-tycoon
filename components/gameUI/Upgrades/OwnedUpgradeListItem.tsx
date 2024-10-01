@@ -8,6 +8,7 @@ import { colors } from "../../misc/Colors";
 import { formatNumber } from "../../../scripts/misc";
 import { getUpgradeBonus } from "../../../scripts/game/upgrades/upgrades";
 import { buildingEmojis } from "../../../scripts/game/buildings/buildings";
+import { howFun } from "../../../scripts/game/shorthands";
 
 interface OwnedUpgradeListItemProps {
     name: string;
@@ -52,7 +53,7 @@ export default function OwnedUpgradeListItem(props: OwnedUpgradeListItemProps) {
                 </View>
                 <View style={listItemStyles.right}>
                     {/* <Text style={{ lineHeight: 30 }} shadow={false} size={amountFontSize} color={colors.purple.medium}>{amount}</Text> */}
-                    <Text style={{ textAlign: "center", lineHeight: 15 }} shadow={false} color={colors.purple.medium} size={14}>{formatNumber(price)} 💵</Text>
+                    <Text style={{ textAlign: "center" }} shadow={false} color={colors.purple.medium} size={14}>{formatNumber(price)} {howFun(77) ? "💸" : "💵"}</Text>
                 </View>
             </View>
             <View style={{

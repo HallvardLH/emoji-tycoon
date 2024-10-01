@@ -19,7 +19,7 @@ export const flyingSaucerUpgrades: UpgradeType[] = [
         ...baseFlyingSaucerUpgrade,
         name: "Telescopes",
         icon: "🔭",
-        description: "Look into the stars to discover prospective planets.",
+        description: "Look into the stars to discover emoji planets.",
         price: getBuildingUpgradePrice(0, 8),
         tier: 0,
         id: 80,

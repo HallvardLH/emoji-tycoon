@@ -4,7 +4,7 @@ import Emoji from "./Emoji";
 import { useSelector } from 'react-redux';
 import { RootState } from '../../scripts/redux/reduxStore';
 import { tapEffect } from "../../scripts/game/effects/onScreenEffects";
-import { Effect } from "../../scripts/game/effects/createEffect";
+import { Effect } from "../../scripts/game/effects/effectType";
 import PulseAnimation from "../animations/PulseAnimation";
 
 export default function EffectPopup() {
@@ -13,7 +13,7 @@ export default function EffectPopup() {
     return (
         <>
             {effectsOnScreen.map((effect) => (
-                <FadeInOutEffect key={effect.id} effect={effect} />
+                <FadeInOutEffect key={effect.instanceId} effect={effect} />
             ))}
         </>
     );
@@ -54,7 +54,7 @@ function FadeInOutEffect({ effect }: FadeInOutEffectProps) {
             }}
         >
             <PulseAnimation maxSize={1.1} duration={2000}>
-                <Pressable onPress={() => tapEffect(effect.id)}>
+                <Pressable onPress={() => tapEffect(effect.instanceId!)}>
                     <Emoji icon={effect.emoji} size={70} />
                 </Pressable>
             </PulseAnimation>

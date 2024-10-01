@@ -1,8 +1,10 @@
 import ScreenView from "../../components/layout/ScreenView";
 import React from 'react';
 import BigEmoji from "../../components/gameUI/BigEmoji";
-import EffectBanner from "../../components/gameUI/EffectBanner";
+import EffectMeters from "../../components/gameUI/Meters/EffectMeters";
 import EffectPopup from "../../components/gameUI/EffectPopup";
+import PrestigeMeter from "../../components/gameUI/Meters/PrestigeMeter";
+import { View } from "react-native";
 
 interface HomeProps {
     navigation: {
@@ -13,7 +15,20 @@ interface HomeProps {
 export default function Home({ navigation }: HomeProps) {
     return (
         <ScreenView>
-            <EffectBanner />
+            <View style={{
+                flexDirection: "row",
+                position: "absolute",
+                top: 10,
+                width: "90%",
+                justifyContent: "space-between",
+            }}>
+                <EffectMeters />
+
+                <View>
+                    <PrestigeMeter />
+                </View>
+
+            </View>
             <BigEmoji />
             <EffectPopup />
         </ScreenView>

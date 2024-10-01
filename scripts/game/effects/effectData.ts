@@ -47,7 +47,7 @@ export const effectData: Effect[] = [
         eptMult: 0,
         eptAdd: 0,
         epsMult: 2,
-        timeLeft: 200,
+        timeLeft: 30,
         timeLeftOnScreen: 25,
         emoji: "🍀",
         xPos: 100,
