@@ -59,4 +59,15 @@ export const graphicDesignStudioUpgrades: UpgradeType[] = [
         tier: 4,
         id: 14,
     },
+
+
+    {
+        ...baseGraphicDesignStudioUpgrade,
+        name: "Blood",
+        icon: "🩸",
+        description: "Painting with blood makes for extra cool emojis!",
+        price: getBuildingUpgradePrice(5, 1),
+        tier: 5,
+        id: 15,
+    },
 ]
