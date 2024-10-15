@@ -18,7 +18,7 @@ export default function Home({ navigation }: HomeProps) {
             <View style={{
                 flexDirection: "row",
                 position: "absolute",
-                top: 10,
+                top: 0,
                 width: "90%",
                 justifyContent: "space-between",
             }}>
@@ -26,6 +26,7 @@ export default function Home({ navigation }: HomeProps) {
 
                 <View>
                     <PrestigeMeter />
+
                 </View>
 
             </View>

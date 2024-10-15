@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { View, StyleSheet, Keyboard } from "react-native";
+import { View, StyleSheet, Keyboard, Platform } from "react-native";
 import TabButton from "./TabButton";
 import { componentColors, colors } from "../misc/Colors";
 import { useNavigation, NavigationProp, ParamListBase } from "@react-navigation/native";
@@ -89,7 +89,7 @@ export default function TabBar(props: TabBarProps) {
 const styles = StyleSheet.create({
     container: {
         position: 'absolute',
-        bottom: 0,
+        bottom: Platform.OS === "ios" ? 50 : 0,
         left: 0,
         right: 0,
         width: "100%",

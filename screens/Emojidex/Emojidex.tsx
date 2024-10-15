@@ -23,10 +23,10 @@ export default function Emojidex({ navigation }: EmojidexProps) {
                         name: "Stats",
                         component: <Stats />,
                     },
-                    {
-                        name: "Collection",
-                        component: <Collection />
-                    }
+                    // {
+                    //     name: "Collection",
+                    //     component: <Collection />
+                    // }
                 ]}
             />
         </ScreenView>

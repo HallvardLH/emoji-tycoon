@@ -7,6 +7,7 @@ import { resetEffects } from '../../scripts/redux/effectsSlice';
 import { resetCollection } from '../../scripts/redux/collectionSlice';
 import { resetPreferences } from '../../scripts/redux/preferencesSlice';
 import { resetStats } from '../../scripts/redux/statsSlice';
+import { resetPrestige } from '../../scripts/redux/prestigeSlice';
 import Button from '../buttons/Button';
 
 interface ResetButtonProps {
@@ -25,6 +26,7 @@ export default function ResetButton({ onPress }: ResetButtonProps) {
         dispatch(resetCollection());
         dispatch(resetPreferences());
         dispatch(resetStats());
+        dispatch(resetPrestige());
     };
     return (
         <Button variant="blue" width={200} label="Reset game" onPress={() => {

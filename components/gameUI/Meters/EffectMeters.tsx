@@ -16,6 +16,7 @@ export default function EffectMeters() {
                         key={effect.instanceId}
                         icon={effect.emoji}
                         percentage={effect.timeLeft / effect.originalDuration! * 100}
+                        label={effect.title}
                     />
                 ))}
             </ScrollView>
@@ -33,5 +34,6 @@ const styles = StyleSheet.create({
         gap: 10,
         width: "100%",
         paddingRight: 10,
+        paddingBottom: 20,
     },
 })

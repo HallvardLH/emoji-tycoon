@@ -11,6 +11,8 @@ import { calculateEpt } from "./calculations";
 import { canBuyUpgrade } from "./upgrades/checks";
 import { addEmojisGained } from "../redux/statsSlice";
 import { calculateBuildingsEps } from "./buildings/buildings";
+import { calculateRemainingEmojisForNextPrestige, getPrestigeLevel } from "./prestige/prestige";
+import { updateEmojiEssence } from "../redux/prestigeSlice";
 
 let lastUpdateTime = Date.now();
 let i = 0
@@ -48,6 +50,7 @@ export function gameLoop() {
             loggedBigEmojiTaps = store.getState().stats.bigEmojiTaps;
             unlockUpgrades();
         }
+        store.dispatch(updateEmojiEssence(getPrestigeLevel()));
     }
     // Runs once every second
     if (i % 10 == 0) {
@@ -55,6 +58,7 @@ export function gameLoop() {
         decrementEffects();
         decrementEffectsOnScreen();
         spawnEffect();
+        calculateRemainingEmojisForNextPrestige(true);
     }
     i++
 }

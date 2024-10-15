@@ -10,6 +10,7 @@ import effectsSlice from './effectsSlice';
 import collectionSlice from './collectionSlice';
 import preferencesSlice from './preferencesSlice';
 import statsSlice from './statsSlice';
+import prestigeSlice from './prestigeSlice';
 
 // Combine reducers
 const rootReducer = combineReducers({
@@ -21,6 +22,7 @@ const rootReducer = combineReducers({
     collection: collectionSlice,
     preferences: preferencesSlice,
     stats: statsSlice,
+    prestige: prestigeSlice,
 });
 
 const persistConfig = {
