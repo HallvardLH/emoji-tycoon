@@ -3,6 +3,7 @@ import React from 'react';
 import ContentTab from "../../components/layout/ContentTab";
 import Collection from "./Collection";
 import Stats from "./Stats";
+import Upgrades from "./Upgrades";
 
 interface EmojidexProps {
     navigation: {
@@ -16,8 +17,8 @@ export default function Emojidex({ navigation }: EmojidexProps) {
             <ContentTab
                 tabs={[
                     {
-                        name: "Achievements",
-                        component: <Stats />,
+                        name: "Upgrades",
+                        component: <Upgrades />,
                     },
                     {
                         name: "Stats",

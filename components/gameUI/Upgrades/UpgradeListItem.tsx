@@ -9,6 +9,9 @@ import { formatNumber } from "../../../scripts/misc";
 import { getUpgradeBonus } from "../../../scripts/game/upgrades/upgrades";
 import { buildingEmojis } from "../../../scripts/game/buildings/buildings";
 import { howFun } from "../../../scripts/game/shorthands";
+import { useState } from "react";
+import { useSelector } from 'react-redux';
+import { RootState } from "../../../scripts/redux/reduxStore";
 
 interface UpgradeListItemProps {
     name: string;
@@ -27,7 +30,10 @@ interface UpgradeListItemProps {
 
 export default function UpgradeListItem(props: UpgradeListItemProps) {
     const { name, buildingName, buildingIcon, id, description, quote, effect, price, icon, buttonActive, onPress, onEmojiPress } = props;
+
     const [bonuses, bonusPercentages, suffixes] = getUpgradeBonus(id);
+
+    const { showDetails } = useSelector((state: RootState) => state.preferences);
     return (
         <ContentBox style={{ marginBottom: 32 }}>
             {buildingName && (
@@ -87,13 +93,17 @@ export default function UpgradeListItem(props: UpgradeListItemProps) {
                     justifyContent: "center",
                 }}>
                     <Text style={{ letterSpacing: 0.1 }} shadow={false} color={colors.purple.medium} size={14}>{effect}</Text>
-                    {bonuses.map((bonus, index) => (
-                        <React.Fragment key={index}>
-                            <Text shadow={false} color={colors.purple.dark} size={14}>
-                                <Text shadow={false} color={"gray"} size={14}>+{bonus}</Text> {suffixes[index]} <Text shadow={false} color={"gray"} size={14}>{bonusPercentages[index]}</Text>
-                            </Text>
-                        </React.Fragment>
-                    ))}
+                    {showDetails && (
+                        <>
+                            {bonuses.map((bonus, index) => (
+                                <React.Fragment key={index}>
+                                    <Text shadow={false} color={colors.purple.dark} size={14}>
+                                        <Text shadow={false} color={"gray"} size={14}>+{bonus}</Text> {suffixes[index]} <Text shadow={false} color={"gray"} size={14}>{bonusPercentages[index]}</Text>
+                                    </Text>
+                                </React.Fragment>
+                            ))}
+                        </>
+                    )}
                 </View>
                 <View style={{
                     flexBasis: 90,

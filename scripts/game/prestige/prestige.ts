@@ -19,7 +19,7 @@ export function calculateRemainingEmojisForNextPrestige(asPercentage = false) {
     const emojisNeededForNextLevel = emojisForNextPrestigeLevel();
     const currentLevelRequiredEmojis = Math.pow(getPrestigeLevel(), 2) * 1e10;
 
-    console.log(formatNumber(currentLevelRequiredEmojis), getPrestigeLevel())
+    // console.log(formatNumber(currentLevelRequiredEmojis), getPrestigeLevel())
 
     // Calculate remaining emojis to reach next level
     const remaining = emojisNeededForNextLevel - emojisGained;

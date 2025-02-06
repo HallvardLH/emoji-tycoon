@@ -14,6 +14,7 @@ export default function PrestigeMeter() {
     const { remainingEmojisPrestigePerc, emojiEssence } = useSelector((state: RootState) => state.prestige);
 
     const [modalVisible, setModalVisible] = useState(false);
+    return null
     return (
         <>
             <TouchableOpacity onPress={() => setModalVisible(true)}>
