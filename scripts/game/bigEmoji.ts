@@ -73,15 +73,29 @@ const emojiData = {
 };
 
 /**
- * Randomly selects the next big emoji, with weighted probabilities for each emoji type
- *
- * The function calculates the total weight based on the weights assigned to different emoji categories. 
- * It then generates a random number and selects an emoji category based on the weighted probabilities. 
- * After selecting a category, it picks a random emoji from that category and dispatches it to the store.
- * This is the next emoji!
+
  *
  */
 export function pickNextEmoji() {
+    let randomEmoji = selectRandomEmoji();
+    store.dispatch(updateNextEmoji({
+        emoji: randomEmoji.emoji,
+        category: randomEmoji.category,
+        id: randomEmoji.index,
+    }))
+    return randomEmoji.emoji
+}
+
+
+/**
+ * Selects a "random" emoji based on weighted probabilities for each emoji type
+ *
+ * The function calculates the total weight based on the weights assigned to different emoji categories. 
+ * It then generates a random number and selects an emoji category based on the weighted probabilities. 
+ * After selecting a category, it picks a random emoji from that category and returns it
+ *
+ */
+export function selectRandomEmoji() {
     const emojiCategories = Object.keys(emojiWeights);
 
     // Calculate the total weight
@@ -97,13 +111,16 @@ export function pickNextEmoji() {
             const emojis = emojiData[category as keyof typeof emojiData];
             // Randomly select an emoji from the chosen category
             const randomEmojiIndex = Math.floor(Math.random() * emojis.length);
-            store.dispatch(updateNextEmoji({
-                emoji: emojis[randomEmojiIndex],
-                category: category,
-                id: randomEmojiIndex,
-            }))
-            return emojis[randomEmojiIndex] as string;
+
+            return { emoji: emojis[randomEmojiIndex], index: randomEmojiIndex, category: category };
         }
         randomNum -= emojiWeights[category];  // Decrease randomNum by the current weight
     }
+
+    // Fallback: Pick a completely random emoji from any category
+    const randomCategory = emojiCategories[Math.floor(Math.random() * emojiCategories.length)];
+    const randomEmojis = emojiData[randomCategory as keyof typeof emojiData];
+    const randomEmojiIndex = Math.floor(Math.random() * randomEmojis.length);
+
+    return { emoji: randomEmojis[randomEmojiIndex], index: randomEmojiIndex, category: randomCategory };
 }
