@@ -13,29 +13,72 @@ interface EmojiRainProps {
     bg?: string;
 }
 
-export default function EmojiRain({ delay, bg }: EmojiRainProps) {
+export default function EmojiRain({ delay = 0, bg }: EmojiRainProps) {
     const { emojisPerSecond } = useSelector((state: RootState) => state.values);
+    const { effects } = useSelector((state: RootState) => state.effects);
 
     interface Raindrop {
         emoji: string;
         xPos: number;
         yPos: number;
         size: number;
+        opacity: number;
         id: string;
     }
 
     const [section, setSection] = useState<Raindrop[]>([]);
+    const rainAnim = useRef(new Animated.Value(-height + HEADER_HEIGHT)).current;
+
+    // Use a ref to store the latest value of emojisPerSecond
+    // This is required to access the newest value of emojisPerSecond
+    const emojisPerSecondRef = useRef(emojisPerSecond);
+    useEffect(() => {
+        emojisPerSecondRef.current = emojisPerSecond;
+    }, [emojisPerSecond]);
+
+    const effectsRef = useRef(effects);
+    useEffect(() => {
+        effectsRef.current = effects;
+    }, [effects]);
+
+    const selectEmoji = () => {
+        const activeEffects = effectsRef.current;
+        // If there are any active effects...
+        if (activeEffects.length > 0) {
+            let emojiPool: string[] = [];
+            // Add all active effect emojis to a pool
+            activeEffects.forEach((effect) => {
+                emojiPool.push(effect.emoji);
+            })
+
+            // Pick a random emoji from that pool
+            return emojiPool[Math.floor(Math.random() * emojiPool.length)];
+
+        }
+        // If there is no active effect, return any random emoji
+        return selectRandomEmoji().emoji;
+    }
 
     const populateSection = () => {
         const newSection: Raindrop[] = [];
-        let emojiAmount = 50;
+        // Use the ref value to ensure we're working with the latest value
+        let emojiAmount = Math.floor(emojisPerSecondRef.current);
+        const maxEmojiAmount = 75;
 
-        if (emojisPerSecond < 1) {
-            emojiAmount = 0;
+        // The minimum and maximum size an emoji can be on the screen
+        const minEmojiSize = 25;
+        const maxEmojiSize = 45;
+
+        const minEmojiOpacity = 0.15;
+        const maxEmojiOpacity = 0.75;
+
+        // Cap the amount of emojis that can be added at once
+        if (emojisPerSecondRef.current > maxEmojiAmount) {
+            emojiAmount = maxEmojiAmount;
         }
 
-        const minDist = 50; // Minimum distance between emojis
-
+        // Minimum distance between emojis
+        const minDist = 50;
         const points: { x: number; y: number }[] = [];
 
         function isFarEnough(x: number, y: number): boolean {
@@ -44,87 +87,85 @@ export default function EmojiRain({ delay, bg }: EmojiRainProps) {
 
         let attempts = 0;
         while (newSection.length < emojiAmount && attempts < emojiAmount * 3) {
-            const x = Math.floor(Math.random() * width - 25);
+            const x = Math.floor(Math.random() * (width - 25));
             const y = Math.floor(Math.random() * (height - 50));
 
             if (isFarEnough(x, y)) {
+                let size = Math.floor(Math.random() * (maxEmojiSize - minEmojiSize + 1)) + minEmojiSize;
+
+                // Calculate opacity based on size
+                // The minimum size gives the minimum possible opacity,
+                // Max size gives the max opacity
+                // Anything else fits somewhere in between
+                let opacity = minEmojiOpacity + ((size - minEmojiSize) / (maxEmojiSize - minEmojiSize)) * (maxEmojiOpacity - minEmojiOpacity);
+
+                let chosenEmoji = selectEmoji();
+
                 points.push({ x, y });
                 newSection.push({
-                    emoji: selectRandomEmoji().emoji,
+                    emoji: chosenEmoji,
                     xPos: x,
                     yPos: y,
-                    size: Math.floor(Math.random() * (45 - 25 + 1)) + 25,
+                    size: size,
+                    opacity: opacity,
                     id: `${newSection.length}-${Date.now()}`,
                 });
             }
 
             attempts++; // Prevent infinite loops
         }
-
         setSection(newSection);
     };
 
-
-
-    // This calls the populate function each time the section
-    // has completed one animation
     useEffect(() => {
-        // Timeout to delay the interval from starting,
-        // if the section has a delay specified
-        setTimeout(() => {
-            // Call the populate section immediately upon mount
-            // unless a delay is specified
+        const startAnimation = () => {
+            // Generate new emojis at the start of each cycle
             populateSection();
 
-            setInterval(() => {
-                populateSection();
-            }, 10000)
-        }, delay)
-    }, []);
-
-    const rainAnim = useRef(new Animated.Value(-height + HEADER_HEIGHT)).current;
-
-    useEffect(() => {
-        const rainAnimation = Animated.loop(
             Animated.timing(rainAnim, {
                 toValue: height - TAB_BAR_HEIGHT,
                 duration: 10000,
-                delay,
                 easing: Easing.linear,
                 useNativeDriver: true,
-            })
-        );
-
-        rainAnimation.start(() => {
-            populateSection();
-            console.log("test")
-        });
-
-        return () => {
-            rainAnimation.stop();
+            }).start(() => {
+                // Reset animation position
+                rainAnim.setValue(-height + HEADER_HEIGHT);
+                // Restart animation when complete
+                startAnimation();
+            });
         };
-    }, []);
+
+        // Delay execution initially if a delay is specified
+        const timeout = setTimeout(startAnimation, delay);
+
+        // Cleanup on unmount
+        return () => clearTimeout(timeout);
+    }, []); // Empty dependency array ensures this runs only once on mount
 
     return (
         <View style={styles.container}>
-            <Animated.View
-                style={[styles.emojiSection, { transform: [{ translateY: rainAnim }], backgroundColor: bg, height, zIndex: delay }]}
-            >
+            <Animated.View style={[
+                styles.emojiSection,
+                {
+                    transform: [{ translateY: rainAnim }],
+                    backgroundColor: bg
+                }
+            ]}>
                 {section.map(item => (
-                    <View key={item.id} style={{ position: 'absolute', top: item.yPos, left: item.xPos, zIndex: delay }}>
+                    <View
+                        key={item.id}
+                        style={{
+                            position: 'absolute',
+                            top: item.yPos,
+                            left: item.xPos,
+                            opacity: item.opacity,
+                        }}>
+
                         <Emoji size={item.size} icon={item.emoji} />
-                        {/* <View
-                            style={{
-                                backgroundColor: bg == "#c5075c" ? "blue" : "red",
-                                width: 25,
-                                height: 25,
-                                borderRadius: 100,
-                            }}
-                        /> */}
+
                     </View>
                 ))}
             </Animated.View>
-
         </View>
     );
 }
