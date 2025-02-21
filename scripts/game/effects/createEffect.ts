@@ -2,6 +2,7 @@ import { Dimensions } from "react-native";
 import { effectData } from "./effectData";
 import { howFun } from "../shorthands";
 import { Effect } from "./effectType";
+import { HEADER_HEIGHT, TAB_BAR_HEIGHT } from "../../../components/layout/ScreenView";
 
 interface EffectWeights {
     [key: string]: number;
@@ -25,7 +26,7 @@ function pickEffectType(): string {
         }
     }
 
-    return "tap"; // Fallback (optional)
+    return "tap"; // Fallback
 }
 
 /**
@@ -35,13 +36,12 @@ function pickEffectType(): string {
  *
  */
 export function createEffect() {
-    const margin = 0;
+    const margin = 150;
 
     // Generate random positions with a margin
-    // const xPos = Math.random() * (Dimensions.get("window").width - 2 * margin) + margin;
-    // const yPos = Math.random() * (Dimensions.get("window").height - 2 * margin) + margin;
-    const xPos = 100
-    const yPos = 100
+    const xPos = Math.floor(Math.random() * (Dimensions.get("window").width - margin));
+    // Ensure effects do not spawn off-screen
+    const yPos = Math.random() * (Dimensions.get("window").height - (HEADER_HEIGHT + TAB_BAR_HEIGHT + margin));
 
     let chosenEffect;
 
@@ -53,12 +53,11 @@ export function createEffect() {
         const filteredEffects = effectData.filter(effect => effect.type === chosenEffectType);
         chosenEffect = filteredEffects[Math.floor(Math.random() * filteredEffects.length)];
 
+        // If fun value is 17, effect 101 ("x77 emoji production") may be chosen
         if (chosenEffect.id === 101 && howFun(17)) {
             // 5% chance to accept this effect
             const randomChance = Math.random();
-            console.log("Tried to give fun effect, and chance was: ", randomChance, " did it work?")
             if (randomChance <= 0.05) {
-                console.log("It did!")
                 break;
             }
         }
@@ -79,6 +78,7 @@ export function createEffect() {
         id: chosenEffect.id,
         xPos: xPos,
         yPos: yPos,
+        margin: margin,
         type: chosenEffect.type
     }
 

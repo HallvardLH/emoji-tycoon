@@ -20,5 +20,7 @@ export interface Effect {
     id: number;
     xPos: number;
     yPos: number;
+    // The style margin given to the on-screen effect
+    margin?: number;
     type: EffectTypes;
 }

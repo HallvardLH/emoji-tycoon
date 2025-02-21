@@ -50,6 +50,8 @@ function FadeInOutEffect({ effect }: FadeInOutEffectProps) {
                 position: "absolute",
                 left: effect.xPos,
                 top: effect.yPos,
+                marginTop: effect.margin ? effect.margin / 2 : 25,
+                marginLeft: effect.margin ? effect.margin / 2 : 25,
                 opacity: fadeAnim, // Bind opacity to animated value
             }}
         >
