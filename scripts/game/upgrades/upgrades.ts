@@ -1,5 +1,5 @@
 import { upgradeData } from './upgradeData/upgradeData';
-import { store } from '../../redux/reduxStore';
+import store from '../../redux/reduxStore';
 import { unlockUpgrade, addUpgrade } from "../../redux/upgradesSlice";
 import { pluralNames, calculateBuildingsEps } from "../buildings/buildings";
 import { updateBuildingValue } from "../buildings/shorthands";

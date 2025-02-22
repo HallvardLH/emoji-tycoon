@@ -1,4 +1,4 @@
-import { store } from '../redux/reduxStore';
+import store from '../redux/reduxStore';
 import { updateEmojis } from '../redux/valuesSlice';
 import { updateBigEmoji, updateNextEmoji } from '../redux/bigEmojiSlice';
 import { addToCollection, CollectionState } from '../redux/collectionSlice';

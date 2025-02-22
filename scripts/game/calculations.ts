@@ -1,4 +1,4 @@
-import { store } from "../redux/reduxStore";
+import store from "../redux/reduxStore";
 import { updateEmojisPerTap } from "../redux/bigEmojiSlice";
 import { updateEmojisPerSecond } from "../redux/valuesSlice";
 import { formatNumber } from "../misc";

@@ -1,4 +1,4 @@
-import { store } from '../../redux/reduxStore';
+import store from '../../redux/reduxStore';
 import { addEffectOnScreen, removeEffectOnScreen, addEffect, updateTimeSinceLastEffect, updateTimeLeftOnScreen } from '../../redux/effectsSlice';
 import { createEffect } from './createEffect';
 import { calculateEmojisPerSecond, calculateEpt } from '../calculations';

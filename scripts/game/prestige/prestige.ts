@@ -1,4 +1,4 @@
-import { store } from "../../redux/reduxStore";
+import store from "../../redux/reduxStore";
 import { updateRemainingEmojisPrestigePerc } from "../../redux/prestigeSlice";
 import { formatNumber } from "../../misc";
 

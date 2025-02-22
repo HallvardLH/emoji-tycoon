@@ -6,7 +6,7 @@ import UpgradesListFilter from './UpgradesListFilter';
 import { getUpgradeDataById } from '../../../scripts/game/upgrades/shorthands';
 import { getUpgradePrice } from '../../../scripts/game/upgrades/upgradePrice';
 import { FlatList } from 'react-native';
-import { store } from '../../../scripts/redux/reduxStore';
+import store from '../../../scripts/redux/reduxStore';
 import { unlockUpgrade } from '../../../scripts/redux/upgradesSlice';
 
 export default function UpgradesList() {

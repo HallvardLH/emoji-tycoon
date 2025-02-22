@@ -5,7 +5,7 @@ import { componentColors, colors } from "../misc/Colors";
 import { useNavigation, NavigationProp, ParamListBase } from "@react-navigation/native";
 import { useSelector } from 'react-redux';
 import { RootState } from '../../scripts/redux/reduxStore';
-import { store } from '../../scripts/redux/reduxStore';
+import store from '../../scripts/redux/reduxStore';
 import { clearUnlockedUpgradeNotifications } from '../../scripts/redux/upgradesSlice';
 import { clearUnlockedBuildingsNotifications } from '../../scripts/redux/buildingsSlice';
 import { canBuyBuilding } from '../../scripts/game/buildings/checks';

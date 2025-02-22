@@ -1,4 +1,4 @@
-import { store } from "../../redux/reduxStore";
+import store from "../../redux/reduxStore";
 import { getBuilding } from "../buildings/shorthands";
 import { upgradeData } from "./upgradeData/upgradeData";
 import { unlockUpgrade, addCanBuyUpgrade, removeCanBuyUpgrade } from "../../redux/upgradesSlice";

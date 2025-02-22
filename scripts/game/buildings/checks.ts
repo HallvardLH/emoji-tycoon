@@ -1,4 +1,4 @@
-import { store } from '../../redux/reduxStore';
+import store from '../../redux/reduxStore';
 import { updateBuildingValue } from './shorthands';
 import { unlockedBuildingNotificaiton } from '../../redux/buildingsSlice';
 

@@ -1,5 +1,5 @@
 import { updateEmojis } from "../redux/valuesSlice";
-import { store } from '../redux/reduxStore';
+import store from '../redux/reduxStore';
 import { canBuyBuilding, unlockBuilding } from "./buildings/checks";
 import { unlockUpgrades } from "./upgrades/checks";
 import { decrementEffects } from "./effects/effects";

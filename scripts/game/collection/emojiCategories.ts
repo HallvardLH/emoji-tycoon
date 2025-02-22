@@ -1,4 +1,4 @@
-import { store } from '../../redux/reduxStore';
+import store from '../../redux/reduxStore';
 import { CollectionState, CollectionEmoji } from '../../redux/collectionSlice';
 import faces from '../../../assets/emojis/faces.json';
 import symbols from '../../../assets/emojis/symbols.json';

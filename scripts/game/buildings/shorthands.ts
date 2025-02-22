@@ -1,4 +1,4 @@
-import { store } from '../../redux/reduxStore';
+import store from '../../redux/reduxStore';
 import { updateBuilding, BuildingProps } from '../../redux/buildingsSlice';
 import { buildingData } from './buildingData';
 import { BuildingNames } from './buildingNamesType';

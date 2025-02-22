@@ -1,6 +1,10 @@
 import { configureStore } from '@reduxjs/toolkit';
 import { combineReducers } from 'redux';
-import { persistStore, persistReducer } from 'redux-persist';
+import {
+    persistReducer,
+    initStore,
+    PersistConfig,
+} from 'react-native-redux-persist2';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import valuesSlice from './valuesSlice';
 import buildingsSlice from './buildingsSlice';
@@ -25,25 +29,36 @@ const rootReducer = combineReducers({
     prestige: prestigeSlice,
 });
 
-const persistConfig = {
-    key: 'root',
-    storage: AsyncStorage,
-    // Optionally you can add version number, whitelist or blacklist to the configuration
+// Persist configuration
+const persistConfig: PersistConfig = {
+    key: 'root', // Key to store the data
+    storage: {
+        type: 'AsyncStorage', // The storage that you want to use
+        // asyncStorage: AsyncStorage, // Pass the AsyncStorage instance
+    },
+    // Optionally, you can add version number, whitelist, or blacklist to the configuration
 };
 
-const persistedReducer = persistReducer(persistConfig, rootReducer);
+// Create the persisted reducer
+const persistedReducer = persistReducer(rootReducer);
 
-export const store = configureStore({
+// Configure the store
+const store = configureStore({
     reducer: persistedReducer,
     middleware: (getDefaultMiddleware) =>
         getDefaultMiddleware({
             serializableCheck: {
-                ignoredActions: ['persist/PERSIST'],
+                ignoredActions: ['persist/PERSIST'], // Ignore persist actions
             },
         }),
 });
 
-export const persistor = persistStore(store);
+// Initialize the store and rehydrate it
+initStore(store, persistConfig);
+
+export const persistor = initStore(store, persistConfig);
 
 export type RootState = ReturnType<typeof store.getState>;
 export type AppDispatch = typeof store.dispatch;
+
+export default store;

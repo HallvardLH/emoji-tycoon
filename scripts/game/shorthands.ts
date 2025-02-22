@@ -1,4 +1,4 @@
-import { store } from "../redux/reduxStore"
+import store from "../redux/reduxStore"
 
 // Returns whether the fun value is within a certain range, or if it is a certain number
 export function howFun(start: number, end?: number) {

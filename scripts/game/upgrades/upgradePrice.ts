@@ -1,6 +1,6 @@
 import { getBaseBuildingPrice } from "../buildings/buildingData"
 import { UpgradeVariantsType } from "./upgradeData/UpgradeType";
-import { store } from "../../redux/reduxStore";
+import store from "../../redux/reduxStore";
 
 export function getUpgradePrice(tier: number, variant: UpgradeVariantsType, buildingId?: number, tierPosition?: number) {
     switch (variant) {

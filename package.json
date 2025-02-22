@@ -12,23 +12,22 @@
     "@react-native-async-storage/async-storage": "^1.23.1",
     "@react-navigation/native": "^6.1.16",
     "@react-navigation/stack": "^6.3.28",
-    "@reduxjs/toolkit": "^2.2.1",
-    "emoji.json": "^15.1.0",
-    "expo": "^51.0.31",
-    "expo-status-bar": "~1.12.1",
-    "lodash": "^4.17.21",
-    "react": "18.2.0",
-    "react-native": "0.74.5",
-    "react-native-gesture-handler": "~2.16.1",
-    "react-native-svg": "15.2.0",
-    "react-redux": "^9.1.0",
-    "redux": "^5.0.1",
-    "redux-persist": "^6.0.0"
+    "@reduxjs/toolkit": "^2.5.1",
+    "expo": "^52.0.37",
+    "expo-secure-store": "^14.0.1",
+    "expo-status-bar": "^2.0.1",
+    "react": "^18.3.1",
+    "react-native": "^0.76.7",
+    "react-native-gesture-handler": "^2.20.2",
+    "react-native-redux-persist2": "^0.0.3",
+    "react-native-svg": "^15.8.0",
+    "react-redux": "^9.2.0",
+    "redux": "^5.0.1"
   },
   "devDependencies": {
     "@babel/core": "^7.20.0",
-    "@types/react": "~18.2.79",
-    "typescript": "~5.3.3"
+    "@types/react": "^18.3.12",
+    "typescript": "^5.7.3"
   },
   "private": true
 }

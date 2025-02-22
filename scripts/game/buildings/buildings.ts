@@ -1,4 +1,4 @@
-import { store } from '../../redux/reduxStore';
+import store from '../../redux/reduxStore';
 import { updateTotalBuildingEps, updateEmojis } from '../../redux/valuesSlice';
 import { buildingData } from './buildingData';
 import { getBuilding, getBuildingById } from './shorthands';
