@@ -9,8 +9,9 @@ interface EffectWeights {
 }
 
 const effectWeights: EffectWeights = {
-    tap: 50,
-    production: 50,
+    tap: 30,
+    production: 40,
+    give: 30
 };
 
 // Function to pick an effect type based on weights
@@ -64,6 +65,16 @@ export function createEffect() {
 
     } while (chosenEffect.id === 101);
 
+    // If fun value is 1 or 2, all effects emojis are replaced with cookie
+    if (howFun(1, 2)) {
+        if (chosenEffect.quality === "good") {
+            chosenEffect.emoji == "🍪";
+        } else {
+            // Bad grandma
+            chosenEffect.emoji == "👵";
+        }
+    }
+
     const effect: Effect = {
         title: chosenEffect.title,
         description: chosenEffect.description,
@@ -74,12 +85,14 @@ export function createEffect() {
         timeLeft: chosenEffect.timeLeft,
         originalDuration: chosenEffect.timeLeft,
         timeLeftOnScreen: chosenEffect.timeLeftOnScreen,
+        displayMeter: chosenEffect.displayMeter,
         instanceId: Date.now(),
         id: chosenEffect.id,
         xPos: xPos,
         yPos: yPos,
         margin: margin,
-        type: chosenEffect.type
+        type: chosenEffect.type,
+        quality: chosenEffect.quality,
     }
 
     return effect;

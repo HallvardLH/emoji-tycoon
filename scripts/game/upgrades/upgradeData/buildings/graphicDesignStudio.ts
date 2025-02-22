@@ -59,8 +59,6 @@ export const graphicDesignStudioUpgrades: UpgradeType[] = [
         tier: 4,
         id: 14,
     },
-
-
     {
         ...baseGraphicDesignStudioUpgrade,
         name: "Blood",

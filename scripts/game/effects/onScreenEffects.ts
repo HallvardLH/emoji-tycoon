@@ -4,6 +4,7 @@ import { createEffect } from './createEffect';
 import { calculateEmojisPerSecond, calculateEpt } from '../calculations';
 import { howFun } from '../shorthands';
 import { addEffectEmojisCollected } from '../../redux/statsSlice';
+import { emojiGiveEffect } from '../giveEmojis';
 
 /**
  * Called when the player taps an effect emoji
@@ -21,6 +22,10 @@ export function tapEffect(id: number) {
 
     // Removes the effect from the onScreen array
     store.dispatch(removeEffectOnScreen(id));
+
+    if (newEffect.type === "give") {
+        emojiGiveEffect();
+    }
 
     calculateEmojisPerSecond();
     calculateEpt();
@@ -68,11 +73,13 @@ export function spawnEffect(guaranteed?: boolean) {
         const chance = timeSinceLastEffect / 100 - Math.random();
         // Threshold of 2 means at least 200 seconds must have passed for there to
         // even be a chance at all of something spawning
+        // With a fun value of 70 to 75, the threshold starts at 0.2 instead of 0,
+        // making boost emojis spawn sooner
         let threshold = 2 - (howFun(70, 75) ? 0.2 : 0);
-        // console.log(chance, threshold / spawnChanceIncrease)
         if (chance >= threshold / spawnChanceIncrease || guaranteed) {
             store.dispatch(addEffectOnScreen(createEffect()));
             // Lucky you! Like, really lucky
+            // Another effect spawned!
             if (howFun(76) && Math.random() > 0.9) {
                 store.dispatch(addEffectOnScreen(createEffect()));
             }

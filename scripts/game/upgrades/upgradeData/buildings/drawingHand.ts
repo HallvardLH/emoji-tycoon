@@ -197,7 +197,7 @@ export const drawingHandUpgrades: UpgradeType[] = [
         name: "Cybernetic ear",
         icon: "🦻",
         description: "Cybernetic ears to draw emojis with your ears super fast!",
-        quote: "What?! Huh?! I'm sorry I can't hear a thing. Huh?!",
+        quote: "What?! Huh?! I'm sorry I can't hear a thing.",
         price: getBuildingUpgradePrice(15, 0),
         categories: ["Multiply building production", "Multiply tap"],
         emojisPerSecondMultiplier: 2,

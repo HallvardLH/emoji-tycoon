@@ -9,16 +9,18 @@ export default function EffectMeters() {
     return (
         <View style={styles.container}>
             <ScrollView persistentScrollbar={true} contentContainerStyle={styles.innerContainer}>
-                {effects.map((effect) => (
-                    // TODO: Based on the id, instead of creating duplicates, add multiplier sign
-                    // Also add label to meter component, to allow for a title that explains the effect better
-                    <ProgressMeter
-                        key={effect.instanceId}
-                        icon={effect.emoji}
-                        percentage={effect.timeLeft / effect.originalDuration! * 100}
-                        label={effect.title}
-                    />
-                ))}
+                {effects
+                    .filter((effect) => effect.displayMeter !== false)
+                    .map((effect) => (
+                        // TODO: Based on the id, instead of creating duplicates, add multiplier sign
+                        // Also add label to meter component, to allow for a title that explains the effect better
+                        <ProgressMeter
+                            key={effect.instanceId}
+                            icon={effect.emoji}
+                            percentage={effect.timeLeft / effect.originalDuration! * 100}
+                            label={effect.title}
+                        />
+                    ))}
             </ScrollView>
         </View>
     )

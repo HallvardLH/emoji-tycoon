@@ -44,7 +44,7 @@ export const farmUpgrades: UpgradeType[] = [
         ...baseFarmUpgrade,
         name: "Better tools",
         icon: "🪚",
-        description: "Allows for mcuh faster farming!",
+        description: "Allows for much faster farming!",
         price: getBuildingUpgradePrice(2, 2),
         tier: 2,
         id: 22,

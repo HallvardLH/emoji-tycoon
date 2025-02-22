@@ -13,6 +13,14 @@ const baseEmojiAssemblyUpgrade = {
     variant: "Standard building" as UpgradeVariantsType,
 };
 
+const emojiAssemblyHelperUpgrade = {
+    ...baseEmojiAssemblyUpgrade,
+    categories: ["Percentage increase production" as UpgradeCateogoriesType],
+    unlockCondition: "Building helper" as UnlockConditionType,
+    emojisPerSecondPercentageIncrease: 0.01,
+    variant: "Helper" as UpgradeVariantsType,
+};
+
 export const emojiAssemblyUpgrades: UpgradeType[] = [
     // Emoji Assembly upgrades
     {
@@ -59,5 +67,26 @@ export const emojiAssemblyUpgrades: UpgradeType[] = [
         price: getBuildingUpgradePrice(4, 7),
         tier: 4,
         id: 74,
+    },
+
+    // Helpers
+    {
+        ...emojiAssemblyHelperUpgrade,
+        name: "Emoji interns",
+        icon: "🧑‍🎓",
+        description: "Interns help the emoji government run smoothly!",
+        tier: 0,
+        tierPosition: 0,
+        id: 750,
+    },
+    {
+        ...emojiAssemblyHelperUpgrade,
+        name: "Emoji bureaucrats",
+        icon: "📎",
+        description: "An emoji government needs administrators to function.",
+        quote: "It looks like you're passing a law. Need help?",
+        tier: 0,
+        tierPosition: 1,
+        id: 751,
     },
 ];

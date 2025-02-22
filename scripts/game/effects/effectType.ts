@@ -1,4 +1,4 @@
-export type EffectTypes = "tap" | "production";
+export type EffectTypes = "tap" | "production" | "give";
 
 export interface Effect {
     title: string;
@@ -14,6 +14,8 @@ export interface Effect {
     // The timeLeft, before being decremented, used for percentage calculation
     originalDuration?: number,
     timeLeftOnScreen: number;
+    // Whether the effect should display a timer on screen
+    displayMeter: boolean,
     // A unique id for each instance of effect
     instanceId?: number;
     // The id of the effect, in relation to effectData
@@ -23,4 +25,6 @@ export interface Effect {
     // The style margin given to the on-screen effect
     margin?: number;
     type: EffectTypes;
+    // Whether the effect helps or sabotages the player
+    quality: "good" | "bad";
 }

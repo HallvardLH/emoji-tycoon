@@ -8,10 +8,16 @@ interface EmojiProps {
 export default function Emoji(props: EmojiProps) {
     const {
         icon,
-        size = Platform.OS == "android" ? 40 : 54
+        size = 40
     } = props;
 
     return (
-        <Text style={{ fontSize: size }}>{icon}</Text>
+        <Text
+            style={{
+                // iOS emojis are a bit smaller, so increase their size by 15%
+                fontSize: Platform.OS == "android" ? size : size * 1.15
+            }}>
+            {icon}
+        </Text>
     )
 }
