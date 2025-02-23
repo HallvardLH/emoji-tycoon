@@ -24,6 +24,9 @@ export default function Cheats({ onPress }: CheatsProps) {
             <Button width={200} label="Give 1 million emojis" onPress={() => {
                 giveOneOffEmojis(1000000);
             }} />
+            <Button width={200} label="Give 1 quadrillion emojis" onPress={() => {
+                giveOneOffEmojis(1000000000000000);
+            }} />
         </View>
 
     )

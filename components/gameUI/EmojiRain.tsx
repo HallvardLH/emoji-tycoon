@@ -79,6 +79,7 @@ export default function EmojiRain({ delay = 0, bg }: EmojiRainProps) {
 
         // Minimum distance between emojis
         const minDist = 50;
+        // TODO: Make distance higher if emojiAmount is small
         const points: { x: number; y: number }[] = [];
 
         function isFarEnough(x: number, y: number): boolean {

@@ -5,7 +5,7 @@ import { UpgradeType, UnlockConditionType, UpgradeVariantsType, UpgradeCateogori
 // Base object for Emoji Theme Park upgrades
 const baseEmojiThemeParkUpgrade = {
     building: "Emoji theme park" as BuildingNames,
-    buildingId: 8,
+    buildingId: 9,
     unlockCondition: "Building amount" as UnlockConditionType,
     categories: ["Multiply building production" as UpgradeCateogoriesType],
     emojisPerSecondMultiplier: 2,
@@ -22,7 +22,7 @@ export const emojiThemeParkUpgrades: UpgradeType[] = [
         description: "You spin me right 'round, baby!",
         price: getBuildingUpgradePrice(0, 6),
         tier: 0,
-        id: 60,
+        id: 900,
     },
     {
         ...baseEmojiThemeParkUpgrade,
@@ -31,7 +31,7 @@ export const emojiThemeParkUpgrades: UpgradeType[] = [
         description: "Do you slide on all your nights like this? (I might)",
         price: getBuildingUpgradePrice(1, 6),
         tier: 1,
-        id: 61,
+        id: 901,
     },
     {
         ...baseEmojiThemeParkUpgrade,
@@ -40,7 +40,7 @@ export const emojiThemeParkUpgrades: UpgradeType[] = [
         description: "Way up, there is where she broke my heart.",
         price: getBuildingUpgradePrice(2, 6),
         tier: 2,
-        id: 62,
+        id: 902,
     },
     {
         ...baseEmojiThemeParkUpgrade,
@@ -49,7 +49,7 @@ export const emojiThemeParkUpgrades: UpgradeType[] = [
         description: "There's only two types of people in the world. The ones that entertain, and the ones that observe.",
         price: getBuildingUpgradePrice(3, 6),
         tier: 3,
-        id: 63,
+        id: 903,
     },
     {
         ...baseEmojiThemeParkUpgrade,
@@ -58,6 +58,6 @@ export const emojiThemeParkUpgrades: UpgradeType[] = [
         description: "They say he's never dropped the ball.",
         price: getBuildingUpgradePrice(4, 6),
         tier: 4,
-        id: 64,
+        id: 904,
     },
 ];

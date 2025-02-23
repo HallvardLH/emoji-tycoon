@@ -5,7 +5,7 @@ import { UpgradeType, UnlockConditionType, UpgradeVariantsType, UpgradeCateogori
 // Base object for Flying Saucer upgrades
 const baseFlyingSaucerUpgrade = {
     building: "Flying saucer" as BuildingNames,
-    buildingId: 10,
+    buildingId: 11,
     unlockCondition: "Building amount" as UnlockConditionType,
     categories: ["Multiply building production" as UpgradeCateogoriesType],
     emojisPerSecondMultiplier: 2,
@@ -14,7 +14,6 @@ const baseFlyingSaucerUpgrade = {
 };
 
 export const flyingSaucerUpgrades: UpgradeType[] = [
-    // Flying Saucer upgrades
     {
         ...baseFlyingSaucerUpgrade,
         name: "Telescopes",

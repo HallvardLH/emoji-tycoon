@@ -1,5 +1,3 @@
-import { howFun } from "../shorthands";
-
 interface BuildingData {
     name: string;
     buildingId: number;
@@ -12,10 +10,6 @@ interface BuildingData {
 export function getBaseBuildingPrice(num: number) {
     return 10 * Math.pow(9, num)
 }
-
-// export function getBaseBuildingPrice(num: number) {
-//     return Math.round(10 * Math.pow(10.5, num))
-// }
 
 function getBaseEps(num: number, noRound?: boolean) {
     if (noRound) { return 0.1 * Math.pow(9, num) }

@@ -5,7 +5,7 @@ import { UpgradeType, UnlockConditionType, UpgradeVariantsType, UpgradeCateogori
 // Base object for Bank upgrades
 const baseBankUpgrade = {
     building: "Bank" as BuildingNames,
-    buildingId: 7,
+    buildingId: 8,
     unlockCondition: "Building amount" as UnlockConditionType,
     categories: ["Multiply building production" as UpgradeCateogoriesType],
     emojisPerSecondMultiplier: 2,
@@ -22,7 +22,7 @@ export const bankUpgrades: UpgradeType[] = [
         description: "Oink oink!",
         price: getBuildingUpgradePrice(0, 5),
         tier: 0,
-        id: 50,
+        id: 800,
     },
     {
         ...baseBankUpgrade,
@@ -31,7 +31,7 @@ export const bankUpgrades: UpgradeType[] = [
         description: "Allows for carrying even more emojis.",
         price: getBuildingUpgradePrice(1, 5),
         tier: 1,
-        id: 51,
+        id: 801,
     },
     {
         ...baseBankUpgrade,
@@ -40,7 +40,7 @@ export const bankUpgrades: UpgradeType[] = [
         description: "Good for spending your hard-earned emojis.",
         price: getBuildingUpgradePrice(2, 5),
         tier: 2,
-        id: 52,
+        id: 802,
     },
     {
         ...baseBankUpgrade,
@@ -49,7 +49,7 @@ export const bankUpgrades: UpgradeType[] = [
         description: "Better education, better emoji-drawing skills.",
         price: getBuildingUpgradePrice(3, 5),
         tier: 3,
-        id: 53,
+        id: 803,
     },
     {
         ...baseBankUpgrade,
@@ -58,6 +58,6 @@ export const bankUpgrades: UpgradeType[] = [
         description: "More innovation, more innovative emojis.",
         price: getBuildingUpgradePrice(4, 5),
         tier: 4,
-        id: 54,
+        id: 804,
     },
 ];

@@ -78,8 +78,7 @@ export function spawnEffect(guaranteed?: boolean) {
         let threshold = 2 - (howFun(70, 75) ? 0.2 : 0);
         if (chance >= threshold / spawnChanceIncrease || guaranteed) {
             store.dispatch(addEffectOnScreen(createEffect()));
-            // Lucky you! Like, really lucky
-            // Another effect spawned!
+            // Lucky you! Another effect spawned!
             if (howFun(76) && Math.random() > 0.9) {
                 store.dispatch(addEffectOnScreen(createEffect()));
             }

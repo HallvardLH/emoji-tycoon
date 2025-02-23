@@ -42,7 +42,7 @@ export const buildingEmojis: buildingName = {
 }
 
 /**
- * Buys a building, subtracting the price from the player's emojis.
+ * Buys a building, subtracting the price from bank.
  *
  * @param buildingId the ID of the building.
  * @param buyAmount the amount of buildings that will be bought (default is 1).

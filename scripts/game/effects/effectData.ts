@@ -1,16 +1,5 @@
 import { Effect } from "./effectType";
 
-const effectEmojis = [
-    "🚀",
-    "💎",
-    "🌟",
-    "⚡",
-    "🍀",
-    "💰",
-    "📈",
-    "🏆"
-];
-
 export const effectData: Effect[] = [
     {
         title: "x2 tapping power",
@@ -112,3 +101,6 @@ export const effectData: Effect[] = [
     },
 
 ]
+
+// An array containing all emojis used for effects
+export const effectEmojis: string[] = effectData.map(effect => effect.emoji);

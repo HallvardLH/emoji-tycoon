@@ -5,7 +5,7 @@ import { unlockedBuildingNotificaiton } from '../../redux/buildingsSlice';
 /**
  * Checks if the player can afford each building
  *
- * Is called form the gameLoop module every 2.5 seconds, but ought to be called immediately upon buying a building
+ * Is called form the gameLoop every 2.5 seconds, but ought to be called immediately upon buying a building
  *
  */
 export const canBuyBuilding = () => {
@@ -19,7 +19,7 @@ export const canBuyBuilding = () => {
 /**
  * Checks if a building should be unlocked
  *
- * Is called from the gameLoop module every 2.5 seconds
+ * Is called from the gameLoop every 2.5 seconds
  */
 export function unlockBuilding() {
     const buildings = store.getState().buildings.buildings;

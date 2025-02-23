@@ -5,7 +5,7 @@ import { UpgradeType, UnlockConditionType, UpgradeVariantsType, UpgradeCateogori
 // Base object for Emoji Assembly upgrades
 const baseEmojiAssemblyUpgrade = {
     building: "Emoji assembly" as BuildingNames,
-    buildingId: 9,
+    buildingId: 10,
     unlockCondition: "Building amount" as UnlockConditionType,
     categories: ["Multiply building production" as UpgradeCateogoriesType],
     emojisPerSecondMultiplier: 2,
@@ -22,51 +22,45 @@ const emojiAssemblyHelperUpgrade = {
 };
 
 export const emojiAssemblyUpgrades: UpgradeType[] = [
-    // Emoji Assembly upgrades
     {
         ...baseEmojiAssemblyUpgrade,
         name: "Emoji elections",
         icon: "🗳️",
         description: "May the best emoji win!",
-        price: getBuildingUpgradePrice(0, 7),
         tier: 0,
-        id: 70,
+        id: 1000,
     },
     {
         ...baseEmojiAssemblyUpgrade,
         name: "Emoji stimulus",
         icon: "📊",
         description: "You get an emoji, and you, and you, everybody gets emojis!",
-        price: getBuildingUpgradePrice(1, 7),
         tier: 1,
-        id: 71,
+        id: 1001,
     },
     {
         ...baseEmojiAssemblyUpgrade,
         name: "Speaker of the emoji house",
         icon: "🗣️",
         description: "Install your very own emoji speaker, to ensure things go your way.",
-        price: getBuildingUpgradePrice(2, 7),
         tier: 2,
-        id: 72,
+        id: 1002,
     },
     {
         ...baseEmojiAssemblyUpgrade,
         name: "Emoji laws",
         icon: "📜",
         description: "We the emojis...",
-        price: getBuildingUpgradePrice(3, 7),
         tier: 3,
-        id: 73,
+        id: 1003,
     },
     {
         ...baseEmojiAssemblyUpgrade,
         name: "Global emoji confederation",
         icon: "🌍",
         description: "Increases cooperation between emoji countries.",
-        price: getBuildingUpgradePrice(4, 7),
         tier: 4,
-        id: 74,
+        id: 1004,
     },
 
     // Helpers
@@ -77,7 +71,7 @@ export const emojiAssemblyUpgrades: UpgradeType[] = [
         description: "Interns help the emoji government run smoothly!",
         tier: 0,
         tierPosition: 0,
-        id: 750,
+        id: 100000,
     },
     {
         ...emojiAssemblyHelperUpgrade,
@@ -87,6 +81,6 @@ export const emojiAssemblyUpgrades: UpgradeType[] = [
         quote: "It looks like you're passing a law. Need help?",
         tier: 0,
         tierPosition: 1,
-        id: 751,
+        id: 100001,
     },
 ];

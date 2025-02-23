@@ -5,7 +5,7 @@ import { UpgradeType, UnlockConditionType, UpgradeVariantsType, UpgradeCateogori
 // Base object for Factory upgrades
 const baseFactoryUpgrade = {
     building: "Factory" as BuildingNames,
-    buildingId: 5,
+    buildingId: 6,
     unlockCondition: "Building amount" as UnlockConditionType,
     categories: ["Multiply building production" as UpgradeCateogoriesType],
     emojisPerSecondMultiplier: 2,
@@ -14,50 +14,44 @@ const baseFactoryUpgrade = {
 };
 
 export const factoryUpgrades: UpgradeType[] = [
-    // Factory upgrades
     {
         ...baseFactoryUpgrade,
         name: "Better tools",
         icon: "🛠️",
         description: "Better tools for creating emojis faster.",
-        price: getBuildingUpgradePrice(0, 4),
         tier: 0,
-        id: 40,
+        id: 600,
     },
     {
         ...baseFactoryUpgrade,
         name: "More workers",
         icon: "🧑‍🏭",
         description: "Increase the amount of factory employees.",
-        price: getBuildingUpgradePrice(1, 4),
         tier: 1,
-        id: 41,
+        id: 601,
     },
     {
         ...baseFactoryUpgrade,
         name: "Bigger gears",
         icon: "⚙️",
         description: "Bigger gears allow for bigger machinery.",
-        price: getBuildingUpgradePrice(2, 4),
         tier: 2,
-        id: 42,
+        id: 602,
     },
     {
         ...baseFactoryUpgrade,
         name: "Nuts and bolts",
         icon: "🔩",
         description: "These are used to make sure everything doesn't fall apart.",
-        price: getBuildingUpgradePrice(3, 4),
         tier: 3,
-        id: 43,
+        id: 603,
     },
     {
         ...baseFactoryUpgrade,
         name: "Robot workers",
         icon: "🤖",
         description: "Replace weak human workers with strong android workers!",
-        price: getBuildingUpgradePrice(4, 4),
         tier: 4,
-        id: 44,
+        id: 604,
     },
 ];

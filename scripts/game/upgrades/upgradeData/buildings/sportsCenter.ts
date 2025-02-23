@@ -3,7 +3,7 @@ import { UpgradeType, UnlockConditionType, UpgradeVariantsType, UpgradeCateogori
 
 const baseSportsCenterUpgrade = {
     building: "Sports center" as BuildingNames,
-    buildingId: 6,
+    buildingId: 7,
     unlockCondition: "Building amount" as UnlockConditionType,
     categories: ["Multiply building production" as UpgradeCateogoriesType],
     emojisPerSecondMultiplier: 2,
@@ -16,10 +16,10 @@ export const sportsCenterUpgrades: UpgradeType[] = [
         ...baseSportsCenterUpgrade,
         name: "Basketball courts",
         icon: "🏀",
-        quote: "Swish, swish, swish. Nothing but net. And their jaws just dropped to the floor!",
+        quote: "Swish, swish, swish. Nothing but net. And their jaws just dropped to the floor.",
         description: "A reason to get together.",
         tier: 0,
-        id: 100,
+        id: 700,
     },
     {
         ...baseSportsCenterUpgrade,
@@ -27,7 +27,7 @@ export const sportsCenterUpgrades: UpgradeType[] = [
         icon: "⚾",
         description: "This ought to be a total home run.",
         tier: 1,
-        id: 101,
+        id: 701,
     },
     {
         ...baseSportsCenterUpgrade,
@@ -35,6 +35,6 @@ export const sportsCenterUpgrades: UpgradeType[] = [
         icon: "🎾",
         description: "Is it a vegetable or a sport?",
         tier: 2,
-        id: 102,
+        id: 702,
     },
 ];

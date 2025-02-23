@@ -15,6 +15,7 @@ import vehicles from '../../assets/emojis/vehicles.json';
 import weather from '../../assets/emojis/weather.json';
 import { addBigEmojiTaps, addEmojisEarnedFromTap } from '../redux/statsSlice';
 import { addEmojisGained } from '../redux/statsSlice';
+import { effectEmojis } from './effects/effectData';
 
 export function tapEmoji() {
     store.dispatch(updateEmojis(
@@ -108,7 +109,8 @@ export function selectRandomEmoji() {
     for (const category of emojiCategories) {
         // Check if the random number falls within the current category's weight
         if (randomNum < emojiWeights[category]) {
-            const emojis = emojiData[category as keyof typeof emojiData];
+            // Filter out effect emojis, as these are to be reserved
+            const emojis = emojiData[category as keyof typeof emojiData].filter(emoji => !effectEmojis.includes(emoji));
             // Randomly select an emoji from the chosen category
             const randomEmojiIndex = Math.floor(Math.random() * emojis.length);
 
