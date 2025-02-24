@@ -1,10 +1,11 @@
 import { BuildingNames } from "../../../buildings/buildingNamesType";
 import { UpgradeType, UnlockConditionType, UpgradeVariantsType, UpgradeCateogoriesType, } from "../UpgradeType";
 
+export const BIG_EMOJI_BUILDING_ID = 1000;
 // Base object
 const baseBigEmojiUpgrade = {
     building: "Big emoji" as BuildingNames,
-    buildingId: 0,
+    buildingId: BIG_EMOJI_BUILDING_ID,
     unlockCondition: "Emojis from tapping" as UnlockConditionType,
     categories: ["Tap percentage of eps" as UpgradeCateogoriesType],
     variant: "Big emoji percentage" as UpgradeVariantsType,

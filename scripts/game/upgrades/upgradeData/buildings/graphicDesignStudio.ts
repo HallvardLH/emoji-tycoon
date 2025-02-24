@@ -3,7 +3,7 @@ import { UpgradeType, UnlockConditionType, UpgradeVariantsType, UpgradeCateogori
 
 const baseGraphicDesignStudioUpgrade = {
     building: "Graphic design studio" as BuildingNames,
-    buildingId: 2,
+    buildingId: 1,
     unlockCondition: "Building amount" as UnlockConditionType,
     categories: ["Multiply building production" as UpgradeCateogoriesType],
     emojisPerSecondMultiplier: 2,

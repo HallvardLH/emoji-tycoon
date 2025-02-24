@@ -3,7 +3,7 @@ import { UpgradeType, UnlockConditionType, UpgradeVariantsType, UpgradeCateogori
 
 const baseFarmUpgrade = {
     building: "Farm" as BuildingNames,
-    buildingId: 3,
+    buildingId: 2,
     unlockCondition: "Building amount" as UnlockConditionType,
     categories: ["Multiply building production" as UpgradeCateogoriesType],
     emojisPerSecondMultiplier: 2,

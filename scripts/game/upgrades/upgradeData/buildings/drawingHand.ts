@@ -4,7 +4,7 @@ import { UpgradeType, UnlockConditionType, UpgradeVariantsType } from "../Upgrad
 
 const baseDrawingHandUpgrade = {
     building: "Drawing hand" as BuildingNames,
-    buildingId: 1,
+    buildingId: 0,
     unlockCondition: "Building amount" as UnlockConditionType,
     variant: "Standard building" as UpgradeVariantsType,
 };

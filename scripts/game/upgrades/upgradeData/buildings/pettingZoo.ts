@@ -4,7 +4,7 @@ import { UpgradeType, UnlockConditionType, UpgradeVariantsType, UpgradeCateogori
 
 const basePettingZooUpgrade = {
     building: "Petting zoo" as BuildingNames,
-    buildingId: 5,
+    buildingId: 4,
     unlockCondition: "Building amount" as UnlockConditionType,
     categories: ["Multiply building production" as UpgradeCateogoriesType],
     emojisPerSecondMultiplier: 2,

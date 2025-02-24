@@ -1,1 +1,1 @@
-export type BuildingNames = "Drawing hand" | "Graphic design studio" | "Farm" | "Restaurant" | "Petting zoo" | "Factory" | "Sports center" | "Bank" | "Emoji theme park" | "Emoji assembly" | "Flying saucer";
+export type BuildingNames = "Big emoji" | "Drawing hand" | "Graphic design studio" | "Farm" | "Restaurant" | "Petting zoo" | "Factory" | "Sports center" | "Bank" | "Emoji theme park" | "Emoji assembly" | "Flying saucer";

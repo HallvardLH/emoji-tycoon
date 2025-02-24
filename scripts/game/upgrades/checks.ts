@@ -29,6 +29,7 @@ export function unlockUpgrades() {
                     2: 25,
                     3: 50,
                     4: 100,
+                    5: 150,
                 }
 
                 if (building.amount >= buildingUnlockReq[upgrade.tier]) {

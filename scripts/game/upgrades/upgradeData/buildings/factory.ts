@@ -5,7 +5,7 @@ import { UpgradeType, UnlockConditionType, UpgradeVariantsType, UpgradeCateogori
 // Base object for Factory upgrades
 const baseFactoryUpgrade = {
     building: "Factory" as BuildingNames,
-    buildingId: 6,
+    buildingId: 5,
     unlockCondition: "Building amount" as UnlockConditionType,
     categories: ["Multiply building production" as UpgradeCateogoriesType],
     emojisPerSecondMultiplier: 2,

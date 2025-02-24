@@ -3,7 +3,7 @@ import { UpgradeType, UnlockConditionType, UpgradeVariantsType, UpgradeCateogori
 
 const baseRestaurantUpgrade = {
     building: "Restaurant" as BuildingNames,
-    buildingId: 4,
+    buildingId: 3,
     unlockCondition: "Building amount" as UnlockConditionType,
     categories: ["Multiply building production" as UpgradeCateogoriesType],
     emojisPerSecondMultiplier: 2,

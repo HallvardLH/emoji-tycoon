@@ -13,6 +13,7 @@ import { canBuyUpgrade } from './checks';
 import { getUpgradePrice } from './upgradePrice';
 import { addEmojisPerSecondPercentage } from '../../redux/valuesSlice';
 import { calculateEpsBonus, calculateEptBonus } from '../calculations';
+import { BIG_EMOJI_BUILDING_ID } from './upgradeData/nonBuilding/bigEmoji';
 
 export function buyUpgrade(upgradeId: number) {
     const upgrade = getUpgradeDataById(upgradeId);
@@ -24,7 +25,7 @@ export function buyUpgrade(upgradeId: number) {
 
         if (upgrade.building && upgrade.buildingId) {
             // Increment upgrades owned by building
-            if (upgrade.buildingId != 1000) {
+            if (upgrade.buildingId != BIG_EMOJI_BUILDING_ID) {
                 updateBuildingValue(upgrade.buildingId, "upgrades", getBuilding(upgrade.building).upgrades + 1);
             }
         }

@@ -1,18 +1,22 @@
 import { getBaseBuildingPrice } from "../buildings/buildingData"
 import { UpgradeVariantsType } from "./upgradeData/UpgradeType";
 import store from "../../redux/reduxStore";
+import { roundToPrettyNumber } from "../../utils";
 
 export function getUpgradePrice(tier: number, variant: UpgradeVariantsType, buildingId?: number, tierPosition?: number) {
     switch (variant) {
         case "Standard building":
             if (buildingId != undefined) {
-                return Math.round((getBaseBuildingPrice(buildingId)) * Math.pow(10, tier + 1)) / 2
+                return roundToPrettyNumber(Math.round((getBaseBuildingPrice(buildingId)) * Math.pow(10, tier + 1) / 2))
             }
             break;
         case "Helper":
             if (tierPosition != undefined && buildingId) {
-                // return Math.pow(10, tier) * Math.round(Math.pow(10, tierPosition + 1));
-                return Math.round((getBaseBuildingPrice(buildingId)) * Math.pow(2 + tier, tierPosition))
+                const basePrice = getBaseBuildingPrice(buildingId);
+                const baseExponent = 50;
+                const tierScalingFactor = 10;
+                const price = basePrice * Math.pow(baseExponent, tier) * (1 + tierPosition / tierScalingFactor);
+                return Math.round(price);
             }
             break;
         case "Big emoji percentage":

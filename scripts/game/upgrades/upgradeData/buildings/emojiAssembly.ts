@@ -5,7 +5,7 @@ import { UpgradeType, UnlockConditionType, UpgradeVariantsType, UpgradeCateogori
 // Base object for Emoji Assembly upgrades
 const baseEmojiAssemblyUpgrade = {
     building: "Emoji assembly" as BuildingNames,
-    buildingId: 10,
+    buildingId: 9,
     unlockCondition: "Building amount" as UnlockConditionType,
     categories: ["Multiply building production" as UpgradeCateogoriesType],
     emojisPerSecondMultiplier: 2,

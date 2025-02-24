@@ -54,6 +54,9 @@ export function getBuildingById(buildingId: number) {
  * @returns The buildingId.
  */
 export function getBuildingIdFromName(name: BuildingNames): number {
+    if (name === "Big emoji") {
+        return 0
+    }
     const building = buildingData.find(building => building.name === name)!;
     return building.buildingId
 
