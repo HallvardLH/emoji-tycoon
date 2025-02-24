@@ -26,8 +26,9 @@ export function unlockBuilding() {
     const emojis = store.getState().values.emojis;
 
     buildings.forEach(building => {
+        console.log(building.name, building.unlocked)
         // Check if the building is locked and if the player has enough emojis to unlock it
-        if (!building.unlocked && emojis >= building.price / 10) {
+        if (!building.unlocked && emojis >= building.price / 4) {
             updateBuildingValue(building.buildingId, "unlocked", true);
             store.dispatch(unlockedBuildingNotificaiton());
         }

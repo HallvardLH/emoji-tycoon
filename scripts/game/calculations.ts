@@ -25,9 +25,9 @@ export function calculateEpt() {
     let tapPercentageIncreases = store.getState().bigEmoji.emojisPerTapPercentages;
 
     // Compound the percentage increases (percentages are already in decimal form, e.g., 0.01 for 1%)
-    let percentageIncrease = tapPercentageIncreases
+    let percentageIncrease = Math.floor(tapPercentageIncreases
         .filter(perc => perc !== 0)
-        .reduce((acc, perc) => acc * (1 + perc), 1);
+        .reduce((acc, perc) => acc * (1 + perc), 1) * 10) / 10;
 
     // Gets epsPercentages, no compounding here
     const tapPercentageOfEps = store.getState().bigEmoji.emojisPerTapPercentageOfEps;
@@ -43,6 +43,8 @@ export function calculateEpt() {
 
     // Calculate emojis per tap with the total multiplier and compounded percentage increases
     let ept = ((baseEmojisPerTap + epsBonus) * multiplier) * percentageIncrease;
+
+    // console.log(baseEmojisPerTap, eps, totalPercentageOfEps, epsBonus, multiplier, percentageIncrease, ept)
 
     // Dispatch the updated value to the store
     store.dispatch(updateEmojisPerTap(ept));

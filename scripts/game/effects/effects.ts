@@ -19,8 +19,8 @@ export function decrementEffects() {
         // If timeLeft has reached 0, remove the effect
         if (effect.timeLeft <= 0) {
             store.dispatch(removeEffect(effect.instanceId!));
-            calculateEpt();
             calculateEmojisPerSecond();
+            calculateEpt();
         }
     })
 }
