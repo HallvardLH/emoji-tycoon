@@ -11,7 +11,7 @@ interface PreferencesState {
 
 const initialState: PreferencesState = {
     bulkBuy: 1,
-    showDetails: false,
+    showDetails: true,
 };
 
 export const preferencesSlice = createSlice({

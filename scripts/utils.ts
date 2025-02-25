@@ -14,20 +14,10 @@ export function getPercentage(number1: number, number2: number) {
 export function roundToPrettyNumber(number: number) {
     if (number === 0) return 0;
 
-    // Determine the magnitude of the number
-    const magnitude = Math.floor(Math.log10(number));
+    const prettyRound = Math.pow(10, (Math.ceil(Math.log(Math.ceil(number)) / Math.LN10))) / 100;
+    return Math.round(number / prettyRound) * prettyRound
+}
 
-    // Calculate the nearest lower and higher powers of 10
-    const lowerPower = Math.pow(10, magnitude);
-    const higherPower = Math.pow(10, magnitude + 1);
-
-    // Find the midpoint between the two powers of 10
-    const midpoint = lowerPower + (higherPower - lowerPower) / 2;
-
-    // Round to the nearest power of 10
-    if (number >= midpoint) {
-        return higherPower;
-    } else {
-        return lowerPower;
-    }
+export function getRandomBetween(min: number, max: number) {
+    return Math.random() * (max - min + Number.EPSILON) + min;
 }

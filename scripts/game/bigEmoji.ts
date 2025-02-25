@@ -16,8 +16,10 @@ import weather from '../../assets/emojis/weather.json';
 import { addBigEmojiTaps, addEmojisEarnedFromTap } from '../redux/statsSlice';
 import { addEmojisGained } from '../redux/statsSlice';
 import { effectEmojis } from './effects/effectData';
+import { testPriceAndEps } from './buildings/buildingData';
 
 export function tapEmoji() {
+    // testPriceAndEps()
     store.dispatch(updateEmojis(
         store.getState().values.emojis + store.getState().bigEmoji.emojisPerTap
     ));

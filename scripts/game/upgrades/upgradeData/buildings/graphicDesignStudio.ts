@@ -18,7 +18,6 @@ export const graphicDesignStudioUpgrades: UpgradeType[] = [
         icon: "✏️",
         description: "Better pencils for more detailed emojis.",
         tier: 0,
-        id: 200,
     },
     {
         ...baseGraphicDesignStudioUpgrade,
@@ -26,7 +25,6 @@ export const graphicDesignStudioUpgrades: UpgradeType[] = [
         icon: "🖍️",
         description: "These special crayons allow artists to access their inner child.",
         tier: 1,
-        id: 201,
     },
     {
         ...baseGraphicDesignStudioUpgrade,
@@ -34,7 +32,6 @@ export const graphicDesignStudioUpgrades: UpgradeType[] = [
         icon: "🖌️",
         description: "Improved brushes allow for more artistic emojis.",
         tier: 2,
-        id: 202,
     },
     {
         ...baseGraphicDesignStudioUpgrade,
@@ -42,7 +39,6 @@ export const graphicDesignStudioUpgrades: UpgradeType[] = [
         icon: "🖋️",
         description: "Allows for more distinguished emojis.",
         tier: 3,
-        id: 203,
     },
     {
         ...baseGraphicDesignStudioUpgrade,
@@ -50,7 +46,6 @@ export const graphicDesignStudioUpgrades: UpgradeType[] = [
         icon: "📏",
         description: "How else would you draw a straight line?",
         tier: 4,
-        id: 204,
     },
     {
         ...baseGraphicDesignStudioUpgrade,
@@ -59,7 +54,6 @@ export const graphicDesignStudioUpgrades: UpgradeType[] = [
         description: "Ensure your emojis are accessible to everyone!",
         quote: "Is it 'Wuh-cag'? 'Double-you-cag'? 'Wee-cag'?",
         tier: 5,
-        id: 205,
     },
     {
         ...baseGraphicDesignStudioUpgrade,
@@ -67,7 +61,6 @@ export const graphicDesignStudioUpgrades: UpgradeType[] = [
         icon: "💥",
         description: "Add 'POW!' and 'BAM!' effects to your emojis for extra flair!",
         tier: 6,
-        id: 206,
     },
     {
         ...baseGraphicDesignStudioUpgrade,
@@ -75,7 +68,6 @@ export const graphicDesignStudioUpgrades: UpgradeType[] = [
         icon: "🖼️",
         description: "Perfectly shaped emojis every time with these stencils!",
         tier: 7,
-        id: 207,
     },
     {
         ...baseGraphicDesignStudioUpgrade,
@@ -84,7 +76,6 @@ export const graphicDesignStudioUpgrades: UpgradeType[] = [
         description: "Speed up your workflow with personalized shortcuts for emoji design!",
         quote: "Try alt + F4.",
         tier: 8,
-        id: 208,
     },
     {
         ...baseGraphicDesignStudioUpgrade,
@@ -92,7 +83,6 @@ export const graphicDesignStudioUpgrades: UpgradeType[] = [
         icon: "📚",
         description: "Access a vast library of pre-made shapes, icons, and textures!",
         tier: 9,
-        id: 209,
     },
     {
         ...baseGraphicDesignStudioUpgrade,
@@ -101,7 +91,6 @@ export const graphicDesignStudioUpgrades: UpgradeType[] = [
         description: "Pressing undo doesn't just revert your work - it alters reality itself. Use sparingly.",
         quote: "To err is human",
         tier: 10,
-        id: 210,
     },
     {
         ...baseGraphicDesignStudioUpgrade,
@@ -109,7 +98,6 @@ export const graphicDesignStudioUpgrades: UpgradeType[] = [
         icon: "📘",
         description: "Only the most refined artists use coloring books.",
         tier: 11,
-        id: 211,
     },
     {
         ...baseGraphicDesignStudioUpgrade,
@@ -117,7 +105,6 @@ export const graphicDesignStudioUpgrades: UpgradeType[] = [
         icon: "👥",
         description: "Invite other designers to work on your emoji projects simultaneously!",
         tier: 12,
-        id: 212,
     },
     {
         ...baseGraphicDesignStudioUpgrade,
@@ -126,7 +113,6 @@ export const graphicDesignStudioUpgrades: UpgradeType[] = [
         description: "Organize your emoji ideas visually for maximum creativity!",
         quote: "Why do you look so board?",
         tier: 13,
-        id: 213,
     },
     {
         ...baseGraphicDesignStudioUpgrade,
@@ -135,7 +121,6 @@ export const graphicDesignStudioUpgrades: UpgradeType[] = [
         description: "Create retro-style pixelated emojis that scream '90s nostalgia!",
         quote: "Every pixel matters.",
         tier: 14,
-        id: 214,
     },
     {
         ...baseGraphicDesignStudioUpgrade,
@@ -143,7 +128,6 @@ export const graphicDesignStudioUpgrades: UpgradeType[] = [
         icon: "📝",
         description: "Love it or hate it, it makes your emojis look... unique!",
         tier: 15,
-        id: 215,
     },
     {
         ...baseGraphicDesignStudioUpgrade,
@@ -152,7 +136,6 @@ export const graphicDesignStudioUpgrades: UpgradeType[] = [
         description: "Let AI do the heavy lifting and generate low quality and boring emojis at lightning speed!",
         quote: "Beep boop!",
         tier: 16,
-        id: 216,
     },
     {
         ...baseGraphicDesignStudioUpgrade,
@@ -161,7 +144,6 @@ export const graphicDesignStudioUpgrades: UpgradeType[] = [
         description: "Fold your paper emojis into all sorts of shapes!",
         quote: "Quack!",
         tier: 17,
-        id: 217,
     },
     {
         ...baseGraphicDesignStudioUpgrade,
@@ -170,7 +152,6 @@ export const graphicDesignStudioUpgrades: UpgradeType[] = [
         description: "Permanent emojis for the truly committed artist!",
         quote: "Ouch!",
         tier: 18,
-        id: 218,
     },
     {
         ...baseGraphicDesignStudioUpgrade,
@@ -178,6 +159,5 @@ export const graphicDesignStudioUpgrades: UpgradeType[] = [
         icon: "🩸",
         description: "Painting with blood makes for extra cool emojis!",
         tier: 19,
-        id: 219,
     },
 ];

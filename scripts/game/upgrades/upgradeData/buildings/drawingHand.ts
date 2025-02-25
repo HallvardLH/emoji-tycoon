@@ -18,7 +18,6 @@ export const drawingHandUpgrades: UpgradeType[] = [
         emojisPerSecondMultiplier: 2,
         emojisPerTapMultiplier: 2,
         tier: 0,
-        id: 100,
     },
     {
         ...baseDrawingHandUpgrade,
@@ -29,7 +28,6 @@ export const drawingHandUpgrades: UpgradeType[] = [
         emojisPerSecondMultiplier: 2,
         emojisPerTapMultiplier: 0,
         tier: 1,
-        id: 101,
     },
     {
         ...baseDrawingHandUpgrade,
@@ -40,7 +38,6 @@ export const drawingHandUpgrades: UpgradeType[] = [
         emojisPerSecondMultiplier: 2,
         emojisPerTapMultiplier: 0,
         tier: 2,
-        id: 102,
     },
     {
         ...baseDrawingHandUpgrade,
@@ -51,7 +48,6 @@ export const drawingHandUpgrades: UpgradeType[] = [
         emojisPerSecondMultiplier: 2,
         emojisPerTapMultiplier: 2,
         tier: 3,
-        id: 103,
     },
     {
         ...baseDrawingHandUpgrade,
@@ -62,7 +58,6 @@ export const drawingHandUpgrades: UpgradeType[] = [
         emojisPerSecondMultiplier: 2,
         emojisPerTapMultiplier: 0,
         tier: 4,
-        id: 104,
     },
     {
         ...baseDrawingHandUpgrade,
@@ -73,7 +68,6 @@ export const drawingHandUpgrades: UpgradeType[] = [
         emojisPerSecondMultiplier: 2,
         emojisPerTapMultiplier: 0,
         tier: 5,
-        id: 105,
     },
     {
         ...baseDrawingHandUpgrade,
@@ -85,7 +79,6 @@ export const drawingHandUpgrades: UpgradeType[] = [
         emojisPerSecondMultiplier: 2,
         emojisPerTapMultiplier: 2,
         tier: 6,
-        id: 106,
     },
     {
         ...baseDrawingHandUpgrade,
@@ -96,7 +89,6 @@ export const drawingHandUpgrades: UpgradeType[] = [
         emojisPerSecondMultiplier: 2,
         emojisPerTapMultiplier: 0,
         tier: 7,
-        id: 107,
     },
     {
         ...baseDrawingHandUpgrade,
@@ -107,7 +99,6 @@ export const drawingHandUpgrades: UpgradeType[] = [
         emojisPerSecondMultiplier: 2,
         emojisPerTapMultiplier: 0,
         tier: 8,
-        id: 108,
     },
     {
         ...baseDrawingHandUpgrade,
@@ -118,7 +109,6 @@ export const drawingHandUpgrades: UpgradeType[] = [
         emojisPerSecondMultiplier: 2,
         emojisPerTapMultiplier: 2,
         tier: 9,
-        id: 109,
     },
     {
         ...baseDrawingHandUpgrade,
@@ -129,7 +119,6 @@ export const drawingHandUpgrades: UpgradeType[] = [
         emojisPerSecondMultiplier: 2,
         emojisPerTapMultiplier: 0,
         tier: 10,
-        id: 110,
     },
     {
         ...baseDrawingHandUpgrade,
@@ -140,7 +129,6 @@ export const drawingHandUpgrades: UpgradeType[] = [
         emojisPerSecondMultiplier: 2,
         emojisPerTapMultiplier: 0,
         tier: 11,
-        id: 111,
     },
     {
         ...baseDrawingHandUpgrade,
@@ -151,7 +139,6 @@ export const drawingHandUpgrades: UpgradeType[] = [
         emojisPerSecondMultiplier: 2,
         emojisPerTapMultiplier: 2,
         tier: 12,
-        id: 112,
     },
     {
         ...baseDrawingHandUpgrade,
@@ -162,7 +149,6 @@ export const drawingHandUpgrades: UpgradeType[] = [
         emojisPerSecondMultiplier: 2,
         emojisPerTapMultiplier: 0,
         tier: 13,
-        id: 113,
     },
     {
         ...baseDrawingHandUpgrade,
@@ -173,7 +159,6 @@ export const drawingHandUpgrades: UpgradeType[] = [
         emojisPerSecondMultiplier: 2,
         emojisPerTapMultiplier: 0,
         tier: 14,
-        id: 114,
     },
     {
         ...baseDrawingHandUpgrade,
@@ -184,7 +169,6 @@ export const drawingHandUpgrades: UpgradeType[] = [
         emojisPerSecondMultiplier: 2,
         emojisPerTapMultiplier: 2,
         tier: 15,
-        id: 115,
     },
     {
         ...baseDrawingHandUpgrade,
@@ -195,7 +179,6 @@ export const drawingHandUpgrades: UpgradeType[] = [
         emojisPerSecondMultiplier: 2,
         emojisPerTapMultiplier: 0,
         tier: 16,
-        id: 116,
     },
     {
         ...baseDrawingHandUpgrade,
@@ -206,7 +189,6 @@ export const drawingHandUpgrades: UpgradeType[] = [
         emojisPerSecondMultiplier: 2,
         emojisPerTapMultiplier: 0,
         tier: 17,
-        id: 117,
     },
     {
         ...baseDrawingHandUpgrade,
@@ -217,7 +199,6 @@ export const drawingHandUpgrades: UpgradeType[] = [
         emojisPerSecondMultiplier: 2,
         emojisPerTapMultiplier: 2,
         tier: 18,
-        id: 118,
     },
     {
         ...baseDrawingHandUpgrade,
@@ -228,6 +209,5 @@ export const drawingHandUpgrades: UpgradeType[] = [
         emojisPerSecondMultiplier: 2,
         emojisPerTapMultiplier: 2,
         tier: 19,
-        id: 119,
     },
 ];

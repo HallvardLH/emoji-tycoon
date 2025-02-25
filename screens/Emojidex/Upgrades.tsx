@@ -43,6 +43,7 @@ export default function Upgrades() {
                                     {/* <Emoji icon={owned.includes(upgrade.id) ? upgrade.icon : "🔒"}></Emoji> */}
                                     <Emoji icon={upgrade.icon}></Emoji>
                                     <Text>{formatNumber(getUpgradePrice(upgrade.tier, upgrade.variant, upgrade.buildingId, upgrade.tierPosition), 0, true)}</Text>
+                                    <Text>{upgrade.id}</Text>
                                     {/* <Text style={styles.upgradeText}>
                                         {upgrade.icon} {upgrade.name} (ID: {upgrade.originalIndex})
                                     </Text> */}

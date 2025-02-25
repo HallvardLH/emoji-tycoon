@@ -3,6 +3,7 @@ import { effectData } from "./effectData";
 import { howFun } from "../shorthands";
 import { Effect } from "./effectType";
 import { HEADER_HEIGHT, TAB_BAR_HEIGHT } from "../../../components/layout/ScreenView";
+import { getEmojisPerSecond } from "../shorthands";
 
 interface EffectWeights {
     [key: string]: number;
@@ -44,6 +45,8 @@ export function createEffect() {
     // Ensure effects do not spawn off-screen
     const yPos = Math.random() * (Dimensions.get("window").height - (HEADER_HEIGHT + TAB_BAR_HEIGHT + margin));
 
+    const eps = getEmojisPerSecond();
+
     let chosenEffect;
 
     do {
@@ -51,7 +54,14 @@ export function createEffect() {
         const chosenEffectType = pickEffectType();
 
         // Filter effect data by chosen effect type
-        const filteredEffects = effectData.filter(effect => effect.type === chosenEffectType);
+        let filteredEffects = effectData.filter(effect => effect.type === chosenEffectType);
+
+        // Disallow bad effects from being chosen if eps is below 1 million
+        // This is mainly to avoid the player's very first boost being negative
+        if (eps < 1_000_000) {
+            filteredEffects = filteredEffects.filter(effect => effect.quality !== "bad");
+        }
+
         chosenEffect = filteredEffects[Math.floor(Math.random() * filteredEffects.length)];
 
         // If fun value is 17, effect 101 ("x77 emoji production") may be chosen

@@ -23,6 +23,6 @@ export interface UpgradeType {
     emojisPerTapMultiplier?: number,
     emojisPerTapPercentageIncrease?: number,
     emojisPerTapPercentageOfEps?: number;
-    id: number,
+    id?: number,
     unlockCondition: UnlockConditionType,
 }

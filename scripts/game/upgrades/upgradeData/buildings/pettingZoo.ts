@@ -232,4 +232,6 @@ export const pettingZooUpgrades: UpgradeType[] = [
         emojisPerTapPercentageIncrease: 0.1,
         id: 50003
     },
+    // Add fairy and cowboy emoji
+
 ];

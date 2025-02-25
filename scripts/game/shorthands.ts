@@ -10,3 +10,15 @@ export function howFun(start: number, end?: number) {
 
     return funValue >= start && funValue <= end;
 }
+
+export const getEmojisPerSecond = () => {
+    return store.getState().values.emojisPerSecond;
+}
+
+export const getEmojisPerTap = () => {
+    return store.getState().bigEmoji.emojisPerTap;
+}
+
+export const getEmojisInBank = () => {
+    return store.getState().values.emojis;
+}

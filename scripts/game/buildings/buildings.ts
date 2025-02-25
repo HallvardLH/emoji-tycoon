@@ -10,6 +10,7 @@ import { calculateEmojisPerSecond, calculateEpt } from '../calculations';
 type PluralNames = {
     [key: string]: string;
 }
+
 export const pluralNames: PluralNames = {
     "Drawing hand": "Drawing hands",
     "Graphic design studio": "Graphic design studios",
@@ -21,12 +22,19 @@ export const pluralNames: PluralNames = {
     "Bank": "Banks",
     "Emoji theme park": "Emoji theme parks",
     "Emoji assembly": "Emoji assemblies",
-    "Flying saucer": "Flying saucers",
-}
+    "Space station": "Space stations",
+    "Candy kingdom": "Candy kingdoms",
+    "Emoji volcano": "Emoji volcanoes",
+    "Temple of the Big Emoji in the sky": "Temples of the Big Emoji in the sky",
+    "Emoji supercomputer": "Emoji supercomputers",
+    "Emoji black hole": "Emoji black holes",
+    "Emoji singularity": "Emoji singularities",
+};
 
 type buildingName = {
     [key: string]: string;
-}
+};
+
 export const buildingEmojis: buildingName = {
     "Drawing hand": "✍️",
     "Graphic design studio": "🎨",
@@ -38,8 +46,15 @@ export const buildingEmojis: buildingName = {
     "Bank": "🏦",
     "Emoji theme park": "🎢",
     "Emoji assembly": "🏛️",
-    "Flying saucer": "🛸",
-}
+    "Space station": "🛰️",
+    "Candy kingdom": "🍭",
+    "Emoji volcano": "🌋",
+    "Temple of the Big Emoji in the sky": "🏯",
+    "Emoji supercomputer": "🖥️",
+    "Emoji black hole": "🕳️",
+    "Emoji singularity": "⚛️",
+};
+
 
 /**
  * Buys a building, subtracting the price from bank.
@@ -69,7 +84,7 @@ export const buyBuilding = (buildingId: number, buyAmount: number = store.getSta
                 currentAmount += 1;
                 updateBuildingValue(buildingId, "amount", currentAmount);
 
-                // Increase the building price for the next one
+                // Increase the building price
                 const newPrice = Math.round(data.basePrice * Math.pow(1.125, currentAmount));
                 updateBuildingValue(buildingId, "price", newPrice);
 
