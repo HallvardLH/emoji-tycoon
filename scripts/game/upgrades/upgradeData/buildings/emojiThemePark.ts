@@ -60,4 +60,6 @@ export const emojiThemeParkUpgrades: UpgradeType[] = [
         tier: 4,
         id: 904,
     },
+
+    // Add ticket upgrade: 🎟️
 ];
