@@ -6,6 +6,7 @@ import { unlockUpgrades } from '../upgrades/checks';
 import { updateBuildingValue } from './shorthands';
 import { canBuyBuilding } from './checks';
 import { calculateEmojisPerSecond, calculateEpt } from '../calculations';
+import { updateBuilding } from '../../redux/buildingsSlice';
 
 type PluralNames = {
     [key: string]: string;
@@ -63,7 +64,7 @@ export const buildingEmojis: buildingName = {
  * @param buyAmount the amount of buildings that will be bought (default is 1).
  */
 export const buyBuilding = (buildingId: number, buyAmount: number = store.getState().preferences.bulkBuy) => {
-    const building = getBuildingById(buildingId);
+    let building = getBuildingById(buildingId);
     const data = buildingData[building.buildingId];
     let currentAmount = building.amount;
 
@@ -73,7 +74,8 @@ export const buyBuilding = (buildingId: number, buyAmount: number = store.getSta
 
         // Loop through the number of buildings to buy
         for (let i = 0; i < buyAmount; i++) {
-
+            // We make sure to update the building value with each iteration
+            building = getBuildingById(buildingId);
             // Check if the current building can be afforded
             if (emojis >= building.price) {
 

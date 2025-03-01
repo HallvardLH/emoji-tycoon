@@ -13,10 +13,7 @@ import { BuildingNames } from './buildingNamesType';
  * @param value the new value of the object's key.
  */
 export const updateBuildingValue = (buildingId: number, key: keyof BuildingProps, value: number | boolean) => {
-    const buildings = store.getState().buildings.buildings;
-
-    // Find the building by its buildingId
-    const building = buildings.find(b => b.buildingId === buildingId);
+    const building = getBuildingById(buildingId);
 
     // Check if the building exists
     if (building) {
@@ -49,6 +46,8 @@ export function getBuildingById(buildingId: number) {
 
 /**
  * Gets the buildingId from the building name.
+ * 
+ * Useful when you know the id but not the name. It can happen!
  *
  * @param name The name of the building.
  * @returns The buildingId.
