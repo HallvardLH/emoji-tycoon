@@ -1,17 +1,28 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
+import { BuildingNames } from '../game/buildings/buildingNamesType';
+import { buildingData } from '../game/buildings/buildingData';
 
+export type upgradeFilters = BuildingNames | "all";
 
 interface PreferencesState {
     /** 
     * @property The amount of buildings that are bought by clicking the buy button
     */
     bulkBuy: 1 | 10 | 100,
+    /** 
+    * @property Whether to show extra details, namely in upgrade list items
+    */
     showDetails: boolean,
+    /** 
+    * @property An array of buildings for which to show upgrades for in the upgrade screen
+    */
+    upgradeFilter: upgradeFilters[],
 }
 
 const initialState: PreferencesState = {
     bulkBuy: 1,
     showDetails: true,
+    upgradeFilter: buildingData.map(building => building.name as BuildingNames),
 };
 
 export const preferencesSlice = createSlice({
@@ -24,6 +35,16 @@ export const preferencesSlice = createSlice({
         updateShowDetails: (state, action: PayloadAction<boolean>) => {
             state.showDetails = action.payload;
         },
+        toggleUpgradeFilter: (state, action: PayloadAction<upgradeFilters>) => {
+            let currentFilters = [...state.upgradeFilter];
+            // If the filter is in the array, remove it
+            if (currentFilters.includes(action.payload)) {
+                currentFilters = currentFilters.filter(upgrade => upgrade != action.payload);
+            } else {
+                currentFilters.push(action.payload);
+            }
+            state.upgradeFilter = currentFilters;
+        },
         resetPreferences: (state) => {
             // Directly return the initialState
             return initialState;
@@ -32,6 +53,6 @@ export const preferencesSlice = createSlice({
     },
 });
 
-export const { updateBulkBuy, updateShowDetails, resetPreferences } = preferencesSlice.actions;
+export const { updateBulkBuy, updateShowDetails, toggleUpgradeFilter, resetPreferences } = preferencesSlice.actions;
 
 export default preferencesSlice.reducer;

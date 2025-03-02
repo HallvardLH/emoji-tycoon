@@ -78,10 +78,10 @@ export function createEffect() {
     // If fun value is 1 or 2, all effects emojis are replaced with cookie
     if (howFun(1, 2)) {
         if (chosenEffect.quality === "good") {
-            chosenEffect.emoji == "🍪";
+            chosenEffect.emoji = "🍪";
         } else {
             // Bad grandma
-            chosenEffect.emoji == "👵";
+            chosenEffect.emoji = "👵";
         }
     }
 

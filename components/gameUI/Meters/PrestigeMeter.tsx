@@ -18,14 +18,13 @@ export default function PrestigeMeter() {
     return (
         <>
             <TouchableOpacity onPress={() => setModalVisible(true)}>
-                <ProgressMeter
-                    percentage={remainingEmojisPrestigePerc}
-                    icon="✨"
-                    side="right"
-                    label="Emoji essence"
-                />
-
+                <View style={styles.iconContainer}>
+                    <View style={styles.innerButtonContainer}>
+                        <Emoji size={24} icon="✨" />
+                    </View>
+                </View>
             </TouchableOpacity>
+
             <Modal
                 modalVisible={modalVisible}
                 onRequestClose={() => setModalVisible(false)}
@@ -68,5 +67,25 @@ const styles = StyleSheet.create({
 
     paragraph: {
         marginBottom: 10,
-    }
+    },
+
+    iconContainer: {
+        justifyContent: "center",
+        alignItems: "center",
+        width: 40,
+        zIndex: 2,
+    },
+    innerButtonContainer: {
+        borderColor: colors.border,
+        borderRadius: 100,
+        justifyContent: "center",
+        alignItems: "center",
+        backgroundColor: colors.blue.medium,
+        width: 40,
+        height: 40,
+        borderWidth: 2.5,
+        zIndex: 2,
+    },
+
+
 })

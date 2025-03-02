@@ -8,10 +8,13 @@ import { getUpgradePrice } from '../../../scripts/game/upgrades/upgradePrice';
 import { FlatList } from 'react-native';
 import store from '../../../scripts/redux/reduxStore';
 import { unlockUpgrade } from '../../../scripts/redux/upgradesSlice';
+import Text from '../../generalUI/Text';
+import { upgradeFilters } from '../../../scripts/redux/preferencesSlice';
 
 export default function UpgradesList() {
     const { unlocked, canBuy } = useSelector((state: RootState) => state.upgrades);
     const { bigEmoji } = useSelector((state: RootState) => state.bigEmoji);
+    const { upgradeFilter } = useSelector((state: RootState) => state.preferences);
 
     // Retrieve the corresponding upgrades from buildingUpgrades based on the unlocked indices,
     // including the original index in the object for later reference
@@ -21,7 +24,13 @@ export default function UpgradesList() {
     }));
 
     // Sort the unlocked upgrades by price
-    const sortedUnlockedUpgrades = unlockedUpgrades.sort((a, b) => getUpgradePrice(a.tier, a.variant, a.buildingId, a.tierPosition) - getUpgradePrice(b.tier, b.variant, b.buildingId, b.tierPosition));
+    let sortedUnlockedUpgrades = unlockedUpgrades.sort((a, b) => getUpgradePrice(a.tier, a.variant, a.buildingId, a.tierPosition) - getUpgradePrice(b.tier, b.variant, b.buildingId, b.tierPosition));
+
+    // Filter out upgrades that are not selected in the filter
+    sortedUnlockedUpgrades = sortedUnlockedUpgrades.filter((upgrade) => {
+        if (upgradeFilter.includes("all")) { return true }
+        return upgradeFilter.includes(upgrade.building as upgradeFilters);
+    })
 
     const renderItem = ({ item: upgrade }: any) => (
         <UpgradeListItem
@@ -37,7 +46,7 @@ export default function UpgradesList() {
             icon={upgrade.icon}
             buttonActive={canBuy.includes(upgrade.id)}
             onPress={() => buyUpgrade(upgrade.id)}
-            onEmojiPress={upgrade.id == 84 ? alienSecret : undefined}
+            onEmojiPress={upgrade.id == 1104 ? alienSecret : undefined}
         />
     );
 
@@ -50,16 +59,13 @@ export default function UpgradesList() {
     }
 
     return (
-        <>
-            {/* <UpgradesListFilter /> */}
-            <FlatList
-                contentContainerStyle={{
-                    paddingTop: 24,
-                }}
-                data={sortedUnlockedUpgrades}
-                renderItem={renderItem}
-                keyExtractor={(item) => item.id.toString()}
-            />
-        </>
+        <FlatList
+            contentContainerStyle={{
+                paddingTop: 24,
+            }}
+            data={sortedUnlockedUpgrades}
+            renderItem={renderItem}
+            keyExtractor={(item) => item.id.toString()}
+        />
     );
 }

@@ -10,7 +10,8 @@ interface BuildingData {
 }
 
 export function getBaseBuildingPrice(num: number) {
-    const price = 10 * Math.pow(10, num)
+    let price = 10 * Math.pow(10, num)
+    if (num >= 15) price *= 10;
     return roundToPrettyNumber(price)
 }
 
@@ -25,7 +26,7 @@ function getBaseEps(num: number, noRound?: boolean) {
 
         // Inspired by Cookie Clicker's base cps curve
         let eps = Math.ceil((Math.pow(num, num * 0.5 + factor)) * 10) / 10
-        return roundToPrettyNumber(eps)
+        return roundToPrettyNumber(Math.round(eps))
     }
 }
 

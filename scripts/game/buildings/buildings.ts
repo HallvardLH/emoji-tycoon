@@ -1,12 +1,11 @@
 import store from '../../redux/reduxStore';
 import { updateTotalBuildingEps, updateEmojis } from '../../redux/valuesSlice';
 import { buildingData } from './buildingData';
-import { getBuilding, getBuildingById } from './shorthands';
+import { getBuildingById } from './shorthands';
 import { unlockUpgrades } from '../upgrades/checks';
 import { updateBuildingValue } from './shorthands';
 import { canBuyBuilding } from './checks';
 import { calculateEmojisPerSecond, calculateEpt } from '../calculations';
-import { updateBuilding } from '../../redux/buildingsSlice';
 
 type PluralNames = {
     [key: string]: string;
@@ -87,7 +86,7 @@ export const buyBuilding = (buildingId: number, buyAmount: number = store.getSta
                 updateBuildingValue(buildingId, "amount", currentAmount);
 
                 // Increase the building price
-                const newPrice = Math.round(data.basePrice * Math.pow(1.125, currentAmount));
+                const newPrice = Math.round(data.basePrice * Math.pow(1.175, currentAmount));
                 updateBuildingValue(buildingId, "price", newPrice);
 
                 // Update the emojis variable to the latest state
