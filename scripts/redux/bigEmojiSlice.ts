@@ -21,6 +21,8 @@ interface BigEmojiState {
     emojisPerTapMultipliers: number[],
     emojisPerTapPercentages: number[],
     emojisPerTapPercentageOfEps: number[],
+
+    tapBoost: number,
 }
 
 const initialState: BigEmojiState = {
@@ -39,6 +41,8 @@ const initialState: BigEmojiState = {
     emojisPerTapMultipliers: [],
     emojisPerTapPercentages: [],
     emojisPerTapPercentageOfEps: [],
+
+    tapBoost: 0,
 };
 
 export const bigEmojiSlice = createSlice({
@@ -89,6 +93,10 @@ export const bigEmojiSlice = createSlice({
             }
         },
 
+        updateTapBoost: (state, action: PayloadAction<number>) => {
+            state.tapBoost = action.payload;
+        },
+
         resetBigEmoji: (state) => {
             // Directly return the initialState
             return initialState;
@@ -97,6 +105,6 @@ export const bigEmojiSlice = createSlice({
     },
 });
 
-export const { updateBigEmoji, updateNextEmoji, updateEmojisPerTap, updateBaseEmojisPerTap, addTapMultiplier, removeTapMultiplier, addTapPercentage, removeTapPercentage, addEmojisPerTapPercentageOfEps, removeEmojisPerTapPercentageOfEps, resetBigEmoji } = bigEmojiSlice.actions;
+export const { updateBigEmoji, updateNextEmoji, updateEmojisPerTap, updateBaseEmojisPerTap, addTapMultiplier, removeTapMultiplier, addTapPercentage, removeTapPercentage, addEmojisPerTapPercentageOfEps, removeEmojisPerTapPercentageOfEps, updateTapBoost, resetBigEmoji } = bigEmojiSlice.actions;
 
 export default bigEmojiSlice.reducer;

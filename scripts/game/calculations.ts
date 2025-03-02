@@ -41,8 +41,11 @@ export function calculateEpt() {
     // Gets base emojis per tap
     const baseEmojisPerTap = store.getState().bigEmoji.baseEmojisPerTap;
 
+    // For every 10 tap boost, multiply EPT
+    const tapBoost = (Math.floor(store.getState().bigEmoji.tapBoost / 10)) + 1;
+
     // Calculate emojis per tap with the total multiplier and compounded percentage increases
-    let ept = ((baseEmojisPerTap + epsBonus) * multiplier) * percentageIncrease;
+    let ept = (((baseEmojisPerTap + epsBonus) * multiplier) * percentageIncrease) * tapBoost;
 
     // console.log(baseEmojisPerTap, eps, totalPercentageOfEps, epsBonus, multiplier, percentageIncrease, ept)
 

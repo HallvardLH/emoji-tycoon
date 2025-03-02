@@ -13,6 +13,7 @@ import { addEmojisGained } from "../redux/statsSlice";
 import { calculateBuildingsEps } from "./buildings/buildings";
 import { calculateRemainingEmojisForNextPrestige, getPrestigeLevel } from "./prestige/prestige";
 import { updateEmojiEssence } from "../redux/prestigeSlice";
+import { decrementTapBoost } from "./tapBoost";
 
 let lastUpdateTime = Date.now();
 let i = 0
@@ -60,6 +61,8 @@ export function gameLoop() {
         spawnEffect();
         calculateRemainingEmojisForNextPrestige(true);
     }
+    decrementTapBoost();
+
     i++
 }
 
