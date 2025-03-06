@@ -36,7 +36,7 @@ export const sportsCenterUpgrades: UpgradeType[] = [
     },
     {
         ...baseSportsCenterUpgrade,
-        name: "Fresibees",
+        name: "Frisbees",
         icon: "🥏",
         description: "The Ultimate sport",
         quote: "Gee I hope no one ever thinks to combine this with golf...",
