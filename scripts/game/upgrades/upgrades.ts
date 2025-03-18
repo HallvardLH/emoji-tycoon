@@ -14,6 +14,7 @@ import { getUpgradePrice } from './upgradePrice';
 import { addEmojisPerSecondPercentage } from '../../redux/valuesSlice';
 import { calculateEpsBonus, calculateEptBonus } from '../calculations';
 import { BIG_EMOJI_BUILDING_ID } from './upgradeData/nonBuilding/bigEmoji';
+import * as Haptics from "expo-haptics";
 
 export function buyUpgrade(upgradeId: number) {
     const upgrade = getUpgradeDataById(upgradeId);
@@ -70,6 +71,10 @@ export function buyUpgrade(upgradeId: number) {
         calculateBuildingsEps();
         calculateEpt();
         canBuyUpgrade();
+
+        Haptics.notificationAsync(
+            Haptics.NotificationFeedbackType.Success
+        )
     }
 }
 

@@ -7,6 +7,7 @@ import PulseAnimation from '../animations/PulseAnimation';
 import { useFonts } from "expo-font";
 import { useCallback } from 'react';
 import { formatNumber } from '../../scripts/misc';
+import * as Haptics from 'expo-haptics';
 
 interface AnimatedEmoji {
     key: string;
@@ -132,7 +133,12 @@ export default function BigEmoji() {
 
 
     return (
-        <Pressable onPress={onEmojiTap} style={styles.container}>
+        <Pressable
+            onPress={() => {
+                onEmojiTap();
+                Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Rigid);
+            }}
+            style={styles.container}>
             <View style={styles.container}>
                 {/* Static Emoji */}
                 <PulseAnimation maxSize={1.06} duration={4000}>

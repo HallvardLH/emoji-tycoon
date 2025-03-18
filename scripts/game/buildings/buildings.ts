@@ -6,6 +6,7 @@ import { unlockUpgrades } from '../upgrades/checks';
 import { updateBuildingValue } from './shorthands';
 import { canBuyBuilding } from './checks';
 import { calculateEmojisPerSecond, calculateEpt } from '../calculations';
+import * as Haptics from "expo-haptics"
 
 type PluralNames = {
     [key: string]: string;
@@ -91,6 +92,9 @@ export const buyBuilding = (buildingId: number, buyAmount: number = store.getSta
 
                 // Update the emojis variable to the latest state
                 emojis = store.getState().values.emojis;
+                Haptics.notificationAsync(
+                    Haptics.NotificationFeedbackType.Success
+                )
 
             } else {
                 break; // Stop if the player can't afford the next building

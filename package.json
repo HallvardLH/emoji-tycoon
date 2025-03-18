@@ -22,7 +22,8 @@
     "react-native-redux-persist2": "^0.0.3",
     "react-native-svg": "^15.8.0",
     "react-redux": "^9.2.0",
-    "redux": "^5.0.1"
+    "redux": "^5.0.1",
+    "expo-haptics": "~14.0.1"
   },
   "devDependencies": {
     "@babel/core": "^7.20.0",
