@@ -118,6 +118,24 @@ export const buyBuilding = (buildingId: number, buyAmount: number = store.getSta
     calculateEpt();
 };
 
+export function calculateBuildingPrice(buildingId: number, buyAmount: number = store.getState().preferences.bulkBuy) {
+    const building = getBuildingById(buildingId);
+    const data = buildingData[building.buildingId];
+    let currentAmount = building.amount;
+    let price = 0;
+
+    // Loop through the number of buildings to buy
+    for (let i = 0; i < buyAmount; i++) {
+        // We make sure to update the building value with each iteration
+        const currentBuilding = getBuildingById(buildingId);
+        // Check if the current building can be afforded
+        price += Math.round(data.basePrice * Math.pow(1.175, currentAmount));
+        currentAmount += 1;
+    }
+
+    return price;
+}
+
 
 
 /**
