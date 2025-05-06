@@ -10,7 +10,7 @@ import { clearUnlockedUpgradeNotifications } from '../../scripts/redux/upgradesS
 import { clearUnlockedBuildingsNotifications } from '../../scripts/redux/buildingsSlice';
 import { canBuyBuilding } from '../../scripts/game/buildings/checks';
 import { canBuyUpgrade } from '../../scripts/game/upgrades/checks';
-import { setActiveTab } from '../../scripts/redux/tabSlice';
+import { setActiveTab } from '../../scripts/redux/tabsSlice';
 
 interface TabBarProps {
     height?: number;
@@ -24,7 +24,7 @@ export default function TabBar(props: TabBarProps) {
     const { unlockedUpgradeNotification } = useSelector((state: RootState) => state.upgrades);
     const { unlockedBuildingsNotification } = useSelector((state: RootState) => state.buildings);
 
-    const { activeTab } = useSelector((state: RootState) => state.tab);
+    const { activeTab } = useSelector((state: RootState) => state.tabs);
 
     useEffect(() => {
         const showSubscription = Keyboard.addListener("keyboardDidShow", () => {

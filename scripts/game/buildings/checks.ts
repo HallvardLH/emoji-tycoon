@@ -29,7 +29,11 @@ export function unlockBuilding() {
         // Check if the building is locked and if the player has enough emojis to unlock it
         if (!building.unlocked && emojis >= building.price / 4) {
             updateBuildingValue(building.buildingId, "unlocked", true);
-            store.dispatch(unlockedBuildingNotificaiton());
+            // Don't show notification if the player is on the buildings tab
+            const activeTab = store.getState().tabs.activeTab;
+            if (activeTab !== "buildings") {
+                store.dispatch(unlockedBuildingNotificaiton());
+            }
         }
     });
 }

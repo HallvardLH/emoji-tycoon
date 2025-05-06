@@ -31,7 +31,6 @@ export const upgradesSlice = createSlice({
                 // Only unlock if not owned
                 if (!state.owned.includes(action.payload)) {
                     state.unlocked.push(action.payload);
-                    state.unlockedUpgradeNotification++;
                 }
             }
         },
@@ -47,6 +46,9 @@ export const upgradesSlice = createSlice({
             }
 
         },
+        unlockedUpgradeNotificaiton: (state) => {
+            state.unlockedUpgradeNotification++;
+        },
         clearUnlockedUpgradeNotifications: (state) => {
             state.unlockedUpgradeNotification = 0;
         },
@@ -59,6 +61,6 @@ export const upgradesSlice = createSlice({
 });
 
 // Export the generated action creators
-export const { addUpgrade, unlockUpgrade, addCanBuyUpgrade, removeCanBuyUpgrade, clearUnlockedUpgradeNotifications, resetUpgrades } = upgradesSlice.actions;
+export const { addUpgrade, unlockUpgrade, addCanBuyUpgrade, removeCanBuyUpgrade, unlockedUpgradeNotificaiton, clearUnlockedUpgradeNotifications, resetUpgrades } = upgradesSlice.actions;
 
 export default upgradesSlice.reducer;

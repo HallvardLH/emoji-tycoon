@@ -1,21 +1,21 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 
-interface TabState {
+interface TabsState {
     activeTab: 'emoji' | 'buildings' | 'upgrades' | 'emojidex';
 }
 
-const initialState: TabState = {
+const initialState: TabsState = {
     activeTab: 'emoji',
 };
 
-export const tabSlice = createSlice({
-    name: "tab",
+export const tabsSlice = createSlice({
+    name: "tabs",
     initialState,
     reducers: {
-        setActiveTab: (state, action: PayloadAction<TabState['activeTab']>) => {
+        setActiveTab: (state, action: PayloadAction<TabsState['activeTab']>) => {
             state.activeTab = action.payload;
         },
-        resetTab: (state) => {
+        resetTabs: (state) => {
             // Directly return the initialState
             return initialState;
         },
@@ -23,6 +23,6 @@ export const tabSlice = createSlice({
     },
 });
 
-export const { setActiveTab, resetTab } = tabSlice.actions;
+export const { setActiveTab, resetTabs } = tabsSlice.actions;
 
-export default tabSlice.reducer;
+export default tabsSlice.reducer;

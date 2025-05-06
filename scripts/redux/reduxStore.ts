@@ -15,7 +15,7 @@ import collectionSlice from './collectionSlice';
 import preferencesSlice from './preferencesSlice';
 import statsSlice from './statsSlice';
 import prestigeSlice from './prestigeSlice';
-import tabSlice from './tabSlice';
+import tabsSlice from './tabsSlice';
 
 // Combine reducers
 const rootReducer = combineReducers({
@@ -28,7 +28,7 @@ const rootReducer = combineReducers({
     preferences: preferencesSlice,
     stats: statsSlice,
     prestige: prestigeSlice,
-    tab: tabSlice,
+    tabs: tabsSlice,
 });
 
 // Persist configuration
