@@ -35,8 +35,8 @@ export default function Home({ navigation }: HomeProps) {
         <ScreenView>
             {/* <EmojiRain bg="#faba2f" delay={8250} />
             <EmojiRain bg="#c5075c" delay={2500} /> */}
-            {/* <EmojiRain delay={getRainDelay() + 1000} />
-            <EmojiRain delay={1000} /> */}
+            <EmojiRain delay={getRainDelay() + 1000} />
+            <EmojiRain delay={1000} />
             <View style={{
                 flexDirection: "row",
                 position: "absolute",

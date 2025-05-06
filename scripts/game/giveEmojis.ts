@@ -14,7 +14,7 @@ export function emojiGiveEffect() {
 
     let gift = Math.min(emojisPerSecond * (60 * 60), emojis * 0.25);
 
-    // Adds another random amount of cookies, just to be sure something is given
+    // Adds another random amount of emojis, just to be sure something is given
     gift += Math.floor(Math.random() * 1000);
 
     giveOneOffEmojis(gift);

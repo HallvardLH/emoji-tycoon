@@ -92,6 +92,7 @@ export const buyBuilding = (buildingId: number, buyAmount: number = store.getSta
 
                 // Update the emojis variable to the latest state
                 emojis = store.getState().values.emojis;
+
                 Haptics.notificationAsync(
                     Haptics.NotificationFeedbackType.Success
                 )
