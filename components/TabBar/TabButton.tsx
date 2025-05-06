@@ -12,8 +12,11 @@ interface TabButtonProps {
     onPress?: () => void;
     icon: string;
     notifications?: number;
+    active?: boolean;
 }
 
+// These values are defined once here to avoid magic numbers in the code
+// and to make it easier to change them in the future.
 const width = 74;
 const borderWidth = 2.5;
 const shadowWidth = width + borderWidth * 2;
@@ -24,9 +27,10 @@ const backgroundHeight = innerButtonHeight + 12;
 const borderRadius = 15;
 
 export default function TabButton(props: TabButtonProps) {
-    const { label, labelColor, background, highlight, onPress, icon, notifications } = props;
+    const { label, labelColor, background, highlight, onPress, icon, notifications, active } = props;
+
     return (
-        <TouchableOpacity onPress={onPress}>
+        <TouchableOpacity style={[active ? { top: -5, transform: [{ scale: 1.1 }] } : null]} onPress={onPress}>
 
             <Shadow width={shadowWidth} height={backgroundHeight} shadowHeight={4} borderRadius={borderRadius} />
             <View style={styles.container}>
@@ -56,7 +60,7 @@ const styles = StyleSheet.create({
         borderColor: componentColors.tabBar.border,
         overflow: "hidden",
         height: backgroundHeight,
-        borderRadius: borderRadius
+        borderRadius: borderRadius,
     },
 
     background: {
