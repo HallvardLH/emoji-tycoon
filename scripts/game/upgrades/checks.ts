@@ -35,7 +35,7 @@ export function unlockUpgrades() {
 
                 if (building.amount >= buildingUnlockReq[upgrade.tier]) {
                     store.dispatch(unlockUpgrade(upgrade.id!));
-                    if (activeTab !== "buildings") {
+                    if (activeTab !== "upgrades") {
                         store.dispatch(unlockedUpgradeNotificaiton());
                     }
                 }
@@ -46,7 +46,7 @@ export function unlockUpgrades() {
                 // Tier 1 is 101 - 200 etc.
                 if (building.amount >= (upgrade.tier * 100) + (upgrade.tierPosition! * 10) && building.amount > 0) {
                     store.dispatch(unlockUpgrade(upgrade.id!));
-                    if (activeTab !== "buildings") {
+                    if (activeTab !== "upgrades") {
                         store.dispatch(unlockedUpgradeNotificaiton());
                     }
                 }
@@ -58,7 +58,7 @@ export function unlockUpgrades() {
                 // Unlocks the most powerful tapping upgrades, starting at 100 emojis gained from taps
                 if (store.getState().stats.emojisEarnedFromTap >= Math.pow(10, upgrade.tierPosition! + 2)) {
                     store.dispatch(unlockUpgrade(upgrade.id!));
-                    if (activeTab !== "buildings") {
+                    if (activeTab !== "upgrades") {
                         store.dispatch(unlockedUpgradeNotificaiton());
                     }
                 }
