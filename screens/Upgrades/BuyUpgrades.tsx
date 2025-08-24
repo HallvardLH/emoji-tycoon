@@ -11,23 +11,23 @@ export default function BuyUpgrades() {
     return (
         <View style={{ width: "100%" }}>
             {/* <ScrollToTopView scrollToTopThreshold={Infinity}> */}
-            <View style={{
+            {/* <View style={{
                 flexDirection: "row",
                 justifyContent: "center",
                 alignItems: "center",
                 gap: 10,
                 marginBottom: 15,
                 marginTop: 5,
-            }}>
-                <Text size={20}>Building upgrades</Text>
+            }}> */}
+            {/* <Text size={20}>Building upgrades</Text> */}
 
-            </View>
-            <View style={{
+            {/* </View> */}
+            {/* <View style={{
                 position: "absolute",
                 right: 20,
             }}>
                 <UpgradesListFilter selected={upgradeFilter} />
-            </View>
+            </View> */}
             <UpgradesList />
             {/* </ScrollToTopView> */}
         </View>

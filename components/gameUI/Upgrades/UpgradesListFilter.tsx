@@ -49,8 +49,8 @@ export default function UpgradesListFilter({ selected }: UpgradesListFilterProps
                             return (
                                 <>
                                     {dynamicData.unlocked && (
-                                        <TouchableOpacity onPress={() => { store.dispatch(toggleUpgradeFilter(building.name as BuildingNames)) }}>
-                                            <View style={[styles.upgrade, selected.includes(building.name as upgradeFilters) ? styles.selected : null]} key={building.name}>
+                                        <TouchableOpacity key={building.name} onPress={() => { store.dispatch(toggleUpgradeFilter(building.name as BuildingNames)) }}>
+                                            <View style={[styles.upgrade, selected.includes(building.name as upgradeFilters) ? styles.selected : null]}>
                                                 <Emoji size={30} icon={building.icon} />
                                             </View>
                                         </TouchableOpacity>

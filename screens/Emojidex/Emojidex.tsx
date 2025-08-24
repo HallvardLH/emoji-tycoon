@@ -13,7 +13,7 @@ interface EmojidexProps {
 
 export default function Emojidex({ navigation }: EmojidexProps) {
     return (
-        <ScreenView>
+        <ScreenView scrollView={false}>
             <ContentTab
                 tabs={[
                     {

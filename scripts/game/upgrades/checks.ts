@@ -16,10 +16,12 @@ type UnlockReq = {
  *
  */
 export function unlockUpgrades() {
-    let i = 0;
     const activeTab = store.getState().tabs.activeTab;
     for (const upgrade of upgradeData) {
-        const building = getBuilding(upgrade.building!)
+        const building = getBuilding(upgrade.building!);
+        const state = store.getState();
+        const isAlreadyUnlockedOrOwned = state.upgrades.unlocked.includes(upgrade.id!) || state.upgrades.owned.includes(upgrade.id!);
+        if (isAlreadyUnlockedOrOwned) continue; // skip already unlocked upgrades
         switch (upgrade.unlockCondition) {
 
             case "Building amount":
@@ -36,6 +38,7 @@ export function unlockUpgrades() {
                 if (building.amount >= buildingUnlockReq[upgrade.tier]) {
                     store.dispatch(unlockUpgrade(upgrade.id!));
                     if (activeTab !== "upgrades") {
+                        console.log(upgrade.name)
                         store.dispatch(unlockedUpgradeNotificaiton());
                     }
                 }
@@ -47,6 +50,7 @@ export function unlockUpgrades() {
                 if (building.amount >= (upgrade.tier * 100) + (upgrade.tierPosition! * 10) && building.amount > 0) {
                     store.dispatch(unlockUpgrade(upgrade.id!));
                     if (activeTab !== "upgrades") {
+
                         store.dispatch(unlockedUpgradeNotificaiton());
                     }
                 }
@@ -59,12 +63,12 @@ export function unlockUpgrades() {
                 if (store.getState().stats.emojisEarnedFromTap >= Math.pow(10, upgrade.tierPosition! + 2)) {
                     store.dispatch(unlockUpgrade(upgrade.id!));
                     if (activeTab !== "upgrades") {
+
                         store.dispatch(unlockedUpgradeNotificaiton());
                     }
                 }
                 break;
         }
-        i++;
     }
 }
 
