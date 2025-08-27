@@ -1,5 +1,5 @@
 import { updateEmojis } from "../redux/valuesSlice";
-import store from '../redux/reduxStore';
+import store from "../redux/reduxStore";
 import { canBuyBuilding, unlockBuilding } from "./buildings/checks";
 import { unlockUpgrades } from "./upgrades/checks";
 import { decrementEffects } from "./effects/effects";
@@ -11,65 +11,70 @@ import { calculateEpt } from "./calculations";
 import { canBuyUpgrade } from "./upgrades/checks";
 import { addEmojisGained } from "../redux/statsSlice";
 import { calculateBuildingsEps } from "./buildings/buildings";
-import { calculateRemainingEmojisForNextPrestige, getPrestigeLevel } from "./prestige/prestige";
+import {
+    calculateRemainingEmojisForNextPrestige,
+    getPrestigeLevel,
+} from "./prestige/prestige";
 import { updateEmojiEssence } from "../redux/prestigeSlice";
 import { decrementTapBoost } from "./tapBoost";
 
 let lastUpdateTime = Date.now();
-let i = 0
+let tick = 0;
 let loggedBigEmojiTaps = 0;
+
 export function gameLoop() {
     const now = Date.now();
     const delta = (now - lastUpdateTime) / 1000; // time in seconds since last update
     lastUpdateTime = now;
 
-    giveEmojis(delta);
+    // cache state once per frame
+    const state = store.getState();
 
-    // Runs at the start of a game session
-    if (i == 0) {
-        // Resets the effect timer, so an effect emoji doesn't spawn immediately on load
-        store.dispatch(updateTimeSinceLastEffect(0));
+    giveEmojis(delta, state);
 
+    // Runs once at game start
+    if (tick === 0) {
+        store.dispatch(updateTimeSinceLastEffect(0)); // reset timer
         generateCollection();
-
         pickNextEmoji();
-
         calculateEpt();
-
         calculateBuildingsEps();
-
-        loggedBigEmojiTaps = store.getState().stats.bigEmojiTaps;
+        loggedBigEmojiTaps = state.stats.bigEmojiTaps;
     }
 
-    // Runs once every 2.5 seconds
-    if (i % 25 == 0) {
+    // Every 2.5s (assuming loop runs at 100ms interval)
+    if (tick % 25 === 0) {
         canBuyBuilding();
         unlockBuilding();
         canBuyUpgrade();
-        // If big emoji taps are not the same as the logged value, we know the emoji has been tapped
-        if (loggedBigEmojiTaps != store.getState().stats.bigEmojiTaps) {
-            loggedBigEmojiTaps = store.getState().stats.bigEmojiTaps;
+
+        // detect new tap
+        if (loggedBigEmojiTaps !== state.stats.bigEmojiTaps) {
+            loggedBigEmojiTaps = state.stats.bigEmojiTaps;
             unlockUpgrades();
         }
+
         store.dispatch(updateEmojiEssence(getPrestigeLevel()));
     }
-    // Runs once every second
-    if (i % 10 == 0) {
-        store.dispatch(updateTimeSinceLastEffect(store.getState().effects.timeSinceLastEffect + 1));
+
+    // Every 1s
+    if (tick % 10 === 0) {
+        store.dispatch(updateTimeSinceLastEffect(state.effects.timeSinceLastEffect + 1));
         decrementEffects();
         decrementEffectsOnScreen();
         spawnEffect();
         calculateRemainingEmojisForNextPrestige(true);
     }
+
     decrementTapBoost();
 
-    i++
+    tick++;
 }
 
-export function giveEmojis(delta: number) {
-    const emojisPerSecond = store.getState().values.emojisPerSecond;
-    const emojis = store.getState().values.emojis;
+export function giveEmojis(delta: number, state = store.getState()) {
+    const { emojisPerSecond, emojis } = state.values;
+    const gained = emojisPerSecond * delta;
 
-    store.dispatch(updateEmojis(emojis + emojisPerSecond * delta));
-    store.dispatch(addEmojisGained(emojisPerSecond * delta));
+    store.dispatch(updateEmojis(emojis + gained));
+    store.dispatch(addEmojisGained(gained));
 }

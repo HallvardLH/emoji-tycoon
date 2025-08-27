@@ -3,21 +3,23 @@ import { updateEmojis } from '../redux/valuesSlice';
 import { addEmojisGained } from '../redux/statsSlice';
 
 /**
- * Gives emojis upon tapping a "give emoji" effect emoji
+ * Gives emojis upon tapping a "give emoji" effect emoji.
  *
- * Gives either an hour's worth of eps or 25% of emojis in bank, whichever is smaller
- *
+ * - Amount is the smaller of:
+ *   - 1 hour's worth of EPS
+ *   - 25% of current bank
+ * - Always gives at least a small random bonus.
  */
 export function emojiGiveEffect() {
-    const emojisPerSecond = store.getState().values.emojisPerSecond;
-    const emojis = store.getState().values.emojis;
+    const { emojisPerSecond, emojis } = store.getState().values;
 
+    // calculate best gift
     let gift = Math.min(emojisPerSecond * (60 * 60), emojis * 0.25);
 
     // Adds another random amount of emojis, just to be sure something is given
-    gift += Math.floor(Math.random() * 1000);
+    const bonus = Math.floor(Math.random() * 1000);
 
-    giveOneOffEmojis(gift);
+    giveOneOffEmojis(gift + bonus);
 }
 
 /**
@@ -26,7 +28,12 @@ export function emojiGiveEffect() {
  * @param amount the amount of emojis that is given
  */
 export function giveOneOffEmojis(amount: number) {
-    const emojis = store.getState().values.emojis;
-    store.dispatch(updateEmojis(emojis + amount));
+    // Disallow negatives or zero
+    if (amount <= 0) return;
+
+    const { emojis } = store.getState().values;
+    const newTotal = emojis + amount;
+
+    store.dispatch(updateEmojis(newTotal));
     store.dispatch(addEmojisGained(amount));
 }

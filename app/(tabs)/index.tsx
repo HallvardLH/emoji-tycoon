@@ -1,6 +1,6 @@
 import ScreenView from "../../components/layout/ScreenView";
 import React from 'react';
-import BigEmoji from "../../components/gameUI/BigEmoji";
+import BigEmoji from "../../components/gameUI/BigEmoji/BigEmoji";
 import EffectMeters from "../../components/gameUI/Meters/EffectMeters";
 import EffectPopup from "../../components/gameUI/EffectPopup";
 import PrestigeMeter from "../../components/gameUI/Meters/PrestigeMeter";

@@ -2,16 +2,20 @@ import { useSelector } from 'react-redux';
 import { RootState } from '../../scripts/redux/reduxStore';
 import Text from '../generalUI/Text';
 import AnimatedNumber from './AnimatedNumber';
+import React, { useMemo } from 'react';
 
 interface EmojisAmountProps {
     fontSize: number;
 }
 
-export default function EmojisAmount({ fontSize = 20 }: EmojisAmountProps) {
+export default React.memo(function EmojisAmount({ fontSize = 20 }: EmojisAmountProps) {
+    const emojis = useSelector((state: RootState) => state.values.emojis);
 
-    const { emojis } = useSelector((state: RootState) => state.values);
+    const textStyle = useMemo(() => ({ fontSize }), [fontSize]);
 
     return (
-        <Text style={{ fontSize: fontSize }}><AnimatedNumber value={emojis} /></Text>
-    )
-}
+        <Text style={textStyle}>
+            <AnimatedNumber value={emojis} />
+        </Text>
+    );
+});

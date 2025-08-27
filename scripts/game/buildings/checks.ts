@@ -31,7 +31,8 @@ export function unlockBuilding() {
             updateBuildingValue(building.buildingId, "unlocked", true);
             // Don't show notification if the player is on the buildings tab
             const activeTab = store.getState().tabs.activeTab;
-            if (activeTab !== "buildings") {
+            // TODO: update this for new navigation
+            if (activeTab !== "Shop") {
                 store.dispatch(unlockedBuildingNotificaiton());
             }
         }

@@ -13,37 +13,37 @@ import placesBuildings from '../../assets/emojis/placesBuildings.json';
 import plants from '../../assets/emojis/plants.json';
 import vehicles from '../../assets/emojis/vehicles.json';
 import weather from '../../assets/emojis/weather.json';
-import { addBigEmojiTaps, addEmojisEarnedFromTap } from '../redux/statsSlice';
-import { addEmojisGained } from '../redux/statsSlice';
+import { updateTapStats } from '../redux/statsSlice';
 import { effectEmojis } from './effects/effectData';
 import { incrementTapBoost } from './tapBoost';
 import { calculateEpt } from './calculations';
 
 export function tapEmoji() {
-    store.dispatch(updateEmojis(
-        store.getState().values.emojis + store.getState().bigEmoji.emojisPerTap
-    ));
+    const state = store.getState();
+    const { emojis } = state.values;
+    const { emojisPerTap, bigEmoji, nextEmoji } = state.bigEmoji;
 
-    // Updating stats
-    store.dispatch(addEmojisGained(store.getState().bigEmoji.emojisPerTap));
-    store.dispatch(addBigEmojiTaps(1));
-    store.dispatch(addEmojisEarnedFromTap(store.getState().bigEmoji.emojisPerTap));
+    const newEmojis = emojis + emojisPerTap;
 
-    const currentEmoji = store.getState().bigEmoji.bigEmoji;
-    store.dispatch(addToCollection({
-        category: currentEmoji.category as keyof CollectionState,
-        id: currentEmoji.id,
-    }));
-
-    const nextEmoji = store.getState().bigEmoji.nextEmoji;
-    store.dispatch(updateBigEmoji({
-        emoji: nextEmoji.emoji,
-        category: nextEmoji.category,
-        id: nextEmoji.id,
-    }));
+    store.dispatch((dispatch) => {
+        dispatch(updateEmojis(newEmojis));
+        dispatch(updateTapStats({
+            emojisGained: emojisPerTap,
+            bigEmojiTaps: 1,
+            emojisEarnedFromTap: emojisPerTap
+        }));
+        dispatch(updateBigEmoji({
+            emoji: nextEmoji.emoji,
+            category: nextEmoji.category,
+            id: nextEmoji.id,
+        }));
+        dispatch(addToCollection({
+            category: bigEmoji.category as keyof CollectionState,
+            id: bigEmoji.id,
+        }));
+    })
 
     incrementTapBoost();
-
     calculateEpt();
 }
 

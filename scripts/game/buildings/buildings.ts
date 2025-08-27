@@ -64,59 +64,82 @@ export const buildingEmojis: buildingName = {
  * @param buyAmount the amount of buildings that will be bought (default is 1).
  */
 export const buyBuilding = (buildingId: number, buyAmount: number = store.getState().preferences.bulkBuy) => {
+    const state = store.getState();
     let building = getBuildingById(buildingId);
-    const data = buildingData[building.buildingId];
-    let currentAmount = building.amount;
 
-    // Check if the building and its amount property exists
-    if (currentAmount !== undefined) {
-        let emojis = store.getState().values.emojis;
-
-        // Loop through the number of buildings to buy
-        for (let i = 0; i < buyAmount; i++) {
-            // We make sure to update the building value with each iteration
-            building = getBuildingById(buildingId);
-            // Check if the current building can be afforded
-            if (emojis >= building.price) {
-
-                // Subtract the cost from emojis
-                store.dispatch(updateEmojis(emojis - building.price));
-
-                // Increase the building amount
-                currentAmount += 1;
-                updateBuildingValue(buildingId, "amount", currentAmount);
-
-                // Increase the building price
-                const newPrice = Math.round(data.basePrice * Math.pow(1.175, currentAmount));
-                updateBuildingValue(buildingId, "price", newPrice);
-
-                // Update the emojis variable to the latest state
-                emojis = store.getState().values.emojis;
-
-                Haptics.notificationAsync(
-                    Haptics.NotificationFeedbackType.Success
-                )
-
-            } else {
-                break; // Stop if the player can't afford the next building
-            }
-        }
-    } else {
+    if (!building || building.amount === undefined) {
         console.error("Building not found or 'amount' is undefined");
+        return;
     }
 
-    // Recalculate eps after buying buildings
+    const data = buildingData[building.buildingId];
+    let currentAmount = building.amount;
+    let emojis = state.values.emojis;
+    let totalCost = 0;
+
+    // Pre-calculate how many buildings can be afforded
+    const affordableBuildings = calculateAffordableBuildings(building, data, emojis, buyAmount);
+    const actualBuyAmount = Math.min(buyAmount, affordableBuildings);
+
+    if (actualBuyAmount === 0) {
+        Haptics.notificationAsync(Haptics.NotificationFeedbackType.Error);
+        return;
+    }
+
+    // Calculate total cost for all buildings at once
+    for (let i = 0; i < actualBuyAmount; i++) {
+        const price = Math.round(data.basePrice * Math.pow(1.175, currentAmount + i));
+        totalCost += price;
+    }
+
+    // Single state update for emojis
+    if (totalCost > 0) {
+        store.dispatch(updateEmojis(emojis - totalCost));
+    }
+
+    const newAmount = currentAmount + actualBuyAmount;
+    const newPrice = Math.round(data.basePrice * Math.pow(1.175, newAmount));
+
+    updateBuildingValue(buildingId, "amount", newAmount);
+    updateBuildingValue(buildingId, "price", newPrice);
+
+    // Trigger haptic feedback if buildings were bought
+    if (actualBuyAmount > 0) {
+        Haptics.notificationAsync(Haptics.NotificationFeedbackType.Success);
+    }
+
+    batchRecalculations();
+};
+
+/**
+ * Batching all expensive recalculations into a single function
+ */
+const batchRecalculations = () => {
     calculateBuildingsEps();
-
-    // Run this immediately to update the front end
     canBuyBuilding();
-
-    // Check if any upgrades should be unlocked after the purchase
     unlockUpgrades();
-
-    // Recalculate emojis per tap
     calculateEpt();
 };
+
+const calculateAffordableBuildings = (building: any, data: any, currentEmojis: number, maxAmount: number) => {
+    let affordable = 0;
+    let cumulativeCost = 0;
+    let currentAmount = building.amount;
+
+    for (let i = 0; i < maxAmount; i++) {
+        const nextPrice = Math.round(data.basePrice * Math.pow(1.175, currentAmount + i));
+
+        if (cumulativeCost + nextPrice <= currentEmojis) {
+            cumulativeCost += nextPrice;
+            affordable++;
+        } else {
+            break;
+        }
+    }
+
+    return affordable;
+};
+
 
 export function calculateBuildingPrice(buildingId: number, buyAmount: number = store.getState().preferences.bulkBuy) {
     const building = getBuildingById(buildingId);

@@ -36,14 +36,22 @@ export const statsSlice = createSlice({
         addEffectEmojisCollected: (state, action: PayloadAction<number>) => {
             state.effectEmojisCollected = state.effectEmojisCollected + action.payload;
         },
+        updateTapStats: (state, action: PayloadAction<{
+            emojisGained: number;
+            bigEmojiTaps: number;
+            emojisEarnedFromTap: number;
+        }>) => {
+            state.emojisGained += action.payload.emojisGained;
+            state.bigEmojiTaps += action.payload.bigEmojiTaps;
+            state.emojisEarnedFromTap += action.payload.emojisEarnedFromTap;
+        },
         resetStats: (state) => {
-            // Directly return the initialState
             return initialState;
         },
 
     },
 });
 
-export const { addBigEmojiTaps, addEmojisGained, addEmojisEarnedFromTap, addEffectEmojisCollected, resetStats } = statsSlice.actions;
+export const { addBigEmojiTaps, addEmojisGained, addEmojisEarnedFromTap, addEffectEmojisCollected, updateTapStats, resetStats } = statsSlice.actions;
 
 export default statsSlice.reducer;
