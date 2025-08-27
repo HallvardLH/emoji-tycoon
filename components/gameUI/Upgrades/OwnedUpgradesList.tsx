@@ -6,7 +6,7 @@ import { getUpgradeDataById } from '../../../scripts/game/upgrades/shorthands';
 import { getUpgradePrice } from '../../../scripts/game/upgrades/upgradePrice';
 import { FlatList } from 'react-native';
 
-export default function UpgradesList() {
+export default function OwnedUpgradesList() {
     const { owned } = useSelector((state: RootState) => state.upgrades);
     const { bigEmoji } = useSelector((state: RootState) => state.bigEmoji);
 

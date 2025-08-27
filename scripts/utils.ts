@@ -32,7 +32,7 @@ export const vibrateForDuration = async (duration: number, feedbackStyle: string
     for (let i = 0; i < repetitions; i++) {
         await Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Medium);
         await new Promise((resolve) => setTimeout(resolve, interval));
-        console.log(feedbackStyle)
+        // console.log(feedbackStyle)
     }
 };
 

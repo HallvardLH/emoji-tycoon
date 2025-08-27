@@ -1,121 +1,115 @@
-import React, { useState, useEffect, act } from 'react';
-import { View, StyleSheet, Keyboard, Platform } from "react-native";
+import { View, StyleSheet, Platform } from "react-native";
+import { useSafeAreaInsets } from "react-native-safe-area-context";
 import TabButton from "./TabButton";
+import { useDispatch } from "react-redux";
+import { setActiveTab } from "../../scripts/redux/tabsSlice";
 import { componentColors, colors } from "../misc/Colors";
-import { useNavigation, NavigationProp, ParamListBase } from "@react-navigation/native";
 import { useSelector } from 'react-redux';
 import { RootState } from '../../scripts/redux/reduxStore';
 import store from '../../scripts/redux/reduxStore';
-import { clearUnlockedUpgradeNotifications } from '../../scripts/redux/upgradesSlice';
-import { clearUnlockedBuildingsNotifications } from '../../scripts/redux/buildingsSlice';
-import { canBuyBuilding } from '../../scripts/game/buildings/checks';
-import { canBuyUpgrade } from '../../scripts/game/upgrades/checks';
-import { setActiveTab } from '../../scripts/redux/tabsSlice';
+import { canBuyBuilding } from "../../scripts/game/buildings/checks";
+import { canBuyUpgrade } from "../../scripts/game/upgrades/checks";
+import { clearUnlockedBuildingsNotifications } from "../../scripts/redux/buildingsSlice";
+import { clearUnlockedUpgradeNotifications } from "../../scripts/redux/upgradesSlice";
+import * as Haptics from 'expo-haptics';
+import { BottomTabBarProps } from "@react-navigation/bottom-tabs";
+import { Tab } from "../../scripts/redux/tabsSlice";
 
-interface TabBarProps {
-    height?: number;
-}
+type TabData = {
+    title: string;
+    icon: string;
+    background: string;
+    highlight: string;
+};
 
-export default function TabBar(props: TabBarProps) {
-    const [isKeyboardVisible, setKeyboardVisible] = useState(false);
-    const navigation = useNavigation<NavigationProp<ParamListBase>>();
-    const { height = 100 } = props;
+const tabData: Record<string, TabData> = {
+    index: {
+        title: "Emoji",
+        icon: "😀",
+        background: componentColors.tabBar.home.background,
+        highlight: componentColors.tabBar.home.highlight,
+    },
+    shop: {
+        title: "Shop",
+        icon: "🛒",
+        background: colors.yellow.medium,
+        highlight: colors.yellow.highlight,
+    },
+    emojidex: {
+        title: "Emojidex",
+        icon: "📖",
+        background: componentColors.tabBar.daily.background,
+        highlight: componentColors.tabBar.daily.highlight,
+    },
+};
+
+export default function TabBar({ state, navigation }: BottomTabBarProps) {
+    const insets = useSafeAreaInsets();
+    const dispatch = useDispatch();
 
     const { unlockedUpgradeNotification } = useSelector((state: RootState) => state.upgrades);
     const { unlockedBuildingsNotification } = useSelector((state: RootState) => state.buildings);
 
-    const { activeTab } = useSelector((state: RootState) => state.tabs);
-
-    useEffect(() => {
-        const showSubscription = Keyboard.addListener("keyboardDidShow", () => {
-            setKeyboardVisible(true);
-        });
-        const hideSubscription = Keyboard.addListener("keyboardDidHide", () => {
-            setKeyboardVisible(false);
-        });
-
-        return () => {
-            showSubscription.remove();
-            hideSubscription.remove();
-        };
-    }, []);
-
-    // Only render TabBar if the keyboard is not visible
-    if (isKeyboardVisible) return null;
-
     return (
-        <View style={[styles.container, { height: height }]}>
-            <TabButton
-                onPress={() => {
-                    navigation.navigate("Emoji");
-                    store.dispatch(setActiveTab("emoji"));
-                }}
-                label="Emoji"
-                icon="😀"
-                background={componentColors.tabBar.home.background}
-                highlight={componentColors.tabBar.home.highlight}
-                notifications={0}
-                active={activeTab === "emoji"}
-            />
-            <TabButton
-                onPress={() => {
-                    navigation.navigate("Buildings");
-                    store.dispatch(clearUnlockedBuildingsNotifications());
-                    canBuyBuilding();
-                    store.dispatch(setActiveTab("buildings"));
-                }}
-                label="Buildings"
-                icon="🏛️"
-                background={colors.yellow.medium}
-                highlight={colors.yellow.highlight}
-                notifications={unlockedBuildingsNotification}
-                active={activeTab === "buildings"}
-            />
-            <TabButton
-                onPress={() => {
-                    navigation.navigate("Upgrades");
-                    store.dispatch(clearUnlockedUpgradeNotifications());
-                    canBuyUpgrade();
-                    store.dispatch(setActiveTab("upgrades"));
-                }}
-                label="Upgrades"
-                icon="💡"
-                background={componentColors.tabBar.browse.background}
-                highlight={componentColors.tabBar.browse.highlight}
-                notifications={unlockedUpgradeNotification}
-                active={activeTab === "upgrades"}
-            />
-            <TabButton
-                onPress={() => {
-                    navigation.navigate("Emojidex");
-                    store.dispatch(setActiveTab("emojidex"));
+        <View style={[styles.container, { paddingBottom: Platform.OS === 'android' ? 10 : insets.bottom }]}>
+            {state.routes.map((route, index) => {
+                const isFocused = state.index === index;
+                if (!tabData.hasOwnProperty(route.name)) return
+                const { title, icon, background, highlight } = tabData[route.name];
+
+                const onPress = () => {
+                    const event = navigation.emit({
+                        type: "tabPress",
+                        target: route.key,
+                        canPreventDefault: true
+                    });
+
+                    Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Rigid);
+
+                    if (!isFocused && !event.defaultPrevented) {
+                        navigation.navigate(route.name);
+                        dispatch(setActiveTab(title as Tab));
+
+                        if (route.name === "shop") {
+                            store.dispatch(clearUnlockedBuildingsNotifications());
+                            canBuyBuilding();
+
+                            store.dispatch(clearUnlockedUpgradeNotifications());
+                            canBuyUpgrade();
+                        }
+                    }
+
+                };
+
+                let notificationCount = 0;
+                if (title === "Shop") {
+                    notificationCount = unlockedUpgradeNotification + unlockedBuildingsNotification;
                 }
-                }
-                label="Emojidex"
-                icon="📖"
-                background={componentColors.tabBar.daily.background}
-                highlight={componentColors.tabBar.daily.highlight}
-                notifications={0}
-                active={activeTab === "emojidex"}
-            />
+
+                return (
+                    <TabButton
+                        key={route.key}
+                        onPress={onPress}
+                        label={title}
+                        icon={icon}
+                        background={background}
+                        highlight={highlight}
+                        notifications={notificationCount}
+                        active={isFocused}
+                    />
+                );
+            })}
         </View>
-    )
+    );
 }
 
 const styles = StyleSheet.create({
     container: {
-        position: 'absolute',
-        bottom: Platform.OS === "ios" ? 50 : 0,
-        left: 0,
-        right: 0,
-        width: "100%",
+        backgroundColor: "#5842c4",
         flexDirection: "row",
-        gap: 20,
-        // borderTopWidth: 2.5,
-        // borderColor: "white",
-        // backgroundColor: colors.purple.medium,
-        // padding: 10,
-        justifyContent: "center",
-        alignItems: "center",
-    }
-})
+        justifyContent: "space-around",
+        borderTopWidth: 1,
+        borderTopColor: "#523fb3",
+        paddingTop: Platform.OS === 'android' ? 15 : 5,
+    },
+});

@@ -50,7 +50,7 @@ export default function BuildingListItem(props: BuildingListItemProps) {
                     {/* <Text style={{ letterSpacing: 0.5, marginVertical: -4 }} shadow={false} color={colors.blue.medium} size={14}>Produces {formatNumber(baseEps)} eps</Text> */}
                     <Text shadow={false} color={colors.yellow.highlight} size={16}>{howFun(77) ? "💸" : "💵"} {price}</Text>
                     {eps > 0 && (
-                        <Text style={{ lineHeight: 14 }} shadow={false} color={colors.purple.dark} size={14}><Text style={{ lineHeight: 14 }} shadow={false} color={colors.yellow.highlight} size={14}>{formatNumber(eps)}</Text> EPS</Text>
+                        <Text style={{ lineHeight: 14 }} shadow={false} color={colors.purple.dark} size={14}><Text style={{ lineHeight: 14 }} shadow={false} color={colors.yellow.highlight} size={14}>{formatNumber(eps)}</Text> Emojis per second</Text>
                     )}
                     <Text style={{ letterSpacing: 0.05 }} shadow={false} color={"gray"} size={14}>{description}</Text>
                 </View>

@@ -1,11 +1,12 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 
+export type Tab = 'Shop' | 'Emoji' | 'Emojidex';
 interface TabsState {
-    activeTab: 'emoji' | 'buildings' | 'upgrades' | 'emojidex';
+    activeTab: Tab;
 }
 
 const initialState: TabsState = {
-    activeTab: 'emoji',
+    activeTab: 'Emoji',
 };
 
 export const tabsSlice = createSlice({

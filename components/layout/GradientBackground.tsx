@@ -3,7 +3,7 @@ import Svg, { Defs, RadialGradient, Rect, Stop } from "react-native-svg";
 import { componentColors } from "../misc/Colors";
 
 export default function GradientBackground() {
-    return(
+    return (
         <View style={styles.container}>
             <Svg height="110%" width="100%">
                 <Defs>

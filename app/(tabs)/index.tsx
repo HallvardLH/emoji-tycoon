@@ -9,13 +9,7 @@ import EmojiRain from "../../components/gameUI/EmojiRain";
 import { TAB_BAR_HEIGHT, HEADER_HEIGHT } from "../../components/layout/ScreenView";
 import { Dimensions } from "react-native";
 
-interface HomeProps {
-    navigation: {
-        navigate: (name: string) => void;
-    };
-}
-
-export default function Home({ navigation }: HomeProps) {
+export default function Home() {
     // This calculates the perfect delay in order for the
     // second emojiRain component to perfectly follow the first
     const getRainDelay = () => {
@@ -48,9 +42,7 @@ export default function Home({ navigation }: HomeProps) {
 
                 <View>
                     <PrestigeMeter />
-
                 </View>
-
             </View>
             <BigEmoji />
             <EffectPopup />
