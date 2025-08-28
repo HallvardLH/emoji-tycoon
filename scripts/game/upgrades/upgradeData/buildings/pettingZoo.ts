@@ -228,6 +228,85 @@ export const pettingZooUpgrades: UpgradeType[] = [
         emojisPerTapPercentageIncrease: 0.1,
         id: 50003
     },
+    {
+        ...basePettingZooUpgrade,
+        name: "Pig helper",
+        icon: "🐖",
+        description: "Runs around your room having fun, making you happy, making you tap faster.",
+        quote: "Oink! I'll help you get emojis!",
+        variant: "Helper",
+        tier: 4,
+        categories: ["Percentage increase tap"],
+        unlockCondition: "Building helper",
+        emojisPerTapPercentageIncrease: 0.1,
+        id: 50004
+    },
+    {
+        ...basePettingZooUpgrade,
+        name: "Rabbit helper",
+        icon: "🐇",
+        description: "Bounces into your screen, making your taps quicker.",
+        quote: "Hop! I'll help you get emojis!",
+        variant: "Helper",
+        tier: 5,
+        categories: ["Percentage increase tap"],
+        unlockCondition: "Building helper",
+        emojisPerTapPercentageIncrease: 0.1,
+        id: 50005
+    },
+    {
+        ...basePettingZooUpgrade,
+        name: "Frog helper",
+        icon: "🐸",
+        description: "Leaps on your screen, making your taps faster.",
+        quote: "Ribbit! I'll help you get emojis!",
+        variant: "Helper",
+        tier: 6,
+        categories: ["Percentage increase tap"],
+        unlockCondition: "Building helper",
+        emojisPerTapPercentageIncrease: 0.1,
+        id: 50006
+    },
+    {
+        ...basePettingZooUpgrade,
+        name: "Elephant helper",
+        icon: "🐘",
+        description: "Its trunk is perfect for tapping the screen!",
+        quote: "Pawoo! I'll help you get emojis!",
+        variant: "Helper",
+        tier: 7,
+        categories: ["Percentage increase tap"],
+        unlockCondition: "Building helper",
+        emojisPerTapPercentageIncrease: 0.1,
+        id: 50007
+    },
+    {
+        ...basePettingZooUpgrade,
+        name: "Monkey helper",
+        icon: "🐒",
+        description: "Gives you lots of banana, curing your hunger, making you tap faster!",
+        quote: "Ooh ooh! I'll help you get emojis!",
+        variant: "Helper",
+        tier: 8,
+        categories: ["Percentage increase tap"],
+        unlockCondition: "Building helper",
+        emojisPerTapPercentageIncrease: 0.1,
+        id: 50008
+    },
+    {
+        ...basePettingZooUpgrade,
+        name: "Penguin helper",
+        icon: "🐧",
+        description: "Pecks your screen with its beak.",
+        quote: "Waddle! I'll help you get emojis!",
+        variant: "Helper",
+        tier: 9,
+        categories: ["Percentage increase tap"],
+        unlockCondition: "Building helper",
+        emojisPerTapPercentageIncrease: 0.1,
+        id: 50009
+    }
+
     // Add fairy and cowboy emoji
 
 ];

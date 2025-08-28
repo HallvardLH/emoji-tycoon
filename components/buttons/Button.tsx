@@ -12,6 +12,7 @@ interface ButtonProps {
     style?: StyleProp<ViewStyle>;
     borderRadius?: number;
     disabled?: boolean;
+    down?: boolean;
     variant?: "play" | "toggle" | "submit" | "blue" | "pink" | "inactive"
 }
 
@@ -55,7 +56,7 @@ const variants = {
     }
 }
 
-export default function Button({ label, onPress, height, width, fontSize, shadowHeight, style, borderRadius, variant = "play", disabled }: ButtonProps) {
+export default function Button({ label, onPress, height, width, fontSize, shadowHeight, style, borderRadius, variant = "play", disabled, down }: ButtonProps) {
     return (
         <BaseButton
             onPress={onPress}
@@ -70,6 +71,7 @@ export default function Button({ label, onPress, height, width, fontSize, shadow
             shadowHeight={shadowHeight}
             style={style}
             disabled={disabled}
+            down={down}
         />
     );
 }

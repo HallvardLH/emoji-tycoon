@@ -113,9 +113,9 @@ export function calculateEptBonus(newPercentageOfEps?: number, newMultiplier?: n
 
     let bonusPercentage: number | string = (bonus / currentEpt) * 100;
     if (bonusPercentage < 0.01) {
-        bonusPercentage = "(>0.01%)";
+        bonusPercentage = ">0.01%";
     } else {
-        bonusPercentage = "(" + Math.round(bonusPercentage * 100) / 100 + "%)";
+        bonusPercentage = Math.round(bonusPercentage * 100) / 100 + "%";
     }
 
     return { bonus: formatNumber(bonus), bonusPercentage: bonusPercentage }
@@ -190,9 +190,9 @@ export function calculateEpsBonus(newMultiplierEffect?: number, newPercentageInc
 
     let bonusPercentage: number | string = (bonus / currentEps) * 100;
     if (bonusPercentage < 0.01) {
-        bonusPercentage = "(>0.01%)";
+        bonusPercentage = ">0.01%";
     } else {
-        bonusPercentage = "(" + Math.round(bonusPercentage * 100) / 100 + "%)";
+        bonusPercentage = Math.round(bonusPercentage * 100) / 100 + "%";
     }
 
     return { bonus: formatNumber(bonus), bonusPercentage: bonusPercentage }

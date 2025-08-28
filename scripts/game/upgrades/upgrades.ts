@@ -129,7 +129,14 @@ export function getUpgradeBonus(upgradeId: number) {
     const currentEps = store.getState().values.emojisPerSecond;
     let bonuses: string[] = [];
     let bonusPercentages: string[] = [];
+    let prefixes: string[] = [];
     let suffixes: string[] = [];
+
+    const productionPrefix = "Buying this upgrade now will add";
+    const productionSuffix = "Emojis per second, increasing emoji production by";
+
+    const tapPrefix = "Buying this upgrade now will add";
+    const tapSuffix = "Emojis per tap, increasing each emoji you get from tapping by";
     upgrade.categories.forEach((category) => {
         let bonus = 0
         switch (category) {
@@ -142,37 +149,42 @@ export function getUpgradeBonus(upgradeId: number) {
                 if (bonusPercentage < 0.01) {
                     bonusPercentages.push("(>0.01%)");
                 } else {
-                    bonusPercentages.push("(" + bonusPercentage.toFixed(2) + "%)");
+                    bonusPercentages.push(bonusPercentage.toFixed(2) + "%");
                 }
-                suffixes.push("eps");
+                prefixes.push(productionPrefix);
+                suffixes.push(productionSuffix);
                 break
             }
             case "Multiply tap": {
                 const calculatedBonus = calculateEptBonus(undefined, upgrade.emojisPerTapMultiplier);
                 bonuses.push(calculatedBonus.bonus);
                 bonusPercentages.push(calculatedBonus.bonusPercentage);
-                suffixes.push("ept");
+                prefixes.push(tapPrefix);
+                suffixes.push(tapSuffix);
                 break
             }
             case "Percentage increase tap": {
                 const calculatedBonus = calculateEptBonus(undefined, undefined, upgrade.emojisPerTapPercentageIncrease);
                 bonuses.push(calculatedBonus.bonus);
                 bonusPercentages.push(calculatedBonus.bonusPercentage);
-                suffixes.push("ept");
+                prefixes.push(tapPrefix);
+                suffixes.push(tapSuffix);
                 break
             }
             case 'Tap percentage of eps': {
                 const calculatedBonus = calculateEptBonus(upgrade.emojisPerTapPercentageOfEps);
                 bonuses.push(calculatedBonus.bonus);
                 bonusPercentages.push(calculatedBonus.bonusPercentage);
-                suffixes.push("ept");
+                prefixes.push(tapPrefix);
+                suffixes.push(tapSuffix);
                 break
             }
             case "Percentage increase production": {
                 const calculatedBonus = calculateEpsBonus(undefined, upgrade.emojisPerSecondPercentageIncrease);
                 bonuses.push(calculatedBonus.bonus);
                 bonusPercentages.push(calculatedBonus.bonusPercentage);
-                suffixes.push("eps");
+                prefixes.push(productionPrefix);
+                suffixes.push(productionSuffix);
                 break
             }
             default:
@@ -180,5 +192,5 @@ export function getUpgradeBonus(upgradeId: number) {
         }
     })
 
-    return [bonuses, bonusPercentages, suffixes]
+    return [bonuses, bonusPercentages, prefixes, suffixes]
 }

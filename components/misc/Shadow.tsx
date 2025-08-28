@@ -5,7 +5,7 @@
 
 import { View, StyleSheet, DimensionValue, StyleProp, ViewStyle } from "react-native";
 
-interface ShadowProps{
+interface ShadowProps {
     /** 
     * @property The height of the container on which the shadow is applied
     */
@@ -24,9 +24,9 @@ interface ShadowProps{
     style?: StyleProp<ViewStyle>;
 }
 
-export default function Shadow(props:ShadowProps) {
-    const { height, shadowHeight = 4, width, borderRadius, backgroundColor = "rgba(0,0,0, 0.15)", style} = props;
-    return(
+export default function Shadow(props: ShadowProps) {
+    const { height, shadowHeight = 4, width, borderRadius, backgroundColor = "rgba(0,0,0, 0.15)", style } = props;
+    return (
         <View style={[
             styles.container,
             {

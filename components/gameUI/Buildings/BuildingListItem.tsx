@@ -65,7 +65,7 @@ export default function BuildingListItem(props: BuildingListItemProps) {
                 justifyContent: "center"
             }}>
                 <Button disabled={!buttonActive} shadowHeight={8} onPress={onPress} height={34} width={110} variant={"blue"} label={"Buy"} />
-                <Button shadowHeight={8} onPress={() => setShowDetails(!showDetails)} height={34} width={110} variant="submit" label={"Details"} />
+                <Button shadowHeight={8} onPress={() => setShowDetails(!showDetails)} down={showDetails} height={34} width={110} variant="submit" label={"Details"} />
             </View>
             {showDetails && (
                 <View style={{
