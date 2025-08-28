@@ -24,7 +24,7 @@ export default function UpgradesList() {
     }));
 
     // Sort the unlocked upgrades by price
-    let sortedUnlockedUpgrades = unlockedUpgrades.sort((a, b) => getUpgradePrice(a.tier, a.variant, a.buildingId, a.tierPosition) - getUpgradePrice(b.tier, b.variant, b.buildingId, b.tierPosition));
+    let sortedUnlockedUpgrades = unlockedUpgrades.sort((a, b) => getUpgradePrice(a.tier, a.variant, a.buildingId) - getUpgradePrice(b.tier, b.variant, b.buildingId));
 
     // Filter out upgrades that are not selected in the filter
     sortedUnlockedUpgrades = sortedUnlockedUpgrades.filter((upgrade) => {
@@ -42,7 +42,7 @@ export default function UpgradesList() {
             description={upgrade.description}
             quote={upgrade.quote}
             effect={getEffectText(upgrade.id)}
-            price={getUpgradePrice(upgrade.tier, upgrade.variant, upgrade.buildingId, upgrade.tierPosition)}
+            price={getUpgradePrice(upgrade.tier, upgrade.variant, upgrade.buildingId)}
             icon={upgrade.icon}
             buttonActive={canBuy.includes(upgrade.id)}
             onPress={() => buyUpgrade(upgrade.id)}

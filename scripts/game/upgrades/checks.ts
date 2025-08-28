@@ -37,32 +37,27 @@ export function unlockUpgrades() {
 
                 if (building.amount >= buildingUnlockReq[upgrade.tier]) {
                     store.dispatch(unlockUpgrade(upgrade.id!));
-                    if (activeTab !== "upgrades") {
+                    if (activeTab !== "Shop") {
                         console.log(upgrade.name)
                         store.dispatch(unlockedUpgradeNotificaiton());
                     }
                 }
                 break;
             case "Building helper":
-                // Upgrades are unlocked for every tenth building, unless there are no more in that tier, then it waits until the next 100
-                // For example, tier 0 ugrades are unlocked between 1 - 100 buildings
-                // Tier 1 is 101 - 200 etc.
-                if (building.amount >= (upgrade.tier * 100) + (upgrade.tierPosition! * 10) && building.amount > 0) {
+                // Helper upgrades are unlocked for every tenth building
+                if (building.amount >= ((upgrade.tier + 1) * 10) && building.amount > 0) {
                     store.dispatch(unlockUpgrade(upgrade.id!));
-                    if (activeTab !== "upgrades") {
+                    if (activeTab !== "Shop") {
 
                         store.dispatch(unlockedUpgradeNotificaiton());
                     }
                 }
                 break;
             case "Emojis from tapping":
-                // if (store.getState().stats.emojisGained >= 10000 && upgrade.tierPosition == 0) {
-                //     store.dispatch(unlockUpgrade(upgrade.id));
-                // }
                 // Unlocks the most powerful tapping upgrades, starting at 100 emojis gained from taps
-                if (store.getState().stats.emojisEarnedFromTap >= Math.pow(10, upgrade.tierPosition! + 2)) {
+                if (store.getState().stats.emojisEarnedFromTap >= Math.pow(10, upgrade.tier + 2)) {
                     store.dispatch(unlockUpgrade(upgrade.id!));
-                    if (activeTab !== "upgrades") {
+                    if (activeTab !== "Shop") {
 
                         store.dispatch(unlockedUpgradeNotificaiton());
                     }
@@ -77,7 +72,7 @@ export function canBuyUpgrade() {
     const unlockedUpgrades = store.getState().upgrades.unlocked;
     unlockedUpgrades.forEach(id => {
         const upgrade = getUpgradeDataById(id);
-        const price = getUpgradePrice(upgrade.tier, upgrade.variant, upgrade.building ? upgrade.buildingId : undefined, upgrade.tierPosition)
+        const price = getUpgradePrice(upgrade.tier, upgrade.variant, upgrade.building ? upgrade.buildingId : undefined)
         if (emojis >= price) {
             store.dispatch(addCanBuyUpgrade(id));
         } else {

@@ -18,7 +18,7 @@ export default function OwnedUpgradesList() {
     }));
 
     // Sort the unlocked upgrades by price
-    const sortedUnlockedUpgrades = ownedUpgrades.sort((a, b) => getUpgradePrice(a.tier, a.variant, a.buildingId, a.tierPosition) - getUpgradePrice(b.tier, b.variant, b.buildingId, b.tierPosition));
+    const sortedUnlockedUpgrades = ownedUpgrades.sort((a, b) => getUpgradePrice(a.tier, a.variant, a.buildingId) - getUpgradePrice(b.tier, b.variant, b.buildingId));
 
     const renderItem = ({ item: upgrade }: any) => (
         <OwnedUpgradeListItem
@@ -29,7 +29,7 @@ export default function OwnedUpgradesList() {
             buildingIcon={upgrade.building == "Big emoji" ? bigEmoji.emoji : undefined}
             description={upgrade.description}
             effect={getEffectText(upgrade.originalIndex)}
-            price={getUpgradePrice(upgrade.tier, upgrade.variant, upgrade.buildingId, upgrade.tierPosition)}
+            price={getUpgradePrice(upgrade.tier, upgrade.variant, upgrade.buildingId)}
             icon={upgrade.icon}
             onPress={() => buyUpgrade(upgrade.originalIndex)}
         />

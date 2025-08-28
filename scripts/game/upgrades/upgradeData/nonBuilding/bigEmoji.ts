@@ -19,7 +19,7 @@ export const bigEmojiUpgrades: UpgradeType[] = [
         name: "Another hand",
         icon: "👈",
         description: "Another hand taps the screen. Whose hand is it? I don't know.",
-        tierPosition: 0,
+        tier: 0,
         id: 0,
     },
     {
@@ -27,7 +27,7 @@ export const bigEmojiUpgrades: UpgradeType[] = [
         name: "Yet another hand",
         icon: "👉",
         description: "One more hand taps the screen. Very handy!",
-        tierPosition: 1,
+        tier: 1,
         id: 1,
     },
     {
@@ -35,7 +35,7 @@ export const bigEmojiUpgrades: UpgradeType[] = [
         name: "Ten more hands",
         icon: "👆",
         description: "Ten hands suddenly start tapping your screen! It's great!",
-        tierPosition: 2,
+        tier: 2,
         id: 2,
     },
     {
@@ -43,7 +43,7 @@ export const bigEmojiUpgrades: UpgradeType[] = [
         name: "One hundred hands!",
         icon: "👇",
         description: "The whole neighborhood has shown up to tap the big emoji on the screen!",
-        tierPosition: 3,
+        tier: 3,
         id: 3,
     },
     {
@@ -51,7 +51,7 @@ export const bigEmojiUpgrades: UpgradeType[] = [
         name: "A thousand hands",
         icon: "☝️",
         description: "People travel from far away just to tap your screen.",
-        tierPosition: 4,
+        tier: 4,
         id: 4,
     },
     {
@@ -59,7 +59,7 @@ export const bigEmojiUpgrades: UpgradeType[] = [
         name: "Million hands",
         icon: "🫵",
         description: "Who are you pointing at? Are you pointing at me? How rude...",
-        tierPosition: 5,
+        tier: 5,
         id: 5,
     },
     {
@@ -67,7 +67,7 @@ export const bigEmojiUpgrades: UpgradeType[] = [
         name: "Billion hands",
         icon: "🙌",
         description: "More than 10% of the world's population helps you tap your screen. I think it's about to break.",
-        tierPosition: 6,
+        tier: 6,
         id: 6,
     },
     {
@@ -75,7 +75,7 @@ export const bigEmojiUpgrades: UpgradeType[] = [
         name: "Trillion hands",
         icon: "🤙",
         description: "Your mom calls. She's worried about you. Annoyed that the call covers the screen, you hang up and continue tapping.",
-        tierPosition: 7,
+        tier: 7,
         id: 7,
     },
     {
@@ -83,7 +83,7 @@ export const bigEmojiUpgrades: UpgradeType[] = [
         name: "Quadrillion hands",
         icon: "🤛",
         description: "There's a lot of hands tapping your screen.",
-        tierPosition: 8,
+        tier: 8,
         id: 8,
     },
     {
@@ -91,7 +91,7 @@ export const bigEmojiUpgrades: UpgradeType[] = [
         name: "Quintillion hands",
         icon: "🤜",
         description: "The sheer number of hands is incomprehensible. The screen is taking a beating.",
-        tierPosition: 9,
+        tier: 9,
         id: 9,
     },
     {
@@ -99,7 +99,7 @@ export const bigEmojiUpgrades: UpgradeType[] = [
         name: "Sextillion hands",
         icon: "✋",
         description: "Hands stretch out as far as the eye can see, all tapping away.",
-        tierPosition: 10,
+        tier: 10,
         id: 10,
     },
     {
@@ -107,7 +107,7 @@ export const bigEmojiUpgrades: UpgradeType[] = [
         name: "Septillion hands",
         icon: "👌",
         description: "Perfect form. Perfect taps. Infinite hands.",
-        tierPosition: 11,
+        tier: 11,
         id: 11,
     },
     {
@@ -115,7 +115,7 @@ export const bigEmojiUpgrades: UpgradeType[] = [
         name: "Octillion hands",
         icon: "🖐️",
         description: "More hands than atoms in the universe. They all know what they're doing.",
-        tierPosition: 12,
+        tier: 12,
         id: 12,
     },
     {
@@ -123,7 +123,7 @@ export const bigEmojiUpgrades: UpgradeType[] = [
         name: "Nonillion hands",
         icon: "🤚",
         description: "The sound of the tapping is now an immensely loud, rhytmic thump that sends a shockwave around the world.",
-        tierPosition: 13,
+        tier: 13,
         id: 13,
     },
     {
@@ -131,7 +131,7 @@ export const bigEmojiUpgrades: UpgradeType[] = [
         name: "Decillion hands",
         icon: "✌️",
         description: "Such a large amount of flesh should never be gathered so tightly in the same space...",
-        tierPosition: 14,
+        tier: 14,
         id: 14,
     },
     {
@@ -139,7 +139,7 @@ export const bigEmojiUpgrades: UpgradeType[] = [
         name: "Undecillion hands",
         icon: "🖖",
         description: "From the already present hands grow dozens more, twisted and malformed.",
-        tierPosition: 15,
+        tier: 15,
         id: 15,
     },
     {
@@ -147,7 +147,7 @@ export const bigEmojiUpgrades: UpgradeType[] = [
         name: "Duodecillion hands",
         icon: "🤟",
         description: "You start hearing whispers. The hands keep tapping, but whose are they?",
-        tierPosition: 16,
+        tier: 16,
         id: 16,
     },
     {
@@ -155,7 +155,7 @@ export const bigEmojiUpgrades: UpgradeType[] = [
         name: "Tredecillion hands",
         icon: "🫱",
         description: "The hands begin to warp. They're no longer human.",
-        tierPosition: 17,
+        tier: 17,
         id: 17,
     },
     {
@@ -163,7 +163,7 @@ export const bigEmojiUpgrades: UpgradeType[] = [
         name: "Quattuordecillion hands",
         icon: "🫲",
         description: "A presence lurks behind the hands, guiding them with malicious intent.",
-        tierPosition: 18,
+        tier: 18,
         id: 18,
     },
     {
@@ -171,7 +171,7 @@ export const bigEmojiUpgrades: UpgradeType[] = [
         name: "Quindecillion hands",
         icon: "🤲",
         description: "These hands... what are they? The air smells of sulfur.",
-        tierPosition: 19,
+        tier: 19,
         id: 19,
     },
     {
@@ -179,7 +179,7 @@ export const bigEmojiUpgrades: UpgradeType[] = [
         name: "Sexdecillion hands",
         icon: "🖤",
         description: "The hands are everywhere, filling the room. You feel them grasping at you...",
-        tierPosition: 20,
+        tier: 20,
         id: 20,
     },
     {
@@ -187,7 +187,7 @@ export const bigEmojiUpgrades: UpgradeType[] = [
         name: "Demon hands",
         icon: "👹",
         description: "Demonic hands from the depths of hell tap endlessly. The screen is red-hot to the touch.",
-        tierPosition: 21,
+        tier: 21,
         id: 21,
     },
     {
@@ -195,7 +195,7 @@ export const bigEmojiUpgrades: UpgradeType[] = [
         name: "Hands of the damned",
         icon: "👻",
         description: "Ghostly, skeletal hands rise from the abyss. They tap with infernal rage.",
-        tierPosition: 22,
+        tier: 22,
         id: 22,
     },
     {
@@ -203,7 +203,7 @@ export const bigEmojiUpgrades: UpgradeType[] = [
         name: "The lord of Underworld",
         icon: "💀",
         description: "The fallen angel himself crawls up from his dominion in order to help you tap your screen.",
-        tierPosition: 23,
+        tier: 23,
         id: 23,
     },
     {
@@ -211,7 +211,7 @@ export const bigEmojiUpgrades: UpgradeType[] = [
         name: "Rude tapping",
         icon: "🖕",
         description: "Really, really rude.",
-        tierPosition: 24,
+        tier: 24,
         id: 24,
     }
 

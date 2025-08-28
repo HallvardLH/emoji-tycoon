@@ -22,7 +22,10 @@ interface PreferencesState {
 const initialState: PreferencesState = {
     bulkBuy: 1,
     showDetails: true,
-    upgradeFilter: buildingData.map(building => building.name as BuildingNames),
+    upgradeFilter: [
+        ...buildingData.map(building => building.name as BuildingNames),
+        "Big emoji" as BuildingNames,
+    ],
 };
 
 export const preferencesSlice = createSlice({

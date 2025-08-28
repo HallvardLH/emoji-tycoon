@@ -193,7 +193,6 @@ export const farmUpgrades: UpgradeType[] = [
         description: "Spud-tacular! Potatoes are the backbone of any farm.",
         variant: "Helper",
         tier: 0,
-        tierPosition: 0,
         id: 30000
     },
     {
@@ -202,8 +201,7 @@ export const farmUpgrades: UpgradeType[] = [
         icon: "🥕",
         description: "Orange you glad we have carrots?",
         variant: "Helper",
-        tier: 0,
-        tierPosition: 1,
+        tier: 1,
         id: 30001
     },
     {
@@ -213,8 +211,7 @@ export const farmUpgrades: UpgradeType[] = [
         description: "Cool as a cucumber! These refreshing veggies are perfect for salads and pickling.",
         quote: "I'm pickle Rick!",
         variant: "Helper",
-        tier: 0,
-        tierPosition: 2,
+        tier: 2,
         id: 30002
     },
     {
@@ -224,8 +221,7 @@ export const farmUpgrades: UpgradeType[] = [
         description: "Sweet or spicy, bell peppers add a pop of color and flavor to your farm.",
         quote: "No point ringing this...",
         variant: "Helper",
-        tier: 0,
-        tierPosition: 3,
+        tier: 3,
         id: 30003
     },
     {
@@ -234,8 +230,7 @@ export const farmUpgrades: UpgradeType[] = [
         icon: "🍅",
         description: "Juicy and versatile, tomatoes are a farm favorite.",
         variant: "Helper",
-        tier: 0,
-        tierPosition: 4,
+        tier: 4,
         id: 30004
     },
     {
@@ -244,8 +239,7 @@ export const farmUpgrades: UpgradeType[] = [
         icon: "🥬",
         description: "Leaf it to lettuce to keep your farm fresh and green.",
         variant: "Helper",
-        tier: 0,
-        tierPosition: 5,
+        tier: 5,
         id: 30005
     },
     {
@@ -253,10 +247,8 @@ export const farmUpgrades: UpgradeType[] = [
         name: "Broccoli",
         icon: "🥦",
         description: "Tiny trees with big benefits!",
-        quote: "Don't tell Broccoli Rob.",
         variant: "Helper",
-        tier: 0,
-        tierPosition: 6,
+        tier: 6,
         id: 30006
     },
     {
@@ -266,8 +258,7 @@ export const farmUpgrades: UpgradeType[] = [
         description: "Layered with flavor and tears, onions are a kitchen staple and a farm essential.",
         quote: "Ogres are like onions. Onions have layers. Ogres have layers.",
         variant: "Helper",
-        tier: 0,
-        tierPosition: 7,
+        tier: 7,
         id: 30007
     },
     {
@@ -277,8 +268,7 @@ export const farmUpgrades: UpgradeType[] = [
         description: "Garlic adds flavor to your dishes and protection to your farm.",
         quote: "Works great if you have a vampire problem!",
         variant: "Helper",
-        tier: 0,
-        tierPosition: 8,
+        tier: 8,
         id: 30008
     },
     {
@@ -288,8 +278,7 @@ export const farmUpgrades: UpgradeType[] = [
         description: "Corn is a versatile crop that's perfect for roasting and popping.",
         quote: "A-maize-ing!",
         variant: "Helper",
-        tier: 0,
-        tierPosition: 9,
+        tier: 9,
         id: 30009
     },
     // Tier 2
@@ -301,8 +290,7 @@ export const farmUpgrades: UpgradeType[] = [
         quote: "Beans!",
         variant: "Helper",
         emojisPerSecondPercentageIncrease: 0.02,
-        tier: 1,
-        tierPosition: 0,
+        tier: 10,
         id: 30010
     },
     {
@@ -310,11 +298,9 @@ export const farmUpgrades: UpgradeType[] = [
         name: "Peanuts",
         icon: "🥜",
         description: "Nutty and delicious, peanuts are great for snacking and boosting your farm's productivity.",
-        quote: "They say Jimmy liked these.",
         variant: "Helper",
         emojisPerSecondPercentageIncrease: 0.02,
-        tier: 1,
-        tierPosition: 1,
+        tier: 11,
         id: 30011
     },
     {
@@ -325,8 +311,7 @@ export const farmUpgrades: UpgradeType[] = [
         quote: "Pumpkin spice and everything nice!",
         variant: "Helper",
         emojisPerSecondPercentageIncrease: 0.02,
-        tier: 1,
-        tierPosition: 2,
+        tier: 12,
         id: 30012
     },
     {
@@ -336,8 +321,7 @@ export const farmUpgrades: UpgradeType[] = [
         description: "Sweet, juicy, and perfect for desserts. Strawberries are a berry good addition to your farm!",
         variant: "Helper",
         emojisPerSecondPercentageIncrease: 0.02,
-        tier: 1,
-        tierPosition: 3,
+        tier: 13,
         id: 30013
     },
     {
@@ -348,8 +332,7 @@ export const farmUpgrades: UpgradeType[] = [
         quote: "I'm blue da ba dee da ba di",
         variant: "Helper",
         emojisPerSecondPercentageIncrease: 0.02,
-        tier: 1,
-        tierPosition: 4,
+        tier: 14,
         id: 30014
     },
     {
@@ -360,8 +343,7 @@ export const farmUpgrades: UpgradeType[] = [
         quote: "My boyfriend's favorite emoji is the eggplant, he keeps sending it to me!",
         variant: "Helper",
         emojisPerSecondPercentageIncrease: 0.02,
-        tier: 1,
-        tierPosition: 5,
+        tier: 15,
         id: 30015
     },
     {
@@ -371,8 +353,7 @@ export const farmUpgrades: UpgradeType[] = [
         description: "Green and abundant, zucchinis are a summer squash that keeps on giving.",
         variant: "Helper",
         emojisPerSecondPercentageIncrease: 0.02,
-        tier: 1,
-        tierPosition: 6,
+        tier: 16,
         id: 30016
     },
     {
@@ -382,8 +363,7 @@ export const farmUpgrades: UpgradeType[] = [
         description: "Creamy and delicious, avocados are the toast of the town and a farm favorite.",
         variant: "Helper",
         emojisPerSecondPercentageIncrease: 0.02,
-        tier: 1,
-        tierPosition: 7,
+        tier: 17,
         id: 30017
     },
     {
@@ -393,8 +373,7 @@ export const farmUpgrades: UpgradeType[] = [
         description: "Potato's sweet cousin.",
         variant: "Helper",
         emojisPerSecondPercentageIncrease: 0.02,
-        tier: 1,
-        tierPosition: 8,
+        tier: 18,
         id: 30018
     },
     {
@@ -404,8 +383,7 @@ export const farmUpgrades: UpgradeType[] = [
         description: "Peas!",
         variant: "Helper",
         emojisPerSecondPercentageIncrease: 0.02,
-        tier: 1,
-        tierPosition: 9,
+        tier: 19,
         id: 30019
     },
     // Tier 3
@@ -416,19 +394,18 @@ export const farmUpgrades: UpgradeType[] = [
         description: "Spicy and crunchy, radishes add a kick to your farm and your dishes.",
         variant: "Helper",
         emojisPerSecondPercentageIncrease: 0.03,
-        tier: 2,
-        tierPosition: 0,
+        tier: 20,
         id: 30020
     },
     {
         ...farmHelperUpgrade,
         name: "Mushrooms",
         icon: "🍄",
-        description: "Fungi fun! Mushrooms are as mysterious as they are delicious.",
+        description: "Fungi fun! Mushrooms aren't really plants, did you know that?",
+        quote: "He's a really fungi",
         variant: "Helper",
         emojisPerSecondPercentageIncrease: 0.03,
-        tier: 2,
-        tierPosition: 1,
+        tier: 22,
         id: 30021
     },
     {
@@ -438,8 +415,7 @@ export const farmUpgrades: UpgradeType[] = [
         description: "Tropical and tangy.",
         variant: "Helper",
         emojisPerSecondPercentageIncrease: 0.03,
-        tier: 2,
-        tierPosition: 2,
+        tier: 23,
         id: 30022
     },
     {
@@ -449,8 +425,7 @@ export const farmUpgrades: UpgradeType[] = [
         description: "Juicy and refreshing, watermelons are the ultimate summer crop.",
         variant: "Helper",
         emojisPerSecondPercentageIncrease: 0.03,
-        tier: 2,
-        tierPosition: 3,
+        tier: 24,
         id: 30023
     },
     {
@@ -460,8 +435,7 @@ export const farmUpgrades: UpgradeType[] = [
         description: "Fuzzy on the outside, sweet on the inside. Kiwis are a farm favorite!",
         variant: "Helper",
         emojisPerSecondPercentageIncrease: 0.03,
-        tier: 2,
-        tierPosition: 4,
+        tier: 25,
         id: 30024
     },
     {
@@ -472,8 +446,7 @@ export const farmUpgrades: UpgradeType[] = [
         quote: "In grapes, there is truth.",
         variant: "Helper",
         emojisPerSecondPercentageIncrease: 0.03,
-        tier: 2,
-        tierPosition: 5,
+        tier: 26,
         id: 30025
     },
     {
@@ -483,8 +456,7 @@ export const farmUpgrades: UpgradeType[] = [
         description: "Sweet and tart, cherries are a delightful treat and a farm favorite.",
         variant: "Helper",
         emojisPerSecondPercentageIncrease: 0.03,
-        tier: 2,
-        tierPosition: 6,
+        tier: 27,
         id: 30026
     },
 ];

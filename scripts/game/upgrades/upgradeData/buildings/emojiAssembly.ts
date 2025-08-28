@@ -70,7 +70,6 @@ export const emojiAssemblyUpgrades: UpgradeType[] = [
         icon: "🧑‍🎓",
         description: "Interns help the emoji government run smoothly!",
         tier: 0,
-        tierPosition: 0,
         id: 100000,
     },
     {
@@ -79,8 +78,7 @@ export const emojiAssemblyUpgrades: UpgradeType[] = [
         icon: "📎",
         description: "An emoji government needs administrators to function.",
         quote: "It looks like you're passing a law. Need help?",
-        tier: 0,
-        tierPosition: 1,
+        tier: 1,
         id: 100001,
     },
 ];

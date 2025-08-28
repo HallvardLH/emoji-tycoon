@@ -55,8 +55,7 @@ export default function Upgrades() {
                                     getUpgradePrice(
                                         upgrade.tier,
                                         upgrade.variant,
-                                        upgrade.buildingId,
-                                        upgrade.tierPosition
+                                        upgrade.buildingId
                                     ),
                                     0,
                                     true

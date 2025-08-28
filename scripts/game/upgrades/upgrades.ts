@@ -19,7 +19,7 @@ import * as Haptics from "expo-haptics";
 export function buyUpgrade(upgradeId: number) {
     const upgrade = getUpgradeDataById(upgradeId);
     const emojis = store.getState().values.emojis;
-    const price = getUpgradePrice(upgrade.tier, upgrade.variant, upgrade.building ? upgrade.buildingId : undefined, upgrade.tierPosition)
+    const price = getUpgradePrice(upgrade.tier, upgrade.variant, upgrade.building ? upgrade.buildingId : undefined)
     if (emojis >= price) {
 
         store.dispatch(updateEmojis(emojis - price));
