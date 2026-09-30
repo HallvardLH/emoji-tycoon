@@ -22,11 +22,11 @@ const BIG_EMOJI = "Big emoji";
 const COLUMNS = 5;
 const GAP = 10;
 
-const priceOf = (upgrade: UpgradeType) => getUpgradePrice(upgrade.tier, upgrade.variant, upgrade.buildingId);
-const iconOf = (building?: string) => building === BIG_EMOJI ? "👆" : buildingEmojis[building ?? ""];
+export const priceOf = (upgrade: UpgradeType) => getUpgradePrice(upgrade.tier, upgrade.variant, upgrade.buildingId);
+export const iconOf = (building?: string) => building === BIG_EMOJI ? "👆" : buildingEmojis[building ?? ""];
 
 /** One chip per effect, e.g. "Drawing hands ×2", "Tapping +10%" */
-function effectChips(upgrade: UpgradeType) {
+export function effectChips(upgrade: UpgradeType) {
     return upgrade.categories.map(category => {
         switch (category) {
             case "Multiply building production": return `${pluralNames[upgrade.building!]} ×${upgrade.emojisPerSecondMultiplier}`;
@@ -46,7 +46,7 @@ function impactLine(upgradeId: number) {
     return parts.length ? `${parts.join(" and ")} right now` : "";
 }
 
-function tierLabel(upgrade: UpgradeType) {
+export function tierLabel(upgrade: UpgradeType) {
     const building = (upgrade.building ?? "").toUpperCase();
     if (upgrade.variant === "Helper") return `${iconOf(upgrade.building)} ${building} · HELPER`;
     if (upgrade.variant === "Big emoji percentage") return `${iconOf(upgrade.building)} BIG EMOJI · HANDS`;
@@ -54,31 +54,44 @@ function tierLabel(upgrade: UpgradeType) {
     return `${iconOf(upgrade.building)} ${building} · TIER ${upgrade.tier + 1}`;
 }
 
+const toUpgrades = (ids: number[]) => ids
+    .map(id => upgradeData.find(upgrade => upgrade.id === id))
+    .filter((upgrade): upgrade is UpgradeType => upgrade !== undefined)
+    .sort((a, b) => priceOf(a) - priceOf(b));
+
 export default function UpgradesList() {
-    const { unlocked } = useSelector((state: RootState) => state.upgrades);
+    const { unlocked, owned: ownedIds } = useSelector((state: RootState) => state.upgrades);
     const { emojis, emojisPerSecond } = useBank();
 
+    // Upgrades for sale, or the ones you've bought
+    const [view, setView] = useState<"available" | "owned">("available");
     const [filter, setFilter] = useState<string>("all");
     const [selectedId, setSelectedId] = useState<number | undefined>(undefined);
     const [gridWidth, setGridWidth] = useState(0);
     const alienTaps = useRef(0);
 
     // Unlocked, not-yet-owned upgrades, cheapest first
-    const available = unlocked
-        .map(id => upgradeData.find(upgrade => upgrade.id === id))
-        .filter((upgrade): upgrade is UpgradeType => upgrade !== undefined)
-        .sort((a, b) => priceOf(a) - priceOf(b));
+    const available = toUpgrades(unlocked);
+    // Bought upgrades, in the order you'd have come across them
+    const owned = toUpgrades(ownedIds);
+    const list = view === "available" ? available : owned;
+    const showingOwned = view === "owned";
 
-    // One filter chip per building that has something to buy, in shop order
+    // One filter chip per building in the list, in shop order
     const filterBuildings = [
-        ...buildingData.map(b => b.name).filter(name => available.some(u => u.building === name)),
-        ...(available.some(u => u.building === BIG_EMOJI) ? [BIG_EMOJI] : []),
+        ...buildingData.map(b => b.name).filter(name => list.some(u => u.building === name)),
+        ...(list.some(u => u.building === BIG_EMOJI) ? [BIG_EMOJI] : []),
     ];
     const activeFilter = filter !== "all" && !filterBuildings.includes(filter) ? "all" : filter;
-    const shown = available.filter(u => activeFilter === "all" || u.building === activeFilter);
+    const shown = list.filter(u => activeFilter === "all" || u.building === activeFilter);
 
     const selected = shown.find(u => u.id === selectedId) ?? shown[0];
     const affordableCount = available.filter(u => emojis >= priceOf(u)).length;
+
+    const switchView = (next: "available" | "owned") => {
+        setView(next);
+        setSelectedId(undefined);
+    };
 
     // Space station secret: tap its alien upgrade five times
     const onIconPress = () => {
@@ -92,20 +105,34 @@ export default function UpgradesList() {
 
     const tileSize = gridWidth > 0 ? (gridWidth - GAP * (COLUMNS - 1)) / COLUMNS : 0;
 
-    if (available.length === 0) {
+    const toggle = (
+        <View style={styles.viewToggle} accessibilityRole="tablist">
+            <ViewTab label="For sale" count={available.length} active={!showingOwned} onPress={() => switchView("available")} />
+            <ViewTab label="Owned" count={owned.length} active={showingOwned} onPress={() => switchView("owned")} />
+        </View>
+    );
+
+    if (list.length === 0) {
         return (
-            <View style={styles.empty}>
-                <Text size={40}>🔒</Text>
-                <Text size={18}>No upgrades yet</Text>
-                <Text font="body" size={14} color={palette.lilac} style={{ textAlign: "center" }}>
-                    Buy buildings and tap the Big Emoji to unlock upgrades.
-                </Text>
+            <View style={styles.emptyScreen}>
+                <View style={styles.emptyToggle}>{toggle}</View>
+                <View style={styles.empty}>
+                    <Text size={40}>{showingOwned ? "🛍️" : "🔒"}</Text>
+                    <Text size={18}>{showingOwned ? "Nothing bought yet" : "No upgrades yet"}</Text>
+                    <Text font="body" size={14} color={palette.lilac} style={{ textAlign: "center" }}>
+                        {showingOwned
+                            ? "Upgrades you buy will be collected here."
+                            : "Buy buildings and tap the Big Emoji to unlock upgrades."}
+                    </Text>
+                </View>
             </View>
         );
     }
 
     return (
         <ScrollView contentContainerStyle={styles.content}>
+            {toggle}
+
             <View style={styles.filters}>
                 <FilterChip label="All" active={activeFilter === "all"} onPress={() => setFilter("all")} />
                 {filterBuildings.map(name => (
@@ -143,35 +170,51 @@ export default function UpgradesList() {
                             </View>
                         ))}
                     </View>
-                    <Text font="bold" size={13} color={palette.greenText}>{impactLine(selected.id!)}</Text>
-                    <ChunkyButton
-                        height={52}
-                        labelSize={18}
-                        label={emojis >= priceOf(selected)
-                            ? `Buy for ${money}${formatNumber(priceOf(selected), 2, true)}`
-                            : `${money}${formatNumber(priceOf(selected), 2, true)} · ${timeToAfford(priceOf(selected), emojis, emojisPerSecond).toLowerCase()}`}
-                        disabled={emojis < priceOf(selected)}
-                        onPress={() => buyUpgrade(selected.id!)}
-                    />
+                    {showingOwned ? (
+                        <View style={styles.ownedBar}>
+                            <Text font="black" size={14} color={palette.greenText}>✓ OWNED</Text>
+                            <Text font="bold" size={13} color={palette.muted}>Paid {money}{formatNumber(priceOf(selected), 2, true)}</Text>
+                        </View>
+                    ) : (
+                        <>
+                            <Text font="bold" size={13} color={palette.greenText}>{impactLine(selected.id!)}</Text>
+                            <ChunkyButton
+                                height={52}
+                                labelSize={18}
+                                label={emojis >= priceOf(selected)
+                                    ? `Buy for ${money}${formatNumber(priceOf(selected), 2, true)}`
+                                    : `${money}${formatNumber(priceOf(selected), 2, true)} · ${timeToAfford(priceOf(selected), emojis, emojisPerSecond).toLowerCase()}`}
+                                disabled={emojis < priceOf(selected)}
+                                onPress={() => buyUpgrade(selected.id!)}
+                            />
+                        </>
+                    )}
                 </View>
             )}
 
             <View style={styles.sectionHead}>
-                <Text size={17}>Available</Text>
-                <Text font="bold" size={12} color={palette.lilac}>{affordableCount} affordable · {available.length} unlocked</Text>
+                <Text size={17}>{showingOwned ? "Owned" : "Available"}</Text>
+                <Text font="bold" size={12} color={palette.lilac}>
+                    {showingOwned
+                        ? `${owned.length} of ${upgradeData.length} upgrades`
+                        : `${affordableCount} affordable · ${available.length} unlocked`}
+                </Text>
             </View>
 
             <View style={styles.grid} onLayout={(e: LayoutChangeEvent) => setGridWidth(e.nativeEvent.layout.width)}>
                 {tileSize > 0 && shown.map(upgrade => {
                     const isSelected = upgrade.id === selected?.id;
-                    const canAfford = emojis >= priceOf(upgrade);
+                    // Owned upgrades always show as full, bright tiles
+                    const canAfford = showingOwned || emojis >= priceOf(upgrade);
                     return (
                         <Pressable
                             key={upgrade.id}
                             onPress={() => setSelectedId(upgrade.id)}
                             accessibilityRole="button"
                             accessibilityState={{ selected: isSelected }}
-                            accessibilityLabel={`${upgrade.name}, ${formatNumber(priceOf(upgrade), 2, true)}${canAfford ? ", affordable" : ""}`}
+                            accessibilityLabel={showingOwned
+                                ? `${upgrade.name}, owned`
+                                : `${upgrade.name}, ${formatNumber(priceOf(upgrade), 2, true)}${canAfford ? ", affordable" : ""}`}
                             style={[
                                 styles.tile,
                                 { width: tileSize, height: tileSize },
@@ -184,6 +227,24 @@ export default function UpgradesList() {
                 })}
             </View>
         </ScrollView>
+    );
+}
+
+/** A small tab inside the list, lighter than the Buildings / Upgrades control above it */
+function ViewTab({ label, count, active, onPress }: { label: string, count: number, active: boolean, onPress: () => void }) {
+    return (
+        <Pressable
+            onPress={onPress}
+            accessibilityRole="tab"
+            accessibilityState={{ selected: active }}
+            accessibilityLabel={`${label}, ${count}`}
+            style={[styles.viewTab, active ? styles.viewTabActive : null]}
+        >
+            <Text font="black" size={13} color={active ? "#FFFFFF" : palette.lilac}>{label}</Text>
+            <View style={[styles.viewCount, active ? styles.viewCountActive : null]}>
+                <Text font="black" size={11} color={active ? palette.ink : palette.lilac}>{count}</Text>
+            </View>
+        </Pressable>
     );
 }
 
@@ -217,6 +278,53 @@ const styles = StyleSheet.create({
         paddingTop: 14,
         paddingBottom: 32,
         gap: 14,
+    },
+    viewToggle: {
+        flexDirection: "row",
+        gap: 6,
+    },
+    viewTab: {
+        height: 34,
+        flexDirection: "row",
+        alignItems: "center",
+        gap: 7,
+        paddingLeft: 14,
+        paddingRight: 6,
+        borderRadius: 17,
+        borderWidth: 2,
+        borderColor: palette.glassLine,
+    },
+    viewTabActive: {
+        backgroundColor: palette.violet,
+        borderColor: palette.violet,
+    },
+    viewCount: {
+        minWidth: 22,
+        height: 22,
+        paddingHorizontal: 6,
+        borderRadius: 11,
+        backgroundColor: palette.glass,
+        alignItems: "center",
+        justifyContent: "center",
+    },
+    viewCountActive: {
+        backgroundColor: palette.sun,
+    },
+    ownedBar: {
+        flexDirection: "row",
+        justifyContent: "space-between",
+        alignItems: "center",
+        paddingHorizontal: 14,
+        height: 44,
+        borderRadius: radii.md,
+        backgroundColor: palette.mint,
+    },
+    emptyScreen: {
+        flex: 1,
+    },
+    emptyToggle: {
+        paddingHorizontal: 20,
+        paddingTop: 14,
     },
     empty: {
         flex: 1,
