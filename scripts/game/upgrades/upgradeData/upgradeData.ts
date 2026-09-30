@@ -9,6 +9,12 @@ import { bankUpgrades } from "./buildings/bank";
 import { emojiThemeParkUpgrades } from "./buildings/emojiThemePark";
 import { emojiAssemblyUpgrades } from "./buildings/emojiAssembly";
 import { spaceStationUpgrades } from "./buildings/spaceStation";
+import { candyKingdomUpgrades } from "./buildings/candyKingdom";
+import { emojiVolcanoUpgrades } from "./buildings/emojiVolcano";
+import { templeOfTheBigEmojiUpgrades } from "./buildings/templeOfTheBigEmoji";
+import { emojiSupercomputerUpgrades } from "./buildings/emojiSupercomputer";
+import { emojiBlackHoleUpgrades } from "./buildings/emojiBlackHole";
+import { emojiSingularityUpgrades } from "./buildings/emojiSingularity";
 import { bigEmojiUpgrades } from "./nonBuilding/bigEmoji";
 import { getBuildingIdFromName } from "../../buildings/shorthands";
 
@@ -66,4 +72,10 @@ export const upgradeData: UpgradeType[] = [
     ...assignIdsToUpgrades(emojiThemeParkUpgrades, getBuildingIdFromName("Emoji theme park") + 1),
     ...assignIdsToUpgrades(emojiAssemblyUpgrades, getBuildingIdFromName("Emoji assembly") + 1),
     ...assignIdsToUpgrades(spaceStationUpgrades, getBuildingIdFromName("Space station") + 1),
+    ...assignIdsToUpgrades(candyKingdomUpgrades, getBuildingIdFromName("Candy kingdom") + 1),
+    ...assignIdsToUpgrades(emojiVolcanoUpgrades, getBuildingIdFromName("Emoji volcano") + 1),
+    ...assignIdsToUpgrades(templeOfTheBigEmojiUpgrades, getBuildingIdFromName("Temple of the Big Emoji in the sky") + 1),
+    ...assignIdsToUpgrades(emojiSupercomputerUpgrades, getBuildingIdFromName("Emoji supercomputer") + 1),
+    ...assignIdsToUpgrades(emojiBlackHoleUpgrades, getBuildingIdFromName("Emoji black hole") + 1),
+    ...assignIdsToUpgrades(emojiSingularityUpgrades, getBuildingIdFromName("Emoji singularity") + 1),
 ];

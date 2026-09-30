@@ -10,9 +10,9 @@ interface EffectWeights {
 }
 
 const effectWeights: EffectWeights = {
-    tap: 100,
-    production: 0,
-    give: 0
+    tap: 40,
+    production: 40,
+    give: 20
 };
 
 // Function to pick an effect type based on weights

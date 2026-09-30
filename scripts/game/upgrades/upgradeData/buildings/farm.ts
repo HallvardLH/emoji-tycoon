@@ -405,7 +405,7 @@ export const farmUpgrades: UpgradeType[] = [
         quote: "He's a really fungi",
         variant: "Helper",
         emojisPerSecondPercentageIncrease: 0.03,
-        tier: 22,
+        tier: 21,
         id: 30021
     },
     {
@@ -415,7 +415,7 @@ export const farmUpgrades: UpgradeType[] = [
         description: "Tropical and tangy.",
         variant: "Helper",
         emojisPerSecondPercentageIncrease: 0.03,
-        tier: 23,
+        tier: 22,
         id: 30022
     },
     {
@@ -425,7 +425,7 @@ export const farmUpgrades: UpgradeType[] = [
         description: "Juicy and refreshing, watermelons are the ultimate summer crop.",
         variant: "Helper",
         emojisPerSecondPercentageIncrease: 0.03,
-        tier: 24,
+        tier: 23,
         id: 30023
     },
     {
@@ -435,7 +435,7 @@ export const farmUpgrades: UpgradeType[] = [
         description: "Fuzzy on the outside, sweet on the inside. Kiwis are a farm favorite!",
         variant: "Helper",
         emojisPerSecondPercentageIncrease: 0.03,
-        tier: 25,
+        tier: 24,
         id: 30024
     },
     {
@@ -446,7 +446,7 @@ export const farmUpgrades: UpgradeType[] = [
         quote: "In grapes, there is truth.",
         variant: "Helper",
         emojisPerSecondPercentageIncrease: 0.03,
-        tier: 26,
+        tier: 25,
         id: 30025
     },
     {
@@ -456,7 +456,7 @@ export const farmUpgrades: UpgradeType[] = [
         description: "Sweet and tart, cherries are a delightful treat and a farm favorite.",
         variant: "Helper",
         emojisPerSecondPercentageIncrease: 0.03,
-        tier: 27,
+        tier: 26,
         id: 30026
     },
 ];

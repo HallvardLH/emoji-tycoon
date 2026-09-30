@@ -63,9 +63,10 @@ export function decrementEffectsOnScreen() {
 /**
  * Attempts to spawn an effect emoji
  *
- * Based on the time since last effect was given (tapped by the player), a random check is done,
+ * Based on the time since last effect was spawned, a random check is done each second,
  * where time since last effect / 100 - a random number between 0 and 1 is put against 0.5.
- * This generally spawns an effect once a minute, with a max wait period of 151 seconds.
+ * This generally spawns an effect about once a minute (never before 50 seconds),
+ * with a max wait period of 150 seconds.
  * 
  * @param guaranteed can be passed to bypass the chance check.
  */
@@ -74,13 +75,13 @@ export function spawnEffect(guaranteed?: boolean) {
     const spawnChanceIncreases = store.getState().effects.effectSpawnChanceIncreasers;
     const spawnChanceIncrease = spawnChanceIncreases.reduce((acc, val) => acc + val)
     if (timeSinceLastEffect >= 0) {
-        // Increasing chance each second, with a guaranteed spawn at 300 seconds
+        // Increasing chance each second, with a guaranteed spawn at 150 seconds
         const chance = timeSinceLastEffect / 100 - Math.random();
-        // Threshold of 2 means at least 200 seconds must have passed for there to
+        // Threshold of 0.5 means at least 50 seconds must have passed for there to
         // even be a chance at all of something spawning
-        // With a fun value of 70 to 75, the threshold starts at 0.2 instead of 0,
+        // With a fun value of 70 to 75, the threshold is lowered by 0.2,
         // making boost emojis spawn sooner
-        let threshold = 2 - (howFun(70, 75) ? 0.2 : 0);
+        let threshold = 0.5 - (howFun(70, 75) ? 0.2 : 0);
         if (chance >= threshold / spawnChanceIncrease || guaranteed) {
             store.dispatch(addEffectOnScreen(createEffect()));
             // Lucky! 1% chance of 2 effect spawning
