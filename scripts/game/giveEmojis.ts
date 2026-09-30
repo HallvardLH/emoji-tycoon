@@ -9,6 +9,8 @@ import { addEmojisGained } from '../redux/statsSlice';
  *   - 1 hour's worth of EPS
  *   - 25% of current bank
  * - Always gives at least a small random bonus.
+ *
+ * @returns the amount of emojis given
  */
 export function emojiGiveEffect() {
     const { emojisPerSecond, emojis } = store.getState().values;
@@ -20,6 +22,7 @@ export function emojiGiveEffect() {
     const bonus = Math.floor(Math.random() * 1000);
 
     giveOneOffEmojis(gift + bonus);
+    return gift + bonus;
 }
 
 /**

@@ -15,8 +15,9 @@ import { playHaptic } from '../../utils';
  * Removes the effect emoji from the screen, and adds it to the array of currently active effects.
  * 
  * @param id is the id of the emoji that was tapped.
+ * @returns the amount of emojis given, for "give" effects
  */
-export function tapEffect(id: number) {
+export function tapEffect(id: number): number | undefined {
     const effectsOnScreen = store.getState().effects.effectsOnScreen;
 
     // Finds the effect based on id and adds it to the effects array
@@ -26,8 +27,9 @@ export function tapEffect(id: number) {
     // Removes the effect from the onScreen array
     store.dispatch(removeEffectOnScreen(id));
 
+    let given: number | undefined;
     if (newEffect.type === "give") {
-        emojiGiveEffect();
+        given = emojiGiveEffect();
     }
 
     calculateEmojisPerSecond();
@@ -38,6 +40,8 @@ export function tapEffect(id: number) {
 
     // vibrateForDuration(5000)
     playHaptic("boost");
+
+    return given;
 }
 
 /**

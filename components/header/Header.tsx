@@ -31,10 +31,11 @@ export default function Header() {
             ) : isEmojidex ? (
                 <Text size={30} style={styles.title}>Emojidex</Text>
             ) : (
-                // Shop: compact counter so the list gets the room
+                // Shop: compact counter so the list gets the room.
+                // The rate sits on its own line so it stays put while the total ticks up.
                 <View style={styles.compactCounter}>
-                    <Text size={28}><AnimatedNumber value={emojis} /></Text>
-                    <Text font="bold" size={13} color={palette.sun}>+{formatNumber(emojisPerSecond, 1)}/s</Text>
+                    <Text size={28} style={{ lineHeight: 30 }}><AnimatedNumber value={emojis} /></Text>
+                    <Text font="bold" size={13} color={palette.sun}>+{formatNumber(emojisPerSecond, 1)} / sec</Text>
                 </View>
             )}
             <HomeNavigation />
@@ -67,11 +68,7 @@ const styles = StyleSheet.create({
         backgroundColor: palette.glass,
     },
     compactCounter: {
-        flexDirection: "row",
-        alignItems: "baseline",
-        gap: 10,
         minHeight: 44,
-        paddingTop: 4,
     },
     title: {
         lineHeight: 44,
