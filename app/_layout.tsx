@@ -6,6 +6,7 @@ import { View, StyleSheet } from "react-native";
 import store from "../scripts/redux/reduxStore";
 import { gameLoop } from "../scripts/game/gameLoop";
 import Header from "../components/header/Header";
+import MilestoneToast from "../components/gameUI/MilestoneToast";
 import { useFonts } from "expo-font";
 import { LilitaOne_400Regular } from "@expo-google-fonts/lilita-one";
 import { Nunito_700Bold, Nunito_700Bold_Italic, Nunito_800ExtraBold, Nunito_900Black } from "@expo-google-fonts/nunito";
@@ -40,6 +41,8 @@ export default function RootLayout() {
                         header: () => <Header />,
                     }}
                 />
+                {/* Over every screen, as milestones can happen anywhere */}
+                <MilestoneToast />
             </View>
         </Provider>
     );

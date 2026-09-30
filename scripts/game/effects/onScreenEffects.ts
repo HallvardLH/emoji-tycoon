@@ -65,6 +65,16 @@ export function decrementEffectsOnScreen() {
 }
 
 /**
+ * Spawns an exact number of effect emojis at once (used by the cheat menu)
+ */
+export function spawnEffects(count: number) {
+    for (let i = 0; i < count; i++) {
+        store.dispatch(addEffectOnScreen(createEffect()));
+    }
+    store.dispatch(updateTimeSinceLastEffect(0));
+}
+
+/**
  * Attempts to spawn an effect emoji
  *
  * Based on the time since last effect was spawned, a random check is done each second,

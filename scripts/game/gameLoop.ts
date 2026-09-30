@@ -17,6 +17,7 @@ import {
 } from "./prestige/prestige";
 import { updateEmojiEssence } from "../redux/prestigeSlice";
 import { decrementTapBoost } from "./tapBoost";
+import { checkBankMilestone } from "./milestones";
 
 let lastUpdateTime = Date.now();
 let tick = 0;
@@ -64,6 +65,7 @@ export function gameLoop() {
         decrementEffectsOnScreen();
         spawnEffect();
         calculateRemainingEmojisForNextPrestige(true);
+        checkBankMilestone();
     }
 
     decrementTapBoost();

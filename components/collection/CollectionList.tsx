@@ -24,7 +24,7 @@ const categoryInfo: Record<string, { label: string, icon: string }> = {
 
 const COLUMNS = 6;
 
-type Cell = { key: string, emoji?: string, count: number };
+type Cell = { key: string, emoji?: string, count: number, shiny?: number };
 
 export default function CollectionList() {
     const collection = useSelector((state: RootState) => state.collection);
@@ -34,12 +34,13 @@ export default function CollectionList() {
     const categories = useMemo(() => Object.keys(categoryInfo).map(name => {
         const counts = collection[name as keyof CollectionState] ?? [];
         const cells: Cell[] = emojiCategories[name]
-            .map((emoji, index) => ({ key: `${name}-${index}`, emoji, count: counts[index]?.amount ?? 0 }))
+            .map((emoji, index) => ({ key: `${name}-${index}`, emoji, count: counts[index]?.amount ?? 0, shiny: counts[index]?.shiny ?? 0 }))
             .filter(cell => !effectEmojis.includes(cell.emoji));
         return { name, cells, found: cells.filter(cell => cell.count > 0).length };
     }), [collection]);
 
     const totalFound = categories.reduce((sum, c) => sum + c.found, 0);
+    const shinyFound = categories.reduce((sum, c) => sum + c.cells.filter(cell => (cell.shiny ?? 0) > 0).length, 0);
     const total = categories.reduce((sum, c) => sum + c.cells.length, 0);
     const percentage = total > 0 ? (totalFound / total) * 100 : 0;
     const mostTapped = categories
@@ -66,6 +67,7 @@ export default function CollectionList() {
                 </View>
                 <Text font="body" size={12} color={palette.muted}>
                     {mostTapped ? `Most tapped: ${mostTapped.emoji} ×${mostTapped.count}` : "Tap the Big Emoji to start collecting"}
+                    {shinyFound > 0 ? `  ·  ✨ ${shinyFound} shiny` : ""}
                 </Text>
             </View>
 
@@ -111,9 +113,14 @@ export default function CollectionList() {
                         </View>
                     );
                 }
+                const shiny = (item.shiny ?? 0) > 0;
                 return (
-                    <View style={styles.found} accessibilityLabel={`${item.emoji}, tapped ${item.count} times`}>
+                    <View
+                        style={[styles.found, shiny ? styles.foundShiny : null]}
+                        accessibilityLabel={`${item.emoji}, tapped ${item.count} times${shiny ? `, ${item.shiny} shiny` : ""}`}
+                    >
                         <Text size={28} style={{ lineHeight: 34 }}>{item.emoji}</Text>
+                        {shiny && <Text size={13} style={styles.shinyMark}>✨</Text>}
                         <View style={styles.countBadge}>
                             <Text font="black" size={10} color={palette.ink}>{item.count > 99 ? "99+" : item.count}</Text>
                         </View>
@@ -187,6 +194,17 @@ const styles = StyleSheet.create({
         backgroundColor: palette.glass,
         alignItems: "center",
         justifyContent: "center",
+    },
+    foundShiny: {
+        backgroundColor: "rgba(255,197,61,0.18)",
+        borderWidth: 2,
+        borderColor: palette.sun,
+    },
+    shinyMark: {
+        position: "absolute",
+        top: -6,
+        left: -4,
+        lineHeight: 16,
     },
     countBadge: {
         position: "absolute",

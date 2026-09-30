@@ -13,38 +13,75 @@ import placesBuildings from '../../assets/emojis/placesBuildings.json';
 import plants from '../../assets/emojis/plants.json';
 import vehicles from '../../assets/emojis/vehicles.json';
 import weather from '../../assets/emojis/weather.json';
-import { updateTapStats } from '../redux/statsSlice';
+import { updateTapStats, addShinyEmojiTapped } from '../redux/statsSlice';
 import { effectEmojis } from './effects/effectData';
 import { incrementTapBoost } from './tapBoost';
 import { calculateEpt } from './calculations';
 
-export function tapEmoji() {
+/** Chance that a new Big Emoji is shiny */
+export const SHINY_CHANCE = 1 / 200;
+// Cheat: every Big Emoji is shiny
+let alwaysShiny = false;
+
+export function isAlwaysShiny() {
+    return alwaysShiny;
+}
+
+export function setAlwaysShiny(on: boolean) {
+    alwaysShiny = on;
+    // Apply to the emoji on screen right away, not just from the next tap
+    const { bigEmoji, nextEmoji } = store.getState().bigEmoji;
+    store.dispatch(updateBigEmoji({ ...bigEmoji, shiny: on }));
+    store.dispatch(updateNextEmoji({ ...nextEmoji, shiny: on }));
+}
+
+/**
+ * What tapping a shiny emoji is worth: 50 taps, or a minute of production if that's more
+ */
+function getShinyReward(emojisPerTap: number, emojisPerSecond: number) {
+    return Math.max(emojisPerTap * 50, emojisPerSecond * 60);
+}
+
+/**
+ * Taps the Big Emoji, which then becomes the next emoji
+ *
+ * @returns the bonus given if the tapped emoji was shiny
+ */
+export function tapEmoji(): number | undefined {
     const state = store.getState();
-    const { emojis } = state.values;
+    const { emojis, emojisPerSecond } = state.values;
     const { emojisPerTap, bigEmoji, nextEmoji } = state.bigEmoji;
 
-    const newEmojis = emojis + emojisPerTap;
+    const shinyReward = bigEmoji.shiny ? getShinyReward(emojisPerTap, emojisPerSecond) : 0;
+    const gained = emojisPerTap + shinyReward;
 
     store.dispatch((dispatch) => {
-        dispatch(updateEmojis(newEmojis));
+        dispatch(updateEmojis(emojis + gained));
         dispatch(updateTapStats({
-            emojisGained: emojisPerTap,
+            emojisGained: gained,
             bigEmojiTaps: 1,
-            emojisEarnedFromTap: emojisPerTap
+            emojisEarnedFromTap: gained
         }));
         dispatch(updateBigEmoji({
             emoji: nextEmoji.emoji,
             category: nextEmoji.category,
             id: nextEmoji.id,
+            shiny: nextEmoji.shiny,
         }));
         dispatch(addToCollection({
             category: bigEmoji.category as keyof CollectionState,
             id: bigEmoji.id,
+            shiny: bigEmoji.shiny,
         }));
+        if (bigEmoji.shiny) {
+            dispatch(addShinyEmojiTapped());
+        }
     })
 
     incrementTapBoost();
     calculateEpt();
+
+    return bigEmoji.shiny ? shinyReward : undefined;
 }
 
 interface EmojiWeights {
@@ -80,15 +117,16 @@ const emojiData = {
 };
 
 /**
-
- *
+ * Picks the emoji that replaces the Big Emoji on the next tap, and whether it's shiny
  */
 export function pickNextEmoji() {
     let randomEmoji = selectRandomEmoji();
+    const shiny = alwaysShiny || Math.random() < SHINY_CHANCE;
     store.dispatch(updateNextEmoji({
         emoji: randomEmoji.emoji,
         category: randomEmoji.category,
         id: randomEmoji.index,
+        shiny,
     }))
     return randomEmoji.emoji
 }

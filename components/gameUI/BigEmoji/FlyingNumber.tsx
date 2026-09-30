@@ -6,14 +6,18 @@ interface FlyingNumberProps {
     number: string;
     xAnim: Animated.Value;
     yAnim: Animated.Value;
+    color?: string;
+    size?: number;
 }
 
-export const FlyingNumber = React.memo(({ number, xAnim, yAnim }: FlyingNumberProps) => (
+export const FlyingNumber = React.memo(({ number, xAnim, yAnim, color = "#FFFFFF", size = 26 }: FlyingNumberProps) => (
     <Animated.Text
         pointerEvents="none"
         style={[
             styles.number,
             {
+                color,
+                fontSize: size,
                 transform: [{ translateY: yAnim }, { translateX: xAnim }],
                 opacity: yAnim.interpolate({
                     inputRange: [-220, -110, 0],
@@ -28,11 +32,9 @@ export const FlyingNumber = React.memo(({ number, xAnim, yAnim }: FlyingNumberPr
 
 const styles = StyleSheet.create({
     number: {
-        fontSize: 26,
         fontFamily: fonts.display,
-        color: "#FFFFFF",
         position: 'absolute',
-        textShadowColor: "rgba(0, 0, 0, 0.3)",
+        textShadowColor: "rgba(0, 0, 0, 0.35)",
         textShadowOffset: { width: 0, height: 2 },
         textShadowRadius: 4
     },

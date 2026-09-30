@@ -10,6 +10,12 @@ interface StatsState {
     bigEmojiTaps: number,
     emojisEarnedFromTap: number,
     effectEmojisCollected: number,
+    shinyEmojisTapped: number,
+    /**
+     * The highest emojis-drawn milestone celebrated, as a power of 1000 (1 = a thousand, 2 = a million...).
+     * Undefined in saves from before milestones existed.
+     */
+    bankMilestone?: number,
 }
 
 const initialState: StatsState = {
@@ -17,6 +23,8 @@ const initialState: StatsState = {
     bigEmojiTaps: 0,
     emojisEarnedFromTap: 0,
     effectEmojisCollected: 0,
+    shinyEmojisTapped: 0,
+    bankMilestone: 0,
 };
 
 export const statsSlice = createSlice({
@@ -36,6 +44,12 @@ export const statsSlice = createSlice({
         addEffectEmojisCollected: (state, action: PayloadAction<number>) => {
             state.effectEmojisCollected = state.effectEmojisCollected + action.payload;
         },
+        addShinyEmojiTapped: (state) => {
+            state.shinyEmojisTapped = (state.shinyEmojisTapped ?? 0) + 1;
+        },
+        setBankMilestone: (state, action: PayloadAction<number>) => {
+            state.bankMilestone = action.payload;
+        },
         updateTapStats: (state, action: PayloadAction<{
             emojisGained: number;
             bigEmojiTaps: number;
@@ -52,6 +66,6 @@ export const statsSlice = createSlice({
     },
 });
 
-export const { addBigEmojiTaps, addEmojisGained, addEmojisEarnedFromTap, addEffectEmojisCollected, updateTapStats, resetStats } = statsSlice.actions;
+export const { addBigEmojiTaps, addEmojisGained, addEmojisEarnedFromTap, addEffectEmojisCollected, addShinyEmojiTapped, setBankMilestone, updateTapStats, resetStats } = statsSlice.actions;
 
 export default statsSlice.reducer;

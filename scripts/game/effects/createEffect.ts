@@ -29,6 +29,13 @@ function pickEffectType(): string {
     return "tap"; // Fallback
 }
 
+// Effects made in the same millisecond (e.g. a double spawn) still need unique ids
+let instanceCounter = 0;
+function nextInstanceId() {
+    instanceCounter = (instanceCounter + 1) % 1000;
+    return Date.now() * 1000 + instanceCounter;
+}
+
 /**
  * Creates an effect
  *
@@ -93,7 +100,7 @@ export function createEffect() {
         originalDuration: chosenEffect.timeLeft,
         timeLeftOnScreen: chosenEffect.timeLeftOnScreen,
         displayMeter: chosenEffect.displayMeter,
-        instanceId: Date.now(),
+        instanceId: nextInstanceId(),
         id: chosenEffect.id,
         xPos: xPos,
         yPos: yPos,

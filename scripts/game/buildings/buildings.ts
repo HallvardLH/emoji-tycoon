@@ -8,6 +8,7 @@ import { canBuyBuilding } from './checks';
 import { calculateEmojisPerSecond, calculateEpt } from '../calculations';
 import * as Haptics from "expo-haptics"
 import { BulkBuyAmount } from '../../redux/preferencesSlice';
+import { celebrateMilestone } from '../milestones';
 
 type PluralNames = {
     [key: string]: string;
@@ -128,6 +129,10 @@ export const buyBuilding = (buildingId: number, bulkBuy: BulkBuyAmount = store.g
     // Trigger haptic feedback if buildings were bought
     if (actualBuyAmount > 0) {
         Haptics.notificationAsync(Haptics.NotificationFeedbackType.Success);
+    }
+
+    if (currentAmount === 0) {
+        celebrateMilestone({ icon: data.icon, caption: "NEW BUILDING", title: `Your first ${data.name.charAt(0).toLowerCase()}${data.name.slice(1)}!` });
     }
 
     batchRecalculations();

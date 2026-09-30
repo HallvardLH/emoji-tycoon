@@ -5,6 +5,8 @@ export type BigEmoji = {
     emoji: string,
     category: string,
     id: number,
+    /** A rare golden version, worth a big bonus when tapped */
+    shiny?: boolean,
 }
 
 interface BigEmojiState {

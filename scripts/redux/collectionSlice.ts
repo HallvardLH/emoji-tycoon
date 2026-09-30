@@ -5,6 +5,8 @@ export type CollectionEmoji = {
     emoji?: string,
     amount: number,
     rarity: number,
+    /** How many times it was tapped while shiny */
+    shiny?: number,
 }
 
 export interface CollectionState {
@@ -38,6 +40,7 @@ const initialState: CollectionState = {
 interface AddToCollectionPayload {
     category: keyof CollectionState;
     id: number;
+    shiny?: boolean;
 }
 
 export const effectsSlice = createSlice({
@@ -45,7 +48,7 @@ export const effectsSlice = createSlice({
     initialState,
     reducers: {
         addToCollection: (state, action: PayloadAction<AddToCollectionPayload>) => {
-            const { category, id } = action.payload;
+            const { category, id, shiny } = action.payload;
 
             // Ensure the index exists in the array
             if (!state[category][id]) {
@@ -55,6 +58,9 @@ export const effectsSlice = createSlice({
 
             // Increment the amount for the specified emoji
             state[category][id].amount += 1;
+            if (shiny) {
+                state[category][id].shiny = (state[category][id].shiny ?? 0) + 1;
+            }
         },
 
         resetCollection: (state) => {

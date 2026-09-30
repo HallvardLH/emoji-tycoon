@@ -11,6 +11,9 @@ import { FlyingNumber } from './FlyingNumber';
 import Svg, { Defs, RadialGradient, Stop, Circle } from 'react-native-svg';
 import GameText from '../../generalUI/Text';
 import { getComboProgress } from '../../../scripts/game/tapBoost';
+import EffectBurst from '../EffectBurst';
+import ComboRain from './ComboRain';
+import store from '../../../scripts/redux/reduxStore';
 import { palette, radii } from '../../misc/theme';
 // import { useFonts } from "expo-font";
 
@@ -26,6 +29,15 @@ interface AnimatedNumber {
     number: string;
     yAnimValue: Animated.Value;
     xAnimValue: Animated.Value;
+    color: string;
+    size: number;
+}
+
+// "+N" numbers get bigger and warmer as the combo rises: ×1 white → ×5 hot pink
+const COMBO_NUMBER_COLORS = ["#FFFFFF", "#FFE08A", palette.sun, "#FF9F43", palette.pop];
+function comboNumberStyle(multiplier: number) {
+    const level = Math.min(multiplier, COMBO_NUMBER_COLORS.length) - 1;
+    return { color: COMBO_NUMBER_COLORS[level], size: 26 + level * 5 };
 }
 
 export default function BigEmoji() {
@@ -50,6 +62,12 @@ export default function BigEmoji() {
     const animatingNumbers = useRef<AnimatedNumber[]>([]);
 
     const [, forceUpdate] = useState(0);
+
+    // Celebrations for shiny emojis that were just tapped
+    const [shinyBursts, setShinyBursts] = useState<{ id: number, amount: number }[]>([]);
+
+    // 1 at rest, lower while pressed
+    const squish = useRef(new Animated.Value(1)).current;
 
     useEffect(() => {
         setEmojisPerTapDisplay(emojisPerTap);
@@ -89,12 +107,14 @@ export default function BigEmoji() {
             animatingEmojis.current = animatingEmojis.current.slice(-25);
         }
 
-        // Add new animating number
+        // Add new animating number, styled by the current combo
+        const { multiplier } = getComboProgress(store.getState().bigEmoji.tapBoost);
         animatingNumbers.current.push({
             key: `${uniqueKey}-num`,
             number: `+${formatNumber(emojisPerTapDisplay, 1)}`,
             yAnimValue: numberYAnimValue,
             xAnimValue: numberXAnimValue,
+            ...comboNumberStyle(multiplier),
         });
 
         // Cap at 25
@@ -145,7 +165,11 @@ export default function BigEmoji() {
             forceUpdate(x => x + 1);
         });
 
-        tapEmoji();
+        const shinyReward = tapEmoji();
+        if (shinyReward !== undefined) {
+            Haptics.notificationAsync(Haptics.NotificationFeedbackType.Success);
+            setShinyBursts(current => [...current, { id: Date.now() + Math.random(), amount: shinyReward }]);
+        }
     }, [staticEmoji, emojisPerTapDisplay, nextEmoji]);
 
 
@@ -163,18 +187,34 @@ export default function BigEmoji() {
                 <Circle cx={SPOTLIGHT / 2} cy={SPOTLIGHT / 2} r={SPOTLIGHT / 2} fill="url(#spotlight)" />
             </Svg>
 
+            {/* Emoji shower behind the stage when the combo maxes out */}
+            <ComboRain />
+
+            <View style={styles.stage}>
             <Pressable
                 accessibilityRole="button"
-                accessibilityLabel="Tap the Big Emoji"
+                accessibilityLabel={bigEmoji.shiny ? "Tap the shiny Big Emoji" : "Tap the Big Emoji"}
                 onPress={() => {
                     onEmojiTap();
                     Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Rigid);
                 }}
-                style={styles.disc}>
+                // Squash down on press, then spring back with a wobble on release
+                onPressIn={() => Animated.spring(squish, { toValue: 0.86, tension: 400, friction: 12, useNativeDriver: true }).start()}
+                onPressOut={() => Animated.spring(squish, { toValue: 1, tension: 220, friction: 4, useNativeDriver: true }).start()}
+                style={[styles.disc, bigEmoji.shiny ? styles.discShiny : null]}>
+                {bigEmoji.shiny && <ShinyGlow />}
                 {/* Static Emoji */}
-                <PulseAnimation maxSize={1.06} duration={4000}>
-                    <Text style={styles.bigEmoji}>{staticEmoji}</Text>
-                </PulseAnimation>
+                <Animated.View style={{
+                    transform: [
+                        // Wider as it gets shorter, so it squashes rather than shrinks
+                        { scaleX: squish.interpolate({ inputRange: [0.8, 1, 1.2], outputRange: [1.12, 1, 0.9] }) },
+                        { scaleY: squish },
+                    ],
+                }}>
+                    <PulseAnimation maxSize={1.06} duration={4000}>
+                        <Text style={styles.bigEmoji}>{staticEmoji}</Text>
+                    </PulseAnimation>
+                </Animated.View>
 
                 {animatingEmojis.current.map(({ key, emoji, yAnimValue, xAnimValue }) => (
                     <FlyingEmoji
@@ -185,20 +225,96 @@ export default function BigEmoji() {
                     />
                 ))}
 
-                {animatingNumbers.current.map(({ key, number, yAnimValue, xAnimValue }) => (
+                {animatingNumbers.current.map(({ key, number, yAnimValue, xAnimValue, color, size }) => (
                     <FlyingNumber
                         key={key}
                         number={number}
                         xAnim={xAnimValue}
                         yAnim={yAnimValue}
+                        color={color}
+                        size={size}
                     />
                 ))}
             </Pressable>
+                {bigEmoji.shiny && (
+                    <View style={styles.shinyTag} pointerEvents="none">
+                        <GameText font="black" size={12} color={palette.ink} style={{ letterSpacing: 1 }}>✨ SHINY ✨</GameText>
+                    </View>
+                )}
+                {shinyBursts.map(burst => (
+                    <EffectBurst
+                        key={burst.id}
+                        headline="✨ SHINY!"
+                        value={`+${formatNumber(burst.amount < 1e6 ? Math.floor(burst.amount) : burst.amount, 1)}`}
+                        caption="EMOJIS"
+                        sparks={["✨", "🌟", "💛", "⭐", "🪙", "✨", "🌟", "💛", "⭐", "🪙", "✨", "🌟"]}
+                        color={palette.sun}
+                        x={DISC / 2}
+                        y={DISC / 2}
+                        onDone={() => setShinyBursts(current => current.filter(b => b.id !== burst.id))}
+                    />
+                ))}
+            </View>
 
             <ComboMeter />
             <GameText font="bold" size={13} color={palette.lilac}>
                 +{formatNumber(emojisPerTap, 1)} per tap · keep tapping to build your combo
             </GameText>
+        </View>
+    );
+}
+
+// Where the twinkles sit around a shiny emoji, relative to the disc's inner area
+const TWINKLES = [
+    { left: 22, top: 26, size: 22, delay: 0 },
+    { left: 150, top: 18, size: 18, delay: 350 },
+    { left: 160, top: 140, size: 24, delay: 700 },
+    { left: 16, top: 136, size: 16, delay: 1050 },
+];
+
+/** A gold glow and twinkling sparkles behind a shiny Big Emoji */
+function ShinyGlow() {
+    const twinkle = useRef(new Animated.Value(0)).current;
+
+    useEffect(() => {
+        const loop = Animated.loop(Animated.timing(twinkle, { toValue: 1, duration: 1400, easing: Easing.linear, useNativeDriver: true }));
+        loop.start();
+        return () => loop.stop();
+    }, []);
+
+    const inner = DISC - 28;
+    return (
+        <View style={StyleSheet.absoluteFill} pointerEvents="none">
+            <Svg width={inner} height={inner} style={StyleSheet.absoluteFill}>
+                <Defs>
+                    <RadialGradient id="shinyGlow" cx="50%" cy="50%" r="50%">
+                        <Stop offset="0%" stopColor={palette.sun} stopOpacity="0.75" />
+                        <Stop offset="60%" stopColor={palette.sun} stopOpacity="0.25" />
+                        <Stop offset="100%" stopColor={palette.sun} stopOpacity="0" />
+                    </RadialGradient>
+                </Defs>
+                <Circle cx={inner / 2} cy={inner / 2} r={inner / 2} fill="url(#shinyGlow)" />
+            </Svg>
+            {TWINKLES.map((t, i) => {
+                // Each twinkle peaks at a different point in the loop
+                const phase = t.delay / 1400;
+                const range = [0, phase, Math.min(phase + 0.25, 0.999), 1];
+                return (
+                    <Animated.Text
+                        key={i}
+                        style={{
+                            position: 'absolute',
+                            left: t.left,
+                            top: t.top,
+                            fontSize: t.size,
+                            opacity: twinkle.interpolate({ inputRange: range, outputRange: [0.15, 0.15, 1, 0.15] }),
+                            transform: [{ scale: twinkle.interpolate({ inputRange: range, outputRange: [0.6, 0.6, 1.2, 0.6] }) }],
+                        }}
+                    >
+                        ✨
+                    </Animated.Text>
+                );
+            })}
         </View>
     );
 }
@@ -245,6 +361,24 @@ const styles = StyleSheet.create({
         alignSelf: 'center',
         top: '50%',
         marginTop: -SPOTLIGHT / 2 - 40,
+    },
+    // Holds the disc, its shiny tag and shiny celebrations, which spill outside it
+    stage: {
+        width: DISC,
+        height: DISC,
+    },
+    discShiny: {
+        backgroundColor: 'rgba(255,197,61,0.12)',
+        borderColor: palette.sun,
+    },
+    shinyTag: {
+        position: 'absolute',
+        top: -12,
+        alignSelf: 'center',
+        paddingHorizontal: 12,
+        paddingVertical: 4,
+        borderRadius: radii.pill,
+        backgroundColor: palette.sun,
     },
     disc: {
         width: DISC,
