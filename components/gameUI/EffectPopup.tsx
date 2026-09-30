@@ -1,5 +1,6 @@
 import React, { useEffect, useRef, useState } from "react";
-import { Animated, Pressable, View, StyleSheet, LayoutChangeEvent } from "react-native";
+import { Animated, Easing, Pressable, View, StyleSheet, LayoutChangeEvent } from "react-native";
+import { usePresence } from "../animations/usePresence";
 import Svg, { Defs, RadialGradient, Stop, Circle } from "react-native-svg";
 import Text from "../generalUI/Text";
 import { palette } from "../misc/theme";
@@ -63,8 +64,13 @@ export default function EffectPopup() {
     const [area, setArea] = useState({ width: 0, height: 0 });
     // Celebrations currently playing
     const [bursts, setBursts] = useState<(Celebration & { id: number, x: number, y: number })[]>([]);
+    // Effects stay on screen a moment after they're gone, to animate out
+    const [shown, remove] = usePresence(effectsOnScreen, effect => effect.instanceId!);
+    // Tapped effects pop away quickly; ones that ran out fade slowly
+    const collected = useRef(new Set<string | number>());
 
     const celebrate = (effect: Effect, given: number | undefined, centerX: number, centerY: number) => {
+        collected.current.add(effect.instanceId!);
         // Keep the whole celebration on screen, including the text floating upwards
         const x = Math.min(Math.max(centerX, EFFECT_BURST_WIDTH / 2), area.width - EFFECT_BURST_WIDTH / 2);
         const y = Math.min(Math.max(centerY, 120), area.height - 50);
@@ -77,8 +83,15 @@ export default function EffectPopup() {
             pointerEvents="box-none"
             onLayout={(e: LayoutChangeEvent) => setArea({ width: e.nativeEvent.layout.width, height: e.nativeEvent.layout.height })}
         >
-            {area.width > 0 && effectsOnScreen.map((effect) => (
-                <FadeInOutEffect key={effect.instanceId} effect={effect} area={area} onCollect={celebrate} />
+            {area.width > 0 && shown.map(({ key, item, leaving }) => (
+                <FadeInOutEffect
+                    key={key}
+                    effect={item}
+                    area={area}
+                    onCollect={celebrate}
+                    leaving={leaving ? (collected.current.has(key) ? "collected" : "expired") : undefined}
+                    onGone={() => { collected.current.delete(key); remove(key); }}
+                />
             ))}
             {bursts.map(({ id, ...burst }) => (
                 <EffectBurst
@@ -107,47 +120,61 @@ interface FadeInOutEffectProps {
     area: { width: number, height: number };
     /** Called when the effect is tapped, with what a gift gave and where the effect was */
     onCollect: (effect: Effect, given: number | undefined, centerX: number, centerY: number) => void;
+    /** Set once the effect is gone: tapped, or it ran out */
+    leaving?: "collected" | "expired";
+    /** Called when the exit animation has finished */
+    onGone: () => void;
 }
 
-function FadeInOutEffect({ effect, area, onCollect }: FadeInOutEffectProps) {
+function FadeInOutEffect({ effect, area, onCollect, leaving, onGone }: FadeInOutEffectProps) {
     const left = toPixels(effect.xPos, area.width, EFFECT_WIDTH);
     const top = toPixels(effect.yPos, area.height, EFFECT_HEIGHT);
 
     const onPress = () => {
+        if (leaving) return;
         // tapEffect plays the haptic
         const given = tapEffect(effect.instanceId!);
         onCollect(effect, given, left + EFFECT_WIDTH / 2, top + GLOW / 2);
     };
 
-    const fadeAnim = useRef(new Animated.Value(0)).current; // Initial opacity value: 0
+    const fadeAnim = useRef(new Animated.Value(0)).current;
+    const scaleAnim = useRef(new Animated.Value(0.6)).current;
 
     useEffect(() => {
-        // Fade in effect
-        Animated.timing(fadeAnim, {
-            toValue: 1,
-            duration: 1000, // 500ms fade-in duration
-            useNativeDriver: true,
-        }).start();
+        // Fade and grow in
+        Animated.parallel([
+            Animated.timing(fadeAnim, { toValue: 1, duration: 600, useNativeDriver: true }),
+            Animated.spring(scaleAnim, { toValue: 1, tension: 120, friction: 6, useNativeDriver: true }),
+        ]).start();
+    }, []);
 
-        return () => {
-            // Fade out effect
-            Animated.timing(fadeAnim, {
-                toValue: 0,
-                duration: 1000, // 500ms fade-out duration
-                useNativeDriver: true,
-            }).start();
-        };
-    }, [fadeAnim]);
+    useEffect(() => {
+        if (!leaving) return;
+        const exit = leaving === "collected"
+            // Tapped: bursts outwards as the celebration takes over
+            ? Animated.parallel([
+                Animated.timing(fadeAnim, { toValue: 0, duration: 220, easing: Easing.out(Easing.quad), useNativeDriver: true }),
+                Animated.timing(scaleAnim, { toValue: 1.5, duration: 220, easing: Easing.out(Easing.quad), useNativeDriver: true }),
+            ])
+            // Ran out: fades and shrinks away
+            : Animated.parallel([
+                Animated.timing(fadeAnim, { toValue: 0, duration: 900, easing: Easing.in(Easing.quad), useNativeDriver: true }),
+                Animated.timing(scaleAnim, { toValue: 0.7, duration: 900, easing: Easing.in(Easing.quad), useNativeDriver: true }),
+            ]);
+        exit.start(onGone);
+    }, [leaving]);
 
     return (
         <Animated.View
+            pointerEvents={leaving ? "none" : "auto"}
             style={{
                 position: "absolute",
                 left: left,
                 top: top,
                 width: EFFECT_WIDTH,
                 height: EFFECT_HEIGHT,
-                opacity: fadeAnim, // Bind opacity to animated value
+                opacity: fadeAnim,
+                transform: [{ scale: scaleAnim }],
             }}
         >
             <Pressable

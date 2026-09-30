@@ -5,6 +5,7 @@ import { RootState } from "../../../scripts/redux/reduxStore";
 import { Effect } from "../../../scripts/game/effects/effectType";
 import Text from "../../generalUI/Text";
 import { palette, radii } from "../../misc/theme";
+import { usePresence } from "../../animations/usePresence";
 
 /** Active effects of the same kind, shown as one chip */
 interface EffectStack {
@@ -84,64 +85,85 @@ export default function EffectMeters() {
     const { effects } = useSelector((state: RootState) => state.effects);
     // Effects that have run out are gone, never shown as an empty bar at 0s
     const stacks = stackEffects(effects.filter((effect) => effect.displayMeter !== false && effect.timeLeft > 0));
+    // Chips whose effects ran out stay a moment to fade away
+    const [shown, remove] = usePresence(stacks, stack => stack.id);
 
-    if (stacks.length === 0) return null;
+    if (shown.length === 0) return null;
 
     return (
         <View style={styles.container}>
-            {stacks.map((stack) => {
-                const { next } = stack;
-                const count = stack.effects.length;
-                const layers = Math.min(count - 1, MAX_LAYERS);
-                const bad = next.quality === "bad";
-                const barColor = bad ? palette.pop : next.type === "production" ? palette.green : palette.violet;
-                const iconBg = bad ? "#FFE3E8" : next.type === "production" ? palette.mint : palette.tile;
-
-                return (
-                    <View
-                        key={stack.id}
-                        style={{ paddingBottom: layers * LAYER_OFFSET }}
-                        accessibilityLabel={count > 1
-                            ? `${count} stacked: ${stackLabel(stack)}, next one ends in ${next.timeLeft} seconds`
-                            : `${next.title}, ${next.timeLeft} seconds left`}
-                    >
-                        {/* Cards peeking out underneath, one per extra effect in the stack */}
-                        {Array.from({ length: layers }, (_, i) => layers - i).map(depth => (
-                            <View
-                                key={depth}
-                                style={[styles.layer, {
-                                    top: depth * LAYER_OFFSET,
-                                    bottom: (layers - depth) * LAYER_OFFSET,
-                                    left: depth * 5,
-                                    right: depth * 5,
-                                    opacity: 0.55 - depth * 0.15,
-                                }]}
-                            />
-                        ))}
-                        <View style={styles.chip}>
-                            <View style={[styles.icon, { backgroundColor: iconBg }]}>
-                                <Text size={17} style={{ lineHeight: 22 }}>{next.emoji}</Text>
-                                {count > 1 && (
-                                    <View style={styles.count}>
-                                        <Text font="black" size={10} color="#FFFFFF">{count}</Text>
-                                    </View>
-                                )}
-                            </View>
-                            <View style={styles.body}>
-                                <Text font="black" size={12} color={palette.ink}>{stackLabel(stack)} · {next.timeLeft}s</Text>
-                                <CountdownBar
-                                    key={next.instanceId}
-                                    timeLeft={next.timeLeft}
-                                    duration={next.originalDuration || next.timeLeft}
-                                    color={barColor}
-                                />
-                            </View>
-                        </View>
-                    </View>
-                );
-            })}
+            {shown.map(({ key, item, leaving }) => (
+                <StackChip key={key} stack={item} leaving={leaving} onGone={() => remove(key)} />
+            ))}
         </View>
     )
+}
+
+/** Fades and grows in, and fades and shrinks away once its effects have run out */
+function StackChip({ stack, leaving, onGone }: { stack: EffectStack, leaving: boolean, onGone: () => void }) {
+    const presence = useRef(new Animated.Value(0)).current;
+
+    useEffect(() => {
+        Animated.timing(presence, {
+            toValue: leaving ? 0 : 1,
+            duration: leaving ? 500 : 300,
+            easing: leaving ? Easing.in(Easing.quad) : Easing.out(Easing.back(2)),
+            useNativeDriver: true,
+        }).start(({ finished }) => { if (finished && leaving) onGone(); });
+    }, [leaving]);
+
+        const { next } = stack;
+        const count = stack.effects.length;
+        const layers = Math.min(count - 1, MAX_LAYERS);
+        const bad = next.quality === "bad";
+        const barColor = bad ? palette.pop : next.type === "production" ? palette.green : palette.violet;
+        const iconBg = bad ? "#FFE3E8" : next.type === "production" ? palette.mint : palette.tile;
+
+        return (
+            <Animated.View
+                style={{
+                    paddingBottom: layers * LAYER_OFFSET,
+                    opacity: presence.interpolate({ inputRange: [0, 1], outputRange: [0, 1], extrapolate: "clamp" }),
+                    transform: [{ scale: presence.interpolate({ inputRange: [0, 1], outputRange: [0.8, 1] }) }],
+                }}
+                accessibilityLabel={count > 1
+                    ? `${count} stacked: ${stackLabel(stack)}, next one ends in ${next.timeLeft} seconds`
+                    : `${next.title}, ${next.timeLeft} seconds left`}
+            >
+                {/* Cards peeking out underneath, one per extra effect in the stack */}
+                {Array.from({ length: layers }, (_, i) => layers - i).map(depth => (
+                    <View
+                        key={depth}
+                        style={[styles.layer, {
+                            top: depth * LAYER_OFFSET,
+                            bottom: (layers - depth) * LAYER_OFFSET,
+                            left: depth * 5,
+                            right: depth * 5,
+                            opacity: 0.55 - depth * 0.15,
+                        }]}
+                    />
+                ))}
+                <View style={styles.chip}>
+                    <View style={[styles.icon, { backgroundColor: iconBg }]}>
+                        <Text size={17} style={{ lineHeight: 22 }}>{next.emoji}</Text>
+                        {count > 1 && (
+                            <View style={styles.count}>
+                                <Text font="black" size={10} color="#FFFFFF">{count}</Text>
+                            </View>
+                        )}
+                    </View>
+                    <View style={styles.body}>
+                        <Text font="black" size={12} color={palette.ink}>{stackLabel(stack)} · {next.timeLeft}s</Text>
+                        <CountdownBar
+                            key={next.instanceId}
+                            timeLeft={next.timeLeft}
+                            duration={next.originalDuration || next.timeLeft}
+                            color={barColor}
+                        />
+                    </View>
+                </View>
+            </Animated.View>
+        );
 }
 
 const styles = StyleSheet.create({

@@ -6,8 +6,9 @@ import { tapEmoji, pickNextEmoji } from '../../../scripts/game/bigEmoji';
 import PulseAnimation from '../../animations/PulseAnimation';
 import { formatNumber } from '../../../scripts/misc';
 import * as Haptics from 'expo-haptics';
-import { FlyingEmoji } from './FlyingEmoji';
+import { FlyingEmoji, FlightPath, makeFlightPath, makeFloatPath } from './FlyingEmoji';
 import { FlyingNumber } from './FlyingNumber';
+import { TapSparks, Spark, makeSparks } from './TapSparks';
 import Svg, { Defs, RadialGradient, Stop, Circle } from 'react-native-svg';
 import GameText from '../../generalUI/Text';
 import { getComboProgress, getMaxComboMultiplier, BOOST_PER_MULTIPLIER } from '../../../scripts/game/tapBoost';
@@ -21,18 +22,39 @@ import { palette, radii } from '../../misc/theme';
 interface AnimatedEmoji {
     key: string;
     emoji: string;
-    yAnimValue: Animated.Value;
-    xAnimValue: Animated.Value;
+    progress: Animated.Value;
+    path: FlightPath;
 }
 
 interface AnimatedNumber {
     key: string;
     number: string;
-    yAnimValue: Animated.Value;
-    xAnimValue: Animated.Value;
+    progress: Animated.Value;
+    x: number;
+    y: number;
+    tilt: number;
     color: string;
     size: number;
 }
+
+interface AnimatedSparks {
+    key: string;
+    progress: Animated.Value;
+    sparks: Spark[];
+    color: string;
+}
+
+// How long each piece of a tap lasts
+const EMOJI_FLIGHT_MS = 650;
+const FLOAT_FLIGHT_MS = 1000;
+const NUMBER_FLIGHT_MS = 900;
+const SPARKS_MS = 480;
+const RING_MS = 520;
+// Rings expanding from the disc on each tap, reused round-robin
+const RING_COUNT = 3;
+
+const randomBetween = (min: number, max: number) => min + Math.random() * (max - min);
+const randomSign = () => (Math.random() < 0.5 ? -1 : 1);
 
 // "+N" numbers get bigger and warmer as the combo rises: ×1 white → ×5 hot pink
 const COMBO_NUMBER_COLORS = ["#FFFFFF", "#FFE08A", palette.sun, "#FF9F43", palette.pop];
@@ -71,8 +93,18 @@ export default function BigEmoji() {
     // Celebrations for shiny emojis that were just tapped
     const [shinyBursts, setShinyBursts] = useState<{ id: number, amount: number }[]>([]);
 
+    const animatingSparks = useRef<AnimatedSparks[]>([]);
+
     // 1 at rest, lower while pressed
     const squish = useRef(new Animated.Value(1)).current;
+    // The next emoji pops in from small with an overshoot
+    const popIn = useRef(new Animated.Value(1)).current;
+    // -1…1, a knock to one side that wobbles back to upright
+    const tilt = useRef(new Animated.Value(0)).current;
+    // Shockwave rings, and the colour each was last fired in
+    const rings = useRef(Array.from({ length: RING_COUNT }, () => new Animated.Value(1))).current;
+    const ringColors = useRef<string[]>(Array(RING_COUNT).fill(palette.lilac));
+    const nextRing = useRef(0);
 
     useEffect(() => {
         setEmojisPerTapDisplay(emojisPerTap);
@@ -83,102 +115,111 @@ export default function BigEmoji() {
         const nextPickedEmoji = pickNextEmoji();
         setStaticEmoji(nextPickedEmoji as string);
 
-        // Create new animated values for the animating emoji and number
-        const newYAnimValue = new Animated.Value(0);
-        const newXAnimValue = new Animated.Value(0);
-        const numberYAnimValue = new Animated.Value(0);
-        const numberXAnimValue = new Animated.Value(0);
+        const { multiplier } = getComboProgress(store.getState().bigEmoji.tapBoost);
+        const comboStyle = comboNumberStyle(multiplier);
+        // Everything hits a little harder as the combo climbs
+        const intensity = Math.min(multiplier - 1, 7) / 7;
 
-        // Random horizontal target value between -200 and 200 for emoji
-        const randomXToValueEmoji = Math.floor(Math.random() * 401) - 200;
-
-        // Random movement for number
-        const randomYToValueNumber = -(Math.floor(Math.random() * 111) + 110);
-        const randomXToValueNumber = Math.floor(Math.random() * 101) - 50;
-
-        // Generate a unique key for the animating emoji and number using the current timestamp
         const uniqueKey = `${nextPickedEmoji}-${Date.now()}-${Math.random()}`;
 
-        // Add new animating emoji
+        // The tapped emoji is knocked off to one side: a hop, then it tumbles down under gravity.
+        // Fun value 31 - 40 (low gravity): it drifts up and away instead
+        const direction = randomSign();
+        const lowGravity = howFun(31, 40);
+        const emojiProgress = new Animated.Value(0);
         animatingEmojis.current.push({
             key: uniqueKey,
             emoji: animatingEmoji,
-            yAnimValue: newYAnimValue,
-            xAnimValue: newXAnimValue,
+            progress: emojiProgress,
+            path: lowGravity
+                ? makeFloatPath(LOW_GRAVITY_RISE, direction * randomBetween(30, 110), direction * randomBetween(5, 20))
+                : makeFlightPath(
+                    randomBetween(25, 45) + intensity * 15,
+                    FALL_DISTANCE,
+                    direction * randomBetween(60, 170),
+                    // A gentle lean in the direction it's thrown, not a spin
+                    direction * randomBetween(15, 35) * (1 + intensity * 0.5),
+                ),
         });
-
-        // Cap at 25
         if (animatingEmojis.current.length > 25) {
             animatingEmojis.current = animatingEmojis.current.slice(-25);
         }
 
-        // Add new animating number, styled by the current combo
-        const { multiplier } = getComboProgress(store.getState().bigEmoji.tapBoost);
+        // The "+N" number, styled by the current combo, rises on the opposite side
+        const numberProgress = new Animated.Value(0);
         animatingNumbers.current.push({
             key: `${uniqueKey}-num`,
             number: `+${formatNumber(emojisPerTapDisplay, 1)}`,
-            yAnimValue: numberYAnimValue,
-            xAnimValue: numberXAnimValue,
-            ...comboNumberStyle(multiplier),
+            progress: numberProgress,
+            x: -direction * randomBetween(10, 70),
+            y: -randomBetween(120, 210),
+            tilt: -direction * randomBetween(4, 14),
+            ...comboStyle,
         });
-
-        // Cap at 25
         if (animatingNumbers.current.length > 25) {
             animatingNumbers.current = animatingNumbers.current.slice(-25);
         }
 
+        // Sparks from ×2 up, more of them the higher the combo
+        let sparksProgress: Animated.Value | undefined;
+        if (multiplier >= 2) {
+            sparksProgress = new Animated.Value(0);
+            animatingSparks.current.push({
+                key: `${uniqueKey}-sparks`,
+                progress: sparksProgress,
+                sparks: makeSparks(3 + Math.min(multiplier, 8)),
+                color: comboStyle.color,
+            });
+            if (animatingSparks.current.length > 6) {
+                animatingSparks.current = animatingSparks.current.slice(-6);
+            }
+        }
+
         forceUpdate(x => x + 1);
 
-        // Fun value 31 - 40 (low gravity): tapped emojis drift up and away instead of dropping
-        const lowGravity = howFun(31, 40);
-
-        Animated.parallel([
-            // Emoji animations
-            Animated.sequence([
-                Animated.timing(newYAnimValue, {
-                    toValue: -30,
-                    duration: 100,
-                    useNativeDriver: true,
-                }),
-                lowGravity
-                    ? Animated.timing(newYAnimValue, {
-                        toValue: -LOW_GRAVITY_RISE,
-                        duration: 800,
-                        easing: Easing.out(Easing.quad),
-                        useNativeDriver: true,
-                    })
-                    : Animated.timing(newYAnimValue, {
-                        toValue: 100,
-                        duration: 200,
-                        useNativeDriver: true,
-                    }),
-            ]),
-            Animated.timing(newXAnimValue, {
-                toValue: lowGravity ? randomXToValueEmoji / 2 : randomXToValueEmoji,
-                duration: lowGravity ? 900 : 300,
-                useNativeDriver: true,
-            }),
-            // Number animations
-            Animated.timing(numberYAnimValue, {
-                toValue: randomYToValueNumber,
-                duration: 800,
-                useNativeDriver: true,
-                easing: Easing.out(Easing.cubic),
-            }),
-            Animated.timing(numberXAnimValue, {
-                toValue: randomXToValueNumber,
-                duration: 800,
-                useNativeDriver: true,
-                easing: Easing.out(Easing.cubic),
-            }),
-        ]).start(() => {
-            // Clean up after animations complete
+        const remove = () => {
             animatingEmojis.current = animatingEmojis.current.filter(item => item.key !== uniqueKey);
             animatingNumbers.current = animatingNumbers.current.filter(item => item.key !== `${uniqueKey}-num`);
-
-            // Trigger a render again to remove from UI
+            animatingSparks.current = animatingSparks.current.filter(item => item.key !== `${uniqueKey}-sparks`);
             forceUpdate(x => x + 1);
-        });
+        };
+
+        Animated.parallel([
+            Animated.timing(emojiProgress, {
+                toValue: 1,
+                duration: lowGravity ? FLOAT_FLIGHT_MS : EMOJI_FLIGHT_MS,
+                // The path is already shaped by gravity, so time runs evenly
+                easing: Easing.linear,
+                useNativeDriver: true,
+            }),
+            Animated.timing(numberProgress, {
+                toValue: 1,
+                duration: NUMBER_FLIGHT_MS,
+                easing: Easing.out(Easing.cubic),
+                useNativeDriver: true,
+            }),
+            ...(sparksProgress ? [Animated.timing(sparksProgress, {
+                toValue: 1,
+                duration: SPARKS_MS,
+                easing: Easing.out(Easing.quad),
+                useNativeDriver: true,
+            })] : []),
+        ]).start(remove);
+
+        // The new emoji pops in
+        popIn.setValue(0.55);
+        Animated.spring(popIn, { toValue: 1, tension: 320, friction: 6, useNativeDriver: true }).start();
+
+        // Knocked away from the side the old emoji flew off to, then wobbles back
+        tilt.setValue(-direction * (0.5 + intensity * 0.5));
+        Animated.spring(tilt, { toValue: 0, tension: 260, friction: 5, useNativeDriver: true }).start();
+
+        // A shockwave ring in the combo colour
+        const ring = nextRing.current;
+        nextRing.current = (ring + 1) % RING_COUNT;
+        ringColors.current[ring] = comboStyle.color;
+        rings[ring].setValue(0);
+        Animated.timing(rings[ring], { toValue: 1, duration: RING_MS, easing: Easing.out(Easing.quad), useNativeDriver: true }).start();
 
         const shinyReward = tapEmoji();
         if (shinyReward !== undefined) {
@@ -186,6 +227,16 @@ export default function BigEmoji() {
             setShinyBursts(current => [...current, { id: Date.now() + Math.random(), amount: shinyReward }]);
         }
     }, [staticEmoji, emojisPerTapDisplay]);
+
+    const staticEmojiStyle = useMemo(() => ({
+        transform: [
+            { rotate: tilt.interpolate({ inputRange: [-1, 1], outputRange: ["-12deg", "12deg"] }) },
+            // Wider as it gets shorter, so it squashes rather than shrinks
+            { scaleX: squish.interpolate({ inputRange: [0.8, 1, 1.2], outputRange: [1.12, 1, 0.9] }) },
+            { scaleY: squish },
+            { scale: popIn },
+        ],
+    }), []);
 
 
     return (
@@ -206,6 +257,17 @@ export default function BigEmoji() {
             <ComboRain />
 
             <View style={styles.stage}>
+            {rings.map((ring, i) => (
+                <Animated.View
+                    key={i}
+                    pointerEvents="none"
+                    style={[styles.ring, {
+                        borderColor: ringColors.current[i],
+                        opacity: ring.interpolate({ inputRange: [0, 1], outputRange: [0.7, 0] }),
+                        transform: [{ scale: ring.interpolate({ inputRange: [0, 1], outputRange: [0.92, 1.3] }) }],
+                    }]}
+                />
+            ))}
             <Pressable
                 accessibilityRole="button"
                 accessibilityLabel={bigEmoji.shiny ? "Tap the shiny Big Emoji" : "Tap the Big Emoji"}
@@ -218,35 +280,30 @@ export default function BigEmoji() {
                 onPressOut={() => Animated.spring(squish, { toValue: 1, tension: 220, friction: 4, useNativeDriver: true }).start()}
                 style={[styles.disc, bigEmoji.shiny ? styles.discShiny : null]}>
                 {bigEmoji.shiny && <ShinyGlow />}
+
+                {animatingSparks.current.map(({ key, progress, sparks, color }) => (
+                    <TapSparks key={key} progress={progress} sparks={sparks} color={color} />
+                ))}
+
                 {/* Static Emoji */}
-                <Animated.View style={{
-                    transform: [
-                        // Wider as it gets shorter, so it squashes rather than shrinks
-                        { scaleX: squish.interpolate({ inputRange: [0.8, 1, 1.2], outputRange: [1.12, 1, 0.9] }) },
-                        { scaleY: squish },
-                    ],
-                }}>
+                <Animated.View style={staticEmojiStyle}>
                     <PulseAnimation maxSize={1.06} duration={4000}>
                         <Text style={styles.bigEmoji}>{staticEmoji}</Text>
                     </PulseAnimation>
                 </Animated.View>
 
-                {animatingEmojis.current.map(({ key, emoji, yAnimValue, xAnimValue }) => (
-                    <FlyingEmoji
-                        key={key}
-                        emoji={emoji}
-                        xAnim={xAnimValue}
-                        yAnim={yAnimValue}
-                        floatUp={howFun(31, 40)}
-                    />
+                {animatingEmojis.current.map(({ key, emoji, progress, path }) => (
+                    <FlyingEmoji key={key} emoji={emoji} progress={progress} path={path} />
                 ))}
 
-                {animatingNumbers.current.map(({ key, number, yAnimValue, xAnimValue, color, size }) => (
+                {animatingNumbers.current.map(({ key, number, progress, x, y, tilt, color, size }) => (
                     <FlyingNumber
                         key={key}
                         number={number}
-                        xAnim={xAnimValue}
-                        yAnim={yAnimValue}
+                        progress={progress}
+                        x={x}
+                        y={y}
+                        tilt={tilt}
                         color={color}
                         size={size}
                     />
@@ -418,6 +475,8 @@ function ComboMeter() {
 const SPOTLIGHT = 500;
 // How far tapped emojis float up with low gravity
 const LOW_GRAVITY_RISE = 260;
+// How far below the disc centre tapped emojis tumble to
+const FALL_DISTANCE = 240;
 const DISC = 220;
 
 const styles = StyleSheet.create({
@@ -437,6 +496,13 @@ const styles = StyleSheet.create({
     stage: {
         width: DISC,
         height: DISC,
+    },
+    ring: {
+        position: 'absolute',
+        width: DISC,
+        height: DISC,
+        borderRadius: DISC / 2,
+        borderWidth: 4,
     },
     discShiny: {
         backgroundColor: 'rgba(255,197,61,0.12)',
