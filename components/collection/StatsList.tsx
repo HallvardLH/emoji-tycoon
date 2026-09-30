@@ -6,7 +6,7 @@ import { formatNumber } from "../../scripts/misc";
 import { palette, radii } from "../misc/theme";
 
 export default function StatsList() {
-    const { bigEmojiTaps, emojisEarnedFromTap, effectEmojisCollected, emojisGained, shinyEmojisTapped } = useSelector((state: RootState) => state.stats);
+    const { bigEmojiTaps, emojisEarnedFromTap, effectEmojisCollected, emojisGained, shinyEmojisTapped, comboTaps } = useSelector((state: RootState) => state.stats);
     const { funValue } = useSelector((state: RootState) => state.values);
 
     const rows: [string, string, string][] = [
@@ -15,6 +15,7 @@ export default function StatsList() {
         ["💥", "Emojis earned from tapping", formatNumber(emojisEarnedFromTap)],
         ["🪄", "Magical emojis tapped", formatNumber(effectEmojisCollected)],
         ["✨", "Shiny emojis tapped", formatNumber(shinyEmojisTapped ?? 0)],
+        ["🔥", "Combo taps", formatNumber(comboTaps ?? 0, 0)],
     ];
     // The fun value, deliberately unexplained: players who know about it will recognise it
     rows.push(["🔮", "???", funValue == 100 ? `${funValue} 😭` : String(funValue)]);

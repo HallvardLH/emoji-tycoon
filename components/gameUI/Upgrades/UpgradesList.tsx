@@ -15,6 +15,7 @@ import Text from '../../generalUI/Text';
 import ChunkyButton from '../../generalUI/ChunkyButton';
 import { useBank, timeToAfford } from '../useBank';
 import { howFun } from '../../../scripts/game/shorthands';
+import { comboLevelOfTier } from '../../../scripts/game/upgrades/upgradeData/nonBuilding/combo';
 import { palette, radii } from '../../misc/theme';
 
 const BIG_EMOJI = "Big emoji";
@@ -32,7 +33,8 @@ function effectChips(upgrade: UpgradeType) {
             case "Multiply tap": return `Tapping ×${upgrade.emojisPerTapMultiplier}`;
             case "Percentage increase tap": return `Tapping +${Math.round(upgrade.emojisPerTapPercentageIncrease! * 100)}%`;
             case "Percentage increase production": return `Production +${Math.round(upgrade.emojisPerSecondPercentageIncrease! * 100)}%`;
-            case "Tap percentage of eps": return `Taps +${Math.round(upgrade.emojisPerTapPercentageOfEps! * 100)}% of /sec`;
+            case "Tap percentage of eps": return `Taps +${Math.round(upgrade.emojisPerTapPercentageOfEps! * 100)}% of emojis/sec`;
+            case "Combo level": return `Max combo ×${comboLevelOfTier(upgrade.tier)}`;
         }
     });
 }
@@ -48,6 +50,7 @@ function tierLabel(upgrade: UpgradeType) {
     const building = (upgrade.building ?? "").toUpperCase();
     if (upgrade.variant === "Helper") return `${iconOf(upgrade.building)} ${building} · HELPER`;
     if (upgrade.variant === "Big emoji percentage") return `${iconOf(upgrade.building)} BIG EMOJI · HANDS`;
+    if (upgrade.variant === "Combo level") return `🔥 COMBO · LEVEL ${comboLevelOfTier(upgrade.tier)}`;
     return `${iconOf(upgrade.building)} ${building} · TIER ${upgrade.tier + 1}`;
 }
 

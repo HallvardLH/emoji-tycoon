@@ -18,7 +18,7 @@ export const funValueEffects: FunValueEffect[] = [
     { from: 31, to: 40, name: "Low gravity", description: "Tapped emojis float up and away" },
     { from: 42, to: 42, name: "The answer", description: "+4.2% production" },
     { from: 50, to: 50, name: "Perfectly balanced", description: "Tapping ×0.5, production ×1.5" },
-    { from: 64, to: 64, name: "Overclocked", description: "Combo caps at ×6 instead of ×5" },
+    { from: 64, to: 64, name: "Overclocked", description: "Combo can go one level higher" },
     { from: 70, to: 75, name: "Impatient", description: "Effect emojis spawn sooner" },
     { from: 76, to: 76, name: "Lucky spawns", description: "10% chance of a bonus effect emoji" },
     { from: 77, to: 77, name: "Flying money", description: "💸 on prices" },

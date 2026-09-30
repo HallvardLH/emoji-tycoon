@@ -15,7 +15,7 @@ import vehicles from '../../assets/emojis/vehicles.json';
 import weather from '../../assets/emojis/weather.json';
 import { updateTapStats, addShinyEmojiTapped } from '../redux/statsSlice';
 import { effectEmojis } from './effects/effectData';
-import { incrementTapBoost } from './tapBoost';
+import { incrementTapBoost, getComboProgress } from './tapBoost';
 import { calculateEpt } from './calculations';
 import { howFun } from './shorthands';
 
@@ -55,13 +55,16 @@ export function tapEmoji(): number | undefined {
 
     const shinyReward = bigEmoji.shiny ? getShinyReward(emojisPerTap, emojisPerSecond) : 0;
     const gained = emojisPerTap + shinyReward;
+    // Counts towards combo level upgrades, weighted by the combo this tap was made at
+    const { multiplier: comboMultiplier } = getComboProgress(state.bigEmoji.tapBoost);
 
     store.dispatch((dispatch) => {
         dispatch(updateEmojis(emojis + gained));
         dispatch(updateTapStats({
             emojisGained: gained,
             bigEmojiTaps: 1,
-            emojisEarnedFromTap: gained
+            emojisEarnedFromTap: gained,
+            comboTaps: comboMultiplier,
         }));
         dispatch(updateBigEmoji({
             emoji: nextEmoji.emoji,

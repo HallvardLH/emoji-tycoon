@@ -4,6 +4,7 @@ import { upgradeData } from "./upgradeData/upgradeData";
 import { unlockUpgrade, addCanBuyUpgrade, removeCanBuyUpgrade, unlockedUpgradeNotificaiton } from "../../redux/upgradesSlice";
 import { getUpgradeDataById } from "./shorthands";
 import { getUpgradePrice } from "./upgradePrice";
+import { COMBO_LEVEL_UNLOCK_TAPS } from "./upgradeData/nonBuilding/combo";
 
 /**
  * Returns the amount of a building required to unlock a standard upgrade of the given tier
@@ -63,6 +64,15 @@ export function unlockUpgrades() {
                     store.dispatch(unlockUpgrade(upgrade.id!));
                     if (activeTab !== "Shop") {
 
+                        store.dispatch(unlockedUpgradeNotificaiton());
+                    }
+                }
+                break;
+            case "Combo taps":
+                // Each combo level unlocks after enough taps, weighted by the combo they were made at
+                if ((store.getState().stats.comboTaps ?? 0) >= COMBO_LEVEL_UNLOCK_TAPS[upgrade.tier]) {
+                    store.dispatch(unlockUpgrade(upgrade.id!));
+                    if (activeTab !== "Shop") {
                         store.dispatch(unlockedUpgradeNotificaiton());
                     }
                 }

@@ -2,6 +2,7 @@ import { getBaseBuildingPrice } from "../buildings/buildingData"
 import { UpgradeVariantsType } from "./upgradeData/UpgradeType";
 import store from "../../redux/reduxStore";
 import { roundToPrettyNumber } from "../../utils";
+import { COMBO_LEVEL_PRICES } from "./upgradeData/nonBuilding/combo";
 
 export function getUpgradePrice(tier: number, variant: UpgradeVariantsType, buildingId?: number) {
     switch (variant) {
@@ -19,6 +20,8 @@ export function getUpgradePrice(tier: number, variant: UpgradeVariantsType, buil
                 return Math.round(price);
             }
             break;
+        case "Combo level":
+            return COMBO_LEVEL_PRICES[tier];
         case "Big emoji percentage":
             const emojiTaps = store.getState().stats.bigEmojiTaps;
             // Price is tier position based, plus how many times you've tapped the emoji

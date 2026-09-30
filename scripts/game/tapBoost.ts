@@ -2,13 +2,18 @@ import store from "../redux/reduxStore";
 import { updateTapBoost } from "../redux/bigEmojiSlice";
 import { calculateEpt } from "./calculations";
 import { howFun } from "./shorthands";
+import { BASE_MAX_COMBO, isComboUpgradeId } from "./upgrades/upgradeData/nonBuilding/combo";
 
 // Every tap adds 1 boost, and every 10 boost adds ×1 to emojis per tap (see calculateEpt)
 export const BOOST_PER_MULTIPLIER = 10;
 
-/** The combo tops out at ×5, or ×6 with a fun value of 64 (overclocked) */
+/**
+ * How high the combo can go: ×2 to start, +1 per combo level upgrade owned (up to ×5),
+ * and +1 more with a fun value of 64 (overclocked)
+ */
 export function getMaxComboMultiplier() {
-    return howFun(64) ? 6 : 5;
+    const comboUpgradesOwned = store.getState().upgrades.owned.filter(isComboUpgradeId).length;
+    return BASE_MAX_COMBO + comboUpgradesOwned + (howFun(64) ? 1 : 0);
 }
 
 // The combo drains faster the higher it is: 2.5 boost per second at ×1, plus 1 per level.

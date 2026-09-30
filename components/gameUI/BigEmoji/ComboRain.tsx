@@ -2,14 +2,15 @@ import React, { useEffect, useMemo, useRef, useState } from "react";
 import { Animated, Easing, LayoutChangeEvent, StyleSheet, View } from "react-native";
 import { useSelector } from "react-redux";
 import { RootState } from "../../../scripts/redux/reduxStore";
-import { getComboProgress } from "../../../scripts/game/tapBoost";
+import { getComboProgress, getMaxComboMultiplier } from "../../../scripts/game/tapBoost";
 import { selectRandomEmoji } from "../../../scripts/game/bigEmoji";
 
 const DROPS = 30;
 // The shower lasts about this long, from first drop to last landing
 const SHOWER_MS = 3000;
 // Minimum time between showers
-const COOLDOWN_MS = 8000;
+const COOLDOWN_MS = 15000;
+const MIN_MAX_FOR_RAIN = 4;
 
 /**
  * A short shower of emojis behind the stage whenever the combo hits max.
@@ -19,7 +20,9 @@ const COOLDOWN_MS = 8000;
 export default React.memo(ComboRain);
 
 function ComboRain() {
-    const isMax = useSelector((state: RootState) => getComboProgress(state.bigEmoji.tapBoost).isMax);
+    // Only rain once a combo level upgrade is bought; hitting the starting cap is too easy to celebrate
+    const isMax = useSelector((state: RootState) =>
+        getComboProgress(state.bigEmoji.tapBoost).isMax && getMaxComboMultiplier() >= MIN_MAX_FOR_RAIN);
     const [showers, setShowers] = useState<number[]>([]);
     const [size, setSize] = useState({ width: 0, height: 0 });
     const wasMax = useRef(isMax);

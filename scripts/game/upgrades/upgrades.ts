@@ -15,6 +15,7 @@ import { addEmojisPerSecondPercentage } from '../../redux/valuesSlice';
 import { calculateEpsBonus, calculateEptBonus } from '../calculations';
 import { BIG_EMOJI_BUILDING_ID } from './upgradeData/nonBuilding/bigEmoji';
 import * as Haptics from "expo-haptics";
+import { comboLevelOfTier } from './upgradeData/nonBuilding/combo';
 
 export function buyUpgrade(upgradeId: number) {
     const upgrade = getUpgradeDataById(upgradeId);
@@ -57,6 +58,9 @@ export function buyUpgrade(upgradeId: number) {
                         store.dispatch(addEmojisPerTapPercentageOfEps(upgrade.emojisPerTapPercentageOfEps));
                     }
                     break;
+                case "Combo level":
+                    // Owning it is the effect: the max combo counts combo level upgrades owned
+                    break;
                 default:
                     console.warn(`No action for category: ${category}`);
                     break;
@@ -97,6 +101,9 @@ export function getEffectText(upgradeId: number) {
                 break
             case "Percentage increase production":
                 text += `\u2022 Total emoji production increased by ${upgrade.emojisPerSecondPercentageIncrease! * 100}%.\n`;
+                break
+            case "Combo level":
+                text += `\u2022 The combo can reach \u00d7${comboLevelOfTier(upgrade.tier)}.\n`;
                 break
             default:
                 return ""

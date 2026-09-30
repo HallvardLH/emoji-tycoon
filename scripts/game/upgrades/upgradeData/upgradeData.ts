@@ -16,6 +16,7 @@ import { emojiSupercomputerUpgrades } from "./buildings/emojiSupercomputer";
 import { emojiBlackHoleUpgrades } from "./buildings/emojiBlackHole";
 import { emojiSingularityUpgrades } from "./buildings/emojiSingularity";
 import { bigEmojiUpgrades } from "./nonBuilding/bigEmoji";
+import { comboUpgrades, COMBO_UPGRADE_ID_BLOCK } from "./nonBuilding/combo";
 import { getBuildingIdFromName } from "../../buildings/shorthands";
 
 import { UpgradeType } from "./UpgradeType";
@@ -61,6 +62,7 @@ function assignIdsToUpgrades(upgrades: UpgradeType[], buildingId: number): Upgra
 // is not a true building, so it does not have a buildingId
 export const upgradeData: UpgradeType[] = [
     ...assignIdsToUpgrades(bigEmojiUpgrades, 0),
+    ...assignIdsToUpgrades(comboUpgrades, COMBO_UPGRADE_ID_BLOCK),
     ...assignIdsToUpgrades(drawingHandUpgrades, getBuildingIdFromName("Drawing hand") + 1),
     ...assignIdsToUpgrades(graphicDesignStudioUpgrades, getBuildingIdFromName("Graphic design studio") + 1),
     ...assignIdsToUpgrades(farmUpgrades, getBuildingIdFromName("Farm") + 1),

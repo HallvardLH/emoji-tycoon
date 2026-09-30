@@ -18,6 +18,7 @@ import {
 import { updateEmojiEssence } from "../redux/prestigeSlice";
 import { decrementTapBoost } from "./tapBoost";
 import { checkBankMilestone } from "./milestones";
+import { setComboTaps } from "../redux/statsSlice";
 
 let lastUpdateTime = Date.now();
 let tick = 0;
@@ -45,6 +46,12 @@ export function gameLoop() {
 
     // Every 2.5s (assuming loop runs at 100ms interval)
     if (tick % 25 === 0) {
+        // Saves from before combo taps existed: count each past tap once, so players
+        // who tapped a lot don't start the combo level upgrades from zero
+        if (state.stats.comboTaps === undefined) {
+            store.dispatch(setComboTaps(state.stats.bigEmojiTaps));
+        }
+
         canBuyBuilding();
         unlockBuilding();
         canBuyUpgrade();

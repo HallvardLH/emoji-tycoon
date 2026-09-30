@@ -12,6 +12,11 @@ interface StatsState {
     effectEmojisCollected: number,
     shinyEmojisTapped: number,
     /**
+     * Taps weighted by the combo multiplier at the time (a tap at ×3 counts 3).
+     * Unlocks combo level upgrades. Undefined in saves from before it existed.
+     */
+    comboTaps?: number,
+    /**
      * The highest emojis-drawn milestone celebrated, as a power of 1000 (1 = a thousand, 2 = a million...).
      * Undefined in saves from before milestones existed.
      */
@@ -24,6 +29,7 @@ const initialState: StatsState = {
     emojisEarnedFromTap: 0,
     effectEmojisCollected: 0,
     shinyEmojisTapped: 0,
+    comboTaps: 0,
     bankMilestone: 0,
 };
 
@@ -50,14 +56,19 @@ export const statsSlice = createSlice({
         setBankMilestone: (state, action: PayloadAction<number>) => {
             state.bankMilestone = action.payload;
         },
+        setComboTaps: (state, action: PayloadAction<number>) => {
+            state.comboTaps = action.payload;
+        },
         updateTapStats: (state, action: PayloadAction<{
             emojisGained: number;
             bigEmojiTaps: number;
             emojisEarnedFromTap: number;
+            comboTaps: number;
         }>) => {
             state.emojisGained += action.payload.emojisGained;
             state.bigEmojiTaps += action.payload.bigEmojiTaps;
             state.emojisEarnedFromTap += action.payload.emojisEarnedFromTap;
+            state.comboTaps = (state.comboTaps ?? 0) + action.payload.comboTaps;
         },
         resetStats: (state) => {
             return initialState;
@@ -66,6 +77,6 @@ export const statsSlice = createSlice({
     },
 });
 
-export const { addBigEmojiTaps, addEmojisGained, addEmojisEarnedFromTap, addEffectEmojisCollected, addShinyEmojiTapped, setBankMilestone, updateTapStats, resetStats } = statsSlice.actions;
+export const { addBigEmojiTaps, addEmojisGained, addEmojisEarnedFromTap, addEffectEmojisCollected, addShinyEmojiTapped, setBankMilestone, setComboTaps, updateTapStats, resetStats } = statsSlice.actions;
 
 export default statsSlice.reducer;

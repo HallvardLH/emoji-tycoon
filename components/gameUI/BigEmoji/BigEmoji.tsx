@@ -342,7 +342,8 @@ function ShinyGlow() {
 function ComboMeter() {
     const tapBoost = useSelector((state: RootState) => state.bigEmoji.tapBoost);
     const { multiplier, isMax } = getComboProgress(tapBoost);
-    const maxMultiplier = getMaxComboMultiplier();
+    // Selected so a newly bought combo level shows straight away, not on the next tap
+    const maxMultiplier = useSelector(() => getMaxComboMultiplier());
     const idle = tapBoost === 0;
 
     // After an always-full ×1 segment: one segment per level (×2 up to the max), plus a 🔥 reserve: boost banked
@@ -350,6 +351,8 @@ function ComboMeter() {
     // BOOST_PER_MULTIPLIER boost wide, so the meter is the whole combo, 0 to cap.
     const segmentCount = maxMultiplier;
     const totalBoost = segmentCount * BOOST_PER_MULTIPLIER;
+    // Narrower segments once there are many, so the bar stays phone-width up to ×8 and beyond
+    const segmentWidth = segmentCount + 1 > 7 ? 15 : 20;
 
     // The combo updates every 100ms; glide between updates instead of jumping
     const fill = useRef(new Animated.Value(tapBoost / totalBoost)).current;
@@ -385,7 +388,7 @@ function ComboMeter() {
             <View style={styles.comboSegments}>
                 {/* ×1 is always yours, so the last full segment is always the multiplier you're getting */}
                 <View style={styles.comboSegmentColumn}>
-                    <View style={styles.comboSegment}>
+                    <View style={[styles.comboSegment, { width: segmentWidth }]}>
                         <View style={styles.comboSegmentFill} />
                     </View>
                     <GameText font="black" size={9} color={palette.sun} style={styles.comboSegmentLabel}>×1</GameText>
@@ -395,7 +398,7 @@ function ComboMeter() {
                     const lit = segment.isReserve ? isMax : multiplier >= segment.level;
                     return (
                         <View key={segment.label} style={styles.comboSegmentColumn}>
-                            <View style={styles.comboSegment}>
+                            <View style={[styles.comboSegment, { width: segmentWidth }]}>
                                 <Animated.View style={[
                                     styles.comboSegmentFill,
                                     segment.isReserve ? { backgroundColor: palette.pop } : null,
