@@ -8,6 +8,9 @@ import { formatNumber } from '../../../scripts/misc';
 import * as Haptics from 'expo-haptics';
 import { FlyingEmoji } from './FlyingEmoji';
 import { FlyingNumber } from './FlyingNumber';
+import Svg, { Defs, RadialGradient, Stop, Circle } from 'react-native-svg';
+import GameText from '../../generalUI/Text';
+import { palette, radii } from '../../misc/theme';
 // import { useFonts } from "expo-font";
 
 interface AnimatedEmoji {
@@ -146,13 +149,27 @@ export default function BigEmoji() {
 
 
     return (
-        <Pressable
-            onPress={() => {
-                onEmojiTap();
-                Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Rigid);
-            }}
-            style={styles.container}>
-            <View style={styles.container}>
+        <View style={styles.container}>
+            {/* Spotlight behind the Big Emoji */}
+            <Svg style={styles.spotlight} width={SPOTLIGHT} height={SPOTLIGHT} pointerEvents="none">
+                <Defs>
+                    <RadialGradient id="spotlight" cx="50%" cy="50%" r="50%">
+                        <Stop offset="0%" stopColor={palette.spotlight} stopOpacity="1" />
+                        <Stop offset="65%" stopColor={palette.spotlight} stopOpacity="0.35" />
+                        <Stop offset="100%" stopColor={palette.grape} stopOpacity="0" />
+                    </RadialGradient>
+                </Defs>
+                <Circle cx={SPOTLIGHT / 2} cy={SPOTLIGHT / 2} r={SPOTLIGHT / 2} fill="url(#spotlight)" />
+            </Svg>
+
+            <Pressable
+                accessibilityRole="button"
+                accessibilityLabel="Tap the Big Emoji"
+                onPress={() => {
+                    onEmojiTap();
+                    Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Rigid);
+                }}
+                style={styles.disc}>
                 {/* Static Emoji */}
                 <PulseAnimation maxSize={1.06} duration={4000}>
                     <Text style={styles.bigEmoji}>{staticEmoji}</Text>
@@ -175,20 +192,84 @@ export default function BigEmoji() {
                         yAnim={yAnimValue}
                     />
                 ))}
-            </View>
-        </Pressable>
+            </Pressable>
+
+            <ComboMeter />
+            <GameText font="bold" size={13} color={palette.lilac}>
+                +{formatNumber(emojisPerTap, 1)} per tap · keep tapping to build your combo
+            </GameText>
+        </View>
     );
 }
+
+/**
+ * Shows the hidden tap boost: every 10 boost adds ×1 to emojis per tap.
+ * The five segments fill up towards the next multiplier.
+ */
+function ComboMeter() {
+    const tapBoost = useSelector((state: RootState) => state.bigEmoji.tapBoost);
+    const multiplier = Math.floor(tapBoost / 10) + 1;
+    const filled = Math.floor((tapBoost % 10) / 2);
+    const idle = tapBoost === 0;
+
+    return (
+        <View style={[styles.combo, idle ? { opacity: 0.55 } : null]}>
+            <GameText size={16} color={palette.sun}>COMBO ×{multiplier}</GameText>
+            <View style={styles.comboSegments}>
+                {[0, 1, 2, 3, 4].map(i => (
+                    <View key={i} style={[styles.comboSegment, { backgroundColor: i < filled ? palette.sun : palette.glassLine }]} />
+                ))}
+            </View>
+        </View>
+    );
+}
+
+const SPOTLIGHT = 500;
+const DISC = 220;
 
 const styles = StyleSheet.create({
     container: {
         flex: 1,
         justifyContent: 'center',
         alignItems: 'center',
-        height: 100,
+        gap: 22,
+    },
+    spotlight: {
+        position: 'absolute',
+        alignSelf: 'center',
+        top: '50%',
+        marginTop: -SPOTLIGHT / 2 - 40,
+    },
+    disc: {
+        width: DISC,
+        height: DISC,
+        borderRadius: DISC / 2,
+        backgroundColor: palette.glassSoft,
+        borderWidth: 14,
+        borderColor: 'rgba(255,255,255,0.04)',
+        justifyContent: 'center',
+        alignItems: 'center',
     },
     bigEmoji: {
-        fontSize: Platform.OS == 'android' ? 150 : 200,
-        position: 'absolute',
+        fontSize: Platform.OS == 'android' ? 130 : 150,
+        lineHeight: Platform.OS == 'android' ? 150 : 175,
+    },
+    combo: {
+        flexDirection: 'row',
+        alignItems: 'center',
+        gap: 10,
+        paddingVertical: 8,
+        paddingHorizontal: 14,
+        borderRadius: radii.pill,
+        backgroundColor: palette.shade,
+    },
+    comboSegments: {
+        flexDirection: 'row',
+        gap: 4,
+    },
+    comboSegment: {
+        width: 16,
+        height: 8,
+        borderRadius: 3,
     },
 });

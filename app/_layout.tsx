@@ -6,21 +6,38 @@ import { View, StyleSheet } from "react-native";
 import store from "../scripts/redux/reduxStore";
 import { gameLoop } from "../scripts/game/gameLoop";
 import Header from "../components/header/Header";
+import { useFonts } from "expo-font";
+import { LilitaOne_400Regular } from "@expo-google-fonts/lilita-one";
+import { Nunito_700Bold, Nunito_700Bold_Italic, Nunito_800ExtraBold, Nunito_900Black } from "@expo-google-fonts/nunito";
+import { palette } from "../components/misc/theme";
 
 export default function RootLayout() {
+    const [fontsLoaded] = useFonts({
+        LilitaOne_400Regular,
+        Nunito_700Bold,
+        Nunito_700Bold_Italic,
+        Nunito_800ExtraBold,
+        Nunito_900Black,
+        "Digitalt": require("../assets/fonts/Digitalt.otf"),
+    });
+
     // Game loop
     useEffect(() => {
         const intervalId = setInterval(gameLoop, 100);
         return () => clearInterval(intervalId);
     }, []);
 
+    if (!fontsLoaded) {
+        return <View style={styles.container} />;
+    }
+
     return (
         <Provider store={store}>
             <View style={styles.container}>
-                <StatusBar style="auto" />
+                <StatusBar style="light" />
                 <Stack
                     screenOptions={{
-                        header: (props) => <Header {...props} />,
+                        header: () => <Header />,
                     }}
                 />
             </View>
@@ -31,5 +48,6 @@ export default function RootLayout() {
 const styles = StyleSheet.create({
     container: {
         flex: 1,
+        backgroundColor: palette.grape,
     },
 });

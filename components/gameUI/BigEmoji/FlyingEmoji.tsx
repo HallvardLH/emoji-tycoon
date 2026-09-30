@@ -9,6 +9,7 @@ interface FlyingEmojiProps {
 
 export const FlyingEmoji = React.memo(({ emoji, xAnim, yAnim }: FlyingEmojiProps) => (
     <Animated.Text
+        pointerEvents="none"
         style={[
             styles.bigEmoji,
             {
@@ -26,7 +27,9 @@ export const FlyingEmoji = React.memo(({ emoji, xAnim, yAnim }: FlyingEmojiProps
 
 const styles = StyleSheet.create({
     bigEmoji: {
-        fontSize: Platform.OS == "android" ? 150 : 200,
+        // Matches the Big Emoji so it looks like the same emoji flying off
+        fontSize: Platform.OS == "android" ? 130 : 150,
+        lineHeight: Platform.OS == "android" ? 150 : 175,
         position: 'absolute',
     },
 });

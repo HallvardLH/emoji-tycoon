@@ -11,12 +11,26 @@ import { getUpgradePrice } from "./upgradePrice";
  * Tiers 0 - 5 require 1, 10, 25, 50, 100 and 150 buildings,
  * after which each tier requires 50 more buildings than the last (200, 250, 300...)
  */
-function getBuildingUnlockRequirement(tier: number) {
+export function getBuildingUnlockRequirement(tier: number) {
     const earlyTiers = [1, 10, 25, 50, 100, 150];
     if (tier < earlyTiers.length) {
         return earlyTiers[tier];
     }
     return 150 + (tier - 5) * 50;
+}
+
+/**
+ * The building amount at which the building's next standard upgrade unlocks,
+ * or undefined if every standard upgrade for it is already unlocked or owned
+ */
+export function getNextUpgradeRequirement(buildingName: string) {
+    const { unlocked, owned } = store.getState().upgrades;
+    const nextTier = upgradeData
+        .filter(upgrade => upgrade.building === buildingName && upgrade.variant === "Standard building")
+        .filter(upgrade => !unlocked.includes(upgrade.id!) && !owned.includes(upgrade.id!))
+        .reduce((lowest, upgrade) => Math.min(lowest, upgrade.tier), Infinity);
+
+    return nextTier === Infinity ? undefined : getBuildingUnlockRequirement(nextTier);
 }
 
 /**

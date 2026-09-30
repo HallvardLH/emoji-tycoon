@@ -9,6 +9,7 @@ export default function Emojidex() {
     return (
         <ScreenView scrollView={false}>
             <ContentTab
+                initialIndex={2}
                 tabs={[
                     {
                         name: "Upgrades",

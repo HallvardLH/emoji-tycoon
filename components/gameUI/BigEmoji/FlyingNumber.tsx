@@ -1,5 +1,6 @@
 import { StyleSheet, Animated } from "react-native";
 import React from "react";
+import { fonts } from "../../misc/theme";
 
 interface FlyingNumberProps {
     number: string;
@@ -9,13 +10,14 @@ interface FlyingNumberProps {
 
 export const FlyingNumber = React.memo(({ number, xAnim, yAnim }: FlyingNumberProps) => (
     <Animated.Text
+        pointerEvents="none"
         style={[
             styles.number,
             {
                 transform: [{ translateY: yAnim }, { translateX: xAnim }],
                 opacity: yAnim.interpolate({
-                    inputRange: [0, 50, 100],
-                    outputRange: [1, 0.5, 0],
+                    inputRange: [-220, -110, 0],
+                    outputRange: [0, 0.6, 1],
                 }),
             },
         ]}
@@ -26,12 +28,12 @@ export const FlyingNumber = React.memo(({ number, xAnim, yAnim }: FlyingNumberPr
 
 const styles = StyleSheet.create({
     number: {
-        fontSize: 40,
-        fontFamily: "Digitalt",
-        color: '#FFD700', // Gold color for the number
+        fontSize: 26,
+        fontFamily: fonts.display,
+        color: "#FFFFFF",
         position: 'absolute',
-        textShadowColor: "rgba(0, 0, 0, 0.2)",
-        textShadowOffset: { width: 0, height: 2.5 },
+        textShadowColor: "rgba(0, 0, 0, 0.3)",
+        textShadowOffset: { width: 0, height: 2 },
         textShadowRadius: 4
     },
 });

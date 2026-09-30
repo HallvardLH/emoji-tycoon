@@ -4,7 +4,7 @@ import { View } from "react-native";
 
 export default function Collection() {
     return (
-        <View style={{ width: "100%" }}>
+        <View style={{ flex: 1, width: "100%" }}>
             <CollectionList />
         </View>
     )

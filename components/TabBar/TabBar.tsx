@@ -1,9 +1,9 @@
-import { View, StyleSheet, Platform } from "react-native";
+import { View, StyleSheet } from "react-native";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
 import TabButton from "./TabButton";
 import { useDispatch } from "react-redux";
 import { setActiveTab } from "../../scripts/redux/tabsSlice";
-import { componentColors, colors } from "../misc/Colors";
+import { palette } from "../misc/theme";
 import { useSelector } from 'react-redux';
 import { RootState } from '../../scripts/redux/reduxStore';
 import store from '../../scripts/redux/reduxStore';
@@ -18,28 +18,20 @@ import { Tab } from "../../scripts/redux/tabsSlice";
 type TabData = {
     title: string;
     icon: string;
-    background: string;
-    highlight: string;
 };
 
 const tabData: Record<string, TabData> = {
     index: {
         title: "Emoji",
         icon: "😀",
-        background: componentColors.tabBar.home.background,
-        highlight: componentColors.tabBar.home.highlight,
     },
     shop: {
         title: "Shop",
         icon: "🛒",
-        background: colors.yellow.medium,
-        highlight: colors.yellow.highlight,
     },
     emojidex: {
         title: "Emojidex",
         icon: "📖",
-        background: componentColors.tabBar.daily.background,
-        highlight: componentColors.tabBar.daily.highlight,
     },
 };
 
@@ -51,11 +43,11 @@ export default function TabBar({ state, navigation }: BottomTabBarProps) {
     const { unlockedBuildingsNotification } = useSelector((state: RootState) => state.buildings);
 
     return (
-        <View style={[styles.container, { paddingBottom: Platform.OS === 'android' ? 10 : insets.bottom }]}>
+        <View style={[styles.container, { paddingBottom: Math.max(insets.bottom, 14) }]} accessibilityRole="tablist">
             {state.routes.map((route, index) => {
                 const isFocused = state.index === index;
                 if (!tabData.hasOwnProperty(route.name)) return
-                const { title, icon, background, highlight } = tabData[route.name];
+                const { title, icon } = tabData[route.name];
 
                 const onPress = () => {
                     const event = navigation.emit({
@@ -92,8 +84,6 @@ export default function TabBar({ state, navigation }: BottomTabBarProps) {
                         onPress={onPress}
                         label={title}
                         icon={icon}
-                        background={background}
-                        highlight={highlight}
                         notifications={notificationCount}
                         active={isFocused}
                     />
@@ -105,11 +95,11 @@ export default function TabBar({ state, navigation }: BottomTabBarProps) {
 
 const styles = StyleSheet.create({
     container: {
-        backgroundColor: "#5842c4",
+        backgroundColor: palette.night,
         flexDirection: "row",
         justifyContent: "space-around",
-        borderTopWidth: 1,
-        borderTopColor: "#523fb3",
-        paddingTop: Platform.OS === 'android' ? 15 : 5,
+        alignItems: "flex-end",
+        paddingTop: 10,
+        paddingHorizontal: 20,
     },
 });

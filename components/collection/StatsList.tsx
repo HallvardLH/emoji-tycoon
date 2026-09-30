@@ -3,45 +3,61 @@ import Text from "../generalUI/Text";
 import { useSelector } from 'react-redux';
 import { RootState } from "../../scripts/redux/reduxStore";
 import { formatNumber } from "../../scripts/misc";
+import { palette, radii } from "../misc/theme";
 
 export default function StatsList() {
     const { bigEmojiTaps, emojisEarnedFromTap, effectEmojisCollected, emojisGained } = useSelector((state: RootState) => state.stats);
     const { funValue } = useSelector((state: RootState) => state.values);
+
+    const rows: [string, string, string][] = [
+        ["✍️", "Total emojis drawn", formatNumber(emojisGained, 0)],
+        ["👆", "Emoji taps", formatNumber(bigEmojiTaps)],
+        ["💥", "Emojis earned from tapping", formatNumber(emojisEarnedFromTap)],
+        ["✨", "Magical emojis tapped", formatNumber(effectEmojisCollected)],
+    ];
+    if (funValue == 100) rows.push(["😭", "Fun value", formatNumber(funValue)]);
+
     return (
-        <View style={styles.container}>
-            <View style={styles.statContainer}>
-                <Text>Total emojis drawn</Text>
-                <Text>{formatNumber(emojisGained, 0)}</Text>
-            </View>
-            <View style={styles.statContainer}>
-                <Text>Emoji taps</Text>
-                <Text>{formatNumber(bigEmojiTaps)}</Text>
-            </View>
-            <View style={styles.statContainer}>
-                <Text>Emojis earned from tapping</Text>
-                <Text>{formatNumber(emojisEarnedFromTap)}</Text>
-            </View>
-            <View style={styles.statContainer}>
-                <Text>Magical emojis tapped</Text>
-                <Text>{formatNumber(effectEmojisCollected)}</Text>
-            </View>
-            {funValue == 100 && (
-                <View style={styles.statContainer}>
-                    <Text>Fun value</Text>
-                    <Text>{formatNumber(funValue)}😭</Text>
+        <View style={styles.card}>
+            {rows.map(([icon, label, value], index) => (
+                <View key={label} style={[styles.row, index > 0 ? styles.divider : null]}>
+                    <View style={styles.icon}><Text size={18} style={{ lineHeight: 24 }}>{icon}</Text></View>
+                    <Text font="bold" size={14} color={palette.muted} style={styles.label}>{label}</Text>
+                    <Text size={18} color={palette.ink}>{value}</Text>
                 </View>
-            )}
+            ))}
         </View>
     )
 }
 
 const styles = StyleSheet.create({
-    container: {
-        marginHorizontal: 26,
-        gap: 10,
+    card: {
+        marginHorizontal: 20,
+        marginTop: 14,
+        paddingHorizontal: 16,
+        paddingVertical: 4,
+        borderRadius: radii.xl,
+        backgroundColor: palette.paper,
     },
-    statContainer: {
+    row: {
         flexDirection: "row",
-        justifyContent: "space-between"
-    }
+        alignItems: "center",
+        gap: 12,
+        paddingVertical: 12,
+    },
+    divider: {
+        borderTopWidth: 1,
+        borderTopColor: palette.track,
+    },
+    icon: {
+        width: 36,
+        height: 36,
+        borderRadius: 12,
+        backgroundColor: palette.tile,
+        alignItems: "center",
+        justifyContent: "center",
+    },
+    label: {
+        flex: 1,
+    },
 })

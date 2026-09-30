@@ -115,12 +115,14 @@ export function selectRandomEmoji() {
     for (const category of emojiCategories) {
         // Check if the random number falls within the current category's weight
         if (randomNum < emojiWeights[category]) {
+            const allEmojis = emojiData[category as keyof typeof emojiData];
             // Filter out effect emojis, as these are to be reserved
-            const emojis = emojiData[category as keyof typeof emojiData].filter(emoji => !effectEmojis.includes(emoji));
+            const emojis = allEmojis.filter(emoji => !effectEmojis.includes(emoji));
             // Randomly select an emoji from the chosen category
-            const randomEmojiIndex = Math.floor(Math.random() * emojis.length);
+            const emoji = emojis[Math.floor(Math.random() * emojis.length)];
 
-            return { emoji: emojis[randomEmojiIndex], index: randomEmojiIndex, category: category };
+            // The index is into the full category list, which is what the collection is keyed by
+            return { emoji: emoji, index: allEmojis.indexOf(emoji), category: category };
         }
         randomNum -= emojiWeights[category];  // Decrease randomNum by the current weight
     }

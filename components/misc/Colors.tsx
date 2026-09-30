@@ -53,8 +53,8 @@ export const componentColors = {
 
     // For app backgorund gradient, starts with center color
     mainBg: {
-        start: "#A559FE",
-        end: "#7053FD",
+        start: "#22154A",
+        end: "#22154A",
         // start: colors.blue.light,
         // end: "#0986b8",
     },

@@ -1,5 +1,8 @@
 import React, { useEffect, useRef } from "react";
-import { Animated, Pressable } from "react-native";
+import { Animated, Pressable, View, StyleSheet } from "react-native";
+import Svg, { Defs, RadialGradient, Stop, Circle } from "react-native-svg";
+import Text from "../generalUI/Text";
+import { palette } from "../misc/theme";
 import Emoji from "./Emoji";
 import { useSelector } from 'react-redux';
 import { RootState } from '../../scripts/redux/reduxStore';
@@ -55,11 +58,46 @@ function FadeInOutEffect({ effect }: FadeInOutEffectProps) {
                 opacity: fadeAnim, // Bind opacity to animated value
             }}
         >
-            <PulseAnimation maxSize={1.1} duration={2000}>
-                <Pressable onPress={() => tapEffect(effect.instanceId!)}>
-                    <Emoji icon={effect.emoji} size={70} />
-                </Pressable>
-            </PulseAnimation>
+            <Pressable
+                accessibilityRole="button"
+                accessibilityLabel={`Collect ${effect.title}`}
+                onPress={() => tapEffect(effect.instanceId!)}
+                style={styles.button}
+            >
+                <PulseAnimation maxSize={1.1} duration={2000}>
+                    <View style={styles.glowWrap}>
+                        <Svg style={StyleSheet.absoluteFill} width={GLOW} height={GLOW} pointerEvents="none">
+                            <Defs>
+                                <RadialGradient id="effectGlow" cx="50%" cy="50%" r="50%">
+                                    <Stop offset="0%" stopColor={palette.sun} stopOpacity="0.5" />
+                                    <Stop offset="100%" stopColor={palette.sun} stopOpacity="0" />
+                                </RadialGradient>
+                            </Defs>
+                            <Circle cx={GLOW / 2} cy={GLOW / 2} r={GLOW / 2} fill="url(#effectGlow)" />
+                        </Svg>
+                        <Emoji icon={effect.emoji} size={52} />
+                    </View>
+                </PulseAnimation>
+                <Text font="black" size={12} style={styles.label}>TAP ME</Text>
+            </Pressable>
         </Animated.View>
     );
 }
+
+const GLOW = 84;
+
+const styles = StyleSheet.create({
+    button: {
+        alignItems: "center",
+        gap: 2,
+    },
+    glowWrap: {
+        width: GLOW,
+        height: GLOW,
+        alignItems: "center",
+        justifyContent: "center",
+    },
+    label: {
+        letterSpacing: 0.8,
+    },
+})

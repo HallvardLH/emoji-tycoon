@@ -1,77 +1,84 @@
-import { View, Pressable, StyleSheet, Image, Text as RNText } from "react-native";
+import { View, Pressable, StyleSheet } from "react-native";
 import Text from "../generalUI/Text";
-import { componentColors } from "../misc/Colors";
-import Emoji from "../gameUI/Emoji";
+import Badge from "../generalUI/Badge";
+import { palette } from "../misc/theme";
 
 interface TabButtonProps {
     label: string;
-    labelColor?: string;
-    background: string;
-    highlight: string;
     onPress?: () => void;
     icon: string;
     notifications?: number;
     active?: boolean;
 }
 
-export default function TabButton({ label, labelColor, background, highlight, onPress, icon, notifications, active }: TabButtonProps) {
+export default function TabButton({ label, onPress, icon, notifications, active }: TabButtonProps) {
     return (
-        <Pressable hitSlop={{ top: 30, bottom: 30, left: 30, right: 30 }} style={[!active ? styles.inactive : null, styles.container]} onPress={onPress}>
-            <Emoji opacity={active ? 1 : 1} icon={icon}></Emoji>
-            {(typeof notifications === 'number' && notifications > 0) && (
-                <View style={styles.notificationContainer}>
-                    <View style={[styles.notification3DEffect, { width: notifications < 100 ? 26 : 34 }]} />
-                    <View style={[styles.notification, { width: notifications < 100 ? 26 : 34 }]}>
-                        <Text style={{ position: "absolute" }} size={13}>{notifications < 100 ? notifications : "+99"}</Text>
+        <Pressable
+            onPress={onPress}
+            accessibilityRole="tab"
+            accessibilityState={{ selected: active }}
+            accessibilityLabel={notifications ? `${label}, ${notifications} new` : label}
+            style={styles.container}
+        >
+            {active ? (
+                // The active tab rises out of the bar on a sun disc
+                <View style={styles.raised}>
+                    <View style={styles.raisedLedge} />
+                    <View style={styles.raisedFace}>
+                        <Text size={30} style={styles.emoji}>{icon}</Text>
                     </View>
                 </View>
+            ) : (
+                <Text size={28} style={styles.emoji}>{icon}</Text>
             )}
-
-            {active && (
-                <View style={styles.activeDot} />
-            )}
-            <Text>{label}</Text>
+            <Text font="black" size={12} color={active ? "#FFFFFF" : palette.lilac} style={styles.label}>{label.toUpperCase()}</Text>
+            {!active && notifications ? (
+                <Badge value={notifications} ringColor={palette.night} style={styles.badge} />
+            ) : null}
         </Pressable>
     )
 }
 
+const RAISED = 58;
+
 const styles = StyleSheet.create({
     container: {
+        width: 84,
+        minHeight: 56,
         alignItems: "center",
-        gap: 2,
+        justifyContent: "flex-end",
+        gap: 4,
     },
-    activeDot: {
-        height: 6,
-        width: 6,
-        borderRadius: "100%",
-        backgroundColor: "#a458db"
+    emoji: {
+        lineHeight: 34,
     },
-    inactive: {
-        top: 8,
+    label: {
+        letterSpacing: 0.7,
     },
-    notificationContainer: {
+    raised: {
+        width: RAISED,
+        height: RAISED + 5,
+        marginTop: -30,
+    },
+    raisedLedge: {
         position: "absolute",
-        top: -8,
-        right: -10,
+        top: 5,
+        width: RAISED,
+        height: RAISED,
+        borderRadius: RAISED / 2,
+        backgroundColor: palette.sunLedge,
     },
-
-    notification: {
-
-        padding: 4,
-        height: 26,
-        width: 26,
+    raisedFace: {
+        width: RAISED,
+        height: RAISED,
+        borderRadius: RAISED / 2,
+        backgroundColor: palette.sun,
+        alignItems: "center",
         justifyContent: "center",
-        alignItems: "center",
-        borderRadius: 100,
-        backgroundColor: "#FF335F",
     },
-
-    notification3DEffect: {
+    badge: {
         position: "absolute",
-        backgroundColor: "#D40633",
-        top: 1.3,
-        height: 26,
-        width: 26,
-        borderRadius: 100,
-    }
+        top: -6,
+        right: 12,
+    },
 })

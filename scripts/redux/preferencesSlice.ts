@@ -4,11 +4,14 @@ import { buildingData } from '../game/buildings/buildingData';
 
 export type upgradeFilters = BuildingNames | "all";
 
+/** How many buildings the buy button buys. "max" buys as many as you can afford. */
+export type BulkBuyAmount = 1 | 10 | 100 | "max";
+
 interface PreferencesState {
     /** 
     * @property The amount of buildings that are bought by clicking the buy button
     */
-    bulkBuy: 1 | 10 | 100,
+    bulkBuy: BulkBuyAmount,
     /** 
     * @property Whether to show extra details, namely in upgrade list items
     */
@@ -32,7 +35,7 @@ export const preferencesSlice = createSlice({
     name: "preferences",
     initialState,
     reducers: {
-        updateBulkBuy: (state, action: PayloadAction<1 | 10 | 100>) => {
+        updateBulkBuy: (state, action: PayloadAction<BulkBuyAmount>) => {
             state.bulkBuy = action.payload;
         },
         updateShowDetails: (state, action: PayloadAction<boolean>) => {

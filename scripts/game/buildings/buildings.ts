@@ -7,6 +7,7 @@ import { updateBuildingValue } from './shorthands';
 import { canBuyBuilding } from './checks';
 import { calculateEmojisPerSecond, calculateEpt } from '../calculations';
 import * as Haptics from "expo-haptics"
+import { BulkBuyAmount } from '../../redux/preferencesSlice';
 
 type PluralNames = {
     [key: string]: string;
@@ -57,14 +58,35 @@ export const buildingEmojis: buildingName = {
 };
 
 
+const PRICE_GROWTH = 1.175;
+
+/**
+ * Turns a bulk buy setting into a number of buildings.
+ *
+ * "max" is as many as the bank can afford (at least 1, so a price can still be shown).
+ * Uses the closed form of the geometric price series; buyBuilding re-checks the exact rounded prices.
+ */
+export function resolveBuyAmount(buildingId: number, bulkBuy: BulkBuyAmount = store.getState().preferences.bulkBuy): number {
+    if (bulkBuy !== "max") return bulkBuy;
+
+    const building = getBuildingById(buildingId);
+    const data = buildingData[buildingId];
+    const emojis = store.getState().values.emojis;
+    const nextPrice = data.basePrice * Math.pow(PRICE_GROWTH, building.amount);
+
+    const affordable = Math.floor(Math.log(emojis * (PRICE_GROWTH - 1) / nextPrice + 1) / Math.log(PRICE_GROWTH));
+    return Math.max(1, affordable);
+}
+
 /**
  * Buys a building, subtracting the price from bank.
  *
  * @param buildingId the ID of the building.
- * @param buyAmount the amount of buildings that will be bought (default is 1).
+ * @param bulkBuy the amount of buildings that will be bought (defaults to the bulk buy preference).
  */
-export const buyBuilding = (buildingId: number, buyAmount: number = store.getState().preferences.bulkBuy) => {
+export const buyBuilding = (buildingId: number, bulkBuy: BulkBuyAmount = store.getState().preferences.bulkBuy) => {
     const state = store.getState();
+    const buyAmount = resolveBuyAmount(buildingId, bulkBuy);
     let building = getBuildingById(buildingId);
 
     if (!building || building.amount === undefined) {
@@ -141,7 +163,8 @@ const calculateAffordableBuildings = (building: any, data: any, currentEmojis: n
 };
 
 
-export function calculateBuildingPrice(buildingId: number, buyAmount: number = store.getState().preferences.bulkBuy) {
+export function calculateBuildingPrice(buildingId: number, bulkBuy: BulkBuyAmount = store.getState().preferences.bulkBuy) {
+    const buyAmount = resolveBuyAmount(buildingId, bulkBuy);
     const building = getBuildingById(buildingId);
     const data = buildingData[building.buildingId];
     let currentAmount = building.amount;

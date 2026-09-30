@@ -1,42 +1,43 @@
-import { StyleSheet, Platform, TouchableOpacity, View } from "react-native";
-import Text from "../generalUI/Text";
-import EmojisAmount from "../gameUI/EmojisAmount";
-import EpsAmount from "../gameUI/EpsAmount";
+import { StyleSheet, View } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
-import { componentColors } from "../misc/Colors";
+import { useSelector } from "react-redux";
+import { usePathname } from "expo-router";
+import Text from "../generalUI/Text";
+import AnimatedNumber from "../gameUI/AnimatedNumber";
 import HomeNavigation from "../drawer/HomeNavigation";
+import { RootState } from "../../scripts/redux/reduxStore";
+import { formatNumber } from "../../scripts/misc";
+import { palette, radii } from "../misc/theme";
 
-type HeaderProps = {
-    navigation: any;
-    route: { name: string };
-    options: { title?: string };
-    back?: { title?: string; href?: string };
-};
+export default function Header() {
+    const pathname = usePathname();
+    const emojis = useSelector((state: RootState) => state.values.emojis);
+    const emojisPerSecond = useSelector((state: RootState) => state.values.emojisPerSecond);
 
-export default function Header({ navigation, route, options, back }: HeaderProps) {
+    const isHome = pathname === "/";
+    const isEmojidex = pathname.startsWith("/emojidex");
+
     return (
-        <SafeAreaView style={styles.container}>
-            <View style={styles.cornerSection}>
-                {back ? (
-                    <TouchableOpacity onPress={() => navigation.goBack()} style={styles.backButton}>
-                        <Text style={styles.backText}>←</Text>
-                    </TouchableOpacity>
-                ) : null}
-            </View>
-            <View style={styles.textContainer}>
-                <Text
-                    style={{ fontSize: Platform.OS === "ios" ? 18 : 15 }}>
-                    <EmojisAmount fontSize={Platform.OS === "ios" ? 27 : 23} /> Emojis
-                </Text>
-                <EpsAmount fontSize={Platform.OS === "ios" ? 18 : 15} />
-            </View>
-            <View style={styles.cornerSection}>
-                {/* {route.name == "Emoji" ? ( */}
-                <HomeNavigation />
-                {/* ) : (
-                    <CircularButton variant="back" onPress={onPress} />
-                )} */}
-            </View>
+        <SafeAreaView edges={["top"]} style={styles.container}>
+            {isHome ? (
+                // Home: the bank is the hero
+                <View style={styles.bigCounter}>
+                    <Text font="black" size={12} color={palette.lilac} style={styles.caps}>EMOJIS</Text>
+                    <Text size={40} style={{ lineHeight: 44 }}><AnimatedNumber value={emojis} /></Text>
+                    <View style={styles.epsPill}>
+                        <Text font="bold" size={14} color={palette.sun}>+{formatNumber(emojisPerSecond, 1)} / sec</Text>
+                    </View>
+                </View>
+            ) : isEmojidex ? (
+                <Text size={30} style={styles.title}>Emojidex</Text>
+            ) : (
+                // Shop: compact counter so the list gets the room
+                <View style={styles.compactCounter}>
+                    <Text size={28}><AnimatedNumber value={emojis} /></Text>
+                    <Text font="bold" size={13} color={palette.sun}>+{formatNumber(emojisPerSecond, 1)}/s</Text>
+                </View>
+            )}
+            <HomeNavigation />
         </SafeAreaView>
     )
 }
@@ -45,25 +46,34 @@ const styles = StyleSheet.create({
     container: {
         flexDirection: "row",
         justifyContent: "space-between",
-        paddingTop: 20,
-        paddingHorizontal: 10,
-        height: Platform.OS === "ios" ? 125 : 100,
-        backgroundColor: componentColors.mainBg.end,
+        alignItems: "flex-start",
+        paddingTop: 18,
+        paddingHorizontal: 20,
+        paddingBottom: 4,
+        backgroundColor: palette.grape,
     },
-    backButton: {
-        marginRight: 16,
+    bigCounter: {
+        gap: 4,
     },
-    backText: {
-        color: 'white',
-        fontSize: 20,
+    caps: {
+        letterSpacing: 1.4,
     },
-    textContainer: {
-        alignItems: "center",
-        textAlign: "center"
+    epsPill: {
+        alignSelf: "flex-start",
+        marginTop: 2,
+        paddingVertical: 5,
+        paddingHorizontal: 12,
+        borderRadius: radii.pill,
+        backgroundColor: palette.glass,
     },
-    cornerSection: {
-        maxWidth: 50,
-        minWidth: 50,
-        alignItems: "center"
-    }
+    compactCounter: {
+        flexDirection: "row",
+        alignItems: "baseline",
+        gap: 10,
+        minHeight: 44,
+        paddingTop: 4,
+    },
+    title: {
+        lineHeight: 44,
+    },
 })

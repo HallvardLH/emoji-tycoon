@@ -1,7 +1,6 @@
 import React, { ReactNode } from "react";
 import { Text as RNText, StyleProp, TextStyle, StyleSheet, LayoutChangeEvent } from "react-native";
-import { componentColors } from "../misc/Colors";
-import { useFonts } from "expo-font";
+import { fonts, palette } from "../misc/theme";
 
 interface TextProps {
     children?: ReactNode;
@@ -10,33 +9,27 @@ interface TextProps {
     shadowColor?: string;
     size?: number;
     color?: string;
+    /** display = Lilita One (numbers, titles), body/bold/black/italic = Nunito */
+    font?: keyof typeof fonts;
     defaultLineHeight?: boolean;
     onLayout?: (event: LayoutChangeEvent) => void;
     numberOfLines?: number;
 }
 
+// Fonts are loaded once in app/_layout.tsx before anything renders
 export default function Text(props: TextProps) {
-    const { children, style, shadow = true, shadowColor, size = 18, color = "white", defaultLineHeight = false, onLayout, ...rest } = props;
-
-    const [fontsLoaded] = useFonts({
-        "Digitalt": require("../../assets/fonts/Digitalt.otf"),
-    });
-
-    if (!fontsLoaded) {
-        return null;
-    }
+    const { children, style, shadow = false, shadowColor, size = 18, color = palette.paper, font = "display", defaultLineHeight, onLayout, ...rest } = props;
 
     return (
         <RNText
-            // textBreakStrategy="highQuality"
             onLayout={onLayout}
             style={[
                 textStyles.text,
+                { fontFamily: fonts[font] },
                 shadow ? textStyles.shadow : null,
                 shadowColor ? { textShadowColor: shadowColor } : null,
                 { fontSize: size },
                 { color: color },
-                defaultLineHeight ? null : { lineHeight: 22 },
                 style,
             ]}
             {...rest}
@@ -48,15 +41,14 @@ export default function Text(props: TextProps) {
 
 const textStyles = StyleSheet.create({
     text: {
-        fontFamily: "Digitalt",
-        letterSpacing: 1,
-        color: componentColors.text.default,
+        fontFamily: fonts.display,
+        color: palette.paper,
         fontSize: 18,
     },
 
     shadow: {
-        textShadowColor: "rgba(0, 0, 0, 0.2)",
-        textShadowOffset: { width: 0, height: 2.5 },
+        textShadowColor: "rgba(0, 0, 0, 0.25)",
+        textShadowOffset: { width: 0, height: 2 },
         textShadowRadius: 4
     }
 })
