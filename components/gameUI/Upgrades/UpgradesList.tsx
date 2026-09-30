@@ -99,7 +99,7 @@ export default function UpgradesList() {
 
     return (
         <ScrollView contentContainerStyle={styles.content}>
-            <ScrollView horizontal showsHorizontalScrollIndicator={false} contentContainerStyle={styles.filters}>
+            <View style={styles.filters}>
                 <FilterChip label="All" active={activeFilter === "all"} onPress={() => setFilter("all")} />
                 {filterBuildings.map(name => (
                     <FilterChip
@@ -110,7 +110,7 @@ export default function UpgradesList() {
                         onPress={() => setFilter(name)}
                     />
                 ))}
-            </ScrollView>
+            </View>
 
             {selected && (
                 <View style={styles.detail}>
@@ -219,6 +219,8 @@ const styles = StyleSheet.create({
         paddingHorizontal: 40,
     },
     filters: {
+        flexDirection: "row",
+        flexWrap: "wrap",
         gap: 6,
     },
     filterChip: {

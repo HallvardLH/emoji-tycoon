@@ -10,6 +10,7 @@ import { FlyingEmoji } from './FlyingEmoji';
 import { FlyingNumber } from './FlyingNumber';
 import Svg, { Defs, RadialGradient, Stop, Circle } from 'react-native-svg';
 import GameText from '../../generalUI/Text';
+import { getComboProgress } from '../../../scripts/game/tapBoost';
 import { palette, radii } from '../../misc/theme';
 // import { useFonts } from "expo-font";
 
@@ -208,17 +209,22 @@ export default function BigEmoji() {
  */
 function ComboMeter() {
     const tapBoost = useSelector((state: RootState) => state.bigEmoji.tapBoost);
-    const multiplier = Math.floor(tapBoost / 10) + 1;
-    const filled = Math.floor((tapBoost % 10) / 2);
+    const { multiplier, progress, isMax } = getComboProgress(tapBoost);
     const idle = tapBoost === 0;
 
     return (
         <View style={[styles.combo, idle ? { opacity: 0.55 } : null]}>
-            <GameText size={16} color={palette.sun}>COMBO ×{multiplier}</GameText>
+            <GameText size={16} color={palette.sun}>{isMax ? `MAX COMBO ×${multiplier}` : `COMBO ×${multiplier}`}</GameText>
+            {/* Five segments that fill smoothly towards the next multiplier */}
             <View style={styles.comboSegments}>
-                {[0, 1, 2, 3, 4].map(i => (
-                    <View key={i} style={[styles.comboSegment, { backgroundColor: i < filled ? palette.sun : palette.glassLine }]} />
-                ))}
+                {[0, 1, 2, 3, 4].map(i => {
+                    const fill = Math.max(0, Math.min(1, progress * 5 - i));
+                    return (
+                        <View key={i} style={styles.comboSegment}>
+                            <View style={[styles.comboSegmentFill, { width: `${fill * 100}%` }]} />
+                        </View>
+                    );
+                })}
             </View>
         </View>
     );
@@ -271,5 +277,11 @@ const styles = StyleSheet.create({
         width: 16,
         height: 8,
         borderRadius: 3,
+        backgroundColor: palette.glassLine,
+        overflow: 'hidden',
+    },
+    comboSegmentFill: {
+        height: 8,
+        backgroundColor: palette.sun,
     },
 });

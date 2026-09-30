@@ -1,5 +1,5 @@
 import { useMemo, useState } from "react";
-import { View, FlatList, ScrollView, Pressable, StyleSheet } from "react-native";
+import { View, FlatList, Pressable, StyleSheet } from "react-native";
 import { useSelector } from "react-redux";
 import Text from "../generalUI/Text";
 import { RootState } from "../../scripts/redux/reduxStore";
@@ -69,7 +69,7 @@ export default function CollectionList() {
                 </Text>
             </View>
 
-            <ScrollView horizontal showsHorizontalScrollIndicator={false} contentContainerStyle={styles.chips}>
+            <View style={styles.chips}>
                 {categories.map(c => {
                     const selected = c.name === active.name;
                     const info = categoryInfo[c.name];
@@ -88,7 +88,7 @@ export default function CollectionList() {
                         </Pressable>
                     );
                 })}
-            </ScrollView>
+            </View>
         </View>
     );
 
@@ -162,6 +162,8 @@ const styles = StyleSheet.create({
         backgroundColor: palette.violet,
     },
     chips: {
+        flexDirection: "row",
+        flexWrap: "wrap",
         gap: 8,
     },
     chip: {
