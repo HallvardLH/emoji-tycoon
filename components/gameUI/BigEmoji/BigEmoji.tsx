@@ -337,7 +337,7 @@ function ShinyGlow() {
 
 /**
  * Shows the hidden tap boost: every 10 boost adds ×1 to emojis per tap.
- * The five segments fill up towards the next multiplier.
+ * One segment per combo level; the one filling is the level you're on.
  */
 function ComboMeter() {
     const tapBoost = useSelector((state: RootState) => state.bigEmoji.tapBoost);
@@ -346,13 +346,14 @@ function ComboMeter() {
     const maxMultiplier = useSelector(() => getMaxComboMultiplier());
     const idle = tapBoost === 0;
 
-    // After an always-full ×1 segment: one segment per level (×2 up to the max), plus a 🔥 reserve: boost banked
-    // above max, which is how long you can keep max combo going. Each segment is
-    // BOOST_PER_MULTIPLIER boost wide, so the meter is the whole combo, 0 to cap.
+    // One segment per level, ×1 up to the max. The segment filling is the level you're on:
+    // ×1 fills as you start tapping, then ×2 while you're at ×2, and so on. The top
+    // segment (pink) is the stretch above the max threshold, i.e. how long you can
+    // keep max combo going. Each segment is BOOST_PER_MULTIPLIER boost wide.
     const segmentCount = maxMultiplier;
     const totalBoost = segmentCount * BOOST_PER_MULTIPLIER;
     // Narrower segments once there are many, so the bar stays phone-width up to ×8 and beyond
-    const segmentWidth = segmentCount + 1 > 7 ? 15 : 20;
+    const segmentWidth = segmentCount > 7 ? 15 : 20;
 
     // The combo updates every 100ms; glide between updates instead of jumping
     const fill = useRef(new Animated.Value(tapBoost / totalBoost)).current;
@@ -366,12 +367,11 @@ function ComboMeter() {
     }, [tapBoost, totalBoost]);
 
     const segments = useMemo(() => Array.from({ length: segmentCount }, (_, i) => {
-        const isReserve = i === segmentCount - 1;
         return {
-            label: isReserve ? "🔥" : `×${i + 2}`,
-            // The level this segment unlocks once full
-            level: i + 2,
-            isReserve,
+            label: `×${i + 1}`,
+            // The level you're at while this segment fills
+            level: i + 1,
+            isTop: i === segmentCount - 1,
             fillStyle: {
                 transform: [{
                     scaleX: fill.interpolate({ inputRange: [i / segmentCount, (i + 1) / segmentCount], outputRange: [0, 1], extrapolate: "clamp" }),
@@ -386,29 +386,22 @@ function ComboMeter() {
             accessibilityLabel={`Combo times ${multiplier}${isMax ? ", max" : ""}`}
         >
             <View style={styles.comboSegments}>
-                {/* ×1 is always yours, so the last full segment is always the multiplier you're getting */}
-                <View style={styles.comboSegmentColumn}>
-                    <View style={[styles.comboSegment, { width: segmentWidth }]}>
-                        <View style={styles.comboSegmentFill} />
-                    </View>
-                    <GameText font="black" size={9} color={palette.sun} style={styles.comboSegmentLabel}>×1</GameText>
-                </View>
                 {segments.map(segment => {
-                    // Reached levels light up their label; the reserve lights while at max
-                    const lit = segment.isReserve ? isMax : multiplier >= segment.level;
+                    // Levels you're at or past light up; nothing is lit before you start tapping
+                    const lit = !idle && multiplier >= segment.level;
                     return (
                         <View key={segment.label} style={styles.comboSegmentColumn}>
                             <View style={[styles.comboSegment, { width: segmentWidth }]}>
                                 <Animated.View style={[
                                     styles.comboSegmentFill,
-                                    segment.isReserve ? { backgroundColor: palette.pop } : null,
+                                    segment.isTop ? { backgroundColor: palette.pop } : null,
                                     segment.fillStyle,
                                 ]} />
                             </View>
                             <GameText
                                 font="black"
                                 size={9}
-                                color={lit ? (segment.isReserve ? palette.pop : palette.sun) : palette.lilac}
+                                color={lit ? (segment.isTop ? palette.pop : palette.sun) : palette.lilac}
                                 style={styles.comboSegmentLabel}
                             >
                                 {segment.label}
