@@ -79,20 +79,23 @@ export function createEffect() {
 
     } while (chosenEffect.id === 101);
 
-    // If fun value is 1 or 2, all effects emojis are replaced with cookie
+    // Fun value disguises for the effect emojis
+    // (kept on this effect only, so effectData itself is never changed)
+    let emoji = chosenEffect.emoji;
+    // 1 - 2: all effects emojis are replaced with cookie
     if (howFun(1, 2)) {
-        if (chosenEffect.quality === "good") {
-            chosenEffect.emoji = "🍪";
-        } else {
-            // Bad grandma
-            chosenEffect.emoji = "👵";
-        }
+        // Bad grandma
+        emoji = chosenEffect.quality === "good" ? "🍪" : "👵";
+    }
+    // 99: 99 red balloons, and a pin for the bad ones
+    if (howFun(99)) {
+        emoji = chosenEffect.quality === "good" ? "🎈" : "📌";
     }
 
     const effect: Effect = {
         title: chosenEffect.title,
         description: chosenEffect.description,
-        emoji: chosenEffect.emoji,
+        emoji: emoji,
         eptMult: chosenEffect.eptMult,
         eptAdd: chosenEffect.eptAdd,
         epsMult: chosenEffect.epsMult,

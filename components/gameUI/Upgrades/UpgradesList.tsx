@@ -14,6 +14,7 @@ import { formatNumber } from '../../../scripts/misc';
 import Text from '../../generalUI/Text';
 import ChunkyButton from '../../generalUI/ChunkyButton';
 import { useBank, timeToAfford } from '../useBank';
+import { howFun } from '../../../scripts/game/shorthands';
 import { palette, radii } from '../../misc/theme';
 
 const BIG_EMOJI = "Big emoji";
@@ -83,6 +84,9 @@ export default function UpgradesList() {
         if (alienTaps.current === 5) store.dispatch(unlockUpgrade(899));
     };
 
+    // Fun value 77: prices come with flying money
+    const money = howFun(77) ? "💸 " : "";
+
     const tileSize = gridWidth > 0 ? (gridWidth - GAP * (COLUMNS - 1)) / COLUMNS : 0;
 
     if (available.length === 0) {
@@ -141,8 +145,8 @@ export default function UpgradesList() {
                         height={52}
                         labelSize={18}
                         label={emojis >= priceOf(selected)
-                            ? `Buy for ${formatNumber(priceOf(selected), 2, true)}`
-                            : `${formatNumber(priceOf(selected), 2, true)} · ${timeToAfford(priceOf(selected), emojis, emojisPerSecond).toLowerCase()}`}
+                            ? `Buy for ${money}${formatNumber(priceOf(selected), 2, true)}`
+                            : `${money}${formatNumber(priceOf(selected), 2, true)} · ${timeToAfford(priceOf(selected), emojis, emojisPerSecond).toLowerCase()}`}
                         disabled={emojis < priceOf(selected)}
                         onPress={() => buyUpgrade(selected.id!)}
                     />

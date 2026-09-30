@@ -8,6 +8,7 @@ import { buyBuilding, calculateBuildingPrice, resolveBuyAmount } from '../../../
 import { getNextUpgradeRequirement } from '../../../scripts/game/upgrades/checks';
 import { formatNumber } from '../../../scripts/misc';
 import { useBank, timeToAfford } from '../useBank';
+import { howFun } from '../../../scripts/game/shorthands';
 
 export interface BuildingInfo {
     name: string;
@@ -48,7 +49,7 @@ export default function BuildingsList() {
                         name={building.name}
                         icon={building.icon}
                         description={building.description}
-                        price={formatNumber(price, 2, true)}
+                        price={(howFun(77) ? "💸 " : "") + formatNumber(price, 2, true)}
                         amount={dynamicData.amount}
                         eps={formatNumber(dynamicData.eps * globalFactor, 1, true)}
                         share={share < 0.1 ? "<0.1%" : `${share < 10 ? share.toFixed(1) : Math.round(share)}%`}

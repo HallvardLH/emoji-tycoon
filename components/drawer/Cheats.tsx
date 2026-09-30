@@ -6,6 +6,7 @@ import { View } from 'react-native';
 import Text from '../generalUI/Text';
 import { giveOneOffEmojis } from '../../scripts/game/giveEmojis';
 import { isAlwaysShiny, setAlwaysShiny } from '../../scripts/game/bigEmoji';
+import FunValueCheat from './FunValueCheat';
 
 interface CheatsProps {
     onPress: () => void;
@@ -42,6 +43,7 @@ export default function Cheats({ onPress }: CheatsProps) {
             <Button width={200} label="Give 1 octillion emojis" onPress={() => {
                 giveOneOffEmojis(1000000000000000000000000000);
             }} />
+            <FunValueCheat />
         </View>
 
     )

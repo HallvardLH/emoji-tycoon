@@ -17,6 +17,7 @@ import { updateTapStats, addShinyEmojiTapped } from '../redux/statsSlice';
 import { effectEmojis } from './effects/effectData';
 import { incrementTapBoost } from './tapBoost';
 import { calculateEpt } from './calculations';
+import { howFun } from './shorthands';
 
 /** Chance that a new Big Emoji is shiny */
 export const SHINY_CHANCE = 1 / 200;
@@ -121,7 +122,9 @@ const emojiData = {
  */
 export function pickNextEmoji() {
     let randomEmoji = selectRandomEmoji();
-    const shiny = alwaysShiny || Math.random() < SHINY_CHANCE;
+    // Fun value 91 - 98 (collector): shiny emojis are 1.25× as likely
+    const shinyChance = SHINY_CHANCE * (howFun(91, 98) ? 1.25 : 1);
+    const shiny = alwaysShiny || Math.random() < shinyChance;
     store.dispatch(updateNextEmoji({
         emoji: randomEmoji.emoji,
         category: randomEmoji.category,

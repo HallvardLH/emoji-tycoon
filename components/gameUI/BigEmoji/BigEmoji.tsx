@@ -14,6 +14,7 @@ import { getComboProgress } from '../../../scripts/game/tapBoost';
 import EffectBurst from '../EffectBurst';
 import ComboRain from './ComboRain';
 import store from '../../../scripts/redux/reduxStore';
+import { howFun } from '../../../scripts/game/shorthands';
 import { palette, radii } from '../../misc/theme';
 // import { useFonts } from "expo-font";
 
@@ -124,6 +125,9 @@ export default function BigEmoji() {
 
         forceUpdate(x => x + 1);
 
+        // Fun value 31 - 40 (low gravity): tapped emojis drift up and away instead of dropping
+        const lowGravity = howFun(31, 40);
+
         Animated.parallel([
             // Emoji animations
             Animated.sequence([
@@ -132,15 +136,22 @@ export default function BigEmoji() {
                     duration: 100,
                     useNativeDriver: true,
                 }),
-                Animated.timing(newYAnimValue, {
-                    toValue: 100,
-                    duration: 200,
-                    useNativeDriver: true,
-                }),
+                lowGravity
+                    ? Animated.timing(newYAnimValue, {
+                        toValue: -LOW_GRAVITY_RISE,
+                        duration: 800,
+                        easing: Easing.out(Easing.quad),
+                        useNativeDriver: true,
+                    })
+                    : Animated.timing(newYAnimValue, {
+                        toValue: 100,
+                        duration: 200,
+                        useNativeDriver: true,
+                    }),
             ]),
             Animated.timing(newXAnimValue, {
-                toValue: randomXToValueEmoji,
-                duration: 300,
+                toValue: lowGravity ? randomXToValueEmoji / 2 : randomXToValueEmoji,
+                duration: lowGravity ? 900 : 300,
                 useNativeDriver: true,
             }),
             // Number animations
@@ -222,6 +233,7 @@ export default function BigEmoji() {
                         emoji={emoji}
                         xAnim={xAnimValue}
                         yAnim={yAnimValue}
+                        floatUp={howFun(31, 40)}
                     />
                 ))}
 
@@ -347,6 +359,8 @@ function ComboMeter() {
 }
 
 const SPOTLIGHT = 500;
+// How far tapped emojis float up with low gravity
+const LOW_GRAVITY_RISE = 260;
 const DISC = 220;
 
 const styles = StyleSheet.create({

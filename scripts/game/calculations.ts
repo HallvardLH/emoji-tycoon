@@ -2,6 +2,7 @@ import store from "../redux/reduxStore";
 import { updateEmojisPerTap } from "../redux/bigEmojiSlice";
 import { updateEmojisPerSecond } from "../redux/valuesSlice";
 import { formatNumber } from "../misc";
+import { funProductionMultiplier, funTapMultiplier } from "./shorthands";
 
 // Recalculates emojis per tap
 export function calculateEpt() {
@@ -45,7 +46,7 @@ export function calculateEpt() {
     const tapBoost = (Math.floor(store.getState().bigEmoji.tapBoost / 10)) + 1;
 
     // Calculate emojis per tap with the total multiplier and compounded percentage increases
-    let ept = (((baseEmojisPerTap + epsBonus) * multiplier) * percentageIncrease) * tapBoost;
+    let ept = (((baseEmojisPerTap + epsBonus) * multiplier) * percentageIncrease) * tapBoost * funTapMultiplier();
 
     // console.log(baseEmojisPerTap, eps, totalPercentageOfEps, epsBonus, multiplier, percentageIncrease, ept)
 
@@ -105,7 +106,7 @@ export function calculateEptBonus(newPercentageOfEps?: number, newMultiplier?: n
     const baseEmojisPerTap = store.getState().bigEmoji.baseEmojisPerTap;
 
     // Calculate emojis per tap with the total multiplier and compounded percentage increases
-    let ept = ((baseEmojisPerTap + epsBonus) * multiplier) * percentageIncrease;
+    let ept = ((baseEmojisPerTap + epsBonus) * multiplier) * percentageIncrease * funTapMultiplier();
 
     const currentEpt = store.getState().bigEmoji.emojisPerTap;
 
@@ -143,8 +144,8 @@ export function calculateEmojisPerSecond() {
 
     const totalBuildingEps = store.getState().values.totalBuildingEps;
 
-    // Apply total multiplier and compounded percentage increases
-    let eps = (totalBuildingEps * totalMultiplier) * compoundedPercentageMultiplier;
+    // Apply total multiplier, compounded percentage increases and any fun value bonus
+    let eps = (totalBuildingEps * totalMultiplier) * compoundedPercentageMultiplier * funProductionMultiplier();
 
     // Update the store with the new EPS
     store.dispatch(updateEmojisPerSecond(eps));
@@ -183,7 +184,7 @@ export function calculateEpsBonus(newMultiplierEffect?: number, newPercentageInc
 
     const totalBuildingEps = store.getState().values.totalBuildingEps;
 
-    const eps = (totalBuildingEps * totalMultiplier) * compoundedPercentageMultiplier;
+    const eps = (totalBuildingEps * totalMultiplier) * compoundedPercentageMultiplier * funProductionMultiplier();
     const currentEps = store.getState().values.emojisPerSecond;
 
     const bonus = eps - currentEps;

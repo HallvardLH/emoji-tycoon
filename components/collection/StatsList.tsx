@@ -16,7 +16,8 @@ export default function StatsList() {
         ["🪄", "Magical emojis tapped", formatNumber(effectEmojisCollected)],
         ["✨", "Shiny emojis tapped", formatNumber(shinyEmojisTapped ?? 0)],
     ];
-    if (funValue == 100) rows.push(["😭", "Fun value", formatNumber(funValue)]);
+    // The fun value, deliberately unexplained: players who know about it will recognise it
+    rows.push(["🔮", "???", funValue == 100 ? `${funValue} 😭` : String(funValue)]);
 
     return (
         <View style={styles.card}>

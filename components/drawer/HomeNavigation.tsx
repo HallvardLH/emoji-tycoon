@@ -1,10 +1,7 @@
 import { useRef } from "react";
 import Drawer from "./Drawer";
 import Cheats from "./Cheats";
-import Text from "../generalUI/Text";
-import { useSelector } from 'react-redux';
-import { RootState } from "../../scripts/redux/reduxStore";
-import { View, Pressable, StyleSheet } from "react-native";
+import { ScrollView, Pressable, StyleSheet } from "react-native";
 import Svg, { Path } from "react-native-svg";
 import { palette, radii } from "../misc/theme";
 
@@ -15,8 +12,6 @@ type DrawerRef = {
 
 export default function HomeNavigation() {
     const navigationDrawerRef = useRef<DrawerRef>(null);
-
-    const { funValue } = useSelector((state: RootState) => state.values);
 
     return (
         <>
@@ -34,21 +29,19 @@ export default function HomeNavigation() {
                 ref={navigationDrawerRef}
                 side="left"
             >
-                <View style={{
+                <ScrollView contentContainerStyle={{
                     alignItems: "center",
-                    flex: 1,
                     gap: 10,
-                    // justifyContent: "center",
-                    marginTop: "30%"
+                    paddingTop: 60,
+                    paddingBottom: 40,
                 }}>
                     <Cheats onPress={() => navigationDrawerRef.current?.closeDrawer()} />
-                    <Text>Fun value: {funValue}</Text>
                     {/* <DrawerLink
                     text="Notifications"
                     linkTo="Notifications"
                     onPress={() => navigationDrawerRef.current?.closeDrawer()}
                 /> */}
-                </View>
+                </ScrollView>
             </Drawer>
         </>
     )

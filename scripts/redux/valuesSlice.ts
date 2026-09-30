@@ -42,6 +42,10 @@ export const valuesSlice = createSlice({
             }
         },
 
+        setFunValue: (state, action: PayloadAction<number>) => {
+            state.funValue = Math.min(100, Math.max(1, Math.round(action.payload)));
+        },
+
         resetValues: (state) => {
             return {
                 ...initialState,
@@ -53,6 +57,6 @@ export const valuesSlice = createSlice({
 });
 
 // Export the generated action creators
-export const { updateEmojis, updateEmojisPerSecond, updateTotalBuildingEps, addEmojisPerSecondPercentage, removeEmojisPerSecondPercentage, resetValues } = valuesSlice.actions;
+export const { updateEmojis, updateEmojisPerSecond, updateTotalBuildingEps, addEmojisPerSecondPercentage, removeEmojisPerSecondPercentage, setFunValue, resetValues } = valuesSlice.actions;
 
 export default valuesSlice.reducer;

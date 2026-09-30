@@ -5,19 +5,26 @@ interface FlyingEmojiProps {
     emoji: string;
     xAnim: Animated.Value;
     yAnim: Animated.Value;
+    /** Low gravity: the emoji rises (y goes negative) and fades as it floats away */
+    floatUp?: boolean;
 }
 
-export const FlyingEmoji = React.memo(({ emoji, xAnim, yAnim }: FlyingEmojiProps) => (
+export const FlyingEmoji = React.memo(({ emoji, xAnim, yAnim, floatUp = false }: FlyingEmojiProps) => (
     <Animated.Text
         pointerEvents="none"
         style={[
             styles.bigEmoji,
             {
                 transform: [{ translateY: yAnim }, { translateX: xAnim }],
-                opacity: yAnim.interpolate({
-                    inputRange: [0, 30, 100],
-                    outputRange: [1, 0.7, 0],
-                }),
+                opacity: floatUp
+                    ? yAnim.interpolate({
+                        inputRange: [-260, -120, 0],
+                        outputRange: [0, 0.6, 1],
+                    })
+                    : yAnim.interpolate({
+                        inputRange: [0, 30, 100],
+                        outputRange: [1, 0.7, 0],
+                    }),
             },
         ]}
     >
