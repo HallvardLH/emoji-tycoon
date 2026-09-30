@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef, useCallback } from 'react';
+import React, { useState, useEffect, useRef, useCallback, useMemo } from 'react';
 import { StyleSheet, Pressable, Text, Animated, View, Easing, Platform } from 'react-native';
 import { useSelector } from 'react-redux';
 import { RootState } from '../../../scripts/redux/reduxStore';
@@ -42,7 +42,11 @@ function comboNumberStyle(multiplier: number) {
 }
 
 export default function BigEmoji() {
-    const { bigEmoji, nextEmoji, emojisPerTap } = useSelector((state: RootState) => state.bigEmoji);
+    // Select only what this renders. The bigEmoji slice also holds the combo, which
+    // changes every 100ms; subscribing to the whole slice re-rendered the entire
+    // stage (and every animation on it) ten times a second.
+    const bigEmoji = useSelector((state: RootState) => state.bigEmoji.bigEmoji);
+    const emojisPerTap = useSelector((state: RootState) => state.bigEmoji.emojisPerTap);
 
     // Necessary for using font
     // useFonts({
@@ -93,7 +97,7 @@ export default function BigEmoji() {
         const randomXToValueNumber = Math.floor(Math.random() * 101) - 50;
 
         // Generate a unique key for the animating emoji and number using the current timestamp
-        const uniqueKey = `${nextEmoji}-${Date.now()}`;
+        const uniqueKey = `${nextPickedEmoji}-${Date.now()}-${Math.random()}`;
 
         // Add new animating emoji
         animatingEmojis.current.push({
@@ -181,7 +185,7 @@ export default function BigEmoji() {
             Haptics.notificationAsync(Haptics.NotificationFeedbackType.Success);
             setShinyBursts(current => [...current, { id: Date.now() + Math.random(), amount: shinyReward }]);
         }
-    }, [staticEmoji, emojisPerTapDisplay, nextEmoji]);
+    }, [staticEmoji, emojisPerTapDisplay]);
 
 
     return (
@@ -340,19 +344,41 @@ function ComboMeter() {
     const { multiplier, progress, isMax } = getComboProgress(tapBoost);
     const idle = tapBoost === 0;
 
+    // The combo updates every 100ms; glide between updates instead of jumping.
+    const animatedProgress = useRef(new Animated.Value(progress)).current;
+    const lastMultiplier = useRef(multiplier);
+    useEffect(() => {
+        if (multiplier !== lastMultiplier.current) {
+            // A new stage: snap rather than sliding back across the whole meter
+            animatedProgress.stopAnimation();
+            animatedProgress.setValue(progress);
+            lastMultiplier.current = multiplier;
+            return;
+        }
+        Animated.timing(animatedProgress, {
+            toValue: progress,
+            duration: 110,
+            easing: Easing.linear,
+            useNativeDriver: true,
+        }).start();
+    }, [progress, multiplier]);
+
+    // Five segments, each filling over its fifth of the stage
+    const segmentFills = useMemo(() => [0, 1, 2, 3, 4].map(i => ({
+        transform: [{
+            scaleX: animatedProgress.interpolate({ inputRange: [i / 5, (i + 1) / 5], outputRange: [0, 1], extrapolate: "clamp" }),
+        }],
+    })), []);
+
     return (
         <View style={[styles.combo, idle ? { opacity: 0.55 } : null]}>
             <GameText size={16} color={palette.sun}>{isMax ? `MAX COMBO ×${multiplier}` : `COMBO ×${multiplier}`}</GameText>
-            {/* Five segments that fill smoothly towards the next multiplier */}
             <View style={styles.comboSegments}>
-                {[0, 1, 2, 3, 4].map(i => {
-                    const fill = Math.max(0, Math.min(1, progress * 5 - i));
-                    return (
-                        <View key={i} style={styles.comboSegment}>
-                            <View style={[styles.comboSegmentFill, { width: `${fill * 100}%` }]} />
-                        </View>
-                    );
-                })}
+                {segmentFills.map((fillStyle, i) => (
+                    <View key={i} style={styles.comboSegment}>
+                        <Animated.View style={[styles.comboSegmentFill, fillStyle]} />
+                    </View>
+                ))}
             </View>
         </View>
     );
@@ -429,7 +455,10 @@ const styles = StyleSheet.create({
         overflow: 'hidden',
     },
     comboSegmentFill: {
+        // Full width, scaled from its left edge (a transform animates without layout work)
+        width: '100%',
         height: 8,
         backgroundColor: palette.sun,
+        transformOrigin: 'left',
     },
 });

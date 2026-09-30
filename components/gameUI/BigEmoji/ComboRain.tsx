@@ -15,7 +15,10 @@ const COOLDOWN_MS = 8000;
  * A short shower of emojis behind the stage whenever the combo hits max.
  * (EmojiRain is the endless background rain; this is a one-off celebration.)
  */
-export default function ComboRain() {
+// Memoised: it takes no props, so re-renders of the stage around it never reach the falling emojis
+export default React.memo(ComboRain);
+
+function ComboRain() {
     const isMax = useSelector((state: RootState) => getComboProgress(state.bigEmoji.tapBoost).isMax);
     const [showers, setShowers] = useState<number[]>([]);
     const [size, setSize] = useState({ width: 0, height: 0 });
@@ -52,15 +55,28 @@ export default function ComboRain() {
 }
 
 function Shower({ width, height, onDone }: { width: number, height: number, onDone: () => void }) {
-    const drops = useMemo(() => Array.from({ length: DROPS }, () => ({
-        emoji: selectRandomEmoji().emoji,
-        x: Math.random() * (width - 40),
-        size: 24 + Math.random() * 18,
-        delay: Math.random() * 900,
-        duration: 1400 + Math.random() * 700,
-        spin: `${Math.round(Math.random() * 360 - 180)}deg`,
-        fall: new Animated.Value(0),
-    })), []);
+    // Everything about each drop, including its animated style, is built once per shower
+    const drops = useMemo(() => Array.from({ length: DROPS }, () => {
+        const fall = new Animated.Value(0);
+        const spin = `${Math.round(Math.random() * 360 - 180)}deg`;
+        return {
+            emoji: selectRandomEmoji().emoji,
+            delay: Math.random() * 900,
+            duration: 1400 + Math.random() * 700,
+            fall,
+            style: {
+                position: "absolute" as const,
+                left: Math.random() * (width - 40),
+                top: -60,
+                fontSize: 24 + Math.random() * 18,
+                opacity: fall.interpolate({ inputRange: [0, 0.1, 0.85, 1], outputRange: [0, 0.8, 0.8, 0] }),
+                transform: [
+                    { translateY: fall.interpolate({ inputRange: [0, 1], outputRange: [0, height + 120] }) },
+                    { rotate: fall.interpolate({ inputRange: [0, 1], outputRange: ["0deg", spin] }) },
+                ],
+            },
+        };
+    }), []);
 
     useEffect(() => {
         Animated.parallel(drops.map(drop => Animated.sequence([
@@ -74,22 +90,7 @@ function Shower({ width, height, onDone }: { width: number, height: number, onDo
     return (
         <>
             {drops.map((drop, i) => (
-                <Animated.Text
-                    key={i}
-                    style={{
-                        position: "absolute",
-                        left: drop.x,
-                        top: -60,
-                        fontSize: drop.size,
-                        opacity: drop.fall.interpolate({ inputRange: [0, 0.1, 0.85, 1], outputRange: [0, 0.8, 0.8, 0] }),
-                        transform: [
-                            { translateY: drop.fall.interpolate({ inputRange: [0, 1], outputRange: [0, height + 120] }) },
-                            { rotate: drop.fall.interpolate({ inputRange: [0, 1], outputRange: ["0deg", drop.spin] }) },
-                        ],
-                    }}
-                >
-                    {drop.emoji}
-                </Animated.Text>
+                <Animated.Text key={i} style={drop.style}>{drop.emoji}</Animated.Text>
             ))}
         </>
     );
