@@ -1,8 +1,6 @@
-import { Dimensions } from "react-native";
 import { effectData } from "./effectData";
 import { howFun } from "../shorthands";
 import { Effect } from "./effectType";
-import { HEADER_HEIGHT, TAB_BAR_HEIGHT } from "../../../components/layout/ScreenView";
 import { getEmojisPerSecond } from "../shorthands";
 
 interface EffectWeights {
@@ -38,12 +36,11 @@ function pickEffectType(): string {
  *
  */
 export function createEffect() {
-    const margin = 150;
-
-    // Generate random positions with a margin
-    const xPos = Math.floor(Math.random() * (Dimensions.get("window").width - margin));
-    // Ensure effects do not spawn off-screen
-    const yPos = Math.random() * (Dimensions.get("window").height - (HEADER_HEIGHT + TAB_BAR_HEIGHT + margin));
+    // Positions are fractions (0 - 1) of the free space on the home screen.
+    // EffectPopup turns them into pixels once it knows the real size of the
+    // play area and of the effect itself, so an effect is never off screen.
+    const xPos = Math.random();
+    const yPos = Math.random();
 
     const eps = getEmojisPerSecond();
 
@@ -100,7 +97,6 @@ export function createEffect() {
         id: chosenEffect.id,
         xPos: xPos,
         yPos: yPos,
-        margin: margin,
         type: chosenEffect.type,
         quality: chosenEffect.quality,
     }

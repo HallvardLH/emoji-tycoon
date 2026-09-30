@@ -27,10 +27,14 @@ export function incrementTapBoost() {
     store.dispatch(updateTapBoost(Math.min(MAX_TAP_BOOST, tapBoost + 1)));
 }
 
-/** The current combo multiplier and how far along the next one is (0 - 1) */
+/**
+ * The current combo multiplier and how full its stage is (0 - 1).
+ * At max, progress is how much boost is banked above the ×5 threshold,
+ * so the meter fills up to the cap and visibly drains back down.
+ */
 export function getComboProgress(tapBoost: number) {
     const multiplier = Math.floor(tapBoost / BOOST_PER_MULTIPLIER) + 1;
     const isMax = multiplier >= MAX_COMBO_MULTIPLIER;
-    const progress = isMax ? 1 : (tapBoost % BOOST_PER_MULTIPLIER) / BOOST_PER_MULTIPLIER;
+    const progress = (tapBoost % BOOST_PER_MULTIPLIER) / BOOST_PER_MULTIPLIER;
     return { multiplier, progress, isMax };
 }
