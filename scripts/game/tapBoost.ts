@@ -11,17 +11,23 @@ export function getMaxComboMultiplier() {
     return howFun(64) ? 6 : 5;
 }
 
-// The amount by which the boost is decremented every 100ms (3.5 per second).
-// Tapping faster than ~3.5 times per second builds the combo, e.g. at 6 taps
-// per second it reaches ×2 in about 4 seconds and ×5 in about 16.
-// Stop tapping and it drains in a few seconds.
+// The combo drains faster the higher it is: 2.5 boost per second at ×1, plus 1 per level.
+// Each tap adds 1, so climbing past a level takes tapping faster than its drain:
+// ×2 needs about 3 taps/s, ×3 about 4, ×4 about 5, ×5 about 6.
+// At 6 taps/s ×5 takes ~30s, at 8 ~11s, at 10 ~7s.
+// The combo settles at whatever level your tapping speed can hold, so max combo is
+// a burst of fast tapping rather than something any steady tapper reaches eventually.
 // With a fun value of 88 - 90 (marathon), it drains 25% slower.
-const BOOST_DECREMENT = 0.35;
+const BASE_DRAIN_PER_SECOND = 2.5;
+const EXTRA_DRAIN_PER_LEVEL = 1;
 
 export function decrementTapBoost() {
     const tapBoost = store.getState().bigEmoji.tapBoost;
     if (tapBoost == 0) return
-    const decrement = BOOST_DECREMENT * (howFun(88, 90) ? 0.75 : 1);
+    const { multiplier } = getComboProgress(tapBoost);
+    const drainPerSecond = BASE_DRAIN_PER_SECOND + EXTRA_DRAIN_PER_LEVEL * (multiplier - 1);
+    // Called every 100ms
+    const decrement = drainPerSecond / 10 * (howFun(88, 90) ? 0.75 : 1);
     store.dispatch(updateTapBoost(Math.max(0, tapBoost - decrement)));
     calculateEpt();
 }

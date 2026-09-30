@@ -10,7 +10,7 @@ import { FlyingEmoji } from './FlyingEmoji';
 import { FlyingNumber } from './FlyingNumber';
 import Svg, { Defs, RadialGradient, Stop, Circle } from 'react-native-svg';
 import GameText from '../../generalUI/Text';
-import { getComboProgress } from '../../../scripts/game/tapBoost';
+import { getComboProgress, getMaxComboMultiplier, BOOST_PER_MULTIPLIER } from '../../../scripts/game/tapBoost';
 import EffectBurst from '../EffectBurst';
 import ComboRain from './ComboRain';
 import store from '../../../scripts/redux/reduxStore';
@@ -341,45 +341,80 @@ function ShinyGlow() {
  */
 function ComboMeter() {
     const tapBoost = useSelector((state: RootState) => state.bigEmoji.tapBoost);
-    const { multiplier, progress, isMax } = getComboProgress(tapBoost);
+    const { multiplier, isMax } = getComboProgress(tapBoost);
+    const maxMultiplier = getMaxComboMultiplier();
     const idle = tapBoost === 0;
 
-    // The combo updates every 100ms; glide between updates instead of jumping.
-    const animatedProgress = useRef(new Animated.Value(progress)).current;
-    const lastMultiplier = useRef(multiplier);
+    // After an always-full ×1 segment: one segment per level (×2 up to the max), plus a 🔥 reserve: boost banked
+    // above max, which is how long you can keep max combo going. Each segment is
+    // BOOST_PER_MULTIPLIER boost wide, so the meter is the whole combo, 0 to cap.
+    const segmentCount = maxMultiplier;
+    const totalBoost = segmentCount * BOOST_PER_MULTIPLIER;
+
+    // The combo updates every 100ms; glide between updates instead of jumping
+    const fill = useRef(new Animated.Value(tapBoost / totalBoost)).current;
     useEffect(() => {
-        if (multiplier !== lastMultiplier.current) {
-            // A new stage: snap rather than sliding back across the whole meter
-            animatedProgress.stopAnimation();
-            animatedProgress.setValue(progress);
-            lastMultiplier.current = multiplier;
-            return;
-        }
-        Animated.timing(animatedProgress, {
-            toValue: progress,
+        Animated.timing(fill, {
+            toValue: tapBoost / totalBoost,
             duration: 110,
             easing: Easing.linear,
             useNativeDriver: true,
         }).start();
-    }, [progress, multiplier]);
+    }, [tapBoost, totalBoost]);
 
-    // Five segments, each filling over its fifth of the stage
-    const segmentFills = useMemo(() => [0, 1, 2, 3, 4].map(i => ({
-        transform: [{
-            scaleX: animatedProgress.interpolate({ inputRange: [i / 5, (i + 1) / 5], outputRange: [0, 1], extrapolate: "clamp" }),
-        }],
-    })), []);
+    const segments = useMemo(() => Array.from({ length: segmentCount }, (_, i) => {
+        const isReserve = i === segmentCount - 1;
+        return {
+            label: isReserve ? "🔥" : `×${i + 2}`,
+            // The level this segment unlocks once full
+            level: i + 2,
+            isReserve,
+            fillStyle: {
+                transform: [{
+                    scaleX: fill.interpolate({ inputRange: [i / segmentCount, (i + 1) / segmentCount], outputRange: [0, 1], extrapolate: "clamp" }),
+                }],
+            },
+        };
+    }), [segmentCount]);
 
     return (
-        <View style={[styles.combo, idle ? { opacity: 0.55 } : null]}>
-            <GameText size={16} color={palette.sun}>{isMax ? `MAX COMBO ×${multiplier}` : `COMBO ×${multiplier}`}</GameText>
+        <View
+            style={[styles.combo, idle ? { opacity: 0.55 } : null]}
+            accessibilityLabel={`Combo times ${multiplier}${isMax ? ", max" : ""}`}
+        >
             <View style={styles.comboSegments}>
-                {segmentFills.map((fillStyle, i) => (
-                    <View key={i} style={styles.comboSegment}>
-                        <Animated.View style={[styles.comboSegmentFill, fillStyle]} />
+                {/* ×1 is always yours, so the last full segment is always the multiplier you're getting */}
+                <View style={styles.comboSegmentColumn}>
+                    <View style={styles.comboSegment}>
+                        <View style={styles.comboSegmentFill} />
                     </View>
-                ))}
+                    <GameText font="black" size={9} color={palette.sun} style={styles.comboSegmentLabel}>×1</GameText>
+                </View>
+                {segments.map(segment => {
+                    // Reached levels light up their label; the reserve lights while at max
+                    const lit = segment.isReserve ? isMax : multiplier >= segment.level;
+                    return (
+                        <View key={segment.label} style={styles.comboSegmentColumn}>
+                            <View style={styles.comboSegment}>
+                                <Animated.View style={[
+                                    styles.comboSegmentFill,
+                                    segment.isReserve ? { backgroundColor: palette.pop } : null,
+                                    segment.fillStyle,
+                                ]} />
+                            </View>
+                            <GameText
+                                font="black"
+                                size={9}
+                                color={lit ? (segment.isReserve ? palette.pop : palette.sun) : palette.lilac}
+                                style={styles.comboSegmentLabel}
+                            >
+                                {segment.label}
+                            </GameText>
+                        </View>
+                    );
+                })}
             </View>
+            <GameText size={16} color={palette.sun}>{isMax ? `MAX COMBO ×${multiplier}` : `COMBO ×${multiplier}`}</GameText>
         </View>
     );
 }
@@ -434,21 +469,30 @@ const styles = StyleSheet.create({
         fontSize: Platform.OS == 'android' ? 130 : 150,
         lineHeight: Platform.OS == 'android' ? 150 : 175,
     },
+    // The bar on top, the "COMBO ×N" text centred underneath
     combo: {
-        flexDirection: 'row',
         alignItems: 'center',
-        gap: 10,
-        paddingVertical: 8,
-        paddingHorizontal: 14,
-        borderRadius: radii.pill,
+        gap: 6,
+        paddingTop: 10,
+        paddingBottom: 8,
+        paddingHorizontal: 16,
+        borderRadius: radii.lg,
         backgroundColor: palette.shade,
     },
     comboSegments: {
         flexDirection: 'row',
         gap: 4,
     },
+    comboSegmentColumn: {
+        alignItems: 'center',
+        gap: 2,
+    },
+    comboSegmentLabel: {
+        lineHeight: 11,
+        opacity: 0.9,
+    },
     comboSegment: {
-        width: 16,
+        width: 20,
         height: 8,
         borderRadius: 3,
         backgroundColor: palette.glassLine,
