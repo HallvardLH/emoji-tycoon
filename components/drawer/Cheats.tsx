@@ -1,14 +1,16 @@
-import { useState } from 'react';
+import { ReactNode, useState } from 'react';
+import { View, Pressable, StyleSheet } from 'react-native';
 import { spawnEffect, spawnEffects } from '../../scripts/game/effects/onScreenEffects';
-import Button from '../buttons/Button';
-import ResetButton from './ResetButton';
-import { View } from 'react-native';
-import Text from '../generalUI/Text';
 import { giveOneOffEmojis } from '../../scripts/game/giveEmojis';
 import { isAlwaysShiny, setAlwaysShiny } from '../../scripts/game/bigEmoji';
+import ResetButton from './ResetButton';
 import FunValueCheat from './FunValueCheat';
+import { cheatAddComboTaps, cheatMultiplyTapEarnings, cheatCollectEmojis, cheatAddMagicalEmojis } from '../../scripts/game/cheats';
+import Text from '../generalUI/Text';
+import { palette, radii } from '../misc/theme';
 
 interface CheatsProps {
+    /** Closes the drawer */
     onPress: () => void;
 }
 
@@ -16,35 +18,158 @@ export default function Cheats({ onPress }: CheatsProps) {
     const [onlyShiny, setOnlyShiny] = useState(isAlwaysShiny());
 
     return (
-        <View style={{
-            alignItems: "center",
-            gap: 10,
-        }}>
-            <Text size={25}>Cheats</Text>
-            <ResetButton onPress={onPress} />
-            <Button width={200} label="Spawn effect emoji" onPress={() => {
-                spawnEffect(true);
-                onPress();
-            }} />
-            <Button width={200} label="Spawn 10 effect emojis" onPress={() => {
-                spawnEffects(10);
-                onPress();
-            }} />
-            <Button width={200} label={`Only shiny emojis: ${onlyShiny ? "ON" : "OFF"}`} onPress={() => {
-                setAlwaysShiny(!onlyShiny);
-                setOnlyShiny(!onlyShiny);
-            }} />
-            <Button width={200} label="Give 1 million emojis" onPress={() => {
-                giveOneOffEmojis(1000000);
-            }} />
-            <Button width={200} label="Give 1 quadrillion emojis" onPress={() => {
-                giveOneOffEmojis(1000000000000000);
-            }} />
-            <Button width={200} label="Give 1 octillion emojis" onPress={() => {
-                giveOneOffEmojis(1000000000000000000000000000);
-            }} />
-            <FunValueCheat />
-        </View>
+        <View style={styles.container}>
+            <View style={styles.titleBlock}>
+                <Text size={30}>Cheats</Text>
+                <Text font="bold" size={13} color={palette.lilac}>For testing. Changes apply to your save.</Text>
+            </View>
 
+            <Section title="EMOJIS">
+                <View style={styles.row}>
+                    <CheatButton label="+1 M" onPress={() => giveOneOffEmojis(1e6)} compact />
+                    <CheatButton label="+1 Qa" onPress={() => giveOneOffEmojis(1e15)} compact />
+                    <CheatButton label="+1 Oc" onPress={() => giveOneOffEmojis(1e27)} compact />
+                </View>
+            </Section>
+
+            <Section title="STATS">
+                <View style={styles.row}>
+                    <CheatButton label="+10k combo taps" onPress={() => cheatAddComboTaps(10_000)} compact />
+                    <CheatButton label="×1000 tap earnings" onPress={() => cheatMultiplyTapEarnings(1000)} compact />
+                </View>
+                <View style={styles.row}>
+                    <CheatButton label="+25 collection" onPress={() => cheatCollectEmojis(25)} compact />
+                    <CheatButton label="+5 shiny" onPress={() => cheatCollectEmojis(5, 1)} compact />
+                    <CheatButton label="+10 magical" onPress={() => cheatAddMagicalEmojis(10)} compact />
+                </View>
+            </Section>
+
+            <Section title="EFFECT EMOJIS">
+                <CheatButton icon="✨" label="Spawn an effect emoji" onPress={() => { spawnEffect(true); onPress(); }} />
+                <CheatButton icon="🎆" label="Spawn 10 effect emojis" onPress={() => { spawnEffects(10); onPress(); }} />
+            </Section>
+
+            <Section title="SHINY">
+                <Pressable
+                    onPress={() => { setAlwaysShiny(!onlyShiny); setOnlyShiny(!onlyShiny); }}
+                    accessibilityRole="switch"
+                    accessibilityState={{ checked: onlyShiny }}
+                    accessibilityLabel="Only shiny emojis"
+                    style={({ pressed }) => [styles.button, pressed ? styles.pressed : null]}
+                >
+                    <Text size={18} style={styles.icon}>🌟</Text>
+                    <Text font="bold" size={14} style={styles.buttonLabel}>Only shiny emojis</Text>
+                    <View style={[styles.switchTrack, onlyShiny ? styles.switchTrackOn : null]}>
+                        <View style={[styles.switchKnob, onlyShiny ? styles.switchKnobOn : null]} />
+                    </View>
+                </Pressable>
+            </Section>
+
+            <Section title="FUN VALUE">
+                <FunValueCheat />
+            </Section>
+
+            <Section title="DANGER ZONE">
+                <ResetButton onPress={onPress} />
+            </Section>
+        </View>
     )
 }
+
+function Section({ title, children }: { title: string, children: ReactNode }) {
+    return (
+        <View style={styles.section}>
+            <Text font="black" size={11} color={palette.lilac} style={styles.sectionTitle}>{title}</Text>
+            {children}
+        </View>
+    );
+}
+
+interface CheatButtonProps {
+    label: string;
+    icon?: string;
+    onPress: () => void;
+    /** Sits in a row with others, label centred */
+    compact?: boolean;
+}
+
+function CheatButton({ label, icon, onPress, compact }: CheatButtonProps) {
+    return (
+        <Pressable
+            onPress={onPress}
+            accessibilityRole="button"
+            accessibilityLabel={label}
+            style={({ pressed }) => [styles.button, compact ? styles.buttonCompact : null, pressed ? styles.pressed : null]}
+        >
+            {icon ? <Text size={18} style={styles.icon}>{icon}</Text> : null}
+            <Text font={compact ? "black" : "bold"} size={14} style={compact ? styles.compactLabel : styles.buttonLabel}>{label}</Text>
+        </Pressable>
+    );
+}
+
+const styles = StyleSheet.create({
+    container: {
+        alignSelf: "stretch",
+        paddingHorizontal: 20,
+        gap: 20,
+    },
+    titleBlock: {
+        gap: 2,
+    },
+    section: {
+        gap: 8,
+    },
+    sectionTitle: {
+        letterSpacing: 1.3,
+    },
+    row: {
+        flexDirection: "row",
+        gap: 8,
+    },
+    button: {
+        minHeight: 48,
+        flexDirection: "row",
+        alignItems: "center",
+        gap: 10,
+        paddingHorizontal: 14,
+        borderRadius: radii.md,
+        backgroundColor: palette.glass,
+    },
+    buttonCompact: {
+        flex: 1,
+        justifyContent: "center",
+        paddingHorizontal: 6,
+    },
+    pressed: {
+        opacity: 0.7,
+    },
+    icon: {
+        lineHeight: 24,
+    },
+    buttonLabel: {
+        flex: 1,
+    },
+    compactLabel: {
+        textAlign: "center",
+    },
+    switchTrack: {
+        width: 44,
+        height: 26,
+        borderRadius: 13,
+        padding: 3,
+        backgroundColor: palette.shade,
+    },
+    switchTrackOn: {
+        backgroundColor: palette.sun,
+    },
+    switchKnob: {
+        width: 20,
+        height: 20,
+        borderRadius: 10,
+        backgroundColor: palette.lilac,
+    },
+    switchKnobOn: {
+        marginLeft: 18,
+        backgroundColor: "#FFFFFF",
+    },
+});

@@ -30,9 +30,7 @@ export default function HomeNavigation() {
                 side="left"
             >
                 <ScrollView contentContainerStyle={{
-                    alignItems: "center",
-                    gap: 10,
-                    paddingTop: 60,
+                    paddingTop: 48,
                     paddingBottom: 40,
                 }}>
                     <Cheats onPress={() => navigationDrawerRef.current?.closeDrawer()} />

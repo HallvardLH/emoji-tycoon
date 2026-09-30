@@ -24,7 +24,6 @@ export default function FunValueCheat() {
 
     return (
         <View style={styles.container}>
-            <Text size={16}>Fun value</Text>
             <View style={styles.stepper}>
                 {[-10, -1].map(by => <StepButton key={by} label={String(by)} onPress={() => change(by)} />)}
                 <View style={styles.value}>
@@ -91,10 +90,8 @@ function StepButton({ label, onPress }: { label: string, onPress: () => void }) 
 
 const styles = StyleSheet.create({
     container: {
-        width: 260,
         alignItems: "center",
         gap: 8,
-        marginTop: 6,
     },
     stepper: {
         flexDirection: "row",
