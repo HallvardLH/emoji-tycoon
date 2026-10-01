@@ -75,12 +75,9 @@ export default function BigEmoji() {
     //     "Digitalt": require("../../../assets/fonts/Digitalt.otf"),
     // });
 
-    // State for the currently displayed static emoji
-    const [staticEmoji, setStaticEmoji] = useState<string>(bigEmoji.emoji);
-
-    // useEffect(() => {
-    //     setStaticEmoji(bigEmoji.emoji);
-    // }, [bigEmoji.emoji]);
+    // The emoji on the disc comes straight from the store, so a reset or a save loading
+    // in shows the right one (a local copy only changed on taps and went stale)
+    const staticEmoji = bigEmoji.emoji;
 
     const [emojisPerTapDisplay, setEmojisPerTapDisplay] = useState<number>(emojisPerTap);
 
@@ -112,8 +109,8 @@ export default function BigEmoji() {
 
     const onEmojiTap = useCallback(() => {
         const animatingEmoji = staticEmoji;
+        // Picks the emoji that tapEmoji (below) puts on the disc
         const nextPickedEmoji = pickNextEmoji();
-        setStaticEmoji(nextPickedEmoji as string);
 
         const { multiplier } = getComboProgress(store.getState().bigEmoji.tapBoost);
         const comboStyle = comboNumberStyle(multiplier);
