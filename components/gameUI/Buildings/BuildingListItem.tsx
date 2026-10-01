@@ -51,9 +51,11 @@ export default function BuildingListItem(props: BuildingListItemProps) {
                     )}
                 </View>
 
+                <Text font="body" size={12} color={palette.muted} numberOfLines={2}>{description}</Text>
+
                 {owned ? (
                     <>
-                        <Text font="body" size={12} color={palette.muted}>{eps} /sec · {share} of total</Text>
+                        <Text font="bold" size={11} color={palette.muted}>{eps} /sec · {share} of total</Text>
                         <View style={styles.progressRow}>
                             <View style={styles.track}>
                                 <View style={[styles.fill, { width: `${progress * 100}%` }]} />
@@ -64,10 +66,7 @@ export default function BuildingListItem(props: BuildingListItemProps) {
                         </View>
                     </>
                 ) : (
-                    <>
-                        <Text font="body" size={12} color={palette.muted} numberOfLines={2}>{description}</Text>
-                        <Text font="bold" size={11} color={palette.muted}>+{epsEach} /sec each</Text>
-                    </>
+                    <Text font="bold" size={11} color={palette.muted}>+{epsEach} /sec each</Text>
                 )}
             </View>
 
