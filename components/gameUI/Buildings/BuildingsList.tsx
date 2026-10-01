@@ -41,8 +41,9 @@ export default function BuildingsList() {
                 const dynamicData = buildings.find(b => b.buildingId === building.buildingId);
                 if (!dynamicData || !dynamicData.unlocked) return null;
 
-                const price = calculateBuildingPrice(building.buildingId, bulkBuy);
-                const buyCount = resolveBuyAmount(building.buildingId, bulkBuy);
+                // Fit "max" into the same bank the button is checked against below
+                const price = calculateBuildingPrice(building.buildingId, bulkBuy, emojis);
+                const buyCount = resolveBuyAmount(building.buildingId, bulkBuy, emojis);
                 const epsEach = building.baseEps * dynamicData.epsMultipliers.filter(m => m !== 0).reduce((a, m) => a * m, 1) * globalFactor;
                 const share = totalBuildingEps > 0 ? (dynamicData.eps / totalBuildingEps) * 100 : 0;
 

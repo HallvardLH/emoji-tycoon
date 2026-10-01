@@ -62,7 +62,7 @@ export const buildingEmojis: buildingName = {
 
 const PRICE_GROWTH = BUILDING_PRICE_GROWTH;
 
-/** What the building costs when you own mount of it, with any Bulk discount (perk) */
+/** What the building costs when you own `amount` of it, with any Bulk discount (perk) */
 export function unitPrice(buildingId: number, amount: number) {
     return Math.round(buildingData[buildingId].basePrice * Math.pow(PRICE_GROWTH, amount) * buildingPriceMultiplier());
 }
@@ -71,18 +71,33 @@ export function unitPrice(buildingId: number, amount: number) {
  * Turns a bulk buy setting into a number of buildings.
  *
  * "max" is as many as the bank can afford (at least 1, so a price can still be shown).
- * Uses the closed form of the geometric price series; buyBuilding re-checks the exact rounded prices.
+ * The closed form of the geometric price series gives a first guess; it uses unrounded
+ * prices, so it's adjusted until the real (rounded) total fits and one more wouldn't.
+ *
+ * @param emojis the bank to fit "max" into; pass the same number the price is compared against
  */
-export function resolveBuyAmount(buildingId: number, bulkBuy: BulkBuyAmount = store.getState().preferences.bulkBuy): number {
+export function resolveBuyAmount(
+    buildingId: number,
+    bulkBuy: BulkBuyAmount = store.getState().preferences.bulkBuy,
+    emojis: number = store.getState().values.emojis,
+): number {
     if (bulkBuy !== "max") return bulkBuy;
 
-    const building = getBuildingById(buildingId);
-    const data = buildingData[buildingId];
-    const emojis = store.getState().values.emojis;
-    const nextPrice = unitPrice(buildingId, building.amount);
+    const owned = getBuildingById(buildingId).amount;
+    const nextPrice = unitPrice(buildingId, owned);
 
-    const affordable = Math.floor(Math.log(emojis * (PRICE_GROWTH - 1) / nextPrice + 1) / Math.log(PRICE_GROWTH));
-    return Math.max(1, affordable);
+    let count = Math.max(1, Math.floor(Math.log(emojis * (PRICE_GROWTH - 1) / nextPrice + 1) / Math.log(PRICE_GROWTH)));
+    let total = 0;
+    for (let i = 0; i < count; i++) total += unitPrice(buildingId, owned + i);
+    while (count > 1 && total > emojis) {
+        count--;
+        total -= unitPrice(buildingId, owned + count);
+    }
+    while (total + unitPrice(buildingId, owned + count) <= emojis) {
+        total += unitPrice(buildingId, owned + count);
+        count++;
+    }
+    return count;
 }
 
 /**
@@ -187,8 +202,17 @@ const calculateAffordableBuildings = (building: any, data: any, currentEmojis: n
 };
 
 
-export function calculateBuildingPrice(buildingId: number, bulkBuy: BulkBuyAmount = store.getState().preferences.bulkBuy) {
-    const buyAmount = resolveBuyAmount(buildingId, bulkBuy);
+/**
+ * The total price of the next bulk buy
+ *
+ * @param emojis the bank "max" is fitted into (defaults to the live bank)
+ */
+export function calculateBuildingPrice(
+    buildingId: number,
+    bulkBuy: BulkBuyAmount = store.getState().preferences.bulkBuy,
+    emojis: number = store.getState().values.emojis,
+) {
+    const buyAmount = resolveBuyAmount(buildingId, bulkBuy, emojis);
     const building = getBuildingById(buildingId);
     const data = buildingData[building.buildingId];
     let currentAmount = building.amount;
