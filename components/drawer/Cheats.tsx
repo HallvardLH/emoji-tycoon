@@ -5,6 +5,7 @@ import { giveOneOffEmojis } from '../../scripts/game/giveEmojis';
 import { isAlwaysShiny, setAlwaysShiny } from '../../scripts/game/bigEmoji';
 import ResetButton from './ResetButton';
 import FunValueCheat from './FunValueCheat';
+import SwitchRow from './SwitchRow';
 import { cheatAddComboTaps, cheatMultiplyTapEarnings, cheatCollectEmojis, cheatAddMagicalEmojis, cheatAddEssence, cheatUnlockPerkTier } from '../../scripts/game/cheats';
 import Text from '../generalUI/Text';
 import { palette, radii } from '../misc/theme';
@@ -57,19 +58,12 @@ export default function Cheats({ onPress }: CheatsProps) {
             </Section>
 
             <Section title="SHINY">
-                <Pressable
-                    onPress={() => { setAlwaysShiny(!onlyShiny); setOnlyShiny(!onlyShiny); }}
-                    accessibilityRole="switch"
-                    accessibilityState={{ checked: onlyShiny }}
-                    accessibilityLabel="Only shiny emojis"
-                    style={({ pressed }) => [styles.button, pressed ? styles.pressed : null]}
-                >
-                    <Text size={18} style={styles.icon}>🌟</Text>
-                    <Text font="bold" size={14} style={styles.buttonLabel}>Only shiny emojis</Text>
-                    <View style={[styles.switchTrack, onlyShiny ? styles.switchTrackOn : null]}>
-                        <View style={[styles.switchKnob, onlyShiny ? styles.switchKnobOn : null]} />
-                    </View>
-                </Pressable>
+                <SwitchRow
+                    icon="🌟"
+                    label="Only shiny emojis"
+                    value={onlyShiny}
+                    onChange={value => { setAlwaysShiny(value); setOnlyShiny(value); }}
+                />
             </Section>
 
             <Section title="FUN VALUE">
@@ -158,25 +152,5 @@ const styles = StyleSheet.create({
     },
     compactLabel: {
         textAlign: "center",
-    },
-    switchTrack: {
-        width: 44,
-        height: 26,
-        borderRadius: 13,
-        padding: 3,
-        backgroundColor: palette.shade,
-    },
-    switchTrackOn: {
-        backgroundColor: palette.sun,
-    },
-    switchKnob: {
-        width: 20,
-        height: 20,
-        borderRadius: 10,
-        backgroundColor: palette.lilac,
-    },
-    switchKnobOn: {
-        marginLeft: 18,
-        backgroundColor: "#FFFFFF",
     },
 });

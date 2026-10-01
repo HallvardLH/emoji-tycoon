@@ -123,8 +123,11 @@ export default function BigEmoji() {
         // Fun value 31 - 40 (low gravity): it drifts up and away instead
         const direction = randomSign();
         const lowGravity = howFun(31, 40);
+        // Reduce animations (settings) drops the flying emoji, the heaviest part of a tap.
+        // Read from the store here, so flipping it doesn't re-render the stage
+        const flyOff = !store.getState().preferences.reduceAnimations;
         const emojiProgress = new Animated.Value(0);
-        animatingEmojis.current.push({
+        if (flyOff) animatingEmojis.current.push({
             key: uniqueKey,
             emoji: animatingEmoji,
             progress: emojiProgress,
@@ -182,13 +185,13 @@ export default function BigEmoji() {
         };
 
         Animated.parallel([
-            Animated.timing(emojiProgress, {
+            ...(flyOff ? [Animated.timing(emojiProgress, {
                 toValue: 1,
                 duration: lowGravity ? FLOAT_FLIGHT_MS : EMOJI_FLIGHT_MS,
                 // The path is already shaped by gravity, so time runs evenly
                 easing: Easing.linear,
                 useNativeDriver: true,
-            }),
+            })] : []),
             Animated.timing(numberProgress, {
                 toValue: 1,
                 duration: NUMBER_FLIGHT_MS,

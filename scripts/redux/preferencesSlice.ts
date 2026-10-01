@@ -20,6 +20,11 @@ interface PreferencesState {
     * @property An array of buildings for which to show upgrades for in the upgrade screen
     */
     upgradeFilter: upgradeFilters[],
+    /**
+    * @property Skips the heaviest animations, chiefly the emojis flying off the Big Emoji.
+    * Missing from saves made before it existed, so read it as off when undefined.
+    */
+    reduceAnimations?: boolean,
 }
 
 const initialState: PreferencesState = {
@@ -29,6 +34,7 @@ const initialState: PreferencesState = {
         ...buildingData.map(building => building.name as BuildingNames),
         "Big emoji" as BuildingNames,
     ],
+    reduceAnimations: false,
 };
 
 export const preferencesSlice = createSlice({
@@ -51,14 +57,17 @@ export const preferencesSlice = createSlice({
             }
             state.upgradeFilter = currentFilters;
         },
+        updateReduceAnimations: (state, action: PayloadAction<boolean>) => {
+            state.reduceAnimations = action.payload;
+        },
         resetPreferences: (state) => {
-            // Directly return the initialState
-            return initialState;
+            // Settings are about the device, not the save, so they survive a reset
+            return { ...initialState, reduceAnimations: state.reduceAnimations ?? false };
         },
 
     },
 });
 
-export const { updateBulkBuy, updateShowDetails, toggleUpgradeFilter, resetPreferences } = preferencesSlice.actions;
+export const { updateBulkBuy, updateShowDetails, toggleUpgradeFilter, updateReduceAnimations, resetPreferences } = preferencesSlice.actions;
 
 export default preferencesSlice.reducer;
