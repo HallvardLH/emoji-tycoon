@@ -1,11 +1,7 @@
 import { configureStore } from '@reduxjs/toolkit';
 import { combineReducers } from 'redux';
-import {
-    persistReducer,
-    initStore,
-    PersistConfig,
-} from 'react-native-redux-persist2';
-import AsyncStorage from '@react-native-async-storage/async-storage';
+import { persistReducer } from 'react-native-redux-persist2';
+import { startPersistence } from './persistence';
 import valuesSlice from './valuesSlice';
 import buildingsSlice from './buildingsSlice';
 import upgradesSlice from './upgradesSlice';
@@ -31,17 +27,7 @@ const rootReducer = combineReducers({
     tabs: tabsSlice,
 });
 
-// Persist configuration
-const persistConfig: PersistConfig = {
-    key: 'root', // Key to store the data
-    storage: {
-        type: 'AsyncStorage', // The storage that you want to use
-        // asyncStorage: AsyncStorage, // Pass the AsyncStorage instance
-    },
-    // Optionally, you can add version number, whitelist, or blacklist to the configuration
-};
-
-// Create the persisted reducer
+// Merges the loaded save into the state when it arrives
 const persistedReducer = persistReducer(rootReducer);
 
 // Configure the store
@@ -55,10 +41,8 @@ const store = configureStore({
         }),
 });
 
-// Initialize the store and rehydrate it
-initStore(store, persistConfig);
-
-export const persistor = initStore(store, persistConfig);
+// Load the save, then keep saving (see persistence.ts)
+startPersistence(store);
 
 export type RootState = ReturnType<typeof store.getState>;
 export type AppDispatch = typeof store.dispatch;
