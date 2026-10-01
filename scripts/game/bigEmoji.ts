@@ -18,6 +18,7 @@ import { effectEmojis } from './effects/effectData';
 import { incrementTapBoost, getComboProgress } from './tapBoost';
 import { calculateEpt } from './calculations';
 import { howFun } from './shorthands';
+import { shinyChanceMultiplier } from './prestige/perks';
 
 /** Chance that a new Big Emoji is shiny */
 export const SHINY_CHANCE = 1 / 200;
@@ -126,7 +127,7 @@ const emojiData = {
 export function pickNextEmoji() {
     let randomEmoji = selectRandomEmoji();
     // Fun value 91 - 98 (collector): shiny emojis are 1.25× as likely
-    const shinyChance = SHINY_CHANCE * (howFun(91, 98) ? 1.25 : 1);
+    const shinyChance = SHINY_CHANCE * (howFun(91, 98) ? 1.25 : 1) * shinyChanceMultiplier();
     const shiny = alwaysShiny || Math.random() < shinyChance;
     store.dispatch(updateNextEmoji({
         emoji: randomEmoji.emoji,

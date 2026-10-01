@@ -1,6 +1,7 @@
 import store from '../redux/reduxStore';
 import { updateEmojis } from '../redux/valuesSlice';
 import { addEmojisGained } from '../redux/statsSlice';
+import { giftMultiplier } from './prestige/perks';
 
 const GIFT_SECONDS_OF_PRODUCTION = 15 * 60;
 const GIFT_SHARE_OF_BANK = 0.1;
@@ -22,7 +23,8 @@ export function emojiGiveEffect() {
     const { emojisPerSecond, emojis } = store.getState().values;
 
     // calculate best gift
-    let gift = Math.min(emojisPerSecond * GIFT_SECONDS_OF_PRODUCTION, emojis * GIFT_SHARE_OF_BANK);
+    // Gift wrap (perk) doubles it
+    let gift = Math.min(emojisPerSecond * GIFT_SECONDS_OF_PRODUCTION, emojis * GIFT_SHARE_OF_BANK) * giftMultiplier();
 
     // Adds another random amount of emojis, just to be sure something is given
     const bonus = Math.floor(Math.random() * 1000);

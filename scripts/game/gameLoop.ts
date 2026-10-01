@@ -7,15 +7,12 @@ import { decrementEffectsOnScreen, spawnEffect } from "./effects/onScreenEffects
 import { updateTimeSinceLastEffect } from "../redux/effectsSlice";
 import { generateCollection } from "./collection/emojiCategories";
 import { pickNextEmoji } from "./bigEmoji";
-import { calculateEpt } from "./calculations";
+import { calculateEpt, calculateEmojisPerSecond } from "./calculations";
+import { hasPerk } from "./prestige/perks";
 import { canBuyUpgrade } from "./upgrades/checks";
 import { addEmojisGained } from "../redux/statsSlice";
 import { calculateBuildingsEps, syncBuildingPrices } from "./buildings/buildings";
-import {
-    calculateRemainingEmojisForNextPrestige,
-    getPrestigeLevel,
-} from "./prestige/prestige";
-import { updateEmojiEssence } from "../redux/prestigeSlice";
+import { calculateRemainingEmojisForNextPrestige, startPrestige, updateLastSeen, trackRunPeak } from "./prestige/prestige";
 import { decrementTapBoost } from "./tapBoost";
 import { checkBankMilestone } from "./milestones";
 import { setComboTaps } from "../redux/statsSlice";
@@ -42,6 +39,8 @@ export function gameLoop() {
         pickNextEmoji();
         calculateEpt();
         calculateBuildingsEps();
+        // Migrates old saves and pays out offline earnings (needs the production just calculated)
+        startPrestige();
         loggedBigEmojiTaps = state.stats.bigEmojiTaps;
     }
 
@@ -56,14 +55,15 @@ export function gameLoop() {
         canBuyBuilding();
         unlockBuilding();
         canBuyUpgrade();
+        // Collector's pride (perk) grows as the collection does
+        if (hasPerk("collectorsPride")) calculateEmojisPerSecond();
+        trackRunPeak();
 
         // detect new tap
         if (loggedBigEmojiTaps !== state.stats.bigEmojiTaps) {
             loggedBigEmojiTaps = state.stats.bigEmojiTaps;
             unlockUpgrades();
         }
-
-        store.dispatch(updateEmojiEssence(getPrestigeLevel()));
     }
 
     // Every 1s
@@ -72,7 +72,8 @@ export function gameLoop() {
         decrementEffects();
         decrementEffectsOnScreen();
         spawnEffect();
-        calculateRemainingEmojisForNextPrestige(true);
+        calculateRemainingEmojisForNextPrestige();
+        updateLastSeen();
         checkBankMilestone();
     }
 

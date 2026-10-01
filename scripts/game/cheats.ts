@@ -3,6 +3,8 @@ import { addEffectEmojisCollected, addShinyEmojiTapped, setComboTaps, addEmojisE
 import { addToCollection, CollectionState } from "../redux/collectionSlice";
 import { selectRandomEmoji } from "./bigEmoji";
 import { unlockUpgrades } from "./upgrades/checks";
+import { cheatPrestige } from "../redux/prestigeSlice";
+import { calculateBuildingsEps } from "./buildings/buildings";
 
 /**
  * Cheats for stats that take a long time to build up by playing,
@@ -33,6 +35,20 @@ export function cheatCollectEmojis(amount: number, shinyEvery = 0) {
         store.dispatch(addToCollection({ category: category as keyof CollectionState, id: index, shiny }));
         if (shiny) store.dispatch(addShinyEmojiTapped());
     }
+}
+
+/**
+ * Free emoji essence, to try out perks. It counts as earned, so the next real
+ * prestige pays out only what the emojis drawn are worth beyond it.
+ */
+export function cheatAddEssence(amount: number) {
+    store.dispatch(cheatPrestige({ essence: amount }));
+    calculateBuildingsEps();
+}
+
+/** Unlocks the next perk tier without prestiging */
+export function cheatUnlockPerkTier() {
+    store.dispatch(cheatPrestige({ tiers: 1 }));
 }
 
 /** Magical (effect) emojis tapped, only shown in Stats */

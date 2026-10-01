@@ -5,7 +5,7 @@ import { giveOneOffEmojis } from '../../scripts/game/giveEmojis';
 import { isAlwaysShiny, setAlwaysShiny } from '../../scripts/game/bigEmoji';
 import ResetButton from './ResetButton';
 import FunValueCheat from './FunValueCheat';
-import { cheatAddComboTaps, cheatMultiplyTapEarnings, cheatCollectEmojis, cheatAddMagicalEmojis } from '../../scripts/game/cheats';
+import { cheatAddComboTaps, cheatMultiplyTapEarnings, cheatCollectEmojis, cheatAddMagicalEmojis, cheatAddEssence, cheatUnlockPerkTier } from '../../scripts/game/cheats';
 import Text from '../generalUI/Text';
 import { palette, radii } from '../misc/theme';
 
@@ -41,6 +41,13 @@ export default function Cheats({ onPress }: CheatsProps) {
                     <CheatButton label="+25 collection" onPress={() => cheatCollectEmojis(25)} compact />
                     <CheatButton label="+5 shiny" onPress={() => cheatCollectEmojis(5, 1)} compact />
                     <CheatButton label="+10 magical" onPress={() => cheatAddMagicalEmojis(10)} compact />
+                </View>
+            </Section>
+
+            <Section title="PRESTIGE">
+                <View style={styles.row}>
+                    <CheatButton label="+100 essence" onPress={() => cheatAddEssence(100)} compact />
+                    <CheatButton label="+1 perk tier" onPress={() => cheatUnlockPerkTier()} compact />
                 </View>
             </Section>
 

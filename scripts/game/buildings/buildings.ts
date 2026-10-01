@@ -9,6 +9,7 @@ import { calculateEmojisPerSecond, calculateEpt } from '../calculations';
 import * as Haptics from "expo-haptics"
 import { BulkBuyAmount } from '../../redux/preferencesSlice';
 import { celebrateMilestone } from '../milestones';
+import { buildingPriceMultiplier } from '../prestige/perks';
 
 type PluralNames = {
     [key: string]: string;
@@ -61,6 +62,11 @@ export const buildingEmojis: buildingName = {
 
 const PRICE_GROWTH = BUILDING_PRICE_GROWTH;
 
+/** What the building costs when you own mount of it, with any Bulk discount (perk) */
+export function unitPrice(buildingId: number, amount: number) {
+    return Math.round(buildingData[buildingId].basePrice * Math.pow(PRICE_GROWTH, amount) * buildingPriceMultiplier());
+}
+
 /**
  * Turns a bulk buy setting into a number of buildings.
  *
@@ -73,7 +79,7 @@ export function resolveBuyAmount(buildingId: number, bulkBuy: BulkBuyAmount = st
     const building = getBuildingById(buildingId);
     const data = buildingData[buildingId];
     const emojis = store.getState().values.emojis;
-    const nextPrice = data.basePrice * Math.pow(PRICE_GROWTH, building.amount);
+    const nextPrice = unitPrice(buildingId, building.amount);
 
     const affordable = Math.floor(Math.log(emojis * (PRICE_GROWTH - 1) / nextPrice + 1) / Math.log(PRICE_GROWTH));
     return Math.max(1, affordable);
@@ -111,7 +117,7 @@ export const buyBuilding = (buildingId: number, bulkBuy: BulkBuyAmount = store.g
 
     // Calculate total cost for all buildings at once
     for (let i = 0; i < actualBuyAmount; i++) {
-        const price = Math.round(data.basePrice * Math.pow(PRICE_GROWTH, currentAmount + i));
+        const price = unitPrice(data.buildingId, currentAmount + i);
         totalCost += price;
     }
 
@@ -121,7 +127,7 @@ export const buyBuilding = (buildingId: number, bulkBuy: BulkBuyAmount = store.g
     }
 
     const newAmount = currentAmount + actualBuyAmount;
-    const newPrice = Math.round(data.basePrice * Math.pow(PRICE_GROWTH, newAmount));
+    const newPrice = unitPrice(data.buildingId, newAmount);
 
     updateBuildingValue(buildingId, "amount", newAmount);
     updateBuildingValue(buildingId, "price", newPrice);
@@ -146,7 +152,7 @@ export const buyBuilding = (buildingId: number, bulkBuy: BulkBuyAmount = store.g
  */
 export function syncBuildingPrices() {
     store.getState().buildings.buildings.forEach(building => {
-        const price = Math.round(buildingData[building.buildingId].basePrice * Math.pow(PRICE_GROWTH, building.amount));
+        const price = unitPrice(building.buildingId, building.amount);
         if (building.price !== price) updateBuildingValue(building.buildingId, "price", price);
     });
 }
@@ -167,7 +173,7 @@ const calculateAffordableBuildings = (building: any, data: any, currentEmojis: n
     let currentAmount = building.amount;
 
     for (let i = 0; i < maxAmount; i++) {
-        const nextPrice = Math.round(data.basePrice * Math.pow(PRICE_GROWTH, currentAmount + i));
+        const nextPrice = unitPrice(data.buildingId, currentAmount + i);
 
         if (cumulativeCost + nextPrice <= currentEmojis) {
             cumulativeCost += nextPrice;
@@ -193,7 +199,7 @@ export function calculateBuildingPrice(buildingId: number, bulkBuy: BulkBuyAmoun
         // We make sure to update the building value with each iteration
         const currentBuilding = getBuildingById(buildingId);
         // Check if the current building can be afforded
-        price += Math.round(data.basePrice * Math.pow(PRICE_GROWTH, currentAmount));
+        price += unitPrice(data.buildingId, currentAmount);
         currentAmount += 1;
     }
 

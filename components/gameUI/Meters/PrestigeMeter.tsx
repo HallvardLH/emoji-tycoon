@@ -1,91 +1,85 @@
-import ProgressMeter from "./ProgressMeter";
-import Modal from "../../generalUI/Modal";
-import ContentBox from "../../generalUI/ContentBox";
-import Text from "../../generalUI/Text";
-import { colors } from "../../misc/Colors";
-import { TouchableOpacity, View } from "react-native";
-import { useState } from "react";
-import { useSelector } from 'react-redux';
+import { Pressable, View, StyleSheet } from "react-native";
+import { useSelector } from "react-redux";
+import { useRouter } from "expo-router";
 import { RootState } from "../../../scripts/redux/reduxStore";
-import { StyleSheet } from "react-native";
-import Emoji from "../Emoji";
+import { essenceForEmojis, emojisForEssence } from "../../../scripts/game/prestige/prestige";
+import Text from "../../generalUI/Text";
+import { palette, radii } from "../../misc/theme";
 
+// Shows up once the first essence is a tenth of the way there
+const SHOW_FROM = emojisForEssence(1) / 10;
+
+/**
+ * Emoji essence on the home screen: how much a prestige would give, and how close the next one is.
+ * Opens the prestige screen.
+ */
 export default function PrestigeMeter() {
-    const { remainingEmojisPrestigePerc, emojiEssence } = useSelector((state: RootState) => state.prestige);
+    const router = useRouter();
+    // Derived values only: the emojis drawn change every tick, these rarely do
+    const visible = useSelector((state: RootState) => (state.prestige.prestiges ?? 0) > 0 || state.stats.emojisGained >= SHOW_FROM);
+    const pending = useSelector((state: RootState) =>
+        Math.max(0, essenceForEmojis(state.stats.emojisGained) - (state.prestige.totalEssenceEarned ?? 0)));
+    // Updated once a second by the game loop
+    const progress = useSelector((state: RootState) => state.prestige.remainingEmojisPrestigePerc);
 
-    const [modalVisible, setModalVisible] = useState(false);
-    return null
+    if (!visible) return null;
+    const ready = pending >= 1;
+
     return (
-        <>
-            <TouchableOpacity onPress={() => setModalVisible(true)}>
-                <View style={styles.iconContainer}>
-                    <View style={styles.innerButtonContainer}>
-                        <Emoji size={24} icon="✨" />
-                    </View>
+        <Pressable
+            onPress={() => router.push("/prestige")}
+            accessibilityRole="button"
+            accessibilityLabel={ready ? `Prestige for ${pending} emoji essence` : "Emoji essence"}
+            style={({ pressed }) => [styles.chip, ready ? styles.chipReady : null, pressed ? { opacity: 0.8 } : null]}
+        >
+            <Text size={18} style={{ lineHeight: 22 }}>✨</Text>
+            <View style={styles.body}>
+                <Text font="black" size={12} color={ready ? palette.ink : "#FFFFFF"}>
+                    {ready ? `+${pending} essence` : "Essence"}
+                </Text>
+                <View style={[styles.track, ready ? styles.trackReady : null]}>
+                    <View style={[styles.fill, ready ? styles.fillReady : null, { width: `${Math.max(2, progress)}%` }]} />
                 </View>
-            </TouchableOpacity>
-
-            <Modal
-                modalVisible={modalVisible}
-                onRequestClose={() => setModalVisible(false)}
-            >
-                <ContentBox title="Prestige">
-                    <View style={styles.prestigeInfoContainer}>
-                        <View style={styles.prestigeInfoText}>
-                            {/* Add animation where the emoji icon stays the same icon for a few seconds, then skips through a bunch of icons until become another one for a while, to show it changing its shape */}
-                            <Text style={styles.paragraph} color={"gray"} size={14} shadow={false}>
-                                After having created <Text color={colors.purple.dark} size={14}>10 billion</Text> emojis, the very essence of emojis has started accumulating around you.
-                            </Text>
-
-                            <Text style={styles.paragraph} color={"gray"} size={14} shadow={false}>
-                                Emoji essence is a <Text color={colors.purple.dark} size={14}>magical substance</Text> that changes its shape whenever you look at it, and holds unknown powers.
-                            </Text>
-                        </View>
-                        <View style={styles.prestigeInfoIcon}>
-                            <Emoji icon="✨" />
-                        </View>
-                    </View>
-                </ContentBox>
-            </Modal>
-        </>
-    )
+            </View>
+        </Pressable>
+    );
 }
 
 const styles = StyleSheet.create({
-    prestigeInfoContainer: {
+    chip: {
+        // Always on the right, whether or not effect chips are showing
+        marginLeft: "auto",
         flexDirection: "row",
-
-    },
-
-    prestigeInfoText: {
-        flex: 3,
-    },
-
-    prestigeInfoIcon: {
-        flex: 1
-    },
-
-    paragraph: {
-        marginBottom: 10,
-    },
-
-    iconContainer: {
-        justifyContent: "center",
         alignItems: "center",
-        width: 40,
-        zIndex: 2,
+        gap: 8,
+        paddingVertical: 6,
+        paddingLeft: 10,
+        paddingRight: 12,
+        borderRadius: radii.pill,
+        backgroundColor: palette.glass,
     },
-    innerButtonContainer: {
-        borderColor: colors.border,
-        borderRadius: 100,
-        justifyContent: "center",
-        alignItems: "center",
-        backgroundColor: colors.blue.medium,
-        width: 40,
-        height: 40,
-        borderWidth: 2.5,
-        zIndex: 2,
+    chipReady: {
+        backgroundColor: palette.sun,
     },
-
-
-})
+    body: {
+        gap: 3,
+    },
+    track: {
+        width: 70,
+        height: 4,
+        borderRadius: 2,
+        backgroundColor: palette.glassLine,
+        overflow: "hidden",
+    },
+    trackReady: {
+        backgroundColor: "rgba(0,0,0,0.15)",
+    },
+    fill: {
+        height: 4,
+        borderRadius: 2,
+        backgroundColor: palette.sun,
+    },
+    fillReady: {
+        backgroundColor: palette.ink,
+    },
+});

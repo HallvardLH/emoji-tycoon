@@ -3,6 +3,7 @@ import { updateEmojisPerTap } from "../redux/bigEmojiSlice";
 import { updateEmojisPerSecond } from "../redux/valuesSlice";
 import { formatNumber } from "../misc";
 import { funProductionMultiplier, funTapMultiplier } from "./shorthands";
+import { prestigeProductionMultiplier } from "./prestige/perks";
 
 // Recalculates emojis per tap
 export function calculateEpt() {
@@ -144,8 +145,9 @@ export function calculateEmojisPerSecond() {
 
     const totalBuildingEps = store.getState().values.totalBuildingEps;
 
-    // Apply total multiplier, compounded percentage increases and any fun value bonus
-    let eps = (totalBuildingEps * totalMultiplier) * compoundedPercentageMultiplier * funProductionMultiplier();
+    // Apply total multiplier, compounded percentage increases, any fun value bonus,
+    // and emoji essence (unspent essence and production perks)
+    let eps = (totalBuildingEps * totalMultiplier) * compoundedPercentageMultiplier * funProductionMultiplier() * prestigeProductionMultiplier();
 
     // Update the store with the new EPS
     store.dispatch(updateEmojisPerSecond(eps));
@@ -184,7 +186,7 @@ export function calculateEpsBonus(newMultiplierEffect?: number, newPercentageInc
 
     const totalBuildingEps = store.getState().values.totalBuildingEps;
 
-    const eps = (totalBuildingEps * totalMultiplier) * compoundedPercentageMultiplier * funProductionMultiplier();
+    const eps = (totalBuildingEps * totalMultiplier) * compoundedPercentageMultiplier * funProductionMultiplier() * prestigeProductionMultiplier();
     const currentEps = store.getState().values.emojisPerSecond;
 
     const bonus = eps - currentEps;

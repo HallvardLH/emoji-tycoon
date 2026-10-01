@@ -8,6 +8,7 @@ import { emojiGiveEffect } from '../giveEmojis';
 import * as Haptics from "expo-haptics"
 import { vibrateForDuration } from '../../utils';
 import { playHaptic } from '../../utils';
+import { effectSpawnRateMultiplier } from '../prestige/perks';
 
 /**
  * Called when the player taps an effect emoji
@@ -90,7 +91,8 @@ export function spawnEffect(guaranteed?: boolean) {
     const spawnChanceIncrease = spawnChanceIncreases.reduce((acc, val) => acc + val)
     if (timeSinceLastEffect >= 0) {
         // Increasing chance each second, with a guaranteed spawn at 300 seconds
-        const chance = timeSinceLastEffect / 200 - Math.random();
+        // Lucky streak (perk) makes time count for more
+        const chance = timeSinceLastEffect * effectSpawnRateMultiplier() / 200 - Math.random();
         // Threshold of 0.5 means at least 100 seconds must have passed for there to
         // even be a chance at all of something spawning
         // With a fun value of 70 to 75, the threshold is lowered by 0.2,

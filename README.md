@@ -31,7 +31,7 @@ The game loop (`scripts/game/gameLoop.ts`) runs every 100 ms:
 - **Every 1 s:** count effects down, maybe spawn an effect emoji, update prestige progress and check bank milestones.
 - **Every 2.5 s:** check which buildings and upgrades are affordable or unlocked.
 
-There are no offline earnings; time away produces nothing.
+Time away produces nothing, unless the Night shift perk is owned (see Prestige).
 
 ### Screens
 | Tab | Contents |
@@ -174,14 +174,37 @@ A secret number from 1–100, rolled on a new game and on reset, like Cookie Cli
 | 99 | 99 red balloons | Effect emojis are 🎈, bad ones 📌 |
 | 100 | Sad hundred | Stats shows 😭 by the fun value |
 
-### Prestige (not live yet)
-- **Emoji essence:** `floor(√(total drawn / 10^10))`, so the first point comes at 10 B.
-- **Status:** progress is tracked, but `PrestigeMeter` renders nothing, and there's no ascend action or anything to spend essence on.
+### Prestige (emoji essence ✨)
+- **Earning essence:** the essence all-time emojis drawn are worth is `floor((total drawn / 2×10^8)^(1/4))`. Prestiging pays out what that's worth beyond the essence already earned, so each run has to go further to earn as much again. About 50 essence for the first prestige, at ~1 Qa drawn.
+- **What it does:** each *unspent* essence gives +2% production (2.5% with Resonance). Essence also buys perks, which gives up that bonus.
+- **Resets:** bank, buildings, building upgrades, hands, effects. **Keeps:** collection, all-time stats, combo upgrades, fun value, essence and perks.
+- **Perks:** each prestige unlocks the next tier (tier 1 after the first prestige, and so on):
+
+| Tier | Perk | Cost | Effect |
+|---|---|---|---|
+| 1 | Night shift 🌙 | 5 | Earn 10% of production while the game is closed, up to 8 h |
+| 1 | Gift wrap 🎀 | 15 | Gifts give twice as much |
+| 1 | Head start 🎒 | 10 | Start every run with 5 minutes of your last run's best production |
+| 2 | Lucky streak 🍀 | 40 | Effect emojis appear 50% more often |
+| 2 | Shiny sense 🌟 | 30 | Shiny emojis twice as likely |
+| 2 | Resonance 🔮 | 60 | Unspent essence gives +2.5% each |
+| 3 | Collector's pride 📖 | 150 | +0.03% production per different emoji collected |
+| 3 | Bulk discount 🏷️ | 200 | Buildings 10% cheaper |
+| 3 | Graveyard shift 🌌 | 120 | Offline earnings 25%, up to 16 h (needs Night shift) |
+| 4 | Neighbourhood 🏘️ | 500 | +3% production per kind of building owned |
+| 4 | Muscle memory ✋ | 400 | Keep Big Emoji hands when prestiging |
+| 4 | Steady hands 🔥 | 300 | Combo drains 20% slower |
+
+- **UI:** a ✨ chip on the home screen fills toward the next essence and shows what a prestige would pay. It opens `app/prestige.tsx` with the reset (two-tap confirm) and the perk tiers.
+- **Pacing (balance sim, player tapping a quarter of the time, prestiging when it would double the essence bonus):**
+  - The first prestige comes at about 19 h, with runs shrinking to about 5 h by the 6th.
+  - Runs lengthen again after about 100 h, once all perks are owned.
 
 ### Cheats (drawer)
 The drawer has these sections:
 - **Emojis:** +1 M / +1 Qa / +1 Oc.
 - **Stats:** +10k combo taps, ×1000 tap earnings, +25 collection, +5 shiny, +10 magical.
+- **Prestige:** +100 essence, +1 perk tier.
 - **Effect emojis:** spawn one, or spawn ten.
 - **Shiny:** an "only shiny emojis" toggle.
 - **Fun value:** a stepper, plus an expandable lookup table.
@@ -231,6 +254,7 @@ scripts/
   game/buildings/         building data, buying, unlock checks
   game/upgrades/          upgrade data, prices, unlock checks, bonuses
   game/effects/           effect data, spawning, timers
+  game/prestige/          prestige.ts (essence, the reset, offline earnings), perks.ts (perk data and effects)
   redux/                  slices: values, buildings, upgrades, bigEmoji, effects, collection, stats,
                           prestige, preferences, tabs
 ```
@@ -244,8 +268,8 @@ scripts/
 ---
 
 ## Known gaps
-- **Prestige:** the UI is disabled, and essence has no use.
-- **Offline earnings:** none, and there's no settings screen yet.
+- **Late prestige:** once all 12 perks are owned (around 100 h), there's nothing new to spend essence on and runs lengthen. More perk tiers, or a repeatable essence sink, would extend it.
+- **Offline earnings:** only through perks, and there's no settings screen yet.
 - **Background rain:** the `EmojiRain` background is commented out on the home screen (`ComboRain` is separate and active).
 - **Web reloads:** deep links like `/shop/Buildings` show "Unmatched Route" on a hard reload.
 - **Type-check:** `tsc` has 13 errors in `screens/AppNavigationStack.tsx` and `scripts/game/upgrades/upgradeBonus.tsx`.

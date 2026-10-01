@@ -2,6 +2,7 @@ import store from "../redux/reduxStore";
 import { updateTapBoost } from "../redux/bigEmojiSlice";
 import { calculateEpt } from "./calculations";
 import { howFun } from "./shorthands";
+import { comboDrainMultiplier } from "./prestige/perks";
 import { BASE_MAX_COMBO, isComboUpgradeId } from "./upgrades/upgradeData/nonBuilding/combo";
 
 // Every tap adds 1 boost, and every 10 boost adds ×1 to emojis per tap (see calculateEpt)
@@ -32,7 +33,7 @@ export function decrementTapBoost() {
     const { multiplier } = getComboProgress(tapBoost);
     const drainPerSecond = BASE_DRAIN_PER_SECOND + EXTRA_DRAIN_PER_LEVEL * (multiplier - 1);
     // Called every 100ms
-    const decrement = drainPerSecond / 10 * (howFun(88, 90) ? 0.75 : 1);
+    const decrement = drainPerSecond / 10 * (howFun(88, 90) ? 0.75 : 1) * comboDrainMultiplier();
     store.dispatch(updateTapBoost(Math.max(0, tapBoost - decrement)));
     calculateEpt();
 }
