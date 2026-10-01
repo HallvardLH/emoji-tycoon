@@ -45,10 +45,10 @@ export function calculateEpt() {
     // For every 10 tap boost, multiply EPT
     const tapBoost = (Math.floor(store.getState().bigEmoji.tapBoost / 10)) + 1;
 
-    // Calculate emojis per tap with the total multiplier and compounded percentage increases
-    let ept = (((baseEmojisPerTap + epsBonus) * multiplier) * percentageIncrease) * tapBoost * funTapMultiplier();
-
-    // console.log(baseEmojisPerTap, eps, totalPercentageOfEps, epsBonus, multiplier, percentageIncrease, ept)
+    // Tap multipliers boost the base tap; the share of production ("hands") is added on top,
+    // then both get the percentage increases and the combo. (Multiplying the production share
+    // too made one tap worth more than a second of production late in the game.)
+    let ept = ((baseEmojisPerTap * multiplier + epsBonus) * percentageIncrease) * tapBoost * funTapMultiplier();
 
     // Dispatch the updated value to the store
     store.dispatch(updateEmojisPerTap(ept));
@@ -105,8 +105,8 @@ export function calculateEptBonus(newPercentageOfEps?: number, newMultiplier?: n
     // Gets base emojis per tap
     const baseEmojisPerTap = store.getState().bigEmoji.baseEmojisPerTap;
 
-    // Calculate emojis per tap with the total multiplier and compounded percentage increases
-    let ept = ((baseEmojisPerTap + epsBonus) * multiplier) * percentageIncrease * funTapMultiplier();
+    // Same as calculateEpt
+    let ept = (baseEmojisPerTap * multiplier + epsBonus) * percentageIncrease * funTapMultiplier();
 
     const currentEpt = store.getState().bigEmoji.emojisPerTap;
 

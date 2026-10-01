@@ -1,6 +1,6 @@
 import store from '../../redux/reduxStore';
 import { updateTotalBuildingEps, updateEmojis } from '../../redux/valuesSlice';
-import { buildingData } from './buildingData';
+import { buildingData, BUILDING_PRICE_GROWTH } from './buildingData';
 import { getBuildingById } from './shorthands';
 import { unlockUpgrades } from '../upgrades/checks';
 import { updateBuildingValue } from './shorthands';
@@ -59,7 +59,7 @@ export const buildingEmojis: buildingName = {
 };
 
 
-const PRICE_GROWTH = 1.175;
+const PRICE_GROWTH = BUILDING_PRICE_GROWTH;
 
 /**
  * Turns a bulk buy setting into a number of buildings.
@@ -111,7 +111,7 @@ export const buyBuilding = (buildingId: number, bulkBuy: BulkBuyAmount = store.g
 
     // Calculate total cost for all buildings at once
     for (let i = 0; i < actualBuyAmount; i++) {
-        const price = Math.round(data.basePrice * Math.pow(1.175, currentAmount + i));
+        const price = Math.round(data.basePrice * Math.pow(PRICE_GROWTH, currentAmount + i));
         totalCost += price;
     }
 
@@ -121,7 +121,7 @@ export const buyBuilding = (buildingId: number, bulkBuy: BulkBuyAmount = store.g
     }
 
     const newAmount = currentAmount + actualBuyAmount;
-    const newPrice = Math.round(data.basePrice * Math.pow(1.175, newAmount));
+    const newPrice = Math.round(data.basePrice * Math.pow(PRICE_GROWTH, newAmount));
 
     updateBuildingValue(buildingId, "amount", newAmount);
     updateBuildingValue(buildingId, "price", newPrice);
@@ -139,6 +139,19 @@ export const buyBuilding = (buildingId: number, bulkBuy: BulkBuyAmount = store.g
 };
 
 /**
+ * Recomputes every building's stored price from its base price, so saves pick up
+ * base price changes (e.g. the black hole and singularity getting cheaper)
+ *
+ * Called once at game start
+ */
+export function syncBuildingPrices() {
+    store.getState().buildings.buildings.forEach(building => {
+        const price = Math.round(buildingData[building.buildingId].basePrice * Math.pow(PRICE_GROWTH, building.amount));
+        if (building.price !== price) updateBuildingValue(building.buildingId, "price", price);
+    });
+}
+
+/**
  * Batching all expensive recalculations into a single function
  */
 const batchRecalculations = () => {
@@ -154,7 +167,7 @@ const calculateAffordableBuildings = (building: any, data: any, currentEmojis: n
     let currentAmount = building.amount;
 
     for (let i = 0; i < maxAmount; i++) {
-        const nextPrice = Math.round(data.basePrice * Math.pow(1.175, currentAmount + i));
+        const nextPrice = Math.round(data.basePrice * Math.pow(PRICE_GROWTH, currentAmount + i));
 
         if (cumulativeCost + nextPrice <= currentEmojis) {
             cumulativeCost += nextPrice;
@@ -180,7 +193,7 @@ export function calculateBuildingPrice(buildingId: number, bulkBuy: BulkBuyAmoun
         // We make sure to update the building value with each iteration
         const currentBuilding = getBuildingById(buildingId);
         // Check if the current building can be afforded
-        price += Math.round(data.basePrice * Math.pow(1.175, currentAmount));
+        price += Math.round(data.basePrice * Math.pow(PRICE_GROWTH, currentAmount));
         currentAmount += 1;
     }
 

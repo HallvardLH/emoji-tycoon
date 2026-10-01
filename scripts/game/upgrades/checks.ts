@@ -6,19 +6,8 @@ import { getUpgradeDataById } from "./shorthands";
 import { getUpgradePrice } from "./upgradePrice";
 import { COMBO_LEVEL_UNLOCK_TAPS } from "./upgradeData/nonBuilding/combo";
 
-/**
- * Returns the amount of a building required to unlock a standard upgrade of the given tier
- *
- * Tiers 0 - 5 require 1, 10, 25, 50, 100 and 150 buildings,
- * after which each tier requires 50 more buildings than the last (200, 250, 300...)
- */
-export function getBuildingUnlockRequirement(tier: number) {
-    const earlyTiers = [1, 10, 25, 50, 100, 150];
-    if (tier < earlyTiers.length) {
-        return earlyTiers[tier];
-    }
-    return 150 + (tier - 5) * 50;
-}
+import { getBuildingUnlockRequirement } from "./requirements";
+export { getBuildingUnlockRequirement };
 
 /**
  * The building amount at which the building's next standard upgrade unlocks,
@@ -53,7 +42,6 @@ export function unlockUpgrades() {
                 if (building.amount >= getBuildingUnlockRequirement(upgrade.tier)) {
                     store.dispatch(unlockUpgrade(upgrade.id!));
                     if (activeTab !== "Shop") {
-                        console.log(upgrade.name)
                         store.dispatch(unlockedUpgradeNotificaiton());
                     }
                 }

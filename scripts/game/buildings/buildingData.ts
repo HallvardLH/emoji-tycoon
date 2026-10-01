@@ -9,9 +9,12 @@ interface BuildingData {
     baseEps: number;
 }
 
+// Each building costs this much more than the last one of its kind
+export const BUILDING_PRICE_GROWTH = 1.175;
+
+/** ×10 per building. (The black hole and singularity used to cost another ×10, which was the biggest wall in the game.) */
 export function getBaseBuildingPrice(num: number) {
-    let price = 10 * Math.pow(10, num)
-    if (num >= 15) price *= 10;
+    const price = 10 * Math.pow(10, num)
     return roundToPrettyNumber(price)
 }
 

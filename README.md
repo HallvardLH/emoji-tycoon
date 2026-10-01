@@ -56,11 +56,11 @@ The header shows your bank, with the per-second rate at a fixed position under i
 
 **Emojis per tap (EPT):**
 ```
-EPT = (baseEPT + EPS × Σ tap-% of EPS)
-      × Π tap multipliers (upgrades, effects, fun value)
+EPT = (baseEPT × Π tap multipliers (upgrades, effects)  +  EPS × Σ tap-% of EPS)
       × Π (1 + tap % increases)
-      × combo multiplier
+      × combo multiplier × fun value multiplier
 ```
+Tap multipliers boost only the base tap, not the share of production the "hands" add.
 
 ### Combo
 - **Hidden tap boost:** each tap adds 1 to it, and every 10 boost is one combo level (×1, ×2, ×3…). The multiplier applies to EPT.
@@ -105,13 +105,13 @@ EPT = (baseEPT + EPS × Σ tap-% of EPS)
 | 12 | Emoji volcano | 🌋 | 10 T | 260 M |
 | 13 | Temple of the Big Emoji in the sky | 🏯 | 100 T | 1.8 B |
 | 14 | Emoji supercomputer | 🖥️ | 1 Qa | 12 B |
-| 15 | Emoji black hole | 🕳️ | 100 Qa | 87 B |
-| 16 | Emoji singularity | ⚛️ | 1 Qi | 630 B |
+| 15 | Emoji black hole | 🕳️ | 10 Qa | 87 B |
+| 16 | Emoji singularity | ⚛️ | 100 Qa | 630 B |
 
 ### Upgrades
 | Kind | Effect | Unlock | Price |
 |---|---|---|---|
-| **Standard building** | ×2 that building's EPS (some also ×2 tapping) | Own 1 / 10 / 25 / 50 / 100 / 150, then +50 per tier | `basePrice × 10^(tier+1) / 2` |
+| **Standard building** | ×2 that building's EPS (some also ×2 tapping) | Own 1 / 5 / 10 / 20 / 30 / 40 / 50 / 60 / 75 / 90 / 100 / 125 / 150, then +25 per tier | 4 × the building's price at the unlock amount |
 | **Helper** | +X% total EPS or +X% tapping | Every 10 of a building | The building's price at 10t + 5 owned |
 | **Big Emoji ("hands")** | Tapping gains +1% of EPS | Emojis earned from tapping ≥ 10^(tier+2) | `10^(tier+4) + taps × 10^tier` |
 | **Combo level** | +1 max combo | Combo taps (see Combo) | Fixed, see table above |
@@ -133,9 +133,9 @@ Effect emojis spawn at random on-screen positions and grow in with a pulse. Tap 
 | 🍀 | ×2 production | 30 s | 25 s |
 | 😈 | ×77 production (fun value 17 only, 5%) | 4 s | 10 s |
 | 💣 | ×0.5 production (bad, only after 1 M EPS) | 15 s | 15 s |
-| 🎁 | Gift: min(1 h of EPS, 25% of bank) + 0–999 | instant | 25 s |
+| 🎁 | Gift: min(15 min of EPS, 10% of bank) + 0–999 | instant | 25 s |
 
-- **Spawning:** the chance rises with time since the last spawn. The first is possible at 50 s, the typical wait is about a minute, and a spawn is guaranteed by 150 s. There's a 1% chance of a double.
+- **Spawning:** the chance rises with time since the last spawn. The first is possible at 100 s, the typical wait is about two minutes, and a spawn is guaranteed by 300 s. There's a 1% chance of a double.
 - **Type weights:** tap 40 / production 40 / gift 20.
 - **Celebrations:** tapping an effect plays a burst naming what you got (e.g. "GIFT! +12.3K").
 - **Exits:** tapped effects burst away, and effects that time out (or chips that run out) fade.

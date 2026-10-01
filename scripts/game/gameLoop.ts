@@ -10,7 +10,7 @@ import { pickNextEmoji } from "./bigEmoji";
 import { calculateEpt } from "./calculations";
 import { canBuyUpgrade } from "./upgrades/checks";
 import { addEmojisGained } from "../redux/statsSlice";
-import { calculateBuildingsEps } from "./buildings/buildings";
+import { calculateBuildingsEps, syncBuildingPrices } from "./buildings/buildings";
 import {
     calculateRemainingEmojisForNextPrestige,
     getPrestigeLevel,
@@ -38,6 +38,7 @@ export function gameLoop() {
     if (tick === 0) {
         store.dispatch(updateTimeSinceLastEffect(0)); // reset timer
         generateCollection();
+        syncBuildingPrices();
         pickNextEmoji();
         calculateEpt();
         calculateBuildingsEps();

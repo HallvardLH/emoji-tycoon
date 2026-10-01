@@ -78,9 +78,9 @@ export function spawnEffects(count: number) {
  * Attempts to spawn an effect emoji
  *
  * Based on the time since last effect was spawned, a random check is done each second,
- * where time since last effect / 100 - a random number between 0 and 1 is put against 0.5.
- * This generally spawns an effect about once a minute (never before 50 seconds),
- * with a max wait period of 150 seconds.
+ * where time since last effect / 200 - a random number between 0 and 1 is put against 0.5.
+ * This generally spawns an effect every two minutes or so (never before 100 seconds),
+ * with a max wait period of 300 seconds.
  * 
  * @param guaranteed can be passed to bypass the chance check.
  */
@@ -89,9 +89,9 @@ export function spawnEffect(guaranteed?: boolean) {
     const spawnChanceIncreases = store.getState().effects.effectSpawnChanceIncreasers;
     const spawnChanceIncrease = spawnChanceIncreases.reduce((acc, val) => acc + val)
     if (timeSinceLastEffect >= 0) {
-        // Increasing chance each second, with a guaranteed spawn at 150 seconds
-        const chance = timeSinceLastEffect / 100 - Math.random();
-        // Threshold of 0.5 means at least 50 seconds must have passed for there to
+        // Increasing chance each second, with a guaranteed spawn at 300 seconds
+        const chance = timeSinceLastEffect / 200 - Math.random();
+        // Threshold of 0.5 means at least 100 seconds must have passed for there to
         // even be a chance at all of something spawning
         // With a fun value of 70 to 75, the threshold is lowered by 0.2,
         // making boost emojis spawn sooner
