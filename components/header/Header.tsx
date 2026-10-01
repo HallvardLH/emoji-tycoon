@@ -6,6 +6,7 @@ import { usePathname } from "expo-router";
 import Text from "../generalUI/Text";
 import AnimatedNumber from "../gameUI/AnimatedNumber";
 import HomeNavigation from "../drawer/HomeNavigation";
+import PrestigeMeter from "../gameUI/Meters/PrestigeMeter";
 import { RootState } from "../../scripts/redux/reduxStore";
 import { formatNumber } from "../../scripts/misc";
 import { palette, radii } from "../misc/theme";
@@ -28,8 +29,11 @@ export default function Header() {
                 <View style={styles.bigCounter}>
                     <Text font="black" size={12} color={palette.lilac} style={styles.caps}>EMOJIS</Text>
                     <Text size={40} style={{ lineHeight: 44 }}><Bank /></Text>
-                    <View style={styles.epsPill}>
-                        <Text font="bold" size={14} color={palette.sun}><Rate /></Text>
+                    <View style={styles.pills}>
+                        <View style={styles.epsPill}>
+                            <Text font="bold" size={14} color={palette.sun}><Rate /></Text>
+                        </View>
+                        <PrestigeMeter />
                     </View>
                 </View>
             ) : isEmojidex ? (
@@ -71,13 +75,26 @@ const styles = StyleSheet.create({
     },
     bigCounter: {
         gap: 4,
+        // Takes what the menu button leaves, so the pills wrap instead of pushing it off screen
+        flex: 1,
+        minWidth: 0,
+        marginRight: 12,
     },
     caps: {
         letterSpacing: 1.4,
     },
-    epsPill: {
-        alignSelf: "flex-start",
+    // The rate, and emoji essence next to it once it shows up
+    pills: {
+        flexDirection: "row",
+        // Same height pills
+        alignItems: "stretch",
+        // Late-game rates get long; essence drops to its own line rather than off screen
+        flexWrap: "wrap",
+        gap: 8,
         marginTop: 2,
+    },
+    epsPill: {
+        justifyContent: "center",
         paddingVertical: 5,
         paddingHorizontal: 12,
         borderRadius: radii.pill,

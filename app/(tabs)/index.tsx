@@ -3,7 +3,6 @@ import React from 'react';
 import BigEmoji from "../../components/gameUI/BigEmoji/BigEmoji";
 import EffectMeters from "../../components/gameUI/Meters/EffectMeters";
 import EffectPopup from "../../components/gameUI/EffectPopup";
-import PrestigeMeter from "../../components/gameUI/Meters/PrestigeMeter";
 import { View, StyleSheet } from "react-native";
 
 export default function Home() {
@@ -14,7 +13,6 @@ export default function Home() {
             {/* Floats over the stage so chips appearing don't shift the Big Emoji */}
             <View style={styles.overlay} pointerEvents="box-none">
                 <EffectMeters />
-                <PrestigeMeter />
             </View>
             <EffectPopup />
         </ScreenView>
@@ -28,6 +26,5 @@ const styles = StyleSheet.create({
         left: 20,
         right: 20,
         flexDirection: "row",
-        justifyContent: "space-between",
     },
 })

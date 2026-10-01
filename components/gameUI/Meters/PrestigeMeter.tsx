@@ -47,8 +47,6 @@ export default function PrestigeMeter() {
 
 const styles = StyleSheet.create({
     chip: {
-        // Always on the right, whether or not effect chips are showing
-        marginLeft: "auto",
         flexDirection: "row",
         alignItems: "center",
         gap: 8,
