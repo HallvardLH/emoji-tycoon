@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import { View, StyleSheet } from "react-native";
 import { useDispatch, useSelector } from "react-redux";
-import { markAffordableUpgradesSeen } from "../../scripts/redux/upgradesSlice";
+import { markAffordableUpgradesSeen, selectNewAffordableUpgrades } from "../../scripts/redux/upgradesSlice";
 import { MaterialTopTabBarProps } from "@react-navigation/material-top-tabs";
 import SegmentedControl from "../generalUI/SegmentedControl";
 import { RootState } from "../../scripts/redux/reduxStore";
@@ -11,10 +11,7 @@ import { palette } from "../misc/theme";
 export default function TopTabBar({ state, descriptors, navigation }: MaterialTopTabBarProps) {
     const dispatch = useDispatch();
     // Affordable upgrades the player hasn't seen on the Upgrades tab yet
-    const newAffordableUpgrades = useSelector((s: RootState) => {
-        const seen = s.upgrades.seenCanBuy ?? [];
-        return s.upgrades.canBuy.filter(id => !seen.includes(id)).length;
-    });
+    const newAffordableUpgrades = useSelector(selectNewAffordableUpgrades);
     const upgradesOpen = state.routes[state.index]?.name === "Upgrades";
 
     // While the Upgrades tab is open, whatever is affordable counts as seen

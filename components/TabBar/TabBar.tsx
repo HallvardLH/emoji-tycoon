@@ -10,7 +10,7 @@ import store from '../../scripts/redux/reduxStore';
 import { canBuyBuilding } from "../../scripts/game/buildings/checks";
 import { canBuyUpgrade } from "../../scripts/game/upgrades/checks";
 import { clearUnlockedBuildingsNotifications } from "../../scripts/redux/buildingsSlice";
-import { clearUnlockedUpgradeNotifications } from "../../scripts/redux/upgradesSlice";
+import { selectNewAffordableUpgrades } from "../../scripts/redux/upgradesSlice";
 import * as Haptics from 'expo-haptics';
 import { BottomTabBarProps } from "@react-navigation/bottom-tabs";
 import { Tab } from "../../scripts/redux/tabsSlice";
@@ -39,8 +39,10 @@ export default function TabBar({ state, navigation }: BottomTabBarProps) {
     const insets = useSafeAreaInsets();
     const dispatch = useDispatch();
 
-    const { unlockedUpgradeNotification } = useSelector((state: RootState) => state.upgrades);
-    const { unlockedBuildingsNotification } = useSelector((state: RootState) => state.buildings);
+    // Buildings unlocked since the Shop was last opened, plus the Upgrades tab's own badge,
+    // so the Shop badge always adds up to what's waiting inside it
+    const newAffordableUpgrades = useSelector(selectNewAffordableUpgrades);
+    const unlockedBuildingsNotification = useSelector((state: RootState) => state.buildings.unlockedBuildingsNotification);
 
     return (
         <View style={[styles.container, { paddingBottom: Math.max(insets.bottom, 14) }]} accessibilityRole="tablist">
@@ -65,8 +67,6 @@ export default function TabBar({ state, navigation }: BottomTabBarProps) {
                         if (route.name === "shop") {
                             store.dispatch(clearUnlockedBuildingsNotifications());
                             canBuyBuilding();
-
-                            store.dispatch(clearUnlockedUpgradeNotifications());
                             canBuyUpgrade();
                         }
                     }
@@ -75,7 +75,7 @@ export default function TabBar({ state, navigation }: BottomTabBarProps) {
 
                 let notificationCount = 0;
                 if (title === "Shop") {
-                    notificationCount = unlockedUpgradeNotification + unlockedBuildingsNotification;
+                    notificationCount = newAffordableUpgrades + unlockedBuildingsNotification;
                 }
 
                 return (

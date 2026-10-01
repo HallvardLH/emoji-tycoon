@@ -4,7 +4,6 @@ interface UpgradesState {
     owned: number[];
     unlocked: number[];
     canBuy: number[]
-    unlockedUpgradeNotification: number;
     /** Affordable upgrades the player has already seen on the Upgrades tab (not counted in its badge) */
     seenCanBuy?: number[];
 }
@@ -13,7 +12,15 @@ const initialState: UpgradesState = {
     owned: [],
     unlocked: [],
     canBuy: [],
-    unlockedUpgradeNotification: 0,
+};
+
+/**
+ * How many affordable upgrades the player hasn't seen on the Upgrades tab yet.
+ * The badge on the Upgrades tab, and the upgrades part of the badge on the Shop tab
+ */
+export const selectNewAffordableUpgrades = (state: { upgrades: UpgradesState }) => {
+    const seen = state.upgrades.seenCanBuy ?? [];
+    return state.upgrades.canBuy.filter(id => !seen.includes(id)).length;
 };
 
 export const upgradesSlice = createSlice({
@@ -48,12 +55,6 @@ export const upgradesSlice = createSlice({
             }
 
         },
-        unlockedUpgradeNotificaiton: (state) => {
-            state.unlockedUpgradeNotification++;
-        },
-        clearUnlockedUpgradeNotifications: (state) => {
-            state.unlockedUpgradeNotification = 0;
-        },
         /** The Upgrades tab is open: everything affordable now has been seen */
         markAffordableUpgradesSeen: (state) => {
             const seen = new Set([...(state.seenCanBuy ?? []), ...state.canBuy]);
@@ -72,6 +73,6 @@ export const upgradesSlice = createSlice({
 });
 
 // Export the generated action creators
-export const { addUpgrade, unlockUpgrade, addCanBuyUpgrade, removeCanBuyUpgrade, unlockedUpgradeNotificaiton, clearUnlockedUpgradeNotifications, markAffordableUpgradesSeen, resetUpgrades } = upgradesSlice.actions;
+export const { addUpgrade, unlockUpgrade, addCanBuyUpgrade, removeCanBuyUpgrade, markAffordableUpgradesSeen, resetUpgrades } = upgradesSlice.actions;
 
 export default upgradesSlice.reducer;

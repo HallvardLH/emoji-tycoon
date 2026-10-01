@@ -89,6 +89,8 @@ export const buildingsSlice = createSlice({
                 upgrades: 0,
                 unlocked: false, // Unlock only the first building
             }));
+            // Unlocks from before a reset or prestige aren't news in the new run
+            state.unlockedBuildingsNotification = 0;
         },
     },
 });

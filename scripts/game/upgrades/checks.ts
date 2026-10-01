@@ -1,7 +1,7 @@
 import store from "../../redux/reduxStore";
 import { getBuilding } from "../buildings/shorthands";
 import { upgradeData } from "./upgradeData/upgradeData";
-import { unlockUpgrade, addCanBuyUpgrade, removeCanBuyUpgrade, unlockedUpgradeNotificaiton } from "../../redux/upgradesSlice";
+import { unlockUpgrade, addCanBuyUpgrade, removeCanBuyUpgrade } from "../../redux/upgradesSlice";
 import { getUpgradeDataById } from "./shorthands";
 import { getUpgradePrice } from "./upgradePrice";
 import { COMBO_LEVEL_UNLOCK_TAPS } from "./upgradeData/nonBuilding/combo";
@@ -30,7 +30,6 @@ export function getNextUpgradeRequirement(buildingName: string) {
  *
  */
 export function unlockUpgrades() {
-    const activeTab = store.getState().tabs.activeTab;
     for (const upgrade of upgradeData) {
         const building = getBuilding(upgrade.building!);
         const state = store.getState();
@@ -41,38 +40,24 @@ export function unlockUpgrades() {
             case "Building amount":
                 if (building.amount >= getBuildingUnlockRequirement(upgrade.tier)) {
                     store.dispatch(unlockUpgrade(upgrade.id!));
-                    if (activeTab !== "Shop") {
-                        store.dispatch(unlockedUpgradeNotificaiton());
-                    }
                 }
                 break;
             case "Building helper":
                 // Helper upgrades are unlocked for every tenth building
                 if (building.amount >= ((upgrade.tier + 1) * 10) && building.amount > 0) {
                     store.dispatch(unlockUpgrade(upgrade.id!));
-                    if (activeTab !== "Shop") {
-
-                        store.dispatch(unlockedUpgradeNotificaiton());
-                    }
                 }
                 break;
             case "Combo taps":
                 // Each combo level unlocks after enough taps, weighted by the combo they were made at
                 if ((store.getState().stats.comboTaps ?? 0) >= COMBO_LEVEL_UNLOCK_TAPS[upgrade.tier]) {
                     store.dispatch(unlockUpgrade(upgrade.id!));
-                    if (activeTab !== "Shop") {
-                        store.dispatch(unlockedUpgradeNotificaiton());
-                    }
                 }
                 break;
             case "Emojis from tapping":
                 // Unlocks the most powerful tapping upgrades, starting at 100 emojis gained from taps
                 if (store.getState().stats.emojisEarnedFromTap >= Math.pow(10, upgrade.tier + 2)) {
                     store.dispatch(unlockUpgrade(upgrade.id!));
-                    if (activeTab !== "Shop") {
-
-                        store.dispatch(unlockedUpgradeNotificaiton());
-                    }
                 }
                 break;
         }
