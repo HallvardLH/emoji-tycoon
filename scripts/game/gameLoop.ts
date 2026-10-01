@@ -18,8 +18,19 @@ import { checkBankMilestone } from "./milestones";
 import { setComboTaps } from "../redux/statsSlice";
 
 let lastUpdateTime = Date.now();
-let tick = 0;
+let started = false;
 let loggedBigEmojiTaps = 0;
+
+// Timers run on real elapsed time, not on how often the loop gets to run: when the
+// page lags, the 100ms interval fires late, and counting ticks stretched every
+// "second" (effects lasted far longer than they said, and their bars jumped back).
+// Both start full, so they run on the first frame.
+let untilSecond = 0;
+let untilCheck = 0;
+const CHECK_INTERVAL = 2.5;
+// After a long pause (the app in the background), catch up at most this many seconds
+// of timers. Longer than any effect lasts, so they all still run out.
+const MAX_CATCH_UP_SECONDS = 60;
 
 export function gameLoop() {
     const now = Date.now();
@@ -32,7 +43,8 @@ export function gameLoop() {
     giveEmojis(delta, state);
 
     // Runs once at game start
-    if (tick === 0) {
+    if (!started) {
+        started = true;
         store.dispatch(updateTimeSinceLastEffect(0)); // reset timer
         generateCollection();
         syncBuildingPrices();
@@ -44,8 +56,10 @@ export function gameLoop() {
         loggedBigEmojiTaps = state.stats.bigEmojiTaps;
     }
 
-    // Every 2.5s (assuming loop runs at 100ms interval)
-    if (tick % 25 === 0) {
+    // Every 2.5s
+    untilCheck -= delta;
+    if (untilCheck <= 0) {
+        untilCheck = CHECK_INTERVAL;
         // Saves from before combo taps existed: count each past tap once, so players
         // who tapped a lot don't start the combo level upgrades from zero
         if (state.stats.comboTaps === undefined) {
@@ -66,20 +80,28 @@ export function gameLoop() {
         }
     }
 
-    // Every 1s
-    if (tick % 10 === 0) {
-        store.dispatch(updateTimeSinceLastEffect(state.effects.timeSinceLastEffect + 1));
-        decrementEffects();
-        decrementEffectsOnScreen();
-        spawnEffect();
-        calculateRemainingEmojisForNextPrestige();
-        updateLastSeen();
-        checkBankMilestone();
+    // Every 1s, once for each second that has passed
+    untilSecond -= delta;
+    let caughtUp = 0;
+    while (untilSecond <= 0 && caughtUp < MAX_CATCH_UP_SECONDS) {
+        untilSecond += 1;
+        caughtUp++;
+        everySecond();
     }
+    // Past the catch-up limit, drop the rest of the pause
+    if (untilSecond <= 0) untilSecond = 1;
 
-    decrementTapBoost();
+    decrementTapBoost(Math.min(delta, 1));
+}
 
-    tick++;
+function everySecond() {
+    store.dispatch(updateTimeSinceLastEffect(store.getState().effects.timeSinceLastEffect + 1));
+    decrementEffects();
+    decrementEffectsOnScreen();
+    spawnEffect();
+    calculateRemainingEmojisForNextPrestige();
+    updateLastSeen();
+    checkBankMilestone();
 }
 
 export function giveEmojis(delta: number, state = store.getState()) {

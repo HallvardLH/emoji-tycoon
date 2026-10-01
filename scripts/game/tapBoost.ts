@@ -27,13 +27,17 @@ export function getMaxComboMultiplier() {
 const BASE_DRAIN_PER_SECOND = 2.5;
 const EXTRA_DRAIN_PER_LEVEL = 1;
 
-export function decrementTapBoost() {
+/**
+ * Drains the combo
+ *
+ * @param seconds real time since the last drain (the game loop runs every ~100ms, later when lagging)
+ */
+export function decrementTapBoost(seconds = 0.1) {
     const tapBoost = store.getState().bigEmoji.tapBoost;
     if (tapBoost == 0) return
     const { multiplier } = getComboProgress(tapBoost);
     const drainPerSecond = BASE_DRAIN_PER_SECOND + EXTRA_DRAIN_PER_LEVEL * (multiplier - 1);
-    // Called every 100ms
-    const decrement = drainPerSecond / 10 * (howFun(88, 90) ? 0.75 : 1) * comboDrainMultiplier();
+    const decrement = drainPerSecond * seconds * (howFun(88, 90) ? 0.75 : 1) * comboDrainMultiplier();
     store.dispatch(updateTapBoost(Math.max(0, tapBoost - decrement)));
     calculateEpt();
 }
