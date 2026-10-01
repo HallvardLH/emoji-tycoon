@@ -1,11 +1,11 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { StyleSheet, View } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 import { useSelector } from "react-redux";
 import { usePathname } from "expo-router";
 import Text from "../generalUI/Text";
-import AnimatedNumber from "../gameUI/AnimatedNumber";
 import HomeNavigation from "../drawer/HomeNavigation";
+import store from "../../scripts/redux/reduxStore";
 import PrestigeMeter from "../gameUI/Meters/PrestigeMeter";
 import { RootState } from "../../scripts/redux/reduxStore";
 import { formatNumber } from "../../scripts/misc";
@@ -51,11 +51,47 @@ export default function Header() {
     )
 }
 
-/** The bank, the only part of the header that changes every tick */
+/**
+ * The bank, counting up every frame rather than in 10-a-second game ticks
+ *
+ * Between ticks it projects the last value forward at the current production, never past
+ * where the next tick will land. It reads the store directly each frame and only
+ * re-renders when the shown text changes, so the header itself stays still.
+ */
 const Bank = React.memo(() => {
-    const emojis = useSelector((state: RootState) => state.values.emojis);
-    return <AnimatedNumber value={emojis} />;
+    const [text, setText] = useState(() => formatBank(store.getState().values.emojis));
+
+    useEffect(() => {
+        let frame: number;
+        let lastValue = store.getState().values.emojis;
+        let lastChange = Date.now();
+        let shown = text;
+
+        const step = () => {
+            const { emojis, emojisPerSecond } = store.getState().values;
+            const now = Date.now();
+            if (emojis !== lastValue) {
+                lastValue = emojis;
+                lastChange = now;
+            }
+            // At most one game tick ahead, so it never runs past the real bank
+            const ahead = Math.min((now - lastChange) / 1000, 0.1) * emojisPerSecond;
+            const next = formatBank(lastValue + Math.max(0, ahead));
+            if (next !== shown) {
+                shown = next;
+                setText(next);
+            }
+            frame = requestAnimationFrame(step);
+        };
+        frame = requestAnimationFrame(step);
+        return () => cancelAnimationFrame(frame);
+    }, []);
+
+    return <>{text}</>;
 });
+
+/** Whole numbers with separators, then three decimals from a million up ("24.231 million") */
+const formatBank = (emojis: number) => emojis < 1e6 ? formatNumber(Math.floor(emojis)) : formatNumber(emojis, 3);
 
 /** Emojis per second, e.g. "+12.1 million / sec" */
 const Rate = React.memo(() => {
