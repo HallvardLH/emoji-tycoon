@@ -22,13 +22,16 @@ export interface BuildingInfo {
 export default function BuildingsList() {
     const { buildings } = useSelector((state: RootState) => state.buildings);
     const { bulkBuy } = useSelector((state: RootState) => state.preferences);
-    const { totalBuildingEps } = useSelector((state: RootState) => state.values);
+    const totalBuildingEps = useSelector((state: RootState) => state.values.totalBuildingEps);
+    // Read live, not from useBank: both change together when a building is bought, and
+    // useBank's half-second sample made the rows flash a wrong value in between
+    const liveEmojisPerSecond = useSelector((state: RootState) => state.values.emojisPerSecond);
     // Re-read so the next-upgrade progress updates when upgrades unlock
     useSelector((state: RootState) => state.upgrades.unlocked);
     const { emojis, emojisPerSecond } = useBank();
 
     // Building EPS is before global bonuses; scale it so rows add up to the header's number
-    const globalFactor = totalBuildingEps > 0 ? emojisPerSecond / totalBuildingEps : 1;
+    const globalFactor = totalBuildingEps > 0 ? liveEmojisPerSecond / totalBuildingEps : 1;
 
     const nextLocked = buildings.find(b => !b.unlocked);
 
