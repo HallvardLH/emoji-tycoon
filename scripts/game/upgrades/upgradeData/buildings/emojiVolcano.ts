@@ -26,6 +26,7 @@ export const emojiVolcanoUpgrades: UpgradeType[] = [
         name: "Obsidian molds",
         icon: "🪨",
         description: "Pour molten emojis into perfectly smiley shapes.",
+        quote: "You'll need a diamond pickaxe for this.",
         tier: 1,
         id: 1301,
     },
@@ -66,6 +67,7 @@ export const emojiVolcanoUpgrades: UpgradeType[] = [
         name: "Mountain forge",
         icon: "🗻",
         description: "Hammer fresh emojis on an anvil of cooled lava.",
+        quote: "One emoji to rule them all, and in the magma bind them.",
         tier: 6,
     },
     {
@@ -73,6 +75,7 @@ export const emojiVolcanoUpgrades: UpgradeType[] = [
         name: "Lava dragons",
         icon: "🐉",
         description: "They breathe fire, and the fire is emojis.",
+        quote: "They breathe fire. They have your address.",
         tier: 7,
     },
     {
@@ -80,6 +83,7 @@ export const emojiVolcanoUpgrades: UpgradeType[] = [
         name: "Core tap",
         icon: "🌡️",
         description: "A pipe straight to the centre of the Earth.",
+        quote: "You tapped the centre of the Earth. It tapped back.",
         tier: 8,
     },
     {
@@ -115,6 +119,7 @@ export const emojiVolcanoUpgrades: UpgradeType[] = [
         name: "Volcanic islands",
         icon: "🏝️",
         description: "Brand-new land, built from emojis cooling in the sea.",
+        quote: "Nice island. Don't go in the water. Don't ever go in the water.",
         tier: 13,
     },
     {
@@ -129,6 +134,7 @@ export const emojiVolcanoUpgrades: UpgradeType[] = [
         name: "Ash clouds",
         icon: "🌫️",
         description: "Every speck of ash is a tiny emoji.",
+        quote: "Patrolling the ash clouds almost makes you wish for a nuclear winter.",
         tier: 15,
     },
     {

@@ -26,6 +26,7 @@ export const candyKingdomUpgrades: UpgradeType[] = [
         name: "Gumdrop guards",
         icon: "🍬",
         description: "Sweet, chewy, and surprisingly well-armed.",
+        quote: "Surprisingly well-armed. Surprisingly bad at aiming.",
         tier: 0,
         id: 1200,
     },
@@ -43,6 +44,7 @@ export const candyKingdomUpgrades: UpgradeType[] = [
         name: "Cupcake cottages",
         icon: "🧁",
         description: "Tiny houses with frosting roofs. The emojis love them.",
+        quote: "The frosting is red. It's not strawberry.",
         tier: 2,
         id: 1202,
     },
@@ -51,6 +53,7 @@ export const candyKingdomUpgrades: UpgradeType[] = [
         name: "Royal decree",
         icon: "👑",
         description: "The Candy King has spoken: more emojis!",
+        quote: "The Candy King has spoken: off with their heads.",
         tier: 3,
         id: 1203,
     },
@@ -75,6 +78,7 @@ export const candyKingdomUpgrades: UpgradeType[] = [
         name: "Honey mines",
         icon: "🍯",
         description: "Sweet, sticky emojis, straight from the ground.",
+        quote: "Never dig straight down.",
         tier: 6,
     },
     {
@@ -82,6 +86,7 @@ export const candyKingdomUpgrades: UpgradeType[] = [
         name: "Cookie clickers",
         icon: "🍪",
         description: "A tribute to the grandmas who came before us.",
+        quote: "A tribute to the grandmas who came before us. We ate them.",
         tier: 7,
     },
     {
@@ -89,6 +94,7 @@ export const candyKingdomUpgrades: UpgradeType[] = [
         name: "Pudding parliament",
         icon: "🍮",
         description: "The wobbliest government in the land.",
+        quote: "When you play the game of puddings, you wobble or you die.",
         tier: 8,
     },
     {
@@ -96,6 +102,7 @@ export const candyKingdomUpgrades: UpgradeType[] = [
         name: "The Candy King's birthday",
         icon: "🎂",
         description: "The whole kingdom celebrates, and everyone gets an emoji.",
+        quote: "The Candy King sends his regards.",
         tier: 9,
     },
     {
@@ -110,6 +117,7 @@ export const candyKingdomUpgrades: UpgradeType[] = [
         name: "Candy cane railways",
         icon: "🚂",
         description: "Choo choo! The emoji express runs on sugar.",
+        quote: "All we had to do was follow the damn train!",
         tier: 11,
     },
     {

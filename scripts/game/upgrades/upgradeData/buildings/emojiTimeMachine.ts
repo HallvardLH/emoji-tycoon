@@ -74,6 +74,7 @@ export const emojiTimeMachineUpgrades: UpgradeType[] = [
         name: "Time loop",
         icon: "🔄",
         description: "The same hour, over and over, drawing emojis every time.",
+        quote: "Ah, here we go again.",
         tier: 8,
     },
     {

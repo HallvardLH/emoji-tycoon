@@ -28,6 +28,7 @@ export const emojiAssemblyUpgrades: UpgradeType[] = [
         name: "Emoji elections",
         icon: "🗳️",
         description: "May the best emoji win!",
+        quote: "May the best emoji win. The losers will be dealt with.",
         tier: 0,
         id: 1000,
     },
@@ -90,6 +91,7 @@ export const emojiAssemblyUpgrades: UpgradeType[] = [
         name: "Emoji peace treaty",
         icon: "🕊️",
         description: "No more emoji wars. Just production.",
+        quote: "War. War never changes.",
         tier: 8,
     },
     {

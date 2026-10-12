@@ -84,6 +84,7 @@ export const factoryUpgrades: UpgradeType[] = [
         name: "Factory Security",
         icon: "🚨",
         description: "Protect your factory from emoji thieves and industrial espionage.",
+        quote: "YOU SHALL NOT PASS. Not without a lanyard.",
         tier: 9,
     },
     {
@@ -134,6 +135,7 @@ export const factoryUpgrades: UpgradeType[] = [
         name: "Reinforced Walls",
         icon: "🧱",
         description: "Strengthen your factory walls to withstand the chaos of high-speed production.",
+        quote: "Hold the door! HOLD THE DOOR!",
         tier: 16,
     },
     {
@@ -141,6 +143,7 @@ export const factoryUpgrades: UpgradeType[] = [
         name: "Mouse Traps",
         icon: "🪤",
         description: "Keep pesky rodents out of your factory. No more nibbled wires or stolen emojis!",
+        quote: "It's a trap!",
         tier: 17,
     },
     {

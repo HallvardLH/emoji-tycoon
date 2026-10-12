@@ -101,6 +101,7 @@ export const sportsCenterUpgrades: UpgradeType[] = [
         name: "Swimming pools",
         icon: "🏊",
         description: "Fifty metres of chlorinated emojis.",
+        quote: "Detecting multiple leviathan-class lifeforms in the deep end. Are you sure whatever you're doing is worth it?",
         tier: 10,
     },
     {
@@ -150,6 +151,7 @@ export const sportsCenterUpgrades: UpgradeType[] = [
         name: "Martial arts dojo",
         icon: "🥋",
         description: "Wax on, wax off, draw emojis.",
+        quote: "Tap or tap not. There is no try.",
         tier: 17,
     },
     {

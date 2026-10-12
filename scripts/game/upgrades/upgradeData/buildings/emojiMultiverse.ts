@@ -18,6 +18,7 @@ export const emojiMultiverseUpgrades: UpgradeType[] = [
         name: "Window to another world",
         icon: "🪟",
         description: "Look through and wave. They wave back, with emojis.",
+        quote: "Don't look it in the eyes. It's tall and it teleports.",
         tier: 0,
     },
     {
@@ -25,6 +26,7 @@ export const emojiMultiverseUpgrades: UpgradeType[] = [
         name: "Alternate yous",
         icon: "👯",
         description: "Billions of versions of you, all tapping in sync.",
+        quote: "I am your father. Also your son. Also you.",
         tier: 1,
     },
     {
@@ -137,6 +139,7 @@ export const emojiMultiverseUpgrades: UpgradeType[] = [
         name: "Portal network",
         icon: "🌀",
         description: "Step through and come back with armfuls of emojis.",
+        quote: "Obsidian frame, flint and steel. What could go wrong?",
         tier: 17,
     },
     {

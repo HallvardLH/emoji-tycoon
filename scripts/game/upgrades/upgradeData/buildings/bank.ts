@@ -114,6 +114,7 @@ export const bankUpgrades: UpgradeType[] = [
         name: "Gold reserves",
         icon: "🥇",
         description: "Stacked to the ceiling, every bar engraved with a smile.",
+        quote: "My precious. MY PRECIOUS.",
         tier: 11,
     },
     {
@@ -128,6 +129,7 @@ export const bankUpgrades: UpgradeType[] = [
         name: "Armoured trucks",
         icon: "🚚",
         description: "Moving emojis between banks, very carefully.",
+        quote: "They're taking the emojis to Isengard!",
         tier: 13,
     },
     {

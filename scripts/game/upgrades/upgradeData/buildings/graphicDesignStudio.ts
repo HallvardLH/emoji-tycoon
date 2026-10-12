@@ -131,6 +131,7 @@ export const graphicDesignStudioUpgrades: UpgradeType[] = [
         name: "Comic Sans font",
         icon: "📝",
         description: "Love it or hate it, it makes your emojis look... unique!",
+        quote: "I quit.",
         tier: 15,
     },
     {
@@ -162,6 +163,7 @@ export const graphicDesignStudioUpgrades: UpgradeType[] = [
         name: "Blood",
         icon: "🩸",
         description: "Painting with blood makes for extra cool emojis!",
+        quote: "Whose? WHOSE?",
         tier: 19,
     },
 ];

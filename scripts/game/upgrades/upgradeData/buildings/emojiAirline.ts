@@ -18,6 +18,7 @@ export const emojiAirlineUpgrades: UpgradeType[] = [
         name: "Paper planes",
         icon: "🛩️",
         description: "Every airline starts somewhere. Ours started on a napkin.",
+        quote: "Fly, you fools!",
         tier: 0,
     },
     {
@@ -25,6 +26,7 @@ export const emojiAirlineUpgrades: UpgradeType[] = [
         name: "In-flight snacks",
         icon: "🥨",
         description: "Tiny pretzels, tiny emojis, every flight.",
+        quote: "Three pretzels. THREE. For a nine-hour flight.",
         tier: 1,
     },
     {
@@ -32,6 +34,7 @@ export const emojiAirlineUpgrades: UpgradeType[] = [
         name: "Frequent flyer miles",
         icon: "🎫",
         description: "Fly ten times, get an emoji. Fly a million times, get a million.",
+        quote: "Two million miles. My reward is a slightly wider middle seat.",
         tier: 2,
     },
     {
@@ -39,6 +42,7 @@ export const emojiAirlineUpgrades: UpgradeType[] = [
         name: "Jumbo jets",
         icon: "🛫",
         description: "Four engines, 600 seats, every one taken by an emoji.",
+        quote: "600 seats and I got the one by the toilet. Again.",
         tier: 3,
     },
     {
@@ -53,6 +57,7 @@ export const emojiAirlineUpgrades: UpgradeType[] = [
         name: "Emoji pilots",
         icon: "👨‍✈️",
         description: "This is your captain speaking. Please fasten your emojis.",
+        quote: "This is your captain speaking. I don't want to be here either.",
         tier: 5,
     },
     {
@@ -67,6 +72,7 @@ export const emojiAirlineUpgrades: UpgradeType[] = [
         name: "First class",
         icon: "🥂",
         description: "Champagne, warm towels and a personal emoji butler.",
+        quote: "Warm towels, champagne, and a curtain so I can't see you. Perfect.",
         tier: 7,
     },
     {
@@ -74,6 +80,7 @@ export const emojiAirlineUpgrades: UpgradeType[] = [
         name: "Supersonic flights",
         icon: "💨",
         description: "Faster than sound, carrying more emojis than ever.",
+        quote: "Faster than sound, so nobody hears the screaming baby.",
         tier: 8,
     },
     {
@@ -95,6 +102,7 @@ export const emojiAirlineUpgrades: UpgradeType[] = [
         name: "Duty free",
         icon: "🛒",
         description: "Tax-free emojis, available at every gate.",
+        quote: "Tax-free and still somehow 40% more expensive.",
         tier: 11,
     },
     {
@@ -102,6 +110,7 @@ export const emojiAirlineUpgrades: UpgradeType[] = [
         name: "Airport lounge",
         icon: "🛋️",
         description: "Free snacks, comfy chairs, and emojis on tap.",
+        quote: "Free snacks, comfy chairs, and a man in socks who won't stop calling his broker.",
         tier: 12,
     },
     {
@@ -109,6 +118,7 @@ export const emojiAirlineUpgrades: UpgradeType[] = [
         name: "Cargo planes",
         icon: "📦",
         description: "No passengers. Just crates and crates of emojis.",
+        quote: "No passengers. Best flight I've ever worked.",
         tier: 13,
     },
     {
@@ -130,6 +140,7 @@ export const emojiAirlineUpgrades: UpgradeType[] = [
         name: "Seaplanes",
         icon: "🌊",
         description: "Land on water, take off with emojis.",
+        quote: "Smooth landing, they said. My lunch is in the lake.",
         tier: 16,
     },
     {
@@ -151,6 +162,7 @@ export const emojiAirlineUpgrades: UpgradeType[] = [
         name: "Space tourism",
         icon: "🌌",
         description: "The next destination is up. Way up.",
+        quote: "Paid forty million emojis to throw up in zero gravity.",
         tier: 19,
     },
 ];

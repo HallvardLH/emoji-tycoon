@@ -81,6 +81,7 @@ export const bigBangUpgrades: UpgradeType[] = [
         name: "Heat death? No thanks",
         icon: "🎇",
         description: "This universe will never run out of emojis.",
+        quote: "Mission failed. You'll get 'em next universe.",
         tier: 9,
     },
     {
@@ -109,6 +110,7 @@ export const bigBangUpgrades: UpgradeType[] = [
         name: "Moons",
         icon: "🌙",
         description: "Every planet gets a moon. Every moon gets emojis.",
+        quote: "That's no moon.",
         tier: 13,
     },
     {

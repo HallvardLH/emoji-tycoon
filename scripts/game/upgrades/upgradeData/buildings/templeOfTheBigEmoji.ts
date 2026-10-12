@@ -34,6 +34,7 @@ export const templeOfTheBigEmojiUpgrades: UpgradeType[] = [
         name: "Temple bells",
         icon: "🔔",
         description: "Every ring summons a fresh emoji from the heavens.",
+        quote: "Shame. Shame. Shame.",
         tier: 2,
         id: 1402,
     },
@@ -129,6 +130,7 @@ export const templeOfTheBigEmojiUpgrades: UpgradeType[] = [
         name: "Holy water",
         icon: "💧",
         description: "Blessed by the Big Emoji. Tastes slightly of emojis.",
+        quote: "Blessed by the Big Emoji. Drink it. Drink it all.",
         tier: 15,
     },
     {
@@ -143,6 +145,7 @@ export const templeOfTheBigEmojiUpgrades: UpgradeType[] = [
         name: "Pilgrimage route",
         icon: "🛤️",
         description: "The long road to the temple, paved with emojis.",
+        quote: "One does not simply walk to the temple.",
         tier: 17,
     },
     {

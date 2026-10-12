@@ -39,6 +39,7 @@ export const emojiThemeParkUpgrades: UpgradeType[] = [
         name: "Ferris wheel",
         icon: "🎡",
         description: "Way up, there is where she broke my heart.",
+        quote: "Stuck at the top for two hours with a man explaining crypto.",
         price: getBuildingUpgradePrice(2, 6),
         tier: 2,
         id: 902,
@@ -48,6 +49,7 @@ export const emojiThemeParkUpgrades: UpgradeType[] = [
         name: "Circus",
         icon: "🎪",
         description: "There's only two types of people in the world. The ones that entertain, and the ones that observe.",
+        quote: "I trained twenty years as an acrobat. Now I juggle smiley faces for toddlers.",
         price: getBuildingUpgradePrice(3, 6),
         tier: 3,
         id: 903,
@@ -57,6 +59,7 @@ export const emojiThemeParkUpgrades: UpgradeType[] = [
         name: "Emoji juggler",
         icon: "🤹‍♂️",
         description: "They say he's never dropped the ball.",
+        quote: "Never dropped the ball? I dropped my dreams.",
         price: getBuildingUpgradePrice(4, 6),
         tier: 4,
         id: 904,
@@ -67,6 +70,7 @@ export const emojiThemeParkUpgrades: UpgradeType[] = [
         name: "Season tickets",
         icon: "🎟️",
         description: "Visitors keep coming back, and they keep bringing emojis.",
+        quote: "Bought a season pass. Went once. My kid cried the whole time.",
         tier: 5,
     },
     {
@@ -88,6 +92,7 @@ export const emojiThemeParkUpgrades: UpgradeType[] = [
         name: "Nightly fireworks",
         icon: "🎆",
         description: "Every rocket bursts into a thousand emojis.",
+        quote: "Ssssssss...",
         tier: 8,
     },
     {
@@ -95,6 +100,7 @@ export const emojiThemeParkUpgrades: UpgradeType[] = [
         name: "Emoji castle",
         icon: "🏰",
         description: "The happiest place on Earth, now with more faces.",
+        quote: "The happiest place on Earth, according to a sign. Written by the owner.",
         tier: 9,
     },
     {
@@ -102,6 +108,7 @@ export const emojiThemeParkUpgrades: UpgradeType[] = [
         name: "Roller coasters",
         icon: "🎢",
         description: "Loop-the-loops that shake the emojis right out of your pockets.",
+        quote: "Lost my phone, my keys and my will to live on the second loop.",
         tier: 10,
     },
     {
@@ -109,6 +116,7 @@ export const emojiThemeParkUpgrades: UpgradeType[] = [
         name: "Haunted house",
         icon: "👻",
         description: "The ghosts are emojis too. Spooky ones.",
+        quote: "The scariest thing in here is the price of the photo at the end.",
         tier: 11,
     },
     {
@@ -116,6 +124,7 @@ export const emojiThemeParkUpgrades: UpgradeType[] = [
         name: "Water slides",
         icon: "💦",
         description: "Splash! You're soaked in emojis.",
+        quote: "Nobody told me the water was yellow.",
         tier: 12,
     },
     {
@@ -123,6 +132,7 @@ export const emojiThemeParkUpgrades: UpgradeType[] = [
         name: "Bumper cars",
         icon: "🚙",
         description: "Every bump knocks loose an emoji.",
+        quote: "A seven-year-old rammed me nine times. He looked me in the eye every time.",
         tier: 13,
     },
     {
@@ -144,6 +154,7 @@ export const emojiThemeParkUpgrades: UpgradeType[] = [
         name: "Souvenir shop",
         icon: "🛍️",
         description: "Exit through the gift shop. Buy emojis.",
+        quote: "Exit through the gift shop. There's no other exit. I've checked.",
         tier: 16,
     },
     {
@@ -165,6 +176,7 @@ export const emojiThemeParkUpgrades: UpgradeType[] = [
         name: "Second park",
         icon: "🗺️",
         description: "One park wasn't enough. Now there's a whole resort.",
+        quote: "One park wasn't enough misery. Now there's two.",
         tier: 19,
     },
 ];

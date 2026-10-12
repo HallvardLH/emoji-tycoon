@@ -26,6 +26,7 @@ export const spaceStationUpgrades: UpgradeType[] = [
         name: "Telescopes",
         icon: "🔭",
         description: "Look into the stars to discover emoji planets.",
+        quote: "We see you too. We've always seen you.",
         tier: 0,
         id: 80,
     },
@@ -42,6 +43,7 @@ export const spaceStationUpgrades: UpgradeType[] = [
         name: "Astronauts",
         icon: "👩‍🚀",
         description: "Someone needs to run your space stations.",
+        quote: "In space no one can hear you scream. We checked. Twice.",
         tier: 2,
         id: 82,
     },
@@ -50,6 +52,7 @@ export const spaceStationUpgrades: UpgradeType[] = [
         name: "Rockets",
         icon: "🚀",
         description: "Flies really fast.",
+        quote: "Flies really fast. So will your remains.",
         tier: 3,
         id: 83,
     },
@@ -67,6 +70,7 @@ export const spaceStationUpgrades: UpgradeType[] = [
         name: "⌇⏁⍀⏃⋏☌⟒ ⍜⏚⟊⟒☊⏁",
         icon: "🧸",
         description: "⏁⊑⟟⌇ ⍜⏚⟊⟒☊⏁ ⊑⍜⌰⎅⌇ ⎍⋏⏁⍜⌰⎅ ⌿⍜⍙⟒⍀⌇.",
+        quote: "⟟ ⏃⋔ ☊⍜⋔⟟⋏☌ ⎎⍜⍀ ⊬⍜⎍.",
         tier: 5,
         id: 1199,
     },
@@ -82,6 +86,7 @@ export const spaceStationUpgrades: UpgradeType[] = [
         name: "Moon base",
         icon: "🌕",
         description: "A whole moon to draw emojis on.",
+        quote: "Plenty of room up here. Plenty of room to bury you.",
         tier: 7,
     },
     {
@@ -89,6 +94,7 @@ export const spaceStationUpgrades: UpgradeType[] = [
         name: "Comet mining",
         icon: "☄️",
         description: "Comets turn out to be frozen emojis.",
+        quote: "You thawed us out. Big mistake.",
         tier: 8,
     },
     {
@@ -96,6 +102,7 @@ export const spaceStationUpgrades: UpgradeType[] = [
         name: "First contact",
         icon: "👾",
         description: "The aliens finally answer. Their message: 👾.",
+        quote: "Hello there.",
         tier: 9,
     },
     {
@@ -131,6 +138,7 @@ export const spaceStationUpgrades: UpgradeType[] = [
         name: "Space suits",
         icon: "🧑‍🚀",
         description: "Now with room for extra emojis in every pocket.",
+        quote: "Extra pockets. One of them is for your teeth.",
         tier: 14,
     },
     {
@@ -166,6 +174,7 @@ export const spaceStationUpgrades: UpgradeType[] = [
         name: "Edge of the universe",
         icon: "🏁",
         description: "There's a sign at the edge. It says: more emojis this way.",
+        quote: "The sign said 'more emojis this way.' We put up the sign. Nobody came back.",
         tier: 19,
     },
 
@@ -196,6 +205,7 @@ export const spaceStationUpgrades: UpgradeType[] = [
         name: "Mission control",
         icon: "📟",
         description: "Houston, we have emojis.",
+        quote: "Houston, we have a problem. The problem is you. We're solving it.",
         tier: 3,
     },
     {
@@ -217,6 +227,7 @@ export const spaceStationUpgrades: UpgradeType[] = [
         name: "Earthrise",
         icon: "🌎",
         description: "The view from up here is very inspiring. And emoji-shaped.",
+        quote: "What a view. Shame about what's going to happen to it.",
         tier: 6,
     },
     {

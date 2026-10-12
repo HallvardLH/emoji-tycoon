@@ -94,6 +94,7 @@ export const emojiBlackHoleUpgrades: UpgradeType[] = [
         name: "Dark matter",
         icon: "🌑",
         description: "Invisible, everywhere, and secretly made of emojis.",
+        quote: "Come to the dark side. We have emojis.",
         tier: 10,
     },
     {
