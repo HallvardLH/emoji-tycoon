@@ -25,6 +25,7 @@ export const factoryUpgrades: UpgradeType[] = [
         name: "More workers",
         icon: "🧑‍🏭",
         description: "Increase the amount of factory employees.",
+        quote: "More workers, same bathroom. One bathroom.",
         tier: 1,
     },
     {
@@ -32,6 +33,7 @@ export const factoryUpgrades: UpgradeType[] = [
         name: "Bigger gears",
         icon: "⚙️",
         description: "Bigger gears allow for bigger machinery.",
+        quote: "Bigger gears, bigger accidents. Ask Dave. Oh, wait.",
         tier: 2,
     },
     {
@@ -39,6 +41,7 @@ export const factoryUpgrades: UpgradeType[] = [
         name: "Nuts and bolts",
         icon: "🔩",
         description: "These are used to make sure everything doesn't fall apart.",
+        quote: "Holding this place together. Barely. Like my marriage.",
         tier: 3,
     },
     {

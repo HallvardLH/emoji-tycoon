@@ -18,6 +18,7 @@ export const graphicDesignStudioUpgrades: UpgradeType[] = [
         name: "Improved pencils",
         icon: "✏️",
         description: "Better pencils for more detailed emojis.",
+        quote: "Better pencils won't fix your talent.",
         tier: 0,
     },
     {
@@ -25,6 +26,7 @@ export const graphicDesignStudioUpgrades: UpgradeType[] = [
         name: "Specialized crayons",
         icon: "🖍️",
         description: "These special crayons allow artists to access their inner child.",
+        quote: "I found my inner child. He's disappointed in me too.",
         tier: 1,
     },
     {
@@ -32,6 +34,7 @@ export const graphicDesignStudioUpgrades: UpgradeType[] = [
         name: "Improved brushes",
         icon: "🖌️",
         description: "Improved brushes allow for more artistic emojis.",
+        quote: "Improved how? All I could paint was a creepy version of my wife. I want my money back.",
         tier: 2,
     },
     {

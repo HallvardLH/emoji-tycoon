@@ -18,6 +18,7 @@ export const theFirstEmojiUpgrades: UpgradeType[] = [
         name: "It noticed you",
         icon: "👀",
         description: "The very first emoji has been watching all along.",
+        quote: "And it saw you. Stop tapping, come on man... just give it a break.",
         tier: 0,
     },
     {

@@ -18,6 +18,7 @@ export const emojiCinemaUpgrades: UpgradeType[] = [
         name: "Popcorn machines",
         icon: "🍿",
         description: "Every bucket comes with a free emoji at the bottom.",
+        quote: "Free emoji? Didn't find one. Give me my money back or I'll sue.",
         tier: 0,
     },
     {
@@ -25,6 +26,7 @@ export const emojiCinemaUpgrades: UpgradeType[] = [
         name: "3D glasses",
         icon: "🥽",
         description: "The emojis jump right off the screen and into your bank.",
+        quote: "I tried to have fun with these, but I just couldn't get the plane to land on that darn aircraft carrier.",
         tier: 1,
     },
     {
@@ -32,6 +34,7 @@ export const emojiCinemaUpgrades: UpgradeType[] = [
         name: "Movie stars",
         icon: "🌟",
         description: "The biggest names in emoji cinema, all on your payroll.",
+        quote: "Patrick Stewart",
         tier: 2,
     },
     {
@@ -39,6 +42,7 @@ export const emojiCinemaUpgrades: UpgradeType[] = [
         name: "Trailers",
         icon: "📽️",
         description: "Twenty minutes of trailers before every film. Each one full of emojis.",
+        quote: "Aaand it's gone, yeah, my popcorn, it's gone. I ate it all during the trailers.",
         tier: 3,
     },
     {

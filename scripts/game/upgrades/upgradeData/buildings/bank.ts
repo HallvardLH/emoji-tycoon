@@ -30,6 +30,7 @@ export const bankUpgrades: UpgradeType[] = [
         name: "Bigger emoji bags",
         icon: "💰",
         description: "Allows for carrying even more emojis.",
+        quote: "My back's broken, but sure, bigger bags.",
         price: getBuildingUpgradePrice(1, 5),
         tier: 1,
         id: 801,
@@ -39,6 +40,7 @@ export const bankUpgrades: UpgradeType[] = [
         name: "Emoji credit cards",
         icon: "💳",
         description: "Good for spending your hard-earned emojis.",
+        quote: "Declined. Your card is declined. Your life is declined.",
         price: getBuildingUpgradePrice(2, 5),
         tier: 2,
         id: 802,
@@ -48,6 +50,7 @@ export const bankUpgrades: UpgradeType[] = [
         name: "Investment into education",
         icon: "🎓",
         description: "Better education, better emoji-drawing skills.",
+        quote: "My student loan is in emojis. I'll be paying it off in the afterlife.",
         price: getBuildingUpgradePrice(3, 5),
         tier: 3,
         id: 803,
@@ -73,6 +76,7 @@ export const bankUpgrades: UpgradeType[] = [
         name: "Emoji stock market",
         icon: "📈",
         description: "Emoji prices only ever go up. Probably.",
+        quote: "'Only ever goes up.' Cool. My savings went down.",
         tier: 6,
     },
     {
@@ -80,6 +84,7 @@ export const bankUpgrades: UpgradeType[] = [
         name: "Emoji coins",
         icon: "🪙",
         description: "A cryptocurrency backed by actual emojis, for once.",
+        quote: "Bought at the top. Obviously.",
         tier: 7,
     },
     {
@@ -94,6 +99,7 @@ export const bankUpgrades: UpgradeType[] = [
         name: "World emoji bank",
         icon: "🌐",
         description: "Lends emojis to whole countries at very reasonable rates.",
+        quote: "'Very reasonable rates.' Says the bank that owns three countries.",
         tier: 9,
     },
     {

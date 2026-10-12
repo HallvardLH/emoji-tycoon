@@ -26,6 +26,7 @@ export const farmUpgrades: UpgradeType[] = [
         name: "Farmers",
         icon: "🧑‍🌾",
         description: "What is a farm without a farmer?!",
+        quote: "I inherited 200 acres from my father, and you have me growing smiley faces.",
         tier: 0,
         id: 300,
     },
@@ -43,6 +44,7 @@ export const farmUpgrades: UpgradeType[] = [
         name: "Better tools",
         icon: "🪚",
         description: "Allows for much faster farming!",
+        quote: "New tools, same pay. Thanks for nothing.",
         tier: 2,
         id: 302,
     },
@@ -84,6 +86,7 @@ export const farmUpgrades: UpgradeType[] = [
         name: "Scarecrows",
         icon: "🎃",
         description: "Keeps those pesky bird emojis away from your farms!",
+        quote: "The birds aren't scared. The neighbours are.",
         tier: 7,
         id: 307,
     },
@@ -192,6 +195,7 @@ export const farmUpgrades: UpgradeType[] = [
         name: "Potatoes",
         icon: "🥔",
         description: "Spud-tacular! Potatoes are the backbone of any farm.",
+        quote: "No salt, no pepper. Just give me a ripe old spud and I'm happy as the blight!",
         variant: "Helper",
         tier: 0,
         id: 30000
@@ -201,6 +205,7 @@ export const farmUpgrades: UpgradeType[] = [
         name: "Carrots",
         icon: "🥕",
         description: "Orange you glad we have carrots?",
+        quote: "No. I'm not glad. Make one more pun and I'll plant you.",
         variant: "Helper",
         tier: 1,
         id: 30001
@@ -230,6 +235,7 @@ export const farmUpgrades: UpgradeType[] = [
         name: "Tomatoes",
         icon: "🍅",
         description: "Juicy and versatile, tomatoes are a farm favorite.",
+        quote: "Great for throwing at whoever designed this farm.",
         variant: "Helper",
         tier: 4,
         id: 30004
@@ -239,6 +245,7 @@ export const farmUpgrades: UpgradeType[] = [
         name: "Lettuce",
         icon: "🥬",
         description: "Leaf it to lettuce to keep your farm fresh and green.",
+        quote: "The most boring thing on this farm. Other than the farmer.",
         variant: "Helper",
         tier: 5,
         id: 30005
@@ -248,6 +255,7 @@ export const farmUpgrades: UpgradeType[] = [
         name: "Broccoli",
         icon: "🥦",
         description: "Tiny trees with big benefits!",
+        quote: "My kid threw it at the waiter. Honestly, he deserved it.",
         variant: "Helper",
         tier: 6,
         id: 30006

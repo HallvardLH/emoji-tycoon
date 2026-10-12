@@ -34,6 +34,7 @@ export const sportsCenterUpgrades: UpgradeType[] = [
         name: "Baseball fields",
         icon: "⚾",
         description: "This ought to be a total home run.",
+        quote: "Home run? The ball hit my car. Again.",
         tier: 1,
     },
     {
@@ -179,6 +180,7 @@ export const sportsCenterUpgrades: UpgradeType[] = [
         name: "Weightlifter helper",
         icon: "🏋️",
         description: "Taps so hard the screen bends a little.",
+        quote: "I bench 200 kilos and you want me poking a phone. Fine.",
         tier: 1,
     },
     {

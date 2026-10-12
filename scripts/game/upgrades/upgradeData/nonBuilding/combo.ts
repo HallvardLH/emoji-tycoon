@@ -49,6 +49,7 @@ export const comboUpgrades: UpgradeType[] = [
         name: "Warm-up",
         icon: "🔥",
         description: "Your fingers are loosening up. The combo can now reach ×4.",
+        quote: "My finger hurts so bad I can hardly believe it.",
         tier: 1,
     },
     {
