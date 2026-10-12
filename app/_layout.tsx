@@ -8,6 +8,7 @@ import { gameLoop } from "../scripts/game/gameLoop";
 import Header from "../components/header/Header";
 import MilestoneToast from "../components/gameUI/MilestoneToast";
 import OfflineModal from "../components/gameUI/OfflineModal";
+import ResetModal from "../components/gameUI/ResetModal";
 import { useFonts } from "expo-font";
 import { LilitaOne_400Regular } from "@expo-google-fonts/lilita-one";
 import { Nunito_700Bold, Nunito_700Bold_Italic, Nunito_800ExtraBold, Nunito_900Black } from "@expo-google-fonts/nunito";
@@ -45,6 +46,7 @@ export default function RootLayout() {
                 {/* Over every screen, as milestones can happen anywhere */}
                 <MilestoneToast />
                 <OfflineModal />
+                <ResetModal />
             </View>
         </Provider>
     );

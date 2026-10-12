@@ -36,7 +36,7 @@ export default function HomeNavigation() {
             </Drawer>
             <Drawer ref={settingsDrawerRef} side="right">
                 <ScrollView contentContainerStyle={styles.drawerContent}>
-                    <Settings />
+                    <Settings onReset={() => settingsDrawerRef.current?.closeDrawer()} />
                 </ScrollView>
             </Drawer>
         </View>

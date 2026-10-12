@@ -3,10 +3,16 @@ import { useDispatch, useSelector } from 'react-redux';
 import { RootState } from '../../scripts/redux/reduxStore';
 import { updateReduceAnimations } from '../../scripts/redux/preferencesSlice';
 import SwitchRow from './SwitchRow';
+import ResetButton from './ResetButton';
 import Text from '../generalUI/Text';
 import { palette } from '../misc/theme';
 
-export default function Settings() {
+interface SettingsProps {
+    /** Called when the reset button is pressed, to close the drawer */
+    onReset?: () => void;
+}
+
+export default function Settings({ onReset }: SettingsProps) {
     const dispatch = useDispatch();
     const reduceAnimations = useSelector((state: RootState) => state.preferences.reduceAnimations ?? false);
 
@@ -23,6 +29,11 @@ export default function Settings() {
                     value={reduceAnimations}
                     onChange={value => dispatch(updateReduceAnimations(value))}
                 />
+            </View>
+
+            <View style={styles.section}>
+                <Text font="black" size={11} color={palette.lilac} style={styles.sectionTitle}>DANGER ZONE</Text>
+                <ResetButton onPress={onReset} />
             </View>
         </View>
     );
