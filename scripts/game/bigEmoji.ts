@@ -23,6 +23,8 @@ import { isTrialActive } from './prestige/trials';
 
 /** Chance that a new Big Emoji is shiny */
 export const SHINY_CHANCE = 1 / 200;
+/** Shiny emojis only start appearing once this many emojis have been produced, all-time */
+export const SHINY_FROM_EMOJIS_PRODUCED = 10_000;
 // Cheat: every Big Emoji is shiny
 let alwaysShiny = false;
 
@@ -131,7 +133,9 @@ export function pickNextEmoji() {
     let randomEmoji = selectRandomEmoji();
     // Fun value 91 - 98 (collector): shiny emojis are 1.25× as likely
     const shinyChance = SHINY_CHANCE * (howFun(91, 98) ? 1.25 : 1) * shinyChanceMultiplier();
-    const shiny = alwaysShiny || Math.random() < shinyChance;
+    // None in the first stretch of the game, so the first one comes once there's more going on
+    const shiniesUnlocked = store.getState().stats.emojisGained >= SHINY_FROM_EMOJIS_PRODUCED;
+    const shiny = alwaysShiny || (shiniesUnlocked && Math.random() < shinyChance);
     store.dispatch(updateNextEmoji({
         emoji: randomEmoji.emoji,
         category: randomEmoji.category,
