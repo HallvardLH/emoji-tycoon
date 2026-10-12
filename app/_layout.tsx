@@ -2,7 +2,7 @@ import { Stack } from "expo-router";
 import { Provider } from "react-redux";
 import { StatusBar } from "expo-status-bar";
 import { useEffect } from "react";
-import { View, StyleSheet } from "react-native";
+import { View, StyleSheet, Platform } from "react-native";
 import store from "../scripts/redux/reduxStore";
 import { gameLoop } from "../scripts/game/gameLoop";
 import Header from "../components/header/Header";
@@ -23,6 +23,25 @@ export default function RootLayout() {
         Nunito_900Black,
         "Digitalt": require("../assets/fonts/Digitalt.otf"),
     });
+
+    // Web: it's a game, not a page. Tapping fast selected the Big Emoji and other text,
+    // and pressing and moving could drag emojis and images off
+    useEffect(() => {
+        if (Platform.OS !== "web") return;
+        const style = document.createElement("style");
+        style.textContent = `
+            * { user-select: none; -webkit-user-select: none; -webkit-touch-callout: none; -webkit-user-drag: none; -webkit-tap-highlight-color: transparent; }
+            input, textarea { user-select: text; -webkit-user-select: text; }
+        `;
+        document.head.appendChild(style);
+        // Firefox has no -webkit-user-drag
+        const preventDrag = (event: DragEvent) => event.preventDefault();
+        document.addEventListener("dragstart", preventDrag);
+        return () => {
+            style.remove();
+            document.removeEventListener("dragstart", preventDrag);
+        };
+    }, []);
 
     // Game loop
     useEffect(() => {
