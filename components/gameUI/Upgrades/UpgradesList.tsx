@@ -1,4 +1,4 @@
-import { useRef, useState } from 'react';
+import { useMemo, useRef, useState } from 'react';
 import { useSelector } from 'react-redux';
 import { View, ScrollView, Pressable, StyleSheet, LayoutChangeEvent } from 'react-native';
 import { RootState } from '../../../scripts/redux/reduxStore';
@@ -75,10 +75,11 @@ export default function UpgradesList() {
     const [gridWidth, setGridWidth] = useState(0);
     const alienTaps = useRef(0);
 
-    // Unlocked, not-yet-owned upgrades, cheapest first
-    const available = toUpgrades(unlocked);
+    // Unlocked, not-yet-owned upgrades, cheapest first. Rebuilt only when the lists change,
+    // not on every bank sample (each id is looked up among ~560 upgrades, then sorted)
+    const available = useMemo(() => toUpgrades(unlocked), [unlocked]);
     // Bought upgrades, in the order you'd have come across them
-    const owned = toUpgrades(ownedIds);
+    const owned = useMemo(() => toUpgrades(ownedIds), [ownedIds]);
     const list = view === "available" ? available : owned;
     const showingOwned = view === "owned";
 

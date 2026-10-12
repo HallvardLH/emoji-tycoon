@@ -1,3 +1,4 @@
+import { memo } from "react";
 import { StyleSheet, View } from "react-native";
 import Text from "../../generalUI/Text";
 import ChunkyButton from "../../generalUI/ChunkyButton";
@@ -25,7 +26,7 @@ interface BuildingListItemProps {
     onPress: () => void;
 }
 
-export default function BuildingListItem(props: BuildingListItemProps) {
+function BuildingListItem(props: BuildingListItemProps) {
     const { name, icon, description, price, amount, eps, share, epsEach, nextUpgrade, buyCount, affordable, waitLabel, onPress } = props;
 
     const owned = amount > 0;
@@ -196,3 +197,20 @@ const styles = StyleSheet.create({
         backgroundColor: "rgba(255,255,255,0.08)",
     },
 })
+
+/**
+ * Rows re-render only when what they show changes. The list re-renders twice a second
+ * (the bank sample) and makes a new onPress and nextUpgrade each time; onPress always
+ * buys the same building, so it's left out, and nextUpgrade is compared by value.
+ */
+export default memo(BuildingListItem, (prev, next) => {
+    for (const key of Object.keys(next) as (keyof BuildingListItemProps)[]) {
+        if (key === "onPress") continue;
+        if (key === "nextUpgrade") {
+            if (prev.nextUpgrade?.from !== next.nextUpgrade?.from || prev.nextUpgrade?.at !== next.nextUpgrade?.at) return false;
+            continue;
+        }
+        if (prev[key] !== next[key]) return false;
+    }
+    return true;
+});

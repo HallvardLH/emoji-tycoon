@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import store from "../../scripts/redux/reduxStore";
+import store, { RootState } from "../../scripts/redux/reduxStore";
 
 /**
  * The current bank and production, sampled every `interval` ms.
@@ -20,6 +20,26 @@ export function useBank(interval = 500) {
     }, [interval]);
 
     return bank;
+}
+
+/**
+ * Like useSelector, but reads the store at most every `interval` ms instead of on every
+ * change. For displays of things that change on every tap or tick (the collection, stats),
+ * where re-rendering that often costs more than it shows. Only re-renders when the
+ * selected value changed.
+ */
+export function useSampledSelector<T>(selector: (state: RootState) => T, interval = 500) {
+    const [value, setValue] = useState(() => selector(store.getState()));
+
+    useEffect(() => {
+        const id = setInterval(() => {
+            const next = selector(store.getState());
+            setValue(current => current === next ? current : next);
+        }, interval);
+        return () => clearInterval(id);
+    }, [interval]);
+
+    return value;
 }
 
 /**

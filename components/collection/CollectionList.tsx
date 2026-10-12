@@ -1,6 +1,6 @@
 import { useMemo, useState } from "react";
 import { View, FlatList, Pressable, StyleSheet } from "react-native";
-import { useSelector } from "react-redux";
+import { useSampledSelector } from "../gameUI/useBank";
 import Text from "../generalUI/Text";
 import { RootState } from "../../scripts/redux/reduxStore";
 import { CollectionState } from "../../scripts/redux/collectionSlice";
@@ -27,7 +27,8 @@ const COLUMNS = 6;
 type Cell = { key: string, emoji?: string, count: number, shiny?: number };
 
 export default function CollectionList() {
-    const collection = useSelector((state: RootState) => state.collection);
+    // Every tap adds to the collection; rebuilding ~1,600 cells per tap made tapping lag
+    const collection = useSampledSelector((state: RootState) => state.collection, 1000);
     const [category, setCategory] = useState("faces");
 
     // Every collectible emoji per category (effect emojis never show up on the Big Emoji)

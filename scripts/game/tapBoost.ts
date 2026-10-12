@@ -15,15 +15,27 @@ export const BOOST_PER_MULTIPLIER = 10;
  * and +1 with Second wind (perk)
  */
 export function getMaxComboMultiplier() {
-    const comboLevels = store.getState().upgrades.owned
-        .filter(isComboUpgradeId)
-        .map(id => comboLevelOfTier(getUpgradeDataById(id)?.tier ?? 0));
-    if (comboLevels.length === 0) return 1;
-    return Math.max(...comboLevels) + (howFun(64) ? 1 : 0) + maxComboBonus();
+    const level = ownedComboLevel(store.getState().upgrades.owned);
+    if (level === 0) return 1;
+    return level + (howFun(64) ? 1 : 0) + maxComboBonus();
+}
+
+// The highest combo level owned, worked out again only when the owned list changes:
+// it's read on every store update (the combo meter selects it) and every tap
+let cachedOwned: number[] | undefined;
+let cachedLevel = 0;
+function ownedComboLevel(owned: number[]) {
+    if (owned !== cachedOwned) {
+        cachedOwned = owned;
+        cachedLevel = owned
+            .filter(isComboUpgradeId)
+            .reduce((max, id) => Math.max(max, comboLevelOfTier(getUpgradeDataById(id)?.tier ?? 0)), 0);
+    }
+    return cachedLevel;
 }
 
 /** Whether the combo is on: Combo! (or any combo level upgrade) is owned */
-export const hasCombo = () => store.getState().upgrades.owned.some(isComboUpgradeId);
+export const hasCombo = () => ownedComboLevel(store.getState().upgrades.owned) > 0;
 
 // The combo drains faster the higher it is: 2.5 boost per second at ×1, plus 1 per level.
 // Each tap adds 1, so climbing past a level takes tapping faster than its drain:
