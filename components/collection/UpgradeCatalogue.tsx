@@ -8,6 +8,7 @@ import { buildingData } from "../../scripts/game/buildings/buildingData";
 import { pluralNames } from "../../scripts/game/buildings/buildings";
 import { getBuildingUnlockRequirement } from "../../scripts/game/upgrades/checks";
 import { COMBO_LEVEL_UNLOCK_TAPS } from "../../scripts/game/upgrades/upgradeData/nonBuilding/combo";
+import { EFFECT_EMOJI_UNLOCK_EARNED } from "../../scripts/game/upgrades/upgradeData/nonBuilding/effectEmojis";
 import { formatNumber } from "../../scripts/misc";
 import { priceOf, iconOf, effectChips, tierLabel } from "../gameUI/Upgrades/UpgradesList";
 import Text from "../generalUI/Text";
@@ -26,18 +27,22 @@ interface Section {
     upgrades: UpgradeType[];
 }
 
-/** Big Emoji hands, combo levels, then each building in shop order; cheapest first within each */
+/** Big Emoji hands, combo levels, effect emojis, then each building in shop order; cheapest first within each */
 function buildSections(): Section[] {
     const byPrice = (a: UpgradeType, b: UpgradeType) => priceOf(a) - priceOf(b);
+    // Combo and effect emoji upgrades belong to the Big Emoji, but get their own sections
+    const ownSection = (u: UpgradeType) => u.variant === "Combo level" || u.variant === "Effect emojis";
     const combo = upgradeData.filter(u => u.variant === "Combo level").sort(byPrice);
-    const hands = upgradeData.filter(u => u.building === "Big emoji" && u.variant !== "Combo level").sort(byPrice);
+    const effectEmojis = upgradeData.filter(u => u.variant === "Effect emojis").sort(byPrice);
+    const hands = upgradeData.filter(u => u.building === "Big emoji" && !ownSection(u)).sort(byPrice);
     return [
         { name: "Big emoji", icon: iconOf("Big emoji"), upgrades: hands },
         { name: COMBO, icon: "🔥", upgrades: combo },
+        { name: "Effect emojis", icon: "✨", upgrades: effectEmojis },
         ...buildingData.map(building => ({
             name: building.name,
             icon: iconOf(building.name),
-            upgrades: upgradeData.filter(u => u.building === building.name && u.variant !== "Combo level").sort(byPrice),
+            upgrades: upgradeData.filter(u => u.building === building.name && !ownSection(u)).sort(byPrice),
         })),
     ].filter(section => section.upgrades.length > 0);
 }
@@ -50,6 +55,7 @@ function unlockText(upgrade: UpgradeType) {
         case "Building helper": return `Own ${(upgrade.tier + 1) * 10} ${plural}`;
         case "Emojis from tapping": return `Earn ${formatNumber(Math.pow(10, upgrade.tier + 2), 0)} emojis from tapping`;
         case "Combo taps": return `${formatNumber(COMBO_LEVEL_UNLOCK_TAPS[upgrade.tier], 0)} combo taps`;
+        case "Emojis earned": return `Earn ${formatNumber(EFFECT_EMOJI_UNLOCK_EARNED[upgrade.tier], 0)} emojis`;
     }
 }
 

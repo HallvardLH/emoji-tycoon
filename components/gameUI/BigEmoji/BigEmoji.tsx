@@ -11,12 +11,13 @@ import { FlyingNumber } from './FlyingNumber';
 import { TapSparks, Spark, makeSparks } from './TapSparks';
 import Svg, { Defs, RadialGradient, Stop, Circle } from 'react-native-svg';
 import GameText from '../../generalUI/Text';
-import { getComboProgress, getMaxComboMultiplier, BOOST_PER_MULTIPLIER } from '../../../scripts/game/tapBoost';
+import { getComboProgress, getMaxComboMultiplier, hasCombo, BOOST_PER_MULTIPLIER } from '../../../scripts/game/tapBoost';
 import EffectBurst from '../EffectBurst';
 import ComboRain from './ComboRain';
 import store from '../../../scripts/redux/reduxStore';
 import { howFun } from '../../../scripts/game/shorthands';
 import { palette, radii } from '../../misc/theme';
+import { playShinySound, playTapSound } from '../../../scripts/game/sounds';
 // import { useFonts } from "expo-font";
 
 interface AnimatedEmoji {
@@ -69,6 +70,9 @@ export default function BigEmoji() {
     // stage (and every animation on it) ten times a second.
     const bigEmoji = useSelector((state: RootState) => state.bigEmoji.bigEmoji);
     const emojisPerTap = useSelector((state: RootState) => state.bigEmoji.emojisPerTap);
+    const handsOff = useSelector((state: RootState) => state.prestige.activeTrial?.id === "handsOff" && !state.prestige.activeTrial.completed);
+    // The combo meter shows once Combo! is bought
+    const comboOn = useSelector(() => hasCombo());
 
     // Necessary for using font
     // useFonts({
@@ -222,7 +226,10 @@ export default function BigEmoji() {
         Animated.timing(rings[ring], { toValue: 1, duration: RING_MS, easing: Easing.out(Easing.quad), useNativeDriver: true }).start();
 
         const shinyReward = tapEmoji();
-        if (shinyReward !== undefined) {
+        if (shinyReward === undefined) {
+            playTapSound();
+        } else {
+            playShinySound();
             Haptics.notificationAsync(Haptics.NotificationFeedbackType.Success);
             setShinyBursts(current => [...current, { id: Date.now() + Math.random(), amount: shinyReward }]);
         }
@@ -329,9 +336,11 @@ export default function BigEmoji() {
                 ))}
             </View>
 
-            <ComboMeter />
-            <GameText font="bold" size={13} color={palette.lilac}>
-                +{formatNumber(emojisPerTap, 1)} per tap · keep tapping to build your combo
+            {comboOn && <ComboMeter />}
+            <GameText font="bold" size={13} color={handsOff ? palette.pop : palette.lilac}>
+                {handsOff
+                    ? "🙅 Hands off trial · taps draw nothing"
+                    : `+${formatNumber(emojisPerTap, 1)} per tap`}
             </GameText>
         </View>
     );

@@ -6,8 +6,9 @@ import { isAlwaysShiny, setAlwaysShiny } from '../../scripts/game/bigEmoji';
 import ResetButton from './ResetButton';
 import FunValueCheat from './FunValueCheat';
 import SwitchRow from './SwitchRow';
-import { cheatAddComboTaps, cheatMultiplyTapEarnings, cheatCollectEmojis, cheatAddMagicalEmojis, cheatAddEssence, cheatUnlockPerkTier } from '../../scripts/game/cheats';
+import { cheatAddComboTaps, cheatMultiplyTapEarnings, cheatCollectEmojis, cheatAddMagicalEmojis, cheatAddEssence, cheatUnlockPerkTier, cheatAddRunTime, cheatReachTrialGoal } from '../../scripts/game/cheats';
 import { registerAway } from '../../scripts/game/offline';
+import { DEBUG_SPEED, setGameSpeed, useGameSpeed } from '../../scripts/game/gameSpeed';
 import Text from '../generalUI/Text';
 import { palette, radii } from '../misc/theme';
 
@@ -18,6 +19,7 @@ interface CheatsProps {
 
 export default function Cheats({ onPress }: CheatsProps) {
     const [onlyShiny, setOnlyShiny] = useState(isAlwaysShiny());
+    const gameSpeed = useGameSpeed();
 
     return (
         <View style={styles.container}>
@@ -52,11 +54,25 @@ export default function Cheats({ onPress }: CheatsProps) {
                     <CheatButton label="+100 essence" onPress={() => cheatAddEssence(100)} compact />
                     <CheatButton label="+1 perk tier" onPress={() => cheatUnlockPerkTier()} compact />
                 </View>
+                <View style={styles.row}>
+                    <CheatButton label="+1 h run time" onPress={() => cheatAddRunTime(3600)} compact />
+                    <CheatButton label="Reach trial goal" onPress={() => cheatReachTrialGoal()} compact />
+                </View>
             </Section>
 
             <Section title="EFFECT EMOJIS">
                 <CheatButton icon="✨" label="Spawn an effect emoji" onPress={() => { spawnEffect(true); onPress(); }} />
                 <CheatButton icon="🎆" label="Spawn 10 effect emojis" onPress={() => { spawnEffects(10); onPress(); }} />
+            </Section>
+
+            <Section title="SPEED">
+                <SwitchRow
+                    icon="⏩"
+                    label={`${DEBUG_SPEED}× speed`}
+                    hint="Production and run time. Effects and the combo stay real-time. Off after a reload."
+                    value={gameSpeed > 1}
+                    onChange={value => setGameSpeed(value ? DEBUG_SPEED : 1)}
+                />
             </Section>
 
             <Section title="SHINY">

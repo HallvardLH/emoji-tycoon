@@ -5,7 +5,7 @@ import { RootState } from '../../../scripts/redux/reduxStore';
 import BuildingListItem, { MysteryBuildingItem } from './BuildingListItem';
 import { buildingData } from '../../../scripts/game/buildings/buildingData';
 import { buyBuilding, calculateBuildingPrice, resolveBuyAmount } from '../../../scripts/game/buildings/buildings';
-import { getNextUpgradeRequirement } from '../../../scripts/game/upgrades/checks';
+import { getNextUpgradeRange } from '../../../scripts/game/upgrades/checks';
 import { formatNumber } from '../../../scripts/misc';
 import { useBank, timeToAfford } from '../useBank';
 import { howFun } from '../../../scripts/game/shorthands';
@@ -58,7 +58,7 @@ export default function BuildingsList() {
                         eps={formatNumber(dynamicData.eps * globalFactor, 1, true)}
                         share={share < 0.1 ? "<0.1%" : `${share < 10 ? share.toFixed(1) : Math.round(share)}%`}
                         epsEach={formatNumber(epsEach, 1, true)}
-                        nextUpgradeAt={getNextUpgradeRequirement(building.name)}
+                        nextUpgrade={getNextUpgradeRange(building.name)}
                         buyCount={buyCount}
                         affordable={emojis >= price}
                         waitLabel={timeToAfford(price, emojis, emojisPerSecond)}

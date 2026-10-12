@@ -18,7 +18,8 @@ import { effectEmojis } from './effects/effectData';
 import { incrementTapBoost, getComboProgress } from './tapBoost';
 import { calculateEpt } from './calculations';
 import { howFun } from './shorthands';
-import { shinyChanceMultiplier } from './prestige/perks';
+import { shinyChanceMultiplier, shinyRewardMultiplier } from './prestige/perks';
+import { isTrialActive } from './prestige/trials';
 
 /** Chance that a new Big Emoji is shiny */
 export const SHINY_CHANCE = 1 / 200;
@@ -38,10 +39,12 @@ export function setAlwaysShiny(on: boolean) {
 }
 
 /**
- * What tapping a shiny emoji is worth: 50 taps, or a minute of production if that's more
+ * What tapping a shiny emoji is worth: 50 taps, or a minute of production if that's more.
+ * Golden touch (perk) multiplies it; in the Hands off trial it's worth nothing, like any tap.
  */
 function getShinyReward(emojisPerTap: number, emojisPerSecond: number) {
-    return Math.max(emojisPerTap * 50, emojisPerSecond * 60);
+    if (isTrialActive("handsOff")) return 0;
+    return Math.max(emojisPerTap * 50, emojisPerSecond * 60) * shinyRewardMultiplier();
 }
 
 /**

@@ -1,9 +1,10 @@
+import { buildingIdOf } from "../../../buildings/buildingData";
 import { BuildingNames } from "../../../buildings/buildingNamesType";
 import { UpgradeType, UnlockConditionType, UpgradeVariantsType, UpgradeCateogoriesType } from "../UpgradeType";
 
 const baseGraphicDesignStudioUpgrade = {
     building: "Graphic design studio" as BuildingNames,
-    buildingId: 1,
+    buildingId: buildingIdOf("Graphic design studio"),
     unlockCondition: "Building amount" as UnlockConditionType,
     categories: ["Multiply building production" as UpgradeCateogoriesType],
     emojisPerSecondMultiplier: 2,

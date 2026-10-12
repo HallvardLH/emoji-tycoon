@@ -1,14 +1,23 @@
+import { buildingIdOf } from "../../../buildings/buildingData";
 import { BuildingNames } from "../../../buildings/buildingNamesType";
 import { UpgradeType, UnlockConditionType, UpgradeVariantsType, UpgradeCateogoriesType } from "../UpgradeType";
 
 const baseCandyKingdomUpgrade = {
     building: "Candy kingdom" as BuildingNames,
-    buildingId: 11,
+    buildingId: buildingIdOf("Candy kingdom"),
     unlockCondition: "Building amount" as UnlockConditionType,
     categories: ["Multiply building production" as UpgradeCateogoriesType],
     emojisPerSecondMultiplier: 2,
     emojisPerTapMultiplier: 0,
     variant: "Standard building" as UpgradeVariantsType,
+};
+
+const candyKingdomHelperUpgrade = {
+    ...baseCandyKingdomUpgrade,
+    categories: ["Percentage increase production" as UpgradeCateogoriesType],
+    unlockCondition: "Building helper" as UnlockConditionType,
+    emojisPerSecondPercentageIncrease: 0.01,
+    variant: "Helper" as UpgradeVariantsType,
 };
 
 export const candyKingdomUpgrades: UpgradeType[] = [
@@ -53,5 +62,182 @@ export const candyKingdomUpgrades: UpgradeType[] = [
         quote: "Donut stop me now!",
         tier: 4,
         id: 1204,
+    },
+    {
+        ...baseCandyKingdomUpgrade,
+        name: "Cake castles",
+        icon: "🍰",
+        description: "The walls are frosting. The moat is custard.",
+        tier: 5,
+    },
+    {
+        ...baseCandyKingdomUpgrade,
+        name: "Honey mines",
+        icon: "🍯",
+        description: "Sweet, sticky emojis, straight from the ground.",
+        tier: 6,
+    },
+    {
+        ...baseCandyKingdomUpgrade,
+        name: "Cookie clickers",
+        icon: "🍪",
+        description: "A tribute to the grandmas who came before us.",
+        tier: 7,
+    },
+    {
+        ...baseCandyKingdomUpgrade,
+        name: "Pudding parliament",
+        icon: "🍮",
+        description: "The wobbliest government in the land.",
+        tier: 8,
+    },
+    {
+        ...baseCandyKingdomUpgrade,
+        name: "The Candy King's birthday",
+        icon: "🎂",
+        description: "The whole kingdom celebrates, and everyone gets an emoji.",
+        tier: 9,
+    },
+    {
+        ...baseCandyKingdomUpgrade,
+        name: "Lollipop lanterns",
+        icon: "🍭",
+        description: "Lighting the streets with sweet emoji glow.",
+        tier: 10,
+    },
+    {
+        ...baseCandyKingdomUpgrade,
+        name: "Candy cane railways",
+        icon: "🚂",
+        description: "Choo choo! The emoji express runs on sugar.",
+        tier: 11,
+    },
+    {
+        ...baseCandyKingdomUpgrade,
+        name: "Ice cream mountains",
+        icon: "🍦",
+        description: "The snow on top is vanilla. The emojis are mint.",
+        tier: 12,
+    },
+    {
+        ...baseCandyKingdomUpgrade,
+        name: "Marshmallow clouds",
+        icon: "☁️",
+        description: "When it rains, it rains emojis.",
+        tier: 13,
+    },
+    {
+        ...baseCandyKingdomUpgrade,
+        name: "Jelly bean mines",
+        icon: "🫘",
+        description: "Every colour, every flavour, every emoji.",
+        tier: 14,
+    },
+    {
+        ...baseCandyKingdomUpgrade,
+        name: "Gingerbread army",
+        icon: "🛡️",
+        description: "Fierce, crunchy, and loyal to the Candy King.",
+        tier: 15,
+    },
+    {
+        ...baseCandyKingdomUpgrade,
+        name: "Caramel moat",
+        icon: "🛶",
+        description: "Sticky, golden, and guarding the castle's emojis.",
+        tier: 16,
+    },
+    {
+        ...baseCandyKingdomUpgrade,
+        name: "Bubblegum balloons",
+        icon: "🎈",
+        description: "Blow hard enough and they lift emojis to the sky.",
+        tier: 17,
+    },
+    {
+        ...baseCandyKingdomUpgrade,
+        name: "Sugar crash",
+        icon: "😵",
+        description: "Everyone needs a nap. Except the emojis.",
+        tier: 18,
+    },
+    {
+        ...baseCandyKingdomUpgrade,
+        name: "Candy empire",
+        icon: "🏯",
+        description: "The Candy Kingdom conquers the world, one sweet at a time.",
+        tier: 19,
+    },
+
+    // Helpers: one for every 10 owned
+    {
+        ...candyKingdomHelperUpgrade,
+        name: "Dango",
+        icon: "🍡",
+        description: "Three sweet dumplings on a stick, one emoji each.",
+        tier: 0,
+    },
+    {
+        ...candyKingdomHelperUpgrade,
+        name: "Waffles",
+        icon: "🧇",
+        description: "Every square holds a little pool of emojis.",
+        tier: 1,
+    },
+    {
+        ...candyKingdomHelperUpgrade,
+        name: "Pies",
+        icon: "🥧",
+        description: "Fresh from the oven, filled with emojis.",
+        tier: 2,
+    },
+    {
+        ...candyKingdomHelperUpgrade,
+        name: "Sundaes",
+        icon: "🍨",
+        description: "Three scoops, sprinkles, and an emoji on top.",
+        tier: 3,
+    },
+    {
+        ...candyKingdomHelperUpgrade,
+        name: "Shaved ice",
+        icon: "🍧",
+        description: "Cool, sweet and drizzled with emojis.",
+        tier: 4,
+    },
+    {
+        ...candyKingdomHelperUpgrade,
+        name: "Fortune cookies",
+        icon: "🥠",
+        description: "Your fortune: more emojis.",
+        tier: 5,
+    },
+    {
+        ...candyKingdomHelperUpgrade,
+        name: "Juice boxes",
+        icon: "🧃",
+        description: "A sugar rush in a box.",
+        tier: 6,
+    },
+    {
+        ...candyKingdomHelperUpgrade,
+        name: "Lemon drops",
+        icon: "🍋",
+        description: "Sour first, then sweet emojis.",
+        tier: 7,
+    },
+    {
+        ...candyKingdomHelperUpgrade,
+        name: "Macaroons",
+        icon: "🥥",
+        description: "Chewy, golden, and full of emojis.",
+        tier: 8,
+    },
+    {
+        ...candyKingdomHelperUpgrade,
+        name: "Cherry on top",
+        icon: "🍒",
+        description: "The finishing touch on every emoji.",
+        tier: 9,
     },
 ];

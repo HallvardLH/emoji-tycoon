@@ -1,5 +1,6 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 import { buildingData } from '../game/buildings/buildingData';
+import { rehydrateActionType } from 'react-native-redux-persist2';
 
 export interface BuildingProps {
     buildingId: number;
@@ -92,6 +93,19 @@ export const buildingsSlice = createSlice({
             // Unlocks from before a reset or prestige aren't news in the new run
             state.unlockedBuildingsNotification = 0;
         },
+    },
+    extraReducers: (builder) => {
+        // A save replaces the whole buildings list, as it was when saved. Match its buildings
+        // to the current ones by name, as ids move when buildings are added in between,
+        // and add any buildings the save doesn't have yet.
+        builder.addMatcher(action => action.type === rehydrateActionType, (state) => {
+            state.buildings = initialState.buildings.map(building => {
+                const saved = state.buildings.find(owned => owned.name === building.name);
+                return saved
+                    ? { ...saved, buildingId: building.buildingId, icon: building.icon }
+                    : { ...building, epsMultipliers: [] };
+            });
+        });
     },
 });
 

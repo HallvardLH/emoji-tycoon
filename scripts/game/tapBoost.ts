@@ -2,20 +2,28 @@ import store from "../redux/reduxStore";
 import { updateTapBoost } from "../redux/bigEmojiSlice";
 import { calculateEpt } from "./calculations";
 import { howFun } from "./shorthands";
-import { comboDrainMultiplier } from "./prestige/perks";
-import { BASE_MAX_COMBO, isComboUpgradeId } from "./upgrades/upgradeData/nonBuilding/combo";
+import { comboDrainMultiplier, maxComboBonus } from "./prestige/perks";
+import { comboLevelOfTier, isComboUpgradeId } from "./upgrades/upgradeData/nonBuilding/combo";
+import { getUpgradeDataById } from "./upgrades/shorthands";
 
 // Every tap adds 1 boost, and every 10 boost adds ×1 to emojis per tap (see calculateEpt)
 export const BOOST_PER_MULTIPLIER = 10;
 
 /**
- * How high the combo can go: ×2 to start, +1 per combo level upgrade owned (up to ×5),
- * and +1 more with a fun value of 64 (overclocked)
+ * How high the combo can go: ×1 (no combo) until Combo! is bought, then the highest
+ * combo level upgrade owned (×3 up to ×8), +1 more with a fun value of 64 (overclocked),
+ * and +1 with Second wind (perk)
  */
 export function getMaxComboMultiplier() {
-    const comboUpgradesOwned = store.getState().upgrades.owned.filter(isComboUpgradeId).length;
-    return BASE_MAX_COMBO + comboUpgradesOwned + (howFun(64) ? 1 : 0);
+    const comboLevels = store.getState().upgrades.owned
+        .filter(isComboUpgradeId)
+        .map(id => comboLevelOfTier(getUpgradeDataById(id)?.tier ?? 0));
+    if (comboLevels.length === 0) return 1;
+    return Math.max(...comboLevels) + (howFun(64) ? 1 : 0) + maxComboBonus();
 }
+
+/** Whether the combo is on: Combo! (or any combo level upgrade) is owned */
+export const hasCombo = () => store.getState().upgrades.owned.some(isComboUpgradeId);
 
 // The combo drains faster the higher it is: 2.5 boost per second at ×1, plus 1 per level.
 // Each tap adds 1, so climbing past a level takes tapping faster than its drain:
@@ -43,6 +51,8 @@ export function decrementTapBoost(seconds = 0.1) {
 }
 
 export function incrementTapBoost() {
+    // No combo until Combo! is bought
+    if (!hasCombo()) return;
     const tapBoost = store.getState().bigEmoji.tapBoost;
     const maxTapBoost = BOOST_PER_MULTIPLIER * getMaxComboMultiplier() - 0.01;
 

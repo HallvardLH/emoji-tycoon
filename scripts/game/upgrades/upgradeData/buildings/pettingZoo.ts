@@ -1,10 +1,11 @@
+import { buildingIdOf } from "../../../buildings/buildingData";
 import { getBuildingUpgradePrice } from "../helpers";
 import { BuildingNames } from "../../../buildings/buildingNamesType";
 import { UpgradeType, UnlockConditionType, UpgradeVariantsType, UpgradeCateogoriesType } from "../UpgradeType";
 
 const basePettingZooUpgrade = {
     building: "Petting zoo" as BuildingNames,
-    buildingId: 4,
+    buildingId: buildingIdOf("Petting zoo"),
     unlockCondition: "Building amount" as UnlockConditionType,
     categories: ["Multiply building production" as UpgradeCateogoriesType],
     emojisPerSecondMultiplier: 2,

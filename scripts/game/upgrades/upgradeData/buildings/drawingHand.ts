@@ -1,9 +1,10 @@
+import { buildingIdOf } from "../../../buildings/buildingData";
 import { BuildingNames } from "../../../buildings/buildingNamesType";
 import { UpgradeType, UnlockConditionType, UpgradeVariantsType } from "../UpgradeType";
 
 const baseDrawingHandUpgrade = {
     building: "Drawing hand" as BuildingNames,
-    buildingId: 0,
+    buildingId: buildingIdOf("Drawing hand"),
     unlockCondition: "Building amount" as UnlockConditionType,
     variant: "Standard building" as UpgradeVariantsType,
 };
@@ -137,7 +138,7 @@ export const drawingHandUpgrades: UpgradeType[] = [
         description: "Wield a paintbrush with your hair to create emojis. Who needs hands when you've got style?",
         categories: ["Multiply building production", "Multiply tap"],
         emojisPerSecondMultiplier: 2,
-        emojisPerTapMultiplier: 2,
+        emojisPerTapMultiplier: 1.25,
         tier: 12,
     },
     {
@@ -167,7 +168,7 @@ export const drawingHandUpgrades: UpgradeType[] = [
         description: "Grip a pen with your teeth and draw emojis. Warning: May cause jaw fatigue!",
         categories: ["Multiply building production", "Multiply tap"],
         emojisPerSecondMultiplier: 2,
-        emojisPerTapMultiplier: 2,
+        emojisPerTapMultiplier: 1.25,
         tier: 15,
     },
     {
@@ -197,7 +198,7 @@ export const drawingHandUpgrades: UpgradeType[] = [
         description: "Why use your hands when you can draw emojis with your mind?",
         categories: ["Multiply building production", "Multiply tap"],
         emojisPerSecondMultiplier: 2,
-        emojisPerTapMultiplier: 2,
+        emojisPerTapMultiplier: 1.25,
         tier: 18,
     },
     {
@@ -207,7 +208,7 @@ export const drawingHandUpgrades: UpgradeType[] = [
         description: "Quantum entanglement in your fingers allows for drawing emojis at the speed of light.",
         categories: ["Multiply building production", "Multiply tap"],
         emojisPerSecondMultiplier: 2,
-        emojisPerTapMultiplier: 2,
+        emojisPerTapMultiplier: 1.25,
         tier: 19,
     },
 ];

@@ -1,3 +1,4 @@
+import { buildingIdOf } from "../../../buildings/buildingData";
 import { getBuildingUpgradePrice } from "../helpers";
 import { BuildingNames } from "../../../buildings/buildingNamesType";
 import { UpgradeType, UnlockConditionType, UpgradeVariantsType, UpgradeCateogoriesType } from "../UpgradeType";
@@ -5,7 +6,7 @@ import { UpgradeType, UnlockConditionType, UpgradeVariantsType, UpgradeCateogori
 // Base object for Emoji Theme Park upgrades
 const baseEmojiThemeParkUpgrade = {
     building: "Emoji theme park" as BuildingNames,
-    buildingId: 8,
+    buildingId: buildingIdOf("Emoji theme park"),
     unlockCondition: "Building amount" as UnlockConditionType,
     categories: ["Multiply building production" as UpgradeCateogoriesType],
     emojisPerSecondMultiplier: 2,
@@ -61,5 +62,109 @@ export const emojiThemeParkUpgrades: UpgradeType[] = [
         id: 904,
     },
 
-    // Add ticket upgrade: 🎟️
+    {
+        ...baseEmojiThemeParkUpgrade,
+        name: "Season tickets",
+        icon: "🎟️",
+        description: "Visitors keep coming back, and they keep bringing emojis.",
+        tier: 5,
+    },
+    {
+        ...baseEmojiThemeParkUpgrade,
+        name: "Emoji parade",
+        icon: "🎭",
+        description: "A daily parade of floats, each one a giant emoji.",
+        tier: 6,
+    },
+    {
+        ...baseEmojiThemeParkUpgrade,
+        name: "Hot dog stands",
+        icon: "🌭",
+        description: "Every sausage comes shaped like a tiny emoji.",
+        tier: 7,
+    },
+    {
+        ...baseEmojiThemeParkUpgrade,
+        name: "Nightly fireworks",
+        icon: "🎆",
+        description: "Every rocket bursts into a thousand emojis.",
+        tier: 8,
+    },
+    {
+        ...baseEmojiThemeParkUpgrade,
+        name: "Emoji castle",
+        icon: "🏰",
+        description: "The happiest place on Earth, now with more faces.",
+        tier: 9,
+    },
+    {
+        ...baseEmojiThemeParkUpgrade,
+        name: "Roller coasters",
+        icon: "🎢",
+        description: "Loop-the-loops that shake the emojis right out of your pockets.",
+        tier: 10,
+    },
+    {
+        ...baseEmojiThemeParkUpgrade,
+        name: "Haunted house",
+        icon: "👻",
+        description: "The ghosts are emojis too. Spooky ones.",
+        tier: 11,
+    },
+    {
+        ...baseEmojiThemeParkUpgrade,
+        name: "Water slides",
+        icon: "💦",
+        description: "Splash! You're soaked in emojis.",
+        tier: 12,
+    },
+    {
+        ...baseEmojiThemeParkUpgrade,
+        name: "Bumper cars",
+        icon: "🚙",
+        description: "Every bump knocks loose an emoji.",
+        tier: 13,
+    },
+    {
+        ...baseEmojiThemeParkUpgrade,
+        name: "Mascots",
+        icon: "🧸",
+        description: "Giant fuzzy emojis that give the best hugs.",
+        tier: 14,
+    },
+    {
+        ...baseEmojiThemeParkUpgrade,
+        name: "Fast pass",
+        icon: "⏩",
+        description: "Skip the queue and get straight to the emojis.",
+        tier: 15,
+    },
+    {
+        ...baseEmojiThemeParkUpgrade,
+        name: "Souvenir shop",
+        icon: "🛍️",
+        description: "Exit through the gift shop. Buy emojis.",
+        tier: 16,
+    },
+    {
+        ...baseEmojiThemeParkUpgrade,
+        name: "Log flume",
+        icon: "🪵",
+        description: "You will get wet. The emojis will get wetter.",
+        tier: 17,
+    },
+    {
+        ...baseEmojiThemeParkUpgrade,
+        name: "Parade floats",
+        icon: "🎊",
+        description: "Every float is bigger and shinier than the last.",
+        tier: 18,
+    },
+    {
+        ...baseEmojiThemeParkUpgrade,
+        name: "Second park",
+        icon: "🗺️",
+        description: "One park wasn't enough. Now there's a whole resort.",
+        tier: 19,
+    },
 ];

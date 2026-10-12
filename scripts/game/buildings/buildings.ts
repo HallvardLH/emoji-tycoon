@@ -10,6 +10,7 @@ import * as Haptics from "expo-haptics"
 import { BulkBuyAmount } from '../../redux/preferencesSlice';
 import { celebrateMilestone } from '../milestones';
 import { buildingPriceMultiplier } from '../prestige/perks';
+import { playBuildingSound } from '../sounds';
 
 type PluralNames = {
     [key: string]: string;
@@ -23,9 +24,11 @@ export const pluralNames: PluralNames = {
     "Petting zoo": "Petting zoos",
     "Factory": "Factories",
     "Sports center": "Sports centers",
+    "Emoji cinema": "Emoji cinemas",
     "Bank": "Banks",
     "Emoji theme park": "Emoji theme parks",
     "Emoji assembly": "Emoji assemblies",
+    "Emoji airline": "Emoji airlines",
     "Space station": "Space stations",
     "Candy kingdom": "Candy kingdoms",
     "Emoji volcano": "Emoji volcanoes",
@@ -33,31 +36,18 @@ export const pluralNames: PluralNames = {
     "Emoji supercomputer": "Emoji supercomputers",
     "Emoji black hole": "Emoji black holes",
     "Emoji singularity": "Emoji singularities",
+    "Emoji time machine": "Emoji time machines",
+    "Big bang": "Big bangs",
+    "Emoji multiverse": "Emoji multiverses",
+    "The first emoji": "First emojis",
 };
 
 type buildingName = {
     [key: string]: string;
 };
 
-export const buildingEmojis: buildingName = {
-    "Drawing hand": "✍️",
-    "Graphic design studio": "🎨",
-    "Farm": "🌽",
-    "Restaurant": "🍽️",
-    "Petting zoo": "🦒",
-    "Factory": "🏭",
-    "Sports center": "🏈",
-    "Bank": "🏦",
-    "Emoji theme park": "🎢",
-    "Emoji assembly": "🏛️",
-    "Space station": "🛰️",
-    "Candy kingdom": "🍭",
-    "Emoji volcano": "🌋",
-    "Temple of the Big Emoji in the sky": "🏯",
-    "Emoji supercomputer": "🖥️",
-    "Emoji black hole": "🕳️",
-    "Emoji singularity": "⚛️",
-};
+/** Each building's icon, by name */
+export const buildingEmojis: buildingName = Object.fromEntries(buildingData.map(building => [building.name, building.icon]));
 
 
 const PRICE_GROWTH = BUILDING_PRICE_GROWTH;
@@ -147,9 +137,10 @@ export const buyBuilding = (buildingId: number, bulkBuy: BulkBuyAmount = store.g
     updateBuildingValue(buildingId, "amount", newAmount);
     updateBuildingValue(buildingId, "price", newPrice);
 
-    // Trigger haptic feedback if buildings were bought
+    // Trigger haptic feedback and a sound if buildings were bought
     if (actualBuyAmount > 0) {
         Haptics.notificationAsync(Haptics.NotificationFeedbackType.Success);
+        playBuildingSound();
     }
 
     if (currentAmount === 0) {

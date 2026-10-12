@@ -2,6 +2,7 @@ import { roundToPrettyNumber } from "../../utils";
 
 interface BuildingData {
     name: string;
+    /** Its position in the list below */
     buildingId: number;
     icon: string;
     description: string;
@@ -44,110 +45,132 @@ export function testPriceAndEps() {
 export const buildingData: BuildingData[] = [
     {
         name: "Drawing hand",
-        buildingId: 0,
         icon: "✍️",
         description: "A hand that draws emojis for you.",
     },
     {
         name: "Graphic design studio",
-        buildingId: 1,
         icon: "🎨",
         description: "A studio where emojis are created.",
     },
     {
         name: "Farm",
-        buildingId: 2,
         icon: "🌽",
         description: "A farm where emojis sprout from the ground.",
     },
     {
         name: "Restaurant",
-        buildingId: 3,
         icon: "🍽️",
         description: "Where emojis go to eat food emojis.",
     },
     {
         name: "Petting zoo",
-        buildingId: 4,
         icon: "🦒",
         description: "Meet all your favorite emoji animals.",
     },
     {
         name: "Factory",
-        buildingId: 5,
         icon: "🏭",
         description: "Creating emojis on an industrial scale.",
     },
     {
         name: "Sports center",
-        buildingId: 6,
         icon: "🏈",
         description: 'Keep your emojis in good shape.',
     },
     {
+        name: "Emoji cinema",
+        icon: "🎬",
+        description: "Blockbusters starring your favourite emojis. Every ticket comes with popcorn and emojis.",
+    },
+    {
         name: "Bank",
-        buildingId: 7,
         icon: "🏦",
         description: '"We keep your emojis safe."',
     },
     {
         name: "Emoji theme park",
-        buildingId: 8,
         icon: "🎢",
         description: '"Welcome to EmojiLand: Where dreams and emotions come to life!"',
     },
     {
         name: "Emoji assembly",
-        buildingId: 9,
         icon: "🏛️",
         description: "Where emojis get together to decide how to make more emojis.",
     },
     {
+        name: "Emoji airline",
+        icon: "✈️",
+        description: "Flies emojis to every corner of the world. Window seat, of course.",
+    },
+    {
         name: "Space station",
-        buildingId: 10,
         icon: "🛰️",
         description: "Conquer new worlds and take their emojis.",
     },
     {
         name: "Candy kingdom",
-        buildingId: 11,
         icon: "🍭",
         description: "A sugary paradise ruled by the Candy King and his sweet emoji subjects.",
     },
     {
         name: "Emoji volcano",
-        buildingId: 12,
         icon: "🌋",
         description: "Every eruption brings a flood of brand-new, freshly-forged emojis!",
     },
     {
         name: "Temple of the Big Emoji in the sky",
-        buildingId: 13,
         icon: "🏯",
         description: "Legends say the Big Emoji in the sky bestows infinite emojis upon its most loyal followers.",
     },
     {
         name: "Emoji supercomputer",
-        buildingId: 14,
         icon: "🖥️",
         description: "The ultimate emoji engine. Multiplies emojis at lightspeed.",
     },
     {
         name: "Emoji black hole",
-        buildingId: 15,
         icon: "🕳️",
         description: "The final destination of all emojis… or a new beginning?",
     },
     {
         name: "Emoji singularity",
-        buildingId: 16,
         icon: "⚛️",
-        description: "That's it. Nothing remains besides emojis. You've done it.",
+        description: "That's it. Nothing remains besides emojis. You've done it. Or have you?",
     },
-    // Automatically adds base price and emojis per second
+    {
+        name: "Emoji time machine",
+        icon: "🕰️",
+        description: "Pops back to the dawn of time to draw the very first emojis. Then the second ones.",
+    },
+    {
+        name: "Big bang",
+        icon: "💥",
+        description: "A brand-new universe, and this time it's emojis all the way down.",
+    },
+    {
+        name: "Emoji multiverse",
+        icon: "🌀",
+        description: "Infinite universes, each with its own emoji tycoon. They all work for you now.",
+    },
+    {
+        name: "The first emoji",
+        icon: "🙂",
+        description: "Where it all began. It's been watching you tap this whole time.",
+    },
+    // Ids come from the order here, so a building can be added anywhere (upgrade files look
+    // theirs up with buildingIdOf). Price and output follow from the id.
     // For drawing hands, we make sure there is no rounding in the base EPS
-].map(building => ({
+].map((building, buildingId) => ({
     ...building,
-    basePrice: getBaseBuildingPrice(building.buildingId),
-    baseEps: getBaseEps(building.buildingId, building.buildingId === 0),
+    buildingId,
+    basePrice: getBaseBuildingPrice(buildingId),
+    baseEps: getBaseEps(buildingId, buildingId === 0),
 }));
+
+/** A building's id, from its name */
+export function buildingIdOf(name: string) {
+    const id = buildingData.findIndex(building => building.name === name);
+    if (id === -1) throw new Error(`Unknown building: ${name}`);
+    return id;
+}

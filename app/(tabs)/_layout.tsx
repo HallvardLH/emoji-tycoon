@@ -1,7 +1,13 @@
 import { Tabs } from "expo-router";
 import TabBar from "../../components/TabBar/TabBar";
+import DesktopLayout from "../../components/layout/DesktopLayout";
+import { useIsDesktop } from "../../components/layout/desktop";
 
 export default function TabLayout() {
+    // On desktop every tab is on screen at once (see desktop.ts)
+    const isDesktop = useIsDesktop();
+    if (isDesktop) return <DesktopLayout />;
+
     return (
         <Tabs
             screenOptions={{ headerShown: false }}

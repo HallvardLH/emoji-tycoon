@@ -31,9 +31,9 @@ export const upgradesSlice = createSlice({
             if (!state.owned.includes(action.payload)) {
                 state.owned.push(action.payload);
             }
-            // Remove the upgrade from unlocked
+            // Remove the upgrade from unlocked, and from affordable (it used to linger there)
             state.unlocked = state.unlocked.filter(element => element !== action.payload);
-
+            state.canBuy = state.canBuy.filter(element => element !== action.payload);
         },
         unlockUpgrade: (state, action: PayloadAction<number>) => {
             if (!state.unlocked.includes(action.payload)) {
@@ -55,6 +55,15 @@ export const upgradesSlice = createSlice({
             }
 
         },
+        /** Drops upgrade ids that aren't in the game anymore, e.g. from saves made before upgrades moved */
+        keepKnownUpgrades: (state, action: PayloadAction<number[]>) => {
+            const known = new Set(action.payload);
+            state.owned = state.owned.filter(id => known.has(id));
+            state.unlocked = state.unlocked.filter(id => known.has(id));
+            // Only upgrades for sale can be affordable
+            state.canBuy = state.canBuy.filter(id => known.has(id) && state.unlocked.includes(id));
+            if (state.seenCanBuy) state.seenCanBuy = state.seenCanBuy.filter(id => known.has(id));
+        },
         /** The Upgrades tab is open: everything affordable now has been seen */
         markAffordableUpgradesSeen: (state) => {
             const seen = new Set([...(state.seenCanBuy ?? []), ...state.canBuy]);
@@ -73,6 +82,6 @@ export const upgradesSlice = createSlice({
 });
 
 // Export the generated action creators
-export const { addUpgrade, unlockUpgrade, addCanBuyUpgrade, removeCanBuyUpgrade, markAffordableUpgradesSeen, resetUpgrades } = upgradesSlice.actions;
+export const { addUpgrade, unlockUpgrade, addCanBuyUpgrade, removeCanBuyUpgrade, keepKnownUpgrades, markAffordableUpgradesSeen, resetUpgrades } = upgradesSlice.actions;
 
 export default upgradesSlice.reducer;

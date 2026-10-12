@@ -16,8 +16,8 @@ interface BuildingListItemProps {
     share: string;
     /** Emojis per second one more of these would add, for buildings you don't own yet */
     epsEach: string;
-    /** Building amount where the next upgrade unlocks */
-    nextUpgradeAt?: number;
+    /** Building amounts the next upgrade is worked towards between: from the last one's, to where it unlocks */
+    nextUpgrade?: { from: number, at: number };
     buyCount: number;
     affordable: boolean;
     /** Shown under the price on a disabled button, e.g. "IN 3 MIN" */
@@ -26,10 +26,13 @@ interface BuildingListItemProps {
 }
 
 export default function BuildingListItem(props: BuildingListItemProps) {
-    const { name, icon, description, price, amount, eps, share, epsEach, nextUpgradeAt, buyCount, affordable, waitLabel, onPress } = props;
+    const { name, icon, description, price, amount, eps, share, epsEach, nextUpgrade, buyCount, affordable, waitLabel, onPress } = props;
 
     const owned = amount > 0;
-    const progress = nextUpgradeAt ? Math.min(1, amount / nextUpgradeAt) : 1;
+    // Starts over for each upgrade, from where the last one unlocked
+    const progress = nextUpgrade
+        ? Math.min(1, Math.max(0, (amount - nextUpgrade.from) / (nextUpgrade.at - nextUpgrade.from)))
+        : 1;
 
     return (
         <View style={styles.card}>
@@ -51,22 +54,27 @@ export default function BuildingListItem(props: BuildingListItemProps) {
                     )}
                 </View>
 
-                <Text font="body" size={12} color={palette.muted} numberOfLines={2}>{description}</Text>
+                {/* Always two lines tall, so every card is the same height */}
+                <Text font="body" size={12} color={palette.muted} numberOfLines={2} style={styles.description}>{description}</Text>
 
                 {owned ? (
                     <>
-                        <Text font="bold" size={11} color={palette.muted}>{eps} /sec · {share} of total</Text>
+                        <Text font="bold" size={11} color={palette.muted} numberOfLines={1} style={styles.statLine}>{eps} /sec · {share} of total</Text>
                         <View style={styles.progressRow}>
                             <View style={styles.track}>
                                 <View style={[styles.fill, { width: `${progress * 100}%` }]} />
                             </View>
-                            <Text font="bold" size={11} color={palette.muted}>
-                                {nextUpgradeAt ? `next upgrade ${nextUpgradeAt}` : "all upgrades found"}
+                            <Text font="bold" size={11} color={palette.muted} numberOfLines={1} style={styles.statLine}>
+                                {nextUpgrade ? `next upgrade ${nextUpgrade.at}` : "all upgrades found"}
                             </Text>
                         </View>
                     </>
                 ) : (
-                    <Text font="bold" size={11} color={palette.muted}>+{epsEach} /sec each</Text>
+                    <>
+                        <Text font="bold" size={11} color={palette.muted} numberOfLines={1} style={styles.statLine}>+{epsEach} /sec each</Text>
+                        {/* Where the progress row goes once owned */}
+                        <View style={styles.progressRow} />
+                    </>
                 )}
             </View>
 
@@ -98,12 +106,16 @@ export function MysteryBuildingItem({ revealAt }: { revealAt: string }) {
     );
 }
 
+// Every card is this tall, whatever it shows, so the list doesn't jump as buildings are bought
+const CARD_HEIGHT = 113;
+
 const styles = StyleSheet.create({
     card: {
         flexDirection: "row",
         alignItems: "center",
         gap: 12,
-        padding: 12,
+        height: CARD_HEIGHT,
+        paddingHorizontal: 12,
         borderRadius: radii.lg,
         backgroundColor: palette.paper,
     },
@@ -130,6 +142,7 @@ const styles = StyleSheet.create({
     },
     name: {
         flexShrink: 1,
+        lineHeight: 22,
     },
     ownedBadge: {
         paddingHorizontal: 7,
@@ -143,10 +156,18 @@ const styles = StyleSheet.create({
         borderRadius: 8,
         backgroundColor: palette.pop,
     },
+    description: {
+        lineHeight: 16,
+        height: 32,
+    },
+    statLine: {
+        lineHeight: 14,
+    },
     progressRow: {
         flexDirection: "row",
         alignItems: "center",
         gap: 6,
+        height: 14,
     },
     track: {
         flex: 1,
@@ -164,7 +185,8 @@ const styles = StyleSheet.create({
         flexDirection: "row",
         alignItems: "center",
         gap: 12,
-        padding: 12,
+        height: CARD_HEIGHT,
+        paddingHorizontal: 12,
         borderRadius: radii.lg,
         borderWidth: 2,
         borderStyle: "dashed",

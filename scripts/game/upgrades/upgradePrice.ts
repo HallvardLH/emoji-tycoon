@@ -3,6 +3,7 @@ import { UpgradeVariantsType } from "./upgradeData/UpgradeType";
 import store from "../../redux/reduxStore";
 import { roundToPrettyNumber } from "../../utils";
 import { COMBO_LEVEL_PRICES } from "./upgradeData/nonBuilding/combo";
+import { EFFECT_EMOJI_PRICES } from "./upgradeData/nonBuilding/effectEmojis";
 import { getBuildingUnlockRequirement } from "./requirements";
 
 // Standard upgrades cost this many times the building at their unlock amount
@@ -29,6 +30,8 @@ export function getUpgradePrice(tier: number, variant: UpgradeVariantsType, buil
             break;
         case "Combo level":
             return COMBO_LEVEL_PRICES[tier];
+        case "Effect emojis":
+            return EFFECT_EMOJI_PRICES[tier];
         case "Big emoji percentage":
             const emojiTaps = store.getState().stats.bigEmojiTaps;
             // Price is tier position based, plus how many times you've tapped the emoji

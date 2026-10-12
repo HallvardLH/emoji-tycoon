@@ -1,14 +1,23 @@
+import { buildingIdOf } from "../../../buildings/buildingData";
 import { BuildingNames } from "../../../buildings/buildingNamesType";
 import { UpgradeType, UnlockConditionType, UpgradeVariantsType, UpgradeCateogoriesType } from "../UpgradeType";
 
 const baseRestaurantUpgrade = {
     building: "Restaurant" as BuildingNames,
-    buildingId: 3,
+    buildingId: buildingIdOf("Restaurant"),
     unlockCondition: "Building amount" as UnlockConditionType,
     categories: ["Multiply building production" as UpgradeCateogoriesType],
     emojisPerSecondMultiplier: 2,
     emojisPerTapMultiplier: 0,
     variant: "Standard building" as UpgradeVariantsType,
+};
+
+const restaurantHelperUpgrade = {
+    ...baseRestaurantUpgrade,
+    categories: ["Percentage increase production" as UpgradeCateogoriesType],
+    unlockCondition: "Building helper" as UnlockConditionType,
+    emojisPerSecondPercentageIncrease: 0.01,
+    variant: "Helper" as UpgradeVariantsType,
 };
 
 export const restaurantUpgrades: UpgradeType[] = [
@@ -172,5 +181,77 @@ export const restaurantUpgrades: UpgradeType[] = [
         description: "A buffet that never ends... but the food might start eating you instead.",
         tier: 19,
         id: 419,
+    },
+
+    // Helpers: one for every 10 owned
+    {
+        ...restaurantHelperUpgrade,
+        name: "Dumplings",
+        icon: "🥟",
+        description: "Steamed, pleated and stuffed with emojis.",
+        tier: 0,
+    },
+    {
+        ...restaurantHelperUpgrade,
+        name: "Burgers",
+        icon: "🍔",
+        description: "Stacked high with lettuce, tomato and emojis.",
+        tier: 1,
+    },
+    {
+        ...restaurantHelperUpgrade,
+        name: "Spaghetti",
+        icon: "🍝",
+        description: "One long noodle, twirled into a perfect emoji.",
+        tier: 2,
+    },
+    {
+        ...restaurantHelperUpgrade,
+        name: "Tempura",
+        icon: "🍤",
+        description: "Lightly battered, deep fried, perfectly crispy emojis.",
+        tier: 3,
+    },
+    {
+        ...restaurantHelperUpgrade,
+        name: "Burritos",
+        icon: "🌯",
+        description: "Everything wrapped up tight, emojis included.",
+        tier: 4,
+    },
+    {
+        ...restaurantHelperUpgrade,
+        name: "Ramen",
+        icon: "🍜",
+        description: "A steaming bowl with a soft-boiled emoji on top.",
+        tier: 5,
+    },
+    {
+        ...restaurantHelperUpgrade,
+        name: "Croissants",
+        icon: "🥐",
+        description: "Flaky, buttery, and shaped like a smile if you squint.",
+        tier: 6,
+    },
+    {
+        ...restaurantHelperUpgrade,
+        name: "Curry",
+        icon: "🍛",
+        description: "Spicy enough to make the emojis sweat.",
+        tier: 7,
+    },
+    {
+        ...restaurantHelperUpgrade,
+        name: "Pancakes",
+        icon: "🥞",
+        description: "A stack of fluffy emojis, drizzled with syrup.",
+        tier: 8,
+    },
+    {
+        ...restaurantHelperUpgrade,
+        name: "Hot pot",
+        icon: "🍲",
+        description: "Everyone shares, and everyone gets emojis.",
+        tier: 9,
     },
 ];

@@ -6,17 +6,9 @@ import Modal from "../generalUI/Modal";
 import Text from "../generalUI/Text";
 import ChunkyButton from "../generalUI/ChunkyButton";
 import { palette, radii } from "../misc/theme";
-import { formatNumber } from "../../scripts/misc";
+import { formatDuration, formatNumber } from "../../scripts/misc";
 import { AD_MULTIPLIER, MAX_AWAY_SECONDS, PREMIUM_COST, PREMIUM_MULTIPLIER, claimOffline, dismissOffline } from "../../scripts/game/offline";
 import { spendPremiumCurrency, watchRewardedAd } from "../../scripts/monetization";
-
-/** "2h 5m", "45m" */
-function formatDuration(seconds: number) {
-    const hours = Math.floor(seconds / 3600);
-    const minutes = Math.floor((seconds % 3600) / 60);
-    if (hours === 0) return `${minutes}m`;
-    return minutes > 0 ? `${hours}h ${minutes}m` : `${hours}h`;
-}
 
 /**
  * Welcome back: offers the production missed while away, for watching an ad

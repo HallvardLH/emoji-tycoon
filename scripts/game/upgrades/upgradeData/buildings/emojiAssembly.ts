@@ -1,3 +1,4 @@
+import { buildingIdOf } from "../../../buildings/buildingData";
 import { getBuildingUpgradePrice } from "../helpers";
 import { BuildingNames } from "../../../buildings/buildingNamesType";
 import { UpgradeType, UnlockConditionType, UpgradeVariantsType, UpgradeCateogoriesType } from "../UpgradeType";
@@ -5,7 +6,7 @@ import { UpgradeType, UnlockConditionType, UpgradeVariantsType, UpgradeCateogori
 // Base object for Emoji Assembly upgrades
 const baseEmojiAssemblyUpgrade = {
     building: "Emoji assembly" as BuildingNames,
-    buildingId: 9,
+    buildingId: buildingIdOf("Emoji assembly"),
     unlockCondition: "Building amount" as UnlockConditionType,
     categories: ["Multiply building production" as UpgradeCateogoriesType],
     emojisPerSecondMultiplier: 2,
@@ -63,6 +64,111 @@ export const emojiAssemblyUpgrades: UpgradeType[] = [
         id: 1004,
     },
 
+    {
+        ...baseEmojiAssemblyUpgrade,
+        name: "Emoji flag",
+        icon: "🏳️",
+        description: "Every nation, united under one flag. It's a smiley face.",
+        tier: 5,
+    },
+    {
+        ...baseEmojiAssemblyUpgrade,
+        name: "Trade agreements",
+        icon: "🤝",
+        description: "Emojis now flow freely across every border.",
+        tier: 6,
+    },
+    {
+        ...baseEmojiAssemblyUpgrade,
+        name: "Emoji press",
+        icon: "🗞️",
+        description: "Daily headlines, written entirely in emojis.",
+        tier: 7,
+    },
+    {
+        ...baseEmojiAssemblyUpgrade,
+        name: "Emoji peace treaty",
+        icon: "🕊️",
+        description: "No more emoji wars. Just production.",
+        tier: 8,
+    },
+    {
+        ...baseEmojiAssemblyUpgrade,
+        name: "Emoji referendum",
+        icon: "🪧",
+        description: "The people have spoken: more emojis, please.",
+        tier: 9,
+    },
+    {
+        ...baseEmojiAssemblyUpgrade,
+        name: "Emoji constitution",
+        icon: "📃",
+        description: "We the emojis, in order to form a more perfect production line...",
+        tier: 10,
+    },
+    {
+        ...baseEmojiAssemblyUpgrade,
+        name: "Emoji senate",
+        icon: "🪑",
+        description: "A hundred seats, a hundred emojis, a hundred opinions.",
+        tier: 11,
+    },
+    {
+        ...baseEmojiAssemblyUpgrade,
+        name: "Emoji embassy",
+        icon: "🏢",
+        description: "Diplomacy, but with more winking faces.",
+        tier: 12,
+    },
+    {
+        ...baseEmojiAssemblyUpgrade,
+        name: "Emoji tax cuts",
+        icon: "✂️",
+        description: "More emojis for everybody!",
+        tier: 13,
+    },
+    {
+        ...baseEmojiAssemblyUpgrade,
+        name: "Emoji census",
+        icon: "📋",
+        description: "Counting every emoji in the land. It's taking a while.",
+        tier: 14,
+    },
+    {
+        ...baseEmojiAssemblyUpgrade,
+        name: "Emoji summit",
+        icon: "⛰️",
+        description: "World leaders meet to discuss one thing: more emojis.",
+        tier: 15,
+    },
+    {
+        ...baseEmojiAssemblyUpgrade,
+        name: "Emoji supreme court",
+        icon: "⚖️",
+        description: "Rules unanimously in favour of more emojis.",
+        tier: 16,
+    },
+    {
+        ...baseEmojiAssemblyUpgrade,
+        name: "Emoji spies",
+        icon: "🕵️",
+        description: "Stealing emoji secrets from rival tycoons.",
+        tier: 17,
+    },
+    {
+        ...baseEmojiAssemblyUpgrade,
+        name: "Emoji united nations",
+        icon: "🇺🇳",
+        description: "Every nation working together, for emojis.",
+        tier: 18,
+    },
+    {
+        ...baseEmojiAssemblyUpgrade,
+        name: "Emoji world order",
+        icon: "🌐",
+        description: "One planet, one government, one emoji.",
+        tier: 19,
+    },
     // Helpers
     {
         ...emojiAssemblyHelperUpgrade,

@@ -20,7 +20,36 @@ interface PrestigeState {
     remainingEmojisPrestigePerc: number;
     /** Saves without it are from before prestige worked, and get migrated */
     version?: number,
+    /** Seconds played this run (not counting time away). Undefined in saves from before it existed */
+    runSeconds?: number,
+    /** Best essence per hour this run, to tell when it starts slowing down */
+    runBestEssenceRate?: number,
+    /** The last runs, newest first */
+    history?: PastRun[],
+    /** The trial this run is played under, if any (see trials.ts) */
+    activeTrial?: ActiveTrial,
+    /** Ids of the trials completed */
+    trialsCompleted?: string[],
 }
+
+export interface PastRun {
+    essence: number,
+    seconds: number,
+    /** Emojis drawn during the run */
+    emojis: number,
+    /** Trial played, if any */
+    trial?: string,
+    trialCompleted?: boolean,
+}
+
+export interface ActiveTrial {
+    id: string,
+    /** Emojis to draw this run to complete it, set when it starts */
+    goal: number,
+    completed: boolean,
+}
+
+export const MAX_HISTORY = 10;
 
 export const PRESTIGE_STATE_VERSION = 1;
 
@@ -39,13 +68,44 @@ export const prestigeSlice = createSlice({
     initialState,
     reducers: {
         /** A prestige: banks the new essence and starts a new run */
-        completePrestige: (state, action: PayloadAction<{ essence: number, runStartEmojis: number }>) => {
+        completePrestige: (state, action: PayloadAction<{ essence: number, runStartEmojis: number, trial?: ActiveTrial }>) => {
+            const run: PastRun = {
+                essence: action.payload.essence,
+                seconds: state.runSeconds ?? 0,
+                emojis: action.payload.runStartEmojis - state.runStartEmojis,
+            };
+            if (state.activeTrial) {
+                run.trial = state.activeTrial.id;
+                run.trialCompleted = state.activeTrial.completed;
+            }
+            state.history = [run, ...(state.history ?? [])].slice(0, MAX_HISTORY);
+
             state.emojiEssence += action.payload.essence;
             state.totalEssenceEarned += action.payload.essence;
             state.prestiges += 1;
             state.runStartEmojis = action.payload.runStartEmojis;
             state.lastRunPeakEps = state.runPeakEps ?? 0;
             state.runPeakEps = 0;
+            state.runSeconds = 0;
+            state.runBestEssenceRate = 0;
+            state.activeTrial = action.payload.trial;
+        },
+        addRunSeconds: (state, action: PayloadAction<number>) => {
+            state.runSeconds = (state.runSeconds ?? 0) + action.payload;
+        },
+        setRunBestEssenceRate: (state, action: PayloadAction<number>) => {
+            state.runBestEssenceRate = action.payload;
+        },
+        /** The goal is reached: the restriction lifts for the rest of the run, and the reward is kept forever */
+        completeTrial: (state) => {
+            if (!state.activeTrial || state.activeTrial.completed) return;
+            state.activeTrial.completed = true;
+            const done = state.trialsCompleted ?? [];
+            if (!done.includes(state.activeTrial.id)) state.trialsCompleted = [...done, state.activeTrial.id];
+        },
+        /** Gives up on the trial: the restriction lifts, without the reward */
+        abandonTrial: (state) => {
+            state.activeTrial = undefined;
         },
         setRunPeakEps: (state, action: PayloadAction<number>) => {
             state.runPeakEps = action.payload;
@@ -88,6 +148,6 @@ export const prestigeSlice = createSlice({
     },
 });
 
-export const { completePrestige, setRunPeakEps, buyPerk, cheatPrestige, refundPerks, setLastSeen, updateRemainingEmojisPrestigePerc, migratePrestige, resetPrestige } = prestigeSlice.actions;
+export const { completePrestige, addRunSeconds, setRunBestEssenceRate, completeTrial, abandonTrial, setRunPeakEps, buyPerk, cheatPrestige, refundPerks, setLastSeen, updateRemainingEmojisPrestigePerc, migratePrestige, resetPrestige } = prestigeSlice.actions;
 
 export default prestigeSlice.reducer;

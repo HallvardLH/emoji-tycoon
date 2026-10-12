@@ -16,6 +16,7 @@ import ChunkyButton from '../../generalUI/ChunkyButton';
 import { useBank, timeToAfford } from '../useBank';
 import { howFun } from '../../../scripts/game/shorthands';
 import { comboLevelOfTier } from '../../../scripts/game/upgrades/upgradeData/nonBuilding/combo';
+import { effectEmojiUpgradeSummary } from '../../../scripts/game/upgrades/upgradeData/nonBuilding/effectEmojis';
 import { palette, radii } from '../../misc/theme';
 
 const BIG_EMOJI = "Big emoji";
@@ -33,8 +34,9 @@ export function effectChips(upgrade: UpgradeType) {
             case "Multiply tap": return `Tapping ×${upgrade.emojisPerTapMultiplier}`;
             case "Percentage increase tap": return `Tapping +${Math.round(upgrade.emojisPerTapPercentageIncrease! * 100)}%`;
             case "Percentage increase production": return `Production +${Math.round(upgrade.emojisPerSecondPercentageIncrease! * 100)}%`;
-            case "Tap percentage of eps": return `Taps +${Math.round(upgrade.emojisPerTapPercentageOfEps! * 100)}% of emojis/sec`;
-            case "Combo level": return `Max combo ×${comboLevelOfTier(upgrade.tier)}`;
+            case "Tap percentage of eps": return `Taps +${+(upgrade.emojisPerTapPercentageOfEps! * 100).toFixed(1)}% of emojis/sec`;
+            case "Effect emojis": return effectEmojiUpgradeSummary(upgrade);
+            case "Combo level": return upgrade.tier === 0 ? `Combo up to ×${comboLevelOfTier(0)}` : `Max combo ×${comboLevelOfTier(upgrade.tier)}`;
         }
     });
 }
@@ -50,7 +52,8 @@ export function tierLabel(upgrade: UpgradeType) {
     const building = (upgrade.building ?? "").toUpperCase();
     if (upgrade.variant === "Helper") return `${iconOf(upgrade.building)} ${building} · HELPER`;
     if (upgrade.variant === "Big emoji percentage") return `${iconOf(upgrade.building)} BIG EMOJI · HANDS`;
-    if (upgrade.variant === "Combo level") return `🔥 COMBO · LEVEL ${comboLevelOfTier(upgrade.tier)}`;
+    if (upgrade.variant === "Effect emojis") return upgrade.tier === 0 ? "✨ EFFECT EMOJIS · NEW" : `✨ EFFECT EMOJIS · LEVEL ${upgrade.tier + 1}`;
+    if (upgrade.variant === "Combo level") return upgrade.tier === 0 ? "🔥 COMBO · NEW" : `🔥 COMBO · LEVEL ${comboLevelOfTier(upgrade.tier)}`;
     return `${iconOf(upgrade.building)} ${building} · TIER ${upgrade.tier + 1}`;
 }
 
@@ -62,6 +65,8 @@ const toUpgrades = (ids: number[]) => ids
 export default function UpgradesList() {
     const { unlocked, owned: ownedIds } = useSelector((state: RootState) => state.upgrades);
     const { emojis, emojisPerSecond } = useBank();
+    // Bare bones (trial): nothing can be bought
+    const bareBones = useSelector((state: RootState) => state.prestige.activeTrial?.id === "bareBones" && !state.prestige.activeTrial.completed);
 
     // Upgrades for sale, or the ones you've bought
     const [view, setView] = useState<"available" | "owned">("available");
@@ -86,7 +91,7 @@ export default function UpgradesList() {
     const shown = list.filter(u => activeFilter === "all" || u.building === activeFilter);
 
     const selected = shown.find(u => u.id === selectedId) ?? shown[0];
-    const affordableCount = available.filter(u => emojis >= priceOf(u)).length;
+    const affordableCount = bareBones ? 0 : available.filter(u => emojis >= priceOf(u)).length;
 
     const switchView = (next: "available" | "owned") => {
         setView(next);
@@ -181,10 +186,12 @@ export default function UpgradesList() {
                             <ChunkyButton
                                 height={52}
                                 labelSize={18}
-                                label={emojis >= priceOf(selected)
+                                label={bareBones
+                                    ? "🦴 No upgrades in Bare bones"
+                                    : emojis >= priceOf(selected)
                                     ? `Buy for ${money}${formatNumber(priceOf(selected), 2, true)}`
                                     : `${money}${formatNumber(priceOf(selected), 2, true)} · ${timeToAfford(priceOf(selected), emojis, emojisPerSecond).toLowerCase()}`}
-                                disabled={emojis < priceOf(selected)}
+                                disabled={bareBones || emojis < priceOf(selected)}
                                 onPress={() => buyUpgrade(selected.id!)}
                             />
                         </>

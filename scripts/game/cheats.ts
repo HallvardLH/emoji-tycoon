@@ -3,7 +3,9 @@ import { addEffectEmojisCollected, addShinyEmojiTapped, setComboTaps, addEmojisE
 import { addToCollection, CollectionState } from "../redux/collectionSlice";
 import { selectRandomEmoji } from "./bigEmoji";
 import { unlockUpgrades } from "./upgrades/checks";
-import { cheatPrestige } from "../redux/prestigeSlice";
+import { cheatPrestige, addRunSeconds } from "../redux/prestigeSlice";
+import { giveOneOffEmojis } from "./giveEmojis";
+import { runEmojis } from "./prestige/trials";
 import { calculateBuildingsEps } from "./buildings/buildings";
 
 /**
@@ -54,4 +56,16 @@ export function cheatUnlockPerkTier() {
 /** Magical (effect) emojis tapped, only shown in Stats */
 export function cheatAddMagicalEmojis(amount: number) {
     store.dispatch(addEffectEmojisCollected(amount));
+}
+
+/** Adds play time to the run, for Momentum (perk) and the essence rate */
+export function cheatAddRunTime(seconds: number) {
+    store.dispatch(addRunSeconds(seconds));
+}
+
+/** Draws whatever the active trial still needs; it completes on the next check */
+export function cheatReachTrialGoal() {
+    const trial = store.getState().prestige.activeTrial;
+    if (!trial || trial.completed) return;
+    giveOneOffEmojis(trial.goal - runEmojis() + 1);
 }

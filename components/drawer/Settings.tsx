@@ -1,7 +1,7 @@
 import { View, StyleSheet } from 'react-native';
 import { useDispatch, useSelector } from 'react-redux';
 import { RootState } from '../../scripts/redux/reduxStore';
-import { updateReduceAnimations } from '../../scripts/redux/preferencesSlice';
+import { updateReduceAnimations, updateSoundEffects } from '../../scripts/redux/preferencesSlice';
 import SwitchRow from './SwitchRow';
 import ResetButton from './ResetButton';
 import Text from '../generalUI/Text';
@@ -15,10 +15,22 @@ interface SettingsProps {
 export default function Settings({ onReset }: SettingsProps) {
     const dispatch = useDispatch();
     const reduceAnimations = useSelector((state: RootState) => state.preferences.reduceAnimations ?? false);
+    const soundEffects = useSelector((state: RootState) => state.preferences.soundEffects ?? true);
 
     return (
         <View style={styles.container}>
             <Text size={30}>Settings</Text>
+
+            <View style={styles.section}>
+                <Text font="black" size={11} color={palette.lilac} style={styles.sectionTitle}>SOUND</Text>
+                <SwitchRow
+                    icon="🔔"
+                    label="Sound effects"
+                    hint="A soft pop as you tap, and a chime for shiny emojis."
+                    value={soundEffects}
+                    onChange={value => dispatch(updateSoundEffects(value))}
+                />
+            </View>
 
             <View style={styles.section}>
                 <Text font="black" size={11} color={palette.lilac} style={styles.sectionTitle}>PERFORMANCE</Text>

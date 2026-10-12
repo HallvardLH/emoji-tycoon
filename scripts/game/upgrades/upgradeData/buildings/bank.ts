@@ -1,3 +1,4 @@
+import { buildingIdOf } from "../../../buildings/buildingData";
 import { getBuildingUpgradePrice } from "../helpers";
 import { BuildingNames } from "../../../buildings/buildingNamesType";
 import { UpgradeType, UnlockConditionType, UpgradeVariantsType, UpgradeCateogoriesType } from "../UpgradeType";
@@ -5,7 +6,7 @@ import { UpgradeType, UnlockConditionType, UpgradeVariantsType, UpgradeCateogori
 // Base object for Bank upgrades
 const baseBankUpgrade = {
     building: "Bank" as BuildingNames,
-    buildingId: 7,
+    buildingId: buildingIdOf("Bank"),
     unlockCondition: "Building amount" as UnlockConditionType,
     categories: ["Multiply building production" as UpgradeCateogoriesType],
     emojisPerSecondMultiplier: 2,
@@ -59,5 +60,110 @@ export const bankUpgrades: UpgradeType[] = [
         price: getBuildingUpgradePrice(4, 5),
         tier: 4,
         id: 804,
+    },
+    {
+        ...baseBankUpgrade,
+        name: "Emoji ATMs",
+        icon: "🏧",
+        description: "Withdraw emojis on every street corner. Nobody knows who deposits them.",
+        tier: 5,
+    },
+    {
+        ...baseBankUpgrade,
+        name: "Emoji stock market",
+        icon: "📈",
+        description: "Emoji prices only ever go up. Probably.",
+        tier: 6,
+    },
+    {
+        ...baseBankUpgrade,
+        name: "Emoji coins",
+        icon: "🪙",
+        description: "A cryptocurrency backed by actual emojis, for once.",
+        tier: 7,
+    },
+    {
+        ...baseBankUpgrade,
+        name: "Emoji vault",
+        icon: "🔐",
+        description: "Like a gold reserve, but every bar is a smiley face.",
+        tier: 8,
+    },
+    {
+        ...baseBankUpgrade,
+        name: "World emoji bank",
+        icon: "🌐",
+        description: "Lends emojis to whole countries at very reasonable rates.",
+        tier: 9,
+    },
+    {
+        ...baseBankUpgrade,
+        name: "Compound interest",
+        icon: "➗",
+        description: "Emojis that make emojis that make emojis.",
+        tier: 10,
+    },
+    {
+        ...baseBankUpgrade,
+        name: "Gold reserves",
+        icon: "🥇",
+        description: "Stacked to the ceiling, every bar engraved with a smile.",
+        tier: 11,
+    },
+    {
+        ...baseBankUpgrade,
+        name: "Emoji bonds",
+        icon: "📜",
+        description: "Long-term investments in emojis. Very safe. Very boring.",
+        tier: 12,
+    },
+    {
+        ...baseBankUpgrade,
+        name: "Armoured trucks",
+        icon: "🚚",
+        description: "Moving emojis between banks, very carefully.",
+        tier: 13,
+    },
+    {
+        ...baseBankUpgrade,
+        name: "Tax haven",
+        icon: "🏝️",
+        description: "A sunny island where emojis go to avoid paying taxes.",
+        tier: 14,
+    },
+    {
+        ...baseBankUpgrade,
+        name: "Emoji mint",
+        icon: "🏭",
+        description: "Printing fresh emojis around the clock.",
+        tier: 15,
+    },
+    {
+        ...baseBankUpgrade,
+        name: "Hedge funds",
+        icon: "🌳",
+        description: "Nobody knows what they do, but the emojis keep coming.",
+        tier: 16,
+    },
+    {
+        ...baseBankUpgrade,
+        name: "Emoji loans",
+        icon: "🧾",
+        description: "Borrow ten emojis, pay back twenty. Everybody wins. Well, you do.",
+        tier: 17,
+    },
+    {
+        ...baseBankUpgrade,
+        name: "Central bank",
+        icon: "🏤",
+        description: "Sets the emoji interest rate for the whole world.",
+        tier: 18,
+    },
+    {
+        ...baseBankUpgrade,
+        name: "Infinite money glitch",
+        icon: "♾️",
+        description: "The bank's computers have a small bug. Don't tell anyone.",
+        tier: 19,
     },
 ];

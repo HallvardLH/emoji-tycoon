@@ -1,28 +1,34 @@
 import { updateEmojis } from "../redux/valuesSlice";
 import store from "../redux/reduxStore";
 import { canBuyBuilding, unlockBuilding } from "./buildings/checks";
-import { unlockUpgrades } from "./upgrades/checks";
+import { syncTapModifiers } from "./upgrades/upgrades";
+import { unlockUpgrades, pruneUnknownUpgrades } from "./upgrades/checks";
 import { decrementEffects } from "./effects/effects";
 import { decrementEffectsOnScreen, spawnEffect } from "./effects/onScreenEffects";
 import { updateTimeSinceLastEffect } from "../redux/effectsSlice";
 import { generateCollection } from "./collection/emojiCategories";
 import { pickNextEmoji } from "./bigEmoji";
 import { calculateEpt, calculateEmojisPerSecond } from "./calculations";
-import { hasPerk } from "./prestige/perks";
+import { hasChangingProductionPerk } from "./prestige/perks";
+import { checkTrial } from "./prestige/trials";
+import { addRunSeconds } from "../redux/prestigeSlice";
 import { canBuyUpgrade } from "./upgrades/checks";
 import { addEmojisGained } from "../redux/statsSlice";
 import { calculateBuildingsEps, syncBuildingPrices } from "./buildings/buildings";
-import { calculateRemainingEmojisForNextPrestige, startPrestige, updateLastSeen, trackRunPeak } from "./prestige/prestige";
+import { calculateRemainingEmojisForNextPrestige, startPrestige, updateLastSeen, trackRunPeak, trackEssenceRate } from "./prestige/prestige";
 import { decrementTapBoost } from "./tapBoost";
 import { checkBankMilestone } from "./milestones";
 import { setComboTaps } from "../redux/statsSlice";
 import { AWAY_THRESHOLD_SECONDS, isGameHidden, registerAway } from "./offline";
+import { getGameSpeed } from "./gameSpeed";
 
 let lastUpdateTime = Date.now();
 let started = false;
 let loggedBigEmojiTaps = 0;
 // Set while the game is hidden: when it was last seen
 let awaySince: number | undefined;
+// Time played since it was last added to the run's play time (once a second)
+let playedSeconds = 0;
 
 // Timers run on real elapsed time, not on how often the loop gets to run: when the
 // page lags, the 100ms interval fires late, and counting ticks stretched every
@@ -58,7 +64,10 @@ export function gameLoop() {
     } else if (delta > AWAY_THRESHOLD_SECONDS) {
         registerAway(delta);
     } else {
-        giveEmojis(delta, state);
+        // Debug speed (cheat) runs production and play time faster
+        const speed = getGameSpeed();
+        giveEmojis(delta * speed, state);
+        playedSeconds += delta * speed;
     }
 
     // Runs once at game start
@@ -67,6 +76,9 @@ export function gameLoop() {
         store.dispatch(updateTimeSinceLastEffect(0)); // reset timer
         generateCollection();
         syncBuildingPrices();
+        pruneUnknownUpgrades();
+        // Saves keep the tap values upgrades had when bought; pick up the current ones
+        syncTapModifiers();
         pickNextEmoji();
         calculateEpt();
         calculateBuildingsEps();
@@ -91,9 +103,11 @@ export function gameLoop() {
         canBuyBuilding();
         unlockBuilding();
         canBuyUpgrade();
-        // Collector's pride (perk) grows as the collection does
-        if (hasPerk("collectorsPride")) calculateEmojisPerSecond();
+        // Collector's pride and Momentum (perks) grow during a run
+        if (hasChangingProductionPerk()) calculateEmojisPerSecond();
         trackRunPeak();
+        trackEssenceRate();
+        checkTrial();
 
         // detect new tap
         if (loggedBigEmojiTaps !== state.stats.bigEmojiTaps) {
@@ -117,6 +131,11 @@ export function gameLoop() {
 }
 
 function everySecond() {
+    // The run's play time, for Momentum (perk) and the essence rate
+    if (playedSeconds > 0) {
+        store.dispatch(addRunSeconds(playedSeconds));
+        playedSeconds = 0;
+    }
     store.dispatch(updateTimeSinceLastEffect(store.getState().effects.timeSinceLastEffect + 1));
     decrementEffects();
     decrementEffectsOnScreen();

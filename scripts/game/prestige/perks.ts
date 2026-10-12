@@ -1,4 +1,5 @@
 import store from "../../redux/reduxStore";
+import { trialEffectSpawnMultiplier, trialProductionMultiplier, trialsCompletedCount } from "./trials";
 
 /**
  * Perks are bought with emoji essence and kept forever. Each prestige unlocks the
@@ -36,6 +37,16 @@ export const perks: Perk[] = [
     { id: "neighbourhood", tier: 4, icon: "🏘️", name: "Neighbourhood", description: "+3% production for every kind of building you own", cost: 500 },
     { id: "muscleMemory", tier: 4, icon: "✋", name: "Muscle memory", description: "Keep your Big Emoji hands when you prestige", cost: 400 },
     { id: "steadyHands", tier: 4, icon: "🔥", name: "Steady hands", description: "The combo drains 20% slower", cost: 300 },
+
+    // Tier 5: rewarding long runs and skill
+    { id: "momentum", tier: 5, icon: "🌊", name: "Momentum", description: "+1% production for every 10 minutes played this run, up to +50%", cost: 800 },
+    { id: "secondWind", tier: 5, icon: "💨", name: "Second wind", description: "+1 to your max combo", cost: 1000 },
+    { id: "goldenTouch", tier: 5, icon: "👑", name: "Golden touch", description: "Shiny emojis are worth 5 times as much", cost: 600 },
+
+    // Tier 6: the late game, where runs get long and essence piles up
+    { id: "overflow", tier: 6, icon: "🫗", name: "Overflow", description: "Spent essence keeps half its production bonus", cost: 2500 },
+    { id: "hallOfFame", tier: 6, icon: "🏆", name: "Hall of fame", description: "+10% production for every trial completed", cost: 2000 },
+    { id: "flyingStart", tier: 6, icon: "🚀", name: "Flying start", description: "Head start gives 30 minutes of production instead of 5", cost: 1500, requires: "headStart" },
 ];
 
 /** Perks that no longer exist. Saves that bought them get the essence back (see startPrestige) */
@@ -71,8 +82,8 @@ export const essenceBonusPerEssence = () => hasPerk("resonance") ? 0.025 : 0.02;
 
 export const giftMultiplier = () => hasPerk("giftWrap") ? 2 : 1;
 
-/** How much more often effect emojis spawn */
-export const effectSpawnRateMultiplier = () => hasPerk("luckyStreak") ? 1.5 : 1;
+/** How much more often effect emojis spawn (Lucky streak, and the Dark sky trial reward) */
+export const effectSpawnRateMultiplier = () => (hasPerk("luckyStreak") ? 1.5 : 1) * trialEffectSpawnMultiplier();
 
 export const shinyChanceMultiplier = () => hasPerk("shinySense") ? 2 : 1;
 
@@ -80,12 +91,32 @@ export const comboDrainMultiplier = () => hasPerk("steadyHands") ? 0.8 : 1;
 
 export const buildingPriceMultiplier = () => hasPerk("bulkDiscount") ? 0.9 : 1;
 
-/** Head start: 5 minutes of the last run's best production (at least a million) */
+/** Head start: 5 minutes of the last run's best production (at least a million), 30 with Flying start */
 export function startingEmojis() {
     if (!hasPerk("headStart")) return 0;
     const lastRunPeakEps = store.getState().prestige.lastRunPeakEps ?? 0;
-    return Math.max(1e6, lastRunPeakEps * 5 * 60);
+    const minutes = hasPerk("flyingStart") ? 30 : 5;
+    return Math.max(1e6, lastRunPeakEps * minutes * 60);
 }
+
+/** Second wind: extra max combo */
+export const maxComboBonus = () => hasPerk("secondWind") ? 1 : 0;
+
+/** Golden touch: what shiny emojis are worth */
+export const shinyRewardMultiplier = () => hasPerk("goldenTouch") ? 5 : 1;
+
+/** Momentum: +1% per 10 minutes played this run, up to +50% */
+export function momentumMultiplier() {
+    if (!hasPerk("momentum")) return 1;
+    const minutes = (store.getState().prestige.runSeconds ?? 0) / 60;
+    return 1 + Math.min(0.5, Math.floor(minutes / 10) * 0.01);
+}
+
+/** Hall of fame: +10% per trial completed */
+export const hallOfFameMultiplier = () => hasPerk("hallOfFame") ? 1 + trialsCompletedCount() * 0.1 : 1;
+
+/** Perks whose bonus changes during a run, so production is recalculated regularly */
+export const hasChangingProductionPerk = () => hasPerk("collectorsPride") || hasPerk("momentum");
 
 /** Overtime: how much longer good effects last */
 export const goodEffectDurationMultiplier = () => hasPerk("overtime") ? 1.5 : 1;
@@ -104,10 +135,22 @@ export function collectionMultiplier() {
     return 1 + found * 0.0003;
 }
 
-/** Production multiplier from unspent essence and the production perks */
+/** Essence counting towards the production bonus: what's unspent, plus half of what's spent with Overflow */
+export function essenceForBonus() {
+    const { emojiEssence = 0, totalEssenceEarned = 0 } = store.getState().prestige;
+    if (!hasPerk("overflow")) return emojiEssence;
+    const spent = Math.max(0, totalEssenceEarned - emojiEssence);
+    return emojiEssence + spent / 2;
+}
+
+/** Production multiplier from essence, the production perks and trial rewards */
 export function prestigeProductionMultiplier() {
-    const { emojiEssence } = store.getState().prestige;
-    return (1 + (emojiEssence ?? 0) * essenceBonusPerEssence()) * collectionMultiplier() * neighbourhoodMultiplier();
+    return (1 + essenceForBonus() * essenceBonusPerEssence())
+        * collectionMultiplier()
+        * neighbourhoodMultiplier()
+        * momentumMultiplier()
+        * hallOfFameMultiplier()
+        * trialProductionMultiplier();
 }
 
 /** Neighbourhood: +10% per kind of building owned */

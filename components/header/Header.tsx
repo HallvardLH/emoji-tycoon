@@ -9,7 +9,9 @@ import store from "../../scripts/redux/reduxStore";
 import PrestigeMeter from "../gameUI/Meters/PrestigeMeter";
 import { RootState } from "../../scripts/redux/reduxStore";
 import { formatNumber } from "../../scripts/misc";
+import { getGameSpeed, useGameSpeed } from "../../scripts/game/gameSpeed";
 import { getLastTickTime } from "../../scripts/game/gameLoop";
+import { useIsDesktop } from "../layout/desktop";
 import { palette, radii } from "../misc/theme";
 
 /**
@@ -20,23 +22,18 @@ import { palette, radii } from "../misc/theme";
 export default function Header() {
     const pathname = usePathname();
 
+    const isDesktop = useIsDesktop();
     const isHome = pathname === "/";
     const isEmojidex = pathname.startsWith("/emojidex");
+
+    // On desktop the counter and buttons sit above the Big Emoji instead (StageHeader)
+    if (isDesktop) return null;
 
     return (
         <SafeAreaView edges={["top"]} style={styles.container}>
             {isHome ? (
                 // Home: the bank is the hero
-                <View style={styles.bigCounter}>
-                    <Text font="black" size={12} color={palette.lilac} style={styles.caps}>EMOJIS</Text>
-                    <Text size={40} style={{ lineHeight: 44 }}><Bank /></Text>
-                    <View style={styles.pills}>
-                        <View style={styles.epsPill}>
-                            <Text font="bold" size={14} color={palette.sun}><Rate /></Text>
-                        </View>
-                        <PrestigeMeter />
-                    </View>
-                </View>
+                <HomeCounter />
             ) : isEmojidex ? (
                 <Text size={30} style={styles.title}>Emojidex</Text>
             ) : (
@@ -50,6 +47,32 @@ export default function Header() {
             <HomeNavigation />
         </SafeAreaView>
     )
+}
+
+/** The bank as the hero: big count, the rate, and emoji essence */
+function HomeCounter() {
+    return (
+        <View style={styles.bigCounter}>
+            <Text font="black" size={12} color={palette.lilac} style={styles.caps}>EMOJIS</Text>
+            <Text size={40} style={{ lineHeight: 44 }}><Bank /></Text>
+            <View style={styles.pills}>
+                <View style={styles.epsPill}>
+                    <Text font="bold" size={14} color={palette.sun}><Rate /></Text>
+                </View>
+                <PrestigeMeter />
+            </View>
+        </View>
+    );
+}
+
+/** Desktop: the home header at the top of the Big Emoji's column, with the cheats and menu buttons */
+export function StageHeader() {
+    return (
+        <View style={styles.container}>
+            <HomeCounter />
+            <HomeNavigation />
+        </View>
+    );
 }
 
 /**
@@ -72,7 +95,7 @@ const Bank = React.memo(() => {
             // ticks, and restarting the projection on each one made the count crawl while tapping.
             // At most one game tick ahead, so it never runs past the real bank
             const sinceTick = (Date.now() - getLastTickTime()) / 1000;
-            const ahead = Math.min(sinceTick, 0.1) * emojisPerSecond;
+            const ahead = Math.min(sinceTick, 0.1) * emojisPerSecond * getGameSpeed();
             const next = formatBank(emojis + Math.max(0, ahead));
             if (next !== shown) {
                 shown = next;
@@ -90,10 +113,11 @@ const Bank = React.memo(() => {
 /** Whole numbers with separators, then three decimals from a million up ("24.231 million") */
 const formatBank = (emojis: number) => emojis < 1e6 ? formatNumber(Math.floor(emojis)) : formatNumber(emojis, 3);
 
-/** Emojis per second, e.g. "+12.1 million / sec" */
+/** Emojis per second, e.g. "+12.1 million / sec", with ⏩ while the debug speed is on */
 const Rate = React.memo(() => {
     const emojisPerSecond = useSelector((state: RootState) => state.values.emojisPerSecond);
-    return <>+{formatNumber(emojisPerSecond, 1)} / sec</>;
+    const speed = useGameSpeed();
+    return <>{speed > 1 ? "⏩ " : ""}+{formatNumber(emojisPerSecond * speed, 1)} / sec</>;
 });
 
 const styles = StyleSheet.create({

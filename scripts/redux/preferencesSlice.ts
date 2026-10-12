@@ -25,6 +25,10 @@ interface PreferencesState {
     * Missing from saves made before it existed, so read it as off when undefined.
     */
     reduceAnimations?: boolean,
+    /**
+    * @property Sound effects for tapping. Missing from saves made before it existed, so read it as on when undefined.
+    */
+    soundEffects?: boolean,
 }
 
 const initialState: PreferencesState = {
@@ -35,6 +39,7 @@ const initialState: PreferencesState = {
         "Big emoji" as BuildingNames,
     ],
     reduceAnimations: false,
+    soundEffects: true,
 };
 
 export const preferencesSlice = createSlice({
@@ -57,17 +62,20 @@ export const preferencesSlice = createSlice({
             }
             state.upgradeFilter = currentFilters;
         },
+        updateSoundEffects: (state, action: PayloadAction<boolean>) => {
+            state.soundEffects = action.payload;
+        },
         updateReduceAnimations: (state, action: PayloadAction<boolean>) => {
             state.reduceAnimations = action.payload;
         },
         resetPreferences: (state) => {
             // Settings are about the device, not the save, so they survive a reset
-            return { ...initialState, reduceAnimations: state.reduceAnimations ?? false };
+            return { ...initialState, reduceAnimations: state.reduceAnimations ?? false, soundEffects: state.soundEffects ?? true };
         },
 
     },
 });
 
-export const { updateBulkBuy, updateShowDetails, toggleUpgradeFilter, updateReduceAnimations, resetPreferences } = preferencesSlice.actions;
+export const { updateBulkBuy, updateShowDetails, toggleUpgradeFilter, updateReduceAnimations, updateSoundEffects, resetPreferences } = preferencesSlice.actions;
 
 export default preferencesSlice.reducer;

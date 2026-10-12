@@ -38,7 +38,8 @@
     "react-native-web": "^0.20.0",
     "react-native-worklets": "^0.4.2",
     "react-redux": "^9.2.0",
-    "redux": "^5.0.1"
+    "redux": "^5.0.1",
+    "expo-audio": "~0.4.9"
   },
   "devDependencies": {
     "@babel/core": "^7.20.0",
