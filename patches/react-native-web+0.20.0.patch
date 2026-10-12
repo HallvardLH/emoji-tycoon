@@ -1,0 +1,30 @@
+diff --git a/node_modules/react-native-web/dist/cjs/vendor/react-native/Animated/nodes/AnimatedProps.js b/node_modules/react-native-web/dist/cjs/vendor/react-native/Animated/nodes/AnimatedProps.js
+index 862ac09..b8324a2 100644
+--- a/node_modules/react-native-web/dist/cjs/vendor/react-native/Animated/nodes/AnimatedProps.js
++++ b/node_modules/react-native-web/dist/cjs/vendor/react-native/Animated/nodes/AnimatedProps.js
+@@ -29,7 +29,9 @@ class AnimatedProps extends _AnimatedNode.default {
+     }
+     this._props = props;
+     this._callback = callback;
+-    this.__attach();
++    // Attached by useAnimatedProps once committed. Attaching here as well attached
++    // every node twice, and one detach left it (and its style) on the animated
++    // values forever: a leak on every re-render of an animated component.
+   }
+   __getValue() {
+     var props = {};
+diff --git a/node_modules/react-native-web/dist/vendor/react-native/Animated/nodes/AnimatedProps.js b/node_modules/react-native-web/dist/vendor/react-native/Animated/nodes/AnimatedProps.js
+index 9ba3336..d91de4f 100644
+--- a/node_modules/react-native-web/dist/vendor/react-native/Animated/nodes/AnimatedProps.js
++++ b/node_modules/react-native-web/dist/vendor/react-native/Animated/nodes/AnimatedProps.js
+@@ -26,7 +26,9 @@ class AnimatedProps extends AnimatedNode {
+     }
+     this._props = props;
+     this._callback = callback;
+-    this.__attach();
++    // Attached by useAnimatedProps once committed. Attaching here as well attached
++    // every node twice, and one detach left it (and its style) on the animated
++    // values forever: a leak on every re-render of an animated component.
+   }
+   __getValue() {
+     var props = {};
