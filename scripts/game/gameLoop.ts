@@ -16,10 +16,13 @@ import { calculateRemainingEmojisForNextPrestige, startPrestige, updateLastSeen,
 import { decrementTapBoost } from "./tapBoost";
 import { checkBankMilestone } from "./milestones";
 import { setComboTaps } from "../redux/statsSlice";
+import { AWAY_THRESHOLD_SECONDS, isGameHidden, registerAway } from "./offline";
 
 let lastUpdateTime = Date.now();
 let started = false;
 let loggedBigEmojiTaps = 0;
+// Set while the game is hidden: when it was last seen
+let awaySince: number | undefined;
 
 // Timers run on real elapsed time, not on how often the loop gets to run: when the
 // page lags, the 100ms interval fires late, and counting ticks stretched every
@@ -40,7 +43,20 @@ export function gameLoop() {
     // cache state once per frame
     const state = store.getState();
 
-    giveEmojis(delta, state);
+    // Nothing is produced while the game is away; coming back offers offline earnings (see offline.ts).
+    // Away is either hidden (a background tab keeps running, slowly) or a long gap between frames
+    // (the app was suspended, or the device slept).
+    if (isGameHidden()) {
+        // When the game was last seen
+        awaySince ??= now - delta * 1000;
+    } else if (awaySince !== undefined) {
+        registerAway((now - awaySince) / 1000);
+        awaySince = undefined;
+    } else if (delta > AWAY_THRESHOLD_SECONDS) {
+        registerAway(delta);
+    } else {
+        giveEmojis(delta, state);
+    }
 
     // Runs once at game start
     if (!started) {
@@ -51,8 +67,11 @@ export function gameLoop() {
         pickNextEmoji();
         calculateEpt();
         calculateBuildingsEps();
-        // Migrates old saves and pays out offline earnings (needs the production just calculated)
+        // Migrates old saves and offers offline earnings (needs the production just calculated)
+        const lastSeen = state.prestige.lastSeen;
         startPrestige();
+        // Catch up the timers for the time the game was closed, so saved effects have run out
+        if (lastSeen) untilSecond -= Math.max(0, (now - lastSeen) / 1000);
         loggedBigEmojiTaps = state.stats.bigEmojiTaps;
     }
 
@@ -100,7 +119,8 @@ function everySecond() {
     decrementEffectsOnScreen();
     spawnEffect();
     calculateRemainingEmojisForNextPrestige();
-    updateLastSeen();
+    // Not while hidden, so closing a hidden game still counts the time it was hidden as away
+    if (!isGameHidden()) updateLastSeen();
     checkBankMilestone();
 }
 

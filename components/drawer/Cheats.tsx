@@ -7,6 +7,7 @@ import ResetButton from './ResetButton';
 import FunValueCheat from './FunValueCheat';
 import SwitchRow from './SwitchRow';
 import { cheatAddComboTaps, cheatMultiplyTapEarnings, cheatCollectEmojis, cheatAddMagicalEmojis, cheatAddEssence, cheatUnlockPerkTier } from '../../scripts/game/cheats';
+import { registerAway } from '../../scripts/game/offline';
 import Text from '../generalUI/Text';
 import { palette, radii } from '../misc/theme';
 
@@ -31,6 +32,7 @@ export default function Cheats({ onPress }: CheatsProps) {
                     <CheatButton label="+1 Qa" onPress={() => giveOneOffEmojis(1e15)} compact />
                     <CheatButton label="+1 Oc" onPress={() => giveOneOffEmojis(1e27)} compact />
                 </View>
+                <CheatButton icon="🌙" label="Simulate 1 hour away" onPress={() => { registerAway(3600); onPress(); }} />
             </Section>
 
             <Section title="STATS">

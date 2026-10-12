@@ -9,6 +9,7 @@ import { resetPreferences } from '../../scripts/redux/preferencesSlice';
 import { resetStats } from '../../scripts/redux/statsSlice';
 import { resetPrestige } from '../../scripts/redux/prestigeSlice';
 import { resetTabs } from '../../scripts/redux/tabsSlice';
+import { resetOffline } from '../../scripts/redux/offlineSlice';
 import { useEffect, useState } from 'react';
 import { Pressable, StyleSheet } from 'react-native';
 import Text from '../generalUI/Text';
@@ -43,6 +44,7 @@ export default function ResetButton({ onPress }: ResetButtonProps) {
         dispatch(resetStats());
         dispatch(resetPrestige());
         dispatch(resetTabs());
+        dispatch(resetOffline());
     };
     return (
         <Pressable

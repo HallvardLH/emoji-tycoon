@@ -12,6 +12,7 @@ import preferencesSlice from './preferencesSlice';
 import statsSlice from './statsSlice';
 import prestigeSlice from './prestigeSlice';
 import tabsSlice from './tabsSlice';
+import offlineSlice from './offlineSlice';
 
 // Combine reducers
 const rootReducer = combineReducers({
@@ -25,6 +26,7 @@ const rootReducer = combineReducers({
     stats: statsSlice,
     prestige: prestigeSlice,
     tabs: tabsSlice,
+    offline: offlineSlice,
 });
 
 // Merges the loaded save into the state when it arrives

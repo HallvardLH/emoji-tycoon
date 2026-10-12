@@ -61,6 +61,14 @@ export const prestigeSlice = createSlice({
             state.totalEssenceEarned += action.payload.essence ?? 0;
             state.prestiges += action.payload.tiers ?? 0;
         },
+        /** Takes away perks that no longer exist and gives their essence back */
+        refundPerks: (state, action: PayloadAction<{ id: string, cost: number }[]>) => {
+            action.payload.forEach(({ id, cost }) => {
+                if (!state.perks.includes(id)) return;
+                state.perks = state.perks.filter(owned => owned !== id);
+                state.emojiEssence += cost;
+            });
+        },
         setLastSeen: (state, action: PayloadAction<number>) => {
             state.lastSeen = action.payload;
         },
@@ -80,6 +88,6 @@ export const prestigeSlice = createSlice({
     },
 });
 
-export const { completePrestige, setRunPeakEps, buyPerk, cheatPrestige, setLastSeen, updateRemainingEmojisPrestigePerc, migratePrestige, resetPrestige } = prestigeSlice.actions;
+export const { completePrestige, setRunPeakEps, buyPerk, cheatPrestige, refundPerks, setLastSeen, updateRemainingEmojisPrestigePerc, migratePrestige, resetPrestige } = prestigeSlice.actions;
 
 export default prestigeSlice.reducer;

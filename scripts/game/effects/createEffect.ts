@@ -2,6 +2,7 @@ import { effectData } from "./effectData";
 import { howFun } from "../shorthands";
 import { Effect } from "./effectType";
 import { getEmojisPerSecond } from "../shorthands";
+import { effectOnScreenMultiplier, goodEffectDurationMultiplier } from "../prestige/perks";
 
 interface EffectWeights {
     [key: string]: number;
@@ -92,6 +93,11 @@ export function createEffect() {
         emoji = chosenEffect.quality === "good" ? "🎈" : "📌";
     }
 
+    // Overtime (perk) makes good effects last longer, Magnet (perk) keeps effect emojis on screen longer
+    const timeLeft = chosenEffect.quality === "good"
+        ? Math.round(chosenEffect.timeLeft * goodEffectDurationMultiplier())
+        : chosenEffect.timeLeft;
+
     const effect: Effect = {
         title: chosenEffect.title,
         description: chosenEffect.description,
@@ -99,9 +105,9 @@ export function createEffect() {
         eptMult: chosenEffect.eptMult,
         eptAdd: chosenEffect.eptAdd,
         epsMult: chosenEffect.epsMult,
-        timeLeft: chosenEffect.timeLeft,
-        originalDuration: chosenEffect.timeLeft,
-        timeLeftOnScreen: chosenEffect.timeLeftOnScreen,
+        timeLeft: timeLeft,
+        originalDuration: timeLeft,
+        timeLeftOnScreen: chosenEffect.timeLeftOnScreen * effectOnScreenMultiplier(),
         displayMeter: chosenEffect.displayMeter,
         instanceId: nextInstanceId(),
         id: chosenEffect.id,

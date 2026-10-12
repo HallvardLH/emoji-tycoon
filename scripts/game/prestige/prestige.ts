@@ -1,20 +1,18 @@
 import store from "../../redux/reduxStore";
-import { completePrestige, setRunPeakEps, buyPerk, migratePrestige, setLastSeen, updateRemainingEmojisPrestigePerc, PRESTIGE_STATE_VERSION } from "../../redux/prestigeSlice";
+import { completePrestige, setRunPeakEps, buyPerk, migratePrestige, refundPerks, setLastSeen, updateRemainingEmojisPrestigePerc, PRESTIGE_STATE_VERSION } from "../../redux/prestigeSlice";
 import { resetBuildings } from "../../redux/buildingsSlice";
 import { resetUpgrades, addUpgrade } from "../../redux/upgradesSlice";
 import { resetBigEmoji, addEmojisPerTapPercentageOfEps } from "../../redux/bigEmojiSlice";
 import { resetEffects } from "../../redux/effectsSlice";
 import { resetValues, setFunValue, updateEmojis } from "../../redux/valuesSlice";
-import { addEmojisGained } from "../../redux/statsSlice";
 import { isComboUpgradeId } from "../upgrades/upgradeData/nonBuilding/combo";
 import { getUpgradeDataById } from "../upgrades/shorthands";
 import { calculateBuildingsEps, syncBuildingPrices } from "../buildings/buildings";
 import { calculateEpt } from "../calculations";
 import { pickNextEmoji } from "../bigEmoji";
 import { unlockUpgrades } from "../upgrades/checks";
-import { celebrateMilestone } from "../milestones";
-import { formatNumber } from "../../misc";
-import { startingEmojis, hasPerk, offlineEarnings, perks, canBuyPerk } from "./perks";
+import { startingEmojis, hasPerk, perks, removedPerks, canBuyPerk } from "./perks";
+import { registerAway } from "../offline";
 
 /**
  * Emoji essence
@@ -136,7 +134,7 @@ export function purchasePerk(id: string) {
 }
 
 /**
- * Runs once at game start: migrates old saves, and pays out offline earnings if a perk allows them
+ * Runs once at game start: migrates old saves, and offers offline earnings for the time away
  */
 export function startPrestige() {
     const prestigeState = store.getState().prestige;
@@ -147,21 +145,15 @@ export function startPrestige() {
         calculateBuildingsEps();
     }
 
-    const offline = offlineEarnings();
-    const lastSeen = store.getState().prestige.lastSeen;
-    const { emojisPerSecond, emojis } = store.getState().values;
-    if (offline && lastSeen) {
-        const awaySeconds = Math.min((Date.now() - lastSeen) / 1000, offline.maxSeconds);
-        // Ignore quick reloads
-        if (awaySeconds > 60) {
-            const earned = emojisPerSecond * offline.rate * awaySeconds;
-            if (earned > 0) {
-                store.dispatch(updateEmojis(emojis + earned));
-                store.dispatch(addEmojisGained(earned));
-                celebrateMilestone({ icon: "🌙", caption: "WHILE YOU WERE AWAY", title: `+${formatNumber(earned, 1)} emojis` });
-            }
-        }
+    // The offline earnings perks were removed (offline earnings are claimed now, see offline.ts)
+    const removed = removedPerks.filter(perk => store.getState().prestige.perks.includes(perk.id));
+    if (removed.length > 0) {
+        store.dispatch(refundPerks(removed));
+        calculateBuildingsEps();
     }
+
+    const lastSeen = store.getState().prestige.lastSeen;
+    if (lastSeen) registerAway((Date.now() - lastSeen) / 1000);
     store.dispatch(setLastSeen(Date.now()));
 }
 

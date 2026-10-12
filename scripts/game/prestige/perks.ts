@@ -18,7 +18,7 @@ export interface Perk {
 
 export const perks: Perk[] = [
     // Tier 1: quality of life for every run after the first
-    { id: "nightShift", tier: 1, icon: "🌙", name: "Night shift", description: "Earn 10% of your production while the game is closed, for up to 8 hours", cost: 5 },
+    { id: "overtime", tier: 1, icon: "⏳", name: "Overtime", description: "Good effects last 50% longer", cost: 5 },
     { id: "giftWrap", tier: 1, icon: "🎀", name: "Gift wrap", description: "Gifts give twice as much", cost: 15 },
     { id: "headStart", tier: 1, icon: "🎒", name: "Head start", description: "Start every run with 5 minutes of your last run's best production", cost: 10 },
 
@@ -30,12 +30,19 @@ export const perks: Perk[] = [
     // Tier 3: long-term multipliers
     { id: "collectorsPride", tier: 3, icon: "📖", name: "Collector's pride", description: "+0.03% production for every different emoji in your collection", cost: 150 },
     { id: "bulkDiscount", tier: 3, icon: "🏷️", name: "Bulk discount", description: "Buildings are 10% cheaper", cost: 200 },
-    { id: "nightShift2", tier: 3, icon: "🌌", name: "Graveyard shift", description: "Earn 25% of your production while away, for up to 16 hours", cost: 120, requires: "nightShift" },
+    { id: "magnet", tier: 3, icon: "🧲", name: "Magnet", description: "Effect emojis stay on screen twice as long", cost: 120 },
 
     // Tier 4: keeping the whole empire relevant
     { id: "neighbourhood", tier: 4, icon: "🏘️", name: "Neighbourhood", description: "+3% production for every kind of building you own", cost: 500 },
     { id: "muscleMemory", tier: 4, icon: "✋", name: "Muscle memory", description: "Keep your Big Emoji hands when you prestige", cost: 400 },
     { id: "steadyHands", tier: 4, icon: "🔥", name: "Steady hands", description: "The combo drains 20% slower", cost: 300 },
+];
+
+/** Perks that no longer exist. Saves that bought them get the essence back (see startPrestige) */
+export const removedPerks = [
+    // Offline earnings, now claimed with an ad or premium currency (see offline.ts)
+    { id: "nightShift", cost: 5 },
+    { id: "nightShift2", cost: 120 },
 ];
 
 export const MAX_PERK_TIER = Math.max(...perks.map(perk => perk.tier));
@@ -80,12 +87,11 @@ export function startingEmojis() {
     return Math.max(1e6, lastRunPeakEps * 5 * 60);
 }
 
-/** Share of production earned while away, and for how long (seconds) */
-export function offlineEarnings() {
-    if (hasPerk("nightShift2")) return { rate: 0.25, maxSeconds: 16 * 3600 };
-    if (hasPerk("nightShift")) return { rate: 0.1, maxSeconds: 8 * 3600 };
-    return undefined;
-}
+/** Overtime: how much longer good effects last */
+export const goodEffectDurationMultiplier = () => hasPerk("overtime") ? 1.5 : 1;
+
+/** Magnet: how much longer effect emojis stay on screen */
+export const effectOnScreenMultiplier = () => hasPerk("magnet") ? 2 : 1;
 
 /** Collector's pride: +0.1% per different emoji collected */
 export function collectionMultiplier() {

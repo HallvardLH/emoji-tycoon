@@ -136,6 +136,16 @@ export function calculateEmojisPerSecond() {
         .filter(mult => mult !== 0) // Removes 0
         .reduce((acc, mult) => acc * mult, 1);
 
+    let eps = calculateBaseEmojisPerSecond() * totalMultiplier;
+
+    // Update the store with the new EPS
+    store.dispatch(updateEmojisPerSecond(eps));
+}
+
+/**
+ * Emojis per second without effects. Offline earnings use it, as effects run out while away.
+ */
+export function calculateBaseEmojisPerSecond() {
     let emojisPerSecondPercentageIncreases = store.getState().values.emojisPerSecondPercentages;
 
     // Apply compound percentage increases
@@ -145,12 +155,9 @@ export function calculateEmojisPerSecond() {
 
     const totalBuildingEps = store.getState().values.totalBuildingEps;
 
-    // Apply total multiplier, compounded percentage increases, any fun value bonus,
+    // Apply compounded percentage increases, any fun value bonus,
     // and emoji essence (unspent essence and production perks)
-    let eps = (totalBuildingEps * totalMultiplier) * compoundedPercentageMultiplier * funProductionMultiplier() * prestigeProductionMultiplier();
-
-    // Update the store with the new EPS
-    store.dispatch(updateEmojisPerSecond(eps));
+    return totalBuildingEps * compoundedPercentageMultiplier * funProductionMultiplier() * prestigeProductionMultiplier();
 }
 
 
