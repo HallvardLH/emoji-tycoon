@@ -130,10 +130,14 @@ function FadeInOutEffect({ effect, area, onCollect, leaving, onGone }: FadeInOut
     const left = toPixels(effect.xPos, area.width, EFFECT_WIDTH);
     const top = toPixels(effect.yPos, area.height, EFFECT_HEIGHT);
 
+    // Set on the first tap, before `leaving` catches up, so a quick double tap collects it once
+    const tapped = useRef(false);
     const onPress = () => {
-        if (leaving) return;
+        // Still catchable while it fades away after running out, but not once collected
+        if (leaving === "collected" || tapped.current) return;
+        tapped.current = true;
         // tapEffect plays the haptic
-        const given = tapEffect(effect.instanceId!);
+        const given = tapEffect(effect);
         onCollect(effect, given, left + EFFECT_WIDTH / 2, top + GLOW / 2);
     };
 
@@ -161,12 +165,13 @@ function FadeInOutEffect({ effect, area, onCollect, leaving, onGone }: FadeInOut
                 Animated.timing(fadeAnim, { toValue: 0, duration: 900, easing: Easing.in(Easing.quad), useNativeDriver: true }),
                 Animated.timing(scaleAnim, { toValue: 0.7, duration: 900, easing: Easing.in(Easing.quad), useNativeDriver: true }),
             ]);
-        exit.start(onGone);
+        // Not when cut short: tapping a fading effect swaps its fade for the collected burst
+        exit.start(({ finished }) => { if (finished) onGone(); });
     }, [leaving]);
 
     return (
         <Animated.View
-            pointerEvents={leaving ? "none" : "auto"}
+            pointerEvents={leaving === "collected" ? "none" : "auto"}
             style={{
                 position: "absolute",
                 left: left,

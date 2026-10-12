@@ -1,6 +1,7 @@
 import store from '../../redux/reduxStore';
 import { addEffectOnScreen, removeEffectOnScreen, addEffect, updateTimeSinceLastEffect, updateTimeLeftOnScreen } from '../../redux/effectsSlice';
 import { createEffect } from './createEffect';
+import { Effect } from './effectType';
 import { calculateEmojisPerSecond, calculateEpt } from '../calculations';
 import { howFun } from '../shorthands';
 import { addEffectEmojisCollected } from '../../redux/statsSlice';
@@ -17,15 +18,17 @@ import { effectUpgradeSpawnMultiplier, hasEffectEmojis } from './effectUpgrades'
  *
  * Removes the effect emoji from the screen, and adds it to the array of currently active effects.
  * 
- * @param id is the id of the emoji that was tapped.
+ * @param effect is the effect emoji that was tapped. It may have just run out and left
+ * the onScreen array, as effects can still be tapped while they fade away.
  * @returns the amount of emojis given, for "give" effects
  */
-export function tapEffect(id: number): number | undefined {
+export function tapEffect(effect: Effect): number | undefined {
+    const id = effect.instanceId!;
     const effectsOnScreen = store.getState().effects.effectsOnScreen;
 
-    // Finds the effect based on id and adds it to the effects array
-    const newEffect = effectsOnScreen.find(effect => effect.instanceId === id)!;
-    store.dispatch(addEffect(newEffect!));
+    // The stored effect if it's still on screen, else the one that was shown as it faded
+    const newEffect = effectsOnScreen.find(effect => effect.instanceId === id) ?? effect;
+    store.dispatch(addEffect(newEffect));
 
     // Removes the effect from the onScreen array
     store.dispatch(removeEffectOnScreen(id));
