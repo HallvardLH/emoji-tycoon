@@ -4,10 +4,20 @@ import { useSelector } from 'react-redux';
 import { RootState } from "../../scripts/redux/reduxStore";
 import { formatNumber } from "../../scripts/misc";
 import { palette, radii } from "../misc/theme";
+import { useSampledSelector } from "../gameUI/useBank";
 
 export default function StatsList() {
-    const { bigEmojiTaps, emojisEarnedFromTap, effectEmojisCollected, emojisGained, shinyEmojisTapped, comboTaps } = useSelector((state: RootState) => state.stats);
+    // Stats change every tick and tap; twice a second is plenty for reading them
+    const { bigEmojiTaps, emojisEarnedFromTap, effectEmojisCollected, emojisGained, shinyEmojisTapped, comboTaps, buildingEmojis } = useSampledSelector((state: RootState) => state.stats);
     const { funValue } = useSelector((state: RootState) => state.values);
+    const buildings = useSelector((state: RootState) => state.buildings.buildings);
+
+    // What each building has made in total, with buffs, biggest first; ones that made nothing are left out
+    const buildingRows: [string, string, string][] = buildings
+        .map(building => ({ building, made: buildingEmojis?.[building.buildingId] ?? 0 }))
+        .filter(({ made }) => made >= 1)
+        .sort((a, b) => b.made - a.made)
+        .map(({ building, made }) => [building.icon, building.name, made < 1e6 ? formatNumber(Math.floor(made)) : formatNumber(made, 1)]);
 
     const rows: [string, string, string][] = [
         ["✍️", "Total emojis drawn", formatNumber(emojisGained, 0)],
@@ -21,6 +31,20 @@ export default function StatsList() {
     rows.push(["🔮", "???", funValue == 100 ? `${funValue} 😭` : String(funValue)]);
 
     return (
+        <>
+            <StatsCard rows={rows} />
+            {buildingRows.length > 0 && (
+                <>
+                    <Text font="black" size={11} color={palette.lilac} style={styles.sectionTitle}>MADE BY EACH BUILDING</Text>
+                    <StatsCard rows={buildingRows} />
+                </>
+            )}
+        </>
+    )
+}
+
+function StatsCard({ rows }: { rows: [string, string, string][] }) {
+    return (
         <View style={styles.card}>
             {rows.map(([icon, label, value], index) => (
                 <View key={label} style={[styles.row, index > 0 ? styles.divider : null]}>
@@ -30,7 +54,7 @@ export default function StatsList() {
                 </View>
             ))}
         </View>
-    )
+    );
 }
 
 const styles = StyleSheet.create({
@@ -62,5 +86,10 @@ const styles = StyleSheet.create({
     },
     label: {
         flex: 1,
+    },
+    sectionTitle: {
+        marginHorizontal: 20,
+        marginTop: 22,
+        letterSpacing: 1.3,
     },
 })

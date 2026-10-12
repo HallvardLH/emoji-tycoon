@@ -91,6 +91,7 @@ Tap multipliers boost the whole tap, including the share of production the "hand
 
 ### Shiny emojis
 - **Chance:** 1 in 200 Big Emojis is shiny, with a gold glow, twinkles and a "✨ SHINY ✨" tag.
+- **Unlock:** none appear until 10,000 emojis have been produced all-time (`SHINY_FROM_EMOJIS_PRODUCED` in `bigEmoji.ts`). The "Only shiny" cheat ignores this.
 - **Reward:** tapping one gives a bonus of max(EPT × 50, EPS × 60) with a celebration burst.
 - **Collection:** shinies are tracked per emoji and marked in the Collection.
 
@@ -132,6 +133,8 @@ Tap multipliers boost the whole tap, including the share of production the "hand
 | **Big Emoji ("hands")** | Tapping gains +1% of EPS (the first five), +0.1% (the rest) | Emojis earned from tapping ≥ 10^(tier+2) | `10^(tier+4) + taps × 10^tier` |
 | **Combo level** | Turns the combo on, then +1 max combo | Combo taps (see Combo) | Fixed, see table above |
 | **Effect emojis** | Turns effect emojis on, then more often / longer | Emojis earned (see Effect emojis) | Fixed, see Effect emojis |
+
+**Round prices:** every upgrade price is rounded to the nearest of 10, 15, 20, 25, 30, 40, 50, 75 or 100 at its scale (47 → 50, 90 → 100, 4,700 → 5,000). This is `roundToPriceStep` in `scripts/utils.ts`, applied in `getUpgradePrice`, so a step can move a price up to about 20% either way.
 
 Each building has its own themed set:
 - **Farm:** veggie helpers.
@@ -186,6 +189,7 @@ None appear until **Good vibes** is bought. Like Cookie Clicker's golden cookie 
   - magical (effect) emojis tapped
   - shiny emojis tapped
   - a cryptic 🔮 "???" row that shows the fun value
+  - **Made by each building:** what each building has made in total, biggest first, with every buff counted (upgrades, percentages, essence and perks, active effects, claimed offline earnings). Each tick's production is split by each building's share of base output (`scripts/game/buildings/buildingTotals.ts`). It's all-time, so prestige keeps it; saves start counting from when it was added.
 
 ### Fun value
 A secret number from 1–100, rolled on a new game and on reset, like Cookie Clicker's seed. Most values do nothing. These give the game a quirk (source of truth: `scripts/game/funValues.ts`, kept in sync with the `howFun()` checks):
@@ -312,6 +316,8 @@ scripts/
 
 ### Conventions
 - **Redux selectors:** select narrow fields, not whole slices. `bigEmoji.tapBoost` changes 10×/s, so subscribing to the whole slice re-renders the stage.
+- **Re-renders:** the bank and stats change every tick (10×/s) and the collection on every tap. Displays of them read through `useBank` / `useSampledSelector` (`components/gameUI/useBank.ts`), which sample the store a few times a second. Hidden tab screens stay mounted, so both navigators wrap their screens in `FreezeWhenBlurred`, which suspends them until they're shown again. Without it, a visited Emojidex re-rendered its ~1,600-cell collection on every tap, and tapping lagged until a refresh. Selectors that run on every store update should be cheap or cached (see `ownedComboLevel` in `tapBoost.ts`).
+- **Upgrade ids (effect emojis):** effect emoji upgrades use block 98 (ids 9800+).
 - **Animations:** use the native driver with transforms (e.g. `scaleX` with `transformOrigin: 'left'` rather than width). Build interpolations once in `useMemo`.
 - **Building ids:** the order in `buildingData.ts`, and price and output follow from it, so a building can be inserted anywhere. Upgrade files look their building up by name (`buildingIdOf`), and saves match buildings by name as they load.
 - **Upgrade ids:** assigned in blocks per building (block = building id + 1, in list order), so they move when buildings are inserted. Ids a save has that no longer exist are dropped at start (`pruneUnknownUpgrades`). Combo upgrades use block 99 (ids 9900+).

@@ -21,6 +21,7 @@ import { checkBankMilestone } from "./milestones";
 import { setComboTaps } from "../redux/statsSlice";
 import { AWAY_THRESHOLD_SECONDS, isGameHidden, registerAway } from "./offline";
 import { getGameSpeed } from "./gameSpeed";
+import { creditBuildings } from "./buildings/buildingTotals";
 
 let lastUpdateTime = Date.now();
 let started = false;
@@ -152,4 +153,5 @@ export function giveEmojis(delta: number, state = store.getState()) {
 
     store.dispatch(updateEmojis(emojis + gained));
     store.dispatch(addEmojisGained(gained));
+    creditBuildings(gained);
 }

@@ -4,6 +4,7 @@ import { setOfflineOffer } from "../redux/offlineSlice";
 import { calculateBaseEmojisPerSecond } from "./calculations";
 import { giveEmojis } from "./gameLoop";
 import { giveOneOffEmojis } from "./giveEmojis";
+import { creditBuildings } from "./buildings/buildingTotals";
 
 /**
  * Offline production
@@ -68,6 +69,8 @@ export function claimOffline(multiplier: number) {
     const earned = offlineEarnings(multiplier);
     store.dispatch(setOfflineOffer(undefined));
     giveOneOffEmojis(earned);
+    // The buildings made it while you were away (the ad or gem bonus counts as a buff)
+    creditBuildings(earned);
     return earned;
 }
 
