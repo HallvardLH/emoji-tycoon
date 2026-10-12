@@ -1,5 +1,5 @@
-import React, { useEffect, useState } from "react";
-import { StyleSheet, View } from "react-native";
+import React, { ReactNode, useEffect, useMemo, useRef, useState } from "react";
+import { Animated, Easing, StyleSheet, View } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 import { useSelector } from "react-redux";
 import { usePathname } from "expo-router";
@@ -41,7 +41,9 @@ export default function Header() {
                 // The rate sits on its own line so it stays put while the total ticks up.
                 <View style={styles.compactCounter}>
                     <Text size={28} style={{ lineHeight: 30 }}><Bank /></Text>
-                    <Text font="bold" size={13} color={palette.sun}><Rate /></Text>
+                    <RateBump origin="left">
+                        <Text font="bold" size={13} color={palette.sun}><Rate /></Text>
+                    </RateBump>
                 </View>
             )}
             <HomeNavigation />
@@ -56,9 +58,9 @@ function HomeCounter() {
             <Text font="black" size={12} color={palette.lilac} style={styles.caps}>EMOJIS</Text>
             <Text size={40} style={{ lineHeight: 44 }}><Bank /></Text>
             <View style={styles.pills}>
-                <View style={styles.epsPill}>
+                <RateBump glow style={styles.epsPill}>
                     <Text font="bold" size={14} color={palette.sun}><Rate /></Text>
-                </View>
+                </RateBump>
                 <PrestigeMeter />
             </View>
         </View>
@@ -120,6 +122,46 @@ const Rate = React.memo(() => {
     return <>{speed > 1 ? "⏩ " : ""}+{formatNumber(emojisPerSecond * speed, 1)} / sec</>;
 });
 
+// How long the bump on a production increase lasts
+const BUMP_MS = 450;
+// Right after loading, the save coming in raises production from nothing; no increase to celebrate
+const SETTLE_MS = 1500;
+
+/**
+ * Pops its children, and flashes a glow behind them with `glow`, each time production
+ * goes up (a purchase, an upgrade, a boost starting). Drops in production stay quiet.
+ */
+function RateBump({ children, glow, origin = "center", style }: { children: ReactNode, glow?: boolean, origin?: "left" | "center", style?: object }) {
+    const bump = useRef(new Animated.Value(1)).current;
+    const emojisPerSecond = useSelector((state: RootState) => state.values.emojisPerSecond);
+    const previous = useRef(emojisPerSecond);
+    const mountedAt = useRef(Date.now());
+
+    useEffect(() => {
+        const increased = emojisPerSecond > previous.current;
+        previous.current = emojisPerSecond;
+        if (!increased || Date.now() - mountedAt.current < SETTLE_MS) return;
+        // Restarts on each increase, so buying in quick succession keeps it bouncing
+        bump.setValue(0);
+        Animated.timing(bump, { toValue: 1, duration: BUMP_MS, easing: Easing.out(Easing.quad), useNativeDriver: true }).start();
+    }, [emojisPerSecond]);
+
+    const bumpStyle = useMemo(() => ({
+        transformOrigin: origin,
+        transform: [{ scale: bump.interpolate({ inputRange: [0, 0.25, 1], outputRange: [1, 1.18, 1] }) }],
+    }), [origin]);
+    const glowStyle = useMemo(() => ({
+        opacity: bump.interpolate({ inputRange: [0, 0.15, 1], outputRange: [0, 1, 0] }),
+    }), []);
+
+    return (
+        <Animated.View style={[style, bumpStyle]}>
+            {glow && <Animated.View pointerEvents="none" style={[styles.bumpGlow, glowStyle]} />}
+            {children}
+        </Animated.View>
+    );
+}
+
 const styles = StyleSheet.create({
     container: {
         flexDirection: "row",
@@ -156,6 +198,12 @@ const styles = StyleSheet.create({
         paddingHorizontal: 12,
         borderRadius: radii.pill,
         backgroundColor: palette.glass,
+    },
+    // Flashes over the rate pill when production goes up
+    bumpGlow: {
+        ...StyleSheet.absoluteFillObject,
+        borderRadius: radii.pill,
+        backgroundColor: "rgba(255,197,61,0.35)",
     },
     compactCounter: {
         minHeight: 44,
