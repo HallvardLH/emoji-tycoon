@@ -35,6 +35,9 @@ const CHECK_INTERVAL = 2.5;
 // of timers. Longer than any effect lasts, so they all still run out.
 const MAX_CATCH_UP_SECONDS = 60;
 
+/** When the last game tick ran, so the header can count the bank up between ticks */
+export const getLastTickTime = () => lastUpdateTime;
+
 export function gameLoop() {
     const now = Date.now();
     const delta = (now - lastUpdateTime) / 1000; // time in seconds since last update
