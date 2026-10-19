@@ -8,6 +8,8 @@ import FunValueCheat from './FunValueCheat';
 import SwitchRow from './SwitchRow';
 import { cheatAddComboTaps, cheatMultiplyTapEarnings, cheatCollectEmojis, cheatAddMagicalEmojis, cheatAddEssence, cheatUnlockPerkTier, cheatAddRunTime, cheatReachTrialGoal } from '../../scripts/game/cheats';
 import { registerAway } from '../../scripts/game/offline';
+import { addGems } from '../../scripts/redux/gemsSlice';
+import store from '../../scripts/redux/reduxStore';
 import { DEBUG_SPEED, setGameSpeed, useGameSpeed } from '../../scripts/game/gameSpeed';
 import Text from '../generalUI/Text';
 import { palette, radii } from '../misc/theme';
@@ -35,6 +37,13 @@ export default function Cheats({ onPress }: CheatsProps) {
                     <CheatButton label="+1 Oc" onPress={() => giveOneOffEmojis(1e27)} compact />
                 </View>
                 <CheatButton icon="🌙" label="Simulate 1 hour away" onPress={() => { registerAway(3600); onPress(); }} />
+            </Section>
+
+            <Section title="GEMS">
+                <View style={styles.row}>
+                    <CheatButton label="+10 gems" onPress={() => store.dispatch(addGems(10))} compact />
+                    <CheatButton label="+100 gems" onPress={() => store.dispatch(addGems(100))} compact />
+                </View>
             </Section>
 
             <Section title="STATS">

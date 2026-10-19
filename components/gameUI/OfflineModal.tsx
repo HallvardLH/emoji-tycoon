@@ -1,37 +1,53 @@
 import { useState } from "react";
 import { Pressable, StyleSheet, View } from "react-native";
 import { useSelector } from "react-redux";
+import { useRouter } from "expo-router";
 import { RootState } from "../../scripts/redux/reduxStore";
 import Modal from "../generalUI/Modal";
 import Text from "../generalUI/Text";
 import ChunkyButton from "../generalUI/ChunkyButton";
 import { palette, radii } from "../misc/theme";
 import { formatDuration, formatNumber } from "../../scripts/misc";
-import { AD_MULTIPLIER, MAX_AWAY_SECONDS, PREMIUM_COST, PREMIUM_MULTIPLIER, claimOffline, dismissOffline } from "../../scripts/game/offline";
-import { spendPremiumCurrency, watchRewardedAd } from "../../scripts/monetization";
+import { AD_MULTIPLIER, GEM_COST, GEM_MULTIPLIER, MAX_AWAY_SECONDS, claimOffline, dismissOffline } from "../../scripts/game/offline";
+import { spendGems, useGemStoreOpen, watchRewardedAd } from "../../scripts/monetization";
 
 /**
  * Welcome back: offers the production missed while away, for watching an ad
- * or spending premium currency (see offline.ts)
+ * or spending gems (see offline.ts)
  */
 export default function OfflineModal() {
     const offer = useSelector((state: RootState) => state.offline.offer);
+    const gems = useSelector((state: RootState) => state.gems.gems);
+    const router = useRouter();
+    // Steps aside while the gem store is open, and is back when it closes
+    const inGemStore = useGemStoreOpen();
     // While an ad plays or a payment goes through, so it can't be claimed twice
     const [busy, setBusy] = useState(false);
+    // The last ad couldn't be shown (offline, none available) or was closed early
+    const [adFailed, setAdFailed] = useState(false);
 
-    if (!offer) return null;
+    if (!offer || inGemStore) return null;
 
     const missed = offer.eps * offer.seconds;
     const capped = offer.seconds >= MAX_AWAY_SECONDS;
 
-    const claim = async (pay: () => Promise<boolean>, multiplier: number) => {
+    const claimWithAd = async () => {
         if (busy) return;
         setBusy(true);
+        setAdFailed(false);
         try {
-            if (await pay()) claimOffline(multiplier);
+            if (await watchRewardedAd()) claimOffline(AD_MULTIPLIER);
+            else setAdFailed(true);
         } finally {
             setBusy(false);
         }
+    };
+
+    const canAffordGems = gems >= GEM_COST;
+    const claimWithGems = () => {
+        if (busy) return;
+        if (!canAffordGems) router.push("/gems");
+        else if (spendGems(GEM_COST)) claimOffline(GEM_MULTIPLIER);
     };
 
     return (
@@ -55,18 +71,25 @@ export default function OfflineModal() {
                 <View style={styles.buttons}>
                     <ChunkyButton
                         label={`📺 +${formatNumber(missed * AD_MULTIPLIER, 1)}`}
-                        sublabel="WATCH AN AD"
+                        sublabel={busy ? "LOADING AD…" : "WATCH AN AD"}
                         height={56}
                         disabled={busy}
-                        onPress={() => claim(watchRewardedAd, AD_MULTIPLIER)}
+                        onPress={claimWithAd}
                     />
                     <ChunkyButton
-                        label={`💎 +${formatNumber(missed * PREMIUM_MULTIPLIER, 1)}`}
-                        sublabel={`×${PREMIUM_MULTIPLIER} FOR ${PREMIUM_COST} GEMS`}
+                        label={`💎 +${formatNumber(missed * GEM_MULTIPLIER, 1)}`}
+                        sublabel={canAffordGems
+                            ? `×${GEM_MULTIPLIER} FOR ${GEM_COST} GEMS · YOU HAVE ${formatNumber(gems)}`
+                            : `×${GEM_MULTIPLIER} FOR ${GEM_COST} GEMS · GET GEMS`}
                         height={56}
                         disabled={busy}
-                        onPress={() => claim(() => spendPremiumCurrency(PREMIUM_COST), PREMIUM_MULTIPLIER)}
+                        onPress={claimWithGems}
                     />
+                    {adFailed && (
+                        <Text font="bold" size={13} color={palette.pop} style={styles.center}>
+                            The ad didn't play to the end. Check your connection and try again.
+                        </Text>
+                    )}
                     <Pressable
                         accessibilityRole="button"
                         disabled={busy}

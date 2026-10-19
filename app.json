@@ -26,7 +26,7 @@
         "backgroundImage": "./assets/adaptive-icon-background.png",
         "backgroundColor": "#22154A"
       },
-      "package": "com.whimsicalworks.emojitycoon",
+      "package": "com.iagogames.emoji_tycoon",
       "versionCode": 1
     },
     "web": {
@@ -44,7 +44,16 @@
         }
       ],
       "expo-font",
-      "expo-audio"
+      "expo-audio",
+      [
+        "react-native-google-mobile-ads",
+        {
+          "androidAppId": "ca-app-pub-5996643289244524~1864050818"
+        }
+      ]
     ]
+  },
+  "react-native-google-mobile-ads": {
+    "android_app_id": "ca-app-pub-5996643289244524~1864050818"
   }
 }

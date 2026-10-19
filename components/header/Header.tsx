@@ -1,8 +1,8 @@
 import React, { ReactNode, useEffect, useMemo, useRef, useState } from "react";
-import { Animated, Easing, StyleSheet, View } from "react-native";
+import { Animated, Easing, Pressable, StyleSheet, View } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 import { useSelector } from "react-redux";
-import { usePathname } from "expo-router";
+import { usePathname, useRouter } from "expo-router";
 import Text from "../generalUI/Text";
 import HomeNavigation from "../drawer/HomeNavigation";
 import store from "../../scripts/redux/reduxStore";
@@ -62,6 +62,7 @@ function HomeCounter() {
                     <Text font="bold" size={14} color={palette.sun}><Rate /></Text>
                 </RateBump>
                 <PrestigeMeter />
+                <GemsPill />
             </View>
         </View>
     );
@@ -114,6 +115,23 @@ const Bank = React.memo(() => {
 
 /** Whole numbers with separators, then three decimals from a million up ("24.231 million") */
 const formatBank = (emojis: number) => emojis < 1e6 ? formatNumber(Math.floor(emojis)) : formatNumber(emojis, 3);
+
+/** Gems, the premium currency. Opens the gem store */
+function GemsPill() {
+    const router = useRouter();
+    const gems = useSelector((state: RootState) => state.gems.gems);
+    return (
+        <Pressable
+            onPress={() => router.push("/gems")}
+            accessibilityRole="button"
+            accessibilityLabel={`${gems} gems. Open the gem store`}
+            style={({ pressed }) => [styles.epsPill, styles.gemsPill, pressed ? { opacity: 0.8 } : null]}
+        >
+            <Text font="bold" size={14} color="#FFFFFF">💎 {formatNumber(gems)}</Text>
+            <Text font="black" size={14} color={palette.sun}>+</Text>
+        </Pressable>
+    );
+}
 
 /** Emojis per second, e.g. "+12.1 million / sec", with ⏩ while the debug speed is on */
 const Rate = React.memo(() => {
@@ -182,7 +200,7 @@ const styles = StyleSheet.create({
     caps: {
         letterSpacing: 1.4,
     },
-    // The rate, and emoji essence next to it once it shows up
+    // The rate, emoji essence once it shows up, and gems
     pills: {
         flexDirection: "row",
         // Same height pills
@@ -198,6 +216,11 @@ const styles = StyleSheet.create({
         paddingHorizontal: 12,
         borderRadius: radii.pill,
         backgroundColor: palette.glass,
+    },
+    gemsPill: {
+        flexDirection: "row",
+        alignItems: "center",
+        gap: 6,
     },
     // Flashes over the rate pill when production goes up
     bumpGlow: {

@@ -11,7 +11,7 @@ import { creditBuildings } from "./buildings/buildingTotals";
  *
  * Nothing is produced while the game is away (closed, in the background or in a
  * hidden tab). Coming back after more than a minute offers the time away as
- * emojis: 100% of production for watching an ad, 200% for premium currency.
+ * emojis: 100% of production for watching an ad, 200% for gems.
  * Shorter breaks count as playing and pay full production.
  */
 
@@ -21,9 +21,8 @@ export const AWAY_THRESHOLD_SECONDS = 60;
 export const MAX_AWAY_SECONDS = 8 * 3600;
 /** Share of production paid for each way of claiming */
 export const AD_MULTIPLIER = 1;
-export const PREMIUM_MULTIPLIER = 2;
-/** In premium currency. A placeholder until the currency exists */
-export const PREMIUM_COST = 10;
+export const GEM_MULTIPLIER = 2;
+export const GEM_COST = 10;
 
 /** Whether the game is out of sight right now. It produces nothing then */
 export function isGameHidden() {

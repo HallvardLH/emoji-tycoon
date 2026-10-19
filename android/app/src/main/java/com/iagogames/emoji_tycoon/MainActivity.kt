@@ -1,4 +1,4 @@
-package com.whimsicalworks.emojitycoon
+package com.iagogames.emoji_tycoon
 
 import android.os.Build
 import android.os.Bundle

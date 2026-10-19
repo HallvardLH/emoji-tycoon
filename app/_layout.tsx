@@ -5,6 +5,7 @@ import { useEffect } from "react";
 import { View, StyleSheet, Platform } from "react-native";
 import store from "../scripts/redux/reduxStore";
 import { gameLoop } from "../scripts/game/gameLoop";
+import { preloadRewardedAd } from "../scripts/ads";
 import Header from "../components/header/Header";
 import MilestoneToast from "../components/gameUI/MilestoneToast";
 import OfflineModal from "../components/gameUI/OfflineModal";
@@ -42,6 +43,9 @@ export default function RootLayout() {
             document.removeEventListener("dragstart", preventDrag);
         };
     }, []);
+
+    // Ready before the welcome back screen asks for one
+    useEffect(() => { preloadRewardedAd(); }, []);
 
     // Game loop
     useEffect(() => {
