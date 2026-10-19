@@ -23,7 +23,8 @@
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
-        "backgroundColor": "#ffffff"
+        "backgroundImage": "./assets/adaptive-icon-background.png",
+        "backgroundColor": "#22154A"
       },
       "package": "com.whimsicalworks.emojitycoon",
       "versionCode": 1
