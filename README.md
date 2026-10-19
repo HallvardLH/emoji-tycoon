@@ -222,7 +222,7 @@ Rewarded ads come from AdMob (`scripts/ads.native.ts`; the web stub `scripts/ads
 - **Apps:** Android `ca-app-pub-5996643289244524~1864050818` and iOS `ca-app-pub-5996643289244524~2471214614`, both in `app.json`. Each shows limited ads until it's linked to its store listing in AdMob ("Add store").
 - **Rewarded ad units:** Android `…/4107070776`, iOS `…/9948133975` (`scripts/ads.native.ts` picks by platform; development builds use Google's test unit).
 - **European consent message:** "Emoji Tycoon consent", published for both apps, with Consent, Do not consent (every country) and Manage options, linking to https://iagogames.com/privacy.
-- **iOS tracking (ATT):** `app.json` sets the prompt text (`userTrackingUsageDescription`). Google's IDFA explainer message for the iOS app, which shows before Apple's prompt, is saved in AdMob as a draft and still needs publishing.
+- **iOS tracking (ATT):** `app.json` sets the prompt text (`userTrackingUsageDescription`). Google's IDFA explainer message for the iOS app, which shows before Apple's prompt, is published in AdMob.
 - **US state regulations:** no message yet.
 
 ### Fun value
