@@ -2,6 +2,7 @@ import { configureStore } from '@reduxjs/toolkit';
 import { combineReducers } from 'redux';
 import { persistReducer } from 'react-native-redux-persist2';
 import { startPersistence } from './persistence';
+export { whenSaveLoaded } from './persistence';
 import valuesSlice from './valuesSlice';
 import buildingsSlice from './buildingsSlice';
 import upgradesSlice from './upgradesSlice';
@@ -14,6 +15,7 @@ import prestigeSlice from './prestigeSlice';
 import tabsSlice from './tabsSlice';
 import offlineSlice from './offlineSlice';
 import gemsSlice from './gemsSlice';
+import achievementsSlice from './achievementsSlice';
 
 // Combine reducers
 const rootReducer = combineReducers({
@@ -29,6 +31,7 @@ const rootReducer = combineReducers({
     tabs: tabsSlice,
     offline: offlineSlice,
     gems: gemsSlice,
+    achievements: achievementsSlice,
 });
 
 // Merges the loaded save into the state when it arrives

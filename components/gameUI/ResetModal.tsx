@@ -11,6 +11,7 @@ import { resetStats } from "../../scripts/redux/statsSlice";
 import { resetPrestige } from "../../scripts/redux/prestigeSlice";
 import { resetTabs } from "../../scripts/redux/tabsSlice";
 import { resetOffline } from "../../scripts/redux/offlineSlice";
+import { resetAchievements } from "../../scripts/redux/achievementsSlice";
 import Modal from "../generalUI/Modal";
 import Text from "../generalUI/Text";
 import { palette, radii } from "../misc/theme";
@@ -51,6 +52,7 @@ function resetGame() {
     store.dispatch(resetPrestige());
     store.dispatch(resetTabs());
     store.dispatch(resetOffline());
+    store.dispatch(resetAchievements());
 }
 
 /** Resetting wipes the save, so it asks first, and says that purchases carry over */
@@ -65,7 +67,7 @@ export default function ResetModal() {
                 <Text size={28} color={palette.ink} style={styles.center}>Start over?</Text>
                 <Text font="bold" size={14} color={palette.muted} style={styles.center}>
                     This resets your game. Your emojis, buildings, upgrades, essence, perks,
-                    collection and stats will all be gone. This can't be undone.
+                    collection, stats and trophies will all be gone. This can't be undone.
                 </Text>
 
                 <View style={styles.kept}>

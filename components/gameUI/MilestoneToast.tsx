@@ -1,7 +1,7 @@
 import React, { useEffect, useMemo, useRef, useState } from "react";
 import { Animated, Easing, StyleSheet, View } from "react-native";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
-import * as Haptics from "expo-haptics";
+import * as Haptics from "../../scripts/game/haptics";
 import Text from "../generalUI/Text";
 import { Milestone, onMilestone } from "../../scripts/game/milestones";
 import { palette, radii } from "../misc/theme";

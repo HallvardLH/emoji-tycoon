@@ -6,7 +6,7 @@ import { unlockUpgrades } from '../upgrades/checks';
 import { updateBuildingValue } from './shorthands';
 import { canBuyBuilding } from './checks';
 import { calculateEmojisPerSecond, calculateEpt } from '../calculations';
-import * as Haptics from "expo-haptics"
+import * as Haptics from "../haptics";
 import { BulkBuyAmount } from '../../redux/preferencesSlice';
 import { celebrateMilestone } from '../milestones';
 import { buildingPriceMultiplier } from '../prestige/perks';

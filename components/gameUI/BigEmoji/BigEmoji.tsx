@@ -5,7 +5,7 @@ import { RootState } from '../../../scripts/redux/reduxStore';
 import { tapEmoji, pickNextEmoji } from '../../../scripts/game/bigEmoji';
 import PulseAnimation from '../../animations/PulseAnimation';
 import { formatNumber } from '../../../scripts/misc';
-import * as Haptics from 'expo-haptics';
+import * as Haptics from "../../../scripts/game/haptics";
 import { FlyingEmoji, FlightPath, makeFlightPath, makeFloatPath } from './FlyingEmoji';
 import { FlyingNumber } from './FlyingNumber';
 import { TapSparks, Spark, makeSparks } from './TapSparks';

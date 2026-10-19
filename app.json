@@ -1,6 +1,6 @@
 {
   "expo": {
-    "name": "emoji-tycoon",
+    "name": "Emoji Tycoon",
     "slug": "emoji-tycoon",
     "version": "1.0.0",
     "orientation": "portrait",
@@ -10,7 +10,7 @@
     "splash": {
       "image": "./assets/splash.png",
       "resizeMode": "contain",
-      "backgroundColor": "#ffffff"
+      "backgroundColor": "#22154A"
     },
     "assetBundlePatterns": [
       "**/*"
@@ -48,12 +48,16 @@
       [
         "react-native-google-mobile-ads",
         {
-          "androidAppId": "ca-app-pub-5996643289244524~1864050818"
+          "androidAppId": "ca-app-pub-5996643289244524~1864050818",
+          "iosAppId": "ca-app-pub-5996643289244524~2471214614",
+          "userTrackingUsageDescription": "Your data is used to show you ads that suit you better, which keeps Emoji Tycoon free.",
+          "skAdNetworkItems": ["cstr6suwn9.skadnetwork"]
         }
       ]
     ]
   },
   "react-native-google-mobile-ads": {
-    "android_app_id": "ca-app-pub-5996643289244524~1864050818"
+    "android_app_id": "ca-app-pub-5996643289244524~1864050818",
+    "ios_app_id": "ca-app-pub-5996643289244524~2471214614"
   }
 }

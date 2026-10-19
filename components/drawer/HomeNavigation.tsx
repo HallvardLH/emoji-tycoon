@@ -14,7 +14,7 @@ type DrawerRef = {
 };
 
 /**
- * The header's top-right buttons: cheats (for testing) and the menu (settings for now), each
+ * The header's top-right buttons: cheats (for testing, development builds only) and the menu (settings for now), each
  * opening a drawer. On desktop the menu swaps the Emojidex column for the settings instead.
  */
 export default function HomeNavigation() {
@@ -25,9 +25,12 @@ export default function HomeNavigation() {
 
     return (
         <View style={styles.buttons}>
-            <HeaderButton label="Cheats" onPress={() => cheatsDrawerRef.current?.openDrawer()}>
-                <Text size={18} style={{ lineHeight: 24 }}>🧪</Text>
-            </HeaderButton>
+            {/* Cheats are for testing: development builds only, never in a release */}
+            {__DEV__ && (
+                <HeaderButton label="Cheats" onPress={() => cheatsDrawerRef.current?.openDrawer()}>
+                    <Text size={18} style={{ lineHeight: 24 }}>🧪</Text>
+                </HeaderButton>
+            )}
             {/* A plain menu icon, so the drawer can hold more than settings later.
                 On desktop the settings open where the Emojidex is, not in a drawer */}
             <HeaderButton
@@ -40,11 +43,13 @@ export default function HomeNavigation() {
                 </Svg>
             </HeaderButton>
 
-            <Drawer ref={cheatsDrawerRef} side="left">
-                <ScrollView contentContainerStyle={styles.drawerContent}>
-                    <Cheats onPress={() => cheatsDrawerRef.current?.closeDrawer()} />
-                </ScrollView>
-            </Drawer>
+            {__DEV__ && (
+                <Drawer ref={cheatsDrawerRef} side="left">
+                    <ScrollView contentContainerStyle={styles.drawerContent}>
+                        <Cheats onPress={() => cheatsDrawerRef.current?.closeDrawer()} />
+                    </ScrollView>
+                </Drawer>
+            )}
             <Drawer ref={settingsDrawerRef} side="right">
                 <ScrollView contentContainerStyle={styles.drawerContent}>
                     <Settings onReset={() => settingsDrawerRef.current?.closeDrawer()} />

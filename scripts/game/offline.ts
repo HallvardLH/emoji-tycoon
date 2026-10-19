@@ -45,10 +45,14 @@ export function registerAway(seconds: number) {
         return;
     }
 
+    // Nothing to offer before there's any production (a new game, or right after a prestige)
+    const eps = calculateBaseEmojisPerSecond();
+    if (!(eps > 0)) return;
+
     const previous = store.getState().offline.offer?.seconds ?? 0;
     store.dispatch(setOfflineOffer({
         seconds: Math.min(previous + seconds, MAX_AWAY_SECONDS),
-        eps: calculateBaseEmojisPerSecond(),
+        eps,
     }));
 }
 

@@ -4,6 +4,7 @@ import ContentTab from "../../components/layout/ContentTab";
 import Collection from "../../screens/Emojidex/Collection";
 import Stats from "../../screens/Emojidex/Stats";
 import Upgrades from "../../screens/Emojidex/Upgrades";
+import AchievementsList from "../../components/collection/AchievementsList";
 
 export default function Emojidex() {
     return (
@@ -22,6 +23,10 @@ export default function Emojidex() {
                     {
                         name: "Collection",
                         component: <Collection />
+                    },
+                    {
+                        name: "Trophies",
+                        component: <AchievementsList />
                     }
                 ]}
             />

@@ -11,7 +11,7 @@ import { canBuyBuilding } from "../../scripts/game/buildings/checks";
 import { canBuyUpgrade } from "../../scripts/game/upgrades/checks";
 import { clearUnlockedBuildingsNotifications } from "../../scripts/redux/buildingsSlice";
 import { selectNewAffordableUpgrades } from "../../scripts/redux/upgradesSlice";
-import * as Haptics from 'expo-haptics';
+import * as Haptics from "../../scripts/game/haptics";
 import { BottomTabBarProps } from "@react-navigation/bottom-tabs";
 import { Tab } from "../../scripts/redux/tabsSlice";
 

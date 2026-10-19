@@ -1,9 +1,9 @@
 import { Stack } from "expo-router";
 import { Provider } from "react-redux";
 import { StatusBar } from "expo-status-bar";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { View, StyleSheet, Platform } from "react-native";
-import store from "../scripts/redux/reduxStore";
+import store, { whenSaveLoaded } from "../scripts/redux/reduxStore";
 import { gameLoop } from "../scripts/game/gameLoop";
 import { preloadRewardedAd } from "../scripts/ads";
 import Header from "../components/header/Header";
@@ -47,13 +47,24 @@ export default function RootLayout() {
     // Ready before the welcome back screen asks for one
     useEffect(() => { preloadRewardedAd(); }, []);
 
-    // Game loop
+    // The save loads asynchronously (slowly on some phones). Nothing runs or shows until it's
+    // in: the game's startup checks, migrations and the welcome back offer all read it, and
+    // taps on a fresh game in the meantime would be thrown away when it arrived
+    const [saveLoaded, setSaveLoaded] = useState(false);
     useEffect(() => {
-        const intervalId = setInterval(gameLoop, 100);
-        return () => clearInterval(intervalId);
+        let cancelled = false;
+        whenSaveLoaded().then(() => { if (!cancelled) setSaveLoaded(true); });
+        return () => { cancelled = true; };
     }, []);
 
-    if (!fontsLoaded) {
+    // Game loop
+    useEffect(() => {
+        if (!saveLoaded) return;
+        const intervalId = setInterval(gameLoop, 100);
+        return () => clearInterval(intervalId);
+    }, [saveLoaded]);
+
+    if (!fontsLoaded || !saveLoaded) {
         return <View style={styles.container} />;
     }
 

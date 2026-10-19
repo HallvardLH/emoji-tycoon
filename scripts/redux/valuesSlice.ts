@@ -22,11 +22,13 @@ export const valuesSlice = createSlice({
     name: "values",
     initialState,
     reducers: {
+        // Never NaN or Infinity: one bad calculation would wipe the bank for good, as it
+        // stays NaN through every sum after it (and saves as null)
         updateEmojis: (state, action: PayloadAction<number>) => {
-            state.emojis = action.payload;
+            if (Number.isFinite(action.payload)) state.emojis = action.payload;
         },
         updateEmojisPerSecond: (state, action: PayloadAction<number>) => {
-            state.emojisPerSecond = action.payload;
+            if (Number.isFinite(action.payload)) state.emojisPerSecond = action.payload;
         },
         updateTotalBuildingEps: (state, action: PayloadAction<number>) => {
             state.totalBuildingEps = action.payload;

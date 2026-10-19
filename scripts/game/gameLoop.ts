@@ -22,6 +22,7 @@ import { setComboTaps } from "../redux/statsSlice";
 import { AWAY_THRESHOLD_SECONDS, isGameHidden, registerAway } from "./offline";
 import { getGameSpeed } from "./gameSpeed";
 import { creditBuildings } from "./buildings/buildingTotals";
+import { checkAchievements } from "./achievements";
 
 let lastUpdateTime = Date.now();
 let started = false;
@@ -47,7 +48,8 @@ export const getLastTickTime = () => lastUpdateTime;
 
 export function gameLoop() {
     const now = Date.now();
-    const delta = (now - lastUpdateTime) / 1000; // time in seconds since last update
+    // time in seconds since last update. Nothing on the first frame: the loop only starts once the save is in
+    const delta = started ? (now - lastUpdateTime) / 1000 : 0;
     lastUpdateTime = now;
 
     // cache state once per frame
@@ -109,6 +111,7 @@ export function gameLoop() {
         trackRunPeak();
         trackEssenceRate();
         checkTrial();
+        checkAchievements();
 
         // detect new tap
         if (loggedBigEmojiTaps !== state.stats.bigEmojiTaps) {

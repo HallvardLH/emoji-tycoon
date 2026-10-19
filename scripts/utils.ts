@@ -1,4 +1,4 @@
-import * as Haptics from 'expo-haptics';
+import * as Haptics from "./game/haptics";
 
 // Calculates percentage of a number
 export function percentageOf(percentage: number, number: number) {

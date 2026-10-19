@@ -8,7 +8,7 @@ import { useSampledSelector } from "../gameUI/useBank";
 
 export default function StatsList() {
     // Stats change every tick and tap; twice a second is plenty for reading them
-    const { bigEmojiTaps, emojisEarnedFromTap, effectEmojisCollected, emojisGained, shinyEmojisTapped, comboTaps, buildingEmojis } = useSampledSelector((state: RootState) => state.stats);
+    const { bigEmojiTaps, emojisEarnedFromTap, effectEmojisCollected, emojisGained, shinyEmojisTapped, comboTaps, bestCombo, buildingEmojis } = useSampledSelector((state: RootState) => state.stats);
     const { funValue } = useSelector((state: RootState) => state.values);
     const buildings = useSelector((state: RootState) => state.buildings.buildings);
 
@@ -26,6 +26,7 @@ export default function StatsList() {
         ["🪄", "Magical emojis tapped", formatNumber(effectEmojisCollected)],
         ["✨", "Shiny emojis tapped", formatNumber(shinyEmojisTapped ?? 0)],
         ["🔥", "Combo taps", formatNumber(comboTaps ?? 0, 0)],
+        ["🥁", "Best combo", `×${bestCombo ?? 1}`],
     ];
     // The fun value, deliberately unexplained: players who know about it will recognise it
     rows.push(["🔮", "???", funValue == 100 ? `${funValue} 😭` : String(funValue)]);

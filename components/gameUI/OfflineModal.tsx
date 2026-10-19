@@ -26,7 +26,8 @@ export default function OfflineModal() {
     // The last ad couldn't be shown (offline, none available) or was closed early
     const [adFailed, setAdFailed] = useState(false);
 
-    if (!offer || inGemStore) return null;
+    // Offers saved with no production (before that was ruled out in registerAway) are worth nothing
+    if (!offer || inGemStore || !(offer.eps > 0)) return null;
 
     const missed = offer.eps * offer.seconds;
     const capped = offer.seconds >= MAX_AWAY_SECONDS;
@@ -50,8 +51,10 @@ export default function OfflineModal() {
         else if (spendGems(GEM_COST)) claimOffline(GEM_MULTIPLIER);
     };
 
+    // Android's back button and taps outside the card do nothing here: one stray press
+    // threw the earnings away. Only "No thanks" dismisses them
     return (
-        <Modal modalVisible noExit onRequestClose={() => { if (!busy) dismissOffline(); }}>
+        <Modal modalVisible noExit onRequestClose={() => {}}>
             <View style={styles.card}>
                 <Text size={44} style={styles.icon}>🌙</Text>
                 <Text size={28} color={palette.ink} style={styles.center}>Welcome back!</Text>

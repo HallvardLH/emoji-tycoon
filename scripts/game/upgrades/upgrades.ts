@@ -14,7 +14,7 @@ import { getUpgradePrice } from './upgradePrice';
 import { addEmojisPerSecondPercentage } from '../../redux/valuesSlice';
 import { previewUpgradeGains, formatGainPercentage, UpgradeChanges } from '../calculations';
 import { BIG_EMOJI_BUILDING_ID } from './upgradeData/nonBuilding/bigEmoji';
-import * as Haptics from "expo-haptics";
+import * as Haptics from "../haptics";
 import { comboLevelOfTier } from './upgradeData/nonBuilding/combo';
 import { effectEmojiUpgradeSummary } from './upgradeData/nonBuilding/effectEmojis';
 import { canBuyUpgrades } from '../prestige/trials';

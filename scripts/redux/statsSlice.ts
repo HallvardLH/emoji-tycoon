@@ -26,6 +26,8 @@ interface StatsState {
      * (see creditBuildings). Undefined in saves from before it existed.
      */
     buildingEmojis?: Record<number, number>,
+    /** The highest combo multiplier reached. Undefined in saves from before it existed */
+    bestCombo?: number,
 }
 
 const initialState: StatsState = {
@@ -37,6 +39,7 @@ const initialState: StatsState = {
     comboTaps: 0,
     bankMilestone: 0,
     buildingEmojis: {},
+    bestCombo: 1,
 };
 
 export const statsSlice = createSlice({
@@ -44,7 +47,8 @@ export const statsSlice = createSlice({
     initialState,
     reducers: {
         addEmojisGained: (state, action: PayloadAction<number>) => {
-            state.emojisGained += action.payload;
+            // Never NaN or Infinity, which would stick (see updateEmojis)
+            if (Number.isFinite(action.payload)) state.emojisGained += action.payload;
         },
         addBigEmojiTaps: (state, action: PayloadAction<number>) => {
             // console.log(state.bigEmojiTaps, action.payload)
@@ -61,6 +65,9 @@ export const statsSlice = createSlice({
         },
         setBankMilestone: (state, action: PayloadAction<number>) => {
             state.bankMilestone = action.payload;
+        },
+        setBestCombo: (state, action: PayloadAction<number>) => {
+            state.bestCombo = Math.max(state.bestCombo ?? 1, action.payload);
         },
         setComboTaps: (state, action: PayloadAction<number>) => {
             state.comboTaps = action.payload;
@@ -90,6 +97,6 @@ export const statsSlice = createSlice({
     },
 });
 
-export const { addBigEmojiTaps, addEmojisGained, addEmojisEarnedFromTap, addEffectEmojisCollected, addShinyEmojiTapped, setBankMilestone, setComboTaps, updateTapStats, addBuildingEmojis, resetStats } = statsSlice.actions;
+export const { addBigEmojiTaps, addEmojisGained, addEmojisEarnedFromTap, addEffectEmojisCollected, addShinyEmojiTapped, setBankMilestone, setBestCombo, setComboTaps, updateTapStats, addBuildingEmojis, resetStats } = statsSlice.actions;
 
 export default statsSlice.reducer;

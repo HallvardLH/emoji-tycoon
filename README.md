@@ -31,16 +31,20 @@ The game loop (`scripts/game/gameLoop.ts`) runs every 100 ms:
 - **Every 1 s:** count effects down, maybe spawn an effect emoji, update prestige progress and check bank milestones.
 - **Every 2.5 s:** check which buildings and upgrades are affordable or unlocked.
 
-Time away (closed, in the background or in a hidden tab) produces nothing. Coming back after more than a minute offers the missed production, up to 8 h: 100% for watching an ad, 200% for premium currency (both stubs in `scripts/monetization.ts` for now). Shorter breaks pay full production. See `scripts/game/offline.ts`.
+Time away (closed, in the background or in a hidden tab) produces nothing. Coming back after more than a minute offers the missed production, up to 8 h: 100% for watching a rewarded ad, 200% for 10 gems. Shorter breaks pay full production, and there's no offer while nothing is produced yet. The offer is only dismissed by "No thanks": Android's back button and taps outside the card leave it be. See `scripts/game/offline.ts`.
+
+**Saving and loading** (`scripts/redux/persistence.ts`): the save loads asynchronously, and the game shows nothing and doesn't start its loop until it's in (`whenSaveLoaded`), since startup checks, migrations and the welcome back offer read it. Each good save that loads is copied to a backup key; a save that can't be read is put aside under `…:corrupt` and the backup loads instead. The bank, production and emojis drawn ignore NaN and Infinity, which would otherwise stick for good.
 
 ### Screens
 | Tab | Contents |
 |---|---|
 | **🛒 Shop** | **Buildings** and **Upgrades** sub-tabs. The bulk-buy control offers 1 / 10 / 100 / Max. A badge shows when something new unlocks. |
 | **😀 Emoji** (home) | The Big Emoji, the combo meter, chips for active effects (top-left), and floating effect emojis. |
-| **📖 Emojidex** | **Upgrades** (catalogue of every upgrade), **Stats** and **Collection**. |
+| **📖 Emojidex** | **Upgrades** (catalogue of every upgrade), **Stats**, **Collection** and **Trophies**. |
 
-The header shows your bank, with the per-second rate at a fixed position under it. The menu button opens a drawer with the **Cheats** panel.
+The header shows your bank, with the per-second rate at a fixed position under it. The menu button opens the settings drawer, and in development builds only (`__DEV__`) a 🧪 button opens the **Cheats** panel.
+
+**First steps:** a new game shows a hint under the Big Emoji, "Tap the emoji to draw emojis!", until 15 taps, then "Open the Shop and hire a Drawing hand" once the first building is affordable. Both go for good with the first building (`components/gameUI/FirstRunHint.tsx`).
 
 **Desktop:** the web build in a window at least 1000 px wide shows three columns, a third each, with no tab bar or page header (`components/layout/DesktopLayout.tsx`, `desktop.ts`): the Shop's upgrades on the left; the Big Emoji in the middle, with the bank, rate and essence above it and the cheats and menu buttons at its top right; and on the right, the buildings, the Emojidex or the settings, picked in a navbar. The menu button opens the settings there. Phones and tablets (the native app) always get the tabs.
 
@@ -186,10 +190,40 @@ None appear until **Good vibes** is bought. Like Cookie Clicker's golden cookie 
   - taps
   - emojis from tapping
   - combo taps
+  - best combo
   - magical (effect) emojis tapped
   - shiny emojis tapped
   - a cryptic 🔮 "???" row that shows the fun value
   - **Made by each building:** what each building has made in total, biggest first, with every buff counted (upgrades, percentages, essence and perks, active effects, claimed offline earnings). Each tick's production is split by each building's share of base output (`scripts/game/buildings/buildingTotals.ts`). It's all-time, so prestige keeps it; saves start counting from when it was added.
+
+### Trophies (achievements)
+153 long-term goals in `scripts/game/achievements.ts`, checked every 2.5 s, with a "TROPHY UNLOCKED" banner for each. They're all-time (prestige keeps them, a reset clears them) and give no bonus for now. The Emojidex's **Trophies** tab lists them by group with overall progress; secret ones show as ??? until unlocked.
+
+| Group | Trophies |
+|---|---|
+| Emojis | Draw 1 thousand … 1 decillion in total (quiet: the bank milestones give the banner) |
+| Production | 10 … 1 septillion emojis per second |
+| Tapping | 100 … 500,000 taps, a ×3 / ×5 / ×8 combo, 1 trillion from tapping |
+| Buildings | 1 / 50 / 100 / 200 of each building, 100 … 2,500 buildings, 10 … 300 upgrades |
+| Collection | 50 … 1,000 different emojis and every emoji, 1 / 10 / 50 shinies |
+| Magic | 1 … 500 effect emojis tapped |
+| Prestige | 1 / 5 / 10 / 25 prestiges, each trial, every perk |
+| Secret | Fun value 42, 1 M in the bank with no buildings, 100 gems held |
+
+A save's first check (an old save, or after a reset) unlocks what's already earned without banners (`achievements.checked`).
+
+### Settings
+Sound effects, vibration (phones only, read through `scripts/game/haptics.ts`, which wraps expo-haptics), reduce animations, **Privacy choices** (only where ad consent applies, see below), reset, and the app version. Settings survive a reset.
+
+### Ads and consent
+Rewarded ads come from AdMob (`scripts/ads.native.ts`; the web stub `scripts/ads.ts` always succeeds). Before any ad is requested, Google's User Messaging Platform (UMP) asks for consent where the law requires it (EEA, UK, some US states): the form shows on the first start, and ads load only once UMP says they can. Ads are personalised only when the player allowed it (or no consent is needed). Players change their choice from Settings → Privacy choices. If UMP can't be reached, the answer from an earlier start is used.
+
+**AdMob setup:**
+- **Apps:** Android `ca-app-pub-5996643289244524~1864050818` and iOS `ca-app-pub-5996643289244524~2471214614`, both in `app.json`. Each shows limited ads until it's linked to its store listing in AdMob ("Add store").
+- **Rewarded ad units:** Android `…/4107070776`, iOS `…/9948133975` (`scripts/ads.native.ts` picks by platform; development builds use Google's test unit).
+- **European consent message:** "Emoji Tycoon consent", published for both apps, with Consent, Do not consent (every country) and Manage options, linking to https://iagogames.com/privacy.
+- **iOS tracking (ATT):** `app.json` sets the prompt text (`userTrackingUsageDescription`). Google's IDFA explainer message for the iOS app, which shows before Apple's prompt, is saved in AdMob as a draft and still needs publishing.
+- **US state regulations:** no message yet.
 
 ### Fun value
 A secret number from 1–100, rolled on a new game and on reset, like Cookie Clicker's seed. Most values do nothing. These give the game a quirk (source of truth: `scripts/game/funValues.ts`, kept in sync with the `howFun()` checks):
@@ -254,7 +288,7 @@ Saves that bought the old offline perks (Night shift, Graveyard shift) get their
   - Runs lengthened again after about 100 h, once the first 12 perks were owned. Tiers 5 and 6 and the trials were added for that stretch but haven't been through the sim yet.
 
 ### Cheats (drawer)
-The drawer has these sections:
+Development builds only: the 🧪 button and the drawer aren't in release builds. The drawer has these sections:
 - **Emojis:** +1 M / +1 Qa / +1 Oc.
 - **Stats:** +10k combo taps, ×1000 tap earnings, +25 collection, +5 shiny, +10 magical.
 - **Prestige:** +100 essence, +1 perk tier, +1 h run time, reach the active trial's goal.
@@ -310,8 +344,10 @@ scripts/
   game/prestige/          prestige.ts (essence, the reset, run tracking), perks.ts (perk data and effects),
                           trials.ts (trial data, rules and rewards)
   game/offline.ts         time away and the offline earnings offer
+  game/achievements.ts    trophy data and the check
+  game/haptics.ts         vibration, off when switched off in Settings
   redux/                  slices: values, buildings, upgrades, bigEmoji, effects, collection, stats,
-                          prestige, preferences, tabs
+                          prestige, preferences, tabs, offline, gems, achievements
 ```
 
 ### Conventions
@@ -327,7 +363,7 @@ scripts/
 
 ## Known gaps
 - **Late prestige:** tiers 5 and 6 and the trials extend it, but once everything is owned there's still no repeatable essence sink. None of it has been through the balance sim yet.
-- **Ads and premium currency:** `scripts/monetization.ts` stubs both; they always succeed.
+- **Gems have one use:** claiming ×2 offline earnings. The gem store sells packs up to 2,800 gems with nothing else to spend them on.
+- **No cloud save:** progress, and gems bought with real money, live only on the device and are lost with the app's data.
 - **Background rain:** the `EmojiRain` background is commented out on the home screen (`ComboRain` is separate and active).
 - **Web reloads:** deep links like `/shop/Buildings` show "Unmatched Route" on a hard reload.
-- **Type-check:** `tsc` has errors only in `screens/AppNavigationStack.tsx`, an old file nothing uses.

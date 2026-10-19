@@ -5,6 +5,7 @@ import { howFun } from "./shorthands";
 import { comboDrainMultiplier, maxComboBonus } from "./prestige/perks";
 import { comboLevelOfTier, isComboUpgradeId } from "./upgrades/upgradeData/nonBuilding/combo";
 import { getUpgradeDataById } from "./upgrades/shorthands";
+import { setBestCombo } from "../redux/statsSlice";
 
 // Every tap adds 1 boost, and every 10 boost adds ×1 to emojis per tap (see calculateEpt)
 export const BOOST_PER_MULTIPLIER = 10;
@@ -68,7 +69,12 @@ export function incrementTapBoost() {
     const tapBoost = store.getState().bigEmoji.tapBoost;
     const maxTapBoost = BOOST_PER_MULTIPLIER * getMaxComboMultiplier() - 0.01;
 
-    store.dispatch(updateTapBoost(Math.min(maxTapBoost, tapBoost + 1)));
+    const next = Math.min(maxTapBoost, tapBoost + 1);
+    store.dispatch(updateTapBoost(next));
+
+    // The best combo reached, for Stats and achievements (only dispatched on a new best)
+    const { multiplier } = getComboProgress(next);
+    if (multiplier > (store.getState().stats.bestCombo ?? 1)) store.dispatch(setBestCombo(multiplier));
 }
 
 /**
