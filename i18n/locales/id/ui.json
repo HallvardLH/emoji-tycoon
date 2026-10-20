@@ -1,0 +1,116 @@
+{
+    "tabs": {
+        "emoji": "Emoji",
+        "shop": "Toko",
+        "emojidex": "Emojidex",
+        "buildings": "Bangunan",
+        "upgrades": "Upgrade",
+        "stats": "Statistik",
+        "collection": "Koleksi"
+    },
+    "header": {
+        "emojis": "Emoji",
+        "perSecond": "Per detik: {{value}}"
+    },
+    "common": {
+        "buy": "Beli",
+        "details": "Detail",
+        "owned_other": "dimiliki"
+    },
+    "buildings": {
+        "bulkBuy_other": "Membeli {{count}} bangunan sekaligus",
+        "emojisPerSecond": "<hl>{{eps}}</hl> emoji per detik",
+        "youHave": "• Kamu punya <hl>{{amount}}</hl> {{building}}",
+        "eachProduces": "• Masing-masing menghasilkan <hl>{{eps}}</hl> emoji per detik",
+        "totalProduces": "• Totalnya <hl>{{eps}}</hl> emoji per detik!",
+        "ownedUpgrades": "Upgrade yang dimiliki"
+    },
+    "upgrades": {
+        "bigEmoji": "Emoji besar",
+        "effects": {
+            "multiplyBuildingProduction": "• {{buildings}}: efisiensi 2x lipat.",
+            "multiplyTap": "• Ketukan jadi 2x lebih efisien.",
+            "percentageIncreaseTap": "• Ketukan jadi {{percent}} lebih kuat.",
+            "tapPercentageOfEps": "• Ketukan memberi {{percent}} dari total produksi emoji kamu.",
+            "percentageIncreaseProduction": "• Total produksi emoji naik {{percent}}."
+        },
+        "bonusProduction": "Membeli upgrade ini sekarang akan menambah <hl>+{{bonus}}</hl> emoji per detik, menaikkan produksi emoji sebesar <hl>{{percent}}</hl>",
+        "bonusTap": "Membeli upgrade ini sekarang akan menambah <hl>+{{bonus}}</hl> emoji per ketukan, menaikkan emoji dari setiap ketukan sebesar <hl>{{percent}}</hl>",
+        "filterTitle": "Filter upgrade",
+        "filterDescription": "Pilih bangunan yang upgrade-nya ingin kamu lihat."
+    },
+    "emojidex": {
+        "basePrice": "Harga dasar: {{price}}"
+    },
+    "stats": {
+        "totalEmojisDrawn": "Total emoji digambar",
+        "emojiTaps": "Ketukan emoji",
+        "emojisEarnedFromTapping": "Emoji dari ketukan",
+        "magicalEmojisTapped": "Emoji ajaib diketuk",
+        "funValue": "Nilai seru"
+    },
+    "drawer": {
+        "language": "Bahasa",
+        "deviceLanguage": "Bahasa perangkat",
+        "funValue": "Nilai seru: {{value}}",
+        "cheats": "Cheat",
+        "resetGame": "Reset game",
+        "spawnEffect": "Munculkan emoji efek",
+        "giveEmojis": "Beri {{amount}} emoji"
+    },
+    "prestige": {
+        "title": "Prestise",
+        "accumulating": "Setelah menciptakan <hl>{{amount}}</hl> emoji, esensi sejati emoji mulai berkumpul di sekitarmu.",
+        "essence": "Esensi emoji adalah <hl>zat ajaib</hl> yang berubah bentuk setiap kali kamu melihatnya, dan menyimpan kekuatan misterius."
+    },
+    "numbers": {
+        "groupSize": "3",
+        "named": "{{value}} {{name}}",
+        "percent": "{{value}}%",
+        "lessThan": "<{{value}}",
+        "long": {
+            "6_other": "juta",
+            "9_other": "miliar",
+            "12_other": "triliun",
+            "15_other": "kuadriliun",
+            "18_other": "kuintiliun",
+            "21_other": "sekstiliun",
+            "24_other": "septiliun",
+            "27_other": "oktiliun",
+            "30_other": "noniliun",
+            "33_other": "desiliun",
+            "36_other": "undesiliun",
+            "39_other": "duodesiliun",
+            "42_other": "tredesiliun",
+            "45_other": "kuatuordesiliun",
+            "48_other": "kuindesiliun",
+            "51_other": "seksdesiliun",
+            "54_other": "septendesiliun",
+            "57_other": "oktodesiliun",
+            "60_other": "novemdesiliun",
+            "63_other": "vigintiliun"
+        },
+        "short": {
+            "6": "Jt",
+            "9": "M",
+            "12": "T",
+            "15": "Kd",
+            "18": "Kn",
+            "21": "Sk",
+            "24": "Sp",
+            "27": "Ok",
+            "30": "No",
+            "33": "Ds",
+            "36": "Ud",
+            "39": "Dd",
+            "42": "Td",
+            "45": "Kad",
+            "48": "Kid",
+            "51": "Skd",
+            "54": "Spd",
+            "57": "Od",
+            "60": "Nd",
+            "63": "Vg"
+        }
+    }
+}

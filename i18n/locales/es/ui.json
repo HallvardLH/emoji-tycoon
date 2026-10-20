@@ -68,6 +68,8 @@
         "essence": "La esencia emoji es una <hl>sustancia mágica</hl> que cambia de forma cada vez que la miras y que alberga poderes desconocidos."
     },
     "numbers": {
+        "groupSize": "3",
+        "named": "{{value}} {{name}}",
         "percent": "{{value}} %",
         "lessThan": "<{{value}}",
         "long": {

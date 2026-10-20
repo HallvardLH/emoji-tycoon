@@ -12,9 +12,8 @@ export function formatNumber(
 
     const formatWithSeparators = (n: number) => {
         if (form === "grouped") {
-            // Grouping and decimal separators follow the current language.
-            // The game font has no non-breaking spaces (used by e.g. French), so use regular spaces instead
-            return n.toLocaleString(getLanguage()).replace(/[\u00a0\u202f]/g, " ");
+            // Grouping and decimal separators follow the current language
+            return toDisplayableNumber(n.toLocaleString(getLanguage()));
         } else if (form === "space") {
             return n.toLocaleString("en-US").replace(/,/g, " "); // Space grouping
         } else {
@@ -22,63 +21,60 @@ export function formatNumber(
         }
     };
 
-    // Number names differ between languages (e.g. "billion" is 10^9 in English, but 10^12 in most of Europe),
-    // so they are looked up per language, and pluralized based on the number in front of them
-    const getSuffix = (power: number, value: number) => {
-        if (shortForm) {
-            return " " + i18n.t(`numbers.short.${power}`, { ns: "ui" });
-        } else {
-            return " " + i18n.t(`numbers.long.${power}`, { ns: "ui", count: value });
-        }
+    // Number names differ between languages, both in what they are called and where they start.
+    // Most languages name every third power of ten from a million (though "billion" is 10^9 in English,
+    // but 10^12 in most of Europe), while Chinese, Japanese and Korean name every fourth (万, 億, 兆...).
+    // The names are looked up per language, and pluralized based on the number in front of them
+    const powers = getNumberNamePowers();
+
+    const withName = (n: number, power: number) => {
+        const value = round(n);
+        const name = shortForm
+            ? i18n.t(`numbers.short.${power}`, { ns: "ui" })
+            : i18n.t(`numbers.long.${power}`, { ns: "ui", count: value });
+        return i18n.t("numbers.named", { ns: "ui", value: formatWithSeparators(value), name });
     };
 
-    const withSuffix = (n: number, power: number) => formatWithSeparators(round(n)) + getSuffix(power, round(n));
-
-    if (num < 1e3) {
+    if (num < Math.pow(10, powers[0])) {
         return formatWithSeparators(round(num));
-    } else if (num < 1e6) {
-        return formatWithSeparators(round(num));
-    } else if (num < 1e9) {
-        return withSuffix(num / 1e6, 6);
-    } else if (num < 1e12) {
-        return withSuffix(num / 1e9, 9);
-    } else if (num < 1e15) {
-        return withSuffix(num / 1e12, 12);
-    } else if (num < 1e18) {
-        return withSuffix(num / 1e15, 15);
-    } else if (num < 1e21) {
-        return withSuffix(num / 1e18, 18);
-    } else if (num < 1e24) {
-        return withSuffix(num / 1e21, 21);
-    } else if (num < 1e27) {
-        return withSuffix(num / 1e24, 24);
-    } else if (num < 1e30) {
-        return withSuffix(num / 1e27, 27);
-    } else if (num < 1e33) {
-        return withSuffix(num / 1e30, 30);
-    } else if (num < 1e36) {
-        return withSuffix(num / 1e33, 33);
-    } else if (num < 1e39) {
-        return withSuffix(num / 1e36, 36);
-    } else if (num < 1e42) {
-        return withSuffix(num / 1e39, 39);
-    } else if (num < 1e45) {
-        return withSuffix(num / 1e42, 42);
-    } else if (num < 1e48) {
-        return withSuffix(num / 1e45, 45);
-    } else if (num < 1e51) {
-        return withSuffix(num / 1e48, 48);
-    } else if (num < 1e54) {
-        return withSuffix(num / 1e51, 51);
-    } else if (num < 1e57) {
-        return withSuffix(num / 1e54, 54);
-    } else if (num < 1e60) {
-        return withSuffix(num / 1e57, 57);
-    } else if (num < 1e63) {
-        return withSuffix(num / 1e60, 60);
-    } else {
-        return withSuffix(num / 1e63, 63);
     }
+    // The largest named power that fits, using the largest name for anything bigger
+    let power = powers[0];
+    for (const p of powers) {
+        if (num >= Math.pow(10, p)) power = p;
+    }
+    return withName(num / Math.pow(10, power), power);
+}
+
+/** The powers of ten that have a name in the current language, e.g. 6 for million */
+export function getNumberNamePowers() {
+    const groupSize = Number(i18n.t("numbers.groupSize", { ns: "ui" })) === 4 ? 4 : 3;
+    return groupSize === 4
+        // 10^4 (万) to 10^68
+        ? Array.from({ length: 17 }, (_, i) => 4 + i * 4)
+        // 10^6 (million) to 10^63
+        : Array.from({ length: 20 }, (_, i) => 6 + i * 3);
+}
+
+// Native digits (e.g. Arabic-Indic or Bengali), from their zero
+const nativeDigitZeros = [0x0660, 0x06f0, 0x0966, 0x09e6, 0x0e50];
+
+/**
+ * Makes a localized number displayable by every font in the game:
+ * Western digits, as is common in games, and regular spaces instead of non-breaking ones
+ */
+function toDisplayableNumber(text: string) {
+    return text
+        .replace(/[\u0660-\u0669\u06f0-\u06f9\u0966-\u096f\u09e6-\u09ef\u0e50-\u0e59]/g, (digit) => {
+            const code = digit.charCodeAt(0);
+            const zero = nativeDigitZeros.find(z => code >= z && code <= z + 9)!;
+            return String(code - zero);
+        })
+        // Arabic thousands and decimal separators, and the Arabic letter mark
+        .replace(/\u066c/g, ",")
+        .replace(/\u066b/g, ".")
+        .replace(/\u061c/g, "")
+        .replace(/[\u00a0\u202f]/g, " ");
 }
 
 /**

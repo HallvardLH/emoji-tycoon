@@ -66,6 +66,8 @@
         "essence": "इमोजी सार एक <hl>जादुई पदार्थ</hl> है, जो देखते ही अपना आकार बदल लेता है और जिसमें अनजानी शक्तियाँ छिपी हैं।"
     },
     "numbers": {
+        "groupSize": "3",
+        "named": "{{value}} {{name}}",
         "percent": "{{value}}%",
         "lessThan": "<{{value}}",
         "long": {

@@ -1,0 +1,138 @@
+{
+    "tabs": {
+        "emoji": "Emoji",
+        "shop": "Kauppa",
+        "emojidex": "Emojidex",
+        "buildings": "Laitokset",
+        "upgrades": "Päivitä",
+        "stats": "Tilastot",
+        "collection": "Kokoelma"
+    },
+    "header": {
+        "emojis": "Emojit",
+        "perSecond": "Sekunnissa: {{value}}"
+    },
+    "common": {
+        "buy": "Osta",
+        "details": "Tiedot",
+        "owned_one": "hallussa",
+        "owned_other": "hallussa"
+    },
+    "buildings": {
+        "bulkBuy_one": "Ostat {{count}} rakennuksen kerrallaan",
+        "bulkBuy_other": "Ostat {{count}} rakennusta kerrallaan",
+        "emojisPerSecond": "<hl>{{eps}}</hl> emojia sekunnissa",
+        "youHave": "• {{building}}: sinulla on <hl>{{amount}}</hl>",
+        "eachProduces": "• Kukin tuottaa <hl>{{eps}}</hl> emojia sekunnissa",
+        "totalProduces": "• Yhteensä <hl>{{eps}}</hl> emojia sekunnissa!",
+        "ownedUpgrades": "Omat päivitykset"
+    },
+    "upgrades": {
+        "bigEmoji": "Iso emoji",
+        "effects": {
+            "multiplyBuildingProduction": "• {{buildings}}: tuplateho.",
+            "multiplyTap": "• Napautukset ovat tuplasti tehokkaampia.",
+            "percentageIncreaseTap": "• Napautukset ovat {{percent}} tehokkaampia.",
+            "tapPercentageOfEps": "• Napautus tuottaa {{percent}} koko emojituotannostasi.",
+            "percentageIncreaseProduction": "• Emojien kokonaistuotanto kasvaa {{percent}}."
+        },
+        "bonusProduction": "Jos ostat tämän päivityksen nyt, saat <hl>+{{bonus}}</hl> emojia sekunnissa ja emojituotanto kasvaa <hl>{{percent}}</hl>",
+        "bonusTap": "Jos ostat tämän päivityksen nyt, saat <hl>+{{bonus}}</hl> emojia napautusta kohden ja jokainen napautus tuottaa <hl>{{percent}}</hl> enemmän",
+        "filterTitle": "Suodata päivitykset",
+        "filterDescription": "Valitse, minkä rakennusten päivitykset näytetään."
+    },
+    "emojidex": {
+        "basePrice": "Perushinta: {{price}}"
+    },
+    "stats": {
+        "totalEmojisDrawn": "Piirretyt emojit yhteensä",
+        "emojiTaps": "Emojinapautukset",
+        "emojisEarnedFromTapping": "Napauttamalla ansaitut emojit",
+        "magicalEmojisTapped": "Napautetut taikaemojit",
+        "funValue": "Hauskuusarvo"
+    },
+    "drawer": {
+        "language": "Kieli",
+        "deviceLanguage": "Laitteen kieli",
+        "funValue": "Hauskuusarvo: {{value}}",
+        "cheats": "Huijaukset",
+        "resetGame": "Nollaa peli",
+        "spawnEffect": "Luo efektiemoji",
+        "giveEmojis": "Anna {{amount}} emojia"
+    },
+    "prestige": {
+        "title": "Prestiisi",
+        "accumulating": "Kun olet luonut <hl>{{amount}}</hl> emojia, emojien syvin olemus on alkanut kertyä ympärillesi.",
+        "essence": "Emojiesanssi on <hl>maaginen aine</hl>, joka muuttaa muotoaan aina kun katsot sitä, ja kätkee sisäänsä tuntemattomia voimia."
+    },
+    "numbers": {
+        "groupSize": "3",
+        "named": "{{value}} {{name}}",
+        "percent": "{{value}} %",
+        "lessThan": "<{{value}}",
+        "long": {
+            "6_one": "miljoona",
+            "6_other": "miljoonaa",
+            "9_one": "miljardi",
+            "9_other": "miljardia",
+            "12_one": "biljoona",
+            "12_other": "biljoonaa",
+            "15_one": "biljardi",
+            "15_other": "biljardia",
+            "18_one": "triljoona",
+            "18_other": "triljoonaa",
+            "21_one": "triljardi",
+            "21_other": "triljardia",
+            "24_one": "kvadriljoona",
+            "24_other": "kvadriljoonaa",
+            "27_one": "kvadriljardi",
+            "27_other": "kvadriljardia",
+            "30_one": "kvintiljoona",
+            "30_other": "kvintiljoonaa",
+            "33_one": "kvintiljardi",
+            "33_other": "kvintiljardia",
+            "36_one": "sekstiljoona",
+            "36_other": "sekstiljoonaa",
+            "39_one": "sekstiljardi",
+            "39_other": "sekstiljardia",
+            "42_one": "septiljoona",
+            "42_other": "septiljoonaa",
+            "45_one": "septiljardi",
+            "45_other": "septiljardia",
+            "48_one": "oktiljoona",
+            "48_other": "oktiljoonaa",
+            "51_one": "oktiljardi",
+            "51_other": "oktiljardia",
+            "54_one": "noniljoona",
+            "54_other": "noniljoonaa",
+            "57_one": "noniljardi",
+            "57_other": "noniljardia",
+            "60_one": "desiljoona",
+            "60_other": "desiljoonaa",
+            "63_one": "desiljardi",
+            "63_other": "desiljardia"
+        },
+        "short": {
+            "6": "M",
+            "9": "Mrd",
+            "12": "B",
+            "15": "Brd",
+            "18": "Tr",
+            "21": "Trd",
+            "24": "Kvr",
+            "27": "Kvrd",
+            "30": "Kvi",
+            "33": "Kvid",
+            "36": "Sk",
+            "39": "Skd",
+            "42": "Sp",
+            "45": "Spd",
+            "48": "Ok",
+            "51": "Okd",
+            "54": "N",
+            "57": "Nd",
+            "60": "D",
+            "63": "Dd"
+        }
+    }
+}

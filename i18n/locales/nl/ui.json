@@ -66,6 +66,8 @@
         "essence": "Emoji-essentie is een <hl>magische substantie</hl> die van vorm verandert zodra je ernaar kijkt, en onbekende krachten bezit."
     },
     "numbers": {
+        "groupSize": "3",
+        "named": "{{value}} {{name}}",
         "percent": "{{value}}%",
         "lessThan": "<{{value}}",
         "long": {

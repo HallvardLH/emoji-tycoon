@@ -1,0 +1,1009 @@
+{
+    "buildings": {
+        "0": {
+            "name": "Piirtävä käsi",
+            "plural": "Piirtävät kädet",
+            "description": "Käsi, joka piirtää emojeja puolestasi."
+        },
+        "1": {
+            "name": "Graafinen studio",
+            "plural": "Graafiset studiot",
+            "description": "Studio, jossa emojit syntyvät."
+        },
+        "2": {
+            "name": "Maatila",
+            "plural": "Maatilat",
+            "description": "Maatila, jossa emojit versovat maasta."
+        },
+        "3": {
+            "name": "Ravintola",
+            "plural": "Ravintolat",
+            "description": "Täällä emojit syövät ruokaemojeja."
+        },
+        "4": {
+            "name": "Kotieläinpiha",
+            "plural": "Kotieläinpihat",
+            "description": "Tapaa kaikki suosikkieläinemojisi."
+        },
+        "5": {
+            "name": "Tehdas",
+            "plural": "Tehtaat",
+            "description": "Emojeja teollisessa mittakaavassa."
+        },
+        "6": {
+            "name": "Urheilukeskus",
+            "plural": "Urheilukeskukset",
+            "description": "Pidä emojisi hyvässä kunnossa."
+        },
+        "7": {
+            "name": "Pankki",
+            "plural": "Pankit",
+            "description": "\"Emojisi ovat turvassa meillä.\""
+        },
+        "8": {
+            "name": "Emojihuvipuisto",
+            "plural": "Emojihuvipuistot",
+            "description": "\"Tervetuloa Emojimaahan: täällä unelmat ja tunteet heräävät henkiin!\""
+        },
+        "9": {
+            "name": "Emojieduskunta",
+            "plural": "Emojieduskunnat",
+            "description": "Täällä emojit päättävät yhdessä, miten emojeja tehdään lisää."
+        },
+        "10": {
+            "name": "Avaruusasema",
+            "plural": "Avaruusasemat",
+            "description": "Valloita uusia maailmoja ja vie niiden emojit."
+        },
+        "11": {
+            "name": "Karkkikuningaskunta",
+            "plural": "Karkkikuningaskunnat",
+            "description": "Sokerinen paratiisi, jota hallitsevat Karkkikuningas ja hänen suloiset emojialamaisensa."
+        },
+        "12": {
+            "name": "Emojitulivuori",
+            "plural": "Emojitulivuoret",
+            "description": "Jokainen purkaus tuo tulvan upouusia, tuoreeltaan taottuja emojeja!"
+        },
+        "13": {
+            "name": "Taivaan Suuren Emojin temppeli",
+            "plural": "Taivaan Suuren Emojin temppelit",
+            "description": "Legendan mukaan taivaan Suuri Emoji suo loputtomasti emojeja uskollisimmille seuraajilleen."
+        },
+        "14": {
+            "name": "Emojisupertietokone",
+            "plural": "Emojisupertietokoneet",
+            "description": "Emojimoottorien aatelia. Monistaa emojeja valon nopeudella."
+        },
+        "15": {
+            "name": "Emojien musta aukko",
+            "plural": "Emojien mustat aukot",
+            "description": "Kaikkien emojien päätepysäkki... vai uusi alku?"
+        },
+        "16": {
+            "name": "Emojisingulariteetti",
+            "plural": "Emojisingulariteetit",
+            "description": "Siinä se. Jäljellä ei ole muuta kuin emojeja. Teit sen."
+        }
+    },
+    "upgrades": {
+        "0": {
+            "name": "Toinen käsi",
+            "description": "Toinen käsi napauttaa näyttöä. Kenen käsi se on? En tiedä."
+        },
+        "1": {
+            "name": "Vielä yksi käsi",
+            "description": "Taas yksi käsi napauttaa näyttöä. Kätevää!"
+        },
+        "2": {
+            "name": "Kymmenen kättä lisää",
+            "description": "Kymmenen kättä alkaa yhtäkkiä napauttaa näyttöäsi! Mahtavaa!"
+        },
+        "3": {
+            "name": "Sata kättä!",
+            "description": "Koko naapurusto on tullut napauttamaan näytön isoa emojia!"
+        },
+        "4": {
+            "name": "Tuhat kättä",
+            "description": "Ihmiset matkustavat kaukaa vain napauttaakseen näyttöäsi."
+        },
+        "5": {
+            "name": "Miljoona kättä",
+            "description": "Ketä sinä osoittelet? Osoitteletko minua? Kuinka epäkohteliasta..."
+        },
+        "6": {
+            "name": "Miljardi kättä",
+            "description": "Yli 10 % maailman väestöstä auttaa sinua napauttamaan näyttöä. Taitaa kohta hajota."
+        },
+        "7": {
+            "name": "Biljoona kättä",
+            "description": "Äitisi soittaa. Hän on huolissaan sinusta. Puhelu peittää näytön, joten suljet sen ärtyneenä ja jatkat napauttamista."
+        },
+        "8": {
+            "name": "Biljardi kättä",
+            "description": "Näyttöäsi napauttaa aika monta kättä."
+        },
+        "9": {
+            "name": "Triljoona kättä",
+            "description": "Käsien määrä on käsittämätön. Näyttö ottaa osumaa."
+        },
+        "10": {
+            "name": "Triljardi kättä",
+            "description": "Käsiä ulottuu silmänkantamattomiin, ja kaikki napauttavat."
+        },
+        "11": {
+            "name": "Kvadriljoona kättä",
+            "description": "Täydellinen muoto. Täydelliset napautukset. Loputtomasti käsiä."
+        },
+        "12": {
+            "name": "Kvadriljardi kättä",
+            "description": "Enemmän käsiä kuin maailmankaikkeudessa on atomeja. Ne kaikki tietävät, mitä tekevät."
+        },
+        "13": {
+            "name": "Kvintiljoona kättä",
+            "description": "Napautusten ääni on nyt valtavan kova, rytmikäs jytinä, joka lähettää shokkiaallon maapallon ympäri."
+        },
+        "14": {
+            "name": "Kvintiljardi kättä",
+            "description": "Näin suurta määrää lihaa ei pitäisi koskaan koota näin tiiviisti samaan tilaan..."
+        },
+        "15": {
+            "name": "Sekstiljoona kättä",
+            "description": "Jo olemassa olevista käsistä kasvaa kymmeniä lisää, vääntyneitä ja epämuodostuneita."
+        },
+        "16": {
+            "name": "Sekstiljardi kättä",
+            "description": "Alat kuulla kuiskauksia. Kädet napauttavat yhä, mutta keiden ne ovat?"
+        },
+        "17": {
+            "name": "Septiljoona kättä",
+            "description": "Kädet alkavat vääristyä. Ne eivät ole enää ihmisen."
+        },
+        "18": {
+            "name": "Septiljardi kättä",
+            "description": "Käsien takana vaanii jokin, joka ohjaa niitä pahantahtoisesti."
+        },
+        "19": {
+            "name": "Oktiljoona kättä",
+            "description": "Nämä kädet... mitä ne ovat? Ilma haisee rikiltä."
+        },
+        "20": {
+            "name": "Oktiljardi kättä",
+            "description": "Käsiä on kaikkialla, ne täyttävät huoneen. Tunnet niiden tarraavan sinuun..."
+        },
+        "21": {
+            "name": "Demonikädet",
+            "description": "Demoniset kädet helvetin syvyyksistä napauttavat lakkaamatta. Näyttö on hehkuvan kuuma."
+        },
+        "22": {
+            "name": "Kirottujen kädet",
+            "description": "Aavemaiset luurankokädet nousevat syvyydestä. Ne napauttavat helvetillisellä raivolla."
+        },
+        "23": {
+            "name": "Manalan herra",
+            "description": "Langennut enkeli itse kömpii ylös valtakunnastaan auttamaan sinua napauttamaan näyttöä."
+        },
+        "24": {
+            "name": "Töykeä napautus",
+            "description": "Tosi, tosi töykeää."
+        },
+        "100": {
+            "name": "Vahvempi käsivarsi",
+            "description": "Vahvemmalla käsivarrella piirrät emojeja nopeammin."
+        },
+        "101": {
+            "name": "Notkeat sormet",
+            "description": "Notkeilla sormilla syntyy monimutkaisempia emojeja."
+        },
+        "102": {
+            "name": "Kaksi kättä",
+            "description": "Tuplasti käsiä, tuplasti emojeja."
+        },
+        "103": {
+            "name": "Lakatut kynnet",
+            "description": "Kynsilakka saa sinut napauttamaan nopeammin, etkö tiennyt?"
+        },
+        "104": {
+            "name": "Jalat",
+            "description": "Jaloilla piirtäminen tuplaa tuotannon (eikä se ole yhtään vaikeaa)!"
+        },
+        "105": {
+            "name": "Kieli",
+            "description": "Vuosien harjoittelulla sinäkin voit oppia piirtämään kielelläsi!"
+        },
+        "106": {
+            "name": "Nenä",
+            "description": "Työnnä väriliitu nenään ja piirrä sillä!",
+            "quote": "*Nuuh* Miksi näyttö haisee jaloilta?"
+        },
+        "107": {
+            "name": "Korva",
+            "description": "Työnnä kynä korvaan, käännä päätä 90 astetta ja piirrä sillä!"
+        },
+        "108": {
+            "name": "Suu",
+            "description": "Laita lyijykynä suuhun ja piirrä sillä!"
+        },
+        "109": {
+            "name": "Vahvempi jalka",
+            "description": "Vahvemmalla jalalla piirrät emojeja jaloillasi paljon nopeammin."
+        },
+        "110": {
+            "name": "Isommat keuhkot",
+            "description": "Isommilla keuhkoilla piirrät emojeja nopeammin."
+        },
+        "111": {
+            "name": "Isommat aivot",
+            "description": "Isommat aivot vapauttavat valtavan luovuuden aallon ja tuplaavat emojituotantosi!"
+        },
+        "112": {
+            "name": "Hiukset",
+            "description": "Heiluttele pensseliä hiuksillasi ja luo emojeja. Kuka tarvitsee käsiä, kun on tyyliä?"
+        },
+        "113": {
+            "name": "Kulmakarvat",
+            "description": "Kohottele kulmiasi ja piirrä emojeja. Treeniä sekä kasvoille että luovuudelle!"
+        },
+        "114": {
+            "name": "Selkä",
+            "description": "Makaa selälläsi ja piirrä emojeja kädet selän takana. Venyttelyä ja piirtelyä!"
+        },
+        "115": {
+            "name": "Hampaat",
+            "description": "Purista kynää hampaillasi ja piirrä emojeja. Varoitus: voi väsyttää leukoja!"
+        },
+        "116": {
+            "name": "Napa",
+            "description": "Piirrä emojeja navallasi. Ainutlaatuinen taito, jota on vaikea hallita!"
+        },
+        "117": {
+            "name": "Kaikupiirtäminen",
+            "description": "Jokainen piirtämäsi emoji kaikuu ja syntyy kahdesti!"
+        },
+        "118": {
+            "name": "Telekineettinen piirtäminen",
+            "description": "Miksi käyttää käsiä, kun voit piirtää emojeja ajatuksen voimalla?"
+        },
+        "119": {
+            "name": "Kvanttisormet",
+            "description": "Sormiesi kvanttilomittuminen mahdollistaa emojien piirtämisen valon nopeudella."
+        },
+        "200": {
+            "name": "Paremmat lyijykynät",
+            "description": "Paremmilla kynillä yksityiskohtaisempia emojeja."
+        },
+        "201": {
+            "name": "Erikoisväriliidut",
+            "description": "Näillä erikoisliiduilla taiteilijat tavoittavat sisäisen lapsensa."
+        },
+        "202": {
+            "name": "Paremmat siveltimet",
+            "description": "Paremmilla siveltimillä taiteellisempia emojeja."
+        },
+        "203": {
+            "name": "Täytekynät",
+            "description": "Arvokkaampia emojeja."
+        },
+        "204": {
+            "name": "Viivaimet",
+            "description": "Miten muuten piirtäisit suoran viivan?"
+        },
+        "205": {
+            "name": "Värisokeussimulaattori",
+            "description": "Varmista, että emojisi ovat kaikkien saavutettavissa!",
+            "quote": "Sanotaanko 'vee-see-aa-gee'? 'Vukag'? 'Veekag'?"
+        },
+        "206": {
+            "name": "Sarjakuvaefektit",
+            "description": "Lisää emojeihisi 'PAM!'- ja 'KRÄK!'-efektejä lisätehoksi!"
+        },
+        "207": {
+            "name": "Sapluunasarja",
+            "description": "Täydellisen muotoisia emojeja joka kerta näillä sapluunoilla!"
+        },
+        "208": {
+            "name": "Omat pikanäppäimet",
+            "description": "Nopeuta emojisuunnittelua omilla pikanäppäimillä!",
+            "quote": "Kokeile alt + F4."
+        },
+        "209": {
+            "name": "Kuvapankin tilaus",
+            "description": "Pääsy valtavaan valmiiden muotojen, ikonien ja tekstuurien kirjastoon!"
+        },
+        "210": {
+            "name": "Kumoa-painike",
+            "description": "Kumoaminen ei vain peru työtäsi - se muuttaa itse todellisuutta. Käytä säästeliäästi.",
+            "quote": "Erehtyminen on inhimillistä"
+        },
+        "211": {
+            "name": "Emojivärityskirja",
+            "description": "Vain hienostuneimmat taiteilijat käyttävät värityskirjoja."
+        },
+        "212": {
+            "name": "Reaaliaikainen yhteistyö",
+            "description": "Kutsu muita suunnittelijoita työstämään emojiprojektejasi samanaikaisesti!"
+        },
+        "213": {
+            "name": "Emojitunnelmataulu",
+            "description": "Järjestä emojiideasi visuaalisesti ja maksimoi luovuus!",
+            "quote": "Miksi näytät noin tunnelmattomalta?"
+        },
+        "214": {
+            "name": "Pikselitaideohjelma",
+            "description": "Luo retrohenkisiä pikseliemojeja, jotka huokuvat 90-luvun nostalgiaa!",
+            "quote": "Jokainen pikseli on tärkeä."
+        },
+        "215": {
+            "name": "Comic Sans -fontti",
+            "description": "Rakasta tai vihaa, se tekee emojeistasi... ainutlaatuisia!"
+        },
+        "216": {
+            "name": "Tekoälytaidegeneraattori",
+            "description": "Anna tekoälyn hoitaa raskas työ ja tuottaa salamannopeasti heikkolaatuisia ja tylsiä emojeja!",
+            "quote": "Piip puup!"
+        },
+        "217": {
+            "name": "Origamipaperi",
+            "description": "Taittele paperiemojisi kaikenlaisiin muotoihin!",
+            "quote": "Kvaak!"
+        },
+        "218": {
+            "name": "Emojitatuointikone",
+            "description": "Pysyviä emojeja todella sitoutuneelle taiteilijalle!",
+            "quote": "Auts!"
+        },
+        "219": {
+            "name": "Veri",
+            "description": "Verellä maalaaminen tekee emojeista erityisen siistejä!"
+        },
+        "300": {
+            "name": "Maanviljelijät",
+            "description": "Mikä maatila on ilman viljelijää?!"
+        },
+        "301": {
+            "name": "Taimi",
+            "description": "Jostain on aloitettava.",
+            "quote": "Älä luovuta - lehti vielä kääntyy!"
+        },
+        "302": {
+            "name": "Paremmat työkalut",
+            "description": "Paljon nopeampaa viljelyä!"
+        },
+        "303": {
+            "name": "Traktorit",
+            "description": "Emojien sadonkorjuu helpottuu huomattavasti."
+        },
+        "304": {
+            "name": "Maalaistalot",
+            "description": "Viihtyisä koti, jossa viljelijäsi voivat levätä ja ladata akkujaan."
+        },
+        "305": {
+            "name": "Emojilehmät",
+            "description": "Tuottaa lisää emuuuuuujeja."
+        },
+        "306": {
+            "name": "Kastelujärjestelmä",
+            "description": "Pidä emojisatosi kosteana, niin se kasvaa nopeammin.",
+            "quote": "Millä vuosisadalla elämme?!"
+        },
+        "307": {
+            "name": "Linnunpelättimet",
+            "description": "Pitää ärsyttävät lintuemojit poissa maatiloiltasi!"
+        },
+        "308": {
+            "name": "Kompostorit",
+            "description": "Muuta jätteet lannoitteeksi terveempää emojisatoa varten!"
+        },
+        "309": {
+            "name": "Kasvihuoneet",
+            "description": "Kasvata emojeja ympäri vuoden säästä riippumatta!"
+        },
+        "310": {
+            "name": "Tuulimyllyt",
+            "description": "Valjasta tuulen voima maatilasi tehostamiseen!",
+            "quote": "Suhhh!"
+        },
+        "311": {
+            "name": "Emojihedelmätarhat",
+            "description": "Kasvata emojipuita, jotka tekevät hedelmää ympäri vuoden!"
+        },
+        "312": {
+            "name": "Sadonkorjuujuhla",
+            "description": "Juhlista runsasta satoa juhlilla, jotka nostavat työmoraalia!"
+        },
+        "313": {
+            "name": "Jättimäinen emojiritsa",
+            "description": "Ammu emojisiemeniä pitkin maatilaa salamannopeaan kylvöön!"
+        },
+        "314": {
+            "name": "Näkymätön aita",
+            "description": "Pitää emojikarjasi aitauksessa... vaikka et näe sitä.",
+            "quote": "Sattuu, jos pissaat sitä vasten."
+        },
+        "315": {
+            "name": "Geenimuunnellut kasvit",
+            "description": "Kuorettomia banaaneja, valmiiksi suklaaseen kastettuja mansikoita, esikeitettyjä perunoita ja paljon muuta!"
+        },
+        "316": {
+            "name": "Tulevaisuuden emojimaatila",
+            "description": "Maatilasi ovat nyt huipputeknisiä utopioita robotteineen, hologrammeineen ja lentävine traktoreineen. Tervetuloa tulevaisuuteen!"
+        },
+        "317": {
+            "name": "Verikuu",
+            "description": "Verikuun alla satosi kasvaa nopeammin... mutta sille kasvaa myös hampaat."
+        },
+        "318": {
+            "name": "Viimeinen sato",
+            "description": "Salaperäinen hahmo ilmestyy ja tarjoaa runsasta satoa vastineeksi... jostakin. Uskallatko suostua?"
+        },
+        "319": {
+            "name": "Maanviljelyn lopettaminen",
+            "description": "Olet kyllästynyt maanviljelyyn. Ehkä parasta olisi lopettaa koko homma ja mennä toimistoon töihin."
+        },
+        "400": {
+            "name": "Terävät veitset",
+            "description": "Terävämmillä veitsillä emojien pilkkominen helpottuu."
+        },
+        "401": {
+            "name": "Tarttumattomat pannut",
+            "description": "Tarttumattomilla pannuilla emojiateriat valmistuvat nopeammin."
+        },
+        "402": {
+            "name": "Paremmat uunit",
+            "description": "Tarkemmin säädettävät uunit kypsentävät emojit nopeammin."
+        },
+        "403": {
+            "name": "Laadukkaat raaka-aineet",
+            "description": "Laadukkaammat raaka-aineet tarkoittavat maukkaampia emojeja."
+        },
+        "404": {
+            "name": "Kokin hattu",
+            "description": "Kokin hattu päässä emojien kokkaus nopeutuu."
+        },
+        "405": {
+            "name": "Emojitehosekoittimet",
+            "description": "Sekoita emojeista herkullisia smoothieita ja keittoja sekunneissa!"
+        },
+        "406": {
+            "name": "Airfryerit",
+            "description": "Paista emojit täydellisiksi ennätysajassa. Rapeita ja kullanruskeita joka kerta!"
+        },
+        "407": {
+            "name": "Sushibaarit",
+            "description": "Kääri emojisushia tarkasti ja tyylillä. Vaatii raakaa lahjakkuutta!"
+        },
+        "408": {
+            "name": "Salaattibaarit",
+            "description": "Heitä yhteen tuoreita emojisalaatteja monilla täytteillä. Terveellistä ja herkullista!"
+        },
+        "409": {
+            "name": "Pizzauunit",
+            "description": "Paista emojipizzoja puu-uunin maulla, joka on kuin toisesta maailmasta!"
+        },
+        "410": {
+            "name": "Emojikahvinkeittimet",
+            "description": "Keitä täydellinen kupillinen emojikahvia, niin kokkisi pysyvät virkeinä!"
+        },
+        "411": {
+            "name": "Emojijäätelökoneet",
+            "description": "Pyöräytä jäisiä emojiherkkuja, jotka ovat yhtä viileitä kuin herkullisia!"
+        },
+        "412": {
+            "name": "Tacopisteet",
+            "description": "Kokoa emojitacoja kaikilla täytteillä. Fiesta joka suupalassa!",
+            "quote": "¡Ay, caramba!"
+        },
+        "413": {
+            "name": "Vohveliraudat",
+            "description": "Paista emojivohveleita, joissa on rapeat reunat ja pehmeä sisus. Täydellistä brunssille!"
+        },
+        "414": {
+            "name": "Emojisuklaasuihkulähteet",
+            "description": "Valuta sulaa emojisuklaata kaiken päälle. Makeaa ja hemmottelevaa!"
+        },
+        "415": {
+            "name": "Emojikannibaalikeittiö",
+            "description": "Valmista emojeja käyttäen muita emojeja raaka-aineina."
+        },
+        "416": {
+            "name": "Mustan aukon emojirasvakeitin",
+            "description": "Paista emojit mustassa aukossa sen valtavalla energialla. Ne palaavat rapeina!"
+        },
+        "417": {
+            "name": "Emojiruokasota-areena",
+            "description": "Muuta keittiösi ruokasota-areenaksi. Sotkuista, kaoottista ja oudon kannattavaa."
+        },
+        "418": {
+            "name": "Elävä taikina",
+            "description": "Tämä taikina liikkuu itsestään ja muotoutuu täydelliseksi emojileiväksi. Joskus se yrittää karata."
+        },
+        "419": {
+            "name": "Loputon noutopöytä",
+            "description": "Noutopöytä, joka ei lopu koskaan... mutta ruoka saattaa alkaa syödä sinua."
+        },
+        "500": {
+            "name": "Luudat",
+            "description": "Siivoamiseen sen jälkeen, kun eläimet ovat öö... käyneet isommalla asialla."
+        },
+        "501": {
+            "name": "Eläinkouluttajat",
+            "description": "Kouluttajat opettavat eläimille temppuja, mikä tehostaa pihan toimintaa."
+        },
+        "502": {
+            "name": "Luksusaitaukset",
+            "description": "Paranna eläinten koteja, niin ne pysyvät iloisina ja tuottavina."
+        },
+        "503": {
+            "name": "Eksoottiset eläimet",
+            "description": "Tuo harvinaisia ja eksoottisia eläimiä houkuttelemaan isompia yleisöjä."
+        },
+        "504": {
+            "name": "Maskotit",
+            "description": "Ystävälliset maskotit houkuttelevat kävijöitä ja kasvattavat tuloja."
+        },
+        "505": {
+            "name": "Eläinlääkäriasemat",
+            "description": "Oma klinikka pitää eläimet terveinä."
+        },
+        "506": {
+            "name": "Varjoisat alueet",
+            "description": "Varjoisat alueet pitävät eläimet ja kävijät viileinä helteellä."
+        },
+        "507": {
+            "name": "Silityspisteet",
+            "description": "Alueet, joilla kävijät voivat turvallisesti puuhastella eläinten kanssa."
+        },
+        "508": {
+            "name": "Eläinten trimmaussetit",
+            "description": "Säännöllinen trimmaus pitää eläimet edustavina ja hyvinvoivina."
+        },
+        "509": {
+            "name": "Penkit kävijöille",
+            "description": "Mukavia istumapaikkoja väsyneille kävijöille."
+        },
+        "510": {
+            "name": "Matkamuistomyymälät",
+            "description": "Myymälä, joka myy eläinaiheisia matkamuistoja."
+        },
+        "511": {
+            "name": "Eläinkuvakoppi",
+            "description": "Kävijät voivat ottaa kuvia eläinten kanssa."
+        },
+        "512": {
+            "name": "Pikkujuna",
+            "description": "Pieni juna vie kävijät kierrokselle pihan ympäri."
+        },
+        "513": {
+            "name": "Eläinten kykyshow",
+            "description": "Järjestä kykyshow, jossa eläimet esittävät temppuja"
+        },
+        "514": {
+            "name": "Eläinparaati",
+            "description": "Järjestä päivittäinen paraati, jossa eläimet marssivat pihan halki."
+        },
+        "515": {
+            "name": "Ylihintaiset välipalat",
+            "description": "Kiskurihintoja eläinaiheisista välipaloista"
+        },
+        "516": {
+            "name": "Eläintyövoima",
+            "description": "Pistä eläimet töihin!"
+        },
+        "517": {
+            "name": "Järjestyksenvalvoja-apinat",
+            "description": "Kouluta apinat hallitsemaan kurittomia väkijoukkoja."
+        },
+        "518": {
+            "name": "Esihistorialliset eläimet",
+            "description": "Tuo dinosaurukset ja muut sukupuuttoon kuolleet eläimet pihalle.",
+            "quote": "Elämä, öö, löytää aina keinon"
+        },
+        "519": {
+            "name": "Yksisarviset",
+            "description": "Kukapa ei haluaisi nähdä lentävää yksisarvista?"
+        },
+        "600": {
+            "name": "Paremmat työkalut",
+            "description": "Paremmilla työkaluilla emojit syntyvät nopeammin."
+        },
+        "601": {
+            "name": "Lisää työntekijöitä",
+            "description": "Kasvata tehtaan työntekijöiden määrää."
+        },
+        "602": {
+            "name": "Isommat rattaat",
+            "description": "Isommat rattaat mahdollistavat isommat koneet."
+        },
+        "603": {
+            "name": "Mutterit ja pultit",
+            "description": "Näillä varmistetaan, ettei kaikki hajoa käsiin."
+        },
+        "604": {
+            "name": "Liukuhihnat",
+            "description": "Tehosta tuotantoa liukuhihnoilla, jotka kuljettavat emojeja nopeammin kuin koskaan!"
+        },
+        "605": {
+            "name": "Laadunvalvonta",
+            "description": "Varmista jokaisen emojin täydellisyys omalla laadunvalvontatiimillä."
+        },
+        "606": {
+            "name": "Tehtaan laajennus",
+            "description": "Laajenna tehdastasi, niin sinne mahtuu enemmän koneita ja työntekijöitä. Isompi on parempi!"
+        },
+        "607": {
+            "name": "Pikapuristimet",
+            "description": "Päivitä pikapuristimiin, jotka leimaavat emojeja salamannopeasti."
+        },
+        "608": {
+            "name": "Tehtaan kuntosali",
+            "description": "Kuntosali, jossa työntekijäsi pysyvät hyvässä kunnossa ja virkeinä. Terve työntekijä on tuottava työntekijä!"
+        },
+        "609": {
+            "name": "Tehtaan vartiointi",
+            "description": "Suojaa tehdastasi emojivarkailta ja teollisuusvakoilulta."
+        },
+        "610": {
+            "name": "Tehtaan kierrätys",
+            "description": "Kierrätä jätemateriaalit uusiksi emojeiksi ja vähennä kustannuksia ja ympäristövaikutuksia."
+        },
+        "611": {
+            "name": "Huoltotikkaat",
+            "description": "Asenna tikkaat korkeiden koneiden huoltoa varten. Huolto ei ole koskaan ollut helpompaa!"
+        },
+        "612": {
+            "name": "Järeät vasarat",
+            "description": "Päivitä järeisiin vasaroihin nopeampaa kokoonpanoa ja korjausta varten. Murskaa tehottomuus!"
+        },
+        "613": {
+            "name": "Tarkkuusjakoavaimet",
+            "description": "Kiristä pultit ja ruuvit tarkkuusjakoavaimilla. Ei enää löysiä päitä tuotantolinjallasi!"
+        },
+        "614": {
+            "name": "Ruuvimeisselisarja",
+            "description": "Täydellinen ruuvimeisselisarja koneidesi hienosäätöön. Jokainen yksityiskohta ratkaisee!"
+        },
+        "615": {
+            "name": "Työkalupakin päivitys",
+            "description": "Täysin varustettu työkalupakki takaa, että työntekijöilläsi on oikea työkalu joka työhön.",
+            "quote": "Mihin mä panin sen- sen- missä on se- äh, antaa olla!"
+        },
+        "616": {
+            "name": "Vahvistetut seinät",
+            "description": "Vahvista tehtaan seinät kestämään pikatuotannon kaaos."
+        },
+        "617": {
+            "name": "Hiirenloukut",
+            "description": "Pidä ärsyttävät jyrsijät poissa tehtaastasi. Ei enää nakerrettuja johtoja tai varastettuja emojeja!"
+        },
+        "618": {
+            "name": "Tehtaanjohtajat",
+            "description": "Mitään ei tapahdu ilman yhtä tällaista.",
+            "quote": "Ja muistakaa: johto toivoo, että vessatauot pysyvät alle minuutissa!"
+        },
+        "619": {
+            "name": "Robottityöntekijät",
+            "description": "Korvaa heikot ihmistyöntekijät vahvoilla androideilla!"
+        },
+        "700": {
+            "name": "Koripallokentät",
+            "description": "Syy kokoontua yhteen.",
+            "quote": "Swish, swish, swish. Puhdas osuma. Ja leuat loksahtivat lattiaan."
+        },
+        "701": {
+            "name": "Pesäpallokentät",
+            "description": "Tästä tulee varma kunnari."
+        },
+        "702": {
+            "name": "Squash-kentät",
+            "description": "Onko se vihannes vai urheilulaji?"
+        },
+        "703": {
+            "name": "Frisbeet",
+            "description": "Ultimaattinen laji",
+            "quote": "Toivottavasti kukaan ei keksi yhdistää tätä golfiin..."
+        },
+        "704": {
+            "name": "Lentopallokentät",
+            "description": "Ultimaattinen laji"
+        },
+        "705": {
+            "name": "Pingispöydät",
+            "description": "Laji, joka on nimetty äänensä mukaan.",
+            "quote": "Paras tapa taistella kommunisteja vastaan"
+        },
+        "706": {
+            "name": "Golfkentät",
+            "description": "Laji, jossa lyödään palloa kepillä ja ajellaan siistillä kärryllä.",
+            "quote": "Presidentillinen laji"
+        },
+        "800": {
+            "name": "Säästöpossut",
+            "description": "Röh röh!"
+        },
+        "801": {
+            "name": "Isommat emojikassit",
+            "description": "Niihin mahtuu vieläkin enemmän emojeja."
+        },
+        "802": {
+            "name": "Emojiluottokortit",
+            "description": "Kätevä tapa tuhlata kovalla työllä ansaitut emojisi."
+        },
+        "803": {
+            "name": "Investointi koulutukseen",
+            "description": "Parempi koulutus, paremmat emojinpiirtotaidot."
+        },
+        "804": {
+            "name": "Investointi innovaatioihin",
+            "description": "Enemmän innovaatioita, innovatiivisempia emojeja."
+        },
+        "900": {
+            "name": "Karusellit",
+            "description": "You spin me right 'round, baby!"
+        },
+        "901": {
+            "name": "Liukumäet",
+            "description": "Do you slide on all your nights like this? (I might)"
+        },
+        "902": {
+            "name": "Maailmanpyörä",
+            "description": "Korkealla ylhäällä hän särki sydämeni."
+        },
+        "903": {
+            "name": "Sirkus",
+            "description": "Maailmassa on vain kahdenlaisia ihmisiä: niitä, jotka viihdyttävät, ja niitä, jotka katsovat."
+        },
+        "904": {
+            "name": "Emojijonglööri",
+            "description": "Hänen sanotaan pitävän aina kaikki pallot ilmassa."
+        },
+        "1000": {
+            "name": "Emojivaalit",
+            "description": "Paras emoji voittakoon!"
+        },
+        "1001": {
+            "name": "Emojielvytys",
+            "description": "Sinä saat emojin, ja sinä, ja sinä, kaikki saavat emojeja!"
+        },
+        "1002": {
+            "name": "Emojieduskunnan puhemies",
+            "description": "Nimitä oma emojipuhemiehesi, niin asiat menevät tahtosi mukaan."
+        },
+        "1003": {
+            "name": "Emojilait",
+            "description": "Me, emojit..."
+        },
+        "1004": {
+            "name": "Maailmanlaajuinen emojiliitto",
+            "description": "Lisää emojivaltioiden välistä yhteistyötä."
+        },
+        "1100": {
+            "name": "Kaukoputket",
+            "description": "Tähyile tähtiin ja löydä emojiplaneettoja."
+        },
+        "1101": {
+            "name": "Satelliittiantennit",
+            "description": "Katso Linnunradan taakse kohti Emojiradan galaksia."
+        },
+        "1102": {
+            "name": "Astronautit",
+            "description": "Jonkun on pyöritettävä avaruusasemiasi."
+        },
+        "1103": {
+            "name": "Raketit",
+            "description": "Lentää tosi lujaa."
+        },
+        "1104": {
+            "name": "⏁⎍⌰⟒⋔⋔⟒ ⍀⏃⎍⊑⏃⌇⌇⏃...",
+            "description": "...⟊⏃ ⏁⎍⍜⋔⋔⟒ ⊑⎍⌰⌰⎍⟊⏃ ⎍⎍⌇⟟⏃ ⟒⋔⍜⟊⟒⟊⏃.",
+            "quote": "⋏⏃⌿⏃⎍⏁⏃ ⋏⏃⏃⋔⏃⏃⋏⟟ ☍⟒⍀⍀⏃⋏ ☍⎍⌰⌰⏃☍⟟⋏ ☍⏃⎅⟒⋏ ⌇⍜⍀⋔⟒⌰⌰⏃ ⌿⏃⌰⟊⏃⌇⏁⏃⏃☍⌇⟒⌇⟟ ⌇⏃⌰⏃⟟⌇⎍⎍⏁⟒⋏⟟"
+        },
+        "1105": {
+            "name": "⍜⎍⏁⍜ ⟒⌇⟟⋏⟒",
+            "description": "⏁⏃⌇⌇⏃ ⟒⌇⟟⋏⟒⟒⌇⌇⏃ ⌿⟟⟟⌰⟒⟒ ⏁⎍⋏⏁⟒⋔⏃⏁⍜⋏ ⋔⏃⊑⏁⟟."
+        },
+        "30000": {
+            "name": "Perunat",
+            "description": "Pottumahtavaa! Perunat ovat jokaisen maatilan selkäranka."
+        },
+        "30001": {
+            "name": "Porkkanat",
+            "description": "Porkkanaa ilman keppiä!"
+        },
+        "30002": {
+            "name": "Kurkut",
+            "description": "Viileä kuin kurkku! Nämä raikkaat vihannekset sopivat salaatteihin ja säilöntään.",
+            "quote": "Olen suolakurkku-Rick!"
+        },
+        "30003": {
+            "name": "Paprikat",
+            "description": "Makea tai tulinen, paprika tuo maatilallesi väriä ja makua.",
+            "quote": "Punainen, keltainen, vihreä... liikennevalot?"
+        },
+        "30004": {
+            "name": "Tomaatit",
+            "description": "Mehukkaat ja monipuoliset tomaatit ovat maatilan suosikki."
+        },
+        "30005": {
+            "name": "Lehtisalaatti",
+            "description": "Lehtisalaatti pitää maatilasi raikkaana ja vihreänä - lehti kerrallaan."
+        },
+        "30006": {
+            "name": "Parsakaali",
+            "description": "Pieniä puita, suuria hyötyjä!"
+        },
+        "30007": {
+            "name": "Sipulit",
+            "description": "Täynnä makua ja kyyneleitä - sipuli on keittiön perusta ja maatilan välttämättömyys.",
+            "quote": "Örkit on kuin sipulit. Sipuleissa on kerroksia. Örkeissä on kerroksia."
+        },
+        "30008": {
+            "name": "Valkosipuli",
+            "description": "Valkosipuli tuo makua ruokiin ja suojaa maatilallesi.",
+            "quote": "Toimii loistavasti, jos sinulla on vampyyriongelma!"
+        },
+        "30009": {
+            "name": "Maissi",
+            "description": "Maissi on monipuolinen kasvi, joka sopii paahdettavaksi ja poksautettavaksi.",
+            "quote": "Mais-tuu!"
+        },
+        "30010": {
+            "name": "Pavut",
+            "description": "Täynnä proteiinia ja täydellisiä maatilan laajentamiseen.",
+            "quote": "Papuja!"
+        },
+        "30011": {
+            "name": "Maapähkinät",
+            "description": "Pähkinäiset ja herkulliset maapähkinät sopivat napostelyyn ja maatilan tuottavuuden nostamiseen."
+        },
+        "30012": {
+            "name": "Kurpitsat",
+            "description": "Jättimäisiä, oransseja ja täydellisiä piirakoihin tai variksien pelotteluun. Kurpitsat ovat syksyn suosikki!",
+            "quote": "Kurpitsamaustetta ja kaikkea kivaa!"
+        },
+        "30013": {
+            "name": "Mansikat",
+            "description": "Makeita, mehukkaita ja täydellisiä jälkiruokiin. Mansikat ovat marjan hyvä lisä maatilallesi!"
+        },
+        "30014": {
+            "name": "Mustikat",
+            "description": "Pieni mutta mahtava.",
+            "quote": "I'm blue da ba dee da ba di"
+        },
+        "30015": {
+            "name": "Munakoisot",
+            "description": "Violetit ja monipuoliset munakoisot sopivat grillattaviksi, paahdettaviksi ja emojiviljelyyn.",
+            "quote": "Poikaystäväni lempiemoji on munakoiso, hän lähettää sitä minulle jatkuvasti!"
+        },
+        "30016": {
+            "name": "Kesäkurpitsat",
+            "description": "Vihreät ja runsaat kesäkurpitsat ovat kesän antimia, joita riittää ja riittää."
+        },
+        "30017": {
+            "name": "Avokadot",
+            "description": "Kermaiset ja herkulliset avokadot ovat paahtoleipien kuninkaita ja maatilan suosikkeja."
+        },
+        "30018": {
+            "name": "Bataatit",
+            "description": "Perunan makea serkku."
+        },
+        "30019": {
+            "name": "Herneet",
+            "description": "Herneitä!"
+        },
+        "30020": {
+            "name": "Retiisit",
+            "description": "Tuliset ja rapeat retiisit tuovat potkua maatilallesi ja ruokiisi."
+        },
+        "30021": {
+            "name": "Sienet",
+            "description": "Sienihauskaa! Sienet eivät oikeastaan ole kasveja, tiesitkö?",
+            "quote": "Hän on sienistä hauskin"
+        },
+        "30022": {
+            "name": "Ananakset",
+            "description": "Trooppisia ja kirpeitä."
+        },
+        "30023": {
+            "name": "Vesimelonit",
+            "description": "Mehukkaat ja raikkaat vesimelonit ovat kesän ykkössato."
+        },
+        "30024": {
+            "name": "Kiivit",
+            "description": "Karvainen ulkoa, makea sisältä. Kiivit ovat maatilan suosikki!"
+        },
+        "30025": {
+            "name": "Viinirypäleet",
+            "description": "Täydellisiä napostelyyn, mehuksi tai viiniksi.",
+            "quote": "Viinirypäleissä on totuus."
+        },
+        "30026": {
+            "name": "Kirsikat",
+            "description": "Makeat ja kirpeät kirsikat ovat ihana herkku ja maatilan suosikki."
+        },
+        "50000": {
+            "name": "Koira-apuri",
+            "description": "Napauttaa näyttöäsi kuonollaan.",
+            "quote": "HAU! Autan sinua saamaan emojeja!"
+        },
+        "50001": {
+            "name": "Kissa-apuri",
+            "description": "Kutittaa sinua viiksillään, jolloin napautat nopeammin.",
+            "quote": "Miau! Autan sinua saamaan emojeja!"
+        },
+        "50002": {
+            "name": "Ankka-apuri",
+            "description": "Nokkii kylkeäsi, jolloin napautat nopeammin.",
+            "quote": "Kvaak! Autan sinua saamaan emojeja!"
+        },
+        "50003": {
+            "name": "Lehmä-apuri",
+            "description": "Heiluttaa utareitaan näyttöäsi vasten, jolloin napautat nopeammin.",
+            "quote": "Ammuu! Autan sinua saamaan emojeja!"
+        },
+        "50004": {
+            "name": "Possu-apuri",
+            "description": "Juoksentelee huoneessasi pitämässä hauskaa, mikä ilahduttaa sinua ja saa sinut napauttamaan nopeammin.",
+            "quote": "Röh! Autan sinua saamaan emojeja!"
+        },
+        "50005": {
+            "name": "Pupu-apuri",
+            "description": "Pomppii näytöllesi ja nopeuttaa napautuksiasi.",
+            "quote": "Hop! Autan sinua saamaan emojeja!"
+        },
+        "50006": {
+            "name": "Sammakko-apuri",
+            "description": "Loikkaa näytöllesi ja nopeuttaa napautuksiasi.",
+            "quote": "Kurr! Autan sinua saamaan emojeja!"
+        },
+        "50007": {
+            "name": "Norsu-apuri",
+            "description": "Sen kärsä on täydellinen näytön napauttamiseen!",
+            "quote": "Töötti! Autan sinua saamaan emojeja!"
+        },
+        "50008": {
+            "name": "Apina-apuri",
+            "description": "Antaa sinulle paljon banaania, mikä vie nälän ja saa sinut napauttamaan nopeammin!",
+            "quote": "Uu uu! Autan sinua saamaan emojeja!"
+        },
+        "50009": {
+            "name": "Pingviini-apuri",
+            "description": "Nokkii näyttöäsi nokallaan.",
+            "quote": "Tepsu! Autan sinua saamaan emojeja!"
+        },
+        "100000": {
+            "name": "Emojiharjoittelijat",
+            "description": "Harjoittelijat pitävät emojihallinnon rattaat pyörimässä!"
+        },
+        "100001": {
+            "name": "Emojibyrokraatit",
+            "description": "Emojihallinto tarvitsee virkamiehiä toimiakseen.",
+            "quote": "Näyttää siltä, että olet säätämässä lakia. Tarvitsetko apua?"
+        }
+    },
+    "effects": {
+        "0": {
+            "title": "x2 napautusvoima",
+            "description": "Emojit per napautus tuplattu!"
+        },
+        "1": {
+            "title": "x3 napautusvoima",
+            "description": "Emojit per napautus kolminkertaistettu!"
+        },
+        "100": {
+            "title": "x2 emojituotanto",
+            "description": "Emojituotanto tuplattu!"
+        },
+        "101": {
+            "title": "x77 emojituotanto",
+            "description": "Emojituotanto 77-kertaistettu!"
+        },
+        "110": {
+            "title": "Puolitettu emojituotanto",
+            "description": "Emojituotanto puolitettu!"
+        },
+        "200": {
+            "title": "Emojilahja",
+            "description": "Tunnin edestä emojeja!"
+        }
+    }
+}

@@ -1,0 +1,116 @@
+{
+    "tabs": {
+        "emoji": "Emoji",
+        "shop": "Cửa hàng",
+        "emojidex": "Emojidex",
+        "buildings": "Công trình",
+        "upgrades": "Nâng cấp",
+        "stats": "Thống kê",
+        "collection": "Bộ sưu tập"
+    },
+    "header": {
+        "emojis": "Emoji",
+        "perSecond": "Mỗi giây: {{value}}"
+    },
+    "common": {
+        "buy": "Mua",
+        "details": "Chi tiết",
+        "owned_other": "đang có"
+    },
+    "buildings": {
+        "bulkBuy_other": "Mua {{count}} công trình mỗi lần",
+        "emojisPerSecond": "<hl>{{eps}}</hl> emoji mỗi giây",
+        "youHave": "• Bạn có <hl>{{amount}}</hl> {{building}}",
+        "eachProduces": "• Mỗi cái tạo ra <hl>{{eps}}</hl> emoji mỗi giây",
+        "totalProduces": "• Tổng cộng <hl>{{eps}}</hl> emoji mỗi giây!",
+        "ownedUpgrades": "Nâng cấp đã có"
+    },
+    "upgrades": {
+        "bigEmoji": "Emoji khổng lồ",
+        "effects": {
+            "multiplyBuildingProduction": "• {{buildings}}: hiệu suất gấp đôi.",
+            "multiplyTap": "• Chạm hiệu quả gấp đôi.",
+            "percentageIncreaseTap": "• Chạm mạnh hơn {{percent}}.",
+            "tapPercentageOfEps": "• Mỗi lần chạm nhận thêm {{percent}} tổng sản lượng emoji của bạn.",
+            "percentageIncreaseProduction": "• Tổng sản lượng emoji tăng {{percent}}."
+        },
+        "bonusProduction": "Mua nâng cấp này ngay sẽ thêm <hl>+{{bonus}}</hl> emoji mỗi giây, tăng sản lượng emoji thêm <hl>{{percent}}</hl>",
+        "bonusTap": "Mua nâng cấp này ngay sẽ thêm <hl>+{{bonus}}</hl> emoji mỗi lần chạm, tăng số emoji bạn nhận được từ mỗi lần chạm thêm <hl>{{percent}}</hl>",
+        "filterTitle": "Lọc nâng cấp",
+        "filterDescription": "Chọn công trình bạn muốn xem nâng cấp."
+    },
+    "emojidex": {
+        "basePrice": "Giá gốc: {{price}}"
+    },
+    "stats": {
+        "totalEmojisDrawn": "Tổng số emoji đã vẽ",
+        "emojiTaps": "Số lần chạm emoji",
+        "emojisEarnedFromTapping": "Emoji kiếm được từ chạm",
+        "magicalEmojisTapped": "Emoji phép thuật đã chạm",
+        "funValue": "Chỉ số vui"
+    },
+    "drawer": {
+        "language": "Ngôn ngữ",
+        "deviceLanguage": "Ngôn ngữ thiết bị",
+        "funValue": "Chỉ số vui: {{value}}",
+        "cheats": "Gian lận",
+        "resetGame": "Chơi lại từ đầu",
+        "spawnEffect": "Gọi emoji hiệu ứng",
+        "giveEmojis": "Nhận {{amount}} emoji"
+    },
+    "prestige": {
+        "title": "Danh vọng",
+        "accumulating": "Sau khi tạo ra <hl>{{amount}}</hl> emoji, tinh chất thuần khiết nhất của emoji đã bắt đầu tích tụ quanh bạn.",
+        "essence": "Tinh chất emoji là một <hl>chất phép thuật</hl> đổi hình dạng mỗi khi bạn nhìn vào, và ẩn chứa những sức mạnh chưa ai biết."
+    },
+    "numbers": {
+        "groupSize": "3",
+        "named": "{{value}} {{name}}",
+        "percent": "{{value}}%",
+        "lessThan": "<{{value}}",
+        "long": {
+            "6_other": "triệu",
+            "9_other": "tỷ",
+            "12_other": "nghìn tỷ",
+            "15_other": "triệu tỷ",
+            "18_other": "tỷ tỷ",
+            "21_other": "nghìn tỷ tỷ",
+            "24_other": "triệu tỷ tỷ",
+            "27_other": "tỷ tỷ tỷ",
+            "30_other": "nonillion",
+            "33_other": "decillion",
+            "36_other": "undecillion",
+            "39_other": "duodecillion",
+            "42_other": "tredecillion",
+            "45_other": "quattuordecillion",
+            "48_other": "quindecillion",
+            "51_other": "sexdecillion",
+            "54_other": "septendecillion",
+            "57_other": "octodecillion",
+            "60_other": "novemdecillion",
+            "63_other": "vigintillion"
+        },
+        "short": {
+            "6": "Tr",
+            "9": "T",
+            "12": "NT",
+            "15": "TrT",
+            "18": "TT",
+            "21": "NTT",
+            "24": "TrTT",
+            "27": "TTT",
+            "30": "No",
+            "33": "Dc",
+            "36": "Ud",
+            "39": "Dd",
+            "42": "Td",
+            "45": "Qad",
+            "48": "Qid",
+            "51": "Sxd",
+            "54": "Spd",
+            "57": "Od",
+            "60": "Nd",
+            "63": "Vg"
+        }
+    }
+}

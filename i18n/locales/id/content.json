@@ -1,0 +1,1009 @@
+{
+    "buildings": {
+        "0": {
+            "name": "Tangan penggambar",
+            "plural": "Tangan penggambar",
+            "description": "Tangan yang menggambar emoji untukmu."
+        },
+        "1": {
+            "name": "Studio desain grafis",
+            "plural": "Studio desain grafis",
+            "description": "Studio tempat emoji diciptakan."
+        },
+        "2": {
+            "name": "Ladang",
+            "plural": "Ladang",
+            "description": "Ladang tempat emoji tumbuh dari tanah."
+        },
+        "3": {
+            "name": "Restoran",
+            "plural": "Restoran",
+            "description": "Tempat emoji makan emoji makanan."
+        },
+        "4": {
+            "name": "Kebun binatang mini",
+            "plural": "Kebun binatang mini",
+            "description": "Temui semua emoji hewan favoritmu."
+        },
+        "5": {
+            "name": "Pabrik",
+            "plural": "Pabrik",
+            "description": "Membuat emoji dalam skala industri."
+        },
+        "6": {
+            "name": "Pusat olahraga",
+            "plural": "Pusat olahraga",
+            "description": "Jaga emojimu tetap bugar."
+        },
+        "7": {
+            "name": "Bank",
+            "plural": "Bank",
+            "description": "\"Emojimu aman bersama kami.\""
+        },
+        "8": {
+            "name": "Taman hiburan emoji",
+            "plural": "Taman hiburan emoji",
+            "description": "\"Selamat datang di EmojiLand: tempat mimpi dan emosi jadi nyata!\""
+        },
+        "9": {
+            "name": "Majelis emoji",
+            "plural": "Majelis emoji",
+            "description": "Tempat emoji berkumpul untuk memutuskan cara membuat lebih banyak emoji."
+        },
+        "10": {
+            "name": "Stasiun luar angkasa",
+            "plural": "Stasiun luar angkasa",
+            "description": "Taklukkan dunia baru dan ambil emoji mereka."
+        },
+        "11": {
+            "name": "Kerajaan permen",
+            "plural": "Kerajaan permen",
+            "description": "Surga manis yang dipimpin Raja Permen dan rakyat emojinya yang imut."
+        },
+        "12": {
+            "name": "Gunung api emoji",
+            "plural": "Gunung api emoji",
+            "description": "Setiap letusan membawa banjir emoji baru yang masih panas!"
+        },
+        "13": {
+            "name": "Kuil Emoji Agung di langit",
+            "plural": "Kuil Emoji Agung di langit",
+            "description": "Konon, Emoji Agung di langit menganugerahkan emoji tanpa batas kepada pengikut paling setianya."
+        },
+        "14": {
+            "name": "Superkomputer emoji",
+            "plural": "Superkomputer emoji",
+            "description": "Mesin emoji pamungkas. Melipatgandakan emoji secepat cahaya."
+        },
+        "15": {
+            "name": "Lubang hitam emoji",
+            "plural": "Lubang hitam emoji",
+            "description": "Tujuan akhir semua emoji... atau awal yang baru?"
+        },
+        "16": {
+            "name": "Singularitas emoji",
+            "plural": "Singularitas emoji",
+            "description": "Selesai. Tak ada yang tersisa selain emoji. Kamu berhasil."
+        }
+    },
+    "upgrades": {
+        "0": {
+            "name": "Tangan lain",
+            "description": "Tangan lain mengetuk layar. Tangan siapa ini? Entahlah."
+        },
+        "1": {
+            "name": "Satu tangan lagi",
+            "description": "Satu tangan lagi mengetuk layar. Ringan tangan banget!"
+        },
+        "2": {
+            "name": "Sepuluh tangan lagi",
+            "description": "Sepuluh tangan tiba-tiba mengetuk layarmu! Mantap!"
+        },
+        "3": {
+            "name": "Seratus tangan!",
+            "description": "Satu kampung datang untuk mengetuk emoji besar di layar!"
+        },
+        "4": {
+            "name": "Seribu tangan",
+            "description": "Orang-orang datang dari jauh hanya untuk mengetuk layarmu."
+        },
+        "5": {
+            "name": "Sejuta tangan",
+            "description": "Kamu nunjuk siapa? Nunjuk aku? Nggak sopan..."
+        },
+        "6": {
+            "name": "Semiliar tangan",
+            "description": "Lebih dari 10% penduduk dunia membantumu mengetuk layar. Kayaknya layarnya mau pecah."
+        },
+        "7": {
+            "name": "Setriliun tangan",
+            "description": "Ibumu menelepon. Dia khawatir sama kamu. Kesal karena teleponnya menutupi layar, kamu menutupnya dan lanjut mengetuk."
+        },
+        "8": {
+            "name": "Sekuadriliun tangan",
+            "description": "Banyak banget tangan yang mengetuk layarmu."
+        },
+        "9": {
+            "name": "Sekuintiliun tangan",
+            "description": "Jumlah tangannya tak terbayangkan. Layarnya babak belur."
+        },
+        "10": {
+            "name": "Sesekstiliun tangan",
+            "description": "Tangan terbentang sejauh mata memandang, semuanya terus mengetuk."
+        },
+        "11": {
+            "name": "Seseptiliun tangan",
+            "description": "Bentuk sempurna. Ketukan sempurna. Tangan tak terbatas."
+        },
+        "12": {
+            "name": "Seoktiliun tangan",
+            "description": "Lebih banyak tangan daripada atom di alam semesta. Semuanya tahu apa yang mereka lakukan."
+        },
+        "13": {
+            "name": "Senoniliun tangan",
+            "description": "Suara ketukannya kini jadi dentuman berirama yang luar biasa keras, mengirim gelombang kejut ke seluruh dunia."
+        },
+        "14": {
+            "name": "Sedesiliun tangan",
+            "description": "Daging sebanyak ini seharusnya tidak pernah berkumpul serapat ini di satu tempat..."
+        },
+        "15": {
+            "name": "Seundesiliun tangan",
+            "description": "Dari tangan-tangan yang ada tumbuh lusinan tangan lagi, bengkok dan cacat."
+        },
+        "16": {
+            "name": "Seduodesiliun tangan",
+            "description": "Kamu mulai mendengar bisikan. Tangan-tangan itu terus mengetuk, tapi milik siapa?"
+        },
+        "17": {
+            "name": "Setredesiliun tangan",
+            "description": "Tangan-tangan itu mulai berubah bentuk. Mereka bukan manusia lagi."
+        },
+        "18": {
+            "name": "Sekuatuordesiliun tangan",
+            "description": "Sesuatu mengintai di balik tangan-tangan itu, membimbing mereka dengan niat jahat."
+        },
+        "19": {
+            "name": "Sekuindesiliun tangan",
+            "description": "Tangan-tangan ini... apa sebenarnya mereka? Udaranya bau belerang."
+        },
+        "20": {
+            "name": "Seseksdesiliun tangan",
+            "description": "Tangan ada di mana-mana, memenuhi ruangan. Kamu merasakan mereka meraih-raihmu..."
+        },
+        "21": {
+            "name": "Tangan iblis",
+            "description": "Tangan iblis dari dasar neraka mengetuk tanpa henti. Layarnya panas membara."
+        },
+        "22": {
+            "name": "Tangan terkutuk",
+            "description": "Tangan tengkorak yang seperti hantu bangkit dari jurang. Mereka mengetuk dengan amarah neraka."
+        },
+        "23": {
+            "name": "Penguasa Dunia Bawah",
+            "description": "Sang malaikat yang jatuh merangkak naik dari kerajaannya untuk membantumu mengetuk layar."
+        },
+        "24": {
+            "name": "Ketukan kurang ajar",
+            "description": "Benar-benar, benar-benar kurang ajar."
+        },
+        "100": {
+            "name": "Lengan lebih kuat",
+            "description": "Lengan yang lebih kuat bikin menggambar emoji lebih cepat."
+        },
+        "101": {
+            "name": "Jari lentur",
+            "description": "Jari yang lentur memungkinkan emoji yang lebih rumit."
+        },
+        "102": {
+            "name": "Dua tangan",
+            "description": "Tangan dua kali lipat, emoji dua kali lipat."
+        },
+        "103": {
+            "name": "Tangan berkuteks",
+            "description": "Pakai kuteks bikin kamu mengetuk lebih cepat, masa nggak tahu?"
+        },
+        "104": {
+            "name": "Kaki",
+            "description": "Menggambar pakai kaki menggandakan produksi (dan sama sekali nggak susah)!"
+        },
+        "105": {
+            "name": "Lidah",
+            "description": "Dengan latihan bertahun-tahun, kamu juga bisa belajar menggambar pakai lidah!"
+        },
+        "106": {
+            "name": "Hidung",
+            "description": "Masukkan krayon ke hidungmu dan menggambarlah!",
+            "quote": "*Sniff* Kok layarnya bau kaki?"
+        },
+        "107": {
+            "name": "Telinga",
+            "description": "Selipkan pulpen di telingamu, miringkan kepala 90 derajat, dan menggambarlah!"
+        },
+        "108": {
+            "name": "Mulut",
+            "description": "Gigit pensil dengan mulutmu dan menggambarlah!"
+        },
+        "109": {
+            "name": "Kaki lebih kuat",
+            "description": "Kaki yang lebih kuat bikin kamu menggambar emoji jauh lebih cepat pakai kaki."
+        },
+        "110": {
+            "name": "Paru-paru lebih besar",
+            "description": "Paru-paru yang lebih besar bikin menggambar emoji lebih cepat."
+        },
+        "111": {
+            "name": "Otak lebih besar",
+            "description": "Otak yang lebih besar memicu gelombang kreativitas yang menggandakan produksi emojimu!"
+        },
+        "112": {
+            "name": "Rambut",
+            "description": "Pegang kuas dengan rambutmu untuk membuat emoji. Siapa butuh tangan kalau punya gaya?"
+        },
+        "113": {
+            "name": "Alis",
+            "description": "Naikkan alismu untuk menggambar emoji. Olahraga untuk wajah dan kreativitasmu!"
+        },
+        "114": {
+            "name": "Punggung",
+            "description": "Berbaring telentang dan gambar emoji dengan tangan di belakang. Sambil peregangan, sambil gambar!"
+        },
+        "115": {
+            "name": "Gigi",
+            "description": "Gigit pulpen dengan gigimu dan gambar emoji. Peringatan: rahang bisa pegal!"
+        },
+        "116": {
+            "name": "Pusar",
+            "description": "Gambar emoji pakai pusarmu. Keahlian unik yang sulit dikuasai!"
+        },
+        "117": {
+            "name": "Gambar bergema",
+            "description": "Setiap emoji yang kamu gambar bergema, jadinya dua kali lipat!"
+        },
+        "118": {
+            "name": "Gambar telekinetik",
+            "description": "Buat apa pakai tangan kalau bisa menggambar emoji pakai pikiran?"
+        },
+        "119": {
+            "name": "Jari kuantum",
+            "description": "Keterikatan kuantum di jarimu memungkinkan menggambar emoji secepat cahaya."
+        },
+        "200": {
+            "name": "Pensil lebih bagus",
+            "description": "Pensil yang lebih bagus untuk emoji yang lebih detail."
+        },
+        "201": {
+            "name": "Krayon khusus",
+            "description": "Krayon spesial ini membangkitkan jiwa kanak-kanak para seniman."
+        },
+        "202": {
+            "name": "Kuas lebih bagus",
+            "description": "Kuas yang lebih bagus memungkinkan emoji yang lebih artistik."
+        },
+        "203": {
+            "name": "Pena celup",
+            "description": "Untuk emoji yang lebih berkelas."
+        },
+        "204": {
+            "name": "Penggaris",
+            "description": "Gimana lagi caranya menggambar garis lurus?"
+        },
+        "205": {
+            "name": "Simulator Buta Warna",
+            "description": "Pastikan emojimu bisa dinikmati semua orang!",
+            "quote": "Dibacanya 'Wu-kag'? 'We-se-a-ge'? 'Dobel-yu-kag'?"
+        },
+        "206": {
+            "name": "Efek komik",
+            "description": "Tambahkan efek 'DUAR!' dan 'BUK!' ke emojimu biar makin keren!"
+        },
+        "207": {
+            "name": "Set stensil",
+            "description": "Emoji berbentuk sempurna setiap saat dengan stensil ini!"
+        },
+        "208": {
+            "name": "Pintasan keyboard khusus",
+            "description": "Percepat kerjamu dengan pintasan pribadi untuk desain emoji!",
+            "quote": "Coba tekan alt + F4."
+        },
+        "209": {
+            "name": "Langganan pustaka aset",
+            "description": "Akses pustaka besar berisi bentuk, ikon, dan tekstur siap pakai!"
+        },
+        "210": {
+            "name": "Tombol undo",
+            "description": "Menekan undo tidak cuma membatalkan kerjamu - tapi mengubah kenyataan itu sendiri. Pakai seperlunya.",
+            "quote": "Manusia tempatnya salah"
+        },
+        "211": {
+            "name": "Buku mewarnai emoji",
+            "description": "Hanya seniman paling berkelas yang pakai buku mewarnai."
+        },
+        "212": {
+            "name": "Kolaborasi real-time",
+            "description": "Ajak desainer lain mengerjakan proyek emojimu bersamaan!"
+        },
+        "213": {
+            "name": "Mood board emoji",
+            "description": "Atur ide-ide emojimu secara visual untuk kreativitas maksimal!",
+            "quote": "Kok mukamu datar kayak papan?"
+        },
+        "214": {
+            "name": "Software pixel art",
+            "description": "Buat emoji piksel bergaya retro yang penuh nostalgia '90-an!",
+            "quote": "Setiap piksel berarti."
+        },
+        "215": {
+            "name": "Font Comic Sans",
+            "description": "Suka atau benci, emojimu jadi kelihatan... unik!"
+        },
+        "216": {
+            "name": "Generator gambar AI",
+            "description": "Biar AI yang kerja keras dan bikin emoji jelek dan membosankan secepat kilat!",
+            "quote": "Bip bup!"
+        },
+        "217": {
+            "name": "Kertas Origami",
+            "description": "Lipat emoji kertasmu jadi segala macam bentuk!",
+            "quote": "Kwek!"
+        },
+        "218": {
+            "name": "Mesin tato emoji",
+            "description": "Emoji permanen untuk seniman yang benar-benar total!",
+            "quote": "Aduh!"
+        },
+        "219": {
+            "name": "Darah",
+            "description": "Melukis pakai darah bikin emoji ekstra keren!"
+        },
+        "300": {
+            "name": "Petani",
+            "description": "Apa artinya ladang tanpa petani?!"
+        },
+        "301": {
+            "name": "Tunas",
+            "description": "Semua harus dimulai dari suatu tempat.",
+            "quote": "Jadilah tunas harapan bangsa!"
+        },
+        "302": {
+            "name": "Alat lebih bagus",
+            "description": "Bertani jadi jauh lebih cepat!"
+        },
+        "303": {
+            "name": "Traktor",
+            "description": "Panen emoji jadi jauh lebih gampang."
+        },
+        "304": {
+            "name": "Rumah petani",
+            "description": "Rumah nyaman untuk petanimu beristirahat dan mengisi tenaga."
+        },
+        "305": {
+            "name": "Sapi emoji",
+            "description": "Menghasilkan lebih banyak emoooooooji."
+        },
+        "306": {
+            "name": "Sistem irigasi",
+            "description": "Jaga tanaman emojimu tetap terairi biar tumbuh lebih cepat.",
+            "quote": "Ini abad berapa sih?!"
+        },
+        "307": {
+            "name": "Orang-orangan sawah",
+            "description": "Usir emoji burung yang menyebalkan dari ladangmu!"
+        },
+        "308": {
+            "name": "Tong kompos",
+            "description": "Ubah sampah jadi pupuk untuk tanaman emoji yang lebih sehat!"
+        },
+        "309": {
+            "name": "Rumah kaca",
+            "description": "Tanam emoji sepanjang tahun, apa pun cuacanya!"
+        },
+        "310": {
+            "name": "Kincir angin",
+            "description": "Manfaatkan tenaga angin untuk meningkatkan efisiensi ladangmu!",
+            "quote": "Wusss!"
+        },
+        "311": {
+            "name": "Kebun buah emoji",
+            "description": "Tanam pohon emoji yang berbuah sepanjang tahun!"
+        },
+        "312": {
+            "name": "Pesta panen",
+            "description": "Rayakan panen melimpahmu dengan pesta yang bikin semangat!"
+        },
+        "313": {
+            "name": "Ketapel Emoji Raksasa",
+            "description": "Luncurkan benih emoji ke seluruh ladang untuk menanam super cepat!"
+        },
+        "314": {
+            "name": "Pagar tak terlihat",
+            "description": "Menjaga ternak emojimu tetap di dalam... walaupun kamu tidak bisa melihatnya.",
+            "quote": "Sakit kalau dikencingi."
+        },
+        "315": {
+            "name": "Tanaman rekayasa genetika",
+            "description": "Pisang tanpa kulit, stroberi yang sudah dicelup cokelat, kentang yang sudah direbus, dan banyak lagi!"
+        },
+        "316": {
+            "name": "Ladang Emoji Masa Depan",
+            "description": "Ladangmu kini jadi utopia canggih dengan robot, hologram, dan traktor terbang. Selamat datang di masa depan!"
+        },
+        "317": {
+            "name": "Bulan darah",
+            "description": "Di bawah bulan darah, tanamanmu tumbuh lebih cepat... tapi juga tumbuh gigi."
+        },
+        "318": {
+            "name": "Panen terakhir",
+            "description": "Sosok misterius muncul, menawarkan panen melimpah sebagai ganti... sesuatu. Kamu berani terima?"
+        },
+        "319": {
+            "name": "Berhenti bertani",
+            "description": "Kamu sudah capek bertani. Mungkin lebih baik berhenti saja dan kerja kantoran."
+        },
+        "400": {
+            "name": "Pisau Tajam",
+            "description": "Pisau yang lebih tajam bikin memotong emoji lebih mudah."
+        },
+        "401": {
+            "name": "Wajan Antilengket",
+            "description": "Wajan antilengket bikin memasak hidangan emoji lebih cepat."
+        },
+        "402": {
+            "name": "Oven Lebih Bagus",
+            "description": "Oven dengan kontrol panas lebih baik memasak emoji lebih cepat."
+        },
+        "403": {
+            "name": "Bahan Berkualitas Tinggi",
+            "description": "Bahan yang lebih berkualitas berarti emoji yang lebih lezat."
+        },
+        "404": {
+            "name": "Topi Koki",
+            "description": "Memakai topi koki mempercepat memasak emoji."
+        },
+        "405": {
+            "name": "Blender Emoji",
+            "description": "Blender emoji jadi smoothie dan sup lezat dalam hitungan detik!"
+        },
+        "406": {
+            "name": "Air Fryer",
+            "description": "Goreng emoji dengan sempurna dalam waktu singkat. Renyah dan keemasan setiap saat!"
+        },
+        "407": {
+            "name": "Bar Sushi",
+            "description": "Gulung sushi emoji dengan presisi dan gaya. Butuh bakat mentah!"
+        },
+        "408": {
+            "name": "Bar Salad",
+            "description": "Racik salad emoji segar dengan berbagai topping. Sehat dan lezat!"
+        },
+        "409": {
+            "name": "Oven Pizza",
+            "description": "Panggang pizza emoji dengan cita rasa kayu bakar yang luar biasa!"
+        },
+        "410": {
+            "name": "Mesin Kopi Emoji",
+            "description": "Seduh secangkir kopi emoji yang sempurna biar kokimu tetap semangat!"
+        },
+        "411": {
+            "name": "Mesin Es Krim Emoji",
+            "description": "Hasilkan camilan emoji beku yang sekeren rasanya!"
+        },
+        "412": {
+            "name": "Stasiun Taco",
+            "description": "Racik taco emoji dengan semua topping. Pesta di setiap gigitan!",
+            "quote": "¡Ay, caramba!"
+        },
+        "413": {
+            "name": "Cetakan Wafel",
+            "description": "Masak wafel emoji yang renyah di luar dan lembut di dalam. Pas untuk brunch!"
+        },
+        "414": {
+            "name": "Air Mancur Cokelat Emoji",
+            "description": "Siram semuanya dengan cokelat emoji leleh. Manis dan memanjakan!"
+        },
+        "415": {
+            "name": "Dapur Kanibal Emoji",
+            "description": "Masak emoji pakai emoji lain sebagai bahannya."
+        },
+        "416": {
+            "name": "Penggorengan Lubang Hitam Emoji",
+            "description": "Goreng emoji di dalam lubang hitam, manfaatkan energinya yang dahsyat. Keluarnya renyah!"
+        },
+        "417": {
+            "name": "Arena Perang Makanan Emoji",
+            "description": "Ubah dapurmu jadi arena perang makanan. Berantakan, kacau, dan anehnya menguntungkan."
+        },
+        "418": {
+            "name": "Adonan Hidup",
+            "description": "Adonan ini bergerak sendiri, membentuk dirinya jadi roti emoji sempurna. Kadang ia mencoba kabur."
+        },
+        "419": {
+            "name": "Prasmanan Tak Terbatas",
+            "description": "Prasmanan yang tidak pernah habis... tapi makanannya mungkin mulai memakanmu."
+        },
+        "500": {
+            "name": "Sapu",
+            "description": "Untuk membersihkan setelah hewan-hewan itu ehm... buang hajat."
+        },
+        "501": {
+            "name": "Pelatih Hewan",
+            "description": "Pelatih mengajari hewan-hewan trik, bikin kebun binatang lebih efisien."
+        },
+        "502": {
+            "name": "Kandang Mewah",
+            "description": "Perbarui rumah hewan-hewan biar mereka senang dan produktif."
+        },
+        "503": {
+            "name": "Hewan Eksotis",
+            "description": "Datangkan hewan langka dan eksotis untuk menarik lebih banyak pengunjung."
+        },
+        "504": {
+            "name": "Maskot Kebun Binatang",
+            "description": "Maskot ramah menarik pengunjung dan menaikkan pendapatan."
+        },
+        "505": {
+            "name": "Klinik Hewan",
+            "description": "Klinik khusus menjaga hewan-hewan tetap sehat."
+        },
+        "506": {
+            "name": "Area Teduh",
+            "description": "Tambahkan area teduh agar hewan dan pengunjung tetap sejuk saat panas."
+        },
+        "507": {
+            "name": "Pos Elus Hewan",
+            "description": "Area khusus tempat pengunjung bisa berinteraksi dengan hewan dengan aman."
+        },
+        "508": {
+            "name": "Alat Grooming Hewan",
+            "description": "Perawatan rutin bikin hewan-hewan tampil terbaik dan merasa segar."
+        },
+        "509": {
+            "name": "Bangku Pengunjung",
+            "description": "Tempat duduk nyaman untuk pengunjung yang capek."
+        },
+        "510": {
+            "name": "Toko Suvenir",
+            "description": "Toko yang menjual suvenir bertema hewan."
+        },
+        "511": {
+            "name": "Photo Booth Hewan",
+            "description": "Pengunjung bisa berfoto bersama hewan-hewan."
+        },
+        "512": {
+            "name": "Kereta Kebun Binatang",
+            "description": "Kereta mini mengajak pengunjung berkeliling kebun binatang."
+        },
+        "513": {
+            "name": "Ajang Bakat Hewan",
+            "description": "Adakan ajang bakat tempat hewan-hewan beraksi"
+        },
+        "514": {
+            "name": "Parade Hewan",
+            "description": "Adakan parade harian tempat hewan-hewan berbaris keliling kebun binatang."
+        },
+        "515": {
+            "name": "Camilan Kemahalan",
+            "description": "Pasang harga selangit untuk camilan bertema hewan"
+        },
+        "516": {
+            "name": "Tenaga Kerja Hewan",
+            "description": "Suruh hewan-hewan bekerja!"
+        },
+        "517": {
+            "name": "Monyet Pengendali Massa",
+            "description": "Latih monyet untuk mengatur kerumunan yang ricuh."
+        },
+        "518": {
+            "name": "Hewan prasejarah",
+            "description": "Bawa dinosaurus dan hewan punah lainnya ke kebun binatang.",
+            "quote": "Kehidupan, ehm, selalu menemukan jalan"
+        },
+        "519": {
+            "name": "Unicorn",
+            "description": "Siapa yang nggak mau lihat unicorn terbang?"
+        },
+        "600": {
+            "name": "Alat lebih bagus",
+            "description": "Alat yang lebih bagus untuk membuat emoji lebih cepat."
+        },
+        "601": {
+            "name": "Lebih banyak pekerja",
+            "description": "Tambah jumlah karyawan pabrik."
+        },
+        "602": {
+            "name": "Roda gigi lebih besar",
+            "description": "Roda gigi lebih besar untuk mesin yang lebih besar."
+        },
+        "603": {
+            "name": "Mur dan baut",
+            "description": "Dipakai supaya semuanya nggak copot berantakan."
+        },
+        "604": {
+            "name": "Ban Berjalan",
+            "description": "Rampingkan produksi dengan ban berjalan yang memindahkan emoji lebih cepat dari sebelumnya!"
+        },
+        "605": {
+            "name": "Kontrol Kualitas",
+            "description": "Pastikan setiap emoji sempurna dengan tim kontrol kualitas khusus."
+        },
+        "606": {
+            "name": "Perluasan Pabrik",
+            "description": "Perluas pabrikmu untuk menampung lebih banyak mesin dan pekerja. Makin besar makin bagus!"
+        },
+        "607": {
+            "name": "Mesin Press Kilat",
+            "description": "Pakai mesin press supercepat yang mencetak emoji secepat kilat."
+        },
+        "608": {
+            "name": "Gym Pabrik",
+            "description": "Gym untuk pekerjamu agar tetap bugar dan bertenaga. Pekerja sehat, pekerja produktif!"
+        },
+        "609": {
+            "name": "Keamanan Pabrik",
+            "description": "Lindungi pabrikmu dari pencuri emoji dan mata-mata industri."
+        },
+        "610": {
+            "name": "Daur Ulang Pabrik",
+            "description": "Daur ulang limbah jadi emoji baru, hemat biaya dan ramah lingkungan."
+        },
+        "611": {
+            "name": "Tangga Perawatan",
+            "description": "Pasang tangga untuk menjangkau mesin yang tinggi. Perawatan jadi semudah ini!"
+        },
+        "612": {
+            "name": "Palu Godam",
+            "description": "Pakai palu godam untuk perakitan dan perbaikan lebih cepat. Hancurkan ketidakefisienan!"
+        },
+        "613": {
+            "name": "Kunci Pas Presisi",
+            "description": "Kencangkan baut dan sekrup dengan kunci pas presisi. Tak ada lagi yang longgar di jalur produksimu!"
+        },
+        "614": {
+            "name": "Set Obeng",
+            "description": "Satu set obeng lengkap untuk menyetel mesinmu. Setiap detail itu penting!"
+        },
+        "615": {
+            "name": "Kotak Perkakas Lengkap",
+            "description": "Kotak perkakas yang lengkap memastikan pekerjamu punya alat yang tepat untuk setiap tugas.",
+            "quote": "Tadi aku taruh di- di- mana sih- ah, sudahlah!"
+        },
+        "616": {
+            "name": "Dinding Diperkuat",
+            "description": "Perkuat dinding pabrikmu untuk menahan kekacauan produksi berkecepatan tinggi."
+        },
+        "617": {
+            "name": "Perangkap Tikus",
+            "description": "Jauhkan tikus nakal dari pabrikmu. Tak ada lagi kabel digigit atau emoji dicuri!"
+        },
+        "618": {
+            "name": "Manajer pabrik",
+            "description": "Tanpa mereka, sama sekali tidak ada pekerjaan yang beres.",
+            "quote": "Dan ingat: manajemen ingin istirahat ke toilet di bawah satu menit!"
+        },
+        "619": {
+            "name": "Pekerja robot",
+            "description": "Ganti pekerja manusia yang lemah dengan pekerja android yang kuat!"
+        },
+        "700": {
+            "name": "Lapangan basket",
+            "description": "Alasan untuk kumpul-kumpul.",
+            "quote": "Swish, swish, swish. Masuk bersih. Dan rahang mereka langsung jatuh ke lantai."
+        },
+        "701": {
+            "name": "Lapangan bisbol",
+            "description": "Ini pasti home run total."
+        },
+        "702": {
+            "name": "Lapangan squash",
+            "description": "Squash itu sayur labu atau olahraga?"
+        },
+        "703": {
+            "name": "Frisbee",
+            "description": "Olahraga Ultimate",
+            "quote": "Semoga nggak ada yang kepikiran menggabungkan ini dengan golf..."
+        },
+        "704": {
+            "name": "Lapangan voli",
+            "description": "Olahraga Ultimate"
+        },
+        "705": {
+            "name": "Meja pingpong",
+            "description": "Olahraga yang dinamai dari bunyinya.",
+            "quote": "Cara terbaik melawan komunis"
+        },
+        "706": {
+            "name": "Lapangan golf",
+            "description": "Olahraga memukul bola pakai tongkat sambil menyetir mobil kecil yang keren.",
+            "quote": "Olahraganya para presiden"
+        },
+        "800": {
+            "name": "Celengan babi",
+            "description": "Nguik nguik!"
+        },
+        "801": {
+            "name": "Tas emoji lebih besar",
+            "description": "Bisa membawa emoji lebih banyak lagi."
+        },
+        "802": {
+            "name": "Kartu kredit emoji",
+            "description": "Pas untuk menghabiskan emoji hasil kerja kerasmu."
+        },
+        "803": {
+            "name": "Investasi pendidikan",
+            "description": "Pendidikan lebih baik, keterampilan menggambar emoji lebih baik."
+        },
+        "804": {
+            "name": "Investasi inovasi",
+            "description": "Lebih banyak inovasi, emoji lebih inovatif."
+        },
+        "900": {
+            "name": "Komidi putar",
+            "description": "You spin me right 'round, baby!"
+        },
+        "901": {
+            "name": "Perosotan",
+            "description": "Do you slide on all your nights like this? (I might)"
+        },
+        "902": {
+            "name": "Bianglala",
+            "description": "Di atas sana, di situlah dia mematahkan hatiku."
+        },
+        "903": {
+            "name": "Sirkus",
+            "description": "Di dunia ini cuma ada dua tipe orang. Yang menghibur, dan yang menonton."
+        },
+        "904": {
+            "name": "Pemain juggling emoji",
+            "description": "Katanya dia belum pernah sekali pun menjatuhkan bola."
+        },
+        "1000": {
+            "name": "Pemilu emoji",
+            "description": "Semoga emoji terbaik yang menang!"
+        },
+        "1001": {
+            "name": "Bansos emoji",
+            "description": "Kamu dapat emoji, kamu juga, kamu juga, semua dapat emoji!"
+        },
+        "1002": {
+            "name": "Ketua DPR emoji",
+            "description": "Pasang ketua DPR emoji pilihanmu sendiri, biar semuanya sesuai maumu."
+        },
+        "1003": {
+            "name": "Undang-undang emoji",
+            "description": "Kami, rakyat emoji..."
+        },
+        "1004": {
+            "name": "Konfederasi emoji global",
+            "description": "Meningkatkan kerja sama antarnegara emoji."
+        },
+        "1100": {
+            "name": "Teleskop",
+            "description": "Pandangi bintang-bintang untuk menemukan planet emoji."
+        },
+        "1101": {
+            "name": "Antena satelit",
+            "description": "Lihat melampaui Bima Sakti menuju galaksi Emoji Sakti."
+        },
+        "1102": {
+            "name": "Astronaut",
+            "description": "Seseorang harus mengurus stasiun luar angkasamu."
+        },
+        "1103": {
+            "name": "Roket",
+            "description": "Terbangnya cepat banget."
+        },
+        "1104": {
+            "name": "☍⏃⋔⟟ ⎅⏃⏁⏃⋏☌ ⎅⟒⋏☌⏃⋏ ⎅⏃⋔⏃⟟...",
+            "description": "...⎅⏃⋏ ⋔⟒⋔⏚⏃⍙⏃ ⟒⋔⍜⟊⟟ ⏚⏃⍀⎍ ⊬⏃⋏☌ ☌⟟⌰⏃.",
+            "quote": "☍⟒⏁⎍☍ ⍙⏃⟊⏃⊑☍⎍ ⌰⟟⋔⏃ ☍⏃⌰⟟ ⎍⋏⏁⎍☍ ⋔⟒⋔⏚⎍☍⏃ ⍀⏃⊑⏃⌇⟟⏃☍⎍"
+        },
+        "1105": {
+            "name": "⏚⟒⋏⎅⏃ ⏃⋏⟒⊑",
+            "description": "⏚⟒⋏⎅⏃ ⟟⋏⟟ ⋔⟒⋏⊬⟟⋔⌿⏃⋏ ☍⟒☍⎍⏃⏁⏃⋏ ⏁⏃☍ ⏁⟒⍀☍⟟⍀⏃."
+        },
+        "30000": {
+            "name": "Kentang",
+            "description": "Kentang-tastis! Kentang adalah tulang punggung setiap ladang."
+        },
+        "30001": {
+            "name": "Wortel",
+            "description": "Untung ada wortel, matamu jadi makin tajam melihat peluang!"
+        },
+        "30002": {
+            "name": "Timun",
+            "description": "Adem kayak timun! Sayuran segar ini pas untuk salad dan acar.",
+            "quote": "I'm pickle Rick!"
+        },
+        "30003": {
+            "name": "Paprika",
+            "description": "Manis atau pedas, paprika menambah warna dan rasa ke ladangmu.",
+            "quote": "Merah, kuning, hijau... ini paprika atau lampu merah?"
+        },
+        "30004": {
+            "name": "Tomat",
+            "description": "Juicy dan serbaguna, tomat jadi favorit di ladang."
+        },
+        "30005": {
+            "name": "Selada",
+            "description": "Selada-lu bikin ladangmu segar dan hijau."
+        },
+        "30006": {
+            "name": "Brokoli",
+            "description": "Pohon mini dengan manfaat besar!"
+        },
+        "30007": {
+            "name": "Bawang",
+            "description": "Penuh rasa dan air mata, bawang wajib ada di dapur dan di ladang.",
+            "quote": "Ogre itu seperti bawang. Bawang punya lapisan. Ogre punya lapisan."
+        },
+        "30008": {
+            "name": "Bawang putih",
+            "description": "Bawang putih menambah rasa ke masakanmu dan perlindungan ke ladangmu.",
+            "quote": "Ampuh banget kalau kamu punya masalah vampir!"
+        },
+        "30009": {
+            "name": "Jagung",
+            "description": "Jagung itu tanaman serbaguna yang pas dibakar atau dijadikan popcorn.",
+            "quote": "Jagoan... eh, jagungan!"
+        },
+        "30010": {
+            "name": "Kacang",
+            "description": "Kaya protein dan pas untuk memperluas ladangmu.",
+            "quote": "Kacang!"
+        },
+        "30011": {
+            "name": "Kacang tanah",
+            "description": "Gurih dan lezat, kacang tanah cocok untuk camilan dan menaikkan produktivitas ladangmu."
+        },
+        "30012": {
+            "name": "Labu",
+            "description": "Raksasa, oranye, dan pas untuk pai atau menakuti gagak. Labu favorit musim gugur!",
+            "quote": "Labu manis, hati pun manis!"
+        },
+        "30013": {
+            "name": "Stroberi",
+            "description": "Manis, juicy, dan pas untuk hidangan penutup. Stroberi sangat 'beri' manfaat untuk ladangmu!"
+        },
+        "30014": {
+            "name": "Bluberi",
+            "description": "Kecil-kecil cabe rawit..",
+            "quote": "I'm blue da ba dee da ba di"
+        },
+        "30015": {
+            "name": "Terong",
+            "description": "Ungu dan serbaguna, terong pas untuk dipanggang, dibakar, dan bertani emoji.",
+            "quote": "Emoji favorit pacarku terong, dia terus mengirimkannya ke aku!"
+        },
+        "30016": {
+            "name": "Zukini",
+            "description": "Hijau dan melimpah, zukini adalah labu musim panas yang terus berbuah."
+        },
+        "30017": {
+            "name": "Alpukat",
+            "description": "Lembut dan lezat, alpukat jadi primadona roti panggang dan favorit di ladang."
+        },
+        "30018": {
+            "name": "Ubi jalar",
+            "description": "Sepupu manis si kentang."
+        },
+        "30019": {
+            "name": "Kacang polong",
+            "description": "Polong!"
+        },
+        "30020": {
+            "name": "Lobak",
+            "description": "Pedas dan renyah, lobak memberi tendangan ke ladang dan masakanmu."
+        },
+        "30021": {
+            "name": "Jamur",
+            "description": "Jamur-jamur gembira! Jamur itu sebenarnya bukan tanaman, tahu nggak?",
+            "quote": "Hidupnya penuh spora... eh, pesona"
+        },
+        "30022": {
+            "name": "Nanas",
+            "description": "Tropis dan asam segar."
+        },
+        "30023": {
+            "name": "Semangka",
+            "description": "Juicy dan menyegarkan, semangka adalah tanaman musim panas terbaik."
+        },
+        "30024": {
+            "name": "Kiwi",
+            "description": "Berbulu di luar, manis di dalam. Kiwi favorit di ladang!"
+        },
+        "30025": {
+            "name": "Anggur",
+            "description": "Pas untuk camilan, jus, atau dijadikan wine.",
+            "quote": "Dalam anggur, ada kebenaran."
+        },
+        "30026": {
+            "name": "Ceri",
+            "description": "Manis dan asam, ceri adalah camilan lezat dan favorit di ladang."
+        },
+        "50000": {
+            "name": "Pembantu anjing",
+            "description": "Mengetuk layarmu dengan moncongnya.",
+            "quote": "GUK! Aku bantu kamu dapat emoji!"
+        },
+        "50001": {
+            "name": "Pembantu kucing",
+            "description": "Menggelitikmu dengan kumisnya, bikin kamu mengetuk lebih cepat.",
+            "quote": "Meong! Aku bantu kamu dapat emoji!"
+        },
+        "50002": {
+            "name": "Pembantu bebek",
+            "description": "Mematuk pinggangmu dengan paruhnya, bikin kamu mengetuk lebih cepat.",
+            "quote": "Kwek! Aku bantu kamu dapat emoji!"
+        },
+        "50003": {
+            "name": "Pembantu sapi",
+            "description": "Mengayunkan ambingnya ke layarmu, bikin kamu mengetuk lebih cepat.",
+            "quote": "Mooo! Aku bantu kamu dapat emoji!"
+        },
+        "50004": {
+            "name": "Pembantu babi",
+            "description": "Lari-lari di kamarmu dengan gembira, bikin kamu senang dan mengetuk lebih cepat.",
+            "quote": "Nguik! Aku bantu kamu dapat emoji!"
+        },
+        "50005": {
+            "name": "Pembantu kelinci",
+            "description": "Melompat ke layarmu, bikin ketukanmu lebih cepat.",
+            "quote": "Hop! Aku bantu kamu dapat emoji!"
+        },
+        "50006": {
+            "name": "Pembantu katak",
+            "description": "Meloncat ke layarmu, bikin ketukanmu lebih cepat.",
+            "quote": "Kwak! Aku bantu kamu dapat emoji!"
+        },
+        "50007": {
+            "name": "Pembantu gajah",
+            "description": "Belalainya pas banget untuk mengetuk layar!",
+            "quote": "Pawoo! Aku bantu kamu dapat emoji!"
+        },
+        "50008": {
+            "name": "Pembantu monyet",
+            "description": "Memberimu banyak pisang biar kamu kenyang dan mengetuk lebih cepat!",
+            "quote": "Uuk aak! Aku bantu kamu dapat emoji!"
+        },
+        "50009": {
+            "name": "Pembantu penguin",
+            "description": "Mematuk layarmu dengan paruhnya.",
+            "quote": "Lenggak-lenggok! Aku bantu kamu dapat emoji!"
+        },
+        "100000": {
+            "name": "Anak magang emoji",
+            "description": "Anak magang membantu pemerintahan emoji berjalan lancar!"
+        },
+        "100001": {
+            "name": "Birokrat emoji",
+            "description": "Pemerintahan emoji butuh pegawai administrasi agar bisa berjalan.",
+            "quote": "Sepertinya kamu sedang membuat undang-undang. Perlu bantuan?"
+        }
+    },
+    "effects": {
+        "0": {
+            "title": "Kekuatan ketuk x2",
+            "description": "Emoji per ketukan jadi 2x lipat!"
+        },
+        "1": {
+            "title": "Kekuatan ketuk x3",
+            "description": "Emoji per ketukan jadi 3x lipat!"
+        },
+        "100": {
+            "title": "Produksi emoji x2",
+            "description": "Produksi emoji jadi 2x lipat!"
+        },
+        "101": {
+            "title": "Produksi emoji x77",
+            "description": "Produksi emoji dikali 77!"
+        },
+        "110": {
+            "title": "Produksi emoji separuh",
+            "description": "Produksi emoji berkurang setengah!"
+        },
+        "200": {
+            "title": "Hadiah emoji",
+            "description": "Emoji senilai 1 jam!"
+        }
+    }
+}

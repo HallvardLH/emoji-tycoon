@@ -66,6 +66,8 @@
         "essence": "Emojiessens är ett <hl>magiskt ämne</hl> som byter form varje gång du tittar på det, och som har okända krafter."
     },
     "numbers": {
+        "groupSize": "3",
+        "named": "{{value}} {{name}}",
         "percent": "{{value}} %",
         "lessThan": "<{{value}}",
         "long": {

@@ -66,6 +66,8 @@
         "essence": "Emoji-Essenz ist eine <hl>magische Substanz</hl>, die ihre Form ändert, sobald du sie ansiehst, und unbekannte Kräfte birgt."
     },
     "numbers": {
+        "groupSize": "3",
+        "named": "{{value}} {{name}}",
         "percent": "{{value}} %",
         "lessThan": "<{{value}}",
         "long": {

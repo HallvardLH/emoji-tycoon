@@ -1,0 +1,116 @@
+{
+    "tabs": {
+        "emoji": "อีโมจิ",
+        "shop": "ร้านค้า",
+        "emojidex": "อีโมจิเด็กซ์",
+        "buildings": "อาคาร",
+        "upgrades": "อัปเกรด",
+        "stats": "สถิติ",
+        "collection": "คอลเลกชัน"
+    },
+    "header": {
+        "emojis": "อีโมจิ",
+        "perSecond": "ต่อวินาที: {{value}}"
+    },
+    "common": {
+        "buy": "ซื้อ",
+        "details": "ดูเพิ่ม",
+        "owned_other": "ที่มี"
+    },
+    "buildings": {
+        "bulkBuy_other": "ซื้อทีละ {{count}} หลัง",
+        "emojisPerSecond": "<hl>{{eps}}</hl> อีโมจิต่อวินาที",
+        "youHave": "• คุณมี {{building}} <hl>{{amount}}</hl> แห่ง",
+        "eachProduces": "• แต่ละแห่งผลิต <hl>{{eps}}</hl> อีโมจิต่อวินาที",
+        "totalProduces": "• รวมทั้งหมด <hl>{{eps}}</hl> อีโมจิต่อวินาที!",
+        "ownedUpgrades": "อัปเกรดที่มี"
+    },
+    "upgrades": {
+        "bigEmoji": "อีโมจิยักษ์",
+        "effects": {
+            "multiplyBuildingProduction": "• {{buildings}}: ประสิทธิภาพเพิ่มเป็น 2 เท่า",
+            "multiplyTap": "• การแตะมีประสิทธิภาพเพิ่มเป็น 2 เท่า",
+            "percentageIncreaseTap": "• การแตะแรงขึ้น {{percent}}",
+            "tapPercentageOfEps": "• การแตะได้รับ {{percent}} ของการผลิตอีโมจิทั้งหมด",
+            "percentageIncreaseProduction": "• การผลิตอีโมจิทั้งหมดเพิ่มขึ้น {{percent}}"
+        },
+        "bonusProduction": "ซื้ออัปเกรดนี้ตอนนี้จะได้ <hl>+{{bonus}}</hl> อีโมจิต่อวินาที เพิ่มการผลิตอีโมจิ <hl>{{percent}}</hl>",
+        "bonusTap": "ซื้ออัปเกรดนี้ตอนนี้จะได้ <hl>+{{bonus}}</hl> อีโมจิต่อการแตะ เพิ่มอีโมจิที่ได้จากการแตะแต่ละครั้ง <hl>{{percent}}</hl>",
+        "filterTitle": "กรองอัปเกรด",
+        "filterDescription": "เลือกอาคารที่อยากดูอัปเกรด"
+    },
+    "emojidex": {
+        "basePrice": "ราคาเริ่มต้น: {{price}}"
+    },
+    "stats": {
+        "totalEmojisDrawn": "อีโมจิที่วาดทั้งหมด",
+        "emojiTaps": "จำนวนครั้งที่แตะ",
+        "emojisEarnedFromTapping": "อีโมจิที่ได้จากการแตะ",
+        "magicalEmojisTapped": "อีโมจิวิเศษที่แตะได้",
+        "funValue": "ค่าความสนุก"
+    },
+    "drawer": {
+        "language": "ภาษา",
+        "deviceLanguage": "ภาษาของอุปกรณ์",
+        "funValue": "ค่าความสนุก: {{value}}",
+        "cheats": "สูตรโกง",
+        "resetGame": "เริ่มเกมใหม่",
+        "spawnEffect": "เรียกอีโมจิเอฟเฟกต์",
+        "giveEmojis": "รับ {{amount}} อีโมจิ"
+    },
+    "prestige": {
+        "title": "เพรสทีจ",
+        "accumulating": "หลังจากสร้างอีโมจิไปแล้ว <hl>{{amount}}</hl> ตัว แก่นแท้ของอีโมจิก็เริ่มสะสมอยู่รอบตัวคุณ",
+        "essence": "แก่นอีโมจิคือ<hl>สารวิเศษ</hl>ที่เปลี่ยนรูปร่างทุกครั้งที่คุณมอง และซ่อนพลังลึกลับเอาไว้"
+    },
+    "numbers": {
+        "groupSize": "3",
+        "named": "{{value}} {{name}}",
+        "percent": "{{value}}%",
+        "lessThan": "<{{value}}",
+        "long": {
+            "6_other": "ล้าน",
+            "9_other": "พันล้าน",
+            "12_other": "ล้านล้าน",
+            "15_other": "ควอดริลเลียน",
+            "18_other": "ควินทิลเลียน",
+            "21_other": "เซกซ์ทิลเลียน",
+            "24_other": "เซปทิลเลียน",
+            "27_other": "ออกทิลเลียน",
+            "30_other": "โนนิลเลียน",
+            "33_other": "เดซิลเลียน",
+            "36_other": "อันเดซิลเลียน",
+            "39_other": "ดูโอเดซิลเลียน",
+            "42_other": "เทรเดซิลเลียน",
+            "45_other": "ควอทเทอร์เดซิลเลียน",
+            "48_other": "ควินเดซิลเลียน",
+            "51_other": "เซกซ์เดซิลเลียน",
+            "54_other": "เซปเทนเดซิลเลียน",
+            "57_other": "ออกโตเดซิลเลียน",
+            "60_other": "โนเวมเดซิลเลียน",
+            "63_other": "วิจินทิลเลียน"
+        },
+        "short": {
+            "6": "ล.",
+            "9": "พล.",
+            "12": "ลล.",
+            "15": "Qa",
+            "18": "Qi",
+            "21": "Sx",
+            "24": "Sp",
+            "27": "Oc",
+            "30": "No",
+            "33": "Dc",
+            "36": "Ud",
+            "39": "Dd",
+            "42": "Td",
+            "45": "Qad",
+            "48": "Qid",
+            "51": "Sxd",
+            "54": "Spd",
+            "57": "Od",
+            "60": "Nd",
+            "63": "Vg"
+        }
+    }
+}

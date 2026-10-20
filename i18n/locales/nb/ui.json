@@ -66,6 +66,8 @@
         "essence": "Emoji-essens er et <hl>magisk stoff</hl> som skifter form hver gang du ser på det, og har ukjente krefter."
     },
     "numbers": {
+        "groupSize": "3",
+        "named": "{{value}} {{name}}",
         "percent": "{{value}} %",
         "lessThan": "<{{value}}",
         "long": {

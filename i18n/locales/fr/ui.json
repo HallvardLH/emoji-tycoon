@@ -68,6 +68,8 @@
         "essence": "L'essence d'emoji est une <hl>substance magique</hl> qui change de forme dès que tu la regardes, et recèle des pouvoirs inconnus."
     },
     "numbers": {
+        "groupSize": "3",
+        "named": "{{value}} {{name}}",
         "percent": "{{value}} %",
         "lessThan": "<{{value}}",
         "long": {

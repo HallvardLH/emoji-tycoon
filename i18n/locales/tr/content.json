@@ -1,0 +1,1009 @@
+{
+    "buildings": {
+        "0": {
+            "name": "Çizen el",
+            "plural": "Çizen eller",
+            "description": "Senin için emoji çizen bir el."
+        },
+        "1": {
+            "name": "Grafik tasarım stüdyosu",
+            "plural": "Grafik tasarım stüdyoları",
+            "description": "Emojilerin yaratıldığı bir stüdyo."
+        },
+        "2": {
+            "name": "Çiftlik",
+            "plural": "Çiftlikler",
+            "description": "Emojilerin topraktan filizlendiği bir çiftlik."
+        },
+        "3": {
+            "name": "Restoran",
+            "plural": "Restoranlar",
+            "description": "Emojilerin yemek emojisi yemeye gittiği yer."
+        },
+        "4": {
+            "name": "Mini hayvanat bahçesi",
+            "plural": "Mini hayvanat bahçeleri",
+            "description": "En sevdiğin hayvan emojileriyle tanış."
+        },
+        "5": {
+            "name": "Fabrika",
+            "plural": "Fabrikalar",
+            "description": "Endüstriyel ölçekte emoji üretimi."
+        },
+        "6": {
+            "name": "Spor merkezi",
+            "plural": "Spor merkezleri",
+            "description": "Emojilerini formda tut."
+        },
+        "7": {
+            "name": "Banka",
+            "plural": "Bankalar",
+            "description": "\"Emojilerin bizimle güvende.\""
+        },
+        "8": {
+            "name": "Emoji lunaparkı",
+            "plural": "Emoji lunaparkları",
+            "description": "\"EmojiLand'e hoş geldin: Hayallerin ve duyguların hayat bulduğu yer!\""
+        },
+        "9": {
+            "name": "Emoji meclisi",
+            "plural": "Emoji meclisleri",
+            "description": "Emojilerin daha fazla emoji yapmanın yolunu konuşmak için toplandığı yer."
+        },
+        "10": {
+            "name": "Uzay istasyonu",
+            "plural": "Uzay istasyonları",
+            "description": "Yeni dünyalar fethet ve emojilerini al."
+        },
+        "11": {
+            "name": "Şeker krallığı",
+            "plural": "Şeker krallıkları",
+            "description": "Şeker Kral ve onun tatlı emoji tebaası tarafından yönetilen şekerli bir cennet."
+        },
+        "12": {
+            "name": "Emoji yanardağı",
+            "plural": "Emoji yanardağları",
+            "description": "Her patlama, yepyeni ve taptaze dövülmüş bir emoji seli getirir!"
+        },
+        "13": {
+            "name": "Gökteki Büyük Emoji tapınağı",
+            "plural": "Gökteki Büyük Emoji tapınakları",
+            "description": "Efsaneye göre gökteki Büyük Emoji, en sadık müritlerine sonsuz emoji bahşeder."
+        },
+        "14": {
+            "name": "Emoji süper bilgisayarı",
+            "plural": "Emoji süper bilgisayarları",
+            "description": "En üst düzey emoji motoru. Emojileri ışık hızında çoğaltır."
+        },
+        "15": {
+            "name": "Emoji kara deliği",
+            "plural": "Emoji kara delikleri",
+            "description": "Tüm emojilerin son durağı... yoksa yeni bir başlangıç mı?"
+        },
+        "16": {
+            "name": "Emoji tekilliği",
+            "plural": "Emoji tekillikleri",
+            "description": "İşte bu. Emojiden başka hiçbir şey kalmadı. Başardın."
+        }
+    },
+    "upgrades": {
+        "0": {
+            "name": "Bir el daha",
+            "description": "Bir el daha ekrana dokunuyor. Kimin eli bu? Bilmiyorum."
+        },
+        "1": {
+            "name": "Yine bir el daha",
+            "description": "Bir el daha ekrana dokunuyor. Eline sağlık!"
+        },
+        "2": {
+            "name": "On el daha",
+            "description": "Birden on el ekranına dokunmaya başlıyor! Harika!"
+        },
+        "3": {
+            "name": "Yüz el!",
+            "description": "Bütün mahalle ekrandaki büyük emojiye dokunmak için toplandı!"
+        },
+        "4": {
+            "name": "Bin el",
+            "description": "İnsanlar sırf ekranına dokunmak için ta uzaklardan geliyor."
+        },
+        "5": {
+            "name": "Milyon el",
+            "description": "Kimi gösteriyorsun? Beni mi gösteriyorsun? Ne kaba..."
+        },
+        "6": {
+            "name": "Milyar el",
+            "description": "Dünya nüfusunun %10'undan fazlası ekranına dokunmana yardım ediyor. Sanırım kırılmak üzere."
+        },
+        "7": {
+            "name": "Trilyon el",
+            "description": "Annen arıyor. Senin için endişeleniyor. Arama ekranı kapattığı için sinirlenip telefonu kapatıyor ve dokunmaya devam ediyorsun."
+        },
+        "8": {
+            "name": "Katrilyon el",
+            "description": "Ekranına bir sürü el dokunuyor."
+        },
+        "9": {
+            "name": "Kentilyon el",
+            "description": "Ellerin sayısı akıl almaz boyutta. Ekran fena hırpalanıyor."
+        },
+        "10": {
+            "name": "Sekstilyon el",
+            "description": "Göz alabildiğine uzanan eller, durmadan dokunuyor."
+        },
+        "11": {
+            "name": "Septilyon el",
+            "description": "Kusursuz form. Kusursuz dokunuşlar. Sonsuz eller."
+        },
+        "12": {
+            "name": "Oktilyon el",
+            "description": "Evrendeki atomlardan daha fazla el. Hepsi ne yaptığını biliyor."
+        },
+        "13": {
+            "name": "Nonilyon el",
+            "description": "Dokunma sesi artık dünyanın etrafında şok dalgası yayan, inanılmaz gürültülü ve ritmik bir gümbürtü."
+        },
+        "14": {
+            "name": "Desilyon el",
+            "description": "Bu kadar çok et asla aynı yere bu kadar sıkışık toplanmamalı..."
+        },
+        "15": {
+            "name": "Undesilyon el",
+            "description": "Mevcut ellerden düzinelerce yeni el çıkıyor, çarpık ve biçimsiz."
+        },
+        "16": {
+            "name": "Dodesilyon el",
+            "description": "Fısıltılar duymaya başlıyorsun. Eller dokunmaya devam ediyor, ama kimin bunlar?"
+        },
+        "17": {
+            "name": "Tredesilyon el",
+            "description": "Eller biçim değiştirmeye başlıyor. Artık insan değiller."
+        },
+        "18": {
+            "name": "Katordesilyon el",
+            "description": "Ellerin ardında bir varlık pusuda bekliyor ve onları kötü niyetle yönlendiriyor."
+        },
+        "19": {
+            "name": "Kendesilyon el",
+            "description": "Bu eller... nedir bunlar? Hava kükürt kokuyor."
+        },
+        "20": {
+            "name": "Seksdesilyon el",
+            "description": "Eller her yerde, odayı dolduruyor. Sana uzandıklarını hissediyorsun..."
+        },
+        "21": {
+            "name": "İblis elleri",
+            "description": "Cehennemin derinliklerinden gelen şeytani eller durmadan dokunuyor. Ekran dokunulamayacak kadar kızgın."
+        },
+        "22": {
+            "name": "Lanetlilerin elleri",
+            "description": "Hayaletimsi, iskelet eller uçurumdan yükseliyor. Cehennemi bir öfkeyle dokunuyorlar."
+        },
+        "23": {
+            "name": "Yeraltı dünyasının efendisi",
+            "description": "Düşmüş meleğin ta kendisi, ekranına dokunmana yardım etmek için krallığından sürünerek çıkıyor."
+        },
+        "24": {
+            "name": "Kaba dokunuş",
+            "description": "Gerçekten, gerçekten kaba."
+        },
+        "100": {
+            "name": "Daha güçlü kol",
+            "description": "Daha güçlü bir kol, emojileri daha hızlı çizmeni sağlar."
+        },
+        "101": {
+            "name": "Esnek parmaklar",
+            "description": "Esnek parmaklar daha detaylı emojiler çizmeni sağlar."
+        },
+        "102": {
+            "name": "İki el",
+            "description": "İki kat el, iki kat emoji."
+        },
+        "103": {
+            "name": "Ojeli eller",
+            "description": "Oje sürmek daha hızlı dokunmanı sağlar, bilmiyor muydun?"
+        },
+        "104": {
+            "name": "Ayaklar",
+            "description": "Ayaklarınla çizmek üretimi ikiye katlar (ve hiç de zor değil)!"
+        },
+        "105": {
+            "name": "Dil",
+            "description": "Yıllarca pratik yaparak sen de dilinle çizmeyi öğrenebilirsin!"
+        },
+        "106": {
+            "name": "Burun",
+            "description": "Burnuna bir pastel boya sok ve onunla çiz!",
+            "quote": "*Koklar* Ekran neden ayak kokuyor?"
+        },
+        "107": {
+            "name": "Kulak",
+            "description": "Kulaklarına birer kalem sok, başını 90 derece çevir ve çiz!"
+        },
+        "108": {
+            "name": "Ağız",
+            "description": "Ağzına bir kurşun kalem al ve onunla çiz!"
+        },
+        "109": {
+            "name": "Daha güçlü bacak",
+            "description": "Daha güçlü bir bacak, ayaklarınla çok daha hızlı emoji çizmeni sağlar."
+        },
+        "110": {
+            "name": "Daha büyük ciğerler",
+            "description": "Daha büyük ciğerler emojileri daha hızlı çizmeni sağlar."
+        },
+        "111": {
+            "name": "Daha büyük beyin",
+            "description": "Daha büyük bir beyin, emoji üretimini ikiye katlayan muazzam bir yaratıcılık dalgası başlatır!"
+        },
+        "112": {
+            "name": "Saç",
+            "description": "Saçınla bir fırça kullanarak emoji yarat. Tarzın varken ele ne gerek var?"
+        },
+        "113": {
+            "name": "Kaşlar",
+            "description": "Kaşlarını kaldırarak emoji çiz. Hem yüzün hem yaratıcılığın için bir egzersiz!"
+        },
+        "114": {
+            "name": "Sırt",
+            "description": "Sırtüstü uzan ve ellerin arkandayken emoji çiz. Hem esneme hem eskiz!"
+        },
+        "115": {
+            "name": "Dişler",
+            "description": "Bir kalemi dişlerinle tut ve emoji çiz. Uyarı: Çene yorgunluğuna yol açabilir!"
+        },
+        "116": {
+            "name": "Göbek",
+            "description": "Göbek deliğinle emoji çiz. Ustalaşması zor, eşsiz bir yetenek!"
+        },
+        "117": {
+            "name": "Yankılı çizim",
+            "description": "Çizdiğin her emoji yankılanır ve iki katı oluşur!"
+        },
+        "118": {
+            "name": "Telekinetik çizim",
+            "description": "Zihninle emoji çizebilecekken neden ellerini kullanasın?"
+        },
+        "119": {
+            "name": "Kuantum parmaklar",
+            "description": "Parmaklarındaki kuantum dolanıklığı, ışık hızında emoji çizmeni sağlar."
+        },
+        "200": {
+            "name": "Gelişmiş kurşun kalemler",
+            "description": "Daha detaylı emojiler için daha iyi kalemler."
+        },
+        "201": {
+            "name": "Özel pastel boyalar",
+            "description": "Bu özel pastel boyalar, sanatçıların içlerindeki çocuğa ulaşmasını sağlar."
+        },
+        "202": {
+            "name": "Gelişmiş fırçalar",
+            "description": "Gelişmiş fırçalar daha sanatsal emojiler sağlar."
+        },
+        "203": {
+            "name": "Dolma kalemler",
+            "description": "Daha seçkin emojiler sağlar."
+        },
+        "204": {
+            "name": "Cetveller",
+            "description": "Başka nasıl düz çizgi çizeceksin ki?"
+        },
+        "205": {
+            "name": "Renk Körlüğü Simülatörü",
+            "description": "Emojilerinin herkes için erişilebilir olduğundan emin ol!",
+            "quote": "'Vu-kag' mı? 'Dabılyu-kag' mı? 'Ve-ce-a-ge' mi?"
+        },
+        "206": {
+            "name": "Çizgi roman efektleri",
+            "description": "Emojilerine ekstra hava katmak için 'PAT!' ve 'GÜM!' efektleri ekle!"
+        },
+        "207": {
+            "name": "Şablon seti",
+            "description": "Bu şablonlarla her seferinde kusursuz şekilli emojiler!"
+        },
+        "208": {
+            "name": "Özel klavye kısayolları",
+            "description": "Emoji tasarımı için kişisel kısayollarla iş akışını hızlandır!",
+            "quote": "Alt + F4'ü dene."
+        },
+        "209": {
+            "name": "Varlık kütüphanesi aboneliği",
+            "description": "Hazır şekiller, simgeler ve dokulardan oluşan devasa bir kütüphaneye eriş!"
+        },
+        "210": {
+            "name": "Geri al düğmesi",
+            "description": "Geri almak sadece işini geri döndürmez - gerçekliğin kendisini değiştirir. Dikkatli kullan.",
+            "quote": "Hata yapmak insana mahsustur"
+        },
+        "211": {
+            "name": "Emoji boyama kitabı",
+            "description": "Sadece en rafine sanatçılar boyama kitabı kullanır."
+        },
+        "212": {
+            "name": "Gerçek zamanlı ortak çalışma",
+            "description": "Diğer tasarımcıları emoji projelerinde aynı anda çalışmaya davet et!"
+        },
+        "213": {
+            "name": "Emoji ilham panosu",
+            "description": "Maksimum yaratıcılık için emoji fikirlerini görsel olarak düzenle!",
+            "quote": "Neden bu kadar modsuzsun?"
+        },
+        "214": {
+            "name": "Piksel sanatı yazılımı",
+            "description": "90'lar nostaljisi kokan retro tarzı pikselli emojiler yarat!",
+            "quote": "Her piksel önemlidir."
+        },
+        "215": {
+            "name": "Comic Sans yazı tipi",
+            "description": "Sev ya da nefret et, emojilerini... benzersiz gösterir!"
+        },
+        "216": {
+            "name": "Yapay zeka sanat üreticisi",
+            "description": "Bırak ağır işi yapay zeka yapsın, yıldırım hızında düşük kaliteli ve sıkıcı emojiler üretsin!",
+            "quote": "Bip bop!"
+        },
+        "217": {
+            "name": "Origami Kağıdı",
+            "description": "Kağıt emojilerini her türlü şekle katla!",
+            "quote": "Vak!"
+        },
+        "218": {
+            "name": "Emoji dövme makinesi",
+            "description": "Gerçekten kendini adamış sanatçılar için kalıcı emojiler!",
+            "quote": "Ahh!"
+        },
+        "219": {
+            "name": "Kan",
+            "description": "Kanla boyamak ekstra havalı emojiler yapar!"
+        },
+        "300": {
+            "name": "Çiftçiler",
+            "description": "Çiftçisiz çiftlik mi olur?!"
+        },
+        "301": {
+            "name": "Fide",
+            "description": "Bir yerden başlamak lazım.",
+            "quote": "Umudunu kökünden kesme!"
+        },
+        "302": {
+            "name": "Daha iyi aletler",
+            "description": "Çok daha hızlı tarım yapmanı sağlar!"
+        },
+        "303": {
+            "name": "Traktörler",
+            "description": "Emoji hasadını çok daha kolaylaştırır."
+        },
+        "304": {
+            "name": "Çiftlik evleri",
+            "description": "Çiftçilerinin dinlenip enerji toplaması için sıcacık bir yuva."
+        },
+        "305": {
+            "name": "Emoji inekler",
+            "description": "Daha çok emööööööji üretir."
+        },
+        "306": {
+            "name": "Sulama sistemi",
+            "description": "Daha hızlı büyüme için emoji ekinlerini sulak tut.",
+            "quote": "Hangi yüzyıldayız?!"
+        },
+        "307": {
+            "name": "Korkuluklar",
+            "description": "O baş belası kuş emojilerini çiftliklerinden uzak tutar!"
+        },
+        "308": {
+            "name": "Kompost kutuları",
+            "description": "Atıkları daha sağlıklı emoji ekinleri için gübreye dönüştür!"
+        },
+        "309": {
+            "name": "Seralar",
+            "description": "Hava nasıl olursa olsun, yıl boyu emoji yetiştir!"
+        },
+        "310": {
+            "name": "Yel değirmenleri",
+            "description": "Çiftliğinin verimini artırmak için rüzgarın gücünü kullan!",
+            "quote": "Vuuuş!"
+        },
+        "311": {
+            "name": "Emoji meyve bahçeleri",
+            "description": "Yıl boyu meyve veren emoji ağaçları yetiştir!"
+        },
+        "312": {
+            "name": "Hasat festivali",
+            "description": "Bereketli hasadını moralleri yükselten bir festivalle kutla!"
+        },
+        "313": {
+            "name": "Dev Emoji Sapanı",
+            "description": "Hızlı ekim için emoji tohumlarını çiftliğin dört bir yanına fırlat!"
+        },
+        "314": {
+            "name": "Görünmez çit",
+            "description": "Emoji hayvanlarını içeride tutar... göremesen bile.",
+            "quote": "Üstüne işeyince acıtıyor."
+        },
+        "315": {
+            "name": "Genetiği değiştirilmiş ekinler",
+            "description": "Kabuksuz muzlar, çikolataya batırılmış çilekler, önceden haşlanmış patatesler ve daha fazlası!"
+        },
+        "316": {
+            "name": "Geleceğin Emoji Çiftliği",
+            "description": "Çiftliklerin artık robotlar, hologramlar ve uçan traktörlerle dolu yüksek teknoloji ütopyaları. Geleceğe hoş geldin!"
+        },
+        "317": {
+            "name": "Kanlı ay",
+            "description": "Kanlı ayın altında ekinlerin daha hızlı büyüyor... ama dişleri de çıkıyor."
+        },
+        "318": {
+            "name": "Son hasat",
+            "description": "Gizemli bir figür belirip bir şey karşılığında... bereketli bir hasat teklif ediyor. Kabul etmeye cesaretin var mı?"
+        },
+        "319": {
+            "name": "Çiftçiliği bırakmak",
+            "description": "Çiftçilikten bıktın. Belki de en iyisi çiftçiliği bırakıp bir ofiste çalışmaktır."
+        },
+        "400": {
+            "name": "Keskin Bıçaklar",
+            "description": "Daha keskin bıçaklar emoji doğramayı kolaylaştırır."
+        },
+        "401": {
+            "name": "Yapışmaz Tavalar",
+            "description": "Yapışmaz tavalar emoji yemeklerini daha hızlı pişirir."
+        },
+        "402": {
+            "name": "Daha İyi Fırınlar",
+            "description": "Isı kontrolü daha iyi fırınlar emojileri daha çabuk pişirir."
+        },
+        "403": {
+            "name": "Kaliteli Malzemeler",
+            "description": "Daha kaliteli malzemeler daha lezzetli emojiler demek."
+        },
+        "404": {
+            "name": "Aşçı Şapkası",
+            "description": "Aşçı şapkası takmak emoji pişirme hızını artırır."
+        },
+        "405": {
+            "name": "Emoji Blenderları",
+            "description": "Emojileri saniyeler içinde nefis smoothie ve çorbalara dönüştür!"
+        },
+        "406": {
+            "name": "Airfryerlar",
+            "description": "Emojileri rekor sürede kusursuzca kızart. Her seferinde çıtır ve altın sarısı!"
+        },
+        "407": {
+            "name": "Suşi Barları",
+            "description": "Emoji suşilerini hassasiyet ve tarzla sar. Ham yetenek gerekir!"
+        },
+        "408": {
+            "name": "Salata Barları",
+            "description": "Çeşit çeşit malzemeyle taze emoji salataları hazırla. Sağlıklı ve lezzetli!"
+        },
+        "409": {
+            "name": "Pizza Fırınları",
+            "description": "Odun ateşi lezzetinde, dünya dışı emoji pizzaları pişir!"
+        },
+        "410": {
+            "name": "Emoji Kahve Makineleri",
+            "description": "Aşçılarını enerjik tutmak için kusursuz bir fincan emoji kahvesi demle!"
+        },
+        "411": {
+            "name": "Emoji Dondurma Makineleri",
+            "description": "Lezzetli olduğu kadar havalı da olan dondurulmuş emoji tatlıları üret!"
+        },
+        "412": {
+            "name": "Taco Tezgahları",
+            "description": "Emoji tacolarını tüm malzemeleriyle hazırla. Her lokmada bir fiesta!",
+            "quote": "¡Ay, caramba!"
+        },
+        "413": {
+            "name": "Waffle Makineleri",
+            "description": "Kenarları çıtır, içi yumuşacık emoji waffle'ları pişir. Brunch için mükemmel!"
+        },
+        "414": {
+            "name": "Emoji Çikolata Şelaleleri",
+            "description": "Her şeyin üstüne erimiş emoji çikolatası gezdir. Tatlı ve şımartıcı!"
+        },
+        "415": {
+            "name": "Emoji Yamyam Mutfağı",
+            "description": "Malzeme olarak başka emojileri kullanarak emoji pişir."
+        },
+        "416": {
+            "name": "Emoji Kara Delik Fritözü",
+            "description": "Emojileri bir kara delikte, onun muazzam enerjisinden yararlanarak kızart. Çıtır çıtır geri dönüyorlar!"
+        },
+        "417": {
+            "name": "Emoji Yemek Savaşı Arenası",
+            "description": "Mutfağını bir yemek savaşı arenasına çevir. Dağınık, kaotik ve tuhaf şekilde kârlı."
+        },
+        "418": {
+            "name": "Canlı Hamur",
+            "description": "Bu hamur kendi kendine hareket ediyor ve kusursuz emoji ekmeğine dönüşüyor. Bazen kaçmaya çalışıyor."
+        },
+        "419": {
+            "name": "Sonsuz Açık Büfe",
+            "description": "Hiç bitmeyen bir açık büfe... ama yemekler seni yemeye başlayabilir."
+        },
+        "500": {
+            "name": "Süpürgeler",
+            "description": "Hayvanlar ıı... iki numaraya gittiğinde arkalarını temizlemek için."
+        },
+        "501": {
+            "name": "Hayvan Eğitmenleri",
+            "description": "Eğitmenler hayvanlara numaralar öğreterek bahçeyi daha verimli hale getirir."
+        },
+        "502": {
+            "name": "Lüks Ağıllar",
+            "description": "Hayvanları mutlu ve üretken tutmak için evlerini yenile."
+        },
+        "503": {
+            "name": "Egzotik Hayvanlar",
+            "description": "Daha büyük kalabalıkları çekmek için nadir ve egzotik hayvanlar getir."
+        },
+        "504": {
+            "name": "Hayvanat Bahçesi Maskotları",
+            "description": "Sevimli maskotlar ziyaretçileri çeker ve genel geliri artırır."
+        },
+        "505": {
+            "name": "Veteriner Klinikleri",
+            "description": "Özel bir klinik hayvanları sağlıklı tutar."
+        },
+        "506": {
+            "name": "Gölgelik Alanlar",
+            "description": "Sıcak günlerde hayvanları ve ziyaretçileri serin tutmak için gölgelik alanlar ekle."
+        },
+        "507": {
+            "name": "Sevme İstasyonları",
+            "description": "Ziyaretçilerin hayvanlarla güvenle etkileşebileceği özel alanlar."
+        },
+        "508": {
+            "name": "Hayvan Bakım Setleri",
+            "description": "Düzenli bakım hayvanların en iyi şekilde görünmesini ve harika hissetmesini sağlar."
+        },
+        "509": {
+            "name": "Ziyaretçi Bankları",
+            "description": "Yorgun ziyaretçiler için rahat oturma alanları."
+        },
+        "510": {
+            "name": "Hediyelik Eşya Dükkanları",
+            "description": "Hayvan temalı hediyelik eşyalar satan bir dükkan."
+        },
+        "511": {
+            "name": "Hayvan Fotoğraf Kabini",
+            "description": "Ziyaretçiler hayvanlarla fotoğraf çektirebilir."
+        },
+        "512": {
+            "name": "Hayvanat Bahçesi Treni",
+            "description": "Mini bir tren ziyaretçileri bahçe turuna çıkarır."
+        },
+        "513": {
+            "name": "Hayvan Yetenek Şovu",
+            "description": "Hayvanların numaralar yaptığı bir yetenek şovu düzenle"
+        },
+        "514": {
+            "name": "Hayvan Geçidi",
+            "description": "Hayvanların bahçede yürüdüğü günlük bir geçit töreni düzenle."
+        },
+        "515": {
+            "name": "Fahiş Fiyatlı Atıştırmalıklar",
+            "description": "Hayvan temalı atıştırmalıklar için ziyaretçilerden fahiş fiyatlar iste"
+        },
+        "516": {
+            "name": "Hayvan İşgücü",
+            "description": "Hayvanları çalıştır!"
+        },
+        "517": {
+            "name": "Kalabalık Kontrol Maymunları",
+            "description": "Maymunları azgın kalabalıkları yönetmek için eğit."
+        },
+        "518": {
+            "name": "Tarih öncesi hayvanlar",
+            "description": "Dinozorları ve diğer nesli tükenmiş hayvanları bahçeye getir.",
+            "quote": "Yaşam, ıı, bir yolunu bulur... yüzerek."
+        },
+        "519": {
+            "name": "Tek boynuzlu atlar",
+            "description": "Uçan bir tek boynuzlu at görmek kim istemez ki?"
+        },
+        "600": {
+            "name": "Daha iyi aletler",
+            "description": "Emojileri daha hızlı üretmek için daha iyi aletler."
+        },
+        "601": {
+            "name": "Daha fazla işçi",
+            "description": "Fabrika çalışanlarının sayısını artır."
+        },
+        "602": {
+            "name": "Daha büyük dişliler",
+            "description": "Daha büyük dişliler daha büyük makineler demek."
+        },
+        "603": {
+            "name": "Somunlar ve cıvatalar",
+            "description": "Her şeyin dağılmamasını sağlamak için kullanılır."
+        },
+        "604": {
+            "name": "Konveyör Bantlar",
+            "description": "Emojileri hiç olmadığı kadar hızlı taşıyan konveyör bantlarla üretimi hızlandır!"
+        },
+        "605": {
+            "name": "Kalite Kontrol",
+            "description": "Özel bir kalite kontrol ekibiyle her emojinin kusursuz olduğundan emin ol."
+        },
+        "606": {
+            "name": "Fabrika Genişletme",
+            "description": "Daha fazla makine ve işçi için fabrikanı büyüt. Büyük olan iyidir!"
+        },
+        "607": {
+            "name": "Yüksek Hızlı Presler",
+            "description": "Emojileri yıldırım hızında basan yüksek hızlı preslere geç."
+        },
+        "608": {
+            "name": "Fabrika Spor Salonu",
+            "description": "İşçilerin formda ve enerjik kalması için bir spor salonu. Sağlıklı işçi, üretken işçidir!"
+        },
+        "609": {
+            "name": "Fabrika Güvenliği",
+            "description": "Fabrikanı emoji hırsızlarından ve endüstriyel casusluktan koru."
+        },
+        "610": {
+            "name": "Fabrika Geri Dönüşümü",
+            "description": "Atık malzemeleri yeni emojilere dönüştürerek maliyetleri ve çevresel etkiyi azalt."
+        },
+        "611": {
+            "name": "Bakım Merdivenleri",
+            "description": "Yüksekteki makinelere kolay erişim için merdivenler kur. Bakım hiç bu kadar kolay olmamıştı!"
+        },
+        "612": {
+            "name": "Ağır Hizmet Çekiçleri",
+            "description": "Daha hızlı montaj ve tamir için ağır hizmet çekiçlerine geç. Verimsizliği paramparça et!"
+        },
+        "613": {
+            "name": "Hassas Anahtarlar",
+            "description": "Cıvata ve vidaları hassas anahtarlarla sık. Üretim hattında artık gevşek uç yok!"
+        },
+        "614": {
+            "name": "Tornavida Seti",
+            "description": "Makinelerine ince ayar yapmak için eksiksiz bir tornavida seti. Her detay önemli!"
+        },
+        "615": {
+            "name": "Alet Çantası Yükseltmesi",
+            "description": "Tam donanımlı bir alet çantası, işçilerinin her iş için doğru alete sahip olmasını sağlar.",
+            "quote": "Şeyi nereye koymuştum- şeyi- nerede bu- ahh, boş ver!"
+        },
+        "616": {
+            "name": "Güçlendirilmiş Duvarlar",
+            "description": "Yüksek hızlı üretimin kaosuna dayanması için fabrika duvarlarını güçlendir."
+        },
+        "617": {
+            "name": "Fare Kapanları",
+            "description": "Baş belası kemirgenleri fabrikandan uzak tut. Artık kemirilmiş kablo ya da çalınmış emoji yok!"
+        },
+        "618": {
+            "name": "Fabrika müdürleri",
+            "description": "Bunlardan biri olmadan kesinlikle hiçbir iş yapılmaz.",
+            "quote": "Ve unutmayın: yönetim tuvalet molalarının bir dakikanın altında kalmasını istiyor!"
+        },
+        "619": {
+            "name": "Robot işçiler",
+            "description": "Zayıf insan işçilerin yerine güçlü android işçiler getir!"
+        },
+        "700": {
+            "name": "Basketbol sahaları",
+            "description": "Bir araya gelmek için bir bahane.",
+            "quote": "Şuf, şuf, şuf. Sadece file. Ve çeneleri yere düştü."
+        },
+        "701": {
+            "name": "Beyzbol sahaları",
+            "description": "Bu kesinlikle tam bir home run olacak."
+        },
+        "702": {
+            "name": "Squash kortları",
+            "description": "Kabak mı, yoksa spor mu?"
+        },
+        "703": {
+            "name": "Frizbiler",
+            "description": "Ultimate spor",
+            "quote": "Umarım kimse bunu golfle birleştirmeyi akıl etmez..."
+        },
+        "704": {
+            "name": "Voleybol sahaları",
+            "description": "Ultimate spor"
+        },
+        "705": {
+            "name": "Masa tenisi masaları",
+            "description": "Adını çıkardığı sesten alan bir spor.",
+            "quote": "Komünistlerle savaşmanın en iyi yolu"
+        },
+        "706": {
+            "name": "Golf sahaları",
+            "description": "Sopayla topa vurduğun ve havalı bir araba sürdüğün spor.",
+            "quote": "Başkanların sporu"
+        },
+        "800": {
+            "name": "Kumbaralar",
+            "description": "Hörk hörk!"
+        },
+        "801": {
+            "name": "Daha büyük emoji çantaları",
+            "description": "Daha da fazla emoji taşımanı sağlar."
+        },
+        "802": {
+            "name": "Emoji kredi kartları",
+            "description": "Alın teriyle kazandığın emojileri harcamak için birebir."
+        },
+        "803": {
+            "name": "Eğitime yatırım",
+            "description": "Daha iyi eğitim, daha iyi emoji çizme becerisi."
+        },
+        "804": {
+            "name": "İnovasyona yatırım",
+            "description": "Daha çok inovasyon, daha yenilikçi emojiler."
+        },
+        "900": {
+            "name": "Atlıkarıncalar",
+            "description": "You spin me right 'round, baby!"
+        },
+        "901": {
+            "name": "Kaydıraklar",
+            "description": "Do you slide on all your nights like this? (I might)"
+        },
+        "902": {
+            "name": "Dönme dolap",
+            "description": "Ta yukarıda, kalbimi orada kırdı."
+        },
+        "903": {
+            "name": "Sirk",
+            "description": "Dünyada sadece iki tür insan vardır. Eğlendirenler ve izleyenler."
+        },
+        "904": {
+            "name": "Emoji hokkabazı",
+            "description": "Topu hiç düşürmediği söylenir."
+        },
+        "1000": {
+            "name": "Emoji seçimleri",
+            "description": "En iyi emoji kazansın!"
+        },
+        "1001": {
+            "name": "Emoji teşvik paketi",
+            "description": "Sana bir emoji, sana da, sana da, herkese emoji!"
+        },
+        "1002": {
+            "name": "Emoji meclis başkanı",
+            "description": "İşlerin senin istediğin gibi gitmesi için kendi emoji meclis başkanını ata."
+        },
+        "1003": {
+            "name": "Emoji yasaları",
+            "description": "Biz emojiler..."
+        },
+        "1004": {
+            "name": "Küresel emoji konfederasyonu",
+            "description": "Emoji ülkeleri arasındaki işbirliğini artırır."
+        },
+        "1100": {
+            "name": "Teleskoplar",
+            "description": "Emoji gezegenleri keşfetmek için yıldızlara bak."
+        },
+        "1101": {
+            "name": "Uydu antenleri",
+            "description": "Samanyolu'nun ötesine, Emojiyolu galaksisine bak."
+        },
+        "1102": {
+            "name": "Astronotlar",
+            "description": "Uzay istasyonlarını birilerinin yönetmesi lazım."
+        },
+        "1103": {
+            "name": "Roketler",
+            "description": "Çok hızlı uçar."
+        },
+        "1104": {
+            "name": "⏚⏃⍀⟟⌇ ⟟☊⟟⋏ ☌⟒⌰⎅⟟☍...",
+            "description": "...⌇⟟⋉⟒ ☊⟟⌰☌⟟⋏ ⊬⟒⋏⟟ ⟒⋔⍜⟊⟟⌰⟒⍀ ☌⟒⏁⟟⍀⎅⟟☍.",
+            "quote": "⌇⟟⍀⍀⟟⋔⟟ ☊⍜⋉⋔⟒☍ ⟟☊⟟⋏ ⊬⎍⋉⎍⋔⟒ ⏚⟒⌇ ☍⟒⋉ ⎅⍜☍⎍⋏"
+        },
+        "1105": {
+            "name": "☌⏃⍀⟟⌿ ⋏⟒⌇⋏⟒",
+            "description": "⏚⎍ ⋏⟒⌇⋏⟒ ⏃⋏⌰⏃⏁⟟⌰⋔⏃⋉ ☌⎍☊⌰⟒⍀ ⏁⏃⌇⟟⍀."
+        },
+        "30000": {
+            "name": "Patatesler",
+            "description": "Patates-tik! Patatesler her çiftliğin bel kemiğidir."
+        },
+        "30001": {
+            "name": "Havuçlar",
+            "description": "Havuç bizden, sopa senden!"
+        },
+        "30002": {
+            "name": "Salatalıklar",
+            "description": "Salatalık gibi serin! Bu ferahlatıcı sebzeler salata ve turşu için birebir.",
+            "quote": "Ben Turşu Rick'im!"
+        },
+        "30003": {
+            "name": "Dolmalık biberler",
+            "description": "Tatlı ya da acı, biberler çiftliğine renk ve lezzet katar.",
+            "quote": "Dolmuş değil, dolmalık!"
+        },
+        "30004": {
+            "name": "Domatesler",
+            "description": "Sulu ve çok yönlü domatesler, çiftliklerin gözdesidir."
+        },
+        "30005": {
+            "name": "Marul",
+            "description": "Çiftliğini taze ve yeşil tutmak için marul gibisi yok. Marul gibi taze!"
+        },
+        "30006": {
+            "name": "Brokoli",
+            "description": "Büyük faydaları olan minik ağaçlar!"
+        },
+        "30007": {
+            "name": "Soğanlar",
+            "description": "Lezzet ve gözyaşı katmanlarıyla soğan, mutfağın temeli ve çiftliğin olmazsa olmazı.",
+            "quote": "Devler soğan gibidir. Soğanların katmanları vardır. Devlerin katmanları vardır."
+        },
+        "30008": {
+            "name": "Sarımsak",
+            "description": "Sarımsak yemeklerine lezzet, çiftliğine koruma katar.",
+            "quote": "Vampir sorunun varsa harika iş görür!"
+        },
+        "30009": {
+            "name": "Mısır",
+            "description": "Mısır, közlemek ve patlatmak için birebir, çok yönlü bir üründür.",
+            "quote": "Patlamaya hazır!"
+        },
+        "30010": {
+            "name": "Fasulyeler",
+            "description": "Proteini bol ve çiftliğini büyütmek için birebir.",
+            "quote": "Fasulye!"
+        },
+        "30011": {
+            "name": "Yer fıstıkları",
+            "description": "Fındıksı ve lezzetli yer fıstıkları, atıştırmak ve çiftliğinin verimini artırmak için harika."
+        },
+        "30012": {
+            "name": "Bal kabakları",
+            "description": "Dev, turuncu, tart yapmak ya da kargaları korkutmak için birebir. Sonbaharın gözdesi!",
+            "quote": "Bal kabağı baharatı ve her şey tatlı!"
+        },
+        "30013": {
+            "name": "Çilekler",
+            "description": "Tatlı, sulu ve tatlılar için mükemmel. Çilekler çiftliğine çok tatlı bir katkı!"
+        },
+        "30014": {
+            "name": "Yaban mersinleri",
+            "description": "Küçük ama güçlü..",
+            "quote": "I'm blue da ba dee da ba di"
+        },
+        "30015": {
+            "name": "Patlıcanlar",
+            "description": "Mor ve çok yönlü patlıcanlar ızgara, fırın ve emoji tarımı için birebir.",
+            "quote": "Erkek arkadaşımın en sevdiği emoji patlıcan, sürekli bana gönderiyor!"
+        },
+        "30016": {
+            "name": "Kabaklar",
+            "description": "Yeşil ve bereketli kabaklar, vermeye doymayan bir yaz sebzesidir."
+        },
+        "30017": {
+            "name": "Avokadolar",
+            "description": "Kremsi ve lezzetli avokadolar, kahvaltı sofralarının yıldızı ve çiftliklerin gözdesi."
+        },
+        "30018": {
+            "name": "Tatlı Patatesler",
+            "description": "Patatesin tatlı kuzeni."
+        },
+        "30019": {
+            "name": "Bezelyeler",
+            "description": "Bezelye!"
+        },
+        "30020": {
+            "name": "Turplar",
+            "description": "Acı ve çıtır turplar, çiftliğine ve yemeklerine canlılık katar."
+        },
+        "30021": {
+            "name": "Mantarlar",
+            "description": "Mantar eğlencesi! Mantarlar aslında bitki değil, biliyor muydun?",
+            "quote": "Mantara bastın!"
+        },
+        "30022": {
+            "name": "Ananaslar",
+            "description": "Tropikal ve mayhoş."
+        },
+        "30023": {
+            "name": "Karpuzlar",
+            "description": "Sulu ve ferahlatıcı karpuzlar, yazın bir numaralı ürünüdür."
+        },
+        "30024": {
+            "name": "Kiviler",
+            "description": "Dışı tüylü, içi tatlı. Kiviler çiftliklerin gözdesi!"
+        },
+        "30025": {
+            "name": "Üzümler",
+            "description": "Atıştırmak, meyve suyu yapmak ya da şaraba dönüştürmek için birebir.",
+            "quote": "Üzümünü ye, bağını sorma."
+        },
+        "30026": {
+            "name": "Kirazlar",
+            "description": "Tatlı ve ekşimsi kirazlar, nefis bir ikram ve çiftliklerin gözdesi."
+        },
+        "50000": {
+            "name": "Köpek yardımcı",
+            "description": "Burnuyla ekranına dokunur.",
+            "quote": "HAV! Emoji toplamana yardım edeceğim!"
+        },
+        "50001": {
+            "name": "Kedi yardımcı",
+            "description": "Bıyıklarıyla seni gıdıklar, daha hızlı dokunmanı sağlar.",
+            "quote": "Miyav! Emoji toplamana yardım edeceğim!"
+        },
+        "50002": {
+            "name": "Ördek yardımcı",
+            "description": "Gagasıyla böğrünü dürter, daha hızlı dokunmanı sağlar.",
+            "quote": "Vak! Emoji toplamana yardım edeceğim!"
+        },
+        "50003": {
+            "name": "İnek yardımcı",
+            "description": "Memelerini ekranına çarpar, daha hızlı dokunmanı sağlar.",
+            "quote": "Möö! Emoji toplamana yardım edeceğim!"
+        },
+        "50004": {
+            "name": "Domuz yardımcı",
+            "description": "Odanda koşturup eğlenir, seni mutlu eder, daha hızlı dokunmanı sağlar.",
+            "quote": "Hörk! Emoji toplamana yardım edeceğim!"
+        },
+        "50005": {
+            "name": "Tavşan yardımcı",
+            "description": "Ekranına zıplar, dokunuşlarını hızlandırır.",
+            "quote": "Hop! Emoji toplamana yardım edeceğim!"
+        },
+        "50006": {
+            "name": "Kurbağa yardımcı",
+            "description": "Ekranına sıçrar, dokunuşlarını hızlandırır.",
+            "quote": "Vırak! Emoji toplamana yardım edeceğim!"
+        },
+        "50007": {
+            "name": "Fil yardımcı",
+            "description": "Hortumu ekrana dokunmak için birebir!",
+            "quote": "Pavuu! Emoji toplamana yardım edeceğim!"
+        },
+        "50008": {
+            "name": "Maymun yardımcı",
+            "description": "Sana bolca muz verir, açlığını giderir, daha hızlı dokunmanı sağlar!",
+            "quote": "U-u a-a! Emoji toplamana yardım edeceğim!"
+        },
+        "50009": {
+            "name": "Penguen yardımcı",
+            "description": "Gagasıyla ekranını gagalar.",
+            "quote": "Paytak paytak! Emoji toplamana yardım edeceğim!"
+        },
+        "100000": {
+            "name": "Emoji stajyerleri",
+            "description": "Stajyerler emoji hükümetinin sorunsuz işlemesine yardım eder!"
+        },
+        "100001": {
+            "name": "Emoji bürokratları",
+            "description": "Bir emoji hükümetinin işlemesi için yöneticilere ihtiyacı vardır.",
+            "quote": "Görünüşe göre bir yasa çıkarıyorsun. Yardım ister misin?"
+        }
+    },
+    "effects": {
+        "0": {
+            "title": "x2 dokunma gücü",
+            "description": "Dokunuş başına emoji ikiye katlandı!"
+        },
+        "1": {
+            "title": "x3 dokunma gücü",
+            "description": "Dokunuş başına emoji üçe katlandı!"
+        },
+        "100": {
+            "title": "x2 emoji üretimi",
+            "description": "Emoji üretimi ikiye katlandı!"
+        },
+        "101": {
+            "title": "x77 emoji üretimi",
+            "description": "Emoji üretimi 77 ile çarpıldı!"
+        },
+        "110": {
+            "title": "Yarım emoji üretimi",
+            "description": "Emoji üretimi yarıya indi!"
+        },
+        "200": {
+            "title": "Emoji hediyesi",
+            "description": "1 saatlik emoji!"
+        }
+    }
+}

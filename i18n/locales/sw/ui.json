@@ -1,0 +1,138 @@
+{
+    "tabs": {
+        "emoji": "Emoji",
+        "shop": "Duka",
+        "emojidex": "Emojidex",
+        "buildings": "Majengo",
+        "upgrades": "Maboresho",
+        "stats": "Takwimu",
+        "collection": "Mkusanyiko"
+    },
+    "header": {
+        "emojis": "Emoji",
+        "perSecond": "Kwa sekunde: {{value}}"
+    },
+    "common": {
+        "buy": "Nunua",
+        "details": "Maelezo",
+        "owned_one": "umenunua",
+        "owned_other": "umenunua"
+    },
+    "buildings": {
+        "bulkBuy_one": "Unanunua jengo {{count}} kwa wakati mmoja",
+        "bulkBuy_other": "Unanunua majengo {{count}} kwa wakati mmoja",
+        "emojisPerSecond": "Emoji <hl>{{eps}}</hl> kwa sekunde",
+        "youHave": "• Idadi ya {{building}}: <hl>{{amount}}</hl>",
+        "eachProduces": "• Kila moja hutoa emoji <hl>{{eps}}</hl> kwa sekunde",
+        "totalProduces": "• Jumla ni emoji <hl>{{eps}}</hl> kwa sekunde!",
+        "ownedUpgrades": "Maboresho uliyonunua"
+    },
+    "upgrades": {
+        "bigEmoji": "Emoji kubwa",
+        "effects": {
+            "multiplyBuildingProduction": "• {{buildings}}: ufanisi mara mbili.",
+            "multiplyTap": "• Kugusa kuna ufanisi mara mbili.",
+            "percentageIncreaseTap": "• Kugusa kuna nguvu zaidi kwa {{percent}}.",
+            "tapPercentageOfEps": "• Kila mguso unakupa {{percent}} ya uzalishaji wako wote wa emoji.",
+            "percentageIncreaseProduction": "• Uzalishaji wote wa emoji umeongezeka kwa {{percent}}."
+        },
+        "bonusProduction": "Ukinunua boresho hili sasa utapata emoji <hl>+{{bonus}}</hl> kwa sekunde, na kuongeza uzalishaji wa emoji kwa <hl>{{percent}}</hl>",
+        "bonusTap": "Ukinunua boresho hili sasa utapata emoji <hl>+{{bonus}}</hl> kwa kila mguso, na kuongeza emoji unazopata kwa kila mguso kwa <hl>{{percent}}</hl>",
+        "filterTitle": "Chuja maboresho",
+        "filterDescription": "Chagua majengo ambayo ungependa kuona maboresho yake."
+    },
+    "emojidex": {
+        "basePrice": "Bei ya msingi: {{price}}"
+    },
+    "stats": {
+        "totalEmojisDrawn": "Jumla ya emoji zilizochorwa",
+        "emojiTaps": "Miguso ya emoji",
+        "emojisEarnedFromTapping": "Emoji zilizopatikana kwa kugusa",
+        "magicalEmojisTapped": "Emoji za kichawi zilizoguswa",
+        "funValue": "Thamani ya furaha"
+    },
+    "drawer": {
+        "language": "Lugha",
+        "deviceLanguage": "Lugha ya kifaa",
+        "funValue": "Thamani ya furaha: {{value}}",
+        "cheats": "Chiti",
+        "resetGame": "Anzisha mchezo upya",
+        "spawnEffect": "Leta emoji ya athari",
+        "giveEmojis": "Toa emoji {{amount}}"
+    },
+    "prestige": {
+        "title": "Heshima",
+        "accumulating": "Baada ya kuunda emoji <hl>{{amount}}</hl>, kiini halisi cha emoji kimeanza kujikusanya karibu nawe.",
+        "essence": "Kiini cha emoji ni <hl>dutu ya kichawi</hl> inayobadilisha umbo lake kila unapoitazama, na ina nguvu zisizojulikana."
+    },
+    "numbers": {
+        "groupSize": "3",
+        "named": "{{name}} {{value}}",
+        "percent": "{{value}}%",
+        "lessThan": "<{{value}}",
+        "long": {
+            "6_one": "milioni",
+            "6_other": "milioni",
+            "9_one": "bilioni",
+            "9_other": "bilioni",
+            "12_one": "trilioni",
+            "12_other": "trilioni",
+            "15_one": "kwadrilioni",
+            "15_other": "kwadrilioni",
+            "18_one": "kwintilioni",
+            "18_other": "kwintilioni",
+            "21_one": "sekstilioni",
+            "21_other": "sekstilioni",
+            "24_one": "septilioni",
+            "24_other": "septilioni",
+            "27_one": "oktilioni",
+            "27_other": "oktilioni",
+            "30_one": "nonilioni",
+            "30_other": "nonilioni",
+            "33_one": "desilioni",
+            "33_other": "desilioni",
+            "36_one": "andesilioni",
+            "36_other": "andesilioni",
+            "39_one": "dodesilioni",
+            "39_other": "dodesilioni",
+            "42_one": "tredesilioni",
+            "42_other": "tredesilioni",
+            "45_one": "kwatuordesilioni",
+            "45_other": "kwatuordesilioni",
+            "48_one": "kwindesilioni",
+            "48_other": "kwindesilioni",
+            "51_one": "seksdesilioni",
+            "51_other": "seksdesilioni",
+            "54_one": "septendesilioni",
+            "54_other": "septendesilioni",
+            "57_one": "oktodesilioni",
+            "57_other": "oktodesilioni",
+            "60_one": "novemdesilioni",
+            "60_other": "novemdesilioni",
+            "63_one": "vigintilioni",
+            "63_other": "vigintilioni"
+        },
+        "short": {
+            "6": "M",
+            "9": "B",
+            "12": "T",
+            "15": "Kd",
+            "18": "Kn",
+            "21": "Sx",
+            "24": "Sp",
+            "27": "Ok",
+            "30": "No",
+            "33": "Ds",
+            "36": "Ud",
+            "39": "Dd",
+            "42": "Td",
+            "45": "Kad",
+            "48": "Kid",
+            "51": "Sxd",
+            "54": "Spd",
+            "57": "Od",
+            "60": "Nd",
+            "63": "Vg"
+        }
+    }
+}

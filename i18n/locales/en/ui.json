@@ -66,6 +66,8 @@
         "essence": "Emoji essence is a <hl>magical substance</hl> that changes its shape whenever you look at it, and holds unknown powers."
     },
     "numbers": {
+        "groupSize": "3",
+        "named": "{{value}} {{name}}",
         "percent": "{{value}}%",
         "lessThan": "<{{value}}",
         "long": {

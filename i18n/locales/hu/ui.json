@@ -1,0 +1,138 @@
+{
+    "tabs": {
+        "emoji": "Emoji",
+        "shop": "Bolt",
+        "emojidex": "Emojidex",
+        "buildings": "Épületek",
+        "upgrades": "Fejlesztés",
+        "stats": "Adatok",
+        "collection": "Gyűjtemény"
+    },
+    "header": {
+        "emojis": "Emojik",
+        "perSecond": "Másodpercenként: {{value}}"
+    },
+    "common": {
+        "buy": "Vétel",
+        "details": "Részletek",
+        "owned_one": "birtokban",
+        "owned_other": "birtokban"
+    },
+    "buildings": {
+        "bulkBuy_one": "Egyszerre {{count}} épületet veszel",
+        "bulkBuy_other": "Egyszerre {{count}} épületet veszel",
+        "emojisPerSecond": "<hl>{{eps}}</hl> emoji másodpercenként",
+        "youHave": "• {{building}} a birtokodban: <hl>{{amount}}</hl> db",
+        "eachProduces": "• Mindegyik másodpercenként <hl>{{eps}}</hl> emojit termel",
+        "totalProduces": "• Összesen másodpercenként <hl>{{eps}}</hl> emoji!",
+        "ownedUpgrades": "Megvett fejlesztések"
+    },
+    "upgrades": {
+        "bigEmoji": "Nagy emoji",
+        "effects": {
+            "multiplyBuildingProduction": "• {{buildings}}: dupla hatékonyság.",
+            "multiplyTap": "• A koppintás kétszer olyan hatékony.",
+            "percentageIncreaseTap": "• Koppintás ereje: +{{percent}}.",
+            "tapPercentageOfEps": "• Koppintásonként a teljes emojitermelésedből kapsz: {{percent}}.",
+            "percentageIncreaseProduction": "• Teljes emojitermelés: +{{percent}}."
+        },
+        "bonusProduction": "Ha most megveszed ezt a fejlesztést, másodpercenként <hl>+{{bonus}}</hl> emojit kapsz, így az emojitermelésed ennyivel nő: <hl>{{percent}}</hl>",
+        "bonusTap": "Ha most megveszed ezt a fejlesztést, koppintásonként <hl>+{{bonus}}</hl> emojit kapsz, így a koppintásonként kapott emoji ennyivel nő: <hl>{{percent}}</hl>",
+        "filterTitle": "Fejlesztések szűrése",
+        "filterDescription": "Válaszd ki, mely épületek fejlesztéseit szeretnéd látni."
+    },
+    "emojidex": {
+        "basePrice": "Alapár: {{price}}"
+    },
+    "stats": {
+        "totalEmojisDrawn": "Összes rajzolt emoji",
+        "emojiTaps": "Emojikoppintások",
+        "emojisEarnedFromTapping": "Koppintással szerzett emojik",
+        "magicalEmojisTapped": "Megkoppintott varázsemojik",
+        "funValue": "Mókaérték"
+    },
+    "drawer": {
+        "language": "Nyelv",
+        "deviceLanguage": "Eszköz nyelve",
+        "funValue": "Mókaérték: {{value}}",
+        "cheats": "Csalások",
+        "resetGame": "Játék visszaállítása",
+        "spawnEffect": "Effekt-emoji idézése",
+        "giveEmojis": "Emojik hozzáadása: {{amount}}"
+    },
+    "prestige": {
+        "title": "Presztízs",
+        "accumulating": "Miután <hl>{{amount}}</hl> emojit létrehoztál, az emojik legbelső esszenciája gyűlni kezdett körülötted.",
+        "essence": "Az emojiesszencia egy <hl>varázslatos anyag</hl>, amely alakot vált, valahányszor ránézel, és ismeretlen erőket rejt."
+    },
+    "numbers": {
+        "groupSize": "3",
+        "named": "{{value}} {{name}}",
+        "percent": "{{value}}%",
+        "lessThan": "<{{value}}",
+        "long": {
+            "6_one": "millió",
+            "6_other": "millió",
+            "9_one": "milliárd",
+            "9_other": "milliárd",
+            "12_one": "billió",
+            "12_other": "billió",
+            "15_one": "billiárd",
+            "15_other": "billiárd",
+            "18_one": "trillió",
+            "18_other": "trillió",
+            "21_one": "trilliárd",
+            "21_other": "trilliárd",
+            "24_one": "kvadrillió",
+            "24_other": "kvadrillió",
+            "27_one": "kvadrilliárd",
+            "27_other": "kvadrilliárd",
+            "30_one": "kvintillió",
+            "30_other": "kvintillió",
+            "33_one": "kvintilliárd",
+            "33_other": "kvintilliárd",
+            "36_one": "szextillió",
+            "36_other": "szextillió",
+            "39_one": "szextilliárd",
+            "39_other": "szextilliárd",
+            "42_one": "szeptillió",
+            "42_other": "szeptillió",
+            "45_one": "szeptilliárd",
+            "45_other": "szeptilliárd",
+            "48_one": "oktillió",
+            "48_other": "oktillió",
+            "51_one": "oktilliárd",
+            "51_other": "oktilliárd",
+            "54_one": "nonillió",
+            "54_other": "nonillió",
+            "57_one": "nonilliárd",
+            "57_other": "nonilliárd",
+            "60_one": "decillió",
+            "60_other": "decillió",
+            "63_one": "decilliárd",
+            "63_other": "decilliárd"
+        },
+        "short": {
+            "6": "M",
+            "9": "Mrd",
+            "12": "B",
+            "15": "Brd",
+            "18": "Tr",
+            "21": "Trd",
+            "24": "Kvr",
+            "27": "Kvrd",
+            "30": "Kvi",
+            "33": "Kvid",
+            "36": "Szx",
+            "39": "Szxd",
+            "42": "Szp",
+            "45": "Szpd",
+            "48": "Okt",
+            "51": "Oktd",
+            "54": "Non",
+            "57": "Nond",
+            "60": "Dec",
+            "63": "Decd"
+        }
+    }
+}

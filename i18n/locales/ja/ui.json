@@ -1,0 +1,96 @@
+{
+    "tabs": {
+        "emoji": "絵文字",
+        "shop": "ショップ",
+        "emojidex": "絵文字図鑑",
+        "buildings": "施設",
+        "upgrades": "強化",
+        "stats": "統計",
+        "collection": "コレクション"
+    },
+    "header": {
+        "emojis": "絵文字",
+        "perSecond": "毎秒：{{value}}"
+    },
+    "common": {
+        "buy": "購入",
+        "details": "詳細",
+        "owned_other": "所持"
+    },
+    "buildings": {
+        "bulkBuy_other": "{{count}}個ずつまとめ買い中",
+        "emojisPerSecond": "毎秒<hl>{{eps}}</hl>絵文字",
+        "youHave": "• {{building}}の所持数：<hl>{{amount}}</hl>",
+        "eachProduces": "• 1つあたり毎秒<hl>{{eps}}</hl>絵文字を生産",
+        "totalProduces": "• 合計で毎秒<hl>{{eps}}</hl>絵文字！",
+        "ownedUpgrades": "所持している強化"
+    },
+    "upgrades": {
+        "bigEmoji": "大きな絵文字",
+        "effects": {
+            "multiplyBuildingProduction": "• {{buildings}}：効率が2倍。",
+            "multiplyTap": "• タップの効率が2倍。",
+            "percentageIncreaseTap": "• タップの威力が{{percent}}アップ。",
+            "tapPercentageOfEps": "• タップで絵文字総生産量の{{percent}}を獲得。",
+            "percentageIncreaseProduction": "• 絵文字の総生産量が{{percent}}アップ。"
+        },
+        "bonusProduction": "今この強化を買うと毎秒<hl>+{{bonus}}</hl>絵文字、絵文字の生産量が<hl>{{percent}}</hl>アップします",
+        "bonusTap": "今この強化を買うとタップごとに<hl>+{{bonus}}</hl>絵文字、タップで得られる絵文字が<hl>{{percent}}</hl>アップします",
+        "filterTitle": "強化を絞り込む",
+        "filterDescription": "強化を表示する施設を選んでね。"
+    },
+    "emojidex": {
+        "basePrice": "基本価格：{{price}}"
+    },
+    "stats": {
+        "totalEmojisDrawn": "描いた絵文字の合計",
+        "emojiTaps": "絵文字タップ数",
+        "emojisEarnedFromTapping": "タップで得た絵文字",
+        "magicalEmojisTapped": "タップした魔法の絵文字",
+        "funValue": "おたのしみ値"
+    },
+    "drawer": {
+        "language": "言語",
+        "deviceLanguage": "端末の言語",
+        "funValue": "おたのしみ値：{{value}}",
+        "cheats": "チート",
+        "resetGame": "ゲームをリセット",
+        "spawnEffect": "効果絵文字を出す",
+        "giveEmojis": "絵文字を{{amount}}個もらう"
+    },
+    "prestige": {
+        "title": "転生",
+        "accumulating": "<hl>{{amount}}</hl>個の絵文字を生み出したことで、絵文字の真髄そのものがあなたのまわりに集まり始めた。",
+        "essence": "絵文字エッセンスは、見るたびに形を変える<hl>魔法の物質</hl>。未知の力を秘めている。"
+    },
+    "numbers": {
+        "groupSize": "4",
+        "named": "{{value}}{{name}}",
+        "percent": "{{value}}%",
+        "lessThan": "<{{value}}",
+        "long": {
+            "4_other": "万",
+            "8_other": "億",
+            "12_other": "兆",
+            "16_other": "京",
+            "20_other": "垓",
+            "24_other": "秭",
+            "28_other": "穣",
+            "32_other": "溝",
+            "36_other": "澗",
+            "40_other": "正",
+            "44_other": "載",
+            "48_other": "極",
+            "52_other": "恒河沙",
+            "56_other": "阿僧祇",
+            "60_other": "那由他",
+            "64_other": "不可思議",
+            "68_other": "無量大数"
+        },
+        "short": {
+            "4": "万", "8": "億", "12": "兆", "16": "京", "20": "垓", "24": "秭",
+            "28": "穣", "32": "溝", "36": "澗", "40": "正", "44": "載", "48": "極",
+            "52": "恒河沙", "56": "阿僧祇", "60": "那由他", "64": "不可思議", "68": "無量大数"
+        }
+    }
+}

@@ -1,0 +1,101 @@
+{
+    "tabs": {
+        "emoji": "Emoji",
+        "shop": "Mağaza",
+        "emojidex": "Emojidex",
+        "buildings": "Binalar",
+        "upgrades": "Yükseltme",
+        "stats": "İstatistik",
+        "collection": "Koleksiyon"
+    },
+    "header": {
+        "emojis": "Emojiler",
+        "perSecond": "Saniyede: {{value}}"
+    },
+    "common": {
+        "buy": "Satın al",
+        "details": "Detaylar",
+        "owned_one": "sahip olunan",
+        "owned_other": "sahip olunan"
+    },
+    "buildings": {
+        "bulkBuy_one": "Tek seferde {{count}} bina alınıyor",
+        "bulkBuy_other": "Tek seferde {{count}} bina alınıyor",
+        "emojisPerSecond": "Saniyede <hl>{{eps}}</hl> emoji",
+        "youHave": "• Sahip olduğun {{building}}: <hl>{{amount}}</hl>",
+        "eachProduces": "• Her biri saniyede <hl>{{eps}}</hl> emoji üretir",
+        "totalProduces": "• Toplamda saniyede <hl>{{eps}}</hl> emoji!",
+        "ownedUpgrades": "Sahip olunan yükseltmeler"
+    },
+    "upgrades": {
+        "bigEmoji": "Büyük emoji",
+        "effects": {
+            "multiplyBuildingProduction": "• {{buildings}} iki kat daha verimli.",
+            "multiplyTap": "• Dokunmak iki kat daha verimli.",
+            "percentageIncreaseTap": "• Dokunmak {{percent}} daha güçlü.",
+            "tapPercentageOfEps": "• Dokunmak, toplam emoji üretiminin {{percent}} kadarını kazandırır.",
+            "percentageIncreaseProduction": "• Toplam emoji üretimi {{percent}} arttı."
+        },
+        "bonusProduction": "Bu yükseltmeyi şimdi alırsan saniyede <hl>+{{bonus}}</hl> emoji kazanırsın ve emoji üretimin <hl>{{percent}}</hl> artar",
+        "bonusTap": "Bu yükseltmeyi şimdi alırsan dokunuş başına <hl>+{{bonus}}</hl> emoji kazanırsın ve her dokunuştan gelen emoji <hl>{{percent}}</hl> artar",
+        "filterTitle": "Yükseltmeleri filtrele",
+        "filterDescription": "Hangi binaların yükseltmelerini görmek istediğini seç."
+    },
+    "emojidex": {
+        "basePrice": "Taban fiyat: {{price}}"
+    },
+    "stats": {
+        "totalEmojisDrawn": "Çizilen toplam emoji",
+        "emojiTaps": "Emoji dokunuşları",
+        "emojisEarnedFromTapping": "Dokunarak kazanılan emoji",
+        "magicalEmojisTapped": "Dokunulan sihirli emoji",
+        "funValue": "Eğlence değeri"
+    },
+    "drawer": {
+        "language": "Dil",
+        "deviceLanguage": "Cihaz dili",
+        "funValue": "Eğlence değeri: {{value}}",
+        "cheats": "Hileler",
+        "resetGame": "Oyunu sıfırla",
+        "spawnEffect": "Efekt emojisi çıkar",
+        "giveEmojis": "{{amount}} emoji ver"
+    },
+    "prestige": {
+        "title": "Prestij",
+        "accumulating": "<hl>{{amount}}</hl> emoji yarattıktan sonra, emojilerin özü etrafında birikmeye başladı.",
+        "essence": "Emoji özü, her baktığında şekil değiştiren ve bilinmeyen güçler barındıran <hl>sihirli bir maddedir</hl>."
+    },
+    "numbers": {
+        "groupSize": "3",
+        "named": "{{value}} {{name}}",
+        "percent": "%{{value}}",
+        "lessThan": "<{{value}}",
+        "long": {
+            "6_one": "milyon", "6_other": "milyon",
+            "9_one": "milyar", "9_other": "milyar",
+            "12_one": "trilyon", "12_other": "trilyon",
+            "15_one": "katrilyon", "15_other": "katrilyon",
+            "18_one": "kentilyon", "18_other": "kentilyon",
+            "21_one": "sekstilyon", "21_other": "sekstilyon",
+            "24_one": "septilyon", "24_other": "septilyon",
+            "27_one": "oktilyon", "27_other": "oktilyon",
+            "30_one": "nonilyon", "30_other": "nonilyon",
+            "33_one": "desilyon", "33_other": "desilyon",
+            "36_one": "undesilyon", "36_other": "undesilyon",
+            "39_one": "dodesilyon", "39_other": "dodesilyon",
+            "42_one": "tredesilyon", "42_other": "tredesilyon",
+            "45_one": "katordesilyon", "45_other": "katordesilyon",
+            "48_one": "kendesilyon", "48_other": "kendesilyon",
+            "51_one": "seksdesilyon", "51_other": "seksdesilyon",
+            "54_one": "septendesilyon", "54_other": "septendesilyon",
+            "57_one": "oktodesilyon", "57_other": "oktodesilyon",
+            "60_one": "novemdesilyon", "60_other": "novemdesilyon",
+            "63_one": "vigintilyon", "63_other": "vigintilyon"
+        },
+        "short": {
+            "6": "Mn", "9": "Mr", "12": "Tn", "15": "Ktn", "18": "Knt", "21": "Skt", "24": "Spt",
+            "27": "Okt", "30": "Nn", "33": "Ds", "36": "Uds", "39": "Dds", "42": "Tds", "45": "Kds",
+            "48": "Kns", "51": "Sds", "54": "Spd", "57": "Ods", "60": "Nds", "63": "Vgt"
+        }
+    }
+}

@@ -1,0 +1,1009 @@
+{
+    "buildings": {
+        "0": {
+            "name": "Mână care desenează",
+            "plural": "Mâini care desenează",
+            "description": "O mână care desenează emoji pentru tine."
+        },
+        "1": {
+            "name": "Studio de design grafic",
+            "plural": "Studiouri de design grafic",
+            "description": "Un studio unde se creează emoji."
+        },
+        "2": {
+            "name": "Fermă",
+            "plural": "Ferme",
+            "description": "O fermă unde emoji-urile răsar din pământ."
+        },
+        "3": {
+            "name": "Restaurant",
+            "plural": "Restaurante",
+            "description": "Unde merg emoji-urile să mănânce emoji cu mâncare."
+        },
+        "4": {
+            "name": "Mini zoo",
+            "plural": "Mini zoo-uri",
+            "description": "Întâlnește toate animalele emoji preferate."
+        },
+        "5": {
+            "name": "Fabrică",
+            "plural": "Fabrici",
+            "description": "Emoji create la scară industrială."
+        },
+        "6": {
+            "name": "Centru sportiv",
+            "plural": "Centre sportive",
+            "description": "Ține-ți emoji-urile în formă."
+        },
+        "7": {
+            "name": "Bancă",
+            "plural": "Bănci",
+            "description": "\"Îți păstrăm emoji-urile în siguranță.\""
+        },
+        "8": {
+            "name": "Parc tematic emoji",
+            "plural": "Parcuri tematice emoji",
+            "description": "\"Bun venit în EmojiLand: unde visele și emoțiile prind viață!\""
+        },
+        "9": {
+            "name": "Adunare emoji",
+            "plural": "Adunări emoji",
+            "description": "Unde emoji-urile se strâng ca să decidă cum să facă și mai multe emoji."
+        },
+        "10": {
+            "name": "Stație spațială",
+            "plural": "Stații spațiale",
+            "description": "Cucerește lumi noi și ia-le emoji-urile."
+        },
+        "11": {
+            "name": "Regat de bomboane",
+            "plural": "Regate de bomboane",
+            "description": "Un paradis dulce condus de Regele Bomboanelor și de supușii lui emoji, dulci foc."
+        },
+        "12": {
+            "name": "Vulcan emoji",
+            "plural": "Vulcani emoji",
+            "description": "Fiecare erupție aduce un potop de emoji nou-nouțe, proaspăt făurite!"
+        },
+        "13": {
+            "name": "Templul Marelui Emoji din cer",
+            "plural": "Temple ale Marelui Emoji din cer",
+            "description": "Legendele spun că Marele Emoji din cer le dăruiește emoji infinite celor mai loiali adepți ai săi."
+        },
+        "14": {
+            "name": "Supercomputer emoji",
+            "plural": "Supercomputere emoji",
+            "description": "Motorul emoji suprem. Înmulțește emoji-urile cu viteza luminii."
+        },
+        "15": {
+            "name": "Gaură neagră emoji",
+            "plural": "Găuri negre emoji",
+            "description": "Destinația finală a tuturor emoji-urilor... sau un nou început?"
+        },
+        "16": {
+            "name": "Singularitate emoji",
+            "plural": "Singularități emoji",
+            "description": "Gata. Nu a mai rămas nimic în afară de emoji. Ai reușit."
+        }
+    },
+    "upgrades": {
+        "0": {
+            "name": "O altă mână",
+            "description": "O altă mână atinge ecranul. A cui e mâna? Habar n-am."
+        },
+        "1": {
+            "name": "Încă o mână",
+            "description": "Încă o mână atinge ecranul. Ce mai mână de ajutor!"
+        },
+        "2": {
+            "name": "Încă zece mâini",
+            "description": "Zece mâini încep brusc să-ți atingă ecranul! E grozav!"
+        },
+        "3": {
+            "name": "O sută de mâini!",
+            "description": "Tot cartierul a venit să atingă emoji-ul mare de pe ecran!"
+        },
+        "4": {
+            "name": "O mie de mâini",
+            "description": "Oamenii vin de departe doar ca să-ți atingă ecranul."
+        },
+        "5": {
+            "name": "Un milion de mâini",
+            "description": "În cine arăți cu degetul? În mine? Ce nepoliticos..."
+        },
+        "6": {
+            "name": "Un miliard de mâini",
+            "description": "Peste 10% din populația lumii te ajută să-ți atingi ecranul. Cred că e gata să crape."
+        },
+        "7": {
+            "name": "Un bilion de mâini",
+            "description": "Te sună mama. Își face griji pentru tine. Apelul îți acoperă ecranul, așa că închizi și continui să atingi."
+        },
+        "8": {
+            "name": "Un biliard de mâini",
+            "description": "Sunt o grămadă de mâini care îți ating ecranul."
+        },
+        "9": {
+            "name": "Un trilion de mâini",
+            "description": "Numărul de mâini e de neînchipuit. Ecranul o încasează zdravăn."
+        },
+        "10": {
+            "name": "Un triliard de mâini",
+            "description": "Mâinile se întind cât vezi cu ochii și ating fără oprire."
+        },
+        "11": {
+            "name": "Un cvadrilion de mâini",
+            "description": "Formă perfectă. Atingeri perfecte. Mâini infinite."
+        },
+        "12": {
+            "name": "Un cvadriliard de mâini",
+            "description": "Mai multe mâini decât atomi în univers. Toate știu ce fac."
+        },
+        "13": {
+            "name": "Un cvintilion de mâini",
+            "description": "Sunetul atingerilor e acum o bubuitură ritmică asurzitoare, care trimite o undă de șoc în jurul lumii."
+        },
+        "14": {
+            "name": "Un cvintiliard de mâini",
+            "description": "O asemenea cantitate de carne n-ar trebui niciodată înghesuită atât de strâns în același loc..."
+        },
+        "15": {
+            "name": "Un sextilion de mâini",
+            "description": "Din mâinile deja existente cresc alte zeci, strâmbe și diforme."
+        },
+        "16": {
+            "name": "Un sextiliard de mâini",
+            "description": "Începi să auzi șoapte. Mâinile ating mai departe, dar ale cui sunt?"
+        },
+        "17": {
+            "name": "Un septilion de mâini",
+            "description": "Mâinile încep să se deformeze. Nu mai sunt omenești."
+        },
+        "18": {
+            "name": "Un septiliard de mâini",
+            "description": "O prezență pândește în spatele mâinilor și le ghidează cu intenții malefice."
+        },
+        "19": {
+            "name": "Un octilion de mâini",
+            "description": "Mâinile astea... ce sunt? Aerul miroase a sulf."
+        },
+        "20": {
+            "name": "Un octiliard de mâini",
+            "description": "Mâinile sunt peste tot și umplu camera. Le simți cum se întind după tine..."
+        },
+        "21": {
+            "name": "Mâini demonice",
+            "description": "Mâini demonice din adâncurile iadului ating la nesfârșit. Ecranul e încins ca jarul."
+        },
+        "22": {
+            "name": "Mâinile damnaților",
+            "description": "Mâini fantomatice, scheletice, se ridică din abis. Ating cu o furie infernală."
+        },
+        "23": {
+            "name": "Stăpânul Infernului",
+            "description": "Însuși îngerul căzut se târăște afară din domeniul său ca să te ajute să-ți atingi ecranul."
+        },
+        "24": {
+            "name": "Atingeri nepoliticoase",
+            "description": "Chiar foarte, foarte nepoliticoase."
+        },
+        "100": {
+            "name": "Braț mai puternic",
+            "description": "Cu un braț mai puternic desenezi emoji mai repede."
+        },
+        "101": {
+            "name": "Degete flexibile",
+            "description": "Degetele flexibile permit emoji mai elaborate."
+        },
+        "102": {
+            "name": "Două mâini",
+            "description": "Dublu mâini, dublu emoji."
+        },
+        "103": {
+            "name": "Mâini cu ojă",
+            "description": "Cu ojă pe unghii atingi mai repede, nu știai?"
+        },
+        "104": {
+            "name": "Picioare",
+            "description": "Desenatul cu picioarele dublează producția (și nu e deloc greu)!"
+        },
+        "105": {
+            "name": "Limbă",
+            "description": "Cu ani de exercițiu, și tu poți învăța să desenezi cu limba!"
+        },
+        "106": {
+            "name": "Nas",
+            "description": "Bagă-ți o cariocă în nas și desenează cu ea!",
+            "quote": "*Snif* De ce miroase ecranul a picioare?"
+        },
+        "107": {
+            "name": "Ureche",
+            "description": "Bagă-ți un pix în ureche, întoarce capul la 90 de grade și desenează!"
+        },
+        "108": {
+            "name": "Gură",
+            "description": "Pune un creion în gură și desenează cu el!"
+        },
+        "109": {
+            "name": "Picior mai puternic",
+            "description": "Un picior mai puternic te ajută să desenezi mult mai repede cu picioarele."
+        },
+        "110": {
+            "name": "Plămâni mai mari",
+            "description": "Cu plămâni mai mari desenezi emoji mai repede."
+        },
+        "111": {
+            "name": "Creier mai mare",
+            "description": "Un creier mai mare dezlănțuie un val uriaș de creativitate care îți dublează producția de emoji!"
+        },
+        "112": {
+            "name": "Păr",
+            "description": "Mânuiește o pensulă cu părul ca să creezi emoji. Cine are nevoie de mâini când are stil?"
+        },
+        "113": {
+            "name": "Sprâncene",
+            "description": "Ridică din sprâncene ca să desenezi emoji. Antrenament pentru față și pentru creativitate!"
+        },
+        "114": {
+            "name": "Spate",
+            "description": "Întinde-te pe spate și desenează emoji cu mâinile la spate. Puțină gimnastică, puțină artă!"
+        },
+        "115": {
+            "name": "Dinți",
+            "description": "Prinde un pix între dinți și desenează emoji. Atenție: poate obosi maxilarul!"
+        },
+        "116": {
+            "name": "Buric",
+            "description": "Desenează emoji cu buricul. E o abilitate unică, greu de stăpânit!"
+        },
+        "117": {
+            "name": "Desen cu ecou",
+            "description": "Fiecare emoji pe care îl desenezi are ecou și apare de două ori!"
+        },
+        "118": {
+            "name": "Desen telekinetic",
+            "description": "De ce să folosești mâinile când poți desena emoji cu mintea?"
+        },
+        "119": {
+            "name": "Degete cuantice",
+            "description": "Inseparabilitatea cuantică din degete te lasă să desenezi emoji cu viteza luminii."
+        },
+        "200": {
+            "name": "Creioane îmbunătățite",
+            "description": "Creioane mai bune pentru emoji mai detaliate."
+        },
+        "201": {
+            "name": "Creioane colorate speciale",
+            "description": "Aceste creioane speciale îi ajută pe artiști să-și regăsească copilul interior."
+        },
+        "202": {
+            "name": "Pensule îmbunătățite",
+            "description": "Pensulele îmbunătățite permit emoji mai artistice."
+        },
+        "203": {
+            "name": "Stilouri",
+            "description": "Pentru emoji mai distinse."
+        },
+        "204": {
+            "name": "Rigle",
+            "description": "Cum altfel să tragi o linie dreaptă?"
+        },
+        "205": {
+            "name": "Simulator de daltonism",
+            "description": "Asigură-te că emoji-urile tale sunt accesibile tuturor!",
+            "quote": "Se zice 'Uu-cag'? 'Dublu-ve-cag'? 'Ve-cag'?"
+        },
+        "206": {
+            "name": "Efecte de benzi desenate",
+            "description": "Adaugă efecte 'BUM!' și 'PAC!' emoji-urilor tale pentru mai mult stil!"
+        },
+        "207": {
+            "name": "Set de șabloane",
+            "description": "Emoji perfect conturate de fiecare dată, cu aceste șabloane!"
+        },
+        "208": {
+            "name": "Scurtături de tastatură",
+            "description": "Lucrează mai repede cu scurtături personalizate pentru designul de emoji!",
+            "quote": "Încearcă Alt + F4."
+        },
+        "209": {
+            "name": "Abonament la resurse",
+            "description": "Acces la o bibliotecă uriașă de forme, iconițe și texturi gata făcute!"
+        },
+        "210": {
+            "name": "Butonul Anulează",
+            "description": "Anulează nu doar îți inversează munca - schimbă însăși realitatea. Folosește-l cu măsură.",
+            "quote": "A greși e omenesc"
+        },
+        "211": {
+            "name": "Carte de colorat emoji",
+            "description": "Doar cei mai rafinați artiști folosesc cărți de colorat."
+        },
+        "212": {
+            "name": "Colaborare în timp real",
+            "description": "Invită alți designeri să lucreze simultan la proiectele tale de emoji!"
+        },
+        "213": {
+            "name": "Panou de inspirație emoji",
+            "description": "Organizează-ți vizual ideile de emoji pentru creativitate maximă!",
+            "quote": "Inspiră adânc. Expiră. Gata, ai inspirație!"
+        },
+        "214": {
+            "name": "Program de pixel art",
+            "description": "Creează emoji pixelate în stil retro, care strigă nostalgie anii '90!",
+            "quote": "Fiecare pixel contează."
+        },
+        "215": {
+            "name": "Fontul Comic Sans",
+            "description": "Fie că-l iubești, fie că-l urăști, emoji-urile tale vor arăta... unic!"
+        },
+        "216": {
+            "name": "Generator de artă AI",
+            "description": "Lasă AI-ul să muncească din greu și să genereze emoji plictisitoare și de proastă calitate cu viteza fulgerului!",
+            "quote": "Bip bup!"
+        },
+        "217": {
+            "name": "Hârtie origami",
+            "description": "Împăturește-ți emoji-urile de hârtie în tot felul de forme!",
+            "quote": "Mac!"
+        },
+        "218": {
+            "name": "Mașină de tatuat emoji",
+            "description": "Emoji permanente pentru artiștii cu adevărat dedicați!",
+            "quote": "Au!"
+        },
+        "219": {
+            "name": "Sânge",
+            "description": "Pictatul cu sânge face emoji extra cool!"
+        },
+        "300": {
+            "name": "Fermieri",
+            "description": "Ce e o fermă fără fermier?!"
+        },
+        "301": {
+            "name": "Răsad",
+            "description": "Trebuie să începi de undeva.",
+            "quote": "Nu-ți pierde frunza!"
+        },
+        "302": {
+            "name": "Unelte mai bune",
+            "description": "Pentru o agricultură mult mai rapidă!"
+        },
+        "303": {
+            "name": "Tractoare",
+            "description": "Recoltatul de emoji devine mult mai ușor."
+        },
+        "304": {
+            "name": "Case de fermă",
+            "description": "Un cămin primitor unde fermierii tăi se odihnesc și își încarcă bateriile."
+        },
+        "305": {
+            "name": "Vaci emoji",
+            "description": "Creează mai multe emuuuuuuuji."
+        },
+        "306": {
+            "name": "Sistem de irigații",
+            "description": "Ține-ți culturile de emoji hidratate pentru o creștere mai rapidă.",
+            "quote": "În ce secol suntem?!"
+        },
+        "307": {
+            "name": "Sperietori de ciori",
+            "description": "Ține departe de ferme păsările emoji enervante!"
+        },
+        "308": {
+            "name": "Compostoare",
+            "description": "Transformă deșeurile în îngrășământ pentru culturi de emoji mai sănătoase!"
+        },
+        "309": {
+            "name": "Sere",
+            "description": "Cultivă emoji tot anul, indiferent de vreme!"
+        },
+        "310": {
+            "name": "Mori de vânt",
+            "description": "Folosește puterea vântului ca să crești eficiența fermei!",
+            "quote": "Vâjjj!"
+        },
+        "311": {
+            "name": "Livezi de emoji",
+            "description": "Cultivă pomi emoji care dau roade tot anul!"
+        },
+        "312": {
+            "name": "Festivalul recoltei",
+            "description": "Sărbătorește recolta bogată cu un festival care ridică moralul!"
+        },
+        "313": {
+            "name": "Praștie gigantică de emoji",
+            "description": "Lansează semințe de emoji peste toată ferma pentru o plantare rapidă!"
+        },
+        "314": {
+            "name": "Gard invizibil",
+            "description": "Îți ține animalele emoji în țarc... chiar dacă nu-l vezi.",
+            "quote": "Doare când faci pipi pe el."
+        },
+        "315": {
+            "name": "Culturi modificate genetic",
+            "description": "Banane fără coajă, căpșuni deja trecute prin ciocolată, cartofi gata fierți și multe altele!"
+        },
+        "316": {
+            "name": "Ferma de emoji a viitorului",
+            "description": "Fermele tale sunt acum utopii high-tech cu roboți, holograme și tractoare zburătoare. Bun venit în viitor!"
+        },
+        "317": {
+            "name": "Lună sângerie",
+            "description": "Sub luna sângerie, culturile cresc mai repede... dar le cresc și dinți."
+        },
+        "318": {
+            "name": "Ultima recoltă",
+            "description": "O siluetă misterioasă îți oferă o recoltă bogată în schimbul... a ceva. Îndrăznești să accepți?"
+        },
+        "319": {
+            "name": "Adio, agricultură",
+            "description": "Te-ai săturat de agricultură. Poate cel mai bine e să renunți și să te apuci de muncă la birou."
+        },
+        "400": {
+            "name": "Cuțite ascuțite",
+            "description": "Cu cuțite mai ascuțite, tocatul de emoji e mai ușor."
+        },
+        "401": {
+            "name": "Tigăi antiaderente",
+            "description": "Tigăile antiaderente grăbesc gătitul mâncărurilor emoji."
+        },
+        "402": {
+            "name": "Cuptoare mai bune",
+            "description": "Cuptoarele cu un control mai bun al căldurii gătesc emoji mai repede."
+        },
+        "403": {
+            "name": "Ingrediente de calitate",
+            "description": "Ingrediente de calitate mai bună înseamnă emoji mai gustoase."
+        },
+        "404": {
+            "name": "Bonetă de bucătar",
+            "description": "Cu boneta de bucătar pe cap, gătești emoji mai repede."
+        },
+        "405": {
+            "name": "Blendere emoji",
+            "description": "Transformă emoji în smoothie-uri și supe delicioase în câteva secunde!"
+        },
+        "406": {
+            "name": "Friteuze cu aer cald",
+            "description": "Prăjește emoji perfect în timp record. Crocante și aurii de fiecare dată!"
+        },
+        "407": {
+            "name": "Baruri de sushi",
+            "description": "Rulează sushi emoji cu precizie și stil. Se caută talent în stare crudă!"
+        },
+        "408": {
+            "name": "Baruri de salate",
+            "description": "Amestecă salate proaspete de emoji cu o mulțime de toppinguri. Sănătos și delicios!"
+        },
+        "409": {
+            "name": "Cuptoare de pizza",
+            "description": "Coace pizza emoji cu aromă de cuptor cu lemne, care nu e de pe lumea asta!"
+        },
+        "410": {
+            "name": "Espressoare emoji",
+            "description": "Prepară ceașca perfectă de cafea emoji ca să-ți ții bucătarii plini de energie!"
+        },
+        "411": {
+            "name": "Mașini de înghețată emoji",
+            "description": "Scoate deserturi emoji înghețate, pe atât de cool pe cât de delicioase!"
+        },
+        "412": {
+            "name": "Stații de tacos",
+            "description": "Asamblează tacos emoji cu toate toppingurile. Fiesta la fiecare mușcătură!",
+            "quote": "¡Ay, caramba!"
+        },
+        "413": {
+            "name": "Aparate de vafe",
+            "description": "Gătește vafe emoji crocante pe margini și pufoase înăuntru. Perfecte pentru brunch!"
+        },
+        "414": {
+            "name": "Fântâni de ciocolată emoji",
+            "description": "Toarnă ciocolată emoji topită peste orice. Dulce și răsfățător!"
+        },
+        "415": {
+            "name": "Bucătăria canibală emoji",
+            "description": "Gătește emoji folosind alte emoji ca ingrediente."
+        },
+        "416": {
+            "name": "Friteuza gaură neagră emoji",
+            "description": "Prăjește emoji într-o gaură neagră, cu toată energia ei imensă. Ies crocante!"
+        },
+        "417": {
+            "name": "Arena bătăii cu mâncare emoji",
+            "description": "Transformă-ți bucătăria într-o arenă de bătaie cu mâncare. E murdar, haotic și ciudat de profitabil."
+        },
+        "418": {
+            "name": "Aluat viu",
+            "description": "Aluatul ăsta se mișcă singur și se modelează în pâine emoji perfectă. Uneori încearcă să evadeze."
+        },
+        "419": {
+            "name": "Bufetul infinit",
+            "description": "Un bufet care nu se termină niciodată... dar s-ar putea ca mâncarea să înceapă să te mănânce pe tine."
+        },
+        "500": {
+            "name": "Mături",
+            "description": "Pentru curățenie după animale, când ele, ăăă... fac treaba mare."
+        },
+        "501": {
+            "name": "Dresori de animale",
+            "description": "Dresorii învață animalele trucuri, iar grădina zoo devine mai eficientă."
+        },
+        "502": {
+            "name": "Țarcuri de lux",
+            "description": "Îmbunătățește casele animalelor ca să rămână fericite și productive."
+        },
+        "503": {
+            "name": "Animale exotice",
+            "description": "Adu animale rare și exotice ca să atragi mulțimi mai mari."
+        },
+        "504": {
+            "name": "Mascote zoo",
+            "description": "Mascotele prietenoase atrag vizitatori și cresc veniturile."
+        },
+        "505": {
+            "name": "Clinici veterinare",
+            "description": "O clinică dedicată ține animalele sănătoase."
+        },
+        "506": {
+            "name": "Zone cu umbră",
+            "description": "Adaugă zone cu umbră ca animalele și vizitatorii să stea la răcoare în zilele toride."
+        },
+        "507": {
+            "name": "Zone de mângâiat",
+            "description": "Zone special amenajate unde vizitatorii pot interacționa în siguranță cu animalele."
+        },
+        "508": {
+            "name": "Truse de îngrijire",
+            "description": "Îngrijirea regulată le face pe animale să arate cât mai bine și să se simtă grozav."
+        },
+        "509": {
+            "name": "Bănci pentru vizitatori",
+            "description": "Locuri confortabile pentru vizitatorii obosiți."
+        },
+        "510": {
+            "name": "Magazine de suveniruri",
+            "description": "Un magazin cu suveniruri cu animale."
+        },
+        "511": {
+            "name": "Cabină foto cu animale",
+            "description": "Vizitatorii își pot face poze cu animalele."
+        },
+        "512": {
+            "name": "Trenulețul zoo",
+            "description": "Un trenuleț îi plimbă pe vizitatori prin grădina zoo."
+        },
+        "513": {
+            "name": "Show de talente animale",
+            "description": "Organizează un show de talente în care animalele fac trucuri"
+        },
+        "514": {
+            "name": "Parada animalelor",
+            "description": "Organizează o paradă zilnică în care animalele mărșăluiesc prin grădina zoo."
+        },
+        "515": {
+            "name": "Gustări la suprapreț",
+            "description": "Cere vizitatorilor prețuri exorbitante pe gustări cu animale"
+        },
+        "516": {
+            "name": "Forță de muncă animală",
+            "description": "Pune animalele la muncă!"
+        },
+        "517": {
+            "name": "Maimuțe de ordine",
+            "description": "Dresează maimuțe să țină în frâu mulțimile gălăgioase."
+        },
+        "518": {
+            "name": "Animale preistorice",
+            "description": "Adu la grădina zoo dinozauri și alte animale dispărute.",
+            "quote": "Viața, ăă, își găsește calea"
+        },
+        "519": {
+            "name": "Unicorni",
+            "description": "Cine nu vrea să vadă un unicorn zburător?"
+        },
+        "600": {
+            "name": "Unelte mai bune",
+            "description": "Unelte mai bune pentru a crea emoji mai repede."
+        },
+        "601": {
+            "name": "Mai mulți muncitori",
+            "description": "Crește numărul de angajați ai fabricii."
+        },
+        "602": {
+            "name": "Roți dințate mai mari",
+            "description": "Roțile dințate mai mari permit utilaje mai mari."
+        },
+        "603": {
+            "name": "Piulițe și șuruburi",
+            "description": "Ca să nu se facă totul bucăți."
+        },
+        "604": {
+            "name": "Benzi transportoare",
+            "description": "Eficientizează producția cu benzi care mută emoji mai repede ca oricând!"
+        },
+        "605": {
+            "name": "Controlul calității",
+            "description": "Asigură-te că fiecare emoji e perfect, cu o echipă dedicată de control al calității."
+        },
+        "606": {
+            "name": "Extinderea fabricii",
+            "description": "Extinde-ți fabrica pentru mai multe utilaje și muncitori. Mai mare e mai bine!"
+        },
+        "607": {
+            "name": "Prese de mare viteză",
+            "description": "Treci la prese de mare viteză care ștanțează emoji cu viteza fulgerului."
+        },
+        "608": {
+            "name": "Sala de sport a fabricii",
+            "description": "O sală unde muncitorii rămân în formă și plini de energie. Muncitorii sănătoși sunt muncitori productivi!"
+        },
+        "609": {
+            "name": "Securitatea fabricii",
+            "description": "Protejează-ți fabrica de hoții de emoji și de spionajul industrial."
+        },
+        "610": {
+            "name": "Reciclare în fabrică",
+            "description": "Reciclează deșeurile în emoji noi, reducând costurile și impactul asupra mediului."
+        },
+        "611": {
+            "name": "Scări pentru mentenanță",
+            "description": "Instalează scări pentru acces ușor la utilajele înalte. Mentenanța n-a fost niciodată mai simplă!"
+        },
+        "612": {
+            "name": "Ciocane rezistente",
+            "description": "Treci la ciocane rezistente pentru asamblări și reparații mai rapide. Spulberă ineficiența!"
+        },
+        "613": {
+            "name": "Chei de precizie",
+            "description": "Strânge piulițele și șuruburile cu chei de precizie. Nimic nu mai rămâne slăbit pe linia de producție!"
+        },
+        "614": {
+            "name": "Set de șurubelnițe",
+            "description": "Un set complet de șurubelnițe pentru reglajul fin al mașinilor. Fiecare detaliu contează!"
+        },
+        "615": {
+            "name": "Trusă de scule mai bună",
+            "description": "O trusă de scule completă le asigură muncitorilor unealta potrivită pentru orice treabă.",
+            "quote": "Unde am pus... ăla... unde e... ah, lasă!"
+        },
+        "616": {
+            "name": "Ziduri ranforsate",
+            "description": "Întărește zidurile fabricii ca să reziste haosului producției de mare viteză."
+        },
+        "617": {
+            "name": "Capcane de șoareci",
+            "description": "Ține rozătoarele enervante departe de fabrică. Gata cu firele roase și emoji-urile furate!"
+        },
+        "618": {
+            "name": "Manageri de fabrică",
+            "description": "Fără ei nu se face absolut nimic.",
+            "quote": "Și nu uitați: conducerea dorește ca pauzele de toaletă să dureze sub un minut!"
+        },
+        "619": {
+            "name": "Muncitori roboți",
+            "description": "Înlocuiește muncitorii umani slabi cu androizi puternici!"
+        },
+        "700": {
+            "name": "Terenuri de baschet",
+            "description": "Un motiv să vă adunați.",
+            "quote": "Swish, swish, swish. Doar plasă. Și le-a căzut falca până la podea."
+        },
+        "701": {
+            "name": "Terenuri de baseball",
+            "description": "Asta o să fie un home run total."
+        },
+        "702": {
+            "name": "Terenuri de squash",
+            "description": "E un sport sau o supă de dovleac?"
+        },
+        "703": {
+            "name": "Frisbee-uri",
+            "description": "Sportul Ultimate",
+            "quote": "Sper că nimănui nu-i vine ideea să combine asta cu golful..."
+        },
+        "704": {
+            "name": "Terenuri de volei",
+            "description": "Sportul Ultimate"
+        },
+        "705": {
+            "name": "Mese de ping-pong",
+            "description": "Un sport numit după sunetul pe care îl face.",
+            "quote": "Cea mai bună metodă de a lupta cu comuniștii"
+        },
+        "706": {
+            "name": "Terenuri de golf",
+            "description": "Un sport în care lovești o minge cu un băț și conduci o mașinuță cool.",
+            "quote": "Un sport prezidențial"
+        },
+        "800": {
+            "name": "Pușculițe",
+            "description": "Guiț guiț!"
+        },
+        "801": {
+            "name": "Saci de emoji mai mari",
+            "description": "Poți căra și mai multe emoji."
+        },
+        "802": {
+            "name": "Carduri de credit emoji",
+            "description": "Bune pentru a cheltui emoji-urile câștigate cu greu."
+        },
+        "803": {
+            "name": "Investiții în educație",
+            "description": "Educație mai bună, desene emoji mai bune."
+        },
+        "804": {
+            "name": "Investiții în inovație",
+            "description": "Mai multă inovație, emoji mai inovatoare."
+        },
+        "900": {
+            "name": "Carusele",
+            "description": "You spin me right 'round, baby!"
+        },
+        "901": {
+            "name": "Tobogane",
+            "description": "Do you slide on all your nights like this? (I might)"
+        },
+        "902": {
+            "name": "Roata mare",
+            "description": "Way up, there is where she broke my heart."
+        },
+        "903": {
+            "name": "Circ",
+            "description": "Există doar două tipuri de oameni pe lume. Cei care distrează și cei care privesc."
+        },
+        "904": {
+            "name": "Jongler de emoji",
+            "description": "Se zice că n-a scăpat niciodată mingea."
+        },
+        "1000": {
+            "name": "Alegeri emoji",
+            "description": "Să câștige cel mai bun emoji!"
+        },
+        "1001": {
+            "name": "Stimulent emoji",
+            "description": "Primești un emoji, și tu, și tu, toată lumea primește emoji!"
+        },
+        "1002": {
+            "name": "Președintele camerei emoji",
+            "description": "Instalează-ți propriul președinte emoji, ca lucrurile să meargă cum vrei tu."
+        },
+        "1003": {
+            "name": "Legi emoji",
+            "description": "Noi, emoji-urile..."
+        },
+        "1004": {
+            "name": "Confederația globală emoji",
+            "description": "Crește cooperarea dintre țările emoji."
+        },
+        "1100": {
+            "name": "Telescoape",
+            "description": "Privește stelele ca să descoperi planete emoji."
+        },
+        "1101": {
+            "name": "Antene de satelit",
+            "description": "Privește dincolo de Calea Lactee, spre galaxia Calea Emoji."
+        },
+        "1102": {
+            "name": "Astronauți",
+            "description": "Cineva trebuie să-ți conducă stațiile spațiale."
+        },
+        "1103": {
+            "name": "Rachete",
+            "description": "Zboară foarte repede."
+        },
+        "1104": {
+            "name": "⏃⋔ ⌇⍜⌇⟟⏁ ⟟⋏ ⌿⏃☊⟒...",
+            "description": "...⌇⟟ ⏃⎅⎍☊⟒⋔ ⟒⋔⍜⟊⟟ ⋏⍜⟟ ⏁⍀⏃⌇⋏⟟⏁⟒.",
+            "quote": "⏃⏁⟟⋏☌⟒ ⎎⏃⏁⏃ ⋔⟒⏃ ⎅⟒ ☊⟟⋏☊⟟ ⍜⍀⟟ ☊⏃ ⌇⏃ ⏃⎎⌰⟟ ⌇⟒☊⍀⟒⏁⎍⌰ ⋔⟒⎍"
+        },
+        "1105": {
+            "name": "⍜⏚⟟⟒☊⏁ ☊⟟⎍⎅⏃⏁",
+            "description": "⏃☊⟒⌇⏁ ⍜⏚⟟⟒☊⏁ ⏃⌇☊⎍⋏⎅⟒ ⌿⎍⏁⟒⍀⟟ ⋏⟒⏚⏃⋏⎍⟟⏁⟒."
+        },
+        "30000": {
+            "name": "Cartofi",
+            "description": "Cartoftastic! Cartofii sunt coloana vertebrală a oricărei ferme."
+        },
+        "30001": {
+            "name": "Morcovi",
+            "description": "Morcovi pentru ochi frumoși... și ferme frumoase!"
+        },
+        "30002": {
+            "name": "Castraveți",
+            "description": "Rece ca un castravete! Legumele astea răcoritoare sunt perfecte pentru salate și murături.",
+            "quote": "Sunt Rick Murătură!"
+        },
+        "30003": {
+            "name": "Ardei grași",
+            "description": "Dulci sau iuți, ardeii grași aduc culoare și gust fermei tale.",
+            "quote": "Nu e gras, e doar bine hrănit..."
+        },
+        "30004": {
+            "name": "Roșii",
+            "description": "Zemoase și versatile, roșiile sunt preferatele fermei."
+        },
+        "30005": {
+            "name": "Salată verde",
+            "description": "Lasă salata verde să-ți țină ferma proaspătă și... verde."
+        },
+        "30006": {
+            "name": "Broccoli",
+            "description": "Copăcei mici cu beneficii mari!"
+        },
+        "30007": {
+            "name": "Ceapă",
+            "description": "Pline de gust și de lacrimi, cepele sunt de bază în bucătărie și esențiale la fermă.",
+            "quote": "Căpcăunii sunt ca cepele. Cepele au straturi. Căpcăunii au straturi."
+        },
+        "30008": {
+            "name": "Usturoi",
+            "description": "Usturoiul dă gust mâncărurilor și protecție fermei.",
+            "quote": "Merge de minune dacă ai o problemă cu vampirii!"
+        },
+        "30009": {
+            "name": "Porumb",
+            "description": "Porumbul e o cultură versatilă, perfectă la copt și pentru floricele.",
+            "quote": "Porumbastic!"
+        },
+        "30010": {
+            "name": "Fasole",
+            "description": "Bogată în proteine și perfectă pentru a-ți extinde ferma.",
+            "quote": "Fasole!"
+        },
+        "30011": {
+            "name": "Arahide",
+            "description": "Crocante și delicioase, arahidele sunt numai bune de ronțăit și cresc productivitatea fermei."
+        },
+        "30012": {
+            "name": "Dovleci",
+            "description": "Uriași, portocalii și perfecți pentru plăcinte sau speriat ciorile. Dovlecii sunt preferații toamnei!",
+            "quote": "Dovleac, scorțișoară și-o toamnă ca-n poveste!"
+        },
+        "30013": {
+            "name": "Căpșuni",
+            "description": "Dulci, zemoase și perfecte pentru deserturi. Căpșunile sunt o alegere de nota zece... și dulce foc!"
+        },
+        "30014": {
+            "name": "Afine",
+            "description": "Mici, dar puternice..",
+            "quote": "I'm blue da ba dee da ba di"
+        },
+        "30015": {
+            "name": "Vinete",
+            "description": "Mov și versatile, vinetele sunt perfecte pentru grătar, copt și agricultură emoji.",
+            "quote": "Emoji-ul preferat al iubitului meu e vânăta, mi-l tot trimite!"
+        },
+        "30016": {
+            "name": "Dovlecei",
+            "description": "Verzi și din belșug, dovleceii sunt un dar al verii care tot dă."
+        },
+        "30017": {
+            "name": "Avocado",
+            "description": "Cremoase și delicioase, avocado sunt regii pâinii prăjite și preferatele fermei."
+        },
+        "30018": {
+            "name": "Cartofi dulci",
+            "description": "Verișorul dulce al cartofului."
+        },
+        "30019": {
+            "name": "Mazăre",
+            "description": "Mazăre!"
+        },
+        "30020": {
+            "name": "Ridichi",
+            "description": "Iuți și crocante, ridichile dau un plus de picanterie fermei și mâncărurilor."
+        },
+        "30021": {
+            "name": "Ciuperci",
+            "description": "Fungi-tastic! Ciupercile nu sunt de fapt plante, știai?",
+            "quote": "Pălăria îi stă perfect!"
+        },
+        "30022": {
+            "name": "Ananas",
+            "description": "Tropical și acrișor."
+        },
+        "30023": {
+            "name": "Pepeni verzi",
+            "description": "Zemoși și răcoritori, pepenii verzi sunt cultura supremă a verii."
+        },
+        "30024": {
+            "name": "Kiwi",
+            "description": "Pufoase pe dinafară, dulci pe dinăuntru. Kiwi sunt preferatele fermei!"
+        },
+        "30025": {
+            "name": "Struguri",
+            "description": "Perfecți pentru ronțăit, suc sau vin.",
+            "quote": "În struguri stă adevărul."
+        },
+        "30026": {
+            "name": "Cireșe",
+            "description": "Dulci și acrișoare, cireșele sunt un deliciu și preferatele fermei."
+        },
+        "50000": {
+            "name": "Câine ajutător",
+            "description": "Îți atinge ecranul cu botul.",
+            "quote": "HAM! Te ajut să strângi emoji!"
+        },
+        "50001": {
+            "name": "Pisică ajutătoare",
+            "description": "Te gâdilă cu mustățile și te face să atingi mai repede.",
+            "quote": "Miau! Te ajut să strângi emoji!"
+        },
+        "50002": {
+            "name": "Rață ajutătoare",
+            "description": "Te ciupește în coaste cu ciocul și te face să atingi mai repede.",
+            "quote": "Mac! Te ajut să strângi emoji!"
+        },
+        "50003": {
+            "name": "Vacă ajutătoare",
+            "description": "Își izbește ugerul de ecran și te face să atingi mai repede.",
+            "quote": "Muu! Te ajut să strângi emoji!"
+        },
+        "50004": {
+            "name": "Porc ajutător",
+            "description": "Aleargă prin cameră, se distrează, îți aduce zâmbetul pe buze și te face să atingi mai repede.",
+            "quote": "Guiț! Te ajut să strângi emoji!"
+        },
+        "50005": {
+            "name": "Iepure ajutător",
+            "description": "Sare în ecran și îți grăbește atingerile.",
+            "quote": "Hop! Te ajut să strângi emoji!"
+        },
+        "50006": {
+            "name": "Broască ajutătoare",
+            "description": "Țopăie pe ecran și îți grăbește atingerile.",
+            "quote": "Oac! Te ajut să strângi emoji!"
+        },
+        "50007": {
+            "name": "Elefant ajutător",
+            "description": "Trompa lui e perfectă pentru atins ecranul!",
+            "quote": "Tuuu! Te ajut să strângi emoji!"
+        },
+        "50008": {
+            "name": "Maimuță ajutătoare",
+            "description": "Îți dă o grămadă de banane, îți potolește foamea și te face să atingi mai repede!",
+            "quote": "U-u-a-a! Te ajut să strângi emoji!"
+        },
+        "50009": {
+            "name": "Pinguin ajutător",
+            "description": "Îți ciocănește ecranul cu ciocul.",
+            "quote": "Leg-leg! Te ajut să strângi emoji!"
+        },
+        "100000": {
+            "name": "Stagiari emoji",
+            "description": "Stagiarii ajută guvernul emoji să meargă ca pe roate!"
+        },
+        "100001": {
+            "name": "Birocrați emoji",
+            "description": "Un guvern emoji are nevoie de funcționari ca să funcționeze.",
+            "quote": "Se pare că încerci să dai o lege. Ai nevoie de ajutor?"
+        }
+    },
+    "effects": {
+        "0": {
+            "title": "x2 putere de atingere",
+            "description": "Emoji pe atingere dublate!"
+        },
+        "1": {
+            "title": "x3 putere de atingere",
+            "description": "Emoji pe atingere triplate!"
+        },
+        "100": {
+            "title": "x2 producție de emoji",
+            "description": "Producția de emoji s-a dublat!"
+        },
+        "101": {
+            "title": "x77 producție de emoji",
+            "description": "Producția de emoji înmulțită cu 77!"
+        },
+        "110": {
+            "title": "Jumătate de producție",
+            "description": "Producția de emoji s-a înjumătățit!"
+        },
+        "200": {
+            "title": "Cadou emoji",
+            "description": "Emoji cât pentru o oră!"
+        }
+    }
+}

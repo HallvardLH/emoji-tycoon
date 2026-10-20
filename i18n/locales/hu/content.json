@@ -1,0 +1,1009 @@
+{
+    "buildings": {
+        "0": {
+            "name": "Rajzoló kéz",
+            "plural": "Rajzoló kezek",
+            "description": "Egy kéz, ami emojikat rajzol neked."
+        },
+        "1": {
+            "name": "Grafikai stúdió",
+            "plural": "Grafikai stúdiók",
+            "description": "Egy stúdió, ahol emojik születnek."
+        },
+        "2": {
+            "name": "Farm",
+            "plural": "Farmok",
+            "description": "Egy farm, ahol emojik bújnak ki a földből."
+        },
+        "3": {
+            "name": "Étterem",
+            "plural": "Éttermek",
+            "description": "Ide járnak az emojik étel-emojikat enni."
+        },
+        "4": {
+            "name": "Simogató állatkert",
+            "plural": "Simogató állatkertek",
+            "description": "Ismerd meg kedvenc emojiállataidat."
+        },
+        "5": {
+            "name": "Gyár",
+            "plural": "Gyárak",
+            "description": "Emojigyártás ipari méretekben."
+        },
+        "6": {
+            "name": "Sportközpont",
+            "plural": "Sportközpontok",
+            "description": "Tartsd formában az emojijaidat."
+        },
+        "7": {
+            "name": "Bank",
+            "plural": "Bankok",
+            "description": "\"Nálunk biztonságban vannak az emojijaid.\""
+        },
+        "8": {
+            "name": "Emoji-vidámpark",
+            "plural": "Emoji-vidámparkok",
+            "description": "\"Üdv Emojiországban, ahol az álmok és az érzelmek életre kelnek!\""
+        },
+        "9": {
+            "name": "Emojigyűlés",
+            "plural": "Emojigyűlések",
+            "description": "Itt gyűlnek össze az emojik, hogy eldöntsék, hogyan legyen még több emoji."
+        },
+        "10": {
+            "name": "Űrállomás",
+            "plural": "Űrállomások",
+            "description": "Hódíts meg új világokat, és vedd el az emojijaikat."
+        },
+        "11": {
+            "name": "Cukorkakirályság",
+            "plural": "Cukorkakirályságok",
+            "description": "Cukros paradicsom, ahol a Cukorkakirály uralkodik édes emojialattvalói felett."
+        },
+        "12": {
+            "name": "Emojivulkán",
+            "plural": "Emojivulkánok",
+            "description": "Minden kitörés vadonatúj, frissen kovácsolt emojik áradatát hozza!"
+        },
+        "13": {
+            "name": "Az égi Nagy Emoji temploma",
+            "plural": "Az égi Nagy Emoji templomai",
+            "description": "A legenda szerint az égi Nagy Emoji végtelen emojival áldja meg leghűbb követőit."
+        },
+        "14": {
+            "name": "Emoji-szuperszámítógép",
+            "plural": "Emoji-szuperszámítógépek",
+            "description": "A végső emojimotor. Fénysebességgel sokszorozza az emojikat."
+        },
+        "15": {
+            "name": "Emoji fekete lyuk",
+            "plural": "Emoji fekete lyukak",
+            "description": "Minden emoji végállomása... vagy egy új kezdet?"
+        },
+        "16": {
+            "name": "Emojiszingularitás",
+            "plural": "Emojiszingularitások",
+            "description": "Ennyi volt. Az emojikon kívül semmi sem maradt. Megcsináltad."
+        }
+    },
+    "upgrades": {
+        "0": {
+            "name": "Még egy kéz",
+            "description": "Egy másik kéz koppintja a képernyőt. Kinek a keze? Fogalmam sincs."
+        },
+        "1": {
+            "name": "És még egy kéz",
+            "description": "Újabb kéz koppint a képernyőn. Kézenfekvő!"
+        },
+        "2": {
+            "name": "Tíz újabb kéz",
+            "description": "Hirtelen tíz kéz kezdi koppintgatni a képernyődet! Szuper!"
+        },
+        "3": {
+            "name": "Száz kéz!",
+            "description": "Az egész környék eljött, hogy megkoppintsa a nagy emojit a képernyőn!"
+        },
+        "4": {
+            "name": "Ezer kéz",
+            "description": "Messze földről utaznak ide, csak hogy a képernyődet koppintgassák."
+        },
+        "5": {
+            "name": "Millió kéz",
+            "description": "Kire mutogatsz? Rám mutogatsz? Milyen bunkó..."
+        },
+        "6": {
+            "name": "Milliárd kéz",
+            "description": "A világ népességének több mint 10%-a segít koppintani. Szerintem mindjárt eltörik a képernyő."
+        },
+        "7": {
+            "name": "Billió kéz",
+            "description": "Anyukád hív. Aggódik érted. Bosszant, hogy a hívás eltakarja a képernyőt, ezért kinyomod, és koppintasz tovább."
+        },
+        "8": {
+            "name": "Billiárd kéz",
+            "description": "Rengeteg kéz koppintja a képernyődet. Dákó egyiknél sincs."
+        },
+        "9": {
+            "name": "Trillió kéz",
+            "description": "A kezek puszta száma felfoghatatlan. A képernyő alaposan megszenvedi."
+        },
+        "10": {
+            "name": "Trilliárd kéz",
+            "description": "Ameddig a szem ellát, mindenhol kezek, és mind szorgalmasan koppintanak."
+        },
+        "11": {
+            "name": "Kvadrillió kéz",
+            "description": "Tökéletes forma. Tökéletes koppintások. Végtelen kéz."
+        },
+        "12": {
+            "name": "Kvadrilliárd kéz",
+            "description": "Több kéz, mint atom az univerzumban. Mind tudja, mit csinál."
+        },
+        "13": {
+            "name": "Kvintillió kéz",
+            "description": "A koppintás hangja mostanra iszonyúan hangos, ritmikus dübörgés, amely lökéshullámot küld körbe a világon."
+        },
+        "14": {
+            "name": "Kvintilliárd kéz",
+            "description": "Ennyi húst sosem lenne szabad ilyen szorosan egy helyre zsúfolni..."
+        },
+        "15": {
+            "name": "Szextillió kéz",
+            "description": "A meglévő kezekből újabb tucatnyi nő ki, kicsavarodva és torzan."
+        },
+        "16": {
+            "name": "Szextilliárd kéz",
+            "description": "Suttogást kezdesz hallani. A kezek tovább koppintanak, de kié lehetnek?"
+        },
+        "17": {
+            "name": "Szeptillió kéz",
+            "description": "A kezek torzulni kezdenek. Már nem emberiek."
+        },
+        "18": {
+            "name": "Szeptilliárd kéz",
+            "description": "A kezek mögött valami ólálkodik, és gonosz szándékkal irányítja őket."
+        },
+        "19": {
+            "name": "Oktillió kéz",
+            "description": "Ezek a kezek... mik ezek? A levegő kénszagú."
+        },
+        "20": {
+            "name": "Oktilliárd kéz",
+            "description": "A kezek mindenhol ott vannak, megtöltik a szobát. Érzed, ahogy feléd nyúlnak..."
+        },
+        "21": {
+            "name": "Démonkezek",
+            "description": "Démoni kezek koppintanak szüntelenül a pokol mélyéről. A képernyő izzik, ha hozzáérsz."
+        },
+        "22": {
+            "name": "Az elkárhozottak kezei",
+            "description": "Kísérteties, csontos kezek emelkednek ki a mélységből. Pokoli dühvel koppintanak."
+        },
+        "23": {
+            "name": "Az alvilág ura",
+            "description": "Maga a bukott angyal mászik fel birodalmából, hogy segítsen koppintani."
+        },
+        "24": {
+            "name": "Bunkó koppintás",
+            "description": "Tényleg nagyon, nagyon bunkó."
+        },
+        "100": {
+            "name": "Erősebb kar",
+            "description": "Erősebb karral gyorsabban rajzolod az emojikat."
+        },
+        "101": {
+            "name": "Hajlékony ujjak",
+            "description": "Hajlékony ujjakkal bonyolultabb emojikat rajzolhatsz."
+        },
+        "102": {
+            "name": "Két kéz",
+            "description": "Kétszer annyi kéz, dupla emoji."
+        },
+        "103": {
+            "name": "Kifestett körmök",
+            "description": "A körömlakktól gyorsabban koppintasz, nem tudtad?"
+        },
+        "104": {
+            "name": "Láb",
+            "description": "Lábbal rajzolva megduplázod a termelést (és egyáltalán nem nehéz)!"
+        },
+        "105": {
+            "name": "Nyelv",
+            "description": "Évek gyakorlásával te is megtanulhatsz a nyelveddel rajzolni!"
+        },
+        "106": {
+            "name": "Orr",
+            "description": "Dugj egy zsírkrétát az orrodba, és rajzolj vele!",
+            "quote": "*Szipp* Miért van lábszaga a képernyőnek?"
+        },
+        "107": {
+            "name": "Fül",
+            "description": "Dugj tollat a füledbe, fordítsd el a fejed 90 fokkal, és rajzolj vele!"
+        },
+        "108": {
+            "name": "Száj",
+            "description": "Vegyél egy ceruzát a szádba, és rajzolj vele!"
+        },
+        "109": {
+            "name": "Erősebb láb",
+            "description": "Erősebb lábbal sokkal gyorsabban rajzolsz emojikat a lábaddal."
+        },
+        "110": {
+            "name": "Nagyobb tüdő",
+            "description": "Nagyobb tüdővel gyorsabban rajzolhatsz emojikat."
+        },
+        "111": {
+            "name": "Nagyobb agy",
+            "description": "Egy nagyobb agy hatalmas kreativitáshullámot szabadít fel, és megduplázza az emojitermelésedet!"
+        },
+        "112": {
+            "name": "Haj",
+            "description": "Fogj ecsetet a hajaddal, és alkoss emojikat. Kinek kell kéz, ha stílusa van?"
+        },
+        "113": {
+            "name": "Szemöldök",
+            "description": "Emeld fel a szemöldököd, és rajzolj emojikat. Edzés az arcodnak és a kreativitásodnak!"
+        },
+        "114": {
+            "name": "Hát",
+            "description": "Feküdj a hátadra, és rajzolj emojikat a hátad mögött. Jógaóra és rajzóra egyben!"
+        },
+        "115": {
+            "name": "Fogak",
+            "description": "Szorítsd a tollat a fogaid közé, és rajzolj emojikat. Figyelem: állkapocsfáradást okozhat!"
+        },
+        "116": {
+            "name": "Köldök",
+            "description": "Rajzolj emojikat a köldököddel. Egyedi képesség, amit nehéz elsajátítani!"
+        },
+        "117": {
+            "name": "Visszhangrajz",
+            "description": "Minden megrajzolt emojid visszhangzik, így kétszer annyi lesz belőle!"
+        },
+        "118": {
+            "name": "Telekinetikus rajzolás",
+            "description": "Minek a kéz, ha az elméddel is rajzolhatsz emojikat?"
+        },
+        "119": {
+            "name": "Kvantumujjak",
+            "description": "Az ujjaidban zajló kvantum-összefonódás révén fénysebességgel rajzolhatsz emojikat."
+        },
+        "200": {
+            "name": "Jobb ceruzák",
+            "description": "Jobb ceruzák a részletesebb emojikért."
+        },
+        "201": {
+            "name": "Különleges zsírkréták",
+            "description": "Ezekkel a különleges zsírkrétákkal a művészek rátalálnak a belső gyermekükre."
+        },
+        "202": {
+            "name": "Jobb ecsetek",
+            "description": "Jobb ecsetekkel művészibb emojik készülnek."
+        },
+        "203": {
+            "name": "Töltőtollak",
+            "description": "Előkelőbb emojikhoz."
+        },
+        "204": {
+            "name": "Vonalzók",
+            "description": "Máshogy hogyan húznál egyenes vonalat?"
+        },
+        "205": {
+            "name": "Színtévesztés-szimulátor",
+            "description": "Legyenek az emojijaid mindenki számára akadálymentesek!",
+            "quote": "'Vécéágé'? 'Duplavékag'? 'Vékág'?"
+        },
+        "206": {
+            "name": "Képregényeffektek",
+            "description": "Dobd fel az emojijaidat 'PAFF!' és 'BUMM!' effektekkel!"
+        },
+        "207": {
+            "name": "Sablonkészlet",
+            "description": "Ezekkel a sablonokkal minden emoji tökéletes formájú lesz!"
+        },
+        "208": {
+            "name": "Egyedi billentyűparancsok",
+            "description": "Gyorsítsd fel a munkát személyre szabott emojitervező billentyűparancsokkal!",
+            "quote": "Próbáld ki: Alt + F4."
+        },
+        "209": {
+            "name": "Elemkönyvtár-előfizetés",
+            "description": "Férj hozzá kész formák, ikonok és textúrák hatalmas tárához!"
+        },
+        "210": {
+            "name": "Visszavonás gomb",
+            "description": "A visszavonás nemcsak a munkádat állítja vissza - magát a valóságot változtatja meg. Óvatosan használd!",
+            "quote": "Tévedni emberi dolog"
+        },
+        "211": {
+            "name": "Emoji-kifestőkönyv",
+            "description": "Csak a legkifinomultabb művészek használnak kifestőt."
+        },
+        "212": {
+            "name": "Valós idejű együttműködés",
+            "description": "Hívj meg más tervezőket, hogy egyszerre dolgozzanak az emojiprojektjeiden!"
+        },
+        "213": {
+            "name": "Emoji-hangulattábla",
+            "description": "Rendezd vizuálisan az emojiötleteidet a maximális kreativitásért!",
+            "quote": "Kicsit lapos a hangulat, nem?"
+        },
+        "214": {
+            "name": "Pixelart-szoftver",
+            "description": "Készíts retró pixeles emojikat, amelyekből csak úgy árad a '90-es évek nosztalgiája!",
+            "quote": "Minden pixel számít."
+        },
+        "215": {
+            "name": "Comic Sans betűtípus",
+            "description": "Szereted vagy utálod, az emojijaid... egyediek lesznek tőle!"
+        },
+        "216": {
+            "name": "MI-képgenerátor",
+            "description": "Hagyd, hogy az MI végezze a nehezét, és villámgyorsan gyártson gyenge minőségű, unalmas emojikat!",
+            "quote": "Bip-bup!"
+        },
+        "217": {
+            "name": "Origamipapír",
+            "description": "Hajtogasd a papíremojijaidat mindenféle formára!",
+            "quote": "Háp!"
+        },
+        "218": {
+            "name": "Emoji-tetoválógép",
+            "description": "Örök emojik az igazán elkötelezett művészeknek!",
+            "quote": "Au!"
+        },
+        "219": {
+            "name": "Vér",
+            "description": "Vérrel festve extra menők lesznek az emojik!"
+        },
+        "300": {
+            "name": "Gazdák",
+            "description": "Mit ér egy farm gazda nélkül?!"
+        },
+        "301": {
+            "name": "Palánta",
+            "description": "Valahol el kell kezdeni.",
+            "quote": "Hajts tovább, sose add fel!"
+        },
+        "302": {
+            "name": "Jobb szerszámok",
+            "description": "Sokkal gyorsabb gazdálkodást tesz lehetővé!"
+        },
+        "303": {
+            "name": "Traktorok",
+            "description": "Sokkal könnyebbé teszik az emojiaratást."
+        },
+        "304": {
+            "name": "Parasztházak",
+            "description": "Hangulatos otthon, ahol a gazdáid pihenhetnek és feltöltődhetnek."
+        },
+        "305": {
+            "name": "Emojitehenek",
+            "description": "Még több emúúúúújit termelnek."
+        },
+        "306": {
+            "name": "Öntözőrendszer",
+            "description": "Öntözd rendszeresen az emojiterményeidet a gyorsabb növekedésért.",
+            "quote": "Hányadik századot írjuk?!"
+        },
+        "307": {
+            "name": "Madárijesztők",
+            "description": "Távol tartják az idegesítő madáremojikat a farmjaidtól!"
+        },
+        "308": {
+            "name": "Komposztálók",
+            "description": "Csinálj a hulladékból trágyát az egészségesebb emojiterményekért!"
+        },
+        "309": {
+            "name": "Üvegházak",
+            "description": "Termessz emojikat egész évben, időjárástól függetlenül!"
+        },
+        "310": {
+            "name": "Szélmalmok",
+            "description": "Fogd munkára a szél erejét, és növeld a farmod hatékonyságát!",
+            "quote": "Zsuhh!"
+        },
+        "311": {
+            "name": "Emoji-gyümölcsösök",
+            "description": "Ültess emojifákat, amelyek egész évben teremnek!"
+        },
+        "312": {
+            "name": "Aratóünnep",
+            "description": "Ünnepeld a bőséges termést egy hangulatjavító fesztivállal!"
+        },
+        "313": {
+            "name": "Óriás emojicsúzli",
+            "description": "Lődd át az emojimagokat a farmon a villámgyors vetésért!"
+        },
+        "314": {
+            "name": "Láthatatlan kerítés",
+            "description": "Bent tartja az emojijószágot... még ha te nem is látod.",
+            "quote": "Fáj, ha lepisiled."
+        },
+        "315": {
+            "name": "Génmódosított növények",
+            "description": "Héj nélküli banán, eleve csokiba mártott eper, előfőzött krumpli és még sok más!"
+        },
+        "316": {
+            "name": "A jövő emojifarmja",
+            "description": "A farmjaid mostantól csúcstechnológiás utópiák robotokkal, hologramokkal és repülő traktorokkal. Üdv a jövőben!"
+        },
+        "317": {
+            "name": "Vérhold",
+            "description": "A vérhold alatt gyorsabban nőnek a terményeid... de fogaik is nőnek."
+        },
+        "318": {
+            "name": "Az utolsó aratás",
+            "description": "Egy titokzatos alak bőséges termést kínál... valamiért cserébe. Mersz igent mondani?"
+        },
+        "319": {
+            "name": "Búcsú a gazdálkodástól",
+            "description": "Eleged lett a gazdálkodásból. Talán az a legjobb, ha feladod, és inkább irodában dolgozol."
+        },
+        "400": {
+            "name": "Éles kések",
+            "description": "Élesebb késekkel könnyebb az emojiaprítás."
+        },
+        "401": {
+            "name": "Tapadásmentes serpenyők",
+            "description": "Tapadásmentes serpenyőkben gyorsabban készülnek az emojifogások."
+        },
+        "402": {
+            "name": "Jobb sütők",
+            "description": "A jobb hőszabályozású sütők gyorsabban sütik az emojikat."
+        },
+        "403": {
+            "name": "Minőségi alapanyagok",
+            "description": "Jobb alapanyagok, ízletesebb emojik."
+        },
+        "404": {
+            "name": "Szakácssapka",
+            "description": "A szakácssapka felgyorsítja az emojifőzést."
+        },
+        "405": {
+            "name": "Emoji-turmixgépek",
+            "description": "Turmixolj emojikból finom smoothie-kat és leveseket pillanatok alatt!"
+        },
+        "406": {
+            "name": "Légsütők",
+            "description": "Süsd tökéletesre az emojikat rekordidő alatt. Mindig ropogós és aranybarna!"
+        },
+        "407": {
+            "name": "Sushibárok",
+            "description": "Tekerj emojisushit precízen és stílusosan. Nyers tehetség kell hozzá!"
+        },
+        "408": {
+            "name": "Salátabárok",
+            "description": "Dobj össze friss emojisalátákat sokféle feltéttel. Egészséges és finom!"
+        },
+        "409": {
+            "name": "Pizzakemencék",
+            "description": "Süss fatüzeléses ízű emojipizzát, ami egyszerűen földöntúli!"
+        },
+        "410": {
+            "name": "Emoji-kávégépek",
+            "description": "Főzd le a tökéletes csésze emojikávét, hogy a szakácsaid pörögjenek!"
+        },
+        "411": {
+            "name": "Emoji-fagyigépek",
+            "description": "Ontják a fagyos emojicsemegéket, amelyek ugyanolyan menők, mint amilyen finomak!"
+        },
+        "412": {
+            "name": "Tacóállomások",
+            "description": "Rakj össze emojitacókat minden feltéttel. Minden falat egy fiesta!",
+            "quote": "¡Ay, caramba!"
+        },
+        "413": {
+            "name": "Gofrisütők",
+            "description": "Süss ropogós szélű, puha belsejű emojigofrit. Tökéletes villásreggelire!"
+        },
+        "414": {
+            "name": "Emoji-csokiszökőkutak",
+            "description": "Csorgass olvasztott emojicsokit mindenre. Édes kényeztetés!"
+        },
+        "415": {
+            "name": "Emoji-kannibálkonyha",
+            "description": "Főzz emojikat más emojikból."
+        },
+        "416": {
+            "name": "Feketelyuk-emojisütő",
+            "description": "Süsd az emojikat egy fekete lyukban, és használd ki hatalmas energiáját. Ropogósan jönnek vissza!"
+        },
+        "417": {
+            "name": "Emoji-kajacsataaréna",
+            "description": "Változtasd a konyhádat kajacsata-arénává. Koszos, kaotikus és furcsán jövedelmező."
+        },
+        "418": {
+            "name": "Élő tészta",
+            "description": "Ez a tészta magától mozog, és tökéletes emojikenyérré formálja magát. Néha megpróbál megszökni."
+        },
+        "419": {
+            "name": "A végtelen büfé",
+            "description": "Egy büfé, aminek sosem lesz vége... de lehet, hogy egyszer az étel kezd el téged enni."
+        },
+        "500": {
+            "name": "Seprűk",
+            "description": "Takarításhoz, miután az állatok izé... elvégezték a nagydolgukat."
+        },
+        "501": {
+            "name": "Állatidomárok",
+            "description": "Az idomárok trükkökre tanítják az állatokat, így hatékonyabb az állatkert."
+        },
+        "502": {
+            "name": "Luxusólak",
+            "description": "Újítsd fel az állatok otthonát, hogy boldogok és produktívak legyenek."
+        },
+        "503": {
+            "name": "Egzotikus állatok",
+            "description": "Hozz ritka, egzotikus állatokat, hogy nagyobb tömeget vonzz."
+        },
+        "504": {
+            "name": "Állatkerti kabalák",
+            "description": "A barátságos kabalafigurák több látogatót csalogatnak, ami növeli a bevételt."
+        },
+        "505": {
+            "name": "Állatorvosi rendelők",
+            "description": "Egy saját rendelő egészségesen tartja az állatokat."
+        },
+        "506": {
+            "name": "Árnyékos részek",
+            "description": "Árnyékos helyek, hogy forró napokon az állatok és a látogatók is hűsölhessenek."
+        },
+        "507": {
+            "name": "Simogatópontok",
+            "description": "Kijelölt helyek, ahol a látogatók biztonságosan érintkezhetnek az állatokkal."
+        },
+        "508": {
+            "name": "Állatápoló készletek",
+            "description": "A rendszeres ápolástól az állatok jól néznek ki és remekül érzik magukat."
+        },
+        "509": {
+            "name": "Látogatói padok",
+            "description": "Kényelmes ülőhelyek a fáradt látogatóknak."
+        },
+        "510": {
+            "name": "Ajándékboltok",
+            "description": "Állatos ajándéktárgyakat árusító bolt."
+        },
+        "511": {
+            "name": "Állatos fotófülke",
+            "description": "A látogatók fotózkodhatnak az állatokkal."
+        },
+        "512": {
+            "name": "Állatkerti kisvonat",
+            "description": "Egy kisvonat körbeviszi a látogatókat az állatkertben."
+        },
+        "513": {
+            "name": "Állati tehetségkutató",
+            "description": "Rendezz tehetségkutatót, ahol az állatok trükköket mutatnak be"
+        },
+        "514": {
+            "name": "Állatparádé",
+            "description": "Rendezz napi parádét, ahol az állatok végigmasíroznak az állatkerten."
+        },
+        "515": {
+            "name": "Túlárazott nasik",
+            "description": "Kérj csillagászati árakat az állatos nasikért"
+        },
+        "516": {
+            "name": "Állati munkaerő",
+            "description": "Fogd munkára az állatokat!"
+        },
+        "517": {
+            "name": "Tömegoszlató majmok",
+            "description": "Taníts be majmokat a rakoncátlan tömeg kezelésére."
+        },
+        "518": {
+            "name": "Őskori állatok",
+            "description": "Hozz dinoszauruszokat és más kihalt állatokat az állatkertbe.",
+            "quote": "Az élet, öhm, utat tör magának"
+        },
+        "519": {
+            "name": "Egyszarvúak",
+            "description": "Ki ne akarna repülő egyszarvút látni?"
+        },
+        "600": {
+            "name": "Jobb szerszámok",
+            "description": "Jobb szerszámok a gyorsabb emojigyártáshoz."
+        },
+        "601": {
+            "name": "Több munkás",
+            "description": "Növeld a gyári dolgozók számát."
+        },
+        "602": {
+            "name": "Nagyobb fogaskerekek",
+            "description": "Nagyobb fogaskerekek, nagyobb gépek."
+        },
+        "603": {
+            "name": "Csavarok és anyák",
+            "description": "Ezek gondoskodnak róla, hogy semmi ne essen szét."
+        },
+        "604": {
+            "name": "Futószalagok",
+            "description": "Gyorsítsd a termelést futószalagokkal, amelyek minden eddiginél gyorsabban mozgatják az emojikat!"
+        },
+        "605": {
+            "name": "Minőségellenőrzés",
+            "description": "Egy külön minőségellenőrző csapat gondoskodik róla, hogy minden emoji tökéletes legyen."
+        },
+        "606": {
+            "name": "Gyárbővítés",
+            "description": "Bővítsd a gyárat, hogy több gép és munkás férjen el. A nagyobb jobb!"
+        },
+        "607": {
+            "name": "Gyorsprések",
+            "description": "Válts nagy sebességű présekre, amelyek villámgyorsan sajtolják az emojikat."
+        },
+        "608": {
+            "name": "Gyári edzőterem",
+            "description": "Edzőterem, hogy a munkásaid fittek és energikusak maradjanak. Az egészséges munkás produktív munkás!"
+        },
+        "609": {
+            "name": "Gyári biztonság",
+            "description": "Védd a gyáradat az emojitolvajoktól és az ipari kémkedéstől."
+        },
+        "610": {
+            "name": "Gyári újrahasznosítás",
+            "description": "Hasznosítsd újra a hulladékot új emojikká, csökkentve a költségeket és a környezeti terhelést."
+        },
+        "611": {
+            "name": "Karbantartó létrák",
+            "description": "Szerelj fel létrákat, hogy könnyen elérd a magasan lévő gépeket. A karbantartás még sosem volt ilyen egyszerű!"
+        },
+        "612": {
+            "name": "Strapabíró kalapácsok",
+            "description": "Válts strapabíró kalapácsokra a gyorsabb összeszerelésért és javításért. Zúzd szét a hatékonytalanságot!"
+        },
+        "613": {
+            "name": "Precíziós csavarkulcsok",
+            "description": "Húzd meg a csavarokat precíziós csavarkulcsokkal. Nincs több laza szál a gyártósoron!"
+        },
+        "614": {
+            "name": "Csavarhúzókészlet",
+            "description": "Teljes csavarhúzókészlet a gépek finomhangolásához. Minden részlet számít!"
+        },
+        "615": {
+            "name": "Szerszámosláda-fejlesztés",
+            "description": "Egy jól felszerelt szerszámosláda biztosítja, hogy a munkásaidnál mindig ott legyen a megfelelő szerszám.",
+            "quote": "Hova tettem a- a- hol van a- áh, mindegy!"
+        },
+        "616": {
+            "name": "Megerősített falak",
+            "description": "Erősítsd meg a gyár falait, hogy kibírják a nagy sebességű termelés káoszát."
+        },
+        "617": {
+            "name": "Egérfogók",
+            "description": "Tartsd távol a kártevőket a gyáradtól. Nincs több megrágott kábel vagy ellopott emoji!"
+        },
+        "618": {
+            "name": "Gyárvezetők",
+            "description": "Ezek nélkül semmi munka nem készül el.",
+            "quote": "És ne feledjétek: a vezetőség szeretné, ha a mosdószünetek egy perc alatt maradnának!"
+        },
+        "619": {
+            "name": "Robotmunkások",
+            "description": "Cseréld le a gyenge emberi munkásokat erős androidokra!"
+        },
+        "700": {
+            "name": "Kosárlabdapályák",
+            "description": "Jó ok az összejövetelre.",
+            "quote": "Suh, suh, suh. Csak a háló. És leesett az álluk."
+        },
+        "701": {
+            "name": "Baseballpályák",
+            "description": "Ez biztosan telitalálat lesz."
+        },
+        "702": {
+            "name": "Squashpályák",
+            "description": "Mint a tenisz, csak a fal mindig visszaüt."
+        },
+        "703": {
+            "name": "Frizbik",
+            "description": "Az Ultimate sport",
+            "quote": "Remélem, senkinek sem jut eszébe golffal kombinálni..."
+        },
+        "704": {
+            "name": "Röplabdapályák",
+            "description": "Az Ultimate sport"
+        },
+        "705": {
+            "name": "Pingpongasztalok",
+            "description": "Egy sport, amit a hangjáról neveztek el.",
+            "quote": "A legjobb fegyver a kommunisták ellen"
+        },
+        "706": {
+            "name": "Golfpályák",
+            "description": "Egy sport, ahol bottal ütöd a labdát, és menő kocsival furikázol.",
+            "quote": "Elnöki sport"
+        },
+        "800": {
+            "name": "Malacperselyek",
+            "description": "Röf röf!"
+        },
+        "801": {
+            "name": "Nagyobb emojizsákok",
+            "description": "Még több emojit cipelhetsz."
+        },
+        "802": {
+            "name": "Emoji-hitelkártyák",
+            "description": "Jól jönnek a nehezen megkeresett emojijaid elköltéséhez."
+        },
+        "803": {
+            "name": "Befektetés az oktatásba",
+            "description": "Jobb oktatás, jobb emojirajzolási tudás."
+        },
+        "804": {
+            "name": "Befektetés az innovációba",
+            "description": "Több innováció, innovatívabb emojik."
+        },
+        "900": {
+            "name": "Körhinták",
+            "description": "You spin me right 'round, baby!"
+        },
+        "901": {
+            "name": "Csúszdák",
+            "description": "Do you slide on all your nights like this? (I might)"
+        },
+        "902": {
+            "name": "Óriáskerék",
+            "description": "Fent a magasban, ott törte össze a szívem."
+        },
+        "903": {
+            "name": "Cirkusz",
+            "description": "A világon csak kétféle ember van. Akik szórakoztatnak, és akik nézik."
+        },
+        "904": {
+            "name": "Emojizsonglőr",
+            "description": "Azt mondják, még sosem ejtette el a labdát."
+        },
+        "1000": {
+            "name": "Emojiválasztások",
+            "description": "Győzzön a legjobb emoji!"
+        },
+        "1001": {
+            "name": "Emoji-mentőcsomag",
+            "description": "Te is kapsz egy emojit, meg te, meg te, mindenki kap emojit!"
+        },
+        "1002": {
+            "name": "Az emojiház elnöke",
+            "description": "Ültesd be a saját emojielnöködet, hogy minden úgy menjen, ahogy te akarod."
+        },
+        "1003": {
+            "name": "Emojitörvények",
+            "description": "Mi, az emojik..."
+        },
+        "1004": {
+            "name": "Globális emojikonföderáció",
+            "description": "Erősíti az együttműködést az emojiországok között."
+        },
+        "1100": {
+            "name": "Távcsövek",
+            "description": "Kémleld a csillagokat, és fedezz fel emojibolygókat."
+        },
+        "1101": {
+            "name": "Parabolaantennák",
+            "description": "Láss túl a Tejúton, egészen az Emojiút galaxisig."
+        },
+        "1102": {
+            "name": "Űrhajósok",
+            "description": "Valakinek működtetnie kell az űrállomásaidat."
+        },
+        "1103": {
+            "name": "Rakéták",
+            "description": "Nagyon gyorsan repülnek."
+        },
+        "1104": {
+            "name": "⏚⟒☍⟒⏚⟒⋏ ⟊⍜⏁⏁⎍⋏☍...",
+            "description": "...⟒⌇ ⊑⍜⋉⏁⎍⋏☍ ⍜⍀⎍⌰⏁ ⎍⟊ ⟒⋔⍜⟊⟟☍⏃⏁.",
+            "quote": "☍⍜⌿⌿⟟⋏⏁⌇ ⍜⏁⌇⋉⍜⍀ ⏃⋉ ⏃⍀☊⍜⋔⍀⏃ ⏃ ⏁⟟⏁☍⍜⋔⟒⍀⏁"
+        },
+        "1105": {
+            "name": "⎎⎍⍀☊⌇⏃ ⏁⏃⍀☌⊬",
+            "description": "⟒⋉ ⏃ ⏁⏃⍀☌⊬ ⟟⌇⋔⟒⍀⟒⏁⌰⟒⋏ ⟒⍀⍜☍⟒⏁ ⍀⟒⟊⏁."
+        },
+        "30000": {
+            "name": "Krumpli",
+            "description": "Krumplitasztikus! A krumpli minden farm gerince."
+        },
+        "30001": {
+            "name": "Répa",
+            "description": "Répa, retek, mogyoró! A répa megvan, a többi is jön."
+        },
+        "30002": {
+            "name": "Uborka",
+            "description": "Hűvös, mint az uborka! Ez a frissítő zöldség tökéletes salátába és savanyításhoz.",
+            "quote": "Uborka Rick vagyok!"
+        },
+        "30003": {
+            "name": "Kaliforniai paprika",
+            "description": "Édes vagy csípős, a paprika színt és ízt visz a farmodra.",
+            "quote": "Kaliforniában még sosem járt..."
+        },
+        "30004": {
+            "name": "Paradicsom",
+            "description": "Lédús és sokoldalú: a paradicsom maga a földi paradicsom."
+        },
+        "30005": {
+            "name": "Saláta",
+            "description": "Bízd a salátára, hogy a farmod friss és zöld maradjon."
+        },
+        "30006": {
+            "name": "Brokkoli",
+            "description": "Apró fák, nagy előnyökkel!"
+        },
+        "30007": {
+            "name": "Hagyma",
+            "description": "Rétegnyi íz és könny: a hagyma a konyha alapja és a farm nélkülözhetetlen része.",
+            "quote": "Az ogrék olyanok, mint a hagyma. A hagymának rétegei vannak. Az ogréknak rétegei vannak."
+        },
+        "30008": {
+            "name": "Fokhagyma",
+            "description": "A fokhagyma ízt ad az ételeidnek és védelmet a farmodnak.",
+            "quote": "Szuper, ha vámpírproblémád van!"
+        },
+        "30009": {
+            "name": "Kukorica",
+            "description": "A kukorica sokoldalú termény, tökéletes sütéshez és pattogatáshoz.",
+            "quote": "Kukori-csodás!"
+        },
+        "30010": {
+            "name": "Bab",
+            "description": "Sok fehérje, és tökéletes a farm bővítéséhez.",
+            "quote": "Bab!"
+        },
+        "30011": {
+            "name": "Földimogyoró",
+            "description": "Ropogós és finom: a földimogyoró remek nasi, és a farmod termelékenységét is növeli."
+        },
+        "30012": {
+            "name": "Tök",
+            "description": "Óriási, narancssárga, és tök-életes pitébe vagy varjak ijesztgetésére. Az ősz kedvence!",
+            "quote": "Tökfűszeres latte, és kész az ősz!"
+        },
+        "30013": {
+            "name": "Eper",
+            "description": "Édes, lédús, desszertnek tökéletes. Az eper eperfektül illik a farmodra!"
+        },
+        "30014": {
+            "name": "Áfonya",
+            "description": "Kicsi, de erős!",
+            "quote": "I'm blue da ba dee da ba di"
+        },
+        "30015": {
+            "name": "Padlizsán",
+            "description": "Lila és sokoldalú: a padlizsán tökéletes grillezéshez, sütéshez és emojifarmoláshoz.",
+            "quote": "A pasim kedvenc emojija a padlizsán, folyton azt küldözgeti nekem!"
+        },
+        "30016": {
+            "name": "Cukkini",
+            "description": "Zöld és bőven terem: a cukkini nyári tökféle, ami csak adja és adja."
+        },
+        "30017": {
+            "name": "Avokádó",
+            "description": "Krémes és finom: az avokádó a pirítósok sztárja és a farm kedvence."
+        },
+        "30018": {
+            "name": "Édesburgonya",
+            "description": "A krumpli édes unokatestvére."
+        },
+        "30019": {
+            "name": "Borsó",
+            "description": "Borsó!"
+        },
+        "30020": {
+            "name": "Retek",
+            "description": "Csípős és ropogós: a retek feldobja a farmodat és az ételeidet."
+        },
+        "30021": {
+            "name": "Gomba",
+            "description": "Gombás jókedv! A gomba valójában nem is növény, tudtad?",
+            "quote": "Nem spórol a spórákkal!"
+        },
+        "30022": {
+            "name": "Ananász",
+            "description": "Trópusi és fanyar."
+        },
+        "30023": {
+            "name": "Görögdinnye",
+            "description": "Lédús és frissítő: a görögdinnye a nyár csúcsterménye."
+        },
+        "30024": {
+            "name": "Kivi",
+            "description": "Kívül szőrös, belül édes. Egyszerűen kivi-tűnő!"
+        },
+        "30025": {
+            "name": "Szőlő",
+            "description": "Tökéletes nasinak, préselésre vagy bornak.",
+            "quote": "A szőlőben az igazság."
+        },
+        "30026": {
+            "name": "Cseresznye",
+            "description": "Édes és fanyar: a cseresznye remek csemege és a farm kedvence."
+        },
+        "50000": {
+            "name": "Kutyasegéd",
+            "description": "Az orrával koppint a képernyődön.",
+            "quote": "VAU! Segítek emojikat szerezni!"
+        },
+        "50001": {
+            "name": "Macskasegéd",
+            "description": "A bajszával csiklandoz, amitől gyorsabban koppintasz.",
+            "quote": "Miau! Segítek emojikat szerezni!"
+        },
+        "50002": {
+            "name": "Kacsasegéd",
+            "description": "A csőrével csipkedi az oldalad, amitől gyorsabban koppintasz.",
+            "quote": "Háp! Segítek emojikat szerezni!"
+        },
+        "50003": {
+            "name": "Tehénsegéd",
+            "description": "A tőgyét a képernyődhöz lóbálja, amitől gyorsabban koppintasz.",
+            "quote": "Mú! Segítek emojikat szerezni!"
+        },
+        "50004": {
+            "name": "Malacsegéd",
+            "description": "Vidáman rohangál a szobádban, felvidít, és gyorsabban koppintasz tőle.",
+            "quote": "Röf! Segítek emojikat szerezni!"
+        },
+        "50005": {
+            "name": "Nyúlsegéd",
+            "description": "Beugrál a képernyődbe, és gyorsabbak lesznek a koppintásaid.",
+            "quote": "Hopp! Segítek emojikat szerezni!"
+        },
+        "50006": {
+            "name": "Békasegéd",
+            "description": "Ráugrik a képernyődre, és gyorsabbak lesznek a koppintásaid.",
+            "quote": "Brekeke! Segítek emojikat szerezni!"
+        },
+        "50007": {
+            "name": "Elefántsegéd",
+            "description": "Az ormánya tökéletes a képernyő koppintásához!",
+            "quote": "Trötty! Segítek emojikat szerezni!"
+        },
+        "50008": {
+            "name": "Majomsegéd",
+            "description": "Rengeteg banánt ad, elűzi az éhséged, és gyorsabban koppintasz!",
+            "quote": "Uh-uh! Segítek emojikat szerezni!"
+        },
+        "50009": {
+            "name": "Pingvinsegéd",
+            "description": "A csőrével kopogtatja a képernyődet.",
+            "quote": "Tipeg-topog! Segítek emojikat szerezni!"
+        },
+        "100000": {
+            "name": "Emojigyakornokok",
+            "description": "A gyakornokok segítenek, hogy az emojikormány olajozottan működjön!"
+        },
+        "100001": {
+            "name": "Emojibürokraták",
+            "description": "Egy emojikormánynak adminisztrátorok kellenek a működéshez.",
+            "quote": "Úgy tűnik, törvényt próbálsz elfogadni. Segíthetek?"
+        }
+    },
+    "effects": {
+        "0": {
+            "title": "x2 koppintóerő",
+            "description": "Dupla emoji koppintásonként!"
+        },
+        "1": {
+            "title": "x3 koppintóerő",
+            "description": "Tripla emoji koppintásonként!"
+        },
+        "100": {
+            "title": "x2 emojitermelés",
+            "description": "Megduplázódott az emojitermelés!"
+        },
+        "101": {
+            "title": "x77 emojitermelés",
+            "description": "Az emojitermelés 77-szeresére nőtt!"
+        },
+        "110": {
+            "title": "Fél emojitermelés",
+            "description": "Megfeleződött az emojitermelés!"
+        },
+        "200": {
+            "title": "Emojiajándék",
+            "description": "1 órányi emoji!"
+        }
+    }
+}

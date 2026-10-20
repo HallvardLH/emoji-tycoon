@@ -4,13 +4,12 @@ import { componentColors } from "../misc/Colors";
 import { useFonts } from "expo-font";
 import { RussoOne_400Regular } from "@expo-google-fonts/russo-one/400Regular";
 import { Baloo2_800ExtraBold } from "@expo-google-fonts/baloo-2/800ExtraBold";
-import { getLanguage, Language } from "../../i18n";
-
-// Digitalt only covers the Latin script, so languages written in other scripts use a font in a similar style
-const scriptFonts: Partial<Record<Language, string>> = {
-    uk: "RussoOne",
-    hi: "Baloo2",
-};
+import { BalooDa2_800ExtraBold } from "@expo-google-fonts/baloo-da-2/800ExtraBold";
+import { Commissioner_900Black } from "@expo-google-fonts/commissioner/900Black";
+import { Kanit_700Bold } from "@expo-google-fonts/kanit/700Bold";
+import { Lalezar_400Regular } from "@expo-google-fonts/lalezar/400Regular";
+import { getLanguage } from "../../i18n";
+import { languageTextStyles } from "../../i18n/fonts";
 
 interface TextProps {
     children?: ReactNode;
@@ -29,12 +28,17 @@ export default function Text(props: TextProps) {
 
     const [fontsLoaded] = useFonts({
         "Digitalt": require("../../assets/fonts/Digitalt.otf"),
+        // Fonts for languages Digitalt cannot display, see i18n/fonts.ts
         "RussoOne": RussoOne_400Regular,
         "Baloo2": Baloo2_800ExtraBold,
+        "BalooDa2": BalooDa2_800ExtraBold,
+        "Commissioner": Commissioner_900Black,
+        "Kanit": Kanit_700Bold,
+        "Lalezar": Lalezar_400Regular,
     });
 
     // The app remounts when the language changes, so this does not need to subscribe to changes
-    const scriptFont = scriptFonts[getLanguage()];
+    const languageStyle = languageTextStyles[getLanguage()];
 
     if (!fontsLoaded) {
         return null;
@@ -46,13 +50,19 @@ export default function Text(props: TextProps) {
             onLayout={onLayout}
             style={[
                 textStyles.text,
-                scriptFont ? { fontFamily: scriptFont } : null,
+                languageStyle ? {
+                    // undefined falls back to the system font
+                    fontFamily: languageStyle.fontFamily ?? undefined,
+                    fontWeight: languageStyle.fontFamily ? undefined : "bold",
+                    writingDirection: languageStyle.rtl ? "rtl" : undefined,
+                } : null,
                 shadow ? textStyles.shadow : null,
                 shadowColor ? { textShadowColor: shadowColor } : null,
                 { fontSize: size },
                 { color: color },
-                defaultLineHeight ? null : { lineHeight: 22 },
+                defaultLineHeight ? null : { lineHeight: languageStyle?.tall ? Math.max(22, Math.round(size * 1.6)) : 22 },
                 style,
+                languageStyle?.noLetterSpacing ? { letterSpacing: 0 } : null,
             ]}
             {...rest}
         >

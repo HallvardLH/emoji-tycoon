@@ -1,0 +1,1009 @@
+{
+    "buildings": {
+        "0": {
+            "name": "Kreslicí ruka",
+            "plural": "Kreslicí ruce",
+            "description": "Ruka, která za tebe kreslí emoji."
+        },
+        "1": {
+            "name": "Grafické studio",
+            "plural": "Grafická studia",
+            "description": "Studio, kde vznikají emoji."
+        },
+        "2": {
+            "name": "Farma",
+            "plural": "Farmy",
+            "description": "Farma, kde emoji raší ze země."
+        },
+        "3": {
+            "name": "Restaurace",
+            "plural": "Restaurace",
+            "description": "Sem chodí emoji na jídelní emoji."
+        },
+        "4": {
+            "name": "Mazlicí koutek",
+            "plural": "Mazlicí koutky",
+            "description": "Poznej všechna svá oblíbená zvířecí emoji."
+        },
+        "5": {
+            "name": "Továrna",
+            "plural": "Továrny",
+            "description": "Výroba emoji v průmyslovém měřítku."
+        },
+        "6": {
+            "name": "Sportovní centrum",
+            "plural": "Sportovní centra",
+            "description": "Udrž svoje emoji v dobré kondici."
+        },
+        "7": {
+            "name": "Banka",
+            "plural": "Banky",
+            "description": "\"Vaše emoji jsou u nás v bezpečí.\""
+        },
+        "8": {
+            "name": "Emoji zábavní park",
+            "plural": "Emoji zábavní parky",
+            "description": "\"Vítejte v EmojiLandu: kde sny a emoce ožívají!\""
+        },
+        "9": {
+            "name": "Emoji shromáždění",
+            "plural": "Emoji shromáždění",
+            "description": "Tady se emoji scházejí a rozhodují, jak vyrobit víc emoji."
+        },
+        "10": {
+            "name": "Vesmírná stanice",
+            "plural": "Vesmírné stanice",
+            "description": "Dobývej nové světy a seber jim emoji."
+        },
+        "11": {
+            "name": "Bonbonové království",
+            "plural": "Bonbonová království",
+            "description": "Cukrový ráj, kde vládne Bonbonový král se svými sladkými emoji poddanými."
+        },
+        "12": {
+            "name": "Emoji sopka",
+            "plural": "Emoji sopky",
+            "description": "Každá erupce přinese záplavu zbrusu nových, čerstvě ukovaných emoji!"
+        },
+        "13": {
+            "name": "Chrám Velkého Emoji na nebi",
+            "plural": "Chrámy Velkého Emoji na nebi",
+            "description": "Legendy praví, že Velké Emoji na nebi dopřává nekonečno emoji svým nejvěrnějším stoupencům."
+        },
+        "14": {
+            "name": "Emoji superpočítač",
+            "plural": "Emoji superpočítače",
+            "description": "Dokonalý emoji stroj. Násobí emoji rychlostí světla."
+        },
+        "15": {
+            "name": "Emoji černá díra",
+            "plural": "Emoji černé díry",
+            "description": "Konečná zastávka všech emoji... nebo nový začátek?"
+        },
+        "16": {
+            "name": "Emoji singularita",
+            "plural": "Emoji singularity",
+            "description": "A je to. Kromě emoji už nezbylo nic. Máš hotovo."
+        }
+    },
+    "upgrades": {
+        "0": {
+            "name": "Další ruka",
+            "description": "Na obrazovku ťuká další ruka. Čí je to ruka? Netuším."
+        },
+        "1": {
+            "name": "A ještě jedna ruka",
+            "description": "Na obrazovku ťuká ještě jedna ruka. Ruka ruku myje!"
+        },
+        "2": {
+            "name": "Deset dalších rukou",
+            "description": "Najednou ti do obrazovky začne ťukat deset rukou! Paráda!"
+        },
+        "3": {
+            "name": "Sto rukou!",
+            "description": "Celé sousedství se přišlo poťukat velké emoji na obrazovce!"
+        },
+        "4": {
+            "name": "Tisíc rukou",
+            "description": "Lidé cestují zdaleka, jen aby ti mohli ťuknout do obrazovky."
+        },
+        "5": {
+            "name": "Milion rukou",
+            "description": "Na koho to ukazuješ? Na mě? To je ale drzost..."
+        },
+        "6": {
+            "name": "Miliarda rukou",
+            "description": "Víc než 10 % světové populace ti pomáhá ťukat do obrazovky. Myslím, že brzy praskne."
+        },
+        "7": {
+            "name": "Bilion rukou",
+            "description": "Volá máma. Má o tebe strach. Hovor ti zakrývá obrazovku, tak ho naštvaně típneš a ťukáš dál."
+        },
+        "8": {
+            "name": "Biliarda rukou",
+            "description": "Do tvé obrazovky ťuká fakt hodně rukou."
+        },
+        "9": {
+            "name": "Trilion rukou",
+            "description": "Ten počet rukou je nepochopitelný. Obrazovka dostává pořádně zabrat."
+        },
+        "10": {
+            "name": "Triliarda rukou",
+            "description": "Ruce sahají, kam až oko dohlédne, a všechny ťukají."
+        },
+        "11": {
+            "name": "Kvadrilion rukou",
+            "description": "Dokonalá forma. Dokonalá ťuknutí. Nekonečno rukou."
+        },
+        "12": {
+            "name": "Kvadriliarda rukou",
+            "description": "Víc rukou než atomů ve vesmíru. Všechny vědí, co dělají."
+        },
+        "13": {
+            "name": "Kvintilion rukou",
+            "description": "Ťukání je teď nesmírně hlasité rytmické dunění, které vysílá rázovou vlnu kolem světa."
+        },
+        "14": {
+            "name": "Kvintiliarda rukou",
+            "description": "Tolik masa by se nikdy nemělo nahromadit tak těsně na jednom místě..."
+        },
+        "15": {
+            "name": "Sextilion rukou",
+            "description": "Z rukou, které už tu jsou, vyrůstají desítky dalších, zkroucených a znetvořených."
+        },
+        "16": {
+            "name": "Sextiliarda rukou",
+            "description": "Začínáš slyšet šepot. Ruce dál ťukají, ale čí vlastně jsou?"
+        },
+        "17": {
+            "name": "Septilion rukou",
+            "description": "Ruce se začínají deformovat. Už nejsou lidské."
+        },
+        "18": {
+            "name": "Septiliarda rukou",
+            "description": "Za rukama číhá jakási přítomnost a vede je se zlým úmyslem."
+        },
+        "19": {
+            "name": "Oktilion rukou",
+            "description": "Tyhle ruce... co jsou zač? Vzduch páchne sírou."
+        },
+        "20": {
+            "name": "Oktiliarda rukou",
+            "description": "Ruce jsou všude a plní celou místnost. Cítíš, jak po tobě chňapají..."
+        },
+        "21": {
+            "name": "Démonické ruce",
+            "description": "Démonické ruce z hlubin pekla ťukají bez konce. Obrazovka je rozžhavená do ruda."
+        },
+        "22": {
+            "name": "Ruce zatracených",
+            "description": "Z propasti stoupají přízračné kostnaté ruce. Ťukají s pekelným vztekem."
+        },
+        "23": {
+            "name": "Pán podsvětí",
+            "description": "Sám padlý anděl se vyplazí ze své říše, aby ti pomohl ťukat do obrazovky."
+        },
+        "24": {
+            "name": "Drzé ťukání",
+            "description": "Fakt, ale fakt drzé."
+        },
+        "100": {
+            "name": "Silnější paže",
+            "description": "Se silnější paží kreslíš emoji rychleji."
+        },
+        "101": {
+            "name": "Ohebné prsty",
+            "description": "Ohebné prsty zvládnou složitější emoji."
+        },
+        "102": {
+            "name": "Dvě ruce",
+            "description": "Dvakrát víc rukou, dvakrát víc emoji."
+        },
+        "103": {
+            "name": "Nalakované nehty",
+            "description": "S nalakovanými nehty se ťuká rychleji. To přece ví každý!"
+        },
+        "104": {
+            "name": "Nohy",
+            "description": "Kreslení nohama zdvojnásobí produkci (a není to vůbec těžké)!"
+        },
+        "105": {
+            "name": "Jazyk",
+            "description": "Po letech tréninku se i ty můžeš naučit kreslit jazykem!"
+        },
+        "106": {
+            "name": "Nos",
+            "description": "Strč si pastelku do nosu a kresli s ní!",
+            "quote": "*Čmuch* Proč obrazovka smrdí nohama?"
+        },
+        "107": {
+            "name": "Ucho",
+            "description": "Strč si pero do ucha, otoč hlavu o 90 stupňů a kresli!"
+        },
+        "108": {
+            "name": "Ústa",
+            "description": "Vezmi tužku do pusy a kresli s ní!"
+        },
+        "109": {
+            "name": "Silnější noha",
+            "description": "Se silnější nohou kreslíš emoji nohama mnohem rychleji."
+        },
+        "110": {
+            "name": "Větší plíce",
+            "description": "S většími plícemi kreslíš emoji rychleji."
+        },
+        "111": {
+            "name": "Větší mozek",
+            "description": "Větší mozek rozpoutá mohutnou vlnu kreativity a zdvojnásobí tvou produkci emoji!"
+        },
+        "112": {
+            "name": "Vlasy",
+            "description": "Ovládej štětec vlasy a tvoř emoji. Kdo potřebuje ruce, když má styl?"
+        },
+        "113": {
+            "name": "Obočí",
+            "description": "Kresli emoji zvedáním obočí. Posilovna pro obličej i kreativitu!"
+        },
+        "114": {
+            "name": "Záda",
+            "description": "Lehni si na záda a kresli emoji rukama za sebou. Strečink a skica v jednom!"
+        },
+        "115": {
+            "name": "Zuby",
+            "description": "Sevři pero v zubech a kresli emoji. Varování: může způsobit únavu čelisti!"
+        },
+        "116": {
+            "name": "Pupík",
+            "description": "Kresli emoji pupíkem. Unikátní dovednost, kterou je těžké zvládnout!"
+        },
+        "117": {
+            "name": "Ozvěnové kreslení",
+            "description": "Každé nakreslené emoji se ozve ozvěnou, takže jich vznikne dvakrát tolik!"
+        },
+        "118": {
+            "name": "Telekinetické kreslení",
+            "description": "Proč používat ruce, když můžeš kreslit emoji myslí?"
+        },
+        "119": {
+            "name": "Kvantové prsty",
+            "description": "Kvantové provázání v prstech ti umožní kreslit emoji rychlostí světla."
+        },
+        "200": {
+            "name": "Lepší tužky",
+            "description": "Lepší tužky pro detailnější emoji."
+        },
+        "201": {
+            "name": "Speciální pastelky",
+            "description": "Díky těmhle speciálním pastelkám najdou umělci své vnitřní dítě."
+        },
+        "202": {
+            "name": "Lepší štětce",
+            "description": "Lepší štětce pro umělečtější emoji."
+        },
+        "203": {
+            "name": "Plnicí pera",
+            "description": "Pro distingovanější emoji."
+        },
+        "204": {
+            "name": "Pravítka",
+            "description": "Jak jinak nakreslit rovnou čáru?"
+        },
+        "205": {
+            "name": "Simulátor barvosleposti",
+            "description": "Zajisti, aby byly tvoje emoji přístupné všem!",
+            "quote": "Říká se 'Vkag'? 'Dvojité-vé-kag'? 'Vé-cé-á-gé'?"
+        },
+        "206": {
+            "name": "Komiksové efekty",
+            "description": "Přidej ke svým emoji efekty 'BUM!' a 'PRÁSK!' pro větší šmrnc!"
+        },
+        "207": {
+            "name": "Sada šablon",
+            "description": "S těmihle šablonami budou emoji pokaždé dokonale tvarované!"
+        },
+        "208": {
+            "name": "Vlastní klávesové zkratky",
+            "description": "Zrychli si práci osobními zkratkami pro návrh emoji!",
+            "quote": "Zkus alt + F4."
+        },
+        "209": {
+            "name": "Předplatné grafické knihovny",
+            "description": "Přístup k obrovské knihovně hotových tvarů, ikon a textur!"
+        },
+        "210": {
+            "name": "Tlačítko Zpět",
+            "description": "Zpět nevrací jen tvou práci - mění samotnou realitu. Používej s rozvahou.",
+            "quote": "Mýlit se je lidské"
+        },
+        "211": {
+            "name": "Emoji omalovánky",
+            "description": "Omalovánky používají jen ti nejrafinovanější umělci."
+        },
+        "212": {
+            "name": "Spolupráce v reálném čase",
+            "description": "Pozvi další designéry, ať pracují na tvých emoji projektech zároveň s tebou!"
+        },
+        "213": {
+            "name": "Emoji nástěnka nálad",
+            "description": "Uspořádej si nápady na emoji vizuálně pro maximální kreativitu!",
+            "quote": "Nálada? Leda tak na nástěnku!"
+        },
+        "214": {
+            "name": "Pixel art program",
+            "description": "Tvoř pixelová retro emoji, ze kterých křičí nostalgie 90. let!",
+            "quote": "Na každém pixelu záleží."
+        },
+        "215": {
+            "name": "Font Comic Sans",
+            "description": "Miluj ho, nebo ho nesnášej, tvoje emoji budou vypadat... jedinečně!"
+        },
+        "216": {
+            "name": "AI generátor obrázků",
+            "description": "Nech AI odvést tu těžkou práci a generovat nekvalitní a nudná emoji rychlostí blesku!",
+            "quote": "Píp pup!"
+        },
+        "217": {
+            "name": "Origami papír",
+            "description": "Poskládej své papírové emoji do všech možných tvarů!",
+            "quote": "Kvák!"
+        },
+        "218": {
+            "name": "Tetovací strojek na emoji",
+            "description": "Trvalá emoji pro opravdu oddané umělce!",
+            "quote": "Au!"
+        },
+        "219": {
+            "name": "Krev",
+            "description": "Malování krví dělá emoji extra cool!"
+        },
+        "300": {
+            "name": "Farmáři",
+            "description": "Co je farma bez farmáře?!"
+        },
+        "301": {
+            "name": "Sazenice",
+            "description": "Někde se začít musí.",
+            "quote": "Sázej na jistotu!"
+        },
+        "302": {
+            "name": "Lepší nářadí",
+            "description": "S ním jde farmaření mnohem rychleji!"
+        },
+        "303": {
+            "name": "Traktory",
+            "description": "Sklizeň emoji je hned o tolik snazší."
+        },
+        "304": {
+            "name": "Statky",
+            "description": "Útulný domov, kde si tvoji farmáři odpočinou a dobijí baterky."
+        },
+        "305": {
+            "name": "Emoji krávy",
+            "description": "Vyrábějí víc emůůůůůůji."
+        },
+        "306": {
+            "name": "Zavlažovací systém",
+            "description": "Zalévej svou emoji úrodu, ať roste rychleji.",
+            "quote": "Ve kterém jsme to století?!"
+        },
+        "307": {
+            "name": "Strašáci",
+            "description": "Udrží ta otravná ptačí emoji dál od tvých farem!"
+        },
+        "308": {
+            "name": "Kompostéry",
+            "description": "Proměň odpad v hnojivo pro zdravější emoji úrodu!"
+        },
+        "309": {
+            "name": "Skleníky",
+            "description": "Pěstuj emoji celý rok, ať je počasí jakékoli!"
+        },
+        "310": {
+            "name": "Větrné mlýny",
+            "description": "Využij sílu větru a zvyš efektivitu své farmy!",
+            "quote": "Vžuuum!"
+        },
+        "311": {
+            "name": "Emoji ovocné sady",
+            "description": "Pěstuj emoji stromy, které plodí celý rok!"
+        },
+        "312": {
+            "name": "Dožínky",
+            "description": "Oslav bohatou úrodu slavností, která zvedne morálku!"
+        },
+        "313": {
+            "name": "Obří emoji prak",
+            "description": "Vystřeluj emoji semínka po celé farmě pro bleskové sázení!"
+        },
+        "314": {
+            "name": "Neviditelný plot",
+            "description": "Udrží tvůj emoji dobytek uvnitř... i když ho nevidíš.",
+            "quote": "Bolí, když se na něj vyčůráš."
+        },
+        "315": {
+            "name": "Geneticky modifikované plodiny",
+            "description": "Banány bez slupky, jahody rovnou v čokoládě, předvařené brambory a další!"
+        },
+        "316": {
+            "name": "Emoji farma budoucnosti",
+            "description": "Tvoje farmy jsou teď high-tech utopie s roboty, hologramy a létajícími traktory. Vítej v budoucnosti!"
+        },
+        "317": {
+            "name": "Krvavý měsíc",
+            "description": "Pod krvavým měsícem rostou tvé plodiny rychleji... ale rostou jim i zuby."
+        },
+        "318": {
+            "name": "Poslední sklizeň",
+            "description": "Objeví se tajemná postava a nabízí bohatou úrodu výměnou za... něco. Odvážíš se přijmout?"
+        },
+        "319": {
+            "name": "Sbohem, farmaření",
+            "description": "Farmaření tě už unavuje. Možná bude nejlepší se na to vykašlat a jít radši dělat do kanceláře."
+        },
+        "400": {
+            "name": "Ostré nože",
+            "description": "S ostřejšími noži se emoji krájí snáz."
+        },
+        "401": {
+            "name": "Nepřilnavé pánve",
+            "description": "S nepřilnavými pánvemi se emoji jídla vaří rychleji."
+        },
+        "402": {
+            "name": "Lepší trouby",
+            "description": "Trouby s lepší regulací teploty upečou emoji rychleji."
+        },
+        "403": {
+            "name": "Prvotřídní suroviny",
+            "description": "Kvalitnější suroviny znamenají chutnější emoji."
+        },
+        "404": {
+            "name": "Kuchařská čepice",
+            "description": "Kuchařská čepice zrychluje vaření emoji."
+        },
+        "405": {
+            "name": "Emoji mixéry",
+            "description": "Rozmixuj emoji na lahodná smoothie a polévky za pár vteřin!"
+        },
+        "406": {
+            "name": "Horkovzdušné fritézy",
+            "description": "Usmaž emoji do dokonalosti v rekordním čase. Pokaždé křupavá a zlatavá!"
+        },
+        "407": {
+            "name": "Sushi bary",
+            "description": "Roluj emoji sushi s precizností a stylem. Vyžaduje syrový talent!"
+        },
+        "408": {
+            "name": "Salátové bary",
+            "description": "Namíchej čerstvé emoji saláty s mnoha přísadami. Zdravé a chutné!"
+        },
+        "409": {
+            "name": "Pizza pece",
+            "description": "Peč emoji pizzy s chutí z pece na dřevo, která je doslova z jiného světa!"
+        },
+        "410": {
+            "name": "Emoji kávovary",
+            "description": "Uvař dokonalý šálek emoji kávy, ať mají tví kuchaři energii!"
+        },
+        "411": {
+            "name": "Emoji zmrzlinovače",
+            "description": "Chrl mražené emoji dobroty, které jsou stejně cool jako chutné!"
+        },
+        "412": {
+            "name": "Taco stánky",
+            "description": "Skládej emoji taco se vším všudy. Fiesta v každém soustu!",
+            "quote": "¡Ay, caramba!"
+        },
+        "413": {
+            "name": "Vaflovače",
+            "description": "Peč emoji vafle s křupavými okraji a nadýchaným středem. Ideální k brunchi!"
+        },
+        "414": {
+            "name": "Emoji čokoládové fontány",
+            "description": "Polij všechno rozpuštěnou emoji čokoládou. Sladké a hříšné!"
+        },
+        "415": {
+            "name": "Emoji kanibalská kuchyně",
+            "description": "Vař emoji z jiných emoji."
+        },
+        "416": {
+            "name": "Emoji fritéza z černé díry",
+            "description": "Smaž emoji v černé díře a využij její nesmírnou energii. Vrátí se křupavá!"
+        },
+        "417": {
+            "name": "Emoji aréna pro bitvu jídlem",
+            "description": "Proměň kuchyni v arénu pro bitvu jídlem. Je to špinavé, chaotické a podivně výnosné."
+        },
+        "418": {
+            "name": "Živé těsto",
+            "description": "Tohle těsto se hýbe samo a tvaruje se do dokonalého emoji chleba. Občas se pokusí utéct."
+        },
+        "419": {
+            "name": "Nekonečný bufet",
+            "description": "Bufet, který nikdy nekončí... ale jídlo možná začne jíst tebe."
+        },
+        "500": {
+            "name": "Košťata",
+            "description": "Na úklid po zvířatech, když si ehm... odskočí na velkou."
+        },
+        "501": {
+            "name": "Cvičitelé zvířat",
+            "description": "Cvičitelé učí zvířata triky, takže zoo funguje efektivněji."
+        },
+        "502": {
+            "name": "Luxusní výběhy",
+            "description": "Vylepši zvířatům domovy, ať jsou spokojená a produktivní."
+        },
+        "503": {
+            "name": "Exotická zvířata",
+            "description": "Přiveď vzácná a exotická zvířata a přilákej větší davy."
+        },
+        "504": {
+            "name": "Maskoti zoo",
+            "description": "Přátelští maskoti lákají návštěvníky a zvyšují celkové příjmy."
+        },
+        "505": {
+            "name": "Veterinární kliniky",
+            "description": "Vlastní klinika udržuje zvířata zdravá."
+        },
+        "506": {
+            "name": "Stinná místa",
+            "description": "Přidej stinná místa, ať se zvířata i návštěvníci v horku zchladí."
+        },
+        "507": {
+            "name": "Mazlicí stanoviště",
+            "description": "Vyhrazená místa, kde si návštěvníci můžou zvířata bezpečně pomazlit."
+        },
+        "508": {
+            "name": "Sady na péči o srst",
+            "description": "Pravidelná péče udržuje zvířata v top formě a dobré náladě."
+        },
+        "509": {
+            "name": "Lavičky pro návštěvníky",
+            "description": "Pohodlná místa k sezení pro unavené návštěvníky."
+        },
+        "510": {
+            "name": "Obchody se suvenýry",
+            "description": "Obchod se zvířecími suvenýry."
+        },
+        "511": {
+            "name": "Fotokoutek se zvířaty",
+            "description": "Návštěvníci se můžou fotit se zvířaty."
+        },
+        "512": {
+            "name": "Vláček po zoo",
+            "description": "Malý vláček vozí návštěvníky po celé zoo."
+        },
+        "513": {
+            "name": "Zvířecí talentová show",
+            "description": "Uspořádej talentovou show, kde zvířata předvádějí triky"
+        },
+        "514": {
+            "name": "Zvířecí průvod",
+            "description": "Uspořádej každodenní průvod, kde zvířata pochodují zoo."
+        },
+        "515": {
+            "name": "Předražené občerstvení",
+            "description": "Účtuj návštěvníkům přemrštěné ceny za zvířecí pochutiny"
+        },
+        "516": {
+            "name": "Zvířecí pracovní síla",
+            "description": "Zapřáhni zvířata do práce!"
+        },
+        "517": {
+            "name": "Opice na kontrolu davu",
+            "description": "Vycvič opice, ať zvládají neukázněné davy."
+        },
+        "518": {
+            "name": "Pravěká zvířata",
+            "description": "Přiveď do zoo dinosaury a další vyhynulá zvířata.",
+            "quote": "Život si, ehm, najde cestu"
+        },
+        "519": {
+            "name": "Jednorožci",
+            "description": "Kdo by nechtěl vidět létajícího jednorožce?"
+        },
+        "600": {
+            "name": "Lepší nástroje",
+            "description": "Lepší nástroje pro rychlejší výrobu emoji."
+        },
+        "601": {
+            "name": "Víc dělníků",
+            "description": "Zvyš počet zaměstnanců továrny."
+        },
+        "602": {
+            "name": "Větší ozubená kola",
+            "description": "Větší ozubená kola umožňují větší stroje."
+        },
+        "603": {
+            "name": "Matice a šrouby",
+            "description": "Díky nim se všechno nerozpadne."
+        },
+        "604": {
+            "name": "Pásové dopravníky",
+            "description": "Zefektivni výrobu dopravníky, které přesouvají emoji rychleji než kdy dřív!"
+        },
+        "605": {
+            "name": "Kontrola kvality",
+            "description": "Speciální tým kontroly kvality zajistí, že každé emoji bude dokonalé."
+        },
+        "606": {
+            "name": "Rozšíření továrny",
+            "description": "Rozšiř továrnu pro víc strojů a dělníků. Čím větší, tím lepší!"
+        },
+        "607": {
+            "name": "Vysokorychlostní lisy",
+            "description": "Přejdi na vysokorychlostní lisy, které razí emoji rychlostí blesku."
+        },
+        "608": {
+            "name": "Firemní posilovna",
+            "description": "Posilovna, kde se dělníci udrží fit a plní energie. Zdraví dělníci jsou produktivní dělníci!"
+        },
+        "609": {
+            "name": "Ochrana továrny",
+            "description": "Chraň továrnu před zloději emoji a průmyslovou špionáží."
+        },
+        "610": {
+            "name": "Recyklace v továrně",
+            "description": "Recykluj odpad na nová emoji a sniž náklady i dopad na životní prostředí."
+        },
+        "611": {
+            "name": "Žebříky pro údržbu",
+            "description": "Nainstaluj žebříky pro snadný přístup k vysokým strojům. Údržba nikdy nebyla snazší!"
+        },
+        "612": {
+            "name": "Těžká kladiva",
+            "description": "Přejdi na těžká kladiva pro rychlejší montáž a opravy. Rozdrť neefektivitu!"
+        },
+        "613": {
+            "name": "Přesné klíče",
+            "description": "Utahuj matice a šrouby přesnými klíči. Na výrobní lince už nic nezůstane volné!"
+        },
+        "614": {
+            "name": "Sada šroubováků",
+            "description": "Kompletní sada šroubováků pro jemné doladění strojů. Na každém detailu záleží!"
+        },
+        "615": {
+            "name": "Lepší bedna na nářadí",
+            "description": "Plně vybavená bedna zajistí, že dělníci mají na každou práci správný nástroj.",
+            "quote": "Kam jsem dal ten- ten- kde je- ále, nic!"
+        },
+        "616": {
+            "name": "Zpevněné zdi",
+            "description": "Zpevni zdi továrny, ať vydrží chaos vysokorychlostní výroby."
+        },
+        "617": {
+            "name": "Pasti na myši",
+            "description": "Drž otravné hlodavce mimo továrnu. Žádné okousané kabely ani ukradená emoji!"
+        },
+        "618": {
+            "name": "Vedoucí továrny",
+            "description": "Bez nich se tu absolutně nic neudělá.",
+            "quote": "A pamatujte: vedení si přeje, aby přestávky na záchod trvaly pod jednu minutu!"
+        },
+        "619": {
+            "name": "Roboti dělníci",
+            "description": "Nahraď slabé lidské dělníky silnými androidy!"
+        },
+        "700": {
+            "name": "Basketbalová hřiště",
+            "description": "Důvod se sejít.",
+            "quote": "Švih, švih, švih. Jen síťka. A všem spadla brada až na zem."
+        },
+        "701": {
+            "name": "Baseballová hřiště",
+            "description": "Tohle bude totální homerun."
+        },
+        "702": {
+            "name": "Squashové kurty",
+            "description": "Je to sport, nebo dýně?"
+        },
+        "703": {
+            "name": "Frisbee",
+            "description": "Sport Ultimate",
+            "quote": "Doufám, že nikoho nenapadne zkombinovat to s golfem..."
+        },
+        "704": {
+            "name": "Volejbalová hřiště",
+            "description": "Ultimátní sport"
+        },
+        "705": {
+            "name": "Pingpongové stoly",
+            "description": "Sport pojmenovaný podle zvuku, který vydává.",
+            "quote": "Nejlepší způsob, jak bojovat proti komunistům"
+        },
+        "706": {
+            "name": "Golfová hřiště",
+            "description": "Sport, kde odpaluješ míček holí a jezdíš v cool vozítku.",
+            "quote": "Prezidentský sport"
+        },
+        "800": {
+            "name": "Prasátka",
+            "description": "Chro chro!"
+        },
+        "801": {
+            "name": "Větší pytle na emoji",
+            "description": "Uneseš ještě víc emoji."
+        },
+        "802": {
+            "name": "Emoji kreditní karty",
+            "description": "Ideální na utrácení tvrdě vydělaných emoji."
+        },
+        "803": {
+            "name": "Investice do vzdělání",
+            "description": "Lepší vzdělání, lepší dovednosti v kreslení emoji."
+        },
+        "804": {
+            "name": "Investice do inovací",
+            "description": "Víc inovací, inovativnější emoji."
+        },
+        "900": {
+            "name": "Kolotoče",
+            "description": "You spin me right 'round, baby!"
+        },
+        "901": {
+            "name": "Skluzavky",
+            "description": "Do you slide on all your nights like this? (I might)"
+        },
+        "902": {
+            "name": "Ruské kolo",
+            "description": "Tam nahoře mi zlomila srdce."
+        },
+        "903": {
+            "name": "Cirkus",
+            "description": "Na světě jsou jen dva typy lidí. Ti, co baví, a ti, co přihlížejí."
+        },
+        "904": {
+            "name": "Emoji žonglér",
+            "description": "Prý mu ještě nikdy nic nespadlo."
+        },
+        "1000": {
+            "name": "Emoji volby",
+            "description": "Ať vyhraje nejlepší emoji!"
+        },
+        "1001": {
+            "name": "Emoji stimul",
+            "description": "Emoji dostaneš ty, a ty, a ty, emoji dostane každý!"
+        },
+        "1002": {
+            "name": "Předseda emoji sněmovny",
+            "description": "Dosaď vlastního emoji předsedu, ať jde všechno podle tebe."
+        },
+        "1003": {
+            "name": "Emoji zákony",
+            "description": "My, emoji..."
+        },
+        "1004": {
+            "name": "Globální emoji konfederace",
+            "description": "Posiluje spolupráci mezi emoji státy."
+        },
+        "1100": {
+            "name": "Teleskopy",
+            "description": "Pozoruj hvězdy a objevuj emoji planety."
+        },
+        "1101": {
+            "name": "Satelitní antény",
+            "description": "Pohleď za Mléčnou dráhu až ke galaxii Emoji dráha."
+        },
+        "1102": {
+            "name": "Astronauti",
+            "description": "Někdo musí řídit tvé vesmírné stanice."
+        },
+        "1103": {
+            "name": "Rakety",
+            "description": "Létají fakt rychle."
+        },
+        "1104": {
+            "name": "⌿⍀⟟☊⊑⏃⋉⟟⋔⟒ ⌇ ⋔⟟⍀⟒⋔...",
+            "description": "...⏃ ⋏⟒⌇⟒⋔⟒ ⌇⟟⌰⟒⋏⟒ ⋏⟒⋉⋏⏃⋔⟒ ⟒⋔⍜⟊⟟.",
+            "quote": "⏁⎍☍⋏⟟ ⋔⟟ ⌿⟒⏁☍⍀⏃⏁ ⎅⍜ ⍜⏚⌰⟟☊⟒⟊⟒ ⏃ ⍜⎅⊑⏃⌰⟟⌇ ⋔⍜⎍ ⏁⏃⟊⋏⍜⌇⏁"
+        },
+        "1105": {
+            "name": "⋉⏃⊑⏃⎅⋏⊬ ⍜⏚⟊⟒☍⏁",
+            "description": "⏁⟒⋏⏁⍜ ⍜⏚⟊⟒☍⏁ ⋔⏃ ⋏⟒⏁⎍⌇⟒⋏⟒ ⌇⟟⌰⊬."
+        },
+        "30000": {
+            "name": "Brambory",
+            "description": "Brambúžasné! Brambory jsou páteří každé farmy."
+        },
+        "30001": {
+            "name": "Mrkev",
+            "description": "Mrkni na to, máme mrkev!"
+        },
+        "30002": {
+            "name": "Okurky",
+            "description": "V klidu jako okurka! Osvěžující zelenina skvělá do salátů i k nakládání.",
+            "quote": "Jsem nakládaný Rick!"
+        },
+        "30003": {
+            "name": "Papriky",
+            "description": "Sladké nebo pálivé, papriky dodají tvé farmě barvu i chuť.",
+            "quote": "Tohle bude pálit..."
+        },
+        "30004": {
+            "name": "Rajčata",
+            "description": "Šťavnatá a všestranná rajčata jsou na farmě hitem."
+        },
+        "30005": {
+            "name": "Salát",
+            "description": "Nech to na salátu, ten udrží tvou farmu svěží a zelenou."
+        },
+        "30006": {
+            "name": "Brokolice",
+            "description": "Malé stromky s velkými výhodami!"
+        },
+        "30007": {
+            "name": "Cibule",
+            "description": "Plná chuti i slz, cibule je základ kuchyně i farmy.",
+            "quote": "Zlobři jsou jako cibule. Cibule má vrstvy. Zlobři mají vrstvy."
+        },
+        "30008": {
+            "name": "Česnek",
+            "description": "Česnek dodá chuť tvým jídlům a ochranu tvé farmě.",
+            "quote": "Skvělý, pokud máš problém s upíry!"
+        },
+        "30009": {
+            "name": "Kukuřice",
+            "description": "Kukuřice je všestranná plodina, ideální na grilování i na popcorn.",
+            "quote": "Ku-ku-řádná paráda!"
+        },
+        "30010": {
+            "name": "Fazole",
+            "description": "Plné bílkovin a ideální k rozšíření farmy.",
+            "quote": "Fazole!"
+        },
+        "30011": {
+            "name": "Arašídy",
+            "description": "Oříškové a lahodné arašídy jsou skvělé na zobání i na zvýšení produktivity farmy."
+        },
+        "30012": {
+            "name": "Dýně",
+            "description": "Obří, oranžové a ideální na koláče nebo strašení vran. Dýně jsou podzimní hit!",
+            "quote": "Dýňové latte a pohoda!"
+        },
+        "30013": {
+            "name": "Jahody",
+            "description": "Sladké, šťavnaté a skvělé na dezerty. Jahody jsou pro farmu prostě jahůdka na dortu!"
+        },
+        "30014": {
+            "name": "Borůvky",
+            "description": "Malé, ale šikovné..",
+            "quote": "I'm blue da ba dee da ba di"
+        },
+        "30015": {
+            "name": "Lilky",
+            "description": "Fialové a všestranné lilky jsou skvělé na grilování, pečení i pěstování emoji.",
+            "quote": "Oblíbené emoji mého kluka je lilek, pořád mi ho posílá!"
+        },
+        "30016": {
+            "name": "Cukety",
+            "description": "Zelené a hojné cukety jsou letní tykve, které nepřestávají plodit."
+        },
+        "30017": {
+            "name": "Avokáda",
+            "description": "Krémová a lahodná avokáda jsou hvězdou každého toastu i farmy."
+        },
+        "30018": {
+            "name": "Batáty",
+            "description": "Sladký bratranec brambory."
+        },
+        "30019": {
+            "name": "Hrách",
+            "description": "Hrášek!"
+        },
+        "30020": {
+            "name": "Ředkvičky",
+            "description": "Pálivé a křupavé ředkvičky dodají farmě i jídlům pořádný říz."
+        },
+        "30021": {
+            "name": "Houby",
+            "description": "Houbová zábava! Houby vlastně nejsou rostliny. Kdo by to řekl?",
+            "quote": "Houby s octem!"
+        },
+        "30022": {
+            "name": "Ananasy",
+            "description": "Tropické a pikantní."
+        },
+        "30023": {
+            "name": "Melouny",
+            "description": "Šťavnaté a osvěžující melouny jsou dokonalá letní plodina."
+        },
+        "30024": {
+            "name": "Kiwi",
+            "description": "Chlupaté zvenku, sladké uvnitř. Kiwi jsou hitem farmy!"
+        },
+        "30025": {
+            "name": "Hrozny",
+            "description": "Ideální na zobání, odšťavnění nebo na víno.",
+            "quote": "Ve hroznech je pravda."
+        },
+        "30026": {
+            "name": "Třešně",
+            "description": "Sladkokyselé třešně jsou lahodná dobrota a hit každé farmy."
+        },
+        "50000": {
+            "name": "Psí pomocník",
+            "description": "Ťuká ti do obrazovky čumákem.",
+            "quote": "HAF! Pomůžu ti získat emoji!"
+        },
+        "50001": {
+            "name": "Kočičí pomocník",
+            "description": "Lechtá tě vousky, takže ťukáš rychleji.",
+            "quote": "Mňau! Pomůžu ti získat emoji!"
+        },
+        "50002": {
+            "name": "Kachní pomocník",
+            "description": "Kluje tě zobákem do boku, takže ťukáš rychleji.",
+            "quote": "Kvák! Pomůžu ti získat emoji!"
+        },
+        "50003": {
+            "name": "Kraví pomocník",
+            "description": "Plácá ti vemenem do obrazovky, takže ťukáš rychleji.",
+            "quote": "Bů! Pomůžu ti získat emoji!"
+        },
+        "50004": {
+            "name": "Prasečí pomocník",
+            "description": "Vesele ti pobíhá po pokoji a dělá ti radost, takže ťukáš rychleji.",
+            "quote": "Chro! Pomůžu ti získat emoji!"
+        },
+        "50005": {
+            "name": "Králičí pomocník",
+            "description": "Skáče ti do obrazovky, takže ťukáš rychleji.",
+            "quote": "Hop! Pomůžu ti získat emoji!"
+        },
+        "50006": {
+            "name": "Žabí pomocník",
+            "description": "Skáče ti po obrazovce, takže ťukáš svižněji.",
+            "quote": "Kvak! Pomůžu ti získat emoji!"
+        },
+        "50007": {
+            "name": "Sloní pomocník",
+            "description": "Jeho chobot je jako stvořený na ťukání do obrazovky!",
+            "quote": "Tú-tú! Pomůžu ti získat emoji!"
+        },
+        "50008": {
+            "name": "Opičí pomocník",
+            "description": "Dává ti spoustu banánů, zažene ti hlad a ty ťukáš rychleji!",
+            "quote": "Úú áá! Pomůžu ti získat emoji!"
+        },
+        "50009": {
+            "name": "Tučňáčí pomocník",
+            "description": "Kluje ti zobákem do obrazovky.",
+            "quote": "Cupity cup! Pomůžu ti získat emoji!"
+        },
+        "100000": {
+            "name": "Emoji stážisti",
+            "description": "Stážisti pomáhají, aby emoji vláda běžela hladce!"
+        },
+        "100001": {
+            "name": "Emoji byrokrati",
+            "description": "Emoji vláda potřebuje ke svému fungování úředníky.",
+            "quote": "Vypadá to, že schvaluješ zákon. Potřebuješ pomoc?"
+        }
+    },
+    "effects": {
+        "0": {
+            "title": "x2 síla ťuknutí",
+            "description": "Dvojnásobek emoji za ťuknutí!"
+        },
+        "1": {
+            "title": "x3 síla ťuknutí",
+            "description": "Trojnásobek emoji za ťuknutí!"
+        },
+        "100": {
+            "title": "x2 produkce emoji",
+            "description": "Produkce emoji zdvojnásobena!"
+        },
+        "101": {
+            "title": "x77 produkce emoji",
+            "description": "Produkce emoji je 77krát vyšší!"
+        },
+        "110": {
+            "title": "Poloviční produkce emoji",
+            "description": "Produkce emoji klesla na polovinu!"
+        },
+        "200": {
+            "title": "Emoji dárek",
+            "description": "Emoji za celou 1 hodinu!"
+        }
+    }
+}

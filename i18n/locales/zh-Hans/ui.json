@@ -1,0 +1,110 @@
+{
+    "tabs": {
+        "emoji": "表情",
+        "shop": "商店",
+        "emojidex": "表情图鉴",
+        "buildings": "建筑",
+        "upgrades": "升级",
+        "stats": "统计",
+        "collection": "收藏"
+    },
+    "header": {
+        "emojis": "表情",
+        "perSecond": "每秒：{{value}}"
+    },
+    "common": {
+        "buy": "购买",
+        "details": "详情",
+        "owned_other": "已拥有"
+    },
+    "buildings": {
+        "bulkBuy_other": "每次购买{{count}}座建筑",
+        "emojisPerSecond": "每秒<hl>{{eps}}</hl>个表情",
+        "youHave": "• 你拥有<hl>{{amount}}</hl>个{{building}}",
+        "eachProduces": "• 每个每秒生产<hl>{{eps}}</hl>个表情",
+        "totalProduces": "• 总计每秒<hl>{{eps}}</hl>个表情！",
+        "ownedUpgrades": "已拥有的升级"
+    },
+    "upgrades": {
+        "bigEmoji": "大表情",
+        "effects": {
+            "multiplyBuildingProduction": "• {{buildings}}：效率翻倍。",
+            "multiplyTap": "• 点击效率翻倍。",
+            "percentageIncreaseTap": "• 点击威力提升{{percent}}。",
+            "tapPercentageOfEps": "• 每次点击额外获得表情总产量的{{percent}}。",
+            "percentageIncreaseProduction": "• 表情总产量提升{{percent}}。"
+        },
+        "bonusProduction": "现在购买此升级，每秒表情<hl>+{{bonus}}</hl>，表情产量提升<hl>{{percent}}</hl>",
+        "bonusTap": "现在购买此升级，每次点击表情<hl>+{{bonus}}</hl>，点击所得表情提升<hl>{{percent}}</hl>",
+        "filterTitle": "筛选升级",
+        "filterDescription": "选择要查看哪些建筑的升级。"
+    },
+    "emojidex": {
+        "basePrice": "基础价格：{{price}}"
+    },
+    "stats": {
+        "totalEmojisDrawn": "累计绘制表情",
+        "emojiTaps": "表情点击次数",
+        "emojisEarnedFromTapping": "点击获得的表情",
+        "magicalEmojisTapped": "点中的魔法表情",
+        "funValue": "趣味值"
+    },
+    "drawer": {
+        "language": "语言",
+        "deviceLanguage": "设备语言",
+        "funValue": "趣味值：{{value}}",
+        "cheats": "作弊",
+        "resetGame": "重置游戏",
+        "spawnEffect": "生成效果表情",
+        "giveEmojis": "获得{{amount}}个表情"
+    },
+    "prestige": {
+        "title": "声望",
+        "accumulating": "你已创造了<hl>{{amount}}</hl>个表情，表情的本源精华开始在你身边汇聚。",
+        "essence": "表情精华是一种<hl>神奇物质</hl>，每次看它时形状都会改变，蕴含着未知的力量。"
+    },
+    "numbers": {
+        "groupSize": "4",
+        "named": "{{value}}{{name}}",
+        "percent": "{{value}}%",
+        "lessThan": "<{{value}}",
+        "long": {
+            "4_other": "万",
+            "8_other": "亿",
+            "12_other": "兆",
+            "16_other": "京",
+            "20_other": "垓",
+            "24_other": "秭",
+            "28_other": "穰",
+            "32_other": "沟",
+            "36_other": "涧",
+            "40_other": "正",
+            "44_other": "载",
+            "48_other": "极",
+            "52_other": "恒河沙",
+            "56_other": "阿僧祇",
+            "60_other": "那由他",
+            "64_other": "不可思议",
+            "68_other": "无量大数"
+        },
+        "short": {
+            "4": "万",
+            "8": "亿",
+            "12": "兆",
+            "16": "京",
+            "20": "垓",
+            "24": "秭",
+            "28": "穰",
+            "32": "沟",
+            "36": "涧",
+            "40": "正",
+            "44": "载",
+            "48": "极",
+            "52": "恒河沙",
+            "56": "阿僧祇",
+            "60": "那由他",
+            "64": "不可思议",
+            "68": "无量大数"
+        }
+    }
+}

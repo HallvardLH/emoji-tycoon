@@ -1,0 +1,110 @@
+{
+    "tabs": {
+        "emoji": "이모지",
+        "shop": "상점",
+        "emojidex": "이모지 도감",
+        "buildings": "건물",
+        "upgrades": "업그레이드",
+        "stats": "통계",
+        "collection": "컬렉션"
+    },
+    "header": {
+        "emojis": "이모지",
+        "perSecond": "초당: {{value}}"
+    },
+    "common": {
+        "buy": "구매",
+        "details": "상세",
+        "owned_other": "보유"
+    },
+    "buildings": {
+        "bulkBuy_other": "건물을 한 번에 {{count}}개씩 구매",
+        "emojisPerSecond": "초당 이모지 <hl>{{eps}}</hl>개",
+        "youHave": "• 보유한 {{building}}: <hl>{{amount}}</hl>개",
+        "eachProduces": "• 하나당 초당 이모지 <hl>{{eps}}</hl>개 생산",
+        "totalProduces": "• 합계 초당 이모지 <hl>{{eps}}</hl>개!",
+        "ownedUpgrades": "보유한 업그레이드"
+    },
+    "upgrades": {
+        "bigEmoji": "큰 이모지",
+        "effects": {
+            "multiplyBuildingProduction": "• {{buildings}}: 효율 2배.",
+            "multiplyTap": "• 탭 효율 2배.",
+            "percentageIncreaseTap": "• 탭 파워 {{percent}} 증가.",
+            "tapPercentageOfEps": "• 탭할 때마다 총 이모지 생산량의 {{percent}}만큼 획득.",
+            "percentageIncreaseProduction": "• 총 이모지 생산량 {{percent}} 증가."
+        },
+        "bonusProduction": "지금 이 업그레이드를 사면 초당 이모지가 <hl>+{{bonus}}</hl>개 늘어나서, 이모지 생산량이 <hl>{{percent}}</hl> 증가해요",
+        "bonusTap": "지금 이 업그레이드를 사면 탭당 이모지가 <hl>+{{bonus}}</hl>개 늘어나서, 탭으로 얻는 이모지가 <hl>{{percent}}</hl> 증가해요",
+        "filterTitle": "업그레이드 필터",
+        "filterDescription": "업그레이드를 볼 건물을 골라 주세요."
+    },
+    "emojidex": {
+        "basePrice": "기본 가격: {{price}}"
+    },
+    "stats": {
+        "totalEmojisDrawn": "그린 이모지 총합",
+        "emojiTaps": "이모지 탭 횟수",
+        "emojisEarnedFromTapping": "탭으로 얻은 이모지",
+        "magicalEmojisTapped": "탭한 마법 이모지",
+        "funValue": "재미 수치"
+    },
+    "drawer": {
+        "language": "언어",
+        "deviceLanguage": "기기 언어",
+        "funValue": "재미 수치: {{value}}",
+        "cheats": "치트",
+        "resetGame": "게임 초기화",
+        "spawnEffect": "효과 이모지 소환",
+        "giveEmojis": "이모지 {{amount}}개 받기"
+    },
+    "prestige": {
+        "title": "프레스티지",
+        "accumulating": "이모지를 <hl>{{amount}}</hl>개나 만들어 내자, 이모지의 본질 그 자체가 당신 주위에 쌓이기 시작했어요.",
+        "essence": "이모지 정수는 볼 때마다 모양이 바뀌는 <hl>마법의 물질</hl>로, 알 수 없는 힘을 품고 있어요."
+    },
+    "numbers": {
+        "groupSize": "4",
+        "named": "{{value}}{{name}}",
+        "percent": "{{value}}%",
+        "lessThan": "<{{value}}",
+        "long": {
+            "4_other": "만",
+            "8_other": "억",
+            "12_other": "조",
+            "16_other": "경",
+            "20_other": "해",
+            "24_other": "자",
+            "28_other": "양",
+            "32_other": "구",
+            "36_other": "간",
+            "40_other": "정",
+            "44_other": "재",
+            "48_other": "극",
+            "52_other": "항하사",
+            "56_other": "아승기",
+            "60_other": "나유타",
+            "64_other": "불가사의",
+            "68_other": "무량대수"
+        },
+        "short": {
+            "4": "만",
+            "8": "억",
+            "12": "조",
+            "16": "경",
+            "20": "해",
+            "24": "자",
+            "28": "양",
+            "32": "구",
+            "36": "간",
+            "40": "정",
+            "44": "재",
+            "48": "극",
+            "52": "항하사",
+            "56": "아승기",
+            "60": "나유타",
+            "64": "불가사의",
+            "68": "무량대수"
+        }
+    }
+}
