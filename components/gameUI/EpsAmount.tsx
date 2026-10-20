@@ -21,6 +21,6 @@ export default function EpsAmount({ fontSize = 20 }: EpsAmountProps) {
     const textStyle = useMemo(() => ({ fontSize }), [fontSize]);
 
     return (
-        <Text style={textStyle}>{t("header.perSecond", { value: formattedValue })}</Text>
+        <Text style={textStyle} numberOfLines={1} adjustsFontSizeToFit minimumFontScale={0.5}>{t("header.perSecond", { value: formattedValue })}</Text>
     );
 }

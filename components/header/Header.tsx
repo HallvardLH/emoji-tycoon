@@ -27,7 +27,11 @@ export default function Header({ navigation, route, options, back }: HeaderProps
             </View>
             <View style={styles.textContainer}>
                 <Text
-                    style={{ fontSize: Platform.OS === "ios" ? 18 : 15 }}>
+                    style={{ fontSize: Platform.OS === "ios" ? 18 : 15 }}
+                    // Long number names, like "quattuordecillion", shrink instead of pushing the buttons aside
+                    numberOfLines={1}
+                    adjustsFontSizeToFit
+                    minimumFontScale={0.5}>
                     <EmojisAmount fontSize={Platform.OS === "ios" ? 27 : 23} /> {t("header.emojis")}
                 </Text>
                 <EpsAmount fontSize={Platform.OS === "ios" ? 18 : 15} />
@@ -60,6 +64,7 @@ const styles = StyleSheet.create({
         fontSize: 20,
     },
     textContainer: {
+        flex: 1,
         alignItems: "center",
         textAlign: "center"
     },

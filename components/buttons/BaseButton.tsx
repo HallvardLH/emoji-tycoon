@@ -130,7 +130,7 @@ export default function BaseButton(props: BaseButtonProps) {
                         <Polygon points={leftPolygonPoints} fill={leftColor} />
                         <Polygon points={rightPolygonPoints} fill={rightColor} />
                     </Svg>
-                    <Text shadow style={[styles.buttonText, { fontSize: fontSize }]}>
+                    <Text shadow style={[styles.buttonText, { fontSize: fontSize }]} numberOfLines={1} adjustsFontSizeToFit minimumFontScale={0.6}>
                         {label}
                     </Text>
                 </View>
@@ -155,6 +155,10 @@ const styles = StyleSheet.create({
     },
     buttonText: {
         position: "absolute",
+        // Lets labels in longer languages shrink to fit the button
+        left: 6,
+        right: 6,
+        textAlign: "center",
         color: componentColors.button.text,
         fontSize: 24,
     },

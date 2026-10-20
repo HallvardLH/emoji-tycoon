@@ -21,6 +21,9 @@ interface TextProps {
     defaultLineHeight?: boolean;
     onLayout?: (event: LayoutChangeEvent) => void;
     numberOfLines?: number;
+    /** Shrinks the text to fit its container, together with numberOfLines */
+    adjustsFontSizeToFit?: boolean;
+    minimumFontScale?: number;
 }
 
 export default function Text(props: TextProps) {
@@ -60,8 +63,9 @@ export default function Text(props: TextProps) {
                 shadowColor ? { textShadowColor: shadowColor } : null,
                 { fontSize: size },
                 { color: color },
-                defaultLineHeight ? null : { lineHeight: languageStyle?.tall ? Math.max(22, Math.round(size * 1.6)) : 22 },
+                defaultLineHeight ? null : { lineHeight: 22 },
                 style,
+                languageStyle?.tall ? { lineHeight: getTallLineHeight(style, size) } : null,
                 languageStyle?.noLetterSpacing ? { letterSpacing: 0 } : null,
             ]}
             {...rest}
@@ -69,6 +73,15 @@ export default function Text(props: TextProps) {
             {children}
         </RNText>
     );
+}
+
+/**
+ * Scripts with tall letters or marks above and below get cut off by the line heights
+ * the game uses for Digitalt, including ones set by components, so make room for them
+ */
+function getTallLineHeight(style: StyleProp<TextStyle>, size: number) {
+    const { lineHeight = 22, fontSize = size } = StyleSheet.flatten(style) ?? {};
+    return Math.max(lineHeight, Math.round(fontSize * 1.6));
 }
 
 const textStyles = StyleSheet.create({

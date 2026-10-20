@@ -69,7 +69,7 @@ export default function TopTabBar({ state, descriptors, navigation, contentSpaci
                         style={[styles.tabButton, { width: `${tabWidthPercent}%` }]}
                         onPress={() => tab.onNavigateTo()}
                     >
-                        <Text>{tab.name}</Text>
+                        <Text style={{ flexShrink: 1, paddingHorizontal: 6 }} numberOfLines={1} adjustsFontSizeToFit minimumFontScale={0.6}>{tab.name}</Text>
                         {tab.notification ? (
                             <View>
                                 <Text size={12}>{tab.notification}</Text>

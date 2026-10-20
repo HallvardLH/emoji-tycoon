@@ -97,7 +97,7 @@ export default function BulkBuySlider(props: BulkBuySliderProps) {
             justifyContent: "flex-end",
             width: "100%"
         }}>
-            <Text size={14}>{t("buildings.bulkBuy", { count: bulkBuy })}</Text>
+            <Text size={14} style={{ flexShrink: 1, textAlign: "right", marginLeft: 12 }}>{t("buildings.bulkBuy", { count: bulkBuy })}</Text>
             <View style={styles.container}>
                 <Shadow style={{ alignSelf: "center" }} height={buttonContainerHeight} shadowHeight={5} width={"88%"} borderRadius={50} />
                 <View style={styles.buttonContainer}>

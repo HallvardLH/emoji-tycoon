@@ -64,7 +64,7 @@ export default function ContentTab(props: ContentTabProps) {
                             }
                         }}
                     >
-                        <Text>{tab.name}</Text>
+                        <Text style={{ flexShrink: 1, paddingHorizontal: 6 }} numberOfLines={1} adjustsFontSizeToFit minimumFontScale={0.6}>{tab.name}</Text>
                         {tab.notification && tab.notification > 0 ? (
                             <View style={{
                                 height: 22,

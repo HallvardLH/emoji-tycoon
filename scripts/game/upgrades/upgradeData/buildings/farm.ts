@@ -328,7 +328,7 @@ export const farmUpgrades: UpgradeType[] = [
         ...farmHelperUpgrade,
         name: "Blueberries",
         icon: "🫐",
-        description: "Tiny but mighty..",
+        description: "Tiny but mighty.",
         quote: "I'm blue da ba dee da ba di",
         variant: "Helper",
         emojisPerSecondPercentageIncrease: 0.02,

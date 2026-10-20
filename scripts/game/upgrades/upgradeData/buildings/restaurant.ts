@@ -88,7 +88,7 @@ export const restaurantUpgrades: UpgradeType[] = [
         ...baseRestaurantUpgrade,
         name: "Pizza Ovens",
         icon: "🍕",
-        description: "Bake emoji pizzas with a wood-fired flavor that’s out of this world!",
+        description: "Bake emoji pizzas with a wood-fired flavor that's out of this world!",
         tier: 9,
         id: 409,
     },

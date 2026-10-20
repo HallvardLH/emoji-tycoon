@@ -46,7 +46,7 @@ export const sportsCenterUpgrades: UpgradeType[] = [
         ...baseSportsCenterUpgrade,
         name: "Volleyball courts",
         icon: "🏐",
-        description: "The Ultimate sport",
+        description: "Bump, set, spike!",
         tier: 4,
     },
     {
@@ -59,7 +59,7 @@ export const sportsCenterUpgrades: UpgradeType[] = [
     },
     {
         ...baseSportsCenterUpgrade,
-        name: "Golf courts",
+        name: "Golf courses",
         icon: "⛳",
         description: "A sport where you hit a ball with a stick and drive a cool cart.",
         quote: "A presidential sport",
