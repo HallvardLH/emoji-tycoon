@@ -52,7 +52,7 @@ export const effectData: Effect[] = [
     },
     {
         title: "x77 emoji production",
-        description: "Emoji production doubled!",
+        description: "Emoji production multiplied by 77!",
         eptMult: 0,
         eptAdd: 0,
         epsMult: 77,

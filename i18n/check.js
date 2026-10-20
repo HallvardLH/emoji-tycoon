@@ -6,6 +6,7 @@
  * - UI strings (ui.json) are compared against locales/en/ui.json
  * - Game content (content.json) is compared against the English texts in the game data files
  * - Placeholders ({{value}}) and <hl> tags must match the English string
+ * - Plural strings must have every plural form the language uses
  * - Characters that the game font (Digitalt) cannot display are reported
  */
 const fs = require("fs");
@@ -67,6 +68,9 @@ function flatten(object, prefix = "", result = {}) {
 
 const placeholders = (text) => (String(text).match(/{{\s*[\w.]+\s*}}|<\/?\w+\s*\/?>/g) || []).map(p => p.replace(/\s/g, "")).sort().join(" ");
 
+// The plural forms a language needs, e.g. one and other for English, or one, few, many and other for Ukrainian
+const pluralCategories = (language) => new Intl.PluralRules(language).resolvedOptions().pluralCategories;
+
 const readJson = (file) => JSON.parse(fs.readFileSync(file, "utf8"));
 
 let errorCount = 0;
@@ -87,7 +91,7 @@ function compare(language, file, english, translated) {
             continue;
         }
         const isPlural = keys.some(key => PLURAL_SUFFIX.test(key));
-        const translatedKeys = isPlural ? [`${base}_one`, `${base}_other`] : [base];
+        const translatedKeys = isPlural ? pluralCategories(language).map(category => `${base}_${category}`) : [base];
         for (const key of translatedKeys) {
             if (!(key in translated)) {
                 error(language, `${file}: missing plural form "${key}"`);
