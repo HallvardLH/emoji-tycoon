@@ -10,6 +10,7 @@ import { resetStats } from '../../scripts/redux/statsSlice';
 import { resetPrestige } from '../../scripts/redux/prestigeSlice';
 import { resetTabs } from '../../scripts/redux/tabsSlice';
 import Button from '../buttons/Button';
+import { useTranslation } from 'react-i18next';
 
 interface ResetButtonProps {
     onPress?: () => void;
@@ -17,6 +18,7 @@ interface ResetButtonProps {
 
 export default function ResetButton({ onPress }: ResetButtonProps) {
     const dispatch = useDispatch();
+    const { t } = useTranslation();
 
     const handleReset = () => {
         dispatch(resetValues());
@@ -31,7 +33,7 @@ export default function ResetButton({ onPress }: ResetButtonProps) {
         dispatch(resetTabs());
     };
     return (
-        <Button variant="blue" width={200} label="Reset game" onPress={() => {
+        <Button variant="blue" width={200} label={t("drawer.resetGame")} onPress={() => {
             handleReset();
             if (onPress) {
                 onPress();

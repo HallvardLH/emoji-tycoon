@@ -5,6 +5,8 @@ import { getEffectText, buyUpgrade } from '../../../scripts/game/upgrades/upgrad
 import { getUpgradeDataById } from '../../../scripts/game/upgrades/shorthands';
 import { getUpgradePrice } from '../../../scripts/game/upgrades/upgradePrice';
 import { FlatList } from 'react-native';
+import { buildingEmojis } from '../../../scripts/game/buildings/buildings';
+import { getUpgradeName, getUpgradeDescription, getUpgradeQuote, getUpgradeBuildingName } from '../../../i18n/content';
 
 export default function OwnedUpgradesList() {
     const { owned } = useSelector((state: RootState) => state.upgrades);
@@ -24,10 +26,10 @@ export default function OwnedUpgradesList() {
         <OwnedUpgradeListItem
             key={upgrade.originalIndex} // Use the original index as the key
             id={upgrade.originalIndex}
-            name={upgrade.name}
-            buildingName={upgrade.building}
-            buildingIcon={upgrade.building == "Big emoji" ? bigEmoji.emoji : undefined}
-            description={upgrade.description}
+            name={getUpgradeName(upgrade.originalIndex)}
+            buildingName={upgrade.building ? getUpgradeBuildingName(upgrade.building) : undefined}
+            buildingIcon={upgrade.building == "Big emoji" ? bigEmoji.emoji : buildingEmojis[upgrade.building]}
+            description={getUpgradeDescription(upgrade.originalIndex)}
             effect={getEffectText(upgrade.originalIndex)}
             price={getUpgradePrice(upgrade.tier, upgrade.variant, upgrade.buildingId)}
             icon={upgrade.icon}

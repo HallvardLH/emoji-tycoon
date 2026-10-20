@@ -14,6 +14,7 @@ import ContentBox from '../../generalUI/ContentBox';
 import CircularButton from '../../buttons/CircularButton';
 import { upgradeFilters } from '../../../scripts/redux/preferencesSlice';
 import { colors } from '../../misc/Colors';
+import { useTranslation } from 'react-i18next';
 
 interface UpgradesListFilterProps {
     selected: upgradeFilters[]
@@ -21,6 +22,7 @@ interface UpgradesListFilterProps {
 
 export default function UpgradesListFilter({ selected }: UpgradesListFilterProps) {
     const { buildings } = useSelector((state: RootState) => state.buildings);
+    const { t } = useTranslation();
 
     const [modalVisible, setModalVisible] = useState(false);
 
@@ -31,12 +33,12 @@ export default function UpgradesListFilter({ selected }: UpgradesListFilterProps
                 modalVisible={modalVisible}
                 onRequestClose={() => setModalVisible(false)}
             >
-                <ContentBox title="Filter upgrades">
+                <ContentBox title={t("upgrades.filterTitle")}>
                     <View style={{
                         justifyContent: "center",
                         alignItems: "center"
                     }}>
-                        <Text shadow={false} color={colors.yellow.dark} size={14} style={{ textAlign: "center" }}>Select which buildings to see upgrades for.</Text>
+                        <Text shadow={false} color={colors.yellow.dark} size={14} style={{ textAlign: "center" }}>{t("upgrades.filterDescription")}</Text>
                     </View>
                     <View style={styles.container}>
                         {/* <TouchableOpacity onPress={() => { store.dispatch(toggleUpgradeFilter("all")) }}>

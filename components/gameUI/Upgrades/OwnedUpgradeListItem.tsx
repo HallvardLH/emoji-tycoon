@@ -6,12 +6,12 @@ import Text from "../../generalUI/Text";
 import Button from "../../buttons/Button";
 import { colors } from "../../misc/Colors";
 import { formatNumber } from "../../../scripts/misc";
-import { getUpgradeBonus } from "../../../scripts/game/upgrades/upgrades";
-import { buildingEmojis } from "../../../scripts/game/buildings/buildings";
 import { howFun } from "../../../scripts/game/shorthands";
 
 interface OwnedUpgradeListItemProps {
+    /** The displayed, translated, name */
     name: string;
+    /** The displayed, translated, building name */
     buildingName?: string;
     buildingIcon?: string;
     id: number;
@@ -39,7 +39,7 @@ export default function OwnedUpgradeListItem(props: OwnedUpgradeListItemProps) {
                     alignItems: "center",
                     gap: 16,
                 }}>
-                    <Emoji size={24} icon={buildingIcon ? buildingIcon : buildingEmojis[buildingName]} />
+                    <Emoji size={24} icon={buildingIcon ?? ""} />
                     <Text shadow={false} color={colors.yellow.highlight} size={14}>{buildingName}</Text>
                 </View>
             )}

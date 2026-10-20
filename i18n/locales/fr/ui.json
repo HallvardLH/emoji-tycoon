@@ -1,0 +1,136 @@
+{
+    "tabs": {
+        "emoji": "Emoji",
+        "shop": "Boutique",
+        "emojidex": "Emojidex",
+        "buildings": "Bâtiments",
+        "upgrades": "Améliorations",
+        "stats": "Stats",
+        "collection": "Collection"
+    },
+    "header": {
+        "emojis": "Emojis",
+        "perSecond": "Par seconde : {{value}}"
+    },
+    "common": {
+        "buy": "Acheter",
+        "details": "Détails",
+        "owned_one": "possédé",
+        "owned_other": "possédés"
+    },
+    "buildings": {
+        "bulkBuy_one": "Achat de {{count}} bâtiment à la fois",
+        "bulkBuy_other": "Achat de {{count}} bâtiments à la fois",
+        "emojisPerSecond": "<hl>{{eps}}</hl> emojis par seconde",
+        "youHave": "• Tu as <hl>{{amount}}</hl> {{building}}",
+        "eachProduces": "• Production unitaire : <hl>{{eps}}</hl> emojis par seconde",
+        "totalProduces": "• Soit un total de <hl>{{eps}}</hl> emojis par seconde !",
+        "ownedUpgrades": "Améliorations possédées"
+    },
+    "upgrades": {
+        "bigEmoji": "Gros emoji",
+        "effects": {
+            "multiplyBuildingProduction": "• {{buildings}} : efficacité doublée.",
+            "multiplyTap": "• Tapoter est deux fois plus efficace.",
+            "percentageIncreaseTap": "• Tapoter est {{percent}} plus puissant.",
+            "tapPercentageOfEps": "• Chaque tapotement rapporte {{percent}} de ta production totale d'emojis.",
+            "percentageIncreaseProduction": "• Production totale d'emojis augmentée de {{percent}}."
+        },
+        "bonusProduction": "Acheter cette amélioration maintenant ajoutera <hl>+{{bonus}}</hl> emojis par seconde, soit une hausse de production de <hl>{{percent}}</hl>",
+        "bonusTap": "Acheter cette amélioration maintenant ajoutera <hl>+{{bonus}}</hl> emojis par tapotement, soit <hl>{{percent}}</hl> de plus à chaque tapotement",
+        "filterTitle": "Filtrer les améliorations",
+        "filterDescription": "Choisis les bâtiments dont tu veux voir les améliorations."
+    },
+    "emojidex": {
+        "basePrice": "Prix de base : {{price}}"
+    },
+    "stats": {
+        "totalEmojisDrawn": "Total d'emojis dessinés",
+        "emojiTaps": "Tapotements d'emoji",
+        "emojisEarnedFromTapping": "Emojis gagnés en tapotant",
+        "magicalEmojisTapped": "Emojis magiques tapotés",
+        "funValue": "Valeur fun"
+    },
+    "drawer": {
+        "language": "Langue",
+        "deviceLanguage": "Langue de l'appareil",
+        "funValue": "Valeur fun : {{value}}",
+        "cheats": "Triche",
+        "resetGame": "Réinitialiser la partie",
+        "spawnEffect": "Faire apparaître un emoji d'effet",
+        "giveEmojis": "Donner {{amount}} emojis"
+    },
+    "prestige": {
+        "title": "Prestige",
+        "accumulating": "Après avoir créé <hl>{{amount}}</hl> emojis, l'essence même des emojis a commencé à s'accumuler autour de toi.",
+        "essence": "L'essence d'emoji est une <hl>substance magique</hl> qui change de forme dès que tu la regardes, et recèle des pouvoirs inconnus."
+    },
+    "numbers": {
+        "percent": "{{value}} %",
+        "lessThan": "<{{value}}",
+        "long": {
+            "6_one": "million",
+            "6_other": "millions",
+            "9_one": "milliard",
+            "9_other": "milliards",
+            "12_one": "billion",
+            "12_other": "billions",
+            "15_one": "billiard",
+            "15_other": "billiards",
+            "18_one": "trillion",
+            "18_other": "trillions",
+            "21_one": "trilliard",
+            "21_other": "trilliards",
+            "24_one": "quadrillion",
+            "24_other": "quadrillions",
+            "27_one": "quadrilliard",
+            "27_other": "quadrilliards",
+            "30_one": "quintillion",
+            "30_other": "quintillions",
+            "33_one": "quintilliard",
+            "33_other": "quintilliards",
+            "36_one": "sextillion",
+            "36_other": "sextillions",
+            "39_one": "sextilliard",
+            "39_other": "sextilliards",
+            "42_one": "septillion",
+            "42_other": "septillions",
+            "45_one": "septilliard",
+            "45_other": "septilliards",
+            "48_one": "octillion",
+            "48_other": "octillions",
+            "51_one": "octilliard",
+            "51_other": "octilliards",
+            "54_one": "nonillion",
+            "54_other": "nonillions",
+            "57_one": "nonilliard",
+            "57_other": "nonilliards",
+            "60_one": "décillion",
+            "60_other": "décillions",
+            "63_one": "décilliard",
+            "63_other": "décilliards"
+        },
+        "short": {
+            "6": "M",
+            "9": "Md",
+            "12": "Bn",
+            "15": "Bd",
+            "18": "Tn",
+            "21": "Td",
+            "24": "Qn",
+            "27": "Qd",
+            "30": "Qin",
+            "33": "Qid",
+            "36": "Sxn",
+            "39": "Sxd",
+            "42": "Spn",
+            "45": "Spd",
+            "48": "Ocn",
+            "51": "Ocd",
+            "54": "Nn",
+            "57": "Nd",
+            "60": "Dcn",
+            "63": "Dcd"
+        }
+    }
+}

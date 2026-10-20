@@ -9,9 +9,13 @@ import { formatNumber } from "../../scripts/misc";
 import { getBaseBuildingPrice } from "../../scripts/game/buildings/buildingData";
 import { getBuildingIdFromName } from "../../scripts/game/buildings/shorthands";
 import { useMemo } from "react";
+import { useTranslation } from "react-i18next";
+import { getUpgradeBuildingName } from "../../i18n/content";
+import { BuildingNames } from "../../scripts/game/buildings/buildingNamesType";
 
 export default function Upgrades() {
     const { owned } = useSelector((state: RootState) => state.upgrades);
+    const { t } = useTranslation();
 
     // Prepare the data for FlatList
     const sections = useMemo(() => {
@@ -41,9 +45,9 @@ export default function Upgrades() {
     const renderItem = ({ item }: { item: typeof sections[0] }) => {
         return (
             <View style={styles.section}>
-                <Text style={styles.header}>{item.buildingName}</Text>
+                <Text style={styles.header}>{getUpgradeBuildingName(item.buildingName as BuildingNames)}</Text>
                 <Text style={{ textAlign: "center" }}>
-                    Base price: {formatNumber(getBaseBuildingPrice(getBuildingIdFromName(item.buildingName)))}
+                    {t("emojidex.basePrice", { price: formatNumber(getBaseBuildingPrice(getBuildingIdFromName(item.buildingName))) })}
                 </Text>
                 <FlatList
                     data={item.data}

@@ -1,7 +1,7 @@
 import store from "../redux/reduxStore";
 import { updateEmojisPerTap } from "../redux/bigEmojiSlice";
 import { updateEmojisPerSecond } from "../redux/valuesSlice";
-import { formatNumber } from "../misc";
+import { formatNumber, formatPercentage } from "../misc";
 
 // Recalculates emojis per tap
 export function calculateEpt() {
@@ -111,12 +111,7 @@ export function calculateEptBonus(newPercentageOfEps?: number, newMultiplier?: n
 
     const bonus = ept - currentEpt;
 
-    let bonusPercentage: number | string = (bonus / currentEpt) * 100;
-    if (bonusPercentage < 0.01) {
-        bonusPercentage = ">0.01%";
-    } else {
-        bonusPercentage = Math.round(bonusPercentage * 100) / 100 + "%";
-    }
+    const bonusPercentage = formatPercentage((bonus / currentEpt) * 100);
 
     return { bonus: formatNumber(bonus), bonusPercentage: bonusPercentage }
 }
@@ -188,12 +183,7 @@ export function calculateEpsBonus(newMultiplierEffect?: number, newPercentageInc
 
     const bonus = eps - currentEps;
 
-    let bonusPercentage: number | string = (bonus / currentEps) * 100;
-    if (bonusPercentage < 0.01) {
-        bonusPercentage = ">0.01%";
-    } else {
-        bonusPercentage = Math.round(bonusPercentage * 100) / 100 + "%";
-    }
+    const bonusPercentage = formatPercentage((bonus / currentEps) * 100);
 
     return { bonus: formatNumber(bonus), bonusPercentage: bonusPercentage }
 }

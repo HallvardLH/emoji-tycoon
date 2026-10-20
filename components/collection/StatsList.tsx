@@ -3,31 +3,33 @@ import Text from "../generalUI/Text";
 import { useSelector } from 'react-redux';
 import { RootState } from "../../scripts/redux/reduxStore";
 import { formatNumber } from "../../scripts/misc";
+import { useTranslation } from "react-i18next";
 
 export default function StatsList() {
+    const { t } = useTranslation();
     const { bigEmojiTaps, emojisEarnedFromTap, effectEmojisCollected, emojisGained } = useSelector((state: RootState) => state.stats);
     const { funValue } = useSelector((state: RootState) => state.values);
     return (
         <View style={styles.container}>
             <View style={styles.statContainer}>
-                <Text>Total emojis drawn</Text>
+                <Text>{t("stats.totalEmojisDrawn")}</Text>
                 <Text>{formatNumber(emojisGained, 0)}</Text>
             </View>
             <View style={styles.statContainer}>
-                <Text>Emoji taps</Text>
+                <Text>{t("stats.emojiTaps")}</Text>
                 <Text>{formatNumber(bigEmojiTaps)}</Text>
             </View>
             <View style={styles.statContainer}>
-                <Text>Emojis earned from tapping</Text>
+                <Text>{t("stats.emojisEarnedFromTapping")}</Text>
                 <Text>{formatNumber(emojisEarnedFromTap)}</Text>
             </View>
             <View style={styles.statContainer}>
-                <Text>Magical emojis tapped</Text>
+                <Text>{t("stats.magicalEmojisTapped")}</Text>
                 <Text>{formatNumber(effectEmojisCollected)}</Text>
             </View>
             {funValue == 100 && (
                 <View style={styles.statContainer}>
-                    <Text>Fun value</Text>
+                    <Text>{t("stats.funValue")}</Text>
                     <Text>{formatNumber(funValue)}😭</Text>
                 </View>
             )}

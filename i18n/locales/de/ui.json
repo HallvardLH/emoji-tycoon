@@ -1,0 +1,99 @@
+{
+    "tabs": {
+        "emoji": "Emoji",
+        "shop": "Shop",
+        "emojidex": "Emojidex",
+        "buildings": "Gebäude",
+        "upgrades": "Upgrades",
+        "stats": "Statistik",
+        "collection": "Sammlung"
+    },
+    "header": {
+        "emojis": "Emojis",
+        "perSecond": "Pro Sekunde: {{value}}"
+    },
+    "common": {
+        "buy": "Kaufen",
+        "details": "Details",
+        "owned_one": "im Besitz",
+        "owned_other": "im Besitz"
+    },
+    "buildings": {
+        "bulkBuy_one": "Kaufe {{count}} Gebäude auf einmal",
+        "bulkBuy_other": "Kaufe {{count}} Gebäude auf einmal",
+        "emojisPerSecond": "<hl>{{eps}}</hl> Emojis pro Sekunde",
+        "youHave": "• Du hast <hl>{{amount}}</hl> {{building}}",
+        "eachProduces": "• Jedes erzeugt <hl>{{eps}}</hl> Emojis pro Sekunde",
+        "totalProduces": "• Insgesamt also <hl>{{eps}}</hl> Emojis pro Sekunde!",
+        "ownedUpgrades": "Gekaufte Upgrades"
+    },
+    "upgrades": {
+        "bigEmoji": "Großes Emoji",
+        "effects": {
+            "multiplyBuildingProduction": "• {{buildings}} sind doppelt so effizient.",
+            "multiplyTap": "• Tippen ist doppelt so effizient.",
+            "percentageIncreaseTap": "• Tippen ist {{percent}} stärker.",
+            "tapPercentageOfEps": "• Tippen bringt {{percent}} deiner gesamten Emoji-Produktion.",
+            "percentageIncreaseProduction": "• Gesamte Emoji-Produktion um {{percent}} erhöht."
+        },
+        "bonusProduction": "Kaufst du dieses Upgrade jetzt, bekommst du <hl>+{{bonus}}</hl> Emojis pro Sekunde - die Emoji-Produktion steigt um <hl>{{percent}}</hl>",
+        "bonusTap": "Kaufst du dieses Upgrade jetzt, bekommst du <hl>+{{bonus}}</hl> Emojis pro Tipp - jeder Tipp bringt <hl>{{percent}}</hl> mehr Emojis",
+        "filterTitle": "Upgrades filtern",
+        "filterDescription": "Wähle, für welche Gebäude du Upgrades sehen willst."
+    },
+    "emojidex": {
+        "basePrice": "Grundpreis: {{price}}"
+    },
+    "stats": {
+        "totalEmojisDrawn": "Gezeichnete Emojis insgesamt",
+        "emojiTaps": "Emoji-Tipps",
+        "emojisEarnedFromTapping": "Durch Tippen verdiente Emojis",
+        "magicalEmojisTapped": "Getippte magische Emojis",
+        "funValue": "Spaßfaktor"
+    },
+    "drawer": {
+        "language": "Sprache",
+        "deviceLanguage": "Gerätesprache",
+        "funValue": "Spaßfaktor: {{value}}",
+        "cheats": "Cheats",
+        "resetGame": "Spiel zurücksetzen",
+        "spawnEffect": "Effekt-Emoji erzeugen",
+        "giveEmojis": "{{amount}} Emojis geben"
+    },
+    "prestige": {
+        "title": "Prestige",
+        "accumulating": "Nachdem du <hl>{{amount}}</hl> Emojis erschaffen hast, sammelt sich die reine Essenz der Emojis um dich herum.",
+        "essence": "Emoji-Essenz ist eine <hl>magische Substanz</hl>, die ihre Form ändert, sobald du sie ansiehst, und unbekannte Kräfte birgt."
+    },
+    "numbers": {
+        "percent": "{{value}} %",
+        "lessThan": "<{{value}}",
+        "long": {
+            "6_one": "Million", "6_other": "Millionen",
+            "9_one": "Milliarde", "9_other": "Milliarden",
+            "12_one": "Billion", "12_other": "Billionen",
+            "15_one": "Billiarde", "15_other": "Billiarden",
+            "18_one": "Trillion", "18_other": "Trillionen",
+            "21_one": "Trilliarde", "21_other": "Trilliarden",
+            "24_one": "Quadrillion", "24_other": "Quadrillionen",
+            "27_one": "Quadrilliarde", "27_other": "Quadrilliarden",
+            "30_one": "Quintillion", "30_other": "Quintillionen",
+            "33_one": "Quintilliarde", "33_other": "Quintilliarden",
+            "36_one": "Sextillion", "36_other": "Sextillionen",
+            "39_one": "Sextilliarde", "39_other": "Sextilliarden",
+            "42_one": "Septillion", "42_other": "Septillionen",
+            "45_one": "Septilliarde", "45_other": "Septilliarden",
+            "48_one": "Oktillion", "48_other": "Oktillionen",
+            "51_one": "Oktilliarde", "51_other": "Oktilliarden",
+            "54_one": "Nonillion", "54_other": "Nonillionen",
+            "57_one": "Nonilliarde", "57_other": "Nonilliarden",
+            "60_one": "Dezillion", "60_other": "Dezillionen",
+            "63_one": "Dezilliarde", "63_other": "Dezilliarden"
+        },
+        "short": {
+            "6": "Mio.", "9": "Mrd.", "12": "Bio.", "15": "Brd.", "18": "Trio.", "21": "Trd.", "24": "Quadr.",
+            "27": "Quadrd.", "30": "Quint.", "33": "Quintd.", "36": "Sext.", "39": "Sextd.", "42": "Sept.", "45": "Septd.",
+            "48": "Okt.", "51": "Oktd.", "54": "Non.", "57": "Nond.", "60": "Dez.", "63": "Dezd."
+        }
+    }
+}

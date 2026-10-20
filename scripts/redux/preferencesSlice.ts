@@ -1,6 +1,7 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 import { BuildingNames } from '../game/buildings/buildingNamesType';
 import { buildingData } from '../game/buildings/buildingData';
+import { LanguagePreference } from '../../i18n';
 
 export type upgradeFilters = BuildingNames | "all";
 
@@ -17,6 +18,10 @@ interface PreferencesState {
     * @property An array of buildings for which to show upgrades for in the upgrade screen
     */
     upgradeFilter: upgradeFilters[],
+    /** 
+    * @property The language of the game, "system" follows the device language
+    */
+    language: LanguagePreference,
 }
 
 const initialState: PreferencesState = {
@@ -26,6 +31,7 @@ const initialState: PreferencesState = {
         ...buildingData.map(building => building.name as BuildingNames),
         "Big emoji" as BuildingNames,
     ],
+    language: "system",
 };
 
 export const preferencesSlice = createSlice({
@@ -48,14 +54,17 @@ export const preferencesSlice = createSlice({
             }
             state.upgradeFilter = currentFilters;
         },
+        setLanguage: (state, action: PayloadAction<LanguagePreference>) => {
+            state.language = action.payload;
+        },
         resetPreferences: (state) => {
-            // Directly return the initialState
-            return initialState;
+            // Resetting the game should not change the language
+            return { ...initialState, language: state.language };
         },
 
     },
 });
 
-export const { updateBulkBuy, updateShowDetails, toggleUpgradeFilter, resetPreferences } = preferencesSlice.actions;
+export const { updateBulkBuy, updateShowDetails, toggleUpgradeFilter, setLanguage, resetPreferences } = preferencesSlice.actions;
 
 export default preferencesSlice.reducer;

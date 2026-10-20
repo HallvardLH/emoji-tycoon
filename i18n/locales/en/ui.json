@@ -1,0 +1,99 @@
+{
+    "tabs": {
+        "emoji": "Emoji",
+        "shop": "Shop",
+        "emojidex": "Emojidex",
+        "buildings": "Buildings",
+        "upgrades": "Upgrades",
+        "stats": "Stats",
+        "collection": "Collection"
+    },
+    "header": {
+        "emojis": "Emojis",
+        "perSecond": "Per second: {{value}}"
+    },
+    "common": {
+        "buy": "Buy",
+        "details": "Details",
+        "owned_one": "owned",
+        "owned_other": "owned"
+    },
+    "buildings": {
+        "bulkBuy_one": "Buying {{count}} building at a time",
+        "bulkBuy_other": "Buying {{count}} buildings at a time",
+        "emojisPerSecond": "<hl>{{eps}}</hl> Emojis per second",
+        "youHave": "• You have <hl>{{amount}}</hl> {{building}}",
+        "eachProduces": "• Each produces <hl>{{eps}}</hl> emojis per second",
+        "totalProduces": "• For a total of <hl>{{eps}}</hl> emojis per second!",
+        "ownedUpgrades": "Owned upgrades"
+    },
+    "upgrades": {
+        "bigEmoji": "Big emoji",
+        "effects": {
+            "multiplyBuildingProduction": "• {{buildings}} are twice as efficient.",
+            "multiplyTap": "• Tapping is twice as efficient.",
+            "percentageIncreaseTap": "• Tapping is {{percent}} more powerful.",
+            "tapPercentageOfEps": "• Tapping gains {{percent}} of your total emoji production.",
+            "percentageIncreaseProduction": "• Total emoji production increased by {{percent}}."
+        },
+        "bonusProduction": "Buying this upgrade now will add <hl>+{{bonus}}</hl> Emojis per second, increasing emoji production by <hl>{{percent}}</hl>",
+        "bonusTap": "Buying this upgrade now will add <hl>+{{bonus}}</hl> Emojis per tap, increasing each emoji you get from tapping by <hl>{{percent}}</hl>",
+        "filterTitle": "Filter upgrades",
+        "filterDescription": "Select which buildings to see upgrades for."
+    },
+    "emojidex": {
+        "basePrice": "Base price: {{price}}"
+    },
+    "stats": {
+        "totalEmojisDrawn": "Total emojis drawn",
+        "emojiTaps": "Emoji taps",
+        "emojisEarnedFromTapping": "Emojis earned from tapping",
+        "magicalEmojisTapped": "Magical emojis tapped",
+        "funValue": "Fun value"
+    },
+    "drawer": {
+        "language": "Language",
+        "deviceLanguage": "Device language",
+        "funValue": "Fun value: {{value}}",
+        "cheats": "Cheats",
+        "resetGame": "Reset game",
+        "spawnEffect": "Spawn effect emoji",
+        "giveEmojis": "Give {{amount}} emojis"
+    },
+    "prestige": {
+        "title": "Prestige",
+        "accumulating": "After having created <hl>{{amount}}</hl> emojis, the very essence of emojis has started accumulating around you.",
+        "essence": "Emoji essence is a <hl>magical substance</hl> that changes its shape whenever you look at it, and holds unknown powers."
+    },
+    "numbers": {
+        "percent": "{{value}}%",
+        "lessThan": "<{{value}}",
+        "long": {
+            "6_one": "million", "6_other": "million",
+            "9_one": "billion", "9_other": "billion",
+            "12_one": "trillion", "12_other": "trillion",
+            "15_one": "quadrillion", "15_other": "quadrillion",
+            "18_one": "quintillion", "18_other": "quintillion",
+            "21_one": "sextillion", "21_other": "sextillion",
+            "24_one": "septillion", "24_other": "septillion",
+            "27_one": "octillion", "27_other": "octillion",
+            "30_one": "nonillion", "30_other": "nonillion",
+            "33_one": "decillion", "33_other": "decillion",
+            "36_one": "undecillion", "36_other": "undecillion",
+            "39_one": "duodecillion", "39_other": "duodecillion",
+            "42_one": "tredecillion", "42_other": "tredecillion",
+            "45_one": "quattuordecillion", "45_other": "quattuordecillion",
+            "48_one": "quindecillion", "48_other": "quindecillion",
+            "51_one": "sexdecillion", "51_other": "sexdecillion",
+            "54_one": "septendecillion", "54_other": "septendecillion",
+            "57_one": "octodecillion", "57_other": "octodecillion",
+            "60_one": "novemdecillion", "60_other": "novemdecillion",
+            "63_one": "vigintillion", "63_other": "vigintillion"
+        },
+        "short": {
+            "6": "M", "9": "B", "12": "T", "15": "Qa", "18": "Qi", "21": "Sx", "24": "Sp",
+            "27": "Oc", "30": "No", "33": "Dc", "36": "Ud", "39": "Dd", "42": "Td", "45": "Qad",
+            "48": "Qid", "51": "Sxd", "54": "Spd", "57": "Od", "60": "Nd", "63": "Vg"
+        }
+    }
+}

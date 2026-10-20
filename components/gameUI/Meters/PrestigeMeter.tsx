@@ -9,11 +9,14 @@ import { useSelector } from 'react-redux';
 import { RootState } from "../../../scripts/redux/reduxStore";
 import { StyleSheet } from "react-native";
 import Emoji from "../Emoji";
+import { Trans, useTranslation } from "react-i18next";
+import { formatNumber } from "../../../scripts/misc";
 
 export default function PrestigeMeter() {
     const { remainingEmojisPrestigePerc, emojiEssence } = useSelector((state: RootState) => state.prestige);
 
     const [modalVisible, setModalVisible] = useState(false);
+    const { t } = useTranslation();
     return null
     return (
         <>
@@ -29,16 +32,16 @@ export default function PrestigeMeter() {
                 modalVisible={modalVisible}
                 onRequestClose={() => setModalVisible(false)}
             >
-                <ContentBox title="Prestige">
+                <ContentBox title={t("prestige.title")}>
                     <View style={styles.prestigeInfoContainer}>
                         <View style={styles.prestigeInfoText}>
                             {/* Add animation where the emoji icon stays the same icon for a few seconds, then skips through a bunch of icons until become another one for a while, to show it changing its shape */}
                             <Text style={styles.paragraph} color={"gray"} size={14} shadow={false}>
-                                After having created <Text color={colors.purple.dark} size={14}>10 billion</Text> emojis, the very essence of emojis has started accumulating around you.
+                                <Trans i18nKey="prestige.accumulating" values={{ amount: formatNumber(10000000000) }} components={{ hl: <Text color={colors.purple.dark} size={14} /> }} />
                             </Text>
 
                             <Text style={styles.paragraph} color={"gray"} size={14} shadow={false}>
-                                Emoji essence is a <Text color={colors.purple.dark} size={14}>magical substance</Text> that changes its shape whenever you look at it, and holds unknown powers.
+                                <Trans i18nKey="prestige.essence" components={{ hl: <Text color={colors.purple.dark} size={14} /> }} />
                             </Text>
                         </View>
                         <View style={styles.prestigeInfoIcon}>

@@ -6,6 +6,8 @@ import UpgradesListFilter from './UpgradesListFilter';
 import { getUpgradeDataById } from '../../../scripts/game/upgrades/shorthands';
 import { getUpgradePrice } from '../../../scripts/game/upgrades/upgradePrice';
 import { FlatList } from 'react-native';
+import { buildingEmojis } from '../../../scripts/game/buildings/buildings';
+import { getUpgradeName, getUpgradeDescription, getUpgradeQuote, getUpgradeBuildingName } from '../../../i18n/content';
 import store from '../../../scripts/redux/reduxStore';
 import { unlockUpgrade } from '../../../scripts/redux/upgradesSlice';
 import Text from '../../generalUI/Text';
@@ -36,11 +38,11 @@ export default function UpgradesList() {
         <UpgradeListItem
             key={upgrade.id} // Use the original index as the key
             id={upgrade.id}
-            name={upgrade.name}
-            buildingName={upgrade.building}
-            buildingIcon={upgrade.building == "Big emoji" ? bigEmoji.emoji : undefined}
-            description={upgrade.description}
-            quote={upgrade.quote}
+            name={getUpgradeName(upgrade.id)}
+            buildingName={upgrade.building ? getUpgradeBuildingName(upgrade.building) : undefined}
+            buildingIcon={upgrade.building == "Big emoji" ? bigEmoji.emoji : buildingEmojis[upgrade.building]}
+            description={getUpgradeDescription(upgrade.id)}
+            quote={getUpgradeQuote(upgrade.id)}
             effect={getEffectText(upgrade.id)}
             price={getUpgradePrice(upgrade.tier, upgrade.variant, upgrade.buildingId)}
             icon={upgrade.icon}

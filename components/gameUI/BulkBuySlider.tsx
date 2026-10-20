@@ -7,6 +7,7 @@ import { useDispatch } from 'react-redux';
 import { updateBulkBuy } from "../../scripts/redux/preferencesSlice";
 import { useSelector } from 'react-redux';
 import { RootState } from '../../scripts/redux/reduxStore';
+import { useTranslation } from 'react-i18next';
 
 interface BulkBuySliderProps {
     contentSpacing?: number;
@@ -14,6 +15,7 @@ interface BulkBuySliderProps {
 
 export default function BulkBuySlider(props: BulkBuySliderProps) {
     const { contentSpacing = 25, } = props;
+    const { t } = useTranslation();
     const { bulkBuy } = useSelector((state: RootState) => state.preferences);
 
     // Translating bulkBuy values to indices
@@ -95,7 +97,7 @@ export default function BulkBuySlider(props: BulkBuySliderProps) {
             justifyContent: "flex-end",
             width: "100%"
         }}>
-            <Text size={14}>Buying {bulkBuy} building{bulkBuy == 1 ? null : "s"} at a time</Text>
+            <Text size={14}>{t("buildings.bulkBuy", { count: bulkBuy })}</Text>
             <View style={styles.container}>
                 <Shadow style={{ alignSelf: "center" }} height={buttonContainerHeight} shadowHeight={5} width={"88%"} borderRadius={50} />
                 <View style={styles.buttonContainer}>

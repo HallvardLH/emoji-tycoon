@@ -7,6 +7,7 @@ import { buyBuilding } from '../../../scripts/game/buildings/buildings';
 import { formatNumber } from '../../../scripts/misc';
 import { View } from 'react-native';
 import { calculateBuildingPrice } from '../../../scripts/game/buildings/buildings';
+import { getBuildingName, getBuildingDescription } from '../../../i18n/content';
 
 export interface BuildingInfo {
     name: string;
@@ -42,10 +43,11 @@ export default function BuildingsList() {
                 return (
                     <View key={building.icon}>
                         <BuildingListItem
-                            name={building.name}
+                            buildingId={building.buildingId}
+                            name={getBuildingName(building.buildingId)}
                             key={building.name}
                             icon={building.icon}
-                            description={building.description}
+                            description={getBuildingDescription(building.buildingId)}
                             price={formatNumber(buildingPrices[building.buildingId])}
                             baseEps={building.baseEps * Math.pow(2, dynamicData.upgrades)}
                             upgradeAmount={dynamicData.upgrades}

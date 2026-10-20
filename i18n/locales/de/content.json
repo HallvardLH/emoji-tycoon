@@ -1,0 +1,1009 @@
+{
+    "buildings": {
+        "0": {
+            "name": "Zeichenhand",
+            "plural": "Zeichenhände",
+            "description": "Eine Hand, die Emojis für dich zeichnet."
+        },
+        "1": {
+            "name": "Grafikstudio",
+            "plural": "Grafikstudios",
+            "description": "Ein Studio, in dem Emojis entstehen."
+        },
+        "2": {
+            "name": "Farm",
+            "plural": "Farmen",
+            "description": "Eine Farm, auf der Emojis aus dem Boden sprießen."
+        },
+        "3": {
+            "name": "Restaurant",
+            "plural": "Restaurants",
+            "description": "Hier essen Emojis Essens-Emojis."
+        },
+        "4": {
+            "name": "Streichelzoo",
+            "plural": "Streichelzoos",
+            "description": "Triff all deine liebsten Tier-Emojis."
+        },
+        "5": {
+            "name": "Fabrik",
+            "plural": "Fabriken",
+            "description": "Emojis im industriellen Maßstab."
+        },
+        "6": {
+            "name": "Sportzentrum",
+            "plural": "Sportzentren",
+            "description": "Hält deine Emojis in Form."
+        },
+        "7": {
+            "name": "Bank",
+            "plural": "Banken",
+            "description": "\"Bei uns sind deine Emojis sicher.\""
+        },
+        "8": {
+            "name": "Emoji-Freizeitpark",
+            "plural": "Emoji-Freizeitparks",
+            "description": "\"Willkommen im EmojiLand: Wo Träume und Gefühle lebendig werden!\""
+        },
+        "9": {
+            "name": "Emoji-Versammlung",
+            "plural": "Emoji-Versammlungen",
+            "description": "Hier beraten Emojis, wie man noch mehr Emojis macht."
+        },
+        "10": {
+            "name": "Raumstation",
+            "plural": "Raumstationen",
+            "description": "Erobere neue Welten und schnapp dir ihre Emojis."
+        },
+        "11": {
+            "name": "Zuckerkönigreich",
+            "plural": "Zuckerkönigreiche",
+            "description": "Ein zuckersüßes Paradies, regiert vom Zuckerkönig und seinen süßen Emoji-Untertanen."
+        },
+        "12": {
+            "name": "Emoji-Vulkan",
+            "plural": "Emoji-Vulkane",
+            "description": "Jeder Ausbruch bringt eine Flut brandneuer, frisch geschmiedeter Emojis!"
+        },
+        "13": {
+            "name": "Tempel des Großen Emojis im Himmel",
+            "plural": "Tempel des Großen Emojis im Himmel",
+            "description": "Der Legende nach schenkt das Große Emoji im Himmel seinen treuesten Anhängern unendlich viele Emojis."
+        },
+        "14": {
+            "name": "Emoji-Supercomputer",
+            "plural": "Emoji-Supercomputer",
+            "description": "Die ultimative Emoji-Maschine. Vervielfacht Emojis mit Lichtgeschwindigkeit."
+        },
+        "15": {
+            "name": "Schwarzes Emoji-Loch",
+            "plural": "Schwarze Emoji-Löcher",
+            "description": "Die Endstation aller Emojis... oder ein neuer Anfang?"
+        },
+        "16": {
+            "name": "Emoji-Singularität",
+            "plural": "Emoji-Singularitäten",
+            "description": "Das war's. Nichts bleibt außer Emojis. Du hast es geschafft."
+        }
+    },
+    "upgrades": {
+        "0": {
+            "name": "Noch eine Hand",
+            "description": "Noch eine Hand tippt auf den Bildschirm. Wessen Hand ist das? Keine Ahnung."
+        },
+        "1": {
+            "name": "Und noch eine Hand",
+            "description": "Noch eine Hand tippt auf den Bildschirm. Sehr handlich!"
+        },
+        "2": {
+            "name": "Zehn weitere Hände",
+            "description": "Plötzlich tippen zehn Hände auf deinen Bildschirm! Großartig!"
+        },
+        "3": {
+            "name": "Hundert Hände!",
+            "description": "Die ganze Nachbarschaft ist gekommen, um auf das große Emoji zu tippen!"
+        },
+        "4": {
+            "name": "Tausend Hände",
+            "description": "Leute reisen von weit her an, nur um auf deinen Bildschirm zu tippen."
+        },
+        "5": {
+            "name": "Millionen Hände",
+            "description": "Auf wen zeigst du? Zeigst du etwa auf mich? Wie unhöflich..."
+        },
+        "6": {
+            "name": "Milliarden Hände",
+            "description": "Über 10 % der Weltbevölkerung helfen dir beim Tippen. Ich glaube, der Bildschirm gibt gleich nach."
+        },
+        "7": {
+            "name": "Billionen Hände",
+            "description": "Deine Mutter ruft an. Sie macht sich Sorgen um dich. Genervt, weil der Anruf den Bildschirm verdeckt, legst du auf und tippst weiter."
+        },
+        "8": {
+            "name": "Billiarden Hände",
+            "description": "Da tippen ganz schön viele Hände auf deinem Bildschirm herum."
+        },
+        "9": {
+            "name": "Trillionen Hände",
+            "description": "Die schiere Zahl der Hände ist unbegreiflich. Der Bildschirm muss einiges einstecken."
+        },
+        "10": {
+            "name": "Trilliarden Hände",
+            "description": "Hände, so weit das Auge reicht, und alle tippen fleißig."
+        },
+        "11": {
+            "name": "Quadrillionen Hände",
+            "description": "Perfekte Form. Perfekte Tipps. Unendlich viele Hände."
+        },
+        "12": {
+            "name": "Quadrilliarden Hände",
+            "description": "Mehr Hände als Atome im Universum. Sie alle wissen, was sie tun."
+        },
+        "13": {
+            "name": "Quintillionen Hände",
+            "description": "Das Tippen ist jetzt ein ohrenbetäubendes, rhythmisches Dröhnen, das eine Schockwelle um die Welt schickt."
+        },
+        "14": {
+            "name": "Quintilliarden Hände",
+            "description": "So viel Fleisch sollte sich niemals so dicht auf einem Fleck drängen..."
+        },
+        "15": {
+            "name": "Sextillionen Hände",
+            "description": "Aus den Händen wachsen Dutzende weitere, verdreht und missgestaltet."
+        },
+        "16": {
+            "name": "Sextilliarden Hände",
+            "description": "Du hörst ein Flüstern. Die Hände tippen weiter, aber wem gehören sie?"
+        },
+        "17": {
+            "name": "Septillionen Hände",
+            "description": "Die Hände verformen sich. Sie sind nicht mehr menschlich."
+        },
+        "18": {
+            "name": "Septilliarden Hände",
+            "description": "Hinter den Händen lauert etwas und lenkt sie mit böser Absicht."
+        },
+        "19": {
+            "name": "Oktillionen Hände",
+            "description": "Diese Hände... was sind sie? Die Luft riecht nach Schwefel."
+        },
+        "20": {
+            "name": "Oktilliarden Hände",
+            "description": "Die Hände sind überall und füllen den Raum. Du spürst, wie sie nach dir greifen..."
+        },
+        "21": {
+            "name": "Dämonenhände",
+            "description": "Dämonische Hände aus den Tiefen der Hölle tippen endlos. Der Bildschirm ist glühend heiß."
+        },
+        "22": {
+            "name": "Hände der Verdammten",
+            "description": "Geisterhafte Skeletthände steigen aus dem Abgrund. Sie tippen mit höllischer Wut."
+        },
+        "23": {
+            "name": "Der Herr der Unterwelt",
+            "description": "Der gefallene Engel höchstpersönlich kriecht aus seinem Reich empor, um dir beim Tippen zu helfen."
+        },
+        "24": {
+            "name": "Unhöfliches Tippen",
+            "description": "Wirklich, wirklich unhöflich."
+        },
+        "100": {
+            "name": "Stärkerer Arm",
+            "description": "Mit einem stärkeren Arm zeichnest du Emojis schneller."
+        },
+        "101": {
+            "name": "Gelenkige Finger",
+            "description": "Gelenkige Finger ermöglichen kunstvollere Emojis."
+        },
+        "102": {
+            "name": "Zwei Hände",
+            "description": "Doppelt so viele Hände, doppelt so viele Emojis."
+        },
+        "103": {
+            "name": "Lackierte Nägel",
+            "description": "Mit Nagellack tippt man schneller, wusstest du das nicht?"
+        },
+        "104": {
+            "name": "Füße",
+            "description": "Mit den Füßen zu zeichnen verdoppelt die Produktion (und ist gar nicht schwer)!"
+        },
+        "105": {
+            "name": "Zunge",
+            "description": "Mit jahrelanger Übung kannst auch du lernen, mit der Zunge zu zeichnen!"
+        },
+        "106": {
+            "name": "Nase",
+            "description": "Steck dir einen Wachsmalstift in die Nase und zeichne damit!",
+            "quote": "*Schnüff* Warum riecht der Bildschirm nach Füßen?"
+        },
+        "107": {
+            "name": "Ohr",
+            "description": "Steck dir einen Stift ins Ohr, neig den Kopf um 90 Grad und zeichne damit!"
+        },
+        "108": {
+            "name": "Mund",
+            "description": "Nimm einen Bleistift in den Mund und zeichne damit!"
+        },
+        "109": {
+            "name": "Stärkeres Bein",
+            "description": "Mit einem stärkeren Bein zeichnest du mit den Füßen viel schneller."
+        },
+        "110": {
+            "name": "Größere Lunge",
+            "description": "Mit einer größeren Lunge zeichnest du Emojis schneller."
+        },
+        "111": {
+            "name": "Größeres Gehirn",
+            "description": "Ein größeres Gehirn entfesselt eine Welle der Kreativität und verdoppelt deine Emoji-Produktion!"
+        },
+        "112": {
+            "name": "Haare",
+            "description": "Schwing einen Pinsel mit deinen Haaren. Wer braucht Hände, wenn er Stil hat?"
+        },
+        "113": {
+            "name": "Augenbrauen",
+            "description": "Zieh die Augenbrauen hoch, um Emojis zu zeichnen. Training für Gesicht und Kreativität!"
+        },
+        "114": {
+            "name": "Rücken",
+            "description": "Leg dich auf den Rücken und zeichne mit den Händen hinter dir. Strecken und Skizzieren in einem!"
+        },
+        "115": {
+            "name": "Zähne",
+            "description": "Nimm einen Stift zwischen die Zähne und zeichne. Achtung: Kann Kiefer-Muskelkater verursachen!"
+        },
+        "116": {
+            "name": "Bauchnabel",
+            "description": "Zeichne Emojis mit deinem Bauchnabel. Eine einzigartige Kunst, die schwer zu meistern ist!"
+        },
+        "117": {
+            "name": "Echo-Zeichnen",
+            "description": "Jedes Emoji, das du zeichnest, hallt nach - und es entstehen doppelt so viele!"
+        },
+        "118": {
+            "name": "Telekinetisches Zeichnen",
+            "description": "Wozu Hände, wenn du Emojis mit deinem Geist zeichnen kannst?"
+        },
+        "119": {
+            "name": "Quantenfinger",
+            "description": "Quantenverschränkung in deinen Fingern lässt dich mit Lichtgeschwindigkeit zeichnen."
+        },
+        "200": {
+            "name": "Bessere Bleistifte",
+            "description": "Bessere Bleistifte für detailliertere Emojis."
+        },
+        "201": {
+            "name": "Spezial-Wachsmalstifte",
+            "description": "Mit diesen Wachsmalstiften finden Künstler ihr inneres Kind."
+        },
+        "202": {
+            "name": "Bessere Pinsel",
+            "description": "Bessere Pinsel ermöglichen künstlerischere Emojis."
+        },
+        "203": {
+            "name": "Füllfederhalter",
+            "description": "Für besonders vornehme Emojis."
+        },
+        "204": {
+            "name": "Lineale",
+            "description": "Wie willst du sonst eine gerade Linie ziehen?"
+        },
+        "205": {
+            "name": "Farbenblindheits-Simulator",
+            "description": "Sorg dafür, dass deine Emojis für alle zugänglich sind!",
+            "quote": "Sagt man 'Wekag'? 'Weh-Zeh-Ah-Geh'? 'Dabbelju-Kag'?"
+        },
+        "206": {
+            "name": "Comic-Effekte",
+            "description": "Peppe deine Emojis mit 'ZACK!' und 'BUMM!' auf!"
+        },
+        "207": {
+            "name": "Schablonen-Set",
+            "description": "Mit diesen Schablonen werden deine Emojis jedes Mal perfekt!"
+        },
+        "208": {
+            "name": "Eigene Tastenkürzel",
+            "description": "Beschleunige dein Emoji-Design mit persönlichen Tastenkürzeln!",
+            "quote": "Probier mal Alt + F4."
+        },
+        "209": {
+            "name": "Asset-Bibliothek-Abo",
+            "description": "Zugriff auf eine riesige Bibliothek fertiger Formen, Icons und Texturen!"
+        },
+        "210": {
+            "name": "Rückgängig-Knopf",
+            "description": "Rückgängig macht nicht nur deine Arbeit ungeschehen - es verändert die Realität selbst. Sparsam verwenden.",
+            "quote": "Irren ist menschlich"
+        },
+        "211": {
+            "name": "Emoji-Malbuch",
+            "description": "Nur die feinsten Künstler benutzen Malbücher."
+        },
+        "212": {
+            "name": "Echtzeit-Zusammenarbeit",
+            "description": "Lade andere Designer ein, gleichzeitig an deinen Emoji-Projekten zu arbeiten!"
+        },
+        "213": {
+            "name": "Emoji-Moodboard",
+            "description": "Ordne deine Emoji-Ideen visuell für maximale Kreativität!",
+            "quote": "Hast du etwa ein Brett vorm Kopf?"
+        },
+        "214": {
+            "name": "Pixel-Art-Software",
+            "description": "Erstelle verpixelte Retro-Emojis, die nach 90er-Nostalgie schreien!",
+            "quote": "Jeder Pixel zählt."
+        },
+        "215": {
+            "name": "Comic Sans",
+            "description": "Man liebt oder hasst sie - deine Emojis sehen damit jedenfalls... einzigartig aus!"
+        },
+        "216": {
+            "name": "KI-Bildgenerator",
+            "description": "Lass die KI schuften und blitzschnell minderwertige, langweilige Emojis erzeugen!",
+            "quote": "Biep bup!"
+        },
+        "217": {
+            "name": "Origamipapier",
+            "description": "Falte deine Papier-Emojis in alle möglichen Formen!",
+            "quote": "Quak!"
+        },
+        "218": {
+            "name": "Emoji-Tattoomaschine",
+            "description": "Permanente Emojis für wirklich engagierte Künstler!",
+            "quote": "Autsch!"
+        },
+        "219": {
+            "name": "Blut",
+            "description": "Mit Blut gemalte Emojis sind extra cool!"
+        },
+        "300": {
+            "name": "Bauern",
+            "description": "Was ist eine Farm ohne Bauern?!"
+        },
+        "301": {
+            "name": "Setzling",
+            "description": "Irgendwo muss man ja anfangen.",
+            "quote": "Ich laub an dich!"
+        },
+        "302": {
+            "name": "Bessere Werkzeuge",
+            "description": "Damit geht das Farmen viel schneller!"
+        },
+        "303": {
+            "name": "Traktoren",
+            "description": "Machen die Emoji-Ernte so viel leichter."
+        },
+        "304": {
+            "name": "Bauernhäuser",
+            "description": "Ein gemütliches Zuhause, in dem deine Bauern neue Kraft tanken."
+        },
+        "305": {
+            "name": "Emoji-Kühe",
+            "description": "Erzeugen mehr Emuuuuuuujis."
+        },
+        "306": {
+            "name": "Bewässerungssystem",
+            "description": "Halte deine Emoji-Pflanzen feucht, damit sie schneller wachsen.",
+            "quote": "In welchem Jahrhundert leben wir?!"
+        },
+        "307": {
+            "name": "Vogelscheuchen",
+            "description": "Halten lästige Vogel-Emojis von deinen Farmen fern!"
+        },
+        "308": {
+            "name": "Komposttonnen",
+            "description": "Mach aus Abfall Dünger für gesündere Emoji-Pflanzen!"
+        },
+        "309": {
+            "name": "Gewächshäuser",
+            "description": "Lass Emojis das ganze Jahr wachsen, egal bei welchem Wetter!"
+        },
+        "310": {
+            "name": "Windmühlen",
+            "description": "Nutze die Kraft des Windes für eine effizientere Farm!",
+            "quote": "Wusch!"
+        },
+        "311": {
+            "name": "Emoji-Obstgärten",
+            "description": "Emoji-Bäume, die das ganze Jahr Früchte tragen!"
+        },
+        "312": {
+            "name": "Erntedankfest",
+            "description": "Feiere deine reiche Ernte mit einem Fest, das die Moral hebt!"
+        },
+        "313": {
+            "name": "Riesen-Emoji-Schleuder",
+            "description": "Schieß Emoji-Samen über deine Farm, um blitzschnell zu pflanzen!"
+        },
+        "314": {
+            "name": "Unsichtbarer Zaun",
+            "description": "Hält dein Emoji-Vieh im Zaum... auch wenn du ihn nicht sehen kannst.",
+            "quote": "Tut weh, wenn man dagegen pinkelt."
+        },
+        "315": {
+            "name": "Genmanipulierte Pflanzen",
+            "description": "Bananen ohne Schale, Erdbeeren mit Schokoüberzug, vorgekochte Kartoffeln und mehr!"
+        },
+        "316": {
+            "name": "Die Emoji-Farm der Zukunft",
+            "description": "Deine Farmen sind jetzt High-Tech-Utopien mit Robotern, Hologrammen und fliegenden Traktoren. Willkommen in der Zukunft!"
+        },
+        "317": {
+            "name": "Blutmond",
+            "description": "Unter dem Blutmond wachsen deine Pflanzen schneller... aber ihnen wachsen auch Zähne."
+        },
+        "318": {
+            "name": "Die letzte Ernte",
+            "description": "Eine mysteriöse Gestalt bietet dir eine reiche Ernte an - im Tausch gegen... etwas. Traust du dich?"
+        },
+        "319": {
+            "name": "Schluss mit Farmen",
+            "description": "Du hast das Farmen satt. Vielleicht solltest du einfach aufhören und stattdessen im Büro arbeiten."
+        },
+        "400": {
+            "name": "Scharfe Messer",
+            "description": "Mit schärferen Messern lassen sich Emojis leichter schnippeln."
+        },
+        "401": {
+            "name": "Antihaft-Pfannen",
+            "description": "Mit Antihaft-Pfannen kochst du Emoji-Gerichte schneller."
+        },
+        "402": {
+            "name": "Bessere Öfen",
+            "description": "Öfen mit besserer Hitzeregelung garen Emojis schneller."
+        },
+        "403": {
+            "name": "Hochwertige Zutaten",
+            "description": "Bessere Zutaten bedeuten leckerere Emojis."
+        },
+        "404": {
+            "name": "Kochmütze",
+            "description": "Mit Kochmütze kochst du Emojis schneller."
+        },
+        "405": {
+            "name": "Emoji-Mixer",
+            "description": "Mix Emojis in Sekunden zu leckeren Smoothies und Suppen!"
+        },
+        "406": {
+            "name": "Heißluftfritteusen",
+            "description": "Frittiere Emojis in Rekordzeit. Jedes Mal knusprig und goldbraun!"
+        },
+        "407": {
+            "name": "Sushi-Bars",
+            "description": "Roll Emoji-Sushi mit Präzision und Stil. Rohes Talent erforderlich!"
+        },
+        "408": {
+            "name": "Salatbars",
+            "description": "Misch frische Emoji-Salate mit allerlei Toppings. Gesund und lecker!"
+        },
+        "409": {
+            "name": "Pizzaöfen",
+            "description": "Back Emoji-Pizzen mit Holzofen-Aroma, das nicht von dieser Welt ist!"
+        },
+        "410": {
+            "name": "Emoji-Kaffeemaschinen",
+            "description": "Brüh die perfekte Tasse Emoji-Kaffee, damit deine Köche wach bleiben!"
+        },
+        "411": {
+            "name": "Emoji-Eismaschinen",
+            "description": "Zaubere gefrorene Emoji-Leckereien, die so cool wie lecker sind!"
+        },
+        "412": {
+            "name": "Taco-Stationen",
+            "description": "Bau Emoji-Tacos mit allen Toppings. Eine Fiesta in jedem Bissen!",
+            "quote": "¡Ay, caramba!"
+        },
+        "413": {
+            "name": "Waffeleisen",
+            "description": "Back Emoji-Waffeln, außen knusprig, innen fluffig. Perfekt zum Brunch!"
+        },
+        "414": {
+            "name": "Emoji-Schokobrunnen",
+            "description": "Übergieß alles mit geschmolzener Emoji-Schokolade. Süß und sündig!"
+        },
+        "415": {
+            "name": "Emoji-Kannibalenküche",
+            "description": "Koche Emojis mit anderen Emojis als Zutaten."
+        },
+        "416": {
+            "name": "Emoji-Schwarzloch-Fritteuse",
+            "description": "Frittiere Emojis in einem Schwarzen Loch und nutze seine gewaltige Energie. Sie kommen knusprig zurück!"
+        },
+        "417": {
+            "name": "Emoji-Essensschlacht-Arena",
+            "description": "Mach deine Küche zur Essensschlacht-Arena. Chaotisch, schmutzig und seltsam profitabel."
+        },
+        "418": {
+            "name": "Lebendiger Teig",
+            "description": "Dieser Teig bewegt sich von selbst und formt sich zu perfektem Emoji-Brot. Manchmal versucht er abzuhauen."
+        },
+        "419": {
+            "name": "Das unendliche Buffet",
+            "description": "Ein Buffet, das nie endet... aber vielleicht isst bald das Essen dich."
+        },
+        "500": {
+            "name": "Besen",
+            "description": "Zum Saubermachen, wenn die Tiere äh... ihr großes Geschäft erledigt haben."
+        },
+        "501": {
+            "name": "Tiertrainer",
+            "description": "Trainer bringen den Tieren Tricks bei und machen den Zoo effizienter."
+        },
+        "502": {
+            "name": "Luxusgehege",
+            "description": "Werte die Gehege auf, damit die Tiere glücklich und produktiv bleiben."
+        },
+        "503": {
+            "name": "Exotische Tiere",
+            "description": "Seltene und exotische Tiere locken mehr Besucher an."
+        },
+        "504": {
+            "name": "Zoo-Maskottchen",
+            "description": "Freundliche Maskottchen locken Besucher an und steigern die Einnahmen."
+        },
+        "505": {
+            "name": "Tierkliniken",
+            "description": "Eine eigene Klinik hält die Tiere gesund."
+        },
+        "506": {
+            "name": "Schattenplätze",
+            "description": "Schattige Plätze halten Tiere und Besucher an heißen Tagen kühl."
+        },
+        "507": {
+            "name": "Streichelstationen",
+            "description": "Bereiche, in denen Besucher sicher mit den Tieren kuscheln können."
+        },
+        "508": {
+            "name": "Tierpflege-Sets",
+            "description": "Regelmäßige Fellpflege lässt die Tiere top aussehen und sich super fühlen."
+        },
+        "509": {
+            "name": "Besucherbänke",
+            "description": "Bequeme Sitzplätze für müde Besucher."
+        },
+        "510": {
+            "name": "Souvenirläden",
+            "description": "Ein Laden mit Tier-Souvenirs."
+        },
+        "511": {
+            "name": "Tier-Fotobox",
+            "description": "Besucher können Fotos mit den Tieren machen."
+        },
+        "512": {
+            "name": "Zoo-Bimmelbahn",
+            "description": "Eine Minibahn fährt Besucher durch den Zoo."
+        },
+        "513": {
+            "name": "Tier-Talentshow",
+            "description": "Veranstalte eine Talentshow, in der die Tiere Kunststücke zeigen"
+        },
+        "514": {
+            "name": "Tierparade",
+            "description": "Eine tägliche Parade, bei der die Tiere durch den Zoo marschieren."
+        },
+        "515": {
+            "name": "Überteuerte Snacks",
+            "description": "Verlange von Besuchern Wucherpreise für Tier-Snacks"
+        },
+        "516": {
+            "name": "Tierische Arbeitskräfte",
+            "description": "Lass die Tiere schuften!"
+        },
+        "517": {
+            "name": "Ordner-Affen",
+            "description": "Bring Affen bei, wilde Menschenmassen in Schach zu halten."
+        },
+        "518": {
+            "name": "Urzeittiere",
+            "description": "Hol Dinosaurier und andere ausgestorbene Tiere in den Zoo.",
+            "quote": "Das Leben, äh, findet einen Weg"
+        },
+        "519": {
+            "name": "Einhörner",
+            "description": "Wer will kein fliegendes Einhorn sehen?"
+        },
+        "600": {
+            "name": "Bessere Werkzeuge",
+            "description": "Bessere Werkzeuge, um Emojis schneller herzustellen."
+        },
+        "601": {
+            "name": "Mehr Arbeiter",
+            "description": "Mehr Personal für die Fabrik."
+        },
+        "602": {
+            "name": "Größere Zahnräder",
+            "description": "Größere Zahnräder ermöglichen größere Maschinen."
+        },
+        "603": {
+            "name": "Schrauben und Muttern",
+            "description": "Damit nicht alles auseinanderfällt."
+        },
+        "604": {
+            "name": "Förderbänder",
+            "description": "Förderbänder bewegen Emojis schneller als je zuvor!"
+        },
+        "605": {
+            "name": "Qualitätskontrolle",
+            "description": "Ein eigenes Prüfteam sorgt dafür, dass jedes Emoji perfekt ist."
+        },
+        "606": {
+            "name": "Fabrikerweiterung",
+            "description": "Vergrößere deine Fabrik für mehr Maschinen und Arbeiter. Größer ist besser!"
+        },
+        "607": {
+            "name": "Schnellpressen",
+            "description": "Hochgeschwindigkeitspressen stanzen Emojis blitzschnell aus."
+        },
+        "608": {
+            "name": "Fabrik-Fitnessstudio",
+            "description": "Hält deine Arbeiter fit und voller Energie. Gesunde Arbeiter sind produktive Arbeiter!"
+        },
+        "609": {
+            "name": "Werkschutz",
+            "description": "Schütze deine Fabrik vor Emoji-Dieben und Industriespionage."
+        },
+        "610": {
+            "name": "Fabrik-Recycling",
+            "description": "Mach aus Abfall neue Emojis - spart Kosten und schont die Umwelt."
+        },
+        "611": {
+            "name": "Wartungsleitern",
+            "description": "Leitern für leichten Zugang zu hohen Maschinen. Wartung war nie einfacher!"
+        },
+        "612": {
+            "name": "Schwere Hämmer",
+            "description": "Robuste Hämmer für schnellere Montage und Reparaturen. Zertrümmere die Ineffizienz!"
+        },
+        "613": {
+            "name": "Präzisions-Schraubenschlüssel",
+            "description": "Zieh Schrauben präzise fest. Keine losen Enden mehr in deiner Produktion!"
+        },
+        "614": {
+            "name": "Schraubendreher-Set",
+            "description": "Ein komplettes Set Schraubendreher zur Feinabstimmung deiner Maschinen. Jedes Detail zählt!"
+        },
+        "615": {
+            "name": "Werkzeugkasten-Upgrade",
+            "description": "Ein voller Werkzeugkasten sorgt dafür, dass deine Arbeiter für jeden Job das richtige Werkzeug haben.",
+            "quote": "Wo hab ich den- den- wo ist der- ach, egal!"
+        },
+        "616": {
+            "name": "Verstärkte Wände",
+            "description": "Verstärke deine Fabrikwände gegen das Chaos der Hochgeschwindigkeitsproduktion."
+        },
+        "617": {
+            "name": "Mausefallen",
+            "description": "Halte lästige Nager fern. Keine angeknabberten Kabel oder gestohlenen Emojis mehr!"
+        },
+        "618": {
+            "name": "Fabrikleiter",
+            "description": "Ohne die wird absolut nichts erledigt.",
+            "quote": "Und denkt dran: Die Geschäftsleitung wünscht Klopausen unter einer Minute!"
+        },
+        "619": {
+            "name": "Roboterarbeiter",
+            "description": "Ersetze schwache menschliche Arbeiter durch starke Androiden!"
+        },
+        "700": {
+            "name": "Basketballplätze",
+            "description": "Ein Grund, zusammenzukommen.",
+            "quote": "Swish, swish, swish. Nur Netz. Und allen klappt die Kinnlade runter."
+        },
+        "701": {
+            "name": "Baseballfelder",
+            "description": "Das wird garantiert ein Homerun."
+        },
+        "702": {
+            "name": "Squashplätze",
+            "description": "Ist das ein Kürbis oder ein Sport?"
+        },
+        "703": {
+            "name": "Frisbees",
+            "description": "Der ultimative Sport",
+            "quote": "Hoffentlich kommt nie jemand auf die Idee, das mit Golf zu kombinieren..."
+        },
+        "704": {
+            "name": "Volleyballfelder",
+            "description": "Der ultimative Sport"
+        },
+        "705": {
+            "name": "Ping-Pong-Tische",
+            "description": "Ein Sport, benannt nach seinem eigenen Geräusch.",
+            "quote": "Der beste Weg, Kommunisten zu bekämpfen"
+        },
+        "706": {
+            "name": "Golfplätze",
+            "description": "Ein Sport, bei dem man mit einem Stock einen Ball schlägt und ein cooles Wägelchen fährt.",
+            "quote": "Ein Sport für Präsidenten"
+        },
+        "800": {
+            "name": "Sparschweine",
+            "description": "Grunz grunz!"
+        },
+        "801": {
+            "name": "Größere Emoji-Beutel",
+            "description": "Damit kannst du noch mehr Emojis tragen."
+        },
+        "802": {
+            "name": "Emoji-Kreditkarten",
+            "description": "Ideal, um deine hart verdienten Emojis auszugeben."
+        },
+        "803": {
+            "name": "Investition in Bildung",
+            "description": "Bessere Bildung, bessere Emoji-Zeichenkünste."
+        },
+        "804": {
+            "name": "Investition in Innovation",
+            "description": "Mehr Innovation, innovativere Emojis."
+        },
+        "900": {
+            "name": "Karussells",
+            "description": "You spin me right 'round, baby!"
+        },
+        "901": {
+            "name": "Rutschen",
+            "description": "Do you slide on all your nights like this? (I might)"
+        },
+        "902": {
+            "name": "Riesenrad",
+            "description": "Ganz oben, genau da hat sie mir das Herz gebrochen."
+        },
+        "903": {
+            "name": "Zirkus",
+            "description": "Es gibt nur zwei Arten von Menschen: die, die unterhalten, und die, die zuschauen."
+        },
+        "904": {
+            "name": "Emoji-Jongleur",
+            "description": "Man sagt, er hat immer alle Bälle in der Luft."
+        },
+        "1000": {
+            "name": "Emoji-Wahlen",
+            "description": "Möge das beste Emoji gewinnen!"
+        },
+        "1001": {
+            "name": "Emoji-Konjunkturpaket",
+            "description": "Du kriegst ein Emoji, und du, und du, alle kriegen Emojis!"
+        },
+        "1002": {
+            "name": "Emoji-Parlamentschef",
+            "description": "Setz deinen eigenen Emoji-Parlamentschef ein, damit alles nach deinem Willen läuft."
+        },
+        "1003": {
+            "name": "Emoji-Gesetze",
+            "description": "Wir sind das Emoji-Volk!"
+        },
+        "1004": {
+            "name": "Globale Emoji-Konföderation",
+            "description": "Fördert die Zusammenarbeit zwischen Emoji-Ländern."
+        },
+        "1100": {
+            "name": "Teleskope",
+            "description": "Blick in die Sterne und entdecke Emoji-Planeten."
+        },
+        "1101": {
+            "name": "Satellitenschüsseln",
+            "description": "Blick über die Milchstraße hinaus bis zur Emojistraße."
+        },
+        "1102": {
+            "name": "Astronauten",
+            "description": "Irgendwer muss ja deine Raumstationen betreiben."
+        },
+        "1103": {
+            "name": "Raketen",
+            "description": "Fliegen echt schnell."
+        },
+        "1104": {
+            "name": "⍙⟟⍀ ☍⍜⋔⋔⟒⋏ ⟟⋏ ⎎⍀⟟⟒⎅⟒⋏...",
+            "description": "...⎍⋏⎅ ⏚⍀⟟⋏☌⟒⋏ ⟟⍀⍀⟒ ⋏⟒⎍⟒ ⟒⋔⍜⟊⟟⌇.",
+            "quote": "⏁⟟⌿⌿ ⋔⟒⟟⋏ ☌⟒⌇⟟☊⊑⏁ ⎎⎍⟒⋏⎎⋔⏃⌰ ⏃⋏, ⎍⋔ ⋔⟒⟟⋏ ☌⟒⊑⟒⟟⋔⋏⟟⌇ ⋉⎍ ⌰⎍⟒⎎⏁⟒⋏"
+        },
+        "1105": {
+            "name": "⌇⟒⌰⏁⌇⏃⋔⟒⌇ ⍜⏚⟊⟒☍⏁",
+            "description": "⎅⟟⟒⌇⟒⌇ ⍜⏚⟊⟒☍⏁ ⏚⟟⍀☌⏁ ⎍⋏☌⟒⏃⊑⋏⏁⟒ ☍⍀⏃⟒⎎⏁⟒."
+        },
+        "30000": {
+            "name": "Kartoffeln",
+            "description": "Knollig gut! Kartoffeln sind das Rückgrat jeder Farm."
+        },
+        "30001": {
+            "name": "Karotten",
+            "description": "Möhr geht immer! Gut für die Augen und fürs Emoji-Geschäft."
+        },
+        "30002": {
+            "name": "Gurken",
+            "description": "Cool wie eine Gurke! Erfrischend und perfekt für Salate und zum Einlegen.",
+            "quote": "Ich bin Gurken-Rick!"
+        },
+        "30003": {
+            "name": "Paprika",
+            "description": "Süß oder scharf: Paprika bringt Farbe und Geschmack auf deine Farm.",
+            "quote": "Paprika? Ich dachte, das heißt Mamarika..."
+        },
+        "30004": {
+            "name": "Tomaten",
+            "description": "Saftig und vielseitig - Tomaten sind ein Liebling jeder Farm."
+        },
+        "30005": {
+            "name": "Salat",
+            "description": "Da haben wir den Salat! Er hält deine Farm frisch und grün."
+        },
+        "30006": {
+            "name": "Brokkoli",
+            "description": "Kleine Bäume mit großer Wirkung!"
+        },
+        "30007": {
+            "name": "Zwiebeln",
+            "description": "Voller Geschmack und Tränen - Zwiebeln gehören in jede Küche und auf jede Farm.",
+            "quote": "Oger sind wie Zwiebeln. Zwiebeln haben Schichten. Oger haben Schichten."
+        },
+        "30008": {
+            "name": "Knoblauch",
+            "description": "Knoblauch würzt deine Gerichte und beschützt deine Farm.",
+            "quote": "Super, falls du ein Vampirproblem hast!"
+        },
+        "30009": {
+            "name": "Mais",
+            "description": "Mais ist vielseitig - perfekt zum Grillen und für Popcorn.",
+            "quote": "Maisterhaft!"
+        },
+        "30010": {
+            "name": "Bohnen",
+            "description": "Reich an Proteinen und perfekt, um deine Farm zu erweitern.",
+            "quote": "Bohnen!"
+        },
+        "30011": {
+            "name": "Erdnüsse",
+            "description": "Nussig und lecker - Erdnüsse sind super zum Knabbern und steigern die Produktivität deiner Farm."
+        },
+        "30012": {
+            "name": "Kürbisse",
+            "description": "Riesig, orange und perfekt für Kuchen oder als Krähenschreck. Ein Herbstliebling!",
+            "quote": "Pumpkin Spice macht alles nice!"
+        },
+        "30013": {
+            "name": "Erdbeeren",
+            "description": "Süß, saftig, perfekt für Desserts. Erdbeeren sind einfach beerenstark!"
+        },
+        "30014": {
+            "name": "Blaubeeren",
+            "description": "Klein, aber oho!",
+            "quote": "I'm blue da ba dee da ba di"
+        },
+        "30015": {
+            "name": "Auberginen",
+            "description": "Lila und vielseitig - perfekt zum Grillen, Rösten und Emoji-Farmen.",
+            "quote": "Mein Freund liebt das Auberginen-Emoji, er schickt es mir ständig!"
+        },
+        "30016": {
+            "name": "Zucchini",
+            "description": "Grün und reichlich - Zucchini sind Sommerkürbisse, die einfach nicht aufhören zu wachsen."
+        },
+        "30017": {
+            "name": "Avocados",
+            "description": "Cremig und lecker - Avocados sind der Star auf jedem Toast und ein Farm-Liebling."
+        },
+        "30018": {
+            "name": "Süßkartoffeln",
+            "description": "Die süße Cousine der Kartoffel."
+        },
+        "30019": {
+            "name": "Erbsen",
+            "description": "Peace! Äh... Erbsen!"
+        },
+        "30020": {
+            "name": "Radieschen",
+            "description": "Scharf und knackig - Radieschen geben deiner Farm und deinen Gerichten den Kick."
+        },
+        "30021": {
+            "name": "Pilze",
+            "description": "Pilzig gut! Pilze sind eigentlich gar keine Pflanzen, wusstest du das?",
+            "quote": "Er ist ein echter Glückspilz"
+        },
+        "30022": {
+            "name": "Ananas",
+            "description": "Tropisch und spritzig."
+        },
+        "30023": {
+            "name": "Wassermelonen",
+            "description": "Saftig und erfrischend - Wassermelonen sind die ultimative Sommerfrucht."
+        },
+        "30024": {
+            "name": "Kiwis",
+            "description": "Außen pelzig, innen süß. Kiwis sind ein Farm-Liebling!"
+        },
+        "30025": {
+            "name": "Trauben",
+            "description": "Perfekt zum Naschen, Entsaften oder für Wein.",
+            "quote": "In der Traube liegt die Wahrheit."
+        },
+        "30026": {
+            "name": "Kirschen",
+            "description": "Süß und herb - Kirschen sind ein Genuss und ein Farm-Liebling."
+        },
+        "50000": {
+            "name": "Hundehelfer",
+            "description": "Tippt mit der Schnauze auf deinen Bildschirm.",
+            "quote": "WUFF! Ich helf dir beim Emoji-Sammeln!"
+        },
+        "50001": {
+            "name": "Katzenhelfer",
+            "description": "Kitzelt dich mit den Schnurrhaaren, damit du schneller tippst.",
+            "quote": "Miau! Ich helf dir beim Emoji-Sammeln!"
+        },
+        "50002": {
+            "name": "Entenhelfer",
+            "description": "Pickt dir mit dem Schnabel in die Seite, damit du schneller tippst.",
+            "quote": "Quak! Ich helf dir beim Emoji-Sammeln!"
+        },
+        "50003": {
+            "name": "Kuhhelfer",
+            "description": "Schwingt ihr Euter gegen deinen Bildschirm, damit du schneller tippst.",
+            "quote": "Muh! Ich helf dir beim Emoji-Sammeln!"
+        },
+        "50004": {
+            "name": "Schweinehelfer",
+            "description": "Tobt fröhlich durch dein Zimmer, macht dich glücklich und lässt dich schneller tippen.",
+            "quote": "Grunz! Ich helf dir beim Emoji-Sammeln!"
+        },
+        "50005": {
+            "name": "Hasenhelfer",
+            "description": "Hüpft gegen deinen Bildschirm und macht deine Tipps schneller.",
+            "quote": "Hopp! Ich helf dir beim Emoji-Sammeln!"
+        },
+        "50006": {
+            "name": "Froschhelfer",
+            "description": "Springt auf deinen Bildschirm und macht deine Tipps schneller.",
+            "quote": "Quaaak! Ich helf dir beim Emoji-Sammeln!"
+        },
+        "50007": {
+            "name": "Elefantenhelfer",
+            "description": "Sein Rüssel ist perfekt zum Tippen!",
+            "quote": "Törööö! Ich helf dir beim Emoji-Sammeln!"
+        },
+        "50008": {
+            "name": "Affenhelfer",
+            "description": "Gibt dir jede Menge Bananen, stillt deinen Hunger und lässt dich schneller tippen!",
+            "quote": "Uh uh! Ich helf dir beim Emoji-Sammeln!"
+        },
+        "50009": {
+            "name": "Pinguinhelfer",
+            "description": "Pickt mit dem Schnabel auf deinen Bildschirm.",
+            "quote": "Watschel! Ich helf dir beim Emoji-Sammeln!"
+        },
+        "100000": {
+            "name": "Emoji-Praktikanten",
+            "description": "Praktikanten sorgen dafür, dass die Emoji-Regierung rund läuft!"
+        },
+        "100001": {
+            "name": "Emoji-Bürokraten",
+            "description": "Eine Emoji-Regierung braucht Beamte, um zu funktionieren.",
+            "quote": "Sieht so aus, als würdest du ein Gesetz verabschieden. Brauchst du Hilfe?"
+        }
+    },
+    "effects": {
+        "0": {
+            "title": "x2 Tippkraft",
+            "description": "Emojis pro Tipp verdoppelt!"
+        },
+        "1": {
+            "title": "x3 Tippkraft",
+            "description": "Emojis pro Tipp verdreifacht!"
+        },
+        "100": {
+            "title": "x2 Emoji-Produktion",
+            "description": "Emoji-Produktion verdoppelt!"
+        },
+        "101": {
+            "title": "x77 Emoji-Produktion",
+            "description": "Emoji-Produktion verdoppelt!"
+        },
+        "110": {
+            "title": "Halbe Emoji-Produktion",
+            "description": "Emoji-Produktion halbiert!"
+        },
+        "200": {
+            "title": "Emoji-Geschenk",
+            "description": "Emojis für eine ganze Stunde!"
+        }
+    }
+}

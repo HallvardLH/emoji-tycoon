@@ -2,6 +2,7 @@ import { View, ScrollView, StyleSheet } from "react-native";
 import { useSelector } from "react-redux";
 import { RootState } from "../../../scripts/redux/reduxStore";
 import ProgressMeter from "./ProgressMeter";
+import { getEffectTitle } from "../../../i18n/content";
 // import { Effect } from "../../scripts/redux/bigEmojiSlice";
 
 export default function EffectMeters() {
@@ -18,7 +19,7 @@ export default function EffectMeters() {
                             key={effect.instanceId}
                             icon={effect.emoji}
                             percentage={effect.timeLeft / effect.originalDuration! * 100}
-                            label={effect.title}
+                            label={getEffectTitle(effect.id, effect.title)}
                         />
                     ))}
             </ScrollView>

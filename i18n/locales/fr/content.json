@@ -1,0 +1,1009 @@
+{
+    "buildings": {
+        "0": {
+            "name": "Main dessinatrice",
+            "plural": "Mains dessinatrices",
+            "description": "Une main qui dessine des emojis pour toi."
+        },
+        "1": {
+            "name": "Studio de graphisme",
+            "plural": "Studios de graphisme",
+            "description": "Un studio où naissent les emojis."
+        },
+        "2": {
+            "name": "Ferme",
+            "plural": "Fermes",
+            "description": "Une ferme où les emojis sortent de terre."
+        },
+        "3": {
+            "name": "Restaurant",
+            "plural": "Restaurants",
+            "description": "Là où les emojis vont manger des emojis de nourriture."
+        },
+        "4": {
+            "name": "Mini-zoo",
+            "plural": "Mini-zoos",
+            "description": "Retrouve tous tes animaux emoji préférés."
+        },
+        "5": {
+            "name": "Usine",
+            "plural": "Usines",
+            "description": "La création d'emojis à l'échelle industrielle."
+        },
+        "6": {
+            "name": "Centre sportif",
+            "plural": "Centres sportifs",
+            "description": "Garde tes emojis en pleine forme."
+        },
+        "7": {
+            "name": "Banque",
+            "plural": "Banques",
+            "description": "« Chez nous, vos emojis sont en sécurité. »"
+        },
+        "8": {
+            "name": "Parc d'attractions emoji",
+            "plural": "Parcs d'attractions emoji",
+            "description": "« Bienvenue à EmojiLand : là où rêves et émotions prennent vie ! »"
+        },
+        "9": {
+            "name": "Assemblée emoji",
+            "plural": "Assemblées emoji",
+            "description": "Là où les emojis se réunissent pour décider comment faire plus d'emojis."
+        },
+        "10": {
+            "name": "Station spatiale",
+            "plural": "Stations spatiales",
+            "description": "Conquiers de nouveaux mondes et prends-leur leurs emojis."
+        },
+        "11": {
+            "name": "Royaume des bonbons",
+            "plural": "Royaumes des bonbons",
+            "description": "Un paradis sucré gouverné par le Roi Bonbon et ses doux sujets emojis."
+        },
+        "12": {
+            "name": "Volcan emoji",
+            "plural": "Volcans emoji",
+            "description": "Chaque éruption déverse un flot d'emojis tout neufs, fraîchement forgés !"
+        },
+        "13": {
+            "name": "Temple du Grand Emoji céleste",
+            "plural": "Temples du Grand Emoji céleste",
+            "description": "La légende dit que le Grand Emoji céleste accorde des emojis infinis à ses plus fidèles disciples."
+        },
+        "14": {
+            "name": "Supercalculateur emoji",
+            "plural": "Supercalculateurs emoji",
+            "description": "Le moteur à emojis ultime. Multiplie les emojis à la vitesse de la lumière."
+        },
+        "15": {
+            "name": "Trou noir emoji",
+            "plural": "Trous noirs emoji",
+            "description": "La destination finale de tous les emojis... ou un nouveau départ ?"
+        },
+        "16": {
+            "name": "Singularité emoji",
+            "plural": "Singularités emoji",
+            "description": "C'est fini. Il ne reste plus que des emojis. Tu as réussi."
+        }
+    },
+    "upgrades": {
+        "0": {
+            "name": "Une autre main",
+            "description": "Une autre main tapote l'écran. À qui est-elle ? Aucune idée."
+        },
+        "1": {
+            "name": "Encore une main",
+            "description": "Une main de plus tapote l'écran. Quel coup de main !"
+        },
+        "2": {
+            "name": "Dix mains de plus",
+            "description": "Dix mains se mettent soudain à tapoter ton écran ! Génial !"
+        },
+        "3": {
+            "name": "Cent mains !",
+            "description": "Tout le quartier est venu tapoter le gros emoji sur l'écran !"
+        },
+        "4": {
+            "name": "Mille mains",
+            "description": "Des gens viennent de très loin rien que pour tapoter ton écran."
+        },
+        "5": {
+            "name": "Un million de mains",
+            "description": "Tu montres qui du doigt, là ? Moi ? Quelle impolitesse..."
+        },
+        "6": {
+            "name": "Un milliard de mains",
+            "description": "Plus de 10 % de la population mondiale t'aide à tapoter ton écran. Je crois qu'il va lâcher."
+        },
+        "7": {
+            "name": "Un billion de mains",
+            "description": "Ta mère appelle. Elle s'inquiète pour toi. Agacement : l'appel cache l'écran. Tu raccroches et continues de tapoter."
+        },
+        "8": {
+            "name": "Un billiard de mains",
+            "description": "Ça fait beaucoup de mains qui tapotent ton écran."
+        },
+        "9": {
+            "name": "Un trillion de mains",
+            "description": "Le nombre de mains dépasse l'entendement. L'écran prend cher."
+        },
+        "10": {
+            "name": "Un trilliard de mains",
+            "description": "Des mains à perte de vue, qui tapotent sans relâche."
+        },
+        "11": {
+            "name": "Un quadrillion de mains",
+            "description": "Forme parfaite. Tapotements parfaits. Mains infinies."
+        },
+        "12": {
+            "name": "Un quadrilliard de mains",
+            "description": "Plus de mains que d'atomes dans l'univers. Elles savent toutes ce qu'elles font."
+        },
+        "13": {
+            "name": "Un quintillion de mains",
+            "description": "Les tapotements forment désormais un martèlement rythmé, assourdissant, qui envoie une onde de choc autour du monde."
+        },
+        "14": {
+            "name": "Un quintilliard de mains",
+            "description": "Une telle quantité de chair ne devrait jamais être entassée ainsi dans un même espace..."
+        },
+        "15": {
+            "name": "Un sextillion de mains",
+            "description": "Sur les mains déjà présentes en poussent des dizaines d'autres, tordues et difformes."
+        },
+        "16": {
+            "name": "Un sextilliard de mains",
+            "description": "Tu commences à entendre des murmures. Les mains tapotent toujours, mais à qui sont-elles ?"
+        },
+        "17": {
+            "name": "Un septillion de mains",
+            "description": "Les mains commencent à se déformer. Elles n'ont plus rien d'humain."
+        },
+        "18": {
+            "name": "Un septilliard de mains",
+            "description": "Une présence rôde derrière les mains et les guide avec de sombres intentions."
+        },
+        "19": {
+            "name": "Un octillion de mains",
+            "description": "Ces mains... que sont-elles ? L'air sent le soufre."
+        },
+        "20": {
+            "name": "Un octilliard de mains",
+            "description": "Les mains sont partout, elles remplissent la pièce. Tu les sens t'agripper..."
+        },
+        "21": {
+            "name": "Mains démoniaques",
+            "description": "Des mains démoniaques venues des profondeurs de l'enfer tapotent sans fin. L'écran est brûlant au toucher."
+        },
+        "22": {
+            "name": "Mains des damnés",
+            "description": "Des mains spectrales et squelettiques surgissent de l'abîme. Elles tapotent avec une rage infernale."
+        },
+        "23": {
+            "name": "Le seigneur des Enfers",
+            "description": "L'ange déchu en personne remonte de son royaume pour t'aider à tapoter ton écran."
+        },
+        "24": {
+            "name": "Tapotage malpoli",
+            "description": "Vraiment, vraiment malpoli."
+        },
+        "100": {
+            "name": "Bras plus fort",
+            "description": "Un bras plus fort permet de dessiner des emojis plus vite."
+        },
+        "101": {
+            "name": "Doigts souples",
+            "description": "Des doigts souples permettent des emojis plus élaborés."
+        },
+        "102": {
+            "name": "Deux mains",
+            "description": "Deux fois plus de mains, deux fois plus d'emojis."
+        },
+        "103": {
+            "name": "Mains manucurées",
+            "description": "Le vernis à ongles fait tapoter plus vite, tu ne savais pas ?"
+        },
+        "104": {
+            "name": "Pieds",
+            "description": "Dessiner avec les pieds double la production (et c'est le pied) !"
+        },
+        "105": {
+            "name": "Langue",
+            "description": "Avec des années de pratique, toi aussi tu peux apprendre à dessiner avec la langue !"
+        },
+        "106": {
+            "name": "Nez",
+            "description": "Mets-toi un crayon dans le nez et dessine avec !",
+            "quote": "*Snif* Pourquoi l'écran sent les pieds ?"
+        },
+        "107": {
+            "name": "Oreille",
+            "description": "Plante un stylo dans ton oreille, tourne la tête à 90 degrés et dessine avec !"
+        },
+        "108": {
+            "name": "Bouche",
+            "description": "Mets un crayon dans ta bouche et dessine avec !"
+        },
+        "109": {
+            "name": "Jambe plus forte",
+            "description": "Une jambe plus forte te permet de dessiner bien plus vite avec tes pieds."
+        },
+        "110": {
+            "name": "Poumons plus grands",
+            "description": "De plus grands poumons permettent de dessiner des emojis plus vite."
+        },
+        "111": {
+            "name": "Cerveau plus gros",
+            "description": "Un cerveau plus gros libère une immense vague de créativité qui double ta production d'emojis !"
+        },
+        "112": {
+            "name": "Cheveux",
+            "description": "Manie un pinceau avec tes cheveux pour créer des emojis. Qui a besoin de mains quand on a du style ?"
+        },
+        "113": {
+            "name": "Sourcils",
+            "description": "Hausse les sourcils pour dessiner des emojis. Du sport pour ton visage et ta créativité !"
+        },
+        "114": {
+            "name": "Dos",
+            "description": "Allonge-toi sur le dos et dessine des emojis, mains derrière toi. Ça étire et ça inspire !"
+        },
+        "115": {
+            "name": "Dents",
+            "description": "Serre un stylo entre tes dents et dessine des emojis. Attention : risque de fatigue de la mâchoire !"
+        },
+        "116": {
+            "name": "Nombril",
+            "description": "Dessine des emojis avec ton nombril. Un talent unique, difficile à maîtriser !"
+        },
+        "117": {
+            "name": "Dessin en écho",
+            "description": "Chaque emoji que tu dessines fait écho, et en crée deux fois plus !"
+        },
+        "118": {
+            "name": "Dessin télékinétique",
+            "description": "Pourquoi utiliser tes mains quand tu peux dessiner des emojis par la pensée ?"
+        },
+        "119": {
+            "name": "Doigts quantiques",
+            "description": "L'intrication quantique de tes doigts te permet de dessiner des emojis à la vitesse de la lumière."
+        },
+        "200": {
+            "name": "Crayons améliorés",
+            "description": "De meilleurs crayons pour des emojis plus détaillés."
+        },
+        "201": {
+            "name": "Crayons de cire spéciaux",
+            "description": "Ces crayons spéciaux permettent aux artistes de retrouver leur âme d'enfant."
+        },
+        "202": {
+            "name": "Pinceaux améliorés",
+            "description": "Des pinceaux améliorés pour des emojis plus artistiques."
+        },
+        "203": {
+            "name": "Stylos-plumes",
+            "description": "Pour des emojis plus distingués."
+        },
+        "204": {
+            "name": "Règles",
+            "description": "Sinon, comment tracer une ligne droite ?"
+        },
+        "205": {
+            "name": "Simulateur de daltonisme",
+            "description": "Rends tes emojis accessibles à tous !",
+            "quote": "On dit « Wouh-cag » ? « Double-vé-cag » ? « Oui-cag » ?"
+        },
+        "206": {
+            "name": "Effets de BD",
+            "description": "Ajoute des « VLAN ! » et des « BAM ! » à tes emojis pour plus de panache !"
+        },
+        "207": {
+            "name": "Kit de pochoirs",
+            "description": "Des emojis parfaitement formés à chaque fois grâce à ces pochoirs !"
+        },
+        "208": {
+            "name": "Raccourcis clavier perso",
+            "description": "Accélère ton travail avec des raccourcis personnalisés pour créer tes emojis !",
+            "quote": "Essaie Alt + F4."
+        },
+        "209": {
+            "name": "Abonnement à une banque d'images",
+            "description": "Accède à une immense bibliothèque de formes, d'icônes et de textures toutes prêtes !"
+        },
+        "210": {
+            "name": "Bouton Annuler",
+            "description": "Annuler ne fait pas que revenir en arrière : ça modifie la réalité elle-même. À utiliser avec modération.",
+            "quote": "L'erreur est humaine"
+        },
+        "211": {
+            "name": "Cahier de coloriage emoji",
+            "description": "Seuls les artistes les plus raffinés utilisent des cahiers de coloriage."
+        },
+        "212": {
+            "name": "Collaboration en temps réel",
+            "description": "Invite d'autres graphistes à travailler en même temps que toi sur tes projets d'emojis !"
+        },
+        "213": {
+            "name": "Planche d'ambiance emoji",
+            "description": "Organise visuellement tes idées d'emojis pour une créativité maximale !",
+            "quote": "On a du pain sur la planche !"
+        },
+        "214": {
+            "name": "Logiciel de pixel art",
+            "description": "Crée des emojis pixelisés au look rétro qui sentent bon les années 90 !",
+            "quote": "Chaque pixel compte."
+        },
+        "215": {
+            "name": "Police Comic Sans",
+            "description": "On l'aime ou on la déteste, mais elle rend tes emojis... uniques !"
+        },
+        "216": {
+            "name": "Générateur d'images IA",
+            "description": "Laisse l'IA faire le gros du travail et générer des emojis moches et sans intérêt à la vitesse de l'éclair !",
+            "quote": "Bip boup !"
+        },
+        "217": {
+            "name": "Papier origami",
+            "description": "Plie tes emojis en papier dans toutes sortes de formes !",
+            "quote": "Coin coin !"
+        },
+        "218": {
+            "name": "Machine à tatouer emoji",
+            "description": "Des emojis permanents pour les artistes vraiment engagés !",
+            "quote": "Aïe !"
+        },
+        "219": {
+            "name": "Sang",
+            "description": "Peindre avec du sang donne des emojis super stylés !"
+        },
+        "300": {
+            "name": "Fermiers",
+            "description": "Qu'est-ce qu'une ferme sans fermier ?!"
+        },
+        "301": {
+            "name": "Jeune pousse",
+            "description": "Il faut bien commencer quelque part.",
+            "quote": "Ne cesse jamais de croître en toi !"
+        },
+        "302": {
+            "name": "Meilleurs outils",
+            "description": "Pour cultiver beaucoup plus vite !"
+        },
+        "303": {
+            "name": "Tracteurs",
+            "description": "La récolte d'emojis devient tellement plus facile."
+        },
+        "304": {
+            "name": "Corps de ferme",
+            "description": "Un foyer douillet où tes fermiers se reposent et rechargent les batteries."
+        },
+        "305": {
+            "name": "Vaches emoji",
+            "description": "Produisent plus d'emeuuuuuhjis."
+        },
+        "306": {
+            "name": "Système d'irrigation",
+            "description": "Garde tes cultures d'emojis bien hydratées pour qu'elles poussent plus vite.",
+            "quote": "On est en quel siècle, là ?!"
+        },
+        "307": {
+            "name": "Épouvantails",
+            "description": "Éloigne ces satanés emojis d'oiseaux de tes fermes !"
+        },
+        "308": {
+            "name": "Bacs à compost",
+            "description": "Transforme les déchets en engrais pour des cultures d'emojis plus saines !"
+        },
+        "309": {
+            "name": "Serres",
+            "description": "Fais pousser des emojis toute l'année, quel que soit le temps !"
+        },
+        "310": {
+            "name": "Moulins à vent",
+            "description": "Exploite la force du vent pour booster l'efficacité de ta ferme !",
+            "quote": "Fiouuu !"
+        },
+        "311": {
+            "name": "Vergers emoji",
+            "description": "Fais pousser des arbres à emojis qui donnent des fruits toute l'année !"
+        },
+        "312": {
+            "name": "Fête des récoltes",
+            "description": "Célèbre ta récolte abondante avec une fête qui remonte le moral !"
+        },
+        "313": {
+            "name": "Lance-pierre emoji géant",
+            "description": "Projette des graines d'emojis à travers ta ferme pour planter en un éclair !"
+        },
+        "314": {
+            "name": "Clôture invisible",
+            "description": "Garde ton bétail emoji enfermé... même si tu ne la vois pas.",
+            "quote": "Ça pique quand on fait pipi dessus."
+        },
+        "315": {
+            "name": "Cultures OGM",
+            "description": "Bananes sans peau, fraises déjà enrobées de chocolat, pommes de terre précuites et bien plus !"
+        },
+        "316": {
+            "name": "La ferme emoji du futur",
+            "description": "Tes fermes sont désormais des utopies high-tech avec robots, hologrammes et tracteurs volants. Bienvenue dans le futur !"
+        },
+        "317": {
+            "name": "Lune de sang",
+            "description": "Sous la lune de sang, tes cultures poussent plus vite... mais il leur pousse aussi des dents."
+        },
+        "318": {
+            "name": "La dernière récolte",
+            "description": "Une silhouette mystérieuse apparaît et t'offre une récolte abondante en échange de... quelque chose. Oseras-tu accepter ?"
+        },
+        "319": {
+            "name": "Abandonner l'agriculture",
+            "description": "Tu en as assez de cultiver. Le mieux, c'est peut-être de tout lâcher pour aller bosser dans un bureau."
+        },
+        "400": {
+            "name": "Couteaux aiguisés",
+            "description": "Des couteaux plus aiguisés pour émincer les emojis plus facilement."
+        },
+        "401": {
+            "name": "Poêles antiadhésives",
+            "description": "Les poêles antiadhésives accélèrent la cuisson des plats emoji."
+        },
+        "402": {
+            "name": "Meilleurs fours",
+            "description": "Des fours mieux régulés cuisent les emojis plus vite."
+        },
+        "403": {
+            "name": "Ingrédients de qualité",
+            "description": "De meilleurs ingrédients, des emojis plus savoureux."
+        },
+        "404": {
+            "name": "Toque de chef",
+            "description": "Porter une toque accélère la cuisson des emojis."
+        },
+        "405": {
+            "name": "Mixeurs emoji",
+            "description": "Mixe des emojis en smoothies et en soupes délicieuses en quelques secondes !"
+        },
+        "406": {
+            "name": "Friteuses à air",
+            "description": "Fais frire des emojis à la perfection en un temps record. Croustillants et dorés à chaque fois !"
+        },
+        "407": {
+            "name": "Bars à sushis",
+            "description": "Roule des sushis emoji avec précision et style. Il faut un talent brut... enfin, cru !"
+        },
+        "408": {
+            "name": "Bars à salades",
+            "description": "Prépare de fraîches salades d'emojis avec plein de garnitures. Sain et délicieux !"
+        },
+        "409": {
+            "name": "Fours à pizza",
+            "description": "Cuis des pizzas emoji au feu de bois, avec un goût venu d'une autre planète !"
+        },
+        "410": {
+            "name": "Machines à café emoji",
+            "description": "Prépare la tasse de café emoji parfaite pour garder tes chefs en forme !"
+        },
+        "411": {
+            "name": "Machines à glace emoji",
+            "description": "Produis des desserts glacés emoji aussi cool que délicieux !"
+        },
+        "412": {
+            "name": "Stands à tacos",
+            "description": "Garnis des tacos emoji avec tout ce que tu veux. C'est la fiesta à chaque bouchée !",
+            "quote": "¡Ay, caramba!"
+        },
+        "413": {
+            "name": "Gaufriers",
+            "description": "Prépare des gaufres emoji croustillantes dehors et moelleuses dedans. Parfait pour le brunch !"
+        },
+        "414": {
+            "name": "Fontaines à chocolat emoji",
+            "description": "Nappe tout de chocolat emoji fondu. Sucré et gourmand !"
+        },
+        "415": {
+            "name": "Cuisine cannibale emoji",
+            "description": "Cuisine des emojis avec d'autres emojis comme ingrédients."
+        },
+        "416": {
+            "name": "Friteuse trou noir emoji",
+            "description": "Fais frire des emojis dans un trou noir pour exploiter son immense énergie. Ils en ressortent croustillants !"
+        },
+        "417": {
+            "name": "Arène de bataille de bouffe",
+            "description": "Transforme ta cuisine en arène de bataille de bouffe. C'est sale, chaotique et étrangement rentable."
+        },
+        "418": {
+            "name": "Pâte vivante",
+            "description": "Cette pâte bouge toute seule et se façonne en pain emoji parfait. Parfois, elle tente de s'enfuir."
+        },
+        "419": {
+            "name": "Le buffet infini",
+            "description": "Un buffet qui ne finit jamais... mais c'est peut-être la nourriture qui va finir par te manger."
+        },
+        "500": {
+            "name": "Balais",
+            "description": "Pour nettoyer derrière les animaux quand ils font euh... la grosse commission."
+        },
+        "501": {
+            "name": "Dresseurs",
+            "description": "Les dresseurs apprennent des tours aux animaux et rendent le zoo plus efficace."
+        },
+        "502": {
+            "name": "Enclos de luxe",
+            "description": "Améliore l'habitat des animaux pour qu'ils restent heureux et productifs."
+        },
+        "503": {
+            "name": "Animaux exotiques",
+            "description": "Accueille des animaux rares et exotiques pour attirer les foules."
+        },
+        "504": {
+            "name": "Mascottes du zoo",
+            "description": "Des mascottes sympas attirent les visiteurs et font grimper les recettes."
+        },
+        "505": {
+            "name": "Cliniques vétérinaires",
+            "description": "Une clinique dédiée garde les animaux en bonne santé."
+        },
+        "506": {
+            "name": "Zones ombragées",
+            "description": "Ajoute des coins d'ombre pour rafraîchir animaux et visiteurs par temps chaud."
+        },
+        "507": {
+            "name": "Coins caresses",
+            "description": "Des espaces où les visiteurs peuvent approcher les animaux en toute sécurité."
+        },
+        "508": {
+            "name": "Kits de toilettage",
+            "description": "Un toilettage régulier garde les animaux beaux et en pleine forme."
+        },
+        "509": {
+            "name": "Bancs pour visiteurs",
+            "description": "Des coins confortables pour les visiteurs fatigués."
+        },
+        "510": {
+            "name": "Boutiques de souvenirs",
+            "description": "Une boutique de souvenirs à l'effigie des animaux."
+        },
+        "511": {
+            "name": "Photomaton animalier",
+            "description": "Les visiteurs peuvent se prendre en photo avec les animaux."
+        },
+        "512": {
+            "name": "Petit train du zoo",
+            "description": "Un petit train emmène les visiteurs faire le tour du zoo."
+        },
+        "513": {
+            "name": "Incroyable talent animal",
+            "description": "Organise un spectacle où les animaux montrent leurs tours"
+        },
+        "514": {
+            "name": "Parade animale",
+            "description": "Organise une parade quotidienne où les animaux défilent dans le zoo."
+        },
+        "515": {
+            "name": "Snacks hors de prix",
+            "description": "Fais payer aux visiteurs des prix exorbitants pour des snacks à thème animal"
+        },
+        "516": {
+            "name": "Main-d'œuvre animale",
+            "description": "Mets les animaux au travail !"
+        },
+        "517": {
+            "name": "Singes anti-émeute",
+            "description": "Dresse des singes pour gérer les foules indisciplinées."
+        },
+        "518": {
+            "name": "Animaux préhistoriques",
+            "description": "Fais venir des dinosaures et autres animaux disparus au zoo.",
+            "quote": "La vie, euh, trouve toujours un requin"
+        },
+        "519": {
+            "name": "Licornes",
+            "description": "Qui ne rêve pas de voir une licorne volante ?"
+        },
+        "600": {
+            "name": "Meilleurs outils",
+            "description": "De meilleurs outils pour créer des emojis plus vite."
+        },
+        "601": {
+            "name": "Plus d'ouvriers",
+            "description": "Augmente le nombre d'employés de l'usine."
+        },
+        "602": {
+            "name": "Engrenages plus grands",
+            "description": "De plus grands engrenages pour de plus grosses machines."
+        },
+        "603": {
+            "name": "Écrous et boulons",
+            "description": "Pour éviter que tout tombe en morceaux."
+        },
+        "604": {
+            "name": "Tapis roulants",
+            "description": "Optimise la production avec des tapis roulants qui déplacent les emojis plus vite que jamais !"
+        },
+        "605": {
+            "name": "Contrôle qualité",
+            "description": "Assure-toi que chaque emoji est parfait grâce à une équipe dédiée au contrôle qualité."
+        },
+        "606": {
+            "name": "Agrandissement de l'usine",
+            "description": "Agrandis ton usine pour accueillir plus de machines et d'ouvriers. Plus c'est gros, mieux c'est !"
+        },
+        "607": {
+            "name": "Presses ultrarapides",
+            "description": "Passe aux presses ultrarapides qui estampent des emojis à la vitesse de l'éclair."
+        },
+        "608": {
+            "name": "Salle de sport de l'usine",
+            "description": "Une salle de sport pour garder tes ouvriers en forme. Ouvrier en forme, ouvrier productif !"
+        },
+        "609": {
+            "name": "Sécurité de l'usine",
+            "description": "Protège ton usine des voleurs d'emojis et de l'espionnage industriel."
+        },
+        "610": {
+            "name": "Recyclage de l'usine",
+            "description": "Recycle les déchets en nouveaux emojis, pour réduire les coûts et l'impact environnemental."
+        },
+        "611": {
+            "name": "Échelles de maintenance",
+            "description": "Installe des échelles pour accéder facilement aux machines en hauteur. La maintenance n'a jamais été aussi simple !"
+        },
+        "612": {
+            "name": "Marteaux renforcés",
+            "description": "Passe aux marteaux renforcés pour assembler et réparer plus vite. Écrase l'inefficacité !"
+        },
+        "613": {
+            "name": "Clés de précision",
+            "description": "Serre boulons et vis avec des clés de précision. Plus rien ne prend du jeu sur ta chaîne de production !"
+        },
+        "614": {
+            "name": "Jeu de tournevis",
+            "description": "Un jeu complet de tournevis pour peaufiner tes machines. Chaque détail compte !"
+        },
+        "615": {
+            "name": "Caisse à outils améliorée",
+            "description": "Une caisse à outils bien garnie pour que tes ouvriers aient le bon outil pour chaque tâche.",
+            "quote": "Où est-ce que j'ai mis le- le- où est le- ah, laisse tomber !"
+        },
+        "616": {
+            "name": "Murs renforcés",
+            "description": "Renforce les murs de ton usine pour résister au chaos de la production à grande vitesse."
+        },
+        "617": {
+            "name": "Tapettes à souris",
+            "description": "Garde les rongeurs hors de ton usine. Fini les câbles grignotés et les emojis volés !"
+        },
+        "618": {
+            "name": "Chefs d'usine",
+            "description": "Rien ne se fait sans eux. Absolument rien.",
+            "quote": "Et rappelez-vous : la direction souhaite que les pauses toilettes durent moins d'une minute !"
+        },
+        "619": {
+            "name": "Ouvriers robots",
+            "description": "Remplace tes faibles ouvriers humains par de robustes androïdes !"
+        },
+        "700": {
+            "name": "Terrains de basket",
+            "description": "Une bonne raison de se retrouver.",
+            "quote": "Swish, swish, swish. Que du filet. Et ils en sont restés bouche bée."
+        },
+        "701": {
+            "name": "Terrains de baseball",
+            "description": "Un coup de circuit assuré."
+        },
+        "702": {
+            "name": "Courts de squash",
+            "description": "C'est un légume ou un sport ?"
+        },
+        "703": {
+            "name": "Frisbees",
+            "description": "Le sport Ultimate",
+            "quote": "Pourvu que personne n'ait l'idée de mélanger ça avec le golf..."
+        },
+        "704": {
+            "name": "Terrains de volley",
+            "description": "Le sport Ultimate"
+        },
+        "705": {
+            "name": "Tables de ping-pong",
+            "description": "Un sport qui porte le nom du bruit qu'il fait.",
+            "quote": "La meilleure arme contre les communistes"
+        },
+        "706": {
+            "name": "Terrains de golf",
+            "description": "Un sport où l'on frappe une balle avec un bâton et où l'on conduit une voiturette trop cool.",
+            "quote": "Un sport présidentiel"
+        },
+        "800": {
+            "name": "Tirelires cochon",
+            "description": "Groin groin !"
+        },
+        "801": {
+            "name": "Sacs à emojis plus grands",
+            "description": "Pour transporter encore plus d'emojis."
+        },
+        "802": {
+            "name": "Cartes de crédit emoji",
+            "description": "Pratique pour dépenser tes emojis durement gagnés."
+        },
+        "803": {
+            "name": "Investissement dans l'éducation",
+            "description": "Meilleure éducation, meilleurs talents de dessin d'emojis."
+        },
+        "804": {
+            "name": "Investissement dans l'innovation",
+            "description": "Plus d'innovation, des emojis plus innovants."
+        },
+        "900": {
+            "name": "Manèges",
+            "description": "You spin me right 'round, baby!"
+        },
+        "901": {
+            "name": "Toboggans",
+            "description": "Tu glisses comme ça toutes tes nuits ? (Peut-être bien)"
+        },
+        "902": {
+            "name": "Grande roue",
+            "description": "Tout là-haut, c'est là qu'elle m'a brisé le cœur."
+        },
+        "903": {
+            "name": "Cirque",
+            "description": "Il n'y a que deux types de personnes au monde : ceux qui divertissent, et ceux qui regardent."
+        },
+        "904": {
+            "name": "Jongleur emoji",
+            "description": "On dit qu'il n'a jamais perdu la boule."
+        },
+        "1000": {
+            "name": "Élections emoji",
+            "description": "Que le meilleur emoji gagne !"
+        },
+        "1001": {
+            "name": "Plan de relance emoji",
+            "description": "Un emoji pour toi, et pour toi, et pour toi, tout le monde a des emojis !"
+        },
+        "1002": {
+            "name": "Président de l'assemblée emoji",
+            "description": "Installe ton propre président emoji pour que tout aille dans ton sens."
+        },
+        "1003": {
+            "name": "Lois emoji",
+            "description": "Nous, les emojis..."
+        },
+        "1004": {
+            "name": "Confédération mondiale des emojis",
+            "description": "Renforce la coopération entre les pays emojis."
+        },
+        "1100": {
+            "name": "Télescopes",
+            "description": "Scrute les étoiles pour découvrir des planètes emoji."
+        },
+        "1101": {
+            "name": "Antennes satellites",
+            "description": "Regarde au-delà de la Voie lactée, vers la galaxie de la Voie emojiée."
+        },
+        "1102": {
+            "name": "Astronautes",
+            "description": "Il faut bien quelqu'un pour faire tourner tes stations spatiales."
+        },
+        "1103": {
+            "name": "Fusées",
+            "description": "Ça vole très vite."
+        },
+        "1104": {
+            "name": "⋏⍜⎍⌇ ⌇⍜⋔⋔⟒⌇ ⌿⏃☊⟟⎎⟟⍾⎍⟒⌇...",
+            "description": "...⟒⏁ ⍜⋏ ⏃⌿⌿⍜⍀⏁⟒ ⎅⟒⌇ ⟒⋔⍜⟊⟟⌇ ⎅⟒ ⎎⍜⌰⟟⟒.",
+            "quote": "⏁⏃⌿⍜⏁⟒ ⋔⏃ ⎎⟟☌⎍⍀⟒ ☊⟟⋏⍾ ⎎⍜⟟⌇ ⌿⍜⎍⍀ ⎅⟒⏚⌰⍜⍾⎍⟒⍀ ⋔⍜⋏ ⌇⟒☊⍀⟒⏁"
+        },
+        "1105": {
+            "name": "⍜⏚⟊⟒⏁ ⟒⏁⍀⏃⋏☌⟒",
+            "description": "☊⟒⏁ ⍜⏚⟊⟒⏁ ⎅⟒⏁⟟⟒⋏⏁ ⎅⟒⌇ ⎎⍜⍀☊⟒⌇ ⟟⋏☊⍜⋏⋏⎍⟒⌇."
+        },
+        "30000": {
+            "name": "Pommes de terre",
+            "description": "Patate-tastique ! Les pommes de terre sont le pilier de toute ferme."
+        },
+        "30001": {
+            "name": "Carottes",
+            "description": "Les carottes, ça rend aimable. Et productif !"
+        },
+        "30002": {
+            "name": "Concombres",
+            "description": "Frais comme un concombre ! Ces légumes rafraîchissants sont parfaits en salade ou en cornichons.",
+            "quote": "Je suis Pickle Rick !"
+        },
+        "30003": {
+            "name": "Poivrons",
+            "description": "Doux ou piquants, les poivrons ajoutent une touche de couleur et de saveur à ta ferme.",
+            "quote": "Poivre et rond à la fois. Le nom tient la route."
+        },
+        "30004": {
+            "name": "Tomates",
+            "description": "Juteuses et polyvalentes, les tomates sont les chouchous de la ferme."
+        },
+        "30005": {
+            "name": "Laitue",
+            "description": "La laitue garde ta ferme fraîche et verte. Pas la peine d'en faire toute une salade !"
+        },
+        "30006": {
+            "name": "Brocolis",
+            "description": "De petits arbres aux grands bienfaits !"
+        },
+        "30007": {
+            "name": "Oignons",
+            "description": "Pleins de saveur et de larmes, les oignons sont incontournables en cuisine comme à la ferme.",
+            "quote": "Les ogres, c'est comme les oignons. Les oignons ont des couches. Les ogres ont des couches."
+        },
+        "30008": {
+            "name": "Ail",
+            "description": "L'ail parfume tes plats et protège ta ferme.",
+            "quote": "Super efficace si tu as un problème de vampires !"
+        },
+        "30009": {
+            "name": "Maïs",
+            "description": "Le maïs est une culture polyvalente, parfaite grillée ou en pop-corn.",
+            "quote": "Maïs-jestueux !"
+        },
+        "30010": {
+            "name": "Haricots",
+            "description": "Riches en protéines et parfaits pour faire grandir ta ferme.",
+            "quote": "C'est la fin des haricots !"
+        },
+        "30011": {
+            "name": "Cacahuètes",
+            "description": "Croquantes et délicieuses, les cacahuètes sont parfaites pour grignoter et booster la productivité de ta ferme."
+        },
+        "30012": {
+            "name": "Citrouilles",
+            "description": "Géantes, orange, parfaites pour les tartes ou pour effrayer les corbeaux. Les citrouilles, stars de l'automne !",
+            "quote": "Minuit sonne... et hop, un carrosse !"
+        },
+        "30013": {
+            "name": "Fraises",
+            "description": "Sucrées, juteuses et parfaites en dessert. Les fraises ramènent leur fraise dans ta ferme !"
+        },
+        "30014": {
+            "name": "Myrtilles",
+            "description": "Petites mais costaudes...",
+            "quote": "I'm blue da ba dee da ba di"
+        },
+        "30015": {
+            "name": "Aubergines",
+            "description": "Violettes et polyvalentes, les aubergines sont parfaites grillées, rôties, et pour cultiver des emojis.",
+            "quote": "L'emoji préféré de mon copain, c'est l'aubergine, il n'arrête pas de me l'envoyer !"
+        },
+        "30016": {
+            "name": "Courgettes",
+            "description": "Vertes et abondantes, les courgettes sont des courges d'été qui n'en finissent pas de donner."
+        },
+        "30017": {
+            "name": "Avocats",
+            "description": "Crémeux et délicieux, les avocats plaident toujours en faveur de ta ferme."
+        },
+        "30018": {
+            "name": "Patates douces",
+            "description": "La cousine sucrée de la pomme de terre."
+        },
+        "30019": {
+            "name": "Petits pois",
+            "description": "Petits pois !"
+        },
+        "30020": {
+            "name": "Radis",
+            "description": "Piquants et croquants, les radis donnent du peps à ta ferme et à tes plats."
+        },
+        "30021": {
+            "name": "Champignons",
+            "description": "Champi-génial ! Les champignons ne sont pas vraiment des plantes, tu le savais ?",
+            "quote": "C'est un vrai champion... euh, champignon."
+        },
+        "30022": {
+            "name": "Ananas",
+            "description": "Tropical et acidulé."
+        },
+        "30023": {
+            "name": "Pastèques",
+            "description": "Juteuses et rafraîchissantes, les pastèques sont la culture d'été par excellence."
+        },
+        "30024": {
+            "name": "Kiwis",
+            "description": "Poilus dehors, sucrés dedans. Les kiwis sont les chouchous de la ferme !"
+        },
+        "30025": {
+            "name": "Raisins",
+            "description": "Parfaits à grignoter, à presser ou à transformer en vin.",
+            "quote": "Dans le raisin est la vérité."
+        },
+        "30026": {
+            "name": "Cerises",
+            "description": "Sucrées et acidulées, les cerises sont la cerise sur le gâteau de ta ferme."
+        },
+        "50000": {
+            "name": "Chien assistant",
+            "description": "Tapote ton écran avec son museau.",
+            "quote": "OUAF ! Je vais t'aider à avoir des emojis !"
+        },
+        "50001": {
+            "name": "Chat assistant",
+            "description": "Te chatouille avec ses moustaches pour te faire tapoter plus vite.",
+            "quote": "Miaou ! Je vais t'aider à avoir des emojis !"
+        },
+        "50002": {
+            "name": "Canard assistant",
+            "description": "Te donne des coups de bec dans les côtes pour te faire tapoter plus vite.",
+            "quote": "Coin coin ! Je vais t'aider à avoir des emojis !"
+        },
+        "50003": {
+            "name": "Vache assistante",
+            "description": "Balance ses pis contre ton écran pour te faire tapoter plus vite.",
+            "quote": "Meuh ! Je vais t'aider à avoir des emojis !"
+        },
+        "50004": {
+            "name": "Cochon assistant",
+            "description": "Court partout dans ta chambre et te met de bonne humeur pour te faire tapoter plus vite.",
+            "quote": "Groin ! Je vais t'aider à avoir des emojis !"
+        },
+        "50005": {
+            "name": "Lapin assistant",
+            "description": "Rebondit sur ton écran pour accélérer tes tapotements.",
+            "quote": "Hop ! Je vais t'aider à avoir des emojis !"
+        },
+        "50006": {
+            "name": "Grenouille assistante",
+            "description": "Saute sur ton écran pour accélérer tes tapotements.",
+            "quote": "Croâ ! Je vais t'aider à avoir des emojis !"
+        },
+        "50007": {
+            "name": "Éléphant assistant",
+            "description": "Sa trompe est parfaite pour tapoter l'écran !",
+            "quote": "Pwaaah ! Je vais t'aider à avoir des emojis !"
+        },
+        "50008": {
+            "name": "Singe assistant",
+            "description": "Te donne plein de bananes pour calmer ta faim et te faire tapoter plus vite !",
+            "quote": "Hou hou ! Je vais t'aider à avoir des emojis !"
+        },
+        "50009": {
+            "name": "Pingouin assistant",
+            "description": "Tapote ton écran avec son bec.",
+            "quote": "Dandin-dandin ! Je vais t'aider à avoir des emojis !"
+        },
+        "100000": {
+            "name": "Stagiaires emoji",
+            "description": "Les stagiaires aident le gouvernement emoji à bien tourner !"
+        },
+        "100001": {
+            "name": "Bureaucrates emoji",
+            "description": "Un gouvernement emoji a besoin d'administrateurs pour fonctionner.",
+            "quote": "On dirait que tu fais passer une loi. Besoin d'aide ?"
+        }
+    },
+    "effects": {
+        "0": {
+            "title": "Tapotement x2",
+            "description": "Emojis par tapotement doublés !"
+        },
+        "1": {
+            "title": "Tapotement x3",
+            "description": "Emojis par tapotement triplés !"
+        },
+        "100": {
+            "title": "Production x2",
+            "description": "Production d'emojis doublée !"
+        },
+        "101": {
+            "title": "Production x77",
+            "description": "Production d'emojis doublée !"
+        },
+        "110": {
+            "title": "Demi-production",
+            "description": "Production d'emojis divisée par deux !"
+        },
+        "200": {
+            "title": "Cadeau emoji",
+            "description": "1 heure d'emojis offerte !"
+        }
+    }
+}

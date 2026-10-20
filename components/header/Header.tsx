@@ -5,6 +5,7 @@ import EpsAmount from "../gameUI/EpsAmount";
 import { SafeAreaView } from "react-native-safe-area-context";
 import { componentColors } from "../misc/Colors";
 import HomeNavigation from "../drawer/HomeNavigation";
+import { useTranslation } from "react-i18next";
 
 type HeaderProps = {
     navigation: any;
@@ -14,6 +15,7 @@ type HeaderProps = {
 };
 
 export default function Header({ navigation, route, options, back }: HeaderProps) {
+    const { t } = useTranslation();
     return (
         <SafeAreaView style={styles.container}>
             <View style={styles.cornerSection}>
@@ -26,7 +28,7 @@ export default function Header({ navigation, route, options, back }: HeaderProps
             <View style={styles.textContainer}>
                 <Text
                     style={{ fontSize: Platform.OS === "ios" ? 18 : 15 }}>
-                    <EmojisAmount fontSize={Platform.OS === "ios" ? 27 : 23} /> Emojis
+                    <EmojisAmount fontSize={Platform.OS === "ios" ? 27 : 23} /> {t("header.emojis")}
                 </Text>
                 <EpsAmount fontSize={Platform.OS === "ios" ? 18 : 15} />
             </View>

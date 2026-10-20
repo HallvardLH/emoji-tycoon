@@ -1,3 +1,5 @@
+import i18n, { getLanguage } from "../i18n";
+
 export function formatNumber(
     num: number,
     decimals: number = 2,
@@ -10,7 +12,9 @@ export function formatNumber(
 
     const formatWithSeparators = (n: number) => {
         if (form === "grouped") {
-            return n.toLocaleString("en-US"); // Comma grouping
+            // Grouping and decimal separators follow the current language.
+            // The game font has no non-breaking spaces (used by e.g. French), so use regular spaces instead
+            return n.toLocaleString(getLanguage()).replace(/[\u00a0\u202f]/g, " ");
         } else if (form === "space") {
             return n.toLocaleString("en-US").replace(/,/g, " "); // Space grouping
         } else {
@@ -18,143 +22,73 @@ export function formatNumber(
         }
     };
 
-    const getSuffix = (power: number) => {
+    // Number names differ between languages (e.g. "billion" is 10^9 in English, but 10^12 in most of Europe),
+    // so they are looked up per language, and pluralized based on the number in front of them
+    const getSuffix = (power: number, value: number) => {
         if (shortForm) {
-            switch (power) {
-                case 6:
-                    return " M";
-                case 9:
-                    return " B";
-                case 12:
-                    return " T";
-                case 15:
-                    return " Qa";
-                case 18:
-                    return " Qi";
-                case 21:
-                    return " Sx";
-                case 24:
-                    return " Sp";
-                case 27:
-                    return " Oc";
-                case 30:
-                    return " No";
-                case 33:
-                    return " Dc";
-                case 36:
-                    return " Ud";
-                case 39:
-                    return " Dd";
-                case 42:
-                    return " Td";
-                case 45:
-                    return " Qad";
-                case 48:
-                    return " Qid";
-                case 51:
-                    return " Sxd";
-                case 54:
-                    return " Spd";
-                case 57:
-                    return " Od";
-                case 60:
-                    return " Nd";
-                case 63:
-                    return " Vg";
-                default:
-                    return "";
-            }
+            return " " + i18n.t(`numbers.short.${power}`, { ns: "ui" });
         } else {
-            switch (power) {
-                case 6:
-                    return " million";
-                case 9:
-                    return " billion";
-                case 12:
-                    return " trillion";
-                case 15:
-                    return " quadrillion";
-                case 18:
-                    return " quintillion";
-                case 21:
-                    return " sextillion";
-                case 24:
-                    return " septillion";
-                case 27:
-                    return " octillion";
-                case 30:
-                    return " nonillion";
-                case 33:
-                    return " decillion";
-                case 36:
-                    return " undecillion";
-                case 39:
-                    return " duodecillion";
-                case 42:
-                    return " tredecillion";
-                case 45:
-                    return " quattuordecillion";
-                case 48:
-                    return " quindecillion";
-                case 51:
-                    return " sexdecillion";
-                case 54:
-                    return " septendecillion";
-                case 57:
-                    return " octodecillion";
-                case 60:
-                    return " novemdecillion";
-                case 63:
-                    return " vigintillion";
-                default:
-                    return "";
-            }
+            return " " + i18n.t(`numbers.long.${power}`, { ns: "ui", count: value });
         }
     };
+
+    const withSuffix = (n: number, power: number) => formatWithSeparators(round(n)) + getSuffix(power, round(n));
 
     if (num < 1e3) {
         return formatWithSeparators(round(num));
     } else if (num < 1e6) {
         return formatWithSeparators(round(num));
     } else if (num < 1e9) {
-        return formatWithSeparators(round(num / 1e6)) + getSuffix(6);
+        return withSuffix(num / 1e6, 6);
     } else if (num < 1e12) {
-        return formatWithSeparators(round(num / 1e9)) + getSuffix(9);
+        return withSuffix(num / 1e9, 9);
     } else if (num < 1e15) {
-        return formatWithSeparators(round(num / 1e12)) + getSuffix(12);
+        return withSuffix(num / 1e12, 12);
     } else if (num < 1e18) {
-        return formatWithSeparators(round(num / 1e15)) + getSuffix(15);
+        return withSuffix(num / 1e15, 15);
     } else if (num < 1e21) {
-        return formatWithSeparators(round(num / 1e18)) + getSuffix(18);
+        return withSuffix(num / 1e18, 18);
     } else if (num < 1e24) {
-        return formatWithSeparators(round(num / 1e21)) + getSuffix(21);
+        return withSuffix(num / 1e21, 21);
     } else if (num < 1e27) {
-        return formatWithSeparators(round(num / 1e24)) + getSuffix(24);
+        return withSuffix(num / 1e24, 24);
     } else if (num < 1e30) {
-        return formatWithSeparators(round(num / 1e27)) + getSuffix(27);
+        return withSuffix(num / 1e27, 27);
     } else if (num < 1e33) {
-        return formatWithSeparators(round(num / 1e30)) + getSuffix(30);
+        return withSuffix(num / 1e30, 30);
     } else if (num < 1e36) {
-        return formatWithSeparators(round(num / 1e33)) + getSuffix(33);
+        return withSuffix(num / 1e33, 33);
     } else if (num < 1e39) {
-        return formatWithSeparators(round(num / 1e36)) + getSuffix(36);
+        return withSuffix(num / 1e36, 36);
     } else if (num < 1e42) {
-        return formatWithSeparators(round(num / 1e39)) + getSuffix(39);
+        return withSuffix(num / 1e39, 39);
     } else if (num < 1e45) {
-        return formatWithSeparators(round(num / 1e42)) + getSuffix(42);
+        return withSuffix(num / 1e42, 42);
     } else if (num < 1e48) {
-        return formatWithSeparators(round(num / 1e45)) + getSuffix(45);
+        return withSuffix(num / 1e45, 45);
     } else if (num < 1e51) {
-        return formatWithSeparators(round(num / 1e48)) + getSuffix(48);
+        return withSuffix(num / 1e48, 48);
     } else if (num < 1e54) {
-        return formatWithSeparators(round(num / 1e51)) + getSuffix(51);
+        return withSuffix(num / 1e51, 51);
     } else if (num < 1e57) {
-        return formatWithSeparators(round(num / 1e54)) + getSuffix(54);
+        return withSuffix(num / 1e54, 54);
     } else if (num < 1e60) {
-        return formatWithSeparators(round(num / 1e57)) + getSuffix(57);
+        return withSuffix(num / 1e57, 57);
     } else if (num < 1e63) {
-        return formatWithSeparators(round(num / 1e60)) + getSuffix(60);
+        return withSuffix(num / 1e60, 60);
     } else {
-        return formatWithSeparators(round(num / 1e63)) + getSuffix(63);
+        return withSuffix(num / 1e63, 63);
     }
+}
+
+/**
+ * Formats a percentage in the current language, e.g. "12.5%" or "12,5 %".
+ * Values below 0.01 are shown as "<0.01%".
+ */
+export function formatPercentage(percentage: number) {
+    const percent = (value: number) => i18n.t("numbers.percent", { ns: "ui", value: formatNumber(value) });
+    if (percentage < 0.01) {
+        return i18n.t("numbers.lessThan", { ns: "ui", value: percent(0.01) });
+    }
+    return percent(percentage);
 }

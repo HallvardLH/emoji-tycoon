@@ -1,0 +1,99 @@
+{
+    "tabs": {
+        "emoji": "Emoji",
+        "shop": "Tienda",
+        "emojidex": "Emojidex",
+        "buildings": "Edificios",
+        "upgrades": "Mejoras",
+        "stats": "Datos",
+        "collection": "Colección"
+    },
+    "header": {
+        "emojis": "Emojis",
+        "perSecond": "Por segundo: {{value}}"
+    },
+    "common": {
+        "buy": "Comprar",
+        "details": "Detalles",
+        "owned_one": "en posesión",
+        "owned_other": "en posesión"
+    },
+    "buildings": {
+        "bulkBuy_one": "Comprando {{count}} edificio a la vez",
+        "bulkBuy_other": "Comprando {{count}} edificios a la vez",
+        "emojisPerSecond": "<hl>{{eps}}</hl> emojis por segundo",
+        "youHave": "• Tienes <hl>{{amount}}</hl> {{building}}",
+        "eachProduces": "• Cada unidad produce <hl>{{eps}}</hl> emojis por segundo",
+        "totalProduces": "• ¡Para un total de <hl>{{eps}}</hl> emojis por segundo!",
+        "ownedUpgrades": "Mejoras adquiridas"
+    },
+    "upgrades": {
+        "bigEmoji": "Gran emoji",
+        "effects": {
+            "multiplyBuildingProduction": "• {{buildings}}: el doble de eficiencia.",
+            "multiplyTap": "• Tocar es el doble de eficaz.",
+            "percentageIncreaseTap": "• Tocar es un {{percent}} más potente.",
+            "tapPercentageOfEps": "• Cada toque te da el {{percent}} de tu producción total de emojis.",
+            "percentageIncreaseProduction": "• La producción total de emojis aumenta un {{percent}}."
+        },
+        "bonusProduction": "Si compras esta mejora ahora, ganarás <hl>+{{bonus}}</hl> emojis por segundo, lo que aumenta tu producción de emojis un <hl>{{percent}}</hl>",
+        "bonusTap": "Si compras esta mejora ahora, ganarás <hl>+{{bonus}}</hl> emojis por toque, lo que aumenta un <hl>{{percent}}</hl> los emojis que consigues con cada toque",
+        "filterTitle": "Filtrar mejoras",
+        "filterDescription": "Elige de qué edificios quieres ver mejoras."
+    },
+    "emojidex": {
+        "basePrice": "Precio base: {{price}}"
+    },
+    "stats": {
+        "totalEmojisDrawn": "Emojis dibujados en total",
+        "emojiTaps": "Toques de emoji",
+        "emojisEarnedFromTapping": "Emojis ganados tocando",
+        "magicalEmojisTapped": "Emojis mágicos tocados",
+        "funValue": "Valor de diversión"
+    },
+    "drawer": {
+        "language": "Idioma",
+        "deviceLanguage": "Idioma del dispositivo",
+        "funValue": "Valor de diversión: {{value}}",
+        "cheats": "Trucos",
+        "resetGame": "Reiniciar partida",
+        "spawnEffect": "Generar emoji de efecto",
+        "giveEmojis": "Dar {{amount}} emojis"
+    },
+    "prestige": {
+        "title": "Prestigio",
+        "accumulating": "Tras haber creado <hl>{{amount}}</hl> emojis, la esencia misma de los emojis ha empezado a acumularse a tu alrededor.",
+        "essence": "La esencia emoji es una <hl>sustancia mágica</hl> que cambia de forma cada vez que la miras y que alberga poderes desconocidos."
+    },
+    "numbers": {
+        "percent": "{{value}} %",
+        "lessThan": "<{{value}}",
+        "long": {
+            "6_one": "millón", "6_other": "millones",
+            "9_one": "mil millones", "9_other": "mil millones",
+            "12_one": "billón", "12_other": "billones",
+            "15_one": "mil billones", "15_other": "mil billones",
+            "18_one": "trillón", "18_other": "trillones",
+            "21_one": "mil trillones", "21_other": "mil trillones",
+            "24_one": "cuatrillón", "24_other": "cuatrillones",
+            "27_one": "mil cuatrillones", "27_other": "mil cuatrillones",
+            "30_one": "quintillón", "30_other": "quintillones",
+            "33_one": "mil quintillones", "33_other": "mil quintillones",
+            "36_one": "sextillón", "36_other": "sextillones",
+            "39_one": "mil sextillones", "39_other": "mil sextillones",
+            "42_one": "septillón", "42_other": "septillones",
+            "45_one": "mil septillones", "45_other": "mil septillones",
+            "48_one": "octillón", "48_other": "octillones",
+            "51_one": "mil octillones", "51_other": "mil octillones",
+            "54_one": "nonillón", "54_other": "nonillones",
+            "57_one": "mil nonillones", "57_other": "mil nonillones",
+            "60_one": "decillón", "60_other": "decillones",
+            "63_one": "mil decillones", "63_other": "mil decillones"
+        },
+        "short": {
+            "6": "M", "9": "mil M", "12": "B", "15": "mil B", "18": "T", "21": "mil T", "24": "Ct",
+            "27": "mil Ct", "30": "Qi", "33": "mil Qi", "36": "Sx", "39": "mil Sx", "42": "Sp", "45": "mil Sp",
+            "48": "Oc", "51": "mil Oc", "54": "No", "57": "mil No", "60": "Dc", "63": "mil Dc"
+        }
+    }
+}

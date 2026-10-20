@@ -7,14 +7,16 @@ import Button from "../../buttons/Button";
 import { colors } from "../../misc/Colors";
 import { formatNumber } from "../../../scripts/misc";
 import { getUpgradeBonus } from "../../../scripts/game/upgrades/upgrades";
-import { buildingEmojis } from "../../../scripts/game/buildings/buildings";
 import { howFun } from "../../../scripts/game/shorthands";
 import { useSelector } from 'react-redux';
 import { RootState } from "../../../scripts/redux/reduxStore";
 import { useState } from "react";
+import { Trans, useTranslation } from "react-i18next";
 
 interface UpgradeListItemProps {
+    /** The displayed, translated, name */
     name: string;
+    /** The displayed, translated, building name */
     buildingName?: string;
     buildingIcon?: string;
     id: number;
@@ -31,7 +33,8 @@ interface UpgradeListItemProps {
 export default function UpgradeListItem(props: UpgradeListItemProps) {
     const { name, buildingName, buildingIcon, id, description, quote, effect, price, icon, buttonActive, onPress, onEmojiPress } = props;
 
-    const [bonuses, bonusPercentages, prefixes, suffixes] = getUpgradeBonus(id);
+    const { bonuses, bonusPercentages, kinds } = getUpgradeBonus(id);
+    const { t } = useTranslation();
 
     // const { showDetails } = useSelector((state: RootState) => state.preferences);
 
@@ -51,7 +54,7 @@ export default function UpgradeListItem(props: UpgradeListItemProps) {
                     alignItems: "center",
                     gap: 16,
                 }}>
-                    <Emoji size={24} icon={buildingIcon ? buildingIcon : buildingEmojis[buildingName]} />
+                    <Emoji size={24} icon={buildingIcon ?? ""} />
                     <Text shadow={false} color={colors.yellow.highlight} size={14}>{buildingName}</Text>
                 </View>
             )}
@@ -86,8 +89,8 @@ export default function UpgradeListItem(props: UpgradeListItemProps) {
                 gap: 10,
                 justifyContent: "center"
             }}>
-                <Button disabled={!buttonActive} shadowHeight={8} onPress={onPress} height={34} width={110} variant={"blue"} label={"Buy"} />
-                <Button onPress={() => setShowDetails(!showDetails)} down={showDetails} shadowHeight={8} height={34} width={110} variant="submit" label={"Details"} />
+                <Button disabled={!buttonActive} shadowHeight={8} onPress={onPress} height={34} width={110} variant={"blue"} label={t("common.buy")} />
+                <Button onPress={() => setShowDetails(!showDetails)} down={showDetails} shadowHeight={8} height={34} width={110} variant="submit" label={t("common.details")} />
 
             </View>
             <View style={{
@@ -105,7 +108,11 @@ export default function UpgradeListItem(props: UpgradeListItemProps) {
                             {bonuses.map((bonus, index) => (
                                 <React.Fragment key={index}>
                                     <Text style={{ textAlign: "center" }} shadow={false} color={"gray"} size={14}>
-                                        {prefixes[index]} <Text shadow={false} color={colors.purple.dark} size={14}>+{bonus}</Text> {suffixes[index]} <Text shadow={false} color={colors.purple.dark} size={14}>{bonusPercentages[index]}</Text>
+                                        <Trans
+                                            i18nKey={kinds[index] === "tap" ? "upgrades.bonusTap" : "upgrades.bonusProduction"}
+                                            values={{ bonus: bonus, percent: bonusPercentages[index] }}
+                                            components={{ hl: <Text shadow={false} color={colors.purple.dark} size={14} /> }}
+                                        />
                                     </Text>
                                 </React.Fragment>
                             ))}

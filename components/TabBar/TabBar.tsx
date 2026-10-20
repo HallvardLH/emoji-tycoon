@@ -14,9 +14,12 @@ import { clearUnlockedUpgradeNotifications } from "../../scripts/redux/upgradesS
 import * as Haptics from 'expo-haptics';
 import { BottomTabBarProps } from "@react-navigation/bottom-tabs";
 import { Tab } from "../../scripts/redux/tabsSlice";
+import { useTranslation } from "react-i18next";
 
 type TabData = {
+    // Used to identify the tab, see labelKey for the displayed label
     title: string;
+    labelKey: string;
     icon: string;
     background: string;
     highlight: string;
@@ -25,18 +28,21 @@ type TabData = {
 const tabData: Record<string, TabData> = {
     index: {
         title: "Emoji",
+        labelKey: "tabs.emoji",
         icon: "😀",
         background: componentColors.tabBar.home.background,
         highlight: componentColors.tabBar.home.highlight,
     },
     shop: {
         title: "Shop",
+        labelKey: "tabs.shop",
         icon: "🛒",
         background: colors.yellow.medium,
         highlight: colors.yellow.highlight,
     },
     emojidex: {
         title: "Emojidex",
+        labelKey: "tabs.emojidex",
         icon: "📖",
         background: componentColors.tabBar.daily.background,
         highlight: componentColors.tabBar.daily.highlight,
@@ -45,6 +51,7 @@ const tabData: Record<string, TabData> = {
 
 export default function TabBar({ state, navigation }: BottomTabBarProps) {
     const insets = useSafeAreaInsets();
+    const { t } = useTranslation();
     const dispatch = useDispatch();
 
     const { unlockedUpgradeNotification } = useSelector((state: RootState) => state.upgrades);
@@ -55,7 +62,7 @@ export default function TabBar({ state, navigation }: BottomTabBarProps) {
             {state.routes.map((route, index) => {
                 const isFocused = state.index === index;
                 if (!tabData.hasOwnProperty(route.name)) return
-                const { title, icon, background, highlight } = tabData[route.name];
+                const { title, labelKey, icon, background, highlight } = tabData[route.name];
 
                 const onPress = () => {
                     const event = navigation.emit({
@@ -90,7 +97,7 @@ export default function TabBar({ state, navigation }: BottomTabBarProps) {
                     <TabButton
                         key={route.key}
                         onPress={onPress}
-                        label={title}
+                        label={t(labelKey)}
                         icon={icon}
                         background={background}
                         highlight={highlight}

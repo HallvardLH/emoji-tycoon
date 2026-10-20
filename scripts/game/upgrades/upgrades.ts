@@ -1,11 +1,11 @@
 import { upgradeData } from './upgradeData/upgradeData';
 import store from '../../redux/reduxStore';
 import { unlockUpgrade, addUpgrade } from "../../redux/upgradesSlice";
-import { pluralNames, calculateBuildingsEps } from "../buildings/buildings";
+import { calculateBuildingsEps } from "../buildings/buildings";
 import { updateBuildingValue } from "../buildings/shorthands";
 import { getBuilding, getBuildingIdFromName } from "../buildings/shorthands";
 import { updateEmojis } from "../../redux/valuesSlice";
-import { formatNumber } from "../../misc";
+import { formatNumber, formatPercentage } from "../../misc";
 import { addTapMultiplier, addTapPercentage, addEmojisPerTapPercentageOfEps } from '../../redux/bigEmojiSlice';
 import { calculateEpt } from "../calculations";
 import { getUpgradeDataById } from './shorthands';
@@ -15,6 +15,8 @@ import { addEmojisPerSecondPercentage } from '../../redux/valuesSlice';
 import { calculateEpsBonus, calculateEptBonus } from '../calculations';
 import { BIG_EMOJI_BUILDING_ID } from './upgradeData/nonBuilding/bigEmoji';
 import * as Haptics from "expo-haptics";
+import i18n from "../../../i18n";
+import { getBuildingPluralName } from "../../../i18n/content";
 
 export function buyUpgrade(upgradeId: number) {
     const upgrade = getUpgradeDataById(upgradeId);
@@ -84,19 +86,19 @@ export function getEffectText(upgradeId: number) {
     upgrade.categories.forEach((category) => {
         switch (category) {
             case "Multiply building production":
-                text += `\u2022 ${pluralNames[upgrade.building!]} are twice as efficient.\n`;
+                text += i18n.t("upgrades.effects.multiplyBuildingProduction", { buildings: getBuildingPluralName(upgrade.buildingId!) }) + "\n";
                 break
             case "Multiply tap":
-                text += `\u2022 Tapping is twice as efficient.\n`;
+                text += i18n.t("upgrades.effects.multiplyTap") + "\n";
                 break
             case "Percentage increase tap":
-                text += `\u2022 Tapping is ${upgrade.emojisPerTapPercentageIncrease! * 100}% more powerful.\n`
+                text += i18n.t("upgrades.effects.percentageIncreaseTap", { percent: formatPercentage(upgrade.emojisPerTapPercentageIncrease! * 100) }) + "\n";
                 break
             case 'Tap percentage of eps':
-                text += `\u2022 Tapping gains ${upgrade.emojisPerTapPercentageOfEps! * 100}% of your total emoji production.\n`
+                text += i18n.t("upgrades.effects.tapPercentageOfEps", { percent: formatPercentage(upgrade.emojisPerTapPercentageOfEps! * 100) }) + "\n";
                 break
             case "Percentage increase production":
-                text += `\u2022 Total emoji production increased by ${upgrade.emojisPerSecondPercentageIncrease! * 100}%.\n`;
+                text += i18n.t("upgrades.effects.percentageIncreaseProduction", { percent: formatPercentage(upgrade.emojisPerSecondPercentageIncrease! * 100) }) + "\n";
                 break
             default:
                 return ""
@@ -124,19 +126,15 @@ export function getDisplayUpgrades(buildingName: string) {
     return upgradeArray
 }
 
+export type UpgradeBonusKind = "production" | "tap";
+
 export function getUpgradeBonus(upgradeId: number) {
     const upgrade = getUpgradeDataById(upgradeId);
     const currentEps = store.getState().values.emojisPerSecond;
     let bonuses: string[] = [];
     let bonusPercentages: string[] = [];
-    let prefixes: string[] = [];
-    let suffixes: string[] = [];
-
-    const productionPrefix = "Buying this upgrade now will add";
-    const productionSuffix = "Emojis per second, increasing emoji production by";
-
-    const tapPrefix = "Buying this upgrade now will add";
-    const tapSuffix = "Emojis per tap, increasing each emoji you get from tapping by";
+    // Whether each bonus is to emoji production or to tapping
+    let kinds: UpgradeBonusKind[] = [];
     upgrade.categories.forEach((category) => {
         let bonus = 0
         switch (category) {
@@ -145,46 +143,36 @@ export function getUpgradeBonus(upgradeId: number) {
                 bonus = (building.eps * upgrade.emojisPerSecondMultiplier!) - building.eps;
                 bonuses.push(formatNumber(bonus));
 
-                const bonusPercentage = (bonus / currentEps) * 100;
-                if (bonusPercentage < 0.01) {
-                    bonusPercentages.push("(>0.01%)");
-                } else {
-                    bonusPercentages.push(bonusPercentage.toFixed(2) + "%");
-                }
-                prefixes.push(productionPrefix);
-                suffixes.push(productionSuffix);
+                bonusPercentages.push(formatPercentage((bonus / currentEps) * 100));
+                kinds.push("production");
                 break
             }
             case "Multiply tap": {
                 const calculatedBonus = calculateEptBonus(undefined, upgrade.emojisPerTapMultiplier);
                 bonuses.push(calculatedBonus.bonus);
                 bonusPercentages.push(calculatedBonus.bonusPercentage);
-                prefixes.push(tapPrefix);
-                suffixes.push(tapSuffix);
+                kinds.push("tap");
                 break
             }
             case "Percentage increase tap": {
                 const calculatedBonus = calculateEptBonus(undefined, undefined, upgrade.emojisPerTapPercentageIncrease);
                 bonuses.push(calculatedBonus.bonus);
                 bonusPercentages.push(calculatedBonus.bonusPercentage);
-                prefixes.push(tapPrefix);
-                suffixes.push(tapSuffix);
+                kinds.push("tap");
                 break
             }
             case 'Tap percentage of eps': {
                 const calculatedBonus = calculateEptBonus(upgrade.emojisPerTapPercentageOfEps);
                 bonuses.push(calculatedBonus.bonus);
                 bonusPercentages.push(calculatedBonus.bonusPercentage);
-                prefixes.push(tapPrefix);
-                suffixes.push(tapSuffix);
+                kinds.push("tap");
                 break
             }
             case "Percentage increase production": {
                 const calculatedBonus = calculateEpsBonus(undefined, upgrade.emojisPerSecondPercentageIncrease);
                 bonuses.push(calculatedBonus.bonus);
                 bonusPercentages.push(calculatedBonus.bonusPercentage);
-                prefixes.push(productionPrefix);
-                suffixes.push(productionSuffix);
+                kinds.push("production");
                 break
             }
             default:
@@ -192,5 +180,5 @@ export function getUpgradeBonus(upgradeId: number) {
         }
     })
 
-    return [bonuses, bonusPercentages, prefixes, suffixes]
+    return { bonuses, bonusPercentages, kinds }
 }

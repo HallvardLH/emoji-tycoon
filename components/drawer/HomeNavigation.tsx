@@ -4,10 +4,12 @@ import Drawer from "./Drawer";
 import DrawerLink from "./DrawerLink";
 import ResetButton from "./ResetButton";
 import Cheats from "./Cheats";
+import LanguagePicker from "./LanguagePicker";
 import Text from "../generalUI/Text";
 import { useSelector } from 'react-redux';
 import { RootState } from "../../scripts/redux/reduxStore";
 import { View } from "react-native";
+import { useTranslation } from "react-i18next";
 
 type DrawerRef = {
     openDrawer: () => void;
@@ -16,6 +18,7 @@ type DrawerRef = {
 
 export default function HomeNavigation() {
     const navigationDrawerRef = useRef<DrawerRef>(null);
+    const { t } = useTranslation();
 
     const { funValue } = useSelector((state: RootState) => state.values);
 
@@ -33,8 +36,9 @@ export default function HomeNavigation() {
                     // justifyContent: "center",
                     marginTop: "30%"
                 }}>
+                    <LanguagePicker />
                     <Cheats onPress={() => navigationDrawerRef.current?.closeDrawer()} />
-                    <Text>Fun value: {funValue}</Text>
+                    <Text>{t("drawer.funValue", { value: funValue })}</Text>
                     {/* <DrawerLink
                     text="Notifications"
                     linkTo="Notifications"

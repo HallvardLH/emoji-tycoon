@@ -5,12 +5,16 @@ import ContentBox from "../../generalUI/ContentBox";
 import Emoji from "../Emoji";
 import { colors } from "../../misc/Colors";
 import { useState } from "react";
-import { pluralNames } from "../../../scripts/game/buildings/buildings";
+import { buildingData } from "../../../scripts/game/buildings/buildingData";
+import { getBuildingNameForAmount } from "../../../i18n/content";
+import { Trans, useTranslation } from "react-i18next";
 import DisplayUpgrades from "../DisplayUpgrades";
 import { formatNumber } from "../../../scripts/misc";
 import { howFun } from "../../../scripts/game/shorthands";
 
 interface BuildingListItemProps {
+    buildingId: number;
+    /** The displayed, translated, name */
     name: string;
     icon: string;
     description: string;
@@ -25,6 +29,7 @@ interface BuildingListItemProps {
 
 export default function BuildingListItem(props: BuildingListItemProps) {
     const {
+        buildingId,
         name,
         icon,
         description,
@@ -38,6 +43,9 @@ export default function BuildingListItem(props: BuildingListItemProps) {
     } = props;
 
     const [showDetails, setShowDetails] = useState(false);
+    const { t } = useTranslation();
+
+    const highlight = <Text shadow={false} color={colors.yellow.highlight} size={15} />;
 
     return (
         <ContentBox style={{ marginBottom: 18 }}>
@@ -50,13 +58,19 @@ export default function BuildingListItem(props: BuildingListItemProps) {
                     {/* <Text style={{ letterSpacing: 0.5, marginVertical: -4 }} shadow={false} color={colors.blue.medium} size={14}>Produces {formatNumber(baseEps)} eps</Text> */}
                     <Text shadow={false} color={colors.yellow.highlight} size={16}>{howFun(77) ? "💸" : "💵"} {price}</Text>
                     {eps > 0 && (
-                        <Text style={{ lineHeight: 14 }} shadow={false} color={colors.purple.dark} size={14}><Text style={{ lineHeight: 14 }} shadow={false} color={colors.yellow.highlight} size={14}>{formatNumber(eps)}</Text> Emojis per second</Text>
+                        <Text style={{ lineHeight: 14 }} shadow={false} color={colors.purple.dark} size={14}>
+                            <Trans
+                                i18nKey="buildings.emojisPerSecond"
+                                values={{ eps: formatNumber(eps) }}
+                                components={{ hl: <Text style={{ lineHeight: 14 }} shadow={false} color={colors.yellow.highlight} size={14} /> }}
+                            />
+                        </Text>
                     )}
                     <Text style={{ letterSpacing: 0.05 }} shadow={false} color={"gray"} size={14}>{description}</Text>
                 </View>
                 <View style={listItemStyles.right}>
                     <Text style={{ lineHeight: 30 }} shadow={false} size={amount < 1000 ? 30 : 26} color={colors.purple.medium}>{amount}</Text>
-                    <Text style={{ lineHeight: 15 }} shadow={false} color={colors.purple.medium} size={14}>owned</Text>
+                    <Text style={{ lineHeight: 15 }} shadow={false} color={colors.purple.medium} size={14}>{t("common.owned", { count: amount })}</Text>
                 </View>
             </View>
             <View style={{
@@ -64,21 +78,25 @@ export default function BuildingListItem(props: BuildingListItemProps) {
                 gap: 10,
                 justifyContent: "center"
             }}>
-                <Button disabled={!buttonActive} shadowHeight={8} onPress={onPress} height={34} width={110} variant={"blue"} label={"Buy"} />
-                <Button shadowHeight={8} onPress={() => setShowDetails(!showDetails)} down={showDetails} height={34} width={110} variant="submit" label={"Details"} />
+                <Button disabled={!buttonActive} shadowHeight={8} onPress={onPress} height={34} width={110} variant={"blue"} label={t("common.buy")} />
+                <Button shadowHeight={8} onPress={() => setShowDetails(!showDetails)} down={showDetails} height={34} width={110} variant="submit" label={t("common.details")} />
             </View>
             {showDetails && (
                 <View style={{
                     marginHorizontal: 10,
                 }}>
                     <Text shadow={false} color={colors.purple.dark} size={15}>
-                        {'\u2022'} You have <Text shadow={false} color={colors.yellow.highlight} size={15}>{formatNumber(amount)}</Text> {amount == 1 ? name : pluralNames[name]}
+                        <Trans
+                            i18nKey="buildings.youHave"
+                            values={{ amount: formatNumber(amount), building: getBuildingNameForAmount(buildingId, amount) }}
+                            components={{ hl: highlight }}
+                        />
                     </Text>
                     <Text shadow={false} color={colors.purple.dark} size={15}>
-                        {'\u2022'} Each produces <Text shadow={false} color={colors.yellow.highlight} size={15}>{formatNumber(baseEps)}</Text> emojis per second
+                        <Trans i18nKey="buildings.eachProduces" values={{ eps: formatNumber(baseEps) }} components={{ hl: highlight }} />
                     </Text>
                     <Text shadow={false} color={colors.purple.dark} size={15}>
-                        {'\u2022'} For a total of <Text shadow={false} color={colors.yellow.highlight} size={15}>{formatNumber(eps)}</Text> emojis per second!
+                        <Trans i18nKey="buildings.totalProduces" values={{ eps: formatNumber(eps) }} components={{ hl: highlight }} />
                     </Text>
                     {upgradeAmount > 0 && (
                         <View style={{
@@ -86,8 +104,8 @@ export default function BuildingListItem(props: BuildingListItemProps) {
                             alignItems: "center",
                             marginVertical: 10,
                         }}>
-                            <Text shadow={false} color={colors.purple.dark} size={20}>Owned upgrades</Text>
-                            <DisplayUpgrades buildingName={name} />
+                            <Text shadow={false} color={colors.purple.dark} size={20}>{t("buildings.ownedUpgrades")}</Text>
+                            <DisplayUpgrades buildingName={buildingData[buildingId].name} />
                         </View>
                     )}
                 </View>
