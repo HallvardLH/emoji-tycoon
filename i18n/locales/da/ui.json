@@ -1,0 +1,99 @@
+{
+    "tabs": {
+        "emoji": "Emoji",
+        "shop": "Butik",
+        "emojidex": "Emojidex",
+        "buildings": "Bygninger",
+        "upgrades": "Upgrades",
+        "stats": "Statistik",
+        "collection": "Samling"
+    },
+    "header": {
+        "emojis": "Emojis",
+        "perSecond": "Pr. sekund: {{value}}"
+    },
+    "common": {
+        "buy": "Køb",
+        "details": "Detaljer",
+        "owned_one": "ejet",
+        "owned_other": "ejet"
+    },
+    "buildings": {
+        "bulkBuy_one": "Køber {{count}} bygning ad gangen",
+        "bulkBuy_other": "Køber {{count}} bygninger ad gangen",
+        "emojisPerSecond": "<hl>{{eps}}</hl> emojis pr. sekund",
+        "youHave": "• Du har <hl>{{amount}}</hl> {{building}}",
+        "eachProduces": "• Hver producerer <hl>{{eps}}</hl> emojis pr. sekund",
+        "totalProduces": "• Det giver i alt <hl>{{eps}}</hl> emojis pr. sekund!",
+        "ownedUpgrades": "Købte upgrades"
+    },
+    "upgrades": {
+        "bigEmoji": "Stor emoji",
+        "effects": {
+            "multiplyBuildingProduction": "• {{buildings}} er dobbelt så effektive.",
+            "multiplyTap": "• Tryk er dobbelt så effektive.",
+            "percentageIncreaseTap": "• Tryk er {{percent}} kraftigere.",
+            "tapPercentageOfEps": "• Tryk giver {{percent}} af din samlede emoji-produktion.",
+            "percentageIncreaseProduction": "• Samlet emoji-produktion øget med {{percent}}."
+        },
+        "bonusProduction": "Køber du denne upgrade nu, får du <hl>+{{bonus}}</hl> emojis pr. sekund, og emoji-produktionen stiger med <hl>{{percent}}</hl>",
+        "bonusTap": "Køber du denne upgrade nu, får du <hl>+{{bonus}}</hl> emojis pr. tryk, og hvert tryk giver <hl>{{percent}}</hl> flere emojis",
+        "filterTitle": "Filtrér upgrades",
+        "filterDescription": "Vælg, hvilke bygninger du vil se upgrades for."
+    },
+    "emojidex": {
+        "basePrice": "Grundpris: {{price}}"
+    },
+    "stats": {
+        "totalEmojisDrawn": "Tegnede emojis i alt",
+        "emojiTaps": "Emoji-tryk",
+        "emojisEarnedFromTapping": "Emojis tjent ved tryk",
+        "magicalEmojisTapped": "Magiske emojis trykket",
+        "funValue": "Sjovfaktor"
+    },
+    "drawer": {
+        "language": "Sprog",
+        "deviceLanguage": "Enhedens sprog",
+        "funValue": "Sjovfaktor: {{value}}",
+        "cheats": "Snydekoder",
+        "resetGame": "Nulstil spil",
+        "spawnEffect": "Fremkald effekt-emoji",
+        "giveEmojis": "Giv {{amount}} emojis"
+    },
+    "prestige": {
+        "title": "Prestige",
+        "accumulating": "Efter at du har skabt <hl>{{amount}}</hl> emojis, er selve essensen af emojis begyndt at samle sig omkring dig.",
+        "essence": "Emoji-essens er et <hl>magisk stof</hl>, der skifter form, hver gang du ser på det, og som rummer ukendte kræfter."
+    },
+    "numbers": {
+        "percent": "{{value}} %",
+        "lessThan": "<{{value}}",
+        "long": {
+            "6_one": "million", "6_other": "millioner",
+            "9_one": "milliard", "9_other": "milliarder",
+            "12_one": "billion", "12_other": "billioner",
+            "15_one": "billiard", "15_other": "billiarder",
+            "18_one": "trillion", "18_other": "trillioner",
+            "21_one": "trilliard", "21_other": "trilliarder",
+            "24_one": "kvadrillion", "24_other": "kvadrillioner",
+            "27_one": "kvadrilliard", "27_other": "kvadrilliarder",
+            "30_one": "kvintillion", "30_other": "kvintillioner",
+            "33_one": "kvintilliard", "33_other": "kvintilliarder",
+            "36_one": "sekstillion", "36_other": "sekstillioner",
+            "39_one": "sekstilliard", "39_other": "sekstilliarder",
+            "42_one": "septillion", "42_other": "septillioner",
+            "45_one": "septilliard", "45_other": "septilliarder",
+            "48_one": "oktillion", "48_other": "oktillioner",
+            "51_one": "oktilliard", "51_other": "oktilliarder",
+            "54_one": "nonillion", "54_other": "nonillioner",
+            "57_one": "nonilliard", "57_other": "nonilliarder",
+            "60_one": "decillion", "60_other": "decillioner",
+            "63_one": "decilliard", "63_other": "decilliarder"
+        },
+        "short": {
+            "6": "mio.", "9": "mia.", "12": "bio.", "15": "bia.", "18": "trio.", "21": "tria.", "24": "kvadr.",
+            "27": "kvadra.", "30": "kvint.", "33": "kvinta.", "36": "sekst.", "39": "seksta.", "42": "sept.", "45": "septa.",
+            "48": "okt.", "51": "okta.", "54": "non.", "57": "nona.", "60": "dec.", "63": "deca."
+        }
+    }
+}

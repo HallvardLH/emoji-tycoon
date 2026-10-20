@@ -1,0 +1,99 @@
+{
+    "tabs": {
+        "emoji": "Emoji",
+        "shop": "Winkel",
+        "emojidex": "Emojidex",
+        "buildings": "Gebouwen",
+        "upgrades": "Upgrades",
+        "stats": "Statistiek",
+        "collection": "Collectie"
+    },
+    "header": {
+        "emojis": "Emoji's",
+        "perSecond": "Per seconde: {{value}}"
+    },
+    "common": {
+        "buy": "Kopen",
+        "details": "Details",
+        "owned_one": "in bezit",
+        "owned_other": "in bezit"
+    },
+    "buildings": {
+        "bulkBuy_one": "Je koopt {{count}} gebouw tegelijk",
+        "bulkBuy_other": "Je koopt {{count}} gebouwen tegelijk",
+        "emojisPerSecond": "<hl>{{eps}}</hl> emoji's per seconde",
+        "youHave": "• Je hebt <hl>{{amount}}</hl> {{building}}",
+        "eachProduces": "• Elk produceert <hl>{{eps}}</hl> emoji's per seconde",
+        "totalProduces": "• Samen goed voor <hl>{{eps}}</hl> emoji's per seconde!",
+        "ownedUpgrades": "Gekochte upgrades"
+    },
+    "upgrades": {
+        "bigEmoji": "Grote emoji",
+        "effects": {
+            "multiplyBuildingProduction": "• {{buildings}}: twee keer zo efficiënt.",
+            "multiplyTap": "• Tikken is twee keer zo efficiënt.",
+            "percentageIncreaseTap": "• Tikken is {{percent}} krachtiger.",
+            "tapPercentageOfEps": "• Tikken levert {{percent}} van je totale emoji-productie op.",
+            "percentageIncreaseProduction": "• Totale emoji-productie met {{percent}} verhoogd."
+        },
+        "bonusProduction": "Koop je deze upgrade nu, dan krijg je <hl>+{{bonus}}</hl> emoji's per seconde erbij: je emoji-productie stijgt met <hl>{{percent}}</hl>",
+        "bonusTap": "Koop je deze upgrade nu, dan krijg je <hl>+{{bonus}}</hl> emoji's per tik erbij: elke tik levert <hl>{{percent}}</hl> meer emoji's op",
+        "filterTitle": "Upgrades filteren",
+        "filterDescription": "Kies van welke gebouwen je upgrades wilt zien."
+    },
+    "emojidex": {
+        "basePrice": "Basisprijs: {{price}}"
+    },
+    "stats": {
+        "totalEmojisDrawn": "Totaal getekende emoji's",
+        "emojiTaps": "Emoji-tikken",
+        "emojisEarnedFromTapping": "Emoji's verdiend met tikken",
+        "magicalEmojisTapped": "Magische emoji's getikt",
+        "funValue": "Funfactor"
+    },
+    "drawer": {
+        "language": "Taal",
+        "deviceLanguage": "Apparaattaal",
+        "funValue": "Funfactor: {{value}}",
+        "cheats": "Cheats",
+        "resetGame": "Spel resetten",
+        "spawnEffect": "Effect-emoji laten verschijnen",
+        "giveEmojis": "Geef {{amount}} emoji's"
+    },
+    "prestige": {
+        "title": "Prestige",
+        "accumulating": "Nu je <hl>{{amount}}</hl> emoji's hebt gemaakt, begint de pure essentie van emoji's zich om je heen te verzamelen.",
+        "essence": "Emoji-essentie is een <hl>magische substantie</hl> die van vorm verandert zodra je ernaar kijkt, en onbekende krachten bezit."
+    },
+    "numbers": {
+        "percent": "{{value}}%",
+        "lessThan": "<{{value}}",
+        "long": {
+            "6_one": "miljoen", "6_other": "miljoen",
+            "9_one": "miljard", "9_other": "miljard",
+            "12_one": "biljoen", "12_other": "biljoen",
+            "15_one": "biljard", "15_other": "biljard",
+            "18_one": "triljoen", "18_other": "triljoen",
+            "21_one": "triljard", "21_other": "triljard",
+            "24_one": "quadriljoen", "24_other": "quadriljoen",
+            "27_one": "quadriljard", "27_other": "quadriljard",
+            "30_one": "quintiljoen", "30_other": "quintiljoen",
+            "33_one": "quintiljard", "33_other": "quintiljard",
+            "36_one": "sextiljoen", "36_other": "sextiljoen",
+            "39_one": "sextiljard", "39_other": "sextiljard",
+            "42_one": "septiljoen", "42_other": "septiljoen",
+            "45_one": "septiljard", "45_other": "septiljard",
+            "48_one": "octiljoen", "48_other": "octiljoen",
+            "51_one": "octiljard", "51_other": "octiljard",
+            "54_one": "noniljoen", "54_other": "noniljoen",
+            "57_one": "noniljard", "57_other": "noniljard",
+            "60_one": "deciljoen", "60_other": "deciljoen",
+            "63_one": "deciljard", "63_other": "deciljard"
+        },
+        "short": {
+            "6": "M", "9": "Md", "12": "Bn", "15": "Bd", "18": "Tn", "21": "Td", "24": "Qan",
+            "27": "Qad", "30": "Qin", "33": "Qid", "36": "Sxn", "39": "Sxd", "42": "Spn", "45": "Spd",
+            "48": "Ocn", "51": "Ocd", "54": "Non", "57": "Nod", "60": "Den", "63": "Ded"
+        }
+    }
+}

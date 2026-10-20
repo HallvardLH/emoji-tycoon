@@ -1,0 +1,1009 @@
+{
+    "buildings": {
+        "0": {
+            "name": "Tekenhand",
+            "plural": "Tekenhanden",
+            "description": "Een hand die emoji's voor je tekent."
+        },
+        "1": {
+            "name": "Grafisch ontwerpstudio",
+            "plural": "Grafisch ontwerpstudio's",
+            "description": "Een studio waar emoji's worden gemaakt."
+        },
+        "2": {
+            "name": "Boerderij",
+            "plural": "Boerderijen",
+            "description": "Een boerderij waar emoji's uit de grond schieten."
+        },
+        "3": {
+            "name": "Restaurant",
+            "plural": "Restaurants",
+            "description": "Waar emoji's emoji-eten gaan eten."
+        },
+        "4": {
+            "name": "Kinderboerderij",
+            "plural": "Kinderboerderijen",
+            "description": "Maak kennis met al je favoriete emoji-dieren."
+        },
+        "5": {
+            "name": "Fabriek",
+            "plural": "Fabrieken",
+            "description": "Emoji's maken op industriële schaal."
+        },
+        "6": {
+            "name": "Sportcentrum",
+            "plural": "Sportcentra",
+            "description": "Houd je emoji's in topvorm."
+        },
+        "7": {
+            "name": "Bank",
+            "plural": "Banken",
+            "description": "\"Bij ons zijn je emoji's veilig.\""
+        },
+        "8": {
+            "name": "Emoji-pretpark",
+            "plural": "Emoji-pretparken",
+            "description": "\"Welkom in EmojiLand: waar dromen en emoties tot leven komen!\""
+        },
+        "9": {
+            "name": "Emoji-parlement",
+            "plural": "Emoji-parlementen",
+            "description": "Waar emoji's samenkomen om te beslissen hoe ze meer emoji's maken."
+        },
+        "10": {
+            "name": "Ruimtestation",
+            "plural": "Ruimtestations",
+            "description": "Verover nieuwe werelden en pik hun emoji's in."
+        },
+        "11": {
+            "name": "Snoepkoninkrijk",
+            "plural": "Snoepkoninkrijken",
+            "description": "Een suikerzoet paradijs, geregeerd door de Snoepkoning en zijn zoete emoji-onderdanen."
+        },
+        "12": {
+            "name": "Emoji-vulkaan",
+            "plural": "Emoji-vulkanen",
+            "description": "Elke uitbarsting brengt een vloedgolf aan gloednieuwe, versgesmede emoji's!"
+        },
+        "13": {
+            "name": "Tempel van de Grote Emoji in de lucht",
+            "plural": "Tempels van de Grote Emoji in de lucht",
+            "description": "Volgens de legende schenkt de Grote Emoji in de lucht oneindig veel emoji's aan zijn trouwste volgelingen."
+        },
+        "14": {
+            "name": "Emoji-supercomputer",
+            "plural": "Emoji-supercomputers",
+            "description": "De ultieme emoji-machine. Vermenigvuldigt emoji's met de snelheid van het licht."
+        },
+        "15": {
+            "name": "Zwart emoji-gat",
+            "plural": "Zwarte emoji-gaten",
+            "description": "De eindbestemming van alle emoji's... of een nieuw begin?"
+        },
+        "16": {
+            "name": "Emoji-singulariteit",
+            "plural": "Emoji-singulariteiten",
+            "description": "Dat was het. Er is niets meer over behalve emoji's. Het is je gelukt."
+        }
+    },
+    "upgrades": {
+        "0": {
+            "name": "Nog een hand",
+            "description": "Nog een hand tikt op het scherm. Van wie is die hand? Geen idee."
+        },
+        "1": {
+            "name": "En nog een hand",
+            "description": "Nog een extra hand tikt op het scherm. Erg handig!"
+        },
+        "2": {
+            "name": "Tien handen erbij",
+            "description": "Opeens beginnen tien handen op je scherm te tikken! Geweldig!"
+        },
+        "3": {
+            "name": "Honderd handen!",
+            "description": "De hele buurt is komen opdagen om op de grote emoji te tikken!"
+        },
+        "4": {
+            "name": "Duizend handen",
+            "description": "Mensen reizen van heinde en verre om op je scherm te tikken."
+        },
+        "5": {
+            "name": "Miljoen handen",
+            "description": "Naar wie wijs je? Wijs je naar mij? Wat onbeschoft..."
+        },
+        "6": {
+            "name": "Miljard handen",
+            "description": "Meer dan 10% van de wereldbevolking helpt je tikken. Volgens mij gaat je scherm zo stuk."
+        },
+        "7": {
+            "name": "Biljoen handen",
+            "description": "Je moeder belt. Ze maakt zich zorgen om je. Geërgerd omdat het gesprek je scherm bedekt, hang je op en tik je verder."
+        },
+        "8": {
+            "name": "Biljard handen",
+            "description": "Er tikken een hoop handen op je scherm."
+        },
+        "9": {
+            "name": "Triljoen handen",
+            "description": "Het aantal handen is onbevattelijk. Het scherm krijgt flink op z'n donder."
+        },
+        "10": {
+            "name": "Triljard handen",
+            "description": "Zover het oog reikt strekken handen zich uit, allemaal driftig tikkend."
+        },
+        "11": {
+            "name": "Quadriljoen handen",
+            "description": "Perfecte vorm. Perfecte tikken. Oneindig veel handen."
+        },
+        "12": {
+            "name": "Quadriljard handen",
+            "description": "Meer handen dan atomen in het heelal. Ze weten allemaal precies wat ze doen."
+        },
+        "13": {
+            "name": "Quintiljoen handen",
+            "description": "Het getik is nu een oorverdovend, ritmisch gedreun dat een schokgolf rond de wereld stuurt."
+        },
+        "14": {
+            "name": "Quintiljard handen",
+            "description": "Zo'n grote hoeveelheid vlees zou nooit zo dicht opeengepakt mogen zijn..."
+        },
+        "15": {
+            "name": "Sextiljoen handen",
+            "description": "Uit de handen groeien er nog tientallen, verwrongen en misvormd."
+        },
+        "16": {
+            "name": "Sextiljard handen",
+            "description": "Je begint gefluister te horen. De handen blijven tikken, maar van wie zijn ze?"
+        },
+        "17": {
+            "name": "Septiljoen handen",
+            "description": "De handen beginnen te vervormen. Ze zijn niet langer menselijk."
+        },
+        "18": {
+            "name": "Septiljard handen",
+            "description": "Achter de handen loert een aanwezigheid die ze met kwade bedoelingen stuurt."
+        },
+        "19": {
+            "name": "Octiljoen handen",
+            "description": "Deze handen... wat zijn het? De lucht ruikt naar zwavel."
+        },
+        "20": {
+            "name": "Octiljard handen",
+            "description": "De handen zijn overal en vullen de kamer. Je voelt ze naar je grijpen..."
+        },
+        "21": {
+            "name": "Demonenhanden",
+            "description": "Demonische handen uit de diepten van de hel tikken eindeloos. Het scherm is gloeiend heet."
+        },
+        "22": {
+            "name": "Handen der verdoemden",
+            "description": "Spookachtige knokenhanden rijzen op uit de afgrond. Ze tikken met helse woede."
+        },
+        "23": {
+            "name": "De heer der onderwereld",
+            "description": "De gevallen engel zelf kruipt omhoog uit zijn rijk om je te helpen tikken."
+        },
+        "24": {
+            "name": "Onbeschoft tikken",
+            "description": "Echt, echt onbeschoft."
+        },
+        "100": {
+            "name": "Sterkere arm",
+            "description": "Met een sterkere arm teken je sneller emoji's."
+        },
+        "101": {
+            "name": "Soepele vingers",
+            "description": "Soepele vingers maken ingewikkeldere emoji's mogelijk."
+        },
+        "102": {
+            "name": "Twee handen",
+            "description": "Twee keer zoveel handen, twee keer zoveel emoji's."
+        },
+        "103": {
+            "name": "Gelakte nagels",
+            "description": "Met gelakte nagels tik je sneller, wist je dat niet?"
+        },
+        "104": {
+            "name": "Voeten",
+            "description": "Tekenen met je voeten verdubbelt de productie (en het is helemaal niet moeilijk)!"
+        },
+        "105": {
+            "name": "Tong",
+            "description": "Met jaren oefening kun ook jij leren tekenen met je tong!"
+        },
+        "106": {
+            "name": "Neus",
+            "description": "Steek een waskrijtje in je neus en teken ermee!",
+            "quote": "*Snif* Waarom ruikt het scherm naar voeten?"
+        },
+        "107": {
+            "name": "Oor",
+            "description": "Steek een pen in je oren, draai je hoofd 90 graden en teken ermee!"
+        },
+        "108": {
+            "name": "Mond",
+            "description": "Steek een potlood in je mond en teken ermee!"
+        },
+        "109": {
+            "name": "Sterker been",
+            "description": "Met een sterker been teken je veel sneller emoji's met je voeten."
+        },
+        "110": {
+            "name": "Grotere longen",
+            "description": "Met grotere longen teken je sneller emoji's."
+        },
+        "111": {
+            "name": "Groter brein",
+            "description": "Een groter brein ontketent een golf van creativiteit die je emoji-productie verdubbelt!"
+        },
+        "112": {
+            "name": "Haar",
+            "description": "Hanteer een penseel met je haar om emoji's te maken. Wie heeft er handen nodig als je stijl hebt?"
+        },
+        "113": {
+            "name": "Wenkbrauwen",
+            "description": "Trek je wenkbrauwen op om emoji's te tekenen. Een workout voor je gezicht en je creativiteit!"
+        },
+        "114": {
+            "name": "Rug",
+            "description": "Ga op je rug liggen en teken emoji's met je handen achter je. Het is rekken en tekenen!"
+        },
+        "115": {
+            "name": "Tanden",
+            "description": "Klem een pen tussen je tanden en teken emoji's. Let op: kan vermoeide kaken veroorzaken!"
+        },
+        "116": {
+            "name": "Navel",
+            "description": "Teken emoji's met je navel. Een unieke vaardigheid die moeilijk onder de knie te krijgen is!"
+        },
+        "117": {
+            "name": "Echotekenen",
+            "description": "Elke emoji die je tekent echoot na, waardoor je er twee keer zoveel krijgt!"
+        },
+        "118": {
+            "name": "Telekinetisch tekenen",
+            "description": "Waarom je handen gebruiken als je emoji's kunt tekenen met je geest?"
+        },
+        "119": {
+            "name": "Kwantumvingers",
+            "description": "Kwantumverstrengeling in je vingers laat je emoji's tekenen met de snelheid van het licht."
+        },
+        "200": {
+            "name": "Betere potloden",
+            "description": "Betere potloden voor gedetailleerdere emoji's."
+        },
+        "201": {
+            "name": "Speciale waskrijtjes",
+            "description": "Met deze speciale krijtjes vinden kunstenaars hun innerlijke kind terug."
+        },
+        "202": {
+            "name": "Betere penselen",
+            "description": "Betere penselen zorgen voor artistiekere emoji's."
+        },
+        "203": {
+            "name": "Vulpennen",
+            "description": "Voor extra voorname emoji's."
+        },
+        "204": {
+            "name": "Linialen",
+            "description": "Hoe trek je anders een rechte lijn?"
+        },
+        "205": {
+            "name": "Kleurenblindheidssimulator",
+            "description": "Zorg dat je emoji's voor iedereen toegankelijk zijn!",
+            "quote": "Is het 'Wuh-kag'? 'Wee-see-aa-gee'? 'Wekag'?"
+        },
+        "206": {
+            "name": "Stripeffecten",
+            "description": "Voeg 'POW!' en 'BAM!' toe aan je emoji's voor extra flair!"
+        },
+        "207": {
+            "name": "Sjablonenset",
+            "description": "Elke keer perfect gevormde emoji's met deze sjablonen!"
+        },
+        "208": {
+            "name": "Eigen sneltoetsen",
+            "description": "Versnel je workflow met persoonlijke sneltoetsen voor emoji-design!",
+            "quote": "Probeer alt + F4."
+        },
+        "209": {
+            "name": "Abonnement op assetbibliotheek",
+            "description": "Toegang tot een enorme bibliotheek met kant-en-klare vormen, iconen en texturen!"
+        },
+        "210": {
+            "name": "Ongedaan maken-knop",
+            "description": "Ongedaan maken draait niet alleen je werk terug - het verandert de werkelijkheid zelf. Gebruik met mate.",
+            "quote": "Vergissen is menselijk"
+        },
+        "211": {
+            "name": "Emoji-kleurboek",
+            "description": "Alleen de meest verfijnde kunstenaars gebruiken kleurboeken."
+        },
+        "212": {
+            "name": "Realtime samenwerken",
+            "description": "Nodig andere ontwerpers uit om tegelijk aan je emoji-projecten te werken!"
+        },
+        "213": {
+            "name": "Emoji-moodboard",
+            "description": "Orden je emoji-ideeën visueel voor maximale creativiteit!",
+            "quote": "Heb je soms een plank voor je kop?"
+        },
+        "214": {
+            "name": "Pixelartsoftware",
+            "description": "Maak retro pixel-emoji's die schreeuwen om jaren '90-nostalgie!",
+            "quote": "Elke pixel telt."
+        },
+        "215": {
+            "name": "Comic Sans-lettertype",
+            "description": "Je houdt ervan of je haat het, maar je emoji's zien er... uniek uit!"
+        },
+        "216": {
+            "name": "AI-kunstgenerator",
+            "description": "Laat AI het zware werk doen en genereer razendsnel saaie emoji's van lage kwaliteit!",
+            "quote": "Biep boep!"
+        },
+        "217": {
+            "name": "Origamipapier",
+            "description": "Vouw je papieren emoji's in allerlei vormen!",
+            "quote": "Kwak!"
+        },
+        "218": {
+            "name": "Emoji-tatoeagepistool",
+            "description": "Permanente emoji's voor de echt toegewijde kunstenaar!",
+            "quote": "Au!"
+        },
+        "219": {
+            "name": "Bloed",
+            "description": "Schilderen met bloed levert extra coole emoji's op!"
+        },
+        "300": {
+            "name": "Boeren",
+            "description": "Wat is een boerderij zonder boer?!"
+        },
+        "301": {
+            "name": "Zaailing",
+            "description": "Je moet ergens beginnen.",
+            "quote": "Ge-loof in jezelf!"
+        },
+        "302": {
+            "name": "Beter gereedschap",
+            "description": "Hiermee boer je veel sneller!"
+        },
+        "303": {
+            "name": "Tractoren",
+            "description": "Maakt emoji's oogsten een stuk makkelijker."
+        },
+        "304": {
+            "name": "Boerderijhuizen",
+            "description": "Een gezellig huis waar je boeren kunnen uitrusten en opladen."
+        },
+        "305": {
+            "name": "Emoji-koeien",
+            "description": "Maakt meer emoeoeoeoeoeji's."
+        },
+        "306": {
+            "name": "Irrigatiesysteem",
+            "description": "Houd je emoji-gewassen gehydrateerd voor snellere groei.",
+            "quote": "In welke eeuw leven we?!"
+        },
+        "307": {
+            "name": "Vogelverschrikkers",
+            "description": "Houdt die vervelende vogel-emoji's weg van je boerderijen!"
+        },
+        "308": {
+            "name": "Compostbakken",
+            "description": "Maak van afval mest voor gezondere emoji-gewassen!"
+        },
+        "309": {
+            "name": "Kassen",
+            "description": "Kweek het hele jaar emoji's, wat voor weer het ook is!"
+        },
+        "310": {
+            "name": "Windmolens",
+            "description": "Benut de kracht van de wind om je boerderij efficiënter te maken!",
+            "quote": "Woesj!"
+        },
+        "311": {
+            "name": "Emoji-boomgaarden",
+            "description": "Kweek emoji-bomen die het hele jaar vrucht dragen!"
+        },
+        "312": {
+            "name": "Oogstfeest",
+            "description": "Vier je overvloedige oogst met een feest dat het moreel opkrikt!"
+        },
+        "313": {
+            "name": "Reuzen-emoji-katapult",
+            "description": "Schiet emoji-zaadjes over je boerderij voor bliksemsnel planten!"
+        },
+        "314": {
+            "name": "Onzichtbaar hek",
+            "description": "Houdt je emoji-vee binnen... ook al kun je het niet zien.",
+            "quote": "Doet pijn als je erop plast."
+        },
+        "315": {
+            "name": "Genetisch gemodificeerde gewassen",
+            "description": "Bananen zonder schil, aardbeien al gedoopt in chocola, voorgekookte aardappels en meer!"
+        },
+        "316": {
+            "name": "De Emoji-boerderij van de Toekomst",
+            "description": "Je boerderijen zijn nu hightech utopieën met robots, hologrammen en vliegende tractoren. Welkom in de toekomst!"
+        },
+        "317": {
+            "name": "Bloedmaan",
+            "description": "Onder de bloedmaan groeien je gewassen sneller... maar ze krijgen ook tanden."
+        },
+        "318": {
+            "name": "De laatste oogst",
+            "description": "Een mysterieuze figuur verschijnt en biedt een overvloedige oogst in ruil voor... iets. Durf jij het aan?"
+        },
+        "319": {
+            "name": "Stoppen met boeren",
+            "description": "Je bent het boeren beu. Misschien kun je er beter gewoon mee stoppen en op kantoor gaan werken."
+        },
+        "400": {
+            "name": "Scherpe messen",
+            "description": "Met scherpere messen hak je makkelijker emoji's."
+        },
+        "401": {
+            "name": "Antiaanbakpannen",
+            "description": "Met antiaanbakpannen kook je sneller emoji-maaltijden."
+        },
+        "402": {
+            "name": "Betere ovens",
+            "description": "Ovens met betere temperatuurregeling garen emoji's sneller."
+        },
+        "403": {
+            "name": "Topingrediënten",
+            "description": "Betere ingrediënten betekenen lekkerdere emoji's."
+        },
+        "404": {
+            "name": "Koksmuts",
+            "description": "Met een koksmuts op kook je sneller emoji's."
+        },
+        "405": {
+            "name": "Emoji-blenders",
+            "description": "Blend emoji's in een paar seconden tot heerlijke smoothies en soepen!"
+        },
+        "406": {
+            "name": "Airfryers",
+            "description": "Frituur emoji's in recordtijd perfect. Elke keer krokant en goudbruin!"
+        },
+        "407": {
+            "name": "Sushibars",
+            "description": "Rol emoji-sushi met precisie en stijl. Rauw talent vereist!"
+        },
+        "408": {
+            "name": "Saladebars",
+            "description": "Hussel verse emoji-salades met allerlei toppings. Gezond en heerlijk!"
+        },
+        "409": {
+            "name": "Pizzaovens",
+            "description": "Bak emoji-pizza's met een houtgestookte smaak die niet van deze wereld is!"
+        },
+        "410": {
+            "name": "Emoji-koffiemachines",
+            "description": "Zet het perfecte kopje emoji-koffie om je koks scherp te houden!"
+        },
+        "411": {
+            "name": "Emoji-ijsmachines",
+            "description": "Draai bevroren emoji-traktaties die net zo cool als lekker zijn!"
+        },
+        "412": {
+            "name": "Tacostations",
+            "description": "Bouw emoji-taco's met alle toppings. Het is fiesta bij elke hap!",
+            "quote": "¡Ay, caramba!"
+        },
+        "413": {
+            "name": "Wafelijzers",
+            "description": "Bak emoji-wafels met krokante randjes en een luchtige binnenkant. Perfect voor de brunch!"
+        },
+        "414": {
+            "name": "Emoji-chocoladefonteinen",
+            "description": "Laat gesmolten emoji-chocolade over alles druipen. Zoet en zondig!"
+        },
+        "415": {
+            "name": "Emoji-kannibalenkeuken",
+            "description": "Kook emoji's met andere emoji's als ingrediënt."
+        },
+        "416": {
+            "name": "Zwart-gat-frituur",
+            "description": "Frituur emoji's in een zwart gat en benut de immense energie. Ze komen er krokant uit!"
+        },
+        "417": {
+            "name": "Emoji-voedselgevecht-arena",
+            "description": "Maak van je keuken een arena voor voedselgevechten. Rommelig, chaotisch en vreemd winstgevend."
+        },
+        "418": {
+            "name": "Levend deeg",
+            "description": "Dit deeg beweegt uit zichzelf en vormt zich tot perfect emoji-brood. Soms probeert het te ontsnappen."
+        },
+        "419": {
+            "name": "Het oneindige buffet",
+            "description": "Een buffet dat nooit ophoudt... maar misschien gaat het eten jou opeten."
+        },
+        "500": {
+            "name": "Bezems",
+            "description": "Om op te ruimen als de dieren eh... een grote boodschap doen."
+        },
+        "501": {
+            "name": "Dierentrainers",
+            "description": "Trainers leren de dieren kunstjes, zodat de dierentuin efficiënter draait."
+        },
+        "502": {
+            "name": "Luxe verblijven",
+            "description": "Geef de dieren een beter onderkomen, zodat ze blij en productief blijven."
+        },
+        "503": {
+            "name": "Exotische dieren",
+            "description": "Haal zeldzame en exotische dieren in huis om meer bezoekers te trekken."
+        },
+        "504": {
+            "name": "Mascottes",
+            "description": "Vriendelijke mascottes lokken bezoekers en verhogen de inkomsten."
+        },
+        "505": {
+            "name": "Dierenklinieken",
+            "description": "Een eigen kliniek houdt de dieren gezond."
+        },
+        "506": {
+            "name": "Schaduwplekken",
+            "description": "Schaduwrijke plekken houden dieren en bezoekers koel op hete dagen."
+        },
+        "507": {
+            "name": "Aaiplekken",
+            "description": "Speciale plekken waar bezoekers veilig met de dieren kunnen knuffelen."
+        },
+        "508": {
+            "name": "Verzorgingssets",
+            "description": "Regelmatige verzorging houdt de dieren mooi en gelukkig."
+        },
+        "509": {
+            "name": "Bankjes",
+            "description": "Comfortabele zitplekken voor vermoeide bezoekers."
+        },
+        "510": {
+            "name": "Souvenirwinkels",
+            "description": "Een winkel vol souvenirs met dieren erop."
+        },
+        "511": {
+            "name": "Dierenfotohokje",
+            "description": "Bezoekers kunnen op de foto met de dieren."
+        },
+        "512": {
+            "name": "Dierentuintreintje",
+            "description": "Een minitreintje geeft bezoekers een rondleiding door de dierentuin."
+        },
+        "513": {
+            "name": "Dierentalentenshow",
+            "description": "Organiseer een talentenshow waarin de dieren kunstjes doen"
+        },
+        "514": {
+            "name": "Dierenparade",
+            "description": "Organiseer een dagelijkse parade waarbij de dieren door de dierentuin marcheren."
+        },
+        "515": {
+            "name": "Peperdure snacks",
+            "description": "Vraag bezoekers woekerprijzen voor snacks in dierenvorm"
+        },
+        "516": {
+            "name": "Dierenpersoneel",
+            "description": "Zet de dieren aan het werk!"
+        },
+        "517": {
+            "name": "Ordeapen",
+            "description": "Train apen om lastige menigten in toom te houden."
+        },
+        "518": {
+            "name": "Prehistorische dieren",
+            "description": "Haal dinosaurussen en andere uitgestorven dieren naar de dierentuin.",
+            "quote": "Het leven, eh, vint een weg"
+        },
+        "519": {
+            "name": "Eenhoorns",
+            "description": "Wie wil er nou geen vliegende eenhoorn zien?"
+        },
+        "600": {
+            "name": "Beter gereedschap",
+            "description": "Beter gereedschap om sneller emoji's te maken."
+        },
+        "601": {
+            "name": "Meer arbeiders",
+            "description": "Meer personeel in de fabriek."
+        },
+        "602": {
+            "name": "Grotere tandwielen",
+            "description": "Grotere tandwielen maken grotere machines mogelijk."
+        },
+        "603": {
+            "name": "Moeren en bouten",
+            "description": "Hiermee zorg je dat niet alles uit elkaar valt."
+        },
+        "604": {
+            "name": "Lopende banden",
+            "description": "Stroomlijn de productie met lopende banden die emoji's sneller dan ooit verplaatsen!"
+        },
+        "605": {
+            "name": "Kwaliteitscontrole",
+            "description": "Zorg dat elke emoji perfect is met een eigen kwaliteitsteam."
+        },
+        "606": {
+            "name": "Fabrieksuitbreiding",
+            "description": "Breid je fabriek uit voor meer machines en arbeiders. Groter is beter!"
+        },
+        "607": {
+            "name": "Snelpersen",
+            "description": "Stap over op snelpersen die bliksemsnel emoji's stansen."
+        },
+        "608": {
+            "name": "Fabrieksgym",
+            "description": "Een gym waar je arbeiders fit en energiek blijven. Gezonde arbeiders zijn productieve arbeiders!"
+        },
+        "609": {
+            "name": "Fabrieksbeveiliging",
+            "description": "Bescherm je fabriek tegen emoji-dieven en bedrijfsspionage."
+        },
+        "610": {
+            "name": "Fabrieksrecycling",
+            "description": "Recycle afval tot nieuwe emoji's: lagere kosten en minder milieu-impact."
+        },
+        "611": {
+            "name": "Onderhoudsladders",
+            "description": "Ladders voor makkelijke toegang tot hoge machines. Onderhoud was nog nooit zo makkelijk!"
+        },
+        "612": {
+            "name": "Zware hamers",
+            "description": "Stap over op zware hamers voor snellere montage en reparaties. Sla de inefficiëntie aan gruzelementen!"
+        },
+        "613": {
+            "name": "Precisiesleutels",
+            "description": "Draai bouten en schroeven aan met precisiesleutels. Geen losse eindjes meer in je productielijn!"
+        },
+        "614": {
+            "name": "Schroevendraaierset",
+            "description": "Een complete set schroevendraaiers om je machines bij te stellen. Elk detail telt!"
+        },
+        "615": {
+            "name": "Gereedschapskist-upgrade",
+            "description": "Een goed gevulde gereedschapskist zorgt dat je arbeiders voor elke klus het juiste gereedschap hebben.",
+            "quote": "Waar heb ik de- de- waar is de- argh, laat maar!"
+        },
+        "616": {
+            "name": "Versterkte muren",
+            "description": "Versterk je fabrieksmuren tegen de chaos van supersnelle productie."
+        },
+        "617": {
+            "name": "Muizenvallen",
+            "description": "Houd vervelende knaagdieren uit je fabriek. Geen aangevreten draden of gestolen emoji's meer!"
+        },
+        "618": {
+            "name": "Fabrieksmanagers",
+            "description": "Zonder een van deze wordt er absoluut niets gedaan.",
+            "quote": "En denk eraan: de directie wil plaspauzes onder de minuut houden!"
+        },
+        "619": {
+            "name": "Robotarbeiders",
+            "description": "Vervang zwakke menselijke arbeiders door sterke androïde arbeiders!"
+        },
+        "700": {
+            "name": "Basketbalvelden",
+            "description": "Een reden om samen te komen.",
+            "quote": "Swish, swish, swish. Alleen maar net. En hun monden vielen open."
+        },
+        "701": {
+            "name": "Honkbalvelden",
+            "description": "Dit wordt gegarandeerd een homerun."
+        },
+        "702": {
+            "name": "Squashbanen",
+            "description": "Is het een groente of een sport?"
+        },
+        "703": {
+            "name": "Frisbees",
+            "description": "De Ultieme sport",
+            "quote": "Ik hoop maar dat niemand ooit op het idee komt om dit met golf te combineren..."
+        },
+        "704": {
+            "name": "Volleybalvelden",
+            "description": "De Ultieme sport"
+        },
+        "705": {
+            "name": "Pingpongtafels",
+            "description": "Een sport die vernoemd is naar het geluid dat hij maakt.",
+            "quote": "De beste manier om communisten te bestrijden"
+        },
+        "706": {
+            "name": "Golfbanen",
+            "description": "Een sport waarbij je met een stok tegen een balletje slaat en in een cool karretje rijdt.",
+            "quote": "Een presidentiële sport"
+        },
+        "800": {
+            "name": "Spaarvarkens",
+            "description": "Knor knor!"
+        },
+        "801": {
+            "name": "Grotere emoji-zakken",
+            "description": "Hiermee draag je nog meer emoji's mee."
+        },
+        "802": {
+            "name": "Emoji-creditcards",
+            "description": "Handig om je zuurverdiende emoji's uit te geven."
+        },
+        "803": {
+            "name": "Investering in onderwijs",
+            "description": "Beter onderwijs, betere emoji-tekenvaardigheden."
+        },
+        "804": {
+            "name": "Investering in innovatie",
+            "description": "Meer innovatie, innovatievere emoji's."
+        },
+        "900": {
+            "name": "Draaimolens",
+            "description": "You spin me right 'round, baby!"
+        },
+        "901": {
+            "name": "Glijbanen",
+            "description": "Do you slide on all your nights like this? (I might)"
+        },
+        "902": {
+            "name": "Reuzenrad",
+            "description": "Daar, helemaal bovenin, brak ze mijn hart."
+        },
+        "903": {
+            "name": "Circus",
+            "description": "There's only two types of people in the world. The ones that entertain, and the ones that observe."
+        },
+        "904": {
+            "name": "Emoji-jongleur",
+            "description": "Ze zeggen dat hij nog nooit een steek heeft laten vallen."
+        },
+        "1000": {
+            "name": "Emoji-verkiezingen",
+            "description": "Moge de beste emoji winnen!"
+        },
+        "1001": {
+            "name": "Emoji-steunpakket",
+            "description": "Jij krijgt een emoji, en jij, en jij, iedereen krijgt emoji's!"
+        },
+        "1002": {
+            "name": "Voorzitter van de emoji-kamer",
+            "description": "Installeer je eigen emoji-voorzitter, zodat alles gaat zoals jij wilt."
+        },
+        "1003": {
+            "name": "Emoji-wetten",
+            "description": "Wij, de emoji's..."
+        },
+        "1004": {
+            "name": "Wereldwijde emoji-confederatie",
+            "description": "Verbetert de samenwerking tussen emoji-landen."
+        },
+        "1100": {
+            "name": "Telescopen",
+            "description": "Tuur naar de sterren om emoji-planeten te ontdekken."
+        },
+        "1101": {
+            "name": "Schotelantennes",
+            "description": "Kijk voorbij de Melkweg, naar het Emojiwegstelsel."
+        },
+        "1102": {
+            "name": "Astronauten",
+            "description": "Iemand moet je ruimtestations bemannen."
+        },
+        "1103": {
+            "name": "Raketten",
+            "description": "Vliegt heel erg snel."
+        },
+        "1104": {
+            "name": "⍙⟟⟊ ☍⍜⋔⟒⋏ ⋔⟒⏁ ☌⍜⟒⎅⟒ ⏚⟒⎅⍜⟒⌰⟟⋏☌⟒⋏...",
+            "description": "...⟒⋏ ⍙⟒ ⏚⍀⟒⋏☌⟒⋏ ☌⟒☍☍⟒ ⋏⟟⟒⎍⍙⟒ ⟒⋔⍜⟊⟟'⌇.",
+            "quote": "⏁⟟☍ ⏁⍙⟒⟒ ⌿⌰⎍⌇ ⎅⍀⟟⟒ ☍⟒⟒⍀ ⍜⌿ ⋔⟟⟊⋏ ☌⟒⋉⟟☊⊑⏁ ⍜⋔ ⋔⟟⟊⋏ ☌⟒⊑⟒⟟⋔ ⏁⟒ ⍜⋏⏁⌇⌰⎍⟟⏁⟒⋏"
+        },
+        "1105": {
+            "name": "⍀⏃⏃⍀ ⍜⏚⟊⟒☊⏁",
+            "description": "⎅⟟⏁ ⍜⏚⟊⟒☊⏁ ⏚⟒⋉⟟⏁ ⍜⋏☌⟒☍⟒⋏⎅⟒ ☍⍀⏃☊⊑⏁⟒⋏."
+        },
+        "30000": {
+            "name": "Aardappels",
+            "description": "Pieperfect! Aardappels zijn de ruggengraat van elke boerderij."
+        },
+        "30001": {
+            "name": "Wortels",
+            "description": "Hier ligt de wortel van je succes."
+        },
+        "30002": {
+            "name": "Komkommers",
+            "description": "Zo fris als een komkommer! Deze verfrissende groenten zijn perfect voor salades en om in te maken.",
+            "quote": "I'm pickle Rick!"
+        },
+        "30003": {
+            "name": "Paprika's",
+            "description": "Zoet of pittig: paprika's geven je boerderij een vleugje kleur en smaak.",
+            "quote": "Rood, geel of groen: dit stoplicht staat altijd op lekker."
+        },
+        "30004": {
+            "name": "Tomaten",
+            "description": "Sappig en veelzijdig: tomaten zijn een favoriet op de boerderij."
+        },
+        "30005": {
+            "name": "Sla",
+            "description": "Sla je slag! Sla houdt je boerderij fris en groen."
+        },
+        "30006": {
+            "name": "Broccoli",
+            "description": "Kleine boompjes met grote voordelen!"
+        },
+        "30007": {
+            "name": "Uien",
+            "description": "Vol smaak en tranen: uien zijn onmisbaar in de keuken en op de boerderij.",
+            "quote": "Ogers zijn net uien. Uien hebben lagen. Ogers hebben lagen."
+        },
+        "30008": {
+            "name": "Knoflook",
+            "description": "Knoflook geeft smaak aan je gerechten en bescherming aan je boerderij.",
+            "quote": "Werkt prima als je een vampierprobleem hebt!"
+        },
+        "30009": {
+            "name": "Maïs",
+            "description": "Maïs is een veelzijdig gewas, perfect om te roosteren of te poppen.",
+            "quote": "Maïs-terlijk!"
+        },
+        "30010": {
+            "name": "Bonen",
+            "description": "Rijk aan eiwit en perfect om je boerderij uit te breiden.",
+            "quote": "Bonen!"
+        },
+        "30011": {
+            "name": "Pinda's",
+            "description": "Nootachtig en heerlijk: pinda's zijn top als snack en geven je boerderij een boost."
+        },
+        "30012": {
+            "name": "Pompoenen",
+            "description": "Reusachtig, oranje en perfect voor taarten of om kraaien weg te jagen. Een herfstfavoriet!",
+            "quote": "Pumpkin spice and everything nice!"
+        },
+        "30013": {
+            "name": "Aardbeien",
+            "description": "Zoet, sappig en perfect voor desserts. Aardbeien zijn de bes-te aanvulling voor je boerderij!"
+        },
+        "30014": {
+            "name": "Blauwe bessen",
+            "description": "Klein maar dapper..",
+            "quote": "I'm blue da ba dee da ba di"
+        },
+        "30015": {
+            "name": "Aubergines",
+            "description": "Paars en veelzijdig: aubergines zijn perfect om te grillen, te roosteren en voor emoji-boerderijen.",
+            "quote": "De lievelingsemoji van mijn vriend is de aubergine, hij blijft hem maar naar me sturen!"
+        },
+        "30016": {
+            "name": "Courgettes",
+            "description": "Groen en overvloedig: courgettes blijven maar komen, de hele zomer lang."
+        },
+        "30017": {
+            "name": "Avocado's",
+            "description": "Romig en heerlijk: avocado's zijn de toast van de stad en een favoriet op de boerderij."
+        },
+        "30018": {
+            "name": "Zoete aardappels",
+            "description": "Het zoete neefje van de aardappel."
+        },
+        "30019": {
+            "name": "Erwten",
+            "description": "Erwten!"
+        },
+        "30020": {
+            "name": "Radijsjes",
+            "description": "Pittig en knapperig: radijsjes geven je boerderij en je gerechten een kick."
+        },
+        "30021": {
+            "name": "Paddenstoelen",
+            "description": "Schimmig leuk! Paddenstoelen zijn eigenlijk geen planten, wist je dat?",
+            "quote": "Hij is een echte champignon!"
+        },
+        "30022": {
+            "name": "Ananassen",
+            "description": "Tropisch en fris."
+        },
+        "30023": {
+            "name": "Watermeloenen",
+            "description": "Sappig en verfrissend: watermeloenen zijn het ultieme zomergewas."
+        },
+        "30024": {
+            "name": "Kiwi's",
+            "description": "Harig vanbuiten, zoet vanbinnen. Kiwi's zijn een favoriet op de boerderij!"
+        },
+        "30025": {
+            "name": "Druiven",
+            "description": "Perfect om te snacken, te persen of er wijn van te maken.",
+            "quote": "In druiven ligt de waarheid."
+        },
+        "30026": {
+            "name": "Kersen",
+            "description": "Zoet en zuur: kersen zijn een heerlijke traktatie en een favoriet op de boerderij."
+        },
+        "50000": {
+            "name": "Hondenhulpje",
+            "description": "Tikt met zijn snuit op je scherm.",
+            "quote": "WOEF! Ik help je aan emoji's!"
+        },
+        "50001": {
+            "name": "Kattenhulpje",
+            "description": "Kietelt je met zijn snorharen, zodat je sneller tikt.",
+            "quote": "Miauw! Ik help je aan emoji's!"
+        },
+        "50002": {
+            "name": "Eendenhulpje",
+            "description": "Pikt met zijn snavel in je zij, zodat je sneller tikt.",
+            "quote": "Kwak! Ik help je aan emoji's!"
+        },
+        "50003": {
+            "name": "Koeienhulpje",
+            "description": "Zwaait met zijn uier tegen je scherm, zodat je sneller tikt.",
+            "quote": "Boe! Ik help je aan emoji's!"
+        },
+        "50004": {
+            "name": "Varkenshulpje",
+            "description": "Rent vrolijk door je kamer, maakt je blij en laat je sneller tikken.",
+            "quote": "Knor! Ik help je aan emoji's!"
+        },
+        "50005": {
+            "name": "Konijnenhulpje",
+            "description": "Stuitert tegen je scherm, zodat je sneller tikt.",
+            "quote": "Hop! Ik help je aan emoji's!"
+        },
+        "50006": {
+            "name": "Kikkerhulpje",
+            "description": "Springt op je scherm, zodat je sneller tikt.",
+            "quote": "Kwaak! Ik help je aan emoji's!"
+        },
+        "50007": {
+            "name": "Olifantenhulpje",
+            "description": "Zijn slurf is perfect om op het scherm te tikken!",
+            "quote": "Toeoet! Ik help je aan emoji's!"
+        },
+        "50008": {
+            "name": "Apenhulpje",
+            "description": "Geeft je een hoop bananen tegen de honger, zodat je sneller tikt!",
+            "quote": "Oe oe! Ik help je aan emoji's!"
+        },
+        "50009": {
+            "name": "Pinguïnhulpje",
+            "description": "Pikt met zijn snavel op je scherm.",
+            "quote": "Waggel! Ik help je aan emoji's!"
+        },
+        "100000": {
+            "name": "Emoji-stagiairs",
+            "description": "Stagiairs zorgen dat de emoji-overheid soepel draait!"
+        },
+        "100001": {
+            "name": "Emoji-bureaucraten",
+            "description": "Een emoji-overheid kan niet zonder ambtenaren.",
+            "quote": "Het lijkt erop dat je een wet aanneemt. Hulp nodig?"
+        }
+    },
+    "effects": {
+        "0": {
+            "title": "x2 tikkracht",
+            "description": "Emoji's per tik verdubbeld!"
+        },
+        "1": {
+            "title": "x3 tikkracht",
+            "description": "Emoji's per tik verdrievoudigd!"
+        },
+        "100": {
+            "title": "x2 emoji-productie",
+            "description": "Emoji-productie verdubbeld!"
+        },
+        "101": {
+            "title": "x77 emoji-productie",
+            "description": "Emoji-productie vermenigvuldigd met 77!"
+        },
+        "110": {
+            "title": "Halve emoji-productie",
+            "description": "Emoji-productie gehalveerd!"
+        },
+        "200": {
+            "title": "Emoji-cadeau",
+            "description": "Een uur aan emoji's!"
+        }
+    }
+}

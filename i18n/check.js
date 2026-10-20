@@ -17,12 +17,15 @@ require("sucrase/register/ts");
 
 // The game data is loaded straight from the TypeScript sources. Stub out the modules
 // that only work inside the app, the data itself does not depend on them
+const i18nIndex = path.join(__dirname, "index.ts");
 const originalLoad = Module._load;
-Module._load = function (request) {
+Module._load = function (request, parent) {
     if (request === "expo-haptics") return { ImpactFeedbackStyle: {}, NotificationFeedbackType: {} };
-    if (request === "expo-localization") return { getLocales: () => [] };
-    if (request === "react-i18next") return { initReactI18next: { type: "3rdParty", init: () => { } } };
     if (/redux\/reduxStore$/.test(request)) return { default: { getState: () => ({}), dispatch: () => { } } };
+    // The i18n setup itself loads every locale file, which may be missing or broken
+    if (request.startsWith(".") && Module._resolveFilename(request, parent) === i18nIndex) {
+        return { default: { t: (key) => key }, getLanguage: () => "en" };
+    }
     return originalLoad.apply(this, arguments);
 };
 
@@ -122,8 +125,14 @@ const languages = fs.readdirSync(localesDir).filter(language => language !== "en
 for (const language of languages) {
     console.log(`Checking ${language}`);
     const dir = path.join(localesDir, language);
-    compare(language, "ui.json", englishUi, flatten(readJson(path.join(dir, "ui.json"))));
-    compare(language, "content.json", flatten(englishContent), flatten(readJson(path.join(dir, "content.json"))));
+    for (const [file, english] of [["ui.json", englishUi], ["content.json", flatten(englishContent)]]) {
+        const filePath = path.join(dir, file);
+        if (!fs.existsSync(filePath)) {
+            error(language, `${file} is missing`);
+            continue;
+        }
+        compare(language, file, english, flatten(readJson(filePath)));
+    }
 }
 
 console.log(`\n${errorCount} error(s), ${warningCount} warning(s)`);

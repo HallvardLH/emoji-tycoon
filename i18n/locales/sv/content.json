@@ -1,0 +1,1009 @@
+{
+    "buildings": {
+        "0": {
+            "name": "Rithand",
+            "plural": "Rithänder",
+            "description": "En hand som ritar emojis åt dig."
+        },
+        "1": {
+            "name": "Designstudio",
+            "plural": "Designstudior",
+            "description": "En studio där emojis skapas."
+        },
+        "2": {
+            "name": "Gård",
+            "plural": "Gårdar",
+            "description": "En gård där emojis gror ur jorden."
+        },
+        "3": {
+            "name": "Restaurang",
+            "plural": "Restauranger",
+            "description": "Hit går emojis för att äta matemojis."
+        },
+        "4": {
+            "name": "Klappzoo",
+            "plural": "Klappzoon",
+            "description": "Träffa alla dina favoritdjur bland emojis."
+        },
+        "5": {
+            "name": "Fabrik",
+            "plural": "Fabriker",
+            "description": "Emojitillverkning i industriell skala."
+        },
+        "6": {
+            "name": "Sporthall",
+            "plural": "Sporthallar",
+            "description": "Håll dina emojis i form."
+        },
+        "7": {
+            "name": "Bank",
+            "plural": "Banker",
+            "description": "\"Hos oss är dina emojis i trygga händer.\""
+        },
+        "8": {
+            "name": "Emojinöjespark",
+            "plural": "Emojinöjesparker",
+            "description": "\"Välkommen till Emojiland: Där drömmar och känslor blir verklighet!\""
+        },
+        "9": {
+            "name": "Emojiriksdag",
+            "plural": "Emojiriksdagar",
+            "description": "Där emojis samlas för att besluta hur man gör fler emojis."
+        },
+        "10": {
+            "name": "Rymdstation",
+            "plural": "Rymdstationer",
+            "description": "Erövra nya världar och ta deras emojis."
+        },
+        "11": {
+            "name": "Godisrike",
+            "plural": "Godisriken",
+            "description": "Ett sockersött paradis styrt av Godiskungen och hans söta emojiundersåtar."
+        },
+        "12": {
+            "name": "Emojivulkan",
+            "plural": "Emojivulkaner",
+            "description": "Varje utbrott för med sig en flod av splitternya, nysmidda emojis!"
+        },
+        "13": {
+            "name": "Tempel åt Den stora emojin i skyn",
+            "plural": "Tempel åt Den stora emojin i skyn",
+            "description": "Legenden säger att Den stora emojin i skyn skänker oändligt många emojis till sina trognaste följare."
+        },
+        "14": {
+            "name": "Emojisuperdator",
+            "plural": "Emojisuperdatorer",
+            "description": "Den ultimata emojimotorn. Mångfaldigar emojis i ljusets hastighet."
+        },
+        "15": {
+            "name": "Svart emojihål",
+            "plural": "Svarta emojihål",
+            "description": "Alla emojis slutstation... eller en ny början?"
+        },
+        "16": {
+            "name": "Emojisingularitet",
+            "plural": "Emojisingulariteter",
+            "description": "Det var det. Inget finns kvar utom emojis. Du har klarat det."
+        }
+    },
+    "upgrades": {
+        "0": {
+            "name": "En hand till",
+            "description": "Ännu en hand trycker på skärmen. Vems hand är det? Ingen aning."
+        },
+        "1": {
+            "name": "Ytterligare en hand",
+            "description": "En hand till trycker på skärmen. Väldigt händigt!"
+        },
+        "2": {
+            "name": "Tio händer till",
+            "description": "Tio händer börjar plötsligt trycka på din skärm! Helt fantastiskt!"
+        },
+        "3": {
+            "name": "Hundra händer!",
+            "description": "Hela grannskapet har dykt upp för att trycka på den stora emojin på skärmen!"
+        },
+        "4": {
+            "name": "Tusen händer",
+            "description": "Folk reser långväga bara för att trycka på din skärm."
+        },
+        "5": {
+            "name": "En miljon händer",
+            "description": "Vem pekar du på? Pekar du på mig? Vad ohyfsat..."
+        },
+        "6": {
+            "name": "En miljard händer",
+            "description": "Över 10 % av jordens befolkning hjälper dig att trycka på skärmen. Jag tror att den snart går sönder."
+        },
+        "7": {
+            "name": "En biljon händer",
+            "description": "Mamma ringer. Hon är orolig för dig. Irriterad över att samtalet täcker skärmen lägger du på och fortsätter trycka."
+        },
+        "8": {
+            "name": "En biljard händer",
+            "description": "Det är rätt många händer som trycker på din skärm nu."
+        },
+        "9": {
+            "name": "En triljon händer",
+            "description": "Antalet händer är helt ofattbart. Skärmen får verkligen stryk."
+        },
+        "10": {
+            "name": "En triljard händer",
+            "description": "Händer så långt ögat når, och alla trycker för fullt."
+        },
+        "11": {
+            "name": "En kvadriljon händer",
+            "description": "Perfekt form. Perfekta tryck. Oändligt många händer."
+        },
+        "12": {
+            "name": "En kvadriljard händer",
+            "description": "Fler händer än det finns atomer i universum. Alla vet precis vad de gör."
+        },
+        "13": {
+            "name": "En kvintiljon händer",
+            "description": "Ljudet av alla tryck är nu ett öronbedövande, rytmiskt dunkande som skickar en chockvåg runt jorden."
+        },
+        "14": {
+            "name": "En kvintiljard händer",
+            "description": "Så mycket kött borde aldrig samlas så tätt på samma ställe..."
+        },
+        "15": {
+            "name": "En sextiljon händer",
+            "description": "Ur händerna växer dussintals nya, förvridna och missbildade."
+        },
+        "16": {
+            "name": "En sextiljard händer",
+            "description": "Du börjar höra viskningar. Händerna fortsätter trycka, men vems är de?"
+        },
+        "17": {
+            "name": "En septiljon händer",
+            "description": "Händerna börjar förvridas. De är inte längre mänskliga."
+        },
+        "18": {
+            "name": "En septiljard händer",
+            "description": "En närvaro lurar bakom händerna och styr dem med ond avsikt."
+        },
+        "19": {
+            "name": "En oktiljon händer",
+            "description": "De här händerna... vad är de? Luften luktar svavel."
+        },
+        "20": {
+            "name": "En oktiljard händer",
+            "description": "Händerna är överallt och fyller rummet. Du känner hur de griper efter dig..."
+        },
+        "21": {
+            "name": "Demonhänder",
+            "description": "Demoniska händer från helvetets djup trycker utan slut. Skärmen är glödhet att ta på."
+        },
+        "22": {
+            "name": "De fördömdas händer",
+            "description": "Spöklika skeletthänder stiger upp ur avgrunden. De trycker med infernaliskt raseri."
+        },
+        "23": {
+            "name": "Underjordens herre",
+            "description": "Den fallne ängeln själv kryper upp ur sitt rike för att hjälpa dig trycka på skärmen."
+        },
+        "24": {
+            "name": "Ohyfsade tryck",
+            "description": "Verkligen, verkligen ohyfsat."
+        },
+        "100": {
+            "name": "Starkare arm",
+            "description": "Med en starkare arm ritar du emojis snabbare."
+        },
+        "101": {
+            "name": "Smidiga fingrar",
+            "description": "Smidiga fingrar ger mer detaljerade emojis."
+        },
+        "102": {
+            "name": "Två händer",
+            "description": "Dubbelt så många händer, dubbelt så många emojis."
+        },
+        "103": {
+            "name": "Nagellackade händer",
+            "description": "Med nagellack trycker man snabbare, visste du inte det?"
+        },
+        "104": {
+            "name": "Fötter",
+            "description": "Att rita med fötterna fördubblar produktionen (och det är inte alls svårt)!"
+        },
+        "105": {
+            "name": "Tunga",
+            "description": "Med många års träning kan även du lära dig att rita med tungan!"
+        },
+        "106": {
+            "name": "Näsa",
+            "description": "Stoppa upp en krita i näsan och rita med den!",
+            "quote": "*Sniff* Varför luktar skärmen fötter?"
+        },
+        "107": {
+            "name": "Öra",
+            "description": "Stoppa en penna i örat, vrid huvudet 90 grader och rita med den!"
+        },
+        "108": {
+            "name": "Mun",
+            "description": "Stoppa en blyertspenna i munnen och rita med den!"
+        },
+        "109": {
+            "name": "Starkare ben",
+            "description": "Med ett starkare ben ritar du emojis mycket snabbare med fötterna."
+        },
+        "110": {
+            "name": "Större lungor",
+            "description": "Med större lungor ritar du emojis snabbare."
+        },
+        "111": {
+            "name": "Större hjärna",
+            "description": "En större hjärna släpper loss en våg av kreativitet som fördubblar din emojiproduktion!"
+        },
+        "112": {
+            "name": "Hår",
+            "description": "Svinga en pensel med håret och skapa emojis. Vem behöver händer när man har stil?"
+        },
+        "113": {
+            "name": "Ögonbryn",
+            "description": "Höj på ögonbrynen för att rita emojis. Träning för både ansiktet och kreativiteten!"
+        },
+        "114": {
+            "name": "Rygg",
+            "description": "Ligg på rygg och rita emojis med händerna bakom dig. Både stretch och skiss!"
+        },
+        "115": {
+            "name": "Tänder",
+            "description": "Bit tag i en penna och rita emojis. Varning: Kan orsaka trötta käkar!"
+        },
+        "116": {
+            "name": "Navel",
+            "description": "Rita emojis med naveln. En unik färdighet som är svår att bemästra!"
+        },
+        "117": {
+            "name": "Ekoritning",
+            "description": "Varje emoji du ritar ekar och blir dubbelt så många!"
+        },
+        "118": {
+            "name": "Telekinetisk ritning",
+            "description": "Varför använda händerna när du kan rita emojis med tankekraft?"
+        },
+        "119": {
+            "name": "Kvantfingrar",
+            "description": "Kvantsammanflätning i fingrarna låter dig rita emojis i ljusets hastighet."
+        },
+        "200": {
+            "name": "Bättre blyertspennor",
+            "description": "Bättre pennor för mer detaljerade emojis."
+        },
+        "201": {
+            "name": "Specialkritor",
+            "description": "Med de här specialkritorna hittar konstnärerna sitt inre barn."
+        },
+        "202": {
+            "name": "Bättre penslar",
+            "description": "Bättre penslar ger mer konstnärliga emojis."
+        },
+        "203": {
+            "name": "Reservoarpennor",
+            "description": "Ger mer förnäma emojis."
+        },
+        "204": {
+            "name": "Linjaler",
+            "description": "Hur skulle du annars rita ett rakt streck?"
+        },
+        "205": {
+            "name": "Färgblindhetssimulator",
+            "description": "Se till att dina emojis är tillgängliga för alla!",
+            "quote": "Heter det 'Vu-kagg'? 'Dubbelve-se-a-ge'? 'Ve-kagg'?"
+        },
+        "206": {
+            "name": "Serietidningseffekter",
+            "description": "Lägg till 'PANG!' och 'BOM!' på dina emojis för extra stuns!"
+        },
+        "207": {
+            "name": "Schablonset",
+            "description": "Perfekt formade emojis varje gång med de här schablonerna!"
+        },
+        "208": {
+            "name": "Egna kortkommandon",
+            "description": "Snabba upp arbetet med personliga kortkommandon för emojidesign!",
+            "quote": "Testa alt + F4."
+        },
+        "209": {
+            "name": "Bildbank-prenumeration",
+            "description": "Få tillgång till ett enormt bibliotek med färdiga former, ikoner och texturer!"
+        },
+        "210": {
+            "name": "Ångra-knapp",
+            "description": "Att trycka på ångra återställer inte bara ditt arbete - det förändrar själva verkligheten. Använd sparsamt.",
+            "quote": "Att fela är mänskligt"
+        },
+        "211": {
+            "name": "Emojimålarbok",
+            "description": "Bara de mest förfinade konstnärerna använder målarböcker."
+        },
+        "212": {
+            "name": "Samarbete i realtid",
+            "description": "Bjud in andra designers att jobba på dina emojiprojekt samtidigt!"
+        },
+        "213": {
+            "name": "Emoji-moodboard",
+            "description": "Organisera dina emojiidéer visuellt för maximal kreativitet!",
+            "quote": "Hoppsan, där gjorde du visst en tavla!"
+        },
+        "214": {
+            "name": "Pixelkonstprogram",
+            "description": "Skapa pixliga emojis i retrostil som skriker 90-talsnostalgi!",
+            "quote": "Varje pixel räknas."
+        },
+        "215": {
+            "name": "Typsnittet Comic Sans",
+            "description": "Älska det eller hata det, det gör dina emojis... unika!"
+        },
+        "216": {
+            "name": "AI-bildgenerator",
+            "description": "Låt AI:n sköta grovjobbet och spotta ur sig tråkiga lågkvalitetsemojis i blixtfart!",
+            "quote": "Bip bop!"
+        },
+        "217": {
+            "name": "Origamipapper",
+            "description": "Vik dina pappersemojis till alla möjliga former!",
+            "quote": "Kvack!"
+        },
+        "218": {
+            "name": "Emojitatueringsmaskin",
+            "description": "Permanenta emojis för den verkligt hängivna konstnären!",
+            "quote": "Aj!"
+        },
+        "219": {
+            "name": "Blod",
+            "description": "Att måla med blod ger extra coola emojis!"
+        },
+        "300": {
+            "name": "Bönder",
+            "description": "Vad är en gård utan en bonde?!"
+        },
+        "301": {
+            "name": "Grodd",
+            "description": "Man måste börja någonstans.",
+            "quote": "Ge aldrig upp - bladet kan vända!"
+        },
+        "302": {
+            "name": "Bättre redskap",
+            "description": "Gör jordbruket mycket snabbare!"
+        },
+        "303": {
+            "name": "Traktorer",
+            "description": "Gör emojiskörden så mycket enklare."
+        },
+        "304": {
+            "name": "Bondstugor",
+            "description": "Ett mysigt hem där dina bönder kan vila och ladda batterierna."
+        },
+        "305": {
+            "name": "Emojikor",
+            "description": "Skapar fler emuuuuuujis."
+        },
+        "306": {
+            "name": "Bevattningssystem",
+            "description": "Håll dina emojigrödor fuktiga så växer de snabbare.",
+            "quote": "Vilket århundrade är det här?!"
+        },
+        "307": {
+            "name": "Fågelskrämmor",
+            "description": "Håller jobbiga fågelemojis borta från dina gårdar!"
+        },
+        "308": {
+            "name": "Kompostlådor",
+            "description": "Gör avfall till gödsel för friskare emojigrödor!"
+        },
+        "309": {
+            "name": "Växthus",
+            "description": "Odla emojis året runt, oavsett väder!"
+        },
+        "310": {
+            "name": "Väderkvarnar",
+            "description": "Tämj vindens kraft och effektivisera din gård!",
+            "quote": "Svisch!"
+        },
+        "311": {
+            "name": "Emojifruktodlingar",
+            "description": "Odla emojiträd som bär frukt året runt!"
+        },
+        "312": {
+            "name": "Skördefest",
+            "description": "Fira den rika skörden med en fest som höjer moralen!"
+        },
+        "313": {
+            "name": "Jättelik emojislangbella",
+            "description": "Skjut emojifrön över hela gården för blixtsnabb sådd!"
+        },
+        "314": {
+            "name": "Osynligt stängsel",
+            "description": "Håller din emojiboskap på plats... även om du inte kan se det.",
+            "quote": "Gör ont om man kissar på det."
+        },
+        "315": {
+            "name": "Genmodifierade grödor",
+            "description": "Skallösa bananer, jordgubbar som redan är doppade i choklad, förkokt potatis och mycket mer!"
+        },
+        "316": {
+            "name": "Framtidens emojigård",
+            "description": "Dina gårdar är nu högteknologiska utopier med robotar, hologram och flygande traktorer. Välkommen till framtiden!"
+        },
+        "317": {
+            "name": "Blodmåne",
+            "description": "Under blodmånen växer dina grödor snabbare... men de får också tänder."
+        },
+        "318": {
+            "name": "Den sista skörden",
+            "description": "En mystisk gestalt dyker upp och erbjuder en rik skörd i utbyte mot... något. Vågar du tacka ja?"
+        },
+        "319": {
+            "name": "Sluta med jordbruk",
+            "description": "Du har tröttnat på jordbruket. Det bästa är kanske att bara ge upp och jobba på kontor i stället."
+        },
+        "400": {
+            "name": "Vassa knivar",
+            "description": "Vassare knivar gör det lättare att hacka emojis."
+        },
+        "401": {
+            "name": "Teflonpannor",
+            "description": "Med teflonpannor lagar du emojimat snabbare."
+        },
+        "402": {
+            "name": "Bättre ugnar",
+            "description": "Ugnar med bättre värmekontroll tillagar emojis snabbare."
+        },
+        "403": {
+            "name": "Förstklassiga råvaror",
+            "description": "Bättre råvaror betyder godare emojis."
+        },
+        "404": {
+            "name": "Kockmössa",
+            "description": "Med kockmössa på lagar du emojis snabbare."
+        },
+        "405": {
+            "name": "Emojimixrar",
+            "description": "Mixa emojis till läckra smoothies och soppor på nolltid!"
+        },
+        "406": {
+            "name": "Airfryers",
+            "description": "Fritera emojis till perfektion på rekordtid. Krispiga och gyllene varje gång!"
+        },
+        "407": {
+            "name": "Sushibarer",
+            "description": "Rulla emojisushi med precision och stil. Kräver rå talang!"
+        },
+        "408": {
+            "name": "Salladsbarer",
+            "description": "Blanda fräscha emojisallader med massor av toppings. Nyttigt och gott!"
+        },
+        "409": {
+            "name": "Pizzaugnar",
+            "description": "Grädda emojipizzor med vedugnssmak som inte är av denna värld!"
+        },
+        "410": {
+            "name": "Emojikaffemaskiner",
+            "description": "Brygg den perfekta koppen emojikaffe så att kockarna håller sig pigga!"
+        },
+        "411": {
+            "name": "Emojiglassmaskiner",
+            "description": "Spotta ut frysta emojigodsaker som är lika coola som de är goda!"
+        },
+        "412": {
+            "name": "Tacostationer",
+            "description": "Bygg emojitacos med alla tillbehör. Fredagsmys i varje tugga!",
+            "quote": "¡Ay, caramba!"
+        },
+        "413": {
+            "name": "Våffeljärn",
+            "description": "Grädda emojivåfflor med krispiga kanter och fluffig insida. Perfekt till brunch!"
+        },
+        "414": {
+            "name": "Emojichokladfontäner",
+            "description": "Ringla smält emojichoklad över allt. Sött och syndigt!"
+        },
+        "415": {
+            "name": "Emojikannibalkök",
+            "description": "Laga emojis med andra emojis som ingredienser."
+        },
+        "416": {
+            "name": "Svarta hålets emojifritös",
+            "description": "Fritera emojis i ett svart hål och utnyttja dess enorma energi. De kommer tillbaka krispiga!"
+        },
+        "417": {
+            "name": "Emojimatkrigsarena",
+            "description": "Gör om ditt kök till en arena för matkrig. Det blir kladdigt, kaotiskt och märkligt lönsamt."
+        },
+        "418": {
+            "name": "Levande deg",
+            "description": "Den här degen rör sig själv och formar sig till perfekta emojibröd. Ibland försöker den rymma."
+        },
+        "419": {
+            "name": "Den oändliga buffén",
+            "description": "En buffé som aldrig tar slut... men maten kanske börjar äta dig i stället."
+        },
+        "500": {
+            "name": "Kvastar",
+            "description": "För att städa efter djuren när de ehh... gör nummer två."
+        },
+        "501": {
+            "name": "Djurtränare",
+            "description": "Tränarna lär djuren trick, så att djurparken blir effektivare."
+        },
+        "502": {
+            "name": "Lyxhagar",
+            "description": "Rusta upp djurens hem så att de håller sig glada och produktiva."
+        },
+        "503": {
+            "name": "Exotiska djur",
+            "description": "Skaffa sällsynta och exotiska djur som lockar större publik."
+        },
+        "504": {
+            "name": "Zoomaskotar",
+            "description": "Vänliga maskotar lockar besökare och ökar intäkterna."
+        },
+        "505": {
+            "name": "Veterinärkliniker",
+            "description": "En egen klinik håller djuren friska."
+        },
+        "506": {
+            "name": "Skuggiga platser",
+            "description": "Skapa skuggiga platser så att djur och besökare håller sig svala när det är varmt."
+        },
+        "507": {
+            "name": "Klappstationer",
+            "description": "Särskilda platser där besökarna tryggt kan umgås med djuren."
+        },
+        "508": {
+            "name": "Djurskötselkit",
+            "description": "Regelbunden pälsvård får djuren att se ut och må som bäst."
+        },
+        "509": {
+            "name": "Besöksbänkar",
+            "description": "Bekväma sittplatser för trötta besökare."
+        },
+        "510": {
+            "name": "Souvenirbutiker",
+            "description": "En butik som säljer souvenirer med djurtema."
+        },
+        "511": {
+            "name": "Fotobås med djur",
+            "description": "Besökarna kan ta bilder med djuren."
+        },
+        "512": {
+            "name": "Zootåg",
+            "description": "Ett minitåg tar med besökarna på en tur genom djurparken."
+        },
+        "513": {
+            "name": "Djurens talangjakt",
+            "description": "Ordna en talangtävling där djuren visar trick"
+        },
+        "514": {
+            "name": "Djurparad",
+            "description": "Ordna en daglig parad där djuren marscherar genom djurparken."
+        },
+        "515": {
+            "name": "Överprisade snacks",
+            "description": "Ta ockerpriser av besökarna för snacks med djurtema"
+        },
+        "516": {
+            "name": "Djurarbetskraft",
+            "description": "Sätt djuren i arbete!"
+        },
+        "517": {
+            "name": "Ordningsvaktsapor",
+            "description": "Träna apor att hålla ordning på stökiga folkmassor."
+        },
+        "518": {
+            "name": "Förhistoriska djur",
+            "description": "Ta hit dinosaurier och andra utdöda djur till djurparken.",
+            "quote": "Livet, eh, hittar en väg"
+        },
+        "519": {
+            "name": "Enhörningar",
+            "description": "Vem vill inte se en flygande enhörning?"
+        },
+        "600": {
+            "name": "Bättre verktyg",
+            "description": "Bättre verktyg för att skapa emojis snabbare."
+        },
+        "601": {
+            "name": "Fler arbetare",
+            "description": "Öka antalet anställda i fabriken."
+        },
+        "602": {
+            "name": "Större kugghjul",
+            "description": "Större kugghjul ger plats för större maskiner."
+        },
+        "603": {
+            "name": "Muttrar och bultar",
+            "description": "De ser till att allt inte faller isär."
+        },
+        "604": {
+            "name": "Löpande band",
+            "description": "Effektivisera produktionen med löpande band som flyttar emojis snabbare än någonsin!"
+        },
+        "605": {
+            "name": "Kvalitetskontroll",
+            "description": "Se till att varje emoji är perfekt med ett eget team för kvalitetskontroll."
+        },
+        "606": {
+            "name": "Fabriksutbyggnad",
+            "description": "Bygg ut fabriken så att den rymmer fler maskiner och arbetare. Större är bättre!"
+        },
+        "607": {
+            "name": "Snabbpressar",
+            "description": "Uppgradera till snabbpressar som stansar ut emojis i blixtfart."
+        },
+        "608": {
+            "name": "Fabriksgym",
+            "description": "Ett gym där arbetarna håller sig i form och pigga. Friska arbetare är produktiva arbetare!"
+        },
+        "609": {
+            "name": "Fabriksvakter",
+            "description": "Skydda fabriken mot emojitjuvar och industrispionage."
+        },
+        "610": {
+            "name": "Fabriksåtervinning",
+            "description": "Återvinn avfall till nya emojis och minska både kostnader och miljöpåverkan."
+        },
+        "611": {
+            "name": "Underhållsstegar",
+            "description": "Sätt upp stegar för att enkelt nå höga maskiner. Underhåll har aldrig varit enklare!"
+        },
+        "612": {
+            "name": "Kraftiga hammare",
+            "description": "Uppgradera till kraftiga hammare för snabbare montering och reparationer. Krossa ineffektiviteten!"
+        },
+        "613": {
+            "name": "Precisionsnycklar",
+            "description": "Dra åt bultar och skruvar med precisionsnycklar. Inga fler lösa trådar i produktionen!"
+        },
+        "614": {
+            "name": "Skruvmejselsats",
+            "description": "En komplett sats skruvmejslar för att finjustera maskinerna. Varje detalj räknas!"
+        },
+        "615": {
+            "name": "Bättre verktygslåda",
+            "description": "En välfylld verktygslåda ser till att arbetarna har rätt verktyg för varje jobb.",
+            "quote": "Var la jag- den- var är- äh, strunt samma!"
+        },
+        "616": {
+            "name": "Förstärkta väggar",
+            "description": "Förstärk fabriksväggarna så att de tål kaoset i höghastighetsproduktionen."
+        },
+        "617": {
+            "name": "Råttfällor",
+            "description": "Håll jobbiga gnagare borta från fabriken. Inga fler gnagda sladdar eller stulna emojis!"
+        },
+        "618": {
+            "name": "Fabrikschefer",
+            "description": "Absolut inget arbete blir gjort utan en sådan.",
+            "quote": "Och glöm inte: ledningen önskar att toalettpauser hålls under en minut!"
+        },
+        "619": {
+            "name": "Robotarbetare",
+            "description": "Byt ut svaga mänskliga arbetare mot starka androider!"
+        },
+        "700": {
+            "name": "Basketplaner",
+            "description": "En anledning att träffas.",
+            "quote": "Swish, swish, swish. Bara nät. Och hakorna föll i golvet."
+        },
+        "701": {
+            "name": "Basebollplaner",
+            "description": "Det här blir garanterat en homerun."
+        },
+        "702": {
+            "name": "Squashbanor",
+            "description": "Är det en grönsak eller en sport?"
+        },
+        "703": {
+            "name": "Frisbees",
+            "description": "Den ultimata sporten",
+            "quote": "Hoppas ingen någonsin kommer på att kombinera det här med golf..."
+        },
+        "704": {
+            "name": "Volleybollplaner",
+            "description": "Den ultimata sporten"
+        },
+        "705": {
+            "name": "Pingisbord",
+            "description": "En sport som fått sitt namn efter ljudet den låter.",
+            "quote": "Bästa sättet att bekämpa kommunister"
+        },
+        "706": {
+            "name": "Golfbanor",
+            "description": "En sport där man slår på en boll med en klubba och kör en cool golfbil.",
+            "quote": "En presidentsport"
+        },
+        "800": {
+            "name": "Spargrisar",
+            "description": "Nöff nöff!"
+        },
+        "801": {
+            "name": "Större emojipåsar",
+            "description": "Nu kan du bära ännu fler emojis."
+        },
+        "802": {
+            "name": "Emojikreditkort",
+            "description": "Perfekt för att spendera dina surt förvärvade emojis."
+        },
+        "803": {
+            "name": "Satsning på utbildning",
+            "description": "Bättre utbildning, bättre emojiritande."
+        },
+        "804": {
+            "name": "Satsning på innovation",
+            "description": "Mer innovation, mer innovativa emojis."
+        },
+        "900": {
+            "name": "Karuseller",
+            "description": "You spin me right 'round, baby!"
+        },
+        "901": {
+            "name": "Rutschkanor",
+            "description": "Do you slide on all your nights like this? (I might)"
+        },
+        "902": {
+            "name": "Pariserhjul",
+            "description": "Högst upp, det var där hon krossade mitt hjärta."
+        },
+        "903": {
+            "name": "Cirkus",
+            "description": "Det finns bara två sorters människor i världen. De som underhåller och de som tittar på."
+        },
+        "904": {
+            "name": "Emojijonglör",
+            "description": "Det sägs att han aldrig har tappat bollen."
+        },
+        "1000": {
+            "name": "Emojival",
+            "description": "Må den bästa emojin vinna!"
+        },
+        "1001": {
+            "name": "Emojistimulans",
+            "description": "Du får en emoji, och du, och du, alla får emojis!"
+        },
+        "1002": {
+            "name": "Emojitalman",
+            "description": "Tillsätt din alldeles egen emojitalman, så att allt går din väg."
+        },
+        "1003": {
+            "name": "Emojilagar",
+            "description": "All offentlig makt utgår från emojifolket..."
+        },
+        "1004": {
+            "name": "Globalt emojiförbund",
+            "description": "Ökar samarbetet mellan emojiländer."
+        },
+        "1100": {
+            "name": "Teleskop",
+            "description": "Spana mot stjärnorna och upptäck emojiplaneter."
+        },
+        "1101": {
+            "name": "Parabolantenner",
+            "description": "Blicka bortom Vintergatan mot galaxen Emojigatan."
+        },
+        "1102": {
+            "name": "Astronauter",
+            "description": "Någon måste ju sköta dina rymdstationer."
+        },
+        "1103": {
+            "name": "Raketer",
+            "description": "Flyger jättefort."
+        },
+        "1104": {
+            "name": "☍⍜⋔⋔⟒⍀ ⟟ ⎎⍀⟒⎅...",
+            "description": "...⍜☊⊑ ⏁⏃⍀ ⋔⟒⎅ ☌⏃⌰⋏⏃ ⋏⊬⏃ ⟒⋔⍜⟊⟟⌇.",
+            "quote": "⏁⍀⊬☊☍ ⌿⏃ ⋔⟟⏁⏁ ⏃⋏⌇⟟☍⏁⟒ ⎎⟒⋔ ☌⏃⋏☌⟒⍀ ⎎⍜⍀ ⏃⏁⏁ ⌰⏃⌇⏃ ⎍⌿⌿ ⋔⟟⋏ ⊑⟒⋔⌰⟟☌⊑⟒⏁"
+        },
+        "1105": {
+            "name": "☍⍜⋏⌇⏁⟟☌⏁ ⍜⏚⟊⟒☍⏁",
+            "description": "⎅⟒⏁⏁⏃ ⍜⏚⟊⟒☍⏁ ⊑⏃⍀ ⍜⏃⋏⏃⎅⟒ ☍⍀⏃⎎⏁⟒⍀."
+        },
+        "30000": {
+            "name": "Potatis",
+            "description": "Potatastiskt! Potatis är ryggraden på varje gård."
+        },
+        "30001": {
+            "name": "Morötter",
+            "description": "Här är moroten du behövde! Bra för synen och för emojiaffärerna."
+        },
+        "30002": {
+            "name": "Gurkor",
+            "description": "Cool som en gurka! De här fräscha grönsakerna passar perfekt i sallader och som inläggning.",
+            "quote": "Jag är Pickle Rick!"
+        },
+        "30003": {
+            "name": "Paprikor",
+            "description": "Söt eller stark, paprika ger färg och smak åt din gård.",
+            "quote": "Paprika? Finns det en mammarika också?"
+        },
+        "30004": {
+            "name": "Tomater",
+            "description": "Saftiga och mångsidiga, tomater är en favorit på gården."
+        },
+        "30005": {
+            "name": "Sallad",
+            "description": "Vänd blad och satsa på sallad! Den håller gården fräsch och grön."
+        },
+        "30006": {
+            "name": "Broccoli",
+            "description": "Små träd med stora fördelar!"
+        },
+        "30007": {
+            "name": "Lök",
+            "description": "Full av smak och tårar - löken är en baskomponent i köket och ett måste på gården.",
+            "quote": "Troll är som lökar. Lökar har lager. Troll har lager."
+        },
+        "30008": {
+            "name": "Vitlök",
+            "description": "Vitlök ger smak åt maten och skydd åt gården.",
+            "quote": "Funkar utmärkt om du har vampyrproblem!"
+        },
+        "30009": {
+            "name": "Majs",
+            "description": "Majs är en mångsidig gröda, perfekt att grilla och poppa.",
+            "quote": "Majsterligt!"
+        },
+        "30010": {
+            "name": "Bönor",
+            "description": "Proteinrika och perfekta när gården ska växa.",
+            "quote": "Bönor!"
+        },
+        "30011": {
+            "name": "Jordnötter",
+            "description": "Nötiga och goda, jordnötter är perfekta att snacka på och höjer gårdens produktivitet."
+        },
+        "30012": {
+            "name": "Pumpor",
+            "description": "Jättestora, orangea och perfekta till pajer eller att skrämma kråkor. Pumpor är en höstfavorit!",
+            "quote": "Pumpkin spice and everything nice!"
+        },
+        "30013": {
+            "name": "Jordgubbar",
+            "description": "Söta, saftiga och perfekta till efterrätt. Jordgubbar är bärömt goda!"
+        },
+        "30014": {
+            "name": "Blåbär",
+            "description": "Små men mäktiga...",
+            "quote": "I'm blue da ba dee da ba di"
+        },
+        "30015": {
+            "name": "Auberginer",
+            "description": "Lila och mångsidiga, auberginer är perfekta att grilla, rosta och emojiodla.",
+            "quote": "Min pojkvän älskar aubergine-emojin, han skickar den till mig hela tiden!"
+        },
+        "30016": {
+            "name": "Zucchini",
+            "description": "Gröna och rikliga, zucchini är en sommarsquash som bara fortsätter att ge."
+        },
+        "30017": {
+            "name": "Avokado",
+            "description": "Krämiga och goda, avokado är mackans stjärna och en gårdsfavorit."
+        },
+        "30018": {
+            "name": "Sötpotatis",
+            "description": "Potatisens söta kusin."
+        },
+        "30019": {
+            "name": "Ärtor",
+            "description": "Ärtor!"
+        },
+        "30020": {
+            "name": "Rädisor",
+            "description": "Starka och krispiga, rädisor ger en kick åt både gården och maten."
+        },
+        "30021": {
+            "name": "Svamp",
+            "description": "Svampigt kul! Svampar är egentligen inte växter, visste du det?",
+            "quote": "Han är en riktig champinjon!"
+        },
+        "30022": {
+            "name": "Ananas",
+            "description": "Tropisk och syrlig."
+        },
+        "30023": {
+            "name": "Vattenmeloner",
+            "description": "Saftiga och uppfriskande, vattenmeloner är den ultimata sommargrödan."
+        },
+        "30024": {
+            "name": "Kiwi",
+            "description": "Luddig på utsidan, söt på insidan. Kiwi är en gårdsfavorit!"
+        },
+        "30025": {
+            "name": "Vindruvor",
+            "description": "Perfekta att snacka på, pressa juice av eller göra vin av.",
+            "quote": "I druvan ligger sanningen."
+        },
+        "30026": {
+            "name": "Körsbär",
+            "description": "Söta och syrliga, körsbär är en härlig godbit och en gårdsfavorit."
+        },
+        "50000": {
+            "name": "Hundhjälpare",
+            "description": "Trycker på skärmen med nosen.",
+            "quote": "VOFF! Jag hjälper dig att få emojis!"
+        },
+        "50001": {
+            "name": "Katthjälpare",
+            "description": "Kittlar dig med morrhåren så att du trycker snabbare.",
+            "quote": "Mjau! Jag hjälper dig att få emojis!"
+        },
+        "50002": {
+            "name": "Ankhjälpare",
+            "description": "Pickar dig i sidan med näbben så att du trycker snabbare.",
+            "quote": "Kvack! Jag hjälper dig att få emojis!"
+        },
+        "50003": {
+            "name": "Kohjälpare",
+            "description": "Svingar juvret mot skärmen så att du trycker snabbare.",
+            "quote": "Muu! Jag hjälper dig att få emojis!"
+        },
+        "50004": {
+            "name": "Grishjälpare",
+            "description": "Springer runt i rummet och har kul, gör dig glad och får dig att trycka snabbare.",
+            "quote": "Nöff! Jag hjälper dig att få emojis!"
+        },
+        "50005": {
+            "name": "Kaninhjälpare",
+            "description": "Studsar in i skärmen så att dina tryck blir snabbare.",
+            "quote": "Hopp! Jag hjälper dig att få emojis!"
+        },
+        "50006": {
+            "name": "Grodhjälpare",
+            "description": "Hoppar upp på skärmen så att dina tryck blir snabbare.",
+            "quote": "Kvack! Jag hjälper dig att få emojis!"
+        },
+        "50007": {
+            "name": "Elefanthjälpare",
+            "description": "Snabeln är perfekt för att trycka på skärmen!",
+            "quote": "Tuuut! Jag hjälper dig att få emojis!"
+        },
+        "50008": {
+            "name": "Aphjälpare",
+            "description": "Ger dig massor av bananer som stillar hungern, så att du trycker snabbare!",
+            "quote": "Oo-oo-aa! Jag hjälper dig att få emojis!"
+        },
+        "50009": {
+            "name": "Pingvinhjälpare",
+            "description": "Pickar på skärmen med näbben.",
+            "quote": "Vagg vagg! Jag hjälper dig att få emojis!"
+        },
+        "100000": {
+            "name": "Emojipraktikanter",
+            "description": "Praktikanter ser till att emojiregeringen går smidigt!"
+        },
+        "100001": {
+            "name": "Emojibyråkrater",
+            "description": "En emojiregering behöver tjänstemän för att fungera.",
+            "quote": "Det ser ut som att du stiftar en lag. Behöver du hjälp?"
+        }
+    },
+    "effects": {
+        "0": {
+            "title": "x2 tryckkraft",
+            "description": "Emojis per tryck fördubblade!"
+        },
+        "1": {
+            "title": "x3 tryckkraft",
+            "description": "Emojis per tryck tredubblade!"
+        },
+        "100": {
+            "title": "x2 emojiproduktion",
+            "description": "Emojiproduktionen fördubblad!"
+        },
+        "101": {
+            "title": "x77 emojiproduktion",
+            "description": "Emojiproduktionen gånger 77!"
+        },
+        "110": {
+            "title": "Halverad emojiproduktion",
+            "description": "Emojiproduktionen halverad!"
+        },
+        "200": {
+            "title": "Emojigåva",
+            "description": "En timmes emojis!"
+        }
+    }
+}

@@ -11,14 +11,30 @@ import deUi from "./locales/de/ui.json";
 import deContent from "./locales/de/content.json";
 import frUi from "./locales/fr/ui.json";
 import frContent from "./locales/fr/content.json";
+import hiUi from "./locales/hi/ui.json";
+import hiContent from "./locales/hi/content.json";
+import nbUi from "./locales/nb/ui.json";
+import nbContent from "./locales/nb/content.json";
+import daUi from "./locales/da/ui.json";
+import daContent from "./locales/da/content.json";
+import svUi from "./locales/sv/ui.json";
+import svContent from "./locales/sv/content.json";
+import nlUi from "./locales/nl/ui.json";
+import nlContent from "./locales/nl/content.json";
+import itUi from "./locales/it/ui.json";
+import itContent from "./locales/it/content.json";
+import ukUi from "./locales/uk/ui.json";
+import ukContent from "./locales/uk/content.json";
 
 /**
  * To add a new language:
  * 1. Add `locales/<code>/ui.json` and `locales/<code>/content.json`
  * 2. Import them below and add the language to `resources` and `languageNames`
- * 3. Run `npm run i18n:check` to find missing or broken strings
+ * 3. If the language is not written in the Latin script, give it a font in components/generalUI/Text.tsx
+ * 4. Add it to CFBundleLocalizations in app.json
+ * 5. Run `npm run i18n:check` to find missing or broken strings
  */
-export const supportedLanguages = ["en", "es", "de", "fr"] as const;
+export const supportedLanguages = ["en", "es", "de", "fr", "it", "nl", "nb", "da", "sv", "uk", "hi"] as const;
 export type Language = typeof supportedLanguages[number];
 /** "system" follows the device language */
 export type LanguagePreference = Language | "system";
@@ -29,6 +45,13 @@ export const languageNames: Record<Language, string> = {
     es: "Español",
     de: "Deutsch",
     fr: "Français",
+    it: "Italiano",
+    nl: "Nederlands",
+    nb: "Norsk",
+    da: "Dansk",
+    sv: "Svenska",
+    uk: "Українська",
+    hi: "हिन्दी",
 };
 
 // English game content (building, upgrade and effect texts) lives in the game data files
@@ -38,6 +61,20 @@ const resources = {
     es: { ui: esUi, content: esContent },
     de: { ui: deUi, content: deContent },
     fr: { ui: frUi, content: frContent },
+    hi: { ui: hiUi, content: hiContent },
+    nb: { ui: nbUi, content: nbContent },
+    da: { ui: daUi, content: daContent },
+    sv: { ui: svUi, content: svContent },
+    nl: { ui: nlUi, content: nlContent },
+    it: { ui: itUi, content: itContent },
+    uk: { ui: ukUi, content: ukContent },
+};
+
+// Device language codes that should use one of the supported languages
+const languageAliases: Record<string, Language> = {
+    // Norwegian, and Norwegian Nynorsk, whose speakers all read Bokmål
+    no: "nb",
+    nn: "nb",
 };
 
 function isSupported(code: string | null | undefined): code is Language {
@@ -47,8 +84,10 @@ function isSupported(code: string | null | undefined): code is Language {
 /** The first of the device's preferred languages that the game supports, or English */
 export function getDeviceLanguage(): Language {
     try {
-        const match = getLocales().find(locale => isSupported(locale.languageCode));
-        if (match) return match.languageCode as Language;
+        for (const locale of getLocales()) {
+            const code = locale.languageCode ? languageAliases[locale.languageCode] ?? locale.languageCode : null;
+            if (isSupported(code)) return code;
+        }
     } catch (error) {
         console.warn("Could not read device locales", error);
     }
