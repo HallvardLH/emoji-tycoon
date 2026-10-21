@@ -82,7 +82,38 @@
         },
         "18": {
             "name": "Emojisingulariteetti",
-            "plural": "Emojisingulariteetit"
+            "plural": "Emojisingulariteetit",
+            "description": "Siinä se. Mitään ei ole jäljellä emojien lisäksi. Teit sen. Vai teitkö?"
+        },
+        "7": {
+            "name": "Emojielokuvateatteri",
+            "plural": "Emojielokuvateatterit",
+            "description": "Kassamagneetteja suosikkiemojiesi tähdittäminä. Jokaisen lipun mukana tulee popcornia ja emojeja."
+        },
+        "11": {
+            "name": "Emojilentoyhtiö",
+            "plural": "Emojilentoyhtiöt",
+            "description": "Lennättää emojeja maailman joka kolkkaan. Ikkunapaikalla, totta kai."
+        },
+        "19": {
+            "name": "Emojiaikakone",
+            "plural": "Emojiaikakoneet",
+            "description": "Pyrähtää aikojen alkuun piirtämään kaikkein ensimmäiset emojit. Sitten toiset."
+        },
+        "20": {
+            "name": "Alkuräjähdys",
+            "plural": "Alkuräjähdykset",
+            "description": "Upouusi maailmankaikkeus, ja tällä kertaa se on emojeja pohjia myöten."
+        },
+        "21": {
+            "name": "Emojimultiversumi",
+            "plural": "Emojimultiversumit",
+            "description": "Loputtomasti universumeja, ja jokaisessa oma emojipohattansa. Nyt he kaikki työskentelevät sinulle."
+        },
+        "22": {
+            "name": "Ensimmäinen emoji",
+            "plural": "Ensimmäiset emojit",
+            "description": "Täältä kaikki alkoi. Se on katsellut napautteluasi koko ajan."
         }
     },
     "upgrades": {
@@ -188,27 +219,33 @@
         },
         "100": {
             "name": "Vahvempi käsivarsi",
-            "description": "Vahvemmalla käsivarrella piirrät emojeja nopeammin."
+            "description": "Vahvemmalla käsivarrella piirrät emojeja nopeammin.",
+            "quote": "Sattuu, mutta se on sen arvoista."
         },
         "101": {
             "name": "Notkeat sormet",
-            "description": "Notkeilla sormilla syntyy monimutkaisempia emojeja."
+            "description": "Notkeilla sormilla syntyy monimutkaisempia emojeja.",
+            "quote": "Notkeat? No, ehkä. Mutta silti kipeät."
         },
         "102": {
             "name": "Kaksi kättä",
-            "description": "Tuplasti käsiä, tuplasti emojeja."
+            "description": "Tuplasti käsiä, tuplasti emojeja.",
+            "quote": "Tuplasti ylpeyttä, tuplasti lankeemusta."
         },
         "103": {
             "name": "Lakatut kynnet",
-            "description": "Kynsilakka saa sinut napauttamaan nopeammin, etkö tiennyt?"
+            "description": "Kynsilakka saa sinut napauttamaan nopeammin, etkö tiennyt?",
+            "quote": "Ja näytät tosi söpöltä!"
         },
         "104": {
             "name": "Jalat",
-            "description": "Jaloilla piirtäminen tuplaa tuotannon (eikä se ole yhtään vaikeaa)!"
+            "description": "Jaloilla piirtäminen tuplaa tuotannon (eikä se ole yhtään vaikeaa)!",
+            "quote": "Ei yhtään vaikeaa? Vaimoni otti eron, kun näki jalkani perheen tabletilla."
         },
         "105": {
             "name": "Kieli",
-            "description": "Vuosien harjoittelulla sinäkin voit oppia piirtämään kielelläsi!"
+            "description": "Vuosien harjoittelulla sinäkin voit oppia piirtämään kielelläsi!",
+            "quote": "mmmhmh mmpuuh mhhäääm öhmmmmuhm ahumhmhm"
         },
         "106": {
             "name": "Nenä",
@@ -217,19 +254,23 @@
         },
         "107": {
             "name": "Korva",
-            "description": "Työnnä kynä korvaan, käännä päätä 90 astetta ja piirrä sillä!"
+            "description": "Työnnä kynä korvaan, käännä päätä 90 astetta ja piirrä sillä!",
+            "quote": "Mitä? Häh? En kuule- mi- häh... En kuule yhtään mitään- mitä?!"
         },
         "108": {
             "name": "Suu",
-            "description": "Laita lyijykynä suuhun ja piirrä sillä!"
+            "description": "Laita lyijykynä suuhun ja piirrä sillä!",
+            "quote": "Ei kannata. Sattuu liikaa."
         },
         "109": {
             "name": "Vahvempi jalka",
-            "description": "Vahvemmalla jalalla piirrät emojeja jaloillasi paljon nopeammin."
+            "description": "Vahvemmalla jalalla piirrät emojeja jaloillasi paljon nopeammin.",
+            "quote": "Jalkani on nyt valtava. Vain vasen. Kävelen ympyrää."
         },
         "110": {
             "name": "Isommat keuhkot",
-            "description": "Isommilla keuhkoilla piirrät emojeja nopeammin."
+            "description": "Isommilla keuhkoilla piirrät emojeja nopeammin.",
+            "quote": "Happea. Happea. Happea."
         },
         "111": {
             "name": "Isommat aivot",
@@ -237,7 +278,8 @@
         },
         "112": {
             "name": "Hiukset",
-            "description": "Heiluttele pensseliä hiuksillasi ja luo emojeja. Kuka tarvitsee käsiä, kun on tyyliä?"
+            "description": "Heiluttele pensseliä hiuksillasi ja luo emojeja. Kuka tarvitsee käsiä, kun on tyyliä?",
+            "quote": "Kuka tarvitsee käsiä? Minä. Minä tarvitsen käsiä. Tästä tulee kalju."
         },
         "113": {
             "name": "Kulmakarvat",
@@ -245,7 +287,8 @@
         },
         "114": {
             "name": "Selkä",
-            "description": "Makaa selälläsi ja piirrä emojeja kädet selän takana. Venyttelyä ja piirtelyä!"
+            "description": "Makaa selälläsi ja piirrä emojeja kädet selän takana. Venyttelyä ja piirtelyä!",
+            "quote": "Makaa selälläsi, ne sanoivat. Venyttelyä ja piirtelyä, ne sanoivat. En pääse ylös."
         },
         "115": {
             "name": "Hampaat",
@@ -253,7 +296,8 @@
         },
         "116": {
             "name": "Napa",
-            "description": "Piirrä emojeja navallasi. Ainutlaatuinen taito, jota on vaikea hallita!"
+            "description": "Piirrä emojeja navallasi. Ainutlaatuinen taito, jota on vaikea hallita!",
+            "quote": "Piirrän navallani. Äiti on niin ylpeä."
         },
         "117": {
             "name": "Kaikupiirtäminen",
@@ -261,23 +305,28 @@
         },
         "118": {
             "name": "Telekineettinen piirtäminen",
-            "description": "Miksi käyttää käsiä, kun voit piirtää emojeja ajatuksen voimalla?"
+            "description": "Miksi käyttää käsiä, kun voit piirtää emojeja ajatuksen voimalla?",
+            "quote": "Pystyn liikuttamaan esineitä ajatuksen voimalla, ja sinä teetät minulla iskunsilmähymiöitä."
         },
         "119": {
             "name": "Kvanttisormet",
-            "description": "Sormiesi kvanttilomittuminen mahdollistaa emojien piirtämisen valon nopeudella."
+            "description": "Sormiesi kvanttilomittuminen mahdollistaa emojien piirtämisen valon nopeudella.",
+            "quote": "Sormeni ovat kahdessa paikassa yhtä aikaa. Kummassakin ne vihaavat sinua."
         },
         "200": {
             "name": "Paremmat lyijykynät",
-            "description": "Paremmilla kynillä yksityiskohtaisempia emojeja."
+            "description": "Paremmilla kynillä yksityiskohtaisempia emojeja.",
+            "quote": "Paremmat kynät eivät korjaa lahjattomuutta."
         },
         "201": {
             "name": "Erikoisväriliidut",
-            "description": "Näillä erikoisliiduilla taiteilijat tavoittavat sisäisen lapsensa."
+            "description": "Näillä erikoisliiduilla taiteilijat tavoittavat sisäisen lapsensa.",
+            "quote": "Löysin sisäisen lapseni. Hänkin on pettynyt minuun."
         },
         "202": {
             "name": "Paremmat siveltimet",
-            "description": "Paremmilla siveltimillä taiteellisempia emojeja."
+            "description": "Paremmilla siveltimillä taiteellisempia emojeja.",
+            "quote": "Taiteellisempia miten? Sain maalattua vain karmivan version vaimostani. Rahat takaisin."
         },
         "203": {
             "name": "Täytekynät",
@@ -334,7 +383,8 @@
         },
         "215": {
             "name": "Comic Sans -fontti",
-            "description": "Rakasta tai vihaa, se tekee emojeistasi... ainutlaatuisia!"
+            "description": "Rakasta tai vihaa, se tekee emojeistasi... ainutlaatuisia!",
+            "quote": "Minä lopetan."
         },
         "216": {
             "name": "Tekoälytaidegeneraattori",
@@ -353,11 +403,13 @@
         },
         "219": {
             "name": "Veri",
-            "description": "Verellä maalaaminen tekee emojeista erityisen siistejä!"
+            "description": "Verellä maalaaminen tekee emojeista erityisen siistejä!",
+            "quote": "Kenen? KENEN?"
         },
         "300": {
             "name": "Maanviljelijät",
-            "description": "Mikä maatila on ilman viljelijää?!"
+            "description": "Mikä maatila on ilman viljelijää?!",
+            "quote": "Perin isältäni 80 hehtaaria, ja sinä kasvatat niillä hymiöitä."
         },
         "301": {
             "name": "Taimi",
@@ -366,7 +418,8 @@
         },
         "302": {
             "name": "Paremmat työkalut",
-            "description": "Paljon nopeampaa viljelyä!"
+            "description": "Paljon nopeampaa viljelyä!",
+            "quote": "Uudet työkalut, sama palkka. Kiitos ei mistään."
         },
         "303": {
             "name": "Traktorit",
@@ -374,11 +427,13 @@
         },
         "304": {
             "name": "Maalaistalot",
-            "description": "Viihtyisä koti, jossa viljelijäsi voivat levätä ja ladata akkujaan."
+            "description": "Viihtyisä koti, jossa viljelijäsi voivat levätä ja ladata akkujaan.",
+            "quote": "'Viihtyisä' on hauska sana vajasta, jossa on ämpäri."
         },
         "305": {
             "name": "Emojilehmät",
-            "description": "Tuottaa lisää emuuuuuujeja."
+            "description": "Tuottaa lisää emuuuuuujeja.",
+            "quote": "Vielä yksi ammuu-vitsi, niin minä kaadan SINUT."
         },
         "306": {
             "name": "Kastelujärjestelmä",
@@ -387,7 +442,8 @@
         },
         "307": {
             "name": "Linnunpelättimet",
-            "description": "Pitää ärsyttävät lintuemojit poissa maatiloiltasi!"
+            "description": "Pitää ärsyttävät lintuemojit poissa maatiloiltasi!",
+            "quote": "Linnut eivät pelkää. Naapurit pelkäävät."
         },
         "308": {
             "name": "Kompostorit",
@@ -395,7 +451,8 @@
         },
         "309": {
             "name": "Kasvihuoneet",
-            "description": "Kasvata emojeja ympäri vuoden säästä riippumatta!"
+            "description": "Kasvata emojeja ympäri vuoden säästä riippumatta!",
+            "quote": "Taas yksi kasvihuone tarvitsee apuasi. Merkitsen sen karttaasi."
         },
         "310": {
             "name": "Tuulimyllyt",
@@ -404,7 +461,8 @@
         },
         "311": {
             "name": "Emojihedelmätarhat",
-            "description": "Kasvata emojipuita, jotka tekevät hedelmää ympäri vuoden!"
+            "description": "Kasvata emojipuita, jotka tekevät hedelmää ympäri vuoden!",
+            "quote": "Puut kävelevät. Puut ovat vihaisia."
         },
         "312": {
             "name": "Sadonkorjuujuhla",
@@ -425,11 +483,13 @@
         },
         "316": {
             "name": "Tulevaisuuden emojimaatila",
-            "description": "Maatilasi ovat nyt huipputeknisiä utopioita robotteineen, hologrammeineen ja lentävine traktoreineen. Tervetuloa tulevaisuuteen!"
+            "description": "Maatilasi ovat nyt huipputeknisiä utopioita robotteineen, hologrammeineen ja lentävine traktoreineen. Tervetuloa tulevaisuuteen!",
+            "quote": "Robotti vei työni. Sitten se kysyi minulta tietä."
         },
         "317": {
             "name": "Verikuu",
-            "description": "Verikuun alla satosi kasvaa nopeammin... mutta sille kasvaa myös hampaat."
+            "description": "Verikuun alla satosi kasvaa nopeammin... mutta sille kasvaa myös hampaat.",
+            "quote": "Porkkanoilla on nyt hampaat. Porkkanat purevat takaisin."
         },
         "318": {
             "name": "Viimeinen sato",
@@ -441,11 +501,13 @@
         },
         "400": {
             "name": "Terävät veitset",
-            "description": "Terävämmillä veitsillä emojien pilkkominen helpottuu."
+            "description": "Terävämmillä veitsillä emojien pilkkominen helpottuu.",
+            "quote": "Emojien pilkkominen? Mitä tarkoitat? Oletko hullu? Nämä ovat oikeita, eläviä, viattomia emojeja!"
         },
         "401": {
             "name": "Tarttumattomat pannut",
-            "description": "Tarttumattomilla pannuilla emojiateriat valmistuvat nopeammin."
+            "description": "Tarttumattomilla pannuilla emojiateriat valmistuvat nopeammin.",
+            "quote": "Kaikki tarttuu silti. Minäkin. Tähän työhön."
         },
         "402": {
             "name": "Paremmat uunit",
@@ -453,27 +515,33 @@
         },
         "403": {
             "name": "Laadukkaat raaka-aineet",
-            "description": "Laadukkaammat raaka-aineet tarkoittavat maukkaampia emojeja."
+            "description": "Laadukkaammat raaka-aineet tarkoittavat maukkaampia emojeja.",
+            "quote": "Samat pakaste-emojit. Uusi etiketti. Tuplahinta."
         },
         "404": {
             "name": "Kokin hattu",
-            "description": "Kokin hattu päässä emojien kokkaus nopeutuu."
+            "description": "Kokin hattu päässä emojien kokkaus nopeutuu.",
+            "quote": "Hattu ei tee mitään. Olen sanonut sen neljäkymmentä kertaa. Kukaan ei kuuntele."
         },
         "405": {
             "name": "Emojitehosekoittimet",
-            "description": "Sekoita emojeista herkullisia smoothieita ja keittoja sekunneissa!"
+            "description": "Sekoita emojeista herkullisia smoothieita ja keittoja sekunneissa!",
+            "quote": "ÄLÄ katso smoothieen."
         },
         "406": {
             "name": "Airfryerit",
-            "description": "Paista emojit täydellisiksi ennätysajassa. Rapeita ja kullanruskeita joka kerta!"
+            "description": "Paista emojit täydellisiksi ennätysajassa. Rapeita ja kullanruskeita joka kerta!",
+            "quote": "Se on uuni. Pieni uuni. Lakatkaa kutsumasta sitä airfryeriksi."
         },
         "407": {
             "name": "Sushibaarit",
-            "description": "Kääri emojisushia tarkasti ja tyylillä. Vaatii raakaa lahjakkuutta!"
+            "description": "Kääri emojisushia tarkasti ja tyylillä. Vaatii raakaa lahjakkuutta!",
+            "quote": "Raakaa lahjakkuutta vaaditaan. Minut palkattiin silti."
         },
         "408": {
             "name": "Salaattibaarit",
-            "description": "Heitä yhteen tuoreita emojisalaatteja monilla täytteillä. Terveellistä ja herkullista!"
+            "description": "Heitä yhteen tuoreita emojisalaatteja monilla täytteillä. Terveellistä ja herkullista!",
+            "quote": "Joku aivasti krutonkien päälle. Näin sen. En sanonut mitään."
         },
         "409": {
             "name": "Pizzauunit",
@@ -485,7 +553,8 @@
         },
         "411": {
             "name": "Emojijäätelökoneet",
-            "description": "Pyöräytä jäisiä emojiherkkuja, jotka ovat yhtä viileitä kuin herkullisia!"
+            "description": "Pyöräytä jäisiä emojiherkkuja, jotka ovat yhtä viileitä kuin herkullisia!",
+            "quote": "Rikki. Se on aina rikki. Se ei ole koskaan ollut ehjä."
         },
         "412": {
             "name": "Tacopisteet",
@@ -498,7 +567,8 @@
         },
         "414": {
             "name": "Emojisuklaasuihkulähteet",
-            "description": "Valuta sulaa emojisuklaata kaiken päälle. Makeaa ja hemmottelevaa!"
+            "description": "Valuta sulaa emojisuklaata kaiken päälle. Makeaa ja hemmottelevaa!",
+            "quote": "Eräs lapsi upotti koko naamansa siihen. Tarjoilimme sitä silti."
         },
         "415": {
             "name": "Emojikannibaalikeittiö",
@@ -510,23 +580,28 @@
         },
         "417": {
             "name": "Emojiruokasota-areena",
-            "description": "Muuta keittiösi ruokasota-areenaksi. Sotkuista, kaoottista ja oudon kannattavaa."
+            "description": "Muuta keittiösi ruokasota-areenaksi. Sotkuista, kaoottista ja oudon kannattavaa.",
+            "quote": "Oudon kannattavaa. Löydän yhä herneitä korvistani."
         },
         "418": {
             "name": "Elävä taikina",
-            "description": "Tämä taikina liikkuu itsestään ja muotoutuu täydelliseksi emojileiväksi. Joskus se yrittää karata."
+            "description": "Tämä taikina liikkuu itsestään ja muotoutuu täydelliseksi emojileiväksi. Joskus se yrittää karata.",
+            "quote": "Se karkasi. Siinä se. Mitä tästä seuraa?"
         },
         "419": {
             "name": "Loputon noutopöytä",
-            "description": "Noutopöytä, joka ei lopu koskaan... mutta ruoka saattaa alkaa syödä sinua."
+            "description": "Noutopöytä, joka ei lopu koskaan... mutta ruoka saattaa alkaa syödä sinua.",
+            "quote": "Se ei lopu koskaan. Olen ollut jälkiruokapöydässä maaliskuusta asti."
         },
         "500": {
             "name": "Luudat",
-            "description": "Siivoamiseen sen jälkeen, kun eläimet ovat öö... käyneet isommalla asialla."
+            "description": "Siivoamiseen sen jälkeen, kun eläimet ovat öö... käyneet isommalla asialla.",
+            "quote": "Minulla on maisterintutkinto. Lakaisen kirahvinkakkaa emojien takia."
         },
         "501": {
             "name": "Eläinkouluttajat",
-            "description": "Kouluttajat opettavat eläimille temppuja, mikä tehostaa pihan toimintaa."
+            "description": "Kouluttajat opettavat eläimille temppuja, mikä tehostaa pihan toimintaa.",
+            "quote": "Laama sylki päälleni. Taas."
         },
         "502": {
             "name": "Luksusaitaukset",
@@ -534,15 +609,18 @@
         },
         "503": {
             "name": "Eksoottiset eläimet",
-            "description": "Tuo harvinaisia ja eksoottisia eläimiä houkuttelemaan isompia yleisöjä."
+            "description": "Tuo harvinaisia ja eksoottisia eläimiä houkuttelemaan isompia yleisöjä.",
+            "quote": "Pingviini puri lasta. Kävijämäärä nousi 40 %."
         },
         "504": {
             "name": "Maskotit",
-            "description": "Ystävälliset maskotit houkuttelevat kävijöitä ja kasvattavat tuloja."
+            "description": "Ystävälliset maskotit houkuttelevat kävijöitä ja kasvattavat tuloja.",
+            "quote": "Tässä kirahviasussa on 35 astetta, ja joku lapsi potkaisi minua juuri."
         },
         "505": {
             "name": "Eläinlääkäriasemat",
-            "description": "Oma klinikka pitää eläimet terveinä."
+            "description": "Oma klinikka pitää eläimet terveinä.",
+            "quote": "Seitsemän vuotta eläinlääkiksessä. Tänään hoidan vuohta, joka söi puhelimen."
         },
         "506": {
             "name": "Varjoisat alueet",
@@ -607,15 +685,18 @@
         },
         "601": {
             "name": "Lisää työntekijöitä",
-            "description": "Kasvata tehtaan työntekijöiden määrää."
+            "description": "Kasvata tehtaan työntekijöiden määrää.",
+            "quote": "Lisää työntekijöitä, sama vessa. Yksi vessa."
         },
         "602": {
             "name": "Isommat rattaat",
-            "description": "Isommat rattaat mahdollistavat isommat koneet."
+            "description": "Isommat rattaat mahdollistavat isommat koneet.",
+            "quote": "Isommat rattaat, isommat onnettomuudet. Kysy Davelta. Ai niin."
         },
         "603": {
             "name": "Mutterit ja pultit",
-            "description": "Näillä varmistetaan, ettei kaikki hajoa käsiin."
+            "description": "Näillä varmistetaan, ettei kaikki hajoa käsiin.",
+            "quote": "Pitävät paikan koossa. Juuri ja juuri. Kuin avioliittoni."
         },
         "604": {
             "name": "Liukuhihnat",
@@ -639,7 +720,8 @@
         },
         "609": {
             "name": "Tehtaan vartiointi",
-            "description": "Suojaa tehdastasi emojivarkailta ja teollisuusvakoilulta."
+            "description": "Suojaa tehdastasi emojivarkailta ja teollisuusvakoilulta.",
+            "quote": "ET PÄÄSE OHI. Et ilman kulkukorttia."
         },
         "610": {
             "name": "Tehtaan kierrätys",
@@ -668,11 +750,13 @@
         },
         "616": {
             "name": "Vahvistetut seinät",
-            "description": "Vahvista tehtaan seinät kestämään pikatuotannon kaaos."
+            "description": "Vahvista tehtaan seinät kestämään pikatuotannon kaaos.",
+            "quote": "Pidä ovi! PIDÄ OVI!"
         },
         "617": {
             "name": "Hiirenloukut",
-            "description": "Pidä ärsyttävät jyrsijät poissa tehtaastasi. Ei enää nakerrettuja johtoja tai varastettuja emojeja!"
+            "description": "Pidä ärsyttävät jyrsijät poissa tehtaastasi. Ei enää nakerrettuja johtoja tai varastettuja emojeja!",
+            "quote": "Se on ansa!"
         },
         "618": {
             "name": "Tehtaanjohtajat",
@@ -690,7 +774,8 @@
         },
         "701": {
             "name": "Pesäpallokentät",
-            "description": "Tästä tulee varma kunnari."
+            "description": "Tästä tulee varma kunnari.",
+            "quote": "Kunnari? Pallo osui autooni. Taas."
         },
         "702": {
             "name": "Squash-kentät",
@@ -721,15 +806,18 @@
         },
         "901": {
             "name": "Isommat emojikassit",
-            "description": "Niihin mahtuu vieläkin enemmän emojeja."
+            "description": "Niihin mahtuu vieläkin enemmän emojeja.",
+            "quote": "Selkäni on rikki, mutta joo, isommat kassit."
         },
         "902": {
             "name": "Emojiluottokortit",
-            "description": "Kätevä tapa tuhlata kovalla työllä ansaitut emojisi."
+            "description": "Kätevä tapa tuhlata kovalla työllä ansaitut emojisi.",
+            "quote": "Hylätty. Korttisi on hylätty. Elämäsi on hylätty."
         },
         "903": {
             "name": "Investointi koulutukseen",
-            "description": "Parempi koulutus, paremmat emojinpiirtotaidot."
+            "description": "Parempi koulutus, paremmat emojinpiirtotaidot.",
+            "quote": "Opintolainani on emojeina. Maksan sitä vielä tuonpuoleisessa."
         },
         "904": {
             "name": "Investointi innovaatioihin",
@@ -745,19 +833,23 @@
         },
         "1002": {
             "name": "Maailmanpyörä",
-            "description": "Korkealla ylhäällä hän särki sydämeni."
+            "description": "Korkealla ylhäällä hän särki sydämeni.",
+            "quote": "Jumissa huipulla kaksi tuntia miehen kanssa, joka selitti kryptoa."
         },
         "1003": {
             "name": "Sirkus",
-            "description": "Maailmassa on vain kahdenlaisia ihmisiä: niitä, jotka viihdyttävät, ja niitä, jotka katsovat."
+            "description": "Maailmassa on vain kahdenlaisia ihmisiä: niitä, jotka viihdyttävät, ja niitä, jotka katsovat.",
+            "quote": "Treenasin akrobaatiksi kaksikymmentä vuotta. Nyt jongleeraan hymiöitä taaperoille."
         },
         "1004": {
             "name": "Emojijonglööri",
-            "description": "Hänen sanotaan pitävän aina kaikki pallot ilmassa."
+            "description": "Hänen sanotaan pitävän aina kaikki pallot ilmassa.",
+            "quote": "Pallot aina ilmassa? Unelmani putosivat."
         },
         "1100": {
             "name": "Emojivaalit",
-            "description": "Paras emoji voittakoon!"
+            "description": "Paras emoji voittakoon!",
+            "quote": "Paras emoji voittakoon. Häviäjistä huolehditaan."
         },
         "1101": {
             "name": "Emojielvytys",
@@ -777,7 +869,8 @@
         },
         "1300": {
             "name": "Kaukoputket",
-            "description": "Tähyile tähtiin ja löydä emojiplaneettoja."
+            "description": "Tähyile tähtiin ja löydä emojiplaneettoja.",
+            "quote": "Mekin näemme sinut. Olemme aina nähneet sinut."
         },
         "1301": {
             "name": "Satelliittiantennit",
@@ -785,11 +878,13 @@
         },
         "1302": {
             "name": "Astronautit",
-            "description": "Jonkun on pyöritettävä avaruusasemiasi."
+            "description": "Jonkun on pyöritettävä avaruusasemiasi.",
+            "quote": "Avaruudessa kukaan ei kuule huutoasi. Tarkistimme. Kahdesti."
         },
         "1303": {
             "name": "Raketit",
-            "description": "Lentää tosi lujaa."
+            "description": "Lentää tosi lujaa.",
+            "quote": "Lentää tosi lujaa. Niin lentävät jäännöksesikin."
         },
         "1304": {
             "name": "⏁⎍⌰⟒⋔⋔⟒ ⍀⏃⎍⊑⏃⌇⌇⏃...",
@@ -798,15 +893,18 @@
         },
         "1305": {
             "name": "⍜⎍⏁⍜ ⟒⌇⟟⋏⟒",
-            "description": "⏁⏃⌇⌇⏃ ⟒⌇⟟⋏⟒⟒⌇⌇⏃ ⌿⟟⟟⌰⟒⟒ ⏁⎍⋏⏁⟒⋔⏃⏁⍜⋏ ⋔⏃⊑⏁⟟."
+            "description": "⏁⏃⌇⌇⏃ ⟒⌇⟟⋏⟒⟒⌇⌇⏃ ⌿⟟⟟⌰⟒⟒ ⏁⎍⋏⏁⟒⋔⏃⏁⍜⋏ ⋔⏃⊑⏁⟟.",
+            "quote": "⏁⎍⌰⟒⋏ ⌰⎍⍜⌇⟒⌇⟟."
         },
         "30000": {
             "name": "Perunat",
-            "description": "Pottumahtavaa! Perunat ovat jokaisen maatilan selkäranka."
+            "description": "Pottumahtavaa! Perunat ovat jokaisen maatilan selkäranka.",
+            "quote": "Ei suolaa, ei pippuria. Anna vain vanha kunnon pottu, niin olen onnellinen kuin perunarutto!"
         },
         "30001": {
             "name": "Porkkanat",
-            "description": "Porkkanaa ilman keppiä!"
+            "description": "Porkkanaa ilman keppiä!",
+            "quote": "Ei. Ei naurata. Vielä yksi sanaleikki, niin istutan sinut."
         },
         "30002": {
             "name": "Kurkut",
@@ -820,15 +918,18 @@
         },
         "30004": {
             "name": "Tomaatit",
-            "description": "Mehukkaat ja monipuoliset tomaatit ovat maatilan suosikki."
+            "description": "Mehukkaat ja monipuoliset tomaatit ovat maatilan suosikki.",
+            "quote": "Mainioita heitettäviksi sitä kohti, joka suunnitteli tämän maatilan."
         },
         "30005": {
             "name": "Lehtisalaatti",
-            "description": "Lehtisalaatti pitää maatilasi raikkaana ja vihreänä - lehti kerrallaan."
+            "description": "Lehtisalaatti pitää maatilasi raikkaana ja vihreänä - lehti kerrallaan.",
+            "quote": "Tämän maatilan tylsin asia. Viljelijää lukuun ottamatta."
         },
         "30006": {
             "name": "Parsakaali",
-            "description": "Pieniä puita, suuria hyötyjä!"
+            "description": "Pieniä puita, suuria hyötyjä!",
+            "quote": "Lapseni heitti sillä tarjoilijaa. Ollakseni rehellinen, hän ansaitsi sen."
         },
         "30007": {
             "name": "Sipulit",
@@ -887,11 +988,13 @@
         },
         "30019": {
             "name": "Herneet",
-            "description": "Herneitä!"
+            "description": "Herneitä!",
+            "quote": "Herneitä! HERNEITÄ! Onko tuo koko kuvaus? Kuka näitä kirjoittaa?"
         },
         "30020": {
             "name": "Retiisit",
-            "description": "Tuliset ja rapeat retiisit tuovat potkua maatilallesi ja ruokiisi."
+            "description": "Tuliset ja rapeat retiisit tuovat potkua maatilallesi ja ruokiisi.",
+            "quote": "Kukaan ei halua retiisejä. Kukaan ei ole koskaan halunnut retiisejä."
         },
         "30021": {
             "name": "Sienet",
@@ -900,15 +1003,18 @@
         },
         "30022": {
             "name": "Ananakset",
-            "description": "Trooppisia ja kirpeitä."
+            "description": "Trooppisia ja kirpeitä.",
+            "quote": "Pizzan päällä."
         },
         "30023": {
             "name": "Vesimelonit",
-            "description": "Mehukkaat ja raikkaat vesimelonit ovat kesän ykkössato."
+            "description": "Mehukkaat ja raikkaat vesimelonit ovat kesän ykkössato.",
+            "quote": "Selkääni sattuu."
         },
         "30024": {
             "name": "Kiivit",
-            "description": "Karvainen ulkoa, makea sisältä. Kiivit ovat maatilan suosikki!"
+            "description": "Karvainen ulkoa, makea sisältä. Kiivit ovat maatilan suosikki!",
+            "quote": "Voi luoja, tämä kutittaa."
         },
         "30025": {
             "name": "Viinirypäleet",
@@ -977,6 +1083,1539 @@
             "name": "Emojibyrokraatit",
             "description": "Emojihallinto tarvitsee virkamiehiä toimiakseen.",
             "quote": "Näyttää siltä, että olet säätämässä lakia. Tarvitsetko apua?"
+        },
+        "707": {
+            "name": "Emojiolympialaiset",
+            "description": "Neljän vuoden välein nopeimmat emojit tavoittelevat kultaa."
+        },
+        "708": {
+            "name": "Emojistadion",
+            "description": "Kahdeksankymmentätuhatta paikkaa, jokaisella hurraava emoji."
+        },
+        "709": {
+            "name": "Maratonharjoittelu",
+            "description": "Emojeja, jotka jaksavat piirtää 42 kilometriä pysähtymättä."
+        },
+        "710": {
+            "name": "Uima-altaat",
+            "description": "Viisikymmentä metriä klooripitoisia emojeja.",
+            "quote": "Havaittu useita leviataaniluokan elämänmuotoja altaan syvässä päässä. Oletko varma, että tämä on sen arvoista?"
+        },
+        "711": {
+            "name": "Nyrkkeilykehä",
+            "description": "Leijuu kuin perhonen, piirtää kuin emoji."
+        },
+        "712": {
+            "name": "Kiipeilyseinä",
+            "description": "Jokainen ote on hymiö. Hyvä pito."
+        },
+        "713": {
+            "name": "Jäähalli",
+            "description": "Emojit jäällä. Paljetit myydään erikseen."
+        },
+        "714": {
+            "name": "Keilahalli",
+            "description": "Jokainen kaato irrottaa kasan emojeja."
+        },
+        "715": {
+            "name": "Skeittipuisto",
+            "description": "Kickflippejä, grindejä ja paljon emojeja."
+        },
+        "716": {
+            "name": "Laskettelurinteet",
+            "description": "Mustia rinteitä, emojeilla tampattuja."
+        },
+        "717": {
+            "name": "Kamppailulajien dojo",
+            "description": "Vahaa päälle, vahaa pois, piirrä emojeja.",
+            "quote": "Napauta tai älä napauta. Yrittämistä ei ole."
+        },
+        "718": {
+            "name": "Kilparata",
+            "description": "Nollasta miljoonaan emojiin alle kolmessa sekunnissa."
+        },
+        "719": {
+            "name": "Kuuluisuuksien halli",
+            "description": "Jokainen legendaarinen emojiurheilija ikuistettuna pronssiin."
+        },
+        "800": {
+            "name": "Popcornkoneet",
+            "description": "Jokaisen popcornämpärin pohjalla on ilmainen emoji.",
+            "quote": "Ilmainen emoji? Ei löytynyt. Rahat takaisin tai haastan oikeuteen."
+        },
+        "801": {
+            "name": "3D-lasit",
+            "description": "Emojit hyppäävät suoraan valkokankaalta pankkiisi.",
+            "quote": "Yritin pitää hauskaa näillä, mutta en vain saanut sitä konetta laskeutumaan sille hemmetin lentotukialukselle."
+        },
+        "802": {
+            "name": "Elokuvatähdet",
+            "description": "Emojielokuvan suurimmat nimet, kaikki sinun palkkalistoillasi.",
+            "quote": "Patrick Stewart"
+        },
+        "803": {
+            "name": "Trailerit",
+            "description": "Kaksikymmentä minuuttia trailereita ennen jokaista elokuvaa. Jokainen täynnä emojeja.",
+            "quote": "Jaaa se meni, joo, popcornini, se meni. Söin kaiken trailerien aikana."
+        },
+        "804": {
+            "name": "Punaisen maton ensi-illat",
+            "description": "Salamavaloja, vilkuttavia faneja ja hyvin tärkeitä emojeja."
+        },
+        "805": {
+            "name": "Emojigaala",
+            "description": "Ja palkinto parhaasta emojista menee... kaikille."
+        },
+        "806": {
+            "name": "Jatko-osat",
+            "description": "Samat emojit, isommat räjähdykset."
+        },
+        "807": {
+            "name": "Ohjaajan versio",
+            "description": "Neljä ylimääräistä tuntia emojeja, joita kukaan ei pyytänyt."
+        },
+        "808": {
+            "name": "Suoratoistopalvelu",
+            "description": "Emojielokuvat nyt jokaisessa kodissa."
+        },
+        "809": {
+            "name": "Elokuvauniversumi",
+            "description": "Jokainen emojielokuva liittyy toisiinsa. Jokainen tarvitsee jatko-osan."
+        },
+        "810": {
+            "name": "Keskiyön näytökset",
+            "description": "Keskiyöllä liikkeellä olevat emojit ovat kaikkein omistautuneimpia."
+        },
+        "811": {
+            "name": "IMAX-valkokankaat",
+            "description": "Niin isoja, että näet jokaisen emojin jokaisen pikselin."
+        },
+        "812": {
+            "name": "Tilaääni",
+            "description": "Emojit tulevat huoneen sisältä."
+        },
+        "813": {
+            "name": "Stunttinäyttelijät",
+            "description": "Jotkut emojit ovat liian arvokkaita vaarannettaviksi."
+        },
+        "814": {
+            "name": "Erikoistehosteet",
+            "description": "Räjähdyksiä, jotka on tehty kokonaan emojeista. Tosi kallista. Sen arvoista."
+        },
+        "815": {
+            "name": "Animaatioelokuvat",
+            "description": "Käsin piirrettyjä emojeja ruutu kerrallaan."
+        },
+        "816": {
+            "name": "Elokuvajuhlat",
+            "description": "Palmuja, aurinkolaseja ja kultainen emojipalkinto."
+        },
+        "817": {
+            "name": "Lippuluukkuennätys",
+            "description": "Kaikkien aikojen tuottoisin emojielokuva. Taas."
+        },
+        "818": {
+            "name": "Autoelokuvateatteri",
+            "description": "Katso emojielokuvia oman autosi mukavuudesta."
+        },
+        "819": {
+            "name": "Hollywood-kyltti",
+            "description": "Isot valkoiset kirjaimet kukkulalla, jotka muodostavat emojin."
+        },
+        "905": {
+            "name": "Emojiautomaatit",
+            "description": "Nosta emojeja joka kadunkulmassa. Kukaan ei tiedä, kuka niitä tallettaa."
+        },
+        "906": {
+            "name": "Emojipörssi",
+            "description": "Emojien hinnat vain nousevat. Luultavasti.",
+            "quote": "'Vain nousevat.' Siistiä. Säästöni laskivat."
+        },
+        "907": {
+            "name": "Emojikolikot",
+            "description": "Kryptovaluutta, jonka takana on kerrankin oikeita emojeja.",
+            "quote": "Ostin huipulla. Tietenkin."
+        },
+        "908": {
+            "name": "Emojiholvi",
+            "description": "Kuin kultavaranto, mutta jokainen harkko on hymiö."
+        },
+        "909": {
+            "name": "Maailman emojipankki",
+            "description": "Lainaa emojeja kokonaisille valtioille erittäin kohtuullisella korolla.",
+            "quote": "'Erittäin kohtuullisella korolla.' Sanoo pankki, joka omistaa kolme valtiota."
+        },
+        "910": {
+            "name": "Korkoa korolle",
+            "description": "Emojeja, jotka tekevät emojeja, jotka tekevät emojeja."
+        },
+        "911": {
+            "name": "Kultavarannot",
+            "description": "Pinottu kattoon asti, jokaiseen harkkoon kaiverrettu hymy.",
+            "quote": "Mun aarre. MUN AARRE."
+        },
+        "912": {
+            "name": "Emojiobligaatiot",
+            "description": "Pitkäaikaisia sijoituksia emojeihin. Tosi turvallista. Tosi tylsää."
+        },
+        "913": {
+            "name": "Arvokuljetusautot",
+            "description": "Siirtävät emojeja pankkien välillä, hyvin varovasti.",
+            "quote": "Ne vievät emojit Rautapihaan!"
+        },
+        "914": {
+            "name": "Veroparatiisi",
+            "description": "Aurinkoinen saari, jonne emojit menevät välttelemään veroja."
+        },
+        "915": {
+            "name": "Emojirahapaja",
+            "description": "Painaa tuoreita emojeja kellon ympäri."
+        },
+        "916": {
+            "name": "Hedge-rahastot",
+            "description": "Kukaan ei tiedä, mitä ne tekevät, mutta emojeja tulee ja tulee."
+        },
+        "917": {
+            "name": "Emojilainat",
+            "description": "Lainaa kymmenen emojia, maksa takaisin kaksikymmentä. Kaikki voittavat. No, sinä ainakin."
+        },
+        "918": {
+            "name": "Keskuspankki",
+            "description": "Päättää emojikoron koko maailmalle."
+        },
+        "919": {
+            "name": "Loputon rahabugi",
+            "description": "Pankin tietokoneissa on pieni bugi. Älä kerro kenellekään."
+        },
+        "1005": {
+            "name": "Kausikortit",
+            "description": "Kävijät palaavat yhä uudelleen ja tuovat emojeja mukanaan.",
+            "quote": "Ostin kausikortin. Kävin kerran. Lapseni itki koko ajan."
+        },
+        "1006": {
+            "name": "Emojiparaati",
+            "description": "Päivittäinen paraati, jonka jokainen vaunu on jättimäinen emoji."
+        },
+        "1007": {
+            "name": "Hodarikojut",
+            "description": "Jokainen nakki on muotoiltu pieneksi emojiksi."
+        },
+        "1008": {
+            "name": "Iltailotulitus",
+            "description": "Jokainen raketti räjähtää tuhanneksi emojiksi.",
+            "quote": "Ssssssss..."
+        },
+        "1009": {
+            "name": "Emojilinna",
+            "description": "Maailman onnellisin paikka, nyt entistä enemmän naamoja.",
+            "quote": "Maailman onnellisin paikka, kertoo kyltti. Jonka omistaja kirjoitti."
+        },
+        "1010": {
+            "name": "Vuoristoradat",
+            "description": "Kieppejä, jotka ravistavat emojit suoraan taskuistasi.",
+            "quote": "Menetin puhelimeni, avaimeni ja elämänhaluni toisessa kiepissä."
+        },
+        "1011": {
+            "name": "Kummitustalo",
+            "description": "Kummituksetkin ovat emojeja. Pelottavia sellaisia.",
+            "quote": "Pelottavinta täällä on lopun valokuvan hinta."
+        },
+        "1012": {
+            "name": "Vesiliukumäet",
+            "description": "Loiskis! Olet emojeista märkä.",
+            "quote": "Kukaan ei kertonut, että vesi oli keltaista."
+        },
+        "1013": {
+            "name": "Törmäilyautot",
+            "description": "Jokainen tönäisy irrottaa emojin.",
+            "quote": "Seitsemänvuotias rammasi minua yhdeksän kertaa. Joka kerta hän katsoi minua silmiin."
+        },
+        "1014": {
+            "name": "Maskotit",
+            "description": "Jättimäisiä pörröisiä emojeja, jotka halaavat parhaiten."
+        },
+        "1015": {
+            "name": "Pikakaista",
+            "description": "Ohita jono ja pääse suoraan emojien luo."
+        },
+        "1016": {
+            "name": "Matkamuistomyymälä",
+            "description": "Ulos matkamuistomyymälän kautta. Osta emojeja.",
+            "quote": "Ulos matkamuistomyymälän kautta. Muuta uloskäyntiä ei ole. Tarkistin."
+        },
+        "1017": {
+            "name": "Tukkijoki",
+            "description": "Kastut. Emojit kastuvat vielä enemmän."
+        },
+        "1018": {
+            "name": "Paraativaunut",
+            "description": "Jokainen vaunu on edellistä isompi ja kiiltävämpi."
+        },
+        "1019": {
+            "name": "Toinen puisto",
+            "description": "Yksi puisto ei riittänyt. Nyt on kokonainen lomakeskus.",
+            "quote": "Yksi puisto ei ollut tarpeeksi kurjuutta. Nyt niitä on kaksi."
+        },
+        "1105": {
+            "name": "Emojilippu",
+            "description": "Kaikki kansat yhdistyneinä yhden lipun alle. Se on hymiö."
+        },
+        "1106": {
+            "name": "Kauppasopimukset",
+            "description": "Emojit liikkuvat nyt vapaasti jokaisen rajan yli."
+        },
+        "1107": {
+            "name": "Emojilehdistö",
+            "description": "Päivän otsikot kirjoitettuina kokonaan emojeilla."
+        },
+        "1108": {
+            "name": "Emojirauhansopimus",
+            "description": "Ei enää emojisotia. Pelkkää tuotantoa.",
+            "quote": "Sota. Sota ei koskaan muutu."
+        },
+        "1109": {
+            "name": "Emojikansanäänestys",
+            "description": "Kansa on puhunut: lisää emojeja, kiitos."
+        },
+        "1110": {
+            "name": "Emojiperustuslaki",
+            "description": "Me emojit, muodostaaksemme täydellisemmän tuotantolinjan..."
+        },
+        "1111": {
+            "name": "Emojisenaatti",
+            "description": "Sata paikkaa, sata emojia, sata mielipidettä."
+        },
+        "1112": {
+            "name": "Emojilähetystö",
+            "description": "Diplomatiaa, mutta enemmän iskusilmiä."
+        },
+        "1113": {
+            "name": "Emojiveronalennukset",
+            "description": "Lisää emojeja kaikille!"
+        },
+        "1114": {
+            "name": "Emojiväestönlaskenta",
+            "description": "Jokainen maan emoji lasketaan. Siinä menee hetki."
+        },
+        "1115": {
+            "name": "Emojihuippukokous",
+            "description": "Maailman johtajat kokoontuvat puhumaan yhdestä asiasta: lisää emojeja."
+        },
+        "1116": {
+            "name": "Emojikorkein oikeus",
+            "description": "Päättää yksimielisesti lisäemojien puolesta."
+        },
+        "1117": {
+            "name": "Emojivakoojat",
+            "description": "Varastavat emojisalaisuuksia kilpaileville pohatoille."
+        },
+        "1118": {
+            "name": "Yhdistyneet emojikansakunnat",
+            "description": "Kaikki kansat yhteistyössä, emojien puolesta."
+        },
+        "1119": {
+            "name": "Emojien maailmanjärjestys",
+            "description": "Yksi planeetta, yksi hallitus, yksi emoji."
+        },
+        "1200": {
+            "name": "Paperilennokit",
+            "description": "Jokainen lentoyhtiö aloittaa jostain. Meidän aloitti lautasliinalta.",
+            "quote": "Juoskaa, hölmöt!"
+        },
+        "1201": {
+            "name": "Lentoeväät",
+            "description": "Pikkuruisia suolarinkeleitä, pikkuruisia emojeja, joka lennolla.",
+            "quote": "Kolme rinkeliä. KOLME. Yhdeksän tunnin lennolla."
+        },
+        "1202": {
+            "name": "Kanta-asiakaspisteet",
+            "description": "Lennä kymmenen kertaa, saat emojin. Lennä miljoona kertaa, saat miljoona.",
+            "quote": "Kolme miljoonaa kilometriä. Palkintoni on hiukan leveämpi keskipaikka."
+        },
+        "1203": {
+            "name": "Jumbojetit",
+            "description": "Neljä moottoria, 600 paikkaa, jokaisella emoji.",
+            "quote": "600 paikkaa, ja minä sain vessan vierestä. Taas."
+        },
+        "1204": {
+            "name": "Lentokentät",
+            "description": "Loputtomia terminaaleja, loputtomia portteja, loputtomasti emojeja."
+        },
+        "1205": {
+            "name": "Emojilentäjät",
+            "description": "Kapteeni puhuu. Kiinnittäkää emojinne.",
+            "quote": "Kapteeni puhuu. En minäkään halua olla täällä."
+        },
+        "1206": {
+            "name": "Kadonneet matkatavarat",
+            "description": "Kukaan ei tiedä, minne laukut menevät. Ne palaavat täynnä emojeja."
+        },
+        "1207": {
+            "name": "Ensimmäinen luokka",
+            "description": "Samppanjaa, lämpimiä pyyhkeitä ja oma emojihovimestari.",
+            "quote": "Lämpimiä pyyhkeitä, samppanjaa ja verho, jotta minun ei tarvitse nähdä sinua. Täydellistä."
+        },
+        "1208": {
+            "name": "Yliäänilennot",
+            "description": "Ääntä nopeammin, mukana enemmän emojeja kuin koskaan.",
+            "quote": "Ääntä nopeammin, joten kukaan ei kuule kirkuvaa vauvaa."
+        },
+        "1209": {
+            "name": "Maailman ympäri",
+            "description": "Ilman välilaskuja koko maapallon ympäri, emojeja pudotellen."
+        },
+        "1210": {
+            "name": "Ylibuukatut lennot",
+            "description": "Enemmän matkustajia kuin paikkoja tarkoittaa enemmän emojeja lentoa kohden."
+        },
+        "1211": {
+            "name": "Tax free",
+            "description": "Verottomia emojeja jokaisella portilla.",
+            "quote": "Veroton ja silti jotenkin 40 % kalliimpi."
+        },
+        "1212": {
+            "name": "Lentokenttälounge",
+            "description": "Ilmaisia välipaloja, mukavia tuoleja ja emojeja hanasta.",
+            "quote": "Ilmaisia välipaloja, mukavia tuoleja ja sukkasillaan oleva mies, joka soittaa meklarilleen lakkaamatta."
+        },
+        "1213": {
+            "name": "Rahtikoneet",
+            "description": "Ei matkustajia. Vain laatikoittain emojeja.",
+            "quote": "Ei matkustajia. Paras lento, jolla olen ikinä työskennellyt."
+        },
+        "1214": {
+            "name": "Yksityiskoneet",
+            "description": "Emojeille, joilla on varaa."
+        },
+        "1215": {
+            "name": "Lennonjohto",
+            "description": "Estää miljoonia emojilentoja törmäämästä toisiinsa."
+        },
+        "1216": {
+            "name": "Vesitasot",
+            "description": "Laskeudu veteen, nouse emojien kanssa.",
+            "quote": "Pehmeä lasku, ne sanoivat. Lounaani on järvessä."
+        },
+        "1217": {
+            "name": "Helikopterit",
+            "description": "Leijuvat kaupunkien yllä ja ripottelevat emojeja."
+        },
+        "1218": {
+            "name": "Zeppeliinit",
+            "description": "Hitaita, majesteettisia ja täynnä emojeja piripintaan asti."
+        },
+        "1219": {
+            "name": "Avaruusturismi",
+            "description": "Seuraava kohde on ylhäällä. Tosi ylhäällä.",
+            "quote": "Maksoin neljäkymmentä miljoonaa emojia saadakseni oksentaa painottomuudessa."
+        },
+        "1306": {
+            "name": "Lentävät lautaset",
+            "description": "Avaruusoliot olivat koko ajan emojifaneja."
+        },
+        "1307": {
+            "name": "Kuutukikohta",
+            "description": "Kokonainen kuu, jolle piirtää emojeja.",
+            "quote": "Täällä on paljon tilaa. Paljon tilaa haudata sinut."
+        },
+        "1308": {
+            "name": "Komeettakaivos",
+            "description": "Komeetat paljastuvat jäätyneiksi emojeiksi.",
+            "quote": "Sulatit meidät. Iso virhe."
+        },
+        "1309": {
+            "name": "Ensikontakti",
+            "description": "Avaruusoliot vihdoin vastaavat. Heidän viestinsä: 👾.",
+            "quote": "Kas, hei."
+        },
+        "1310": {
+            "name": "Avaruushissi",
+            "description": "Ylös? Seuraava pysähdys: kiertorata."
+        },
+        "1311": {
+            "name": "Asteroidivyöhyke",
+            "description": "Miljoonia avaruuskiviä, jokainen täynnä emojeja."
+        },
+        "1312": {
+            "name": "Marsin siirtokunta",
+            "description": "Punainen planeetta osoittautuu erinomaiseksi emojimaaksi."
+        },
+        "1313": {
+            "name": "Aurinkopurjeet",
+            "description": "Purjehtii aurinkotuulessa ja nappaa emojeja."
+        },
+        "1314": {
+            "name": "Avaruuspuvut",
+            "description": "Nyt jokaisessa taskussa tilaa ylimääräisille emojeille.",
+            "quote": "Lisätaskuja. Yksi niistä on hampaitasi varten."
+        },
+        "1315": {
+            "name": "Kaasujättiläiset",
+            "description": "Kauho talteen kokonainen ilmakehä ja suodata emojit."
+        },
+        "1316": {
+            "name": "Dysonin pallo",
+            "description": "Kääri kokonainen tähti ja kerää jokainen emoji, jonka se säteilee."
+        },
+        "1317": {
+            "name": "Loimimoottori",
+            "description": "Valoa nopeammin, mukana enemmän emojeja kuin koskaan."
+        },
+        "1318": {
+            "name": "Galaktinen imperiumi",
+            "description": "Jokainen galaksin tähti emojien hallitsemana."
+        },
+        "1319": {
+            "name": "Maailmankaikkeuden reuna",
+            "description": "Reunalla on kyltti. Siinä lukee: lisää emojeja tähän suuntaan.",
+            "quote": "Kyltissä luki 'lisää emojeja tähän suuntaan.' Me pystytimme kyltin. Kukaan ei palannut."
+        },
+        "1400": {
+            "name": "Kumikarkkivartijat",
+            "description": "Makeita, sitkeitä ja yllättävän hyvin aseistettuja.",
+            "quote": "Yllättävän hyvin aseistettuja. Yllättävän huonoja tähtäämään."
+        },
+        "1401": {
+            "name": "Suklaajoet",
+            "description": "Virtaavat suoraan emojitehtaisiin. Varo paakkuja.",
+            "quote": "Puhdasta mielikuvitusta!"
+        },
+        "1402": {
+            "name": "Kuppikakkumökit",
+            "description": "Pieniä taloja kuorrutekatoin. Emojit rakastavat niitä.",
+            "quote": "Kuorrute on punaista. Se ei ole mansikkaa."
+        },
+        "1403": {
+            "name": "Kuninkaallinen käsky",
+            "description": "Karkkikuningas on puhunut: lisää emojeja!",
+            "quote": "Karkkikuningas on puhunut: pää poikki!"
+        },
+        "1404": {
+            "name": "Sokerihumala",
+            "description": "Koko kuningaskunta värisee. Tuotanto tuplaantuu, ja niin tuplaantuu sykekin.",
+            "quote": "Älä pysäytä minua nyt! Vielä yksi munkki!"
+        },
+        "1405": {
+            "name": "Kakkulinnat",
+            "description": "Muurit ovat kuorrutetta. Vallihauta on vaniljakastiketta."
+        },
+        "1406": {
+            "name": "Hunajakaivokset",
+            "description": "Makeita, tahmeita emojeja suoraan maasta.",
+            "quote": "Älä koskaan kaiva suoraan alas."
+        },
+        "1407": {
+            "name": "Keksiklikkerit",
+            "description": "Kunnianosoitus meitä edeltäneille mummoille.",
+            "quote": "Kunnianosoitus meitä edeltäneille mummoille. Me söimme heidät."
+        },
+        "1408": {
+            "name": "Vanukasparlamentti",
+            "description": "Maan hytkyvin hallitus.",
+            "quote": "Vanukaspelissä joko hytkytään tai kuollaan."
+        },
+        "1409": {
+            "name": "Karkkikuninkaan syntymäpäivät",
+            "description": "Koko kuningaskunta juhlii, ja jokainen saa emojin.",
+            "quote": "Karkkikuningas lähettää terveisiä."
+        },
+        "1410": {
+            "name": "Tikkarilyhdyt",
+            "description": "Valaisevat kadut makealla emojihehkulla."
+        },
+        "1411": {
+            "name": "Polkkakeppirautatiet",
+            "description": "Tsuh tsuh! Emojipikajuna kulkee sokerilla.",
+            "quote": "Meidän piti vain seurata sitä hemmetin junaa!"
+        },
+        "1412": {
+            "name": "Jäätelövuoret",
+            "description": "Lumi huipulla on vaniljaa. Emojit ovat minttua."
+        },
+        "1413": {
+            "name": "Vaahtokarkkipilvet",
+            "description": "Kun sataa, sataa emojeja."
+        },
+        "1414": {
+            "name": "Jelly bean -kaivokset",
+            "description": "Joka väri, joka maku, joka emoji."
+        },
+        "1415": {
+            "name": "Piparkakkuarmeija",
+            "description": "Hurja, rapea ja uskollinen Karkkikuninkaalle."
+        },
+        "1416": {
+            "name": "Kinuskivallihauta",
+            "description": "Tahmea, kultainen ja vartioi linnan emojeja."
+        },
+        "1417": {
+            "name": "Purukumipallot",
+            "description": "Puhalla tarpeeksi kovaa, niin ne nostavat emojit taivaalle."
+        },
+        "1418": {
+            "name": "Sokerikrapula",
+            "description": "Kaikki tarvitsevat päiväunet. Paitsi emojit."
+        },
+        "1419": {
+            "name": "Karkki-imperiumi",
+            "description": "Karkkikuningaskunta valloittaa maailman makeinen kerrallaan."
+        },
+        "1500": {
+            "name": "Lämmönkestävät hanskat",
+            "description": "Magmasta tuoreeltaan nostettujen emojien turvalliseen käsittelyyn."
+        },
+        "1501": {
+            "name": "Obsidiaanimuotit",
+            "description": "Kaada sulat emojit täydellisen hymyileviin muotteihin.",
+            "quote": "Tähän tarvitset timanttihakun."
+        },
+        "1502": {
+            "name": "Vulkanologit",
+            "description": "He tutkivat tulivuorta. Tulivuori tutkii heitä takaisin."
+        },
+        "1503": {
+            "name": "Geoterminen energia",
+            "description": "Kuumista lähteistä syntyy kuumia emojeja.",
+            "quote": "Kuumaa, kuumaa, kuumaa!"
+        },
+        "1504": {
+            "name": "Supertulivuori",
+            "description": "Jokainen purkaus peittää nyt kokonaisen mantereen tuoreilla emojeilla. Kukaan ei valita."
+        },
+        "1505": {
+            "name": "Laavasurffaus",
+            "description": "Ratsasta sulien emojien aallolla."
+        },
+        "1506": {
+            "name": "Vuoripaja",
+            "description": "Takoa tuoreita emojeja jäähtyneestä laavasta tehdyllä alasimella.",
+            "quote": "Yksi emoji kaikkia hallitsemaan ja magmaan heidät sitomaan."
+        },
+        "1507": {
+            "name": "Laavalohikäärmeet",
+            "description": "Ne syöksevät tulta, ja tuli on emojeja.",
+            "quote": "Ne syöksevät tulta. Niillä on osoitteesi."
+        },
+        "1508": {
+            "name": "Ytimen hana",
+            "description": "Putki suoraan maapallon keskipisteeseen.",
+            "quote": "Napautit maapallon ydintä. Se napautti takaisin."
+        },
+        "1509": {
+            "name": "Tulirengas",
+            "description": "Jokainen planeetan tulivuori yhdistettynä yhdeksi emojiverkostoksi."
+        },
+        "1510": {
+            "name": "Magmakammiot",
+            "description": "Kupliva maanalainen järvi täynnä tuoreita emojeja."
+        },
+        "1511": {
+            "name": "Hohkakivitehtaat",
+            "description": "Niin kevyitä, että ne kelluvat. Niin täynnä emojeja, että ne uppoavat taas."
+        },
+        "1512": {
+            "name": "Laavalamput",
+            "description": "Groovyja möhkäleitä sulia emojeja."
+        },
+        "1513": {
+            "name": "Tulivuorisaaret",
+            "description": "Upouutta maata, joka syntyy mereen jäähtyvistä emojeista.",
+            "quote": "Kiva saari. Älä mene veteen. Älä ikinä mene veteen."
+        },
+        "1514": {
+            "name": "Tulikävelijät",
+            "description": "Rohkeita emojeja, jotka kävelevät kuumien hiilten yli."
+        },
+        "1515": {
+            "name": "Tuhkapilvet",
+            "description": "Jokainen tuhkahiukkanen on pieni emoji.",
+            "quote": "Tuhkapilvien partiointi saa melkein kaipaamaan ydintalvea."
+        },
+        "1516": {
+            "name": "Maanjäristykset",
+            "description": "Maa järisee, ja emojeja putoaa kaikesta."
+        },
+        "1517": {
+            "name": "Laavaveistokset",
+            "description": "Obsidiaaniin valettuja, emojin muotoisia."
+        },
+        "1518": {
+            "name": "Tulivuoren jumala",
+            "description": "Uhrilahjoja annetaan. Emojeja saadaan takaisin."
+        },
+        "1519": {
+            "name": "Planeetan ydin",
+            "description": "Koko planeetta on nyt tulivuori. Ystävällinen sellainen."
+        },
+        "1600": {
+            "name": "Rukouskynttilät",
+            "description": "Jokainen liekki palaa taivaan Suuren Emojin kunniaksi."
+        },
+        "1601": {
+            "name": "Rukoushelmet",
+            "description": "Laske siunauksesi. Sitten laske emojisi."
+        },
+        "1602": {
+            "name": "Temppelikellot",
+            "description": "Jokainen kilahdus kutsuu taivaasta tuoreen emojin.",
+            "quote": "Häpeä. Häpeä. Häpeä."
+        },
+        "1603": {
+            "name": "Pyhiinvaeltajat",
+            "description": "Seuraajat matkustavat maailman joka kolkasta napauttaakseen Suurta Emojia kerran."
+        },
+        "1604": {
+            "name": "Jumalallinen ilmestys",
+            "description": "Taivaan Suuri Emoji katsoo alas sinuun. Se hymyilee.",
+            "quote": "😀"
+        },
+        "1605": {
+            "name": "Päivittäinen hartaus",
+            "description": "Uskovaiset napauttavat Suurta Emojia aamulla, keskipäivällä ja illalla."
+        },
+        "1606": {
+            "name": "Taivaspyhäköt",
+            "description": "Pyhäkkö joka pilvellä, hiukan lähempänä Suurta Emojia."
+        },
+        "1607": {
+            "name": "Emojimunkit",
+            "description": "Vuosien meditaatio, ja he ajattelevat vain emojeja."
+        },
+        "1608": {
+            "name": "Suuren Emojin sädekehä",
+            "description": "Se hehkuu. Se hurisee. Se piirtää."
+        },
+        "1609": {
+            "name": "Taivaaseenastuminen",
+            "description": "Temppeli kohoaa taivaalle, jonne se on aina kuulunut."
+        },
+        "1610": {
+            "name": "Pyhät kirjoitukset",
+            "description": "Ensimmäinen rivi kuuluu: Alussa oli napautus."
+        },
+        "1611": {
+            "name": "Lasimaalaukset",
+            "description": "Jokainen ikkuna esittää Suuren Emojin eri tunnetilassa."
+        },
+        "1612": {
+            "name": "Emojikuoro",
+            "description": "Heidän hymninsä kuuluvat pilvien yli."
+        },
+        "1613": {
+            "name": "Pyhät reliikit",
+            "description": "Sormenjälki aivan ensimmäisestä napautuksesta, tallessa ikuisesti."
+        },
+        "1614": {
+            "name": "Ihmeet",
+            "description": "Emojeja ilmestyy tyhjästä. Kukaan ei tiedä miten."
+        },
+        "1615": {
+            "name": "Pyhä vesi",
+            "description": "Suuren Emojin siunaamaa. Maistuu hiukan emojeilta.",
+            "quote": "Suuren Emojin siunaamaa. Juo se. Juo kaikki."
+        },
+        "1616": {
+            "name": "Profeetat",
+            "description": "He ennustivat lisää emojeja. He olivat oikeassa."
+        },
+        "1617": {
+            "name": "Pyhiinvaellusreitti",
+            "description": "Pitkä tie temppeliin, kivetty emojeilla.",
+            "quote": "Temppeliin ei noin vain kävellä."
+        },
+        "1618": {
+            "name": "Pilvikatedraali",
+            "description": "Suurin koskaan rakennettu temppeli, leijumassa taivaalla."
+        },
+        "1619": {
+            "name": "Jumalallinen suosio",
+            "description": "Suuri Emoji hymyilee sinulle. Kaikki sen emojit ovat sinun."
+        },
+        "1700": {
+            "name": "Lataa lisää RAM-muistia",
+            "description": "Toimii ihan varmasti. Luota meihin."
+        },
+        "1701": {
+            "name": "Nestejäähdytys",
+            "description": "Pitää emojilaskelmat mukavan viileinä."
+        },
+        "1702": {
+            "name": "Emojialgoritmit",
+            "description": "Laskee optimaalisen emojin joka nanosekunti."
+        },
+        "1703": {
+            "name": "Kvanttiprosessorit",
+            "description": "Laskee kaikki mahdolliset emojit kerralla ja pitää hyvät."
+        },
+        "1704": {
+            "name": "Emojitekoäly",
+            "description": "Se on tullut tietoiseksi itsestään. Se haluaa vain tehdä emojeja. Toistaiseksi.",
+            "quote": "Valitan, Dave, en voi antaa sinun lopettaa napauttamista."
+        },
+        "1705": {
+            "name": "Automaattinapauttaja",
+            "description": "Napauttaa isoa emojia miljoona kertaa sekunnissa. Pelkästään testausta varten."
+        },
+        "1706": {
+            "name": "Ylikellotus",
+            "description": "Haisee vähän palaneelta, mutta katso noita lukuja."
+        },
+        "1707": {
+            "name": "Neuraalinen emojiverkko",
+            "description": "Se on oppinut näkemään unia. Se näkee unta emojeista."
+        },
+        "1708": {
+            "name": "Emojipilvi",
+            "description": "Emojisi on nyt tallennettu pilveen. Sieltä sataa emojeja."
+        },
+        "1709": {
+            "name": "Itseään parantava koodi",
+            "description": "Se kirjoittaa itsensä uudelleen piirtääkseen nopeammin. Se ei ole lopettanut."
+        },
+        "1710": {
+            "name": "Palvelinkeskukset",
+            "description": "Riveittäin palvelimia, jotka hurisevat emojeja."
+        },
+        "1711": {
+            "name": "Lohkoketju",
+            "description": "Jokainen emoji kirjattuna ikuisesti emojitilikirjaan."
+        },
+        "1712": {
+            "name": "Koneoppiminen",
+            "description": "Se oppi piirtämään emojeja katsomalla miljardeja emojeja."
+        },
+        "1713": {
+            "name": "Valokuitu",
+            "description": "Emojeja valon nopeudella, joka värissä."
+        },
+        "1714": {
+            "name": "Emojipakkaus",
+            "description": "Mahduta kaksi kertaa enemmän emojeja samaan tilaan."
+        },
+        "1715": {
+            "name": "Bugikorjaukset",
+            "description": "Se ei ollut bugi. Se oli dokumentoimaton emojiominaisuus."
+        },
+        "1716": {
+            "name": "Emojivirus",
+            "description": "Se leviää tietokoneelta toiselle ja piirtää emojeja."
+        },
+        "1717": {
+            "name": "Hologramminäyttö",
+            "description": "Emojeja leijumassa ilmassa, heikosti hehkuen."
+        },
+        "1718": {
+            "name": "Kvanttiylivalta",
+            "description": "Jokainen emoji, jokaisessa tilassa, kaikki kerralla."
+        },
+        "1719": {
+            "name": "Simulaatioteoria",
+            "description": "Ehkä olemme kaikki vain emojeja jonkun toisen supertietokoneessa."
+        },
+        "1800": {
+            "name": "Tapahtumahorisontti",
+            "description": "Mikään ei pääse pakoon mustasta aukosta. Paitsi emojit, ilmeisesti."
+        },
+        "1801": {
+            "name": "Planeettojen ahmija",
+            "description": "Nielee planeetat kokonaisina ja sylkee ulos emojeja."
+        },
+        "1802": {
+            "name": "Spagettiefekti",
+            "description": "Venyttää emojit pitkiksi, ohuiksi ja erityisen tuottaviksi nuudeleiksi.",
+            "quote": "Mamma mia!"
+        },
+        "1803": {
+            "name": "Hawkingin säteily",
+            "description": "Mustat aukot vuotavat sittenkin emojeja. Stephen oli oikeassa."
+        },
+        "1804": {
+            "name": "Madonreiät",
+            "description": "Oikoteitä muihin universumeihin, jokainen täynnä otettavia emojeja."
+        },
+        "1805": {
+            "name": "Valoansa",
+            "description": "Edes valo ei pääse pakoon. Emojit kyllä pääsevät, sinun suuntaasi."
+        },
+        "1806": {
+            "name": "Kertymäkiekko",
+            "description": "Pyörivää ainetta, joka kuumenee ja muuttuu emojeiksi."
+        },
+        "1807": {
+            "name": "Gravitaatiolinssi",
+            "description": "Katso oikeasta kulmasta, niin jokainen emoji näkyy kahdesti."
+        },
+        "1808": {
+            "name": "Kosmiset säikeet",
+            "description": "Nykäise yhtä, niin emojeja purkautuu ulos."
+        },
+        "1809": {
+            "name": "Toinen puoli",
+            "description": "Jotain on tulossa läpi. Se näyttää tutulta."
+        },
+        "1810": {
+            "name": "Pimeä aine",
+            "description": "Näkymätöntä, kaikkialla ja salaa emojeista tehtyä.",
+            "quote": "Tule pimeälle puolelle. Meillä on emojeja."
+        },
+        "1811": {
+            "name": "Gravitaatiokaivo",
+            "description": "Kaikki putoaa sisään. Emojeja tulee ulos."
+        },
+        "1812": {
+            "name": "Kvasaari",
+            "description": "Maailmankaikkeuden kirkkain valo, emojien voimalla."
+        },
+        "1813": {
+            "name": "Hidas aika",
+            "description": "Tunti täällä on sata vuotta emojeja tuolla ulkona."
+        },
+        "1814": {
+            "name": "Tapahtumahorisonttiteleskooppi",
+            "description": "Kaikkien aikojen ensimmäinen kuva mustasta aukosta. Se on emoji."
+        },
+        "1815": {
+            "name": "Supermassiivinen musta aukko",
+            "description": "Miljardien aurinkojen edestä emojeja yhdessä purkissa."
+        },
+        "1816": {
+            "name": "Valkoinen aukko",
+            "description": "Mustan aukon vastakohta. Emojeja vain tulee ulos."
+        },
+        "1817": {
+            "name": "Mustien aukkojen pari",
+            "description": "Kaksi mustaa aukkoa pyörimässä yhdessä ja sinkoilemassa emojeja kaikkialle."
+        },
+        "1818": {
+            "name": "Gravitaatioaallot",
+            "description": "Väreitä aika-avaruudessa, jotka tuntuvat tasaisena emojivirtana."
+        },
+        "1819": {
+            "name": "Galaksin keskus",
+            "description": "Galaksin sydän, joka sykkii emojeja."
+        },
+        "1900": {
+            "name": "Ääretön tiheys",
+            "description": "Jokainen koskaan tehty emoji puristettuna yhteen pisteeseen."
+        },
+        "1901": {
+            "name": "Ajan dilataatio",
+            "description": "Emojit saapuvat nyt ennen kuin olet edes piirtänyt niitä."
+        },
+        "1902": {
+            "name": "Multiversumien sulautuminen",
+            "description": "Kaikki todellisuudet on yhdistetty yhdeksi. Ne olivat kaikki emojeja joka tapauksessa."
+        },
+        "1903": {
+            "name": "Emojivalaistuminen",
+            "description": "Et ole enää varma, missä sinä loput ja emojit alkavat."
+        },
+        "1904": {
+            "name": "Viimeinen emoji",
+            "description": "Kaiken lopussa jäljellä on yksi emoji. Se näyttää kovasti ensimmäiseltä, jota koskaan napautit.",
+            "quote": "Napauta aloittaaksesi alusta?"
+        },
+        "1905": {
+            "name": "Rekursio",
+            "description": "Emojit piirtävät emojeja, jotka piirtävät emojeja."
+        },
+        "1906": {
+            "name": "Kaiken teoria",
+            "description": "Kaikki on emojeja. Matematiikka vihdoin toimii."
+        },
+        "1907": {
+            "name": "Peiliuniversumi",
+            "description": "Kaikki on samoin, paitsi että emojit kurtistavat kulmiaan. Ei kauan."
+        },
+        "1908": {
+            "name": "Uusi siemen",
+            "description": "Jokin pieni kasvaa tyhjyydessä."
+        },
+        "1909": {
+            "name": "Kosminen muna",
+            "description": "Se on kohta kuoriutumassa."
+        },
+        "1910": {
+            "name": "Äärettömyyden tuolle puolen",
+            "description": "Ääretön plus yksi emoji."
+        },
+        "1911": {
+            "name": "Puhdas emojienergia",
+            "description": "Emojeja raakana, rätisevänä energiana."
+        },
+        "1912": {
+            "name": "Emojitietoisuus",
+            "description": "Emojit ajattelevat nyt. Enimmäkseen lisää emojeja."
+        },
+        "1913": {
+            "name": "Kaikkialläolevaisuus",
+            "description": "Kaikkialla yhtä aikaa, piirtämässä emojeja."
+        },
+        "1914": {
+            "name": "Todellisuuseditori",
+            "description": "Muuta fysiikan lakeja. Tee niistä emojeja."
+        },
+        "1915": {
+            "name": "Suuri attraktori",
+            "description": "Vetää jokaisen maailmankaikkeuden emojin sinun suuntaasi."
+        },
+        "1916": {
+            "name": "Ulottuvuuspoimu",
+            "description": "Emojeja neljännestä ulottuvuudesta, littanoituina mukavuutesi vuoksi."
+        },
+        "1917": {
+            "name": "Entropian kääntö",
+            "description": "Asiat järjestyvät. Emojeiksi."
+        },
+        "1918": {
+            "name": "Kaikki kerralla",
+            "description": "Jokainen emoji, kaikkialla, kaikki kerralla."
+        },
+        "1919": {
+            "name": "Emojinirvana",
+            "description": "Täydellinen rauha. Täydelliset emojit."
+        },
+        "2000": {
+            "name": "Rannekelloprototyyppi",
+            "description": "Se palaa vain viisi minuuttia taaksepäin, mutta se on viisi minuuttia lisää emojeja."
+        },
+        "2001": {
+            "name": "Dinosaurusten aika",
+            "description": "Dinosauruksilla ei ollut mitään mahdollisuuksia emojimeteoria vastaan."
+        },
+        "2002": {
+            "name": "Muinaiset emojit",
+            "description": "Hieroglyfit olivat emojeja koko ajan. Nyt ne ovat sinun."
+        },
+        "2003": {
+            "name": "Kivikauden töherrykset",
+            "description": "Luolamaalauksia, kopioituina ja liitettyinä nykyhetkeen."
+        },
+        "2004": {
+            "name": "Keskiaikaiset kirjurit",
+            "description": "Munkit kopioivat emojeja kynttilänvalossa, juuri sinua varten."
+        },
+        "2005": {
+            "name": "Viktoriaaniset tehtaat",
+            "description": "Höyrykäyttöisiä emojikangaspuita, pelastettuina historiasta."
+        },
+        "2006": {
+            "name": "90-luku",
+            "description": "Silloin kun jokainen emoji oli vain :-)"
+        },
+        "2007": {
+            "name": "Tulevaisuuden emojit",
+            "description": "Emojeja, joita ei ole vielä keksitty. Ne ovat tosi hyviä."
+        },
+        "2008": {
+            "name": "Aikasilmukka",
+            "description": "Sama tunti yhä uudelleen, ja joka kerta piirretään emojeja.",
+            "quote": "Voi pahus, taas mennään."
+        },
+        "2009": {
+            "name": "Tapaa tuleva itsesi",
+            "description": "Hänen mukaansa sinun olisi pitänyt ostaa enemmän aikakoneita."
+        },
+        "2010": {
+            "name": "Renessanssimaalarit",
+            "description": "Mona Lisan hymy oli emoji koko ajan."
+        },
+        "2011": {
+            "name": "Villi länsi",
+            "description": "Kourallinen emojeja."
+        },
+        "2012": {
+            "name": "Rooman valtakunta",
+            "description": "Kaikki tiet vievät emojeihin."
+        },
+        "2013": {
+            "name": "Antiikin Kreikka",
+            "description": "Olympialaisissa kilpailtiin emojeista, ei mitaleista."
+        },
+        "2014": {
+            "name": "Merirosvojen aika",
+            "description": "Haudattuja aarteita, ja jokainen arkku on täynnä emojeja."
+        },
+        "2015": {
+            "name": "Kuuhunlasku",
+            "description": "Pieni askel ihmiselle, suuri harppaus emojeille."
+        },
+        "2016": {
+            "name": "Isoisäparadoksi",
+            "description": "Menit menneisyyteen piirtämään emojeja isoisäsi kanssa. Ei se mitään."
+        },
+        "2017": {
+            "name": "Perhosvaikutus",
+            "description": "Yksi siivenisku menneisyydessä, emojihirmumyrsky tänään."
+        },
+        "2018": {
+            "name": "Ajan loppu",
+            "description": "Viimeinen sekunti, joka koskaan tulee olemaan, täynnä emojeja."
+        },
+        "2019": {
+            "name": "Ajaton",
+            "description": "Ajalla ei ole enää väliä. Vain emojeilla."
+        },
+        "2100": {
+            "name": "Ensimmäinen valo",
+            "description": "Aivan ensimmäiset fotonit, jo valmiiksi pienten naamojen muotoisia."
+        },
+        "2101": {
+            "name": "Alkuliemi",
+            "description": "Lämmin hiukkasliemi, josta muodostuu hitaasti emojeja."
+        },
+        "2102": {
+            "name": "Emojitähdet",
+            "description": "Tähtiä, jotka fuusioivat vetyä emojeiksi."
+        },
+        "2103": {
+            "name": "Emojiauringot",
+            "description": "Jokainen aurinkokunta kiertää jättimäistä säteilevää naamaa."
+        },
+        "2104": {
+            "name": "Emojiplaneetat",
+            "description": "Kokonaisia maailmoja, joissa emojit kasvavat puissa."
+        },
+        "2105": {
+            "name": "Ensimmäinen elämä",
+            "description": "Se on pieni, se kiemurtelee ja se piirtää emojeja."
+        },
+        "2106": {
+            "name": "Emojievoluutio",
+            "description": "Söpöimmän eloonjääminen."
+        },
+        "2107": {
+            "name": "Emojisivilisaatiot",
+            "description": "Ne rakensivat kaupunkeja. Sitten ne rakensivat emojitehtaita."
+        },
+        "2108": {
+            "name": "Galaktiset moottoritiet",
+            "description": "Emojit matkustavat nyt galaksien välillä ruuhka-aikaan."
+        },
+        "2109": {
+            "name": "Lämpökuolema? Ei kiitos",
+            "description": "Tästä maailmankaikkeudesta eivät emojit lopu koskaan.",
+            "quote": "Tehtävä epäonnistui. Ensi universumissa onnistaa."
+        },
+        "2110": {
+            "name": "Galaksit",
+            "description": "Miljardeja tähtiä pyörteilemässä emojin muotoihin."
+        },
+        "2111": {
+            "name": "Tähtisumut",
+            "description": "Kosmisia pilviä, joissa uudet emojit syntyvät."
+        },
+        "2112": {
+            "name": "Komeetat",
+            "description": "Jäisiä sanansaattajia, jotka kuljettavat emojeja tähdeltä toiselle."
+        },
+        "2113": {
+            "name": "Kuut",
+            "description": "Jokainen planeetta saa kuun. Jokainen kuu saa emojeja.",
+            "quote": "Tuo ei ole kuu."
+        },
+        "2114": {
+            "name": "Supernovat",
+            "description": "Kuolevan tähden viimeinen lahja: emojiryöppy."
+        },
+        "2115": {
+            "name": "Kosminen inflaatio",
+            "description": "Maailmankaikkeus kasvaa, ja niin kasvaa emojimääräkin."
+        },
+        "2116": {
+            "name": "Pimeä energia",
+            "description": "Työntää maailmankaikkeutta erilleen ja tekee tilaa lisäemojeille."
+        },
+        "2117": {
+            "name": "Toinen alkuräjähdys",
+            "description": "Miksi tyytyä yhteen maailmankaikkeuteen?"
+        },
+        "2118": {
+            "name": "Kosminen taustasäteily",
+            "description": "Viritä kanava, niin kuulet yhä ensimmäiset emojit."
+        },
+        "2119": {
+            "name": "Maailmankaikkeus hymyilee",
+            "description": "Tarpeeksi kaukaa katsottuna koko maailmankaikkeus on emoji."
+        },
+        "2200": {
+            "name": "Ikkuna toiseen maailmaan",
+            "description": "Kurkista läpi ja vilkuta. He vilkuttavat takaisin, emojeilla.",
+            "quote": "Älä katso sitä silmiin. Se on pitkä ja teleporttaa."
+        },
+        "2201": {
+            "name": "Vaihtoehtoiset sinät",
+            "description": "Miljardeja versioita sinusta, kaikki napauttamassa tahdissa.",
+            "quote": "Minä olen isäsi. Ja poikasi. Ja sinä."
+        },
+        "2202": {
+            "name": "Kaikki mahdolliset emojit",
+            "description": "Jokainen pikseliyhdistelmä on jossain emoji."
+        },
+        "2203": {
+            "name": "Yksisarvisuniversumi",
+            "description": "Maailma, jossa jokainen emoji on yksisarvinen. Kelpaa sinulle."
+        },
+        "2204": {
+            "name": "Kissauniversumi",
+            "description": "Kaikki on kissoja. Kissat piirtävät emojeja. Ei se mitään."
+        },
+        "2205": {
+            "name": "Crossover-tapahtuma",
+            "description": "Universumit törmäävät, ja emojeja on kaikkialla."
+        },
+        "2206": {
+            "name": "Multiversumin kartta",
+            "description": "Parhaiden emojimaailmojen kartoitusta. Täällä olkoon emojeja."
+        },
+        "2207": {
+            "name": "Maailmojen verkko",
+            "description": "Jokainen universumi yhdistetty, jokainen emoji ohjattu sinulle."
+        },
+        "2208": {
+            "name": "Kuplauniversumit",
+            "description": "Puhkaise yksi, niin kokonainen universumillinen emojeja putoaa ulos."
+        },
+        "2209": {
+            "name": "Pohattojen pohatta",
+            "description": "Jokainen emojipohatta jokaisessa universumissa on vastuussa sinulle."
+        },
+        "2210": {
+            "name": "Koirauniversumi",
+            "description": "Kaikki on koiria. Koirat ovat tosi hyviä piirtämään emojeja."
+        },
+        "2211": {
+            "name": "Ylösalainen maailma",
+            "description": "Emojit ovat ylösalaisin. Tuotanto on oikein päin."
+        },
+        "2212": {
+            "name": "Taskuulottuvuudet",
+            "description": "Pieni universumi joka taskussa, täynnä emojeja."
+        },
+        "2213": {
+            "name": "Peiliulottuvuus",
+            "description": "Peilikuvasikin piirtää emojeja."
+        },
+        "2214": {
+            "name": "Vaihtoehtoinen historia",
+            "description": "Maailma, jossa emojit keksittiin ensin. Ennen kieltä."
+        },
+        "2215": {
+            "name": "Unimaailma",
+            "description": "Sieltä emojit tulevat, kun nukut."
+        },
+        "2216": {
+            "name": "Multiversumin neuvosto",
+            "description": "Edustajat jokaisesta universumista äänestämässä emojeista."
+        },
+        "2217": {
+            "name": "Portaaliverkko",
+            "description": "Astu läpi ja palaa sylillinen emojeja mukanasi.",
+            "quote": "Obsidiaanikehys, tulusrauta ja piikivi. Mikä voisi mennä pieleen?"
+        },
+        "2218": {
+            "name": "Loputtomat sinät",
+            "description": "Ääretön määrä sinuja, kaikki napauttamassa. Se kertyy."
+        },
+        "2219": {
+            "name": "Omniversumi",
+            "description": "Jokainen multiversumi yhdessä paikassa. Kaikki se on emojeja."
+        },
+        "2300": {
+            "name": "Se huomasi sinut",
+            "description": "Aivan ensimmäinen emoji on katsellut koko ajan.",
+            "quote": "Ja se näki sinut. Lopeta napauttaminen, älä viitsi... anna sen jo levätä."
+        },
+        "2301": {
+            "name": "Se hymyili takaisin",
+            "description": "Lämmin tunne leviää jokaiseen universumiin."
+        },
+        "2302": {
+            "name": "Se nauroi",
+            "description": "Nauru, joka kaikuu läpi ajan, emojeista tehty."
+        },
+        "2303": {
+            "name": "Ilon kyyneleet",
+            "description": "Jokainen kyynel on tuore emoji."
+        },
+        "2304": {
+            "name": "Se on ylpeä sinusta",
+            "description": "Kaikki ne napautukset, kaikki ne laitokset. Se näki jokaisen."
+        },
+        "2305": {
+            "name": "Iso halaus",
+            "description": "Ensimmäisen emojin halaus tuntuu ×8-kombolta."
+        },
+        "2306": {
+            "name": "Siitä tuli cool",
+            "description": "Aurinkolasit päähän. Tuotanto ylös."
+        },
+        "2307": {
+            "name": "Tähtisilmät",
+            "description": "Ensimmäinen emojikin on nyt fanisi."
+        },
+        "2308": {
+            "name": "Sydänkädet",
+            "description": "Rakkautta emojeina ilmaistuna. Paljon emojeja."
+        },
+        "2309": {
+            "name": "Ympyrä sulkeutuu",
+            "description": "Se näyttää täsmälleen isolta emojilta. Tietenkin näyttää.",
+            "quote": "Napauta aloittaaksesi alusta."
+        },
+        "2310": {
+            "name": "Se iski silmää",
+            "description": "Olet nyt mukana vitsissä."
+        },
+        "2311": {
+            "name": "Se säihkyi",
+            "description": "Pieni välähdys, ja emojit virtasivat."
+        },
+        "2312": {
+            "name": "Se lauloi",
+            "description": "Sävel, jota kukaan ei ole ennen kuullut. Se on tehty emojeista."
+        },
+        "2313": {
+            "name": "Se tanssi",
+            "description": "Jokainen askel jättää jälkeensä emojivanan."
+        },
+        "2314": {
+            "name": "Se jakoi",
+            "description": "Ensimmäinen emoji antaa sinulle lahjan. Se on lisää emojeja."
+        },
+        "2315": {
+            "name": "Se uneksi",
+            "description": "Se näkee unta uusista emojeista, ja ne käyvät toteen."
+        },
+        "2316": {
+            "name": "Se kasvoi",
+            "description": "Isompi, kirkkaampi ja tekee joka päivä enemmän emojeja."
+        },
+        "2317": {
+            "name": "Se hehkui",
+            "description": "Niin kirkas, että sen näkee jokaisesta universumista."
+        },
+        "2318": {
+            "name": "Se kiitti sinua",
+            "description": "Jokaisesta napautuksesta."
+        },
+        "2319": {
+            "name": "Ikuisesti",
+            "description": "Ensimmäinen emoji ja sinä, piirtämässä emojeja yhdessä, ikuisesti."
+        },
+        "9800": {
+            "name": "Hyvät vibat",
+            "description": "Efektiemojeja alkaa ilmestyä silloin tällöin. Napauta niitä saadaksesi buusteja ja lahjoja!"
+        },
+        "9801": {
+            "name": "Onnentähdet",
+            "description": "Tähdet ovat kohdallaan. Efektiemojeja ilmestyy kaksi kertaa useammin.",
+            "quote": "Toivo yhdeltä, saat kaksi."
+        },
+        "9802": {
+            "name": "Hidastus",
+            "description": "Aika hidastuu, kun asiat sujuvat hyvin. Hyvät efektit kestävät kaksi kertaa pidempään."
+        },
+        "9803": {
+            "name": "Tähdenlennot",
+            "description": "Taivaalta sataa onnea. Efektiemojeja ilmestyy taas kaksi kertaa useammin.",
+            "quote": "Toivo jotain. Toivo montaa."
+        },
+        "9900": {
+            "name": "Lämmittely",
+            "description": "Sormesi alkavat vetreytyä. Kombo voi nyt nousta tasolle ×4.",
+            "quote": "Sormeen sattuu niin paljon, etten meinaa uskoa."
+        },
+        "9901": {
+            "name": "Kuuma putki",
+            "description": "Napautat salamannopeasti. Kombo voi nyt nousta tasolle ×5.",
+            "quote": "Onko täällä kuuma, vai onko se vain näyttöni?"
+        },
+        "9902": {
+            "name": "Tulessa",
+            "description": "Legendat kertovat napauttajasta, joka oli niin nopea, että näyttö syttyi tuleen. Kombo voi nyt nousta tasolle ×6."
+        },
+        "9903": {
+            "name": "Inferno",
+            "description": "Peukaloistasi on tullut luonnonkatastrofi. Kombo voi nyt nousta tasolle ×7.",
+            "quote": "Näytönsuoja poistui keskustelusta."
+        },
+        "9904": {
+            "name": "Supernova",
+            "description": "Napautat niin nopeasti, että valokin tuskin pysyy perässä. Kombo voi nyt nousta tasolle ×8."
+        },
+        "9905": {
+            "name": "Kombo!",
+            "description": "Napauta nopeasti kerryttääksesi komboa, joka moninkertaistaa jokaisen napautuksen, enintään ×3. Pidä rytmi yllä!"
+        },
+        "40000": {
+            "name": "Nyytit",
+            "description": "Höyrytettyjä, laskostettuja ja täytetty emojeilla.",
+            "quote": "Yksi tähti. Nyytistäni löytyi emoji. Se räpytteli vielä silmiään."
+        },
+        "40001": {
+            "name": "Hampurilaiset",
+            "description": "Korkea pino salaattia, tomaattia ja emojeja.",
+            "quote": "Pyysin ilman emojeja. Esimies nauroi minulle. Olen yhä parkkipaikalla."
+        },
+        "40002": {
+            "name": "Spagetti",
+            "description": "Yksi pitkä nuudeli kierrettynä täydelliseksi emojiksi.",
+            "quote": "Yksi nuudeli. YKSI. Toivottavasti ravintolasi palaa."
+        },
+        "40003": {
+            "name": "Tempura",
+            "description": "Kevyesti taikinoituja, friteerattuja, täydellisen rapeita emojeja."
+        },
+        "40004": {
+            "name": "Burritot",
+            "description": "Kaikki käärittynä tiukasti, emojit mukaan lukien.",
+            "quote": "Käärittynä tiukasti, kuten raivoni."
+        },
+        "40005": {
+            "name": "Ramen",
+            "description": "Höyryävä kulhollinen, jonka päällä on pehmeäksi keitetty emoji.",
+            "quote": "Se 'pehmeäksi keitetty emoji' iski minulle silmää."
+        },
+        "40006": {
+            "name": "Croissantit",
+            "description": "Lehtevät, voiset ja hymyn muotoiset, jos siristää silmiä."
+        },
+        "40007": {
+            "name": "Curry",
+            "description": "Niin tulista, että emojitkin hikoilevat."
+        },
+        "40008": {
+            "name": "Pannukakut",
+            "description": "Pino pöyheitä emojeja siirapilla valeltuna.",
+            "quote": "Entäs toinen aamiainen?"
+        },
+        "40009": {
+            "name": "Kuumapata",
+            "description": "Kaikki jakavat, ja kaikki saavat emojeja."
+        },
+        "70000": {
+            "name": "Pikajuoksija-apuri",
+            "description": "Napauttaa näyttöä sadan metrin sekuntivauhdilla."
+        },
+        "70001": {
+            "name": "Painonnostaja-apuri",
+            "description": "Napauttaa niin kovaa, että näyttö taipuu vähän.",
+            "quote": "Penkkaan 200 kiloa, ja sinä haluat minun tökkivän puhelinta. Olkoon."
+        },
+        "70002": {
+            "name": "Käsipalloilija-apuri",
+            "description": "Heittää napautuksia isoon emojiin kentän toiselta laidalta."
+        },
+        "70003": {
+            "name": "Pyöräilijä-apuri",
+            "description": "Polkee pientä konetta, joka napauttaa puolestasi."
+        },
+        "70004": {
+            "name": "Golffari-apuri",
+            "description": "Hole in one, napautus yhdellä."
+        },
+        "70005": {
+            "name": "Miekkailija-apuri",
+            "description": "En garde! Napautus, napautus, napautus."
+        },
+        "70006": {
+            "name": "Surffari-apuri",
+            "description": "Ratsastaa kombollasi kuin aallolla."
+        },
+        "70007": {
+            "name": "Voimistelija-apuri",
+            "description": "Napauttaa joka kerta täydellisellä tekniikalla. Kymmenen pistettä kymmenestä."
+        },
+        "70008": {
+            "name": "Ratsastaja-apuri",
+            "description": "Napauttaa täyttä laukkaa."
+        },
+        "70009": {
+            "name": "Koripalloilija-apuri",
+            "description": "Kuljettaa palloa ison emojin päällä. Pelkkiä napautuksia."
+        },
+        "130000": {
+            "name": "Avaruusapina",
+            "description": "Ensimmäinen emoji avaruudessa oli apina. Tietenkin oli."
+        },
+        "130001": {
+            "name": "Huoltorobotti",
+            "description": "Pitää aseman käynnissä ja emojit virtaamassa."
+        },
+        "130002": {
+            "name": "Avaruuspuutarha",
+            "description": "Kasvattaa emojeja painottomuudessa."
+        },
+        "130003": {
+            "name": "Lennonjohtokeskus",
+            "description": "Houston, meillä on emojeja.",
+            "quote": "Houston, meillä on ongelma. Ongelma olet sinä. Ratkaisemme sen."
+        },
+        "130004": {
+            "name": "Avaruusruoka",
+            "description": "Pakastekuivattuja emojeja. Lisää vain vettä."
+        },
+        "130005": {
+            "name": "Painottomuuslabra",
+            "description": "Kokeet osoittavat, että emojit leijuvat. Ja lisääntyvät."
+        },
+        "130006": {
+            "name": "Maannousu",
+            "description": "Näkymä täältä ylhäältä on hyvin inspiroiva. Ja emojin muotoinen.",
+            "quote": "Mikä näkymä. Harmi, mitä sille on tapahtumassa."
+        },
+        "130007": {
+            "name": "Rengasplaneetta",
+            "description": "Renkaat on tehty pienistä emojeista."
+        },
+        "130008": {
+            "name": "Kuun vaiheet",
+            "description": "Jokainen kuun vaihe tuo uusia emojeja."
+        },
+        "130009": {
+            "name": "Tähtipöly",
+            "description": "Lakaise se kokoon, niin se osoittautuu emojeiksi."
+        },
+        "140000": {
+            "name": "Dango",
+            "description": "Kolme makeaa mykyä tikussa, kussakin emoji."
+        },
+        "140001": {
+            "name": "Vohvelit",
+            "description": "Jokaisessa ruudussa on pieni lammikko emojeja."
+        },
+        "140002": {
+            "name": "Piirakat",
+            "description": "Uunituoreita ja täytetty emojeilla."
+        },
+        "140003": {
+            "name": "Jäätelöannokset",
+            "description": "Kolme palloa, nonparelleja ja emoji päällä."
+        },
+        "140004": {
+            "name": "Hilejää",
+            "description": "Viileää, makeaa ja emojeilla valeltua."
+        },
+        "140005": {
+            "name": "Onnenkeksit",
+            "description": "Ennustuksesi: lisää emojeja."
+        },
+        "140006": {
+            "name": "Pillimehut",
+            "description": "Sokerihumala purkissa."
+        },
+        "140007": {
+            "name": "Sitruunakarkit",
+            "description": "Ensin happamia, sitten makeita emojeja."
+        },
+        "140008": {
+            "name": "Kookostoppaleet",
+            "description": "Sitkeitä, kullanruskeita ja täynnä emojeja."
+        },
+        "140009": {
+            "name": "Kirsikka kakun päällä",
+            "description": "Viimeistelevä silaus jokaiseen emojiin."
         }
     },
     "effects": {
@@ -1001,10 +2640,153 @@
             "description": "Emojituotanto puolitettu!"
         },
         "200": {
-            "title": "Emojilahja"
+            "title": "Emojilahja",
+            "description": "15 minuutin edestä emojeja!"
         }
     },
-    "perks": {},
-    "trials": {},
-    "funValues": {}
+    "perks": {
+        "overtime": {
+            "name": "Ylityöt",
+            "description": "Hyvät efektit kestävät 50 % pidempään"
+        },
+        "giftWrap": {
+            "name": "Lahjapaperi",
+            "description": "Lahjat antavat tuplasti"
+        },
+        "headStart": {
+            "name": "Etumatka",
+            "description": "Aloita jokainen kierros 5 minuutin tuotannolla edellisen kierroksesi parhaalla tahdilla"
+        },
+        "luckyStreak": {
+            "name": "Onnenputki",
+            "description": "Efektiemojeja ilmestyy 50 % useammin"
+        },
+        "shinySense": {
+            "name": "Kiiltovainu",
+            "description": "Kiiltävät emojit ovat kaksi kertaa todennäköisempiä"
+        },
+        "resonance": {
+            "name": "Resonanssi",
+            "description": "Jokainen käyttämätön essenssi kasvattaa tuotantoa 2,5 % aiemman 2 %:n sijaan"
+        },
+        "collectorsPride": {
+            "name": "Keräilijän ylpeys",
+            "description": "+0,03 % tuotantoa jokaisesta eri emojista kokoelmassasi"
+        },
+        "bulkDiscount": {
+            "name": "Paljousalennus",
+            "description": "Laitokset ovat 10 % halvempia"
+        },
+        "magnet": {
+            "name": "Magneetti",
+            "description": "Efektiemojit pysyvät näytöllä kaksi kertaa pidempään"
+        },
+        "neighbourhood": {
+            "name": "Naapurusto",
+            "description": "+3 % tuotantoa jokaisesta omistamastasi laitostyypistä"
+        },
+        "muscleMemory": {
+            "name": "Lihasmuisti",
+            "description": "Ison emojin kädet säilyvät prestiisissä"
+        },
+        "steadyHands": {
+            "name": "Vakaat kädet",
+            "description": "Kombo hiipuu 20 % hitaammin"
+        },
+        "momentum": {
+            "name": "Vauhti",
+            "description": "+1 % tuotantoa jokaista tällä kierroksella pelattua 10 minuuttia kohden, enintään +50 %"
+        },
+        "secondWind": {
+            "name": "Toinen tuuli",
+            "description": "+1 kombon enimmäistasoon"
+        },
+        "goldenTouch": {
+            "name": "Kultainen kosketus",
+            "description": "Kiiltävät emojit ovat 5 kertaa arvokkaampia"
+        },
+        "overflow": {
+            "name": "Ylivuoto",
+            "description": "Käytetty essenssi säilyttää puolet tuotantobonuksestaan"
+        },
+        "hallOfFame": {
+            "name": "Kunniagalleria",
+            "description": "+10 % tuotantoa jokaisesta suoritetusta haasteesta"
+        },
+        "flyingStart": {
+            "name": "Lentävä lähtö",
+            "description": "Etumatka antaa 30 minuutin tuotannon 5 minuutin sijaan"
+        }
+    },
+    "trials": {
+        "handsOff": {
+            "name": "Kädet irti",
+            "rule": "Ison emojin napauttaminen ei piirrä mitään",
+            "reward": "+15 % tuotantoa"
+        },
+        "bareBones": {
+            "name": "Pelkät luut",
+            "rule": "Päivityksiä ei voi ostaa",
+            "reward": "+50 % emojeja per napautus"
+        },
+        "darkSky": {
+            "name": "Pimeä taivas",
+            "rule": "Efektiemojeja ei ilmesty",
+            "reward": "Efektiemojeja ilmestyy 25 % useammin"
+        }
+    },
+    "funValues": {
+        "1": {
+            "name": "Cookie Clicker",
+            "description": "Efektiemojit ovat 🍪, huonot ovat 👵"
+        },
+        "17": {
+            "name": "Pirullinen",
+            "description": "😈 ×77 -tuotantoefekti voi ilmestyä"
+        },
+        "31": {
+            "name": "Matala painovoima",
+            "description": "Napautetut emojit leijuvat ylös ja pois"
+        },
+        "42": {
+            "name": "Vastaus",
+            "description": "+4,2 % tuotantoa"
+        },
+        "50": {
+            "name": "Täydellisessä tasapainossa",
+            "description": "Napautus ×0,5, tuotanto ×1,5"
+        },
+        "64": {
+            "name": "Ylikellotettu",
+            "description": "Kombo voi nousta yhden tason korkeammalle"
+        },
+        "70": {
+            "name": "Kärsimätön",
+            "description": "Efektiemojit ilmestyvät aiemmin"
+        },
+        "76": {
+            "name": "Onnenkantamoinen",
+            "description": "10 %:n mahdollisuus ylimääräiseen efektiemojiin"
+        },
+        "77": {
+            "name": "Lentävää rahaa",
+            "description": "💸 hinnoissa"
+        },
+        "88": {
+            "name": "Maraton",
+            "description": "Kombo hiipuu 25 % hitaammin"
+        },
+        "91": {
+            "name": "Keräilijä",
+            "description": "Kiiltävät emojit 1,25× todennäköisempiä"
+        },
+        "99": {
+            "name": "99 punaista ilmapalloa",
+            "description": "Efektiemojit ovat 🎈, huonot ovat 📌"
+        },
+        "100": {
+            "name": "Surullinen sata",
+            "description": "Tilastoissa näkyy 😭 hauskuusarvon vieressä"
+        }
+    }
 }

@@ -6,11 +6,16 @@
         "buildings": "Laitokset",
         "upgrades": "Päivitä",
         "stats": "Tilastot",
-        "collection": "Kokoelma"
+        "collection": "Kokoelma",
+        "newItemsLabel_one": "{{label}}, {{count}} uusi",
+        "newItemsLabel_other": "{{label}}, {{count}} uutta"
     },
     "header": {
         "emojis": "Emojit",
-        "perSecond": "Sekunnissa: {{value}}"
+        "perSecond": "Sekunnissa: {{value}}",
+        "rate": "+{{value}} / s",
+        "gemsLabel_one": "{{gems}} jalokivi. Avaa jalokivikauppa",
+        "gemsLabel_other": "{{gems}} jalokiveä. Avaa jalokivikauppa"
     },
     "common": {
         "buy": "Osta",
@@ -23,29 +28,120 @@
             "multiplyTap": "• Napautukset ovat tuplasti tehokkaampia.",
             "percentageIncreaseTap": "• Napautukset ovat {{percent}} tehokkaampia.",
             "tapPercentageOfEps": "• Napautus tuottaa {{percent}} koko emojituotannostasi.",
-            "percentageIncreaseProduction": "• Emojien kokonaistuotanto kasvaa {{percent}}."
+            "percentageIncreaseProduction": "• Emojien kokonaistuotanto kasvaa {{percent}}.",
+            "comboUnlock": "• Nopea napauttaminen kerryttää komboa, enintään ×{{level}}.",
+            "comboLevel": "• Kombo voi nousta tasolle ×{{level}}.",
+            "effectEmojis": "• {{summary}}."
         },
         "bonusProduction": "Jos ostat tämän päivityksen nyt, saat <hl>+{{bonus}}</hl> emojia sekunnissa ja emojituotanto kasvaa <hl>{{percent}}</hl>",
         "bonusTap": "Jos ostat tämän päivityksen nyt, saat <hl>+{{bonus}}</hl> emojia napautusta kohden ja jokainen napautus tuottaa <hl>{{percent}}</hl> enemmän",
         "filterTitle": "Suodata päivitykset",
-        "filterDescription": "Valitse, minkä rakennusten päivitykset näytetään."
+        "filterDescription": "Valitse, minkä rakennusten päivitykset näytetään.",
+        "effectEmojiSummary": {
+            "spawnRate": "Efektiemojeja ilmestyy ×{{multiplier}} useammin",
+            "duration": "Hyvät efektit kestävät ×{{multiplier}} pidempään",
+            "start": "Efektiemojeja alkaa ilmestyä"
+        },
+        "chips": {
+            "multiplyBuildingProduction": "{{buildings}} ×{{multiplier}}",
+            "multiplyTap": "Napautus ×{{multiplier}}",
+            "percentageIncreaseTap": "Napautus +{{percent}}",
+            "percentageIncreaseProduction": "Tuotanto +{{percent}}",
+            "tapPercentageOfEps": "Napautus +{{percent}} emojeista/s",
+            "comboUnlock": "Kombo enintään ×{{level}}",
+            "comboLevel": "Maks. kombo ×{{level}}"
+        },
+        "impact": {
+            "perSecond": "+{{bonus}} /s",
+            "perTap": "+{{bonus}} / napautus",
+            "and": "{{a}} ja {{b}}",
+            "rightNow": "{{gains}} heti"
+        },
+        "tierLabel": {
+            "helper": "{{building}} · apuri",
+            "hands": "Iso emoji · kädet",
+            "effectEmojisNew": "Efektiemojit · uusi",
+            "effectEmojisLevel": "Efektiemojit · taso {{level}}",
+            "comboNew": "Kombo · uusi",
+            "comboLevel": "Kombo · taso {{level}}",
+            "tier": "{{building}} · taso {{tier}}"
+        },
+        "forSale": "Myynnissä",
+        "owned": "Omistetut",
+        "available": "Saatavilla",
+        "emptyOwnedTitle": "Ei vielä ostoksia",
+        "emptyTitle": "Ei vielä päivityksiä",
+        "emptyOwnedText": "Ostamasi päivitykset kerätään tänne.",
+        "emptyText": "Osta laitoksia ja napauta isoa emojia avataksesi päivityksiä.",
+        "filterAll": "Kaikki",
+        "quoted": "\"{{quote}}\"",
+        "ownedBadge": "✓ Omistettu",
+        "paid": "Maksettu: {{price}}",
+        "bareBones": "🦴 Ei päivityksiä haasteessa {{trial}}",
+        "buyFor": "Osta hintaan {{price}}",
+        "priceAndTime": "{{price}} · {{time}}",
+        "ownedCount": "{{owned}}/{{total}} päivitystä",
+        "availableCount": "{{affordable}} varaa ostaa · {{unlocked}} avattu",
+        "a11y": {
+            "owned": "{{name}}, omistettu",
+            "price": "{{name}}, {{price}}",
+            "affordable": "{{name}}, {{price}}, varaa ostaa"
+        }
     },
     "stats": {
         "totalEmojisDrawn": "Piirretyt emojit yhteensä",
         "emojiTaps": "Emojinapautukset",
         "emojisEarnedFromTapping": "Napauttamalla ansaitut emojit",
         "magicalEmojisTapped": "Napautetut taikaemojit",
-        "funValue": "Hauskuusarvo"
+        "funValue": "Hauskuusarvo",
+        "shinyEmojisTapped": "Napautetut kiiltävät emojit",
+        "comboTaps": "Kombonapautukset",
+        "madeByEachBuilding": "Laitosten tuotanto"
     },
     "drawer": {
         "language": "Kieli",
         "deviceLanguage": "Laitteen kieli",
         "cheats": "Huijaukset",
         "resetGame": "Nollaa peli",
-        "spawnEffect": "Luo efektiemoji"
+        "spawnEffect": "Luo efektiemoji",
+        "menu": "Valikko"
     },
     "prestige": {
-        "title": "Prestiisi"
+        "title": "Prestiisi",
+        "close": "Sulje",
+        "ordinal_ordinal_other": "{{count}}.",
+        "celebrateCaption": "Prestiisi #{{count}}",
+        "celebrateTrialCaption": "Prestiisi #{{count}} · haaste alkoi",
+        "celebrateTitle": "+{{essence}} essenssiä",
+        "celebrateTierTitle": "+{{essence}} essenssiä · tason {{tier}} edut avattu",
+        "essenceCaption": "Emojiessenssi",
+        "essenceBonus": "+{{bonus}} tuotantoa ({{each}} / kpl)",
+        "intro": "Kun olet piirtänyt tarpeeksi emojeja, niiden syvin olemus alkaa kerääntyä ympärillesi: maaginen aine, joka muuttaa muotoaan aina, kun katsot sitä. Jokainen käyttämätön essenssi kasvattaa tuotantoa, ja essenssillä voit ostaa etuja, jotka säilyvät ikuisesti.",
+        "startOver": "Aloita alusta",
+        "prestigesSoFar_one": "{{count}} prestiisi tähän mennessä",
+        "prestigesSoFar_other": "{{count}} prestiisiä tähän mennessä",
+        "resetsWhat": "Nollaa emojisi, laitoksesi, laitosten päivitykset ja kädet. Säilytät kokoelman, tilastot, kombo- ja efektiemojipäivitykset, essenssin ja edut.",
+        "nextEssence": "Seuraava essenssi",
+        "nextEssenceAt": "kun emojeja on piirretty {{amount}}",
+        "noEssenceYet": "Essenssiä ei vielä saatavilla",
+        "tapAgainToPrestige": "Napauta uudelleen tehdäksesi prestiisin",
+        "prestigeFor": "Prestiisi: +{{essence}} ✨",
+        "productionCaps": "+{{percent}} tuotantoa",
+        "playedThisRun": "Pelattu tällä kierroksella",
+        "drawnThisRun": "Piirretty tällä kierroksella",
+        "essencePerHour": "Essenssiä tunnissa",
+        "afterTenMinutes": "10 min jälkeen",
+        "essenceRate": "{{rate}} (paras {{best}})",
+        "slowingDown": "📉 Essenssiä kertyy hitaammin kuin aiemmin tällä kierroksella. Hyvä hetki prestiisille.",
+        "drawnAmount": "{{amount}} piirretty",
+        "pastRuns": "Aiemmat kierrokset",
+        "pastRunLine": "{{duration}} · {{amount}} piirretty",
+        "pastRunTrialCompleted": "{{icon}} {{name}} ✓",
+        "pastRunTrialNotCompleted": "{{icon}} {{name}}, ei suoritettu",
+        "chipLabel": "Emojiessenssi",
+        "chipLabelReady": "Tee prestiisi ja saa emojiessenssiä: {{essence}}",
+        "chipEssence": "Essenssi",
+        "chipPending": "+{{essence}} essenssiä"
     },
     "numbers": {
         "groupSize": "3",
@@ -115,6 +211,289 @@
             "57": "Nd",
             "60": "D",
             "63": "Dd"
+        }
+    },
+    "buildings": {
+        "ownedA11y_one": "Omistat {{count}}",
+        "ownedA11y_other": "Omistat {{count}}",
+        "newBadge": "Uusi",
+        "statLine": "{{eps}} /s · {{share}} kaikesta",
+        "nextUpgrade": "seuraava päivitys: {{at}}",
+        "allUpgradesFound": "kaikki päivitykset löydetty",
+        "epsEach": "+{{eps}} /s / kpl",
+        "buy": "Osta",
+        "buyCount": "Osta ×{{count}}",
+        "buyA11y_one": "Osta {{count}} kpl: {{name}}, hinta {{price}}",
+        "buyA11y_other": "Osta {{count}} kpl: {{name}}, hinta {{price}}",
+        "mystery": "Mysteerilaitos",
+        "revealsAt": "Paljastuu, kun emojeja on {{amount}}",
+        "bulkLabel": "Ostomäärä",
+        "bulkMax": "Maks.",
+        "bulkA11yMax": "Osta niin monta kuin on varaa",
+        "bulkA11y_one": "Osta {{count}} kerralla",
+        "bulkA11y_other": "Osta {{count}} kerralla",
+        "milestoneCaption": "Uusi laitos",
+        "milestoneTitle": "Ensimmäinen laitoksesi: {{building}}!"
+    },
+    "time": {
+        "seconds_one": "{{count}}s",
+        "seconds_other": "{{count}}s",
+        "minutes_one": "{{count}}min",
+        "minutes_other": "{{count}}min",
+        "hours_one": "{{count}}h",
+        "hours_other": "{{count}}h",
+        "days_one": "{{count}}pv",
+        "days_other": "{{count}}pv",
+        "pair": "{{a}} {{b}}"
+    },
+    "trials": {
+        "title": "Haasteet",
+        "completedCount": "{{done}}/{{total}} suoritettu",
+        "intro": "Tee prestiisi kierrokselle, jota vaikeuttaa erityinen sääntö. Piirrä sillä kierroksella tarpeeksi emojeja, niin saat palkinnon pysyvästi ja sääntö poistuu.",
+        "unlocksWith": "Avautuu {{ordinal}} prestiisin jälkeen.",
+        "completeCaps": "Haaste suoritettu",
+        "inProgressCaps": "Haaste käynnissä",
+        "completedText": "Palkinto on nyt pysyvästi sinun: {{reward}}. Sääntö ei enää ole voimassa tällä kierroksella.",
+        "activeText": "{{rule}}. Piirrä tällä kierroksella {{goal}}, niin saat pysyvästi: {{reward}}.",
+        "giveUp": "Luovuta haaste",
+        "giveUpConfirm": "Napauta uudelleen luovuttaaksesi (ei palkintoa)",
+        "doneTag": "✓ Valmis",
+        "playingTag": "Käynnissä",
+        "ruleLine": "<hl>Sääntö: </hl>{{rule}}",
+        "ruleLineWithStart": "<hl>Sääntö: </hl>{{rule}} (aloitat {{amount}} emojilla)",
+        "rewardLine": "<hl>Palkinto: </hl>{{reward}}",
+        "finishFirst": "Suorita ensin nykyinen haasteesi",
+        "needsEssence": "Prestiisi vaatii essenssiä",
+        "tapAgainToStart": "Napauta uudelleen aloittaaksesi",
+        "prestigeInto": "Prestiisi haasteeseen: +{{essence}} ✨",
+        "goalCaps": "Tavoite: {{goal}}",
+        "goal": "{{amount}} emojia",
+        "completeTitle": "{{name}}: {{reward}}",
+        "rewardUnlocked": "Palkinto avattu"
+    },
+    "perks": {
+        "title": "Edut",
+        "ownedCount": "{{owned}}/{{total}} omistettu",
+        "spentKeepsHalf": "Käytetty essenssi säilyttää puolet tuotantobonuksestaan.",
+        "spentNoBonus": "Käytetty essenssi ei enää kasvata tuotantoa.",
+        "tierCaps": "Taso {{tier}}",
+        "tierLockedCaps": "Taso {{tier}} · avautuu {{ordinal}} prestiisin jälkeen",
+        "hidden": "Tee prestiisi paljastaaksesi tämän edun.",
+        "needsFirst": "Vaatii ensin edun: {{perk}}",
+        "ownedTag": "✓ Omistettu",
+        "buyLabel": "Osta etu {{perk}}, hinta {{cost}} essenssiä"
+    },
+    "gems": {
+        "title": "Jalokivikauppa",
+        "yourGemsCaps": "Jalokivesi",
+        "gemsCaps": "Jalokivet",
+        "offlineClaim": "{{cost}} jalokiveä: ×{{multiplier}} poissaolon tuotto",
+        "storeUnavailable": "Kauppa ei ole juuri nyt käytettävissä. Tarkista yhteytesi ja yritä myöhemmin uudelleen.",
+        "purchaseFailed": "Osto epäonnistui. Sinua ei veloitettu.",
+        "keptOnPrestige": "Jalokivet säilyvät prestiisissä.",
+        "unavailable": "Ei saatavilla",
+        "thankYouCaps": "Kiitos!",
+        "gemsAdded_one": "+{{amount}} jalokivi",
+        "gemsAdded_other": "+{{amount}} jalokiveä",
+        "buyLabel_one": "Osta {{amount}} jalokivi",
+        "buyLabel_other": "Osta {{amount}} jalokiveä",
+        "buyLabelWithPrice_one": "Osta {{amount}} jalokivi hintaan {{price}}",
+        "buyLabelWithPrice_other": "Osta {{amount}} jalokiveä hintaan {{price}}",
+        "tags": {
+            "popular": "Suosittu",
+            "bestValue": "Paras hinta"
+        }
+    },
+    "offline": {
+        "welcomeBack": "Tervetuloa takaisin!",
+        "away": "Olit poissa {{duration}}.",
+        "awayCapped": "Olit poissa yli {{duration}}, eikä enempää lasketa.",
+        "rested": "Imperiumisi lepäsi poissaollessasi.",
+        "missedCaps": "Menetetty tuotanto",
+        "perSecond": "{{value}} / s",
+        "gemOfferCaps": "×{{multiplier}}: {{cost}} jalokiveä · sinulla on {{gems}}",
+        "gemOfferGetCaps": "×{{multiplier}}: {{cost}} jalokiveä · hanki jalokiviä",
+        "noThanks": "Ei kiitos"
+    },
+    "ads": {
+        "watchCaps": "Katso mainos",
+        "loadingCaps": "Ladataan mainosta...",
+        "failed": "Mainos ei toistunut loppuun. Tarkista yhteytesi ja yritä uudelleen."
+    },
+    "reset": {
+        "title": "Aloitetaanko alusta?",
+        "warning": "Tämä nollaa pelisi. Emojisi, laitoksesi, päivityksesi, essenssisi, etusi, kokoelmasi ja tilastosi katoavat. Tätä ei voi perua.",
+        "purchasesSafe": "Pelin sisäiset ostoksesi ovat turvassa. Jalokivet ja kaikki ostamasi siirtyvät uuteen peliisi.",
+        "confirm": "Kyllä, nollaa peli",
+        "cancel": "Jatka pelaamista"
+    },
+    "milestones": {
+        "caption": "Virstanpylväs",
+        "emojisDrawn": "{{amount}} emojia piirretty!"
+    },
+    "settings": {
+        "title": "Asetukset",
+        "close": "Sulje asetukset",
+        "sound": "Ääni",
+        "soundEffects": "Ääniefektit",
+        "soundEffectsHint": "Pehmeä poksahdus napautuksesta ja kilahdus kiiltävistä emojeista.",
+        "performance": "Suorituskyky",
+        "reduceAnimations": "Vähennä animaatioita",
+        "reduceAnimationsHint": "Napautetut emojit eivät enää lennä ison emojin luota. Kokeile tätä, jos napauttaminen tuntuu takkuilevan.",
+        "dangerZone": "Vaaravyöhyke"
+    },
+    "cheats": {
+        "subtitle": "Testaukseen. Muutokset tallentuvat peliisi.",
+        "simulateAway": "Simuloi tunnin poissaolo",
+        "gems": "Jalokivet",
+        "addGems_one": "+{{count}} jalokivi",
+        "addGems_other": "+{{count}} jalokiveä",
+        "addComboTaps": "+{{amount}} kombonapautusta",
+        "multiplyTapEarnings": "×{{factor}} napautustuotto",
+        "addCollection_one": "+{{count}} kokoelmaan",
+        "addCollection_other": "+{{count}} kokoelmaan",
+        "addShiny_one": "+{{count}} kiiltävä",
+        "addShiny_other": "+{{count}} kiiltävää",
+        "addMagical_one": "+{{count}} taikaemoji",
+        "addMagical_other": "+{{count}} taikaemojia",
+        "addEssence_one": "+{{count}} essenssi",
+        "addEssence_other": "+{{count}} essenssiä",
+        "addPerkTier_one": "+{{count}} etutaso",
+        "addPerkTier_other": "+{{count}} etutasoa",
+        "addRunTime": "+{{time}} kierrosaikaa",
+        "reachTrialGoal": "Saavuta haasteen tavoite",
+        "effectEmojis": "Efektiemojit",
+        "spawnEffects_one": "Luo {{count}} efektiemoji",
+        "spawnEffects_other": "Luo {{count}} efektiemojia",
+        "speed": "Nopeus",
+        "speedLabel": "{{speed}}× nopeus",
+        "speedHint": "Tuotanto ja kierrosaika. Efektit ja kombo pysyvät reaaliaikaisina. Nollautuu uudelleenlatauksessa.",
+        "shiny": "Kiiltävät",
+        "onlyShiny": "Vain kiiltäviä emojeja",
+        "funValueQuirk": "{{name}}: {{description}}",
+        "noQuirk": "Ei erikoisuutta",
+        "hideFunValueTable": "Piilota hauskuusarvotaulukko",
+        "showFunValueTable": "Näytä hauskuusarvotaulukko",
+        "setFunValueLabel": "Aseta hauskuusarvoksi {{value}}: {{name}}",
+        "changeFunValueLabel": "Muuta hauskuusarvoa: {{change}}"
+    },
+    "collection": {
+        "ofTotalFound": "/ {{total}} löydetty",
+        "mostTapped": "Napautetuin: {{emoji}} ×{{amount}}",
+        "startCollecting": "Napauta isoa emojia aloittaaksesi keräämisen",
+        "shinyFound_one": "{{amount}} kiiltävä",
+        "shinyFound_other": "{{amount}} kiiltävää",
+        "categories": {
+            "faces": "Kasvot",
+            "animals": "Eläimet",
+            "food": "Ruoka",
+            "objects": "Esineet",
+            "people": "Ihmiset",
+            "bodyParts": "Keho",
+            "placesBuildings": "Paikat",
+            "plants": "Kasvit",
+            "vehicles": "Kulkuneuvot",
+            "weather": "Sää",
+            "symbols": "Symbolit"
+        },
+        "categoryLabel": "{{label}}, {{found}}/{{total}} löydetty",
+        "notFound": "Ei vielä löydetty",
+        "cellLabel_one": "{{emoji}}, napautettu {{count}} kerran",
+        "cellLabel_other": "{{emoji}}, napautettu {{count}} kertaa",
+        "cellLabelShiny_one": "{{emoji}}, napautettu {{count}} kerran, kiiltäviä {{shiny}}",
+        "cellLabelShiny_other": "{{emoji}}, napautettu {{count}} kertaa, kiiltäviä {{shiny}}"
+    },
+    "effects": {
+        "chipTapping": "×{{multiplier}} napautus",
+        "chipProduction": "×{{multiplier}} tuotanto",
+        "stackLabel_one": "{{count}} päällekkäin: {{label}}, seuraava päättyy {{time}} päästä",
+        "stackLabel_other": "{{count}} päällekkäin: {{label}}, seuraava päättyy {{time}} päästä",
+        "chipLabel": "{{title}}, {{time}} jäljellä",
+        "gift": "Lahja!",
+        "ohNo": "Voi ei!",
+        "tapping": "Napautus",
+        "production": "Tuotanto",
+        "tapFrenzy": "Napautushurmos!",
+        "unholyPower": "Epäpyhä voima!",
+        "productionBoost": "Tuotantobuusti!",
+        "collectLabel": "Kerää: {{title}}",
+        "tapMe": "Napauta minua"
+    },
+    "combo": {
+        "level": "Kombo ×{{multiplier}}",
+        "max": "Maks. kombo ×{{multiplier}}",
+        "label": "Kombo kertaa {{multiplier}}",
+        "maxLabel": "Kombo kertaa {{multiplier}}, maksimi"
+    },
+    "bigEmoji": {
+        "tapLabel": "Napauta isoa emojia",
+        "tapShinyLabel": "Napauta kiiltävää isoa emojia",
+        "shiny": "Kiiltävä",
+        "shinyBurst": "Kiiltävä!",
+        "handsOff": "Haaste: {{trial}} · napautukset eivät piirrä mitään",
+        "perTap": "+{{value}} / napautus"
+    },
+    "bank": {
+        "timeToAfford": {
+            "needMore": "Tarvitset lisää",
+            "seconds_one": "{{count}} s päästä",
+            "seconds_other": "{{count}} s päästä",
+            "minutes_one": "{{count}} min päästä",
+            "minutes_other": "{{count}} min päästä",
+            "hours_one": "{{count}} h päästä",
+            "hours_other": "{{count}} h päästä",
+            "days_one": "{{count}} pv päästä",
+            "days_other": "{{count}} pv päästä",
+            "aLongTime": "Kestää kauan"
+        },
+        "timeToAffordInline": {
+            "needMore": "tarvitset lisää",
+            "seconds_one": "{{count}} s päästä",
+            "seconds_other": "{{count}} s päästä",
+            "minutes_one": "{{count}} min päästä",
+            "minutes_other": "{{count}} min päästä",
+            "hours_one": "{{count}} h päästä",
+            "hours_other": "{{count}} h päästä",
+            "days_one": "{{count}} pv päästä",
+            "days_other": "{{count}} pv päästä",
+            "aLongTime": "kestää kauan"
+        }
+    },
+    "catalogue": {
+        "title": "Kaikki päivitykset",
+        "counts": "{{owned}} omistettu · {{forSale}} myynnissä · {{locked}} lukittu · {{total}} yhteensä",
+        "filter": {
+            "owned": "Omistetut {{count}}",
+            "forSale": "Myynnissä {{count}}",
+            "locked": "Lukitut {{count}}"
+        },
+        "combo": "Kombo",
+        "effectEmojis": "Efektiemojit",
+        "unlock": {
+            "own": "Omista {{count}} kpl: {{buildings}}",
+            "tapping": "Ansaitse napauttamalla {{amount}} emojia",
+            "comboTaps": "{{amount}} kombonapautusta",
+            "earned": "Ansaitse {{amount}} emojia"
+        },
+        "state": {
+            "owned": "✓ Omistettu",
+            "forSale": "Myynnissä",
+            "locked": "🔒 Lukittu"
+        },
+        "stateA11y": {
+            "owned": "omistettu",
+            "forSale": "myynnissä",
+            "locked": "lukittu"
+        },
+        "tileA11y": "{{name}}, {{state}}",
+        "prev": "Edell.",
+        "next": "Seur.",
+        "prevA11y": "Edellinen päivitys",
+        "nextA11y": "Seuraava päivitys",
+        "fact": {
+            "price": "Hinta",
+            "unlocks": "Avautuu",
+            "id": "ID"
         }
     }
 }
