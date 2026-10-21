@@ -6,11 +6,16 @@
         "buildings": "इमारतें",
         "upgrades": "अपग्रेड",
         "stats": "आँकड़े",
-        "collection": "संग्रह"
+        "collection": "संग्रह",
+        "newItemsLabel_one": "{{label}}, {{count}} नया",
+        "newItemsLabel_other": "{{label}}, {{count}} नए"
     },
     "header": {
         "emojis": "इमोजी",
-        "perSecond": "प्रति सेकंड: {{value}}"
+        "perSecond": "प्रति सेकंड: {{value}}",
+        "rate": "+{{value}} / सेकंड",
+        "gemsLabel_one": "{{gems}} रत्न। रत्न दुकान खोलो",
+        "gemsLabel_other": "{{gems}} रत्न। रत्न दुकान खोलो"
     },
     "common": {
         "buy": "खरीदो",
@@ -23,29 +28,124 @@
             "multiplyTap": "• टैप करना दोगुना असरदार होता है।",
             "percentageIncreaseTap": "• टैप {{percent}} ज़्यादा ताक़तवर होता है।",
             "tapPercentageOfEps": "• हर टैप से कुल इमोजी उत्पादन का {{percent}} मिलता है।",
-            "percentageIncreaseProduction": "• कुल इमोजी उत्पादन में {{percent}} की बढ़त।"
+            "percentageIncreaseProduction": "• कुल इमोजी उत्पादन में {{percent}} की बढ़त।",
+            "comboUnlock": "• तेज़ टैप करने से कॉम्बो बनता है, ×{{level}} तक।",
+            "comboLevel": "• कॉम्बो ×{{level}} तक जा सकता है।",
+            "effectEmojis": "• {{summary}}।"
         },
         "bonusProduction": "यह अपग्रेड अभी खरीदने पर <hl>+{{bonus}}</hl> इमोजी प्रति सेकंड जुड़ेंगे, यानी इमोजी उत्पादन में <hl>{{percent}}</hl> की बढ़त",
         "bonusTap": "यह अपग्रेड अभी खरीदने पर हर टैप पर <hl>+{{bonus}}</hl> इमोजी जुड़ेंगे, यानी हर टैप से मिलने वाले इमोजी में <hl>{{percent}}</hl> की बढ़त",
         "filterTitle": "अपग्रेड फ़िल्टर करो",
-        "filterDescription": "चुनो कि किन इमारतों के अपग्रेड देखने हैं।"
+        "filterDescription": "चुनो कि किन इमारतों के अपग्रेड देखने हैं।",
+        "effectEmojiSummary": {
+            "spawnRate": "इफ़ेक्ट इमोजी ×{{multiplier}} ज़्यादा बार आते हैं",
+            "duration": "अच्छे इफ़ेक्ट ×{{multiplier}} देर तक चलते हैं",
+            "start": "इफ़ेक्ट इमोजी आने लगते हैं"
+        },
+        "chips": {
+            "multiplyBuildingProduction": "{{buildings}} ×{{multiplier}}",
+            "multiplyTap": "टैपिंग ×{{multiplier}}",
+            "percentageIncreaseTap": "टैपिंग +{{percent}}",
+            "percentageIncreaseProduction": "उत्पादन +{{percent}}",
+            "tapPercentageOfEps": "टैप में +{{percent}} इमोजी/सेकंड",
+            "comboUnlock": "कॉम्बो ×{{level}} तक",
+            "comboLevel": "मैक्स कॉम्बो ×{{level}}"
+        },
+        "impact": {
+            "perSecond": "+{{bonus}} /सेकंड",
+            "perTap": "+{{bonus}} प्रति टैप",
+            "and": "{{a}} और {{b}}",
+            "rightNow": "अभी {{gains}}"
+        },
+        "tierLabel": {
+            "helper": "{{building}} · मददगार",
+            "hands": "बड़ा इमोजी · हाथ",
+            "effectEmojisNew": "इफ़ेक्ट इमोजी · नया",
+            "effectEmojisLevel": "इफ़ेक्ट इमोजी · लेवल {{level}}",
+            "comboNew": "कॉम्बो · नया",
+            "comboLevel": "कॉम्बो · लेवल {{level}}",
+            "tier": "{{building}} · टियर {{tier}}"
+        },
+        "forSale": "बिक्री पर",
+        "owned": "खरीदे गए",
+        "available": "उपलब्ध",
+        "emptyOwnedTitle": "अभी कुछ नहीं खरीदा",
+        "emptyTitle": "अभी कोई अपग्रेड नहीं",
+        "emptyOwnedText": "तुम्हारे खरीदे अपग्रेड यहाँ जमा होंगे।",
+        "emptyText": "अपग्रेड अनलॉक करने के लिए इमारतें खरीदो और बड़े इमोजी को टैप करो।",
+        "filterAll": "सभी",
+        "quoted": "\"{{quote}}\"",
+        "ownedBadge": "✓ खरीदा",
+        "paid": "{{price}} चुकाए",
+        "bareBones": "🦴 {{trial}} में अपग्रेड नहीं",
+        "buyFor": "{{price}} में खरीदो",
+        "priceAndTime": "{{price}} · {{time}}",
+        "ownedCount": "{{total}} में से {{owned}} अपग्रेड",
+        "availableCount": "{{affordable}} खरीदने लायक · {{unlocked}} अनलॉक",
+        "a11y": {
+            "owned": "{{name}}, खरीदा हुआ",
+            "price": "{{name}}, {{price}}",
+            "affordable": "{{name}}, {{price}}, खरीद सकते हो"
+        }
     },
     "stats": {
         "totalEmojisDrawn": "कुल बनाए गए इमोजी",
         "emojiTaps": "इमोजी टैप",
         "emojisEarnedFromTapping": "टैप से कमाए इमोजी",
         "magicalEmojisTapped": "टैप किए गए जादुई इमोजी",
-        "funValue": "मज़ा स्तर"
+        "funValue": "मज़ा स्तर",
+        "shinyEmojisTapped": "टैप किए गए चमकीले इमोजी",
+        "comboTaps": "कॉम्बो टैप",
+        "madeByEachBuilding": "हर इमारत का उत्पादन"
     },
     "drawer": {
         "language": "भाषा",
         "deviceLanguage": "डिवाइस की भाषा",
         "cheats": "चीट्स",
         "resetGame": "गेम रीसेट करो",
-        "spawnEffect": "इफ़ेक्ट इमोजी लाओ"
+        "spawnEffect": "इफ़ेक्ट इमोजी लाओ",
+        "menu": "मेन्यू"
     },
     "prestige": {
-        "title": "प्रेस्टीज"
+        "title": "प्रेस्टीज",
+        "close": "बंद करो",
+        "ordinal_ordinal_one": "{{count}}ली",
+        "ordinal_ordinal_two": "{{count}}री",
+        "ordinal_ordinal_few": "{{count}}थी",
+        "ordinal_ordinal_many": "{{count}}ठी",
+        "ordinal_ordinal_other": "{{count}}वीं",
+        "celebrateCaption": "प्रेस्टीज #{{count}}",
+        "celebrateTrialCaption": "प्रेस्टीज #{{count}} · चुनौती शुरू",
+        "celebrateTitle": "+{{essence}} सार",
+        "celebrateTierTitle": "+{{essence}} सार · टियर {{tier}} के पर्क अनलॉक",
+        "essenceCaption": "इमोजी सार",
+        "essenceBonus": "+{{bonus}} उत्पादन (हर सार से {{each}})",
+        "intro": "काफ़ी इमोजी बना लेने के बाद, उनका असली सार तुम्हारे आस-पास जमा होने लगता है: एक जादुई पदार्थ, जो हर बार देखने पर अपना रूप बदल लेता है। बिना खर्च किया हर सार उत्पादन बढ़ाता है, और सार से ऐसे पर्क खरीदे जा सकते हैं जो हमेशा साथ रहते हैं।",
+        "startOver": "फिर से शुरू करो",
+        "prestigesSoFar_one": "अब तक {{count}} प्रेस्टीज",
+        "prestigesSoFar_other": "अब तक {{count}} प्रेस्टीज",
+        "resetsWhat": "तुम्हारे इमोजी, इमारतें, इमारतों के अपग्रेड और हाथ रीसेट हो जाते हैं। संग्रह, आँकड़े, कॉम्बो और इफ़ेक्ट इमोजी के अपग्रेड, सार और पर्क तुम्हारे पास रहते हैं।",
+        "nextEssence": "अगला सार",
+        "nextEssenceAt": "{{amount}} इमोजी बनने पर",
+        "noEssenceYet": "अभी कोई सार नहीं मिलेगा",
+        "tapAgainToPrestige": "प्रेस्टीज के लिए फिर टैप करो",
+        "prestigeFor": "+{{essence}} ✨ के लिए प्रेस्टीज",
+        "productionCaps": "+{{percent}} उत्पादन",
+        "playedThisRun": "इस दौर का समय",
+        "drawnThisRun": "इस दौर में बने",
+        "essencePerHour": "प्रति घंटा सार",
+        "afterTenMinutes": "10 मिनट बाद",
+        "essenceRate": "{{rate}} (रिकॉर्ड {{best}})",
+        "slowingDown": "📉 इस दौर में सार पहले से धीमे आ रहा है। प्रेस्टीज का अच्छा मौक़ा है।",
+        "drawnAmount": "{{amount}} बने",
+        "pastRuns": "पिछले दौर",
+        "pastRunLine": "{{duration}} · {{amount}} बने",
+        "pastRunTrialCompleted": "{{icon}} {{name}} ✓",
+        "pastRunTrialNotCompleted": "{{icon}} {{name}}, पूरी नहीं हुई",
+        "chipLabel": "इमोजी सार",
+        "chipLabelReady": "{{essence}} इमोजी सार के लिए प्रेस्टीज",
+        "chipEssence": "सार",
+        "chipPending": "+{{essence}} सार"
     },
     "numbers": {
         "groupSize": "3",
@@ -115,6 +215,289 @@
             "57": "ऑक्टोडे",
             "60": "नोवेडे",
             "63": "विजि"
+        }
+    },
+    "buildings": {
+        "ownedA11y_one": "{{count}} तुम्हारे पास",
+        "ownedA11y_other": "{{count}} तुम्हारे पास",
+        "newBadge": "नया",
+        "statLine": "{{eps}} /सेकंड · कुल का {{share}}",
+        "nextUpgrade": "अगला अपग्रेड {{at}} पर",
+        "allUpgradesFound": "सारे अपग्रेड मिल गए",
+        "epsEach": "हर एक +{{eps}} /सेकंड",
+        "buy": "खरीदो",
+        "buyCount": "खरीदो ×{{count}}",
+        "buyA11y_one": "{{count}} {{name}} {{price}} में खरीदो",
+        "buyA11y_other": "{{count}} {{name}} {{price}} में खरीदो",
+        "mystery": "रहस्यमय इमारत",
+        "revealsAt": "{{amount}} इमोजी पर दिखेगी",
+        "bulkLabel": "कितने खरीदने हैं",
+        "bulkMax": "मैक्स",
+        "bulkA11yMax": "जितने खरीद सको, उतने खरीदो",
+        "bulkA11y_one": "एक बार में {{count}} खरीदो",
+        "bulkA11y_other": "एक बार में {{count}} खरीदो",
+        "milestoneCaption": "नई इमारत",
+        "milestoneTitle": "{{building}} की शुरुआत!"
+    },
+    "time": {
+        "seconds_one": "{{count}}से",
+        "seconds_other": "{{count}}से",
+        "minutes_one": "{{count}}मि",
+        "minutes_other": "{{count}}मि",
+        "hours_one": "{{count}}घं",
+        "hours_other": "{{count}}घं",
+        "days_one": "{{count}}दि",
+        "days_other": "{{count}}दि",
+        "pair": "{{a}} {{b}}"
+    },
+    "trials": {
+        "title": "चुनौतियाँ",
+        "completedCount": "{{total}} में से {{done}} पूरी",
+        "intro": "ऐसे दौर में प्रेस्टीज करो जिसका एक नियम उसे मुश्किल बना दे। उस दौर में काफ़ी इमोजी बनाओ, तो इनाम हमेशा के लिए तुम्हारा, और नियम हट जाता है।",
+        "unlocksWith": "{{ordinal}} बार प्रेस्टीज करने पर अनलॉक होती हैं।",
+        "completeCaps": "चुनौती पूरी",
+        "inProgressCaps": "चुनौती जारी",
+        "completedText": "{{reward}} अब हमेशा के लिए तुम्हारा है, और इस दौर के बाक़ी समय के लिए नियम हट गया है।",
+        "activeText": "{{rule}}। इस दौर में {{goal}} बनाओ और हमेशा के लिए {{reward}} पाओ।",
+        "giveUp": "ये चुनौती छोड़ दो",
+        "giveUpConfirm": "छोड़ने के लिए फिर टैप करो (कोई इनाम नहीं)",
+        "doneTag": "✓ पूरी",
+        "playingTag": "जारी",
+        "ruleLine": "<hl>नियम: </hl>{{rule}}",
+        "ruleLineWithStart": "<hl>नियम: </hl>{{rule}} (शुरुआत {{amount}} इमोजी से)",
+        "rewardLine": "<hl>इनाम: </hl>{{reward}}",
+        "finishFirst": "पहले अपनी चुनौती पूरी करो",
+        "needsEssence": "प्रेस्टीज के लिए सार चाहिए",
+        "tapAgainToStart": "शुरू करने के लिए फिर टैप करो",
+        "prestigeInto": "+{{essence}} ✨ के साथ चुनौती में प्रेस्टीज",
+        "goalCaps": "लक्ष्य: {{goal}}",
+        "goal": "{{amount}} इमोजी",
+        "completeTitle": "{{name}}: {{reward}}",
+        "rewardUnlocked": "इनाम अनलॉक"
+    },
+    "perks": {
+        "title": "पर्क",
+        "ownedCount": "{{total}} में से {{owned}} तुम्हारे",
+        "spentKeepsHalf": "खर्च किया सार अपना आधा उत्पादन बोनस बनाए रखता है।",
+        "spentNoBonus": "खर्च किया सार अब उत्पादन नहीं बढ़ाता।",
+        "tierCaps": "टियर {{tier}}",
+        "tierLockedCaps": "टियर {{tier}} · {{ordinal}} बार प्रेस्टीज पर अनलॉक",
+        "hidden": "ये पर्क देखने के लिए प्रेस्टीज करो।",
+        "needsFirst": "पहले {{perk}} चाहिए",
+        "ownedTag": "✓ तुम्हारा",
+        "buyLabel": "{{perk}} को {{cost}} सार में खरीदो"
+    },
+    "gems": {
+        "title": "रत्न दुकान",
+        "yourGemsCaps": "तुम्हारे रत्न",
+        "gemsCaps": "रत्न",
+        "offlineClaim": "{{cost}} रत्न में ×{{multiplier}} ऑफ़लाइन कमाई",
+        "storeUnavailable": "दुकान अभी उपलब्ध नहीं है। अपना कनेक्शन जाँचो और बाद में फिर कोशिश करो।",
+        "purchaseFailed": "खरीदारी पूरी नहीं हुई। तुमसे कोई पैसा नहीं लिया गया।",
+        "keptOnPrestige": "प्रेस्टीज करने पर रत्न बने रहते हैं।",
+        "unavailable": "उपलब्ध नहीं",
+        "thankYouCaps": "शुक्रिया!",
+        "gemsAdded_one": "+{{amount}} रत्न",
+        "gemsAdded_other": "+{{amount}} रत्न",
+        "buyLabel_one": "{{amount}} रत्न खरीदो",
+        "buyLabel_other": "{{amount}} रत्न खरीदो",
+        "buyLabelWithPrice_one": "{{amount}} रत्न {{price}} में खरीदो",
+        "buyLabelWithPrice_other": "{{amount}} रत्न {{price}} में खरीदो",
+        "tags": {
+            "popular": "लोकप्रिय",
+            "bestValue": "सबसे फ़ायदेमंद"
+        }
+    },
+    "offline": {
+        "welcomeBack": "वापसी पर स्वागत है!",
+        "away": "तुम्हें गए {{duration}} हो गए।",
+        "awayCapped": "तुम्हें गए {{duration}} से ज़्यादा हो गए, इससे ज़्यादा गिना नहीं जाता।",
+        "rested": "तुम्हारी ग़ैरमौजूदगी में साम्राज्य ने आराम किया।",
+        "missedCaps": "छूटा उत्पादन",
+        "perSecond": "{{value}} / सेकंड",
+        "gemOfferCaps": "{{cost}} रत्न में ×{{multiplier}} · तुम्हारे पास {{gems}}",
+        "gemOfferGetCaps": "{{cost}} रत्न में ×{{multiplier}} · रत्न लो",
+        "noThanks": "नहीं, शुक्रिया"
+    },
+    "ads": {
+        "watchCaps": "विज्ञापन देखो",
+        "loadingCaps": "विज्ञापन लोड हो रहा है...",
+        "failed": "विज्ञापन पूरा नहीं चला। अपना कनेक्शन जाँचो और फिर कोशिश करो।"
+    },
+    "reset": {
+        "title": "फिर से शुरू करना है?",
+        "warning": "इससे तुम्हारा गेम रीसेट हो जाएगा। तुम्हारे इमोजी, इमारतें, अपग्रेड, सार, पर्क, संग्रह और आँकड़े, सब मिट जाएँगे। इसे वापस नहीं किया जा सकता।",
+        "purchasesSafe": "तुम्हारी इन-गेम खरीदारियाँ सुरक्षित हैं। रत्न और जो कुछ भी तुमने खरीदा है, वो नए गेम में साथ आएगा।",
+        "confirm": "हाँ, मेरा गेम रीसेट करो",
+        "cancel": "खेलते रहो"
+    },
+    "milestones": {
+        "caption": "उपलब्धि",
+        "emojisDrawn": "{{amount}} इमोजी बन गए!"
+    },
+    "settings": {
+        "title": "सेटिंग्स",
+        "close": "सेटिंग्स बंद करो",
+        "sound": "आवाज़",
+        "soundEffects": "साउंड इफ़ेक्ट",
+        "soundEffectsHint": "टैप पर हल्की-सी 'पॉप', और चमकीले इमोजी पर घंटी की खनक।",
+        "performance": "परफ़ॉर्मेंस",
+        "reduceAnimations": "एनिमेशन कम करो",
+        "reduceAnimationsHint": "टैप किए इमोजी अब बड़े इमोजी से उड़कर नहीं निकलेंगे। अगर टैपिंग अटकती लगे तो इसे आज़माओ।",
+        "dangerZone": "ख़तरे का ज़ोन"
+    },
+    "cheats": {
+        "subtitle": "टेस्टिंग के लिए। बदलाव तुम्हारे सेव पर लागू होते हैं।",
+        "simulateAway": "1 घंटे की ग़ैरहाज़िरी सिम्युलेट करो",
+        "gems": "रत्न",
+        "addGems_one": "+{{count}} रत्न",
+        "addGems_other": "+{{count}} रत्न",
+        "addComboTaps": "+{{amount}} कॉम्बो टैप",
+        "multiplyTapEarnings": "×{{factor}} टैप कमाई",
+        "addCollection_one": "+{{count}} संग्रह",
+        "addCollection_other": "+{{count}} संग्रह",
+        "addShiny_one": "+{{count}} चमकीला",
+        "addShiny_other": "+{{count}} चमकीले",
+        "addMagical_one": "+{{count}} जादुई",
+        "addMagical_other": "+{{count}} जादुई",
+        "addEssence_one": "+{{count}} सार",
+        "addEssence_other": "+{{count}} सार",
+        "addPerkTier_one": "+{{count}} पर्क टियर",
+        "addPerkTier_other": "+{{count}} पर्क टियर",
+        "addRunTime": "+{{time}} दौर का समय",
+        "reachTrialGoal": "चुनौती का लक्ष्य पूरा करो",
+        "effectEmojis": "इफ़ेक्ट इमोजी",
+        "spawnEffects_one": "{{count}} इफ़ेक्ट इमोजी लाओ",
+        "spawnEffects_other": "{{count}} इफ़ेक्ट इमोजी लाओ",
+        "speed": "रफ़्तार",
+        "speedLabel": "{{speed}}× रफ़्तार",
+        "speedHint": "उत्पादन और दौर का समय। इफ़ेक्ट और कॉम्बो असली समय में चलते हैं। रीलोड के बाद बंद।",
+        "shiny": "चमकीले",
+        "onlyShiny": "सिर्फ़ चमकीले इमोजी",
+        "funValueQuirk": "{{name}}: {{description}}",
+        "noQuirk": "कोई ख़ासियत नहीं",
+        "hideFunValueTable": "मज़ा स्तर टेबल छिपाओ",
+        "showFunValueTable": "मज़ा स्तर टेबल दिखाओ",
+        "setFunValueLabel": "मज़ा स्तर {{value}} पर सेट करो: {{name}}",
+        "changeFunValueLabel": "मज़ा स्तर {{change}} बदलो"
+    },
+    "collection": {
+        "ofTotalFound": "/ {{total}} मिले",
+        "mostTapped": "सबसे ज़्यादा टैप: {{emoji}} ×{{amount}}",
+        "startCollecting": "संग्रह शुरू करने के लिए बड़े इमोजी को टैप करो",
+        "shinyFound_one": "{{amount}} चमकीला",
+        "shinyFound_other": "{{amount}} चमकीले",
+        "categories": {
+            "faces": "चेहरे",
+            "animals": "जानवर",
+            "food": "खाना",
+            "objects": "चीज़ें",
+            "people": "लोग",
+            "bodyParts": "शरीर",
+            "placesBuildings": "जगहें",
+            "plants": "पौधे",
+            "vehicles": "गाड़ियाँ",
+            "weather": "मौसम",
+            "symbols": "चिह्न"
+        },
+        "categoryLabel": "{{label}}, {{total}} में से {{found}} मिले",
+        "notFound": "अभी नहीं मिला",
+        "cellLabel_one": "{{emoji}}, {{count}} बार टैप किया",
+        "cellLabel_other": "{{emoji}}, {{count}} बार टैप किया",
+        "cellLabelShiny_one": "{{emoji}}, {{count}} बार टैप किया, {{shiny}} चमकीले",
+        "cellLabelShiny_other": "{{emoji}}, {{count}} बार टैप किया, {{shiny}} चमकीले"
+    },
+    "effects": {
+        "chipTapping": "×{{multiplier}} टैपिंग",
+        "chipProduction": "×{{multiplier}} उत्पादन",
+        "stackLabel_one": "{{count}} एक साथ: {{label}}, अगला {{time}} में ख़त्म",
+        "stackLabel_other": "{{count}} एक साथ: {{label}}, अगला {{time}} में ख़त्म",
+        "chipLabel": "{{title}}, {{time}} बाक़ी",
+        "gift": "तोहफ़ा!",
+        "ohNo": "अरे नहीं!",
+        "tapping": "टैपिंग",
+        "production": "उत्पादन",
+        "tapFrenzy": "टैप का तूफ़ान!",
+        "unholyPower": "शैतानी ताक़त!",
+        "productionBoost": "उत्पादन बूस्ट!",
+        "collectLabel": "{{title}} लो",
+        "tapMe": "मुझे टैप करो"
+    },
+    "combo": {
+        "level": "कॉम्बो ×{{multiplier}}",
+        "max": "मैक्स कॉम्बो ×{{multiplier}}",
+        "label": "कॉम्बो {{multiplier}} गुना",
+        "maxLabel": "कॉम्बो {{multiplier}} गुना, मैक्स"
+    },
+    "bigEmoji": {
+        "tapLabel": "बड़े इमोजी को टैप करो",
+        "tapShinyLabel": "चमकीले बड़े इमोजी को टैप करो",
+        "shiny": "चमकीला",
+        "shinyBurst": "चमकीला!",
+        "handsOff": "{{trial}} चुनौती · टैप से कुछ नहीं बनता",
+        "perTap": "+{{value}} प्रति टैप"
+    },
+    "bank": {
+        "timeToAfford": {
+            "needMore": "और चाहिए",
+            "seconds_one": "{{count}} सेकंड में",
+            "seconds_other": "{{count}} सेकंड में",
+            "minutes_one": "{{count}} मिनट में",
+            "minutes_other": "{{count}} मिनट में",
+            "hours_one": "{{count}} घंटे में",
+            "hours_other": "{{count}} घंटे में",
+            "days_one": "{{count}} दिन में",
+            "days_other": "{{count}} दिन में",
+            "aLongTime": "बहुत देर में"
+        },
+        "timeToAffordInline": {
+            "needMore": "और चाहिए",
+            "seconds_one": "{{count}} सेकंड में",
+            "seconds_other": "{{count}} सेकंड में",
+            "minutes_one": "{{count}} मिनट में",
+            "minutes_other": "{{count}} मिनट में",
+            "hours_one": "{{count}} घंटे में",
+            "hours_other": "{{count}} घंटे में",
+            "days_one": "{{count}} दिन में",
+            "days_other": "{{count}} दिन में",
+            "aLongTime": "बहुत देर में"
+        }
+    },
+    "catalogue": {
+        "title": "सारे अपग्रेड",
+        "counts": "{{owned}} खरीदे · {{forSale}} बिक्री पर · {{locked}} लॉक · कुल {{total}}",
+        "filter": {
+            "owned": "खरीदे {{count}}",
+            "forSale": "बिक्री पर {{count}}",
+            "locked": "लॉक {{count}}"
+        },
+        "combo": "कॉम्बो",
+        "effectEmojis": "इफ़ेक्ट इमोजी",
+        "unlock": {
+            "own": "{{count}} {{buildings}} रखो",
+            "tapping": "टैप से {{amount}} इमोजी कमाओ",
+            "comboTaps": "{{amount}} कॉम्बो टैप",
+            "earned": "{{amount}} इमोजी कमाओ"
+        },
+        "state": {
+            "owned": "✓ खरीदा",
+            "forSale": "बिक्री पर",
+            "locked": "🔒 लॉक"
+        },
+        "stateA11y": {
+            "owned": "खरीदा हुआ",
+            "forSale": "बिक्री पर",
+            "locked": "लॉक"
+        },
+        "tileA11y": "{{name}}, {{state}}",
+        "prev": "पिछला",
+        "next": "अगला",
+        "prevA11y": "पिछला अपग्रेड",
+        "nextA11y": "अगला अपग्रेड",
+        "fact": {
+            "price": "क़ीमत",
+            "unlocks": "अनलॉक",
+            "id": "ID"
         }
     }
 }

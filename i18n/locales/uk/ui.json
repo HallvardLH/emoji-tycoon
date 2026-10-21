@@ -113,6 +113,7 @@
     "prestige": {
         "title": "Престиж",
         "close": "Закрити",
+        "ordinal_ordinal_few": "{{count}}-й",
         "ordinal_ordinal_other": "{{count}}-й",
         "celebrateCaption": "Престиж #{{count}}",
         "celebrateTrialCaption": "Престиж #{{count}} · Випробування почалося",
