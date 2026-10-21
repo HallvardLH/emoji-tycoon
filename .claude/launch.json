@@ -6,6 +6,12 @@
       "runtimeExecutable": "C:\\Program Files\\nodejs\\npx.cmd",
       "runtimeArgs": ["expo", "start", "--web", "--port", "8081"],
       "port": 8081
+    },
+    {
+      "name": "expo-native-8082",
+      "runtimeExecutable": "C:\\Program Files\\nodejs\\npx.cmd",
+      "runtimeArgs": ["expo", "start", "--port", "8082"],
+      "port": 8082
     }
   ]
 }
