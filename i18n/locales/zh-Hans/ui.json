@@ -6,11 +6,14 @@
         "buildings": "建筑",
         "upgrades": "升级",
         "stats": "统计",
-        "collection": "收藏"
+        "collection": "收藏",
+        "newItemsLabel_other": "{{label}}，{{count}}个新内容"
     },
     "header": {
         "emojis": "表情",
-        "perSecond": "每秒：{{value}}"
+        "perSecond": "每秒：{{value}}",
+        "rate": "+{{value}}/秒",
+        "gemsLabel_other": "{{gems}}宝石。打开宝石商店"
     },
     "common": {
         "buy": "购买",
@@ -23,29 +26,119 @@
             "multiplyTap": "• 点击效率翻倍。",
             "percentageIncreaseTap": "• 点击威力提升{{percent}}。",
             "tapPercentageOfEps": "• 每次点击额外获得表情总产量的{{percent}}。",
-            "percentageIncreaseProduction": "• 表情总产量提升{{percent}}。"
+            "percentageIncreaseProduction": "• 表情总产量提升{{percent}}。",
+            "comboUnlock": "• 快速点击可累积连击，最高×{{level}}。",
+            "comboLevel": "• 连击最高可达×{{level}}。",
+            "effectEmojis": "• {{summary}}。"
         },
         "bonusProduction": "现在购买此升级，每秒表情<hl>+{{bonus}}</hl>，表情产量提升<hl>{{percent}}</hl>",
         "bonusTap": "现在购买此升级，每次点击表情<hl>+{{bonus}}</hl>，点击所得表情提升<hl>{{percent}}</hl>",
         "filterTitle": "筛选升级",
-        "filterDescription": "选择要查看哪些建筑的升级。"
+        "filterDescription": "选择要查看哪些建筑的升级。",
+        "effectEmojiSummary": {
+            "spawnRate": "效果表情出现频率×{{multiplier}}",
+            "duration": "正面效果持续时间×{{multiplier}}",
+            "start": "效果表情开始出现"
+        },
+        "chips": {
+            "multiplyBuildingProduction": "{{buildings}} ×{{multiplier}}",
+            "multiplyTap": "点击 ×{{multiplier}}",
+            "percentageIncreaseTap": "点击 +{{percent}}",
+            "percentageIncreaseProduction": "产量 +{{percent}}",
+            "tapPercentageOfEps": "点击+每秒产量的{{percent}}",
+            "comboUnlock": "连击最高×{{level}}",
+            "comboLevel": "最高连击×{{level}}"
+        },
+        "impact": {
+            "perSecond": "+{{bonus}}/秒",
+            "perTap": "每次点击+{{bonus}}",
+            "and": "{{a}}，{{b}}",
+            "rightNow": "立即{{gains}}"
+        },
+        "tierLabel": {
+            "helper": "{{building}} · 助手",
+            "hands": "大表情 · 手",
+            "effectEmojisNew": "效果表情 · 新",
+            "effectEmojisLevel": "效果表情 · {{level}}级",
+            "comboNew": "连击 · 新",
+            "comboLevel": "连击 · {{level}}级",
+            "tier": "{{building}} · {{tier}}阶"
+        },
+        "forSale": "在售",
+        "owned": "已拥有",
+        "available": "可购买",
+        "emptyOwnedTitle": "还没买过升级",
+        "emptyTitle": "暂无升级",
+        "emptyOwnedText": "你购买的升级会收录在这里。",
+        "emptyText": "购买建筑、点击大表情来解锁升级。",
+        "filterAll": "全部",
+        "quoted": "「{{quote}}」",
+        "ownedBadge": "✓ 已拥有",
+        "paid": "已支付{{price}}",
+        "bareBones": "🦴 {{trial}}中无法购买升级",
+        "buyFor": "花{{price}}购买",
+        "priceAndTime": "{{price}} · {{time}}",
+        "ownedCount": "已拥有{{owned}}/{{total}}个升级",
+        "availableCount": "{{affordable}}个买得起 · {{unlocked}}个已解锁",
+        "a11y": {
+            "owned": "{{name}}，已拥有",
+            "price": "{{name}}，{{price}}",
+            "affordable": "{{name}}，{{price}}，买得起"
+        }
     },
     "stats": {
         "totalEmojisDrawn": "累计绘制表情",
         "emojiTaps": "表情点击次数",
         "emojisEarnedFromTapping": "点击获得的表情",
         "magicalEmojisTapped": "点中的魔法表情",
-        "funValue": "趣味值"
+        "funValue": "趣味值",
+        "shinyEmojisTapped": "点中的闪光表情",
+        "comboTaps": "连击点击次数",
+        "madeByEachBuilding": "各建筑产量"
     },
     "drawer": {
         "language": "语言",
         "deviceLanguage": "设备语言",
         "cheats": "作弊",
         "resetGame": "重置游戏",
-        "spawnEffect": "生成效果表情"
+        "spawnEffect": "生成效果表情",
+        "menu": "菜单"
     },
     "prestige": {
-        "title": "声望"
+        "title": "声望",
+        "close": "关闭",
+        "ordinal_ordinal_other": "第{{count}}",
+        "celebrateCaption": "第{{count}}次声望",
+        "celebrateTrialCaption": "第{{count}}次声望 · 挑战开始",
+        "celebrateTitle": "+{{essence}}精华",
+        "celebrateTierTitle": "+{{essence}}精华 · 第{{tier}}阶天赋已解锁",
+        "essenceCaption": "表情精华",
+        "essenceBonus": "产量+{{bonus}}（每点{{each}}）",
+        "intro": "画出足够多的表情后，它们的精华便开始在你身边聚集：这是一种神奇的物质，每次你看它，它都会变换形状。每点未花费的精华都能提升产量，精华还能购买永久生效的天赋。",
+        "startOver": "重新开始",
+        "prestigesSoFar_other": "已声望{{count}}次",
+        "resetsWhat": "重置你的表情、建筑、建筑升级和手。保留收藏、统计、连击和效果表情升级、精华以及天赋。",
+        "nextEssence": "下一点精华",
+        "nextEssenceAt": "累计绘制{{amount}}表情时",
+        "noEssenceYet": "暂时还没有可获得的精华",
+        "tapAgainToPrestige": "再点一次进行声望",
+        "prestigeFor": "声望，获得+{{essence}} ✨",
+        "productionCaps": "产量+{{percent}}",
+        "playedThisRun": "本轮游戏时长",
+        "drawnThisRun": "本轮绘制",
+        "essencePerHour": "每小时精华",
+        "afterTenMinutes": "10分钟后",
+        "essenceRate": "{{rate}}（最佳{{best}}）",
+        "slowingDown": "📉 精华获取速度比本轮早些时候慢了。现在正是声望的好时机。",
+        "drawnAmount": "已绘制{{amount}}",
+        "pastRuns": "往轮记录",
+        "pastRunLine": "{{duration}} · 绘制{{amount}}",
+        "pastRunTrialCompleted": "{{icon}} {{name}} ✓",
+        "pastRunTrialNotCompleted": "{{icon}} {{name}}，未完成",
+        "chipLabel": "表情精华",
+        "chipLabelReady": "声望可获得{{essence}}表情精华",
+        "chipEssence": "精华",
+        "chipPending": "+{{essence}}精华"
     },
     "numbers": {
         "groupSize": "4",
@@ -89,6 +182,260 @@
             "60": "那由他",
             "64": "不可思议",
             "68": "无量大数"
+        }
+    },
+    "buildings": {
+        "ownedA11y_other": "已拥有{{count}}个",
+        "newBadge": "新",
+        "statLine": "{{eps}}/秒 · 占总产量{{share}}",
+        "nextUpgrade": "下个升级：{{at}}",
+        "allUpgradesFound": "已解锁全部升级",
+        "epsEach": "每个+{{eps}}/秒",
+        "buy": "购买",
+        "buyCount": "购买×{{count}}",
+        "buyA11y_other": "花{{price}}购买{{count}}个{{name}}",
+        "mystery": "神秘建筑",
+        "revealsAt": "表情达到{{amount}}时揭晓",
+        "bulkLabel": "购买数量",
+        "bulkMax": "最大",
+        "bulkA11yMax": "能买多少买多少",
+        "bulkA11y_other": "每次购买{{count}}个",
+        "milestoneCaption": "新建筑",
+        "milestoneTitle": "你的第一个{{building}}！"
+    },
+    "time": {
+        "seconds_other": "{{count}}秒",
+        "minutes_other": "{{count}}分",
+        "hours_other": "{{count}}小时",
+        "days_other": "{{count}}天",
+        "pair": "{{a}}{{b}}"
+    },
+    "trials": {
+        "title": "挑战",
+        "completedCount": "已完成{{done}}/{{total}}",
+        "intro": "声望进入一轮带有特殊规则的高难度游戏。在这一轮中画出足够多的表情，即可永久获得奖励，规则也随之解除。",
+        "unlocksWith": "{{ordinal}}次声望时解锁。",
+        "completeCaps": "挑战完成",
+        "inProgressCaps": "挑战进行中",
+        "completedText": "{{reward}}永久归你所有，本轮剩余时间内规则解除。",
+        "activeText": "{{rule}}。本轮绘制{{goal}}即可永久获得{{reward}}。",
+        "giveUp": "放弃此挑战",
+        "giveUpConfirm": "再点一次放弃（无奖励）",
+        "doneTag": "✓ 已完成",
+        "playingTag": "进行中",
+        "ruleLine": "<hl>规则：</hl>{{rule}}",
+        "ruleLineWithStart": "<hl>规则：</hl>{{rule}}（初始拥有{{amount}}表情）",
+        "rewardLine": "<hl>奖励：</hl>{{reward}}",
+        "finishFirst": "请先完成当前挑战",
+        "needsEssence": "需要精华才能声望",
+        "tapAgainToStart": "再点一次开始",
+        "prestigeInto": "声望进入挑战，获得+{{essence}} ✨",
+        "goalCaps": "目标：{{goal}}",
+        "goal": "{{amount}}表情",
+        "completeTitle": "{{name}}：{{reward}}",
+        "rewardUnlocked": "奖励已解锁"
+    },
+    "perks": {
+        "title": "天赋",
+        "ownedCount": "已拥有{{owned}}/{{total}}",
+        "spentKeepsHalf": "已花费的精华保留一半产量加成。",
+        "spentNoBonus": "已花费的精华不再提升产量。",
+        "tierCaps": "第{{tier}}阶",
+        "tierLockedCaps": "第{{tier}}阶 · {{ordinal}}次声望时解锁",
+        "hidden": "声望后揭晓此天赋。",
+        "needsFirst": "需先拥有{{perk}}",
+        "ownedTag": "✓ 已拥有",
+        "buyLabel": "花{{cost}}精华购买{{perk}}"
+    },
+    "gems": {
+        "title": "宝石商店",
+        "yourGemsCaps": "你的宝石",
+        "gemsCaps": "宝石",
+        "offlineClaim": "花{{cost}}宝石领取×{{multiplier}}离线收益",
+        "storeUnavailable": "商店暂时无法使用。请检查网络连接，稍后再试。",
+        "purchaseFailed": "购买未成功。你没有被扣款。",
+        "keptOnPrestige": "声望时保留宝石。",
+        "unavailable": "不可用",
+        "thankYouCaps": "谢谢！",
+        "gemsAdded_other": "+{{amount}}宝石",
+        "buyLabel_other": "购买{{amount}}宝石",
+        "buyLabelWithPrice_other": "花{{price}}购买{{amount}}宝石",
+        "tags": {
+            "popular": "热门",
+            "bestValue": "最超值"
+        }
+    },
+    "offline": {
+        "welcomeBack": "欢迎回来！",
+        "away": "你离开了{{duration}}。",
+        "awayCapped": "你离开了超过{{duration}}，最多只计算这么久。",
+        "rested": "你不在的时候，你的帝国也在休息。",
+        "missedCaps": "错过的产量",
+        "perSecond": "{{value}}/秒",
+        "gemOfferCaps": "{{cost}}宝石换×{{multiplier}} · 你有{{gems}}",
+        "gemOfferGetCaps": "{{cost}}宝石换×{{multiplier}} · 获取宝石",
+        "noThanks": "不用了"
+    },
+    "ads": {
+        "watchCaps": "观看广告",
+        "loadingCaps": "广告加载中...",
+        "failed": "广告未能播放完毕。请检查网络连接后重试。"
+    },
+    "reset": {
+        "title": "重新开始？",
+        "warning": "这将重置你的游戏。你的表情、建筑、升级、精华、天赋、收藏和统计都将消失。此操作无法撤销。",
+        "purchasesSafe": "你的游戏内购买不受影响。宝石和你购买的所有内容都会保留到新游戏中。",
+        "confirm": "是的，重置游戏",
+        "cancel": "继续玩"
+    },
+    "milestones": {
+        "caption": "里程碑",
+        "emojisDrawn": "已绘制{{amount}}表情！"
+    },
+    "settings": {
+        "title": "设置",
+        "close": "关闭设置",
+        "sound": "声音",
+        "soundEffects": "音效",
+        "soundEffectsHint": "点击时有轻柔的「啵」声，点中闪光表情时有叮咚声。",
+        "performance": "性能",
+        "reduceAnimations": "减少动画",
+        "reduceAnimationsHint": "点击的表情不再从大表情上飞出。如果点击感觉卡顿，可以试试这个。",
+        "dangerZone": "危险区域"
+    },
+    "cheats": {
+        "subtitle": "测试用。更改会直接应用到你的存档。",
+        "simulateAway": "模拟离开1小时",
+        "gems": "宝石",
+        "addGems_other": "+{{count}}宝石",
+        "addComboTaps": "+{{amount}}次连击点击",
+        "multiplyTapEarnings": "点击收益×{{factor}}",
+        "addCollection_other": "+{{count}}收藏",
+        "addShiny_other": "+{{count}}闪光",
+        "addMagical_other": "+{{count}}魔法",
+        "addEssence_other": "+{{count}}精华",
+        "addPerkTier_other": "+{{count}}天赋阶",
+        "addRunTime": "本轮时长+{{time}}",
+        "reachTrialGoal": "达成挑战目标",
+        "effectEmojis": "效果表情",
+        "spawnEffects_other": "生成{{count}}个效果表情",
+        "speed": "速度",
+        "speedLabel": "{{speed}}×速度",
+        "speedHint": "影响产量和本轮时长。效果和连击仍按真实时间计算。重新加载后关闭。",
+        "shiny": "闪光",
+        "onlyShiny": "只出闪光表情",
+        "funValueQuirk": "{{name}}：{{description}}",
+        "noQuirk": "无特殊效果",
+        "hideFunValueTable": "隐藏趣味值表",
+        "showFunValueTable": "显示趣味值表",
+        "setFunValueLabel": "将趣味值设为{{value}}：{{name}}",
+        "changeFunValueLabel": "趣味值变化{{change}}"
+    },
+    "collection": {
+        "ofTotalFound": "/ {{total}} 已发现",
+        "mostTapped": "点击最多：{{emoji}} ×{{amount}}",
+        "startCollecting": "点击大表情开始收集",
+        "shinyFound_other": "{{amount}}个闪光",
+        "categories": {
+            "faces": "面孔",
+            "animals": "动物",
+            "food": "食物",
+            "objects": "物品",
+            "people": "人物",
+            "bodyParts": "身体",
+            "placesBuildings": "地点",
+            "plants": "植物",
+            "vehicles": "交通",
+            "weather": "天气",
+            "symbols": "符号"
+        },
+        "categoryLabel": "{{label}}，已发现{{found}}/{{total}}",
+        "notFound": "尚未发现",
+        "cellLabel_other": "{{emoji}}，已点击{{count}}次",
+        "cellLabelShiny_other": "{{emoji}}，已点击{{count}}次，{{shiny}}个闪光"
+    },
+    "effects": {
+        "chipTapping": "点击×{{multiplier}}",
+        "chipProduction": "产量×{{multiplier}}",
+        "stackLabel_other": "已叠加{{count}}个：{{label}}，下一个{{time}}后结束",
+        "chipLabel": "{{title}}，剩余{{time}}",
+        "gift": "礼物！",
+        "ohNo": "糟糕！",
+        "tapping": "点击",
+        "production": "产量",
+        "tapFrenzy": "点击狂潮！",
+        "unholyPower": "邪恶之力！",
+        "productionBoost": "产量提升！",
+        "collectLabel": "领取{{title}}",
+        "tapMe": "点我"
+    },
+    "combo": {
+        "level": "连击×{{multiplier}}",
+        "max": "最高连击×{{multiplier}}",
+        "label": "连击{{multiplier}}倍",
+        "maxLabel": "连击{{multiplier}}倍，已达最高"
+    },
+    "bigEmoji": {
+        "tapLabel": "点击大表情",
+        "tapShinyLabel": "点击闪光大表情",
+        "shiny": "闪光",
+        "shinyBurst": "闪光！",
+        "handsOff": "{{trial}}挑战 · 点击画不出表情",
+        "perTap": "每次点击+{{value}}"
+    },
+    "bank": {
+        "timeToAfford": {
+            "needMore": "表情不足",
+            "seconds_other": "{{count}}秒后",
+            "minutes_other": "{{count}}分钟后",
+            "hours_other": "{{count}}小时后",
+            "days_other": "{{count}}天后",
+            "aLongTime": "遥遥无期"
+        },
+        "timeToAffordInline": {
+            "needMore": "表情不足",
+            "seconds_other": "{{count}}秒后",
+            "minutes_other": "{{count}}分钟后",
+            "hours_other": "{{count}}小时后",
+            "days_other": "{{count}}天后",
+            "aLongTime": "遥遥无期"
+        }
+    },
+    "catalogue": {
+        "title": "全部升级",
+        "counts": "已拥有{{owned}} · 在售{{forSale}} · 未解锁{{locked}} · 共{{total}}",
+        "filter": {
+            "owned": "已拥有 {{count}}",
+            "forSale": "在售 {{count}}",
+            "locked": "未解锁 {{count}}"
+        },
+        "combo": "连击",
+        "effectEmojis": "效果表情",
+        "unlock": {
+            "own": "拥有{{count}}个{{buildings}}",
+            "tapping": "通过点击获得{{amount}}表情",
+            "comboTaps": "{{amount}}次连击点击",
+            "earned": "获得{{amount}}表情"
+        },
+        "state": {
+            "owned": "✓ 已拥有",
+            "forSale": "在售",
+            "locked": "🔒 未解锁"
+        },
+        "stateA11y": {
+            "owned": "已拥有",
+            "forSale": "在售",
+            "locked": "未解锁"
+        },
+        "tileA11y": "{{name}}，{{state}}",
+        "prev": "上一个",
+        "next": "下一个",
+        "prevA11y": "上一个升级",
+        "nextA11y": "下一个升级",
+        "fact": {
+            "price": "价格",
+            "unlocks": "解锁条件",
+            "id": "ID"
         }
     }
 }
