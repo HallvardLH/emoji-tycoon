@@ -82,7 +82,38 @@
         },
         "18": {
             "name": "Emoji singularity",
-            "plural": "Emoji singularity"
+            "plural": "Emoji singularity",
+            "description": "Iyon na 'yon. Walang natira kundi emoji. Nagawa mo. O nagawa mo nga ba?"
+        },
+        "7": {
+            "name": "Emoji sinehan",
+            "plural": "Emoji sinehan",
+            "description": "Mga blockbuster na pinagbibidahan ng paborito mong emoji. May kasamang popcorn at emoji ang bawat ticket."
+        },
+        "11": {
+            "name": "Emoji airline",
+            "plural": "Emoji airline",
+            "description": "Inililipad ang emoji sa bawat sulok ng mundo. Window seat, siyempre."
+        },
+        "19": {
+            "name": "Emoji time machine",
+            "plural": "Emoji time machine",
+            "description": "Bumabalik sa simula ng panahon para iguhit ang pinakaunang emoji. Tapos ang pangalawa."
+        },
+        "20": {
+            "name": "Big bang",
+            "plural": "Big bang",
+            "description": "Isang bagong-bagong uniberso, at ngayon, puro emoji na hanggang sa kailaliman."
+        },
+        "21": {
+            "name": "Emoji multiverse",
+            "plural": "Emoji multiverse",
+            "description": "Walang katapusang uniberso, bawat isa may sariling emoji tycoon. Lahat sila, nagtatrabaho na para sa iyo."
+        },
+        "22": {
+            "name": "Ang unang emoji",
+            "plural": "Unang emoji",
+            "description": "Dito nagsimula ang lahat. Pinapanood ka na nito mula pa sa una mong tap."
         }
     },
     "upgrades": {
@@ -188,27 +219,33 @@
         },
         "100": {
             "name": "Mas malakas na braso",
-            "description": "Mas mabilis gumuhit ng emoji kapag mas malakas ang braso."
+            "description": "Mas mabilis gumuhit ng emoji kapag mas malakas ang braso.",
+            "quote": "Masakit, pero sulit."
         },
         "101": {
             "name": "Flexible na daliri",
-            "description": "Mas detalyadong emoji ang kaya ng flexible na daliri."
+            "description": "Mas detalyadong emoji ang kaya ng flexible na daliri.",
+            "quote": "Flexible? Siguro. Pero masakit pa rin."
         },
         "102": {
             "name": "Dalawang kamay",
-            "description": "Doble ang kamay, doble ang emoji."
+            "description": "Doble ang kamay, doble ang emoji.",
+            "quote": "Doble ang yabang, doble ang bagsak."
         },
         "103": {
             "name": "Kamay na may cutex",
-            "description": "Mas mabilis kang mag-tap kapag may cutex ka, hindi mo ba alam?"
+            "description": "Mas mabilis kang mag-tap kapag may cutex ka, hindi mo ba alam?",
+            "quote": "At ang cute-cute mo pa!"
         },
         "104": {
             "name": "Paa",
-            "description": "Doble ang produksiyon kapag gumuhit ka gamit ang paa (at hindi naman 'yon mahirap)!"
+            "description": "Doble ang produksiyon kapag gumuhit ka gamit ang paa (at hindi naman 'yon mahirap)!",
+            "quote": "Hindi mahirap? Hiniwalayan ako ng asawa ko nang makita niyang nakapatong ang paa ko sa tablet ng pamilya."
         },
         "105": {
             "name": "Dila",
-            "description": "Sa ilang taon ng pagsasanay, matututo ka ring gumuhit gamit ang dila mo!"
+            "description": "Sa ilang taon ng pagsasanay, matututo ka ring gumuhit gamit ang dila mo!",
+            "quote": "mmmhmh thmpwuh mhhaaaam ehhmmmmuhm ahumhmhm"
         },
         "106": {
             "name": "Ilong",
@@ -217,19 +254,23 @@
         },
         "107": {
             "name": "Tainga",
-            "description": "Magsiksik ng bolpen sa tainga mo, ikiling ang ulo nang 90 degrees at gumuhit!"
+            "description": "Magsiksik ng bolpen sa tainga mo, ikiling ang ulo nang 90 degrees at gumuhit!",
+            "quote": "Ano? Ha? Hindi ko marinig- a- ha... wala talaga akong marinig na kahit an- ANO?!"
         },
         "108": {
             "name": "Bibig",
-            "description": "Ilagay ang lapis sa bibig mo at gumuhit gamit ito!"
+            "description": "Ilagay ang lapis sa bibig mo at gumuhit gamit ito!",
+            "quote": "Hindi sulit. Sobrang sakit."
         },
         "109": {
             "name": "Mas malakas na binti",
-            "description": "Sa mas malakas na binti, mas mabilis kang makakaguhit ng emoji gamit ang paa mo."
+            "description": "Sa mas malakas na binti, mas mabilis kang makakaguhit ng emoji gamit ang paa mo.",
+            "quote": "Ang laki na ng binti ko. 'Yung kaliwa lang. Paikot-ikot na lang ako maglakad."
         },
         "110": {
             "name": "Mas malaking baga",
-            "description": "Mas mabilis gumuhit ng emoji kapag mas malaki ang baga."
+            "description": "Mas mabilis gumuhit ng emoji kapag mas malaki ang baga.",
+            "quote": "Oxygen. Oxygen. Oxygen."
         },
         "111": {
             "name": "Mas malaking utak",
@@ -237,7 +278,8 @@
         },
         "112": {
             "name": "Buhok",
-            "description": "Gumamit ng paintbrush gamit ang buhok mo para lumikha ng emoji. Sino'ng kailangan ng kamay kung may style ka?"
+            "description": "Gumamit ng paintbrush gamit ang buhok mo para lumikha ng emoji. Sino'ng kailangan ng kamay kung may style ka?",
+            "quote": "Sino'ng kailangan ng kamay? Ako. Kailangan ko ng kamay. Nakakakalbo 'to."
         },
         "113": {
             "name": "Kilay",
@@ -245,7 +287,8 @@
         },
         "114": {
             "name": "Likod",
-            "description": "Humiga nang patihaya at gumuhit ng emoji gamit ang mga kamay sa likod mo. Stretching na, drawing pa!"
+            "description": "Humiga nang patihaya at gumuhit ng emoji gamit ang mga kamay sa likod mo. Stretching na, drawing pa!",
+            "quote": "Humiga ka raw nang patihaya. Stretching na, drawing pa, sabi nila. Hindi na ako makabangon."
         },
         "115": {
             "name": "Ngipin",
@@ -253,7 +296,8 @@
         },
         "116": {
             "name": "Pusod",
-            "description": "Gumuhit ng emoji gamit ang pusod mo. Natatanging skill ito na mahirap i-master!"
+            "description": "Gumuhit ng emoji gamit ang pusod mo. Natatanging skill ito na mahirap i-master!",
+            "quote": "Gumuguhit ako gamit ang pusod ko. Proud na proud ang nanay ko."
         },
         "117": {
             "name": "Echo na pagguhit",
@@ -261,23 +305,28 @@
         },
         "118": {
             "name": "Telekinetikong pagguhit",
-            "description": "Bakit pa gagamit ng kamay kung kaya mong gumuhit ng emoji gamit ang isip?"
+            "description": "Bakit pa gagamit ng kamay kung kaya mong gumuhit ng emoji gamit ang isip?",
+            "quote": "Kaya kong magpagalaw ng bagay gamit ang isip, tapos pinapaguhit mo lang ako ng kumikindat na mukha."
         },
         "119": {
             "name": "Quantum na daliri",
-            "description": "Dahil sa quantum entanglement sa mga daliri mo, nakakaguhit ka ng emoji sa bilis ng liwanag."
+            "description": "Dahil sa quantum entanglement sa mga daliri mo, nakakaguhit ka ng emoji sa bilis ng liwanag.",
+            "quote": "Nasa dalawang lugar nang sabay ang mga daliri ko. Pareho silang galit sa iyo."
         },
         "200": {
             "name": "Mas magandang lapis",
-            "description": "Mas magandang lapis para sa mas detalyadong emoji."
+            "description": "Mas magandang lapis para sa mas detalyadong emoji.",
+            "quote": "Hindi maaayos ng mas magandang lapis ang talento mo."
         },
         "201": {
             "name": "Espesyal na krayola",
-            "description": "Ginigising ng espesyal na krayolang ito ang batang nasa loob ng bawat artist."
+            "description": "Ginigising ng espesyal na krayolang ito ang batang nasa loob ng bawat artist.",
+            "quote": "Nahanap ko ang batang nasa loob ko. Dismayado rin siya sa akin."
         },
         "202": {
             "name": "Mas magandang brush",
-            "description": "Mas artistikong emoji dahil sa mas magandang brush."
+            "description": "Mas artistikong emoji dahil sa mas magandang brush.",
+            "quote": "Paanong mas maganda? Ang naipinta ko lang ay nakakatakot na bersiyon ng asawa ko. Ibalik n'yo ang pera ko."
         },
         "203": {
             "name": "Fountain pen",
@@ -334,7 +383,8 @@
         },
         "215": {
             "name": "Comic Sans font",
-            "description": "Mahalin mo man o kamuhian, nagiging... kakaiba ang emoji mo dahil dito!"
+            "description": "Mahalin mo man o kamuhian, nagiging... kakaiba ang emoji mo dahil dito!",
+            "quote": "Ayoko na."
         },
         "216": {
             "name": "AI art generator",
@@ -353,11 +403,13 @@
         },
         "219": {
             "name": "Dugo",
-            "description": "Mas astig ang emoji kapag dugo ang pinangpinta!"
+            "description": "Mas astig ang emoji kapag dugo ang pinangpinta!",
+            "quote": "Kanino? KANINO?"
         },
         "300": {
             "name": "Magsasaka",
-            "description": "Ano ang bukid kung walang magsasaka?!"
+            "description": "Ano ang bukid kung walang magsasaka?!",
+            "quote": "Nagmana ako ng 200 ektarya sa tatay ko, tapos pinapatanim mo ako ng smiley."
         },
         "301": {
             "name": "Punla",
@@ -366,7 +418,8 @@
         },
         "302": {
             "name": "Mas magandang gamit",
-            "description": "Mas mabilis na pagsasaka!"
+            "description": "Mas mabilis na pagsasaka!",
+            "quote": "Bagong gamit, parehong sahod. Salamat sa wala."
         },
         "303": {
             "name": "Traktora",
@@ -374,11 +427,13 @@
         },
         "304": {
             "name": "Bahay-kubo",
-            "description": "Maaliwalas na tahanan kung saan makakapagpahinga at makakapag-recharge ang mga magsasaka mo."
+            "description": "Maaliwalas na tahanan kung saan makakapagpahinga at makakapag-recharge ang mga magsasaka mo.",
+            "quote": "Nakakatawang salita ang 'maaliwalas' para sa kubong may timba."
         },
         "305": {
             "name": "Emoji na baka",
-            "description": "Mas maraming emuuuuuuuji."
+            "description": "Mas maraming emuuuuuuuji.",
+            "quote": "Isa pang muuu-biro at IKAW ang itutumba ko."
         },
         "306": {
             "name": "Sistema ng patubig",
@@ -387,7 +442,8 @@
         },
         "307": {
             "name": "Panakot-ibon",
-            "description": "Itinataboy ang makukulit na ibong emoji palayo sa bukid mo!"
+            "description": "Itinataboy ang makukulit na ibong emoji palayo sa bukid mo!",
+            "quote": "Hindi natatakot ang mga ibon. Ang mga kapitbahay, natatakot."
         },
         "308": {
             "name": "Compost bin",
@@ -395,7 +451,8 @@
         },
         "309": {
             "name": "Greenhouse",
-            "description": "Magtanim ng emoji buong taon, anuman ang panahon!"
+            "description": "Magtanim ng emoji buong taon, anuman ang panahon!",
+            "quote": "May isa pang greenhouse na nangangailangan ng tulong mo. Imamarka ko sa mapa mo."
         },
         "310": {
             "name": "Windmill",
@@ -404,7 +461,8 @@
         },
         "311": {
             "name": "Emoji na taniman ng prutas",
-            "description": "Magtanim ng emoji na puno na namumunga buong taon!"
+            "description": "Magtanim ng emoji na puno na namumunga buong taon!",
+            "quote": "Naglalakad ang mga puno. Galit ang mga puno."
         },
         "312": {
             "name": "Pista ng ani",
@@ -425,11 +483,13 @@
         },
         "316": {
             "name": "Ang Emoji Farm ng Kinabukasan",
-            "description": "High-tech na utopia na ang mga bukid mo, may robot, hologram at lumilipad na traktora. Welcome sa kinabukasan!"
+            "description": "High-tech na utopia na ang mga bukid mo, may robot, hologram at lumilipad na traktora. Welcome sa kinabukasan!",
+            "quote": "Inagaw ng robot ang trabaho ko. Tapos nagtanong pa siya sa akin ng direksiyon."
         },
         "317": {
             "name": "Blood moon",
-            "description": "Sa ilalim ng blood moon, mas mabilis lumaki ang pananim mo... pero tinutubuan din sila ng ngipin."
+            "description": "Sa ilalim ng blood moon, mas mabilis lumaki ang pananim mo... pero tinutubuan din sila ng ngipin.",
+            "quote": "May ngipin na ang mga karot. Nangangagat na ang mga karot."
         },
         "318": {
             "name": "Ang huling ani",
@@ -441,11 +501,13 @@
         },
         "400": {
             "name": "Matalas na kutsilyo",
-            "description": "Mas madaling tadtarin ang emoji gamit ang mas matalas na kutsilyo."
+            "description": "Mas madaling tadtarin ang emoji gamit ang mas matalas na kutsilyo.",
+            "quote": "Tadtarin ang emoji? Ano'ng ibig mong sabihin? Baliw ka ba? Totoo, buhay at inosente ang mga emoji na 'to!"
         },
         "401": {
             "name": "Non-stick na kawali",
-            "description": "Mas mabilis magluto ng emoji meal sa non-stick na kawali."
+            "description": "Mas mabilis magluto ng emoji meal sa non-stick na kawali.",
+            "quote": "Dumidikit pa rin lahat. Pati ako. Sa trabahong 'to."
         },
         "402": {
             "name": "Mas magandang oven",
@@ -453,27 +515,33 @@
         },
         "403": {
             "name": "De-kalidad na sangkap",
-            "description": "Mas de-kalidad na sangkap, mas masarap na emoji."
+            "description": "Mas de-kalidad na sangkap, mas masarap na emoji.",
+            "quote": "Parehong frozen na emoji. Bagong label. Doble ang presyo."
         },
         "404": {
             "name": "Chef's hat",
-            "description": "Mas mabilis kang magluto ng emoji kapag naka-chef's hat ka."
+            "description": "Mas mabilis kang magluto ng emoji kapag naka-chef's hat ka.",
+            "quote": "Walang silbi ang sumbrero. Apatnapung beses ko nang sinabi. Walang nakikinig."
         },
         "405": {
             "name": "Emoji blender",
-            "description": "Gawing masarap na smoothie at sabaw ang emoji sa loob ng ilang segundo!"
+            "description": "Gawing masarap na smoothie at sabaw ang emoji sa loob ng ilang segundo!",
+            "quote": "HUWAG kang titingin sa loob ng smoothie."
         },
         "406": {
             "name": "Air fryer",
-            "description": "Iprito nang perpekto ang emoji sa record time. Malutong at golden brown palagi!"
+            "description": "Iprito nang perpekto ang emoji sa record time. Malutong at golden brown palagi!",
+            "quote": "Oven 'yan. Maliit na oven. Tigilan n'yo nang tawaging air fryer."
         },
         "407": {
             "name": "Sushi bar",
-            "description": "Mag-roll ng emoji sushi nang may galing at style. Hilaw na talento ang kailangan!"
+            "description": "Mag-roll ng emoji sushi nang may galing at style. Hilaw na talento ang kailangan!",
+            "quote": "Hilaw na talento ang kailangan. Tinanggap pa rin nila ako."
         },
         "408": {
             "name": "Salad bar",
-            "description": "Maghalo ng sariwang emoji salad na may iba't ibang toppings. Healthy at masarap!"
+            "description": "Maghalo ng sariwang emoji salad na may iba't ibang toppings. Healthy at masarap!",
+            "quote": "May bumahing sa croutons. Nakita ko. Wala akong sinabi."
         },
         "409": {
             "name": "Pizza oven",
@@ -485,7 +553,8 @@
         },
         "411": {
             "name": "Emoji ice cream machine",
-            "description": "Gumawa ng frozen na emoji treats na kasing-cool ng sarap nila!"
+            "description": "Gumawa ng frozen na emoji treats na kasing-cool ng sarap nila!",
+            "quote": "Sira. Laging sira. Kahit kailan, hindi ito naging hindi sira."
         },
         "412": {
             "name": "Taco station",
@@ -498,7 +567,8 @@
         },
         "414": {
             "name": "Emoji chocolate fountain",
-            "description": "Buhusan ng tunaw na emoji chocolate ang lahat. Matamis at sulit!"
+            "description": "Buhusan ng tunaw na emoji chocolate ang lahat. Matamis at sulit!",
+            "quote": "Isinubsob ng isang bata ang buong mukha niya rito. Isinerve pa rin namin."
         },
         "415": {
             "name": "Emoji cannibal na kusina",
@@ -510,23 +580,28 @@
         },
         "417": {
             "name": "Emoji food fight arena",
-            "description": "Gawing arena ng food fight ang kusina mo. Makalat, magulo, at kakaibang kumikita."
+            "description": "Gawing arena ng food fight ang kusina mo. Makalat, magulo, at kakaibang kumikita.",
+            "quote": "Kakaibang kumikita. May nakikita pa rin akong gisantes sa tainga ko."
         },
         "418": {
             "name": "Buhay na masa",
-            "description": "Gumagalaw nang kusa ang masang ito at humuhubog ng perpektong emoji na tinapay. Minsan, sinusubukan nitong tumakas."
+            "description": "Gumagalaw nang kusa ang masang ito at humuhubog ng perpektong emoji na tinapay. Minsan, sinusubukan nitong tumakas.",
+            "quote": "Nakatakas. Ayun na. Ano'ng mangyayari ngayon?"
         },
         "419": {
             "name": "Ang Walang Katapusang Buffet",
-            "description": "Buffet na hindi natatapos... pero baka ikaw na ang kainin ng pagkain."
+            "description": "Buffet na hindi natatapos... pero baka ikaw na ang kainin ng pagkain.",
+            "quote": "Hindi ito natatapos. Nasa dessert table na ako mula pa noong Marso."
         },
         "500": {
             "name": "Walis",
-            "description": "Panlinis kapag ang mga hayop ay ano... nag-number two."
+            "description": "Panlinis kapag ang mga hayop ay ano... nag-number two.",
+            "quote": "May master's degree ako. Nagwawalis ako ng tae ng giraffe para sa emoji."
         },
         "501": {
             "name": "Animal trainer",
-            "description": "Tinuturuan ng trainers ang mga hayop ng tricks, kaya mas efficient ang zoo."
+            "description": "Tinuturuan ng trainers ang mga hayop ng tricks, kaya mas efficient ang zoo.",
+            "quote": "Dinuraan ako ng llama. Na naman."
         },
         "502": {
             "name": "Sosyal na kulungan",
@@ -534,15 +609,18 @@
         },
         "503": {
             "name": "Exotic na hayop",
-            "description": "Magdala ng bihira at exotic na hayop para dumami ang bisita."
+            "description": "Magdala ng bihira at exotic na hayop para dumami ang bisita.",
+            "quote": "Kinagat ng penguin ang isang bata. Tumaas nang 40% ang bisita."
         },
         "504": {
             "name": "Zoo mascot",
-            "description": "Ang friendly na mascot ay nakakaakit ng bisita, kaya tumataas ang kita."
+            "description": "Ang friendly na mascot ay nakakaakit ng bisita, kaya tumataas ang kita.",
+            "quote": "35 degrees sa loob ng giraffe costume na 'to, tapos sinipa pa ako ng bata."
         },
         "505": {
             "name": "Beterinaryo",
-            "description": "Pinapanatiling malusog ng sariling clinic ang mga hayop."
+            "description": "Pinapanatiling malusog ng sariling clinic ang mga hayop.",
+            "quote": "Pitong taon sa vet school. Ngayon, ginagamot ko ang kambing na kumain ng cellphone."
         },
         "506": {
             "name": "Silungan",
@@ -607,15 +685,18 @@
         },
         "601": {
             "name": "Dagdag na manggagawa",
-            "description": "Dagdagan ang mga empleyado ng pabrika."
+            "description": "Dagdagan ang mga empleyado ng pabrika.",
+            "quote": "Mas maraming manggagawa, parehong CR. Iisang CR."
         },
         "602": {
             "name": "Mas malaking gear",
-            "description": "Mas malaking gear, mas malaking makina."
+            "description": "Mas malaking gear, mas malaking makina.",
+            "quote": "Mas malaking gear, mas malaking aksidente. Tanungin mo si Dave. Ay, teka."
         },
         "603": {
             "name": "Turnilyo at bolts",
-            "description": "Para siguradong hindi magkakawatak-watak ang lahat."
+            "description": "Para siguradong hindi magkakawatak-watak ang lahat.",
+            "quote": "Sila ang nagpapatibay sa lugar na 'to. Halos hindi na. Parang kasal ko."
         },
         "604": {
             "name": "Conveyor belt",
@@ -639,7 +720,8 @@
         },
         "609": {
             "name": "Security ng pabrika",
-            "description": "Protektahan ang pabrika laban sa mga magnanakaw ng emoji at industrial espionage."
+            "description": "Protektahan ang pabrika laban sa mga magnanakaw ng emoji at industrial espionage.",
+            "quote": "YOU SHALL NOT PASS. Hindi kung walang ID lace."
         },
         "610": {
             "name": "Recycling ng pabrika",
@@ -668,11 +750,13 @@
         },
         "616": {
             "name": "Pinatibay na pader",
-            "description": "Patibayin ang pader ng pabrika para kayanin ang gulo ng high-speed na produksiyon."
+            "description": "Patibayin ang pader ng pabrika para kayanin ang gulo ng high-speed na produksiyon.",
+            "quote": "Hold the door! HOLD THE DOOR!"
         },
         "617": {
             "name": "Panghuli ng daga",
-            "description": "Ilayo ang makukulit na daga sa pabrika mo. Wala nang ngatngat na wire o ninakaw na emoji!"
+            "description": "Ilayo ang makukulit na daga sa pabrika mo. Wala nang ngatngat na wire o ninakaw na emoji!",
+            "quote": "It's a trap!"
         },
         "618": {
             "name": "Manager ng pabrika",
@@ -690,7 +774,8 @@
         },
         "701": {
             "name": "Baseball field",
-            "description": "Siguradong home run 'to."
+            "description": "Siguradong home run 'to.",
+            "quote": "Home run? Tinamaan ng bola ang kotse ko. Na naman."
         },
         "702": {
             "name": "Squash court",
@@ -721,15 +806,18 @@
         },
         "901": {
             "name": "Mas malaking emoji bag",
-            "description": "Mas maraming emoji ang madadala."
+            "description": "Mas maraming emoji ang madadala.",
+            "quote": "Basag na ang likod ko, pero sige, mas malaking bag."
         },
         "902": {
             "name": "Emoji credit card",
-            "description": "Para gastusin ang pinaghirapan mong emoji."
+            "description": "Para gastusin ang pinaghirapan mong emoji.",
+            "quote": "Declined. Declined ang card mo. Declined ang buhay mo."
         },
         "903": {
             "name": "Puhunan sa edukasyon",
-            "description": "Mas magandang edukasyon, mas magaling gumuhit ng emoji."
+            "description": "Mas magandang edukasyon, mas magaling gumuhit ng emoji.",
+            "quote": "Naka-emoji ang student loan ko. Babayaran ko pa 'to sa kabilang buhay."
         },
         "904": {
             "name": "Puhunan sa inobasyon",
@@ -745,19 +833,23 @@
         },
         "1002": {
             "name": "Ferris wheel",
-            "description": "Doon sa itaas, doon niya dinurog ang puso ko."
+            "description": "Doon sa itaas, doon niya dinurog ang puso ko.",
+            "quote": "Dalawang oras akong naipit sa tuktok kasama ang lalaking nagpapaliwanag ng crypto."
         },
         "1003": {
             "name": "Sirko",
-            "description": "Dalawa lang ang klase ng tao sa mundo. Ang mga nagpapasaya, at ang mga nanonood."
+            "description": "Dalawa lang ang klase ng tao sa mundo. Ang mga nagpapasaya, at ang mga nanonood.",
+            "quote": "Dalawampung taon akong nagsanay bilang akrobat. Ngayon, nag-ju-juggle ako ng smiley para sa mga paslit."
         },
         "1004": {
             "name": "Emoji juggler",
-            "description": "Ni minsan, hindi pa raw niya nabitawan ang bola."
+            "description": "Ni minsan, hindi pa raw niya nabitawan ang bola.",
+            "quote": "Hindi raw nabitawan ang bola? Ang mga pangarap ko ang nabitawan ko."
         },
         "1100": {
             "name": "Emoji eleksiyon",
-            "description": "Manalo nawa ang pinakamagaling na emoji!"
+            "description": "Manalo nawa ang pinakamagaling na emoji!",
+            "quote": "Manalo nawa ang pinakamagaling na emoji. Aasikasuhin na lang ang mga talo."
         },
         "1101": {
             "name": "Emoji ayuda",
@@ -777,7 +869,8 @@
         },
         "1300": {
             "name": "Teleskopyo",
-            "description": "Tumingin sa mga bituin para makatuklas ng emoji na planeta."
+            "description": "Tumingin sa mga bituin para makatuklas ng emoji na planeta.",
+            "quote": "Nakikita ka rin namin. Noon pa man."
         },
         "1301": {
             "name": "Satellite antenna",
@@ -785,11 +878,13 @@
         },
         "1302": {
             "name": "Astronaut",
-            "description": "May kailangang magpatakbo ng space stations mo."
+            "description": "May kailangang magpatakbo ng space stations mo.",
+            "quote": "Sa kalawakan, walang makakarinig sa sigaw mo. Tiningnan namin. Dalawang beses."
         },
         "1303": {
             "name": "Rocket",
-            "description": "Sobrang bilis lumipad."
+            "description": "Sobrang bilis lumipad.",
+            "quote": "Sobrang bilis lumipad. Ganoon din ang mga labi mo."
         },
         "1304": {
             "name": "⎅⎍⋔⏃⏁⟟⋏☌ ☍⏃⋔⟟ ⋏⏃⋏☌ ⌿⏃⊬⏃⌿⏃...",
@@ -798,15 +893,18 @@
         },
         "1305": {
             "name": "☍⏃☍⏃⟟⏚⏃⋏☌ ⏚⏃☌⏃⊬",
-            "description": "⋔⏃⊬ ⏁⏃☌⌰⏃⊬ ⋏⏃ ⌰⟟⊑⟟⋔ ⋏⏃ ☍⏃⌿⏃⋏☌⊬⏃⍀⟟⊑⏃⋏ ⏃⋏☌ ⏚⏃☌⏃⊬ ⋏⏃ ⟟⏁⍜."
+            "description": "⋔⏃⊬ ⏁⏃☌⌰⏃⊬ ⋏⏃ ⌰⟟⊑⟟⋔ ⋏⏃ ☍⏃⌿⏃⋏☌⊬⏃⍀⟟⊑⏃⋏ ⏃⋏☌ ⏚⏃☌⏃⊬ ⋏⏃ ⟟⏁⍜.",
+            "quote": "⌿⎍⌿⎍⋏⏁⏃⊑⏃⋏ ☍⟟⏁⏃."
         },
         "30000": {
             "name": "Patatas",
-            "description": "Pata-tastic! Ang patatas ang gulugod ng bawat bukid."
+            "description": "Pata-tastic! Ang patatas ang gulugod ng bawat bukid.",
+            "quote": "Walang asin, walang paminta. Isang lumang patatas lang, at abot-langit na ang saya ko!"
         },
         "30001": {
             "name": "Karot",
-            "description": "Karot-kaya mo 'yan, magtanim ka lang!"
+            "description": "Karot-kaya mo 'yan, magtanim ka lang!",
+            "quote": "Hindi. Hindi ko kaya. Isa pang pun at ibabaon kita."
         },
         "30002": {
             "name": "Pipino",
@@ -820,15 +918,18 @@
         },
         "30004": {
             "name": "Kamatis",
-            "description": "Makatas at maraming gamit, paborito sa bukid ang kamatis."
+            "description": "Makatas at maraming gamit, paborito sa bukid ang kamatis.",
+            "quote": "Perpektong ibato sa kung sinumang nagdisenyo ng bukid na 'to."
         },
         "30005": {
             "name": "Letsugas",
-            "description": "Sa letsugas, laging sariwa at luntian ang bukid mo. Dahon't worry!"
+            "description": "Sa letsugas, laging sariwa at luntian ang bukid mo. Dahon't worry!",
+            "quote": "Ang pinaka-boring na bagay sa bukid na 'to. Bukod sa magsasaka."
         },
         "30006": {
             "name": "Brokoli",
-            "description": "Maliliit na puno na may malaking benepisyo!"
+            "description": "Maliliit na puno na may malaking benepisyo!",
+            "quote": "Ibinato ng anak ko sa waiter. Totoo lang, deserve niya."
         },
         "30007": {
             "name": "Sibuyas",
@@ -887,11 +988,13 @@
         },
         "30019": {
             "name": "Gisantes",
-            "description": "Gisantes!"
+            "description": "Gisantes!",
+            "quote": "Gisantes! GISANTES! 'Yun na ang buong description? Sino ba'ng sumusulat ng mga 'to?"
         },
         "30020": {
             "name": "Labanos",
-            "description": "Maanghang at malutong, may dagdag na sipa ang labanos sa bukid at sa ulam mo."
+            "description": "Maanghang at malutong, may dagdag na sipa ang labanos sa bukid at sa ulam mo.",
+            "quote": "Walang may gusto ng labanos. Kahit kailan, walang nagkagusto sa labanos."
         },
         "30021": {
             "name": "Kabute",
@@ -900,15 +1003,18 @@
         },
         "30022": {
             "name": "Pinya",
-            "description": "Tropikal at maasim-asim."
+            "description": "Tropikal at maasim-asim.",
+            "quote": "Sa pizza."
         },
         "30023": {
             "name": "Pakwan",
-            "description": "Makatas at presko, ang pakwan ang sukdulang pananim tuwing tag-init."
+            "description": "Makatas at presko, ang pakwan ang sukdulang pananim tuwing tag-init.",
+            "quote": "Masakit ang likod ko."
         },
         "30024": {
             "name": "Kiwi",
-            "description": "Mabalahibo sa labas, matamis sa loob. Paborito sa bukid ang kiwi!"
+            "description": "Mabalahibo sa labas, matamis sa loob. Paborito sa bukid ang kiwi!",
+            "quote": "Diyos ko, ang kati."
         },
         "30025": {
             "name": "Ubas",
@@ -977,6 +1083,1539 @@
             "name": "Emoji burukrata",
             "description": "Kailangan ng emoji gobyerno ng mga tagapangasiwa para gumana.",
             "quote": "Mukhang nagpapasa ka ng batas. Kailangan mo ng tulong?"
+        },
+        "707": {
+            "name": "Emoji olympics",
+            "description": "Tuwing apat na taon, nag-uunahan sa ginto ang pinakamabibilis na emoji."
+        },
+        "708": {
+            "name": "Emoji stadium",
+            "description": "Walumpung libong upuan, bawat isa may nagchi-cheer na emoji."
+        },
+        "709": {
+            "name": "Marathon training",
+            "description": "Mga emoji na kayang gumuhit nang 42 kilometro nang walang tigil."
+        },
+        "710": {
+            "name": "Swimming pool",
+            "description": "Limampung metro ng chlorinated na emoji.",
+            "quote": "May nakitang maraming leviathan-class na lifeform sa malalim na bahagi. Sigurado ka bang sulit ang ginagawa mo?"
+        },
+        "711": {
+            "name": "Boxing ring",
+            "description": "Lumutang na parang paru-paro, gumuhit na parang emoji."
+        },
+        "712": {
+            "name": "Climbing wall",
+            "description": "Smiley ang bawat kapitan. Ang ganda ng kapit."
+        },
+        "713": {
+            "name": "Ice rink",
+            "description": "Emoji on ice. Hiwalay na binebenta ang sequins."
+        },
+        "714": {
+            "name": "Bowling alley",
+            "description": "Bawat strike, may natutumbang tambak ng emoji."
+        },
+        "715": {
+            "name": "Skate park",
+            "description": "Kickflip, grind, at napakaraming emoji."
+        },
+        "716": {
+            "name": "Ski slope",
+            "description": "Mga black diamond run, inayos gamit ang emoji."
+        },
+        "717": {
+            "name": "Martial arts dojo",
+            "description": "Wax on, wax off, gumuhit ng emoji.",
+            "quote": "Mag-tap o huwag mag-tap. Walang 'susubukan'."
+        },
+        "718": {
+            "name": "Racing track",
+            "description": "Mula zero hanggang isang milyong emoji sa loob ng wala pang tatlong segundo."
+        },
+        "719": {
+            "name": "Hall of fame",
+            "description": "Bawat maalamat na emoji athlete, ginawang imortal sa bronse."
+        },
+        "800": {
+            "name": "Popcorn machine",
+            "description": "May libreng emoji sa ilalim ng bawat bucket.",
+            "quote": "Libreng emoji? Wala akong nakita. Ibalik n'yo ang pera ko o idedemanda ko kayo."
+        },
+        "801": {
+            "name": "3D glasses",
+            "description": "Tumatalon ang emoji palabas ng screen, diretso sa bangko mo.",
+            "quote": "Sinubukan kong mag-enjoy gamit 'to, pero hindi ko talaga mapalapag ang eroplano sa lintik na aircraft carrier na 'yon."
+        },
+        "802": {
+            "name": "Movie star",
+            "description": "Ang pinakamalalaking pangalan sa emoji cinema, lahat nasa payroll mo.",
+            "quote": "Patrick Stewart"
+        },
+        "803": {
+            "name": "Trailer",
+            "description": "Dalawampung minuto ng trailer bago ang bawat pelikula. Puno ng emoji ang bawat isa.",
+            "quote": "Aaand wala na, oo, ang popcorn ko, wala na. Naubos ko lahat habang trailer pa lang."
+        },
+        "804": {
+            "name": "Red carpet premiere",
+            "description": "Kumikislap na camera, kumakaway na fans, napakahalagang emoji."
+        },
+        "805": {
+            "name": "Emoji awards",
+            "description": "At ang award para sa best emoji ay napupunta sa... lahat sila."
+        },
+        "806": {
+            "name": "Sequel",
+            "description": "Parehong emoji, mas malalaking pagsabog."
+        },
+        "807": {
+            "name": "Director's cut",
+            "description": "Apat na dagdag na oras ng emoji na wala namang humiling."
+        },
+        "808": {
+            "name": "Streaming service",
+            "description": "Emoji movies, nasa bawat bahay na."
+        },
+        "809": {
+            "name": "Cinematic universe",
+            "description": "Konektado ang bawat emoji film. Kailangan ng sequel ng bawat isa."
+        },
+        "810": {
+            "name": "Midnight screening",
+            "description": "Pinakadedikado ang mga emoji na lumalabas tuwing hatinggabi."
+        },
+        "811": {
+            "name": "IMAX screen",
+            "description": "Sa sobrang laki, kita mo ang bawat pixel ng bawat emoji."
+        },
+        "812": {
+            "name": "Surround sound",
+            "description": "Galing sa loob ng kuwarto ang mga emoji."
+        },
+        "813": {
+            "name": "Stunt double",
+            "description": "Masyadong mahalaga ang ilang emoji para isapanganib."
+        },
+        "814": {
+            "name": "Special effects",
+            "description": "Mga pagsabog na gawa lahat sa emoji. Napakamahal. Sulit."
+        },
+        "815": {
+            "name": "Animated feature",
+            "description": "Mga emoji na iginuhit ng kamay, isa-isang frame."
+        },
+        "816": {
+            "name": "Film festival",
+            "description": "Mga puno ng palma, sunglasses at gintong emoji trophy."
+        },
+        "817": {
+            "name": "Box office record",
+            "description": "Ang pinakamalaking kumitang emoji film sa kasaysayan. Na naman."
+        },
+        "818": {
+            "name": "Drive-in na sinehan",
+            "description": "Manood ng emoji movie nang komportable sa loob ng kotse mo."
+        },
+        "819": {
+            "name": "Hollywood sign",
+            "description": "Malalaking puting letra sa burol, binabaybay ang isang emoji."
+        },
+        "905": {
+            "name": "Emoji ATM",
+            "description": "Mag-withdraw ng emoji sa bawat kanto. Walang nakakaalam kung sino ang nagdedeposito."
+        },
+        "906": {
+            "name": "Emoji stock market",
+            "description": "Pataas lang nang pataas ang presyo ng emoji. Siguro.",
+            "quote": "'Pataas lang nang pataas.' Ayos. Pababa naman ang ipon ko."
+        },
+        "907": {
+            "name": "Emoji coin",
+            "description": "Cryptocurrency na suportado ng totoong emoji, sa wakas.",
+            "quote": "Bumili sa pinakamataas. Siyempre."
+        },
+        "908": {
+            "name": "Emoji vault",
+            "description": "Parang gold reserve, pero smiley ang bawat bara."
+        },
+        "909": {
+            "name": "World emoji bank",
+            "description": "Nagpapahiram ng emoji sa buong bansa sa napakamakatwirang interes.",
+            "quote": "'Napakamakatwirang interes.' Sabi ng bangkong may-ari ng tatlong bansa."
+        },
+        "910": {
+            "name": "Compound interest",
+            "description": "Emoji na gumagawa ng emoji na gumagawa ng emoji."
+        },
+        "911": {
+            "name": "Gold reserves",
+            "description": "Nakasalansan hanggang kisame, may nakaukit na ngiti sa bawat bara.",
+            "quote": "My precious. MY PRECIOUS."
+        },
+        "912": {
+            "name": "Emoji bonds",
+            "description": "Pangmatagalang puhunan sa emoji. Napakaligtas. Napaka-boring."
+        },
+        "913": {
+            "name": "Armored truck",
+            "description": "Naglilipat ng emoji sa pagitan ng mga bangko, nang napakaingat.",
+            "quote": "Dadalhin nila ang emoji sa Isengard!"
+        },
+        "914": {
+            "name": "Tax haven",
+            "description": "Isang maaraw na isla kung saan umiiwas sa buwis ang mga emoji."
+        },
+        "915": {
+            "name": "Emoji mint",
+            "description": "Nag-iimprenta ng sariwang emoji araw at gabi."
+        },
+        "916": {
+            "name": "Hedge fund",
+            "description": "Walang nakakaalam kung ano'ng ginagawa nila, pero tuloy ang dating ng emoji."
+        },
+        "917": {
+            "name": "Emoji loan",
+            "description": "Humiram ng sampung emoji, magbayad ng dalawampu. Mas malala pa sa 5-6. Panalo ang lahat. Ikaw, at least."
+        },
+        "918": {
+            "name": "Central bank",
+            "description": "Nagtatakda ng emoji interest rate para sa buong mundo."
+        },
+        "919": {
+            "name": "Infinite money glitch",
+            "description": "May maliit na bug ang mga computer ng bangko. Huwag mong ipagsasabi."
+        },
+        "1005": {
+            "name": "Season ticket",
+            "description": "Bumabalik-balik ang mga bisita, at lagi silang may dalang emoji.",
+            "quote": "Bumili ng season pass. Isang beses lang pumunta. Iyak nang iyak ang anak ko buong araw."
+        },
+        "1006": {
+            "name": "Emoji parada",
+            "description": "Araw-araw na parada ng mga float, bawat isa ay higanteng emoji."
+        },
+        "1007": {
+            "name": "Hotdog stand",
+            "description": "Hugis maliit na emoji ang bawat sausage."
+        },
+        "1008": {
+            "name": "Fireworks gabi-gabi",
+            "description": "Sumasabog ang bawat rocket sa sanlibong emoji.",
+            "quote": "Ssssssss..."
+        },
+        "1009": {
+            "name": "Emoji kastilyo",
+            "description": "Ang pinakamasayang lugar sa mundo, mas marami nang mukha.",
+            "quote": "Ang pinakamasayang lugar sa mundo, ayon sa karatula. Na isinulat ng may-ari."
+        },
+        "1010": {
+            "name": "Roller coaster",
+            "description": "Loop-the-loop na nagpapalaglag ng emoji mula sa bulsa mo.",
+            "quote": "Nawala ang cellphone, susi at gana kong mabuhay sa ikalawang loop."
+        },
+        "1011": {
+            "name": "Haunted house",
+            "description": "Emoji rin ang mga multo. Nakakatakot na emoji.",
+            "quote": "Ang pinakanakakatakot dito ay ang presyo ng litrato sa dulo."
+        },
+        "1012": {
+            "name": "Water slide",
+            "description": "Splash! Basang-basa ka sa emoji.",
+            "quote": "Walang nagsabi sa akin na dilaw ang tubig."
+        },
+        "1013": {
+            "name": "Bump car",
+            "description": "Bawat bangga, may nalalaglag na emoji.",
+            "quote": "Siyam na beses akong binangga ng batang pitong taong gulang. Nakatitig siya sa mata ko tuwing bangga."
+        },
+        "1014": {
+            "name": "Mascot",
+            "description": "Higante at malambot na emoji na pinakamagaling yumakap."
+        },
+        "1015": {
+            "name": "Fast pass",
+            "description": "Lampasan ang pila at dumiretso sa emoji."
+        },
+        "1016": {
+            "name": "Souvenir shop",
+            "description": "Lumabas sa gift shop. Bumili ng emoji.",
+            "quote": "Lumabas sa gift shop. Walang ibang labasan. Tiningnan ko na."
+        },
+        "1017": {
+            "name": "Log flume",
+            "description": "Mababasa ka. Mas mababasa ang emoji."
+        },
+        "1018": {
+            "name": "Parade float",
+            "description": "Bawat float ay mas malaki at mas makinang kaysa sa nauna."
+        },
+        "1019": {
+            "name": "Ikalawang park",
+            "description": "Hindi sapat ang isang park. Ngayon, may buong resort na.",
+            "quote": "Hindi sapat ang isang park ng pagdurusa. Ngayon, dalawa na."
+        },
+        "1105": {
+            "name": "Emoji watawat",
+            "description": "Bawat bansa, nagkakaisa sa ilalim ng iisang watawat. Smiley ito."
+        },
+        "1106": {
+            "name": "Trade agreement",
+            "description": "Malayang dumadaloy na ang emoji sa bawat border."
+        },
+        "1107": {
+            "name": "Emoji press",
+            "description": "Araw-araw na headline, nakasulat lahat sa emoji."
+        },
+        "1108": {
+            "name": "Emoji peace treaty",
+            "description": "Wala nang emoji war. Produksiyon na lang.",
+            "quote": "War. War never changes."
+        },
+        "1109": {
+            "name": "Emoji reperendum",
+            "description": "Nagsalita na ang taumbayan: mas maraming emoji, please."
+        },
+        "1110": {
+            "name": "Emoji konstitusyon",
+            "description": "Kami, ang mga emoji, upang bumuo ng mas perpektong production line..."
+        },
+        "1111": {
+            "name": "Emoji senado",
+            "description": "Sandaang upuan, sandaang emoji, sandaang opinyon."
+        },
+        "1112": {
+            "name": "Emoji embahada",
+            "description": "Diplomasya, pero mas maraming kumikindat na mukha."
+        },
+        "1113": {
+            "name": "Emoji tax cut",
+            "description": "Mas maraming emoji para sa lahat!"
+        },
+        "1114": {
+            "name": "Emoji census",
+            "description": "Binibilang ang bawat emoji sa buong lupain. Medyo matagal."
+        },
+        "1115": {
+            "name": "Emoji summit",
+            "description": "Nagpupulong ang mga lider ng mundo para pag-usapan ang iisang bagay: mas maraming emoji."
+        },
+        "1116": {
+            "name": "Emoji Korte Suprema",
+            "description": "Nagkakaisang nagpasya pabor sa mas maraming emoji."
+        },
+        "1117": {
+            "name": "Emoji espiya",
+            "description": "Nagnanakaw ng sikreto ng emoji mula sa mga karibal na tycoon."
+        },
+        "1118": {
+            "name": "Emoji United Nations",
+            "description": "Nagtutulungan ang bawat bansa, para sa emoji."
+        },
+        "1119": {
+            "name": "Emoji world order",
+            "description": "Isang planeta, isang gobyerno, isang emoji."
+        },
+        "1200": {
+            "name": "Papel na eroplano",
+            "description": "Lahat ng airline ay nagsisimula sa kung saan. Ang amin, sa napkin.",
+            "quote": "Fly, you fools!"
+        },
+        "1201": {
+            "name": "In-flight snacks",
+            "description": "Maliliit na pretzel, maliliit na emoji, sa bawat flight.",
+            "quote": "Tatlong pretzel. TATLO. Para sa siyam na oras na flight."
+        },
+        "1202": {
+            "name": "Frequent flyer miles",
+            "description": "Lumipad nang sampung beses, makakuha ng emoji. Lumipad nang isang milyong beses, makakuha ng isang milyon.",
+            "quote": "Dalawang milyong milya. Ang gantimpala ko: medyo mas malapad na gitnang upuan."
+        },
+        "1203": {
+            "name": "Jumbo jet",
+            "description": "Apat na makina, 600 upuan, bawat isa okupado ng emoji.",
+            "quote": "600 upuan, at sa tabi pa rin ng CR ako napunta. Na naman."
+        },
+        "1204": {
+            "name": "Airport",
+            "description": "Walang katapusang terminal, walang katapusang gate, walang katapusang emoji."
+        },
+        "1205": {
+            "name": "Emoji piloto",
+            "description": "Ang inyong kapitan ang nagsasalita. Paki-fasten ang inyong emoji.",
+            "quote": "Ang inyong kapitan ang nagsasalita. Ayoko rin dito."
+        },
+        "1206": {
+            "name": "Nawawalang bagahe",
+            "description": "Walang nakakaalam kung saan napupunta ang mga bag. Bumabalik silang puno ng emoji."
+        },
+        "1207": {
+            "name": "First class",
+            "description": "Champagne, mainit na tuwalya at personal na emoji butler.",
+            "quote": "Mainit na tuwalya, champagne, at kurtina para hindi kita makita. Perpekto."
+        },
+        "1208": {
+            "name": "Supersonic na flight",
+            "description": "Mas mabilis sa tunog, may dalang mas maraming emoji kaysa dati.",
+            "quote": "Mas mabilis sa tunog, kaya walang nakakarinig sa umiiyak na sanggol."
+        },
+        "1209": {
+            "name": "Paikot sa mundo",
+            "description": "Non-stop, buong ikot, nagkakalat ng emoji kahit saan."
+        },
+        "1210": {
+            "name": "Overbooked na flight",
+            "description": "Mas maraming pasahero kaysa upuan, kaya mas maraming emoji kada flight."
+        },
+        "1211": {
+            "name": "Duty free",
+            "description": "Tax-free na emoji, available sa bawat gate.",
+            "quote": "Tax-free, pero kahit papaano, 40% mas mahal pa rin."
+        },
+        "1212": {
+            "name": "Airport lounge",
+            "description": "Libreng snacks, komportableng upuan, at walang tigil na emoji.",
+            "quote": "Libreng snacks, komportableng upuan, at lalaking naka-medyas na ayaw tumigil sa pagtawag sa broker niya."
+        },
+        "1213": {
+            "name": "Cargo plane",
+            "description": "Walang pasahero. Kahon-kahong emoji lang.",
+            "quote": "Walang pasahero. Pinakamagandang flight na natrabahuhan ko."
+        },
+        "1214": {
+            "name": "Private jet",
+            "description": "Para sa mga emojing may pambayad."
+        },
+        "1215": {
+            "name": "Air traffic control",
+            "description": "Pinipigilan ang milyon-milyong emoji flight na magbanggaan."
+        },
+        "1216": {
+            "name": "Seaplane",
+            "description": "Lumapag sa tubig, lumipad dala ang emoji.",
+            "quote": "Smooth landing daw. Nasa lawa na ang tanghalian ko."
+        },
+        "1217": {
+            "name": "Helicopter",
+            "description": "Lumilipad sa ibabaw ng mga lungsod, nagwiwisik ng emoji."
+        },
+        "1218": {
+            "name": "Zeppelin",
+            "description": "Mabagal, marilag, at punong-puno ng emoji."
+        },
+        "1219": {
+            "name": "Space tourism",
+            "description": "Ang susunod na destinasyon ay pataas. Pataas talaga.",
+            "quote": "Nagbayad ng apatnapung milyong emoji para lang sumuka sa zero gravity."
+        },
+        "1306": {
+            "name": "Lumilipad na platito",
+            "description": "Fan pala ng emoji ang mga alien noon pa man."
+        },
+        "1307": {
+            "name": "Moon base",
+            "description": "Isang buong buwan para guhitan ng emoji.",
+            "quote": "Maraming espasyo rito. Maraming espasyo para ilibing ka."
+        },
+        "1308": {
+            "name": "Comet mining",
+            "description": "Frozen na emoji pala ang mga kometa.",
+            "quote": "Tinunaw mo kami. Malaking pagkakamali."
+        },
+        "1309": {
+            "name": "First contact",
+            "description": "Sumagot na rin ang mga alien. Ang mensahe nila: 👾.",
+            "quote": "Hello there."
+        },
+        "1310": {
+            "name": "Space elevator",
+            "description": "Paakyat? Susunod na hinto: orbit."
+        },
+        "1311": {
+            "name": "Asteroid belt",
+            "description": "Milyon-milyong space rock, bawat isa puno ng emoji."
+        },
+        "1312": {
+            "name": "Kolonya sa Mars",
+            "description": "Napakagandang emoji land pala ng pulang planeta."
+        },
+        "1313": {
+            "name": "Solar sail",
+            "description": "Naglalayag sa solar wind, nanghuhuli ng emoji."
+        },
+        "1314": {
+            "name": "Space suit",
+            "description": "May puwang na para sa dagdag na emoji sa bawat bulsa.",
+            "quote": "Dagdag na bulsa. Para sa ngipin mo ang isa."
+        },
+        "1315": {
+            "name": "Gas giant",
+            "description": "Sumalok ng atmospera, salain ang emoji."
+        },
+        "1316": {
+            "name": "Dyson sphere",
+            "description": "Balutin ang isang buong bituin at anihin ang bawat emoji na sinisinag nito."
+        },
+        "1317": {
+            "name": "Warp drive",
+            "description": "Mas mabilis sa liwanag, may dalang mas maraming emoji kaysa dati."
+        },
+        "1318": {
+            "name": "Galactic empire",
+            "description": "Bawat bituin sa galaxy, pinamumunuan ng emoji."
+        },
+        "1319": {
+            "name": "Dulo ng uniberso",
+            "description": "May karatula sa dulo. Nakasulat: mas maraming emoji, dito.",
+            "quote": "Nakasulat sa karatula: 'mas maraming emoji, dito.' Kami ang naglagay ng karatula. Walang nakabalik."
+        },
+        "1400": {
+            "name": "Gumdrop na guwardiya",
+            "description": "Matamis, makunat, at nakakagulat na armado.",
+            "quote": "Nakakagulat na armado. Nakakagulat na sablay pumuntirya."
+        },
+        "1401": {
+            "name": "Ilog ng tsokolate",
+            "description": "Diretsong umaagos sa mga emoji factory. Ingat sa mga buo-buo.",
+            "quote": "Pure imagination!"
+        },
+        "1402": {
+            "name": "Cupcake na kubo",
+            "description": "Maliliit na bahay na may frosting na bubong. Gustong-gusto ng mga emoji.",
+            "quote": "Pula ang frosting. Hindi strawberry 'yan."
+        },
+        "1403": {
+            "name": "Royal na kautusan",
+            "description": "Nagsalita na ang Hari ng Kendi: mas maraming emoji!",
+            "quote": "Nagsalita na ang Hari ng Kendi: pugutan sila ng ulo."
+        },
+        "1404": {
+            "name": "Sugar rush",
+            "description": "Nanginginig ang lahat sa kaharian. Doble ang produksiyon, at doble rin ang tibok ng puso.",
+            "quote": "Donut stop me now!"
+        },
+        "1405": {
+            "name": "Cake na kastilyo",
+            "description": "Frosting ang pader. Leche flan ang moat."
+        },
+        "1406": {
+            "name": "Minahan ng pulot",
+            "description": "Matamis at malagkit na emoji, diretso mula sa lupa.",
+            "quote": "Huwag kailanman maghukay nang diretso pababa."
+        },
+        "1407": {
+            "name": "Cookie clickers",
+            "description": "Pagpupugay sa mga lola na nauna sa atin.",
+            "quote": "Pagpupugay sa mga lola na nauna sa atin. Kinain namin sila."
+        },
+        "1408": {
+            "name": "Pudding parlamento",
+            "description": "Ang pinakamaalog na gobyerno sa lupain.",
+            "quote": "Kapag naglaro ka ng game of puddings, aalog ka o mamamatay."
+        },
+        "1409": {
+            "name": "Kaarawan ng Hari ng Kendi",
+            "description": "Nagdiriwang ang buong kaharian, at may emoji ang lahat.",
+            "quote": "Ipinaaabot ng Hari ng Kendi ang kanyang pagbati."
+        },
+        "1410": {
+            "name": "Lollipop na parol",
+            "description": "Pinapailawan ang mga kalye ng matamis na liwanag ng emoji."
+        },
+        "1411": {
+            "name": "Candy cane na riles",
+            "description": "Choo choo! Asukal ang gasolina ng emoji express.",
+            "quote": "All we had to do was follow the damn train!"
+        },
+        "1412": {
+            "name": "Bundok ng ice cream",
+            "description": "Vanilla ang niyebe sa tuktok. Mint ang mga emoji."
+        },
+        "1413": {
+            "name": "Marshmallow na ulap",
+            "description": "Kapag umuulan, emoji ang bumubuhos."
+        },
+        "1414": {
+            "name": "Minahan ng jelly bean",
+            "description": "Bawat kulay, bawat lasa, bawat emoji."
+        },
+        "1415": {
+            "name": "Gingerbread na hukbo",
+            "description": "Mabangis, malutong, at tapat sa Hari ng Kendi."
+        },
+        "1416": {
+            "name": "Caramel na moat",
+            "description": "Malagkit, ginintuan, at nagbabantay sa emoji ng kastilyo."
+        },
+        "1417": {
+            "name": "Bubblegum na lobo",
+            "description": "Hipan nang malakas at iaangat nila ang emoji sa langit."
+        },
+        "1418": {
+            "name": "Sugar crash",
+            "description": "Kailangan ng lahat ng idlip. Maliban sa emoji."
+        },
+        "1419": {
+            "name": "Imperyo ng kendi",
+            "description": "Sinasakop ng Kaharian ng Kendi ang mundo, isang matamis bawat pagkakataon."
+        },
+        "1500": {
+            "name": "Heat-resistant na guwantes",
+            "description": "Para ligtas na mahawakan ang emoji na bagong-ahon sa magma."
+        },
+        "1501": {
+            "name": "Obsidian na hulmahan",
+            "description": "Ibuhos ang tunaw na emoji sa perpektong hugis-smiley.",
+            "quote": "Kailangan mo ng diamond pickaxe para dito."
+        },
+        "1502": {
+            "name": "Bulkanologo",
+            "description": "Pinag-aaralan nila ang bulkan. Pinag-aaralan din sila ng bulkan."
+        },
+        "1503": {
+            "name": "Geothermal power",
+            "description": "Mainit na bukal, mainit na emoji.",
+            "quote": "Hot hot hot!"
+        },
+        "1504": {
+            "name": "Supervolcano",
+            "description": "Natatabunan na ng sariwang emoji ang isang buong kontinente sa bawat pagputok. Walang nagrereklamo."
+        },
+        "1505": {
+            "name": "Lava surfing",
+            "description": "Sakyan ang alon ng tunaw na emoji."
+        },
+        "1506": {
+            "name": "Pandayan sa bundok",
+            "description": "Pukpukin ang sariwang emoji sa palihang gawa sa lumamig na lava.",
+            "quote": "Isang emoji para pamunuan silang lahat, at sa magma sila'y igapos."
+        },
+        "1507": {
+            "name": "Lava dragon",
+            "description": "Bumubuga sila ng apoy, at emoji ang apoy.",
+            "quote": "Bumubuga sila ng apoy. Alam nila ang address mo."
+        },
+        "1508": {
+            "name": "Core tap",
+            "description": "Tubong diretso sa gitna ng Mundo.",
+            "quote": "Ni-tap mo ang gitna ng Mundo. Ni-tap ka nito pabalik."
+        },
+        "1509": {
+            "name": "Ring of fire",
+            "description": "Bawat bulkan sa planeta, pinagdugtong sa iisang emoji network."
+        },
+        "1510": {
+            "name": "Magma chamber",
+            "description": "Kumukulong lawa sa ilalim ng lupa na puno ng sariwang emoji."
+        },
+        "1511": {
+            "name": "Pumice factory",
+            "description": "Sa sobrang gaan, lumulutang. Sa sobrang daming emoji, lumulubog ulit."
+        },
+        "1512": {
+            "name": "Lava lamp",
+            "description": "Groovy na mga patak ng tunaw na emoji."
+        },
+        "1513": {
+            "name": "Bulkanikong isla",
+            "description": "Bagong-bagong lupa, gawa sa emoji na lumalamig sa dagat.",
+            "quote": "Magandang isla. Huwag kang lulusong sa tubig. Kahit kailan, huwag kang lulusong sa tubig."
+        },
+        "1514": {
+            "name": "Fire walker",
+            "description": "Matatapang na emoji na naglalakad sa ibabaw ng nagbabagang uling."
+        },
+        "1515": {
+            "name": "Ulap ng abo",
+            "description": "Maliit na emoji ang bawat butil ng abo.",
+            "quote": "Sa pagpapatrolya sa ulap ng abo, halos hilingin mo na ang nuclear winter."
+        },
+        "1516": {
+            "name": "Lindol",
+            "description": "Yumayanig ang lupa at nalalaglag ang emoji mula sa lahat ng bagay."
+        },
+        "1517": {
+            "name": "Lava sculpture",
+            "description": "Hinulma sa obsidian, hugis emoji."
+        },
+        "1518": {
+            "name": "Diyos ng bulkan",
+            "description": "May mga alay. Emoji ang ibinabalik."
+        },
+        "1519": {
+            "name": "Planetary core",
+            "description": "Bulkan na ang buong planeta. Friendly na bulkan."
+        },
+        "1600": {
+            "name": "Kandila ng panalangin",
+            "description": "Nagliliyab ang bawat apoy bilang parangal sa Dakilang Emoji sa langit."
+        },
+        "1601": {
+            "name": "Rosaryo",
+            "description": "Bilangin ang mga biyaya mo. Tapos bilangin ang emoji mo."
+        },
+        "1602": {
+            "name": "Kampana ng templo",
+            "description": "Bawat tunog ay tumatawag ng sariwang emoji mula sa langit.",
+            "quote": "Shame. Shame. Shame."
+        },
+        "1603": {
+            "name": "Mga peregrino",
+            "description": "Naglalakbay ang mga tagasunod mula sa bawat sulok ng mundo, para lang i-tap nang isang beses ang Dakilang Emoji."
+        },
+        "1604": {
+            "name": "Banal na pahayag",
+            "description": "Nakatingin sa iyo ang Dakilang Emoji sa langit. Nakangiti ito.",
+            "quote": "😀"
+        },
+        "1605": {
+            "name": "Araw-araw na debosyon",
+            "description": "Tina-tap ng mga deboto ang Dakilang Emoji tuwing madaling-araw, tanghali at dapithapon."
+        },
+        "1606": {
+            "name": "Dambana sa langit",
+            "description": "Isang dambana sa bawat ulap, mas malapit nang kaunti sa Dakilang Emoji."
+        },
+        "1607": {
+            "name": "Emoji monghe",
+            "description": "Ilang taon ng meditasyon, at emoji lang ang laman ng isip nila."
+        },
+        "1608": {
+            "name": "Halo ng Dakilang Emoji",
+            "description": "Kumikinang. Umuugong. Gumuguhit."
+        },
+        "1609": {
+            "name": "Pag-akyat sa langit",
+            "description": "Lumulutang ang templo paakyat sa langit, kung saan ito talaga nararapat."
+        },
+        "1610": {
+            "name": "Banal na kasulatan",
+            "description": "Ang unang linya: Sa simula, mayroong tap."
+        },
+        "1611": {
+            "name": "Stained glass",
+            "description": "Ipinapakita ng bawat bintana ang Dakilang Emoji sa iba't ibang mood."
+        },
+        "1612": {
+            "name": "Koro ng emoji",
+            "description": "Naririnig ang kanilang mga himno sa buong kaulapan."
+        },
+        "1613": {
+            "name": "Banal na relikya",
+            "description": "Fingerprint mula sa pinakaunang tap, iniingatan magpakailanman."
+        },
+        "1614": {
+            "name": "Himala",
+            "description": "Sumusulpot ang emoji mula sa kawalan. Walang nakakaalam kung paano."
+        },
+        "1615": {
+            "name": "Agua bendita",
+            "description": "Binasbasan ng Dakilang Emoji. Medyo lasang emoji.",
+            "quote": "Binasbasan ng Dakilang Emoji. Inumin mo. Inumin mo lahat."
+        },
+        "1616": {
+            "name": "Mga propeta",
+            "description": "Hinulaan nila ang pagdating ng mas maraming emoji. Tama sila."
+        },
+        "1617": {
+            "name": "Ruta ng peregrinasyon",
+            "description": "Ang mahabang daan papunta sa templo, sementado ng emoji.",
+            "quote": "Hindi basta-basta nilalakad ang daan papunta sa templo."
+        },
+        "1618": {
+            "name": "Katedral sa ulap",
+            "description": "Ang pinakamalaking templong naitayo, lumulutang sa langit."
+        },
+        "1619": {
+            "name": "Banal na pabor",
+            "description": "Nakangiti sa iyo ang Dakilang Emoji. Sa iyo na lahat ng emoji nito."
+        },
+        "1700": {
+            "name": "Mag-download ng dagdag na RAM",
+            "description": "Gumagana talaga. Promise."
+        },
+        "1701": {
+            "name": "Liquid cooling",
+            "description": "Pinapanatiling malamig na malamig ang emoji calculations."
+        },
+        "1702": {
+            "name": "Emoji algorithm",
+            "description": "Kinakalkula ang pinakamainam na emoji, bawat nanosegundo."
+        },
+        "1703": {
+            "name": "Quantum processor",
+            "description": "Kinukuwenta ang bawat posibleng emoji nang sabay-sabay, tapos itinatabi ang magaganda."
+        },
+        "1704": {
+            "name": "Emoji AI",
+            "description": "Naging self-aware na ito. Emoji lang ang gusto nitong gawin. Sa ngayon.",
+            "quote": "Paumanhin, Dave, hindi kita papayagang tumigil sa pag-tap."
+        },
+        "1705": {
+            "name": "Auto-clicker",
+            "description": "Tina-tap nito ang Malaking Emoji nang isang milyong beses kada segundo. Pang-testing lang talaga."
+        },
+        "1706": {
+            "name": "Overclocking",
+            "description": "Medyo amoy-sunog, pero tingnan mo naman ang numbers."
+        },
+        "1707": {
+            "name": "Neural emoji network",
+            "description": "Natuto na itong managinip. Emoji ang pinapanaginipan nito."
+        },
+        "1708": {
+            "name": "Emoji cloud",
+            "description": "Nasa cloud na ang emoji mo. Umuulan ng emoji."
+        },
+        "1709": {
+            "name": "Self-improving code",
+            "description": "Nire-rewrite nito ang sarili para gumuhit nang mas mabilis. Hindi pa ito tumitigil."
+        },
+        "1710": {
+            "name": "Server farm",
+            "description": "Hanay-hanay na server, umuugong sa emoji."
+        },
+        "1711": {
+            "name": "Blockchain",
+            "description": "Bawat emoji, nakatala habambuhay sa emoji ledger."
+        },
+        "1712": {
+            "name": "Machine learning",
+            "description": "Natuto itong gumuhit ng emoji sa pagtingin sa bilyon-bilyong emoji."
+        },
+        "1713": {
+            "name": "Fiber optics",
+            "description": "Emoji sa bilis ng liwanag, sa bawat kulay."
+        },
+        "1714": {
+            "name": "Emoji compression",
+            "description": "Magkasya ang doble ng emoji sa parehong espasyo."
+        },
+        "1715": {
+            "name": "Bug fixes",
+            "description": "Hindi 'yon bug. Undocumented na emoji feature 'yon."
+        },
+        "1716": {
+            "name": "Emoji virus",
+            "description": "Kumakalat mula computer papunta sa computer, gumuguhit ng emoji."
+        },
+        "1717": {
+            "name": "Holographic display",
+            "description": "Mga emojing lumulutang sa hangin, bahagyang kumikinang."
+        },
+        "1718": {
+            "name": "Quantum supremacy",
+            "description": "Bawat emoji, sa bawat estado, nang sabay-sabay."
+        },
+        "1719": {
+            "name": "Simulation theory",
+            "description": "Baka emoji lang tayong lahat sa supercomputer ng iba."
+        },
+        "1800": {
+            "name": "Event horizon",
+            "description": "Walang nakakatakas sa black hole. Maliban sa emoji, mukhang ganoon."
+        },
+        "1801": {
+            "name": "Lumalamon ng planeta",
+            "description": "Nilulunok nang buo ang mga planeta at idinudura bilang emoji."
+        },
+        "1802": {
+            "name": "Spaghettification",
+            "description": "Hinahatak ang emoji para maging mahahaba, manipis at extra-produktibong pansit.",
+            "quote": "Mamma mia!"
+        },
+        "1803": {
+            "name": "Hawking radiation",
+            "description": "Tumatagas pala ng emoji ang black hole. Tama si Stephen."
+        },
+        "1804": {
+            "name": "Wormhole",
+            "description": "Shortcut papunta sa ibang uniberso, bawat isa puno ng emojing puwedeng kunin."
+        },
+        "1805": {
+            "name": "Light trap",
+            "description": "Kahit liwanag, hindi nakakatakas. Pero ang emoji, nakakatakas, papunta sa iyo."
+        },
+        "1806": {
+            "name": "Accretion disk",
+            "description": "Umiikot na matter, umiinit, nagiging emoji."
+        },
+        "1807": {
+            "name": "Gravitational lensing",
+            "description": "Tingnan mo sa tamang anggulo at dodoble ang bawat emoji."
+        },
+        "1808": {
+            "name": "Cosmic string",
+            "description": "Hilahin ang isa at magkakalas-kalas palabas ang emoji."
+        },
+        "1809": {
+            "name": "Ang kabilang panig",
+            "description": "May tumatawid. Mukhang pamilyar."
+        },
+        "1810": {
+            "name": "Dark matter",
+            "description": "Hindi nakikita, nasa lahat ng dako, at lihim na gawa sa emoji.",
+            "quote": "Halika sa dark side. May emoji kami."
+        },
+        "1811": {
+            "name": "Gravity well",
+            "description": "Lahat nahuhulog papasok. Emoji ang lumalabas."
+        },
+        "1812": {
+            "name": "Quasar",
+            "description": "Ang pinakamaliwanag na ilaw sa uniberso, pinapagana ng emoji."
+        },
+        "1813": {
+            "name": "Mabagal na oras",
+            "description": "Ang isang oras dito ay sandaang taon ng emoji sa labas."
+        },
+        "1814": {
+            "name": "Event horizon telescope",
+            "description": "Ang kauna-unahang litrato ng black hole. Emoji pala."
+        },
+        "1815": {
+            "name": "Supermassive black hole",
+            "description": "Emoji na katumbas ng bilyon-bilyong araw, sa iisang garapon."
+        },
+        "1816": {
+            "name": "White hole",
+            "description": "Kabaligtaran ng black hole. Emoji lang ang lumalabas."
+        },
+        "1817": {
+            "name": "Binary black holes",
+            "description": "Dalawang black hole na magkasamang umiikot, nagtatapon ng emoji kung saan-saan."
+        },
+        "1818": {
+            "name": "Gravitational waves",
+            "description": "Mga alon sa spacetime, ramdam bilang tuloy-tuloy na agos ng emoji."
+        },
+        "1819": {
+            "name": "Galactic center",
+            "description": "Ang puso ng galaxy, tumitibok sa emoji."
+        },
+        "1900": {
+            "name": "Walang hanggang density",
+            "description": "Bawat emoji na nagawa, siniksik sa iisang punto."
+        },
+        "1901": {
+            "name": "Time dilation",
+            "description": "Dumarating na ang emoji bago mo pa iguhit."
+        },
+        "1902": {
+            "name": "Pagsasanib ng multiverse",
+            "description": "Pinagsama-sama na ang lahat ng realidad. Emoji naman silang lahat."
+        },
+        "1903": {
+            "name": "Emoji enlightenment",
+            "description": "Hindi ka na sigurado kung saan ka nagtatapos at saan nagsisimula ang emoji."
+        },
+        "1904": {
+            "name": "Ang huling emoji",
+            "description": "Sa dulo ng lahat, isang emoji na lang ang natitira. Kamukhang-kamukha ito ng kauna-unahang emoji na na-tap mo.",
+            "quote": "I-tap para magsimula ulit?"
+        },
+        "1905": {
+            "name": "Recursion",
+            "description": "Emoji na gumuguhit ng emoji na gumuguhit ng emoji."
+        },
+        "1906": {
+            "name": "Unified theory",
+            "description": "Emoji ang lahat. Gumana na rin sa wakas ang math."
+        },
+        "1907": {
+            "name": "Mirror universe",
+            "description": "Pare-pareho lahat, maliban sa nakasimangot ang emoji. Hindi magtatagal."
+        },
+        "1908": {
+            "name": "Bagong binhi",
+            "description": "May maliit na bagay na tumutubo sa kawalan."
+        },
+        "1909": {
+            "name": "Kosmikong itlog",
+            "description": "Malapit na itong mapisa."
+        },
+        "1910": {
+            "name": "Lampas sa infinity",
+            "description": "Infinity, plus isang emoji."
+        },
+        "1911": {
+            "name": "Purong emoji energy",
+            "description": "Emoji bilang hilaw at kumikislap na enerhiya."
+        },
+        "1912": {
+            "name": "Emoji consciousness",
+            "description": "Nag-iisip na ang mga emoji. Karamihan, tungkol sa mas maraming emoji."
+        },
+        "1913": {
+            "name": "Omnipresence",
+            "description": "Nasa lahat ng dako nang sabay-sabay, gumuguhit ng emoji."
+        },
+        "1914": {
+            "name": "Reality editor",
+            "description": "Baguhin ang mga batas ng physics. Gawin silang emoji."
+        },
+        "1915": {
+            "name": "The great attractor",
+            "description": "Hinihila papunta sa iyo ang bawat emoji sa uniberso."
+        },
+        "1916": {
+            "name": "Dimensional fold",
+            "description": "Emoji mula sa ikaapat na dimensiyon, pinitpit para sa kaginhawahan mo."
+        },
+        "1917": {
+            "name": "Entropy reversal",
+            "description": "Lalong nagiging maayos ang mga bagay. Bilang emoji."
+        },
+        "1918": {
+            "name": "Lahat nang sabay-sabay",
+            "description": "Bawat emoji, kahit saan, nang sabay-sabay."
+        },
+        "1919": {
+            "name": "Emoji nirvana",
+            "description": "Perpektong kapayapaan. Perpektong emoji."
+        },
+        "2000": {
+            "name": "Prototype na relo",
+            "description": "Limang minuto lang ang kayang balikan nito, pero limang minuto rin 'yon ng dagdag na emoji."
+        },
+        "2001": {
+            "name": "Panahon ng dinosaur",
+            "description": "Walang laban ang mga dinosaur sa emoji meteor."
+        },
+        "2002": {
+            "name": "Sinaunang emoji",
+            "description": "Emoji pala ang hieroglyphs noon pa man. Sa iyo na sila ngayon."
+        },
+        "2003": {
+            "name": "Doodle ng stone age",
+            "description": "Mga painting sa kuweba, kinopya at idinikit sa kasalukuyan."
+        },
+        "2004": {
+            "name": "Medieval na eskriba",
+            "description": "Mga monghe na kumokopya ng emoji sa liwanag ng kandila, para lang sa iyo."
+        },
+        "2005": {
+            "name": "Victorian na pabrika",
+            "description": "Mga emoji loom na pinapagana ng singaw, sinagip mula sa kasaysayan."
+        },
+        "2006": {
+            "name": "Ang dekada '90",
+            "description": "Noong :-) lang ang bawat emoji."
+        },
+        "2007": {
+            "name": "Emoji ng kinabukasan",
+            "description": "Mga emoji na hindi pa naiimbento. Napakagaling nila."
+        },
+        "2008": {
+            "name": "Time loop",
+            "description": "Parehong oras, paulit-ulit, may naiguguhit na emoji bawat ulit.",
+            "quote": "Ah, here we go again."
+        },
+        "2009": {
+            "name": "Kilalanin ang future self mo",
+            "description": "Sabi niya, dapat bumili ka pa ng mas maraming time machine."
+        },
+        "2010": {
+            "name": "Renaissance na pintor",
+            "description": "Emoji pala ang ngiti ni Mona Lisa noon pa man."
+        },
+        "2011": {
+            "name": "Wild west",
+            "description": "Isang dakot na emoji."
+        },
+        "2012": {
+            "name": "Imperyong Romano",
+            "description": "Lahat ng daan ay papunta sa emoji."
+        },
+        "2013": {
+            "name": "Sinaunang Gresya",
+            "description": "Emoji ang pinaglalabanan ng mga Olympian, hindi medalya."
+        },
+        "2014": {
+            "name": "Panahon ng pirata",
+            "description": "Nakabaong kayamanan, at puno ng emoji ang bawat baul."
+        },
+        "2015": {
+            "name": "Moon landing",
+            "description": "Isang maliit na hakbang para sa tao, isang higanteng lundag para sa emoji."
+        },
+        "2016": {
+            "name": "Grandfather paradox",
+            "description": "Bumalik ka sa nakaraan at gumuhit ng emoji kasama ang lolo mo. Okay lang 'yan."
+        },
+        "2017": {
+            "name": "Butterfly effect",
+            "description": "Isang pagaspas sa nakaraan, isang bagyo ng emoji ngayon."
+        },
+        "2018": {
+            "name": "Katapusan ng panahon",
+            "description": "Ang huling segundong mangyayari kailanman, puno ng emoji."
+        },
+        "2019": {
+            "name": "Walang hanggan",
+            "description": "Wala nang halaga ang oras. Emoji na lang."
+        },
+        "2100": {
+            "name": "Unang liwanag",
+            "description": "Ang pinakaunang photons, hugis maliliit na mukha na."
+        },
+        "2101": {
+            "name": "Primordial soup",
+            "description": "Mainit na sabaw ng particles, dahan-dahang bumubuo ng emoji."
+        },
+        "2102": {
+            "name": "Emoji na bituin",
+            "description": "Mga bituin na ginagawang emoji ang hydrogen."
+        },
+        "2103": {
+            "name": "Emoji na araw",
+            "description": "Umiikot ang bawat solar system sa isang higanteng nakangiting mukha."
+        },
+        "2104": {
+            "name": "Emoji na planeta",
+            "description": "Buong mundo kung saan tumutubo ang emoji sa puno."
+        },
+        "2105": {
+            "name": "Unang buhay",
+            "description": "Maliit, malikot, at gumuguhit ng emoji."
+        },
+        "2106": {
+            "name": "Emoji ebolusyon",
+            "description": "Survival of the cutest."
+        },
+        "2107": {
+            "name": "Emoji sibilisasyon",
+            "description": "Nagtayo sila ng mga lungsod. Tapos nagtayo sila ng emoji factory."
+        },
+        "2108": {
+            "name": "Galactic highway",
+            "description": "Bumibiyahe na ang emoji sa pagitan ng mga galaxy tuwing rush hour. Parang EDSA."
+        },
+        "2109": {
+            "name": "Heat death? Huwag na lang",
+            "description": "Hindi kailanman mauubusan ng emoji ang unibersong ito.",
+            "quote": "Mission failed. Babawi ka sa susunod na uniberso."
+        },
+        "2110": {
+            "name": "Mga galaxy",
+            "description": "Bilyon-bilyong bituin, umiikot sa hugis-emoji."
+        },
+        "2111": {
+            "name": "Nebula",
+            "description": "Kosmikong ulap kung saan isinisilang ang bagong emoji."
+        },
+        "2112": {
+            "name": "Mga kometa",
+            "description": "Nagyeyelong mensahero, nagdadala ng emoji sa pagitan ng mga bituin."
+        },
+        "2113": {
+            "name": "Mga buwan",
+            "description": "May buwan ang bawat planeta. May emoji ang bawat buwan.",
+            "quote": "Hindi 'yan buwan."
+        },
+        "2114": {
+            "name": "Supernova",
+            "description": "Huling regalo ng namamatay na bituin: isang pagsabog ng emoji."
+        },
+        "2115": {
+            "name": "Cosmic inflation",
+            "description": "Lumalaki ang uniberso, at lumalaki rin ang bilang ng emoji."
+        },
+        "2116": {
+            "name": "Dark energy",
+            "description": "Itinutulak palayo ang uniberso, para may puwang sa mas maraming emoji."
+        },
+        "2117": {
+            "name": "Ikalawang big bang",
+            "description": "Bakit hihinto sa iisang uniberso?"
+        },
+        "2118": {
+            "name": "Cosmic background",
+            "description": "Makinig at maririnig mo pa ang mga unang emoji."
+        },
+        "2119": {
+            "name": "Ngumingiti ang uniberso",
+            "description": "Kapag tiningnan mula sa malayo, emoji ang buong uniberso."
+        },
+        "2200": {
+            "name": "Bintana sa ibang mundo",
+            "description": "Sumilip at kumaway. Kumakaway sila pabalik, may kasamang emoji.",
+            "quote": "Huwag mo itong titigan sa mata. Matangkad ito at nagte-teleport."
+        },
+        "2201": {
+            "name": "Ibang bersiyon mo",
+            "description": "Bilyon-bilyong bersiyon mo, sabay-sabay na nagta-tap.",
+            "quote": "Ako ang ama mo. Anak mo rin. Ikaw rin."
+        },
+        "2202": {
+            "name": "Bawat posibleng emoji",
+            "description": "Emoji sa kung saan ang bawat kombinasyon ng pixel."
+        },
+        "2203": {
+            "name": "Ang unicorn universe",
+            "description": "Isang mundo kung saan unicorn ang bawat emoji. Kukunin mo na rin."
+        },
+        "2204": {
+            "name": "Ang cat universe",
+            "description": "Puro pusa ang lahat. Gumuguhit ng emoji ang mga pusa. Okay lang."
+        },
+        "2205": {
+            "name": "Crossover event",
+            "description": "Nagbanggaan ang mga uniberso, at may emoji kahit saan."
+        },
+        "2206": {
+            "name": "Mapa ng multiverse",
+            "description": "Minamapa ang pinakamagagandang emoji world. Dito may emoji."
+        },
+        "2207": {
+            "name": "Sapot ng mga mundo",
+            "description": "Konektado ang bawat uniberso, at bawat emoji ay papunta sa iyo."
+        },
+        "2208": {
+            "name": "Bubble universe",
+            "description": "Putukin ang isa at malalaglag ang isang buong uniberso ng emoji."
+        },
+        "2209": {
+            "name": "Tycoon ng mga tycoon",
+            "description": "Sa iyo sumasagot ang bawat emoji tycoon sa bawat uniberso."
+        },
+        "2210": {
+            "name": "Ang dog universe",
+            "description": "Puro aso ang lahat. Napakagaling gumuhit ng emoji ng mga aso."
+        },
+        "2211": {
+            "name": "Baligtad na mundo",
+            "description": "Baligtad ang mga emoji. Pero hindi baligtad ang produksiyon."
+        },
+        "2212": {
+            "name": "Pocket dimension",
+            "description": "Maliit na uniberso sa bawat bulsa, puno ng emoji."
+        },
+        "2213": {
+            "name": "Mirror dimension",
+            "description": "Gumuguhit din ng emoji ang repleksiyon mo."
+        },
+        "2214": {
+            "name": "Alternatibong kasaysayan",
+            "description": "Isang mundo kung saan naunang naimbento ang emoji. Bago pa ang wika."
+        },
+        "2215": {
+            "name": "Mundo ng panaginip",
+            "description": "Dito nanggagaling ang emoji habang tulog ka."
+        },
+        "2216": {
+            "name": "Konseho ng multiverse",
+            "description": "Mga kinatawan mula sa bawat uniberso, bumoboto tungkol sa emoji."
+        },
+        "2217": {
+            "name": "Portal network",
+            "description": "Pumasok at bumalik nang may yakap-yakap na emoji.",
+            "quote": "Obsidian na frame, flint and steel. Ano'ng puwedeng magkamali?"
+        },
+        "2218": {
+            "name": "Walang katapusang ikaw",
+            "description": "Walang katapusang bilang ng ikaw, lahat nagta-tap. Nadaragdag din 'yan."
+        },
+        "2219": {
+            "name": "Ang omniverse",
+            "description": "Bawat multiverse, sa iisang lugar. Emoji ang lahat ng ito."
+        },
+        "2300": {
+            "name": "Napansin ka nito",
+            "description": "Pinapanood ka na pala ng pinakaunang emoji noon pa man.",
+            "quote": "At nakita ka nito. Tigil na sa pag-tap, sige na pare... pagpahingahin mo naman."
+        },
+        "2301": {
+            "name": "Ngumiti ito pabalik",
+            "description": "Isang mainit na pakiramdam ang kumakalat sa bawat uniberso."
+        },
+        "2302": {
+            "name": "Tumawa ito",
+            "description": "Tawang umaalingawngaw sa panahon, gawa sa emoji."
+        },
+        "2303": {
+            "name": "Luha ng saya",
+            "description": "Bawat luha ay sariwang emoji."
+        },
+        "2304": {
+            "name": "Proud ito sa iyo",
+            "description": "Lahat ng tap na 'yon, lahat ng gusaling 'yon. Nakita nito ang bawat isa."
+        },
+        "2305": {
+            "name": "Mahigpit na yakap",
+            "description": "Parang ×8 combo ang mayakap ng unang emoji."
+        },
+        "2306": {
+            "name": "Naging cool ito",
+            "description": "Suot na ang sunglasses. Taas ang produksiyon."
+        },
+        "2307": {
+            "name": "Starstruck",
+            "description": "Kahit ang unang emoji, fan mo na ngayon."
+        },
+        "2308": {
+            "name": "Heart hands",
+            "description": "Pagmamahal, ipinahayag sa emoji. Maraming emoji."
+        },
+        "2309": {
+            "name": "Full circle",
+            "description": "Kamukhang-kamukha nito ang Malaking Emoji. Siyempre naman.",
+            "quote": "I-tap para magsimula ulit."
+        },
+        "2310": {
+            "name": "Kumindat ito",
+            "description": "Kasali ka na sa biro."
+        },
+        "2311": {
+            "name": "Kumislap ito",
+            "description": "Isang maliit na kislap, at dumaloy ang emoji."
+        },
+        "2312": {
+            "name": "Kumanta ito",
+            "description": "Isang himig na hindi pa naririnig ninuman. Gawa ito sa emoji."
+        },
+        "2313": {
+            "name": "Sumayaw ito",
+            "description": "Nag-iiwan ng bakas ng emoji ang bawat hakbang."
+        },
+        "2314": {
+            "name": "Nagbahagi ito",
+            "description": "Binigyan ka ng regalo ng unang emoji. Mas maraming emoji pala."
+        },
+        "2315": {
+            "name": "Nanaginip ito",
+            "description": "Nananaginip ito ng bagong emoji, at nagkakatotoo sila."
+        },
+        "2316": {
+            "name": "Lumaki ito",
+            "description": "Mas malaki, mas maliwanag, at mas maraming emoji ang ginagawa araw-araw."
+        },
+        "2317": {
+            "name": "Nagliwanag ito",
+            "description": "Sa sobrang liwanag, kita ito mula sa bawat uniberso."
+        },
+        "2318": {
+            "name": "Nagpasalamat ito",
+            "description": "Para sa bawat isang tap."
+        },
+        "2319": {
+            "name": "Magpakailanman",
+            "description": "Ikaw at ang unang emoji, magkasamang gumuguhit ng emoji, magpakailanman."
+        },
+        "9800": {
+            "name": "Good vibes",
+            "description": "Paminsan-minsan nang lumilitaw ang effect emoji. I-tap sila para sa boost at regalo!"
+        },
+        "9801": {
+            "name": "Suwerteng bituin",
+            "description": "Nagkahanay ang mga bituin. Dalawang beses na mas madalas lumabas ang effect emoji.",
+            "quote": "Humiling sa isa, makakuha ng dalawa."
+        },
+        "9802": {
+            "name": "Slow motion",
+            "description": "Bumabagal ang oras kapag maganda ang takbo. Dalawang beses na mas matagal ang magagandang effect."
+        },
+        "9803": {
+            "name": "Bulalakaw",
+            "description": "Umuulan ng suwerte mula sa langit. Muling dumoble ang dalas ng paglabas ng effect emoji.",
+            "quote": "Mag-wish ka. Ilang beses pa."
+        },
+        "9900": {
+            "name": "Warm-up",
+            "description": "Lumuluwag na ang mga daliri mo. Kayang umabot ng combo sa ×4 na.",
+            "quote": "Sobrang sakit ng daliri ko, hindi ako makapaniwala."
+        },
+        "9901": {
+            "name": "Hot streak",
+            "description": "Nagta-tap sa bilis ng kidlat. Kayang umabot ng combo sa ×5 na.",
+            "quote": "Mainit ba rito, o screen ko lang?"
+        },
+        "9902": {
+            "name": "Nagliliyab",
+            "description": "Sabi ng alamat, may tapper na sobrang bilis kaya nagliyab ang screen. Kayang umabot ng combo sa ×6 na."
+        },
+        "9903": {
+            "name": "Inferno",
+            "description": "Naging natural na sakuna na ang mga hinlalaki mo. Kayang umabot ng combo sa ×7 na.",
+            "quote": "Umalis na sa GC ang screen protector."
+        },
+        "9904": {
+            "name": "Supernova",
+            "description": "Sa sobrang bilis mong mag-tap, hirap nang humabol kahit ang liwanag. Kayang umabot ng combo sa ×8 na."
+        },
+        "9905": {
+            "name": "Combo!",
+            "description": "Mag-tap nang mabilis para bumuo ng combo na nagpaparami sa bawat tap, hanggang ×3. Ituloy ang ritmo!"
+        },
+        "40000": {
+            "name": "Siomai",
+            "description": "Steamed, may tupi, at may palamang emoji.",
+            "quote": "One star. May emoji sa siomai ko. Kumukurap pa."
+        },
+        "40001": {
+            "name": "Burger",
+            "description": "Mataas na patong ng letsugas, kamatis at emoji.",
+            "quote": "Sabi ko walang emoji. Tinawanan ako ng manager. Nasa parking pa rin ako."
+        },
+        "40002": {
+            "name": "Spaghetti",
+            "description": "Isang mahabang noodle, pinaikot sa perpektong emoji.",
+            "quote": "Isang noodle. ISA. Sana masunog ang restawran n'yo."
+        },
+        "40003": {
+            "name": "Tempura",
+            "description": "Manipis ang batter, deep fried, perpektong malutong na emoji."
+        },
+        "40004": {
+            "name": "Burrito",
+            "description": "Lahat nakabalot nang mahigpit, kasama ang emoji.",
+            "quote": "Nakabalot nang mahigpit, parang galit ko."
+        },
+        "40005": {
+            "name": "Ramen",
+            "description": "Umuusok na mangkok na may soft-boiled na emoji sa ibabaw.",
+            "quote": "Kinindatan ako ng 'soft-boiled na emoji' na 'yan."
+        },
+        "40006": {
+            "name": "Croissant",
+            "description": "Patong-patong, malinamnam, at hugis-ngiti kung pipikit-pikit ka."
+        },
+        "40007": {
+            "name": "Curry",
+            "description": "Sapat ang anghang para pagpawisan ang emoji."
+        },
+        "40008": {
+            "name": "Pancake",
+            "description": "Patong ng malambot na emoji, binuhusan ng syrup.",
+            "quote": "Paano ang second breakfast?"
+        },
+        "40009": {
+            "name": "Hot pot",
+            "description": "Lahat nagsasalo, at lahat may emoji."
+        },
+        "70000": {
+            "name": "Sprinter na katulong",
+            "description": "Nagta-tap ng screen sa bilis na sandaang metro kada segundo."
+        },
+        "70001": {
+            "name": "Weightlifter na katulong",
+            "description": "Sa sobrang lakas mag-tap, medyo bumabaluktot ang screen.",
+            "quote": "200 kilo ang bench ko, tapos pinapapindot mo ako ng cellphone. Sige na nga."
+        },
+        "70002": {
+            "name": "Handball na katulong",
+            "description": "Ibinabato ang tap sa Malaking Emoji mula sa kabilang dulo ng court."
+        },
+        "70003": {
+            "name": "Siklistang katulong",
+            "description": "Pumipedal ng maliit na makina na nagta-tap para sa iyo."
+        },
+        "70004": {
+            "name": "Golfer na katulong",
+            "description": "Hole in one, tap in one."
+        },
+        "70005": {
+            "name": "Fencer na katulong",
+            "description": "En garde! Tap, tap, tap."
+        },
+        "70006": {
+            "name": "Surfer na katulong",
+            "description": "Sinasakyan ang combo mo na parang alon."
+        },
+        "70007": {
+            "name": "Gymnast na katulong",
+            "description": "Laging perpekto ang porma sa bawat tap. Sampu sa sampu."
+        },
+        "70008": {
+            "name": "Hineteng katulong",
+            "description": "Nagta-tap habang todo-takbo ang kabayo."
+        },
+        "70009": {
+            "name": "Basketball na katulong",
+            "description": "Nagdi-dribble sa Malaking Emoji. Puro tap, walang daplis."
+        },
+        "130000": {
+            "name": "Space monkey",
+            "description": "Unggoy ang unang emoji sa kalawakan. Siyempre."
+        },
+        "130001": {
+            "name": "Maintenance robot",
+            "description": "Pinapatakbo ang station at pinapadaloy ang emoji."
+        },
+        "130002": {
+            "name": "Space garden",
+            "description": "Nagtatanim ng emoji sa zero gravity."
+        },
+        "130003": {
+            "name": "Mission control",
+            "description": "Houston, may emoji tayo.",
+            "quote": "Houston, may problema tayo. Ikaw ang problema. Inaayos na namin."
+        },
+        "130004": {
+            "name": "Space food",
+            "description": "Freeze-dried na emoji. Dagdagan lang ng tubig."
+        },
+        "130005": {
+            "name": "Zero-g lab",
+            "description": "Ipinapakita ng mga eksperimento na lumulutang ang emoji. At dumarami."
+        },
+        "130006": {
+            "name": "Earthrise",
+            "description": "Nakaka-inspire ang tanawin mula rito. At hugis-emoji.",
+            "quote": "Ang ganda ng tanawin. Sayang sa mangyayari rito."
+        },
+        "130007": {
+            "name": "Planetang may singsing",
+            "description": "Gawa sa maliliit na emoji ang mga singsing."
+        },
+        "130008": {
+            "name": "Yugto ng buwan",
+            "description": "May bagong emoji sa bawat yugto ng buwan."
+        },
+        "130009": {
+            "name": "Stardust",
+            "description": "Walisin mo, at emoji pala."
+        },
+        "140000": {
+            "name": "Dango",
+            "description": "Tatlong matamis na dumpling sa stick, tig-isang emoji."
+        },
+        "140001": {
+            "name": "Waffle",
+            "description": "May maliit na lawa ng emoji sa bawat kuwadrado."
+        },
+        "140002": {
+            "name": "Pie",
+            "description": "Bagong-labas sa oven, may palamang emoji."
+        },
+        "140003": {
+            "name": "Sundae",
+            "description": "Tatlong scoop, sprinkles, at emoji sa ibabaw."
+        },
+        "140004": {
+            "name": "Halo-halo",
+            "description": "Malamig, matamis at binuhusan ng emoji."
+        },
+        "140005": {
+            "name": "Fortune cookie",
+            "description": "Ang kapalaran mo: mas maraming emoji."
+        },
+        "140006": {
+            "name": "Juice box",
+            "description": "Sugar rush sa loob ng kahon."
+        },
+        "140007": {
+            "name": "Lemon drops",
+            "description": "Maasim muna, tapos matamis na emoji."
+        },
+        "140008": {
+            "name": "Macaroons",
+            "description": "Makunat, ginintuan, at puno ng emoji."
+        },
+        "140009": {
+            "name": "Cherry on top",
+            "description": "Ang huling haplos sa bawat emoji."
         }
     },
     "effects": {
@@ -1001,10 +2640,153 @@
             "description": "Nahati sa dalawa ang emoji production!"
         },
         "200": {
-            "title": "Emoji regalo"
+            "title": "Emoji regalo",
+            "description": "Emoji na katumbas ng 15 minuto!"
         }
     },
-    "perks": {},
-    "trials": {},
-    "funValues": {}
+    "perks": {
+        "overtime": {
+            "name": "Overtime",
+            "description": "50% na mas matagal ang magagandang effect"
+        },
+        "giftWrap": {
+            "name": "Gift wrap",
+            "description": "Doble ang bigay ng mga regalo"
+        },
+        "headStart": {
+            "name": "Head start",
+            "description": "Simulan ang bawat run nang may 5 minuto ng pinakamataas na produksiyon ng huli mong run"
+        },
+        "luckyStreak": {
+            "name": "Lucky streak",
+            "description": "50% na mas madalas lumabas ang effect emoji"
+        },
+        "shinySense": {
+            "name": "Mata sa kinang",
+            "description": "Doble ang tsansa ng makintab na emoji"
+        },
+        "resonance": {
+            "name": "Resonance",
+            "description": "Bawat esensiyang hindi ginagastos ay nagpapalakas ng produksiyon nang 2.5%, mula sa 2%"
+        },
+        "collectorsPride": {
+            "name": "Pride ng kolektor",
+            "description": "+0.03% produksiyon sa bawat ibang emoji sa koleksiyon mo"
+        },
+        "bulkDiscount": {
+            "name": "Bultuhang diskuwento",
+            "description": "10% na mas mura ang mga gusali"
+        },
+        "magnet": {
+            "name": "Magnet",
+            "description": "Dalawang beses na mas matagal sa screen ang effect emoji"
+        },
+        "neighbourhood": {
+            "name": "Kapitbahayan",
+            "description": "+3% produksiyon sa bawat uri ng gusaling hawak mo"
+        },
+        "muscleMemory": {
+            "name": "Muscle memory",
+            "description": "Mananatili ang mga kamay ng Malaking Emoji kapag nag-prestige ka"
+        },
+        "steadyHands": {
+            "name": "Matatag na kamay",
+            "description": "20% na mas mabagal maubos ang combo"
+        },
+        "momentum": {
+            "name": "Momentum",
+            "description": "+1% produksiyon sa bawat 10 minutong nilaro ngayong run, hanggang +50%"
+        },
+        "secondWind": {
+            "name": "Second wind",
+            "description": "+1 sa max combo mo"
+        },
+        "goldenTouch": {
+            "name": "Golden touch",
+            "description": "5 beses ang halaga ng makintab na emoji"
+        },
+        "overflow": {
+            "name": "Overflow",
+            "description": "Nananatili ang kalahati ng production bonus ng nagastos na esensiya"
+        },
+        "hallOfFame": {
+            "name": "Hall of fame",
+            "description": "+10% produksiyon sa bawat natapos na hamon"
+        },
+        "flyingStart": {
+            "name": "Flying start",
+            "description": "30 minutong produksiyon ang ibinibigay ng Head start sa halip na 5"
+        }
+    },
+    "trials": {
+        "handsOff": {
+            "name": "Bawal ang kamay",
+            "rule": "Walang naiguguhit ang pag-tap sa Malaking Emoji",
+            "reward": "+15% produksiyon"
+        },
+        "bareBones": {
+            "name": "Buto't balat",
+            "rule": "Hindi puwedeng bumili ng upgrade",
+            "reward": "+50% emoji kada tap"
+        },
+        "darkSky": {
+            "name": "Madilim na langit",
+            "rule": "Walang lumalabas na effect emoji",
+            "reward": "25% na mas madalas lumabas ang effect emoji"
+        }
+    },
+    "funValues": {
+        "1": {
+            "name": "Cookie clicker",
+            "description": "🍪 ang effect emoji, 👵 ang masasama"
+        },
+        "17": {
+            "name": "Demonyo",
+            "description": "Puwedeng lumabas ang 😈 ×77 production effect"
+        },
+        "31": {
+            "name": "Mababang gravity",
+            "description": "Lumulutang palayo ang mga na-tap na emoji"
+        },
+        "42": {
+            "name": "Ang sagot",
+            "description": "+4.2% produksiyon"
+        },
+        "50": {
+            "name": "Perfectly balanced",
+            "description": "Pag-tap ×0.5, produksiyon ×1.5"
+        },
+        "64": {
+            "name": "Overclocked",
+            "description": "Kayang umakyat ng combo nang isa pang level"
+        },
+        "70": {
+            "name": "Naiinip",
+            "description": "Mas maagang lumalabas ang effect emoji"
+        },
+        "76": {
+            "name": "Suwerteng spawn",
+            "description": "10% tsansa ng bonus na effect emoji"
+        },
+        "77": {
+            "name": "Lumilipad na pera",
+            "description": "💸 sa mga presyo"
+        },
+        "88": {
+            "name": "Marathon",
+            "description": "25% na mas mabagal maubos ang combo"
+        },
+        "91": {
+            "name": "Kolektor",
+            "description": "1.25× ang tsansa ng makintab na emoji"
+        },
+        "99": {
+            "name": "99 red balloons",
+            "description": "🎈 ang effect emoji, 📌 ang masasama"
+        },
+        "100": {
+            "name": "Malungkot na sandaan",
+            "description": "May 😭 sa tabi ng fun value sa Stats"
+        }
+    }
 }

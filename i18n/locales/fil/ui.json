@@ -6,11 +6,16 @@
         "buildings": "Gusali",
         "upgrades": "Upgrade",
         "stats": "Stats",
-        "collection": "Koleksiyon"
+        "collection": "Koleksiyon",
+        "newItemsLabel_one": "{{label}}, {{count}} bago",
+        "newItemsLabel_other": "{{label}}, {{count}} bago"
     },
     "header": {
         "emojis": "Emoji",
-        "perSecond": "Kada segundo: {{value}}"
+        "perSecond": "Kada segundo: {{value}}",
+        "rate": "+{{value}} / seg",
+        "gemsLabel_one": "{{gems}} gem. Buksan ang tindahan ng gem",
+        "gemsLabel_other": "{{gems}} gem. Buksan ang tindahan ng gem"
     },
     "common": {
         "buy": "Bilhin",
@@ -23,29 +28,121 @@
             "multiplyTap": "• Doble ang lakas ng pag-tap.",
             "percentageIncreaseTap": "• {{percent}} na mas malakas ang pag-tap.",
             "tapPercentageOfEps": "• Bawat tap ay nagbibigay ng {{percent}} ng kabuuang emoji production mo.",
-            "percentageIncreaseProduction": "• Tumaas nang {{percent}} ang kabuuang emoji production."
+            "percentageIncreaseProduction": "• Tumaas nang {{percent}} ang kabuuang emoji production.",
+            "comboUnlock": "• Kapag mabilis kang mag-tap, bubuo ka ng combo, hanggang ×{{level}}.",
+            "comboLevel": "• Kayang umabot ng combo sa ×{{level}}.",
+            "effectEmojis": "• {{summary}}."
         },
         "bonusProduction": "Kapag binili mo ang upgrade na ito ngayon, may dagdag na <hl>+{{bonus}}</hl> emoji kada segundo, at tataas nang <hl>{{percent}}</hl> ang emoji production",
         "bonusTap": "Kapag binili mo ang upgrade na ito ngayon, may dagdag na <hl>+{{bonus}}</hl> emoji kada tap, at tataas nang <hl>{{percent}}</hl> ang bawat emoji na nakukuha mo sa pag-tap",
         "filterTitle": "I-filter ang upgrade",
-        "filterDescription": "Piliin kung aling mga gusali ang may upgrade na ipapakita."
+        "filterDescription": "Piliin kung aling mga gusali ang may upgrade na ipapakita.",
+        "effectEmojiSummary": {
+            "spawnRate": "×{{multiplier}} na mas madalas lumabas ang effect emoji",
+            "duration": "×{{multiplier}} na mas matagal ang magagandang effect",
+            "start": "Magsisimulang lumabas ang effect emoji"
+        },
+        "chips": {
+            "multiplyBuildingProduction": "{{buildings}} ×{{multiplier}}",
+            "multiplyTap": "Pag-tap ×{{multiplier}}",
+            "percentageIncreaseTap": "Pag-tap +{{percent}}",
+            "percentageIncreaseProduction": "Produksiyon +{{percent}}",
+            "tapPercentageOfEps": "Tap +{{percent}} ng emoji/seg",
+            "comboUnlock": "Combo hanggang ×{{level}}",
+            "comboLevel": "Max combo ×{{level}}"
+        },
+        "impact": {
+            "perSecond": "+{{bonus}} /seg",
+            "perTap": "+{{bonus}} kada tap",
+            "and": "{{a}} at {{b}}",
+            "rightNow": "{{gains}} ngayon"
+        },
+        "tierLabel": {
+            "helper": "{{building}} · Katulong",
+            "hands": "Malaking emoji · Kamay",
+            "effectEmojisNew": "Effect emoji · Bago",
+            "effectEmojisLevel": "Effect emoji · Level {{level}}",
+            "comboNew": "Combo · Bago",
+            "comboLevel": "Combo · Level {{level}}",
+            "tier": "{{building}} · Tier {{tier}}"
+        },
+        "forSale": "Mabibili",
+        "owned": "Nabili",
+        "available": "Available",
+        "emptyOwnedTitle": "Wala ka pang nabibili",
+        "emptyTitle": "Wala pang upgrade",
+        "emptyOwnedText": "Dito mapupunta ang mga upgrade na bibilhin mo.",
+        "emptyText": "Bumili ng gusali at i-tap ang Malaking Emoji para magbukas ng upgrade.",
+        "filterAll": "Lahat",
+        "quoted": "\"{{quote}}\"",
+        "ownedBadge": "✓ Nabili",
+        "paid": "Binayaran: {{price}}",
+        "bareBones": "🦴 Walang upgrade sa {{trial}}",
+        "buyFor": "Bilhin sa {{price}}",
+        "priceAndTime": "{{price}} · {{time}}",
+        "ownedCount": "{{owned}} sa {{total}} upgrade",
+        "availableCount": "{{affordable}} kaya mong bilhin · {{unlocked}} bukas",
+        "a11y": {
+            "owned": "{{name}}, nabili na",
+            "price": "{{name}}, {{price}}",
+            "affordable": "{{name}}, {{price}}, kaya mong bilhin"
+        }
     },
     "stats": {
         "totalEmojisDrawn": "Kabuuang emoji na naiguhit",
         "emojiTaps": "Mga emoji tap",
         "emojisEarnedFromTapping": "Emoji mula sa pag-tap",
         "magicalEmojisTapped": "Mahiwagang emoji na na-tap",
-        "funValue": "Fun value"
+        "funValue": "Fun value",
+        "shinyEmojisTapped": "Makintab na emoji na na-tap",
+        "comboTaps": "Mga combo tap",
+        "madeByEachBuilding": "Gawa ng bawat gusali"
     },
     "drawer": {
         "language": "Wika",
         "deviceLanguage": "Wika ng device",
         "cheats": "Cheats",
         "resetGame": "I-reset ang laro",
-        "spawnEffect": "Mag-spawn ng effect emoji"
+        "spawnEffect": "Mag-spawn ng effect emoji",
+        "menu": "Menu"
     },
     "prestige": {
-        "title": "Prestige"
+        "title": "Prestige",
+        "close": "Isara",
+        "ordinal_ordinal_one": "ika-{{count}}",
+        "ordinal_ordinal_other": "ika-{{count}}",
+        "celebrateCaption": "Prestige #{{count}}",
+        "celebrateTrialCaption": "Prestige #{{count}} · Nagsimula ang hamon",
+        "celebrateTitle": "+{{essence}} esensiya",
+        "celebrateTierTitle": "+{{essence}} esensiya · bukas na ang tier {{tier}} perks",
+        "essenceCaption": "Emoji esensiya",
+        "essenceBonus": "+{{bonus}} produksiyon ({{each}} bawat isa)",
+        "intro": "Kapag nakaguhit ka na ng sapat na emoji, nagsisimulang magtipon sa paligid mo ang mismong esensiya nila: isang mahiwagang bagay na nag-iiba ng hugis tuwing titingnan mo. Bawat esensiyang hindi ginagastos ay nagpapalakas ng produksiyon, at pambili ang esensiya ng perks na pang-habambuhay.",
+        "startOver": "Magsimula ulit",
+        "prestigesSoFar_one": "{{count}} prestige sa ngayon",
+        "prestigesSoFar_other": "{{count}} prestige sa ngayon",
+        "resetsWhat": "Mare-reset ang emoji, gusali, upgrade ng gusali at kamay mo. Mananatili ang koleksiyon, stats, combo at effect emoji upgrade, esensiya at perks mo.",
+        "nextEssence": "Susunod na esensiya",
+        "nextEssenceAt": "sa {{amount}} emoji na naiguhit",
+        "noEssenceYet": "Wala pang makukuhang esensiya",
+        "tapAgainToPrestige": "I-tap ulit para mag-prestige",
+        "prestigeFor": "Mag-prestige para sa +{{essence}} ✨",
+        "productionCaps": "+{{percent}} produksiyon",
+        "playedThisRun": "Nilaro ngayong run",
+        "drawnThisRun": "Naiguhit ngayong run",
+        "essencePerHour": "Esensiya kada oras",
+        "afterTenMinutes": "pagkalipas ng 10 min",
+        "essenceRate": "{{rate}} (best: {{best}})",
+        "slowingDown": "📉 Mas mabagal na ang dating ng esensiya kaysa kanina sa run na ito. Magandang oras para mag-prestige.",
+        "drawnAmount": "{{amount}} naiguhit",
+        "pastRuns": "Mga nakaraang run",
+        "pastRunLine": "{{duration}} · {{amount}} naiguhit",
+        "pastRunTrialCompleted": "{{icon}} {{name}} ✓",
+        "pastRunTrialNotCompleted": "{{icon}} {{name}}, hindi natapos",
+        "chipLabel": "Emoji esensiya",
+        "chipLabelReady": "Mag-prestige para sa {{essence}} emoji esensiya",
+        "chipEssence": "Esensiya",
+        "chipPending": "+{{essence}} esensiya"
     },
     "numbers": {
         "groupSize": "3",
@@ -115,6 +212,289 @@
             "57": "Oks",
             "60": "Nbs",
             "63": "Bh"
+        }
+    },
+    "buildings": {
+        "ownedA11y_one": "{{count}} ang hawak mo",
+        "ownedA11y_other": "{{count}} ang hawak mo",
+        "newBadge": "Bago",
+        "statLine": "{{eps}} /seg · {{share}} ng kabuuan",
+        "nextUpgrade": "susunod na upgrade sa {{at}}",
+        "allUpgradesFound": "nahanap na lahat ng upgrade",
+        "epsEach": "+{{eps}} /seg bawat isa",
+        "buy": "Bilhin",
+        "buyCount": "Bilhin ×{{count}}",
+        "buyA11y_one": "Bilhin ang {{count}} {{name}} sa halagang {{price}}",
+        "buyA11y_other": "Bilhin ang {{count}} {{name}} sa halagang {{price}}",
+        "mystery": "Misteryosong gusali",
+        "revealsAt": "Lalabas sa {{amount}} emoji",
+        "bulkLabel": "Dami ng bibilhin",
+        "bulkMax": "Max",
+        "bulkA11yMax": "Bilhin hangga't kaya mo",
+        "bulkA11y_one": "Bumili ng {{count}} kada bili",
+        "bulkA11y_other": "Bumili ng {{count}} kada bili",
+        "milestoneCaption": "Bagong gusali",
+        "milestoneTitle": "Ang una mong {{building}}!"
+    },
+    "time": {
+        "seconds_one": "{{count}} seg",
+        "seconds_other": "{{count}} seg",
+        "minutes_one": "{{count}} min",
+        "minutes_other": "{{count}} min",
+        "hours_one": "{{count}} oras",
+        "hours_other": "{{count}} oras",
+        "days_one": "{{count}} araw",
+        "days_other": "{{count}} araw",
+        "pair": "{{a}} {{b}}"
+    },
+    "trials": {
+        "title": "Mga hamon",
+        "completedCount": "{{done}} sa {{total}} ang natapos",
+        "intro": "Mag-prestige papunta sa run na may patakarang nagpapahirap dito. Gumuhit ng sapat na emoji sa run na iyon para makuha ang gantimpala nito habambuhay, at mawawala ang patakaran.",
+        "unlocksWith": "Mabubuksan sa {{ordinal}} mong prestige.",
+        "completeCaps": "Tapos ang hamon",
+        "inProgressCaps": "Hamon sa kasalukuyan",
+        "completedText": "Sa iyo na ang {{reward}} habambuhay, at wala na ang patakaran sa natitirang bahagi ng run na ito.",
+        "activeText": "{{rule}}. Gumuhit ng {{goal}} ngayong run para makuha ang {{reward}} habambuhay.",
+        "giveUp": "Sumuko sa hamong ito",
+        "giveUpConfirm": "I-tap ulit para sumuko (walang gantimpala)",
+        "doneTag": "✓ Tapos",
+        "playingTag": "Nilalaro",
+        "ruleLine": "<hl>Patakaran: </hl>{{rule}}",
+        "ruleLineWithStart": "<hl>Patakaran: </hl>{{rule}} (magsisimula ka sa {{amount}} emoji)",
+        "rewardLine": "<hl>Gantimpala: </hl>{{reward}}",
+        "finishFirst": "Tapusin muna ang hamon mo",
+        "needsEssence": "Kailangan ng esensiya para mag-prestige",
+        "tapAgainToStart": "I-tap ulit para magsimula",
+        "prestigeInto": "Mag-prestige sa hamon para sa +{{essence}} ✨",
+        "goalCaps": "Layunin: {{goal}}",
+        "goal": "{{amount}} emoji",
+        "completeTitle": "{{name}}: {{reward}}",
+        "rewardUnlocked": "Nakuha ang gantimpala"
+    },
+    "perks": {
+        "title": "Perks",
+        "ownedCount": "{{owned}} sa {{total}} ang hawak mo",
+        "spentKeepsHalf": "Nananatili ang kalahati ng production bonus ng nagastos na esensiya.",
+        "spentNoBonus": "Hindi na nagpapalakas ng produksiyon ang nagastos na esensiya.",
+        "tierCaps": "Tier {{tier}}",
+        "tierLockedCaps": "Tier {{tier}} · Mabubuksan sa {{ordinal}} mong prestige",
+        "hidden": "Mag-prestige para makita ang perk na ito.",
+        "needsFirst": "Kailangan muna ang {{perk}}",
+        "ownedTag": "✓ Nabili",
+        "buyLabel": "Bilhin ang {{perk}} sa {{cost}} esensiya"
+    },
+    "gems": {
+        "title": "Tindahan ng gem",
+        "yourGemsCaps": "Mga gem mo",
+        "gemsCaps": "Gem",
+        "offlineClaim": "{{cost}} gem para sa ×{{multiplier}} na offline na kita",
+        "storeUnavailable": "Hindi available ang tindahan ngayon. Tingnan ang koneksiyon mo at subukan ulit mamaya.",
+        "purchaseFailed": "Hindi natuloy ang pagbili. Hindi ka siningil.",
+        "keptOnPrestige": "Nananatili ang gem kapag nag-prestige ka.",
+        "unavailable": "Hindi available",
+        "thankYouCaps": "Salamat!",
+        "gemsAdded_one": "+{{amount}} gem",
+        "gemsAdded_other": "+{{amount}} gem",
+        "buyLabel_one": "Bumili ng {{amount}} gem",
+        "buyLabel_other": "Bumili ng {{amount}} gem",
+        "buyLabelWithPrice_one": "Bumili ng {{amount}} gem sa halagang {{price}}",
+        "buyLabelWithPrice_other": "Bumili ng {{amount}} gem sa halagang {{price}}",
+        "tags": {
+            "popular": "Patok",
+            "bestValue": "Pinakasulit"
+        }
+    },
+    "offline": {
+        "welcomeBack": "Welcome back!",
+        "away": "Nawala ka nang {{duration}}.",
+        "awayCapped": "Nawala ka nang mahigit {{duration}}, ang pinakamatagal na binibilang.",
+        "rested": "Nagpahinga ang imperyo mo habang wala ka.",
+        "missedCaps": "Produksiyong na-miss",
+        "perSecond": "{{value}} / seg",
+        "gemOfferCaps": "×{{multiplier}} sa {{cost}} gem · may {{gems}} ka",
+        "gemOfferGetCaps": "×{{multiplier}} sa {{cost}} gem · kumuha ng gem",
+        "noThanks": "Huwag na lang"
+    },
+    "ads": {
+        "watchCaps": "Manood ng ad",
+        "loadingCaps": "Naglo-load ang ad...",
+        "failed": "Hindi natapos ang ad. Tingnan ang koneksiyon mo at subukan ulit."
+    },
+    "reset": {
+        "title": "Magsimula ulit?",
+        "warning": "Mare-reset ang laro mo. Mawawala lahat ng emoji, gusali, upgrade, esensiya, perks, koleksiyon at stats mo. Hindi na ito maibabalik.",
+        "purchasesSafe": "Ligtas ang mga in-game purchase mo. Dadalhin sa bagong laro mo ang gem at anumang binili mo.",
+        "confirm": "Oo, i-reset ang laro ko",
+        "cancel": "Maglaro pa"
+    },
+    "milestones": {
+        "caption": "Milestone",
+        "emojisDrawn": "{{amount}} emoji na ang naiguhit!"
+    },
+    "settings": {
+        "title": "Settings",
+        "close": "Isara ang settings",
+        "sound": "Tunog",
+        "soundEffects": "Sound effects",
+        "soundEffectsHint": "Mahinang pop tuwing nagta-tap ka, at tunog ng kampanilya para sa makintab na emoji.",
+        "performance": "Performance",
+        "reduceAnimations": "Bawasan ang animation",
+        "reduceAnimationsHint": "Hindi na lilipad ang mga na-tap na emoji mula sa Malaking Emoji. Subukan ito kung parang nagla-lag ang pag-tap.",
+        "dangerZone": "Danger zone"
+    },
+    "cheats": {
+        "subtitle": "Pang-testing. Mababago ang save mo.",
+        "simulateAway": "Kunwaring 1 oras na wala",
+        "gems": "Gem",
+        "addGems_one": "+{{count}} gem",
+        "addGems_other": "+{{count}} gem",
+        "addComboTaps": "+{{amount}} combo tap",
+        "multiplyTapEarnings": "×{{factor}} kita sa tap",
+        "addCollection_one": "+{{count}} koleksiyon",
+        "addCollection_other": "+{{count}} koleksiyon",
+        "addShiny_one": "+{{count}} makintab",
+        "addShiny_other": "+{{count}} makintab",
+        "addMagical_one": "+{{count}} mahiwaga",
+        "addMagical_other": "+{{count}} mahiwaga",
+        "addEssence_one": "+{{count}} esensiya",
+        "addEssence_other": "+{{count}} esensiya",
+        "addPerkTier_one": "+{{count}} perk tier",
+        "addPerkTier_other": "+{{count}} perk tier",
+        "addRunTime": "+{{time}} sa run",
+        "reachTrialGoal": "Abutin ang layunin ng hamon",
+        "effectEmojis": "Effect emoji",
+        "spawnEffects_one": "Mag-spawn ng {{count}} effect emoji",
+        "spawnEffects_other": "Mag-spawn ng {{count}} effect emoji",
+        "speed": "Bilis",
+        "speedLabel": "{{speed}}× bilis",
+        "speedHint": "Produksiyon at oras ng run. Real-time pa rin ang effects at combo. Mawawala pag nag-reload.",
+        "shiny": "Makintab",
+        "onlyShiny": "Makintab na emoji lang",
+        "funValueQuirk": "{{name}}: {{description}}",
+        "noQuirk": "Walang quirk",
+        "hideFunValueTable": "Itago ang fun value table",
+        "showFunValueTable": "Ipakita ang fun value table",
+        "setFunValueLabel": "Gawing {{value}} ang fun value: {{name}}",
+        "changeFunValueLabel": "Baguhin ang fun value nang {{change}}"
+    },
+    "collection": {
+        "ofTotalFound": "/ {{total}} nahanap",
+        "mostTapped": "Pinakana-tap: {{emoji}} ×{{amount}}",
+        "startCollecting": "I-tap ang Malaking Emoji para magsimulang mangolekta",
+        "shinyFound_one": "{{amount}} makintab",
+        "shinyFound_other": "{{amount}} makintab",
+        "categories": {
+            "faces": "Mukha",
+            "animals": "Hayop",
+            "food": "Pagkain",
+            "objects": "Bagay",
+            "people": "Tao",
+            "bodyParts": "Katawan",
+            "placesBuildings": "Lugar",
+            "plants": "Halaman",
+            "vehicles": "Sasakyan",
+            "weather": "Panahon",
+            "symbols": "Simbolo"
+        },
+        "categoryLabel": "{{label}}, {{found}} sa {{total}} ang nahanap",
+        "notFound": "Hindi pa nahahanap",
+        "cellLabel_one": "{{emoji}}, na-tap nang {{count}} beses",
+        "cellLabel_other": "{{emoji}}, na-tap nang {{count}} beses",
+        "cellLabelShiny_one": "{{emoji}}, na-tap nang {{count}} beses, {{shiny}} makintab",
+        "cellLabelShiny_other": "{{emoji}}, na-tap nang {{count}} beses, {{shiny}} makintab"
+    },
+    "effects": {
+        "chipTapping": "×{{multiplier}} pag-tap",
+        "chipProduction": "×{{multiplier}} produksiyon",
+        "stackLabel_one": "{{count}} magkapatong: {{label}}, matatapos ang susunod sa {{time}}",
+        "stackLabel_other": "{{count}} magkapatong: {{label}}, matatapos ang susunod sa {{time}}",
+        "chipLabel": "{{title}}, {{time}} na lang",
+        "gift": "Regalo!",
+        "ohNo": "Naku!",
+        "tapping": "Pag-tap",
+        "production": "Produksiyon",
+        "tapFrenzy": "Tap frenzy!",
+        "unholyPower": "Maitim na kapangyarihan!",
+        "productionBoost": "Production boost!",
+        "collectLabel": "Kunin ang {{title}}",
+        "tapMe": "I-tap ako"
+    },
+    "combo": {
+        "level": "Combo ×{{multiplier}}",
+        "max": "Max combo ×{{multiplier}}",
+        "label": "Combo na {{multiplier}} beses",
+        "maxLabel": "Combo na {{multiplier}} beses, max"
+    },
+    "bigEmoji": {
+        "tapLabel": "I-tap ang Malaking Emoji",
+        "tapShinyLabel": "I-tap ang makintab na Malaking Emoji",
+        "shiny": "Makintab",
+        "shinyBurst": "Makintab!",
+        "handsOff": "{{trial}} · walang naiguguhit ang tap",
+        "perTap": "+{{value}} kada tap"
+    },
+    "bank": {
+        "timeToAfford": {
+            "needMore": "Kulang pa",
+            "seconds_one": "Sa {{count}} seg",
+            "seconds_other": "Sa {{count}} seg",
+            "minutes_one": "Sa {{count}} min",
+            "minutes_other": "Sa {{count}} min",
+            "hours_one": "Sa {{count}} oras",
+            "hours_other": "Sa {{count}} oras",
+            "days_one": "Sa {{count}} araw",
+            "days_other": "Sa {{count}} araw",
+            "aLongTime": "Matagal pa"
+        },
+        "timeToAffordInline": {
+            "needMore": "kulang pa",
+            "seconds_one": "sa {{count}} seg",
+            "seconds_other": "sa {{count}} seg",
+            "minutes_one": "sa {{count}} min",
+            "minutes_other": "sa {{count}} min",
+            "hours_one": "sa {{count}} oras",
+            "hours_other": "sa {{count}} oras",
+            "days_one": "sa {{count}} araw",
+            "days_other": "sa {{count}} araw",
+            "aLongTime": "matagal pa"
+        }
+    },
+    "catalogue": {
+        "title": "Lahat ng upgrade",
+        "counts": "{{owned}} nabili · {{forSale}} mabibili · {{locked}} sarado · {{total}} lahat",
+        "filter": {
+            "owned": "Nabili {{count}}",
+            "forSale": "Mabibili {{count}}",
+            "locked": "Sarado {{count}}"
+        },
+        "combo": "Combo",
+        "effectEmojis": "Effect emoji",
+        "unlock": {
+            "own": "Magkaroon ng {{count}} {{buildings}}",
+            "tapping": "Kumita ng {{amount}} emoji mula sa pag-tap",
+            "comboTaps": "{{amount}} combo tap",
+            "earned": "Kumita ng {{amount}} emoji"
+        },
+        "state": {
+            "owned": "✓ Nabili",
+            "forSale": "Mabibili",
+            "locked": "🔒 Sarado"
+        },
+        "stateA11y": {
+            "owned": "nabili",
+            "forSale": "mabibili",
+            "locked": "sarado"
+        },
+        "tileA11y": "{{name}}, {{state}}",
+        "prev": "Nauna",
+        "next": "Susunod",
+        "prevA11y": "Nakaraang upgrade",
+        "nextA11y": "Susunod na upgrade",
+        "fact": {
+            "price": "Presyo",
+            "unlocks": "Mabubuksan",
+            "id": "ID"
         }
     }
 }
