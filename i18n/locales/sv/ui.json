@@ -6,11 +6,16 @@
         "buildings": "Byggnader",
         "upgrades": "Uppgradera",
         "stats": "Statistik",
-        "collection": "Samling"
+        "collection": "Samling",
+        "newItemsLabel_one": "{{label}}, {{count}} ny",
+        "newItemsLabel_other": "{{label}}, {{count}} nya"
     },
     "header": {
         "emojis": "Emojis",
-        "perSecond": "Per sekund: {{value}}"
+        "perSecond": "Per sekund: {{value}}",
+        "rate": "+{{value}} / s",
+        "gemsLabel_one": "{{gems}} juvel. Öppna juvelbutiken",
+        "gemsLabel_other": "{{gems}} juveler. Öppna juvelbutiken"
     },
     "common": {
         "buy": "Köp",
@@ -23,29 +28,121 @@
             "multiplyTap": "• Dina tryck är dubbelt så effektiva.",
             "percentageIncreaseTap": "• Dina tryck är {{percent}} kraftfullare.",
             "tapPercentageOfEps": "• Varje tryck ger {{percent}} av din totala emojiproduktion.",
-            "percentageIncreaseProduction": "• Total emojiproduktion ökar med {{percent}}."
+            "percentageIncreaseProduction": "• Total emojiproduktion ökar med {{percent}}.",
+            "comboUnlock": "• Snabba tryck bygger upp en kombo, upp till ×{{level}}.",
+            "comboLevel": "• Kombon kan nå ×{{level}}.",
+            "effectEmojis": "• {{summary}}."
         },
         "bonusProduction": "Köper du den här uppgraderingen nu får du <hl>+{{bonus}}</hl> emojis per sekund, och emojiproduktionen ökar med <hl>{{percent}}</hl>",
         "bonusTap": "Köper du den här uppgraderingen nu får du <hl>+{{bonus}}</hl> emojis per tryck, och varje tryck ger <hl>{{percent}}</hl> mer",
         "filterTitle": "Filtrera uppgraderingar",
-        "filterDescription": "Välj vilka byggnader du vill se uppgraderingar för."
+        "filterDescription": "Välj vilka byggnader du vill se uppgraderingar för.",
+        "effectEmojiSummary": {
+            "spawnRate": "Effekt-emojis dyker upp ×{{multiplier}} så ofta",
+            "duration": "Bra effekter varar ×{{multiplier}} så länge",
+            "start": "Effekt-emojis börjar dyka upp"
+        },
+        "chips": {
+            "multiplyBuildingProduction": "{{buildings}} ×{{multiplier}}",
+            "multiplyTap": "Tryck ×{{multiplier}}",
+            "percentageIncreaseTap": "Tryck +{{percent}}",
+            "percentageIncreaseProduction": "Produktion +{{percent}}",
+            "tapPercentageOfEps": "Tryck +{{percent}} av emojis/s",
+            "comboUnlock": "Kombo upp till ×{{level}}",
+            "comboLevel": "Maxkombo ×{{level}}"
+        },
+        "impact": {
+            "perSecond": "+{{bonus}} /s",
+            "perTap": "+{{bonus}} per tryck",
+            "and": "{{a}} och {{b}}",
+            "rightNow": "{{gains}} just nu"
+        },
+        "tierLabel": {
+            "helper": "{{building}} · HJÄLPARE",
+            "hands": "STORA EMOJIN · HÄNDER",
+            "effectEmojisNew": "EFFEKT-EMOJIS · NY",
+            "effectEmojisLevel": "EFFEKT-EMOJIS · NIVÅ {{level}}",
+            "comboNew": "KOMBO · NY",
+            "comboLevel": "KOMBO · NIVÅ {{level}}",
+            "tier": "{{building}} · NIVÅ {{tier}}"
+        },
+        "forSale": "Till salu",
+        "owned": "Ägda",
+        "available": "Tillgängliga",
+        "emptyOwnedTitle": "Inget köpt än",
+        "emptyTitle": "Inga uppgraderingar än",
+        "emptyOwnedText": "Uppgraderingar du köper samlas här.",
+        "emptyText": "Köp byggnader och tryck på Stora emojin för att låsa upp uppgraderingar.",
+        "filterAll": "Alla",
+        "quoted": "\"{{quote}}\"",
+        "ownedBadge": "✓ ÄGD",
+        "paid": "Betalade {{price}}",
+        "bareBones": "🦴 Inga uppgraderingar i {{trial}}",
+        "buyFor": "Köp för {{price}}",
+        "priceAndTime": "{{price}} · {{time}}",
+        "ownedCount": "{{owned}} av {{total}} uppgraderingar",
+        "availableCount": "{{affordable}} har du råd med · {{unlocked}} upplåsta",
+        "a11y": {
+            "owned": "{{name}}, ägd",
+            "price": "{{name}}, {{price}}",
+            "affordable": "{{name}}, {{price}}, du har råd"
+        }
     },
     "stats": {
         "totalEmojisDrawn": "Ritade emojis totalt",
         "emojiTaps": "Emojitryck",
         "emojisEarnedFromTapping": "Emojis från tryck",
         "magicalEmojisTapped": "Magiska emojis tryckta",
-        "funValue": "Kul-värde"
+        "funValue": "Kul-värde",
+        "shinyEmojisTapped": "Glänsande emojis tryckta",
+        "comboTaps": "Kombotryck",
+        "madeByEachBuilding": "Gjort av varje byggnad"
     },
     "drawer": {
         "language": "Språk",
         "deviceLanguage": "Enhetens språk",
         "cheats": "Fusk",
         "resetGame": "Återställ spelet",
-        "spawnEffect": "Skapa effekt-emoji"
+        "spawnEffect": "Skapa effekt-emoji",
+        "menu": "Meny"
     },
     "prestige": {
-        "title": "Prestige"
+        "title": "Prestige",
+        "close": "Stäng",
+        "ordinal_ordinal_one": "{{count}}:a",
+        "ordinal_ordinal_other": "{{count}}:e",
+        "celebrateCaption": "PRESTIGE #{{count}}",
+        "celebrateTrialCaption": "PRESTIGE #{{count}} · UTMANING STARTAD",
+        "celebrateTitle": "+{{essence}} essens",
+        "celebrateTierTitle": "+{{essence}} essens · förmåner i nivå {{tier}} upplåsta",
+        "essenceCaption": "EMOJIESSENS",
+        "essenceBonus": "+{{bonus}} produktion ({{each}} styck)",
+        "intro": "När du har ritat tillräckligt många emojis börjar deras innersta essens samlas runt dig: ett magiskt ämne som byter form varje gång du tittar på det. Varje osparad essens ökar produktionen, och för essens köper du förmåner som varar för evigt.",
+        "startOver": "Börja om",
+        "prestigesSoFar_one": "{{count}} PRESTIGE HITTILLS",
+        "prestigesSoFar_other": "{{count}} PRESTIGE HITTILLS",
+        "resetsWhat": "Återställer dina emojis, byggnader, byggnadsuppgraderingar och händer. Du behåller samlingen, statistiken, kombo- och effekt-emoji-uppgraderingarna, essensen och förmånerna.",
+        "nextEssence": "Nästa essens",
+        "nextEssenceAt": "vid {{amount}} ritade emojis",
+        "noEssenceYet": "Ingen essens att få än",
+        "tapAgainToPrestige": "Tryck igen för prestige",
+        "prestigeFor": "Prestige för +{{essence}} ✨",
+        "productionCaps": "+{{percent}} PRODUKTION",
+        "playedThisRun": "Spelat denna runda",
+        "drawnThisRun": "Ritat denna runda",
+        "essencePerHour": "Essens per timme",
+        "afterTenMinutes": "efter 10 min",
+        "essenceRate": "{{rate}} (bäst {{best}})",
+        "slowingDown": "📉 Essensen kommer in långsammare än tidigare under rundan. Ett bra läge för prestige.",
+        "drawnAmount": "{{amount}} ritade",
+        "pastRuns": "Tidigare rundor",
+        "pastRunLine": "{{duration}} · {{amount}} ritade",
+        "pastRunTrialCompleted": "{{icon}} {{name}} ✓",
+        "pastRunTrialNotCompleted": "{{icon}} {{name}}, inte klarad",
+        "chipLabel": "Emojiessens",
+        "chipLabelReady": "Prestige för {{essence}} emojiessens",
+        "chipEssence": "Essens",
+        "chipPending": "+{{essence}} essens"
     },
     "numbers": {
         "groupSize": "3",
@@ -115,6 +212,289 @@
             "57": "nond",
             "60": "decn",
             "63": "decd"
+        }
+    },
+    "buildings": {
+        "ownedA11y_one": "{{count}} ägd",
+        "ownedA11y_other": "{{count}} ägda",
+        "newBadge": "NY",
+        "statLine": "{{eps}} /s · {{share}} av totalen",
+        "nextUpgrade": "nästa uppgradering {{at}}",
+        "allUpgradesFound": "alla uppgraderingar hittade",
+        "epsEach": "+{{eps}} /s styck",
+        "buy": "KÖP",
+        "buyCount": "KÖP ×{{count}}",
+        "buyA11y_one": "Köp {{count}} {{name}} för {{price}}",
+        "buyA11y_other": "Köp {{count}} {{name}} för {{price}}",
+        "mystery": "Mystisk byggnad",
+        "revealsAt": "Avslöjas vid {{amount}} emojis",
+        "bulkLabel": "Antal att köpa",
+        "bulkMax": "Max",
+        "bulkA11yMax": "Köp så många du har råd med",
+        "bulkA11y_one": "Köp {{count}} åt gången",
+        "bulkA11y_other": "Köp {{count}} åt gången",
+        "milestoneCaption": "NY BYGGNAD",
+        "milestoneTitle": "Välkommen, {{building}}!"
+    },
+    "time": {
+        "seconds_one": "{{count}}s",
+        "seconds_other": "{{count}}s",
+        "minutes_one": "{{count}}min",
+        "minutes_other": "{{count}}min",
+        "hours_one": "{{count}}h",
+        "hours_other": "{{count}}h",
+        "days_one": "{{count}}d",
+        "days_other": "{{count}}d",
+        "pair": "{{a}} {{b}}"
+    },
+    "trials": {
+        "title": "Utmaningar",
+        "completedCount": "{{done}} av {{total}} klarade",
+        "intro": "Gör prestige till en runda med en regel som gör den svårare. Rita tillräckligt många emojis under rundan för att behålla belöningen för alltid, och regeln hävs.",
+        "unlocksWith": "Låses upp vid din {{ordinal}} prestige.",
+        "completeCaps": "UTMANING KLARAD",
+        "inProgressCaps": "UTMANING PÅGÅR",
+        "completedText": "{{reward}} är din för gott, och regeln är hävd resten av rundan.",
+        "activeText": "{{rule}}. Rita {{goal}} under rundan för att få {{reward}} för alltid.",
+        "giveUp": "Ge upp utmaningen",
+        "giveUpConfirm": "Tryck igen för att ge upp (ingen belöning)",
+        "doneTag": "✓ KLAR",
+        "playingTag": "PÅGÅR",
+        "ruleLine": "<hl>Regel: </hl>{{rule}}",
+        "ruleLineWithStart": "<hl>Regel: </hl>{{rule}} (du börjar med {{amount}} emojis)",
+        "rewardLine": "<hl>Belöning: </hl>{{reward}}",
+        "finishFirst": "Avsluta din utmaning först",
+        "needsEssence": "Kräver essens för prestige",
+        "tapAgainToStart": "Tryck igen för att starta",
+        "prestigeInto": "Prestige till utmaning för +{{essence}} ✨",
+        "goalCaps": "MÅL: {{goal}}",
+        "goal": "{{amount}} emojis",
+        "completeTitle": "{{name}}: {{reward}}",
+        "rewardUnlocked": "Belöning upplåst"
+    },
+    "perks": {
+        "title": "Förmåner",
+        "ownedCount": "{{owned}} av {{total}} ägda",
+        "spentKeepsHalf": "Spenderad essens behåller halva sin produktionsbonus.",
+        "spentNoBonus": "Spenderad essens ökar inte längre produktionen.",
+        "tierCaps": "NIVÅ {{tier}}",
+        "tierLockedCaps": "NIVÅ {{tier}} · LÅSES UPP VID DIN {{ordinal}} PRESTIGE",
+        "hidden": "Gör prestige för att avslöja förmånen.",
+        "needsFirst": "Kräver {{perk}} först",
+        "ownedTag": "✓ ÄGD",
+        "buyLabel": "Köp {{perk}} för {{cost}} essens"
+    },
+    "gems": {
+        "title": "Juvelbutik",
+        "yourGemsCaps": "DINA JUVELER",
+        "gemsCaps": "JUVELER",
+        "offlineClaim": "{{cost}} juveler ger ×{{multiplier}} offlineintäkter",
+        "storeUnavailable": "Butiken är inte tillgänglig just nu. Kontrollera anslutningen och försök igen senare.",
+        "purchaseFailed": "Köpet gick inte igenom. Du har inte debiterats.",
+        "keptOnPrestige": "Juveler behålls när du gör prestige.",
+        "unavailable": "Inte tillgänglig",
+        "thankYouCaps": "TACK!",
+        "gemsAdded_one": "+{{amount}} juvel",
+        "gemsAdded_other": "+{{amount}} juveler",
+        "buyLabel_one": "Köp {{amount}} juvel",
+        "buyLabel_other": "Köp {{amount}} juveler",
+        "buyLabelWithPrice_one": "Köp {{amount}} juvel för {{price}}",
+        "buyLabelWithPrice_other": "Köp {{amount}} juveler för {{price}}",
+        "tags": {
+            "popular": "POPULÄR",
+            "bestValue": "BÄST VÄRDE"
+        }
+    },
+    "offline": {
+        "welcomeBack": "Välkommen tillbaka!",
+        "away": "Du var borta i {{duration}}.",
+        "awayCapped": "Du var borta i över {{duration}}, det mesta som räknas.",
+        "rested": "Ditt imperium vilade medan du var borta.",
+        "missedCaps": "MISSAD PRODUKTION",
+        "perSecond": "{{value}} / s",
+        "gemOfferCaps": "×{{multiplier}} FÖR {{cost}} JUVELER · DU HAR {{gems}}",
+        "gemOfferGetCaps": "×{{multiplier}} FÖR {{cost}} JUVELER · SKAFFA JUVELER",
+        "noThanks": "Nej tack"
+    },
+    "ads": {
+        "watchCaps": "SE EN REKLAM",
+        "loadingCaps": "LADDAR REKLAM...",
+        "failed": "Reklamen spelades inte klart. Kontrollera anslutningen och försök igen."
+    },
+    "reset": {
+        "title": "Börja om?",
+        "warning": "Detta återställer spelet. Dina emojis, byggnader, uppgraderingar, essens, förmåner, samling och statistik försvinner. Det går inte att ångra.",
+        "purchasesSafe": "Dina köp i spelet är säkra. Juveler och allt du har köpt följer med till ditt nya spel.",
+        "confirm": "Ja, återställ spelet",
+        "cancel": "Fortsätt spela"
+    },
+    "milestones": {
+        "caption": "MILSTOLPE",
+        "emojisDrawn": "{{amount}} ritade emojis!"
+    },
+    "settings": {
+        "title": "Inställningar",
+        "close": "Stäng inställningar",
+        "sound": "Ljud",
+        "soundEffects": "Ljudeffekter",
+        "soundEffectsHint": "Ett mjukt plopp när du trycker och ett klingande för glänsande emojis.",
+        "performance": "Prestanda",
+        "reduceAnimations": "Minska animationer",
+        "reduceAnimationsHint": "Tryckta emojis flyger inte längre iväg från Stora emojin. Testa detta om trycken känns sega.",
+        "dangerZone": "Farozon"
+    },
+    "cheats": {
+        "subtitle": "För testning. Ändringarna sparas i ditt spel.",
+        "simulateAway": "Simulera 1 timme borta",
+        "gems": "Juveler",
+        "addGems_one": "+{{count}} juvel",
+        "addGems_other": "+{{count}} juveler",
+        "addComboTaps": "+{{amount}} kombotryck",
+        "multiplyTapEarnings": "×{{factor}} tryckintäkter",
+        "addCollection_one": "+{{count}} samling",
+        "addCollection_other": "+{{count}} samling",
+        "addShiny_one": "+{{count}} glänsande",
+        "addShiny_other": "+{{count}} glänsande",
+        "addMagical_one": "+{{count}} magisk",
+        "addMagical_other": "+{{count}} magiska",
+        "addEssence_one": "+{{count}} essens",
+        "addEssence_other": "+{{count}} essens",
+        "addPerkTier_one": "+{{count}} förmånsnivå",
+        "addPerkTier_other": "+{{count}} förmånsnivåer",
+        "addRunTime": "+{{time}} rundtid",
+        "reachTrialGoal": "Nå utmaningens mål",
+        "effectEmojis": "Effekt-emojis",
+        "spawnEffects_one": "Skapa {{count}} effekt-emoji",
+        "spawnEffects_other": "Skapa {{count}} effekt-emojis",
+        "speed": "Hastighet",
+        "speedLabel": "{{speed}}× hastighet",
+        "speedHint": "Produktion och rundtid. Effekter och kombon går i realtid. Av efter omstart.",
+        "shiny": "Glänsande",
+        "onlyShiny": "Bara glänsande emojis",
+        "funValueQuirk": "{{name}}: {{description}}",
+        "noQuirk": "Ingen egenhet",
+        "hideFunValueTable": "Dölj kul-värdetabell",
+        "showFunValueTable": "Visa kul-värdetabell",
+        "setFunValueLabel": "Sätt kul-värdet till {{value}}: {{name}}",
+        "changeFunValueLabel": "Ändra kul-värdet med {{change}}"
+    },
+    "collection": {
+        "ofTotalFound": "/ {{total}} hittade",
+        "mostTapped": "Mest tryckt: {{emoji}} ×{{amount}}",
+        "startCollecting": "Tryck på Stora emojin för att börja samla",
+        "shinyFound_one": "{{amount}} glänsande",
+        "shinyFound_other": "{{amount}} glänsande",
+        "categories": {
+            "faces": "Ansikten",
+            "animals": "Djur",
+            "food": "Mat",
+            "objects": "Föremål",
+            "people": "Människor",
+            "bodyParts": "Kropp",
+            "placesBuildings": "Platser",
+            "plants": "Växter",
+            "vehicles": "Fordon",
+            "weather": "Väder",
+            "symbols": "Symboler"
+        },
+        "categoryLabel": "{{label}}, {{found}} av {{total}} hittade",
+        "notFound": "Inte hittad än",
+        "cellLabel_one": "{{emoji}}, tryckt {{count}} gång",
+        "cellLabel_other": "{{emoji}}, tryckt {{count}} gånger",
+        "cellLabelShiny_one": "{{emoji}}, tryckt {{count}} gång, {{shiny}} glänsande",
+        "cellLabelShiny_other": "{{emoji}}, tryckt {{count}} gånger, {{shiny}} glänsande"
+    },
+    "effects": {
+        "chipTapping": "×{{multiplier}} tryck",
+        "chipProduction": "×{{multiplier}} produktion",
+        "stackLabel_one": "{{count}} staplad: {{label}}, nästa tar slut om {{time}}",
+        "stackLabel_other": "{{count}} staplade: {{label}}, nästa tar slut om {{time}}",
+        "chipLabel": "{{title}}, {{time}} kvar",
+        "gift": "Gåva!",
+        "ohNo": "Åh nej!",
+        "tapping": "Tryck",
+        "production": "Produktion",
+        "tapFrenzy": "Tryckfrenesi!",
+        "unholyPower": "Ohelig kraft!",
+        "productionBoost": "Produktionsboost!",
+        "collectLabel": "Hämta {{title}}",
+        "tapMe": "Tryck på mig"
+    },
+    "combo": {
+        "level": "Kombo ×{{multiplier}}",
+        "max": "Maxkombo ×{{multiplier}}",
+        "label": "Kombo gånger {{multiplier}}",
+        "maxLabel": "Kombo gånger {{multiplier}}, max"
+    },
+    "bigEmoji": {
+        "tapLabel": "Tryck på Stora emojin",
+        "tapShinyLabel": "Tryck på den glänsande Stora emojin",
+        "shiny": "Glänsande",
+        "shinyBurst": "Glans!",
+        "handsOff": "Utmaningen {{trial}} · tryck ritar ingenting",
+        "perTap": "+{{value}} per tryck"
+    },
+    "bank": {
+        "timeToAfford": {
+            "needMore": "Behöver mer",
+            "seconds_one": "Om {{count}} s",
+            "seconds_other": "Om {{count}} s",
+            "minutes_one": "Om {{count}} min",
+            "minutes_other": "Om {{count}} min",
+            "hours_one": "Om {{count}} tim",
+            "hours_other": "Om {{count}} tim",
+            "days_one": "Om {{count}} dag",
+            "days_other": "Om {{count}} dagar",
+            "aLongTime": "Länge"
+        },
+        "timeToAffordInline": {
+            "needMore": "behöver mer",
+            "seconds_one": "om {{count}} s",
+            "seconds_other": "om {{count}} s",
+            "minutes_one": "om {{count}} min",
+            "minutes_other": "om {{count}} min",
+            "hours_one": "om {{count}} tim",
+            "hours_other": "om {{count}} tim",
+            "days_one": "om {{count}} dag",
+            "days_other": "om {{count}} dagar",
+            "aLongTime": "om länge"
+        }
+    },
+    "catalogue": {
+        "title": "Alla uppgraderingar",
+        "counts": "{{owned}} ägda · {{forSale}} till salu · {{locked}} låsta · {{total}} totalt",
+        "filter": {
+            "owned": "Ägda {{count}}",
+            "forSale": "Till salu {{count}}",
+            "locked": "Låsta {{count}}"
+        },
+        "combo": "Kombo",
+        "effectEmojis": "Effekt-emojis",
+        "unlock": {
+            "own": "Äg {{count}} {{buildings}}",
+            "tapping": "Tjäna {{amount}} emojis på tryck",
+            "comboTaps": "{{amount}} kombotryck",
+            "earned": "Tjäna {{amount}} emojis"
+        },
+        "state": {
+            "owned": "✓ ÄGD",
+            "forSale": "TILL SALU",
+            "locked": "🔒 LÅST"
+        },
+        "stateA11y": {
+            "owned": "ägd",
+            "forSale": "till salu",
+            "locked": "låst"
+        },
+        "tileA11y": "{{name}}, {{state}}",
+        "prev": "Förra",
+        "next": "Nästa",
+        "prevA11y": "Föregående uppgradering",
+        "nextA11y": "Nästa uppgradering",
+        "fact": {
+            "price": "PRIS",
+            "unlocks": "LÅSER UPP",
+            "id": "ID"
         }
     }
 }
