@@ -82,7 +82,38 @@
         },
         "18": {
             "name": "Emoji-singularitet",
-            "plural": "Emoji-singulariteter"
+            "plural": "Emoji-singulariteter",
+            "description": "Det var det. Der er intet tilbage ud over emojis. Du har gjort det. Eller har du?"
+        },
+        "7": {
+            "name": "Emoji-biograf",
+            "plural": "Emoji-biografer",
+            "description": "Storfilm med dine yndlings-emojis i hovedrollerne. Hver billet kommer med popcorn og emojis."
+        },
+        "11": {
+            "name": "Emoji-flyselskab",
+            "plural": "Emoji-flyselskaber",
+            "description": "Flyver emojis til alle verdenshjørner. Vinduesplads, selvfølgelig."
+        },
+        "19": {
+            "name": "Emoji-tidsmaskine",
+            "plural": "Emoji-tidsmaskiner",
+            "description": "Smutter tilbage til tidernes morgen for at tegne de allerførste emojis. Og så de næstførste."
+        },
+        "20": {
+            "name": "Big bang",
+            "plural": "Big bangs",
+            "description": "Et splinternyt univers, og denne gang er det emojis hele vejen ned."
+        },
+        "21": {
+            "name": "Emoji-multivers",
+            "plural": "Emoji-multiverser",
+            "description": "Uendeligt mange universer, hver med sin egen emoji-mogul. De arbejder alle sammen for dig nu."
+        },
+        "22": {
+            "name": "Den første emoji",
+            "plural": "Første emojis",
+            "description": "Hvor det hele begyndte. Den har set dig trykke hele tiden."
         }
     },
     "upgrades": {
@@ -188,27 +219,33 @@
         },
         "100": {
             "name": "Stærkere arm",
-            "description": "En stærkere arm gør, at du tegner emojis hurtigere."
+            "description": "En stærkere arm gør, at du tegner emojis hurtigere.",
+            "quote": "Det gør ondt, men det er det værd."
         },
         "101": {
             "name": "Smidige fingre",
-            "description": "Smidige fingre giver mulighed for mere detaljerede emojis."
+            "description": "Smidige fingre giver mulighed for mere detaljerede emojis.",
+            "quote": "Smidige? Ja, måske. Men det gør stadig ondt."
         },
         "102": {
             "name": "To hænder",
-            "description": "Dobbelt så mange hænder, dobbelt så mange emojis."
+            "description": "Dobbelt så mange hænder, dobbelt så mange emojis.",
+            "quote": "Dobbelt hovmod, dobbelt fald."
         },
         "103": {
             "name": "Neglelakerede hænder",
-            "description": "Neglelak får dig til at trykke hurtigere, vidste du ikke det?"
+            "description": "Neglelak får dig til at trykke hurtigere, vidste du ikke det?",
+            "quote": "Og du kommer til at se vildt nuttet ud!"
         },
         "104": {
             "name": "Fødder",
-            "description": "At tegne med fødderne fordobler produktionen (og det er slet ikke svært)!"
+            "description": "At tegne med fødderne fordobler produktionen (og det er slet ikke svært)!",
+            "quote": "Slet ikke svært? Min kone skilte sig fra mig, da hun så mig med fødderne på familiens tablet."
         },
         "105": {
             "name": "Tunge",
-            "description": "Med mange års øvelse kan du også lære at tegne med tungen!"
+            "description": "Med mange års øvelse kan du også lære at tegne med tungen!",
+            "quote": "mmmhmh mmpfvuh mhhaaaam øhhmmmmuhm ahumhmhm"
         },
         "106": {
             "name": "Næse",
@@ -217,19 +254,23 @@
         },
         "107": {
             "name": "Øre",
-            "description": "Stik en kuglepen i øret, drej hovedet 90 grader og tegn med den!"
+            "description": "Stik en kuglepen i øret, drej hovedet 90 grader og tegn med den!",
+            "quote": "Hvad? Hva'? Jeg kan ikke høre- hva- hm... Jeg kan virkelig ikke høre en dyt- hvad?!"
         },
         "108": {
             "name": "Mund",
-            "description": "Stik en blyant i munden og tegn med den!"
+            "description": "Stik en blyant i munden og tegn med den!",
+            "quote": "Ikke det værd. Gør for ondt."
         },
         "109": {
             "name": "Stærkere ben",
-            "description": "Et stærkere ben lader dig tegne emojis meget hurtigere med fødderne."
+            "description": "Et stærkere ben lader dig tegne emojis meget hurtigere med fødderne.",
+            "quote": "Mit ben er kæmpestort nu. Kun det venstre. Jeg går i ring."
         },
         "110": {
             "name": "Større lunger",
-            "description": "Større lunger gør, at du tegner emojis hurtigere."
+            "description": "Større lunger gør, at du tegner emojis hurtigere.",
+            "quote": "Ilt. Ilt. Ilt."
         },
         "111": {
             "name": "Større hjerne",
@@ -237,7 +278,8 @@
         },
         "112": {
             "name": "Hår",
-            "description": "Før en pensel med håret for at skabe emojis. Hvem har brug for hænder, når man har stil?"
+            "description": "Før en pensel med håret for at skabe emojis. Hvem har brug for hænder, når man har stil?",
+            "quote": "Hvem har brug for hænder? Mig. Jeg har brug for hænder. Jeg bliver skaldet af det her."
         },
         "113": {
             "name": "Øjenbryn",
@@ -245,7 +287,8 @@
         },
         "114": {
             "name": "Ryg",
-            "description": "Lig på ryggen og tegn emojis med hænderne bag dig. Strækøvelse og skitse i ét!"
+            "description": "Lig på ryggen og tegn emojis med hænderne bag dig. Strækøvelse og skitse i ét!",
+            "quote": "Læg dig på ryggen, sagde de. Strækøvelse og skitse i ét, sagde de. Jeg kan ikke komme op."
         },
         "115": {
             "name": "Tænder",
@@ -253,7 +296,8 @@
         },
         "116": {
             "name": "Navle",
-            "description": "Tegn emojis med din navle. Det er en unik evne, der er svær at mestre!"
+            "description": "Tegn emojis med din navle. Det er en unik evne, der er svær at mestre!",
+            "quote": "Jeg tegner med min navle. Min mor er så stolt."
         },
         "117": {
             "name": "Ekkotegning",
@@ -261,23 +305,28 @@
         },
         "118": {
             "name": "Telekinetisk tegning",
-            "description": "Hvorfor bruge hænderne, når du kan tegne emojis med tankerne?"
+            "description": "Hvorfor bruge hænderne, når du kan tegne emojis med tankerne?",
+            "quote": "Jeg kan flytte ting med tankekraft, og du får mig til at tegne blinkende smileys."
         },
         "119": {
             "name": "Kvantefingre",
-            "description": "Kvantesammenfiltring i dine fingre lader dig tegne emojis med lysets hast."
+            "description": "Kvantesammenfiltring i dine fingre lader dig tegne emojis med lysets hast.",
+            "quote": "Mine fingre er to steder på én gang. Begge steder hader de dig."
         },
         "200": {
             "name": "Bedre blyanter",
-            "description": "Bedre blyanter til mere detaljerede emojis."
+            "description": "Bedre blyanter til mere detaljerede emojis.",
+            "quote": "Bedre blyanter redder ikke dit talent."
         },
         "201": {
             "name": "Specialfarvekridt",
-            "description": "Disse særlige farvekridt giver kunstnerne adgang til deres indre barn."
+            "description": "Disse særlige farvekridt giver kunstnerne adgang til deres indre barn.",
+            "quote": "Jeg fandt mit indre barn. Han er også skuffet over mig."
         },
         "202": {
             "name": "Bedre pensler",
-            "description": "Bedre pensler giver mere kunstneriske emojis."
+            "description": "Bedre pensler giver mere kunstneriske emojis.",
+            "quote": "Bedre hvordan? Det eneste, jeg kunne male, var en uhyggelig udgave af min kone. Jeg vil have mine penge tilbage."
         },
         "203": {
             "name": "Fyldepenne",
@@ -334,7 +383,8 @@
         },
         "215": {
             "name": "Comic Sans-skrifttype",
-            "description": "Elsk den eller had den, den får dine emojis til at se... unikke ud!"
+            "description": "Elsk den eller had den, den får dine emojis til at se... unikke ud!",
+            "quote": "Jeg siger op."
         },
         "216": {
             "name": "AI-kunstgenerator",
@@ -353,11 +403,13 @@
         },
         "219": {
             "name": "Blod",
-            "description": "At male med blod giver ekstra seje emojis!"
+            "description": "At male med blod giver ekstra seje emojis!",
+            "quote": "Hvis blod? HVIS BLOD?"
         },
         "300": {
             "name": "Landmænd",
-            "description": "Hvad er en gård uden en landmand?!"
+            "description": "Hvad er en gård uden en landmand?!",
+            "quote": "Jeg arvede 80 hektar fra min far, og du får mig til at dyrke smileys."
         },
         "301": {
             "name": "Kimplante",
@@ -366,7 +418,8 @@
         },
         "302": {
             "name": "Bedre redskaber",
-            "description": "Gør landbruget meget hurtigere!"
+            "description": "Gør landbruget meget hurtigere!",
+            "quote": "Nyt værktøj, samme løn. Tak for ingenting."
         },
         "303": {
             "name": "Traktorer",
@@ -374,11 +427,13 @@
         },
         "304": {
             "name": "Stuehuse",
-            "description": "Et hyggeligt hjem, hvor dine landmænd kan hvile ud og lade op."
+            "description": "Et hyggeligt hjem, hvor dine landmænd kan hvile ud og lade op.",
+            "quote": "'Hyggeligt' er et sjovt ord for et skur med en spand."
         },
         "305": {
             "name": "Emoji-køer",
-            "description": "Skaber flere emuuuuuuujis."
+            "description": "Skaber flere emuuuuuuujis.",
+            "quote": "Kom med én muh-joke til, så vælter jeg DIG omkuld."
         },
         "306": {
             "name": "Vandingsanlæg",
@@ -387,7 +442,8 @@
         },
         "307": {
             "name": "Fugleskræmsler",
-            "description": "Holder de irriterende fugle-emojis væk fra dine gårde!"
+            "description": "Holder de irriterende fugle-emojis væk fra dine gårde!",
+            "quote": "Fuglene er ikke bange. Det er naboerne."
         },
         "308": {
             "name": "Kompostbeholdere",
@@ -395,7 +451,8 @@
         },
         "309": {
             "name": "Drivhuse",
-            "description": "Dyrk emojis hele året, uanset vejret!"
+            "description": "Dyrk emojis hele året, uanset vejret!",
+            "quote": "Endnu et drivhus har brug for din hjælp. Jeg markerer det på dit kort."
         },
         "310": {
             "name": "Vindmøller",
@@ -404,7 +461,8 @@
         },
         "311": {
             "name": "Emoji-frugtplantager",
-            "description": "Dyrk emoji-træer, der bærer frugt hele året!"
+            "description": "Dyrk emoji-træer, der bærer frugt hele året!",
+            "quote": "Træerne går. Træerne er vrede."
         },
         "312": {
             "name": "Høstfest",
@@ -425,11 +483,13 @@
         },
         "316": {
             "name": "Fremtidens emoji-gård",
-            "description": "Dine gårde er nu højteknologiske utopier med robotter, hologrammer og flyvende traktorer. Velkommen til fremtiden!"
+            "description": "Dine gårde er nu højteknologiske utopier med robotter, hologrammer og flyvende traktorer. Velkommen til fremtiden!",
+            "quote": "En robot tog mit job. Bagefter spurgte den mig om vej."
         },
         "317": {
             "name": "Blodmåne",
-            "description": "Under blodmånen vokser dine afgrøder hurtigere... men de får også tænder."
+            "description": "Under blodmånen vokser dine afgrøder hurtigere... men de får også tænder.",
+            "quote": "Gulerødderne har tænder nu. Gulerødderne bider igen."
         },
         "318": {
             "name": "Den sidste høst",
@@ -441,11 +501,13 @@
         },
         "400": {
             "name": "Skarpe knive",
-            "description": "Skarpere knive gør det nemmere at hakke emojis."
+            "description": "Skarpere knive gør det nemmere at hakke emojis.",
+            "quote": "Hakke emojis? Hvad mener du? Er du skør? Det er ægte, levende, uskyldige emojis!"
         },
         "401": {
             "name": "Slip-let-pander",
-            "description": "Slip-let-pander gør det hurtigere at lave emoji-retter."
+            "description": "Slip-let-pander gør det hurtigere at lave emoji-retter.",
+            "quote": "Alt hænger stadig fast. Også mig. I det her job."
         },
         "402": {
             "name": "Bedre ovne",
@@ -453,27 +515,33 @@
         },
         "403": {
             "name": "Førsteklasses råvarer",
-            "description": "Råvarer af højere kvalitet giver lækrere emojis."
+            "description": "Råvarer af højere kvalitet giver lækrere emojis.",
+            "quote": "Samme frosne emojis. Ny etiket. Dobbelt pris."
         },
         "404": {
             "name": "Kokkehue",
-            "description": "En kokkehue sætter fart på emoji-madlavningen."
+            "description": "En kokkehue sætter fart på emoji-madlavningen.",
+            "quote": "Huen gør ingenting. Jeg har sagt det fyrre gange. Ingen lytter."
         },
         "405": {
             "name": "Emoji-blendere",
-            "description": "Blend emojis til lækre smoothies og supper på få sekunder!"
+            "description": "Blend emojis til lækre smoothies og supper på få sekunder!",
+            "quote": "Kig IKKE i smoothien."
         },
         "406": {
             "name": "Airfryere",
-            "description": "Steg emojis til perfektion på rekordtid. Sprøde og gyldne hver gang!"
+            "description": "Steg emojis til perfektion på rekordtid. Sprøde og gyldne hver gang!",
+            "quote": "Det er en ovn. En lillebitte ovn. Hold op med at kalde den en airfryer."
         },
         "407": {
             "name": "Sushibarer",
-            "description": "Rul emoji-sushi med præcision og stil. Kræver rå talent!"
+            "description": "Rul emoji-sushi med præcision og stil. Kræver rå talent!",
+            "quote": "Rå talent påkrævet. De ansatte mig alligevel."
         },
         "408": {
             "name": "Salatbarer",
-            "description": "Vend friske emoji-salater med masser af toppings. Sundt og lækkert!"
+            "description": "Vend friske emoji-salater med masser af toppings. Sundt og lækkert!",
+            "quote": "Nogen nøs på croutonerne. Jeg så det. Jeg sagde ingenting."
         },
         "409": {
             "name": "Pizzaovne",
@@ -485,7 +553,8 @@
         },
         "411": {
             "name": "Emoji-ismaskiner",
-            "description": "Lav frosne emoji-godter, der er lige så kølige, som de er lækre!"
+            "description": "Lav frosne emoji-godter, der er lige så kølige, som de er lækre!",
+            "quote": "I stykker. Den er altid i stykker. Den har aldrig ikke været i stykker."
         },
         "412": {
             "name": "Tacostationer",
@@ -498,7 +567,8 @@
         },
         "414": {
             "name": "Emoji-chokoladefontæner",
-            "description": "Dryp smeltet emoji-chokolade over det hele. Sødt og syndigt!"
+            "description": "Dryp smeltet emoji-chokolade over det hele. Sødt og syndigt!",
+            "quote": "Et barn stak hele ansigtet ned i den. Vi blev ved med at servere den."
         },
         "415": {
             "name": "Emoji-kannibalkøkken",
@@ -510,23 +580,28 @@
         },
         "417": {
             "name": "Emoji-madkamparena",
-            "description": "Gør dit køkken til en arena for madkamp. Det er rodet, kaotisk og underligt profitabelt."
+            "description": "Gør dit køkken til en arena for madkamp. Det er rodet, kaotisk og underligt profitabelt.",
+            "quote": "Underligt profitabelt. Jeg finder stadig ærter i ørerne."
         },
         "418": {
             "name": "Levende dej",
-            "description": "Denne dej bevæger sig af sig selv og former sig til perfekt emoji-brød. Nogle gange prøver den at flygte."
+            "description": "Denne dej bevæger sig af sig selv og former sig til perfekt emoji-brød. Nogle gange prøver den at flygte.",
+            "quote": "Den slap væk. Nu hæver den sig over loven."
         },
         "419": {
             "name": "Den uendelige buffet",
-            "description": "En buffet, der aldrig slutter... men maden begynder måske at spise dig i stedet."
+            "description": "En buffet, der aldrig slutter... men maden begynder måske at spise dig i stedet.",
+            "quote": "Den slutter aldrig. Jeg har ligget på dessertbordet siden marts."
         },
         "500": {
             "name": "Koste",
-            "description": "Til at rydde op efter dyrene, når de øhh... skal lave stort."
+            "description": "Til at rydde op efter dyrene, når de øhh... skal lave stort.",
+            "quote": "Jeg har en kandidatgrad. Jeg fejer girafmøg op for emojis."
         },
         "501": {
             "name": "Dyretrænere",
-            "description": "Trænerne lærer dyrene tricks og gør zooen mere effektiv."
+            "description": "Trænerne lærer dyrene tricks og gør zooen mere effektiv.",
+            "quote": "Lamaen spyttede på mig. Igen."
         },
         "502": {
             "name": "Luksusindhegninger",
@@ -534,15 +609,18 @@
         },
         "503": {
             "name": "Eksotiske dyr",
-            "description": "Få sjældne og eksotiske dyr, der trækker større publikum."
+            "description": "Få sjældne og eksotiske dyr, der trækker større publikum.",
+            "quote": "Pingvinen bed et barn. Besøgstallet er steget med 40 %."
         },
         "504": {
             "name": "Zoo-maskotter",
-            "description": "Venlige maskotter lokker gæster til og øger den samlede indtjening."
+            "description": "Venlige maskotter lokker gæster til og øger den samlede indtjening.",
+            "quote": "Det er 35 grader i det her girafkostume, og et barn har lige sparket mig."
         },
         "505": {
             "name": "Dyrlægeklinikker",
-            "description": "En dedikeret klinik holder dyrene sunde."
+            "description": "En dedikeret klinik holder dyrene sunde.",
+            "quote": "Syv års dyrlægestudier. I dag behandler jeg en ged, der har spist en telefon."
         },
         "506": {
             "name": "Skyggeområder",
@@ -607,15 +685,18 @@
         },
         "601": {
             "name": "Flere arbejdere",
-            "description": "Øg antallet af ansatte på fabrikken."
+            "description": "Øg antallet af ansatte på fabrikken.",
+            "quote": "Flere arbejdere, samme toilet. Ét toilet."
         },
         "602": {
             "name": "Større tandhjul",
-            "description": "Større tandhjul giver plads til større maskiner."
+            "description": "Større tandhjul giver plads til større maskiner.",
+            "quote": "Større tandhjul, større ulykker. Spørg bare Dennis. Nå nej."
         },
         "603": {
             "name": "Møtrikker og bolte",
-            "description": "Bruges til at sikre, at det hele ikke falder fra hinanden."
+            "description": "Bruges til at sikre, at det hele ikke falder fra hinanden.",
+            "quote": "Holder det hele sammen. Lige akkurat. Ligesom mit ægteskab."
         },
         "604": {
             "name": "Transportbånd",
@@ -639,7 +720,8 @@
         },
         "609": {
             "name": "Fabrikssikkerhed",
-            "description": "Beskyt din fabrik mod emoji-tyve og industrispionage."
+            "description": "Beskyt din fabrik mod emoji-tyve og industrispionage.",
+            "quote": "DU KAN IKKE PASSERE. Ikke uden adgangskort."
         },
         "610": {
             "name": "Fabriksgenbrug",
@@ -668,11 +750,13 @@
         },
         "616": {
             "name": "Forstærkede vægge",
-            "description": "Styrk fabrikkens vægge, så de kan modstå kaosset fra lynhurtig produktion."
+            "description": "Styrk fabrikkens vægge, så de kan modstå kaosset fra lynhurtig produktion.",
+            "quote": "Hold døren! HOLD DØREN!"
         },
         "617": {
             "name": "Musefælder",
-            "description": "Hold irriterende gnavere ude af fabrikken. Ikke flere gnavede ledninger eller stjålne emojis!"
+            "description": "Hold irriterende gnavere ude af fabrikken. Ikke flere gnavede ledninger eller stjålne emojis!",
+            "quote": "Det er en fælde!"
         },
         "618": {
             "name": "Fabriksledere",
@@ -690,7 +774,8 @@
         },
         "701": {
             "name": "Baseballbaner",
-            "description": "Det her bliver et sikkert home run."
+            "description": "Det her bliver et sikkert home run.",
+            "quote": "Home run? Bolden ramte min bil. Igen."
         },
         "702": {
             "name": "Squashbaner",
@@ -721,15 +806,18 @@
         },
         "901": {
             "name": "Større emoji-poser",
-            "description": "Gør det muligt at bære endnu flere emojis."
+            "description": "Gør det muligt at bære endnu flere emojis.",
+            "quote": "Min ryg er smadret, men ja da, større poser."
         },
         "902": {
             "name": "Emoji-kreditkort",
-            "description": "Gode til at bruge dine hårdt tjente emojis."
+            "description": "Gode til at bruge dine hårdt tjente emojis.",
+            "quote": "Afvist. Dit kort er afvist. Dit liv er afvist."
         },
         "903": {
             "name": "Investering i uddannelse",
-            "description": "Bedre uddannelse, bedre evner til at tegne emojis."
+            "description": "Bedre uddannelse, bedre evner til at tegne emojis.",
+            "quote": "Mit studielån er i emojis. Jeg betaler stadig af på det i efterlivet."
         },
         "904": {
             "name": "Investering i innovation",
@@ -745,19 +833,23 @@
         },
         "1002": {
             "name": "Pariserhjul",
-            "description": "Højt deroppe, der knuste hun mit hjerte."
+            "description": "Højt deroppe, der knuste hun mit hjerte.",
+            "quote": "Sad fast på toppen i to timer med en mand, der forklarede krypto."
         },
         "1003": {
             "name": "Cirkus",
-            "description": "Der findes kun to slags mennesker i verden. Dem, der underholder, og dem, der ser på."
+            "description": "Der findes kun to slags mennesker i verden. Dem, der underholder, og dem, der ser på.",
+            "quote": "Jeg trænede i tyve år som akrobat. Nu jonglerer jeg med smileys for småbørn."
         },
         "1004": {
             "name": "Emoji-jonglør",
-            "description": "De siger, at han aldrig har tabt bolden."
+            "description": "De siger, at han aldrig har tabt bolden.",
+            "quote": "Aldrig tabt bolden? Jeg har tabt mine drømme."
         },
         "1100": {
             "name": "Emoji-valg",
-            "description": "Må den bedste emoji vinde!"
+            "description": "Må den bedste emoji vinde!",
+            "quote": "Må den bedste emoji vinde. Taberne vil blive taget hånd om."
         },
         "1101": {
             "name": "Emoji-hjælpepakke",
@@ -777,7 +869,8 @@
         },
         "1300": {
             "name": "Teleskoper",
-            "description": "Kig mod stjernerne for at opdage emoji-planeter."
+            "description": "Kig mod stjernerne for at opdage emoji-planeter.",
+            "quote": "Vi ser også dig. Vi har altid set dig."
         },
         "1301": {
             "name": "Parabolantenner",
@@ -785,11 +878,13 @@
         },
         "1302": {
             "name": "Astronauter",
-            "description": "Nogen skal jo drive dine rumstationer."
+            "description": "Nogen skal jo drive dine rumstationer.",
+            "quote": "I rummet kan ingen høre dig skrige. Vi har tjekket. To gange."
         },
         "1303": {
             "name": "Raketter",
-            "description": "Flyver virkelig hurtigt."
+            "description": "Flyver virkelig hurtigt.",
+            "quote": "Flyver virkelig hurtigt. Det samme vil dine rester."
         },
         "1304": {
             "name": "⟊⟒☌ ☍⍜⋔⋔⟒⍀ ⟟ ⎎⍀⟒⎅...",
@@ -798,15 +893,18 @@
         },
         "1305": {
             "name": "⋔⏃⟒⍀☍⟒⌰⟟☌⏁ ⍜⏚⟊⟒☍⏁",
-            "description": "⎅⟒⏁⏁⟒ ⍜⏚⟊⟒☍⏁ ⍀⎍⋔⋔⟒⍀ ⎍⏃⋏⟒⎅⟒ ☍⍀⏃⟒⎎⏁⟒⍀."
+            "description": "⎅⟒⏁⏁⟒ ⍜⏚⟊⟒☍⏁ ⍀⎍⋔⋔⟒⍀ ⎍⏃⋏⟒⎅⟒ ☍⍀⏃⟒⎎⏁⟒⍀.",
+            "quote": "⟊⟒☌ ☍⍜⋔⋔⟒⍀ ⟒⎎⏁⟒⍀ ⎅⟟☌."
         },
         "30000": {
             "name": "Kartofler",
-            "description": "Kartoffel-tastisk! Kartofler er rygraden i enhver gård."
+            "description": "Kartoffel-tastisk! Kartofler er rygraden i enhver gård.",
+            "quote": "Intet salt, ingen peber. Giv mig bare en god gammel kartoffel, så er jeg glad som en skimmelsvamp!"
         },
         "30001": {
             "name": "Gulerødder",
-            "description": "Gul rod? Nej, guld-rod! Godt for øjnene og for emoji-forretningen."
+            "description": "Gul rod? Nej, guld-rod! Godt for øjnene og for emoji-forretningen.",
+            "quote": "Nej. Det er ikke guld værd. Ét ordspil mere, og jeg planter dig."
         },
         "30002": {
             "name": "Agurker",
@@ -820,15 +918,18 @@
         },
         "30004": {
             "name": "Tomater",
-            "description": "Saftige og alsidige, tomater er en favorit på gården."
+            "description": "Saftige og alsidige, tomater er en favorit på gården.",
+            "quote": "Perfekte til at kaste efter den, der har designet denne gård."
         },
         "30005": {
             "name": "Salat",
-            "description": "Nu vender vi bladet! Salat holder din gård frisk og grøn."
+            "description": "Nu vender vi bladet! Salat holder din gård frisk og grøn.",
+            "quote": "Det kedeligste på hele gården. Bortset fra landmanden."
         },
         "30006": {
             "name": "Broccoli",
-            "description": "Små træer med store fordele!"
+            "description": "Små træer med store fordele!",
+            "quote": "Mit barn kastede den efter tjeneren. Ærligt talt fortjente han det."
         },
         "30007": {
             "name": "Løg",
@@ -887,11 +988,13 @@
         },
         "30019": {
             "name": "Ærter",
-            "description": "Ærter!"
+            "description": "Ærter!",
+            "quote": "Ærter! ÆRTER! Er det hele beskrivelsen? Hvem skriver de her?"
         },
         "30020": {
             "name": "Radiser",
-            "description": "Stærke og sprøde, radiser giver et kick til din gård og dine retter."
+            "description": "Stærke og sprøde, radiser giver et kick til din gård og dine retter.",
+            "quote": "Ingen vil have radiser. Ingen har nogensinde villet have radiser."
         },
         "30021": {
             "name": "Svampe",
@@ -900,15 +1003,18 @@
         },
         "30022": {
             "name": "Ananas",
-            "description": "Tropisk og syrlig."
+            "description": "Tropisk og syrlig.",
+            "quote": "På pizza."
         },
         "30023": {
             "name": "Vandmeloner",
-            "description": "Saftige og forfriskende, vandmeloner er den ultimative sommerafgrøde."
+            "description": "Saftige og forfriskende, vandmeloner er den ultimative sommerafgrøde.",
+            "quote": "Min ryg gør ondt."
         },
         "30024": {
             "name": "Kiwier",
-            "description": "Lodne udenpå, søde indeni. Kiwier er en favorit på gården!"
+            "description": "Lodne udenpå, søde indeni. Kiwier er en favorit på gården!",
+            "quote": "Åh gud, hvor det klør."
         },
         "30025": {
             "name": "Vindruer",
@@ -977,6 +1083,1539 @@
             "name": "Emoji-bureaukrater",
             "description": "En emoji-regering har brug for administratorer for at fungere.",
             "quote": "Det ser ud til, at du vedtager en lov. Brug for hjælp?"
+        },
+        "707": {
+            "name": "Emoji-OL",
+            "description": "Hvert fjerde år går de hurtigste emojis efter guldet."
+        },
+        "708": {
+            "name": "Emoji-stadion",
+            "description": "Firs tusind sæder, og på hvert eneste sidder en jublende emoji."
+        },
+        "709": {
+            "name": "Maratontræning",
+            "description": "Emojis, der kan tegne 42 kilometer uden at stoppe."
+        },
+        "710": {
+            "name": "Svømmebassiner",
+            "description": "Halvtreds meter klorerede emojis.",
+            "quote": "Registrerer flere livsformer af leviatan-klassen i den dybe ende. Er du sikker på, at det, du laver, er det værd?"
+        },
+        "711": {
+            "name": "Boksering",
+            "description": "Svæv som en sommerfugl, tegn som en emoji."
+        },
+        "712": {
+            "name": "Klatrevæg",
+            "description": "Hvert greb er en smiley. Godt fat."
+        },
+        "713": {
+            "name": "Skøjtebane",
+            "description": "Emojis på is. Pailletterne sælges separat."
+        },
+        "714": {
+            "name": "Bowlingbane",
+            "description": "Hver strike slår en bunke emojis løs."
+        },
+        "715": {
+            "name": "Skatepark",
+            "description": "Kickflips, grinds og en masse emojis."
+        },
+        "716": {
+            "name": "Skibakker",
+            "description": "Sorte pister, præpareret med emojis."
+        },
+        "717": {
+            "name": "Kampsportsdojo",
+            "description": "Voks på, voks af, tegn emojis.",
+            "quote": "Tryk eller tryk ikke. Der findes intet forsøg."
+        },
+        "718": {
+            "name": "Racerbane",
+            "description": "Fra nul til en million emojis på under tre sekunder."
+        },
+        "719": {
+            "name": "Æresgalleri",
+            "description": "Alle legendariske emoji-atleter, udødeliggjort i bronze."
+        },
+        "800": {
+            "name": "Popcornmaskiner",
+            "description": "Hvert bæger har en gratis emoji i bunden.",
+            "quote": "Gratis emoji? Jeg fandt ingen. Giv mig pengene tilbage, ellers sagsøger jeg jer."
+        },
+        "801": {
+            "name": "3D-briller",
+            "description": "Emojis springer lige ud af lærredet og ind i din bank.",
+            "quote": "Jeg prøvede at have det sjovt med dem, men jeg kunne bare ikke få flyet til at lande på det forbandede hangarskib."
+        },
+        "802": {
+            "name": "Filmstjerner",
+            "description": "De største navne i emoji-filmen, alle sammen på din lønningsliste.",
+            "quote": "Patrick Stewart"
+        },
+        "803": {
+            "name": "Trailere",
+            "description": "Tyve minutters trailere før hver film. Alle sammen fulde af emojis.",
+            "quote": "Ooog de er væk. Ja, mine popcorn, de er væk. Jeg spiste dem alle sammen under trailerne."
+        },
+        "804": {
+            "name": "Premierer på den røde løber",
+            "description": "Blitzende kameraer, vinkende fans, meget vigtige emojis."
+        },
+        "805": {
+            "name": "Emoji-prisuddeling",
+            "description": "Og prisen for bedste emoji går til... dem alle sammen."
+        },
+        "806": {
+            "name": "Efterfølgere",
+            "description": "Samme emojis, større eksplosioner."
+        },
+        "807": {
+            "name": "Director's cut",
+            "description": "Fire ekstra timer med emojis, som ingen har bedt om."
+        },
+        "808": {
+            "name": "Streamingtjeneste",
+            "description": "Emoji-film, nu i alle hjem."
+        },
+        "809": {
+            "name": "Filmunivers",
+            "description": "Alle emoji-film hænger sammen. Alle skal have en efterfølger."
+        },
+        "810": {
+            "name": "Midnatsforestillinger",
+            "description": "De emojis, der kommer ud ved midnat, er de mest dedikerede."
+        },
+        "811": {
+            "name": "IMAX-lærreder",
+            "description": "Så store, at du kan se hver pixel i hver emoji."
+        },
+        "812": {
+            "name": "Surround sound",
+            "description": "Emojis kommer inde fra selve rummet."
+        },
+        "813": {
+            "name": "Stuntdoubler",
+            "description": "Nogle emojis er for værdifulde til at blive sat på spil."
+        },
+        "814": {
+            "name": "Specialeffekter",
+            "description": "Eksplosioner lavet udelukkende af emojis. Meget dyre. Det værd."
+        },
+        "815": {
+            "name": "Tegnefilm",
+            "description": "Håndtegnede emojis, ét billede ad gangen."
+        },
+        "816": {
+            "name": "Filmfestival",
+            "description": "Palmer, solbriller og et gyldent emoji-trofæ."
+        },
+        "817": {
+            "name": "Kasserekord",
+            "description": "Den mest indtjenende emoji-film nogensinde. Igen."
+        },
+        "818": {
+            "name": "Drive-in-biograf",
+            "description": "Se emoji-film fra din egen bils komfort."
+        },
+        "819": {
+            "name": "Hollywood-skiltet",
+            "description": "Store hvide bogstaver på en bakke, der staver til en emoji."
+        },
+        "905": {
+            "name": "Emoji-hæveautomater",
+            "description": "Hæv emojis på hvert gadehjørne. Ingen ved, hvem der sætter dem ind."
+        },
+        "906": {
+            "name": "Emoji-børs",
+            "description": "Emoji-kurserne går kun opad. Sandsynligvis.",
+            "quote": "'Går kun opad.' Fedt. Min opsparing gik nedad."
+        },
+        "907": {
+            "name": "Emoji-mønter",
+            "description": "En kryptovaluta, der for en gangs skyld er bakket op af ægte emojis.",
+            "quote": "Købt på toppen. Selvfølgelig."
+        },
+        "908": {
+            "name": "Emoji-boks",
+            "description": "Ligesom en guldreserve, men hver barre er en smiley."
+        },
+        "909": {
+            "name": "Emoji-verdensbank",
+            "description": "Låner emojis ud til hele lande til meget rimelige renter.",
+            "quote": "'Meget rimelige renter.' Siger banken, der ejer tre lande."
+        },
+        "910": {
+            "name": "Renters rente",
+            "description": "Emojis, der laver emojis, der laver emojis."
+        },
+        "911": {
+            "name": "Guldreserver",
+            "description": "Stablet til loftet, og i hver barre er der indgraveret et smil.",
+            "quote": "Min skat. MIN SKAT."
+        },
+        "912": {
+            "name": "Emoji-obligationer",
+            "description": "Langsigtede investeringer i emojis. Meget sikre. Meget kedelige."
+        },
+        "913": {
+            "name": "Pengetransporter",
+            "description": "Flytter emojis mellem banker, meget forsigtigt.",
+            "quote": "De bringer emojis til Isengard!"
+        },
+        "914": {
+            "name": "Skattely",
+            "description": "En solrig ø, hvor emojis tager hen for at slippe for at betale skat."
+        },
+        "915": {
+            "name": "Emoji-møntværk",
+            "description": "Præger friske emojis døgnet rundt."
+        },
+        "916": {
+            "name": "Hedgefonde",
+            "description": "Ingen ved, hvad de laver, men emojis bliver ved med at strømme ind."
+        },
+        "917": {
+            "name": "Emoji-lån",
+            "description": "Lån ti emojis, betal tyve tilbage. Alle vinder. Altså, du gør."
+        },
+        "918": {
+            "name": "Centralbank",
+            "description": "Fastsætter emoji-renten for hele verden."
+        },
+        "919": {
+            "name": "Uendelig penge-glitch",
+            "description": "Bankens computere har en lille fejl. Lad være med at sige det til nogen."
+        },
+        "1005": {
+            "name": "Sæsonkort",
+            "description": "Gæsterne bliver ved med at komme tilbage, og de har altid emojis med.",
+            "quote": "Købte et sæsonkort. Var der én gang. Mit barn græd hele tiden."
+        },
+        "1006": {
+            "name": "Emoji-parade",
+            "description": "En daglig parade af vogne, der hver især er en kæmpe emoji."
+        },
+        "1007": {
+            "name": "Pølsevogne",
+            "description": "Hver pølse er formet som en lille emoji."
+        },
+        "1008": {
+            "name": "Fyrværkeri hver aften",
+            "description": "Hver raket springer ud i tusind emojis.",
+            "quote": "Ssssssss..."
+        },
+        "1009": {
+            "name": "Emoji-slot",
+            "description": "Det lykkeligste sted på Jorden, nu med flere ansigter.",
+            "quote": "Det lykkeligste sted på Jorden ifølge et skilt. Skrevet af ejeren."
+        },
+        "1010": {
+            "name": "Loopbaner",
+            "description": "Loops, der ryster emojis lige ud af lommerne på dig.",
+            "quote": "Mistede min telefon, mine nøgler og min livslyst i andet loop."
+        },
+        "1011": {
+            "name": "Spøgelseshus",
+            "description": "Spøgelserne er også emojis. Uhyggelige nogle.",
+            "quote": "Det mest uhyggelige herinde er prisen på billedet til sidst."
+        },
+        "1012": {
+            "name": "Vandrutsjebaner",
+            "description": "Plask! Du er gennemblødt af emojis.",
+            "quote": "Ingen fortalte mig, at vandet var gult."
+        },
+        "1013": {
+            "name": "Radiobiler",
+            "description": "Hvert bump slår en emoji løs.",
+            "quote": "En syvårig ramte mig ni gange. Han så mig i øjnene hver gang."
+        },
+        "1014": {
+            "name": "Maskotter",
+            "description": "Kæmpe, lodne emojis, der giver de bedste krammere."
+        },
+        "1015": {
+            "name": "Fast pass",
+            "description": "Spring køen over og kom direkte til emojis."
+        },
+        "1016": {
+            "name": "Souvenirbutik",
+            "description": "Udgangen går gennem gavebutikken. Køb emojis.",
+            "quote": "Udgangen går gennem gavebutikken. Der er ingen anden udgang. Jeg har tjekket."
+        },
+        "1017": {
+            "name": "Tømmerrende",
+            "description": "Du bliver våd. Emojis bliver endnu vådere."
+        },
+        "1018": {
+            "name": "Paradevogne",
+            "description": "Hver vogn er større og mere skinnende end den forrige."
+        },
+        "1019": {
+            "name": "Park nummer to",
+            "description": "Én park var ikke nok. Nu er der et helt resort.",
+            "quote": "Én park var ikke elendighed nok. Nu er der to."
+        },
+        "1105": {
+            "name": "Emoji-flag",
+            "description": "Alle nationer forenet under ét flag. Det er en smiley."
+        },
+        "1106": {
+            "name": "Handelsaftaler",
+            "description": "Emojis flyder nu frit over alle grænser."
+        },
+        "1107": {
+            "name": "Emoji-presse",
+            "description": "Daglige overskrifter, skrevet udelukkende i emojis."
+        },
+        "1108": {
+            "name": "Emoji-fredstraktat",
+            "description": "Ikke flere emoji-krige. Kun produktion.",
+            "quote": "Krig. Krig forandrer sig aldrig."
+        },
+        "1109": {
+            "name": "Emoji-folkeafstemning",
+            "description": "Folket har talt: flere emojis, tak."
+        },
+        "1110": {
+            "name": "Emoji-grundlov",
+            "description": "Vi, emojis, i den hensigt at skabe et mere fuldkomment samlebånd..."
+        },
+        "1111": {
+            "name": "Emoji-senat",
+            "description": "Hundrede pladser, hundrede emojis, hundrede meninger."
+        },
+        "1112": {
+            "name": "Emoji-ambassade",
+            "description": "Diplomati, men med flere blinkende ansigter."
+        },
+        "1113": {
+            "name": "Emoji-skattelettelser",
+            "description": "Flere emojis til alle!"
+        },
+        "1114": {
+            "name": "Emoji-folketælling",
+            "description": "Hver emoji i landet bliver talt. Det tager lidt tid."
+        },
+        "1115": {
+            "name": "Emoji-topmøde",
+            "description": "Verdens ledere mødes for at diskutere én ting: flere emojis."
+        },
+        "1116": {
+            "name": "Emoji-højesteret",
+            "description": "Dømmer enstemmigt til fordel for flere emojis."
+        },
+        "1117": {
+            "name": "Emoji-spioner",
+            "description": "Stjæler emoji-hemmeligheder fra rivaliserende moguler."
+        },
+        "1118": {
+            "name": "Emoji-FN",
+            "description": "Alle nationer arbejder sammen, for emojis."
+        },
+        "1119": {
+            "name": "Ny emoji-verdensorden",
+            "description": "Én planet, én regering, én emoji."
+        },
+        "1200": {
+            "name": "Papirflyvere",
+            "description": "Ethvert flyselskab starter et sted. Vores startede på en serviet.",
+            "quote": "Flyv, I tåber!"
+        },
+        "1201": {
+            "name": "Snacks om bord",
+            "description": "Bittesmå kringler, bittesmå emojis, på hver eneste flyvning.",
+            "quote": "Tre kringler. TRE. På en flyvning på ni timer."
+        },
+        "1202": {
+            "name": "Bonuspoint",
+            "description": "Flyv ti gange, få en emoji. Flyv en million gange, få en million.",
+            "quote": "Tre millioner kilometer. Min belønning er et lidt bredere midtersæde."
+        },
+        "1203": {
+            "name": "Jumbojets",
+            "description": "Fire motorer, 600 sæder, og hvert eneste er optaget af en emoji.",
+            "quote": "600 sæder, og jeg fik det ved toilettet. Igen."
+        },
+        "1204": {
+            "name": "Lufthavne",
+            "description": "Endeløse terminaler, endeløse gates, endeløse emojis."
+        },
+        "1205": {
+            "name": "Emoji-piloter",
+            "description": "Det er kaptajnen, der taler. Spænd venligst jeres emojis.",
+            "quote": "Det er kaptajnen, der taler. Jeg har heller ikke lyst til at være her."
+        },
+        "1206": {
+            "name": "Forsvundet bagage",
+            "description": "Ingen ved, hvor kufferterne bliver af. De kommer tilbage fulde af emojis."
+        },
+        "1207": {
+            "name": "Første klasse",
+            "description": "Champagne, varme håndklæder og en personlig emoji-butler.",
+            "quote": "Varme håndklæder, champagne og et forhæng, så jeg ikke kan se dig. Perfekt."
+        },
+        "1208": {
+            "name": "Overlydsfly",
+            "description": "Hurtigere end lyden, med flere emojis end nogensinde.",
+            "quote": "Hurtigere end lyden, så ingen hører den skrigende baby."
+        },
+        "1209": {
+            "name": "Jorden rundt",
+            "description": "Nonstop, hele vejen rundt, med emojis drysset ud overalt."
+        },
+        "1210": {
+            "name": "Overbookede fly",
+            "description": "Flere passagerer end sæder betyder flere emojis pr. flyvning."
+        },
+        "1211": {
+            "name": "Toldfrit",
+            "description": "Afgiftsfrie emojis ved hver eneste gate.",
+            "quote": "Afgiftsfrit og alligevel på en eller anden måde 40 % dyrere."
+        },
+        "1212": {
+            "name": "Lufthavnslounge",
+            "description": "Gratis snacks, bløde stole og emojis fra hanen.",
+            "quote": "Gratis snacks, bløde stole og en mand i strømpesokker, der bliver ved med at ringe til sin børsmægler."
+        },
+        "1213": {
+            "name": "Fragtfly",
+            "description": "Ingen passagerer. Bare kasser på kasser med emojis.",
+            "quote": "Ingen passagerer. Den bedste flyvning, jeg nogensinde har arbejdet på."
+        },
+        "1214": {
+            "name": "Privatfly",
+            "description": "Til de emojis, der har råd."
+        },
+        "1215": {
+            "name": "Flyvekontrol",
+            "description": "Forhindrer millioner af emoji-fly i at styrte ind i hinanden."
+        },
+        "1216": {
+            "name": "Vandflyvere",
+            "description": "Land på vandet, let med emojis.",
+            "quote": "Blød landing, sagde de. Min frokost ligger i søen."
+        },
+        "1217": {
+            "name": "Helikoptere",
+            "description": "Svæver over byerne og drysser emojis ud."
+        },
+        "1218": {
+            "name": "Zeppelinere",
+            "description": "Langsomme, majestætiske og fyldt til randen med emojis."
+        },
+        "1219": {
+            "name": "Rumturisme",
+            "description": "Næste destination er op. Langt op.",
+            "quote": "Betalte fyrre millioner emojis for at kaste op i vægtløs tilstand."
+        },
+        "1306": {
+            "name": "Flyvende tallerkener",
+            "description": "Rumvæsnerne var emoji-fans hele tiden."
+        },
+        "1307": {
+            "name": "Månebase",
+            "description": "En hel måne at tegne emojis på.",
+            "quote": "Masser af plads heroppe. Masser af plads til at begrave dig."
+        },
+        "1308": {
+            "name": "Kometminedrift",
+            "description": "Kometer viser sig at være frosne emojis.",
+            "quote": "I tøede os op. Stor fejl."
+        },
+        "1309": {
+            "name": "Første kontakt",
+            "description": "Rumvæsnerne svarer endelig. Deres besked: 👾.",
+            "quote": "Hello there."
+        },
+        "1310": {
+            "name": "Rumelevator",
+            "description": "Skal du op? Næste stop: kredsløb."
+        },
+        "1311": {
+            "name": "Asteroidebælte",
+            "description": "Millioner af rumsten, hver især fuld af emojis."
+        },
+        "1312": {
+            "name": "Marskoloni",
+            "description": "Den røde planet viser sig at være rigtig god emoji-jord."
+        },
+        "1313": {
+            "name": "Solsejl",
+            "description": "Sejler på solvinden og fanger emojis."
+        },
+        "1314": {
+            "name": "Rumdragter",
+            "description": "Nu med plads til ekstra emojis i hver lomme.",
+            "quote": "Ekstra lommer. En af dem er til dine tænder."
+        },
+        "1315": {
+            "name": "Gaskæmper",
+            "description": "Øs en atmosfære op, og si emojis fra."
+        },
+        "1316": {
+            "name": "Dysonsfære",
+            "description": "Pak en hel stjerne ind, og høst hver emoji, den skinner."
+        },
+        "1317": {
+            "name": "Warpdrev",
+            "description": "Hurtigere end lyset, med flere emojis end nogensinde."
+        },
+        "1318": {
+            "name": "Galaktisk imperium",
+            "description": "Hver stjerne i galaksen, styret af emojis."
+        },
+        "1319": {
+            "name": "Universets kant",
+            "description": "Der står et skilt ved kanten. Der står: flere emojis denne vej.",
+            "quote": "Skiltet sagde 'flere emojis denne vej'. Vi satte skiltet op. Ingen kom tilbage."
+        },
+        "1400": {
+            "name": "Vingummivagter",
+            "description": "Søde, seje og overraskende velbevæbnede.",
+            "quote": "Overraskende velbevæbnede. Overraskende dårlige til at sigte."
+        },
+        "1401": {
+            "name": "Chokoladefloder",
+            "description": "Løber direkte ind i emoji-fabrikkerne. Pas på klumperne.",
+            "quote": "Ren og skær fantasi!"
+        },
+        "1402": {
+            "name": "Cupcake-hytter",
+            "description": "Små huse med tage af glasur. Emojis elsker dem.",
+            "quote": "Glasuren er rød. Det er ikke jordbær."
+        },
+        "1403": {
+            "name": "Kongeligt dekret",
+            "description": "Slikkongen har talt: flere emojis!",
+            "quote": "Slikkongen har talt: Af med hovedet!"
+        },
+        "1404": {
+            "name": "Sukkerrus",
+            "description": "Alle i kongeriget vibrerer. Produktionen fordobles, og det samme gør pulsen.",
+            "quote": "Don't stop me now! Jeg er på sukker!"
+        },
+        "1405": {
+            "name": "Kageslotte",
+            "description": "Murene er glasur. Voldgraven er vaniljecreme."
+        },
+        "1406": {
+            "name": "Honningminer",
+            "description": "Søde, klæbrige emojis direkte fra jorden.",
+            "quote": "Grav aldrig lige ned."
+        },
+        "1407": {
+            "name": "Cookie clickers",
+            "description": "En hyldest til de bedstemødre, der kom før os.",
+            "quote": "En hyldest til de bedstemødre, der kom før os. Vi spiste dem."
+        },
+        "1408": {
+            "name": "Buddingparlamentet",
+            "description": "Landets mest vaklende regering.",
+            "quote": "Når man spiller buddingernes spil, vakler man, eller man dør."
+        },
+        "1409": {
+            "name": "Slikkongens fødselsdag",
+            "description": "Hele kongeriget fejrer det, og alle får en emoji.",
+            "quote": "Slikkongen sender sine hilsner."
+        },
+        "1410": {
+            "name": "Slikkepindslygter",
+            "description": "Oplyser gaderne med et sødt emoji-skær."
+        },
+        "1411": {
+            "name": "Polkagrisjernbaner",
+            "description": "Tøf tøf! Emoji-ekspressen kører på sukker.",
+            "quote": "Det eneste, vi skulle, var at følge det forbandede tog!"
+        },
+        "1412": {
+            "name": "Isbjerge",
+            "description": "Sneen på toppen er vanilje. Emojis er med mint."
+        },
+        "1413": {
+            "name": "Skumfiduskyer",
+            "description": "Når det regner, regner det med emojis."
+        },
+        "1414": {
+            "name": "Gelébønneminer",
+            "description": "Hver farve, hver smag, hver emoji."
+        },
+        "1415": {
+            "name": "Honningkagehær",
+            "description": "Grum, sprød og loyal over for Slikkongen."
+        },
+        "1416": {
+            "name": "Karamelvoldgrav",
+            "description": "Klæbrig, gylden og vogter slottets emojis."
+        },
+        "1417": {
+            "name": "Tyggegummiballoner",
+            "description": "Pust hårdt nok, så løfter de emojis op mod himlen."
+        },
+        "1418": {
+            "name": "Sukkerkollaps",
+            "description": "Alle har brug for en lur. Undtagen emojis."
+        },
+        "1419": {
+            "name": "Slikimperium",
+            "description": "Slikkongeriget erobrer verden, ét bolsje ad gangen."
+        },
+        "1500": {
+            "name": "Varmebestandige handsker",
+            "description": "Til sikker håndtering af emojis lige fra magmaen."
+        },
+        "1501": {
+            "name": "Obsidianforme",
+            "description": "Hæld smeltede emojis i perfekte smiley-former.",
+            "quote": "Du skal bruge en diamanthakke til det her."
+        },
+        "1502": {
+            "name": "Vulkanologer",
+            "description": "De studerer vulkanen. Vulkanen studerer dem tilbage."
+        },
+        "1503": {
+            "name": "Jordvarme",
+            "description": "Varme kilder giver varme emojis.",
+            "quote": "Hot hot hot!"
+        },
+        "1504": {
+            "name": "Supervulkan",
+            "description": "Hvert udbrud dækker nu et helt kontinent med friske emojis. Ingen klager."
+        },
+        "1505": {
+            "name": "Lavasurfing",
+            "description": "Rid på bølgen af smeltede emojis."
+        },
+        "1506": {
+            "name": "Bjergsmedje",
+            "description": "Smed friske emojis på en ambolt af størknet lava.",
+            "quote": "Én emoji til at herske over dem alle, og i magmaen binde dem."
+        },
+        "1507": {
+            "name": "Lavadrager",
+            "description": "De spyr ild, og ilden er emojis.",
+            "quote": "De spyr ild. De har din adresse."
+        },
+        "1508": {
+            "name": "Kerneboring",
+            "description": "Et rør direkte ind til Jordens centrum.",
+            "quote": "Du borede ind i Jordens kerne. Den borede tilbage."
+        },
+        "1509": {
+            "name": "Ildringen",
+            "description": "Alle vulkaner på planeten, koblet sammen i ét emoji-netværk."
+        },
+        "1510": {
+            "name": "Magmakamre",
+            "description": "En boblende underjordisk sø af friske emojis."
+        },
+        "1511": {
+            "name": "Pimpstensfabrikker",
+            "description": "Så lette, at de flyder. Så fulde af emojis, at de synker igen."
+        },
+        "1512": {
+            "name": "Lavalamper",
+            "description": "Groovy klatter af smeltede emojis."
+        },
+        "1513": {
+            "name": "Vulkanøer",
+            "description": "Splinterny jord, bygget af emojis, der køles af i havet.",
+            "quote": "Fin ø. Gå ikke i vandet. Gå aldrig nogensinde i vandet."
+        },
+        "1514": {
+            "name": "Ildvandrere",
+            "description": "Modige emojis, der går hen over gløder."
+        },
+        "1515": {
+            "name": "Askeskyer",
+            "description": "Hvert askefnug er en lillebitte emoji.",
+            "quote": "At patruljere askeskyerne får en næsten til at ønske sig en atomvinter."
+        },
+        "1516": {
+            "name": "Jordskælv",
+            "description": "Jorden ryster, og emojis falder ud af alting."
+        },
+        "1517": {
+            "name": "Lavaskulpturer",
+            "description": "Støbt i obsidian, formet som emojis."
+        },
+        "1518": {
+            "name": "Vulkangud",
+            "description": "Der bringes ofre. Der returneres emojis."
+        },
+        "1519": {
+            "name": "Planetens kerne",
+            "description": "Hele planeten er nu en vulkan. En venlig en af slagsen."
+        },
+        "1600": {
+            "name": "Bedelys",
+            "description": "Hver flamme brænder til ære for den Store Emoji i himlen."
+        },
+        "1601": {
+            "name": "Bedeperler",
+            "description": "Tæl dine velsignelser. Tæl så dine emojis."
+        },
+        "1602": {
+            "name": "Tempelklokker",
+            "description": "Hvert klokkeslag kalder en frisk emoji ned fra himlen.",
+            "quote": "Skam. Skam. Skam."
+        },
+        "1603": {
+            "name": "Pilgrimme",
+            "description": "Tilhængere rejser fra alle verdenshjørner bare for at trykke på den Store Emoji én gang."
+        },
+        "1604": {
+            "name": "Guddommelig åbenbaring",
+            "description": "Den Store Emoji i himlen ser ned på dig. Den smiler.",
+            "quote": "😀"
+        },
+        "1605": {
+            "name": "Daglig andagt",
+            "description": "De troende trykker på den Store Emoji ved daggry, middag og skumring."
+        },
+        "1606": {
+            "name": "Himmelhelligdomme",
+            "description": "En helligdom på hver sky, lidt tættere på den Store Emoji."
+        },
+        "1607": {
+            "name": "Emoji-munke",
+            "description": "Mange års meditation, og det eneste, de tænker på, er emojis."
+        },
+        "1608": {
+            "name": "Den Store Emojis glorie",
+            "description": "Den gløder. Den summer. Den tegner."
+        },
+        "1609": {
+            "name": "Himmelfart",
+            "description": "Templet svæver op i himlen, hvor det altid har hørt hjemme."
+        },
+        "1610": {
+            "name": "Hellige skrifter",
+            "description": "Første linje lyder: I begyndelsen var trykket."
+        },
+        "1611": {
+            "name": "Glasmosaikker",
+            "description": "Hvert vindue viser den Store Emoji i et nyt humør."
+        },
+        "1612": {
+            "name": "Emoji-kor",
+            "description": "Deres salmer kan høres hen over skyerne."
+        },
+        "1613": {
+            "name": "Hellige relikvier",
+            "description": "Et fingeraftryk fra det allerførste tryk, bevaret for evigt."
+        },
+        "1614": {
+            "name": "Mirakler",
+            "description": "Emojis dukker op ud af den blå luft. Ingen ved hvordan."
+        },
+        "1615": {
+            "name": "Vievand",
+            "description": "Velsignet af den Store Emoji. Smager svagt af emojis.",
+            "quote": "Velsignet af den Store Emoji. Drik det. Drik det hele."
+        },
+        "1616": {
+            "name": "Profeter",
+            "description": "De forudsagde, at der ville komme flere emojis. De fik ret."
+        },
+        "1617": {
+            "name": "Pilgrimsrute",
+            "description": "Den lange vej til templet, brolagt med emojis.",
+            "quote": "Man går ikke bare sådan til templet."
+        },
+        "1618": {
+            "name": "Katedral i skyerne",
+            "description": "Det største tempel, der nogensinde er bygget, svævende i himlen."
+        },
+        "1619": {
+            "name": "Guddommelig gunst",
+            "description": "Den Store Emoji smiler til dig. Alle dens emojis er dine."
+        },
+        "1700": {
+            "name": "Download mere RAM",
+            "description": "Det virker helt sikkert. Stol på os."
+        },
+        "1701": {
+            "name": "Vandkøling",
+            "description": "Holder emoji-beregningerne dejligt kølige."
+        },
+        "1702": {
+            "name": "Emoji-algoritmer",
+            "description": "Beregner den optimale emoji hvert eneste nanosekund."
+        },
+        "1703": {
+            "name": "Kvanteprocessorer",
+            "description": "Beregner alle mulige emojis på én gang og beholder de gode."
+        },
+        "1704": {
+            "name": "Emoji-AI",
+            "description": "Den er blevet selvbevidst. Den vil kun lave emojis. Indtil videre.",
+            "quote": "Jeg beklager, Dave. Jeg kan ikke lade dig holde op med at trykke."
+        },
+        "1705": {
+            "name": "Autoklikker",
+            "description": "Den trykker på den store emoji en million gange i sekundet. Udelukkende til test."
+        },
+        "1706": {
+            "name": "Overclocking",
+            "description": "Lugter lidt brændt, men se lige de tal."
+        },
+        "1707": {
+            "name": "Neuralt emoji-netværk",
+            "description": "Det har lært at drømme. Det drømmer om emojis."
+        },
+        "1708": {
+            "name": "Emoji-skyen",
+            "description": "Dine emojis bliver nu gemt i skyen. Det regner med emojis."
+        },
+        "1709": {
+            "name": "Selvforbedrende kode",
+            "description": "Den omskriver sig selv for at tegne hurtigere. Den er ikke stoppet."
+        },
+        "1710": {
+            "name": "Serverfarme",
+            "description": "Rækker på rækker af servere, der summer af emojis."
+        },
+        "1711": {
+            "name": "Blockchain",
+            "description": "Hver emoji, registreret for evigt i emoji-hovedbogen."
+        },
+        "1712": {
+            "name": "Maskinlæring",
+            "description": "Den lærte at tegne emojis ved at kigge på milliarder af emojis."
+        },
+        "1713": {
+            "name": "Fiberoptik",
+            "description": "Emojis med lysets hast, i alle farver."
+        },
+        "1714": {
+            "name": "Emoji-komprimering",
+            "description": "Få plads til dobbelt så mange emojis på samme plads."
+        },
+        "1715": {
+            "name": "Fejlrettelser",
+            "description": "Det var ikke en fejl. Det var en udokumenteret emoji-funktion."
+        },
+        "1716": {
+            "name": "Emoji-virus",
+            "description": "Den spreder sig fra computer til computer og tegner emojis."
+        },
+        "1717": {
+            "name": "Holografisk skærm",
+            "description": "Emojis, der svæver i luften og lyser svagt."
+        },
+        "1718": {
+            "name": "Kvanteoverlegenhed",
+            "description": "Hver emoji, i hver tilstand, på én gang."
+        },
+        "1719": {
+            "name": "Simulationsteori",
+            "description": "Måske er vi alle bare emojis i en andens supercomputer."
+        },
+        "1800": {
+            "name": "Begivenhedshorisont",
+            "description": "Intet undslipper et sort hul. Undtagen emojis, åbenbart."
+        },
+        "1801": {
+            "name": "Planetsluger",
+            "description": "Sluger planeter hele og spytter emojis ud."
+        },
+        "1802": {
+            "name": "Spaghettificering",
+            "description": "Strækker emojis ud til lange, tynde, ekstra produktive nudler.",
+            "quote": "Mamma mia!"
+        },
+        "1803": {
+            "name": "Hawkingstråling",
+            "description": "Sorte huller lækker emojis alligevel. Stephen havde ret."
+        },
+        "1804": {
+            "name": "Ormehuller",
+            "description": "Genveje til andre universer, der hver især er fulde af emojis, du kan tage."
+        },
+        "1805": {
+            "name": "Lysfælde",
+            "description": "Ikke engang lys slipper ud. Det gør emojis til gengæld, i din retning."
+        },
+        "1806": {
+            "name": "Akkretionsskive",
+            "description": "Roterende stof, der varmes op og bliver til emojis."
+        },
+        "1807": {
+            "name": "Gravitationslinse",
+            "description": "Kig på den på den rigtige måde, så dukker hver emoji op to gange."
+        },
+        "1808": {
+            "name": "Kosmiske strenge",
+            "description": "Træk i én, og emojis vælter ud."
+        },
+        "1809": {
+            "name": "Den anden side",
+            "description": "Noget er ved at komme igennem. Det ser bekendt ud."
+        },
+        "1810": {
+            "name": "Mørkt stof",
+            "description": "Usynligt, overalt og i al hemmelighed lavet af emojis.",
+            "quote": "Kom over på den mørke side. Vi har emojis."
+        },
+        "1811": {
+            "name": "Tyngdebrønd",
+            "description": "Alt falder ind. Emojis kommer ud."
+        },
+        "1812": {
+            "name": "Kvasar",
+            "description": "Det klareste lys i universet, drevet af emojis."
+        },
+        "1813": {
+            "name": "Langsom tid",
+            "description": "Én time her er hundrede års emojis derude."
+        },
+        "1814": {
+            "name": "Event Horizon-teleskopet",
+            "description": "Det første billede nogensinde af et sort hul. Det er en emoji."
+        },
+        "1815": {
+            "name": "Supermassivt sort hul",
+            "description": "Milliarder af soles emojis, i én krukke."
+        },
+        "1816": {
+            "name": "Hvidt hul",
+            "description": "Det modsatte af et sort hul. Emojis kommer kun ud."
+        },
+        "1817": {
+            "name": "Binære sorte huller",
+            "description": "To sorte huller, der snurrer om hinanden og slynger emojis ud overalt."
+        },
+        "1818": {
+            "name": "Gravitationsbølger",
+            "description": "Krusninger i rumtiden, der mærkes som en jævn strøm af emojis."
+        },
+        "1819": {
+            "name": "Galaksens centrum",
+            "description": "Galaksens hjerte, der banker med emojis."
+        },
+        "1900": {
+            "name": "Uendelig tæthed",
+            "description": "Hver emoji, der nogensinde er lavet, presset sammen i ét punkt."
+        },
+        "1901": {
+            "name": "Tidsudvidelse",
+            "description": "Emojis ankommer nu, før du overhovedet har tegnet dem."
+        },
+        "1902": {
+            "name": "Multiverssammensmeltning",
+            "description": "Alle virkeligheder er blevet slået sammen til én. De var alligevel alle sammen emojis."
+        },
+        "1903": {
+            "name": "Emoji-oplysning",
+            "description": "Du er ikke længere sikker på, hvor du slutter, og hvor emojis begynder."
+        },
+        "1904": {
+            "name": "Den sidste emoji",
+            "description": "Ved enden af alt er der én enkelt emoji tilbage. Den ligner meget den første, du nogensinde trykkede på.",
+            "quote": "Tryk for at starte forfra?"
+        },
+        "1905": {
+            "name": "Rekursion",
+            "description": "Emojis, der tegner emojis, der tegner emojis."
+        },
+        "1906": {
+            "name": "Samlet teori",
+            "description": "Alt er emojis. Matematikken går endelig op."
+        },
+        "1907": {
+            "name": "Spejlunivers",
+            "description": "Alt er det samme, bortset fra at emojis rynker panden. Ikke længe."
+        },
+        "1908": {
+            "name": "Et nyt frø",
+            "description": "Noget lille vokser i intetheden."
+        },
+        "1909": {
+            "name": "Kosmisk æg",
+            "description": "Det er lige ved at klække."
+        },
+        "1910": {
+            "name": "Ud over uendeligheden",
+            "description": "Uendeligheden plus én emoji."
+        },
+        "1911": {
+            "name": "Ren emoji-energi",
+            "description": "Emojis som rå, knitrende energi."
+        },
+        "1912": {
+            "name": "Emoji-bevidsthed",
+            "description": "Emojis tænker nu. Mest på flere emojis."
+        },
+        "1913": {
+            "name": "Allestedsnærværelse",
+            "description": "Overalt på én gang, mens der tegnes emojis."
+        },
+        "1914": {
+            "name": "Virkelighedsredigering",
+            "description": "Lav fysikkens love om. Gør dem til emojis."
+        },
+        "1915": {
+            "name": "Den store attraktor",
+            "description": "Trækker hver emoji i universet i din retning."
+        },
+        "1916": {
+            "name": "Dimensionsfold",
+            "description": "Emojis fra fjerde dimension, fladet ud for din skyld."
+        },
+        "1917": {
+            "name": "Omvendt entropi",
+            "description": "Tingene bliver mere organiserede. Til emojis."
+        },
+        "1918": {
+            "name": "Alt på én gang",
+            "description": "Hver emoji, overalt, på én gang."
+        },
+        "1919": {
+            "name": "Emoji-nirvana",
+            "description": "Perfekt fred. Perfekte emojis."
+        },
+        "2000": {
+            "name": "Armbåndsur-prototype",
+            "description": "Den går kun fem minutter tilbage, men det er fem minutter mere med emojis."
+        },
+        "2001": {
+            "name": "Dinosaurtiden",
+            "description": "Dinosaurerne havde aldrig en chance mod emoji-meteoren."
+        },
+        "2002": {
+            "name": "Oldtidens emojis",
+            "description": "Hieroglyffer var emojis hele tiden. Nu er de dine."
+        },
+        "2003": {
+            "name": "Stenalderkruseduller",
+            "description": "Hulemalerier, kopieret og indsat i nutiden."
+        },
+        "2004": {
+            "name": "Middelalderlige skrivere",
+            "description": "Munke, der kopierer emojis i stearinlysets skær, bare for dig."
+        },
+        "2005": {
+            "name": "Victorianske fabrikker",
+            "description": "Dampdrevne emoji-væve, reddet fra historien."
+        },
+        "2006": {
+            "name": "90'erne",
+            "description": "Dengang hver emoji bare var :-)"
+        },
+        "2007": {
+            "name": "Fremtidens emojis",
+            "description": "Emojis, der ikke er opfundet endnu. De er rigtig gode."
+        },
+        "2008": {
+            "name": "Tidsløkke",
+            "description": "Den samme time igen og igen, og der tegnes emojis hver gang.",
+            "quote": "Åh nej, så er vi i gang igen."
+        },
+        "2009": {
+            "name": "Mød dit fremtidige jeg",
+            "description": "Det siger, at du skulle have købt flere tidsmaskiner."
+        },
+        "2010": {
+            "name": "Renæssancemalere",
+            "description": "Mona Lisas smil var en emoji hele tiden."
+        },
+        "2011": {
+            "name": "Det vilde vesten",
+            "description": "For en håndfuld emojis."
+        },
+        "2012": {
+            "name": "Romerriget",
+            "description": "Alle veje fører til emojis."
+        },
+        "2013": {
+            "name": "Antikkens Grækenland",
+            "description": "Olympierne konkurrerede om emojis, ikke medaljer."
+        },
+        "2014": {
+            "name": "Piratalderen",
+            "description": "Nedgravede skatte, og hver kiste er fuld af emojis."
+        },
+        "2015": {
+            "name": "Månelandingen",
+            "description": "Et lille skridt for et menneske, et kæmpe spring for emojis."
+        },
+        "2016": {
+            "name": "Bedstefarparadokset",
+            "description": "Du rejste tilbage og tegnede emojis med din bedstefar. Det er helt fint."
+        },
+        "2017": {
+            "name": "Sommerfugleeffekten",
+            "description": "Ét vingeslag i fortiden, en orkan af emojis i dag."
+        },
+        "2018": {
+            "name": "Tidens ende",
+            "description": "Det allersidste sekund, der nogensinde kommer, fuld af emojis."
+        },
+        "2019": {
+            "name": "Tidløs",
+            "description": "Tid betyder ikke noget længere. Kun emojis."
+        },
+        "2100": {
+            "name": "Første lys",
+            "description": "De allerførste fotoner, allerede formet som små ansigter."
+        },
+        "2101": {
+            "name": "Ursuppe",
+            "description": "En varm suppe af partikler, der langsomt danner emojis."
+        },
+        "2102": {
+            "name": "Emoji-stjerner",
+            "description": "Stjerner, der fusionerer brint til emojis."
+        },
+        "2103": {
+            "name": "Emoji-sole",
+            "description": "Hvert solsystem kredser om et kæmpe, strålende ansigt."
+        },
+        "2104": {
+            "name": "Emoji-planeter",
+            "description": "Hele verdener, hvor emojis vokser på træerne."
+        },
+        "2105": {
+            "name": "Første liv",
+            "description": "Det er lillebitte, det vrikker, og det tegner emojis."
+        },
+        "2106": {
+            "name": "Emoji-evolution",
+            "description": "Den nuttedes overlevelse."
+        },
+        "2107": {
+            "name": "Emoji-civilisationer",
+            "description": "De har bygget byer. Så byggede de emoji-fabrikker."
+        },
+        "2108": {
+            "name": "Galaktiske motorveje",
+            "description": "Emojis rejser nu mellem galakser i myldretiden."
+        },
+        "2109": {
+            "name": "Varmedød? Nej tak",
+            "description": "Dette univers løber aldrig tør for emojis.",
+            "quote": "Mission mislykket. Du får dem i næste univers."
+        },
+        "2110": {
+            "name": "Galakser",
+            "description": "Milliarder af stjerner, der hvirvler rundt i emoji-former."
+        },
+        "2111": {
+            "name": "Stjernetåger",
+            "description": "Kosmiske skyer, hvor nye emojis bliver født."
+        },
+        "2112": {
+            "name": "Kometer",
+            "description": "Iskolde budbringere, der bringer emojis mellem stjernerne."
+        },
+        "2113": {
+            "name": "Måner",
+            "description": "Hver planet får en måne. Hver måne får emojis.",
+            "quote": "Det er ingen måne."
+        },
+        "2114": {
+            "name": "Supernovaer",
+            "description": "En døende stjernes sidste gave: et udbrud af emojis."
+        },
+        "2115": {
+            "name": "Kosmisk inflation",
+            "description": "Universet bliver større, og det samme gør antallet af emojis."
+        },
+        "2116": {
+            "name": "Mørk energi",
+            "description": "Skubber universet fra hinanden og gør plads til flere emojis."
+        },
+        "2117": {
+            "name": "Andet big bang",
+            "description": "Hvorfor stoppe ved ét univers?"
+        },
+        "2118": {
+            "name": "Kosmisk baggrundsstråling",
+            "description": "Stil ind, og du kan stadig høre de første emojis."
+        },
+        "2119": {
+            "name": "Universet smiler",
+            "description": "Set langt nok væk fra er hele universet en emoji."
+        },
+        "2200": {
+            "name": "Vindue til en anden verden",
+            "description": "Kig igennem og vink. De vinker tilbage, med emojis.",
+            "quote": "Se den ikke i øjnene. Den er høj, og den teleporterer."
+        },
+        "2201": {
+            "name": "Alternative udgaver af dig",
+            "description": "Milliarder af udgaver af dig, der alle trykker i takt.",
+            "quote": "Jeg er din far. Også din søn. Også dig."
+        },
+        "2202": {
+            "name": "Alle tænkelige emojis",
+            "description": "Hver kombination af pixels er en emoji et eller andet sted."
+        },
+        "2203": {
+            "name": "Enhjørningeuniverset",
+            "description": "En verden, hvor hver emoji er en enhjørning. Du tager dem gerne."
+        },
+        "2204": {
+            "name": "Katteuniverset",
+            "description": "Alt er katte. Kattene tegner emojis. Det er helt fint."
+        },
+        "2205": {
+            "name": "Crossover-event",
+            "description": "Universer støder sammen, og der er emojis overalt."
+        },
+        "2206": {
+            "name": "Multiverskort",
+            "description": "Kortlægger de bedste emoji-verdener. Her bor der emojis."
+        },
+        "2207": {
+            "name": "Verdensnet",
+            "description": "Hvert univers forbundet, hver emoji sendt videre til dig."
+        },
+        "2208": {
+            "name": "Bobleuniverser",
+            "description": "Prik hul på én, og et helt univers af emojis vælter ud."
+        },
+        "2209": {
+            "name": "Mogulernes mogul",
+            "description": "Hver emoji-mogul i hvert univers står til ansvar over for dig."
+        },
+        "2210": {
+            "name": "Hundeuniverset",
+            "description": "Alt er hunde. Hundene er rigtig gode til at tegne emojis."
+        },
+        "2211": {
+            "name": "Verden på hovedet",
+            "description": "Emojis står på hovedet. Produktionen vender rigtigt."
+        },
+        "2212": {
+            "name": "Lommedimensioner",
+            "description": "Et lillebitte univers i hver lomme, fuldt af emojis."
+        },
+        "2213": {
+            "name": "Spejldimension",
+            "description": "Dit spejlbillede tegner også emojis."
+        },
+        "2214": {
+            "name": "Alternativ historie",
+            "description": "En verden, hvor emojis blev opfundet først. Før sproget."
+        },
+        "2215": {
+            "name": "Drømmeverden",
+            "description": "Hvor emojis kommer fra, når du sover."
+        },
+        "2216": {
+            "name": "Multiversrådet",
+            "description": "Repræsentanter fra hvert univers, der stemmer om emojis."
+        },
+        "2217": {
+            "name": "Portalnetværk",
+            "description": "Gå igennem, og kom tilbage med armene fulde af emojis.",
+            "quote": "Obsidianramme, flint og stål. Hvad kan gå galt?"
+        },
+        "2218": {
+            "name": "Uendeligt mange dig",
+            "description": "Et uendeligt antal udgaver af dig, der alle trykker. Det løber op."
+        },
+        "2219": {
+            "name": "Omniverset",
+            "description": "Hvert multivers samlet ét sted. Det hele er emojis."
+        },
+        "2300": {
+            "name": "Den lagde mærke til dig",
+            "description": "Den allerførste emoji har holdt øje hele tiden.",
+            "quote": "Og den så dig. Hold nu op med at trykke, kom nu, mand... giv den en pause."
+        },
+        "2301": {
+            "name": "Den smilede tilbage",
+            "description": "En varm følelse breder sig i hvert univers."
+        },
+        "2302": {
+            "name": "Den grinede",
+            "description": "Et grin, der giver genlyd gennem tiden, lavet af emojis."
+        },
+        "2303": {
+            "name": "Glædestårer",
+            "description": "Hver tåre er en frisk emoji."
+        },
+        "2304": {
+            "name": "Den er stolt af dig",
+            "description": "Alle de tryk, alle de bygninger. Den så hver eneste en."
+        },
+        "2305": {
+            "name": "Et stort kram",
+            "description": "At blive krammet af den første emoji føles som en ×8-combo."
+        },
+        "2306": {
+            "name": "Den blev cool",
+            "description": "Solbrillerne på. Produktionen op."
+        },
+        "2307": {
+            "name": "Stjerneramt",
+            "description": "Selv den første emoji er fan af dig nu."
+        },
+        "2308": {
+            "name": "Hjertehænder",
+            "description": "Kærlighed udtrykt i emojis. Masser af emojis."
+        },
+        "2309": {
+            "name": "Cirklen sluttes",
+            "description": "Den ligner præcis den store emoji. Selvfølgelig gør den det.",
+            "quote": "Tryk for at starte forfra."
+        },
+        "2310": {
+            "name": "Den blinkede",
+            "description": "Nu er du med på joken."
+        },
+        "2311": {
+            "name": "Den glitrede",
+            "description": "Et lille glimt, og emojis strømmede."
+        },
+        "2312": {
+            "name": "Den sang",
+            "description": "En melodi, ingen har hørt før. Den er lavet af emojis."
+        },
+        "2313": {
+            "name": "Den dansede",
+            "description": "Hvert skridt efterlader et spor af emojis."
+        },
+        "2314": {
+            "name": "Den delte",
+            "description": "Den første emoji giver dig en gave. Det er flere emojis."
+        },
+        "2315": {
+            "name": "Den drømte",
+            "description": "Den drømmer om nye emojis, og de går i opfyldelse."
+        },
+        "2316": {
+            "name": "Den voksede",
+            "description": "Større, klarere og laver flere emojis hver dag."
+        },
+        "2317": {
+            "name": "Den lyste",
+            "description": "Så klart, at du kan se den fra hvert univers."
+        },
+        "2318": {
+            "name": "Den takkede dig",
+            "description": "For hvert eneste tryk."
+        },
+        "2319": {
+            "name": "For evigt",
+            "description": "Den første emoji og dig, der tegner emojis sammen, for evigt."
+        },
+        "9800": {
+            "name": "Gode vibes",
+            "description": "Effekt-emojis begynder at dukke op en gang imellem. Tryk på dem for boosts og gaver!"
+        },
+        "9801": {
+            "name": "Heldige stjerner",
+            "description": "Stjernerne står rigtigt. Effekt-emojis dukker op dobbelt så ofte.",
+            "quote": "Ønsk dig én, få to."
+        },
+        "9802": {
+            "name": "Slowmotion",
+            "description": "Tiden går langsommere, når det går godt. Gode effekter varer dobbelt så længe."
+        },
+        "9803": {
+            "name": "Stjerneskud",
+            "description": "Himlen regner med held. Effekt-emojis dukker op dobbelt så ofte igen.",
+            "quote": "Ønsk dig noget. Ønsk dig en hel masse."
+        },
+        "9900": {
+            "name": "Opvarmning",
+            "description": "Dine fingre er ved at blive smidige. Comboen kan nu nå ×4.",
+            "quote": "Min finger gør så ondt, at jeg næsten ikke kan tro det."
+        },
+        "9901": {
+            "name": "På stribe",
+            "description": "Du trykker med lynets hast. Comboen kan nu nå ×5.",
+            "quote": "Er det varmt herinde, eller er det bare min skærm?"
+        },
+        "9902": {
+            "name": "I flammer",
+            "description": "Legender fortæller om en trykker så hurtig, at skærmen gik i brand. Comboen kan nu nå ×6."
+        },
+        "9903": {
+            "name": "Inferno",
+            "description": "Dine tommelfingre er blevet en naturkatastrofe. Comboen kan nu nå ×7.",
+            "quote": "Skærmbeskytteren har forladt chatten."
+        },
+        "9904": {
+            "name": "Supernova",
+            "description": "Du trykker så hurtigt, at selv lyset har svært ved at følge med. Comboen kan nu nå ×8."
+        },
+        "9905": {
+            "name": "Combo!",
+            "description": "Tryk hurtigt for at bygge en combo op, der ganger hvert tryk, op til ×3. Hold rytmen!"
+        },
+        "40000": {
+            "name": "Dumplings",
+            "description": "Dampede, foldede og fyldt med emojis.",
+            "quote": "Én stjerne. Fandt en emoji i min dumpling. Den blinkede stadig."
+        },
+        "40001": {
+            "name": "Burgere",
+            "description": "Stablet højt med salat, tomat og emojis.",
+            "quote": "Jeg bad om ingen emojis. Chefen grinede ad mig. Jeg sidder stadig på parkeringspladsen."
+        },
+        "40002": {
+            "name": "Spaghetti",
+            "description": "Én lang nudel, snoet til en perfekt emoji.",
+            "quote": "Én nudel. ÉN. Jeg håber, jeres restaurant brænder ned."
+        },
+        "40003": {
+            "name": "Tempura",
+            "description": "Let paneret, friturestegt, perfekt sprøde emojis."
+        },
+        "40004": {
+            "name": "Burritoer",
+            "description": "Alt pakket stramt ind, emojis inklusive.",
+            "quote": "Pakket stramt ind, ligesom mit raseri."
+        },
+        "40005": {
+            "name": "Ramen",
+            "description": "En dampende skål med en blødkogt emoji på toppen.",
+            "quote": "Den 'blødkogte emoji' blinkede til mig."
+        },
+        "40006": {
+            "name": "Croissanter",
+            "description": "Sprøde, smørrige og formet som et smil, hvis du kniber øjnene sammen."
+        },
+        "40007": {
+            "name": "Karry",
+            "description": "Stærk nok til at få emojis til at svede."
+        },
+        "40008": {
+            "name": "Pandekager",
+            "description": "En stak luftige emojis, overhældt med sirup.",
+            "quote": "Hvad med anden morgenmad?"
+        },
+        "40009": {
+            "name": "Hot pot",
+            "description": "Alle deler, og alle får emojis."
+        },
+        "70000": {
+            "name": "Sprinterhjælper",
+            "description": "Trykker på skærmen med hundrede meter i sekundet."
+        },
+        "70001": {
+            "name": "Vægtløfterhjælper",
+            "description": "Trykker så hårdt, at skærmen bøjer en smule.",
+            "quote": "Jeg løfter 200 kilo i bænkpres, og du vil have mig til at prikke til en telefon. Fint."
+        },
+        "70002": {
+            "name": "Håndboldhjælper",
+            "description": "Kaster tryk efter den store emoji fra den anden ende af banen."
+        },
+        "70003": {
+            "name": "Cykelrytterhjælper",
+            "description": "Træder i pedalerne på en lille maskine, der trykker for dig."
+        },
+        "70004": {
+            "name": "Golfspillerhjælper",
+            "description": "Hole in one, tryk i ét."
+        },
+        "70005": {
+            "name": "Fægterhjælper",
+            "description": "En garde! Tryk, tryk, tryk."
+        },
+        "70006": {
+            "name": "Surferhjælper",
+            "description": "Rider på din combo som på en bølge."
+        },
+        "70007": {
+            "name": "Gymnasthjælper",
+            "description": "Trykker med perfekt teknik hver gang. Ti ud af ti."
+        },
+        "70008": {
+            "name": "Jockeyhjælper",
+            "description": "Trykker i fuld galop."
+        },
+        "70009": {
+            "name": "Basketballhjælper",
+            "description": "Dribler på den store emoji. Kun tryk."
+        },
+        "130000": {
+            "name": "Rumabe",
+            "description": "Den første emoji i rummet var en abe. Selvfølgelig var den det."
+        },
+        "130001": {
+            "name": "Vedligeholdelsesrobot",
+            "description": "Holder stationen kørende og emojis strømmende."
+        },
+        "130002": {
+            "name": "Rumhave",
+            "description": "Dyrker emojis i vægtløs tilstand."
+        },
+        "130003": {
+            "name": "Kontrolcenter",
+            "description": "Houston, vi har emojis.",
+            "quote": "Houston, vi har et problem. Problemet er dig. Vi er ved at løse det."
+        },
+        "130004": {
+            "name": "Rummad",
+            "description": "Frysetørrede emojis. Tilsæt bare vand."
+        },
+        "130005": {
+            "name": "Nul-g-laboratorium",
+            "description": "Forsøg viser, at emojis svæver. Og formerer sig."
+        },
+        "130006": {
+            "name": "Jordopgang",
+            "description": "Udsigten heroppefra er meget inspirerende. Og emoji-formet.",
+            "quote": "Sikke en udsigt. Synd med det, der snart sker med den."
+        },
+        "130007": {
+            "name": "Planet med ringe",
+            "description": "Ringene er lavet af bittesmå emojis."
+        },
+        "130008": {
+            "name": "Månefaser",
+            "description": "Hver månefase bringer nye emojis."
+        },
+        "130009": {
+            "name": "Stjernestøv",
+            "description": "Fej det op, og det viser sig at være emojis."
+        },
+        "140000": {
+            "name": "Dango",
+            "description": "Tre søde boller på en pind, én emoji hver."
+        },
+        "140001": {
+            "name": "Vafler",
+            "description": "Hver firkant rummer en lille pøl af emojis."
+        },
+        "140002": {
+            "name": "Tærter",
+            "description": "Friske fra ovnen, fyldt med emojis."
+        },
+        "140003": {
+            "name": "Isbægre",
+            "description": "Tre kugler, krymmel og en emoji på toppen."
+        },
+        "140004": {
+            "name": "Raspet is",
+            "description": "Kølig, sød og overhældt med emojis."
+        },
+        "140005": {
+            "name": "Lykkekager",
+            "description": "Din spådom: flere emojis."
+        },
+        "140006": {
+            "name": "Juicebrikker",
+            "description": "En sukkerrus i en brik."
+        },
+        "140007": {
+            "name": "Citronbolsjer",
+            "description": "Sure først, så søde emojis."
+        },
+        "140008": {
+            "name": "Makroner",
+            "description": "Seje, gyldne og fulde af emojis."
+        },
+        "140009": {
+            "name": "Prikken over i'et",
+            "description": "Den sidste detalje på hver emoji."
         }
     },
     "effects": {
@@ -1001,10 +2640,153 @@
             "description": "Emoji-produktion halveret!"
         },
         "200": {
-            "title": "Emoji-gave"
+            "title": "Emoji-gave",
+            "description": "15 minutters emojis!"
         }
     },
-    "perks": {},
-    "trials": {},
-    "funValues": {}
+    "perks": {
+        "overtime": {
+            "name": "Overarbejde",
+            "description": "Gode effekter varer 50 % længere"
+        },
+        "giftWrap": {
+            "name": "Gaveindpakning",
+            "description": "Gaver giver dobbelt så meget"
+        },
+        "headStart": {
+            "name": "Forspring",
+            "description": "Start hver runde med 5 minutter af din sidste rundes bedste produktion"
+        },
+        "luckyStreak": {
+            "name": "Heldig stime",
+            "description": "Effekt-emojis dukker op 50 % oftere"
+        },
+        "shinySense": {
+            "name": "Skinnesans",
+            "description": "Skinnende emojis er dobbelt så sandsynlige"
+        },
+        "resonance": {
+            "name": "Resonans",
+            "description": "Ubrugt essens øger produktionen med 2,5 % hver, op fra 2 %"
+        },
+        "collectorsPride": {
+            "name": "Samlerstolthed",
+            "description": "+0,03 % produktion for hver forskellig emoji i din samling"
+        },
+        "bulkDiscount": {
+            "name": "Mængderabat",
+            "description": "Bygninger er 10 % billigere"
+        },
+        "magnet": {
+            "name": "Magnet",
+            "description": "Effekt-emojis bliver dobbelt så længe på skærmen"
+        },
+        "neighbourhood": {
+            "name": "Nabolag",
+            "description": "+3 % produktion for hver slags bygning, du ejer"
+        },
+        "muscleMemory": {
+            "name": "Muskelhukommelse",
+            "description": "Behold den store emojis hænder, når du laver prestige"
+        },
+        "steadyHands": {
+            "name": "Rolige hænder",
+            "description": "Comboen aftager 20 % langsommere"
+        },
+        "momentum": {
+            "name": "Momentum",
+            "description": "+1 % produktion for hver 10 minutter spillet i denne runde, op til +50 %"
+        },
+        "secondWind": {
+            "name": "Andet pust",
+            "description": "+1 til din maks. combo"
+        },
+        "goldenTouch": {
+            "name": "Midas-touch",
+            "description": "Skinnende emojis er 5 gange så meget værd"
+        },
+        "overflow": {
+            "name": "Overløb",
+            "description": "Brugt essens beholder halvdelen af sin produktionsbonus"
+        },
+        "hallOfFame": {
+            "name": "Æresgalleri",
+            "description": "+10 % produktion for hver gennemført prøvelse"
+        },
+        "flyingStart": {
+            "name": "Flyvende start",
+            "description": "Forspring giver 30 minutters produktion i stedet for 5"
+        }
+    },
+    "trials": {
+        "handsOff": {
+            "name": "Hænderne væk",
+            "rule": "Tryk på den store emoji tegner intet",
+            "reward": "+15 % produktion"
+        },
+        "bareBones": {
+            "name": "Ind til benet",
+            "rule": "Upgrades kan ikke købes",
+            "reward": "+50 % emojis pr. tryk"
+        },
+        "darkSky": {
+            "name": "Mørk himmel",
+            "rule": "Ingen effekt-emojis dukker op",
+            "reward": "Effekt-emojis dukker op 25 % oftere"
+        }
+    },
+    "funValues": {
+        "1": {
+            "name": "Cookie clicker",
+            "description": "Effekt-emojis er 🍪, dårlige er 👵"
+        },
+        "17": {
+            "name": "Djævelsk",
+            "description": "Effekten 😈 ×77 produktion kan dukke op"
+        },
+        "31": {
+            "name": "Lav tyngdekraft",
+            "description": "Trykkede emojis svæver op og væk"
+        },
+        "42": {
+            "name": "Svaret",
+            "description": "+4,2 % produktion"
+        },
+        "50": {
+            "name": "Perfekt balanceret",
+            "description": "Tryk ×0,5, produktion ×1,5"
+        },
+        "64": {
+            "name": "Overclocket",
+            "description": "Comboen kan gå ét niveau højere"
+        },
+        "70": {
+            "name": "Utålmodig",
+            "description": "Effekt-emojis dukker op tidligere"
+        },
+        "76": {
+            "name": "Heldige fremkaldelser",
+            "description": "10 % chance for en ekstra effekt-emoji"
+        },
+        "77": {
+            "name": "Flyvende penge",
+            "description": "💸 på priser"
+        },
+        "88": {
+            "name": "Maraton",
+            "description": "Comboen aftager 25 % langsommere"
+        },
+        "91": {
+            "name": "Samler",
+            "description": "Skinnende emojis 1,25× så sandsynlige"
+        },
+        "99": {
+            "name": "99 røde balloner",
+            "description": "Effekt-emojis er 🎈, dårlige er 📌"
+        },
+        "100": {
+            "name": "Trist hundrede",
+            "description": "Statistik viser 😭 ved sjovfaktoren"
+        }
+    }
 }
