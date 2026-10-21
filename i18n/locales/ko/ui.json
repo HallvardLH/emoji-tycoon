@@ -6,11 +6,14 @@
         "buildings": "건물",
         "upgrades": "업그레이드",
         "stats": "통계",
-        "collection": "컬렉션"
+        "collection": "컬렉션",
+        "newItemsLabel_other": "{{label}}, 새 항목 {{count}}개"
     },
     "header": {
         "emojis": "이모지",
-        "perSecond": "초당: {{value}}"
+        "perSecond": "초당: {{value}}",
+        "rate": "초당 +{{value}}",
+        "gemsLabel_other": "보석 {{gems}}개. 보석 상점 열기"
     },
     "common": {
         "buy": "구매",
@@ -23,29 +26,119 @@
             "multiplyTap": "• 탭 효율 2배.",
             "percentageIncreaseTap": "• 탭 파워 {{percent}} 증가.",
             "tapPercentageOfEps": "• 탭할 때마다 총 이모지 생산량의 {{percent}}만큼 획득.",
-            "percentageIncreaseProduction": "• 총 이모지 생산량 {{percent}} 증가."
+            "percentageIncreaseProduction": "• 총 이모지 생산량 {{percent}} 증가.",
+            "comboUnlock": "• 빠르게 탭하면 최대 ×{{level}}까지 콤보가 쌓여요.",
+            "comboLevel": "• 콤보 최대 ×{{level}}.",
+            "effectEmojis": "• {{summary}}."
         },
         "bonusProduction": "지금 이 업그레이드를 사면 초당 이모지가 <hl>+{{bonus}}</hl>개 늘어나서, 이모지 생산량이 <hl>{{percent}}</hl> 증가해요",
         "bonusTap": "지금 이 업그레이드를 사면 탭당 이모지가 <hl>+{{bonus}}</hl>개 늘어나서, 탭으로 얻는 이모지가 <hl>{{percent}}</hl> 증가해요",
         "filterTitle": "업그레이드 필터",
-        "filterDescription": "업그레이드를 볼 건물을 골라 주세요."
+        "filterDescription": "업그레이드를 볼 건물을 골라 주세요.",
+        "effectEmojiSummary": {
+            "spawnRate": "효과 이모지 등장 빈도 ×{{multiplier}}",
+            "duration": "좋은 효과 지속 시간 ×{{multiplier}}",
+            "start": "효과 이모지가 나타나기 시작해요"
+        },
+        "chips": {
+            "multiplyBuildingProduction": "{{buildings}} ×{{multiplier}}",
+            "multiplyTap": "탭 ×{{multiplier}}",
+            "percentageIncreaseTap": "탭 +{{percent}}",
+            "percentageIncreaseProduction": "생산량 +{{percent}}",
+            "tapPercentageOfEps": "탭당 초당 생산량의 +{{percent}}",
+            "comboUnlock": "콤보 최대 ×{{level}}",
+            "comboLevel": "최대 콤보 ×{{level}}"
+        },
+        "impact": {
+            "perSecond": "초당 +{{bonus}}",
+            "perTap": "탭당 +{{bonus}}",
+            "and": "{{a}}, {{b}}",
+            "rightNow": "지금 사면 {{gains}}"
+        },
+        "tierLabel": {
+            "helper": "{{building}} · 도우미",
+            "hands": "큰 이모지 · 손",
+            "effectEmojisNew": "효과 이모지 · 신규",
+            "effectEmojisLevel": "효과 이모지 · 레벨 {{level}}",
+            "comboNew": "콤보 · 신규",
+            "comboLevel": "콤보 · 레벨 {{level}}",
+            "tier": "{{building}} · {{tier}}단계"
+        },
+        "forSale": "판매 중",
+        "owned": "보유",
+        "available": "구매 가능",
+        "emptyOwnedTitle": "아직 산 게 없어요",
+        "emptyTitle": "아직 업그레이드가 없어요",
+        "emptyOwnedText": "구매한 업그레이드가 여기 모여요.",
+        "emptyText": "건물을 사고 큰 이모지를 탭해서 업그레이드를 해금해 보세요.",
+        "filterAll": "전체",
+        "quoted": "\"{{quote}}\"",
+        "ownedBadge": "✓ 보유",
+        "paid": "{{price}}에 구매함",
+        "bareBones": "🦴 {{trial}} 중에는 업그레이드 불가",
+        "buyFor": "{{price}}에 구매",
+        "priceAndTime": "{{price}} · {{time}}",
+        "ownedCount": "업그레이드 {{owned}}/{{total}}개",
+        "availableCount": "구매 가능 {{affordable}} · 해금 {{unlocked}}",
+        "a11y": {
+            "owned": "{{name}}, 보유함",
+            "price": "{{name}}, {{price}}",
+            "affordable": "{{name}}, {{price}}, 구매 가능"
+        }
     },
     "stats": {
         "totalEmojisDrawn": "그린 이모지 총합",
         "emojiTaps": "이모지 탭 횟수",
         "emojisEarnedFromTapping": "탭으로 얻은 이모지",
         "magicalEmojisTapped": "탭한 마법 이모지",
-        "funValue": "재미 수치"
+        "funValue": "재미 수치",
+        "shinyEmojisTapped": "탭한 반짝이 이모지",
+        "comboTaps": "콤보 탭 횟수",
+        "madeByEachBuilding": "건물별 생산량"
     },
     "drawer": {
         "language": "언어",
         "deviceLanguage": "기기 언어",
         "cheats": "치트",
         "resetGame": "게임 초기화",
-        "spawnEffect": "효과 이모지 소환"
+        "spawnEffect": "효과 이모지 소환",
+        "menu": "메뉴"
     },
     "prestige": {
-        "title": "프레스티지"
+        "title": "프레스티지",
+        "close": "닫기",
+        "ordinal_ordinal_other": "{{count}}번째",
+        "celebrateCaption": "프레스티지 #{{count}}",
+        "celebrateTrialCaption": "프레스티지 #{{count}} · 시련 시작",
+        "celebrateTitle": "정수 +{{essence}}",
+        "celebrateTierTitle": "정수 +{{essence}} · {{tier}}단계 특전 해금",
+        "essenceCaption": "이모지 정수",
+        "essenceBonus": "생산량 +{{bonus}} (개당 {{each}})",
+        "intro": "이모지를 충분히 그리고 나면 이모지의 정수가 당신 주위에 모여들기 시작해요. 바라볼 때마다 모양이 바뀌는 신비한 물질이죠. 쓰지 않은 정수는 하나하나 생산량을 높여 주고, 정수로는 영원히 유지되는 특전을 살 수 있어요.",
+        "startOver": "다시 시작",
+        "prestigesSoFar_other": "지금까지 프레스티지 {{count}}회",
+        "resetsWhat": "이모지, 건물, 건물 업그레이드, 손이 초기화돼요. 컬렉션, 통계, 콤보와 효과 이모지 업그레이드, 정수, 특전은 유지돼요.",
+        "nextEssence": "다음 정수",
+        "nextEssenceAt": "그린 이모지 {{amount}}개 달성 시",
+        "noEssenceYet": "아직 얻을 정수가 없어요",
+        "tapAgainToPrestige": "한 번 더 탭하면 프레스티지",
+        "prestigeFor": "프레스티지하고 +{{essence}} ✨",
+        "productionCaps": "생산량 +{{percent}}",
+        "playedThisRun": "이번 회차 플레이 시간",
+        "drawnThisRun": "이번 회차에 그린 이모지",
+        "essencePerHour": "시간당 정수",
+        "afterTenMinutes": "10분 후부터",
+        "essenceRate": "{{rate}} (최고 {{best}})",
+        "slowingDown": "📉 이번 회차 초반보다 정수가 느리게 모이고 있어요. 프레스티지하기 좋은 때예요.",
+        "drawnAmount": "{{amount}}개 그림",
+        "pastRuns": "지난 회차",
+        "pastRunLine": "{{duration}} · {{amount}}개 그림",
+        "pastRunTrialCompleted": "{{icon}} {{name}} ✓",
+        "pastRunTrialNotCompleted": "{{icon}} {{name}}, 미완료",
+        "chipLabel": "이모지 정수",
+        "chipLabelReady": "프레스티지하고 이모지 정수 {{essence}}개 받기",
+        "chipEssence": "정수",
+        "chipPending": "정수 +{{essence}}"
     },
     "numbers": {
         "groupSize": "4",
@@ -89,6 +182,260 @@
             "60": "나유타",
             "64": "불가사의",
             "68": "무량대수"
+        }
+    },
+    "buildings": {
+        "ownedA11y_other": "{{count}}개 보유",
+        "newBadge": "NEW",
+        "statLine": "초당 {{eps}} · 전체의 {{share}}",
+        "nextUpgrade": "다음 업그레이드: {{at}}개",
+        "allUpgradesFound": "업그레이드 모두 발견",
+        "epsEach": "개당 초당 +{{eps}}",
+        "buy": "구매",
+        "buyCount": "구매 ×{{count}}",
+        "buyA11y_other": "{{name}} {{count}}개를 {{price}}에 구매",
+        "mystery": "미지의 건물",
+        "revealsAt": "이모지 {{amount}}개 달성 시 공개",
+        "bulkLabel": "구매 수량",
+        "bulkMax": "최대",
+        "bulkA11yMax": "살 수 있는 만큼 구매",
+        "bulkA11y_other": "한 번에 {{count}}개씩 구매",
+        "milestoneCaption": "새 건물",
+        "milestoneTitle": "첫 번째 {{building}}!"
+    },
+    "time": {
+        "seconds_other": "{{count}}초",
+        "minutes_other": "{{count}}분",
+        "hours_other": "{{count}}시간",
+        "days_other": "{{count}}일",
+        "pair": "{{a}} {{b}}"
+    },
+    "trials": {
+        "title": "시련",
+        "completedCount": "{{done}}/{{total}} 완료",
+        "intro": "규칙 때문에 더 어려워진 회차로 프레스티지해요. 그 회차에 이모지를 충분히 그리면 보상을 영원히 얻고 규칙도 풀려요.",
+        "unlocksWith": "{{ordinal}} 프레스티지 때 해금돼요.",
+        "completeCaps": "시련 완료",
+        "inProgressCaps": "시련 진행 중",
+        "completedText": "{{reward}} 보상을 영원히 얻었어요. 이번 회차 동안 규칙도 풀려요.",
+        "activeText": "{{rule}}. 이번 회차에 {{goal}}만큼 그리면 {{reward}} 보상을 영원히 얻어요.",
+        "giveUp": "이 시련 포기하기",
+        "giveUpConfirm": "한 번 더 탭하면 포기 (보상 없음)",
+        "doneTag": "✓ 완료",
+        "playingTag": "진행 중",
+        "ruleLine": "<hl>규칙: </hl>{{rule}}",
+        "ruleLineWithStart": "<hl>규칙: </hl>{{rule}} (이모지 {{amount}}개로 시작)",
+        "rewardLine": "<hl>보상: </hl>{{reward}}",
+        "finishFirst": "진행 중인 시련을 먼저 끝내세요",
+        "needsEssence": "프레스티지하려면 정수가 필요해요",
+        "tapAgainToStart": "한 번 더 탭하면 시작",
+        "prestigeInto": "시련으로 프레스티지하고 +{{essence}} ✨",
+        "goalCaps": "목표: {{goal}}",
+        "goal": "이모지 {{amount}}개",
+        "completeTitle": "{{name}}: {{reward}}",
+        "rewardUnlocked": "보상 해금"
+    },
+    "perks": {
+        "title": "특전",
+        "ownedCount": "{{owned}}/{{total}} 보유",
+        "spentKeepsHalf": "쓴 정수도 생산량 보너스의 절반을 유지해요.",
+        "spentNoBonus": "쓴 정수는 더 이상 생산량을 높여 주지 않아요.",
+        "tierCaps": "{{tier}}단계",
+        "tierLockedCaps": "{{tier}}단계 · {{ordinal}} 프레스티지 때 해금",
+        "hidden": "프레스티지하면 이 특전이 공개돼요.",
+        "needsFirst": "먼저 {{perk}} 필요",
+        "ownedTag": "✓ 보유",
+        "buyLabel": "정수 {{cost}}개로 {{perk}} 구매"
+    },
+    "gems": {
+        "title": "보석 상점",
+        "yourGemsCaps": "내 보석",
+        "gemsCaps": "보석",
+        "offlineClaim": "보석 {{cost}}개로 오프라인 수익 ×{{multiplier}} 받기",
+        "storeUnavailable": "지금은 상점을 이용할 수 없어요. 연결을 확인하고 나중에 다시 시도해 주세요.",
+        "purchaseFailed": "구매가 완료되지 않았어요. 요금은 청구되지 않았어요.",
+        "keptOnPrestige": "보석은 프레스티지해도 유지돼요.",
+        "unavailable": "이용 불가",
+        "thankYouCaps": "감사합니다!",
+        "gemsAdded_other": "보석 +{{amount}}개",
+        "buyLabel_other": "보석 {{amount}}개 구매",
+        "buyLabelWithPrice_other": "보석 {{amount}}개를 {{price}}에 구매",
+        "tags": {
+            "popular": "인기",
+            "bestValue": "최고 가성비"
+        }
+    },
+    "offline": {
+        "welcomeBack": "다시 오신 걸 환영해요!",
+        "away": "{{duration}} 동안 자리를 비웠어요.",
+        "awayCapped": "{{duration}} 넘게 자리를 비웠어요. 최대로 인정되는 시간이에요.",
+        "rested": "자리를 비운 동안 제국은 쉬고 있었어요.",
+        "missedCaps": "놓친 생산량",
+        "perSecond": "초당 {{value}}",
+        "gemOfferCaps": "보석 {{cost}}개로 ×{{multiplier}} · 보유 {{gems}}개",
+        "gemOfferGetCaps": "보석 {{cost}}개로 ×{{multiplier}} · 보석 얻기",
+        "noThanks": "괜찮아요"
+    },
+    "ads": {
+        "watchCaps": "광고 보기",
+        "loadingCaps": "광고 불러오는 중...",
+        "failed": "광고가 끝까지 재생되지 않았어요. 연결을 확인하고 다시 시도해 주세요."
+    },
+    "reset": {
+        "title": "처음부터 다시 할까요?",
+        "warning": "게임이 초기화돼요. 이모지, 건물, 업그레이드, 정수, 특전, 컬렉션, 통계가 모두 사라져요. 되돌릴 수 없어요.",
+        "purchasesSafe": "인게임 구매는 안전해요. 보석과 구매한 모든 항목은 새 게임으로 이어져요.",
+        "confirm": "네, 게임을 초기화할게요",
+        "cancel": "계속 플레이"
+    },
+    "milestones": {
+        "caption": "달성",
+        "emojisDrawn": "이모지 {{amount}}개 달성!"
+    },
+    "settings": {
+        "title": "설정",
+        "close": "설정 닫기",
+        "sound": "소리",
+        "soundEffects": "효과음",
+        "soundEffectsHint": "탭할 때 부드러운 뽁 소리, 반짝이 이모지에는 맑은 종소리가 나요.",
+        "performance": "성능",
+        "reduceAnimations": "애니메이션 줄이기",
+        "reduceAnimationsHint": "탭한 이모지가 큰 이모지에서 튀어 나가지 않아요. 탭이 버벅일 때 켜 보세요.",
+        "dangerZone": "위험 구역"
+    },
+    "cheats": {
+        "subtitle": "테스트용이에요. 변경 사항이 저장 데이터에 적용돼요.",
+        "simulateAway": "1시간 자리 비우기 시뮬레이션",
+        "gems": "보석",
+        "addGems_other": "보석 +{{count}}",
+        "addComboTaps": "콤보 탭 +{{amount}}",
+        "multiplyTapEarnings": "탭 수익 ×{{factor}}",
+        "addCollection_other": "컬렉션 +{{count}}",
+        "addShiny_other": "반짝이 +{{count}}",
+        "addMagical_other": "마법 +{{count}}",
+        "addEssence_other": "정수 +{{count}}",
+        "addPerkTier_other": "특전 단계 +{{count}}",
+        "addRunTime": "회차 시간 +{{time}}",
+        "reachTrialGoal": "시련 목표 달성",
+        "effectEmojis": "효과 이모지",
+        "spawnEffects_other": "효과 이모지 {{count}}개 소환",
+        "speed": "속도",
+        "speedLabel": "{{speed}}× 속도",
+        "speedHint": "생산과 회차 시간에 적용돼요. 효과와 콤보는 실시간 그대로예요. 새로고침하면 꺼져요.",
+        "shiny": "반짝이",
+        "onlyShiny": "반짝이 이모지만",
+        "funValueQuirk": "{{name}}: {{description}}",
+        "noQuirk": "특이 사항 없음",
+        "hideFunValueTable": "재미 수치 표 숨기기",
+        "showFunValueTable": "재미 수치 표 보기",
+        "setFunValueLabel": "재미 수치 {{value}} 설정: {{name}}",
+        "changeFunValueLabel": "재미 수치 {{change}} 변경"
+    },
+    "collection": {
+        "ofTotalFound": "/ {{total}} 발견",
+        "mostTapped": "최다 탭: {{emoji}} ×{{amount}}",
+        "startCollecting": "큰 이모지를 탭해서 수집을 시작하세요",
+        "shinyFound_other": "반짝이 {{amount}}개",
+        "categories": {
+            "faces": "표정",
+            "animals": "동물",
+            "food": "음식",
+            "objects": "사물",
+            "people": "사람",
+            "bodyParts": "신체",
+            "placesBuildings": "장소",
+            "plants": "식물",
+            "vehicles": "탈것",
+            "weather": "날씨",
+            "symbols": "기호"
+        },
+        "categoryLabel": "{{label}}, {{total}}개 중 {{found}}개 발견",
+        "notFound": "아직 발견 못 함",
+        "cellLabel_other": "{{emoji}}, {{count}}번 탭함",
+        "cellLabelShiny_other": "{{emoji}}, {{count}}번 탭함, 반짝이 {{shiny}}개"
+    },
+    "effects": {
+        "chipTapping": "탭 ×{{multiplier}}",
+        "chipProduction": "생산량 ×{{multiplier}}",
+        "stackLabel_other": "{{count}}개 중첩: {{label}}, 다음 종료까지 {{time}}",
+        "chipLabel": "{{title}}, {{time}} 남음",
+        "gift": "선물!",
+        "ohNo": "이런!",
+        "tapping": "탭",
+        "production": "생산량",
+        "tapFrenzy": "탭 폭주!",
+        "unholyPower": "사악한 힘!",
+        "productionBoost": "생산량 부스트!",
+        "collectLabel": "{{title}} 받기",
+        "tapMe": "탭해 줘"
+    },
+    "combo": {
+        "level": "콤보 ×{{multiplier}}",
+        "max": "최대 콤보 ×{{multiplier}}",
+        "label": "콤보 {{multiplier}}배",
+        "maxLabel": "콤보 {{multiplier}}배, 최대"
+    },
+    "bigEmoji": {
+        "tapLabel": "큰 이모지 탭하기",
+        "tapShinyLabel": "반짝이는 큰 이모지 탭하기",
+        "shiny": "반짝이",
+        "shinyBurst": "반짝!",
+        "handsOff": "{{trial}} 시련 · 탭해도 안 그려져요",
+        "perTap": "탭당 +{{value}}"
+    },
+    "bank": {
+        "timeToAfford": {
+            "needMore": "더 필요해요",
+            "seconds_other": "{{count}}초 후",
+            "minutes_other": "{{count}}분 후",
+            "hours_other": "{{count}}시간 후",
+            "days_other": "{{count}}일 후",
+            "aLongTime": "한참 후"
+        },
+        "timeToAffordInline": {
+            "needMore": "부족",
+            "seconds_other": "{{count}}초 후",
+            "minutes_other": "{{count}}분 후",
+            "hours_other": "{{count}}시간 후",
+            "days_other": "{{count}}일 후",
+            "aLongTime": "한참 후"
+        }
+    },
+    "catalogue": {
+        "title": "모든 업그레이드",
+        "counts": "보유 {{owned}} · 판매 중 {{forSale}} · 잠김 {{locked}} · 전체 {{total}}",
+        "filter": {
+            "owned": "보유 {{count}}",
+            "forSale": "판매 중 {{count}}",
+            "locked": "잠김 {{count}}"
+        },
+        "combo": "콤보",
+        "effectEmojis": "효과 이모지",
+        "unlock": {
+            "own": "{{buildings}} {{count}}개 보유",
+            "tapping": "탭으로 이모지 {{amount}}개 획득",
+            "comboTaps": "콤보 탭 {{amount}}회",
+            "earned": "이모지 {{amount}}개 획득"
+        },
+        "state": {
+            "owned": "✓ 보유",
+            "forSale": "판매 중",
+            "locked": "🔒 잠김"
+        },
+        "stateA11y": {
+            "owned": "보유",
+            "forSale": "판매 중",
+            "locked": "잠김"
+        },
+        "tileA11y": "{{name}}, {{state}}",
+        "prev": "이전",
+        "next": "다음",
+        "prevA11y": "이전 업그레이드",
+        "nextA11y": "다음 업그레이드",
+        "fact": {
+            "price": "가격",
+            "unlocks": "해금 조건",
+            "id": "ID"
         }
     }
 }
