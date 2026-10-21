@@ -6,11 +6,16 @@
         "buildings": "Épületek",
         "upgrades": "Fejlesztés",
         "stats": "Adatok",
-        "collection": "Gyűjtemény"
+        "collection": "Gyűjtemény",
+        "newItemsLabel_one": "{{label}}, {{count}} új",
+        "newItemsLabel_other": "{{label}}, {{count}} új"
     },
     "header": {
         "emojis": "Emojik",
-        "perSecond": "Másodpercenként: {{value}}"
+        "perSecond": "Másodpercenként: {{value}}",
+        "rate": "+{{value}} / mp",
+        "gemsLabel_one": "{{gems}} drágakő. Drágakőbolt megnyitása",
+        "gemsLabel_other": "{{gems}} drágakő. Drágakőbolt megnyitása"
     },
     "common": {
         "buy": "Vétel",
@@ -23,29 +28,121 @@
             "multiplyTap": "• A koppintás kétszer olyan hatékony.",
             "percentageIncreaseTap": "• Koppintás ereje: +{{percent}}.",
             "tapPercentageOfEps": "• Koppintásonként a teljes emojitermelésedből kapsz: {{percent}}.",
-            "percentageIncreaseProduction": "• Teljes emojitermelés: +{{percent}}."
+            "percentageIncreaseProduction": "• Teljes emojitermelés: +{{percent}}.",
+            "comboUnlock": "• A gyors koppintás kombót épít, legfeljebb ×{{level}} szorzóig.",
+            "comboLevel": "• A kombó elérheti a ×{{level}} szorzót.",
+            "effectEmojis": "• {{summary}}."
         },
         "bonusProduction": "Ha most megveszed ezt a fejlesztést, másodpercenként <hl>+{{bonus}}</hl> emojit kapsz, így az emojitermelésed ennyivel nő: <hl>{{percent}}</hl>",
         "bonusTap": "Ha most megveszed ezt a fejlesztést, koppintásonként <hl>+{{bonus}}</hl> emojit kapsz, így a koppintásonként kapott emoji ennyivel nő: <hl>{{percent}}</hl>",
         "filterTitle": "Fejlesztések szűrése",
-        "filterDescription": "Válaszd ki, mely épületek fejlesztéseit szeretnéd látni."
+        "filterDescription": "Válaszd ki, mely épületek fejlesztéseit szeretnéd látni.",
+        "effectEmojiSummary": {
+            "spawnRate": "Az effekt-emojik ×{{multiplier}} gyakrabban jelennek meg",
+            "duration": "A jó effektek ×{{multiplier}} tovább tartanak",
+            "start": "Megjelennek az effekt-emojik"
+        },
+        "chips": {
+            "multiplyBuildingProduction": "{{buildings}} ×{{multiplier}}",
+            "multiplyTap": "Koppintás ×{{multiplier}}",
+            "percentageIncreaseTap": "Koppintás +{{percent}}",
+            "percentageIncreaseProduction": "Termelés +{{percent}}",
+            "tapPercentageOfEps": "Koppintás: az emoji/mp +{{percent}}",
+            "comboUnlock": "Kombó max. ×{{level}}",
+            "comboLevel": "Max. kombó ×{{level}}"
+        },
+        "impact": {
+            "perSecond": "+{{bonus}} /mp",
+            "perTap": "+{{bonus}} koppintásonként",
+            "and": "{{a}} és {{b}}",
+            "rightNow": "Most rögtön: {{gains}}"
+        },
+        "tierLabel": {
+            "helper": "{{building}} · Segéd",
+            "hands": "Nagy emoji · Kezek",
+            "effectEmojisNew": "Effekt-emojik · Új",
+            "effectEmojisLevel": "Effekt-emojik · {{level}}. szint",
+            "comboNew": "Kombó · Új",
+            "comboLevel": "Kombó · {{level}}. szint",
+            "tier": "{{building}} · {{tier}}. szint"
+        },
+        "forSale": "Kapható",
+        "owned": "Megvett",
+        "available": "Elérhető",
+        "emptyOwnedTitle": "Még nem vettél semmit",
+        "emptyTitle": "Még nincs fejlesztés",
+        "emptyOwnedText": "A megvett fejlesztéseid itt gyűlnek.",
+        "emptyText": "Vegyél épületeket, és koppintsd a Nagy emojit a fejlesztések feloldásához.",
+        "filterAll": "Mind",
+        "quoted": "\"{{quote}}\"",
+        "ownedBadge": "✓ Megvan",
+        "paid": "Fizetve: {{price}}",
+        "bareBones": "🦴 Nincs fejlesztés ({{trial}})",
+        "buyFor": "Vétel: {{price}}",
+        "priceAndTime": "{{price}} · {{time}}",
+        "ownedCount": "{{owned}} / {{total}} fejlesztés",
+        "availableCount": "{{affordable}} megfizethető · {{unlocked}} feloldva",
+        "a11y": {
+            "owned": "{{name}}, megvan",
+            "price": "{{name}}, {{price}}",
+            "affordable": "{{name}}, {{price}}, megfizethető"
+        }
     },
     "stats": {
         "totalEmojisDrawn": "Összes rajzolt emoji",
         "emojiTaps": "Emojikoppintások",
         "emojisEarnedFromTapping": "Koppintással szerzett emojik",
         "magicalEmojisTapped": "Megkoppintott varázsemojik",
-        "funValue": "Mókaérték"
+        "funValue": "Mókaérték",
+        "shinyEmojisTapped": "Megkoppintott csillogó emojik",
+        "comboTaps": "Kombókoppintások",
+        "madeByEachBuilding": "Épületenkénti termelés"
     },
     "drawer": {
         "language": "Nyelv",
         "deviceLanguage": "Eszköz nyelve",
         "cheats": "Csalások",
         "resetGame": "Játék visszaállítása",
-        "spawnEffect": "Effekt-emoji idézése"
+        "spawnEffect": "Effekt-emoji idézése",
+        "menu": "Menü"
     },
     "prestige": {
-        "title": "Presztízs"
+        "title": "Presztízs",
+        "close": "Bezárás",
+        "ordinal_ordinal_one": "{{count}}.",
+        "ordinal_ordinal_other": "{{count}}.",
+        "celebrateCaption": "{{count}}. presztízs",
+        "celebrateTrialCaption": "{{count}}. presztízs · Próba elindítva",
+        "celebrateTitle": "+{{essence}} esszencia",
+        "celebrateTierTitle": "+{{essence}} esszencia · {{tier}}. szintű előnyök feloldva",
+        "essenceCaption": "Emojiesszencia",
+        "essenceBonus": "+{{bonus}} termelés (darabonként {{each}})",
+        "intro": "Ha elég emojit rajzoltál, a lényegük, az esszenciájuk gyűlni kezd körülötted: egy varázslatos anyag, amely alakot vált, valahányszor ránézel. Minden el nem költött esszencia növeli a termelést, esszenciáért pedig örökre megmaradó előnyöket vehetsz.",
+        "startOver": "Újrakezdés",
+        "prestigesSoFar_one": "Eddig {{count}} presztízs",
+        "prestigesSoFar_other": "Eddig {{count}} presztízs",
+        "resetsWhat": "Nullázza az emojijaidat, épületeidet, épületfejlesztéseidet és kezeidet. Megmarad a gyűjteményed, az adataid, a kombó- és effekt-emoji-fejlesztéseid, az esszenciád és az előnyeid.",
+        "nextEssence": "Következő esszencia",
+        "nextEssenceAt": "{{amount}} rajzolt emojinál",
+        "noEssenceYet": "Még nincs megszerezhető esszencia",
+        "tapAgainToPrestige": "Koppints újra a presztízshez",
+        "prestigeFor": "Presztízs: +{{essence}} ✨",
+        "productionCaps": "+{{percent}} termelés",
+        "playedThisRun": "Játékidő ebben a körben",
+        "drawnThisRun": "Rajzolva ebben a körben",
+        "essencePerHour": "Esszencia óránként",
+        "afterTenMinutes": "10 perc után",
+        "essenceRate": "{{rate}} (csúcs: {{best}})",
+        "slowingDown": "📉 Lassabban jön az esszencia, mint korábban ebben a körben. Jó alkalom a presztízsre.",
+        "drawnAmount": "{{amount}} rajzolva",
+        "pastRuns": "Korábbi körök",
+        "pastRunLine": "{{duration}} · {{amount}} rajzolva",
+        "pastRunTrialCompleted": "{{icon}} {{name}} ✓",
+        "pastRunTrialNotCompleted": "{{icon}} {{name}}, nem teljesítve",
+        "chipLabel": "Emojiesszencia",
+        "chipLabelReady": "Presztízs, jutalom: {{essence}} emojiesszencia",
+        "chipEssence": "Esszencia",
+        "chipPending": "+{{essence}} esszencia"
     },
     "numbers": {
         "groupSize": "3",
@@ -115,6 +212,289 @@
             "57": "Nond",
             "60": "Dec",
             "63": "Decd"
+        }
+    },
+    "buildings": {
+        "ownedA11y_one": "{{count}} van belőle",
+        "ownedA11y_other": "{{count}} van belőle",
+        "newBadge": "Új",
+        "statLine": "{{eps}} /mp · {{share}} az összesből",
+        "nextUpgrade": "következő fejlesztés: {{at}}",
+        "allUpgradesFound": "minden fejlesztés megvan",
+        "epsEach": "+{{eps}} /mp darabonként",
+        "buy": "Vétel",
+        "buyCount": "Vétel ×{{count}}",
+        "buyA11y_one": "Vétel: {{name}} ×{{count}}, ár: {{price}}",
+        "buyA11y_other": "Vétel: {{name}} ×{{count}}, ár: {{price}}",
+        "mystery": "Rejtélyes épület",
+        "revealsAt": "Felfedés {{amount}} emojinál",
+        "bulkLabel": "Vételi mennyiség",
+        "bulkMax": "Max",
+        "bulkA11yMax": "Annyit veszel, amennyire futja",
+        "bulkA11y_one": "Egyszerre {{count}} darab vétele",
+        "bulkA11y_other": "Egyszerre {{count}} darab vétele",
+        "milestoneCaption": "Új épület",
+        "milestoneTitle": "Az első épületed: {{building}}!"
+    },
+    "time": {
+        "seconds_one": "{{count}}mp",
+        "seconds_other": "{{count}}mp",
+        "minutes_one": "{{count}}p",
+        "minutes_other": "{{count}}p",
+        "hours_one": "{{count}}ó",
+        "hours_other": "{{count}}ó",
+        "days_one": "{{count}}n",
+        "days_other": "{{count}}n",
+        "pair": "{{a}} {{b}}"
+    },
+    "trials": {
+        "title": "Próbák",
+        "completedCount": "{{done}} / {{total}} teljesítve",
+        "intro": "Presztízzsel indíts egy kört egy nehezítő szabállyal. Rajzolj elég emojit abban a körben, és a jutalom örökre a tiéd, a szabály pedig megszűnik.",
+        "unlocksWith": "{{ordinal}} presztízsnél nyílik meg.",
+        "completeCaps": "Próba teljesítve",
+        "inProgressCaps": "Próba folyamatban",
+        "completedText": "Örökre megszerezted: {{reward}}. A szabály a kör hátralevő részére megszűnt.",
+        "activeText": "{{rule}}. Rajzolj ebben a körben ennyit: {{goal}}, és örökre megkapod: {{reward}}.",
+        "giveUp": "Próba feladása",
+        "giveUpConfirm": "Koppints újra a feladáshoz (nincs jutalom)",
+        "doneTag": "✓ Kész",
+        "playingTag": "Folyamatban",
+        "ruleLine": "<hl>Szabály: </hl>{{rule}}",
+        "ruleLineWithStart": "<hl>Szabály: </hl>{{rule}} (kezdőtőke: {{amount}} emoji)",
+        "rewardLine": "<hl>Jutalom: </hl>{{reward}}",
+        "finishFirst": "Előbb fejezd be a próbádat",
+        "needsEssence": "A presztízshez esszencia kell",
+        "tapAgainToStart": "Koppints újra az indításhoz",
+        "prestigeInto": "Presztízs a próbába: +{{essence}} ✨",
+        "goalCaps": "Cél: {{goal}}",
+        "goal": "{{amount}} emoji",
+        "completeTitle": "{{name}}: {{reward}}",
+        "rewardUnlocked": "Jutalom feloldva"
+    },
+    "perks": {
+        "title": "Előnyök",
+        "ownedCount": "{{owned}} / {{total}} megvan",
+        "spentKeepsHalf": "Az elköltött esszencia megtartja termelési bónusza felét.",
+        "spentNoBonus": "Az elköltött esszencia már nem növeli a termelést.",
+        "tierCaps": "{{tier}}. szint",
+        "tierLockedCaps": "{{tier}}. szint · {{ordinal}} presztízsnél nyílik",
+        "hidden": "Presztízs után felfeded ezt az előnyt.",
+        "needsFirst": "Előbb kell: {{perk}}",
+        "ownedTag": "✓ Megvan",
+        "buyLabel": "Vétel: {{perk}}, ár: {{cost}} esszencia"
+    },
+    "gems": {
+        "title": "Drágakőbolt",
+        "yourGemsCaps": "Drágaköveid",
+        "gemsCaps": "Drágakő",
+        "offlineClaim": "{{cost}} drágakőért ×{{multiplier}} offline bevétel",
+        "storeUnavailable": "A bolt most nem érhető el. Ellenőrizd a kapcsolatot, és próbáld újra később.",
+        "purchaseFailed": "A vásárlás nem sikerült. Nem vontunk le pénzt.",
+        "keptOnPrestige": "A drágakövek presztízs után is megmaradnak.",
+        "unavailable": "Nem elérhető",
+        "thankYouCaps": "Köszönjük!",
+        "gemsAdded_one": "+{{amount}} drágakő",
+        "gemsAdded_other": "+{{amount}} drágakő",
+        "buyLabel_one": "{{amount}} drágakő vétele",
+        "buyLabel_other": "{{amount}} drágakő vétele",
+        "buyLabelWithPrice_one": "{{amount}} drágakő vétele, ár: {{price}}",
+        "buyLabelWithPrice_other": "{{amount}} drágakő vétele, ár: {{price}}",
+        "tags": {
+            "popular": "Népszerű",
+            "bestValue": "Legjobb ár"
+        }
+    },
+    "offline": {
+        "welcomeBack": "Üdv újra!",
+        "away": "Távollét: {{duration}}.",
+        "awayCapped": "Távollét: több mint {{duration}}, ennél több nem számít.",
+        "rested": "A birodalmad pihent, amíg távol voltál.",
+        "missedCaps": "Kimaradt termelés",
+        "perSecond": "{{value}} / mp",
+        "gemOfferCaps": "×{{multiplier}}: {{cost}} drágakő · Neked van: {{gems}}",
+        "gemOfferGetCaps": "×{{multiplier}}: {{cost}} drágakő · Drágakövek",
+        "noThanks": "Nem, köszönöm"
+    },
+    "ads": {
+        "watchCaps": "Reklám megnézése",
+        "loadingCaps": "Reklám betöltése...",
+        "failed": "A reklám nem ment le a végéig. Ellenőrizd a kapcsolatot, és próbáld újra."
+    },
+    "reset": {
+        "title": "Újrakezded?",
+        "warning": "Ez visszaállítja a játékot. Elvesznek az emojijaid, épületeid, fejlesztéseid, az esszenciád, az előnyeid, a gyűjteményed és az adataid. Nem vonható vissza.",
+        "purchasesSafe": "A játékon belüli vásárlásaid biztonságban vannak. A drágakövek és minden, amit vettél, átkerül az új játékba.",
+        "confirm": "Igen, visszaállítom",
+        "cancel": "Játszom tovább"
+    },
+    "milestones": {
+        "caption": "Mérföldkő",
+        "emojisDrawn": "{{amount}} emoji megrajzolva!"
+    },
+    "settings": {
+        "title": "Beállítások",
+        "close": "Beállítások bezárása",
+        "sound": "Hang",
+        "soundEffects": "Hangeffektek",
+        "soundEffectsHint": "Halk pukkanás koppintáskor, csilingelés a csillogó emojiknál.",
+        "performance": "Teljesítmény",
+        "reduceAnimations": "Kevesebb animáció",
+        "reduceAnimationsHint": "A megkoppintott emojik nem repülnek le a Nagy emojiról. Próbáld ki, ha akadozik a koppintás.",
+        "dangerZone": "Veszélyzóna"
+    },
+    "cheats": {
+        "subtitle": "Teszteléshez. A változások a mentésedre hatnak.",
+        "simulateAway": "1 óra távollét szimulálása",
+        "gems": "Drágakövek",
+        "addGems_one": "+{{count}} drágakő",
+        "addGems_other": "+{{count}} drágakő",
+        "addComboTaps": "+{{amount}} kombókoppintás",
+        "multiplyTapEarnings": "×{{factor}} koppintási bevétel",
+        "addCollection_one": "+{{count}} gyűjtemény",
+        "addCollection_other": "+{{count}} gyűjtemény",
+        "addShiny_one": "+{{count}} csillogó",
+        "addShiny_other": "+{{count}} csillogó",
+        "addMagical_one": "+{{count}} varázs",
+        "addMagical_other": "+{{count}} varázs",
+        "addEssence_one": "+{{count}} esszencia",
+        "addEssence_other": "+{{count}} esszencia",
+        "addPerkTier_one": "+{{count}} előnyszint",
+        "addPerkTier_other": "+{{count}} előnyszint",
+        "addRunTime": "+{{time}} köridő",
+        "reachTrialGoal": "Próbacél elérése",
+        "effectEmojis": "Effekt-emojik",
+        "spawnEffects_one": "{{count}} effekt-emoji idézése",
+        "spawnEffects_other": "{{count}} effekt-emoji idézése",
+        "speed": "Sebesség",
+        "speedLabel": "{{speed}}× sebesség",
+        "speedHint": "Termelés és köridő. Az effektek és a kombó valós időben futnak. Újratöltés után kikapcsol.",
+        "shiny": "Csillogó",
+        "onlyShiny": "Csak csillogó emojik",
+        "funValueQuirk": "{{name}}: {{description}}",
+        "noQuirk": "Nincs különlegesség",
+        "hideFunValueTable": "Mókaérték-táblázat elrejtése",
+        "showFunValueTable": "Mókaérték-táblázat mutatása",
+        "setFunValueLabel": "Mókaérték beállítása: {{value}} ({{name}})",
+        "changeFunValueLabel": "Mókaérték módosítása: {{change}}"
+    },
+    "collection": {
+        "ofTotalFound": "/ {{total}} megtalálva",
+        "mostTapped": "Legtöbbet koppintott: {{emoji}} ×{{amount}}",
+        "startCollecting": "Koppintsd a Nagy emojit a gyűjtés elkezdéséhez",
+        "shinyFound_one": "{{amount}} csillogó",
+        "shinyFound_other": "{{amount}} csillogó",
+        "categories": {
+            "faces": "Arcok",
+            "animals": "Állatok",
+            "food": "Étel",
+            "objects": "Tárgyak",
+            "people": "Emberek",
+            "bodyParts": "Test",
+            "placesBuildings": "Helyek",
+            "plants": "Növények",
+            "vehicles": "Járművek",
+            "weather": "Időjárás",
+            "symbols": "Szimbólumok"
+        },
+        "categoryLabel": "{{label}}, {{found}} / {{total}} megtalálva",
+        "notFound": "Még nem találtad meg",
+        "cellLabel_one": "{{emoji}}, koppintva: {{count}}",
+        "cellLabel_other": "{{emoji}}, koppintva: {{count}}",
+        "cellLabelShiny_one": "{{emoji}}, koppintva: {{count}}, csillogó: {{shiny}}",
+        "cellLabelShiny_other": "{{emoji}}, koppintva: {{count}}, csillogó: {{shiny}}"
+    },
+    "effects": {
+        "chipTapping": "×{{multiplier}} koppintás",
+        "chipProduction": "×{{multiplier}} termelés",
+        "stackLabel_one": "{{count}} halmozva: {{label}}, a következő lejár: {{time}}",
+        "stackLabel_other": "{{count}} halmozva: {{label}}, a következő lejár: {{time}}",
+        "chipLabel": "{{title}}, hátravan: {{time}}",
+        "gift": "Ajándék!",
+        "ohNo": "Jaj, ne!",
+        "tapping": "Koppintás",
+        "production": "Termelés",
+        "tapFrenzy": "Koppintási őrület!",
+        "unholyPower": "Pokoli erő!",
+        "productionBoost": "Termelési löket!",
+        "collectLabel": "Begyűjtés: {{title}}",
+        "tapMe": "Koppints rám"
+    },
+    "combo": {
+        "level": "Kombó ×{{multiplier}}",
+        "max": "Max. kombó ×{{multiplier}}",
+        "label": "Kombó, szorzó: {{multiplier}}",
+        "maxLabel": "Kombó, szorzó: {{multiplier}}, maximum"
+    },
+    "bigEmoji": {
+        "tapLabel": "Koppintsd a Nagy emojit",
+        "tapShinyLabel": "Koppintsd a csillogó Nagy emojit",
+        "shiny": "Csillogó",
+        "shinyBurst": "Csillogó!",
+        "handsOff": "{{trial}} próba · a koppintás nem rajzol",
+        "perTap": "+{{value}} koppintásonként"
+    },
+    "bank": {
+        "timeToAfford": {
+            "needMore": "Kevés",
+            "seconds_one": "{{count}} mp múlva",
+            "seconds_other": "{{count}} mp múlva",
+            "minutes_one": "{{count}} perc múlva",
+            "minutes_other": "{{count}} perc múlva",
+            "hours_one": "{{count}} óra múlva",
+            "hours_other": "{{count}} óra múlva",
+            "days_one": "{{count}} nap múlva",
+            "days_other": "{{count}} nap múlva",
+            "aLongTime": "Sokára"
+        },
+        "timeToAffordInline": {
+            "needMore": "kevés",
+            "seconds_one": "{{count}} mp múlva",
+            "seconds_other": "{{count}} mp múlva",
+            "minutes_one": "{{count}} perc múlva",
+            "minutes_other": "{{count}} perc múlva",
+            "hours_one": "{{count}} óra múlva",
+            "hours_other": "{{count}} óra múlva",
+            "days_one": "{{count}} nap múlva",
+            "days_other": "{{count}} nap múlva",
+            "aLongTime": "sokára"
+        }
+    },
+    "catalogue": {
+        "title": "Összes fejlesztés",
+        "counts": "{{owned}} megvan · {{forSale}} kapható · {{locked}} zárolt · {{total}} összesen",
+        "filter": {
+            "owned": "Megvan {{count}}",
+            "forSale": "Kapható {{count}}",
+            "locked": "Zárolt {{count}}"
+        },
+        "combo": "Kombó",
+        "effectEmojis": "Effekt-emojik",
+        "unlock": {
+            "own": "{{buildings}}: {{count}} db",
+            "tapping": "Szerezz {{amount}} emojit koppintással",
+            "comboTaps": "{{amount}} kombókoppintás",
+            "earned": "Szerezz {{amount}} emojit"
+        },
+        "state": {
+            "owned": "✓ Megvan",
+            "forSale": "Kapható",
+            "locked": "🔒 Zárolt"
+        },
+        "stateA11y": {
+            "owned": "megvan",
+            "forSale": "kapható",
+            "locked": "zárolt"
+        },
+        "tileA11y": "{{name}}, {{state}}",
+        "prev": "Előző",
+        "next": "Következő",
+        "prevA11y": "Előző fejlesztés",
+        "nextA11y": "Következő fejlesztés",
+        "fact": {
+            "price": "Ár",
+            "unlocks": "Feloldás",
+            "id": "ID"
         }
     }
 }
