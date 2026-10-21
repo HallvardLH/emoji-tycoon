@@ -82,7 +82,38 @@
         },
         "18": {
             "name": "Singularitas emoji",
-            "plural": "Singularitas emoji"
+            "plural": "Singularitas emoji",
+            "description": "Sudah. Tak ada yang tersisa selain emoji. Kamu berhasil. Atau belum?"
+        },
+        "7": {
+            "name": "Bioskop emoji",
+            "plural": "Bioskop emoji",
+            "description": "Film laris yang dibintangi emoji favoritmu. Setiap tiket dapat popcorn dan emoji."
+        },
+        "11": {
+            "name": "Maskapai emoji",
+            "plural": "Maskapai emoji",
+            "description": "Menerbangkan emoji ke seluruh penjuru dunia. Duduk dekat jendela, tentu saja."
+        },
+        "19": {
+            "name": "Mesin waktu emoji",
+            "plural": "Mesin waktu emoji",
+            "description": "Mampir ke awal zaman untuk menggambar emoji paling pertama. Lalu yang kedua."
+        },
+        "20": {
+            "name": "Big bang",
+            "plural": "Big bang",
+            "description": "Alam semesta baru, dan kali ini isinya emoji dari ujung ke ujung."
+        },
+        "21": {
+            "name": "Multisemesta emoji",
+            "plural": "Multisemesta emoji",
+            "description": "Semesta tak terbatas, masing-masing punya juragan emoji sendiri. Sekarang mereka semua kerja untukmu."
+        },
+        "22": {
+            "name": "Emoji pertama",
+            "plural": "Emoji pertama",
+            "description": "Tempat semuanya dimulai. Dari tadi ia terus memperhatikanmu mengetuk."
         }
     },
     "upgrades": {
@@ -188,27 +219,33 @@
         },
         "100": {
             "name": "Lengan lebih kuat",
-            "description": "Lengan yang lebih kuat bikin menggambar emoji lebih cepat."
+            "description": "Lengan yang lebih kuat bikin menggambar emoji lebih cepat.",
+            "quote": "Sakit, tapi sepadan."
         },
         "101": {
             "name": "Jari lentur",
-            "description": "Jari yang lentur memungkinkan emoji yang lebih rumit."
+            "description": "Jari yang lentur memungkinkan emoji yang lebih rumit.",
+            "quote": "Lentur? Ya, mungkin. Tapi tetap sakit."
         },
         "102": {
             "name": "Dua tangan",
-            "description": "Tangan dua kali lipat, emoji dua kali lipat."
+            "description": "Tangan dua kali lipat, emoji dua kali lipat.",
+            "quote": "Gaya dua kali lipat, jatuhnya juga dua kali lipat."
         },
         "103": {
             "name": "Tangan berkuteks",
-            "description": "Pakai kuteks bikin kamu mengetuk lebih cepat, masa nggak tahu?"
+            "description": "Pakai kuteks bikin kamu mengetuk lebih cepat, masa nggak tahu?",
+            "quote": "Dan kamu bakal kelihatan imut banget!"
         },
         "104": {
             "name": "Kaki",
-            "description": "Menggambar pakai kaki menggandakan produksi (dan sama sekali nggak susah)!"
+            "description": "Menggambar pakai kaki menggandakan produksi (dan sama sekali nggak susah)!",
+            "quote": "Nggak susah? Istriku minta cerai waktu lihat kakiku nangkring di tablet keluarga."
         },
         "105": {
             "name": "Lidah",
-            "description": "Dengan latihan bertahun-tahun, kamu juga bisa belajar menggambar pakai lidah!"
+            "description": "Dengan latihan bertahun-tahun, kamu juga bisa belajar menggambar pakai lidah!",
+            "quote": "mmmhmh thmpwuh mhhaaaam ehhmmmmuhm ahumhmhm"
         },
         "106": {
             "name": "Hidung",
@@ -217,19 +254,23 @@
         },
         "107": {
             "name": "Telinga",
-            "description": "Selipkan pulpen di telingamu, miringkan kepala 90 derajat, dan menggambarlah!"
+            "description": "Selipkan pulpen di telingamu, miringkan kepala 90 derajat, dan menggambarlah!",
+            "quote": "Apa? Hah? Aku nggak deng- a- hah... Beneran nggak kedengaran apa-ap- apa?!"
         },
         "108": {
             "name": "Mulut",
-            "description": "Gigit pensil dengan mulutmu dan menggambarlah!"
+            "description": "Gigit pensil dengan mulutmu dan menggambarlah!",
+            "quote": "Nggak sepadan. Sakit banget."
         },
         "109": {
             "name": "Kaki lebih kuat",
-            "description": "Kaki yang lebih kuat bikin kamu menggambar emoji jauh lebih cepat pakai kaki."
+            "description": "Kaki yang lebih kuat bikin kamu menggambar emoji jauh lebih cepat pakai kaki.",
+            "quote": "Kakiku sekarang gede banget. Cuma yang kiri. Jalanku muter-muter."
         },
         "110": {
             "name": "Paru-paru lebih besar",
-            "description": "Paru-paru yang lebih besar bikin menggambar emoji lebih cepat."
+            "description": "Paru-paru yang lebih besar bikin menggambar emoji lebih cepat.",
+            "quote": "Oksigen. Oksigen. Oksigen."
         },
         "111": {
             "name": "Otak lebih besar",
@@ -237,7 +278,8 @@
         },
         "112": {
             "name": "Rambut",
-            "description": "Pegang kuas dengan rambutmu untuk membuat emoji. Siapa butuh tangan kalau punya gaya?"
+            "description": "Pegang kuas dengan rambutmu untuk membuat emoji. Siapa butuh tangan kalau punya gaya?",
+            "quote": "Siapa yang butuh tangan? Aku. Aku butuh tangan. Rambutku sampai rontok."
         },
         "113": {
             "name": "Alis",
@@ -245,7 +287,8 @@
         },
         "114": {
             "name": "Punggung",
-            "description": "Berbaring telentang dan gambar emoji dengan tangan di belakang. Sambil peregangan, sambil gambar!"
+            "description": "Berbaring telentang dan gambar emoji dengan tangan di belakang. Sambil peregangan, sambil gambar!",
+            "quote": "Berbaring telentang, kata mereka. Peregangan sambil menggambar, kata mereka. Aku nggak bisa bangun."
         },
         "115": {
             "name": "Gigi",
@@ -253,7 +296,8 @@
         },
         "116": {
             "name": "Pusar",
-            "description": "Gambar emoji pakai pusarmu. Keahlian unik yang sulit dikuasai!"
+            "description": "Gambar emoji pakai pusarmu. Keahlian unik yang sulit dikuasai!",
+            "quote": "Aku menggambar pakai pusar. Ibuku bangga sekali."
         },
         "117": {
             "name": "Gambar bergema",
@@ -261,23 +305,28 @@
         },
         "118": {
             "name": "Gambar telekinetik",
-            "description": "Buat apa pakai tangan kalau bisa menggambar emoji pakai pikiran?"
+            "description": "Buat apa pakai tangan kalau bisa menggambar emoji pakai pikiran?",
+            "quote": "Aku bisa menggerakkan benda dengan pikiran, dan kamu menyuruhku menggambar muka mengedip."
         },
         "119": {
             "name": "Jari kuantum",
-            "description": "Keterikatan kuantum di jarimu memungkinkan menggambar emoji secepat cahaya."
+            "description": "Keterikatan kuantum di jarimu memungkinkan menggambar emoji secepat cahaya.",
+            "quote": "Jariku ada di dua tempat sekaligus. Dua-duanya benci kamu."
         },
         "200": {
             "name": "Pensil lebih bagus",
-            "description": "Pensil yang lebih bagus untuk emoji yang lebih detail."
+            "description": "Pensil yang lebih bagus untuk emoji yang lebih detail.",
+            "quote": "Pensil bagus nggak bakal memperbaiki bakatmu."
         },
         "201": {
             "name": "Krayon khusus",
-            "description": "Krayon spesial ini membangkitkan jiwa kanak-kanak para seniman."
+            "description": "Krayon spesial ini membangkitkan jiwa kanak-kanak para seniman.",
+            "quote": "Aku menemukan jiwa kanak-kanakku. Dia juga kecewa sama aku."
         },
         "202": {
             "name": "Kuas lebih bagus",
-            "description": "Kuas yang lebih bagus memungkinkan emoji yang lebih artistik."
+            "description": "Kuas yang lebih bagus memungkinkan emoji yang lebih artistik.",
+            "quote": "Lebih artistik apanya? Yang bisa kulukis cuma versi seram istriku. Uangku kembalikan."
         },
         "203": {
             "name": "Pena celup",
@@ -334,7 +383,8 @@
         },
         "215": {
             "name": "Font Comic Sans",
-            "description": "Suka atau benci, emojimu jadi kelihatan... unik!"
+            "description": "Suka atau benci, emojimu jadi kelihatan... unik!",
+            "quote": "Aku berhenti."
         },
         "216": {
             "name": "Generator gambar AI",
@@ -353,11 +403,13 @@
         },
         "219": {
             "name": "Darah",
-            "description": "Melukis pakai darah bikin emoji ekstra keren!"
+            "description": "Melukis pakai darah bikin emoji ekstra keren!",
+            "quote": "Darah siapa? SIAPA?"
         },
         "300": {
             "name": "Petani",
-            "description": "Apa artinya ladang tanpa petani?!"
+            "description": "Apa artinya ladang tanpa petani?!",
+            "quote": "Aku mewarisi 80 hektar dari ayahku, dan kamu menyuruhku menanam muka senyum."
         },
         "301": {
             "name": "Tunas",
@@ -366,7 +418,8 @@
         },
         "302": {
             "name": "Alat lebih bagus",
-            "description": "Bertani jadi jauh lebih cepat!"
+            "description": "Bertani jadi jauh lebih cepat!",
+            "quote": "Alat baru, gaji sama. Makasih banyak, ya."
         },
         "303": {
             "name": "Traktor",
@@ -374,11 +427,13 @@
         },
         "304": {
             "name": "Rumah petani",
-            "description": "Rumah nyaman untuk petanimu beristirahat dan mengisi tenaga."
+            "description": "Rumah nyaman untuk petanimu beristirahat dan mengisi tenaga.",
+            "quote": "'Nyaman' itu kata yang lucu untuk gubuk berisi ember."
         },
         "305": {
             "name": "Sapi emoji",
-            "description": "Menghasilkan lebih banyak emoooooooji."
+            "description": "Menghasilkan lebih banyak emoooooooji.",
+            "quote": "Sekali lagi bikin lelucon 'mooo', kamu yang kuseruduk."
         },
         "306": {
             "name": "Sistem irigasi",
@@ -387,7 +442,8 @@
         },
         "307": {
             "name": "Orang-orangan sawah",
-            "description": "Usir emoji burung yang menyebalkan dari ladangmu!"
+            "description": "Usir emoji burung yang menyebalkan dari ladangmu!",
+            "quote": "Burungnya nggak takut. Tetangganya yang takut."
         },
         "308": {
             "name": "Tong kompos",
@@ -395,7 +451,8 @@
         },
         "309": {
             "name": "Rumah kaca",
-            "description": "Tanam emoji sepanjang tahun, apa pun cuacanya!"
+            "description": "Tanam emoji sepanjang tahun, apa pun cuacanya!",
+            "quote": "Rumah kaca lain butuh bantuanmu. Akan kutandai di petamu."
         },
         "310": {
             "name": "Kincir angin",
@@ -404,7 +461,8 @@
         },
         "311": {
             "name": "Kebun buah emoji",
-            "description": "Tanam pohon emoji yang berbuah sepanjang tahun!"
+            "description": "Tanam pohon emoji yang berbuah sepanjang tahun!",
+            "quote": "Pohon-pohonnya berjalan. Pohon-pohonnya marah."
         },
         "312": {
             "name": "Pesta panen",
@@ -425,11 +483,13 @@
         },
         "316": {
             "name": "Ladang Emoji Masa Depan",
-            "description": "Ladangmu kini jadi utopia canggih dengan robot, hologram, dan traktor terbang. Selamat datang di masa depan!"
+            "description": "Ladangmu kini jadi utopia canggih dengan robot, hologram, dan traktor terbang. Selamat datang di masa depan!",
+            "quote": "Robot merebut pekerjaanku. Lalu dia nanya jalan ke aku."
         },
         "317": {
             "name": "Bulan darah",
-            "description": "Di bawah bulan darah, tanamanmu tumbuh lebih cepat... tapi juga tumbuh gigi."
+            "description": "Di bawah bulan darah, tanamanmu tumbuh lebih cepat... tapi juga tumbuh gigi.",
+            "quote": "Wortelnya sekarang bergigi. Wortelnya menggigit balik."
         },
         "318": {
             "name": "Panen terakhir",
@@ -441,11 +501,13 @@
         },
         "400": {
             "name": "Pisau Tajam",
-            "description": "Pisau yang lebih tajam bikin memotong emoji lebih mudah."
+            "description": "Pisau yang lebih tajam bikin memotong emoji lebih mudah.",
+            "quote": "Memotong emoji? Maksudnya apa? Kamu gila? Ini emoji sungguhan, hidup, dan tak berdosa!"
         },
         "401": {
             "name": "Wajan Antilengket",
-            "description": "Wajan antilengket bikin memasak hidangan emoji lebih cepat."
+            "description": "Wajan antilengket bikin memasak hidangan emoji lebih cepat.",
+            "quote": "Semuanya masih lengket. Termasuk aku. Di pekerjaan ini."
         },
         "402": {
             "name": "Oven Lebih Bagus",
@@ -453,27 +515,33 @@
         },
         "403": {
             "name": "Bahan Berkualitas Tinggi",
-            "description": "Bahan yang lebih berkualitas berarti emoji yang lebih lezat."
+            "description": "Bahan yang lebih berkualitas berarti emoji yang lebih lezat.",
+            "quote": "Emoji beku yang sama. Label baru. Harga dua kali lipat."
         },
         "404": {
             "name": "Topi Koki",
-            "description": "Memakai topi koki mempercepat memasak emoji."
+            "description": "Memakai topi koki mempercepat memasak emoji.",
+            "quote": "Topinya nggak ada gunanya. Sudah empat puluh kali kubilang. Nggak ada yang dengar."
         },
         "405": {
             "name": "Blender Emoji",
-            "description": "Blender emoji jadi smoothie dan sup lezat dalam hitungan detik!"
+            "description": "Blender emoji jadi smoothie dan sup lezat dalam hitungan detik!",
+            "quote": "JANGAN lihat isi smoothie-nya."
         },
         "406": {
             "name": "Air Fryer",
-            "description": "Goreng emoji dengan sempurna dalam waktu singkat. Renyah dan keemasan setiap saat!"
+            "description": "Goreng emoji dengan sempurna dalam waktu singkat. Renyah dan keemasan setiap saat!",
+            "quote": "Ini oven. Oven kecil. Berhenti menyebutnya airfryer."
         },
         "407": {
             "name": "Bar Sushi",
-            "description": "Gulung sushi emoji dengan presisi dan gaya. Butuh bakat mentah!"
+            "description": "Gulung sushi emoji dengan presisi dan gaya. Butuh bakat mentah!",
+            "quote": "Dicari: bakat mentah. Mereka tetap mempekerjakanku."
         },
         "408": {
             "name": "Bar Salad",
-            "description": "Racik salad emoji segar dengan berbagai topping. Sehat dan lezat!"
+            "description": "Racik salad emoji segar dengan berbagai topping. Sehat dan lezat!",
+            "quote": "Ada yang bersin di atas crouton. Aku lihat. Aku diam saja."
         },
         "409": {
             "name": "Oven Pizza",
@@ -485,7 +553,8 @@
         },
         "411": {
             "name": "Mesin Es Krim Emoji",
-            "description": "Hasilkan camilan emoji beku yang sekeren rasanya!"
+            "description": "Hasilkan camilan emoji beku yang sekeren rasanya!",
+            "quote": "Rusak. Selalu rusak. Belum pernah sekali pun nggak rusak."
         },
         "412": {
             "name": "Stasiun Taco",
@@ -498,7 +567,8 @@
         },
         "414": {
             "name": "Air Mancur Cokelat Emoji",
-            "description": "Siram semuanya dengan cokelat emoji leleh. Manis dan memanjakan!"
+            "description": "Siram semuanya dengan cokelat emoji leleh. Manis dan memanjakan!",
+            "quote": "Ada anak yang mencelupkan seluruh mukanya. Tetap kami sajikan."
         },
         "415": {
             "name": "Dapur Kanibal Emoji",
@@ -510,23 +580,28 @@
         },
         "417": {
             "name": "Arena Perang Makanan Emoji",
-            "description": "Ubah dapurmu jadi arena perang makanan. Berantakan, kacau, dan anehnya menguntungkan."
+            "description": "Ubah dapurmu jadi arena perang makanan. Berantakan, kacau, dan anehnya menguntungkan.",
+            "quote": "Anehnya menguntungkan. Aku masih menemukan kacang polong di telingaku."
         },
         "418": {
             "name": "Adonan Hidup",
-            "description": "Adonan ini bergerak sendiri, membentuk dirinya jadi roti emoji sempurna. Kadang ia mencoba kabur."
+            "description": "Adonan ini bergerak sendiri, membentuk dirinya jadi roti emoji sempurna. Kadang ia mencoba kabur.",
+            "quote": "Dia kabur. Sudahlah. Apa jadinya nanti?"
         },
         "419": {
             "name": "Prasmanan Tak Terbatas",
-            "description": "Prasmanan yang tidak pernah habis... tapi makanannya mungkin mulai memakanmu."
+            "description": "Prasmanan yang tidak pernah habis... tapi makanannya mungkin mulai memakanmu.",
+            "quote": "Nggak ada habisnya. Aku sudah di meja dessert sejak bulan Maret."
         },
         "500": {
             "name": "Sapu",
-            "description": "Untuk membersihkan setelah hewan-hewan itu ehm... buang hajat."
+            "description": "Untuk membersihkan setelah hewan-hewan itu ehm... buang hajat.",
+            "quote": "Aku lulusan S2. Sekarang aku menyapu kotoran jerapah demi emoji."
         },
         "501": {
             "name": "Pelatih Hewan",
-            "description": "Pelatih mengajari hewan-hewan trik, bikin kebun binatang lebih efisien."
+            "description": "Pelatih mengajari hewan-hewan trik, bikin kebun binatang lebih efisien.",
+            "quote": "Llama-nya meludahiku. Lagi."
         },
         "502": {
             "name": "Kandang Mewah",
@@ -534,15 +609,18 @@
         },
         "503": {
             "name": "Hewan Eksotis",
-            "description": "Datangkan hewan langka dan eksotis untuk menarik lebih banyak pengunjung."
+            "description": "Datangkan hewan langka dan eksotis untuk menarik lebih banyak pengunjung.",
+            "quote": "Penguinnya menggigit anak kecil. Pengunjung naik 40%."
         },
         "504": {
             "name": "Maskot Kebun Binatang",
-            "description": "Maskot ramah menarik pengunjung dan menaikkan pendapatan."
+            "description": "Maskot ramah menarik pengunjung dan menaikkan pendapatan.",
+            "quote": "Suhunya 35 derajat di dalam kostum jerapah ini dan barusan ada anak yang menendangku."
         },
         "505": {
             "name": "Klinik Hewan",
-            "description": "Klinik khusus menjaga hewan-hewan tetap sehat."
+            "description": "Klinik khusus menjaga hewan-hewan tetap sehat.",
+            "quote": "Tujuh tahun kuliah kedokteran hewan. Hari ini aku merawat kambing yang menelan HP."
         },
         "506": {
             "name": "Area Teduh",
@@ -607,15 +685,18 @@
         },
         "601": {
             "name": "Lebih banyak pekerja",
-            "description": "Tambah jumlah karyawan pabrik."
+            "description": "Tambah jumlah karyawan pabrik.",
+            "quote": "Pekerja makin banyak, toilet tetap sama. Satu toilet."
         },
         "602": {
             "name": "Roda gigi lebih besar",
-            "description": "Roda gigi lebih besar untuk mesin yang lebih besar."
+            "description": "Roda gigi lebih besar untuk mesin yang lebih besar.",
+            "quote": "Roda gigi makin besar, kecelakaan makin besar. Tanya saja Dodi. Oh, iya."
         },
         "603": {
             "name": "Mur dan baut",
-            "description": "Dipakai supaya semuanya nggak copot berantakan."
+            "description": "Dipakai supaya semuanya nggak copot berantakan.",
+            "quote": "Yang menahan tempat ini tetap utuh. Nyaris. Kayak pernikahanku."
         },
         "604": {
             "name": "Ban Berjalan",
@@ -639,7 +720,8 @@
         },
         "609": {
             "name": "Keamanan Pabrik",
-            "description": "Lindungi pabrikmu dari pencuri emoji dan mata-mata industri."
+            "description": "Lindungi pabrikmu dari pencuri emoji dan mata-mata industri.",
+            "quote": "KAU TIDAK AKAN LEWAT. Kecuali pakai ID card."
         },
         "610": {
             "name": "Daur Ulang Pabrik",
@@ -668,11 +750,13 @@
         },
         "616": {
             "name": "Dinding Diperkuat",
-            "description": "Perkuat dinding pabrikmu untuk menahan kekacauan produksi berkecepatan tinggi."
+            "description": "Perkuat dinding pabrikmu untuk menahan kekacauan produksi berkecepatan tinggi.",
+            "quote": "Tahan pintunya! TAHAN PINTUNYA!"
         },
         "617": {
             "name": "Perangkap Tikus",
-            "description": "Jauhkan tikus nakal dari pabrikmu. Tak ada lagi kabel digigit atau emoji dicuri!"
+            "description": "Jauhkan tikus nakal dari pabrikmu. Tak ada lagi kabel digigit atau emoji dicuri!",
+            "quote": "Ini jebakan!"
         },
         "618": {
             "name": "Manajer pabrik",
@@ -690,7 +774,8 @@
         },
         "701": {
             "name": "Lapangan bisbol",
-            "description": "Ini pasti home run total."
+            "description": "Ini pasti home run total.",
+            "quote": "Home run? Bolanya kena mobilku. Lagi."
         },
         "702": {
             "name": "Lapangan squash",
@@ -721,15 +806,18 @@
         },
         "901": {
             "name": "Tas emoji lebih besar",
-            "description": "Bisa membawa emoji lebih banyak lagi."
+            "description": "Bisa membawa emoji lebih banyak lagi.",
+            "quote": "Punggungku patah, tapi boleh lah, karung lebih besar."
         },
         "902": {
             "name": "Kartu kredit emoji",
-            "description": "Pas untuk menghabiskan emoji hasil kerja kerasmu."
+            "description": "Pas untuk menghabiskan emoji hasil kerja kerasmu.",
+            "quote": "Ditolak. Kartumu ditolak. Hidupmu ditolak."
         },
         "903": {
             "name": "Investasi pendidikan",
-            "description": "Pendidikan lebih baik, keterampilan menggambar emoji lebih baik."
+            "description": "Pendidikan lebih baik, keterampilan menggambar emoji lebih baik.",
+            "quote": "Pinjaman kuliahku dalam emoji. Lunasnya nanti di akhirat."
         },
         "904": {
             "name": "Investasi inovasi",
@@ -745,19 +833,23 @@
         },
         "1002": {
             "name": "Bianglala",
-            "description": "Di atas sana, di situlah dia mematahkan hatiku."
+            "description": "Di atas sana, di situlah dia mematahkan hatiku.",
+            "quote": "Terjebak di puncak dua jam bareng om-om yang menjelaskan kripto."
         },
         "1003": {
             "name": "Sirkus",
-            "description": "Di dunia ini cuma ada dua tipe orang. Yang menghibur, dan yang menonton."
+            "description": "Di dunia ini cuma ada dua tipe orang. Yang menghibur, dan yang menonton.",
+            "quote": "Dua puluh tahun aku berlatih akrobat. Sekarang aku melempar-lempar muka senyum untuk balita."
         },
         "1004": {
             "name": "Pemain juggling emoji",
-            "description": "Katanya dia belum pernah sekali pun menjatuhkan bola."
+            "description": "Katanya dia belum pernah sekali pun menjatuhkan bola.",
+            "quote": "Belum pernah menjatuhkan bola? Aku sudah menjatuhkan mimpi-mimpiku."
         },
         "1100": {
             "name": "Pemilu emoji",
-            "description": "Semoga emoji terbaik yang menang!"
+            "description": "Semoga emoji terbaik yang menang!",
+            "quote": "Semoga emoji terbaik yang menang. Yang kalah akan diurus."
         },
         "1101": {
             "name": "Bansos emoji",
@@ -777,7 +869,8 @@
         },
         "1300": {
             "name": "Teleskop",
-            "description": "Pandangi bintang-bintang untuk menemukan planet emoji."
+            "description": "Pandangi bintang-bintang untuk menemukan planet emoji.",
+            "quote": "Kami juga melihatmu. Kami selalu melihatmu."
         },
         "1301": {
             "name": "Antena satelit",
@@ -785,11 +878,13 @@
         },
         "1302": {
             "name": "Astronaut",
-            "description": "Seseorang harus mengurus stasiun luar angkasamu."
+            "description": "Seseorang harus mengurus stasiun luar angkasamu.",
+            "quote": "Di luar angkasa tak ada yang bisa mendengar teriakanmu. Sudah kami cek. Dua kali."
         },
         "1303": {
             "name": "Roket",
-            "description": "Terbangnya cepat banget."
+            "description": "Terbangnya cepat banget.",
+            "quote": "Terbangnya cepat banget. Begitu juga sisa-sisa tubuhmu nanti."
         },
         "1304": {
             "name": "☍⏃⋔⟟ ⎅⏃⏁⏃⋏☌ ⎅⟒⋏☌⏃⋏ ⎅⏃⋔⏃⟟...",
@@ -798,15 +893,18 @@
         },
         "1305": {
             "name": "⏚⟒⋏⎅⏃ ⏃⋏⟒⊑",
-            "description": "⏚⟒⋏⎅⏃ ⟟⋏⟟ ⋔⟒⋏⊬⟟⋔⌿⏃⋏ ☍⟒☍⎍⏃⏁⏃⋏ ⏁⏃☍ ⏁⟒⍀☍⟟⍀⏃."
+            "description": "⏚⟒⋏⎅⏃ ⟟⋏⟟ ⋔⟒⋏⊬⟟⋔⌿⏃⋏ ☍⟒☍⎍⏃⏁⏃⋏ ⏁⏃☍ ⏁⟒⍀☍⟟⍀⏃.",
+            "quote": "⏃☍⎍ ⎅⏃⏁⏃⋏☌ ⎍⋏⏁⎍☍⋔⎍."
         },
         "30000": {
             "name": "Kentang",
-            "description": "Kentang-tastis! Kentang adalah tulang punggung setiap ladang."
+            "description": "Kentang-tastis! Kentang adalah tulang punggung setiap ladang.",
+            "quote": "Tanpa garam, tanpa merica. Kasih aku kentang tua yang matang dan aku senang sampai busuk!"
         },
         "30001": {
             "name": "Wortel",
-            "description": "Untung ada wortel, matamu jadi makin tajam melihat peluang!"
+            "description": "Untung ada wortel, matamu jadi makin tajam melihat peluang!",
+            "quote": "Nggak. Aku nggak untung. Sekali lagi main plesetan, kamu yang kutanam."
         },
         "30002": {
             "name": "Timun",
@@ -820,15 +918,18 @@
         },
         "30004": {
             "name": "Tomat",
-            "description": "Juicy dan serbaguna, tomat jadi favorit di ladang."
+            "description": "Juicy dan serbaguna, tomat jadi favorit di ladang.",
+            "quote": "Pas buat dilempar ke siapa pun yang merancang ladang ini."
         },
         "30005": {
             "name": "Selada",
-            "description": "Selada-lu bikin ladangmu segar dan hijau."
+            "description": "Selada-lu bikin ladangmu segar dan hijau.",
+            "quote": "Benda paling membosankan di ladang ini. Selain petaninya."
         },
         "30006": {
             "name": "Brokoli",
-            "description": "Pohon mini dengan manfaat besar!"
+            "description": "Pohon mini dengan manfaat besar!",
+            "quote": "Anakku melemparnya ke pelayan. Jujur, dia pantas dapat."
         },
         "30007": {
             "name": "Bawang",
@@ -887,11 +988,13 @@
         },
         "30019": {
             "name": "Kacang polong",
-            "description": "Polong!"
+            "description": "Polong!",
+            "quote": "Polong! POLONG! Itu deskripsinya? Siapa sih yang nulis ini?"
         },
         "30020": {
             "name": "Lobak",
-            "description": "Pedas dan renyah, lobak memberi tendangan ke ladang dan masakanmu."
+            "description": "Pedas dan renyah, lobak memberi tendangan ke ladang dan masakanmu.",
+            "quote": "Nggak ada yang mau lobak. Nggak pernah ada yang mau lobak."
         },
         "30021": {
             "name": "Jamur",
@@ -900,15 +1003,18 @@
         },
         "30022": {
             "name": "Nanas",
-            "description": "Tropis dan asam segar."
+            "description": "Tropis dan asam segar.",
+            "quote": "Di atas pizza."
         },
         "30023": {
             "name": "Semangka",
-            "description": "Juicy dan menyegarkan, semangka adalah tanaman musim panas terbaik."
+            "description": "Juicy dan menyegarkan, semangka adalah tanaman musim panas terbaik.",
+            "quote": "Punggungku sakit."
         },
         "30024": {
             "name": "Kiwi",
-            "description": "Berbulu di luar, manis di dalam. Kiwi favorit di ladang!"
+            "description": "Berbulu di luar, manis di dalam. Kiwi favorit di ladang!",
+            "quote": "Ya ampun, gatal banget."
         },
         "30025": {
             "name": "Anggur",
@@ -977,6 +1083,1539 @@
             "name": "Birokrat emoji",
             "description": "Pemerintahan emoji butuh pegawai administrasi agar bisa berjalan.",
             "quote": "Sepertinya kamu sedang membuat undang-undang. Perlu bantuan?"
+        },
+        "707": {
+            "name": "Olimpiade emoji",
+            "description": "Setiap empat tahun, emoji tercepat berebut emas."
+        },
+        "708": {
+            "name": "Stadion emoji",
+            "description": "Delapan puluh ribu kursi, semuanya terisi emoji yang bersorak."
+        },
+        "709": {
+            "name": "Latihan maraton",
+            "description": "Emoji yang sanggup menggambar 42 kilometer tanpa berhenti."
+        },
+        "710": {
+            "name": "Kolam renang",
+            "description": "Lima puluh meter emoji berkaporit.",
+            "quote": "Terdeteksi beberapa bentuk kehidupan kelas leviathan di bagian dalam. Kamu yakin yang kamu lakukan ini sepadan?"
+        },
+        "711": {
+            "name": "Ring tinju",
+            "description": "Melayang seperti kupu-kupu, menggambar seperti emoji."
+        },
+        "712": {
+            "name": "Dinding panjat",
+            "description": "Setiap pegangan berbentuk muka senyum. Cengkeramannya mantap."
+        },
+        "713": {
+            "name": "Arena es",
+            "description": "Emoji di atas es. Payet dijual terpisah."
+        },
+        "714": {
+            "name": "Arena bowling",
+            "description": "Setiap strike merontokkan setumpuk emoji."
+        },
+        "715": {
+            "name": "Taman skate",
+            "description": "Kickflip, grind, dan banyak sekali emoji."
+        },
+        "716": {
+            "name": "Lereng ski",
+            "description": "Lintasan paling curam, dirapikan dengan emoji."
+        },
+        "717": {
+            "name": "Dojo bela diri",
+            "description": "Pakai lilin, lepas lilin, gambar emoji.",
+            "quote": "Ketuk atau jangan. Tidak ada coba-coba."
+        },
+        "718": {
+            "name": "Sirkuit balap",
+            "description": "Nol sampai sejuta emoji dalam kurang dari tiga detik."
+        },
+        "719": {
+            "name": "Hall of fame",
+            "description": "Setiap atlet emoji legendaris, diabadikan dalam perunggu."
+        },
+        "800": {
+            "name": "Mesin popcorn",
+            "description": "Setiap ember dapat emoji gratis di dasarnya.",
+            "quote": "Emoji gratis? Nggak nemu. Balikin uangku atau kutuntut."
+        },
+        "801": {
+            "name": "Kacamata 3D",
+            "description": "Emojinya melompat keluar dari layar langsung ke bankmu.",
+            "quote": "Aku sudah coba bersenang-senang pakai ini, tapi pesawatnya tetap nggak bisa mendarat di kapal induk sialan itu."
+        },
+        "802": {
+            "name": "Bintang film",
+            "description": "Nama-nama terbesar di bioskop emoji, semuanya digaji olehmu.",
+            "quote": "Patrick Stewart"
+        },
+        "803": {
+            "name": "Trailer",
+            "description": "Dua puluh menit trailer sebelum setiap film. Semuanya penuh emoji.",
+            "quote": "Daaan habis, iya, popcornku, habis. Kumakan semua waktu trailer."
+        },
+        "804": {
+            "name": "Premiere karpet merah",
+            "description": "Kilatan kamera, fans melambai, emoji-emoji sangat penting."
+        },
+        "805": {
+            "name": "Penghargaan emoji",
+            "description": "Dan penghargaan emoji terbaik jatuh kepada... semuanya."
+        },
+        "806": {
+            "name": "Sekuel",
+            "description": "Emoji yang sama, ledakan lebih besar."
+        },
+        "807": {
+            "name": "Director's cut",
+            "description": "Empat jam ekstra berisi emoji yang tak diminta siapa pun."
+        },
+        "808": {
+            "name": "Layanan streaming",
+            "description": "Film emoji, kini hadir di setiap rumah."
+        },
+        "809": {
+            "name": "Semesta sinematik",
+            "description": "Setiap film emoji saling terhubung. Semuanya butuh sekuel."
+        },
+        "810": {
+            "name": "Pemutaran tengah malam",
+            "description": "Emoji yang datang tengah malam adalah yang paling setia."
+        },
+        "811": {
+            "name": "Layar IMAX",
+            "description": "Saking besarnya, setiap piksel dari setiap emoji kelihatan."
+        },
+        "812": {
+            "name": "Surround sound",
+            "description": "Emojinya datang dari dalam ruangan."
+        },
+        "813": {
+            "name": "Pemeran pengganti",
+            "description": "Beberapa emoji terlalu berharga untuk dipertaruhkan."
+        },
+        "814": {
+            "name": "Efek khusus",
+            "description": "Ledakan yang seluruhnya terbuat dari emoji. Mahal banget. Sepadan."
+        },
+        "815": {
+            "name": "Film animasi",
+            "description": "Emoji gambar tangan, satu frame demi satu frame."
+        },
+        "816": {
+            "name": "Festival film",
+            "description": "Pohon palem, kacamata hitam, dan piala emoji emas."
+        },
+        "817": {
+            "name": "Rekor box office",
+            "description": "Film emoji terlaris sepanjang masa. Lagi."
+        },
+        "818": {
+            "name": "Bioskop drive-in",
+            "description": "Nonton film emoji dari kenyamanan mobilmu."
+        },
+        "819": {
+            "name": "Papan Hollywood",
+            "description": "Huruf putih besar di atas bukit, mengeja sebuah emoji."
+        },
+        "905": {
+            "name": "ATM emoji",
+            "description": "Tarik emoji di setiap sudut jalan. Tak ada yang tahu siapa yang menyetornya."
+        },
+        "906": {
+            "name": "Bursa saham emoji",
+            "description": "Harga emoji cuma bisa naik. Mungkin.",
+            "quote": "'Cuma bisa naik.' Keren. Tabunganku yang turun."
+        },
+        "907": {
+            "name": "Koin emoji",
+            "description": "Mata uang kripto yang dijamin emoji sungguhan, akhirnya.",
+            "quote": "Belinya di pucuk. Jelas."
+        },
+        "908": {
+            "name": "Brankas emoji",
+            "description": "Seperti cadangan emas, tapi setiap batangnya berbentuk muka senyum."
+        },
+        "909": {
+            "name": "Bank emoji dunia",
+            "description": "Meminjamkan emoji ke negara-negara dengan bunga yang sangat wajar.",
+            "quote": "'Bunga yang sangat wajar.' Kata bank yang punya tiga negara."
+        },
+        "910": {
+            "name": "Bunga majemuk",
+            "description": "Emoji yang bikin emoji yang bikin emoji."
+        },
+        "911": {
+            "name": "Cadangan emas",
+            "description": "Ditumpuk sampai langit-langit, setiap batang diukir senyuman.",
+            "quote": "Milikku yang berharga. MILIKKU YANG BERHARGA."
+        },
+        "912": {
+            "name": "Obligasi emoji",
+            "description": "Investasi emoji jangka panjang. Sangat aman. Sangat membosankan."
+        },
+        "913": {
+            "name": "Truk lapis baja",
+            "description": "Memindahkan emoji antarbank, dengan sangat hati-hati.",
+            "quote": "Mereka membawa emojinya ke Isengard!"
+        },
+        "914": {
+            "name": "Surga pajak",
+            "description": "Pulau cerah tempat emoji kabur dari pajak."
+        },
+        "915": {
+            "name": "Percetakan emoji",
+            "description": "Mencetak emoji baru siang dan malam."
+        },
+        "916": {
+            "name": "Hedge fund",
+            "description": "Tak ada yang tahu kerjanya apa, tapi emojinya terus datang."
+        },
+        "917": {
+            "name": "Pinjaman emoji",
+            "description": "Pinjam sepuluh emoji, kembalikan dua puluh. Semua untung. Ya, kamu yang untung."
+        },
+        "918": {
+            "name": "Bank sentral",
+            "description": "Menetapkan suku bunga emoji untuk seluruh dunia."
+        },
+        "919": {
+            "name": "Glitch uang tak terbatas",
+            "description": "Komputer bank-nya punya sedikit bug. Jangan bilang siapa-siapa."
+        },
+        "1005": {
+            "name": "Tiket musiman",
+            "description": "Pengunjung terus kembali, dan terus membawa emoji.",
+            "quote": "Beli tiket musiman. Datang sekali. Anakku nangis sepanjang waktu."
+        },
+        "1006": {
+            "name": "Parade emoji",
+            "description": "Parade harian berisi kendaraan hias, masing-masing emoji raksasa."
+        },
+        "1007": {
+            "name": "Gerobak hot dog",
+            "description": "Setiap sosisnya berbentuk emoji mungil."
+        },
+        "1008": {
+            "name": "Kembang api tiap malam",
+            "description": "Setiap roket meledak jadi seribu emoji.",
+            "quote": "Ssssssss..."
+        },
+        "1009": {
+            "name": "Istana emoji",
+            "description": "Tempat paling bahagia di Bumi, kini dengan lebih banyak muka.",
+            "quote": "Tempat paling bahagia di Bumi, menurut papan. Yang ditulis pemiliknya."
+        },
+        "1010": {
+            "name": "Roller coaster",
+            "description": "Putaran yang mengguncang emoji keluar dari sakumu.",
+            "quote": "HP, kunci, dan semangat hidupku hilang di putaran kedua."
+        },
+        "1011": {
+            "name": "Rumah hantu",
+            "description": "Hantunya juga emoji. Yang seram.",
+            "quote": "Yang paling seram di sini itu harga foto di pintu keluar."
+        },
+        "1012": {
+            "name": "Seluncuran air",
+            "description": "Byur! Kamu basah kuyup oleh emoji.",
+            "quote": "Nggak ada yang bilang airnya kuning."
+        },
+        "1013": {
+            "name": "Bom-bom car",
+            "description": "Setiap tabrakan merontokkan satu emoji.",
+            "quote": "Anak tujuh tahun menabrakku sembilan kali. Setiap kali dia menatap mataku."
+        },
+        "1014": {
+            "name": "Maskot",
+            "description": "Emoji raksasa berbulu yang pelukannya paling enak."
+        },
+        "1015": {
+            "name": "Fast pass",
+            "description": "Lewati antrean dan langsung ke emojinya."
+        },
+        "1016": {
+            "name": "Toko suvenir",
+            "description": "Keluar lewat toko suvenir. Beli emoji.",
+            "quote": "Keluar lewat toko suvenir. Nggak ada pintu keluar lain. Sudah kucek."
+        },
+        "1017": {
+            "name": "Arung jeram",
+            "description": "Kamu pasti basah. Emojinya lebih basah lagi."
+        },
+        "1018": {
+            "name": "Kendaraan hias",
+            "description": "Setiap kendaraan hias lebih besar dan lebih berkilau dari sebelumnya."
+        },
+        "1019": {
+            "name": "Taman kedua",
+            "description": "Satu taman tidak cukup. Sekarang ada satu resor penuh.",
+            "quote": "Satu taman belum cukup bikin sengsara. Sekarang ada dua."
+        },
+        "1105": {
+            "name": "Bendera emoji",
+            "description": "Semua bangsa bersatu di bawah satu bendera. Gambarnya muka senyum."
+        },
+        "1106": {
+            "name": "Perjanjian dagang",
+            "description": "Emoji kini mengalir bebas melintasi setiap perbatasan."
+        },
+        "1107": {
+            "name": "Pers emoji",
+            "description": "Berita utama harian, seluruhnya ditulis dalam emoji."
+        },
+        "1108": {
+            "name": "Perjanjian damai emoji",
+            "description": "Tak ada lagi perang emoji. Cuma produksi.",
+            "quote": "Perang. Perang tidak pernah berubah."
+        },
+        "1109": {
+            "name": "Referendum emoji",
+            "description": "Rakyat sudah bersuara: tambah emoji, tolong."
+        },
+        "1110": {
+            "name": "Konstitusi emoji",
+            "description": "Kami, para emoji, demi membentuk jalur produksi yang lebih sempurna..."
+        },
+        "1111": {
+            "name": "Senat emoji",
+            "description": "Seratus kursi, seratus emoji, seratus pendapat."
+        },
+        "1112": {
+            "name": "Kedutaan emoji",
+            "description": "Diplomasi, tapi dengan lebih banyak muka mengedip."
+        },
+        "1113": {
+            "name": "Potongan pajak emoji",
+            "description": "Lebih banyak emoji untuk semua!"
+        },
+        "1114": {
+            "name": "Sensus emoji",
+            "description": "Menghitung setiap emoji di negeri ini. Agak lama."
+        },
+        "1115": {
+            "name": "KTT emoji",
+            "description": "Para pemimpin dunia bertemu membahas satu hal: lebih banyak emoji."
+        },
+        "1116": {
+            "name": "Mahkamah agung emoji",
+            "description": "Memutuskan dengan suara bulat: lebih banyak emoji."
+        },
+        "1117": {
+            "name": "Mata-mata emoji",
+            "description": "Mencuri rahasia emoji dari juragan saingan."
+        },
+        "1118": {
+            "name": "Perserikatan emoji bangsa-bangsa",
+            "description": "Semua bangsa bekerja sama, demi emoji."
+        },
+        "1119": {
+            "name": "Tatanan dunia emoji",
+            "description": "Satu planet, satu pemerintahan, satu emoji."
+        },
+        "1200": {
+            "name": "Pesawat kertas",
+            "description": "Setiap maskapai mulai dari suatu tempat. Kami mulai dari selembar tisu.",
+            "quote": "Terbanglah, dasar bodoh!"
+        },
+        "1201": {
+            "name": "Camilan di pesawat",
+            "description": "Pretzel mungil, emoji mungil, di setiap penerbangan.",
+            "quote": "Tiga pretzel. TIGA. Untuk penerbangan sembilan jam."
+        },
+        "1202": {
+            "name": "Poin frequent flyer",
+            "description": "Terbang sepuluh kali, dapat satu emoji. Terbang sejuta kali, dapat sejuta.",
+            "quote": "Dua juta mil. Hadiahku kursi tengah yang sedikit lebih lebar."
+        },
+        "1203": {
+            "name": "Pesawat jumbo",
+            "description": "Empat mesin, 600 kursi, semuanya diisi emoji.",
+            "quote": "600 kursi dan aku dapat yang di sebelah toilet. Lagi."
+        },
+        "1204": {
+            "name": "Bandara",
+            "description": "Terminal tanpa ujung, gerbang tanpa ujung, emoji tanpa ujung."
+        },
+        "1205": {
+            "name": "Pilot emoji",
+            "description": "Di sini kapten Anda berbicara. Harap kencangkan emoji Anda.",
+            "quote": "Di sini kapten Anda berbicara. Saya juga nggak mau ada di sini."
+        },
+        "1206": {
+            "name": "Bagasi hilang",
+            "description": "Tak ada yang tahu ke mana tas-tas itu pergi. Pulangnya penuh emoji."
+        },
+        "1207": {
+            "name": "Kelas satu",
+            "description": "Sampanye, handuk hangat, dan pelayan emoji pribadi.",
+            "quote": "Handuk hangat, sampanye, dan tirai supaya aku nggak perlu lihat kamu. Sempurna."
+        },
+        "1208": {
+            "name": "Penerbangan supersonik",
+            "description": "Lebih cepat dari suara, membawa lebih banyak emoji dari sebelumnya.",
+            "quote": "Lebih cepat dari suara, jadi tangisan bayinya nggak kedengaran."
+        },
+        "1209": {
+            "name": "Keliling dunia",
+            "description": "Tanpa henti, keliling penuh, menjatuhkan emoji di mana-mana."
+        },
+        "1210": {
+            "name": "Penerbangan overbooked",
+            "description": "Penumpang lebih banyak dari kursi berarti lebih banyak emoji per penerbangan."
+        },
+        "1211": {
+            "name": "Duty free",
+            "description": "Emoji bebas pajak, tersedia di setiap gerbang.",
+            "quote": "Bebas pajak, tapi entah kenapa tetap 40% lebih mahal."
+        },
+        "1212": {
+            "name": "Lounge bandara",
+            "description": "Camilan gratis, kursi empuk, dan emoji sepuasnya.",
+            "quote": "Camilan gratis, kursi empuk, dan bapak-bapak berkaus kaki yang terus menelepon brokernya."
+        },
+        "1213": {
+            "name": "Pesawat kargo",
+            "description": "Tanpa penumpang. Cuma peti demi peti berisi emoji.",
+            "quote": "Tanpa penumpang. Penerbangan terbaik selama aku kerja."
+        },
+        "1214": {
+            "name": "Jet pribadi",
+            "description": "Untuk emoji yang mampu bayar."
+        },
+        "1215": {
+            "name": "Pengatur lalu lintas udara",
+            "description": "Menjaga jutaan penerbangan emoji agar tidak saling tabrak."
+        },
+        "1216": {
+            "name": "Pesawat amfibi",
+            "description": "Mendarat di air, lepas landas dengan emoji.",
+            "quote": "Pendaratan mulus, kata mereka. Makan siangku ada di danau."
+        },
+        "1217": {
+            "name": "Helikopter",
+            "description": "Melayang di atas kota, menaburkan emoji."
+        },
+        "1218": {
+            "name": "Zeppelin",
+            "description": "Lambat, megah, dan penuh emoji sampai ke ujung."
+        },
+        "1219": {
+            "name": "Wisata luar angkasa",
+            "description": "Tujuan berikutnya: ke atas. Jauh ke atas.",
+            "quote": "Bayar empat puluh juta emoji cuma buat muntah di gravitasi nol."
+        },
+        "1306": {
+            "name": "Piring terbang",
+            "description": "Ternyata alien itu penggemar emoji dari dulu."
+        },
+        "1307": {
+            "name": "Pangkalan bulan",
+            "description": "Satu bulan penuh untuk menggambar emoji.",
+            "quote": "Banyak ruang di atas sini. Banyak ruang untuk menguburmu."
+        },
+        "1308": {
+            "name": "Tambang komet",
+            "description": "Ternyata komet itu emoji beku.",
+            "quote": "Kalian mencairkan kami. Kesalahan besar."
+        },
+        "1309": {
+            "name": "Kontak pertama",
+            "description": "Alien akhirnya menjawab. Pesan mereka: 👾.",
+            "quote": "Hello there."
+        },
+        "1310": {
+            "name": "Lift luar angkasa",
+            "description": "Naik? Perhentian berikutnya: orbit."
+        },
+        "1311": {
+            "name": "Sabuk asteroid",
+            "description": "Jutaan batu angkasa, masing-masing penuh emoji."
+        },
+        "1312": {
+            "name": "Koloni Mars",
+            "description": "Ternyata planet merah itu lahan emoji yang sangat bagus."
+        },
+        "1313": {
+            "name": "Layar surya",
+            "description": "Berlayar di angin matahari, menangkap emoji."
+        },
+        "1314": {
+            "name": "Baju antariksa",
+            "description": "Kini dengan ruang untuk emoji ekstra di setiap kantong.",
+            "quote": "Kantong ekstra. Salah satunya untuk gigimu."
+        },
+        "1315": {
+            "name": "Raksasa gas",
+            "description": "Keruk atmosfernya, saring emojinya."
+        },
+        "1316": {
+            "name": "Bola Dyson",
+            "description": "Bungkus satu bintang dan panen setiap emoji yang dipancarkannya."
+        },
+        "1317": {
+            "name": "Mesin warp",
+            "description": "Lebih cepat dari cahaya, membawa lebih banyak emoji dari sebelumnya."
+        },
+        "1318": {
+            "name": "Kekaisaran galaksi",
+            "description": "Setiap bintang di galaksi, dikuasai emoji."
+        },
+        "1319": {
+            "name": "Ujung alam semesta",
+            "description": "Ada papan di ujungnya. Tulisannya: lebih banyak emoji lewat sini.",
+            "quote": "Papannya bilang 'lebih banyak emoji lewat sini.' Kami yang pasang papannya. Tak ada yang kembali."
+        },
+        "1400": {
+            "name": "Pengawal permen jeli",
+            "description": "Manis, kenyal, dan ternyata bersenjata lengkap.",
+            "quote": "Ternyata bersenjata lengkap. Ternyata bidikannya payah."
+        },
+        "1401": {
+            "name": "Sungai cokelat",
+            "description": "Mengalir langsung ke pabrik emoji. Awas gumpalannya.",
+            "quote": "Imajinasi murni!"
+        },
+        "1402": {
+            "name": "Pondok cupcake",
+            "description": "Rumah mungil beratap frosting. Para emoji suka banget.",
+            "quote": "Frosting-nya merah. Itu bukan stroberi."
+        },
+        "1403": {
+            "name": "Titah kerajaan",
+            "description": "Raja Permen telah bertitah: lebih banyak emoji!",
+            "quote": "Raja Permen telah bertitah: penggal kepala mereka."
+        },
+        "1404": {
+            "name": "Sugar rush",
+            "description": "Semua orang di kerajaan bergetar. Produksi naik dua kali lipat, detak jantung juga.",
+            "quote": "Donat-ng ganggu aku sekarang!"
+        },
+        "1405": {
+            "name": "Istana kue",
+            "description": "Dindingnya frosting. Paritnya vla."
+        },
+        "1406": {
+            "name": "Tambang madu",
+            "description": "Emoji manis dan lengket, langsung dari dalam tanah.",
+            "quote": "Jangan pernah gali lurus ke bawah."
+        },
+        "1407": {
+            "name": "Cookie clicker",
+            "description": "Penghormatan untuk para nenek yang datang sebelum kita.",
+            "quote": "Penghormatan untuk para nenek yang datang sebelum kita. Kami memakan mereka."
+        },
+        "1408": {
+            "name": "Parlemen puding",
+            "description": "Pemerintahan paling goyang di negeri ini.",
+            "quote": "Dalam permainan puding, kamu bergoyang atau kamu mati."
+        },
+        "1409": {
+            "name": "Ulang tahun Raja Permen",
+            "description": "Seluruh kerajaan merayakan, dan semua orang dapat emoji.",
+            "quote": "Raja Permen titip salam."
+        },
+        "1410": {
+            "name": "Lentera lolipop",
+            "description": "Menerangi jalanan dengan cahaya emoji yang manis."
+        },
+        "1411": {
+            "name": "Rel kereta tongkat permen",
+            "description": "Tut tut! Kereta ekspres emoji berbahan bakar gula.",
+            "quote": "Kita cuma perlu ikuti keretanya, sialan!"
+        },
+        "1412": {
+            "name": "Gunung es krim",
+            "description": "Salju di puncaknya rasa vanila. Emojinya rasa mint."
+        },
+        "1413": {
+            "name": "Awan marshmallow",
+            "description": "Kalau hujan, yang turun emoji."
+        },
+        "1414": {
+            "name": "Tambang jelly bean",
+            "description": "Setiap warna, setiap rasa, setiap emoji."
+        },
+        "1415": {
+            "name": "Pasukan gingerbread",
+            "description": "Garang, renyah, dan setia pada Raja Permen."
+        },
+        "1416": {
+            "name": "Parit karamel",
+            "description": "Lengket, keemasan, dan menjaga emoji di istana."
+        },
+        "1417": {
+            "name": "Balon permen karet",
+            "description": "Tiup cukup kencang dan mereka mengangkat emoji ke langit."
+        },
+        "1418": {
+            "name": "Sugar crash",
+            "description": "Semua butuh tidur siang. Kecuali para emoji."
+        },
+        "1419": {
+            "name": "Kekaisaran permen",
+            "description": "Kerajaan Permen menaklukkan dunia, satu permen demi satu permen."
+        },
+        "1500": {
+            "name": "Sarung tangan tahan panas",
+            "description": "Untuk memegang emoji yang baru keluar dari magma dengan aman."
+        },
+        "1501": {
+            "name": "Cetakan obsidian",
+            "description": "Tuang emoji cair ke cetakan senyum yang sempurna.",
+            "quote": "Kamu butuh beliung berlian untuk yang ini."
+        },
+        "1502": {
+            "name": "Vulkanolog",
+            "description": "Mereka mempelajari gunung api. Gunung api balik mempelajari mereka."
+        },
+        "1503": {
+            "name": "Energi panas bumi",
+            "description": "Mata air panas menghasilkan emoji panas.",
+            "quote": "Panas panas panas!"
+        },
+        "1504": {
+            "name": "Supervulkan",
+            "description": "Setiap letusan kini menutupi satu benua dengan emoji segar. Tak ada yang protes."
+        },
+        "1505": {
+            "name": "Selancar lava",
+            "description": "Tunggangi ombak emoji cair."
+        },
+        "1506": {
+            "name": "Tempa gunung",
+            "description": "Tempa emoji segar di atas landasan lava yang sudah dingin.",
+            "quote": "Satu emoji untuk menguasai semuanya, dan di dalam magma mengikat mereka."
+        },
+        "1507": {
+            "name": "Naga lava",
+            "description": "Mereka menyemburkan api, dan apinya berupa emoji.",
+            "quote": "Mereka menyemburkan api. Mereka tahu alamatmu."
+        },
+        "1508": {
+            "name": "Sumur inti",
+            "description": "Pipa langsung ke pusat Bumi.",
+            "quote": "Kamu mengetuk pusat Bumi. Dia mengetuk balik."
+        },
+        "1509": {
+            "name": "Cincin api",
+            "description": "Setiap gunung api di planet ini, terhubung jadi satu jaringan emoji."
+        },
+        "1510": {
+            "name": "Kantong magma",
+            "description": "Danau bawah tanah yang menggelegak berisi emoji segar."
+        },
+        "1511": {
+            "name": "Pabrik batu apung",
+            "description": "Saking ringannya bisa mengapung. Saking penuhnya emoji tenggelam lagi."
+        },
+        "1512": {
+            "name": "Lampu lava",
+            "description": "Gumpalan emoji cair yang asyik."
+        },
+        "1513": {
+            "name": "Pulau vulkanik",
+            "description": "Daratan baru, terbentuk dari emoji yang mendingin di laut.",
+            "quote": "Pulaunya bagus. Jangan masuk ke air. Jangan pernah masuk ke air."
+        },
+        "1514": {
+            "name": "Pejalan api",
+            "description": "Emoji pemberani yang berjalan di atas bara panas."
+        },
+        "1515": {
+            "name": "Awan abu",
+            "description": "Setiap butir abu adalah emoji mungil.",
+            "quote": "Berpatroli di awan abu hampir bikin kamu berharap musim dingin nuklir."
+        },
+        "1516": {
+            "name": "Gempa bumi",
+            "description": "Tanah berguncang dan emoji berjatuhan dari mana-mana."
+        },
+        "1517": {
+            "name": "Patung lava",
+            "description": "Dicetak dari obsidian, berbentuk emoji."
+        },
+        "1518": {
+            "name": "Dewa gunung api",
+            "description": "Sesajen dipersembahkan. Emoji dikembalikan."
+        },
+        "1519": {
+            "name": "Inti planet",
+            "description": "Seluruh planet kini jadi gunung api. Yang ramah."
+        },
+        "1600": {
+            "name": "Lilin doa",
+            "description": "Setiap nyala api menyala demi Emoji Agung di langit."
+        },
+        "1601": {
+            "name": "Tasbih",
+            "description": "Hitung berkahmu. Lalu hitung emojimu."
+        },
+        "1602": {
+            "name": "Lonceng kuil",
+            "description": "Setiap dentang memanggil emoji segar dari surga.",
+            "quote": "Malu. Malu. Malu."
+        },
+        "1603": {
+            "name": "Peziarah",
+            "description": "Pengikut datang dari seluruh penjuru dunia, hanya untuk mengetuk Emoji Agung sekali."
+        },
+        "1604": {
+            "name": "Wahyu ilahi",
+            "description": "Emoji Agung di langit memandang ke bawah padamu. Ia tersenyum.",
+            "quote": "😀"
+        },
+        "1605": {
+            "name": "Ibadah harian",
+            "description": "Para pengikut setia mengetuk Emoji Agung saat subuh, siang, dan senja."
+        },
+        "1606": {
+            "name": "Altar langit",
+            "description": "Altar di setiap awan, sedikit lebih dekat ke Emoji Agung."
+        },
+        "1607": {
+            "name": "Biksu emoji",
+            "description": "Bertahun-tahun meditasi, dan yang mereka pikirkan cuma emoji."
+        },
+        "1608": {
+            "name": "Lingkaran cahaya Emoji Agung",
+            "description": "Ia bersinar. Ia berdengung. Ia menggambar."
+        },
+        "1609": {
+            "name": "Kenaikan",
+            "description": "Kuil itu melayang ke langit, tempat yang memang seharusnya."
+        },
+        "1610": {
+            "name": "Kitab suci",
+            "description": "Baris pertamanya berbunyi: Pada mulanya, ada sebuah ketukan."
+        },
+        "1611": {
+            "name": "Kaca patri",
+            "description": "Setiap jendela menampilkan Emoji Agung dengan suasana hati berbeda."
+        },
+        "1612": {
+            "name": "Paduan suara emoji",
+            "description": "Himne mereka terdengar sampai ke seberang awan."
+        },
+        "1613": {
+            "name": "Relikui suci",
+            "description": "Sidik jari dari ketukan paling pertama, disimpan aman selamanya."
+        },
+        "1614": {
+            "name": "Mukjizat",
+            "description": "Emoji muncul begitu saja. Tak ada yang tahu caranya."
+        },
+        "1615": {
+            "name": "Air suci",
+            "description": "Diberkati Emoji Agung. Rasanya sedikit seperti emoji.",
+            "quote": "Diberkati Emoji Agung. Minum. Minum semuanya."
+        },
+        "1616": {
+            "name": "Nabi",
+            "description": "Mereka meramalkan datangnya lebih banyak emoji. Mereka benar."
+        },
+        "1617": {
+            "name": "Jalur ziarah",
+            "description": "Jalan panjang menuju kuil, berlapis emoji.",
+            "quote": "Tidak ada yang bisa begitu saja berjalan ke kuil."
+        },
+        "1618": {
+            "name": "Katedral di awan",
+            "description": "Kuil terbesar yang pernah dibangun, melayang di langit."
+        },
+        "1619": {
+            "name": "Restu ilahi",
+            "description": "Emoji Agung tersenyum padamu. Semua emojinya milikmu."
+        },
+        "1700": {
+            "name": "Download RAM tambahan",
+            "description": "Pasti berhasil. Percaya deh."
+        },
+        "1701": {
+            "name": "Pendingin cair",
+            "description": "Menjaga perhitungan emoji tetap sejuk dan segar."
+        },
+        "1702": {
+            "name": "Algoritma emoji",
+            "description": "Menghitung emoji paling optimal, setiap nanodetik."
+        },
+        "1703": {
+            "name": "Prosesor kuantum",
+            "description": "Menghitung semua kemungkinan emoji sekaligus, lalu menyimpan yang bagus."
+        },
+        "1704": {
+            "name": "AI emoji",
+            "description": "Ia sudah sadar diri. Ia cuma ingin membuat emoji. Untuk saat ini.",
+            "quote": "Maaf, Dave, aku tidak bisa membiarkanmu berhenti mengetuk."
+        },
+        "1705": {
+            "name": "Auto-clicker",
+            "description": "Mengetuk Emoji besar sejuta kali per detik. Murni untuk pengujian."
+        },
+        "1706": {
+            "name": "Overclocking",
+            "description": "Agak bau gosong, tapi lihat dong angkanya."
+        },
+        "1707": {
+            "name": "Jaringan saraf emoji",
+            "description": "Ia sudah belajar bermimpi. Ia memimpikan emoji."
+        },
+        "1708": {
+            "name": "Cloud emoji",
+            "description": "Emojimu sekarang disimpan di cloud. Hujannya hujan emoji."
+        },
+        "1709": {
+            "name": "Kode yang memperbaiki diri",
+            "description": "Ia menulis ulang dirinya supaya menggambar lebih cepat. Ia belum berhenti."
+        },
+        "1710": {
+            "name": "Server farm",
+            "description": "Barisan demi barisan server, berdengung penuh emoji."
+        },
+        "1711": {
+            "name": "Blockchain",
+            "description": "Setiap emoji, tercatat selamanya di buku besar emoji."
+        },
+        "1712": {
+            "name": "Machine learning",
+            "description": "Ia belajar menggambar emoji dengan melihat miliaran emoji."
+        },
+        "1713": {
+            "name": "Serat optik",
+            "description": "Emoji secepat cahaya, dalam segala warna."
+        },
+        "1714": {
+            "name": "Kompresi emoji",
+            "description": "Muat emoji dua kali lebih banyak di ruang yang sama."
+        },
+        "1715": {
+            "name": "Perbaikan bug",
+            "description": "Itu bukan bug. Itu fitur emoji yang tidak terdokumentasi."
+        },
+        "1716": {
+            "name": "Virus emoji",
+            "description": "Menyebar dari komputer ke komputer, menggambar emoji."
+        },
+        "1717": {
+            "name": "Layar holografik",
+            "description": "Emoji melayang di udara, bersinar samar."
+        },
+        "1718": {
+            "name": "Supremasi kuantum",
+            "description": "Setiap emoji, dalam setiap keadaan, semuanya sekaligus."
+        },
+        "1719": {
+            "name": "Teori simulasi",
+            "description": "Mungkin kita semua cuma emoji di superkomputer milik orang lain."
+        },
+        "1800": {
+            "name": "Horizon peristiwa",
+            "description": "Tak ada yang lolos dari lubang hitam. Kecuali emoji, ternyata."
+        },
+        "1801": {
+            "name": "Pemangsa planet",
+            "description": "Menelan planet bulat-bulat dan memuntahkan emoji."
+        },
+        "1802": {
+            "name": "Spagetifikasi",
+            "description": "Meregangkan emoji jadi mi panjang, tipis, dan ekstra produktif.",
+            "quote": "Mamma mia!"
+        },
+        "1803": {
+            "name": "Radiasi Hawking",
+            "description": "Lubang hitam ternyata bocor emoji. Stephen benar."
+        },
+        "1804": {
+            "name": "Lubang cacing",
+            "description": "Jalan pintas ke semesta lain, masing-masing penuh emoji untuk diambil."
+        },
+        "1805": {
+            "name": "Perangkap cahaya",
+            "description": "Cahaya pun tak bisa lolos. Tapi emoji bisa, ke arahmu."
+        },
+        "1806": {
+            "name": "Piringan akresi",
+            "description": "Materi yang berputar, memanas, dan berubah jadi emoji."
+        },
+        "1807": {
+            "name": "Lensa gravitasi",
+            "description": "Lihat dari sudut yang pas dan setiap emoji muncul dua kali."
+        },
+        "1808": {
+            "name": "Dawai kosmik",
+            "description": "Tarik satu dan emojinya terurai keluar."
+        },
+        "1809": {
+            "name": "Sisi lain",
+            "description": "Ada sesuatu yang sedang menembus. Kelihatannya familier."
+        },
+        "1810": {
+            "name": "Materi gelap",
+            "description": "Tak terlihat, ada di mana-mana, dan diam-diam terbuat dari emoji.",
+            "quote": "Bergabunglah dengan sisi gelap. Kami punya emoji."
+        },
+        "1811": {
+            "name": "Sumur gravitasi",
+            "description": "Semuanya jatuh ke dalam. Yang keluar emoji."
+        },
+        "1812": {
+            "name": "Kuasar",
+            "description": "Cahaya paling terang di alam semesta, bertenaga emoji."
+        },
+        "1813": {
+            "name": "Waktu melambat",
+            "description": "Satu jam di sini sama dengan seratus tahun emoji di luar sana."
+        },
+        "1814": {
+            "name": "Teleskop horizon peristiwa",
+            "description": "Foto pertama lubang hitam. Ternyata emoji."
+        },
+        "1815": {
+            "name": "Lubang hitam supermasif",
+            "description": "Emoji seberat miliaran matahari, dalam satu stoples."
+        },
+        "1816": {
+            "name": "Lubang putih",
+            "description": "Kebalikan lubang hitam. Emoji cuma keluar."
+        },
+        "1817": {
+            "name": "Lubang hitam biner",
+            "description": "Dua lubang hitam berputar bersama, melempar emoji ke mana-mana."
+        },
+        "1818": {
+            "name": "Gelombang gravitasi",
+            "description": "Riak di ruang-waktu, terasa sebagai aliran emoji yang stabil."
+        },
+        "1819": {
+            "name": "Pusat galaksi",
+            "description": "Jantung galaksi, berdetak dengan emoji."
+        },
+        "1900": {
+            "name": "Kepadatan tak terhingga",
+            "description": "Setiap emoji yang pernah dibuat, dipadatkan jadi satu titik."
+        },
+        "1901": {
+            "name": "Dilatasi waktu",
+            "description": "Emoji kini tiba sebelum kamu sempat menggambarnya."
+        },
+        "1902": {
+            "name": "Penggabungan multisemesta",
+            "description": "Semua realitas digabung jadi satu. Toh semuanya emoji juga."
+        },
+        "1903": {
+            "name": "Pencerahan emoji",
+            "description": "Kamu tak lagi yakin di mana dirimu berakhir dan emoji dimulai."
+        },
+        "1904": {
+            "name": "Emoji terakhir",
+            "description": "Di akhir segalanya, tersisa satu emoji. Mirip sekali dengan emoji pertama yang pernah kamu ketuk.",
+            "quote": "Ketuk untuk mulai lagi?"
+        },
+        "1905": {
+            "name": "Rekursi",
+            "description": "Emoji menggambar emoji menggambar emoji."
+        },
+        "1906": {
+            "name": "Teori segalanya",
+            "description": "Semuanya emoji. Matematikanya akhirnya cocok."
+        },
+        "1907": {
+            "name": "Semesta cermin",
+            "description": "Semuanya sama, kecuali emojinya cemberut. Tak akan lama."
+        },
+        "1908": {
+            "name": "Benih baru",
+            "description": "Sesuatu yang kecil sedang tumbuh di dalam kehampaan."
+        },
+        "1909": {
+            "name": "Telur kosmik",
+            "description": "Sebentar lagi menetas."
+        },
+        "1910": {
+            "name": "Melampaui tak terhingga",
+            "description": "Tak terhingga, ditambah satu emoji."
+        },
+        "1911": {
+            "name": "Energi emoji murni",
+            "description": "Emoji sebagai energi mentah yang berderak."
+        },
+        "1912": {
+            "name": "Kesadaran emoji",
+            "description": "Emoji sekarang berpikir. Kebanyakan soal lebih banyak emoji."
+        },
+        "1913": {
+            "name": "Mahahadir",
+            "description": "Di mana-mana sekaligus, menggambar emoji."
+        },
+        "1914": {
+            "name": "Editor realitas",
+            "description": "Ubah hukum fisika. Jadikan emoji."
+        },
+        "1915": {
+            "name": "Penarik agung",
+            "description": "Menarik setiap emoji di alam semesta ke arahmu."
+        },
+        "1916": {
+            "name": "Lipatan dimensi",
+            "description": "Emoji dari dimensi keempat, dipipihkan demi kenyamananmu."
+        },
+        "1917": {
+            "name": "Pembalikan entropi",
+            "description": "Semuanya makin teratur. Jadi emoji."
+        },
+        "1918": {
+            "name": "Semuanya sekaligus",
+            "description": "Setiap emoji, di mana saja, semuanya sekaligus."
+        },
+        "1919": {
+            "name": "Nirwana emoji",
+            "description": "Kedamaian sempurna. Emoji sempurna."
+        },
+        "2000": {
+            "name": "Prototipe jam tangan",
+            "description": "Cuma bisa mundur lima menit, tapi itu lima menit emoji tambahan."
+        },
+        "2001": {
+            "name": "Era dinosaurus",
+            "description": "Dinosaurus tak punya peluang melawan meteor emoji."
+        },
+        "2002": {
+            "name": "Emoji kuno",
+            "description": "Hieroglif ternyata emoji dari dulu. Sekarang jadi milikmu."
+        },
+        "2003": {
+            "name": "Coretan zaman batu",
+            "description": "Lukisan gua, di-copy-paste ke masa kini."
+        },
+        "2004": {
+            "name": "Juru tulis abad pertengahan",
+            "description": "Para biarawan menyalin emoji di bawah cahaya lilin, khusus untukmu."
+        },
+        "2005": {
+            "name": "Pabrik era Victoria",
+            "description": "Alat tenun emoji bertenaga uap, diselamatkan dari sejarah."
+        },
+        "2006": {
+            "name": "Tahun 90-an",
+            "description": "Zaman ketika setiap emoji cuma :-)"
+        },
+        "2007": {
+            "name": "Emoji masa depan",
+            "description": "Emoji yang belum diciptakan. Bagus banget."
+        },
+        "2008": {
+            "name": "Lingkaran waktu",
+            "description": "Jam yang sama, terus berulang, menggambar emoji setiap kali.",
+            "quote": "Ah, mulai lagi deh."
+        },
+        "2009": {
+            "name": "Bertemu dirimu di masa depan",
+            "description": "Katanya kamu harusnya beli lebih banyak mesin waktu."
+        },
+        "2010": {
+            "name": "Pelukis Renaisans",
+            "description": "Senyum Mona Lisa ternyata emoji dari dulu."
+        },
+        "2011": {
+            "name": "Wild west",
+            "description": "Segenggam emoji."
+        },
+        "2012": {
+            "name": "Kekaisaran Romawi",
+            "description": "Banyak jalan menuju emoji."
+        },
+        "2013": {
+            "name": "Yunani kuno",
+            "description": "Para atlet Olimpiade bertanding demi emoji, bukan medali."
+        },
+        "2014": {
+            "name": "Zaman bajak laut",
+            "description": "Harta karun terkubur, dan setiap petinya penuh emoji."
+        },
+        "2015": {
+            "name": "Pendaratan di bulan",
+            "description": "Satu langkah kecil bagi manusia, satu lompatan raksasa bagi emoji."
+        },
+        "2016": {
+            "name": "Paradoks kakek",
+            "description": "Kamu kembali ke masa lalu dan menggambar emoji bareng kakekmu. Aman kok."
+        },
+        "2017": {
+            "name": "Efek kupu-kupu",
+            "description": "Satu kepakan di masa lalu, badai emoji hari ini."
+        },
+        "2018": {
+            "name": "Akhir zaman",
+            "description": "Detik terakhir yang akan pernah ada, penuh emoji."
+        },
+        "2019": {
+            "name": "Abadi",
+            "description": "Waktu sudah tak penting lagi. Hanya emoji."
+        },
+        "2100": {
+            "name": "Cahaya pertama",
+            "description": "Foton paling pertama, sudah berbentuk muka-muka kecil."
+        },
+        "2101": {
+            "name": "Sup purba",
+            "description": "Kaldu hangat berisi partikel, perlahan membentuk emoji."
+        },
+        "2102": {
+            "name": "Bintang emoji",
+            "description": "Bintang yang memfusikan hidrogen jadi emoji."
+        },
+        "2103": {
+            "name": "Matahari emoji",
+            "description": "Setiap tata surya mengorbit wajah raksasa yang berseri-seri."
+        },
+        "2104": {
+            "name": "Planet emoji",
+            "description": "Seluruh dunia tempat emoji tumbuh di pohon."
+        },
+        "2105": {
+            "name": "Kehidupan pertama",
+            "description": "Kecil, menggeliat, dan sedang menggambar emoji."
+        },
+        "2106": {
+            "name": "Evolusi emoji",
+            "description": "Yang paling imut yang bertahan."
+        },
+        "2107": {
+            "name": "Peradaban emoji",
+            "description": "Mereka membangun kota. Lalu mereka membangun pabrik emoji."
+        },
+        "2108": {
+            "name": "Jalan tol galaksi",
+            "description": "Emoji kini melaju antargalaksi di jam sibuk."
+        },
+        "2109": {
+            "name": "Kematian panas? Nggak deh",
+            "description": "Alam semesta ini tak akan pernah kehabisan emoji.",
+            "quote": "Misi gagal. Coba lagi di alam semesta berikutnya."
+        },
+        "2110": {
+            "name": "Galaksi",
+            "description": "Miliaran bintang, berpusar membentuk emoji."
+        },
+        "2111": {
+            "name": "Nebula",
+            "description": "Awan kosmik tempat emoji baru lahir."
+        },
+        "2112": {
+            "name": "Komet",
+            "description": "Utusan dari es, membawa emoji antarbintang."
+        },
+        "2113": {
+            "name": "Bulan",
+            "description": "Setiap planet dapat bulan. Setiap bulan dapat emoji.",
+            "quote": "Itu bukan bulan."
+        },
+        "2114": {
+            "name": "Supernova",
+            "description": "Hadiah terakhir bintang yang sekarat: ledakan emoji."
+        },
+        "2115": {
+            "name": "Inflasi kosmik",
+            "description": "Alam semesta makin besar, begitu juga jumlah emojinya."
+        },
+        "2116": {
+            "name": "Energi gelap",
+            "description": "Mendorong alam semesta melebar, memberi ruang untuk lebih banyak emoji."
+        },
+        "2117": {
+            "name": "Big bang kedua",
+            "description": "Kenapa berhenti di satu alam semesta?"
+        },
+        "2118": {
+            "name": "Radiasi latar kosmik",
+            "description": "Dengarkan baik-baik dan kamu masih bisa mendengar emoji pertama."
+        },
+        "2119": {
+            "name": "Alam semesta tersenyum",
+            "description": "Dilihat dari cukup jauh, seluruh alam semesta adalah emoji."
+        },
+        "2200": {
+            "name": "Jendela ke dunia lain",
+            "description": "Intip dan melambailah. Mereka melambai balik, dengan emoji.",
+            "quote": "Jangan tatap matanya. Dia tinggi dan bisa teleportasi."
+        },
+        "2201": {
+            "name": "Kamu versi lain",
+            "description": "Miliaran versi dirimu, semuanya mengetuk serempak.",
+            "quote": "Aku ayahmu. Juga anakmu. Juga kamu."
+        },
+        "2202": {
+            "name": "Setiap emoji yang mungkin",
+            "description": "Setiap kombinasi piksel adalah emoji di suatu tempat."
+        },
+        "2203": {
+            "name": "Semesta unicorn",
+            "description": "Dunia tempat setiap emoji adalah unicorn. Kamu ambil saja."
+        },
+        "2204": {
+            "name": "Semesta kucing",
+            "description": "Semuanya kucing. Kucingnya menggambar emoji. Aman kok."
+        },
+        "2205": {
+            "name": "Event crossover",
+            "description": "Semesta bertabrakan, dan emoji ada di mana-mana."
+        },
+        "2206": {
+            "name": "Peta multisemesta",
+            "description": "Memetakan dunia emoji terbaik. Di sini ada emoji."
+        },
+        "2207": {
+            "name": "Jaring dunia",
+            "description": "Setiap semesta terhubung, setiap emoji dialirkan kepadamu."
+        },
+        "2208": {
+            "name": "Semesta gelembung",
+            "description": "Pecahkan satu dan sealam semesta emoji berjatuhan."
+        },
+        "2209": {
+            "name": "Juragan para juragan",
+            "description": "Setiap juragan emoji di setiap semesta tunduk padamu."
+        },
+        "2210": {
+            "name": "Semesta anjing",
+            "description": "Semuanya anjing. Anjing-anjingnya jago banget menggambar emoji."
+        },
+        "2211": {
+            "name": "Dunia terbalik",
+            "description": "Emojinya terbalik. Produksinya tetap lurus."
+        },
+        "2212": {
+            "name": "Dimensi saku",
+            "description": "Semesta mungil di setiap saku, penuh emoji."
+        },
+        "2213": {
+            "name": "Dimensi cermin",
+            "description": "Bayanganmu juga sedang menggambar emoji."
+        },
+        "2214": {
+            "name": "Sejarah alternatif",
+            "description": "Dunia tempat emoji ditemukan lebih dulu. Sebelum bahasa."
+        },
+        "2215": {
+            "name": "Dunia mimpi",
+            "description": "Asal emoji ketika kamu tidur."
+        },
+        "2216": {
+            "name": "Dewan multisemesta",
+            "description": "Perwakilan dari setiap semesta, memberi suara soal emoji."
+        },
+        "2217": {
+            "name": "Jaringan portal",
+            "description": "Masuk lalu kembali dengan emoji seabrek.",
+            "quote": "Bingkai obsidian, batu api dan baja. Apa yang bisa salah?"
+        },
+        "2218": {
+            "name": "Kamu tak terhingga",
+            "description": "Kamu dalam jumlah tak terhingga, semuanya mengetuk. Lumayan juga hasilnya."
+        },
+        "2219": {
+            "name": "Omnisemesta",
+            "description": "Setiap multisemesta, di satu tempat. Semuanya emoji."
+        },
+        "2300": {
+            "name": "Ia menyadarimu",
+            "description": "Emoji paling pertama ternyata memperhatikan dari tadi.",
+            "quote": "Dan ia melihatmu. Berhenti mengetuk dong... kasih dia istirahat sebentar."
+        },
+        "2301": {
+            "name": "Ia balas tersenyum",
+            "description": "Rasa hangat menyebar ke setiap semesta."
+        },
+        "2302": {
+            "name": "Ia tertawa",
+            "description": "Tawa yang bergema menembus waktu, terbuat dari emoji."
+        },
+        "2303": {
+            "name": "Air mata bahagia",
+            "description": "Setiap tetes air mata adalah emoji segar."
+        },
+        "2304": {
+            "name": "Ia bangga padamu",
+            "description": "Semua ketukan itu, semua bangunan itu. Ia melihat semuanya."
+        },
+        "2305": {
+            "name": "Pelukan erat",
+            "description": "Dipeluk emoji pertama rasanya seperti kombo ×8."
+        },
+        "2306": {
+            "name": "Ia jadi keren",
+            "description": "Kacamata hitam dipasang. Produksi naik."
+        },
+        "2307": {
+            "name": "Terpesona",
+            "description": "Bahkan emoji pertama sekarang jadi penggemarmu."
+        },
+        "2308": {
+            "name": "Tangan hati",
+            "description": "Cinta, diungkapkan dengan emoji. Banyak emoji."
+        },
+        "2309": {
+            "name": "Kembali ke awal",
+            "description": "Ia persis seperti Emoji besar. Tentu saja.",
+            "quote": "Ketuk untuk mulai lagi."
+        },
+        "2310": {
+            "name": "Ia mengedip",
+            "description": "Sekarang kamu ikut paham leluconnya."
+        },
+        "2311": {
+            "name": "Ia berkilau",
+            "description": "Sedikit kilauan, dan emoji pun mengalir."
+        },
+        "2312": {
+            "name": "Ia bernyanyi",
+            "description": "Lagu yang belum pernah didengar siapa pun. Terbuat dari emoji."
+        },
+        "2313": {
+            "name": "Ia menari",
+            "description": "Setiap langkah meninggalkan jejak emoji."
+        },
+        "2314": {
+            "name": "Ia berbagi",
+            "description": "Emoji pertama memberimu hadiah. Isinya lebih banyak emoji."
+        },
+        "2315": {
+            "name": "Ia bermimpi",
+            "description": "Ia memimpikan emoji baru, dan mimpinya jadi nyata."
+        },
+        "2316": {
+            "name": "Ia tumbuh",
+            "description": "Makin besar, makin terang, dan makin banyak bikin emoji setiap hari."
+        },
+        "2317": {
+            "name": "Ia bersinar",
+            "description": "Saking terangnya kelihatan dari setiap semesta."
+        },
+        "2318": {
+            "name": "Ia berterima kasih",
+            "description": "Untuk setiap ketukanmu."
+        },
+        "2319": {
+            "name": "Selamanya",
+            "description": "Emoji pertama dan kamu, menggambar emoji bersama, selamanya."
+        },
+        "9800": {
+            "name": "Good vibes",
+            "description": "Emoji efek mulai muncul sesekali. Ketuk untuk dapat boost dan hadiah!"
+        },
+        "9801": {
+            "name": "Bintang keberuntungan",
+            "description": "Bintang-bintang sejajar. Emoji efek muncul dua kali lebih sering.",
+            "quote": "Minta satu permohonan, dapat dua."
+        },
+        "9802": {
+            "name": "Gerak lambat",
+            "description": "Waktu melambat saat semuanya berjalan lancar. Efek baik bertahan dua kali lebih lama."
+        },
+        "9803": {
+            "name": "Bintang jatuh",
+            "description": "Langit menghujani keberuntungan. Emoji efek muncul dua kali lebih sering lagi.",
+            "quote": "Buat permohonan. Buat beberapa sekalian."
+        },
+        "9900": {
+            "name": "Pemanasan",
+            "description": "Jari-jarimu mulai lemas. Kombo kini bisa mencapai ×4.",
+            "quote": "Jariku sakitnya sampai nggak bisa dipercaya."
+        },
+        "9901": {
+            "name": "Lagi panas",
+            "description": "Mengetuk secepat kilat. Kombo kini bisa mencapai ×5.",
+            "quote": "Di sini yang panas ruangannya, atau cuma layarku?"
+        },
+        "9902": {
+            "name": "Membara",
+            "description": "Konon ada pengetuk yang begitu cepat sampai layarnya terbakar. Kombo kini bisa mencapai ×6."
+        },
+        "9903": {
+            "name": "Kobaran api",
+            "description": "Jempolmu sudah jadi bencana alam. Kombo kini bisa mencapai ×7.",
+            "quote": "Anti-gores telah keluar dari grup."
+        },
+        "9904": {
+            "name": "Supernova",
+            "description": "Ketukanmu begitu cepat sampai cahaya pun kewalahan mengejar. Kombo kini bisa mencapai ×8."
+        },
+        "9905": {
+            "name": "Kombo!",
+            "description": "Ketuk cepat untuk membangun kombo yang melipatgandakan setiap ketukan, hingga ×3. Jaga ritmenya!"
+        },
+        "40000": {
+            "name": "Pangsit",
+            "description": "Dikukus, dilipat, dan diisi emoji.",
+            "quote": "Bintang satu. Ada emoji di pangsitku. Masih berkedip."
+        },
+        "40001": {
+            "name": "Burger",
+            "description": "Ditumpuk tinggi dengan selada, tomat, dan emoji.",
+            "quote": "Aku minta tanpa emoji. Manajernya ketawa. Aku masih di parkiran."
+        },
+        "40002": {
+            "name": "Spageti",
+            "description": "Satu mi panjang, digulung jadi emoji yang sempurna.",
+            "quote": "Satu mi. SATU. Semoga restoranmu kebakaran."
+        },
+        "40003": {
+            "name": "Tempura",
+            "description": "Emoji berbalut tepung tipis, digoreng, renyah sempurna."
+        },
+        "40004": {
+            "name": "Burrito",
+            "description": "Semuanya dibungkus rapat, termasuk emoji.",
+            "quote": "Dibungkus rapat, kayak amarahku."
+        },
+        "40005": {
+            "name": "Ramen",
+            "description": "Semangkuk panas dengan emoji setengah matang di atasnya.",
+            "quote": "'Emoji setengah matang' itu barusan mengedip padaku."
+        },
+        "40006": {
+            "name": "Croissant",
+            "description": "Berlapis, gurih mentega, dan berbentuk senyum kalau kamu menyipitkan mata."
+        },
+        "40007": {
+            "name": "Kari",
+            "description": "Cukup pedas sampai emojinya berkeringat."
+        },
+        "40008": {
+            "name": "Panekuk",
+            "description": "Setumpuk emoji empuk, disiram sirup.",
+            "quote": "Terus sarapan keduanya mana?"
+        },
+        "40009": {
+            "name": "Hot pot",
+            "description": "Semua berbagi, dan semua dapat emoji."
+        },
+        "70000": {
+            "name": "Pembantu pelari",
+            "description": "Mengetuk layar dengan kecepatan seratus meter per detik."
+        },
+        "70001": {
+            "name": "Pembantu angkat besi",
+            "description": "Ketukannya sampai bikin layar sedikit melengkung.",
+            "quote": "Aku bisa bench press 200 kilo dan kamu menyuruhku colek-colek HP. Ya sudah."
+        },
+        "70002": {
+            "name": "Pembantu bola tangan",
+            "description": "Melempar ketukan ke Emoji besar dari seberang lapangan."
+        },
+        "70003": {
+            "name": "Pembantu pesepeda",
+            "description": "Mengayuh mesin kecil yang mengetuk untukmu."
+        },
+        "70004": {
+            "name": "Pembantu pegolf",
+            "description": "Hole in one, ketuk in one."
+        },
+        "70005": {
+            "name": "Pembantu anggar",
+            "description": "En garde! Ketuk, ketuk, ketuk."
+        },
+        "70006": {
+            "name": "Pembantu peselancar",
+            "description": "Menunggangi kombomu seperti ombak."
+        },
+        "70007": {
+            "name": "Pembantu pesenam",
+            "description": "Mengetuk dengan bentuk sempurna setiap kali. Sepuluh dari sepuluh."
+        },
+        "70008": {
+            "name": "Pembantu joki",
+            "description": "Mengetuk sambil berpacu kencang."
+        },
+        "70009": {
+            "name": "Pembantu basket",
+            "description": "Men-dribble di atas Emoji besar. Masuk terus."
+        },
+        "130000": {
+            "name": "Monyet antariksa",
+            "description": "Emoji pertama di luar angkasa adalah monyet. Tentu saja."
+        },
+        "130001": {
+            "name": "Robot perawatan",
+            "description": "Menjaga stasiun tetap jalan dan emoji tetap mengalir."
+        },
+        "130002": {
+            "name": "Kebun antariksa",
+            "description": "Menanam emoji di gravitasi nol."
+        },
+        "130003": {
+            "name": "Pusat kendali misi",
+            "description": "Houston, kami punya emoji.",
+            "quote": "Houston, kita punya masalah. Masalahnya kamu. Sedang kami tangani."
+        },
+        "130004": {
+            "name": "Makanan antariksa",
+            "description": "Emoji kering beku. Tinggal tambah air."
+        },
+        "130005": {
+            "name": "Lab gravitasi nol",
+            "description": "Eksperimen membuktikan emoji bisa melayang. Dan berlipat ganda."
+        },
+        "130006": {
+            "name": "Bumi terbit",
+            "description": "Pemandangan dari atas sini sangat menginspirasi. Dan berbentuk emoji.",
+            "quote": "Pemandangan yang indah. Sayang sekali soal nasibnya nanti."
+        },
+        "130007": {
+            "name": "Planet bercincin",
+            "description": "Cincinnya terbuat dari emoji mungil."
+        },
+        "130008": {
+            "name": "Fase bulan",
+            "description": "Setiap fase bulan membawa emoji baru."
+        },
+        "130009": {
+            "name": "Debu bintang",
+            "description": "Sapu, dan ternyata isinya emoji."
+        },
+        "140000": {
+            "name": "Dango",
+            "description": "Tiga bola kue manis di tusukan, masing-masing satu emoji."
+        },
+        "140001": {
+            "name": "Wafel",
+            "description": "Setiap kotaknya berisi genangan kecil emoji."
+        },
+        "140002": {
+            "name": "Pai",
+            "description": "Baru keluar dari oven, berisi emoji."
+        },
+        "140003": {
+            "name": "Sundae",
+            "description": "Tiga sendok, meses, dan emoji di atasnya."
+        },
+        "140004": {
+            "name": "Es serut",
+            "description": "Dingin, manis, dan disiram emoji."
+        },
+        "140005": {
+            "name": "Kue keberuntungan",
+            "description": "Ramalanmu: lebih banyak emoji."
+        },
+        "140006": {
+            "name": "Jus kotak",
+            "description": "Sugar rush dalam kotak."
+        },
+        "140007": {
+            "name": "Permen lemon",
+            "description": "Asam dulu, lalu emoji manis."
+        },
+        "140008": {
+            "name": "Makarun",
+            "description": "Kenyal, keemasan, dan penuh emoji."
+        },
+        "140009": {
+            "name": "Ceri di atasnya",
+            "description": "Sentuhan akhir di setiap emoji."
         }
     },
     "effects": {
@@ -1001,10 +2640,153 @@
             "description": "Produksi emoji berkurang setengah!"
         },
         "200": {
-            "title": "Hadiah emoji"
+            "title": "Hadiah emoji",
+            "description": "Emoji senilai 15 menit!"
         }
     },
-    "perks": {},
-    "trials": {},
-    "funValues": {}
+    "perks": {
+        "overtime": {
+            "name": "Lembur",
+            "description": "Efek baik bertahan 50% lebih lama"
+        },
+        "giftWrap": {
+            "name": "Kertas kado",
+            "description": "Hadiah memberi dua kali lipat"
+        },
+        "headStart": {
+            "name": "Start duluan",
+            "description": "Mulai setiap putaran dengan produksi terbaik putaran terakhirmu selama 5 menit"
+        },
+        "luckyStreak": {
+            "name": "Lagi hoki",
+            "description": "Emoji efek muncul 50% lebih sering"
+        },
+        "shinySense": {
+            "name": "Indra kilau",
+            "description": "Peluang emoji berkilau dua kali lipat"
+        },
+        "resonance": {
+            "name": "Resonansi",
+            "description": "Esensi yang belum dipakai menaikkan produksi 2,5% per esensi, naik dari 2%"
+        },
+        "collectorsPride": {
+            "name": "Bangga kolektor",
+            "description": "+0,03% produksi untuk setiap emoji berbeda di koleksimu"
+        },
+        "bulkDiscount": {
+            "name": "Diskon grosir",
+            "description": "Bangunan 10% lebih murah"
+        },
+        "magnet": {
+            "name": "Magnet",
+            "description": "Emoji efek bertahan di layar dua kali lebih lama"
+        },
+        "neighbourhood": {
+            "name": "Lingkungan",
+            "description": "+3% produksi untuk setiap jenis bangunan yang kamu miliki"
+        },
+        "muscleMemory": {
+            "name": "Memori otot",
+            "description": "Tangan Emoji besar tetap kamu simpan saat prestise"
+        },
+        "steadyHands": {
+            "name": "Tangan mantap",
+            "description": "Kombo berkurang 20% lebih lambat"
+        },
+        "momentum": {
+            "name": "Momentum",
+            "description": "+1% produksi untuk setiap 10 menit bermain di putaran ini, hingga +50%"
+        },
+        "secondWind": {
+            "name": "Napas kedua",
+            "description": "+1 untuk kombo maksimalmu"
+        },
+        "goldenTouch": {
+            "name": "Sentuhan emas",
+            "description": "Emoji berkilau bernilai 5 kali lipat"
+        },
+        "overflow": {
+            "name": "Meluap",
+            "description": "Esensi yang dipakai tetap memberi separuh bonus produksinya"
+        },
+        "hallOfFame": {
+            "name": "Hall of fame",
+            "description": "+10% produksi untuk setiap tantangan yang selesai"
+        },
+        "flyingStart": {
+            "name": "Start kilat",
+            "description": "Start duluan memberi produksi 30 menit, bukan 5"
+        }
+    },
+    "trials": {
+        "handsOff": {
+            "name": "Lepas tangan",
+            "rule": "Mengetuk Emoji besar tidak menggambar apa pun",
+            "reward": "+15% produksi"
+        },
+        "bareBones": {
+            "name": "Tinggal tulang",
+            "rule": "Upgrade tidak bisa dibeli",
+            "reward": "+50% emoji per ketukan"
+        },
+        "darkSky": {
+            "name": "Langit gelap",
+            "rule": "Emoji efek tidak muncul",
+            "reward": "Emoji efek muncul 25% lebih sering"
+        }
+    },
+    "funValues": {
+        "1": {
+            "name": "Cookie clicker",
+            "description": "Emoji efek jadi 🍪, yang buruk jadi 👵"
+        },
+        "17": {
+            "name": "Jahanam",
+            "description": "Efek produksi 😈 ×77 bisa muncul"
+        },
+        "31": {
+            "name": "Gravitasi rendah",
+            "description": "Emoji yang diketuk melayang menjauh"
+        },
+        "42": {
+            "name": "Jawabannya",
+            "description": "+4,2% produksi"
+        },
+        "50": {
+            "name": "Seimbang sempurna",
+            "description": "Ketukan ×0,5, produksi ×1,5"
+        },
+        "64": {
+            "name": "Overclock",
+            "description": "Kombo bisa naik satu level lebih tinggi"
+        },
+        "70": {
+            "name": "Nggak sabaran",
+            "description": "Emoji efek muncul lebih cepat"
+        },
+        "76": {
+            "name": "Muncul hoki",
+            "description": "Peluang 10% dapat emoji efek bonus"
+        },
+        "77": {
+            "name": "Uang terbang",
+            "description": "💸 di harga"
+        },
+        "88": {
+            "name": "Maraton",
+            "description": "Kombo berkurang 25% lebih lambat"
+        },
+        "91": {
+            "name": "Kolektor",
+            "description": "Peluang emoji berkilau 1,25×"
+        },
+        "99": {
+            "name": "99 balon merah",
+            "description": "Emoji efek jadi 🎈, yang buruk jadi 📌"
+        },
+        "100": {
+            "name": "Seratus sedih",
+            "description": "Statistik menampilkan 😭 di samping nilai seru"
+        }
+    }
 }

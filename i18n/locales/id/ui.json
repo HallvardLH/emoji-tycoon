@@ -6,11 +6,14 @@
         "buildings": "Bangunan",
         "upgrades": "Upgrade",
         "stats": "Statistik",
-        "collection": "Koleksi"
+        "collection": "Koleksi",
+        "newItemsLabel_other": "{{label}}, {{count}} baru"
     },
     "header": {
         "emojis": "Emoji",
-        "perSecond": "Per detik: {{value}}"
+        "perSecond": "Per detik: {{value}}",
+        "rate": "+{{value}} / dtk",
+        "gemsLabel_other": "{{gems}} permata. Buka toko permata"
     },
     "common": {
         "buy": "Beli",
@@ -23,29 +26,119 @@
             "multiplyTap": "• Ketukan jadi 2x lebih efisien.",
             "percentageIncreaseTap": "• Ketukan jadi {{percent}} lebih kuat.",
             "tapPercentageOfEps": "• Ketukan memberi {{percent}} dari total produksi emoji kamu.",
-            "percentageIncreaseProduction": "• Total produksi emoji naik {{percent}}."
+            "percentageIncreaseProduction": "• Total produksi emoji naik {{percent}}.",
+            "comboUnlock": "• Mengetuk cepat membangun kombo, hingga ×{{level}}.",
+            "comboLevel": "• Kombo bisa mencapai ×{{level}}.",
+            "effectEmojis": "• {{summary}}."
         },
         "bonusProduction": "Membeli upgrade ini sekarang akan menambah <hl>+{{bonus}}</hl> emoji per detik, menaikkan produksi emoji sebesar <hl>{{percent}}</hl>",
         "bonusTap": "Membeli upgrade ini sekarang akan menambah <hl>+{{bonus}}</hl> emoji per ketukan, menaikkan emoji dari setiap ketukan sebesar <hl>{{percent}}</hl>",
         "filterTitle": "Filter upgrade",
-        "filterDescription": "Pilih bangunan yang upgrade-nya ingin kamu lihat."
+        "filterDescription": "Pilih bangunan yang upgrade-nya ingin kamu lihat.",
+        "effectEmojiSummary": {
+            "spawnRate": "Emoji efek muncul ×{{multiplier}} lebih sering",
+            "duration": "Efek baik bertahan ×{{multiplier}} lebih lama",
+            "start": "Emoji efek mulai bermunculan"
+        },
+        "chips": {
+            "multiplyBuildingProduction": "{{buildings}} ×{{multiplier}}",
+            "multiplyTap": "Ketukan ×{{multiplier}}",
+            "percentageIncreaseTap": "Ketukan +{{percent}}",
+            "percentageIncreaseProduction": "Produksi +{{percent}}",
+            "tapPercentageOfEps": "Ketukan +{{percent}} dari emoji/dtk",
+            "comboUnlock": "Kombo hingga ×{{level}}",
+            "comboLevel": "Kombo maks ×{{level}}"
+        },
+        "impact": {
+            "perSecond": "+{{bonus}} /dtk",
+            "perTap": "+{{bonus}} per ketukan",
+            "and": "{{a}} dan {{b}}",
+            "rightNow": "{{gains}} saat ini"
+        },
+        "tierLabel": {
+            "helper": "{{building}} · PEMBANTU",
+            "hands": "EMOJI BESAR · TANGAN",
+            "effectEmojisNew": "EMOJI EFEK · BARU",
+            "effectEmojisLevel": "EMOJI EFEK · LEVEL {{level}}",
+            "comboNew": "KOMBO · BARU",
+            "comboLevel": "KOMBO · LEVEL {{level}}",
+            "tier": "{{building}} · TINGKAT {{tier}}"
+        },
+        "forSale": "Dijual",
+        "owned": "Dimiliki",
+        "available": "Tersedia",
+        "emptyOwnedTitle": "Belum ada yang dibeli",
+        "emptyTitle": "Belum ada upgrade",
+        "emptyOwnedText": "Upgrade yang kamu beli akan terkumpul di sini.",
+        "emptyText": "Beli bangunan dan ketuk Emoji besar untuk membuka upgrade.",
+        "filterAll": "Semua",
+        "quoted": "\"{{quote}}\"",
+        "ownedBadge": "✓ DIMILIKI",
+        "paid": "Dibayar {{price}}",
+        "bareBones": "🦴 Tak ada upgrade di {{trial}}",
+        "buyFor": "Beli seharga {{price}}",
+        "priceAndTime": "{{price}} · {{time}}",
+        "ownedCount": "{{owned}} dari {{total}} upgrade",
+        "availableCount": "{{affordable}} terjangkau · {{unlocked}} terbuka",
+        "a11y": {
+            "owned": "{{name}}, dimiliki",
+            "price": "{{name}}, {{price}}",
+            "affordable": "{{name}}, {{price}}, terjangkau"
+        }
     },
     "stats": {
         "totalEmojisDrawn": "Total emoji digambar",
         "emojiTaps": "Ketukan emoji",
         "emojisEarnedFromTapping": "Emoji dari ketukan",
         "magicalEmojisTapped": "Emoji ajaib diketuk",
-        "funValue": "Nilai seru"
+        "funValue": "Nilai seru",
+        "shinyEmojisTapped": "Emoji berkilau diketuk",
+        "comboTaps": "Ketukan kombo",
+        "madeByEachBuilding": "Hasil tiap bangunan"
     },
     "drawer": {
         "language": "Bahasa",
         "deviceLanguage": "Bahasa perangkat",
         "cheats": "Cheat",
         "resetGame": "Reset game",
-        "spawnEffect": "Munculkan emoji efek"
+        "spawnEffect": "Munculkan emoji efek",
+        "menu": "Menu"
     },
     "prestige": {
-        "title": "Prestise"
+        "title": "Prestise",
+        "close": "Tutup",
+        "ordinal_ordinal_other": "ke-{{count}}",
+        "celebrateCaption": "PRESTISE #{{count}}",
+        "celebrateTrialCaption": "PRESTISE #{{count}} · TANTANGAN DIMULAI",
+        "celebrateTitle": "+{{essence}} esensi",
+        "celebrateTierTitle": "+{{essence}} esensi · perk tingkat {{tier}} terbuka",
+        "essenceCaption": "ESENSI EMOJI",
+        "essenceBonus": "+{{bonus}} produksi ({{each}} per esensi)",
+        "intro": "Setelah cukup banyak emoji digambar, esensi mereka mulai berkumpul di sekitarmu: zat ajaib yang berubah bentuk setiap kali kamu melihatnya. Setiap esensi yang belum dipakai menaikkan produksi, dan esensi bisa membeli perk yang berlaku selamanya.",
+        "startOver": "Mulai ulang",
+        "prestigesSoFar_other": "{{count}} PRESTISE SEJAUH INI",
+        "resetsWhat": "Mereset emoji, bangunan, upgrade bangunan, dan tangan. Koleksi, statistik, upgrade kombo dan emoji efek, esensi, serta perk tetap kamu simpan.",
+        "nextEssence": "Esensi berikutnya",
+        "nextEssenceAt": "di {{amount}} emoji digambar",
+        "noEssenceYet": "Belum ada esensi untuk didapat",
+        "tapAgainToPrestige": "Ketuk lagi untuk prestise",
+        "prestigeFor": "Prestise untuk +{{essence}} ✨",
+        "productionCaps": "+{{percent}} PRODUKSI",
+        "playedThisRun": "Dimainkan putaran ini",
+        "drawnThisRun": "Digambar putaran ini",
+        "essencePerHour": "Esensi per jam",
+        "afterTenMinutes": "setelah 10 mnt",
+        "essenceRate": "{{rate}} (terbaik {{best}})",
+        "slowingDown": "📉 Esensi datang lebih lambat dibanding tadi di putaran ini. Saat yang pas untuk prestise.",
+        "drawnAmount": "{{amount}} digambar",
+        "pastRuns": "Putaran sebelumnya",
+        "pastRunLine": "{{duration}} · {{amount}} digambar",
+        "pastRunTrialCompleted": "{{icon}} {{name}} ✓",
+        "pastRunTrialNotCompleted": "{{icon}} {{name}}, tidak selesai",
+        "chipLabel": "Esensi emoji",
+        "chipLabelReady": "Prestise untuk {{essence}} esensi emoji",
+        "chipEssence": "Esensi",
+        "chipPending": "+{{essence}} esensi"
     },
     "numbers": {
         "groupSize": "3",
@@ -95,6 +188,260 @@
             "57": "Od",
             "60": "Nd",
             "63": "Vg"
+        }
+    },
+    "buildings": {
+        "ownedA11y_other": "{{count}} dimiliki",
+        "newBadge": "BARU",
+        "statLine": "{{eps}} /dtk · {{share}} dari total",
+        "nextUpgrade": "upgrade berikutnya {{at}}",
+        "allUpgradesFound": "semua upgrade ditemukan",
+        "epsEach": "+{{eps}} /dtk per unit",
+        "buy": "BELI",
+        "buyCount": "BELI ×{{count}}",
+        "buyA11y_other": "Beli {{count}} {{name}} seharga {{price}}",
+        "mystery": "Bangunan misterius",
+        "revealsAt": "Terungkap di {{amount}} emoji",
+        "bulkLabel": "Jumlah beli",
+        "bulkMax": "Maks",
+        "bulkA11yMax": "Beli sebanyak yang kamu mampu",
+        "bulkA11y_other": "Beli {{count}} sekaligus",
+        "milestoneCaption": "BANGUNAN BARU",
+        "milestoneTitle": "{{building}} pertamamu!"
+    },
+    "time": {
+        "seconds_other": "{{count}}d",
+        "minutes_other": "{{count}}m",
+        "hours_other": "{{count}}j",
+        "days_other": "{{count}}h",
+        "pair": "{{a}} {{b}}"
+    },
+    "trials": {
+        "title": "Tantangan",
+        "completedCount": "{{done}} dari {{total}} selesai",
+        "intro": "Prestise ke putaran dengan aturan yang bikin lebih sulit. Gambar cukup banyak emoji di putaran itu untuk menyimpan hadiahnya selamanya, dan aturannya pun dicabut.",
+        "unlocksWith": "Terbuka di prestise {{ordinal}} kamu.",
+        "completeCaps": "TANTANGAN SELESAI",
+        "inProgressCaps": "TANTANGAN BERLANGSUNG",
+        "completedText": "{{reward}} jadi milikmu selamanya, dan aturannya dicabut selama sisa putaran ini.",
+        "activeText": "{{rule}}. Gambar {{goal}} di putaran ini untuk mendapat {{reward}} selamanya.",
+        "giveUp": "Menyerah dari tantangan ini",
+        "giveUpConfirm": "Ketuk lagi untuk menyerah (tanpa hadiah)",
+        "doneTag": "✓ SELESAI",
+        "playingTag": "DIMAINKAN",
+        "ruleLine": "<hl>Aturan: </hl>{{rule}}",
+        "ruleLineWithStart": "<hl>Aturan: </hl>{{rule}} (kamu mulai dengan {{amount}} emoji)",
+        "rewardLine": "<hl>Hadiah: </hl>{{reward}}",
+        "finishFirst": "Selesaikan tantanganmu dulu",
+        "needsEssence": "Butuh esensi untuk prestise",
+        "tapAgainToStart": "Ketuk lagi untuk mulai",
+        "prestigeInto": "Prestise ke tantangan untuk +{{essence}} ✨",
+        "goalCaps": "TARGET: {{goal}}",
+        "goal": "{{amount}} emoji",
+        "completeTitle": "{{name}}: {{reward}}",
+        "rewardUnlocked": "Hadiah terbuka"
+    },
+    "perks": {
+        "title": "Perk",
+        "ownedCount": "{{owned}} dari {{total}} dimiliki",
+        "spentKeepsHalf": "Esensi yang dipakai tetap memberi separuh bonus produksinya.",
+        "spentNoBonus": "Esensi yang dipakai tidak lagi menaikkan produksi.",
+        "tierCaps": "TINGKAT {{tier}}",
+        "tierLockedCaps": "TINGKAT {{tier}} · TERBUKA DI PRESTISE {{ordinal}} KAMU",
+        "hidden": "Lakukan prestise untuk mengungkap perk ini.",
+        "needsFirst": "Butuh {{perk}} dulu",
+        "ownedTag": "✓ DIMILIKI",
+        "buyLabel": "Beli {{perk}} seharga {{cost}} esensi"
+    },
+    "gems": {
+        "title": "Toko permata",
+        "yourGemsCaps": "PERMATAMU",
+        "gemsCaps": "PERMATA",
+        "offlineClaim": "{{cost}} permata untuk klaim ×{{multiplier}} hasil offline",
+        "storeUnavailable": "Toko sedang tidak tersedia. Periksa koneksimu dan coba lagi nanti.",
+        "purchaseFailed": "Pembelian gagal. Kamu tidak dikenai biaya.",
+        "keptOnPrestige": "Permata tetap tersimpan saat kamu prestise.",
+        "unavailable": "Tidak tersedia",
+        "thankYouCaps": "TERIMA KASIH!",
+        "gemsAdded_other": "+{{amount}} permata",
+        "buyLabel_other": "Beli {{amount}} permata",
+        "buyLabelWithPrice_other": "Beli {{amount}} permata seharga {{price}}",
+        "tags": {
+            "popular": "POPULER",
+            "bestValue": "PALING HEMAT"
+        }
+    },
+    "offline": {
+        "welcomeBack": "Selamat datang kembali!",
+        "away": "Kamu pergi selama {{duration}}.",
+        "awayCapped": "Kamu pergi lebih dari {{duration}}, batas maksimal yang dihitung.",
+        "rested": "Kerajaanmu beristirahat selama kamu pergi.",
+        "missedCaps": "PRODUKSI TERLEWAT",
+        "perSecond": "{{value}} / dtk",
+        "gemOfferCaps": "×{{multiplier}} UNTUK {{cost}} PERMATA · KAMU PUNYA {{gems}}",
+        "gemOfferGetCaps": "×{{multiplier}} UNTUK {{cost}} PERMATA · DAPATKAN PERMATA",
+        "noThanks": "Nggak, makasih"
+    },
+    "ads": {
+        "watchCaps": "TONTON IKLAN",
+        "loadingCaps": "MEMUAT IKLAN...",
+        "failed": "Iklan tidak diputar sampai habis. Periksa koneksimu dan coba lagi."
+    },
+    "reset": {
+        "title": "Mulai ulang?",
+        "warning": "Ini akan mereset game-mu. Emoji, bangunan, upgrade, esensi, perk, koleksi, dan statistikmu akan hilang semua. Ini tidak bisa dibatalkan.",
+        "purchasesSafe": "Pembelian dalam game-mu aman. Permata dan semua yang kamu beli akan terbawa ke game barumu.",
+        "confirm": "Ya, reset game-ku",
+        "cancel": "Lanjut main"
+    },
+    "milestones": {
+        "caption": "PENCAPAIAN",
+        "emojisDrawn": "{{amount}} emoji digambar!"
+    },
+    "settings": {
+        "title": "Pengaturan",
+        "close": "Tutup pengaturan",
+        "sound": "Suara",
+        "soundEffects": "Efek suara",
+        "soundEffectsHint": "Bunyi pop lembut saat kamu mengetuk, dan denting untuk emoji berkilau.",
+        "performance": "Performa",
+        "reduceAnimations": "Kurangi animasi",
+        "reduceAnimationsHint": "Emoji yang diketuk tidak lagi terlempar dari Emoji besar. Coba ini kalau ketukan terasa lag.",
+        "dangerZone": "Zona bahaya"
+    },
+    "cheats": {
+        "subtitle": "Untuk pengujian. Perubahan berlaku pada simpananmu.",
+        "simulateAway": "Simulasikan pergi 1 jam",
+        "gems": "Permata",
+        "addGems_other": "+{{count}} permata",
+        "addComboTaps": "+{{amount}} ketukan kombo",
+        "multiplyTapEarnings": "×{{factor}} hasil ketukan",
+        "addCollection_other": "+{{count}} koleksi",
+        "addShiny_other": "+{{count}} berkilau",
+        "addMagical_other": "+{{count}} ajaib",
+        "addEssence_other": "+{{count}} esensi",
+        "addPerkTier_other": "+{{count}} tingkat perk",
+        "addRunTime": "+{{time}} waktu putaran",
+        "reachTrialGoal": "Capai target tantangan",
+        "effectEmojis": "Emoji efek",
+        "spawnEffects_other": "Munculkan {{count}} emoji efek",
+        "speed": "Kecepatan",
+        "speedLabel": "Kecepatan {{speed}}×",
+        "speedHint": "Produksi dan waktu putaran. Efek dan kombo tetap real-time. Mati setelah dimuat ulang.",
+        "shiny": "Berkilau",
+        "onlyShiny": "Hanya emoji berkilau",
+        "funValueQuirk": "{{name}}: {{description}}",
+        "noQuirk": "Tanpa keunikan",
+        "hideFunValueTable": "Sembunyikan tabel nilai seru",
+        "showFunValueTable": "Tampilkan tabel nilai seru",
+        "setFunValueLabel": "Atur nilai seru ke {{value}}: {{name}}",
+        "changeFunValueLabel": "Ubah nilai seru sebesar {{change}}"
+    },
+    "collection": {
+        "ofTotalFound": "/ {{total}} ditemukan",
+        "mostTapped": "Paling sering diketuk: {{emoji}} ×{{amount}}",
+        "startCollecting": "Ketuk Emoji besar untuk mulai mengoleksi",
+        "shinyFound_other": "{{amount}} berkilau",
+        "categories": {
+            "faces": "Wajah",
+            "animals": "Hewan",
+            "food": "Makanan",
+            "objects": "Benda",
+            "people": "Orang",
+            "bodyParts": "Tubuh",
+            "placesBuildings": "Tempat",
+            "plants": "Tanaman",
+            "vehicles": "Kendaraan",
+            "weather": "Cuaca",
+            "symbols": "Simbol"
+        },
+        "categoryLabel": "{{label}}, {{found}} dari {{total}} ditemukan",
+        "notFound": "Belum ditemukan",
+        "cellLabel_other": "{{emoji}}, diketuk {{count}} kali",
+        "cellLabelShiny_other": "{{emoji}}, diketuk {{count}} kali, {{shiny}} berkilau"
+    },
+    "effects": {
+        "chipTapping": "×{{multiplier}} ketukan",
+        "chipProduction": "×{{multiplier}} produksi",
+        "stackLabel_other": "{{count}} bertumpuk: {{label}}, berikutnya berakhir dalam {{time}}",
+        "chipLabel": "{{title}}, sisa {{time}}",
+        "gift": "Hadiah!",
+        "ohNo": "Oh tidak!",
+        "tapping": "Ketukan",
+        "production": "Produksi",
+        "tapFrenzy": "Ketukan gila!",
+        "unholyPower": "Kekuatan iblis!",
+        "productionBoost": "Produksi melonjak!",
+        "collectLabel": "Ambil {{title}}",
+        "tapMe": "Ketuk aku"
+    },
+    "combo": {
+        "level": "Kombo ×{{multiplier}}",
+        "max": "Kombo maks ×{{multiplier}}",
+        "label": "Kombo kali {{multiplier}}",
+        "maxLabel": "Kombo kali {{multiplier}}, maksimal"
+    },
+    "bigEmoji": {
+        "tapLabel": "Ketuk Emoji besar",
+        "tapShinyLabel": "Ketuk Emoji besar yang berkilau",
+        "shiny": "Berkilau",
+        "shinyBurst": "Berkilau!",
+        "handsOff": "Tantangan {{trial}} · ketukan tak menggambar apa pun",
+        "perTap": "+{{value}} per ketukan"
+    },
+    "bank": {
+        "timeToAfford": {
+            "needMore": "Belum cukup",
+            "seconds_other": "Dalam {{count}} dtk",
+            "minutes_other": "Dalam {{count}} mnt",
+            "hours_other": "Dalam {{count}} jam",
+            "days_other": "Dalam {{count}} hari",
+            "aLongTime": "Masih lama"
+        },
+        "timeToAffordInline": {
+            "needMore": "belum cukup",
+            "seconds_other": "dalam {{count}} dtk",
+            "minutes_other": "dalam {{count}} mnt",
+            "hours_other": "dalam {{count}} jam",
+            "days_other": "dalam {{count}} hari",
+            "aLongTime": "masih lama"
+        }
+    },
+    "catalogue": {
+        "title": "Semua upgrade",
+        "counts": "{{owned}} dimiliki · {{forSale}} dijual · {{locked}} terkunci · {{total}} total",
+        "filter": {
+            "owned": "Dimiliki {{count}}",
+            "forSale": "Dijual {{count}}",
+            "locked": "Terkunci {{count}}"
+        },
+        "combo": "Kombo",
+        "effectEmojis": "Emoji efek",
+        "unlock": {
+            "own": "Miliki {{count}} {{buildings}}",
+            "tapping": "Dapatkan {{amount}} emoji dari ketukan",
+            "comboTaps": "{{amount}} ketukan kombo",
+            "earned": "Dapatkan {{amount}} emoji"
+        },
+        "state": {
+            "owned": "✓ DIMILIKI",
+            "forSale": "DIJUAL",
+            "locked": "🔒 TERKUNCI"
+        },
+        "stateA11y": {
+            "owned": "dimiliki",
+            "forSale": "dijual",
+            "locked": "terkunci"
+        },
+        "tileA11y": "{{name}}, {{state}}",
+        "prev": "Kembali",
+        "next": "Lanjut",
+        "prevA11y": "Upgrade sebelumnya",
+        "nextA11y": "Upgrade berikutnya",
+        "fact": {
+            "price": "HARGA",
+            "unlocks": "TERBUKA",
+            "id": "ID"
         }
     }
 }

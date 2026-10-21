@@ -6,11 +6,14 @@
         "buildings": "建築",
         "upgrades": "升級",
         "stats": "統計",
-        "collection": "收藏"
+        "collection": "收藏",
+        "newItemsLabel_other": "{{label}}，{{count}} 個新項目"
     },
     "header": {
         "emojis": "Emoji",
-        "perSecond": "每秒：{{value}}"
+        "perSecond": "每秒：{{value}}",
+        "rate": "+{{value}}/秒",
+        "gemsLabel_other": "{{gems}} 顆寶石。開啟寶石商店"
     },
     "common": {
         "buy": "購買",
@@ -23,29 +26,119 @@
             "multiplyTap": "• 點擊效率翻倍。",
             "percentageIncreaseTap": "• 點擊威力提升 {{percent}}。",
             "tapPercentageOfEps": "• 每次點擊可獲得 Emoji 總產量的 {{percent}}。",
-            "percentageIncreaseProduction": "• Emoji 總產量提升 {{percent}}。"
+            "percentageIncreaseProduction": "• Emoji 總產量提升 {{percent}}。",
+            "comboUnlock": "• 快速點擊可累積連擊，最高 ×{{level}}。",
+            "comboLevel": "• 連擊最高可達 ×{{level}}。",
+            "effectEmojis": "• {{summary}}。"
         },
         "bonusProduction": "現在購買這項升級，每秒可多得 <hl>+{{bonus}}</hl> 個 Emoji，Emoji 產量提升 <hl>{{percent}}</hl>",
         "bonusTap": "現在購買這項升級，每次點擊可多得 <hl>+{{bonus}}</hl> 個 Emoji，點擊獲得的 Emoji 提升 <hl>{{percent}}</hl>",
         "filterTitle": "篩選升級",
-        "filterDescription": "選擇要顯示哪些建築的升級。"
+        "filterDescription": "選擇要顯示哪些建築的升級。",
+        "effectEmojiSummary": {
+            "spawnRate": "效果 Emoji 出現頻率 ×{{multiplier}}",
+            "duration": "好效果持續時間 ×{{multiplier}}",
+            "start": "效果 Emoji 開始出現"
+        },
+        "chips": {
+            "multiplyBuildingProduction": "{{buildings}} ×{{multiplier}}",
+            "multiplyTap": "點擊 ×{{multiplier}}",
+            "percentageIncreaseTap": "點擊 +{{percent}}",
+            "percentageIncreaseProduction": "產量 +{{percent}}",
+            "tapPercentageOfEps": "點擊 +每秒產量的 {{percent}}",
+            "comboUnlock": "連擊最高 ×{{level}}",
+            "comboLevel": "連擊上限 ×{{level}}"
+        },
+        "impact": {
+            "perSecond": "+{{bonus}}/秒",
+            "perTap": "每次點擊 +{{bonus}}",
+            "and": "{{a}}，{{b}}",
+            "rightNow": "目前 {{gains}}"
+        },
+        "tierLabel": {
+            "helper": "{{building}} · 幫手",
+            "hands": "大 Emoji · 手",
+            "effectEmojisNew": "效果 Emoji · 新",
+            "effectEmojisLevel": "效果 Emoji · 第 {{level}} 級",
+            "comboNew": "連擊 · 新",
+            "comboLevel": "連擊 · 第 {{level}} 級",
+            "tier": "{{building}} · 第 {{tier}} 階"
+        },
+        "forSale": "販售中",
+        "owned": "已擁有",
+        "available": "可購買",
+        "emptyOwnedTitle": "還沒買過任何東西",
+        "emptyTitle": "還沒有升級",
+        "emptyOwnedText": "你買的升級會收集在這裡。",
+        "emptyText": "購買建築、點擊大 Emoji，就能解鎖升級。",
+        "filterAll": "全部",
+        "quoted": "「{{quote}}」",
+        "ownedBadge": "✓ 已擁有",
+        "paid": "已付 {{price}}",
+        "bareBones": "🦴 {{trial}}中無法購買升級",
+        "buyFor": "以 {{price}} 購買",
+        "priceAndTime": "{{price}} · {{time}}",
+        "ownedCount": "已擁有 {{owned}}/{{total}} 個升級",
+        "availableCount": "買得起 {{affordable}} · 已解鎖 {{unlocked}}",
+        "a11y": {
+            "owned": "{{name}}，已擁有",
+            "price": "{{name}}，{{price}}",
+            "affordable": "{{name}}，{{price}}，買得起"
+        }
     },
     "stats": {
         "totalEmojisDrawn": "畫出的 Emoji 總數",
         "emojiTaps": "Emoji 點擊次數",
         "emojisEarnedFromTapping": "點擊獲得的 Emoji",
         "magicalEmojisTapped": "點到的魔法 Emoji",
-        "funValue": "趣味值"
+        "funValue": "趣味值",
+        "shinyEmojisTapped": "點到的閃亮 Emoji",
+        "comboTaps": "連擊點擊次數",
+        "madeByEachBuilding": "各建築的產量"
     },
     "drawer": {
         "language": "語言",
         "deviceLanguage": "裝置語言",
         "cheats": "作弊",
         "resetGame": "重置遊戲",
-        "spawnEffect": "生成效果 Emoji"
+        "spawnEffect": "生成效果 Emoji",
+        "menu": "選單"
     },
     "prestige": {
-        "title": "聲望"
+        "title": "聲望",
+        "close": "關閉",
+        "ordinal_ordinal_other": "第 {{count}} 次",
+        "celebrateCaption": "第 {{count}} 次聲望",
+        "celebrateTrialCaption": "第 {{count}} 次聲望 · 試煉開始",
+        "celebrateTitle": "+{{essence}} 精華",
+        "celebrateTierTitle": "+{{essence}} 精華 · 已解鎖第 {{tier}} 階天賦",
+        "essenceCaption": "Emoji 精華",
+        "essenceBonus": "產量 +{{bonus}}（每個 {{each}}）",
+        "intro": "畫出夠多的 Emoji 之後，它們的精華會開始聚集在你身邊：一種每次看它都會變換形狀的神奇物質。每個未花掉的精華都能提升產量，而精華也能用來購買永久有效的天賦。",
+        "startOver": "重新開始",
+        "prestigesSoFar_other": "目前已聲望 {{count}} 次",
+        "resetsWhat": "會重置你的 Emoji、建築、建築升級和手。你會保留收藏、統計、連擊與效果 Emoji 升級、精華和天賦。",
+        "nextEssence": "下一個精華",
+        "nextEssenceAt": "畫出 {{amount}} 個 Emoji 時",
+        "noEssenceYet": "目前還無法獲得精華",
+        "tapAgainToPrestige": "再點一次以聲望",
+        "prestigeFor": "聲望並獲得 +{{essence}} ✨",
+        "productionCaps": "產量 +{{percent}}",
+        "playedThisRun": "本輪遊玩時間",
+        "drawnThisRun": "本輪畫出",
+        "essencePerHour": "每小時精華",
+        "afterTenMinutes": "10 分鐘後",
+        "essenceRate": "{{rate}}（最高 {{best}}）",
+        "slowingDown": "📉 精華的獲得速度比本輪稍早時慢了。現在是聲望的好時機。",
+        "drawnAmount": "畫出 {{amount}}",
+        "pastRuns": "過去的輪次",
+        "pastRunLine": "{{duration}} · 畫出 {{amount}}",
+        "pastRunTrialCompleted": "{{icon}} {{name}} ✓",
+        "pastRunTrialNotCompleted": "{{icon}} {{name}}，未完成",
+        "chipLabel": "Emoji 精華",
+        "chipLabelReady": "聲望並獲得 {{essence}} 個 Emoji 精華",
+        "chipEssence": "精華",
+        "chipPending": "+{{essence}} 精華"
     },
     "numbers": {
         "groupSize": "4",
@@ -89,6 +182,260 @@
             "60": "那由他",
             "64": "不可思議",
             "68": "無量大數"
+        }
+    },
+    "buildings": {
+        "ownedA11y_other": "已擁有 {{count}} 個",
+        "newBadge": "新",
+        "statLine": "{{eps}}/秒 · 佔總產量 {{share}}",
+        "nextUpgrade": "下個升級：{{at}} 個",
+        "allUpgradesFound": "已找到所有升級",
+        "epsEach": "每個 +{{eps}}/秒",
+        "buy": "購買",
+        "buyCount": "購買 ×{{count}}",
+        "buyA11y_other": "以 {{price}} 購買 {{count}} 個{{name}}",
+        "mystery": "神祕建築",
+        "revealsAt": "{{amount}} 個 Emoji 時揭曉",
+        "bulkLabel": "購買數量",
+        "bulkMax": "最多",
+        "bulkA11yMax": "買到買不起為止",
+        "bulkA11y_other": "一次購買 {{count}} 個",
+        "milestoneCaption": "新建築",
+        "milestoneTitle": "你的第一個{{building}}！"
+    },
+    "time": {
+        "seconds_other": "{{count}}秒",
+        "minutes_other": "{{count}}分",
+        "hours_other": "{{count}}小時",
+        "days_other": "{{count}}天",
+        "pair": "{{a}}{{b}}"
+    },
+    "trials": {
+        "title": "試煉",
+        "completedCount": "已完成 {{done}}/{{total}}",
+        "intro": "聲望進入一個帶有特殊規則、難度更高的輪次。在該輪畫出足夠的 Emoji，就能永久保留獎勵，規則也會解除。",
+        "unlocksWith": "{{ordinal}}聲望時解鎖。",
+        "completeCaps": "試煉完成",
+        "inProgressCaps": "試煉進行中",
+        "completedText": "{{reward}}永久歸你所有，本輪剩餘時間的規則也已解除。",
+        "activeText": "{{rule}}。在本輪畫出 {{goal}}，即可永久獲得{{reward}}。",
+        "giveUp": "放棄這個試煉",
+        "giveUpConfirm": "再點一次以放棄（沒有獎勵）",
+        "doneTag": "✓ 完成",
+        "playingTag": "進行中",
+        "ruleLine": "<hl>規則：</hl>{{rule}}",
+        "ruleLineWithStart": "<hl>規則：</hl>{{rule}}（開局有 {{amount}} 個 Emoji）",
+        "rewardLine": "<hl>獎勵：</hl>{{reward}}",
+        "finishFirst": "請先完成目前的試煉",
+        "needsEssence": "需要精華才能聲望",
+        "tapAgainToStart": "再點一次以開始",
+        "prestigeInto": "聲望進入試煉並獲得 +{{essence}} ✨",
+        "goalCaps": "目標：{{goal}}",
+        "goal": "{{amount}} 個 Emoji",
+        "completeTitle": "{{name}}：{{reward}}",
+        "rewardUnlocked": "獎勵已解鎖"
+    },
+    "perks": {
+        "title": "天賦",
+        "ownedCount": "已擁有 {{owned}}/{{total}}",
+        "spentKeepsHalf": "花掉的精華仍保留一半的產量加成。",
+        "spentNoBonus": "花掉的精華不再提升產量。",
+        "tierCaps": "第 {{tier}} 階",
+        "tierLockedCaps": "第 {{tier}} 階 · {{ordinal}}聲望時解鎖",
+        "hidden": "聲望後即可揭曉此天賦。",
+        "needsFirst": "需要先擁有{{perk}}",
+        "ownedTag": "✓ 已擁有",
+        "buyLabel": "以 {{cost}} 精華購買{{perk}}"
+    },
+    "gems": {
+        "title": "寶石商店",
+        "yourGemsCaps": "你的寶石",
+        "gemsCaps": "寶石",
+        "offlineClaim": "{{cost}} 顆寶石可領取 ×{{multiplier}} 離線收益",
+        "storeUnavailable": "商店目前無法使用。請檢查網路連線，稍後再試。",
+        "purchaseFailed": "購買未完成。你沒有被扣款。",
+        "keptOnPrestige": "聲望時會保留寶石。",
+        "unavailable": "無法使用",
+        "thankYouCaps": "謝謝你！",
+        "gemsAdded_other": "+{{amount}} 顆寶石",
+        "buyLabel_other": "購買 {{amount}} 顆寶石",
+        "buyLabelWithPrice_other": "以 {{price}} 購買 {{amount}} 顆寶石",
+        "tags": {
+            "popular": "熱門",
+            "bestValue": "最划算"
+        }
+    },
+    "offline": {
+        "welcomeBack": "歡迎回來！",
+        "away": "你離開了 {{duration}}。",
+        "awayCapped": "你離開超過 {{duration}}，這已是計算上限。",
+        "rested": "你不在的時候，你的帝國休息了一下。",
+        "missedCaps": "錯過的產量",
+        "perSecond": "{{value}}/秒",
+        "gemOfferCaps": "{{cost}} 顆寶石換 ×{{multiplier}} · 你有 {{gems}} 顆",
+        "gemOfferGetCaps": "{{cost}} 顆寶石換 ×{{multiplier}} · 取得寶石",
+        "noThanks": "不用了，謝謝"
+    },
+    "ads": {
+        "watchCaps": "觀看廣告",
+        "loadingCaps": "廣告載入中...",
+        "failed": "廣告沒有播放完畢。請檢查網路連線後再試一次。"
+    },
+    "reset": {
+        "title": "要重新開始嗎？",
+        "warning": "這會重置你的遊戲。你的 Emoji、建築、升級、精華、天賦、收藏和統計都會消失，而且無法復原。",
+        "purchasesSafe": "你的遊戲內購買不受影響。寶石和你買過的所有東西都會帶到新遊戲中。",
+        "confirm": "是的，重置我的遊戲",
+        "cancel": "繼續玩"
+    },
+    "milestones": {
+        "caption": "里程碑",
+        "emojisDrawn": "已畫出 {{amount}} 個 Emoji！"
+    },
+    "settings": {
+        "title": "設定",
+        "close": "關閉設定",
+        "sound": "音效",
+        "soundEffects": "音效",
+        "soundEffectsHint": "點擊時發出輕柔的啵聲，點到閃亮 Emoji 時會有叮噹聲。",
+        "performance": "效能",
+        "reduceAnimations": "減少動畫",
+        "reduceAnimationsHint": "點擊的 Emoji 不再從大 Emoji 上飛出去。如果點擊感覺卡頓，可以試試看。",
+        "dangerZone": "危險區域"
+    },
+    "cheats": {
+        "subtitle": "測試用。變更會套用到你的存檔。",
+        "simulateAway": "模擬離開 1 小時",
+        "gems": "寶石",
+        "addGems_other": "+{{count}} 顆寶石",
+        "addComboTaps": "+{{amount}} 次連擊點擊",
+        "multiplyTapEarnings": "點擊收益 ×{{factor}}",
+        "addCollection_other": "+{{count}} 收藏",
+        "addShiny_other": "+{{count}} 閃亮",
+        "addMagical_other": "+{{count}} 魔法",
+        "addEssence_other": "+{{count}} 精華",
+        "addPerkTier_other": "+{{count}} 天賦階級",
+        "addRunTime": "+{{time}} 本輪時間",
+        "reachTrialGoal": "達成試煉目標",
+        "effectEmojis": "效果 Emoji",
+        "spawnEffects_other": "生成 {{count}} 個效果 Emoji",
+        "speed": "速度",
+        "speedLabel": "{{speed}}× 速度",
+        "speedHint": "影響產量和本輪時間。效果和連擊維持實際時間。重新載入後關閉。",
+        "shiny": "閃亮",
+        "onlyShiny": "只出現閃亮 Emoji",
+        "funValueQuirk": "{{name}}：{{description}}",
+        "noQuirk": "沒有特性",
+        "hideFunValueTable": "隱藏趣味值表",
+        "showFunValueTable": "顯示趣味值表",
+        "setFunValueLabel": "將趣味值設為 {{value}}：{{name}}",
+        "changeFunValueLabel": "趣味值變更 {{change}}"
+    },
+    "collection": {
+        "ofTotalFound": "/ {{total}} 已找到",
+        "mostTapped": "最常點擊：{{emoji}} ×{{amount}}",
+        "startCollecting": "點擊大 Emoji 開始收集",
+        "shinyFound_other": "{{amount}} 個閃亮",
+        "categories": {
+            "faces": "表情",
+            "animals": "動物",
+            "food": "食物",
+            "objects": "物品",
+            "people": "人物",
+            "bodyParts": "身體",
+            "placesBuildings": "地點",
+            "plants": "植物",
+            "vehicles": "交通工具",
+            "weather": "天氣",
+            "symbols": "符號"
+        },
+        "categoryLabel": "{{label}}，已找到 {{found}}/{{total}}",
+        "notFound": "尚未找到",
+        "cellLabel_other": "{{emoji}}，點擊 {{count}} 次",
+        "cellLabelShiny_other": "{{emoji}}，點擊 {{count}} 次，閃亮 {{shiny}} 次"
+    },
+    "effects": {
+        "chipTapping": "點擊 ×{{multiplier}}",
+        "chipProduction": "產量 ×{{multiplier}}",
+        "stackLabel_other": "疊加 {{count}} 層：{{label}}，下一層在 {{time}} 後結束",
+        "chipLabel": "{{title}}，剩餘 {{time}}",
+        "gift": "禮物！",
+        "ohNo": "糟糕！",
+        "tapping": "點擊",
+        "production": "產量",
+        "tapFrenzy": "點擊狂熱！",
+        "unholyPower": "邪惡之力！",
+        "productionBoost": "產量提升！",
+        "collectLabel": "領取{{title}}",
+        "tapMe": "點我"
+    },
+    "combo": {
+        "level": "連擊 ×{{multiplier}}",
+        "max": "最大連擊 ×{{multiplier}}",
+        "label": "連擊 {{multiplier}} 倍",
+        "maxLabel": "連擊 {{multiplier}} 倍，已達上限"
+    },
+    "bigEmoji": {
+        "tapLabel": "點擊大 Emoji",
+        "tapShinyLabel": "點擊閃亮的大 Emoji",
+        "shiny": "閃亮",
+        "shinyBurst": "閃亮！",
+        "handsOff": "{{trial}}試煉 · 點擊不會畫出任何東西",
+        "perTap": "每次點擊 +{{value}}"
+    },
+    "bank": {
+        "timeToAfford": {
+            "needMore": "還不夠",
+            "seconds_other": "{{count}} 秒後",
+            "minutes_other": "{{count}} 分鐘後",
+            "hours_other": "{{count}} 小時後",
+            "days_other": "{{count}} 天後",
+            "aLongTime": "還要很久"
+        },
+        "timeToAffordInline": {
+            "needMore": "還不夠",
+            "seconds_other": "{{count}} 秒後",
+            "minutes_other": "{{count}} 分鐘後",
+            "hours_other": "{{count}} 小時後",
+            "days_other": "{{count}} 天後",
+            "aLongTime": "還要很久"
+        }
+    },
+    "catalogue": {
+        "title": "所有升級",
+        "counts": "已擁有 {{owned}} · 販售中 {{forSale}} · 未解鎖 {{locked}} · 共 {{total}}",
+        "filter": {
+            "owned": "已擁有 {{count}}",
+            "forSale": "販售中 {{count}}",
+            "locked": "未解鎖 {{count}}"
+        },
+        "combo": "連擊",
+        "effectEmojis": "效果 Emoji",
+        "unlock": {
+            "own": "擁有 {{count}} 個{{buildings}}",
+            "tapping": "靠點擊獲得 {{amount}} 個 Emoji",
+            "comboTaps": "{{amount}} 次連擊點擊",
+            "earned": "獲得 {{amount}} 個 Emoji"
+        },
+        "state": {
+            "owned": "✓ 已擁有",
+            "forSale": "販售中",
+            "locked": "🔒 未解鎖"
+        },
+        "stateA11y": {
+            "owned": "已擁有",
+            "forSale": "販售中",
+            "locked": "未解鎖"
+        },
+        "tileA11y": "{{name}}，{{state}}",
+        "prev": "上一個",
+        "next": "下一個",
+        "prevA11y": "上一個升級",
+        "nextA11y": "下一個升級",
+        "fact": {
+            "price": "價格",
+            "unlocks": "解鎖條件",
+            "id": "ID"
         }
     }
 }
