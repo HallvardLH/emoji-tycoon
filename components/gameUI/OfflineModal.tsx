@@ -11,6 +11,7 @@ import { formatDuration, formatNumber } from "../../scripts/misc";
 import { AD_MULTIPLIER, GEM_COST, GEM_MULTIPLIER, MAX_AWAY_SECONDS, claimOffline, dismissOffline } from "../../scripts/game/offline";
 import { spendGems, useGemStoreOpen, watchRewardedAd } from "../../scripts/monetization";
 import { useTranslation } from "react-i18next";
+import { toCaps } from "../../scripts/utils";
 
 /**
  * Welcome back: offers the production missed while away, for watching an ad
@@ -65,7 +66,7 @@ export default function OfflineModal() {
                 </Text>
 
                 <View style={styles.missed}>
-                    <Text font="black" size={11} color={palette.muted} style={styles.caption}>{t("offline.missedCaps")}</Text>
+                    <Text font="black" size={11} color={palette.muted} style={styles.caption}>{toCaps(t("offline.missedCaps"))}</Text>
                     <Text size={30} color={palette.ink}>{formatNumber(missed, 1)}</Text>
                     <Text font="bold" size={12} color={palette.muted}>{t("offline.perSecond", { value: formatNumber(offer.eps, 1) })}</Text>
                 </View>
@@ -73,7 +74,7 @@ export default function OfflineModal() {
                 <View style={styles.buttons}>
                     <ChunkyButton
                         label={`📺 +${formatNumber(missed * AD_MULTIPLIER, 1)}`}
-                        sublabel={busy ? t("ads.loadingCaps") : t("ads.watchCaps")}
+                        sublabel={busy ? toCaps(t("ads.loadingCaps")) : toCaps(t("ads.watchCaps"))}
                         height={56}
                         disabled={busy}
                         onPress={claimWithAd}
@@ -81,8 +82,8 @@ export default function OfflineModal() {
                     <ChunkyButton
                         label={`💎 +${formatNumber(missed * GEM_MULTIPLIER, 1)}`}
                         sublabel={canAffordGems
-                            ? t("offline.gemOfferCaps", { multiplier: GEM_MULTIPLIER, cost: GEM_COST, gems: formatNumber(gems) })
-                            : t("offline.gemOfferGetCaps", { multiplier: GEM_MULTIPLIER, cost: GEM_COST })}
+                            ? toCaps(t("offline.gemOfferCaps", { multiplier: GEM_MULTIPLIER, cost: GEM_COST, gems: formatNumber(gems) }))
+                            : toCaps(t("offline.gemOfferGetCaps", { multiplier: GEM_MULTIPLIER, cost: GEM_COST }))}
                         height={56}
                         disabled={busy}
                         onPress={claimWithGems}

@@ -7,6 +7,7 @@ import { roundToPrettyNumber } from "../../utils";
 import { formatNumber } from "../../misc";
 import i18n from "../../../i18n";
 import { getTrialName, getTrialReward } from "../../../i18n/content";
+import { toCaps } from "../../utils";
 
 /**
  * Trials: prestige into a run with a rule that makes it harder, and draw a set
@@ -83,7 +84,7 @@ export function checkTrial() {
     applyTrialRules();
     celebrateMilestone({
         icon: trial?.icon ?? "🏅",
-        caption: i18n.t("trials.completeCaps"),
+        caption: toCaps(i18n.t("trials.completeCaps")),
         title: trial ? i18n.t("trials.completeTitle", { name: getTrialName(trial), reward: getTrialReward(trial) }) : i18n.t("trials.rewardUnlocked"),
     });
 }

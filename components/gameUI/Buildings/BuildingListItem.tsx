@@ -4,6 +4,7 @@ import Text from "../../generalUI/Text";
 import ChunkyButton from "../../generalUI/ChunkyButton";
 import { palette, radii } from "../../misc/theme";
 import { useTranslation } from "react-i18next";
+import { toCaps } from "../../../scripts/utils";
 
 interface BuildingListItemProps {
     /** The displayed, translated, name */
@@ -55,7 +56,7 @@ function BuildingListItem(props: BuildingListItemProps) {
                         </View>
                     ) : (
                         <View style={styles.newBadge}>
-                            <Text font="black" size={11} color="#FFFFFF">{t("buildings.newBadge")}</Text>
+                            <Text font="black" size={11} color="#FFFFFF">{toCaps(t("buildings.newBadge"))}</Text>
                         </View>
                     )}
                 </View>
@@ -88,7 +89,7 @@ function BuildingListItem(props: BuildingListItemProps) {
                 width={96}
                 label={price}
                 labelSize={price.length > 7 ? 13 : 16}
-                sublabel={affordable ? (buyCount > 1 ? t("buildings.buyCount", { count: buyCount }) : t("buildings.buy")) : waitLabel}
+                sublabel={affordable ? (buyCount > 1 ? toCaps(t("buildings.buyCount", { count: buyCount })) : toCaps(t("buildings.buy"))) : waitLabel}
                 accessibilityLabel={t("buildings.buyA11y", { count: buyCount, name: buyName, price })}
                 disabled={!affordable}
                 onPress={onPress}

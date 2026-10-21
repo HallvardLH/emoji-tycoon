@@ -23,6 +23,7 @@ import { useTranslation } from 'react-i18next';
 import i18n, { getLanguage } from '../../../i18n';
 import { getBuildingPluralName, getUpgradeBuildingName, getUpgradeName, getUpgradeDescription, getUpgradeQuote, getTrialName } from '../../../i18n/content';
 import { trials } from '../../../scripts/game/prestige/trials';
+import { toCaps } from "../../../scripts/utils";
 
 const BIG_EMOJI = "Big emoji";
 const COLUMNS = 5;
@@ -59,11 +60,11 @@ function impactLine(upgradeId: number) {
 
 export function tierLabel(upgrade: UpgradeType) {
     const building = (upgrade.building ? getUpgradeBuildingName(upgrade.building) : "").toLocaleUpperCase(getLanguage());
-    if (upgrade.variant === "Helper") return `${iconOf(upgrade.building)} ${i18n.t("upgrades.tierLabel.helper", { building })}`;
-    if (upgrade.variant === "Big emoji percentage") return `${iconOf(upgrade.building)} ${i18n.t("upgrades.tierLabel.hands")}`;
-    if (upgrade.variant === "Effect emojis") return `✨ ${upgrade.tier === 0 ? i18n.t("upgrades.tierLabel.effectEmojisNew") : i18n.t("upgrades.tierLabel.effectEmojisLevel", { level: upgrade.tier + 1 })}`;
-    if (upgrade.variant === "Combo level") return `🔥 ${upgrade.tier === 0 ? i18n.t("upgrades.tierLabel.comboNew") : i18n.t("upgrades.tierLabel.comboLevel", { level: comboLevelOfTier(upgrade.tier) })}`;
-    return `${iconOf(upgrade.building)} ${i18n.t("upgrades.tierLabel.tier", { building, tier: upgrade.tier + 1 })}`;
+    if (upgrade.variant === "Helper") return `${iconOf(upgrade.building)} ${toCaps(i18n.t("upgrades.tierLabel.helper", { building }))}`;
+    if (upgrade.variant === "Big emoji percentage") return `${iconOf(upgrade.building)} ${toCaps(i18n.t("upgrades.tierLabel.hands"))}`;
+    if (upgrade.variant === "Effect emojis") return `✨ ${upgrade.tier === 0 ? toCaps(i18n.t("upgrades.tierLabel.effectEmojisNew")) : toCaps(i18n.t("upgrades.tierLabel.effectEmojisLevel", { level: upgrade.tier + 1 }))}`;
+    if (upgrade.variant === "Combo level") return `🔥 ${upgrade.tier === 0 ? toCaps(i18n.t("upgrades.tierLabel.comboNew")) : toCaps(i18n.t("upgrades.tierLabel.comboLevel", { level: comboLevelOfTier(upgrade.tier) }))}`;
+    return `${iconOf(upgrade.building)} ${toCaps(i18n.t("upgrades.tierLabel.tier", { building, tier: upgrade.tier + 1 }))}`;
 }
 
 const toUpgrades = (ids: number[]) => ids
@@ -186,7 +187,7 @@ export default function UpgradesList() {
                     </View>
                     {showingOwned ? (
                         <View style={styles.ownedBar}>
-                            <Text font="black" size={14} color={palette.greenText}>{t("upgrades.ownedBadge")}</Text>
+                            <Text font="black" size={14} color={palette.greenText}>{toCaps(t("upgrades.ownedBadge"))}</Text>
                             <Text font="bold" size={13} color={palette.muted}>{t("upgrades.paid", { price: money + formatNumber(priceOf(selected), 2, true) })}</Text>
                         </View>
                     ) : (

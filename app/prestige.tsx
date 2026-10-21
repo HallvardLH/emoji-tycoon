@@ -16,6 +16,7 @@ import { getPerkName, getPerkDescription, getTrialName, getTrialRule, getTrialRe
 import Text from "../components/generalUI/Text";
 import ChunkyButton from "../components/generalUI/ChunkyButton";
 import { palette, radii } from "../components/misc/theme";
+import { toCaps } from "../scripts/utils";
 
 // How long the "tap again" confirmation stays armed
 const CONFIRM_MS = 3000;
@@ -66,7 +67,7 @@ export default function PrestigeScreen() {
             const count = prestiges + 1;
             celebrateMilestone({
                 icon: trial?.icon ?? "✨",
-                caption: trial ? t("prestige.celebrateTrialCaption", { count }) : t("prestige.celebrateCaption", { count }),
+                caption: trial ? toCaps(t("prestige.celebrateTrialCaption", { count })) : toCaps(t("prestige.celebrateCaption", { count })),
                 title: count <= MAX_PERK_TIER ? t("prestige.celebrateTierTitle", { essence: gained, tier: count }) : t("prestige.celebrateTitle", { essence: gained }),
             });
         }
@@ -94,7 +95,7 @@ export default function PrestigeScreen() {
                 <View style={styles.hero}>
                     <Text size={44} style={{ lineHeight: 52 }}>✨</Text>
                     <View style={{ flex: 1, gap: 2 }}>
-                        <Text font="black" size={11} color={palette.muted} style={styles.caps}>{t("prestige.essenceCaption")}</Text>
+                        <Text font="black" size={11} color={palette.muted} style={styles.caps}>{toCaps(t("prestige.essenceCaption"))}</Text>
                         <Text size={34} color={palette.ink} style={{ lineHeight: 38 }}>{formatNumber(emojiEssence)}</Text>
                         <Text font="bold" size={13} color={palette.greenText}>
                             {t("prestige.essenceBonus", { bonus: percent(Math.round(essenceForBonus() * bonus * 100)), each: percent(Math.round(bonus * 100)) })}
@@ -119,7 +120,7 @@ export default function PrestigeScreen() {
                 <View style={styles.card}>
                     <View style={styles.rowBetween}>
                         <Text size={20} color={palette.ink}>{t("prestige.startOver")}</Text>
-                        <Text font="black" size={12} color={palette.violetDeep}>{t("prestige.prestigesSoFar", { count: prestiges })}</Text>
+                        <Text font="black" size={12} color={palette.violetDeep}>{toCaps(t("prestige.prestigesSoFar", { count: prestiges }))}</Text>
                     </View>
                     <Text font="body" size={14} color={palette.muted} style={{ lineHeight: 20 }}>
                         {t("prestige.resetsWhat")}
@@ -140,7 +141,7 @@ export default function PrestigeScreen() {
                         height={54}
                         labelSize={18}
                         label={pending < 1 ? t("prestige.noEssenceYet") : armed === "prestige" ? t("prestige.tapAgainToPrestige") : t("prestige.prestigeFor", { essence: formatNumber(pending) })}
-                        sublabel={pending >= 1 && armed !== "prestige" ? t("prestige.productionCaps", { percent: percent(Math.round(pending * bonus * 100)) }) : undefined}
+                        sublabel={pending >= 1 && armed !== "prestige" ? toCaps(t("prestige.productionCaps", { percent: percent(Math.round(pending * bonus * 100)) })) : undefined}
                         disabled={pending < 1}
                         onPress={() => onPrestige()}
                     />
@@ -243,7 +244,7 @@ function ActiveTrialCard({ trial, goal, completed, armed, onAbandon }: ActiveTri
                 <View style={styles.perkIcon}><Text size={24} style={{ lineHeight: 30 }}>{trial.icon}</Text></View>
                 <View style={{ flex: 1, gap: 2 }}>
                     <Text font="black" size={11} color={completed ? palette.greenText : palette.pop} style={styles.caps}>
-                        {completed ? t("trials.completeCaps") : t("trials.inProgressCaps")}
+                        {completed ? toCaps(t("trials.completeCaps")) : toCaps(t("trials.inProgressCaps"))}
                     </Text>
                     <Text size={18} color={palette.ink}>{getTrialName(trial)}</Text>
                 </View>
@@ -296,9 +297,9 @@ function TrialCard({ trial, unlocked, completed, playing, blocked, pending, arme
     const { t } = useTranslation();
     let action;
     if (completed) {
-        action = <View style={styles.ownedTag}><Text font="black" size={12} color={palette.greenText}>{t("trials.doneTag")}</Text></View>;
+        action = <View style={styles.ownedTag}><Text font="black" size={12} color={palette.greenText}>{toCaps(t("trials.doneTag"))}</Text></View>;
     } else if (playing) {
-        action = <View style={[styles.ownedTag, styles.playingTag]}><Text font="black" size={12} color={palette.pop}>{t("trials.playingTag")}</Text></View>;
+        action = <View style={[styles.ownedTag, styles.playingTag]}><Text font="black" size={12} color={palette.pop}>{toCaps(t("trials.playingTag"))}</Text></View>;
     }
 
     return (
@@ -331,7 +332,7 @@ function TrialCard({ trial, unlocked, completed, playing, blocked, pending, arme
                     height={44}
                     labelSize={15}
                     label={blocked ? t("trials.finishFirst") : pending < 1 ? t("trials.needsEssence") : armed ? t("trials.tapAgainToStart") : t("trials.prestigeInto", { essence: formatNumber(pending) })}
-                    sublabel={!blocked && pending >= 1 && !armed ? t("trials.goalCaps", { goal: upper(formatGoal(trialGoal(trial))) }) : undefined}
+                    sublabel={!blocked && pending >= 1 && !armed ? toCaps(t("trials.goalCaps", { goal: upper(formatGoal(trialGoal(trial))) })) : undefined}
                     disabled={blocked || pending < 1}
                     onPress={onStart}
                 />
@@ -377,7 +378,7 @@ function PerkTier({ tier, unlocked, essence, owned }: { tier: number, unlocked: 
     return (
         <View style={styles.tier}>
             <Text font="black" size={11} color={unlocked ? palette.sun : palette.lilac} style={styles.caps}>
-                {unlocked ? t("perks.tierCaps", { tier }) : t("perks.tierLockedCaps", { tier, ordinal: upper(ordinal(tier)) })}
+                {unlocked ? toCaps(t("perks.tierCaps", { tier })) : toCaps(t("perks.tierLockedCaps", { tier, ordinal: upper(ordinal(tier)) }))}
             </Text>
             {perks.filter(perk => perk.tier === tier).map(perk => (
                 <PerkCard key={perk.id} perk={perk} unlocked={unlocked} essence={essence} owned={owned} />
@@ -408,7 +409,7 @@ function PerkCard({ perk, unlocked, essence, owned }: { perk: Perk, unlocked: bo
             </View>
             {isOwned ? (
                 <View style={styles.ownedTag}>
-                    <Text font="black" size={12} color={palette.greenText}>{t("perks.ownedTag")}</Text>
+                    <Text font="black" size={12} color={palette.greenText}>{toCaps(t("perks.ownedTag"))}</Text>
                 </View>
             ) : unlocked ? (
                 <ChunkyButton

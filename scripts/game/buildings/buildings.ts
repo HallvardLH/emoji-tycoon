@@ -13,6 +13,7 @@ import { buildingPriceMultiplier } from '../prestige/perks';
 import { playBuildingSound } from '../sounds';
 import i18n, { getLanguage } from '../../../i18n';
 import { getBuildingName } from '../../../i18n/content';
+import { toCaps } from "../../utils";
 
 type PluralNames = {
     [key: string]: string;
@@ -157,7 +158,7 @@ export const buyBuilding = (buildingId: number, bulkBuy: BulkBuyAmount = store.g
     if (currentAmount === 0) {
         celebrateMilestone({
             icon: data.icon,
-            caption: i18n.t("buildings.milestoneCaption"),
+            caption: toCaps(i18n.t("buildings.milestoneCaption")),
             title: i18n.t("buildings.milestoneTitle", { building: midSentence(getBuildingName(data.buildingId)) }),
         });
     }

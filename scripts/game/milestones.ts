@@ -2,6 +2,7 @@ import store from "../redux/reduxStore";
 import { setBankMilestone } from "../redux/statsSlice";
 import { formatNumber } from "../misc";
 import i18n from "../../i18n";
+import { toCaps } from "../utils";
 
 export interface Milestone {
     icon: string;
@@ -47,7 +48,7 @@ export function checkBankMilestone() {
         store.dispatch(setBankMilestone(reached));
         celebrateMilestone({
             icon: bankIcons[Math.min(reached - 1, bankIcons.length - 1)],
-            caption: i18n.t("milestones.caption"),
+            caption: toCaps(i18n.t("milestones.caption")),
             title: i18n.t("milestones.emojisDrawn", { amount: formatNumber(Math.pow(1000, reached), 0) }),
         });
     }

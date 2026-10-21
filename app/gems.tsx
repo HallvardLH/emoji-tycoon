@@ -14,6 +14,7 @@ import { useTranslation } from "react-i18next";
 import Text from "../components/generalUI/Text";
 import ChunkyButton from "../components/generalUI/ChunkyButton";
 import { palette, radii } from "../components/misc/theme";
+import { toCaps } from "../scripts/utils";
 
 /** The gem store: gem packs bought for real money */
 export default function GemStoreScreen() {
@@ -45,7 +46,7 @@ export default function GemStoreScreen() {
         try {
             const result = await buyGemPack(pack);
             if (result === "bought") {
-                celebrateMilestone({ icon: pack.icon, caption: t("gems.thankYouCaps"), title: t("gems.gemsAdded", { count: pack.gems, amount: formatNumber(pack.gems) }) });
+                celebrateMilestone({ icon: pack.icon, caption: toCaps(t("gems.thankYouCaps")), title: t("gems.gemsAdded", { count: pack.gems, amount: formatNumber(pack.gems) }) });
             } else if (result === "failed") {
                 setFailed(true);
             }
@@ -74,7 +75,7 @@ export default function GemStoreScreen() {
                 <View style={styles.hero}>
                     <Text size={44} style={{ lineHeight: 52 }}>💎</Text>
                     <View style={{ flex: 1, gap: 2 }}>
-                        <Text font="black" size={11} color={palette.muted} style={styles.caps}>{t("gems.yourGemsCaps")}</Text>
+                        <Text font="black" size={11} color={palette.muted} style={styles.caps}>{toCaps(t("gems.yourGemsCaps"))}</Text>
                         <Text size={34} color={palette.ink} style={{ lineHeight: 38 }}>{formatNumber(gems)}</Text>
                         <Text font="bold" size={13} color={palette.greenText}>
                             {t("gems.offlineClaim", { cost: GEM_COST, multiplier: GEM_MULTIPLIER })}
@@ -134,12 +135,12 @@ function PackCard({ pack, price, loading, buying, disabled, onBuy }: PackCardPro
         <View style={[styles.pack, pack.tag ? styles.packTagged : null]}>
             {pack.tag ? (
                 <View style={styles.tag}>
-                    <Text font="black" size={10} color={palette.ink} style={styles.caps}>{t(`gems.tags.${pack.tag}`)}</Text>
+                    <Text font="black" size={10} color={palette.ink} style={styles.caps}>{toCaps(t(`gems.tags.${pack.tag}`))}</Text>
                 </View>
             ) : null}
             <Text size={40} style={{ lineHeight: 48 }}>{pack.icon}</Text>
             <Text size={24} color={palette.ink} style={{ lineHeight: 28 }}>{formatNumber(pack.gems)}</Text>
-            <Text font="black" size={11} color={palette.muted} style={styles.caps}>{t("gems.gemsCaps")}</Text>
+            <Text font="black" size={11} color={palette.muted} style={styles.caps}>{toCaps(t("gems.gemsCaps"))}</Text>
             <ChunkyButton
                 height={44}
                 labelSize={16}

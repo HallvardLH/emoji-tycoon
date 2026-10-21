@@ -6,11 +6,16 @@
         "buildings": "ভবন",
         "upgrades": "আপগ্রেড",
         "stats": "পরিসংখ্যান",
-        "collection": "সংগ্রহ"
+        "collection": "সংগ্রহ",
+        "newItemsLabel_one": "{{label}}, {{count}}টি নতুন",
+        "newItemsLabel_other": "{{label}}, {{count}}টি নতুন"
     },
     "header": {
         "emojis": "ইমোজি",
-        "perSecond": "প্রতি সেকেন্ডে: {{value}}"
+        "perSecond": "প্রতি সেকেন্ডে: {{value}}",
+        "rate": "+{{value}} / সে",
+        "gemsLabel_one": "{{gems}}টি রত্ন। রত্নের দোকান খোলো",
+        "gemsLabel_other": "{{gems}}টি রত্ন। রত্নের দোকান খোলো"
     },
     "common": {
         "buy": "কেনো",
@@ -23,29 +28,124 @@
             "multiplyTap": "• ট্যাপ করা দ্বিগুণ কার্যকর।",
             "percentageIncreaseTap": "• ট্যাপ {{percent}} বেশি শক্তিশালী।",
             "tapPercentageOfEps": "• প্রতি ট্যাপে মোট ইমোজি উৎপাদনের {{percent}} পাবে।",
-            "percentageIncreaseProduction": "• মোট ইমোজি উৎপাদন {{percent}} বেড়েছে।"
+            "percentageIncreaseProduction": "• মোট ইমোজি উৎপাদন {{percent}} বেড়েছে।",
+            "comboUnlock": "• দ্রুত ট্যাপ করলে কম্বো তৈরি হয়, ×{{level}} পর্যন্ত।",
+            "comboLevel": "• কম্বো ×{{level}} পর্যন্ত যেতে পারে।",
+            "effectEmojis": "• {{summary}}।"
         },
         "bonusProduction": "এই আপগ্রেড এখন কিনলে প্রতি সেকেন্ডে <hl>+{{bonus}}</hl> ইমোজি যোগ হবে, ইমোজি উৎপাদন বাড়বে <hl>{{percent}}</hl>",
         "bonusTap": "এই আপগ্রেড এখন কিনলে প্রতি ট্যাপে <hl>+{{bonus}}</hl> ইমোজি যোগ হবে, প্রতি ট্যাপে পাওয়া ইমোজি বাড়বে <hl>{{percent}}</hl>",
         "filterTitle": "আপগ্রেড ফিল্টার করো",
-        "filterDescription": "কোন কোন ভবনের আপগ্রেড দেখবে, বেছে নাও।"
+        "filterDescription": "কোন কোন ভবনের আপগ্রেড দেখবে, বেছে নাও।",
+        "effectEmojiSummary": {
+            "spawnRate": "ইফেক্ট ইমোজি ×{{multiplier}} হারে আসে",
+            "duration": "ভালো ইফেক্ট ×{{multiplier}} সময় ধরে থাকে",
+            "start": "ইফেক্ট ইমোজি আসতে শুরু করে"
+        },
+        "chips": {
+            "multiplyBuildingProduction": "{{buildings}} ×{{multiplier}}",
+            "multiplyTap": "ট্যাপ ×{{multiplier}}",
+            "percentageIncreaseTap": "ট্যাপ +{{percent}}",
+            "percentageIncreaseProduction": "উৎপাদন +{{percent}}",
+            "tapPercentageOfEps": "ট্যাপে ইমোজি/সে-র +{{percent}}",
+            "comboUnlock": "কম্বো ×{{level}} পর্যন্ত",
+            "comboLevel": "সর্বোচ্চ কম্বো ×{{level}}"
+        },
+        "impact": {
+            "perSecond": "+{{bonus}} /সে",
+            "perTap": "প্রতি ট্যাপে +{{bonus}}",
+            "and": "{{a}} আর {{b}}",
+            "rightNow": "এই মুহূর্তে {{gains}}"
+        },
+        "tierLabel": {
+            "helper": "{{building}} · সহকারী",
+            "hands": "বড় ইমোজি · হাত",
+            "effectEmojisNew": "ইফেক্ট ইমোজি · নতুন",
+            "effectEmojisLevel": "ইফেক্ট ইমোজি · লেভেল {{level}}",
+            "comboNew": "কম্বো · নতুন",
+            "comboLevel": "কম্বো · লেভেল {{level}}",
+            "tier": "{{building}} · স্তর {{tier}}"
+        },
+        "forSale": "বিক্রির জন্য",
+        "owned": "কেনা",
+        "available": "পাওয়া যাচ্ছে",
+        "emptyOwnedTitle": "এখনো কিছু কেনা হয়নি",
+        "emptyTitle": "এখনো কোনো আপগ্রেড নেই",
+        "emptyOwnedText": "যে আপগ্রেডগুলো কিনবে, সেগুলো এখানে জমা হবে।",
+        "emptyText": "আপগ্রেড আনলক করতে ভবন কেনো আর বড় ইমোজিতে ট্যাপ করো।",
+        "filterAll": "সব",
+        "quoted": "\"{{quote}}\"",
+        "ownedBadge": "✓ কেনা",
+        "paid": "দাম দিয়েছ {{price}}",
+        "bareBones": "🦴 {{trial}}-এ কোনো আপগ্রেড নেই",
+        "buyFor": "{{price}} দিয়ে কেনো",
+        "priceAndTime": "{{price}} · {{time}}",
+        "ownedCount": "{{total}}টির মধ্যে {{owned}}টি আপগ্রেড",
+        "availableCount": "{{affordable}}টি কেনা যায় · {{unlocked}}টি আনলক",
+        "a11y": {
+            "owned": "{{name}}, কেনা",
+            "price": "{{name}}, {{price}}",
+            "affordable": "{{name}}, {{price}}, কেনা যায়"
+        }
     },
     "stats": {
         "totalEmojisDrawn": "মোট আঁকা ইমোজি",
         "emojiTaps": "ইমোজি ট্যাপ",
         "emojisEarnedFromTapping": "ট্যাপ করে পাওয়া ইমোজি",
         "magicalEmojisTapped": "ট্যাপ করা জাদুর ইমোজি",
-        "funValue": "মজার মান"
+        "funValue": "মজার মান",
+        "shinyEmojisTapped": "ট্যাপ করা ঝকঝকে ইমোজি",
+        "comboTaps": "কম্বো ট্যাপ",
+        "madeByEachBuilding": "প্রতিটি ভবনের উৎপাদন"
     },
     "drawer": {
         "language": "ভাষা",
         "deviceLanguage": "ডিভাইসের ভাষা",
         "cheats": "চিট",
         "resetGame": "গেম রিসেট করো",
-        "spawnEffect": "ইফেক্ট ইমোজি আনো"
+        "spawnEffect": "ইফেক্ট ইমোজি আনো",
+        "menu": "মেনু"
     },
     "prestige": {
-        "title": "প্রেস্টিজ"
+        "title": "প্রেস্টিজ",
+        "close": "বন্ধ করো",
+        "ordinal_ordinal_one": "{{count}}ম",
+        "ordinal_ordinal_two": "{{count}}য়",
+        "ordinal_ordinal_few": "{{count}}র্থ",
+        "ordinal_ordinal_many": "{{count}}ষ্ঠ",
+        "ordinal_ordinal_other": "{{count}}তম",
+        "celebrateCaption": "প্রেস্টিজ #{{count}}",
+        "celebrateTrialCaption": "প্রেস্টিজ #{{count}} · চ্যালেঞ্জ শুরু",
+        "celebrateTitle": "+{{essence}} নির্যাস",
+        "celebrateTierTitle": "+{{essence}} নির্যাস · স্তর {{tier}}-এর সুবিধা আনলক",
+        "essenceCaption": "ইমোজি নির্যাস",
+        "essenceBonus": "+{{bonus}} উৎপাদন (প্রতিটি {{each}})",
+        "intro": "যথেষ্ট ইমোজি আঁকার পর তাদের আসল নির্যাস তোমার চারপাশে জমতে শুরু করে: এক জাদুকরী পদার্থ, যার দিকে তাকালেই সে আকার বদলায়। প্রতিটি খরচ না করা নির্যাস উৎপাদন বাড়ায়, আর নির্যাস দিয়ে কেনা যায় চিরকালের সুবিধা।",
+        "startOver": "নতুন করে শুরু করো",
+        "prestigesSoFar_one": "এ পর্যন্ত {{count}} বার প্রেস্টিজ",
+        "prestigesSoFar_other": "এ পর্যন্ত {{count}} বার প্রেস্টিজ",
+        "resetsWhat": "তোমার ইমোজি, ভবন, ভবনের আপগ্রেড আর হাত রিসেট হবে। সংগ্রহ, পরিসংখ্যান, কম্বো আর ইফেক্ট ইমোজির আপগ্রেড, নির্যাস আর সুবিধা থেকে যাবে।",
+        "nextEssence": "পরের নির্যাস",
+        "nextEssenceAt": "{{amount}} ইমোজি আঁকা হলে",
+        "noEssenceYet": "এখনো কোনো নির্যাস পাওয়ার নেই",
+        "tapAgainToPrestige": "প্রেস্টিজ করতে আবার ট্যাপ করো",
+        "prestigeFor": "+{{essence}} ✨-এর জন্য প্রেস্টিজ",
+        "productionCaps": "+{{percent}} উৎপাদন",
+        "playedThisRun": "এই দফায় খেলেছ",
+        "drawnThisRun": "এই দফায় এঁকেছ",
+        "essencePerHour": "ঘণ্টায় নির্যাস",
+        "afterTenMinutes": "10 মিনিট পর",
+        "essenceRate": "{{rate}} (সেরা {{best}})",
+        "slowingDown": "📉 এই দফায় আগের চেয়ে ধীরে নির্যাস আসছে। প্রেস্টিজ করার ভালো সময়।",
+        "drawnAmount": "{{amount}} আঁকা",
+        "pastRuns": "আগের দফাগুলো",
+        "pastRunLine": "{{duration}} · {{amount}} আঁকা",
+        "pastRunTrialCompleted": "{{icon}} {{name}} ✓",
+        "pastRunTrialNotCompleted": "{{icon}} {{name}}, শেষ হয়নি",
+        "chipLabel": "ইমোজি নির্যাস",
+        "chipLabelReady": "{{essence}} ইমোজি নির্যাসের জন্য প্রেস্টিজ করো",
+        "chipEssence": "নির্যাস",
+        "chipPending": "+{{essence}} নির্যাস"
     },
     "numbers": {
         "groupSize": "3",
@@ -115,6 +215,289 @@
             "57": "অক্টোডে",
             "60": "নভেডে",
             "63": "ভিজি"
+        }
+    },
+    "buildings": {
+        "ownedA11y_one": "{{count}}টি আছে",
+        "ownedA11y_other": "{{count}}টি আছে",
+        "newBadge": "নতুন",
+        "statLine": "{{eps}} /সে · মোটের {{share}}",
+        "nextUpgrade": "পরের আপগ্রেড {{at}}টিতে",
+        "allUpgradesFound": "সব আপগ্রেড পাওয়া গেছে",
+        "epsEach": "প্রতিটি +{{eps}} /সে",
+        "buy": "কেনো",
+        "buyCount": "কেনো ×{{count}}",
+        "buyA11y_one": "{{price}} দিয়ে {{count}}টি {{name}} কেনো",
+        "buyA11y_other": "{{price}} দিয়ে {{count}}টি {{name}} কেনো",
+        "mystery": "রহস্যময় ভবন",
+        "revealsAt": "{{amount}} ইমোজিতে দেখা যাবে",
+        "bulkLabel": "কতগুলো কিনবে",
+        "bulkMax": "সর্বোচ্চ",
+        "bulkA11yMax": "যতগুলো কেনার সামর্থ্য আছে, সব কেনো",
+        "bulkA11y_one": "একবারে {{count}}টি কেনো",
+        "bulkA11y_other": "একবারে {{count}}টি কেনো",
+        "milestoneCaption": "নতুন ভবন",
+        "milestoneTitle": "তোমার প্রথম {{building}}!"
+    },
+    "time": {
+        "seconds_one": "{{count}}সে",
+        "seconds_other": "{{count}}সে",
+        "minutes_one": "{{count}}মি",
+        "minutes_other": "{{count}}মি",
+        "hours_one": "{{count}}ঘ",
+        "hours_other": "{{count}}ঘ",
+        "days_one": "{{count}}দি",
+        "days_other": "{{count}}দি",
+        "pair": "{{a}} {{b}}"
+    },
+    "trials": {
+        "title": "চ্যালেঞ্জ",
+        "completedCount": "{{total}}টির মধ্যে {{done}}টি শেষ",
+        "intro": "এমন এক দফায় প্রেস্টিজ করো, যেখানে একটা নিয়ম খেলা কঠিন করে দেয়। সেই দফায় যথেষ্ট ইমোজি আঁকলে পুরস্কার চিরকাল তোমার, আর নিয়মও উঠে যায়।",
+        "unlocksWith": "তোমার {{ordinal}} প্রেস্টিজে আনলক হবে।",
+        "completeCaps": "চ্যালেঞ্জ শেষ",
+        "inProgressCaps": "চ্যালেঞ্জ চলছে",
+        "completedText": "{{reward}} এখন চিরকাল তোমার, আর এই দফার বাকি সময় নিয়মটা উঠে গেল।",
+        "activeText": "{{rule}}। চিরকালের জন্য {{reward}} পেতে এই দফায় {{goal}} আঁকো।",
+        "giveUp": "এই চ্যালেঞ্জ ছেড়ে দাও",
+        "giveUpConfirm": "ছেড়ে দিতে আবার ট্যাপ করো (পুরস্কার নেই)",
+        "doneTag": "✓ শেষ",
+        "playingTag": "চলছে",
+        "ruleLine": "<hl>নিয়ম: </hl>{{rule}}",
+        "ruleLineWithStart": "<hl>নিয়ম: </hl>{{rule}} (শুরুতে পাবে {{amount}} ইমোজি)",
+        "rewardLine": "<hl>পুরস্কার: </hl>{{reward}}",
+        "finishFirst": "আগে তোমার চ্যালেঞ্জ শেষ করো",
+        "needsEssence": "প্রেস্টিজ করতে নির্যাস লাগবে",
+        "tapAgainToStart": "শুরু করতে আবার ট্যাপ করো",
+        "prestigeInto": "+{{essence}} ✨ নিয়ে চ্যালেঞ্জে প্রেস্টিজ",
+        "goalCaps": "লক্ষ্য: {{goal}}",
+        "goal": "{{amount}} ইমোজি",
+        "completeTitle": "{{name}}: {{reward}}",
+        "rewardUnlocked": "পুরস্কার আনলক হলো"
+    },
+    "perks": {
+        "title": "সুবিধা",
+        "ownedCount": "{{total}}টির মধ্যে {{owned}}টি কেনা",
+        "spentKeepsHalf": "খরচ করা নির্যাস তার উৎপাদন বোনাসের অর্ধেক রাখে।",
+        "spentNoBonus": "খরচ করা নির্যাস আর উৎপাদন বাড়ায় না।",
+        "tierCaps": "স্তর {{tier}}",
+        "tierLockedCaps": "স্তর {{tier}} · তোমার {{ordinal}} প্রেস্টিজে আনলক",
+        "hidden": "এই সুবিধা দেখতে প্রেস্টিজ করো।",
+        "needsFirst": "আগে {{perk}} লাগবে",
+        "ownedTag": "✓ কেনা",
+        "buyLabel": "{{cost}} নির্যাস দিয়ে {{perk}} কেনো"
+    },
+    "gems": {
+        "title": "রত্নের দোকান",
+        "yourGemsCaps": "তোমার রত্ন",
+        "gemsCaps": "রত্ন",
+        "offlineClaim": "{{cost}} রত্নে অফলাইন আয় ×{{multiplier}}",
+        "storeUnavailable": "দোকান এখন খোলা নেই। ইন্টারনেট সংযোগ দেখে পরে আবার চেষ্টা করো।",
+        "purchaseFailed": "কেনাটা সম্পন্ন হয়নি। তোমার কাছ থেকে টাকা কাটা হয়নি।",
+        "keptOnPrestige": "প্রেস্টিজ করলেও রত্ন থেকে যায়।",
+        "unavailable": "পাওয়া যাচ্ছে না",
+        "thankYouCaps": "ধন্যবাদ!",
+        "gemsAdded_one": "+{{amount}} রত্ন",
+        "gemsAdded_other": "+{{amount}} রত্ন",
+        "buyLabel_one": "{{amount}}টি রত্ন কেনো",
+        "buyLabel_other": "{{amount}}টি রত্ন কেনো",
+        "buyLabelWithPrice_one": "{{price}} দিয়ে {{amount}}টি রত্ন কেনো",
+        "buyLabelWithPrice_other": "{{price}} দিয়ে {{amount}}টি রত্ন কেনো",
+        "tags": {
+            "popular": "জনপ্রিয়",
+            "bestValue": "সেরা দাম"
+        }
+    },
+    "offline": {
+        "welcomeBack": "আবার স্বাগতম!",
+        "away": "তুমি {{duration}} দূরে ছিলে।",
+        "awayCapped": "তুমি {{duration}}-এর বেশি দূরে ছিলে, এর বেশি গোনা হয় না।",
+        "rested": "তুমি না থাকায় তোমার সাম্রাজ্য বিশ্রাম নিয়েছে।",
+        "missedCaps": "হারানো উৎপাদন",
+        "perSecond": "{{value}} / সে",
+        "gemOfferCaps": "{{cost}} রত্নে ×{{multiplier}} · তোমার আছে {{gems}}",
+        "gemOfferGetCaps": "{{cost}} রত্নে ×{{multiplier}} · রত্ন নাও",
+        "noThanks": "না, থাক"
+    },
+    "ads": {
+        "watchCaps": "বিজ্ঞাপন দেখো",
+        "loadingCaps": "বিজ্ঞাপন লোড হচ্ছে...",
+        "failed": "বিজ্ঞাপনটা শেষ পর্যন্ত চলেনি। ইন্টারনেট সংযোগ দেখে আবার চেষ্টা করো।"
+    },
+    "reset": {
+        "title": "নতুন করে শুরু?",
+        "warning": "এতে তোমার গেম রিসেট হবে। তোমার ইমোজি, ভবন, আপগ্রেড, নির্যাস, সুবিধা, সংগ্রহ আর পরিসংখ্যান সব মুছে যাবে। এটা আর ফেরানো যাবে না।",
+        "purchasesSafe": "গেমের ভেতরে তোমার কেনাকাটা নিরাপদ। রত্ন আর কেনা সবকিছু নতুন গেমেও থাকবে।",
+        "confirm": "হ্যাঁ, গেম রিসেট করো",
+        "cancel": "খেলা চালিয়ে যাও"
+    },
+    "milestones": {
+        "caption": "মাইলফলক",
+        "emojisDrawn": "{{amount}} ইমোজি আঁকা হলো!"
+    },
+    "settings": {
+        "title": "সেটিংস",
+        "close": "সেটিংস বন্ধ করো",
+        "sound": "শব্দ",
+        "soundEffects": "সাউন্ড ইফেক্ট",
+        "soundEffectsHint": "ট্যাপে মৃদু পপ, আর ঝকঝকে ইমোজিতে টুংটাং।",
+        "performance": "পারফরম্যান্স",
+        "reduceAnimations": "অ্যানিমেশন কমাও",
+        "reduceAnimationsHint": "ট্যাপ করা ইমোজি আর বড় ইমোজি থেকে উড়ে যাবে না। ট্যাপ ধীর লাগলে এটা চালু করে দেখো।",
+        "dangerZone": "বিপদ এলাকা"
+    },
+    "cheats": {
+        "subtitle": "টেস্টিংয়ের জন্য। পরিবর্তন তোমার সেভে লাগবে।",
+        "simulateAway": "1 ঘণ্টা দূরে থাকার ভান",
+        "gems": "রত্ন",
+        "addGems_one": "+{{count}} রত্ন",
+        "addGems_other": "+{{count}} রত্ন",
+        "addComboTaps": "+{{amount}} কম্বো ট্যাপ",
+        "multiplyTapEarnings": "ট্যাপের আয় ×{{factor}}",
+        "addCollection_one": "+{{count}} সংগ্রহ",
+        "addCollection_other": "+{{count}} সংগ্রহ",
+        "addShiny_one": "+{{count}} ঝকঝকে",
+        "addShiny_other": "+{{count}} ঝকঝকে",
+        "addMagical_one": "+{{count}} জাদুর",
+        "addMagical_other": "+{{count}} জাদুর",
+        "addEssence_one": "+{{count}} নির্যাস",
+        "addEssence_other": "+{{count}} নির্যাস",
+        "addPerkTier_one": "+{{count}} সুবিধার স্তর",
+        "addPerkTier_other": "+{{count}} সুবিধার স্তর",
+        "addRunTime": "দফার সময় +{{time}}",
+        "reachTrialGoal": "চ্যালেঞ্জের লক্ষ্যে পৌঁছাও",
+        "effectEmojis": "ইফেক্ট ইমোজি",
+        "spawnEffects_one": "{{count}}টি ইফেক্ট ইমোজি আনো",
+        "spawnEffects_other": "{{count}}টি ইফেক্ট ইমোজি আনো",
+        "speed": "গতি",
+        "speedLabel": "{{speed}}× গতি",
+        "speedHint": "উৎপাদন আর দফার সময়। ইফেক্ট আর কম্বো চলে আসল সময়ে। রিলোড করলে বন্ধ।",
+        "shiny": "ঝকঝকে",
+        "onlyShiny": "শুধু ঝকঝকে ইমোজি",
+        "funValueQuirk": "{{name}}: {{description}}",
+        "noQuirk": "কোনো বিশেষত্ব নেই",
+        "hideFunValueTable": "মজার মানের তালিকা লুকাও",
+        "showFunValueTable": "মজার মানের তালিকা দেখাও",
+        "setFunValueLabel": "মজার মান {{value}} করো: {{name}}",
+        "changeFunValueLabel": "মজার মান {{change}} বদলাও"
+    },
+    "collection": {
+        "ofTotalFound": "/ {{total}} পাওয়া গেছে",
+        "mostTapped": "সবচেয়ে বেশি ট্যাপ: {{emoji}} ×{{amount}}",
+        "startCollecting": "সংগ্রহ শুরু করতে বড় ইমোজিতে ট্যাপ করো",
+        "shinyFound_one": "{{amount}} ঝকঝকে",
+        "shinyFound_other": "{{amount}} ঝকঝকে",
+        "categories": {
+            "faces": "মুখ",
+            "animals": "প্রাণী",
+            "food": "খাবার",
+            "objects": "জিনিস",
+            "people": "মানুষ",
+            "bodyParts": "শরীর",
+            "placesBuildings": "জায়গা",
+            "plants": "গাছপালা",
+            "vehicles": "যানবাহন",
+            "weather": "আবহাওয়া",
+            "symbols": "চিহ্ন"
+        },
+        "categoryLabel": "{{label}}, {{total}}টির মধ্যে {{found}}টি পাওয়া গেছে",
+        "notFound": "এখনো পাওয়া যায়নি",
+        "cellLabel_one": "{{emoji}}, {{count}} বার ট্যাপ করা",
+        "cellLabel_other": "{{emoji}}, {{count}} বার ট্যাপ করা",
+        "cellLabelShiny_one": "{{emoji}}, {{count}} বার ট্যাপ করা, {{shiny}} ঝকঝকে",
+        "cellLabelShiny_other": "{{emoji}}, {{count}} বার ট্যাপ করা, {{shiny}} ঝকঝকে"
+    },
+    "effects": {
+        "chipTapping": "ট্যাপ ×{{multiplier}}",
+        "chipProduction": "উৎপাদন ×{{multiplier}}",
+        "stackLabel_one": "{{count}}টি একসাথে: {{label}}, পরেরটা শেষ হবে {{time}} পর",
+        "stackLabel_other": "{{count}}টি একসাথে: {{label}}, পরেরটা শেষ হবে {{time}} পর",
+        "chipLabel": "{{title}}, বাকি {{time}}",
+        "gift": "উপহার!",
+        "ohNo": "হায় হায়!",
+        "tapping": "ট্যাপ",
+        "production": "উৎপাদন",
+        "tapFrenzy": "ট্যাপের ঝড়!",
+        "unholyPower": "অশুভ শক্তি!",
+        "productionBoost": "উৎপাদন বাড়ল!",
+        "collectLabel": "{{title}} সংগ্রহ করো",
+        "tapMe": "আমাকে ট্যাপ করো"
+    },
+    "combo": {
+        "level": "কম্বো ×{{multiplier}}",
+        "max": "সর্বোচ্চ কম্বো ×{{multiplier}}",
+        "label": "কম্বো {{multiplier}} গুণ",
+        "maxLabel": "কম্বো {{multiplier}} গুণ, সর্বোচ্চ"
+    },
+    "bigEmoji": {
+        "tapLabel": "বড় ইমোজিতে ট্যাপ করো",
+        "tapShinyLabel": "ঝকঝকে বড় ইমোজিতে ট্যাপ করো",
+        "shiny": "ঝকঝকে",
+        "shinyBurst": "ঝকঝকে!",
+        "handsOff": "{{trial}} চ্যালেঞ্জ · ট্যাপে কিছু আঁকা হয় না",
+        "perTap": "প্রতি ট্যাপে +{{value}}"
+    },
+    "bank": {
+        "timeToAfford": {
+            "needMore": "আরও লাগবে",
+            "seconds_one": "{{count}} সেকেন্ডে",
+            "seconds_other": "{{count}} সেকেন্ডে",
+            "minutes_one": "{{count}} মিনিটে",
+            "minutes_other": "{{count}} মিনিটে",
+            "hours_one": "{{count}} ঘণ্টায়",
+            "hours_other": "{{count}} ঘণ্টায়",
+            "days_one": "{{count}} দিনে",
+            "days_other": "{{count}} দিনে",
+            "aLongTime": "অনেক সময়"
+        },
+        "timeToAffordInline": {
+            "needMore": "আরও লাগবে",
+            "seconds_one": "{{count}} সেকেন্ডে",
+            "seconds_other": "{{count}} সেকেন্ডে",
+            "minutes_one": "{{count}} মিনিটে",
+            "minutes_other": "{{count}} মিনিটে",
+            "hours_one": "{{count}} ঘণ্টায়",
+            "hours_other": "{{count}} ঘণ্টায়",
+            "days_one": "{{count}} দিনে",
+            "days_other": "{{count}} দিনে",
+            "aLongTime": "অনেক সময় লাগবে"
+        }
+    },
+    "catalogue": {
+        "title": "সব আপগ্রেড",
+        "counts": "{{owned}} কেনা · {{forSale}} বিক্রির জন্য · {{locked}} লক করা · মোট {{total}}",
+        "filter": {
+            "owned": "কেনা {{count}}",
+            "forSale": "বিক্রির জন্য {{count}}",
+            "locked": "লক করা {{count}}"
+        },
+        "combo": "কম্বো",
+        "effectEmojis": "ইফেক্ট ইমোজি",
+        "unlock": {
+            "own": "{{count}}টি {{buildings}} রাখো",
+            "tapping": "ট্যাপ করে {{amount}} ইমোজি আয় করো",
+            "comboTaps": "{{amount}} কম্বো ট্যাপ",
+            "earned": "{{amount}} ইমোজি আয় করো"
+        },
+        "state": {
+            "owned": "✓ কেনা",
+            "forSale": "বিক্রির জন্য",
+            "locked": "🔒 লক করা"
+        },
+        "stateA11y": {
+            "owned": "কেনা",
+            "forSale": "বিক্রির জন্য",
+            "locked": "লক করা"
+        },
+        "tileA11y": "{{name}}, {{state}}",
+        "prev": "আগের",
+        "next": "পরের",
+        "prevA11y": "আগের আপগ্রেড",
+        "nextA11y": "পরের আপগ্রেড",
+        "fact": {
+            "price": "দাম",
+            "unlocks": "আনলক",
+            "id": "আইডি"
         }
     }
 }

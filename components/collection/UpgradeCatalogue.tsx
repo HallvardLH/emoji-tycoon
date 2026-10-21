@@ -17,6 +17,7 @@ import { useTranslation } from "react-i18next";
 import i18n from "../../i18n";
 import { getBuildingNameForAmount, getUpgradeBuildingName, getUpgradeName, getUpgradeDescription, getUpgradeQuote } from "../../i18n/content";
 import { BuildingNames } from "../../scripts/game/buildings/buildingNamesType";
+import { toCaps } from "../../scripts/utils";
 
 type UpgradeState = "owned" | "forSale" | "locked";
 type Filter = "all" | UpgradeState;
@@ -71,7 +72,7 @@ function unlockText(upgrade: UpgradeType) {
     }
 }
 
-const stateLabel = (state: UpgradeState) => i18n.t(`catalogue.state.${state}`);
+const stateLabel = (state: UpgradeState) => toCaps(i18n.t(`catalogue.state.${state}`));
 
 /** Every upgrade in the game, grouped and marked owned / for sale / locked */
 export default function UpgradeCatalogue() {
@@ -274,8 +275,8 @@ function UpgradeDetail({ upgrade, state }: { upgrade: UpgradeType, state: Upgrad
                 ))}
             </View>
             <View style={styles.facts}>
-                <Fact label={i18n.t("catalogue.fact.price")} value={formatNumber(priceOf(upgrade), 2, true)} />
-                <Fact label={i18n.t("catalogue.fact.unlocks")} value={unlockText(upgrade) ?? ""} />
+                <Fact label={toCaps(i18n.t("catalogue.fact.price"))} value={formatNumber(priceOf(upgrade), 2, true)} />
+                <Fact label={toCaps(i18n.t("catalogue.fact.unlocks"))} value={unlockText(upgrade) ?? ""} />
                 <Fact label={i18n.t("catalogue.fact.id")} value={`#${upgrade.id}`} />
             </View>
         </View>
