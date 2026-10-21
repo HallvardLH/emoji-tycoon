@@ -6,11 +6,16 @@
         "buildings": "Gebäude",
         "upgrades": "Upgrades",
         "stats": "Statistik",
-        "collection": "Sammlung"
+        "collection": "Sammlung",
+        "newItemsLabel_one": "{{label}}, {{count}} neu",
+        "newItemsLabel_other": "{{label}}, {{count}} neu"
     },
     "header": {
         "emojis": "Emojis",
-        "perSecond": "Pro Sekunde: {{value}}"
+        "perSecond": "Pro Sekunde: {{value}}",
+        "rate": "+{{value}} / Sek.",
+        "gemsLabel_one": "{{gems}} Juwel. Juwelenladen öffnen",
+        "gemsLabel_other": "{{gems}} Juwelen. Juwelenladen öffnen"
     },
     "common": {
         "buy": "Kaufen",
@@ -23,29 +28,120 @@
             "multiplyTap": "• Tippen ist doppelt so effizient.",
             "percentageIncreaseTap": "• Tippen ist {{percent}} stärker.",
             "tapPercentageOfEps": "• Tippen bringt {{percent}} deiner gesamten Emoji-Produktion.",
-            "percentageIncreaseProduction": "• Gesamte Emoji-Produktion um {{percent}} erhöht."
+            "percentageIncreaseProduction": "• Gesamte Emoji-Produktion um {{percent}} erhöht.",
+            "comboUnlock": "• Schnelles Tippen baut eine Combo auf, bis zu ×{{level}}.",
+            "comboLevel": "• Die Combo kann ×{{level}} erreichen.",
+            "effectEmojis": "• {{summary}}."
         },
         "bonusProduction": "Kaufst du dieses Upgrade jetzt, bekommst du <hl>+{{bonus}}</hl> Emojis pro Sekunde - die Emoji-Produktion steigt um <hl>{{percent}}</hl>",
         "bonusTap": "Kaufst du dieses Upgrade jetzt, bekommst du <hl>+{{bonus}}</hl> Emojis pro Tipp - jeder Tipp bringt <hl>{{percent}}</hl> mehr Emojis",
         "filterTitle": "Upgrades filtern",
-        "filterDescription": "Wähle, für welche Gebäude du Upgrades sehen willst."
+        "filterDescription": "Wähle, für welche Gebäude du Upgrades sehen willst.",
+        "effectEmojiSummary": {
+            "spawnRate": "Effekt-Emojis erscheinen ×{{multiplier}} so oft",
+            "duration": "Gute Effekte halten ×{{multiplier}} so lange",
+            "start": "Effekt-Emojis tauchen ab jetzt auf"
+        },
+        "chips": {
+            "multiplyBuildingProduction": "{{buildings}} ×{{multiplier}}",
+            "multiplyTap": "Tippen ×{{multiplier}}",
+            "percentageIncreaseTap": "Tippen +{{percent}}",
+            "percentageIncreaseProduction": "Produktion +{{percent}}",
+            "tapPercentageOfEps": "Tipps +{{percent}} der Emojis/Sek.",
+            "comboUnlock": "Combo bis ×{{level}}",
+            "comboLevel": "Max. Combo ×{{level}}"
+        },
+        "impact": {
+            "perSecond": "+{{bonus}} /Sek.",
+            "perTap": "+{{bonus}} pro Tipp",
+            "and": "{{a}} und {{b}}",
+            "rightNow": "{{gains}} sofort"
+        },
+        "tierLabel": {
+            "helper": "{{building}} · Helfer",
+            "hands": "Großes Emoji · Hände",
+            "effectEmojisNew": "Effekt-Emojis · Neu",
+            "effectEmojisLevel": "Effekt-Emojis · Stufe {{level}}",
+            "comboNew": "Combo · Neu",
+            "comboLevel": "Combo · Stufe {{level}}",
+            "tier": "{{building}} · Stufe {{tier}}"
+        },
+        "forSale": "Im Angebot",
+        "owned": "Gekauft",
+        "available": "Verfügbar",
+        "emptyOwnedTitle": "Noch nichts gekauft",
+        "emptyTitle": "Noch keine Upgrades",
+        "emptyOwnedText": "Gekaufte Upgrades werden hier gesammelt.",
+        "emptyText": "Kauf Gebäude und tippe auf das Große Emoji, um Upgrades freizuschalten.",
+        "filterAll": "Alle",
+        "quoted": "\"{{quote}}\"",
+        "ownedBadge": "✓ Gekauft",
+        "paid": "Bezahlt: {{price}}",
+        "bareBones": "🦴 Keine Upgrades: {{trial}}",
+        "buyFor": "Für {{price}} kaufen",
+        "priceAndTime": "{{price}} · {{time}}",
+        "ownedCount": "{{owned}} von {{total}} Upgrades",
+        "availableCount": "{{affordable}} bezahlbar · {{unlocked}} freigeschaltet",
+        "a11y": {
+            "owned": "{{name}}, gekauft",
+            "price": "{{name}}, {{price}}",
+            "affordable": "{{name}}, {{price}}, bezahlbar"
+        }
     },
     "stats": {
         "totalEmojisDrawn": "Gezeichnete Emojis insgesamt",
         "emojiTaps": "Emoji-Tipps",
         "emojisEarnedFromTapping": "Durch Tippen verdiente Emojis",
         "magicalEmojisTapped": "Getippte magische Emojis",
-        "funValue": "Spaßfaktor"
+        "funValue": "Spaßfaktor",
+        "shinyEmojisTapped": "Getippte glänzende Emojis",
+        "comboTaps": "Combo-Tipps",
+        "madeByEachBuilding": "Produziert pro Gebäude"
     },
     "drawer": {
         "language": "Sprache",
         "deviceLanguage": "Gerätesprache",
         "cheats": "Cheats",
         "resetGame": "Spiel zurücksetzen",
-        "spawnEffect": "Effekt-Emoji erzeugen"
+        "spawnEffect": "Effekt-Emoji erzeugen",
+        "menu": "Menü"
     },
     "prestige": {
-        "title": "Prestige"
+        "title": "Prestige",
+        "close": "Schließen",
+        "ordinal_ordinal_other": "{{count}}.",
+        "celebrateCaption": "Prestige #{{count}}",
+        "celebrateTrialCaption": "Prestige #{{count}} · Prüfung gestartet",
+        "celebrateTitle": "+{{essence}} Essenz",
+        "celebrateTierTitle": "+{{essence}} Essenz · Perks der Stufe {{tier}} freigeschaltet",
+        "essenceCaption": "Emoji-Essenz",
+        "essenceBonus": "+{{bonus}} Produktion ({{each}} pro Essenz)",
+        "intro": "Hast du genug Emojis gezeichnet, sammelt sich ihre Essenz um dich: eine magische Substanz, die jedes Mal ihre Form ändert, wenn du hinsiehst. Jede nicht ausgegebene Essenz steigert die Produktion, und mit Essenz kaufst du Perks, die für immer bleiben.",
+        "startOver": "Neu anfangen",
+        "prestigesSoFar_one": "Bisher {{count}} Prestige",
+        "prestigesSoFar_other": "Bisher {{count}} Prestiges",
+        "resetsWhat": "Setzt deine Emojis, Gebäude, Gebäude-Upgrades und Hände zurück. Du behältst Sammlung, Statistik, Combo- und Effekt-Emoji-Upgrades, Essenz und Perks.",
+        "nextEssence": "Nächste Essenz",
+        "nextEssenceAt": "bei {{amount}} gezeichneten Emojis",
+        "noEssenceYet": "Noch keine Essenz zu holen",
+        "tapAgainToPrestige": "Nochmal tippen für Prestige",
+        "prestigeFor": "Prestige für +{{essence}} ✨",
+        "productionCaps": "+{{percent}} Produktion",
+        "playedThisRun": "Gespielt in diesem Durchgang",
+        "drawnThisRun": "Gezeichnet in diesem Durchgang",
+        "essencePerHour": "Essenz pro Stunde",
+        "afterTenMinutes": "nach 10 Min.",
+        "essenceRate": "{{rate}} (Bestwert {{best}})",
+        "slowingDown": "📉 Die Essenz kommt langsamer als vorhin in diesem Durchgang. Ein guter Zeitpunkt für Prestige.",
+        "drawnAmount": "{{amount}} gezeichnet",
+        "pastRuns": "Frühere Durchgänge",
+        "pastRunLine": "{{duration}} · {{amount}} gezeichnet",
+        "pastRunTrialCompleted": "{{icon}} {{name}} ✓",
+        "pastRunTrialNotCompleted": "{{icon}} {{name}}, nicht geschafft",
+        "chipLabel": "Emoji-Essenz",
+        "chipLabelReady": "Prestige für {{essence}} Emoji-Essenz",
+        "chipEssence": "Essenz",
+        "chipPending": "+{{essence}} Essenz"
     },
     "numbers": {
         "groupSize": "3",
@@ -115,6 +211,289 @@
             "57": "Nond.",
             "60": "Dez.",
             "63": "Dezd."
+        }
+    },
+    "buildings": {
+        "ownedA11y_one": "{{count}} im Besitz",
+        "ownedA11y_other": "{{count}} im Besitz",
+        "newBadge": "Neu",
+        "statLine": "{{eps}} /Sek. · {{share}} Anteil",
+        "nextUpgrade": "nächstes Upgrade {{at}}",
+        "allUpgradesFound": "alle Upgrades gefunden",
+        "epsEach": "+{{eps}} /Sek. pro Stück",
+        "buy": "Kaufen",
+        "buyCount": "Kaufen ×{{count}}",
+        "buyA11y_one": "{{count}} {{name}} für {{price}} kaufen",
+        "buyA11y_other": "{{count}} {{name}} für {{price}} kaufen",
+        "mystery": "Geheimnisvolles Gebäude",
+        "revealsAt": "Wird bei {{amount}} Emojis enthüllt",
+        "bulkLabel": "Kaufmenge",
+        "bulkMax": "Max",
+        "bulkA11yMax": "So viele kaufen, wie du dir leisten kannst",
+        "bulkA11y_one": "{{count}} auf einmal kaufen",
+        "bulkA11y_other": "{{count}} auf einmal kaufen",
+        "milestoneCaption": "Neues Gebäude",
+        "milestoneTitle": "Neu: {{building}}!"
+    },
+    "time": {
+        "seconds_one": "{{count}}s",
+        "seconds_other": "{{count}}s",
+        "minutes_one": "{{count}}min",
+        "minutes_other": "{{count}}min",
+        "hours_one": "{{count}}h",
+        "hours_other": "{{count}}h",
+        "days_one": "{{count}}T",
+        "days_other": "{{count}}T",
+        "pair": "{{a}} {{b}}"
+    },
+    "trials": {
+        "title": "Prüfungen",
+        "completedCount": "{{done}} von {{total}} geschafft",
+        "intro": "Starte per Prestige einen Durchgang mit einer Regel, die ihn schwerer macht. Zeichne darin genug Emojis, um die Belohnung für immer zu behalten, und die Regel wird aufgehoben.",
+        "unlocksWith": "Wird mit deinem {{ordinal}} Prestige freigeschaltet.",
+        "completeCaps": "Prüfung geschafft",
+        "inProgressCaps": "Prüfung läuft",
+        "completedText": "Die Belohnung gehört dir für immer: {{reward}}. Die Regel gilt für den Rest dieses Durchgangs nicht mehr.",
+        "activeText": "{{rule}}. Zeichne in diesem Durchgang {{goal}} für eine dauerhafte Belohnung: {{reward}}.",
+        "giveUp": "Prüfung aufgeben",
+        "giveUpConfirm": "Nochmal tippen zum Aufgeben (keine Belohnung)",
+        "doneTag": "✓ Geschafft",
+        "playingTag": "Läuft",
+        "ruleLine": "<hl>Regel: </hl>{{rule}}",
+        "ruleLineWithStart": "<hl>Regel: </hl>{{rule}} (du startest mit {{amount}} Emojis)",
+        "rewardLine": "<hl>Belohnung: </hl>{{reward}}",
+        "finishFirst": "Schließ erst deine Prüfung ab",
+        "needsEssence": "Für Prestige brauchst du Essenz",
+        "tapAgainToStart": "Nochmal tippen zum Starten",
+        "prestigeInto": "Prestige in Prüfung für +{{essence}} ✨",
+        "goalCaps": "Ziel: {{goal}}",
+        "goal": "{{amount}} Emojis",
+        "completeTitle": "{{name}}: {{reward}}",
+        "rewardUnlocked": "Belohnung freigeschaltet"
+    },
+    "perks": {
+        "title": "Perks",
+        "ownedCount": "{{owned}} von {{total}} gekauft",
+        "spentKeepsHalf": "Ausgegebene Essenz behält die Hälfte ihres Produktionsbonus.",
+        "spentNoBonus": "Ausgegebene Essenz steigert die Produktion nicht mehr.",
+        "tierCaps": "Stufe {{tier}}",
+        "tierLockedCaps": "Stufe {{tier}} · Freigeschaltet mit deinem {{ordinal}} Prestige",
+        "hidden": "Mach ein Prestige, um diesen Perk zu enthüllen.",
+        "needsFirst": "Erst {{perk}} nötig",
+        "ownedTag": "✓ Gekauft",
+        "buyLabel": "{{perk}} für {{cost}} Essenz kaufen"
+    },
+    "gems": {
+        "title": "Juwelenladen",
+        "yourGemsCaps": "Deine Juwelen",
+        "gemsCaps": "Juwelen",
+        "offlineClaim": "{{cost}} Juwelen für ×{{multiplier}} Offline-Einnahmen",
+        "storeUnavailable": "Der Laden ist gerade nicht verfügbar. Prüfe deine Verbindung und versuch es später noch einmal.",
+        "purchaseFailed": "Der Kauf hat nicht geklappt. Dir wurde nichts berechnet.",
+        "keptOnPrestige": "Juwelen bleiben beim Prestige erhalten.",
+        "unavailable": "Nicht verfügbar",
+        "thankYouCaps": "Danke!",
+        "gemsAdded_one": "+{{amount}} Juwel",
+        "gemsAdded_other": "+{{amount}} Juwelen",
+        "buyLabel_one": "{{amount}} Juwel kaufen",
+        "buyLabel_other": "{{amount}} Juwelen kaufen",
+        "buyLabelWithPrice_one": "{{amount}} Juwel für {{price}} kaufen",
+        "buyLabelWithPrice_other": "{{amount}} Juwelen für {{price}} kaufen",
+        "tags": {
+            "popular": "Beliebt",
+            "bestValue": "Bester Preis"
+        }
+    },
+    "offline": {
+        "welcomeBack": "Willkommen zurück!",
+        "away": "Du warst {{duration}} weg.",
+        "awayCapped": "Du warst über {{duration}} weg, mehr zählt nicht.",
+        "rested": "Dein Imperium hat sich ausgeruht, während du weg warst.",
+        "missedCaps": "Verpasste Produktion",
+        "perSecond": "{{value}} / Sek.",
+        "gemOfferCaps": "×{{multiplier}} für {{cost}} Juwelen · Du hast {{gems}}",
+        "gemOfferGetCaps": "×{{multiplier}} für {{cost}} Juwelen · Juwelen holen",
+        "noThanks": "Nein danke"
+    },
+    "ads": {
+        "watchCaps": "Werbung ansehen",
+        "loadingCaps": "Werbung lädt...",
+        "failed": "Die Werbung wurde nicht bis zum Ende abgespielt. Prüfe deine Verbindung und versuch es noch einmal."
+    },
+    "reset": {
+        "title": "Neu anfangen?",
+        "warning": "Dadurch wird dein Spiel zurückgesetzt. Deine Emojis, Gebäude, Upgrades, Essenz, Perks, Sammlung und Statistik gehen verloren. Das kann nicht rückgängig gemacht werden.",
+        "purchasesSafe": "Deine In-Game-Käufe sind sicher. Juwelen und alles, was du gekauft hast, werden in dein neues Spiel übernommen.",
+        "confirm": "Ja, Spiel zurücksetzen",
+        "cancel": "Weiterspielen"
+    },
+    "milestones": {
+        "caption": "Meilenstein",
+        "emojisDrawn": "{{amount}} Emojis gezeichnet!"
+    },
+    "settings": {
+        "title": "Einstellungen",
+        "close": "Einstellungen schließen",
+        "sound": "Sound",
+        "soundEffects": "Soundeffekte",
+        "soundEffectsHint": "Ein sanftes Ploppen beim Tippen und ein Glöckchen für glänzende Emojis.",
+        "performance": "Leistung",
+        "reduceAnimations": "Animationen reduzieren",
+        "reduceAnimationsHint": "Getippte Emojis fliegen nicht mehr vom Großen Emoji weg. Probier das, wenn das Tippen ruckelt.",
+        "dangerZone": "Gefahrenzone"
+    },
+    "cheats": {
+        "subtitle": "Zum Testen. Änderungen gelten für deinen Spielstand.",
+        "simulateAway": "1 Stunde Abwesenheit simulieren",
+        "gems": "Juwelen",
+        "addGems_one": "+{{count}} Juwel",
+        "addGems_other": "+{{count}} Juwelen",
+        "addComboTaps": "+{{amount}} Combo-Tipps",
+        "multiplyTapEarnings": "×{{factor}} Tipp-Einnahmen",
+        "addCollection_one": "+{{count}} Sammlung",
+        "addCollection_other": "+{{count}} Sammlung",
+        "addShiny_one": "+{{count}} glänzend",
+        "addShiny_other": "+{{count}} glänzend",
+        "addMagical_one": "+{{count}} magisch",
+        "addMagical_other": "+{{count}} magisch",
+        "addEssence_one": "+{{count}} Essenz",
+        "addEssence_other": "+{{count}} Essenz",
+        "addPerkTier_one": "+{{count}} Perk-Stufe",
+        "addPerkTier_other": "+{{count}} Perk-Stufen",
+        "addRunTime": "+{{time}} Spielzeit",
+        "reachTrialGoal": "Prüfungsziel erreichen",
+        "effectEmojis": "Effekt-Emojis",
+        "spawnEffects_one": "{{count}} Effekt-Emoji erzeugen",
+        "spawnEffects_other": "{{count}} Effekt-Emojis erzeugen",
+        "speed": "Tempo",
+        "speedLabel": "{{speed}}× Tempo",
+        "speedHint": "Produktion und Spielzeit. Effekte und Combo bleiben in Echtzeit. Nach Neuladen aus.",
+        "shiny": "Glänzend",
+        "onlyShiny": "Nur glänzende Emojis",
+        "funValueQuirk": "{{name}}: {{description}}",
+        "noQuirk": "Keine Besonderheit",
+        "hideFunValueTable": "Spaßfaktor-Tabelle ausblenden",
+        "showFunValueTable": "Spaßfaktor-Tabelle anzeigen",
+        "setFunValueLabel": "Spaßfaktor auf {{value}} setzen: {{name}}",
+        "changeFunValueLabel": "Spaßfaktor um {{change}} ändern"
+    },
+    "collection": {
+        "ofTotalFound": "/ {{total}} gefunden",
+        "mostTapped": "Am meisten getippt: {{emoji}} ×{{amount}}",
+        "startCollecting": "Tippe auf das Große Emoji, um mit dem Sammeln zu beginnen",
+        "shinyFound_one": "{{amount}} glänzend",
+        "shinyFound_other": "{{amount}} glänzend",
+        "categories": {
+            "faces": "Gesichter",
+            "animals": "Tiere",
+            "food": "Essen",
+            "objects": "Objekte",
+            "people": "Menschen",
+            "bodyParts": "Körper",
+            "placesBuildings": "Orte",
+            "plants": "Pflanzen",
+            "vehicles": "Fahrzeuge",
+            "weather": "Wetter",
+            "symbols": "Symbole"
+        },
+        "categoryLabel": "{{label}}, {{found}} von {{total}} gefunden",
+        "notFound": "Noch nicht gefunden",
+        "cellLabel_one": "{{emoji}}, {{count}}-mal getippt",
+        "cellLabel_other": "{{emoji}}, {{count}}-mal getippt",
+        "cellLabelShiny_one": "{{emoji}}, {{count}}-mal getippt, {{shiny}} glänzend",
+        "cellLabelShiny_other": "{{emoji}}, {{count}}-mal getippt, {{shiny}} glänzend"
+    },
+    "effects": {
+        "chipTapping": "×{{multiplier}} Tippen",
+        "chipProduction": "×{{multiplier}} Produktion",
+        "stackLabel_one": "{{count}} gestapelt: {{label}}, der nächste endet in {{time}}",
+        "stackLabel_other": "{{count}} gestapelt: {{label}}, der nächste endet in {{time}}",
+        "chipLabel": "{{title}}, noch {{time}}",
+        "gift": "Geschenk!",
+        "ohNo": "Oh nein!",
+        "tapping": "Tippen",
+        "production": "Produktion",
+        "tapFrenzy": "Tipprausch!",
+        "unholyPower": "Unheilige Macht!",
+        "productionBoost": "Produktionsschub!",
+        "collectLabel": "{{title}} einsammeln",
+        "tapMe": "Tipp mich"
+    },
+    "combo": {
+        "level": "Combo ×{{multiplier}}",
+        "max": "Max. Combo ×{{multiplier}}",
+        "label": "Combo mal {{multiplier}}",
+        "maxLabel": "Combo mal {{multiplier}}, Maximum"
+    },
+    "bigEmoji": {
+        "tapLabel": "Tippe auf das Große Emoji",
+        "tapShinyLabel": "Tippe auf das glänzende Große Emoji",
+        "shiny": "Glänzend",
+        "shinyBurst": "Glanz!",
+        "handsOff": "Prüfung {{trial}} · Tippen zeichnet nichts",
+        "perTap": "+{{value}} pro Tipp"
+    },
+    "bank": {
+        "timeToAfford": {
+            "needMore": "Reicht nicht",
+            "seconds_one": "In {{count}} Sek.",
+            "seconds_other": "In {{count}} Sek.",
+            "minutes_one": "In {{count}} Min.",
+            "minutes_other": "In {{count}} Min.",
+            "hours_one": "In {{count}} Std.",
+            "hours_other": "In {{count}} Std.",
+            "days_one": "In {{count}} Tag",
+            "days_other": "In {{count}} Tagen",
+            "aLongTime": "Ewig"
+        },
+        "timeToAffordInline": {
+            "needMore": "reicht nicht",
+            "seconds_one": "in {{count}} Sek.",
+            "seconds_other": "in {{count}} Sek.",
+            "minutes_one": "in {{count}} Min.",
+            "minutes_other": "in {{count}} Min.",
+            "hours_one": "in {{count}} Std.",
+            "hours_other": "in {{count}} Std.",
+            "days_one": "in {{count}} Tag",
+            "days_other": "in {{count}} Tagen",
+            "aLongTime": "ewig"
+        }
+    },
+    "catalogue": {
+        "title": "Alle Upgrades",
+        "counts": "{{owned}} gekauft · {{forSale}} im Angebot · {{locked}} gesperrt · {{total}} gesamt",
+        "filter": {
+            "owned": "Gekauft {{count}}",
+            "forSale": "Im Angebot {{count}}",
+            "locked": "Gesperrt {{count}}"
+        },
+        "combo": "Combo",
+        "effectEmojis": "Effekt-Emojis",
+        "unlock": {
+            "own": "{{count}} {{buildings}} besitzen",
+            "tapping": "{{amount}} Emojis durch Tippen verdienen",
+            "comboTaps": "{{amount}} Combo-Tipps",
+            "earned": "{{amount}} Emojis verdienen"
+        },
+        "state": {
+            "owned": "✓ Gekauft",
+            "forSale": "Im Angebot",
+            "locked": "🔒 Gesperrt"
+        },
+        "stateA11y": {
+            "owned": "gekauft",
+            "forSale": "im Angebot",
+            "locked": "gesperrt"
+        },
+        "tileA11y": "{{name}}, {{state}}",
+        "prev": "Zurück",
+        "next": "Weiter",
+        "prevA11y": "Vorheriges Upgrade",
+        "nextA11y": "Nächstes Upgrade",
+        "fact": {
+            "price": "Preis",
+            "unlocks": "Freischaltung",
+            "id": "ID"
         }
     }
 }

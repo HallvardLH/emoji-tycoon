@@ -6,11 +6,16 @@
         "buildings": "Gebouwen",
         "upgrades": "Upgrades",
         "stats": "Statistiek",
-        "collection": "Collectie"
+        "collection": "Collectie",
+        "newItemsLabel_one": "{{label}}, {{count}} nieuw",
+        "newItemsLabel_other": "{{label}}, {{count}} nieuw"
     },
     "header": {
         "emojis": "Emoji's",
-        "perSecond": "Per seconde: {{value}}"
+        "perSecond": "Per seconde: {{value}}",
+        "rate": "+{{value}} /sec",
+        "gemsLabel_one": "{{gems}} juweel. Open de juwelenwinkel",
+        "gemsLabel_other": "{{gems}} juwelen. Open de juwelenwinkel"
     },
     "common": {
         "buy": "Kopen",
@@ -23,29 +28,120 @@
             "multiplyTap": "• Tikken is twee keer zo efficiënt.",
             "percentageIncreaseTap": "• Tikken is {{percent}} krachtiger.",
             "tapPercentageOfEps": "• Tikken levert {{percent}} van je totale emoji-productie op.",
-            "percentageIncreaseProduction": "• Totale emoji-productie met {{percent}} verhoogd."
+            "percentageIncreaseProduction": "• Totale emoji-productie met {{percent}} verhoogd.",
+            "comboUnlock": "• Snel tikken bouwt een combo op, tot ×{{level}}.",
+            "comboLevel": "• De combo kan ×{{level}} halen.",
+            "effectEmojis": "• {{summary}}."
         },
         "bonusProduction": "Koop je deze upgrade nu, dan krijg je <hl>+{{bonus}}</hl> emoji's per seconde erbij: je emoji-productie stijgt met <hl>{{percent}}</hl>",
         "bonusTap": "Koop je deze upgrade nu, dan krijg je <hl>+{{bonus}}</hl> emoji's per tik erbij: elke tik levert <hl>{{percent}}</hl> meer emoji's op",
         "filterTitle": "Upgrades filteren",
-        "filterDescription": "Kies van welke gebouwen je upgrades wilt zien."
+        "filterDescription": "Kies van welke gebouwen je upgrades wilt zien.",
+        "effectEmojiSummary": {
+            "spawnRate": "Effect-emoji's verschijnen ×{{multiplier}} zo vaak",
+            "duration": "Goede effecten duren ×{{multiplier}} zo lang",
+            "start": "Er beginnen effect-emoji's te verschijnen"
+        },
+        "chips": {
+            "multiplyBuildingProduction": "{{buildings}} ×{{multiplier}}",
+            "multiplyTap": "Tikken ×{{multiplier}}",
+            "percentageIncreaseTap": "Tikken +{{percent}}",
+            "percentageIncreaseProduction": "Productie +{{percent}}",
+            "tapPercentageOfEps": "Tik +{{percent}} van emoji's/sec",
+            "comboUnlock": "Combo tot ×{{level}}",
+            "comboLevel": "Max. combo ×{{level}}"
+        },
+        "impact": {
+            "perSecond": "+{{bonus}} /sec",
+            "perTap": "+{{bonus}} per tik",
+            "and": "{{a}} en {{b}}",
+            "rightNow": "{{gains}} op dit moment"
+        },
+        "tierLabel": {
+            "helper": "{{building}} · Hulpje",
+            "hands": "Grote emoji · Handen",
+            "effectEmojisNew": "Effect-emoji's · Nieuw",
+            "effectEmojisLevel": "Effect-emoji's · Niveau {{level}}",
+            "comboNew": "Combo · Nieuw",
+            "comboLevel": "Combo · Niveau {{level}}",
+            "tier": "{{building}} · Rang {{tier}}"
+        },
+        "forSale": "Te koop",
+        "owned": "In bezit",
+        "available": "Beschikbaar",
+        "emptyOwnedTitle": "Nog niets gekocht",
+        "emptyTitle": "Nog geen upgrades",
+        "emptyOwnedText": "Upgrades die je koopt, verschijnen hier.",
+        "emptyText": "Koop gebouwen en tik op de grote emoji om upgrades te ontgrendelen.",
+        "filterAll": "Alle",
+        "quoted": "\"{{quote}}\"",
+        "ownedBadge": "✓ In bezit",
+        "paid": "Betaald: {{price}}",
+        "bareBones": "🦴 Geen upgrades in {{trial}}",
+        "buyFor": "Koop voor {{price}}",
+        "priceAndTime": "{{price}} · {{time}}",
+        "ownedCount": "{{owned}} van {{total}} upgrades",
+        "availableCount": "{{affordable}} betaalbaar · {{unlocked}} ontgrendeld",
+        "a11y": {
+            "owned": "{{name}}, in bezit",
+            "price": "{{name}}, {{price}}",
+            "affordable": "{{name}}, {{price}}, betaalbaar"
+        }
     },
     "stats": {
         "totalEmojisDrawn": "Totaal getekende emoji's",
         "emojiTaps": "Emoji-tikken",
         "emojisEarnedFromTapping": "Emoji's verdiend met tikken",
         "magicalEmojisTapped": "Magische emoji's getikt",
-        "funValue": "Funfactor"
+        "funValue": "Funfactor",
+        "shinyEmojisTapped": "Glimmende emoji's getikt",
+        "comboTaps": "Combotikken",
+        "madeByEachBuilding": "Gemaakt per gebouw"
     },
     "drawer": {
         "language": "Taal",
         "deviceLanguage": "Apparaattaal",
         "cheats": "Cheats",
         "resetGame": "Spel resetten",
-        "spawnEffect": "Effect-emoji laten verschijnen"
+        "spawnEffect": "Effect-emoji laten verschijnen",
+        "menu": "Menu"
     },
     "prestige": {
-        "title": "Prestige"
+        "title": "Prestige",
+        "close": "Sluiten",
+        "ordinal_ordinal_other": "{{count}}e",
+        "celebrateCaption": "Prestige #{{count}}",
+        "celebrateTrialCaption": "Prestige #{{count}} · Uitdaging gestart",
+        "celebrateTitle": "+{{essence}} essentie",
+        "celebrateTierTitle": "+{{essence}} essentie · rang {{tier}}-voordelen ontgrendeld",
+        "essenceCaption": "Emoji-essentie",
+        "essenceBonus": "+{{bonus}} productie ({{each}} per stuk)",
+        "intro": "Als je genoeg emoji's hebt getekend, begint hun pure essentie zich om je heen te verzamelen: een magische substantie die van vorm verandert zodra je ernaar kijkt. Elke ongebruikte essentie verhoogt je productie, en met essentie koop je voordelen die voor altijd blijven.",
+        "startOver": "Opnieuw beginnen",
+        "prestigesSoFar_one": "{{count}} prestige tot nu toe",
+        "prestigesSoFar_other": "{{count}} prestiges tot nu toe",
+        "resetsWhat": "Reset je emoji's, gebouwen, gebouwupgrades en handen. Je houdt je collectie, statistieken, combo- en effect-emoji-upgrades, essentie en voordelen.",
+        "nextEssence": "Volgende essentie",
+        "nextEssenceAt": "bij {{amount}} getekende emoji's",
+        "noEssenceYet": "Nog geen essentie te verdienen",
+        "tapAgainToPrestige": "Tik nogmaals voor prestige",
+        "prestigeFor": "Prestige voor +{{essence}} ✨",
+        "productionCaps": "+{{percent}} productie",
+        "playedThisRun": "Gespeeld deze ronde",
+        "drawnThisRun": "Getekend deze ronde",
+        "essencePerHour": "Essentie per uur",
+        "afterTenMinutes": "na 10 min",
+        "essenceRate": "{{rate}} (record {{best}})",
+        "slowingDown": "📉 Er komt minder snel essentie binnen dan eerder deze ronde. Een goed moment voor prestige.",
+        "drawnAmount": "{{amount}} getekend",
+        "pastRuns": "Vorige rondes",
+        "pastRunLine": "{{duration}} · {{amount}} getekend",
+        "pastRunTrialCompleted": "{{icon}} {{name}} ✓",
+        "pastRunTrialNotCompleted": "{{icon}} {{name}}, niet voltooid",
+        "chipLabel": "Emoji-essentie",
+        "chipLabelReady": "Prestige voor {{essence}} emoji-essentie",
+        "chipEssence": "Essentie",
+        "chipPending": "+{{essence}} essentie"
     },
     "numbers": {
         "groupSize": "3",
@@ -115,6 +211,289 @@
             "57": "Nod",
             "60": "Den",
             "63": "Ded"
+        }
+    },
+    "buildings": {
+        "ownedA11y_one": "{{count}} in bezit",
+        "ownedA11y_other": "{{count}} in bezit",
+        "newBadge": "NIEUW",
+        "statLine": "{{eps}} /sec · {{share}} van totaal",
+        "nextUpgrade": "volgende upgrade bij {{at}}",
+        "allUpgradesFound": "alle upgrades gevonden",
+        "epsEach": "+{{eps}} /sec per stuk",
+        "buy": "Kopen",
+        "buyCount": "Koop ×{{count}}",
+        "buyA11y_one": "Koop {{count}} {{name}} voor {{price}}",
+        "buyA11y_other": "Koop {{count}} {{name}} voor {{price}}",
+        "mystery": "Mysterieus gebouw",
+        "revealsAt": "Onthuld bij {{amount}} emoji's",
+        "bulkLabel": "Aantal kopen",
+        "bulkMax": "Max",
+        "bulkA11yMax": "Koop er zoveel als je kunt betalen",
+        "bulkA11y_one": "Koop er {{count}} tegelijk",
+        "bulkA11y_other": "Koop er {{count}} tegelijk",
+        "milestoneCaption": "Nieuw gebouw",
+        "milestoneTitle": "Je eerste {{building}}!"
+    },
+    "time": {
+        "seconds_one": "{{count}}s",
+        "seconds_other": "{{count}}s",
+        "minutes_one": "{{count}}m",
+        "minutes_other": "{{count}}m",
+        "hours_one": "{{count}}u",
+        "hours_other": "{{count}}u",
+        "days_one": "{{count}}d",
+        "days_other": "{{count}}d",
+        "pair": "{{a}} {{b}}"
+    },
+    "trials": {
+        "title": "Uitdagingen",
+        "completedCount": "{{done}} van {{total}} voltooid",
+        "intro": "Start met prestige een ronde met een regel die het moeilijker maakt. Teken in die ronde genoeg emoji's om de beloning voor altijd te houden, en de regel vervalt.",
+        "unlocksWith": "Ontgrendeld bij je {{ordinal}} prestige.",
+        "completeCaps": "Uitdaging voltooid",
+        "inProgressCaps": "Uitdaging bezig",
+        "completedText": "{{reward}} is voorgoed van jou, en de regel vervalt voor de rest van deze ronde.",
+        "activeText": "{{rule}}. Teken {{goal}} deze ronde om voor altijd {{reward}} te verdienen.",
+        "giveUp": "Deze uitdaging opgeven",
+        "giveUpConfirm": "Tik nogmaals om op te geven (geen beloning)",
+        "doneTag": "✓ Klaar",
+        "playingTag": "Bezig",
+        "ruleLine": "<hl>Regel: </hl>{{rule}}",
+        "ruleLineWithStart": "<hl>Regel: </hl>{{rule}} (je begint met {{amount}} emoji's)",
+        "rewardLine": "<hl>Beloning: </hl>{{reward}}",
+        "finishFirst": "Maak eerst je uitdaging af",
+        "needsEssence": "Essentie nodig voor prestige",
+        "tapAgainToStart": "Tik nogmaals om te starten",
+        "prestigeInto": "Prestige naar uitdaging voor +{{essence}} ✨",
+        "goalCaps": "Doel: {{goal}}",
+        "goal": "{{amount}} emoji's",
+        "completeTitle": "{{name}}: {{reward}}",
+        "rewardUnlocked": "Beloning ontgrendeld"
+    },
+    "perks": {
+        "title": "Voordelen",
+        "ownedCount": "{{owned}} van {{total}} in bezit",
+        "spentKeepsHalf": "Uitgegeven essentie houdt de helft van haar productiebonus.",
+        "spentNoBonus": "Uitgegeven essentie verhoogt de productie niet meer.",
+        "tierCaps": "Rang {{tier}}",
+        "tierLockedCaps": "Rang {{tier}} · ontgrendeld bij je {{ordinal}} prestige",
+        "hidden": "Doe een prestige om dit voordeel te onthullen.",
+        "needsFirst": "Eerst {{perk}} nodig",
+        "ownedTag": "✓ In bezit",
+        "buyLabel": "Koop {{perk}} voor {{cost}} essentie"
+    },
+    "gems": {
+        "title": "Juwelenwinkel",
+        "yourGemsCaps": "Jouw juwelen",
+        "gemsCaps": "Juwelen",
+        "offlineClaim": "{{cost}} juwelen voor ×{{multiplier}} offline verdiensten",
+        "storeUnavailable": "De winkel is nu niet beschikbaar. Controleer je verbinding en probeer het later opnieuw.",
+        "purchaseFailed": "De aankoop is niet gelukt. Er is niets afgeschreven.",
+        "keptOnPrestige": "Je houdt je juwelen bij een prestige.",
+        "unavailable": "Niet beschikbaar",
+        "thankYouCaps": "Bedankt!",
+        "gemsAdded_one": "+{{amount}} juweel",
+        "gemsAdded_other": "+{{amount}} juwelen",
+        "buyLabel_one": "Koop {{amount}} juweel",
+        "buyLabel_other": "Koop {{amount}} juwelen",
+        "buyLabelWithPrice_one": "Koop {{amount}} juweel voor {{price}}",
+        "buyLabelWithPrice_other": "Koop {{amount}} juwelen voor {{price}}",
+        "tags": {
+            "popular": "Populair",
+            "bestValue": "Beste deal"
+        }
+    },
+    "offline": {
+        "welcomeBack": "Welkom terug!",
+        "away": "Je was {{duration}} weg.",
+        "awayCapped": "Je was meer dan {{duration}} weg, het maximum dat telt.",
+        "rested": "Je imperium rustte uit terwijl je weg was.",
+        "missedCaps": "Gemiste productie",
+        "perSecond": "{{value}} /sec",
+        "gemOfferCaps": "×{{multiplier}} voor {{cost}} juwelen · je hebt er {{gems}}",
+        "gemOfferGetCaps": "×{{multiplier}} voor {{cost}} juwelen · juwelen halen",
+        "noThanks": "Nee, bedankt"
+    },
+    "ads": {
+        "watchCaps": "Bekijk een advertentie",
+        "loadingCaps": "Advertentie laden...",
+        "failed": "De advertentie is niet tot het einde afgespeeld. Controleer je verbinding en probeer het opnieuw."
+    },
+    "reset": {
+        "title": "Opnieuw beginnen?",
+        "warning": "Hiermee reset je je spel. Je emoji's, gebouwen, upgrades, essentie, voordelen, collectie en statistieken zijn dan allemaal weg. Dit kan niet ongedaan worden gemaakt.",
+        "purchasesSafe": "Je in-game aankopen zijn veilig. Juwelen en alles wat je hebt gekocht, gaan mee naar je nieuwe spel.",
+        "confirm": "Ja, reset mijn spel",
+        "cancel": "Verder spelen"
+    },
+    "milestones": {
+        "caption": "Mijlpaal",
+        "emojisDrawn": "{{amount}} emoji's getekend!"
+    },
+    "settings": {
+        "title": "Instellingen",
+        "close": "Instellingen sluiten",
+        "sound": "Geluid",
+        "soundEffects": "Geluidseffecten",
+        "soundEffectsHint": "Een zachte plop als je tikt, en een belletje voor glimmende emoji's.",
+        "performance": "Prestaties",
+        "reduceAnimations": "Minder animaties",
+        "reduceAnimationsHint": "Getikte emoji's vliegen niet meer van de grote emoji af. Probeer dit als tikken traag aanvoelt.",
+        "dangerZone": "Gevarenzone"
+    },
+    "cheats": {
+        "subtitle": "Om te testen. Wijzigingen gelden voor je opgeslagen spel.",
+        "simulateAway": "Simuleer 1 uur weg",
+        "gems": "Juwelen",
+        "addGems_one": "+{{count}} juweel",
+        "addGems_other": "+{{count}} juwelen",
+        "addComboTaps": "+{{amount}} combotikken",
+        "multiplyTapEarnings": "×{{factor}} tikopbrengst",
+        "addCollection_one": "+{{count}} collectie",
+        "addCollection_other": "+{{count}} collectie",
+        "addShiny_one": "+{{count}} glimmend",
+        "addShiny_other": "+{{count}} glimmend",
+        "addMagical_one": "+{{count}} magisch",
+        "addMagical_other": "+{{count}} magisch",
+        "addEssence_one": "+{{count}} essentie",
+        "addEssence_other": "+{{count}} essentie",
+        "addPerkTier_one": "+{{count}} voordeelrang",
+        "addPerkTier_other": "+{{count}} voordeelrangen",
+        "addRunTime": "+{{time}} speeltijd",
+        "reachTrialGoal": "Uitdagingsdoel halen",
+        "effectEmojis": "Effect-emoji's",
+        "spawnEffects_one": "{{count}} effect-emoji laten verschijnen",
+        "spawnEffects_other": "{{count}} effect-emoji's laten verschijnen",
+        "speed": "Snelheid",
+        "speedLabel": "{{speed}}× snelheid",
+        "speedHint": "Productie en speeltijd. Effecten en de combo blijven realtime. Uit na herladen.",
+        "shiny": "Glimmend",
+        "onlyShiny": "Alleen glimmende emoji's",
+        "funValueQuirk": "{{name}}: {{description}}",
+        "noQuirk": "Geen gekkigheid",
+        "hideFunValueTable": "Funfactortabel verbergen",
+        "showFunValueTable": "Funfactortabel tonen",
+        "setFunValueLabel": "Funfactor instellen op {{value}}: {{name}}",
+        "changeFunValueLabel": "Funfactor wijzigen met {{change}}"
+    },
+    "collection": {
+        "ofTotalFound": "/ {{total}} gevonden",
+        "mostTapped": "Meest getikt: {{emoji}} ×{{amount}}",
+        "startCollecting": "Tik op de grote emoji om te beginnen met verzamelen",
+        "shinyFound_one": "{{amount}} glimmend",
+        "shinyFound_other": "{{amount}} glimmend",
+        "categories": {
+            "faces": "Gezichten",
+            "animals": "Dieren",
+            "food": "Eten",
+            "objects": "Voorwerpen",
+            "people": "Mensen",
+            "bodyParts": "Lichaam",
+            "placesBuildings": "Plekken",
+            "plants": "Planten",
+            "vehicles": "Voertuigen",
+            "weather": "Weer",
+            "symbols": "Symbolen"
+        },
+        "categoryLabel": "{{label}}, {{found}} van {{total}} gevonden",
+        "notFound": "Nog niet gevonden",
+        "cellLabel_one": "{{emoji}}, {{count}} keer getikt",
+        "cellLabel_other": "{{emoji}}, {{count}} keer getikt",
+        "cellLabelShiny_one": "{{emoji}}, {{count}} keer getikt, {{shiny}} glimmend",
+        "cellLabelShiny_other": "{{emoji}}, {{count}} keer getikt, {{shiny}} glimmend"
+    },
+    "effects": {
+        "chipTapping": "×{{multiplier}} tikken",
+        "chipProduction": "×{{multiplier}} productie",
+        "stackLabel_one": "{{count}} gestapeld: {{label}}, volgende eindigt over {{time}}",
+        "stackLabel_other": "{{count}} gestapeld: {{label}}, volgende eindigt over {{time}}",
+        "chipLabel": "{{title}}, nog {{time}}",
+        "gift": "Cadeau!",
+        "ohNo": "O nee!",
+        "tapping": "Tikken",
+        "production": "Productie",
+        "tapFrenzy": "Tikwoede!",
+        "unholyPower": "Duivelse kracht!",
+        "productionBoost": "Productieboost!",
+        "collectLabel": "{{title}} ophalen",
+        "tapMe": "Tik op mij"
+    },
+    "combo": {
+        "level": "Combo ×{{multiplier}}",
+        "max": "Max. combo ×{{multiplier}}",
+        "label": "Combo keer {{multiplier}}",
+        "maxLabel": "Combo keer {{multiplier}}, maximaal"
+    },
+    "bigEmoji": {
+        "tapLabel": "Tik op de grote emoji",
+        "tapShinyLabel": "Tik op de glimmende grote emoji",
+        "shiny": "Glimmend",
+        "shinyBurst": "Glimmer!",
+        "handsOff": "Uitdaging {{trial}} · tikken tekent niets",
+        "perTap": "+{{value}} per tik"
+    },
+    "bank": {
+        "timeToAfford": {
+            "needMore": "Meer nodig",
+            "seconds_one": "Over {{count}} sec",
+            "seconds_other": "Over {{count}} sec",
+            "minutes_one": "Over {{count}} min",
+            "minutes_other": "Over {{count}} min",
+            "hours_one": "Over {{count}} uur",
+            "hours_other": "Over {{count}} uur",
+            "days_one": "Over {{count}} dag",
+            "days_other": "Over {{count}} dagen",
+            "aLongTime": "Duurt lang"
+        },
+        "timeToAffordInline": {
+            "needMore": "meer nodig",
+            "seconds_one": "over {{count}} sec",
+            "seconds_other": "over {{count}} sec",
+            "minutes_one": "over {{count}} min",
+            "minutes_other": "over {{count}} min",
+            "hours_one": "over {{count}} uur",
+            "hours_other": "over {{count}} uur",
+            "days_one": "over {{count}} dag",
+            "days_other": "over {{count}} dagen",
+            "aLongTime": "duurt lang"
+        }
+    },
+    "catalogue": {
+        "title": "Alle upgrades",
+        "counts": "{{owned}} in bezit · {{forSale}} te koop · {{locked}} op slot · {{total}} totaal",
+        "filter": {
+            "owned": "In bezit {{count}}",
+            "forSale": "Te koop {{count}}",
+            "locked": "Op slot {{count}}"
+        },
+        "combo": "Combo",
+        "effectEmojis": "Effect-emoji's",
+        "unlock": {
+            "own": "Bezit {{count}} {{buildings}}",
+            "tapping": "Verdien {{amount}} emoji's met tikken",
+            "comboTaps": "{{amount}} combotikken",
+            "earned": "Verdien {{amount}} emoji's"
+        },
+        "state": {
+            "owned": "✓ In bezit",
+            "forSale": "Te koop",
+            "locked": "🔒 Op slot"
+        },
+        "stateA11y": {
+            "owned": "in bezit",
+            "forSale": "te koop",
+            "locked": "op slot"
+        },
+        "tileA11y": "{{name}}, {{state}}",
+        "prev": "Vorige",
+        "next": "Volgende",
+        "prevA11y": "Vorige upgrade",
+        "nextA11y": "Volgende upgrade",
+        "fact": {
+            "price": "Prijs",
+            "unlocks": "Ontgrendeling",
+            "id": "ID"
         }
     }
 }

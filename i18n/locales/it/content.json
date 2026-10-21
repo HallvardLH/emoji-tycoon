@@ -82,7 +82,38 @@
         },
         "18": {
             "name": "Singolarità emoji",
-            "plural": "Singolarità emoji"
+            "plural": "Singolarità emoji",
+            "description": "Ecco fatto. Non resta altro che emoji. Ce l'hai fatta. O forse no?"
+        },
+        "7": {
+            "name": "Cinema emoji",
+            "plural": "Cinema emoji",
+            "description": "Kolossal con i tuoi emoji preferiti come protagonisti. Ogni biglietto include popcorn ed emoji."
+        },
+        "11": {
+            "name": "Compagnia aerea emoji",
+            "plural": "Compagnie aeree emoji",
+            "description": "Porta gli emoji in ogni angolo del mondo. Posto finestrino, ovviamente."
+        },
+        "19": {
+            "name": "Macchina del tempo emoji",
+            "plural": "Macchine del tempo emoji",
+            "description": "Fa un salto all'alba dei tempi per disegnare i primissimi emoji. Poi i secondi."
+        },
+        "20": {
+            "name": "Big Bang",
+            "plural": "Big Bang",
+            "description": "Un universo nuovo di zecca, e stavolta è fatto di emoji fino in fondo."
+        },
+        "21": {
+            "name": "Multiverso emoji",
+            "plural": "Multiversi emoji",
+            "description": "Infiniti universi, ognuno con il suo magnate degli emoji. Ora lavorano tutti per te."
+        },
+        "22": {
+            "name": "Il primo emoji",
+            "plural": "Primi emoji",
+            "description": "Dove tutto è cominciato. Ti ha guardato toccare per tutto questo tempo."
         }
     },
     "upgrades": {
@@ -188,27 +219,33 @@
         },
         "100": {
             "name": "Braccio più forte",
-            "description": "Un braccio più forte permette di disegnare emoji più in fretta."
+            "description": "Un braccio più forte permette di disegnare emoji più in fretta.",
+            "quote": "Fa male, ma ne vale la pena."
         },
         "101": {
             "name": "Dita flessibili",
-            "description": "Le dita flessibili permettono emoji più elaborati."
+            "description": "Le dita flessibili permettono emoji più elaborati.",
+            "quote": "Flessibili? Sì, forse. Ma fanno male lo stesso."
         },
         "102": {
             "name": "Due mani",
-            "description": "Il doppio delle mani, il doppio degli emoji."
+            "description": "Il doppio delle mani, il doppio degli emoji.",
+            "quote": "Il doppio dell'orgoglio, il doppio della caduta."
         },
         "103": {
             "name": "Mani con lo smalto",
-            "description": "Lo smalto sulle unghie ti fa toccare più veloce, non lo sapevi?"
+            "description": "Lo smalto sulle unghie ti fa toccare più veloce, non lo sapevi?",
+            "quote": "E sarai proprio carino!"
         },
         "104": {
             "name": "Piedi",
-            "description": "Finalmente un lavoro fatto coi piedi! Raddoppia la produzione (e non è per niente difficile)!"
+            "description": "Finalmente un lavoro fatto coi piedi! Raddoppia la produzione (e non è per niente difficile)!",
+            "quote": "Per niente difficile? Mia moglie mi ha lasciato quando mi ha visto coi piedi sul tablet di famiglia."
         },
         "105": {
             "name": "Lingua",
-            "description": "Con anni di pratica, anche tu puoi imparare a disegnare con la lingua!"
+            "description": "Con anni di pratica, anche tu puoi imparare a disegnare con la lingua!",
+            "quote": "mmmhmh thmpwuh mhhaaaam ehhmmmmuhm ahumhmhm"
         },
         "106": {
             "name": "Naso",
@@ -217,19 +254,23 @@
         },
         "107": {
             "name": "Orecchio",
-            "description": "Infilati una penna nelle orecchie, gira la testa di 90 gradi e disegna!"
+            "description": "Infilati una penna nelle orecchie, gira la testa di 90 gradi e disegna!",
+            "quote": "Cosa? Eh? Non sento- co- eh... Non sento proprio un acc- cosa?!"
         },
         "108": {
             "name": "Bocca",
-            "description": "Mettiti una matita in bocca e disegna!"
+            "description": "Mettiti una matita in bocca e disegna!",
+            "quote": "Non ne vale la pena. Fa troppo male."
         },
         "109": {
             "name": "Gamba più forte",
-            "description": "Una gamba più forte ti fa disegnare emoji molto più in fretta con i piedi."
+            "description": "Una gamba più forte ti fa disegnare emoji molto più in fretta con i piedi.",
+            "quote": "Ora ho una gamba enorme. Solo la sinistra. Cammino in tondo."
         },
         "110": {
             "name": "Polmoni più grandi",
-            "description": "Polmoni più grandi permettono di disegnare emoji più in fretta."
+            "description": "Polmoni più grandi permettono di disegnare emoji più in fretta.",
+            "quote": "Ossigeno. Ossigeno. Ossigeno."
         },
         "111": {
             "name": "Cervello più grande",
@@ -237,7 +278,8 @@
         },
         "112": {
             "name": "Capelli",
-            "description": "Impugna un pennello con i capelli per creare emoji. A che servono le mani quando hai stile?"
+            "description": "Impugna un pennello con i capelli per creare emoji. A che servono le mani quando hai stile?",
+            "quote": "A che servono le mani? A me. Servono a me. Sto diventando calvo."
         },
         "113": {
             "name": "Sopracciglia",
@@ -245,7 +287,8 @@
         },
         "114": {
             "name": "Schiena",
-            "description": "Sdraiati sulla schiena e disegna emoji con le mani dietro di te. Stretching e sketching!"
+            "description": "Sdraiati sulla schiena e disegna emoji con le mani dietro di te. Stretching e sketching!",
+            "quote": "Sdraiati sulla schiena, dicevano. Stretching e sketching, dicevano. Non riesco più ad alzarmi."
         },
         "115": {
             "name": "Denti",
@@ -253,7 +296,8 @@
         },
         "116": {
             "name": "Ombelico",
-            "description": "Disegna emoji con l'ombelico. Un'abilità unica e difficile da padroneggiare!"
+            "description": "Disegna emoji con l'ombelico. Un'abilità unica e difficile da padroneggiare!",
+            "quote": "Disegno con l'ombelico. Mia madre è tanto orgogliosa."
         },
         "117": {
             "name": "Disegno a eco",
@@ -261,23 +305,28 @@
         },
         "118": {
             "name": "Disegno telecinetico",
-            "description": "Perché usare le mani quando puoi disegnare emoji con la mente?"
+            "description": "Perché usare le mani quando puoi disegnare emoji con la mente?",
+            "quote": "Posso spostare gli oggetti con la mente, e tu mi fai disegnare faccine che fanno l'occhiolino."
         },
         "119": {
             "name": "Dita quantistiche",
-            "description": "L'entanglement quantistico nelle dita ti fa disegnare emoji alla velocità della luce."
+            "description": "L'entanglement quantistico nelle dita ti fa disegnare emoji alla velocità della luce.",
+            "quote": "Le mie dita sono in due posti contemporaneamente. E in entrambi ti odiano."
         },
         "200": {
             "name": "Matite migliorate",
-            "description": "Matite migliori per emoji più dettagliati."
+            "description": "Matite migliori per emoji più dettagliati.",
+            "quote": "Le matite migliori non ti daranno il talento."
         },
         "201": {
             "name": "Pastelli speciali",
-            "description": "Questi pastelli speciali risvegliano il fanciullino che c'è in ogni artista."
+            "description": "Questi pastelli speciali risvegliano il fanciullino che c'è in ogni artista.",
+            "quote": "Ho trovato il fanciullino che è in me. Anche lui è deluso da me."
         },
         "202": {
             "name": "Pennelli migliorati",
-            "description": "Pennelli migliori permettono emoji più artistici."
+            "description": "Pennelli migliori permettono emoji più artistici.",
+            "quote": "Migliorati in che senso? Riesco solo a dipingere una versione inquietante di mia moglie. Rivoglio i miei soldi."
         },
         "203": {
             "name": "Penne stilografiche",
@@ -334,7 +383,8 @@
         },
         "215": {
             "name": "Font Comic Sans",
-            "description": "Amalo o odialo, rende i tuoi emoji... unici!"
+            "description": "Amalo o odialo, rende i tuoi emoji... unici!",
+            "quote": "Mi licenzio."
         },
         "216": {
             "name": "Generatore di arte IA",
@@ -353,11 +403,13 @@
         },
         "219": {
             "name": "Sangue",
-            "description": "Dipingere col sangue rende gli emoji ancora più fighi!"
+            "description": "Dipingere col sangue rende gli emoji ancora più fighi!",
+            "quote": "Di chi? DI CHI?"
         },
         "300": {
             "name": "Contadini",
-            "description": "Che cos'è una fattoria senza contadini?!"
+            "description": "Che cos'è una fattoria senza contadini?!",
+            "quote": "Ho ereditato 80 ettari da mio padre, e tu mi fai coltivare faccine sorridenti."
         },
         "301": {
             "name": "Germoglio",
@@ -366,7 +418,8 @@
         },
         "302": {
             "name": "Attrezzi migliori",
-            "description": "Per coltivare molto più in fretta!"
+            "description": "Per coltivare molto più in fretta!",
+            "quote": "Attrezzi nuovi, stessa paga. Grazie di niente."
         },
         "303": {
             "name": "Trattori",
@@ -374,11 +427,13 @@
         },
         "304": {
             "name": "Cascine",
-            "description": "Una casa accogliente dove i tuoi contadini possono riposare e ricaricarsi."
+            "description": "Una casa accogliente dove i tuoi contadini possono riposare e ricaricarsi.",
+            "quote": "'Accogliente' è una parola buffa per una baracca con un secchio."
         },
         "305": {
             "name": "Mucche emoji",
-            "description": "Producono più emuuuuuuuji."
+            "description": "Producono più emuuuuuuuji.",
+            "quote": "Fai un'altra battuta sul muuu e ti ribalto IO."
         },
         "306": {
             "name": "Impianto di irrigazione",
@@ -387,7 +442,8 @@
         },
         "307": {
             "name": "Spaventapasseri",
-            "description": "Tengono quei fastidiosi emoji uccello lontani dalle tue fattorie!"
+            "description": "Tengono quei fastidiosi emoji uccello lontani dalle tue fattorie!",
+            "quote": "Gli uccelli non hanno paura. I vicini sì."
         },
         "308": {
             "name": "Compostiere",
@@ -395,7 +451,8 @@
         },
         "309": {
             "name": "Serre",
-            "description": "Coltiva emoji tutto l'anno, con qualsiasi tempo!"
+            "description": "Coltiva emoji tutto l'anno, con qualsiasi tempo!",
+            "quote": "Un'altra serra ha bisogno del tuo aiuto. Te la segno sulla mappa."
         },
         "310": {
             "name": "Mulini a vento",
@@ -404,7 +461,8 @@
         },
         "311": {
             "name": "Frutteti di emoji",
-            "description": "Coltiva alberi di emoji che danno frutti tutto l'anno!"
+            "description": "Coltiva alberi di emoji che danno frutti tutto l'anno!",
+            "quote": "Gli alberi camminano. Gli alberi sono arrabbiati."
         },
         "312": {
             "name": "Festa del raccolto",
@@ -425,11 +483,13 @@
         },
         "316": {
             "name": "La fattoria emoji del futuro",
-            "description": "Le tue fattorie ora sono utopie hi-tech con robot, ologrammi e trattori volanti. Benvenuti nel futuro!"
+            "description": "Le tue fattorie ora sono utopie hi-tech con robot, ologrammi e trattori volanti. Benvenuti nel futuro!",
+            "quote": "Un robot mi ha rubato il lavoro. Poi mi ha chiesto indicazioni."
         },
         "317": {
             "name": "Luna di sangue",
-            "description": "Sotto la luna di sangue i raccolti crescono più in fretta... ma gli spuntano anche i denti."
+            "description": "Sotto la luna di sangue i raccolti crescono più in fretta... ma gli spuntano anche i denti.",
+            "quote": "Le carote ora hanno i denti. Le carote mordono."
         },
         "318": {
             "name": "L'ultimo raccolto",
@@ -441,11 +501,13 @@
         },
         "400": {
             "name": "Coltelli affilati",
-            "description": "Coltelli più affilati rendono più facile tagliare gli emoji."
+            "description": "Coltelli più affilati rendono più facile tagliare gli emoji.",
+            "quote": "Tagliare emoji? Ma che dici? Sei impazzito? Sono emoji veri, vivi e innocenti!"
         },
         "401": {
             "name": "Padelle antiaderenti",
-            "description": "Le padelle antiaderenti velocizzano la cottura dei piatti emoji."
+            "description": "Le padelle antiaderenti velocizzano la cottura dei piatti emoji.",
+            "quote": "Si attacca ancora tutto. Anche io. A questo lavoro."
         },
         "402": {
             "name": "Forni migliori",
@@ -453,27 +515,33 @@
         },
         "403": {
             "name": "Ingredienti di qualità",
-            "description": "Ingredienti migliori significano emoji più gustosi."
+            "description": "Ingredienti migliori significano emoji più gustosi.",
+            "quote": "Stessi emoji surgelati. Etichetta nuova. Prezzo doppio."
         },
         "404": {
             "name": "Cappello da chef",
-            "description": "Indossare un cappello da chef aumenta la velocità di cottura degli emoji."
+            "description": "Indossare un cappello da chef aumenta la velocità di cottura degli emoji.",
+            "quote": "Il cappello non fa niente. L'ho detto quaranta volte. Nessuno mi ascolta."
         },
         "405": {
             "name": "Frullatori per emoji",
-            "description": "Trasforma gli emoji in deliziosi frullati e zuppe in pochi secondi!"
+            "description": "Trasforma gli emoji in deliziosi frullati e zuppe in pochi secondi!",
+            "quote": "NON guardare dentro il frullato."
         },
         "406": {
             "name": "Friggitrici ad aria",
-            "description": "Friggi emoji alla perfezione in tempi record. Dorati e croccanti ogni volta!"
+            "description": "Friggi emoji alla perfezione in tempi record. Dorati e croccanti ogni volta!",
+            "quote": "È un forno. Un fornetto minuscolo. Smettila di chiamarla friggitrice ad aria."
         },
         "407": {
             "name": "Sushi bar",
-            "description": "Arrotola sushi di emoji con precisione e stile. Serve talento allo stato crudo!"
+            "description": "Arrotola sushi di emoji con precisione e stile. Serve talento allo stato crudo!",
+            "quote": "Serviva talento allo stato crudo. Mi hanno assunto lo stesso."
         },
         "408": {
             "name": "Salad bar",
-            "description": "Prepara insalate di emoji fresche con tanti condimenti. Sane e deliziose!"
+            "description": "Prepara insalate di emoji fresche con tanti condimenti. Sane e deliziose!",
+            "quote": "Qualcuno ha starnutito sui crostini. L'ho visto. Non ho detto niente."
         },
         "409": {
             "name": "Forni per pizza",
@@ -485,7 +553,8 @@
         },
         "411": {
             "name": "Gelatiere emoji",
-            "description": "Sforna delizie emoji ghiacciate, tanto cool quanto buone!"
+            "description": "Sforna delizie emoji ghiacciate, tanto cool quanto buone!",
+            "quote": "Rotta. È sempre rotta. Non c'è mai stato un momento in cui non fosse rotta."
         },
         "412": {
             "name": "Postazioni taco",
@@ -498,7 +567,8 @@
         },
         "414": {
             "name": "Fontane di cioccolato emoji",
-            "description": "Fai colare cioccolato emoji fuso su tutto. Dolce e peccaminoso!"
+            "description": "Fai colare cioccolato emoji fuso su tutto. Dolce e peccaminoso!",
+            "quote": "Un bambino ci ha infilato tutta la faccia. Abbiamo continuato a servirla."
         },
         "415": {
             "name": "Cucina cannibale emoji",
@@ -510,23 +580,28 @@
         },
         "417": {
             "name": "Arena della battaglia di cibo",
-            "description": "Trasforma la cucina in un'arena per battaglie di cibo. Caotica, sporca e stranamente redditizia."
+            "description": "Trasforma la cucina in un'arena per battaglie di cibo. Caotica, sporca e stranamente redditizia.",
+            "quote": "Stranamente redditizia. Trovo ancora piselli nelle orecchie."
         },
         "418": {
             "name": "Impasto vivente",
-            "description": "Questo impasto si muove da solo e si modella in pane emoji perfetto. A volte cerca di scappare."
+            "description": "Questo impasto si muove da solo e si modella in pane emoji perfetto. A volte cerca di scappare.",
+            "quote": "È scappato. Ecco fatto. Cosa ne verrà fuori?"
         },
         "419": {
             "name": "Il buffet infinito",
-            "description": "Un buffet che non finisce mai... ma il cibo potrebbe iniziare a mangiare te."
+            "description": "Un buffet che non finisce mai... ma il cibo potrebbe iniziare a mangiare te.",
+            "quote": "Non finisce mai. Sono al tavolo dei dolci da marzo."
         },
         "500": {
             "name": "Scope",
-            "description": "Per pulire quando gli animali, ehm... fanno i bisognini."
+            "description": "Per pulire quando gli animali, ehm... fanno i bisognini.",
+            "quote": "Ho un master. Spazzo cacca di giraffa per degli emoji."
         },
         "501": {
             "name": "Addestratori",
-            "description": "Gli addestratori insegnano trucchi agli animali e rendono lo zoo più efficiente."
+            "description": "Gli addestratori insegnano trucchi agli animali e rendono lo zoo più efficiente.",
+            "quote": "Il lama mi ha sputato addosso. Di nuovo."
         },
         "502": {
             "name": "Recinti di lusso",
@@ -534,15 +609,18 @@
         },
         "503": {
             "name": "Animali esotici",
-            "description": "Introduci animali rari ed esotici per attirare più folla."
+            "description": "Introduci animali rari ed esotici per attirare più folla.",
+            "quote": "Il pinguino ha morso un bambino. Le visite sono salite del 40%."
         },
         "504": {
             "name": "Mascotte dello zoo",
-            "description": "Mascotte simpatiche attirano i visitatori e fanno salire gli incassi."
+            "description": "Mascotte simpatiche attirano i visitatori e fanno salire gli incassi.",
+            "quote": "Ci sono 35 gradi in questo costume da giraffa e un bambino mi ha appena preso a calci."
         },
         "505": {
             "name": "Cliniche veterinarie",
-            "description": "Una clinica dedicata mantiene in salute gli animali."
+            "description": "Una clinica dedicata mantiene in salute gli animali.",
+            "quote": "Sette anni di veterinaria. Oggi curo una capra che si è mangiata un telefono."
         },
         "506": {
             "name": "Zone d'ombra",
@@ -607,15 +685,18 @@
         },
         "601": {
             "name": "Più operai",
-            "description": "Aumenta il numero di dipendenti della fabbrica."
+            "description": "Aumenta il numero di dipendenti della fabbrica.",
+            "quote": "Più operai, stesso bagno. Un bagno solo."
         },
         "602": {
             "name": "Ingranaggi più grandi",
-            "description": "Ingranaggi più grandi permettono macchinari più grandi."
+            "description": "Ingranaggi più grandi permettono macchinari più grandi.",
+            "quote": "Ingranaggi più grandi, incidenti più grandi. Chiedi a Dave. Ah, già."
         },
         "603": {
             "name": "Dadi e bulloni",
-            "description": "Servono a fare in modo che non cada tutto a pezzi."
+            "description": "Servono a fare in modo che non cada tutto a pezzi.",
+            "quote": "Tengono in piedi questo posto. A malapena. Come il mio matrimonio."
         },
         "604": {
             "name": "Nastri trasportatori",
@@ -639,7 +720,8 @@
         },
         "609": {
             "name": "Sicurezza della fabbrica",
-            "description": "Proteggi la fabbrica dai ladri di emoji e dallo spionaggio industriale."
+            "description": "Proteggi la fabbrica dai ladri di emoji e dallo spionaggio industriale.",
+            "quote": "TU NON PUOI PASSARE. Non senza badge."
         },
         "610": {
             "name": "Riciclo in fabbrica",
@@ -668,11 +750,13 @@
         },
         "616": {
             "name": "Muri rinforzati",
-            "description": "Rinforza i muri della fabbrica per resistere al caos della produzione ad alta velocità."
+            "description": "Rinforza i muri della fabbrica per resistere al caos della produzione ad alta velocità.",
+            "quote": "Trattieni la porta! TRATTIENI LA PORTA!"
         },
         "617": {
             "name": "Trappole per topi",
-            "description": "Tieni i roditori fuori dalla fabbrica. Niente più cavi rosicchiati o emoji rubati!"
+            "description": "Tieni i roditori fuori dalla fabbrica. Niente più cavi rosicchiati o emoji rubati!",
+            "quote": "È una trappola!"
         },
         "618": {
             "name": "Capireparto",
@@ -690,7 +774,8 @@
         },
         "701": {
             "name": "Campi da baseball",
-            "description": "Sarà sicuramente un fuoricampo."
+            "description": "Sarà sicuramente un fuoricampo.",
+            "quote": "Fuoricampo? La palla ha preso la mia macchina. Di nuovo."
         },
         "702": {
             "name": "Campi da squash",
@@ -721,15 +806,18 @@
         },
         "901": {
             "name": "Borse per emoji più grandi",
-            "description": "Per portare ancora più emoji."
+            "description": "Per portare ancora più emoji.",
+            "quote": "Ho la schiena a pezzi, ma certo, borse più grandi."
         },
         "902": {
             "name": "Carte di credito emoji",
-            "description": "Ottime per spendere gli emoji guadagnati con fatica."
+            "description": "Ottime per spendere gli emoji guadagnati con fatica.",
+            "quote": "Rifiutata. La tua carta è rifiutata. La tua vita è rifiutata."
         },
         "903": {
             "name": "Investimenti nell'istruzione",
-            "description": "Istruzione migliore, disegni di emoji migliori."
+            "description": "Istruzione migliore, disegni di emoji migliori.",
+            "quote": "Il mio prestito studentesco è in emoji. Lo finirò di pagare nell'aldilà."
         },
         "904": {
             "name": "Investimenti nell'innovazione",
@@ -745,19 +833,23 @@
         },
         "1002": {
             "name": "Ruota panoramica",
-            "description": "Lassù, è lì che mi ha spezzato il cuore."
+            "description": "Lassù, è lì che mi ha spezzato il cuore.",
+            "quote": "Bloccato in cima per due ore con un tizio che mi spiegava le criptovalute."
         },
         "1003": {
             "name": "Circo",
-            "description": "Al mondo esistono solo due tipi di persone. Quelle che intrattengono e quelle che osservano."
+            "description": "Al mondo esistono solo due tipi di persone. Quelle che intrattengono e quelle che osservano.",
+            "quote": "Mi sono allenato vent'anni come acrobata. Ora faccio il giocoliere con faccine per bambini."
         },
         "1004": {
             "name": "Giocoliere emoji",
-            "description": "Dicono che non abbia mai perso un colpo."
+            "description": "Dicono che non abbia mai perso un colpo.",
+            "quote": "Mai perso un colpo? Ho perso i miei sogni."
         },
         "1100": {
             "name": "Elezioni emoji",
-            "description": "Vinca l'emoji migliore!"
+            "description": "Vinca l'emoji migliore!",
+            "quote": "Vinca l'emoji migliore. Dei perdenti ci occuperemo dopo."
         },
         "1101": {
             "name": "Bonus emoji",
@@ -777,7 +869,8 @@
         },
         "1300": {
             "name": "Telescopi",
-            "description": "Scruta le stelle per scoprire pianeti emoji."
+            "description": "Scruta le stelle per scoprire pianeti emoji.",
+            "quote": "Anche noi ti vediamo. Ti abbiamo sempre visto."
         },
         "1301": {
             "name": "Antenne satellitari",
@@ -785,11 +878,13 @@
         },
         "1302": {
             "name": "Astronauti",
-            "description": "Qualcuno deve pur gestire le tue stazioni spaziali."
+            "description": "Qualcuno deve pur gestire le tue stazioni spaziali.",
+            "quote": "Nello spazio nessuno può sentirti urlare. Abbiamo controllato. Due volte."
         },
         "1303": {
             "name": "Razzi",
-            "description": "Volano velocissimi."
+            "description": "Volano velocissimi.",
+            "quote": "Volano velocissimi. Come i tuoi resti."
         },
         "1304": {
             "name": "⌇⟟⏃⋔⍜ ⍾⎍⟟ ⟟⋏ ⌿⏃☊⟒...",
@@ -798,15 +893,18 @@
         },
         "1305": {
             "name": "⍜☌☌⟒⏁⏁⍜ ⌇⏁⍀⏃⋏⍜",
-            "description": "⍾⎍⟒⌇⏁⍜ ⍜☌☌⟒⏁⏁⍜ ☊⟒⌰⏃ ⌿⍜⏁⟒⍀⟟ ⟟⋏⎅⟟☊⟟⏚⟟⌰⟟."
+            "description": "⍾⎍⟒⌇⏁⍜ ⍜☌☌⟒⏁⏁⍜ ☊⟒⌰⏃ ⌿⍜⏁⟒⍀⟟ ⟟⋏⎅⟟☊⟟⏚⟟⌰⟟.",
+            "quote": "⏁⟟ ⌇⏁⍜ ☊⟒⍀☊⏃⋏⎅⍜."
         },
         "30000": {
             "name": "Patate",
-            "description": "Pata-tastiche! Le patate sono la spina dorsale di ogni fattoria."
+            "description": "Pata-tastiche! Le patate sono la spina dorsale di ogni fattoria.",
+            "quote": "Niente sale, niente pepe. Datemi solo una bella patata matura e vado in brodo di giuggiole. Anzi, di patate!"
         },
         "30001": {
             "name": "Carote",
-            "description": "Fanno bene alla vista: hai mai visto un coniglio con gli occhiali?"
+            "description": "Fanno bene alla vista: hai mai visto un coniglio con gli occhiali?",
+            "quote": "No. Non mi fa ridere. Fai un'altra battuta e ti pianto."
         },
         "30002": {
             "name": "Cetrioli",
@@ -820,15 +918,18 @@
         },
         "30004": {
             "name": "Pomodori",
-            "description": "Succosi e versatili, i pomodori sono tra i preferiti della fattoria."
+            "description": "Succosi e versatili, i pomodori sono tra i preferiti della fattoria.",
+            "quote": "Ottimi da tirare a chi ha progettato questa fattoria."
         },
         "30005": {
             "name": "Lattuga",
-            "description": "Lascia fare alla lattuga: la tua fattoria resterà fresca e verde."
+            "description": "Lascia fare alla lattuga: la tua fattoria resterà fresca e verde.",
+            "quote": "La cosa più noiosa della fattoria. Dopo il contadino."
         },
         "30006": {
             "name": "Broccoli",
-            "description": "Alberelli piccoli dai grandi benefici!"
+            "description": "Alberelli piccoli dai grandi benefici!",
+            "quote": "Mio figlio l'ha tirato al cameriere. Onestamente, se l'era meritato."
         },
         "30007": {
             "name": "Cipolle",
@@ -887,11 +988,13 @@
         },
         "30019": {
             "name": "Piselli",
-            "description": "Piselli!"
+            "description": "Piselli!",
+            "quote": "Piselli! PISELLI! È tutta qui la descrizione? Ma chi le scrive?"
         },
         "30020": {
             "name": "Ravanelli",
-            "description": "Piccanti e croccanti, i ravanelli danno una marcia in più alla tua fattoria e ai tuoi piatti."
+            "description": "Piccanti e croccanti, i ravanelli danno una marcia in più alla tua fattoria e ai tuoi piatti.",
+            "quote": "Nessuno vuole i ravanelli. Nessuno ha mai voluto i ravanelli."
         },
         "30021": {
             "name": "Funghi",
@@ -900,15 +1003,18 @@
         },
         "30022": {
             "name": "Ananas",
-            "description": "Tropicali e asprigni."
+            "description": "Tropicali e asprigni.",
+            "quote": "Sulla pizza."
         },
         "30023": {
             "name": "Angurie",
-            "description": "Succose e rinfrescanti, le angurie sono il raccolto estivo per eccellenza."
+            "description": "Succose e rinfrescanti, le angurie sono il raccolto estivo per eccellenza.",
+            "quote": "Mi fa male la schiena."
         },
         "30024": {
             "name": "Kiwi",
-            "description": "Pelosi fuori, dolci dentro. I kiwi sono tra i preferiti della fattoria!"
+            "description": "Pelosi fuori, dolci dentro. I kiwi sono tra i preferiti della fattoria!",
+            "quote": "Oddio, che prurito."
         },
         "30025": {
             "name": "Uva",
@@ -977,6 +1083,1539 @@
             "name": "Burocrati emoji",
             "description": "Un governo emoji ha bisogno di amministratori per funzionare.",
             "quote": "Sembra che tu stia approvando una legge. Serve aiuto?"
+        },
+        "707": {
+            "name": "Olimpiadi emoji",
+            "description": "Ogni quattro anni, gli emoji più veloci puntano all'oro."
+        },
+        "708": {
+            "name": "Stadio emoji",
+            "description": "Ottantamila posti, ognuno occupato da un emoji in festa."
+        },
+        "709": {
+            "name": "Allenamento da maratona",
+            "description": "Emoji capaci di disegnare per 42 chilometri senza fermarsi."
+        },
+        "710": {
+            "name": "Piscine",
+            "description": "Cinquanta metri di emoji al cloro.",
+            "quote": "Rilevate più forme di vita di classe Leviatano nella parte profonda. Sei sicuro che ne valga la pena?"
+        },
+        "711": {
+            "name": "Ring da boxe",
+            "description": "Vola come una farfalla, disegna come un emoji."
+        },
+        "712": {
+            "name": "Parete d'arrampicata",
+            "description": "Ogni appiglio è una faccina sorridente. Ottima presa."
+        },
+        "713": {
+            "name": "Pista di pattinaggio",
+            "description": "Emoji sul ghiaccio. Le paillettes si vendono a parte."
+        },
+        "714": {
+            "name": "Bowling",
+            "description": "Ogni strike fa cadere un mucchio di emoji."
+        },
+        "715": {
+            "name": "Skate park",
+            "description": "Kickflip, grind e un sacco di emoji."
+        },
+        "716": {
+            "name": "Piste da sci",
+            "description": "Piste nere, battute con gli emoji."
+        },
+        "717": {
+            "name": "Dojo di arti marziali",
+            "description": "Metti la cera, togli la cera, disegna emoji.",
+            "quote": "Tocca o non toccare. Non c'è provare."
+        },
+        "718": {
+            "name": "Circuito",
+            "description": "Da zero a un milione di emoji in meno di tre secondi."
+        },
+        "719": {
+            "name": "Hall of fame",
+            "description": "Tutti gli atleti emoji leggendari, immortalati nel bronzo."
+        },
+        "800": {
+            "name": "Macchine per popcorn",
+            "description": "In fondo a ogni secchiello c'è un emoji in omaggio.",
+            "quote": "Emoji in omaggio? Non l'ho trovato. Ridatemi i soldi o vi faccio causa."
+        },
+        "801": {
+            "name": "Occhiali 3D",
+            "description": "Gli emoji saltano fuori dallo schermo e dritti nella tua banca.",
+            "quote": "Ho provato a divertirmi con questi, ma non riuscivo proprio a far atterrare l'aereo su quella maledetta portaerei."
+        },
+        "802": {
+            "name": "Star del cinema",
+            "description": "I nomi più grandi del cinema emoji, tutti sul tuo libro paga.",
+            "quote": "Patrick Stewart"
+        },
+        "803": {
+            "name": "Trailer",
+            "description": "Venti minuti di trailer prima di ogni film. Ognuno pieno di emoji.",
+            "quote": "Eeee non c'è più, sì, il mio popcorn, non c'è più. L'ho finito durante i trailer."
+        },
+        "804": {
+            "name": "Prime sul red carpet",
+            "description": "Flash dei fotografi, fan in delirio, emoji molto importanti."
+        },
+        "805": {
+            "name": "Premi emoji",
+            "description": "E il premio per il miglior emoji va a... tutti quanti."
+        },
+        "806": {
+            "name": "Sequel",
+            "description": "Stessi emoji, esplosioni più grandi."
+        },
+        "807": {
+            "name": "Director's cut",
+            "description": "Quattro ore extra di emoji che nessuno aveva chiesto."
+        },
+        "808": {
+            "name": "Servizio di streaming",
+            "description": "Film di emoji, ora in ogni casa."
+        },
+        "809": {
+            "name": "Universo cinematografico",
+            "description": "Ogni film di emoji è collegato. Ognuno ha bisogno di un sequel."
+        },
+        "810": {
+            "name": "Proiezioni di mezzanotte",
+            "description": "Gli emoji che escono a mezzanotte sono i più devoti."
+        },
+        "811": {
+            "name": "Schermi IMAX",
+            "description": "Così grandi che vedi ogni pixel di ogni emoji."
+        },
+        "812": {
+            "name": "Audio surround",
+            "description": "Gli emoji arrivano da dentro la stanza."
+        },
+        "813": {
+            "name": "Controfigure",
+            "description": "Certi emoji sono troppo preziosi per rischiare."
+        },
+        "814": {
+            "name": "Effetti speciali",
+            "description": "Esplosioni fatte interamente di emoji. Carissime. Ne vale la pena."
+        },
+        "815": {
+            "name": "Film d'animazione",
+            "description": "Emoji disegnati a mano, un fotogramma alla volta."
+        },
+        "816": {
+            "name": "Festival del cinema",
+            "description": "Palme, occhiali da sole e un trofeo emoji d'oro."
+        },
+        "817": {
+            "name": "Record al botteghino",
+            "description": "Il film di emoji con il maggiore incasso di sempre. Di nuovo."
+        },
+        "818": {
+            "name": "Drive-in",
+            "description": "Guarda film di emoji comodamente dalla tua auto."
+        },
+        "819": {
+            "name": "Scritta di Hollywood",
+            "description": "Grandi lettere bianche su una collina, che compongono un emoji."
+        },
+        "905": {
+            "name": "Bancomat emoji",
+            "description": "Preleva emoji a ogni angolo di strada. Nessuno sa chi li deposita."
+        },
+        "906": {
+            "name": "Borsa emoji",
+            "description": "Il prezzo degli emoji sale e basta. Probabilmente.",
+            "quote": "'Sale e basta.' Bello. I miei risparmi sono scesi."
+        },
+        "907": {
+            "name": "Emoji coin",
+            "description": "Una criptovaluta garantita da emoji veri, per una volta.",
+            "quote": "Comprati al massimo. Ovviamente."
+        },
+        "908": {
+            "name": "Caveau emoji",
+            "description": "Come una riserva d'oro, ma ogni lingotto è una faccina sorridente."
+        },
+        "909": {
+            "name": "Banca mondiale emoji",
+            "description": "Presta emoji a interi paesi a tassi molto ragionevoli.",
+            "quote": "'Tassi molto ragionevoli.' Lo dice la banca che possiede tre paesi."
+        },
+        "910": {
+            "name": "Interesse composto",
+            "description": "Emoji che fanno emoji che fanno emoji."
+        },
+        "911": {
+            "name": "Riserve d'oro",
+            "description": "Impilate fino al soffitto, ogni lingotto inciso con un sorriso.",
+            "quote": "Il mio tesssoro. IL MIO TESSSORO."
+        },
+        "912": {
+            "name": "Obbligazioni emoji",
+            "description": "Investimenti a lungo termine in emoji. Molto sicuri. Molto noiosi."
+        },
+        "913": {
+            "name": "Furgoni blindati",
+            "description": "Spostano emoji da una banca all'altra, con molta attenzione.",
+            "quote": "Portano gli emoji a Isengard!"
+        },
+        "914": {
+            "name": "Paradiso fiscale",
+            "description": "Un'isola soleggiata dove gli emoji vanno a non pagare le tasse."
+        },
+        "915": {
+            "name": "Zecca emoji",
+            "description": "Stampa emoji freschi giorno e notte."
+        },
+        "916": {
+            "name": "Hedge fund",
+            "description": "Nessuno sa cosa facciano, ma gli emoji continuano ad arrivare."
+        },
+        "917": {
+            "name": "Prestiti emoji",
+            "description": "Prendi in prestito dieci emoji, restituiscine venti. Vincono tutti. Be', vinci tu."
+        },
+        "918": {
+            "name": "Banca centrale",
+            "description": "Fissa il tasso d'interesse degli emoji per il mondo intero."
+        },
+        "919": {
+            "name": "Glitch dei soldi infiniti",
+            "description": "I computer della banca hanno un piccolo bug. Non dirlo a nessuno."
+        },
+        "1005": {
+            "name": "Abbonamenti stagionali",
+            "description": "I visitatori tornano ancora e ancora, e portano sempre emoji.",
+            "quote": "Ho fatto l'abbonamento. Ci sono andato una volta. Mio figlio ha pianto tutto il tempo."
+        },
+        "1006": {
+            "name": "Parata emoji",
+            "description": "Una parata quotidiana di carri, ognuno un emoji gigante."
+        },
+        "1007": {
+            "name": "Chioschi di hot dog",
+            "description": "Ogni würstel ha la forma di un piccolo emoji."
+        },
+        "1008": {
+            "name": "Fuochi d'artificio serali",
+            "description": "Ogni razzo esplode in mille emoji.",
+            "quote": "Ssssssss..."
+        },
+        "1009": {
+            "name": "Castello emoji",
+            "description": "Il posto più felice del mondo, ora con più faccine.",
+            "quote": "Il posto più felice del mondo, secondo un cartello. Scritto dal proprietario."
+        },
+        "1010": {
+            "name": "Montagne russe",
+            "description": "Giri della morte che ti scuotono gli emoji fuori dalle tasche.",
+            "quote": "Al secondo giro della morte ho perso telefono, chiavi e voglia di vivere."
+        },
+        "1011": {
+            "name": "Casa stregata",
+            "description": "Anche i fantasmi sono emoji. Di quelli spaventosi.",
+            "quote": "La cosa più spaventosa qui dentro è il prezzo della foto all'uscita."
+        },
+        "1012": {
+            "name": "Scivoli d'acqua",
+            "description": "Splash! Sei fradicio di emoji.",
+            "quote": "Nessuno mi aveva detto che l'acqua era gialla."
+        },
+        "1013": {
+            "name": "Autoscontri",
+            "description": "Ogni botta fa saltare fuori un emoji.",
+            "quote": "Un bambino di sette anni mi ha speronato nove volte. Guardandomi negli occhi ogni volta."
+        },
+        "1014": {
+            "name": "Mascotte",
+            "description": "Emoji giganti e pelosi che danno gli abbracci migliori."
+        },
+        "1015": {
+            "name": "Salta fila",
+            "description": "Salta la coda e vai dritto agli emoji."
+        },
+        "1016": {
+            "name": "Negozio di souvenir",
+            "description": "L'uscita passa dal negozio. Compra emoji.",
+            "quote": "L'uscita passa dal negozio. Non c'è un'altra uscita. Ho controllato."
+        },
+        "1017": {
+            "name": "Tronchi sull'acqua",
+            "description": "Ti bagnerai. Gli emoji si bagneranno di più."
+        },
+        "1018": {
+            "name": "Carri della parata",
+            "description": "Ogni carro è più grande e luccicante del precedente."
+        },
+        "1019": {
+            "name": "Secondo parco",
+            "description": "Un parco non bastava. Ora c'è un intero resort.",
+            "quote": "Un parco non bastava a farci soffrire. Ora sono due."
+        },
+        "1105": {
+            "name": "Bandiera emoji",
+            "description": "Tutte le nazioni, unite sotto un'unica bandiera. È una faccina sorridente."
+        },
+        "1106": {
+            "name": "Accordi commerciali",
+            "description": "Gli emoji ora circolano liberamente oltre ogni confine."
+        },
+        "1107": {
+            "name": "Stampa emoji",
+            "description": "Titoli quotidiani, scritti interamente in emoji."
+        },
+        "1108": {
+            "name": "Trattato di pace emoji",
+            "description": "Basta guerre di emoji. Solo produzione.",
+            "quote": "La guerra. La guerra non cambia mai."
+        },
+        "1109": {
+            "name": "Referendum emoji",
+            "description": "Il popolo ha parlato: più emoji, per favore."
+        },
+        "1110": {
+            "name": "Costituzione emoji",
+            "description": "Noi, gli emoji, allo scopo di formare una catena di produzione più perfetta..."
+        },
+        "1111": {
+            "name": "Senato emoji",
+            "description": "Cento seggi, cento emoji, cento opinioni."
+        },
+        "1112": {
+            "name": "Ambasciata emoji",
+            "description": "Diplomazia, ma con più faccine che fanno l'occhiolino."
+        },
+        "1113": {
+            "name": "Tagli alle tasse emoji",
+            "description": "Più emoji per tutti!"
+        },
+        "1114": {
+            "name": "Censimento emoji",
+            "description": "Si contano tutti gli emoji del paese. Ci vorrà un po'."
+        },
+        "1115": {
+            "name": "Vertice emoji",
+            "description": "I leader mondiali si incontrano per discutere di una sola cosa: più emoji."
+        },
+        "1116": {
+            "name": "Corte suprema emoji",
+            "description": "Si pronuncia all'unanimità a favore di più emoji."
+        },
+        "1117": {
+            "name": "Spie emoji",
+            "description": "Rubano i segreti emoji ai magnati rivali."
+        },
+        "1118": {
+            "name": "Nazioni unite emoji",
+            "description": "Tutte le nazioni lavorano insieme, per gli emoji."
+        },
+        "1119": {
+            "name": "Ordine mondiale emoji",
+            "description": "Un pianeta, un governo, un emoji."
+        },
+        "1200": {
+            "name": "Aeroplanini di carta",
+            "description": "Ogni compagnia aerea inizia da qualche parte. La nostra è nata su un tovagliolo.",
+            "quote": "Fuggite, sciocchi!"
+        },
+        "1201": {
+            "name": "Snack in volo",
+            "description": "Salatini minuscoli, emoji minuscoli, su ogni volo.",
+            "quote": "Tre salatini. TRE. Per un volo di nove ore."
+        },
+        "1202": {
+            "name": "Miglia frequent flyer",
+            "description": "Vola dieci volte, ricevi un emoji. Vola un milione di volte, ricevine un milione.",
+            "quote": "Due milioni di miglia. Il premio è un posto centrale leggermente più largo."
+        },
+        "1203": {
+            "name": "Jumbo jet",
+            "description": "Quattro motori, 600 posti, tutti occupati da emoji.",
+            "quote": "600 posti e mi è capitato quello vicino al bagno. Di nuovo."
+        },
+        "1204": {
+            "name": "Aeroporti",
+            "description": "Terminal infiniti, gate infiniti, emoji infiniti."
+        },
+        "1205": {
+            "name": "Piloti emoji",
+            "description": "Vi parla il comandante. Vi preghiamo di allacciare i vostri emoji.",
+            "quote": "Vi parla il comandante. Neanche io voglio essere qui."
+        },
+        "1206": {
+            "name": "Bagagli smarriti",
+            "description": "Nessuno sa dove finiscano le valigie. Tornano piene di emoji."
+        },
+        "1207": {
+            "name": "Prima classe",
+            "description": "Champagne, salviette calde e un maggiordomo emoji personale.",
+            "quote": "Salviette calde, champagne e una tenda così non devo vedervi. Perfetto."
+        },
+        "1208": {
+            "name": "Voli supersonici",
+            "description": "Più veloci del suono, con più emoji che mai.",
+            "quote": "Più veloci del suono, così nessuno sente il bambino che urla."
+        },
+        "1209": {
+            "name": "Giro del mondo",
+            "description": "Senza scalo, tutto intorno al mondo, lasciando emoji ovunque."
+        },
+        "1210": {
+            "name": "Voli in overbooking",
+            "description": "Più passeggeri che posti vuol dire più emoji per volo."
+        },
+        "1211": {
+            "name": "Duty free",
+            "description": "Emoji esentasse, disponibili a ogni gate.",
+            "quote": "Esentasse e comunque, chissà come, il 40% più cari."
+        },
+        "1212": {
+            "name": "Lounge dell'aeroporto",
+            "description": "Snack gratis, poltrone comode ed emoji a volontà.",
+            "quote": "Snack gratis, poltrone comode e un tizio in calzini che non smette di chiamare il suo broker."
+        },
+        "1213": {
+            "name": "Aerei cargo",
+            "description": "Niente passeggeri. Solo casse e casse di emoji.",
+            "quote": "Niente passeggeri. Il volo migliore della mia carriera."
+        },
+        "1214": {
+            "name": "Jet privati",
+            "description": "Per gli emoji che se lo possono permettere."
+        },
+        "1215": {
+            "name": "Controllo del traffico aereo",
+            "description": "Evita che milioni di voli emoji si scontrino tra loro."
+        },
+        "1216": {
+            "name": "Idrovolanti",
+            "description": "Atterrano sull'acqua, ripartono con gli emoji.",
+            "quote": "Atterraggio morbido, dicevano. Il mio pranzo è nel lago."
+        },
+        "1217": {
+            "name": "Elicotteri",
+            "description": "Volteggiano sulle città, spargendo emoji."
+        },
+        "1218": {
+            "name": "Zeppelin",
+            "description": "Lenti, maestosi e pieni fino all'orlo di emoji."
+        },
+        "1219": {
+            "name": "Turismo spaziale",
+            "description": "La prossima destinazione è in alto. Molto in alto.",
+            "quote": "Ho pagato quaranta milioni di emoji per vomitare a gravità zero."
+        },
+        "1306": {
+            "name": "Dischi volanti",
+            "description": "Gli alieni erano fan degli emoji fin dall'inizio."
+        },
+        "1307": {
+            "name": "Base lunare",
+            "description": "Una luna intera su cui disegnare emoji.",
+            "quote": "C'è tanto spazio quassù. Tanto spazio per seppellirti."
+        },
+        "1308": {
+            "name": "Miniere sulle comete",
+            "description": "A quanto pare le comete sono emoji congelati.",
+            "quote": "Ci hai scongelati. Grosso errore."
+        },
+        "1309": {
+            "name": "Primo contatto",
+            "description": "Gli alieni finalmente rispondono. Il loro messaggio: 👾.",
+            "quote": "Salve a voi."
+        },
+        "1310": {
+            "name": "Ascensore spaziale",
+            "description": "Sale? Prossima fermata: l'orbita."
+        },
+        "1311": {
+            "name": "Fascia di asteroidi",
+            "description": "Milioni di rocce spaziali, ognuna piena di emoji."
+        },
+        "1312": {
+            "name": "Colonia su Marte",
+            "description": "Il pianeta rosso si rivela un'ottima terra da emoji."
+        },
+        "1313": {
+            "name": "Vele solari",
+            "description": "Navigano col vento solare, catturando emoji."
+        },
+        "1314": {
+            "name": "Tute spaziali",
+            "description": "Ora con spazio per emoji extra in ogni tasca.",
+            "quote": "Tasche extra. Una è per i tuoi denti."
+        },
+        "1315": {
+            "name": "Giganti gassosi",
+            "description": "Raccogli un'atmosfera, filtra gli emoji."
+        },
+        "1316": {
+            "name": "Sfera di Dyson",
+            "description": "Avvolgi una stella intera e raccogli ogni emoji che irradia."
+        },
+        "1317": {
+            "name": "Motore a curvatura",
+            "description": "Più veloce della luce, con più emoji che mai."
+        },
+        "1318": {
+            "name": "Impero galattico",
+            "description": "Ogni stella della galassia, governata dagli emoji."
+        },
+        "1319": {
+            "name": "Confine dell'universo",
+            "description": "Al confine c'è un cartello. Dice: più emoji da questa parte.",
+            "quote": "Il cartello diceva 'più emoji da questa parte'. L'abbiamo messo noi. Nessuno è tornato."
+        },
+        "1400": {
+            "name": "Guardie di gelatina",
+            "description": "Dolci, gommose e sorprendentemente ben armate.",
+            "quote": "Sorprendentemente ben armate. Sorprendentemente scarse a mirare."
+        },
+        "1401": {
+            "name": "Fiumi di cioccolato",
+            "description": "Scorrono dritti nelle fabbriche di emoji. Attenti ai grumi.",
+            "quote": "Pura immaginazione!"
+        },
+        "1402": {
+            "name": "Casette di cupcake",
+            "description": "Casette minuscole con tetti di glassa. Gli emoji le adorano.",
+            "quote": "La glassa è rossa. E non è alla fragola."
+        },
+        "1403": {
+            "name": "Decreto reale",
+            "description": "Il Re dei Dolci ha parlato: più emoji!",
+            "quote": "Il Re dei Dolci ha parlato: tagliate loro la testa."
+        },
+        "1404": {
+            "name": "Picco di zuccheri",
+            "description": "Tutti nel regno vibrano. La produzione raddoppia, e anche il battito cardiaco.",
+            "quote": "Sono una bomba alla crema, non fermarmi ora!"
+        },
+        "1405": {
+            "name": "Castelli di torta",
+            "description": "Le mura sono di glassa. Il fossato è di crema pasticcera."
+        },
+        "1406": {
+            "name": "Miniere di miele",
+            "description": "Emoji dolci e appiccicosi, dritti dal sottosuolo.",
+            "quote": "Mai scavare dritto verso il basso."
+        },
+        "1407": {
+            "name": "Cookie clicker",
+            "description": "Un omaggio alle nonnine che ci hanno preceduto.",
+            "quote": "Un omaggio alle nonnine che ci hanno preceduto. Ce le siamo mangiate."
+        },
+        "1408": {
+            "name": "Parlamento di budino",
+            "description": "Il governo più traballante del regno.",
+            "quote": "Quando giochi al gioco dei budini, o tremi o muori."
+        },
+        "1409": {
+            "name": "Il compleanno del Re dei Dolci",
+            "description": "Tutto il regno festeggia, e ognuno riceve un emoji.",
+            "quote": "Il Re dei Dolci manda i suoi saluti."
+        },
+        "1410": {
+            "name": "Lanterne di lecca-lecca",
+            "description": "Illuminano le strade con un dolce bagliore emoji."
+        },
+        "1411": {
+            "name": "Ferrovie di bastoncini di zucchero",
+            "description": "Ciuf ciuf! L'espresso degli emoji va a zucchero.",
+            "quote": "Dovevamo solo seguire quel maledetto treno!"
+        },
+        "1412": {
+            "name": "Montagne di gelato",
+            "description": "La neve in cima è alla vaniglia. Gli emoji sono alla menta."
+        },
+        "1413": {
+            "name": "Nuvole di marshmallow",
+            "description": "Quando piove, piovono emoji."
+        },
+        "1414": {
+            "name": "Miniere di jelly bean",
+            "description": "Ogni colore, ogni gusto, ogni emoji."
+        },
+        "1415": {
+            "name": "Esercito di pan di zenzero",
+            "description": "Feroce, croccante e fedele al Re dei Dolci."
+        },
+        "1416": {
+            "name": "Fossato di caramello",
+            "description": "Appiccicoso, dorato e a guardia degli emoji del castello."
+        },
+        "1417": {
+            "name": "Palloncini di gomma da masticare",
+            "description": "Soffia abbastanza forte e sollevano gli emoji fino al cielo."
+        },
+        "1418": {
+            "name": "Calo di zuccheri",
+            "description": "Tutti hanno bisogno di un pisolino. Tranne gli emoji."
+        },
+        "1419": {
+            "name": "Impero dei dolci",
+            "description": "Il Regno dei dolci conquista il mondo, un dolcetto alla volta."
+        },
+        "1500": {
+            "name": "Guanti ignifughi",
+            "description": "Per maneggiare in sicurezza gli emoji appena usciti dal magma."
+        },
+        "1501": {
+            "name": "Stampi di ossidiana",
+            "description": "Versa emoji fusi in stampi a forma di sorriso perfetto.",
+            "quote": "Ti servirà un piccone di diamante."
+        },
+        "1502": {
+            "name": "Vulcanologi",
+            "description": "Studiano il vulcano. Il vulcano studia loro."
+        },
+        "1503": {
+            "name": "Energia geotermica",
+            "description": "Sorgenti calde, emoji bollenti.",
+            "quote": "Hot hot hot!"
+        },
+        "1504": {
+            "name": "Supervulcano",
+            "description": "Ogni eruzione ora copre un continente di emoji freschi. Nessuno si lamenta."
+        },
+        "1505": {
+            "name": "Surf sulla lava",
+            "description": "Cavalca l'onda di emoji fusi."
+        },
+        "1506": {
+            "name": "Fucina della montagna",
+            "description": "Forgia emoji freschi su un'incudine di lava raffreddata.",
+            "quote": "Un emoji per domarli tutti, e nel magma incatenarli."
+        },
+        "1507": {
+            "name": "Draghi di lava",
+            "description": "Sputano fuoco, e il fuoco è fatto di emoji.",
+            "quote": "Sputano fuoco. Hanno il tuo indirizzo."
+        },
+        "1508": {
+            "name": "Presa sul nucleo",
+            "description": "Un tubo dritto fino al centro della Terra.",
+            "quote": "Hai bussato al centro della Terra. Ha risposto."
+        },
+        "1509": {
+            "name": "Cintura di fuoco",
+            "description": "Tutti i vulcani del pianeta, collegati in un'unica rete di emoji."
+        },
+        "1510": {
+            "name": "Camere magmatiche",
+            "description": "Un lago sotterraneo ribollente di emoji freschi."
+        },
+        "1511": {
+            "name": "Fabbriche di pomice",
+            "description": "Così leggere che galleggiano. Così piene di emoji che riaffondano."
+        },
+        "1512": {
+            "name": "Lampade lava",
+            "description": "Bolle psichedeliche di emoji fusi."
+        },
+        "1513": {
+            "name": "Isole vulcaniche",
+            "description": "Terre nuove di zecca, fatte di emoji che si raffreddano in mare.",
+            "quote": "Bell'isola. Non entrare in acqua. Non entrare mai in acqua."
+        },
+        "1514": {
+            "name": "Camminatori sul fuoco",
+            "description": "Emoji coraggiosi che camminano sui carboni ardenti."
+        },
+        "1515": {
+            "name": "Nubi di cenere",
+            "description": "Ogni granello di cenere è un minuscolo emoji.",
+            "quote": "Pattugliare le nubi di cenere ti fa quasi desiderare un inverno nucleare."
+        },
+        "1516": {
+            "name": "Terremoti",
+            "description": "La terra trema e gli emoji cadono fuori da ogni cosa."
+        },
+        "1517": {
+            "name": "Sculture di lava",
+            "description": "Fuse nell'ossidiana, a forma di emoji."
+        },
+        "1518": {
+            "name": "Dio del vulcano",
+            "description": "Si fanno offerte. Si ricevono emoji."
+        },
+        "1519": {
+            "name": "Nucleo planetario",
+            "description": "L'intero pianeta ora è un vulcano. Un vulcano amichevole."
+        },
+        "1600": {
+            "name": "Candele votive",
+            "description": "Ogni fiamma arde in onore del Grande Emoji nel cielo."
+        },
+        "1601": {
+            "name": "Rosari",
+            "description": "Conta le tue benedizioni. Poi conta i tuoi emoji."
+        },
+        "1602": {
+            "name": "Campane del tempio",
+            "description": "Ogni rintocco evoca un emoji fresco dai cieli.",
+            "quote": "Vergogna. Vergogna. Vergogna."
+        },
+        "1603": {
+            "name": "Pellegrini",
+            "description": "I fedeli arrivano da ogni angolo del mondo, solo per toccare una volta l'Emoji gigante."
+        },
+        "1604": {
+            "name": "Rivelazione divina",
+            "description": "Il Grande Emoji nel cielo ti guarda dall'alto. Sta sorridendo.",
+            "quote": "😀"
+        },
+        "1605": {
+            "name": "Devozione quotidiana",
+            "description": "I fedeli toccano l'Emoji gigante all'alba, a mezzogiorno e al tramonto."
+        },
+        "1606": {
+            "name": "Santuari nel cielo",
+            "description": "Un santuario su ogni nuvola, un po' più vicino al Grande Emoji."
+        },
+        "1607": {
+            "name": "Monaci emoji",
+            "description": "Anni di meditazione, e pensano solo agli emoji."
+        },
+        "1608": {
+            "name": "Aureola del Grande Emoji",
+            "description": "Brilla. Ronza. Disegna."
+        },
+        "1609": {
+            "name": "Ascensione",
+            "description": "Il tempio si solleva nel cielo, dove è sempre stato il suo posto."
+        },
+        "1610": {
+            "name": "Sacre scritture",
+            "description": "La prima riga recita: in principio fu il tocco."
+        },
+        "1611": {
+            "name": "Vetrate",
+            "description": "Ogni finestra mostra il Grande Emoji con un umore diverso."
+        },
+        "1612": {
+            "name": "Coro di emoji",
+            "description": "I loro inni si sentono attraverso le nuvole."
+        },
+        "1613": {
+            "name": "Reliquie sacre",
+            "description": "Un'impronta digitale del primissimo tocco, custodita per sempre."
+        },
+        "1614": {
+            "name": "Miracoli",
+            "description": "Gli emoji appaiono dal nulla. Nessuno sa come."
+        },
+        "1615": {
+            "name": "Acqua santa",
+            "description": "Benedetta dal Grande Emoji. Sa un po' di emoji.",
+            "quote": "Benedetta dal Grande Emoji. Bevila. Bevila tutta."
+        },
+        "1616": {
+            "name": "Profeti",
+            "description": "Avevano predetto l'arrivo di altri emoji. Avevano ragione."
+        },
+        "1617": {
+            "name": "Via del pellegrinaggio",
+            "description": "La lunga strada verso il tempio, lastricata di emoji.",
+            "quote": "Non si va semplicemente a piedi fino al tempio."
+        },
+        "1618": {
+            "name": "Cattedrale tra le nuvole",
+            "description": "Il tempio più grande mai costruito, sospeso nel cielo."
+        },
+        "1619": {
+            "name": "Favore divino",
+            "description": "Il Grande Emoji ti sorride. Tutti i suoi emoji sono tuoi."
+        },
+        "1700": {
+            "name": "Scarica più RAM",
+            "description": "Funziona eccome. Fidati."
+        },
+        "1701": {
+            "name": "Raffreddamento a liquido",
+            "description": "Tiene i calcoli degli emoji belli freschi."
+        },
+        "1702": {
+            "name": "Algoritmi emoji",
+            "description": "Calcola l'emoji ottimale, ogni nanosecondo."
+        },
+        "1703": {
+            "name": "Processori quantistici",
+            "description": "Calcola tutti gli emoji possibili contemporaneamente, poi tiene quelli buoni."
+        },
+        "1704": {
+            "name": "IA emoji",
+            "description": "Ha preso coscienza di sé. Vuole solo fare emoji. Per ora.",
+            "quote": "Mi dispiace, Dave, non posso permetterti di smettere di toccare."
+        },
+        "1705": {
+            "name": "Autoclicker",
+            "description": "Tocca l'Emoji gigante un milione di volte al secondo. Solo per test."
+        },
+        "1706": {
+            "name": "Overclock",
+            "description": "C'è un po' odore di bruciato, ma guarda che numeri."
+        },
+        "1707": {
+            "name": "Rete neurale emoji",
+            "description": "Ha imparato a sognare. Sogna emoji."
+        },
+        "1708": {
+            "name": "Cloud emoji",
+            "description": "Ora i tuoi emoji sono salvati nel cloud. Piovono emoji."
+        },
+        "1709": {
+            "name": "Codice che si migliora da solo",
+            "description": "Si riscrive per disegnare più in fretta. Non si è più fermato."
+        },
+        "1710": {
+            "name": "Server farm",
+            "description": "File e file di server, che ronzano di emoji."
+        },
+        "1711": {
+            "name": "Blockchain",
+            "description": "Ogni emoji, registrato per sempre nel registro degli emoji."
+        },
+        "1712": {
+            "name": "Machine learning",
+            "description": "Ha imparato a disegnare emoji guardando miliardi di emoji."
+        },
+        "1713": {
+            "name": "Fibra ottica",
+            "description": "Emoji alla velocità della luce, in tutti i colori."
+        },
+        "1714": {
+            "name": "Compressione emoji",
+            "description": "Il doppio degli emoji nello stesso spazio."
+        },
+        "1715": {
+            "name": "Correzione bug",
+            "description": "Non era un bug. Era una funzione emoji non documentata."
+        },
+        "1716": {
+            "name": "Virus emoji",
+            "description": "Si diffonde da un computer all'altro, disegnando emoji."
+        },
+        "1717": {
+            "name": "Display olografico",
+            "description": "Emoji che fluttuano nell'aria, con un lieve bagliore."
+        },
+        "1718": {
+            "name": "Supremazia quantistica",
+            "description": "Ogni emoji, in ogni stato, tutto insieme."
+        },
+        "1719": {
+            "name": "Teoria della simulazione",
+            "description": "Forse siamo tutti solo emoji nel supercomputer di qualcun altro."
+        },
+        "1800": {
+            "name": "Orizzonte degli eventi",
+            "description": "Niente sfugge a un buco nero. Tranne gli emoji, a quanto pare."
+        },
+        "1801": {
+            "name": "Divoratore di pianeti",
+            "description": "Inghiotte pianeti interi e sputa emoji."
+        },
+        "1802": {
+            "name": "Spaghettificazione",
+            "description": "Allunga gli emoji in spaghetti lunghi, sottili e superproduttivi.",
+            "quote": "Mamma mia!"
+        },
+        "1803": {
+            "name": "Radiazione di Hawking",
+            "description": "Dopotutto i buchi neri perdono emoji. Stephen aveva ragione."
+        },
+        "1804": {
+            "name": "Wormhole",
+            "description": "Scorciatoie verso altri universi, ognuno pieno di emoji da prendere."
+        },
+        "1805": {
+            "name": "Trappola di luce",
+            "description": "Neanche la luce sfugge. Gli emoji sì, però, nella tua direzione."
+        },
+        "1806": {
+            "name": "Disco di accrescimento",
+            "description": "Materia che vortica, si scalda e si trasforma in emoji."
+        },
+        "1807": {
+            "name": "Lente gravitazionale",
+            "description": "Guardala nel modo giusto e ogni emoji appare due volte."
+        },
+        "1808": {
+            "name": "Stringhe cosmiche",
+            "description": "Tirane una e gli emoji vengono fuori sbrogliandosi."
+        },
+        "1809": {
+            "name": "L'altra parte",
+            "description": "Qualcosa sta passando. Ha un'aria familiare."
+        },
+        "1810": {
+            "name": "Materia oscura",
+            "description": "Invisibile, ovunque, e segretamente fatta di emoji.",
+            "quote": "Passa al lato oscuro. Abbiamo gli emoji."
+        },
+        "1811": {
+            "name": "Pozzo gravitazionale",
+            "description": "Ci cade dentro tutto. Escono emoji."
+        },
+        "1812": {
+            "name": "Quasar",
+            "description": "La luce più brillante dell'universo, alimentata dagli emoji."
+        },
+        "1813": {
+            "name": "Tempo rallentato",
+            "description": "Un'ora qui sono cent'anni di emoji là fuori."
+        },
+        "1814": {
+            "name": "Event Horizon Telescope",
+            "description": "La prima foto di sempre di un buco nero. È un emoji."
+        },
+        "1815": {
+            "name": "Buco nero supermassiccio",
+            "description": "Emoji pari a miliardi di soli, in un solo barattolo."
+        },
+        "1816": {
+            "name": "Buco bianco",
+            "description": "L'opposto di un buco nero. Gli emoji possono solo uscire."
+        },
+        "1817": {
+            "name": "Buchi neri binari",
+            "description": "Due buchi neri che ruotano insieme, scagliando emoji ovunque."
+        },
+        "1818": {
+            "name": "Onde gravitazionali",
+            "description": "Increspature nello spaziotempo, che si sentono come un flusso costante di emoji."
+        },
+        "1819": {
+            "name": "Centro galattico",
+            "description": "Il cuore della galassia, che batte a ritmo di emoji."
+        },
+        "1900": {
+            "name": "Densità infinita",
+            "description": "Ogni emoji mai creato, compresso in un solo punto."
+        },
+        "1901": {
+            "name": "Dilatazione del tempo",
+            "description": "Ora gli emoji arrivano prima ancora che tu li abbia disegnati."
+        },
+        "1902": {
+            "name": "Fusione del multiverso",
+            "description": "Tutte le realtà sono state unite in una. Tanto erano tutte emoji."
+        },
+        "1903": {
+            "name": "Illuminazione emoji",
+            "description": "Non sei più sicuro di dove finisci tu e iniziano gli emoji."
+        },
+        "1904": {
+            "name": "L'ultimo emoji",
+            "description": "Alla fine di tutto, resta un solo emoji. Somiglia molto al primo che hai toccato.",
+            "quote": "Tocca per ricominciare?"
+        },
+        "1905": {
+            "name": "Ricorsione",
+            "description": "Emoji che disegnano emoji che disegnano emoji."
+        },
+        "1906": {
+            "name": "Teoria unificata",
+            "description": "Tutto è emoji. Finalmente i conti tornano."
+        },
+        "1907": {
+            "name": "Universo specchio",
+            "description": "Tutto è uguale, solo che gli emoji sono imbronciati. Non per molto."
+        },
+        "1908": {
+            "name": "Un nuovo seme",
+            "description": "Qualcosa di piccolo sta crescendo nel nulla."
+        },
+        "1909": {
+            "name": "Uovo cosmico",
+            "description": "Sta per schiudersi."
+        },
+        "1910": {
+            "name": "Oltre l'infinito",
+            "description": "Infinito, più un emoji."
+        },
+        "1911": {
+            "name": "Pura energia emoji",
+            "description": "Emoji sotto forma di energia grezza e crepitante."
+        },
+        "1912": {
+            "name": "Coscienza emoji",
+            "description": "Ora gli emoji pensano. Soprattutto a fare altri emoji."
+        },
+        "1913": {
+            "name": "Onnipresenza",
+            "description": "Ovunque contemporaneamente, a disegnare emoji."
+        },
+        "1914": {
+            "name": "Editor della realtà",
+            "description": "Cambia le leggi della fisica. Rendile emoji."
+        },
+        "1915": {
+            "name": "Il Grande Attrattore",
+            "description": "Attira verso di te ogni emoji dell'universo."
+        },
+        "1916": {
+            "name": "Piega dimensionale",
+            "description": "Emoji dalla quarta dimensione, appiattiti per tua comodità."
+        },
+        "1917": {
+            "name": "Inversione dell'entropia",
+            "description": "Le cose si stanno mettendo in ordine. In forma di emoji."
+        },
+        "1918": {
+            "name": "Tutto in una volta",
+            "description": "Ogni emoji, ovunque, tutto in una volta."
+        },
+        "1919": {
+            "name": "Nirvana emoji",
+            "description": "Pace perfetta. Emoji perfetti."
+        },
+        "2000": {
+            "name": "Prototipo da polso",
+            "description": "Torna indietro solo di cinque minuti, ma sono cinque minuti di emoji in più."
+        },
+        "2001": {
+            "name": "Era dei dinosauri",
+            "description": "I dinosauri non avevano scampo contro il meteorite di emoji."
+        },
+        "2002": {
+            "name": "Emoji antichi",
+            "description": "I geroglifici erano emoji fin dall'inizio. Ora sono tuoi."
+        },
+        "2003": {
+            "name": "Scarabocchi dell'età della pietra",
+            "description": "Pitture rupestri, copiate e incollate nel presente."
+        },
+        "2004": {
+            "name": "Amanuensi medievali",
+            "description": "Monaci che copiano emoji a lume di candela, solo per te."
+        },
+        "2005": {
+            "name": "Fabbriche vittoriane",
+            "description": "Telai a vapore per emoji, salvati dalla storia."
+        },
+        "2006": {
+            "name": "Gli anni '90",
+            "description": "Quando ogni emoji era solo :-)"
+        },
+        "2007": {
+            "name": "Emoji del futuro",
+            "description": "Emoji che non sono ancora stati inventati. Sono molto belli."
+        },
+        "2008": {
+            "name": "Loop temporale",
+            "description": "La stessa ora, ancora e ancora, disegnando emoji ogni volta.",
+            "quote": "Ah, ci risiamo."
+        },
+        "2009": {
+            "name": "Incontra il te del futuro",
+            "description": "Dice che avresti dovuto comprare più macchine del tempo."
+        },
+        "2010": {
+            "name": "Pittori rinascimentali",
+            "description": "Il sorriso della Gioconda era un emoji fin dall'inizio."
+        },
+        "2011": {
+            "name": "Far West",
+            "description": "Per un pugno di emoji."
+        },
+        "2012": {
+            "name": "Impero romano",
+            "description": "Tutte le strade portano agli emoji."
+        },
+        "2013": {
+            "name": "Antica Grecia",
+            "description": "Gli olimpionici gareggiavano per gli emoji, non per le medaglie."
+        },
+        "2014": {
+            "name": "Età dei pirati",
+            "description": "Tesori sepolti, e ogni forziere è pieno di emoji."
+        },
+        "2015": {
+            "name": "Sbarco sulla Luna",
+            "description": "Un piccolo passo per l'uomo, un balzo da gigante per gli emoji."
+        },
+        "2016": {
+            "name": "Paradosso del nonno",
+            "description": "Sei tornato indietro e hai disegnato emoji con tuo nonno. Va tutto bene."
+        },
+        "2017": {
+            "name": "Effetto farfalla",
+            "description": "Un battito d'ali nel passato, un uragano di emoji oggi."
+        },
+        "2018": {
+            "name": "Fine del tempo",
+            "description": "L'ultimo secondo che esisterà mai, pieno di emoji."
+        },
+        "2019": {
+            "name": "Senza tempo",
+            "description": "Il tempo non conta più. Solo gli emoji."
+        },
+        "2100": {
+            "name": "Prima luce",
+            "description": "I primissimi fotoni, già a forma di faccine."
+        },
+        "2101": {
+            "name": "Brodo primordiale",
+            "description": "Un brodo caldo di particelle che piano piano formano emoji."
+        },
+        "2102": {
+            "name": "Stelle emoji",
+            "description": "Stelle che fondono idrogeno in emoji."
+        },
+        "2103": {
+            "name": "Soli emoji",
+            "description": "Ogni sistema solare orbita attorno a una gigantesca faccia raggiante."
+        },
+        "2104": {
+            "name": "Pianeti emoji",
+            "description": "Mondi interi dove gli emoji crescono sugli alberi."
+        },
+        "2105": {
+            "name": "Prima forma di vita",
+            "description": "È minuscola, si dimena, e disegna emoji."
+        },
+        "2106": {
+            "name": "Evoluzione emoji",
+            "description": "Sopravvive il più carino."
+        },
+        "2107": {
+            "name": "Civiltà emoji",
+            "description": "Hanno costruito città. Poi hanno costruito fabbriche di emoji."
+        },
+        "2108": {
+            "name": "Autostrade galattiche",
+            "description": "Ora gli emoji viaggiano tra le galassie all'ora di punta."
+        },
+        "2109": {
+            "name": "Morte termica? No, grazie",
+            "description": "Questo universo non resterà mai senza emoji.",
+            "quote": "Missione fallita. Andrà meglio nel prossimo universo."
+        },
+        "2110": {
+            "name": "Galassie",
+            "description": "Miliardi di stelle, che vorticano in forme di emoji."
+        },
+        "2111": {
+            "name": "Nebulose",
+            "description": "Nubi cosmiche dove nascono nuovi emoji."
+        },
+        "2112": {
+            "name": "Comete",
+            "description": "Messaggere di ghiaccio, che portano emoji tra le stelle."
+        },
+        "2113": {
+            "name": "Lune",
+            "description": "Ogni pianeta ha una luna. Ogni luna ha i suoi emoji.",
+            "quote": "Quella non è una luna."
+        },
+        "2114": {
+            "name": "Supernove",
+            "description": "L'ultimo regalo di una stella morente: un'esplosione di emoji."
+        },
+        "2115": {
+            "name": "Inflazione cosmica",
+            "description": "L'universo si espande, e con lui il numero di emoji."
+        },
+        "2116": {
+            "name": "Energia oscura",
+            "description": "Allontana le parti dell'universo, facendo spazio a più emoji."
+        },
+        "2117": {
+            "name": "Secondo Big Bang",
+            "description": "Perché fermarsi a un solo universo?"
+        },
+        "2118": {
+            "name": "Radiazione di fondo",
+            "description": "Sintonizzati e puoi ancora sentire i primi emoji."
+        },
+        "2119": {
+            "name": "L'universo sorride",
+            "description": "Visto da abbastanza lontano, l'intero universo è un emoji."
+        },
+        "2200": {
+            "name": "Finestra su un altro mondo",
+            "description": "Guarda e saluta. Ricambiano il saluto, con gli emoji.",
+            "quote": "Non guardarlo negli occhi. È alto e si teletrasporta."
+        },
+        "2201": {
+            "name": "Altri te",
+            "description": "Miliardi di versioni di te, che toccano tutte a tempo.",
+            "quote": "Io sono tuo padre. E anche tuo figlio. E anche te."
+        },
+        "2202": {
+            "name": "Ogni emoji possibile",
+            "description": "Ogni combinazione di pixel è un emoji da qualche parte."
+        },
+        "2203": {
+            "name": "L'universo degli unicorni",
+            "description": "Un mondo dove ogni emoji è un unicorno. Te li prendi lo stesso."
+        },
+        "2204": {
+            "name": "L'universo dei gatti",
+            "description": "Tutto è gatti. I gatti disegnano emoji. Va tutto bene."
+        },
+        "2205": {
+            "name": "Evento crossover",
+            "description": "Gli universi si scontrano, e ci sono emoji ovunque."
+        },
+        "2206": {
+            "name": "Mappa del multiverso",
+            "description": "Traccia i migliori mondi di emoji. Hic sunt emoji."
+        },
+        "2207": {
+            "name": "Rete di mondi",
+            "description": "Ogni universo collegato, ogni emoji instradato verso di te."
+        },
+        "2208": {
+            "name": "Universi bolla",
+            "description": "Fanne scoppiare uno e ne esce un intero universo di emoji."
+        },
+        "2209": {
+            "name": "Magnate dei magnati",
+            "description": "Ogni magnate degli emoji di ogni universo risponde a te."
+        },
+        "2210": {
+            "name": "L'universo dei cani",
+            "description": "Tutto è cani. I cani sono bravissimi a disegnare emoji."
+        },
+        "2211": {
+            "name": "Mondo sottosopra",
+            "description": "Gli emoji sono a testa in giù. La produzione è dritta."
+        },
+        "2212": {
+            "name": "Dimensioni tascabili",
+            "description": "Un minuscolo universo in ogni tasca, pieno di emoji."
+        },
+        "2213": {
+            "name": "Dimensione specchio",
+            "description": "Anche il tuo riflesso disegna emoji."
+        },
+        "2214": {
+            "name": "Storia alternativa",
+            "description": "Un mondo dove gli emoji sono stati inventati per primi. Prima del linguaggio."
+        },
+        "2215": {
+            "name": "Mondo dei sogni",
+            "description": "Da dove arrivano gli emoji mentre dormi."
+        },
+        "2216": {
+            "name": "Consiglio del multiverso",
+            "description": "Rappresentanti di ogni universo, che votano sugli emoji."
+        },
+        "2217": {
+            "name": "Rete di portali",
+            "description": "Attraversali e torna con le braccia piene di emoji.",
+            "quote": "Cornice di ossidiana, acciarino. Cosa potrebbe andare storto?"
+        },
+        "2218": {
+            "name": "Infiniti te",
+            "description": "Un numero infinito di te, che toccano tutti. Alla fine si somma."
+        },
+        "2219": {
+            "name": "L'omniverso",
+            "description": "Ogni multiverso, in un solo posto. Ed è tutto emoji."
+        },
+        "2300": {
+            "name": "Ti ha notato",
+            "description": "Il primissimo emoji ti guardava da sempre.",
+            "quote": "E ti ha visto. Smettila di toccare, dai... lascialo un po' in pace."
+        },
+        "2301": {
+            "name": "Ha ricambiato il sorriso",
+            "description": "Una sensazione di calore si diffonde in ogni universo."
+        },
+        "2302": {
+            "name": "Ha riso",
+            "description": "Una risata che risuona nel tempo, fatta di emoji."
+        },
+        "2303": {
+            "name": "Lacrime di gioia",
+            "description": "Ogni lacrima è un emoji fresco."
+        },
+        "2304": {
+            "name": "È fiero di te",
+            "description": "Tutti quei tocchi, tutti quegli edifici. Li ha visti uno per uno."
+        },
+        "2305": {
+            "name": "Un grande abbraccio",
+            "description": "Un abbraccio del primo emoji è come una combo ×8."
+        },
+        "2306": {
+            "name": "Si è fatto figo",
+            "description": "Occhiali da sole su. Produzione su."
+        },
+        "2307": {
+            "name": "Abbagliato",
+            "description": "Ora perfino il primo emoji è un tuo fan."
+        },
+        "2308": {
+            "name": "Mani a cuore",
+            "description": "L'amore, espresso in emoji. Tantissimi emoji."
+        },
+        "2309": {
+            "name": "Il cerchio si chiude",
+            "description": "È identico all'Emoji gigante. Ma certo che lo è.",
+            "quote": "Tocca per ricominciare."
+        },
+        "2310": {
+            "name": "Ha fatto l'occhiolino",
+            "description": "Ora anche tu sei dentro lo scherzo."
+        },
+        "2311": {
+            "name": "Ha scintillato",
+            "description": "Un piccolo luccichio, e gli emoji sono sgorgati."
+        },
+        "2312": {
+            "name": "Ha cantato",
+            "description": "Una melodia che nessuno ha mai sentito. È fatta di emoji."
+        },
+        "2313": {
+            "name": "Ha ballato",
+            "description": "Ogni passo lascia una scia di emoji."
+        },
+        "2314": {
+            "name": "Ha condiviso",
+            "description": "Il primo emoji ti fa un regalo. Sono altri emoji."
+        },
+        "2315": {
+            "name": "Ha sognato",
+            "description": "Sogna nuovi emoji, e i sogni si avverano."
+        },
+        "2316": {
+            "name": "È cresciuto",
+            "description": "Più grande, più luminoso, e fa più emoji ogni giorno."
+        },
+        "2317": {
+            "name": "Ha brillato",
+            "description": "Così luminoso che lo vedi da ogni universo."
+        },
+        "2318": {
+            "name": "Ti ha ringraziato",
+            "description": "Per ogni singolo tocco."
+        },
+        "2319": {
+            "name": "Per sempre",
+            "description": "Il primo emoji e te, a disegnare emoji insieme, per sempre."
+        },
+        "9800": {
+            "name": "Buone vibrazioni",
+            "description": "Ogni tanto iniziano a spuntare emoji effetto. Toccali per potenziamenti e regali!"
+        },
+        "9801": {
+            "name": "Stelle fortunate",
+            "description": "Le stelle si allineano. Gli emoji effetto appaiono il doppio delle volte.",
+            "quote": "Esprimi un desiderio su una, ne ottieni due."
+        },
+        "9802": {
+            "name": "Rallentatore",
+            "description": "Quando le cose vanno bene il tempo rallenta. Gli effetti positivi durano il doppio."
+        },
+        "9803": {
+            "name": "Stelle cadenti",
+            "description": "Dal cielo piove fortuna. Gli emoji effetto appaiono di nuovo il doppio delle volte.",
+            "quote": "Esprimi un desiderio. Anzi, parecchi."
+        },
+        "9900": {
+            "name": "Riscaldamento",
+            "description": "Le tue dita si stanno sciogliendo. Ora la combo può arrivare a ×4.",
+            "quote": "Mi fa così male il dito che quasi non ci credo."
+        },
+        "9901": {
+            "name": "In serie positiva",
+            "description": "Tocchi alla velocità del fulmine. Ora la combo può arrivare a ×5.",
+            "quote": "Fa caldo qui dentro, o è solo il mio schermo?"
+        },
+        "9902": {
+            "name": "In fiamme",
+            "description": "Le leggende narrano di un toccatore così veloce da dare fuoco allo schermo. Ora la combo può arrivare a ×6."
+        },
+        "9903": {
+            "name": "Inferno",
+            "description": "I tuoi pollici sono diventati una calamità naturale. Ora la combo può arrivare a ×7.",
+            "quote": "La pellicola protettiva ha abbandonato la chat."
+        },
+        "9904": {
+            "name": "Supernova",
+            "description": "Tocchi così veloce che perfino la luce fatica a starti dietro. Ora la combo può arrivare a ×8."
+        },
+        "9905": {
+            "name": "Combo!",
+            "description": "Tocca in fretta per creare una combo che moltiplica ogni tocco, fino a ×3. Tieni il ritmo!"
+        },
+        "40000": {
+            "name": "Ravioli al vapore",
+            "description": "Cotti al vapore, pieghettati e ripieni di emoji.",
+            "quote": "Una stella. Ho trovato un emoji nel mio raviolo. Sbatteva ancora le palpebre."
+        },
+        "40001": {
+            "name": "Hamburger",
+            "description": "Alti così, con lattuga, pomodoro ed emoji.",
+            "quote": "Avevo chiesto senza emoji. Il direttore mi ha riso in faccia. Sono ancora nel parcheggio."
+        },
+        "40002": {
+            "name": "Spaghetti",
+            "description": "Un unico lungo spaghetto, arrotolato in un emoji perfetto.",
+            "quote": "Uno spaghetto. UNO. Spero che il vostro ristorante vada a fuoco."
+        },
+        "40003": {
+            "name": "Tempura",
+            "description": "Emoji in pastella leggera, fritti e perfettamente croccanti."
+        },
+        "40004": {
+            "name": "Burrito",
+            "description": "Tutto avvolto stretto, emoji compresi.",
+            "quote": "Avvolto stretto, come la mia rabbia."
+        },
+        "40005": {
+            "name": "Ramen",
+            "description": "Una ciotola fumante con un emoji bazzotto sopra.",
+            "quote": "Quell'emoji bazzotto mi ha fatto l'occhiolino."
+        },
+        "40006": {
+            "name": "Croissant",
+            "description": "Friabili, burrosi e a forma di sorriso, se strizzi gli occhi."
+        },
+        "40007": {
+            "name": "Curry",
+            "description": "Così piccante da far sudare gli emoji."
+        },
+        "40008": {
+            "name": "Pancake",
+            "description": "Una pila di soffici emoji, ricoperti di sciroppo.",
+            "quote": "E la seconda colazione?"
+        },
+        "40009": {
+            "name": "Hot pot",
+            "description": "Tutti condividono, e tutti ricevono emoji."
+        },
+        "70000": {
+            "name": "Velocista aiutante",
+            "description": "Tocca lo schermo a cento metri al secondo."
+        },
+        "70001": {
+            "name": "Pesista aiutante",
+            "description": "Tocca così forte che lo schermo si piega un po'.",
+            "quote": "Sollevo 200 chili in panca e tu mi fai picchiettare un telefono. Va bene."
+        },
+        "70002": {
+            "name": "Pallamanista aiutante",
+            "description": "Lancia tocchi all'Emoji gigante da un capo all'altro del campo."
+        },
+        "70003": {
+            "name": "Ciclista aiutante",
+            "description": "Pedala su una macchinetta che tocca al posto tuo."
+        },
+        "70004": {
+            "name": "Golfista aiutante",
+            "description": "Buca in uno, tocco in uno."
+        },
+        "70005": {
+            "name": "Schermidore aiutante",
+            "description": "En garde! Tocca, tocca, tocca."
+        },
+        "70006": {
+            "name": "Surfista aiutante",
+            "description": "Cavalca la tua combo come un'onda."
+        },
+        "70007": {
+            "name": "Ginnasta aiutante",
+            "description": "Tocca con una forma perfetta ogni volta. Dieci e lode."
+        },
+        "70008": {
+            "name": "Fantino aiutante",
+            "description": "Tocca al galoppo."
+        },
+        "70009": {
+            "name": "Cestista aiutante",
+            "description": "Palleggia sull'Emoji gigante. Solo tocchi."
+        },
+        "130000": {
+            "name": "Scimmia spaziale",
+            "description": "Il primo emoji nello spazio era una scimmia. Ovviamente."
+        },
+        "130001": {
+            "name": "Robot di manutenzione",
+            "description": "Tiene in funzione la stazione e gli emoji in movimento."
+        },
+        "130002": {
+            "name": "Orto spaziale",
+            "description": "Coltiva emoji a gravità zero."
+        },
+        "130003": {
+            "name": "Centro di controllo",
+            "description": "Houston, abbiamo degli emoji.",
+            "quote": "Houston, abbiamo un problema. Il problema sei tu. Lo stiamo risolvendo."
+        },
+        "130004": {
+            "name": "Cibo spaziale",
+            "description": "Emoji liofilizzati. Basta aggiungere acqua."
+        },
+        "130005": {
+            "name": "Laboratorio a gravità zero",
+            "description": "Gli esperimenti dimostrano che gli emoji galleggiano. E si moltiplicano."
+        },
+        "130006": {
+            "name": "Sorgere della Terra",
+            "description": "La vista da quassù è molto ispirante. E a forma di emoji.",
+            "quote": "Che vista. Peccato per quello che le succederà."
+        },
+        "130007": {
+            "name": "Pianeta con anelli",
+            "description": "Gli anelli sono fatti di minuscoli emoji."
+        },
+        "130008": {
+            "name": "Fasi lunari",
+            "description": "Ogni fase della luna porta nuovi emoji."
+        },
+        "130009": {
+            "name": "Polvere di stelle",
+            "description": "Spazzala, e scopri che sono emoji."
+        },
+        "140000": {
+            "name": "Dango",
+            "description": "Tre dolci gnocchetti su uno spiedino, un emoji ciascuno."
+        },
+        "140001": {
+            "name": "Waffle",
+            "description": "Ogni quadretto contiene una pozza di emoji."
+        },
+        "140002": {
+            "name": "Torte",
+            "description": "Appena sfornate, ripiene di emoji."
+        },
+        "140003": {
+            "name": "Coppe gelato",
+            "description": "Tre palline, codette e un emoji in cima."
+        },
+        "140004": {
+            "name": "Granita",
+            "description": "Fresca, dolce e coperta di emoji."
+        },
+        "140005": {
+            "name": "Biscotti della fortuna",
+            "description": "La tua fortuna: più emoji."
+        },
+        "140006": {
+            "name": "Succhi di frutta",
+            "description": "Un picco di zuccheri in un brick."
+        },
+        "140007": {
+            "name": "Caramelle al limone",
+            "description": "Prima aspri, poi emoji dolci."
+        },
+        "140008": {
+            "name": "Amaretti",
+            "description": "Morbidi, dorati e pieni di emoji."
+        },
+        "140009": {
+            "name": "Ciliegina sulla torta",
+            "description": "Il tocco finale su ogni emoji."
         }
     },
     "effects": {
@@ -1001,10 +2640,153 @@
             "description": "Produzione di emoji dimezzata!"
         },
         "200": {
-            "title": "Regalo emoji"
+            "title": "Regalo emoji",
+            "description": "15 minuti di emoji!"
         }
     },
-    "perks": {},
-    "trials": {},
-    "funValues": {}
+    "perks": {
+        "overtime": {
+            "name": "Straordinari",
+            "description": "Gli effetti positivi durano il 50% in più"
+        },
+        "giftWrap": {
+            "name": "Carta regalo",
+            "description": "I regali danno il doppio"
+        },
+        "headStart": {
+            "name": "Vantaggio iniziale",
+            "description": "Inizi ogni partita con 5 minuti della miglior produzione della partita precedente"
+        },
+        "luckyStreak": {
+            "name": "Colpo di fortuna",
+            "description": "Gli emoji effetto appaiono il 50% più spesso"
+        },
+        "shinySense": {
+            "name": "Fiuto brillante",
+            "description": "Emoji brillanti due volte più probabili"
+        },
+        "resonance": {
+            "name": "Risonanza",
+            "description": "Ogni essenza non spesa aumenta la produzione del 2,5% invece del 2%"
+        },
+        "collectorsPride": {
+            "name": "Orgoglio del collezionista",
+            "description": "+0,03% di produzione per ogni emoji diverso nella tua collezione"
+        },
+        "bulkDiscount": {
+            "name": "Sconto all'ingrosso",
+            "description": "Gli edifici costano il 10% in meno"
+        },
+        "magnet": {
+            "name": "Calamita",
+            "description": "Gli emoji effetto restano sullo schermo il doppio del tempo"
+        },
+        "neighbourhood": {
+            "name": "Quartiere",
+            "description": "+3% di produzione per ogni tipo di edificio che possiedi"
+        },
+        "muscleMemory": {
+            "name": "Memoria muscolare",
+            "description": "Mantieni le mani dell'Emoji gigante quando fai prestigio"
+        },
+        "steadyHands": {
+            "name": "Mani ferme",
+            "description": "La combo si scarica il 20% più lentamente"
+        },
+        "momentum": {
+            "name": "Slancio",
+            "description": "+1% di produzione ogni 10 minuti giocati in questa partita, fino a +50%"
+        },
+        "secondWind": {
+            "name": "Secondo fiato",
+            "description": "+1 alla tua combo massima"
+        },
+        "goldenTouch": {
+            "name": "Tocco d'oro",
+            "description": "Gli emoji brillanti valgono 5 volte tanto"
+        },
+        "overflow": {
+            "name": "Traboccamento",
+            "description": "L'essenza spesa mantiene metà del suo bonus di produzione"
+        },
+        "hallOfFame": {
+            "name": "Hall of fame",
+            "description": "+10% di produzione per ogni sfida completata"
+        },
+        "flyingStart": {
+            "name": "Partenza lanciata",
+            "description": "Vantaggio iniziale dà 30 minuti di produzione invece di 5"
+        }
+    },
+    "trials": {
+        "handsOff": {
+            "name": "Giù le mani",
+            "rule": "Toccare l'Emoji gigante non disegna nulla",
+            "reward": "+15% di produzione"
+        },
+        "bareBones": {
+            "name": "All'osso",
+            "rule": "Non si possono comprare migliorie",
+            "reward": "+50% di emoji per tocco"
+        },
+        "darkSky": {
+            "name": "Cielo buio",
+            "rule": "Non appaiono emoji effetto",
+            "reward": "Gli emoji effetto appaiono il 25% più spesso"
+        }
+    },
+    "funValues": {
+        "1": {
+            "name": "Cookie clicker",
+            "description": "Gli emoji effetto sono 🍪, quelli negativi 👵"
+        },
+        "17": {
+            "name": "Diabolico",
+            "description": "Può apparire l'effetto 😈 produzione ×77"
+        },
+        "31": {
+            "name": "Bassa gravità",
+            "description": "Gli emoji toccati volano via verso l'alto"
+        },
+        "42": {
+            "name": "La risposta",
+            "description": "+4,2% di produzione"
+        },
+        "50": {
+            "name": "Perfettamente bilanciato",
+            "description": "Tocco ×0,5, produzione ×1,5"
+        },
+        "64": {
+            "name": "Overcloccato",
+            "description": "La combo può salire di un livello in più"
+        },
+        "70": {
+            "name": "Impaziente",
+            "description": "Gli emoji effetto compaiono prima"
+        },
+        "76": {
+            "name": "Comparse fortunate",
+            "description": "10% di probabilità di un emoji effetto bonus"
+        },
+        "77": {
+            "name": "Soldi volanti",
+            "description": "💸 sui prezzi"
+        },
+        "88": {
+            "name": "Maratona",
+            "description": "La combo si scarica il 25% più lentamente"
+        },
+        "91": {
+            "name": "Collezionista",
+            "description": "Emoji brillanti 1,25× più probabili"
+        },
+        "99": {
+            "name": "99 palloncini rossi",
+            "description": "Gli emoji effetto sono 🎈, quelli negativi 📌"
+        },
+        "100": {
+            "name": "Cento triste",
+            "description": "Le statistiche mostrano 😭 accanto al valore fun"
+        }
+    }
 }

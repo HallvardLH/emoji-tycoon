@@ -6,11 +6,14 @@
         "buildings": "施設",
         "upgrades": "強化",
         "stats": "統計",
-        "collection": "収集"
+        "collection": "収集",
+        "newItemsLabel_other": "{{label}}、新着{{count}}件"
     },
     "header": {
         "emojis": "絵文字",
-        "perSecond": "毎秒：{{value}}"
+        "perSecond": "毎秒：{{value}}",
+        "rate": "+{{value}} / 秒",
+        "gemsLabel_other": "{{gems}}ジェム。ジェムショップを開く"
     },
     "common": {
         "buy": "購入",
@@ -23,29 +26,119 @@
             "multiplyTap": "• タップの効率が2倍。",
             "percentageIncreaseTap": "• タップの威力が{{percent}}アップ。",
             "tapPercentageOfEps": "• タップで絵文字総生産量の{{percent}}を獲得。",
-            "percentageIncreaseProduction": "• 絵文字の総生産量が{{percent}}アップ。"
+            "percentageIncreaseProduction": "• 絵文字の総生産量が{{percent}}アップ。",
+            "comboUnlock": "• 速くタップするとコンボがつながる（最大×{{level}}）。",
+            "comboLevel": "• コンボが×{{level}}まで届く。",
+            "effectEmojis": "• {{summary}}。"
         },
         "bonusProduction": "今この強化を買うと毎秒<hl>+{{bonus}}</hl>絵文字、絵文字の生産量が<hl>{{percent}}</hl>アップします",
         "bonusTap": "今この強化を買うとタップごとに<hl>+{{bonus}}</hl>絵文字、タップで得られる絵文字が<hl>{{percent}}</hl>アップします",
         "filterTitle": "強化を絞り込む",
-        "filterDescription": "強化を表示する施設を選んでね。"
+        "filterDescription": "強化を表示する施設を選んでね。",
+        "effectEmojiSummary": {
+            "spawnRate": "効果絵文字の出現頻度が×{{multiplier}}",
+            "duration": "良い効果の持続時間が×{{multiplier}}",
+            "start": "効果絵文字が出現するようになる"
+        },
+        "chips": {
+            "multiplyBuildingProduction": "{{buildings}} ×{{multiplier}}",
+            "multiplyTap": "タップ ×{{multiplier}}",
+            "percentageIncreaseTap": "タップ +{{percent}}",
+            "percentageIncreaseProduction": "生産量 +{{percent}}",
+            "tapPercentageOfEps": "タップ +毎秒生産の{{percent}}",
+            "comboUnlock": "コンボ 最大×{{level}}",
+            "comboLevel": "最大コンボ ×{{level}}"
+        },
+        "impact": {
+            "perSecond": "毎秒+{{bonus}}",
+            "perTap": "タップごとに+{{bonus}}",
+            "and": "{{a}}、{{b}}",
+            "rightNow": "今なら{{gains}}"
+        },
+        "tierLabel": {
+            "helper": "{{building}} · お手伝い",
+            "hands": "大きな絵文字 · 手",
+            "effectEmojisNew": "効果絵文字 · NEW",
+            "effectEmojisLevel": "効果絵文字 · レベル{{level}}",
+            "comboNew": "コンボ · NEW",
+            "comboLevel": "コンボ · レベル{{level}}",
+            "tier": "{{building}} · ランク{{tier}}"
+        },
+        "forSale": "販売中",
+        "owned": "購入済み",
+        "available": "購入可能",
+        "emptyOwnedTitle": "まだ何も買っていません",
+        "emptyTitle": "まだ強化がありません",
+        "emptyOwnedText": "買った強化はここに集まるよ。",
+        "emptyText": "施設を買ったり大きな絵文字をタップしたりすると、強化が解放されるよ。",
+        "filterAll": "すべて",
+        "quoted": "「{{quote}}」",
+        "ownedBadge": "✓ 購入済み",
+        "paid": "{{price}}で購入",
+        "bareBones": "🦴 {{trial}}中は強化なし",
+        "buyFor": "{{price}}で購入",
+        "priceAndTime": "{{price}} · {{time}}",
+        "ownedCount": "強化 {{owned}} / {{total}}",
+        "availableCount": "購入可能{{affordable}} · 解放済み{{unlocked}}",
+        "a11y": {
+            "owned": "{{name}}、購入済み",
+            "price": "{{name}}、{{price}}",
+            "affordable": "{{name}}、{{price}}、購入可能"
+        }
     },
     "stats": {
         "totalEmojisDrawn": "描いた絵文字の合計",
         "emojiTaps": "絵文字タップ数",
         "emojisEarnedFromTapping": "タップで得た絵文字",
         "magicalEmojisTapped": "タップした魔法の絵文字",
-        "funValue": "おたのしみ値"
+        "funValue": "おたのしみ値",
+        "shinyEmojisTapped": "タップしたキラキラ絵文字",
+        "comboTaps": "コンボタップ数",
+        "madeByEachBuilding": "施設ごとの生産量"
     },
     "drawer": {
         "language": "言語",
         "deviceLanguage": "端末の言語",
         "cheats": "チート",
         "resetGame": "ゲームをリセット",
-        "spawnEffect": "効果絵文字を出す"
+        "spawnEffect": "効果絵文字を出す",
+        "menu": "メニュー"
     },
     "prestige": {
-        "title": "転生"
+        "title": "転生",
+        "close": "閉じる",
+        "ordinal_ordinal_other": "{{count}}回目",
+        "celebrateCaption": "転生 #{{count}}",
+        "celebrateTrialCaption": "転生 #{{count}} · 試練開始",
+        "celebrateTitle": "エッセンス+{{essence}}",
+        "celebrateTierTitle": "エッセンス+{{essence}} · ランク{{tier}}のパーク解放",
+        "essenceCaption": "絵文字エッセンス",
+        "essenceBonus": "生産量+{{bonus}}（1つにつき{{each}}）",
+        "intro": "絵文字をたくさん描くと、その本質があなたの周りに集まり始める。見るたびに形を変える、不思議な物質だ。使っていないエッセンスは1つごとに生産量をアップさせ、エッセンスでずっと続くパークを買える。",
+        "startOver": "やり直す",
+        "prestigesSoFar_other": "これまでの転生：{{count}}回",
+        "resetsWhat": "絵文字、施設、施設の強化、手がリセットされます。収集、統計、コンボと効果絵文字の強化、エッセンス、パークは残ります。",
+        "nextEssence": "次のエッセンス",
+        "nextEssenceAt": "描いた絵文字{{amount}}個で",
+        "noEssenceYet": "まだエッセンスを獲得できません",
+        "tapAgainToPrestige": "もう一度タップで転生",
+        "prestigeFor": "転生してエッセンス+{{essence}} ✨",
+        "productionCaps": "生産量+{{percent}}",
+        "playedThisRun": "今回のプレイ時間",
+        "drawnThisRun": "今回描いた絵文字",
+        "essencePerHour": "1時間あたりのエッセンス",
+        "afterTenMinutes": "10分経過後",
+        "essenceRate": "{{rate}}（最高{{best}}）",
+        "slowingDown": "📉 エッセンスの増え方が今回の序盤より遅くなっています。転生するなら今がチャンス。",
+        "drawnAmount": "{{amount}}個描いた",
+        "pastRuns": "過去の周回",
+        "pastRunLine": "{{duration}} · {{amount}}個描いた",
+        "pastRunTrialCompleted": "{{icon}} {{name}} ✓",
+        "pastRunTrialNotCompleted": "{{icon}} {{name}}、未達成",
+        "chipLabel": "絵文字エッセンス",
+        "chipLabelReady": "転生して絵文字エッセンスを{{essence}}獲得",
+        "chipEssence": "エッセンス",
+        "chipPending": "エッセンス+{{essence}}"
     },
     "numbers": {
         "groupSize": "4",
@@ -89,6 +182,260 @@
             "60": "那由他",
             "64": "不可思議",
             "68": "無量大数"
+        }
+    },
+    "buildings": {
+        "ownedA11y_other": "{{count}}個所有",
+        "newBadge": "NEW",
+        "statLine": "毎秒{{eps}} · 全体の{{share}}",
+        "nextUpgrade": "次の強化：{{at}}",
+        "allUpgradesFound": "強化をすべて発見",
+        "epsEach": "1つにつき毎秒+{{eps}}",
+        "buy": "購入",
+        "buyCount": "購入 ×{{count}}",
+        "buyA11y_other": "{{name}}を{{count}}個、{{price}}で購入",
+        "mystery": "謎の施設",
+        "revealsAt": "絵文字{{amount}}個で出現",
+        "bulkLabel": "購入数",
+        "bulkMax": "最大",
+        "bulkA11yMax": "買えるだけ購入",
+        "bulkA11y_other": "{{count}}個ずつ購入",
+        "milestoneCaption": "新しい施設",
+        "milestoneTitle": "はじめての{{building}}！"
+    },
+    "time": {
+        "seconds_other": "{{count}}秒",
+        "minutes_other": "{{count}}分",
+        "hours_other": "{{count}}時間",
+        "days_other": "{{count}}日",
+        "pair": "{{a}}{{b}}"
+    },
+    "trials": {
+        "title": "試練",
+        "completedCount": "{{done}} / {{total}} 達成",
+        "intro": "難しくなるルールつきの周回に転生しよう。その周回で絵文字を十分に描けば報酬がずっと手に入り、ルールも解除される。",
+        "unlocksWith": "{{ordinal}}の転生で解放。",
+        "completeCaps": "試練達成",
+        "inProgressCaps": "試練に挑戦中",
+        "completedText": "{{reward}}がずっとあなたのものに。今回の周回の残りはルールも解除されます。",
+        "activeText": "{{rule}}。今回の周回で{{goal}}描けば、{{reward}}がずっと手に入る。",
+        "giveUp": "この試練をあきらめる",
+        "giveUpConfirm": "もう一度タップであきらめる（報酬なし）",
+        "doneTag": "✓ 達成",
+        "playingTag": "挑戦中",
+        "ruleLine": "<hl>ルール：</hl>{{rule}}",
+        "ruleLineWithStart": "<hl>ルール：</hl>{{rule}}（絵文字{{amount}}個でスタート）",
+        "rewardLine": "<hl>報酬：</hl>{{reward}}",
+        "finishFirst": "先に今の試練を終わらせよう",
+        "needsEssence": "転生にはエッセンスが必要",
+        "tapAgainToStart": "もう一度タップでスタート",
+        "prestigeInto": "試練に転生してエッセンス+{{essence}} ✨",
+        "goalCaps": "目標：{{goal}}",
+        "goal": "絵文字{{amount}}個",
+        "completeTitle": "{{name}}：{{reward}}",
+        "rewardUnlocked": "報酬を獲得"
+    },
+    "perks": {
+        "title": "パーク",
+        "ownedCount": "{{owned}} / {{total}} 所有",
+        "spentKeepsHalf": "使ったエッセンスも生産量ボーナスが半分残ります。",
+        "spentNoBonus": "使ったエッセンスは生産量をアップさせなくなります。",
+        "tierCaps": "ランク{{tier}}",
+        "tierLockedCaps": "ランク{{tier}} · {{ordinal}}の転生で解放",
+        "hidden": "転生するとこのパークが明らかになります。",
+        "needsFirst": "先に{{perk}}が必要",
+        "ownedTag": "✓ 所有",
+        "buyLabel": "{{perk}}をエッセンス{{cost}}で購入"
+    },
+    "gems": {
+        "title": "ジェムショップ",
+        "yourGemsCaps": "所持ジェム",
+        "gemsCaps": "ジェム",
+        "offlineClaim": "{{cost}}ジェムでオフライン収入×{{multiplier}}を受け取る",
+        "storeUnavailable": "現在ショップを利用できません。接続を確認して、あとでもう一度お試しください。",
+        "purchaseFailed": "購入が完了しませんでした。料金は請求されていません。",
+        "keptOnPrestige": "ジェムは転生しても残ります。",
+        "unavailable": "利用不可",
+        "thankYouCaps": "ありがとう！",
+        "gemsAdded_other": "+{{amount}}ジェム",
+        "buyLabel_other": "{{amount}}ジェムを購入",
+        "buyLabelWithPrice_other": "{{amount}}ジェムを{{price}}で購入",
+        "tags": {
+            "popular": "人気",
+            "bestValue": "一番お得"
+        }
+    },
+    "offline": {
+        "welcomeBack": "おかえりなさい！",
+        "away": "{{duration}}留守にしていました。",
+        "awayCapped": "{{duration}}以上留守にしていました。カウントされるのはここまでです。",
+        "rested": "留守のあいだ、あなたの帝国はひと休みしていました。",
+        "missedCaps": "逃した生産量",
+        "perSecond": "毎秒{{value}}",
+        "gemOfferCaps": "×{{multiplier}}（{{cost}}ジェム） · 所持{{gems}}",
+        "gemOfferGetCaps": "×{{multiplier}}（{{cost}}ジェム） · ジェムを入手",
+        "noThanks": "結構です"
+    },
+    "ads": {
+        "watchCaps": "広告を見る",
+        "loadingCaps": "広告を読み込み中...",
+        "failed": "広告が最後まで再生されませんでした。接続を確認して、もう一度お試しください。"
+    },
+    "reset": {
+        "title": "最初からやり直す？",
+        "warning": "ゲームがリセットされます。絵文字、施設、強化、エッセンス、パーク、収集、統計がすべて消えます。元に戻すことはできません。",
+        "purchasesSafe": "ゲーム内で購入したものは安全です。ジェムや購入したアイテムは新しいゲームに引き継がれます。",
+        "confirm": "はい、リセットします",
+        "cancel": "プレイを続ける"
+    },
+    "milestones": {
+        "caption": "マイルストーン",
+        "emojisDrawn": "絵文字を{{amount}}個描いた！"
+    },
+    "settings": {
+        "title": "設定",
+        "close": "設定を閉じる",
+        "sound": "サウンド",
+        "soundEffects": "効果音",
+        "soundEffectsHint": "タップするとポンとやさしい音、キラキラ絵文字ではチャイムが鳴ります。",
+        "performance": "パフォーマンス",
+        "reduceAnimations": "アニメーションを減らす",
+        "reduceAnimationsHint": "タップした絵文字が大きな絵文字から飛び出さなくなります。タップが重いと感じたら試してみてね。",
+        "dangerZone": "危険ゾーン"
+    },
+    "cheats": {
+        "subtitle": "テスト用。変更はセーブデータに反映されます。",
+        "simulateAway": "1時間の留守をシミュレート",
+        "gems": "ジェム",
+        "addGems_other": "+{{count}}ジェム",
+        "addComboTaps": "コンボタップ+{{amount}}",
+        "multiplyTapEarnings": "タップ収入×{{factor}}",
+        "addCollection_other": "収集+{{count}}",
+        "addShiny_other": "キラキラ+{{count}}",
+        "addMagical_other": "魔法+{{count}}",
+        "addEssence_other": "エッセンス+{{count}}",
+        "addPerkTier_other": "パークランク+{{count}}",
+        "addRunTime": "周回時間+{{time}}",
+        "reachTrialGoal": "試練の目標を達成",
+        "effectEmojis": "効果絵文字",
+        "spawnEffects_other": "効果絵文字を{{count}}個出す",
+        "speed": "スピード",
+        "speedLabel": "{{speed}}倍速",
+        "speedHint": "生産と周回時間に適用。効果とコンボはリアルタイムのまま。再読み込みでオフ。",
+        "shiny": "キラキラ",
+        "onlyShiny": "キラキラ絵文字だけ",
+        "funValueQuirk": "{{name}}：{{description}}",
+        "noQuirk": "特殊効果なし",
+        "hideFunValueTable": "おたのしみ値の表を隠す",
+        "showFunValueTable": "おたのしみ値の表を表示",
+        "setFunValueLabel": "おたのしみ値を{{value}}に設定：{{name}}",
+        "changeFunValueLabel": "おたのしみ値を{{change}}変更"
+    },
+    "collection": {
+        "ofTotalFound": "/ {{total}} 発見",
+        "mostTapped": "最多タップ：{{emoji}} ×{{amount}}",
+        "startCollecting": "大きな絵文字をタップして収集を始めよう",
+        "shinyFound_other": "キラキラ{{amount}}",
+        "categories": {
+            "faces": "顔",
+            "animals": "動物",
+            "food": "食べ物",
+            "objects": "物",
+            "people": "人",
+            "bodyParts": "体",
+            "placesBuildings": "場所",
+            "plants": "植物",
+            "vehicles": "乗り物",
+            "weather": "天気",
+            "symbols": "記号"
+        },
+        "categoryLabel": "{{label}}、{{total}}個中{{found}}個発見",
+        "notFound": "まだ見つかっていません",
+        "cellLabel_other": "{{emoji}}、{{count}}回タップ",
+        "cellLabelShiny_other": "{{emoji}}、{{count}}回タップ、キラキラ{{shiny}}個"
+    },
+    "effects": {
+        "chipTapping": "タップ ×{{multiplier}}",
+        "chipProduction": "生産量 ×{{multiplier}}",
+        "stackLabel_other": "{{count}}個重ねがけ：{{label}}、次の効果終了まで{{time}}",
+        "chipLabel": "{{title}}、残り{{time}}",
+        "gift": "ギフト！",
+        "ohNo": "あらら！",
+        "tapping": "タップ",
+        "production": "生産量",
+        "tapFrenzy": "タップ祭り！",
+        "unholyPower": "邪悪な力！",
+        "productionBoost": "生産ブースト！",
+        "collectLabel": "{{title}}を受け取る",
+        "tapMe": "タップして"
+    },
+    "combo": {
+        "level": "コンボ ×{{multiplier}}",
+        "max": "最大コンボ ×{{multiplier}}",
+        "label": "コンボ{{multiplier}}倍",
+        "maxLabel": "コンボ{{multiplier}}倍、最大"
+    },
+    "bigEmoji": {
+        "tapLabel": "大きな絵文字をタップ",
+        "tapShinyLabel": "キラキラの大きな絵文字をタップ",
+        "shiny": "キラキラ",
+        "shinyBurst": "キラキラ！",
+        "handsOff": "試練「{{trial}}」 · タップしても描けない",
+        "perTap": "タップごとに+{{value}}"
+    },
+    "bank": {
+        "timeToAfford": {
+            "needMore": "足りません",
+            "seconds_other": "あと{{count}}秒",
+            "minutes_other": "あと{{count}}分",
+            "hours_other": "あと{{count}}時間",
+            "days_other": "あと{{count}}日",
+            "aLongTime": "ずっと先"
+        },
+        "timeToAffordInline": {
+            "needMore": "足りません",
+            "seconds_other": "あと{{count}}秒",
+            "minutes_other": "あと{{count}}分",
+            "hours_other": "あと{{count}}時間",
+            "days_other": "あと{{count}}日",
+            "aLongTime": "ずっと先"
+        }
+    },
+    "catalogue": {
+        "title": "すべての強化",
+        "counts": "購入済み{{owned}} · 販売中{{forSale}} · 未解放{{locked}} · 全{{total}}",
+        "filter": {
+            "owned": "購入済み {{count}}",
+            "forSale": "販売中 {{count}}",
+            "locked": "未解放 {{count}}"
+        },
+        "combo": "コンボ",
+        "effectEmojis": "効果絵文字",
+        "unlock": {
+            "own": "{{buildings}}を{{count}}個所有",
+            "tapping": "タップで絵文字を{{amount}}個獲得",
+            "comboTaps": "コンボタップ{{amount}}回",
+            "earned": "絵文字を{{amount}}個獲得"
+        },
+        "state": {
+            "owned": "✓ 購入済み",
+            "forSale": "販売中",
+            "locked": "🔒 未解放"
+        },
+        "stateA11y": {
+            "owned": "購入済み",
+            "forSale": "販売中",
+            "locked": "未解放"
+        },
+        "tileA11y": "{{name}}、{{state}}",
+        "prev": "前へ",
+        "next": "次へ",
+        "prevA11y": "前の強化",
+        "nextA11y": "次の強化",
+        "fact": {
+            "price": "価格",
+            "unlocks": "解放条件",
+            "id": "ID"
         }
     }
 }

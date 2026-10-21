@@ -6,11 +6,16 @@
         "buildings": "Bygninger",
         "upgrades": "Oppgrader",
         "stats": "Statistikk",
-        "collection": "Samling"
+        "collection": "Samling",
+        "newItemsLabel_one": "{{label}}, {{count}} ny",
+        "newItemsLabel_other": "{{label}}, {{count}} nye"
     },
     "header": {
         "emojis": "Emojier",
-        "perSecond": "Per sekund: {{value}}"
+        "perSecond": "Per sekund: {{value}}",
+        "rate": "+{{value}} / sek",
+        "gemsLabel_one": "{{gems}} juvel. Åpne juvelbutikken",
+        "gemsLabel_other": "{{gems}} juveler. Åpne juvelbutikken"
     },
     "common": {
         "buy": "Kjøp",
@@ -23,29 +28,120 @@
             "multiplyTap": "• Trykkene dine er dobbelt så effektive.",
             "percentageIncreaseTap": "• Trykkene dine er {{percent}} kraftigere.",
             "tapPercentageOfEps": "• Hvert trykk gir {{percent}} av den totale emojiproduksjonen din.",
-            "percentageIncreaseProduction": "• Total emojiproduksjon økt med {{percent}}."
+            "percentageIncreaseProduction": "• Total emojiproduksjon økt med {{percent}}.",
+            "comboUnlock": "• Trykker du raskt, bygger du opp en kombo, opptil ×{{level}}.",
+            "comboLevel": "• Komboen kan nå ×{{level}}.",
+            "effectEmojis": "• {{summary}}."
         },
         "bonusProduction": "Kjøper du denne oppgraderingen nå, får du <hl>+{{bonus}}</hl> emojier per sekund, og emojiproduksjonen øker med <hl>{{percent}}</hl>",
         "bonusTap": "Kjøper du denne oppgraderingen nå, får du <hl>+{{bonus}}</hl> emojier per trykk, og hvert trykk gir <hl>{{percent}}</hl> flere emojier",
         "filterTitle": "Filtrer oppgraderinger",
-        "filterDescription": "Velg hvilke bygninger du vil se oppgraderinger for."
+        "filterDescription": "Velg hvilke bygninger du vil se oppgraderinger for.",
+        "effectEmojiSummary": {
+            "spawnRate": "Effekt-emojier dukker opp ×{{multiplier}} så ofte",
+            "duration": "Gode effekter varer ×{{multiplier}} så lenge",
+            "start": "Effekt-emojier begynner å dukke opp"
+        },
+        "chips": {
+            "multiplyBuildingProduction": "{{buildings}} ×{{multiplier}}",
+            "multiplyTap": "Trykk ×{{multiplier}}",
+            "percentageIncreaseTap": "Trykk +{{percent}}",
+            "percentageIncreaseProduction": "Produksjon +{{percent}}",
+            "tapPercentageOfEps": "Trykk +{{percent}} av emojier/sek",
+            "comboUnlock": "Kombo opptil ×{{level}}",
+            "comboLevel": "Maks kombo ×{{level}}"
+        },
+        "impact": {
+            "perSecond": "+{{bonus}} /sek",
+            "perTap": "+{{bonus}} per trykk",
+            "and": "{{a}} og {{b}}",
+            "rightNow": "{{gains}} akkurat nå"
+        },
+        "tierLabel": {
+            "helper": "{{building}} · HJELPER",
+            "hands": "STOR EMOJI · HENDER",
+            "effectEmojisNew": "EFFEKT-EMOJIER · NY",
+            "effectEmojisLevel": "EFFEKT-EMOJIER · NIVÅ {{level}}",
+            "comboNew": "KOMBO · NY",
+            "comboLevel": "KOMBO · NIVÅ {{level}}",
+            "tier": "{{building}} · TRINN {{tier}}"
+        },
+        "forSale": "Til salgs",
+        "owned": "Kjøpt",
+        "available": "Tilgjengelig",
+        "emptyOwnedTitle": "Ingenting kjøpt ennå",
+        "emptyTitle": "Ingen oppgraderinger ennå",
+        "emptyOwnedText": "Oppgraderinger du kjøper, samles her.",
+        "emptyText": "Kjøp bygninger og trykk på den store emojien for å låse opp oppgraderinger.",
+        "filterAll": "Alle",
+        "quoted": "\"{{quote}}\"",
+        "ownedBadge": "✓ KJØPT",
+        "paid": "Betalt {{price}}",
+        "bareBones": "🦴 Ingen oppgraderinger i {{trial}}",
+        "buyFor": "Kjøp for {{price}}",
+        "priceAndTime": "{{price}} · {{time}}",
+        "ownedCount": "{{owned}} av {{total}} oppgraderinger",
+        "availableCount": "{{affordable}} har du råd til · {{unlocked}} låst opp",
+        "a11y": {
+            "owned": "{{name}}, kjøpt",
+            "price": "{{name}}, {{price}}",
+            "affordable": "{{name}}, {{price}}, du har råd"
+        }
     },
     "stats": {
         "totalEmojisDrawn": "Emojier tegnet totalt",
         "emojiTaps": "Emojitrykk",
         "emojisEarnedFromTapping": "Emojier fra trykking",
         "magicalEmojisTapped": "Magiske emojier trykket på",
-        "funValue": "Moroverdi"
+        "funValue": "Moroverdi",
+        "shinyEmojisTapped": "Skinnende emojier trykket på",
+        "comboTaps": "Kombotrykk",
+        "madeByEachBuilding": "Laget av hver bygning"
     },
     "drawer": {
         "language": "Språk",
         "deviceLanguage": "Enhetens språk",
         "cheats": "Juks",
         "resetGame": "Tilbakestill spillet",
-        "spawnEffect": "Lag effekt-emoji"
+        "spawnEffect": "Lag effekt-emoji",
+        "menu": "Meny"
     },
     "prestige": {
-        "title": "Prestisje"
+        "title": "Prestisje",
+        "close": "Lukk",
+        "ordinal_ordinal_other": "{{count}}.",
+        "celebrateCaption": "PRESTISJE #{{count}}",
+        "celebrateTrialCaption": "PRESTISJE #{{count}} · UTFORDRING STARTET",
+        "celebrateTitle": "+{{essence}} essens",
+        "celebrateTierTitle": "+{{essence}} essens · trinn {{tier}}-fordeler låst opp",
+        "essenceCaption": "EMOJIESSENS",
+        "essenceBonus": "+{{bonus}} produksjon ({{each}} hver)",
+        "intro": "Når du har tegnet nok emojier, begynner selve essensen deres å samle seg rundt deg: et magisk stoff som skifter form hver gang du ser på det. Hver essens du ikke har brukt, øker produksjonen, og med essens kan du kjøpe fordeler som varer for alltid.",
+        "startOver": "Begynn på nytt",
+        "prestigesSoFar_one": "{{count}} PRESTISJE HITTIL",
+        "prestigesSoFar_other": "{{count}} PRESTISJER HITTIL",
+        "resetsWhat": "Tilbakestiller emojier, bygninger, bygningsoppgraderinger og hender. Du beholder samlingen, statistikken, kombo- og effekt-emoji-oppgraderingene, essensen og fordelene.",
+        "nextEssence": "Neste essens",
+        "nextEssenceAt": "ved {{amount}} emojier tegnet",
+        "noEssenceYet": "Ingen essens å hente ennå",
+        "tapAgainToPrestige": "Trykk igjen for prestisje",
+        "prestigeFor": "Prestisje for +{{essence}} ✨",
+        "productionCaps": "+{{percent}} PRODUKSJON",
+        "playedThisRun": "Spilt denne runden",
+        "drawnThisRun": "Tegnet denne runden",
+        "essencePerHour": "Essens per time",
+        "afterTenMinutes": "etter 10 min",
+        "essenceRate": "{{rate}} (beste {{best}})",
+        "slowingDown": "📉 Essensen kommer saktere enn tidligere i denne runden. Et godt tidspunkt for prestisje.",
+        "drawnAmount": "{{amount}} tegnet",
+        "pastRuns": "Tidligere runder",
+        "pastRunLine": "{{duration}} · {{amount}} tegnet",
+        "pastRunTrialCompleted": "{{icon}} {{name}} ✓",
+        "pastRunTrialNotCompleted": "{{icon}} {{name}}, ikke fullført",
+        "chipLabel": "Emojiessens",
+        "chipLabelReady": "Prestisje for {{essence}} emojiessens",
+        "chipEssence": "Essens",
+        "chipPending": "+{{essence}} essens"
     },
     "numbers": {
         "groupSize": "3",
@@ -115,6 +211,289 @@
             "57": "nond.",
             "60": "des.",
             "63": "desd."
+        }
+    },
+    "buildings": {
+        "ownedA11y_one": "Du eier {{count}}",
+        "ownedA11y_other": "Du eier {{count}}",
+        "newBadge": "NY",
+        "statLine": "{{eps}} /sek · {{share}} av totalen",
+        "nextUpgrade": "neste oppgradering {{at}}",
+        "allUpgradesFound": "alle oppgraderinger funnet",
+        "epsEach": "+{{eps}} /sek hver",
+        "buy": "KJØP",
+        "buyCount": "KJØP ×{{count}}",
+        "buyA11y_one": "Kjøp {{count}} {{name}} for {{price}}",
+        "buyA11y_other": "Kjøp {{count}} {{name}} for {{price}}",
+        "mystery": "Mystisk bygning",
+        "revealsAt": "Avsløres ved {{amount}} emojier",
+        "bulkLabel": "Antall å kjøpe",
+        "bulkMax": "Maks",
+        "bulkA11yMax": "Kjøp så mange du har råd til",
+        "bulkA11y_one": "Kjøp {{count}} om gangen",
+        "bulkA11y_other": "Kjøp {{count}} om gangen",
+        "milestoneCaption": "NY BYGNING",
+        "milestoneTitle": "Første {{building}} er på plass!"
+    },
+    "time": {
+        "seconds_one": "{{count}}s",
+        "seconds_other": "{{count}}s",
+        "minutes_one": "{{count}}m",
+        "minutes_other": "{{count}}m",
+        "hours_one": "{{count}}t",
+        "hours_other": "{{count}}t",
+        "days_one": "{{count}}d",
+        "days_other": "{{count}}d",
+        "pair": "{{a}} {{b}}"
+    },
+    "trials": {
+        "title": "Utfordringer",
+        "completedCount": "{{done}} av {{total}} fullført",
+        "intro": "Ta prestisje inn i en runde med en regel som gjør det vanskeligere. Tegn nok emojier i den runden, så får du beholde belønningen for alltid, og regelen oppheves.",
+        "unlocksWith": "Låses opp ved din {{ordinal}} prestisje.",
+        "completeCaps": "UTFORDRING FULLFØRT",
+        "inProgressCaps": "UTFORDRING PÅGÅR",
+        "completedText": "{{reward}} er din for godt, og regelen er opphevet resten av runden.",
+        "activeText": "{{rule}}. Tegn {{goal}} denne runden for å få {{reward}} for alltid.",
+        "giveUp": "Gi opp denne utfordringen",
+        "giveUpConfirm": "Trykk igjen for å gi opp (ingen belønning)",
+        "doneTag": "✓ FULLFØRT",
+        "playingTag": "PÅGÅR",
+        "ruleLine": "<hl>Regel: </hl>{{rule}}",
+        "ruleLineWithStart": "<hl>Regel: </hl>{{rule}} (du starter med {{amount}} emojier)",
+        "rewardLine": "<hl>Belønning: </hl>{{reward}}",
+        "finishFirst": "Fullfør utfordringen din først",
+        "needsEssence": "Krever essens for prestisje",
+        "tapAgainToStart": "Trykk igjen for å starte",
+        "prestigeInto": "Prestisje inn i utfordring for +{{essence}} ✨",
+        "goalCaps": "MÅL: {{goal}}",
+        "goal": "{{amount}} emojier",
+        "completeTitle": "{{name}}: {{reward}}",
+        "rewardUnlocked": "Belønning låst opp"
+    },
+    "perks": {
+        "title": "Fordeler",
+        "ownedCount": "{{owned}} av {{total}} kjøpt",
+        "spentKeepsHalf": "Brukt essens beholder halve produksjonsbonusen.",
+        "spentNoBonus": "Brukt essens øker ikke lenger produksjonen.",
+        "tierCaps": "TRINN {{tier}}",
+        "tierLockedCaps": "TRINN {{tier}} · LÅSES OPP VED DIN {{ordinal}} PRESTISJE",
+        "hidden": "Ta prestisje for å avsløre denne fordelen.",
+        "needsFirst": "Krever {{perk}} først",
+        "ownedTag": "✓ KJØPT",
+        "buyLabel": "Kjøp {{perk}} for {{cost}} essens"
+    },
+    "gems": {
+        "title": "Juvelbutikk",
+        "yourGemsCaps": "DINE JUVELER",
+        "gemsCaps": "JUVELER",
+        "offlineClaim": "{{cost}} juveler gir ×{{multiplier}} offline-inntekt",
+        "storeUnavailable": "Butikken er ikke tilgjengelig akkurat nå. Sjekk tilkoblingen og prøv igjen senere.",
+        "purchaseFailed": "Kjøpet gikk ikke gjennom. Du har ikke blitt belastet.",
+        "keptOnPrestige": "Du beholder juvelene når du tar prestisje.",
+        "unavailable": "Utilgjengelig",
+        "thankYouCaps": "TUSEN TAKK!",
+        "gemsAdded_one": "+{{amount}} juvel",
+        "gemsAdded_other": "+{{amount}} juveler",
+        "buyLabel_one": "Kjøp {{amount}} juvel",
+        "buyLabel_other": "Kjøp {{amount}} juveler",
+        "buyLabelWithPrice_one": "Kjøp {{amount}} juvel for {{price}}",
+        "buyLabelWithPrice_other": "Kjøp {{amount}} juveler for {{price}}",
+        "tags": {
+            "popular": "POPULÆR",
+            "bestValue": "MEST FOR PENGENE"
+        }
+    },
+    "offline": {
+        "welcomeBack": "Velkommen tilbake!",
+        "away": "Du var borte i {{duration}}.",
+        "awayCapped": "Du var borte i over {{duration}}, som er maks det som teller.",
+        "rested": "Imperiet ditt hvilte mens du var borte.",
+        "missedCaps": "TAPT PRODUKSJON",
+        "perSecond": "{{value}} / sek",
+        "gemOfferCaps": "×{{multiplier}} FOR {{cost}} JUVELER · DU HAR {{gems}}",
+        "gemOfferGetCaps": "×{{multiplier}} FOR {{cost}} JUVELER · SKAFF JUVELER",
+        "noThanks": "Nei takk"
+    },
+    "ads": {
+        "watchCaps": "SE EN REKLAME",
+        "loadingCaps": "LASTER REKLAME...",
+        "failed": "Reklamen ble ikke spilt av helt til slutt. Sjekk tilkoblingen og prøv igjen."
+    },
+    "reset": {
+        "title": "Begynne på nytt?",
+        "warning": "Dette tilbakestiller spillet. Emojiene, bygningene, oppgraderingene, essensen, fordelene, samlingen og statistikken din forsvinner. Dette kan ikke angres.",
+        "purchasesSafe": "Kjøpene dine i spillet er trygge. Juveler og alt du har kjøpt, blir med deg til det nye spillet.",
+        "confirm": "Ja, tilbakestill spillet",
+        "cancel": "Fortsett å spille"
+    },
+    "milestones": {
+        "caption": "MILEPÆL",
+        "emojisDrawn": "{{amount}} emojier tegnet!"
+    },
+    "settings": {
+        "title": "Innstillinger",
+        "close": "Lukk innstillinger",
+        "sound": "Lyd",
+        "soundEffects": "Lydeffekter",
+        "soundEffectsHint": "Et mykt plopp når du trykker, og et klokkespill for skinnende emojier.",
+        "performance": "Ytelse",
+        "reduceAnimations": "Færre animasjoner",
+        "reduceAnimationsHint": "Emojier du trykker på, flyr ikke lenger ut fra den store emojien. Prøv dette hvis trykkingen føles treg.",
+        "dangerZone": "Faresone"
+    },
+    "cheats": {
+        "subtitle": "For testing. Endringene gjelder lagringen din.",
+        "simulateAway": "Simuler 1 time borte",
+        "gems": "Juveler",
+        "addGems_one": "+{{count}} juvel",
+        "addGems_other": "+{{count}} juveler",
+        "addComboTaps": "+{{amount}} kombotrykk",
+        "multiplyTapEarnings": "×{{factor}} trykkinntekt",
+        "addCollection_one": "+{{count}} i samlingen",
+        "addCollection_other": "+{{count}} i samlingen",
+        "addShiny_one": "+{{count}} skinnende",
+        "addShiny_other": "+{{count}} skinnende",
+        "addMagical_one": "+{{count}} magisk",
+        "addMagical_other": "+{{count}} magiske",
+        "addEssence_one": "+{{count}} essens",
+        "addEssence_other": "+{{count}} essens",
+        "addPerkTier_one": "+{{count}} fordelstrinn",
+        "addPerkTier_other": "+{{count}} fordelstrinn",
+        "addRunTime": "+{{time}} rundetid",
+        "reachTrialGoal": "Nå utfordringsmålet",
+        "effectEmojis": "Effekt-emojier",
+        "spawnEffects_one": "Lag {{count}} effekt-emoji",
+        "spawnEffects_other": "Lag {{count}} effekt-emojier",
+        "speed": "Hastighet",
+        "speedLabel": "{{speed}}× hastighet",
+        "speedHint": "Produksjon og rundetid. Effekter og komboen går i sanntid. Av etter omstart.",
+        "shiny": "Skinnende",
+        "onlyShiny": "Bare skinnende emojier",
+        "funValueQuirk": "{{name}}: {{description}}",
+        "noQuirk": "Ingen særegenhet",
+        "hideFunValueTable": "Skjul moroverditabell",
+        "showFunValueTable": "Vis moroverditabell",
+        "setFunValueLabel": "Sett moroverdi til {{value}}: {{name}}",
+        "changeFunValueLabel": "Endre moroverdi med {{change}}"
+    },
+    "collection": {
+        "ofTotalFound": "/ {{total}} funnet",
+        "mostTapped": "Mest trykket: {{emoji}} ×{{amount}}",
+        "startCollecting": "Trykk på den store emojien for å begynne å samle",
+        "shinyFound_one": "{{amount}} skinnende",
+        "shinyFound_other": "{{amount}} skinnende",
+        "categories": {
+            "faces": "Fjes",
+            "animals": "Dyr",
+            "food": "Mat",
+            "objects": "Ting",
+            "people": "Folk",
+            "bodyParts": "Kropp",
+            "placesBuildings": "Steder",
+            "plants": "Planter",
+            "vehicles": "Kjøretøy",
+            "weather": "Vær",
+            "symbols": "Symboler"
+        },
+        "categoryLabel": "{{label}}, {{found}} av {{total}} funnet",
+        "notFound": "Ikke funnet ennå",
+        "cellLabel_one": "{{emoji}}, trykket {{count}} gang",
+        "cellLabel_other": "{{emoji}}, trykket {{count}} ganger",
+        "cellLabelShiny_one": "{{emoji}}, trykket {{count}} gang, {{shiny}} skinnende",
+        "cellLabelShiny_other": "{{emoji}}, trykket {{count}} ganger, {{shiny}} skinnende"
+    },
+    "effects": {
+        "chipTapping": "×{{multiplier}} trykk",
+        "chipProduction": "×{{multiplier}} produksjon",
+        "stackLabel_one": "{{count}} stablet: {{label}}, neste slutter om {{time}}",
+        "stackLabel_other": "{{count}} stablet: {{label}}, neste slutter om {{time}}",
+        "chipLabel": "{{title}}, {{time}} igjen",
+        "gift": "Gave!",
+        "ohNo": "Å nei!",
+        "tapping": "Trykking",
+        "production": "Produksjon",
+        "tapFrenzy": "Trykkefest!",
+        "unholyPower": "Uhellig kraft!",
+        "productionBoost": "Produksjonsløft!",
+        "collectLabel": "Hent {{title}}",
+        "tapMe": "Trykk på meg"
+    },
+    "combo": {
+        "level": "Kombo ×{{multiplier}}",
+        "max": "Maks kombo ×{{multiplier}}",
+        "label": "Kombo ganger {{multiplier}}",
+        "maxLabel": "Kombo ganger {{multiplier}}, maks"
+    },
+    "bigEmoji": {
+        "tapLabel": "Trykk på den store emojien",
+        "tapShinyLabel": "Trykk på den skinnende store emojien",
+        "shiny": "Skinnende",
+        "shinyBurst": "Skinnende!",
+        "handsOff": "Utfordring: {{trial}} · trykk tegner ingenting",
+        "perTap": "+{{value}} per trykk"
+    },
+    "bank": {
+        "timeToAfford": {
+            "needMore": "Trenger mer",
+            "seconds_one": "Om {{count}} sek",
+            "seconds_other": "Om {{count}} sek",
+            "minutes_one": "Om {{count}} min",
+            "minutes_other": "Om {{count}} min",
+            "hours_one": "Om {{count}} t",
+            "hours_other": "Om {{count}} t",
+            "days_one": "Om {{count}} dag",
+            "days_other": "Om {{count}} dager",
+            "aLongTime": "Om lenge"
+        },
+        "timeToAffordInline": {
+            "needMore": "trenger mer",
+            "seconds_one": "om {{count}} sek",
+            "seconds_other": "om {{count}} sek",
+            "minutes_one": "om {{count}} min",
+            "minutes_other": "om {{count}} min",
+            "hours_one": "om {{count}} t",
+            "hours_other": "om {{count}} t",
+            "days_one": "om {{count}} dag",
+            "days_other": "om {{count}} dager",
+            "aLongTime": "om lenge"
+        }
+    },
+    "catalogue": {
+        "title": "Alle oppgraderinger",
+        "counts": "{{owned}} kjøpt · {{forSale}} til salgs · {{locked}} låst · {{total}} totalt",
+        "filter": {
+            "owned": "Kjøpt {{count}}",
+            "forSale": "Til salgs {{count}}",
+            "locked": "Låst {{count}}"
+        },
+        "combo": "Kombo",
+        "effectEmojis": "Effekt-emojier",
+        "unlock": {
+            "own": "Eie {{count}} {{buildings}}",
+            "tapping": "Tjen {{amount}} emojier på trykking",
+            "comboTaps": "{{amount}} kombotrykk",
+            "earned": "Tjen {{amount}} emojier"
+        },
+        "state": {
+            "owned": "✓ KJØPT",
+            "forSale": "TIL SALGS",
+            "locked": "🔒 LÅST"
+        },
+        "stateA11y": {
+            "owned": "kjøpt",
+            "forSale": "til salgs",
+            "locked": "låst"
+        },
+        "tileA11y": "{{name}}, {{state}}",
+        "prev": "Forrige",
+        "next": "Neste",
+        "prevA11y": "Forrige oppgradering",
+        "nextA11y": "Neste oppgradering",
+        "fact": {
+            "price": "PRIS",
+            "unlocks": "LÅSES OPP",
+            "id": "ID"
         }
     }
 }
