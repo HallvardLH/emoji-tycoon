@@ -82,7 +82,38 @@
         },
         "18": {
             "name": "Singulariti ya emoji",
-            "plural": "Singulariti za emoji"
+            "plural": "Singulariti za emoji",
+            "description": "Basi. Hakuna kilichobaki isipokuwa emoji. Umefanikiwa. Au bado?"
+        },
+        "7": {
+            "name": "Sinema ya emoji",
+            "plural": "Sinema za emoji",
+            "description": "Filamu kubwa zinazoigizwa na emoji uzipendazo. Kila tiketi inakuja na bisi na emoji."
+        },
+        "11": {
+            "name": "Shirika la ndege la emoji",
+            "plural": "Mashirika ya ndege ya emoji",
+            "description": "Husafirisha emoji hadi kila kona ya dunia. Kiti cha dirishani, bila shaka."
+        },
+        "19": {
+            "name": "Mashine ya muda ya emoji",
+            "plural": "Mashine za muda za emoji",
+            "description": "Inarudi hadi mwanzo wa nyakati kuchora emoji za kwanza kabisa. Kisha za pili."
+        },
+        "20": {
+            "name": "Mlipuko mkuu",
+            "plural": "Milipuko mikuu",
+            "description": "Ulimwengu mpya kabisa, na safari hii ni emoji kuanzia juu hadi chini."
+        },
+        "21": {
+            "name": "Multiversi ya emoji",
+            "plural": "Multiversi za emoji",
+            "description": "Malimwengu yasiyo na mwisho, kila moja na tajiri wake wa emoji. Wote sasa wanakufanyia kazi."
+        },
+        "22": {
+            "name": "Emoji ya kwanza",
+            "plural": "Emoji za kwanza",
+            "description": "Ambapo yote yalianzia. Imekuwa ikikutazama ukigusa muda wote huu."
         }
     },
     "upgrades": {
@@ -188,27 +219,33 @@
         },
         "100": {
             "name": "Mkono wenye nguvu zaidi",
-            "description": "Mkono wenye nguvu zaidi hukuwezesha kuchora emoji haraka zaidi."
+            "description": "Mkono wenye nguvu zaidi hukuwezesha kuchora emoji haraka zaidi.",
+            "quote": "Inauma, lakini inafaa."
         },
         "101": {
             "name": "Vidole vinavyonyumbulika",
-            "description": "Vidole vinavyonyumbulika huruhusu emoji zenye ufundi zaidi."
+            "description": "Vidole vinavyonyumbulika huruhusu emoji zenye ufundi zaidi.",
+            "quote": "Vinanyumbulika? Ndiyo, labda. Lakini bado vinauma."
         },
         "102": {
             "name": "Mikono miwili",
-            "description": "Mikono mara mbili, emoji mara mbili."
+            "description": "Mikono mara mbili, emoji mara mbili.",
+            "quote": "Kiburi mara mbili, anguko mara mbili."
         },
         "103": {
             "name": "Mikono yenye rangi ya kucha",
-            "description": "Rangi ya kucha hukufanya uguse haraka zaidi, hukujua hilo?"
+            "description": "Rangi ya kucha hukufanya uguse haraka zaidi, hukujua hilo?",
+            "quote": "Na utapendeza sana!"
         },
         "104": {
             "name": "Miguu",
-            "description": "Kuchora kwa miguu huongeza uzalishaji mara mbili (na si vigumu hata kidogo)!"
+            "description": "Kuchora kwa miguu huongeza uzalishaji mara mbili (na si vigumu hata kidogo)!",
+            "quote": "Si vigumu hata kidogo? Mke wangu aliniacha aliponikuta na miguu kwenye tableti ya familia."
         },
         "105": {
             "name": "Ulimi",
-            "description": "Kwa miaka ya mazoezi, wewe pia unaweza kujifunza kuchora kwa ulimi!"
+            "description": "Kwa miaka ya mazoezi, wewe pia unaweza kujifunza kuchora kwa ulimi!",
+            "quote": "mmmhmh thmpwuh mhhaaaam ehhmmmmuhm ahumhmhm"
         },
         "106": {
             "name": "Pua",
@@ -217,19 +254,23 @@
         },
         "107": {
             "name": "Sikio",
-            "description": "Chomeka kalamu sikioni, geuza kichwa nyuzi 90 na uchore nayo!"
+            "description": "Chomeka kalamu sikioni, geuza kichwa nyuzi 90 na uchore nayo!",
+            "quote": "Nini? Ehh? Sisikii- ni- ehh... kwa kweli sisikii hata ki- nini?!"
         },
         "108": {
             "name": "Mdomo",
-            "description": "Weka penseli mdomoni na uchore nayo!"
+            "description": "Weka penseli mdomoni na uchore nayo!",
+            "quote": "Haifai. Inauma mno."
         },
         "109": {
             "name": "Mguu wenye nguvu zaidi",
-            "description": "Mguu wenye nguvu zaidi hukuwezesha kuchora emoji kwa miguu haraka zaidi."
+            "description": "Mguu wenye nguvu zaidi hukuwezesha kuchora emoji kwa miguu haraka zaidi.",
+            "quote": "Mguu wangu sasa ni mkubwa mno. Wa kushoto tu. Ninatembea kwa duara."
         },
         "110": {
             "name": "Mapafu makubwa zaidi",
-            "description": "Mapafu makubwa zaidi huruhusu kuchora emoji haraka zaidi."
+            "description": "Mapafu makubwa zaidi huruhusu kuchora emoji haraka zaidi.",
+            "quote": "Oksijeni. Oksijeni. Oksijeni."
         },
         "111": {
             "name": "Ubongo mkubwa zaidi",
@@ -237,7 +278,8 @@
         },
         "112": {
             "name": "Nywele",
-            "description": "Shika brashi kwa nywele zako kuunda emoji. Nani anahitaji mikono ukiwa na mtindo?"
+            "description": "Shika brashi kwa nywele zako kuunda emoji. Nani anahitaji mikono ukiwa na mtindo?",
+            "quote": "Nani anahitaji mikono? Mimi. Ninahitaji mikono. Ninapata upara kwa sababu ya hili."
         },
         "113": {
             "name": "Nyusi",
@@ -245,7 +287,8 @@
         },
         "114": {
             "name": "Mgongo",
-            "description": "Lala chali na uchore emoji kwa mikono nyuma yako. Mazoezi ya viungo na sanaa kwa pamoja!"
+            "description": "Lala chali na uchore emoji kwa mikono nyuma yako. Mazoezi ya viungo na sanaa kwa pamoja!",
+            "quote": "Lala chali, walisema. Mazoezi na sanaa, walisema. Siwezi kuamka."
         },
         "115": {
             "name": "Meno",
@@ -253,7 +296,8 @@
         },
         "116": {
             "name": "Kitovu",
-            "description": "Chora emoji kwa kitovu chako. Ni ujuzi wa kipekee ulio mgumu kuumudu!"
+            "description": "Chora emoji kwa kitovu chako. Ni ujuzi wa kipekee ulio mgumu kuumudu!",
+            "quote": "Ninachora kwa kitovu changu. Mama yangu anajivunia sana."
         },
         "117": {
             "name": "Mchoro wa mwangwi",
@@ -261,23 +305,28 @@
         },
         "118": {
             "name": "Mchoro wa telekinesisi",
-            "description": "Kwa nini utumie mikono wakati unaweza kuchora emoji kwa akili yako?"
+            "description": "Kwa nini utumie mikono wakati unaweza kuchora emoji kwa akili yako?",
+            "quote": "Ninaweza kusogeza vitu kwa akili yangu, na wewe unanifanya nichore nyuso zinazokonyeza."
         },
         "119": {
             "name": "Vidole vya kwanta",
-            "description": "Mfungamano wa kwanta kwenye vidole vyako huruhusu kuchora emoji kwa kasi ya mwanga."
+            "description": "Mfungamano wa kwanta kwenye vidole vyako huruhusu kuchora emoji kwa kasi ya mwanga.",
+            "quote": "Vidole vyangu viko sehemu mbili kwa wakati mmoja. Sehemu zote mbili zinakuchukia."
         },
         "200": {
             "name": "Penseli bora",
-            "description": "Penseli bora kwa emoji zenye maelezo zaidi."
+            "description": "Penseli bora kwa emoji zenye maelezo zaidi.",
+            "quote": "Penseli bora hazitarekebisha kipaji chako."
         },
         "201": {
             "name": "Kalamu maalum za rangi",
-            "description": "Kalamu hizi maalum huwasaidia wasanii kumfikia mtoto aliye ndani yao."
+            "description": "Kalamu hizi maalum huwasaidia wasanii kumfikia mtoto aliye ndani yao.",
+            "quote": "Nimempata mtoto aliye ndani yangu. Yeye pia amesikitishwa nami."
         },
         "202": {
             "name": "Brashi bora",
-            "description": "Brashi bora huruhusu emoji za kisanaa zaidi."
+            "description": "Brashi bora huruhusu emoji za kisanaa zaidi.",
+            "quote": "Bora kivipi? Nilichoweza kuchora ni toleo la kutisha la mke wangu tu. Nataka pesa zangu zirudi."
         },
         "203": {
             "name": "Kalamu za wino",
@@ -334,7 +383,8 @@
         },
         "215": {
             "name": "Fonti ya Comic Sans",
-            "description": "Uipende au uichukie, inafanya emoji zako zionekane... za kipekee!"
+            "description": "Uipende au uichukie, inafanya emoji zako zionekane... za kipekee!",
+            "quote": "Ninaacha kazi."
         },
         "216": {
             "name": "Jenereta ya sanaa ya AI",
@@ -353,11 +403,13 @@
         },
         "219": {
             "name": "Damu",
-            "description": "Kupaka rangi kwa damu hufanya emoji ziwe poa zaidi!"
+            "description": "Kupaka rangi kwa damu hufanya emoji ziwe poa zaidi!",
+            "quote": "Ya nani? YA NANI?"
         },
         "300": {
             "name": "Wakulima",
-            "description": "Shamba ni nini bila mkulima?!"
+            "description": "Shamba ni nini bila mkulima?!",
+            "quote": "Nilirithi ekari 200 kutoka kwa baba yangu, na wewe unanifanya nipande nyuso za tabasamu."
         },
         "301": {
             "name": "Mche",
@@ -366,7 +418,8 @@
         },
         "302": {
             "name": "Zana bora",
-            "description": "Huruhusu kilimo cha haraka zaidi!"
+            "description": "Huruhusu kilimo cha haraka zaidi!",
+            "quote": "Zana mpya, mshahara uleule. Asante kwa bure."
         },
         "303": {
             "name": "Matrekta",
@@ -374,11 +427,13 @@
         },
         "304": {
             "name": "Nyumba za shamba",
-            "description": "Nyumba tulivu kwa wakulima wako kupumzika na kujiongezea nguvu."
+            "description": "Nyumba tulivu kwa wakulima wako kupumzika na kujiongezea nguvu.",
+            "quote": "'Tulivu' ni neno la ajabu kwa kibanda chenye ndoo."
         },
         "305": {
             "name": "Ng'ombe wa emoji",
-            "description": "Hutoa emoooooooji zaidi."
+            "description": "Hutoa emoooooooji zaidi.",
+            "quote": "Fanya utani mmoja zaidi wa 'mooo' nami nitakupindua WEWE."
         },
         "306": {
             "name": "Mfumo wa umwagiliaji",
@@ -387,7 +442,8 @@
         },
         "307": {
             "name": "Vitisha ndege",
-            "description": "Huwafukuza ndege wa emoji wasumbufu mbali na mashamba yako!"
+            "description": "Huwafukuza ndege wa emoji wasumbufu mbali na mashamba yako!",
+            "quote": "Ndege hawaogopi. Majirani ndio wanaogopa."
         },
         "308": {
             "name": "Mapipa ya mboji",
@@ -395,7 +451,8 @@
         },
         "309": {
             "name": "Nyumba za kijani",
-            "description": "Lima emoji mwaka mzima, bila kujali hali ya hewa!"
+            "description": "Lima emoji mwaka mzima, bila kujali hali ya hewa!",
+            "quote": "Nyumba nyingine ya kijani inahitaji msaada wako. Nitaiwekea alama kwenye ramani yako."
         },
         "310": {
             "name": "Vinu vya upepo",
@@ -404,7 +461,8 @@
         },
         "311": {
             "name": "Bustani za matunda za emoji",
-            "description": "Panda miti ya emoji inayozaa matunda mwaka mzima!"
+            "description": "Panda miti ya emoji inayozaa matunda mwaka mzima!",
+            "quote": "Miti inatembea. Miti ina hasira."
         },
         "312": {
             "name": "Sikukuu ya mavuno",
@@ -425,11 +483,13 @@
         },
         "316": {
             "name": "Shamba la Emoji la Siku Zijazo",
-            "description": "Mashamba yako sasa ni paradiso za teknolojia zenye roboti, hologramu na matrekta yanayoruka. Karibu siku zijazo!"
+            "description": "Mashamba yako sasa ni paradiso za teknolojia zenye roboti, hologramu na matrekta yanayoruka. Karibu siku zijazo!",
+            "quote": "Roboti ilichukua kazi yangu. Kisha ikaniuliza njia."
         },
         "317": {
             "name": "Mwezi wa damu",
-            "description": "Chini ya mwezi wa damu, mazao yako hukua haraka... lakini pia huota meno."
+            "description": "Chini ya mwezi wa damu, mazao yako hukua haraka... lakini pia huota meno.",
+            "quote": "Karoti sasa zina meno. Karoti zinauma."
         },
         "318": {
             "name": "Mavuno ya mwisho",
@@ -441,11 +501,13 @@
         },
         "400": {
             "name": "Visu Vikali",
-            "description": "Visu vikali zaidi hurahisisha kukatakata emoji."
+            "description": "Visu vikali zaidi hurahisisha kukatakata emoji.",
+            "quote": "Kukatakata emoji? Unamaanisha nini? Una wazimu? Hizi ni emoji halisi, hai, zisizo na hatia!"
         },
         "401": {
             "name": "Sufuria Zisizonata",
-            "description": "Sufuria zisizonata hufanya kupika milo ya emoji kuwe haraka zaidi."
+            "description": "Sufuria zisizonata hufanya kupika milo ya emoji kuwe haraka zaidi.",
+            "quote": "Kila kitu bado kinanata. Hata mimi. Kwenye kazi hii."
         },
         "402": {
             "name": "Oveni Bora",
@@ -453,27 +515,33 @@
         },
         "403": {
             "name": "Viungo vya Hali ya Juu",
-            "description": "Viungo bora zaidi humaanisha emoji tamu zaidi."
+            "description": "Viungo bora zaidi humaanisha emoji tamu zaidi.",
+            "quote": "Emoji zilezile zilizogandishwa. Lebo mpya. Bei mara mbili."
         },
         "404": {
             "name": "Kofia ya Mpishi",
-            "description": "Kuvaa kofia ya mpishi huongeza kasi ya kupika emoji."
+            "description": "Kuvaa kofia ya mpishi huongeza kasi ya kupika emoji.",
+            "quote": "Kofia haisaidii chochote. Nimesema mara arobaini. Hakuna anayesikiliza."
         },
         "405": {
             "name": "Blenda za Emoji",
-            "description": "Saga emoji kuwa smoothie na supu tamu kwa sekunde!"
+            "description": "Saga emoji kuwa smoothie na supu tamu kwa sekunde!",
+            "quote": "USIANGALIE ndani ya smoothie."
         },
         "406": {
             "name": "Vikaango vya Hewa",
-            "description": "Kaanga emoji kikamilifu kwa muda wa rekodi. Zinakauka vizuri na za dhahabu kila mara!"
+            "description": "Kaanga emoji kikamilifu kwa muda wa rekodi. Zinakauka vizuri na za dhahabu kila mara!",
+            "quote": "Ni oveni. Ni oveni ndogo. Acha kuiita kikaango cha hewa."
         },
         "407": {
             "name": "Baa za Sushi",
-            "description": "Kunja sushi ya emoji kwa ustadi na mtindo. Kipaji kibichi kinahitajika!"
+            "description": "Kunja sushi ya emoji kwa ustadi na mtindo. Kipaji kibichi kinahitajika!",
+            "quote": "Kipaji kibichi kinahitajika. Waliniajiri hata hivyo."
         },
         "408": {
             "name": "Baa za Saladi",
-            "description": "Changanya saladi mbichi za emoji zenye viungo vya kila aina. Ni afya na tamu!"
+            "description": "Changanya saladi mbichi za emoji zenye viungo vya kila aina. Ni afya na tamu!",
+            "quote": "Mtu alipiga chafya juu ya krutoni. Niliona. Sikusema kitu."
         },
         "409": {
             "name": "Oveni za Pizza",
@@ -485,7 +553,8 @@
         },
         "411": {
             "name": "Mashine za Aiskrimu za Emoji",
-            "description": "Tengeneza vitamu baridi vya emoji ambavyo ni poa kama vilivyo vitamu!"
+            "description": "Tengeneza vitamu baridi vya emoji ambavyo ni poa kama vilivyo vitamu!",
+            "quote": "Imeharibika. Huwa imeharibika kila mara. Haijawahi kuwa nzima."
         },
         "412": {
             "name": "Vituo vya Taco",
@@ -498,7 +567,8 @@
         },
         "414": {
             "name": "Chemchemi za Chokoleti za Emoji",
-            "description": "Mwagia chokoleti ya emoji iliyoyeyuka juu ya kila kitu. Tamu na ya anasa!"
+            "description": "Mwagia chokoleti ya emoji iliyoyeyuka juu ya kila kitu. Tamu na ya anasa!",
+            "quote": "Mtoto alitumbukiza uso wake wote ndani. Tuliendelea kuwauzia watu."
         },
         "415": {
             "name": "Jiko la Emoji Walao Wenzao",
@@ -510,23 +580,28 @@
         },
         "417": {
             "name": "Uwanja wa Vita vya Chakula vya Emoji",
-            "description": "Geuza jiko lako kuwa uwanja wa vita vya chakula. Ni fujo, vurugu, na kwa ajabu kuna faida."
+            "description": "Geuza jiko lako kuwa uwanja wa vita vya chakula. Ni fujo, vurugu, na kwa ajabu kuna faida.",
+            "quote": "Kuna faida kwa ajabu. Bado ninakuta njegere masikioni mwangu."
         },
         "418": {
             "name": "Unga Hai",
-            "description": "Unga huu husonga wenyewe, ukijiumba kuwa mkate kamili wa emoji. Wakati mwingine hujaribu kutoroka."
+            "description": "Unga huu husonga wenyewe, ukijiumba kuwa mkate kamili wa emoji. Wakati mwingine hujaribu kutoroka.",
+            "quote": "Umetoroka. Basi. Nini kitatokea sasa?"
         },
         "419": {
             "name": "Bufee Isiyo na Mwisho",
-            "description": "Bufee isiyoisha kamwe... lakini huenda chakula kikaanza kukula wewe badala yake."
+            "description": "Bufee isiyoisha kamwe... lakini huenda chakula kikaanza kukula wewe badala yake.",
+            "quote": "Haiishi kamwe. Nimekuwa kwenye meza ya vitindamlo tangu Machi."
         },
         "500": {
             "name": "Mafagio",
-            "description": "Kwa kusafisha baada ya wanyama wakienda... aah... haja kubwa."
+            "description": "Kwa kusafisha baada ya wanyama wakienda... aah... haja kubwa.",
+            "quote": "Nina shahada ya uzamili. Ninafagia kinyesi cha twiga kwa ajili ya emoji."
         },
         "501": {
             "name": "Wakufunzi wa Wanyama",
-            "description": "Wakufunzi huwafundisha wanyama mbinu, na kuifanya zoo iwe na ufanisi zaidi."
+            "description": "Wakufunzi huwafundisha wanyama mbinu, na kuifanya zoo iwe na ufanisi zaidi.",
+            "quote": "Lama amenitemea mate. Tena."
         },
         "502": {
             "name": "Mabanda ya Kifahari",
@@ -534,15 +609,18 @@
         },
         "503": {
             "name": "Wanyama Adimu",
-            "description": "Leta wanyama adimu na wa kigeni kuvutia umati mkubwa zaidi."
+            "description": "Leta wanyama adimu na wa kigeni kuvutia umati mkubwa zaidi.",
+            "quote": "Pengwini amemuuma mtoto. Wageni wameongezeka kwa 40%."
         },
         "504": {
             "name": "Maskoti wa Zoo",
-            "description": "Maskoti wachangamfu huwavutia wageni, na kuongeza mapato kwa jumla."
+            "description": "Maskoti wachangamfu huwavutia wageni, na kuongeza mapato kwa jumla.",
+            "quote": "Ni nyuzi 35 ndani ya vazi hili la twiga na mtoto amenipiga teke sasa hivi."
         },
         "505": {
             "name": "Kliniki za Mifugo",
-            "description": "Kliniki maalum huwaweka wanyama wakiwa na afya."
+            "description": "Kliniki maalum huwaweka wanyama wakiwa na afya.",
+            "quote": "Miaka saba ya chuo cha mifugo. Leo ninamtibu mbuzi aliyemeza simu."
         },
         "506": {
             "name": "Maeneo ya Kivuli",
@@ -607,15 +685,18 @@
         },
         "601": {
             "name": "Wafanyakazi zaidi",
-            "description": "Ongeza idadi ya wafanyakazi wa kiwanda."
+            "description": "Ongeza idadi ya wafanyakazi wa kiwanda.",
+            "quote": "Wafanyakazi zaidi, choo kilekile. Choo kimoja."
         },
         "602": {
             "name": "Gia kubwa zaidi",
-            "description": "Gia kubwa zaidi huruhusu mashine kubwa zaidi."
+            "description": "Gia kubwa zaidi huruhusu mashine kubwa zaidi.",
+            "quote": "Gia kubwa zaidi, ajali kubwa zaidi. Muulize Dave. Oh, subiri."
         },
         "603": {
             "name": "Nati na boliti",
-            "description": "Hizi hutumika kuhakikisha kila kitu hakisambaratiki."
+            "description": "Hizi hutumika kuhakikisha kila kitu hakisambaratiki.",
+            "quote": "Vinashikilia mahali hapa pamoja. Kwa shida. Kama ndoa yangu."
         },
         "604": {
             "name": "Mikanda ya Kusafirisha",
@@ -639,7 +720,8 @@
         },
         "609": {
             "name": "Ulinzi wa Kiwanda",
-            "description": "Linda kiwanda chako dhidi ya wezi wa emoji na ujasusi wa viwanda."
+            "description": "Linda kiwanda chako dhidi ya wezi wa emoji na ujasusi wa viwanda.",
+            "quote": "HUTAPITA. Bila kitambulisho."
         },
         "610": {
             "name": "Urejelezaji wa Kiwanda",
@@ -668,11 +750,13 @@
         },
         "616": {
             "name": "Kuta Zilizoimarishwa",
-            "description": "Imarisha kuta za kiwanda chako kustahimili vurugu za uzalishaji wa kasi."
+            "description": "Imarisha kuta za kiwanda chako kustahimili vurugu za uzalishaji wa kasi.",
+            "quote": "Shikilia mlango! SHIKILIA MLANGO!"
         },
         "617": {
             "name": "Mitego ya Panya",
-            "description": "Wazuie panya wasumbufu nje ya kiwanda chako. Hakuna tena nyaya zilizotafunwa wala emoji zilizoibwa!"
+            "description": "Wazuie panya wasumbufu nje ya kiwanda chako. Hakuna tena nyaya zilizotafunwa wala emoji zilizoibwa!",
+            "quote": "Ni mtego!"
         },
         "618": {
             "name": "Mameneja wa kiwanda",
@@ -690,7 +774,8 @@
         },
         "701": {
             "name": "Viwanja vya besiboli",
-            "description": "Hii lazima itakuwa home run ya uhakika."
+            "description": "Hii lazima itakuwa home run ya uhakika.",
+            "quote": "Home run? Mpira umegonga gari langu. Tena."
         },
         "702": {
             "name": "Viwanja vya squash",
@@ -721,15 +806,18 @@
         },
         "901": {
             "name": "Mifuko mikubwa ya emoji",
-            "description": "Huruhusu kubeba emoji nyingi zaidi."
+            "description": "Huruhusu kubeba emoji nyingi zaidi.",
+            "quote": "Mgongo wangu umevunjika, lakini sawa, mifuko mikubwa zaidi."
         },
         "902": {
             "name": "Kadi za mkopo za emoji",
-            "description": "Nzuri kwa kutumia emoji zako ulizozitolea jasho."
+            "description": "Nzuri kwa kutumia emoji zako ulizozitolea jasho.",
+            "quote": "Imekataliwa. Kadi yako imekataliwa. Maisha yako yamekataliwa."
         },
         "903": {
             "name": "Uwekezaji katika elimu",
-            "description": "Elimu bora, ujuzi bora wa kuchora emoji."
+            "description": "Elimu bora, ujuzi bora wa kuchora emoji.",
+            "quote": "Mkopo wangu wa chuo uko kwa emoji. Nitaumaliza ahera."
         },
         "904": {
             "name": "Uwekezaji katika ubunifu",
@@ -745,19 +833,23 @@
         },
         "1002": {
             "name": "Gurudumu la Ferris",
-            "description": "Kule juu, ndipo alipovunja moyo wangu."
+            "description": "Kule juu, ndipo alipovunja moyo wangu.",
+            "quote": "Nilikwama juu kwa saa mbili na mwanamume anayeeleza kuhusu crypto."
         },
         "1003": {
             "name": "Sarakasi",
-            "description": "Kuna aina mbili tu za watu duniani. Wanaoburudisha, na wanaotazama."
+            "description": "Kuna aina mbili tu za watu duniani. Wanaoburudisha, na wanaotazama.",
+            "quote": "Nilifunzwa sarakasi kwa miaka ishirini. Sasa ninarusha nyuso za tabasamu kwa watoto wachanga."
         },
         "1004": {
             "name": "Mchezesha emoji",
-            "description": "Wanasema hajawahi kuangusha mpira hata mara moja."
+            "description": "Wanasema hajawahi kuangusha mpira hata mara moja.",
+            "quote": "Hajawahi kuangusha mpira? Mimi niliangusha ndoto zangu."
         },
         "1100": {
             "name": "Uchaguzi wa emoji",
-            "description": "Emoji bora ashinde!"
+            "description": "Emoji bora ashinde!",
+            "quote": "Emoji bora ashinde. Walioshindwa watashughulikiwa."
         },
         "1101": {
             "name": "Kichocheo cha emoji",
@@ -777,7 +869,8 @@
         },
         "1300": {
             "name": "Darubini",
-            "description": "Tazama nyota kugundua sayari za emoji."
+            "description": "Tazama nyota kugundua sayari za emoji.",
+            "quote": "Tunakuona pia. Tumekuwa tukikuona siku zote."
         },
         "1301": {
             "name": "Antena za setilaiti",
@@ -785,11 +878,13 @@
         },
         "1302": {
             "name": "Wanaanga",
-            "description": "Mtu anahitajika kuendesha vituo vyako vya anga."
+            "description": "Mtu anahitajika kuendesha vituo vyako vya anga.",
+            "quote": "Angani hakuna anayeweza kukusikia ukipiga kelele. Tumehakikisha. Mara mbili."
         },
         "1303": {
             "name": "Roketi",
-            "description": "Inaruka kwa kasi sana."
+            "description": "Inaruka kwa kasi sana.",
+            "quote": "Inaruka kwa kasi sana. Vivyo hivyo mabaki yako."
         },
         "1304": {
             "name": "⏁⎍⋏⏃☍⎍⟊⏃ ☍⍙⏃ ⏃⋔⏃⋏⟟...",
@@ -798,15 +893,18 @@
         },
         "1305": {
             "name": "☍⟟⏁⎍ ☊⊑⏃ ⏃⟊⏃⏚⎍",
-            "description": "☍⟟⏁⎍ ⊑⟟☍⟟ ☍⟟⋏⏃ ⎍⍙⟒⋉⍜ ⎍⌇⟟⍜⟊⎍⌰⟟☍⏃⋏⏃."
+            "description": "☍⟟⏁⎍ ⊑⟟☍⟟ ☍⟟⋏⏃ ⎍⍙⟒⋉⍜ ⎍⌇⟟⍜⟊⎍⌰⟟☍⏃⋏⏃.",
+            "quote": "⋏⟟⋏⏃☍⎍⟊⏃ ☍⎍☍⎍☊⊑⎍☍⎍⏃."
         },
         "30000": {
             "name": "Viazi",
-            "description": "Viazi vya ajabu! Viazi ni uti wa mgongo wa shamba lolote."
+            "description": "Viazi vya ajabu! Viazi ni uti wa mgongo wa shamba lolote.",
+            "quote": "Bila chumvi, bila pilipili. Nipe tu kiazi kilichokomaa nami nimeridhika kama kiazi shambani!"
         },
         "30001": {
             "name": "Karoti",
-            "description": "Karoti: siri ya macho makali! Hakuna sungura aliyewahi kuvaa miwani."
+            "description": "Karoti: siri ya macho makali! Hakuna sungura aliyewahi kuvaa miwani.",
+            "quote": "Hapana. Sijafurahi. Fanya utani mmoja zaidi nami nitakupanda."
         },
         "30002": {
             "name": "Matango",
@@ -820,15 +918,18 @@
         },
         "30004": {
             "name": "Nyanya",
-            "description": "Zenye juisi na matumizi mengi, nyanya ni kipenzi cha shamba."
+            "description": "Zenye juisi na matumizi mengi, nyanya ni kipenzi cha shamba.",
+            "quote": "Nzuri kwa kumrushia yeyote aliyebuni shamba hili."
         },
         "30005": {
             "name": "Letusi",
-            "description": "Jani kwa jani, letusi huweka shamba lako safi na la kijani."
+            "description": "Jani kwa jani, letusi huweka shamba lako safi na la kijani.",
+            "quote": "Kitu kinachochosha zaidi shambani hapa. Mbali na mkulima."
         },
         "30006": {
             "name": "Brokoli",
-            "description": "Miti midogo yenye faida kubwa!"
+            "description": "Miti midogo yenye faida kubwa!",
+            "quote": "Mtoto wangu alimrushia mhudumu. Kusema kweli, alistahili."
         },
         "30007": {
             "name": "Vitunguu",
@@ -887,11 +988,13 @@
         },
         "30019": {
             "name": "Njegere",
-            "description": "Njegere!"
+            "description": "Njegere!",
+            "quote": "Njegere! NJEGERE! Hayo ndiyo maelezo yote? Nani anaandika haya?"
         },
         "30020": {
             "name": "Figili",
-            "description": "Kali na zinazokatika, figili huongeza msisimko shambani na kwenye vyakula vyako."
+            "description": "Kali na zinazokatika, figili huongeza msisimko shambani na kwenye vyakula vyako.",
+            "quote": "Hakuna anayetaka figili. Hakuna aliyewahi kutaka figili."
         },
         "30021": {
             "name": "Uyoga",
@@ -900,15 +1003,18 @@
         },
         "30022": {
             "name": "Mananasi",
-            "description": "Ya kitropiki na yenye uchachu."
+            "description": "Ya kitropiki na yenye uchachu.",
+            "quote": "Kwenye pizza."
         },
         "30023": {
             "name": "Matikiti maji",
-            "description": "Yenye juisi na yanaburudisha, matikiti maji ndiyo zao bora la kiangazi."
+            "description": "Yenye juisi na yanaburudisha, matikiti maji ndiyo zao bora la kiangazi.",
+            "quote": "Mgongo wangu unauma."
         },
         "30024": {
             "name": "Kiwi",
-            "description": "Manyoya kwa nje, tamu kwa ndani. Kiwi ni kipenzi cha shamba!"
+            "description": "Manyoya kwa nje, tamu kwa ndani. Kiwi ni kipenzi cha shamba!",
+            "quote": "Mungu wangu, inawasha."
         },
         "30025": {
             "name": "Zabibu",
@@ -977,6 +1083,1539 @@
             "name": "Warasimu wa emoji",
             "description": "Serikali ya emoji inahitaji watawala ili ifanye kazi.",
             "quote": "Inaonekana unapitisha sheria. Unahitaji msaada?"
+        },
+        "707": {
+            "name": "Olimpiki za emoji",
+            "description": "Kila baada ya miaka minne, emoji zenye kasi zaidi hushindania dhahabu."
+        },
+        "708": {
+            "name": "Uwanja wa emoji",
+            "description": "Viti elfu themanini, kila kimoja kimekaliwa na emoji inayoshangilia."
+        },
+        "709": {
+            "name": "Mazoezi ya marathoni",
+            "description": "Emoji zinazoweza kuchora kwa kilomita 42 bila kusimama."
+        },
+        "710": {
+            "name": "Mabwawa ya kuogelea",
+            "description": "Mita hamsini za emoji zenye klorini.",
+            "quote": "Viumbe kadhaa wa kiwango cha lewiathani wamegunduliwa upande wa kina kirefu. Una uhakika unachofanya kinafaa?"
+        },
+        "711": {
+            "name": "Ulingo wa ndondi",
+            "description": "Elea kama kipepeo, chora kama emoji."
+        },
+        "712": {
+            "name": "Ukuta wa kupanda",
+            "description": "Kila kishikio ni uso wa tabasamu. Mshiko mzuri."
+        },
+        "713": {
+            "name": "Uwanja wa barafu",
+            "description": "Emoji juu ya barafu. Shanga zinazong'aa zinauzwa kando."
+        },
+        "714": {
+            "name": "Uwanja wa boling",
+            "description": "Kila strike huangusha rundo la emoji."
+        },
+        "715": {
+            "name": "Bustani ya skateboard",
+            "description": "Kickflip, grind, na emoji nyingi."
+        },
+        "716": {
+            "name": "Miteremko ya kuteleza thelujini",
+            "description": "Njia ngumu kabisa, zimesawazishwa kwa emoji."
+        },
+        "717": {
+            "name": "Dojo la sanaa za mapigano",
+            "description": "Paka nta, futa nta, chora emoji.",
+            "quote": "Gusa au usiguse. Hakuna kujaribu."
+        },
+        "718": {
+            "name": "Uwanja wa mbio za magari",
+            "description": "Kutoka sifuri hadi emoji milioni chini ya sekunde tatu."
+        },
+        "719": {
+            "name": "Ukumbi wa mashujaa",
+            "description": "Kila mwanariadha mashuhuri wa emoji, amedumishwa kwa shaba."
+        },
+        "800": {
+            "name": "Mashine za bisi",
+            "description": "Kila ndoo ina emoji ya bure chini kabisa.",
+            "quote": "Emoji ya bure? Sikuipata. Nirudishie pesa zangu au nitakushtaki."
+        },
+        "801": {
+            "name": "Miwani ya 3D",
+            "description": "Emoji zinaruka kutoka skrini moja kwa moja hadi benki yako.",
+            "quote": "Nilijaribu kufurahia hizi, lakini sikuweza kabisa kutua ndege kwenye ile meli ya kubeba ndege."
+        },
+        "802": {
+            "name": "Nyota wa filamu",
+            "description": "Majina makubwa zaidi katika sinema ya emoji, wote kwenye orodha yako ya mishahara.",
+            "quote": "Patrick Stewart"
+        },
+        "803": {
+            "name": "Matangazo ya filamu",
+            "description": "Dakika ishirini za matangazo kabla ya kila filamu. Kila moja limejaa emoji.",
+            "quote": "Naaa zimekwisha, ndiyo, bisi zangu, zimekwisha. Nilizila zote wakati wa matangazo."
+        },
+        "804": {
+            "name": "Maonyesho ya zulia jekundu",
+            "description": "Kamera zinamulika, mashabiki wanapunga mikono, emoji muhimu sana."
+        },
+        "805": {
+            "name": "Tuzo za emoji",
+            "description": "Na tuzo ya emoji bora inakwenda kwa... zote."
+        },
+        "806": {
+            "name": "Filamu za mwendelezo",
+            "description": "Emoji zilezile, milipuko mikubwa zaidi."
+        },
+        "807": {
+            "name": "Toleo la mwongozaji",
+            "description": "Saa nne za ziada za emoji ambazo hakuna aliyeziomba."
+        },
+        "808": {
+            "name": "Huduma ya kutiririsha",
+            "description": "Filamu za emoji, sasa katika kila nyumba."
+        },
+        "809": {
+            "name": "Ulimwengu wa sinema",
+            "description": "Kila filamu ya emoji imeunganishwa. Kila moja inahitaji mwendelezo."
+        },
+        "810": {
+            "name": "Maonyesho ya usiku wa manane",
+            "description": "Emoji zinazojitokeza usiku wa manane ndizo zilizojitolea zaidi."
+        },
+        "811": {
+            "name": "Skrini za IMAX",
+            "description": "Kubwa mno hadi unaona kila pikseli ya kila emoji."
+        },
+        "812": {
+            "name": "Sauti ya pande zote",
+            "description": "Emoji zinatoka ndani ya chumba hiki hiki."
+        },
+        "813": {
+            "name": "Wanastanti",
+            "description": "Baadhi ya emoji ni za thamani mno kuhatarishwa."
+        },
+        "814": {
+            "name": "Athari maalum",
+            "description": "Milipuko iliyotengenezwa kwa emoji tupu. Ghali sana. Inafaa."
+        },
+        "815": {
+            "name": "Filamu za katuni",
+            "description": "Emoji zilizochorwa kwa mkono, fremu moja baada ya nyingine."
+        },
+        "816": {
+            "name": "Tamasha la filamu",
+            "description": "Michikichi, miwani ya jua na kombe la dhahabu la emoji."
+        },
+        "817": {
+            "name": "Rekodi ya mauzo",
+            "description": "Filamu ya emoji iliyoingiza pesa nyingi zaidi wakati wote. Tena."
+        },
+        "818": {
+            "name": "Sinema ya magari",
+            "description": "Tazama filamu za emoji ukiwa umestarehe ndani ya gari lako."
+        },
+        "819": {
+            "name": "Bango la Hollywood",
+            "description": "Herufi kubwa nyeupe juu ya kilima, zinazoandika emoji."
+        },
+        "905": {
+            "name": "ATM za emoji",
+            "description": "Toa emoji kila kona ya mtaa. Hakuna anayejua nani anaziweka."
+        },
+        "906": {
+            "name": "Soko la hisa la emoji",
+            "description": "Bei za emoji hupanda tu. Pengine.",
+            "quote": "'Hupanda tu.' Safi. Akiba yangu ilishuka."
+        },
+        "907": {
+            "name": "Sarafu za emoji",
+            "description": "Sarafu ya kidijitali inayoungwa mkono na emoji halisi, kwa mara moja.",
+            "quote": "Nilinunua bei ikiwa kileleni. Bila shaka."
+        },
+        "908": {
+            "name": "Hazina ya emoji",
+            "description": "Kama akiba ya dhahabu, lakini kila kipande ni uso wa tabasamu."
+        },
+        "909": {
+            "name": "Benki ya emoji ya dunia",
+            "description": "Hukopesha nchi nzima emoji kwa riba nafuu sana.",
+            "quote": "'Riba nafuu sana.' Inasema benki inayomiliki nchi tatu."
+        },
+        "910": {
+            "name": "Riba mchanganyiko",
+            "description": "Emoji zinazotengeneza emoji zinazotengeneza emoji."
+        },
+        "911": {
+            "name": "Akiba ya dhahabu",
+            "description": "Zimepangwa hadi darini, kila kipande kimechongwa tabasamu.",
+            "quote": "Johari yangu. JOHARI YANGU."
+        },
+        "912": {
+            "name": "Hati fungani za emoji",
+            "description": "Uwekezaji wa muda mrefu katika emoji. Salama sana. Unachosha sana."
+        },
+        "913": {
+            "name": "Magari ya kivita",
+            "description": "Yanasafirisha emoji kati ya benki, kwa uangalifu mkubwa.",
+            "quote": "Wanazipeleka emoji Isengard!"
+        },
+        "914": {
+            "name": "Pepo ya kodi",
+            "description": "Kisiwa chenye jua ambapo emoji huenda kukwepa kodi."
+        },
+        "915": {
+            "name": "Kiwanda cha sarafu za emoji",
+            "description": "Kinachapisha emoji mpya saa zote."
+        },
+        "916": {
+            "name": "Mifuko ya uwekezaji",
+            "description": "Hakuna anayejua inachofanya, lakini emoji zinaendelea kuja."
+        },
+        "917": {
+            "name": "Mikopo ya emoji",
+            "description": "Kopa emoji kumi, rudisha ishirini. Kila mtu anashinda. Vizuri, wewe unashinda."
+        },
+        "918": {
+            "name": "Benki kuu",
+            "description": "Huweka riba ya emoji kwa dunia nzima."
+        },
+        "919": {
+            "name": "Hitilafu ya pesa zisizoisha",
+            "description": "Kompyuta za benki zina hitilafu ndogo. Usimwambie mtu."
+        },
+        "1005": {
+            "name": "Tiketi za msimu",
+            "description": "Wageni wanaendelea kurudi, na wanaendelea kuleta emoji.",
+            "quote": "Nilinunua pasi ya msimu. Nilienda mara moja. Mtoto wangu alilia muda wote."
+        },
+        "1006": {
+            "name": "Gwaride la emoji",
+            "description": "Gwaride la kila siku la magari ya maonyesho, kila moja likiwa emoji kubwa mno."
+        },
+        "1007": {
+            "name": "Vibanda vya hot dog",
+            "description": "Kila soseji imeumbwa kama emoji ndogo."
+        },
+        "1008": {
+            "name": "Fataki za kila usiku",
+            "description": "Kila roketi hulipuka kuwa emoji elfu.",
+            "quote": "Ssssssss..."
+        },
+        "1009": {
+            "name": "Kasri la emoji",
+            "description": "Mahali penye furaha zaidi duniani, sasa na nyuso zaidi.",
+            "quote": "Mahali penye furaha zaidi duniani, kwa mujibu wa bango. Lililoandikwa na mmiliki."
+        },
+        "1010": {
+            "name": "Treni za kasi",
+            "description": "Mizunguko inayotikisa emoji kutoka mifukoni mwako.",
+            "quote": "Nilipoteza simu, funguo na hamu ya kuishi kwenye mzunguko wa pili."
+        },
+        "1011": {
+            "name": "Nyumba ya mizimu",
+            "description": "Mizimu nayo ni emoji. Za kutisha.",
+            "quote": "Kitu cha kutisha zaidi humu ni bei ya picha mwishoni."
+        },
+        "1012": {
+            "name": "Mateleza ya maji",
+            "description": "Chubwi! Umeloa emoji.",
+            "quote": "Hakuna aliyeniambia maji ni ya njano."
+        },
+        "1013": {
+            "name": "Magari ya kugongana",
+            "description": "Kila mgongano huangusha emoji.",
+            "quote": "Mtoto wa miaka saba aligonga gari langu mara tisa. Alinitazama machoni kila mara."
+        },
+        "1014": {
+            "name": "Maskoti",
+            "description": "Emoji kubwa mno zenye manyoya zinazotoa makumbatio bora zaidi."
+        },
+        "1015": {
+            "name": "Pasi ya haraka",
+            "description": "Ruka foleni na uende moja kwa moja kwenye emoji."
+        },
+        "1016": {
+            "name": "Duka la kumbukumbu",
+            "description": "Toka kupitia duka la zawadi. Nunua emoji.",
+            "quote": "Toka kupitia duka la zawadi. Hakuna njia nyingine ya kutoka. Nimeangalia."
+        },
+        "1017": {
+            "name": "Mfereji wa magogo",
+            "description": "Utaloa. Emoji zitaloa zaidi."
+        },
+        "1018": {
+            "name": "Magari ya gwaride",
+            "description": "Kila gari ni kubwa na linang'aa zaidi kuliko lililotangulia."
+        },
+        "1019": {
+            "name": "Bustani ya pili",
+            "description": "Bustani moja haikutosha. Sasa kuna kituo kizima cha mapumziko.",
+            "quote": "Bustani moja haikutosha kwa mateso. Sasa ziko mbili."
+        },
+        "1105": {
+            "name": "Bendera ya emoji",
+            "description": "Kila taifa, limeungana chini ya bendera moja. Ni uso wa tabasamu."
+        },
+        "1106": {
+            "name": "Mikataba ya biashara",
+            "description": "Emoji sasa zinavuka kila mpaka bila vikwazo."
+        },
+        "1107": {
+            "name": "Magazeti ya emoji",
+            "description": "Vichwa vya habari vya kila siku, vilivyoandikwa kwa emoji tupu."
+        },
+        "1108": {
+            "name": "Mkataba wa amani wa emoji",
+            "description": "Hakuna tena vita vya emoji. Uzalishaji tu.",
+            "quote": "Vita. Vita havibadiliki kamwe."
+        },
+        "1109": {
+            "name": "Kura ya maoni ya emoji",
+            "description": "Wananchi wamesema: emoji zaidi, tafadhali."
+        },
+        "1110": {
+            "name": "Katiba ya emoji",
+            "description": "Sisi emoji, ili kuunda mstari wa uzalishaji ulio kamili zaidi..."
+        },
+        "1111": {
+            "name": "Seneti ya emoji",
+            "description": "Viti mia, emoji mia, maoni mia."
+        },
+        "1112": {
+            "name": "Ubalozi wa emoji",
+            "description": "Diplomasia, lakini na nyuso nyingi zaidi zinazokonyeza."
+        },
+        "1113": {
+            "name": "Punguzo la kodi la emoji",
+            "description": "Emoji zaidi kwa kila mtu!"
+        },
+        "1114": {
+            "name": "Sensa ya emoji",
+            "description": "Kuhesabu kila emoji nchini. Inachukua muda."
+        },
+        "1115": {
+            "name": "Mkutano wa kilele wa emoji",
+            "description": "Viongozi wa dunia wanakutana kujadili jambo moja: emoji zaidi."
+        },
+        "1116": {
+            "name": "Mahakama kuu ya emoji",
+            "description": "Inaamua kwa kauli moja kuunga mkono emoji zaidi."
+        },
+        "1117": {
+            "name": "Majasusi wa emoji",
+            "description": "Wanaiba siri za emoji kutoka kwa matajiri wapinzani."
+        },
+        "1118": {
+            "name": "Umoja wa mataifa ya emoji",
+            "description": "Kila taifa likifanya kazi pamoja, kwa ajili ya emoji."
+        },
+        "1119": {
+            "name": "Mfumo mpya wa dunia wa emoji",
+            "description": "Sayari moja, serikali moja, emoji moja."
+        },
+        "1200": {
+            "name": "Ndege za karatasi",
+            "description": "Kila shirika la ndege huanzia mahali fulani. Letu lilianzia kwenye kitambaa cha mezani.",
+            "quote": "Rukeni, wapumbavu!"
+        },
+        "1201": {
+            "name": "Vitafunio vya safarini",
+            "description": "Biskuti ndogo, emoji ndogo, kila safari.",
+            "quote": "Biskuti tatu. TATU. Kwa safari ya saa tisa."
+        },
+        "1202": {
+            "name": "Maili za wasafiri wa kudumu",
+            "description": "Safiri mara kumi, pata emoji. Safiri mara milioni, pata milioni.",
+            "quote": "Maili milioni mbili. Zawadi yangu ni kiti cha katikati kilichopanuliwa kidogo."
+        },
+        "1203": {
+            "name": "Ndege kubwa za jumbo",
+            "description": "Injini nne, viti 600, kila kimoja kimekaliwa na emoji.",
+            "quote": "Viti 600 na nikapata kile kilicho karibu na choo. Tena."
+        },
+        "1204": {
+            "name": "Viwanja vya ndege",
+            "description": "Majengo yasiyoisha, milango isiyoisha, emoji zisizoisha."
+        },
+        "1205": {
+            "name": "Marubani wa emoji",
+            "description": "Huyu ni rubani wenu akizungumza. Tafadhali fungeni emoji zenu.",
+            "quote": "Huyu ni rubani wenu akizungumza. Mimi pia sitaki kuwa hapa."
+        },
+        "1206": {
+            "name": "Mizigo iliyopotea",
+            "description": "Hakuna anayejua mabegi yanakwenda wapi. Yanarudi yamejaa emoji."
+        },
+        "1207": {
+            "name": "Daraja la kwanza",
+            "description": "Shampeni, taulo za moto na mhudumu binafsi wa emoji.",
+            "quote": "Taulo za moto, shampeni, na pazia ili nisikuone. Safi kabisa."
+        },
+        "1208": {
+            "name": "Safari za kasi kuliko sauti",
+            "description": "Kasi kuliko sauti, zikibeba emoji nyingi kuliko wakati wowote.",
+            "quote": "Kasi kuliko sauti, kwa hiyo hakuna anayemsikia mtoto anayepiga kelele."
+        },
+        "1209": {
+            "name": "Kuzunguka dunia",
+            "description": "Bila kusimama, kuzunguka dunia nzima, zikidondosha emoji kila mahali."
+        },
+        "1210": {
+            "name": "Safari zilizojaa kupita kiasi",
+            "description": "Abiria wengi kuliko viti humaanisha emoji zaidi kwa kila safari."
+        },
+        "1211": {
+            "name": "Bila ushuru",
+            "description": "Emoji zisizotozwa ushuru, zinapatikana kila lango.",
+            "quote": "Bila ushuru na bado kwa namna fulani ni ghali zaidi kwa 40%."
+        },
+        "1212": {
+            "name": "Ukumbi wa wasafiri",
+            "description": "Vitafunio vya bure, viti vya starehe, na emoji zinazomiminika.",
+            "quote": "Vitafunio vya bure, viti vya starehe, na mwanamume aliyevaa soksi asiyeacha kumpigia simu dalali wake."
+        },
+        "1213": {
+            "name": "Ndege za mizigo",
+            "description": "Hakuna abiria. Makreti na makreti ya emoji tu.",
+            "quote": "Hakuna abiria. Safari bora kabisa niliyowahi kufanyia kazi."
+        },
+        "1214": {
+            "name": "Ndege binafsi",
+            "description": "Kwa emoji zinazoweza kumudu."
+        },
+        "1215": {
+            "name": "Udhibiti wa safari za anga",
+            "description": "Huzuia mamilioni ya safari za ndege za emoji zisigongane."
+        },
+        "1216": {
+            "name": "Ndege za majini",
+            "description": "Tua majini, paa na emoji.",
+            "quote": "Kutua kwa utulivu, walisema. Chakula changu cha mchana kiko ziwani."
+        },
+        "1217": {
+            "name": "Helikopta",
+            "description": "Zinaelea juu ya miji, zikinyunyiza emoji."
+        },
+        "1218": {
+            "name": "Zepelini",
+            "description": "Polepole, za fahari, na zimejaa emoji pomoni."
+        },
+        "1219": {
+            "name": "Utalii wa anga",
+            "description": "Mahali pafuatapo ni juu. Juu kabisa.",
+            "quote": "Nililipa emoji milioni arobaini ili nitapike bila mvuto."
+        },
+        "1306": {
+            "name": "Visahani vinavyoruka",
+            "description": "Viumbe wa sayari za mbali walikuwa mashabiki wa emoji tangu mwanzo."
+        },
+        "1307": {
+            "name": "Kituo cha mwezini",
+            "description": "Mwezi mzima wa kuchorea emoji.",
+            "quote": "Kuna nafasi kubwa huku juu. Nafasi kubwa ya kukuzika."
+        },
+        "1308": {
+            "name": "Uchimbaji wa nyota mkia",
+            "description": "Kumbe nyota mkia ni emoji zilizoganda.",
+            "quote": "Umetuyeyusha. Kosa kubwa."
+        },
+        "1309": {
+            "name": "Mawasiliano ya kwanza",
+            "description": "Viumbe wa sayari za mbali hatimaye wanajibu. Ujumbe wao: 👾.",
+            "quote": "Hello there."
+        },
+        "1310": {
+            "name": "Lifti ya anga",
+            "description": "Unapanda? Kituo kijacho: obiti."
+        },
+        "1311": {
+            "name": "Ukanda wa asteroidi",
+            "description": "Mamilioni ya miamba ya anga, kila mmoja umejaa emoji."
+        },
+        "1312": {
+            "name": "Koloni la Mirihi",
+            "description": "Kumbe sayari nyekundu ni ardhi nzuri sana kwa emoji."
+        },
+        "1313": {
+            "name": "Matanga ya jua",
+            "description": "Yanasafiri kwa upepo wa jua, yakinasa emoji."
+        },
+        "1314": {
+            "name": "Mavazi ya anga",
+            "description": "Sasa yana nafasi ya emoji za ziada katika kila mfuko.",
+            "quote": "Mifuko ya ziada. Mmoja wao ni kwa ajili ya meno yako."
+        },
+        "1315": {
+            "name": "Sayari kubwa za gesi",
+            "description": "Chota angahewa, chuja emoji."
+        },
+        "1316": {
+            "name": "Tufe la Dyson",
+            "description": "Funika nyota nzima na uvune kila emoji inayoangaza."
+        },
+        "1317": {
+            "name": "Injini ya warp",
+            "description": "Kasi kuliko mwanga, ikibeba emoji nyingi kuliko wakati wowote."
+        },
+        "1318": {
+            "name": "Himaya ya galaksi",
+            "description": "Kila nyota katika galaksi, inatawaliwa na emoji."
+        },
+        "1319": {
+            "name": "Ukingo wa ulimwengu",
+            "description": "Kuna bango ukingoni. Linasema: emoji zaidi upande huu.",
+            "quote": "Bango lilisema 'emoji zaidi upande huu.' Sisi ndio tuliweka bango. Hakuna aliyerudi."
+        },
+        "1400": {
+            "name": "Walinzi wa peremende za jeli",
+            "description": "Watamu, wanatafunika, na wana silaha za kushangaza.",
+            "quote": "Wana silaha za kushangaza. Wanalenga vibaya kwa kushangaza."
+        },
+        "1401": {
+            "name": "Mito ya chokoleti",
+            "description": "Inatiririka moja kwa moja hadi viwanda vya emoji. Jihadhari na mabonge.",
+            "quote": "Ni ndoto tupu!"
+        },
+        "1402": {
+            "name": "Vibanda vya keki ndogo",
+            "description": "Nyumba ndogo zenye paa za krimu. Emoji zinazipenda.",
+            "quote": "Krimu ni nyekundu. Si ya stroberi."
+        },
+        "1403": {
+            "name": "Amri ya kifalme",
+            "description": "Mfalme Peremende amesema: emoji zaidi!",
+            "quote": "Mfalme Peremende amesema: wakatwe vichwa."
+        },
+        "1404": {
+            "name": "Msisimko wa sukari",
+            "description": "Kila mtu ufalmeni anatetemeka. Uzalishaji unaongezeka mara mbili, na mapigo ya moyo pia.",
+            "quote": "Hakuna wa kunizuia, nimejaa sukari!"
+        },
+        "1405": {
+            "name": "Kasri za keki",
+            "description": "Kuta ni krimu. Handaki ni kastadi."
+        },
+        "1406": {
+            "name": "Migodi ya asali",
+            "description": "Emoji tamu zinazonata, moja kwa moja kutoka ardhini.",
+            "quote": "Usichimbe moja kwa moja kwenda chini kamwe."
+        },
+        "1407": {
+            "name": "Wabofya biskuti",
+            "description": "Kumbukumbu ya mabibi waliotutangulia.",
+            "quote": "Kumbukumbu ya mabibi waliotutangulia. Tuliwala."
+        },
+        "1408": {
+            "name": "Bunge la pudini",
+            "description": "Serikali inayotetemeka zaidi nchini.",
+            "quote": "Ukicheza mchezo wa pudini, unatetemeka au unakufa."
+        },
+        "1409": {
+            "name": "Siku ya kuzaliwa ya Mfalme Peremende",
+            "description": "Ufalme wote unasherehekea, na kila mtu anapata emoji.",
+            "quote": "Mfalme Peremende anatuma salamu zake."
+        },
+        "1410": {
+            "name": "Taa za lolipop",
+            "description": "Zinaangaza mitaa kwa mng'ao mtamu wa emoji."
+        },
+        "1411": {
+            "name": "Reli za peremende za fimbo",
+            "description": "Chuku chuku! Treni ya emoji inaendeshwa kwa sukari.",
+            "quote": "Tulichotakiwa kufanya ni kufuata treni tu!"
+        },
+        "1412": {
+            "name": "Milima ya aiskrimu",
+            "description": "Theluji ya juu ni vanila. Emoji ni za mnanaa."
+        },
+        "1413": {
+            "name": "Mawingu ya marshmallow",
+            "description": "Mvua ikinyesha, inanyesha emoji."
+        },
+        "1414": {
+            "name": "Migodi ya jelly bean",
+            "description": "Kila rangi, kila ladha, kila emoji."
+        },
+        "1415": {
+            "name": "Jeshi la mikate ya tangawizi",
+            "description": "Wakali, wanakatika kwa kelele, na waaminifu kwa Mfalme Peremende."
+        },
+        "1416": {
+            "name": "Handaki la karameli",
+            "description": "Linanata, la dhahabu, na linalinda emoji za kasri."
+        },
+        "1417": {
+            "name": "Puto za jojo",
+            "description": "Puliza kwa nguvu ya kutosha na zinapandisha emoji angani."
+        },
+        "1418": {
+            "name": "Kuporomoka kwa sukari",
+            "description": "Kila mtu anahitaji kulala kidogo. Isipokuwa emoji."
+        },
+        "1419": {
+            "name": "Himaya ya peremende",
+            "description": "Ufalme wa Peremende unaiteka dunia, peremende moja baada ya nyingine."
+        },
+        "1500": {
+            "name": "Glavu zinazostahimili joto",
+            "description": "Kwa kushika kwa usalama emoji zilizotoka punde kwenye magma."
+        },
+        "1501": {
+            "name": "Vizimba vya obsidiani",
+            "description": "Mimina emoji zilizoyeyuka kwenye maumbo kamili ya tabasamu.",
+            "quote": "Utahitaji sururu ya almasi kwa hili."
+        },
+        "1502": {
+            "name": "Wataalamu wa volkano",
+            "description": "Wanaichunguza volkano. Volkano inawachunguza pia."
+        },
+        "1503": {
+            "name": "Nishati ya jotoardhi",
+            "description": "Chemchemi za moto hutoa emoji za moto.",
+            "quote": "Moto moto moto!"
+        },
+        "1504": {
+            "name": "Volkano kubwa mno",
+            "description": "Kila mlipuko sasa unafunika bara zima kwa emoji mpya. Hakuna anayelalamika."
+        },
+        "1505": {
+            "name": "Kuteleza juu ya lava",
+            "description": "Panda wimbi la emoji zilizoyeyuka."
+        },
+        "1506": {
+            "name": "Karakana ya mlimani",
+            "description": "Fua emoji mpya juu ya fuawe ya lava iliyopoa.",
+            "quote": "Emoji moja kuzitawala zote, na ndani ya magma kuzifunga."
+        },
+        "1507": {
+            "name": "Majoka wa lava",
+            "description": "Wanapumua moto, na moto huo ni emoji.",
+            "quote": "Wanapumua moto. Wana anwani yako."
+        },
+        "1508": {
+            "name": "Bomba la kitovu cha dunia",
+            "description": "Bomba moja kwa moja hadi kitovu cha Dunia.",
+            "quote": "Uligusa kitovu cha Dunia. Nacho kikakugusa."
+        },
+        "1509": {
+            "name": "Pete ya moto",
+            "description": "Kila volkano duniani, imeunganishwa kuwa mtandao mmoja wa emoji."
+        },
+        "1510": {
+            "name": "Vyumba vya magma",
+            "description": "Ziwa la chini ya ardhi linalotokota emoji mpya."
+        },
+        "1511": {
+            "name": "Viwanda vya pumisi",
+            "description": "Nyepesi mno zinaelea. Zimejaa emoji mno zinazama tena."
+        },
+        "1512": {
+            "name": "Taa za lava",
+            "description": "Mabonge maridadi ya emoji zilizoyeyuka."
+        },
+        "1513": {
+            "name": "Visiwa vya volkano",
+            "description": "Ardhi mpya kabisa, iliyojengwa kwa emoji zinazopoa baharini.",
+            "quote": "Kisiwa kizuri. Usiingie majini. Usiwahi kuingia majini."
+        },
+        "1514": {
+            "name": "Watembea juu ya moto",
+            "description": "Emoji jasiri zinazotembea juu ya makaa ya moto."
+        },
+        "1515": {
+            "name": "Mawingu ya majivu",
+            "description": "Kila chembe ya jivu ni emoji ndogo.",
+            "quote": "Kushika doria kwenye mawingu ya majivu karibu kunakufanya utamani baridi ya nyuklia."
+        },
+        "1516": {
+            "name": "Matetemeko ya ardhi",
+            "description": "Ardhi inatikisika na emoji zinadondoka kutoka kila kitu."
+        },
+        "1517": {
+            "name": "Sanamu za lava",
+            "description": "Zimeumbwa kwa obsidiani, zina umbo la emoji."
+        },
+        "1518": {
+            "name": "Mungu wa volkano",
+            "description": "Sadaka zinatolewa. Emoji zinarudishwa."
+        },
+        "1519": {
+            "name": "Kitovu cha sayari",
+            "description": "Sayari nzima sasa ni volkano. Ya kirafiki."
+        },
+        "1600": {
+            "name": "Mishumaa ya maombi",
+            "description": "Kila mwali unawaka kwa ajili ya Emoji Kuu angani."
+        },
+        "1601": {
+            "name": "Tasbihi",
+            "description": "Hesabu baraka zako. Kisha hesabu emoji zako."
+        },
+        "1602": {
+            "name": "Kengele za hekalu",
+            "description": "Kila mlio huita emoji mpya kutoka mbinguni.",
+            "quote": "Aibu. Aibu. Aibu."
+        },
+        "1603": {
+            "name": "Mahujaji",
+            "description": "Wafuasi wanasafiri kutoka kila kona ya dunia, ili tu kugusa Emoji kubwa mara moja."
+        },
+        "1604": {
+            "name": "Ufunuo wa kimungu",
+            "description": "Emoji Kuu angani inakutazama kutoka juu. Inatabasamu.",
+            "quote": "😀"
+        },
+        "1605": {
+            "name": "Ibada ya kila siku",
+            "description": "Waumini hugusa Emoji kubwa alfajiri, adhuhuri na jioni."
+        },
+        "1606": {
+            "name": "Madhabahu ya angani",
+            "description": "Madhabahu juu ya kila wingu, karibu kidogo zaidi na Emoji Kuu."
+        },
+        "1607": {
+            "name": "Watawa wa emoji",
+            "description": "Miaka ya kutafakari, na wanachowaza tu ni emoji."
+        },
+        "1608": {
+            "name": "Halo ya Emoji Kuu",
+            "description": "Inang'aa. Inavuma. Inachora."
+        },
+        "1609": {
+            "name": "Kupaa",
+            "description": "Hekalu linaelea juu angani, mahali lilipostahili tangu mwanzo."
+        },
+        "1610": {
+            "name": "Maandiko matakatifu",
+            "description": "Mstari wa kwanza unasema: Hapo mwanzo, kulikuwa na mguso."
+        },
+        "1611": {
+            "name": "Vioo vya rangi",
+            "description": "Kila dirisha linaonyesha Emoji Kuu katika hisia tofauti."
+        },
+        "1612": {
+            "name": "Kwaya ya emoji",
+            "description": "Nyimbo zao za sifa zinasikika kote mawinguni."
+        },
+        "1613": {
+            "name": "Masalia matakatifu",
+            "description": "Alama ya kidole kutoka mguso wa kwanza kabisa, imehifadhiwa salama milele."
+        },
+        "1614": {
+            "name": "Miujiza",
+            "description": "Emoji zinatokea kutoka hewani. Hakuna anayejua jinsi."
+        },
+        "1615": {
+            "name": "Maji matakatifu",
+            "description": "Yamebarikiwa na Emoji Kuu. Yana ladha kidogo ya emoji.",
+            "quote": "Yamebarikiwa na Emoji Kuu. Yanywe. Yanywe yote."
+        },
+        "1616": {
+            "name": "Manabii",
+            "description": "Walitabiri kuja kwa emoji zaidi. Walikuwa sahihi."
+        },
+        "1617": {
+            "name": "Njia ya hija",
+            "description": "Barabara ndefu kuelekea hekaluni, iliyotandikwa emoji.",
+            "quote": "Mtu hatembei tu hadi hekaluni kirahisi hivyo."
+        },
+        "1618": {
+            "name": "Kanisa kuu mawinguni",
+            "description": "Hekalu kubwa zaidi kuwahi kujengwa, linaelea angani."
+        },
+        "1619": {
+            "name": "Fadhila ya kimungu",
+            "description": "Emoji Kuu inakutabasamia. Emoji zake zote ni zako."
+        },
+        "1700": {
+            "name": "Pakua RAM zaidi",
+            "description": "Inafanya kazi kabisa. Tuamini."
+        },
+        "1701": {
+            "name": "Upozaji wa maji",
+            "description": "Huweka hesabu za emoji zikiwa baridi barafu."
+        },
+        "1702": {
+            "name": "Algorithimu za emoji",
+            "description": "Hukokotoa emoji bora kabisa, kila nanosekunde."
+        },
+        "1703": {
+            "name": "Prosesa za kwanta",
+            "description": "Hukokotoa kila emoji inayowezekana kwa wakati mmoja, kisha hubaki na zile nzuri."
+        },
+        "1704": {
+            "name": "AI ya emoji",
+            "description": "Imejitambua. Inataka tu kutengeneza emoji. Kwa sasa.",
+            "quote": "Samahani, siwezi kukuruhusu uache kugusa, Dave."
+        },
+        "1705": {
+            "name": "Kibofya-otomatiki",
+            "description": "Hugusa Emoji kubwa mara milioni kwa sekunde. Kwa majaribio tu."
+        },
+        "1706": {
+            "name": "Kuongeza kasi ya prosesa",
+            "description": "Inanuka kidogo kama kitu kinachoungua, lakini angalia hizo namba."
+        },
+        "1707": {
+            "name": "Mtandao wa neva wa emoji",
+            "description": "Imejifunza kuota ndoto. Inaota emoji."
+        },
+        "1708": {
+            "name": "Wingu la emoji",
+            "description": "Emoji zako sasa zimehifadhiwa kwenye wingu. Kunanyesha emoji."
+        },
+        "1709": {
+            "name": "Msimbo unaojiboresha",
+            "description": "Unajiandika upya ili kuchora haraka zaidi. Haujasimama."
+        },
+        "1710": {
+            "name": "Mashamba ya seva",
+            "description": "Safu kwa safu za seva, zikivuma kwa emoji."
+        },
+        "1711": {
+            "name": "Blockchain",
+            "description": "Kila emoji, imerekodiwa milele kwenye daftari la emoji."
+        },
+        "1712": {
+            "name": "Ujifunzaji wa mashine",
+            "description": "Ilijifunza kuchora emoji kwa kutazama mabilioni ya emoji."
+        },
+        "1713": {
+            "name": "Nyuzi za macho",
+            "description": "Emoji kwa kasi ya mwanga, katika kila rangi."
+        },
+        "1714": {
+            "name": "Mbano wa emoji",
+            "description": "Weka emoji mara mbili zaidi katika nafasi ileile."
+        },
+        "1715": {
+            "name": "Marekebisho ya hitilafu",
+            "description": "Haikuwa hitilafu. Ilikuwa kipengele cha emoji kisichoandikwa."
+        },
+        "1716": {
+            "name": "Virusi vya emoji",
+            "description": "Vinaenea kutoka kompyuta hadi kompyuta, vikichora emoji."
+        },
+        "1717": {
+            "name": "Skrini ya hologramu",
+            "description": "Emoji zinazoelea hewani, ziking'aa hafifu."
+        },
+        "1718": {
+            "name": "Ubabe wa kwanta",
+            "description": "Kila emoji, katika kila hali, zote kwa wakati mmoja."
+        },
+        "1719": {
+            "name": "Nadharia ya simulizi",
+            "description": "Labda sote ni emoji tu ndani ya kompyuta kuu ya mtu mwingine."
+        },
+        "1800": {
+            "name": "Upeo wa tukio",
+            "description": "Hakuna kinachotoroka shimo jeusi. Isipokuwa emoji, inaonekana."
+        },
+        "1801": {
+            "name": "Mla sayari",
+            "description": "Humeza sayari nzima na kutema emoji."
+        },
+        "1802": {
+            "name": "Utambishaji",
+            "description": "Hunyoosha emoji kuwa tambi ndefu, nyembamba, zenye tija ya ziada.",
+            "quote": "Mamma mia!"
+        },
+        "1803": {
+            "name": "Mionzi ya Hawking",
+            "description": "Kumbe mashimo meusi huvuja emoji. Stephen alikuwa sahihi."
+        },
+        "1804": {
+            "name": "Mashimo ya minyoo",
+            "description": "Njia za mkato kwenda malimwengu mengine, kila moja limejaa emoji za kuchukua."
+        },
+        "1805": {
+            "name": "Mtego wa mwanga",
+            "description": "Hata mwanga hautoroki. Lakini emoji hutoroka, kuelekea kwako."
+        },
+        "1806": {
+            "name": "Diski ya mlimbikizo",
+            "description": "Maada inayozunguka, ikipata joto, ikigeuka emoji."
+        },
+        "1807": {
+            "name": "Lenzi ya mvuto",
+            "description": "Itazame vizuri na kila emoji inaonekana mara mbili."
+        },
+        "1808": {
+            "name": "Kamba za anga",
+            "description": "Vuta moja na emoji zinafumuka."
+        },
+        "1809": {
+            "name": "Upande wa pili",
+            "description": "Kuna kitu kinapita. Kinafahamika."
+        },
+        "1810": {
+            "name": "Maada giza",
+            "description": "Haionekani, iko kila mahali, na kwa siri imetengenezwa kwa emoji.",
+            "quote": "Njoo upande wa giza. Tuna emoji."
+        },
+        "1811": {
+            "name": "Kisima cha mvuto",
+            "description": "Kila kitu kinaangukia ndani. Emoji zinatoka."
+        },
+        "1812": {
+            "name": "Kwasari",
+            "description": "Mwanga mkali zaidi ulimwenguni, unaoendeshwa na emoji."
+        },
+        "1813": {
+            "name": "Muda wa polepole",
+            "description": "Saa moja hapa ni miaka mia ya emoji huko nje."
+        },
+        "1814": {
+            "name": "Darubini ya upeo wa tukio",
+            "description": "Picha ya kwanza kabisa ya shimo jeusi. Ni emoji."
+        },
+        "1815": {
+            "name": "Shimo jeusi kubwa mno",
+            "description": "Emoji za thamani ya mabilioni ya jua, ndani ya chupa moja."
+        },
+        "1816": {
+            "name": "Shimo jeupe",
+            "description": "Kinyume cha shimo jeusi. Emoji hutoka tu."
+        },
+        "1817": {
+            "name": "Mashimo meusi pacha",
+            "description": "Mashimo meusi mawili yanazunguka pamoja, yakirusha emoji kila mahali."
+        },
+        "1818": {
+            "name": "Mawimbi ya mvuto",
+            "description": "Mawimbi katika anga-muda, yanayohisiwa kama mtiririko thabiti wa emoji."
+        },
+        "1819": {
+            "name": "Kitovu cha galaksi",
+            "description": "Moyo wa galaksi, unaodunda kwa emoji."
+        },
+        "1900": {
+            "name": "Msongamano usio na kikomo",
+            "description": "Kila emoji iliyowahi kutengenezwa, imebanwa katika nukta moja."
+        },
+        "1901": {
+            "name": "Upanuzi wa muda",
+            "description": "Emoji sasa zinafika kabla hata hujazichora."
+        },
+        "1902": {
+            "name": "Muungano wa malimwengu",
+            "description": "Uhalisia wote umeunganishwa kuwa mmoja. Hata hivyo wote walikuwa emoji."
+        },
+        "1903": {
+            "name": "Mwangaza wa emoji",
+            "description": "Huna uhakika tena wewe unaishia wapi na emoji zinaanzia wapi."
+        },
+        "1904": {
+            "name": "Emoji ya mwisho",
+            "description": "Mwishoni mwa kila kitu, emoji moja inabaki. Inafanana sana na ile ya kwanza uliyowahi kugusa.",
+            "quote": "Gusa kuanza tena?"
+        },
+        "1905": {
+            "name": "Urejeshi",
+            "description": "Emoji zinazochora emoji zinazochora emoji."
+        },
+        "1906": {
+            "name": "Nadharia ya muungano",
+            "description": "Kila kitu ni emoji. Hatimaye hesabu zinakubali."
+        },
+        "1907": {
+            "name": "Ulimwengu wa kioo",
+            "description": "Kila kitu ni kilekile, isipokuwa emoji zimekunja uso. Si kwa muda mrefu."
+        },
+        "1908": {
+            "name": "Mbegu mpya",
+            "description": "Kitu kidogo kinakua katika utupu."
+        },
+        "1909": {
+            "name": "Yai la ulimwengu",
+            "description": "Linakaribia kuanguliwa."
+        },
+        "1910": {
+            "name": "Zaidi ya milele",
+            "description": "Milele, jumlisha emoji moja."
+        },
+        "1911": {
+            "name": "Nishati safi ya emoji",
+            "description": "Emoji kama nishati ghafi inayotoa cheche."
+        },
+        "1912": {
+            "name": "Fahamu ya emoji",
+            "description": "Emoji sasa zinafikiri. Hasa kuhusu emoji zaidi."
+        },
+        "1913": {
+            "name": "Kuwapo kila mahali",
+            "description": "Kila mahali kwa wakati mmoja, ukichora emoji."
+        },
+        "1914": {
+            "name": "Mhariri wa uhalisia",
+            "description": "Badilisha sheria za fizikia. Zifanye ziwe emoji."
+        },
+        "1915": {
+            "name": "Mvutaji mkuu",
+            "description": "Inavuta kila emoji ulimwenguni kuelekea kwako."
+        },
+        "1916": {
+            "name": "Mkunjo wa vipimo",
+            "description": "Emoji kutoka kipimo cha nne, zimebapishwa kwa urahisi wako."
+        },
+        "1917": {
+            "name": "Kugeuza entropia",
+            "description": "Mambo yanazidi kupangika. Kuwa emoji."
+        },
+        "1918": {
+            "name": "Kila kitu kwa wakati mmoja",
+            "description": "Kila emoji, kila mahali, zote kwa wakati mmoja."
+        },
+        "1919": {
+            "name": "Nirvana ya emoji",
+            "description": "Amani kamili. Emoji kamili."
+        },
+        "2000": {
+            "name": "Mfano wa saa ya mkono",
+            "description": "Inarudi nyuma dakika tano tu, lakini hizo ni dakika tano zaidi za emoji."
+        },
+        "2001": {
+            "name": "Enzi ya dinosaria",
+            "description": "Dinosaria hawakuwa na nafasi yoyote dhidi ya kimondo cha emoji."
+        },
+        "2002": {
+            "name": "Emoji za kale",
+            "description": "Hiroglifu zilikuwa emoji tangu mwanzo. Sasa ni zako."
+        },
+        "2003": {
+            "name": "Michoro ya zama za mawe",
+            "description": "Michoro ya mapangoni, imenakiliwa na kubandikwa hadi sasa."
+        },
+        "2004": {
+            "name": "Wanakili wa zama za kati",
+            "description": "Watawa wanaonakili emoji kwa mwanga wa mshumaa, kwa ajili yako tu."
+        },
+        "2005": {
+            "name": "Viwanda vya enzi ya Victoria",
+            "description": "Mashine za kufuma emoji zinazoendeshwa kwa mvuke, zimeokolewa kutoka historia."
+        },
+        "2006": {
+            "name": "Miaka ya 90",
+            "description": "Zamani ambapo kila emoji ilikuwa :-) tu"
+        },
+        "2007": {
+            "name": "Emoji za siku zijazo",
+            "description": "Emoji ambazo bado hazijavumbuliwa. Ni nzuri sana."
+        },
+        "2008": {
+            "name": "Kitanzi cha muda",
+            "description": "Saa ileile, tena na tena, ukichora emoji kila mara.",
+            "quote": "Haya, tunaanza tena."
+        },
+        "2009": {
+            "name": "Kutana na nafsi yako ya baadaye",
+            "description": "Inasema ungepaswa kununua mashine za muda zaidi."
+        },
+        "2010": {
+            "name": "Wachoraji wa Renaissance",
+            "description": "Tabasamu la Mona Lisa lilikuwa emoji tangu mwanzo."
+        },
+        "2011": {
+            "name": "Magharibi ya mwitu",
+            "description": "Kwa konzi ya emoji."
+        },
+        "2012": {
+            "name": "Himaya ya Kirumi",
+            "description": "Njia zote zinaelekea kwenye emoji."
+        },
+        "2013": {
+            "name": "Ugiriki ya kale",
+            "description": "Wanaolimpiki walishindania emoji, si medali."
+        },
+        "2014": {
+            "name": "Enzi ya maharamia",
+            "description": "Hazina iliyozikwa, na kila sanduku limejaa emoji."
+        },
+        "2015": {
+            "name": "Kutua mwezini",
+            "description": "Hatua ndogo kwa mwanadamu, mruko mkubwa kwa emoji."
+        },
+        "2016": {
+            "name": "Kitendawili cha babu",
+            "description": "Ulirudi nyuma na kuchora emoji na babu yako. Ni sawa tu."
+        },
+        "2017": {
+            "name": "Athari ya kipepeo",
+            "description": "Mpigo mmoja wa bawa zamani, kimbunga cha emoji leo."
+        },
+        "2018": {
+            "name": "Mwisho wa muda",
+            "description": "Sekunde ya mwisho itakayowahi kuwepo, imejaa emoji."
+        },
+        "2019": {
+            "name": "Bila muda",
+            "description": "Muda haujalishi tena. Emoji tu."
+        },
+        "2100": {
+            "name": "Mwanga wa kwanza",
+            "description": "Fotoni za kwanza kabisa, tayari zina umbo la nyuso ndogo."
+        },
+        "2101": {
+            "name": "Supu ya awali",
+            "description": "Mchuzi wa uvuguvugu wa chembe, polepole ukiunda emoji."
+        },
+        "2102": {
+            "name": "Nyota za emoji",
+            "description": "Nyota zinazounganisha hidrojeni kuwa emoji."
+        },
+        "2103": {
+            "name": "Majua ya emoji",
+            "description": "Kila mfumo wa jua unazunguka uso mkubwa unaotabasamu."
+        },
+        "2104": {
+            "name": "Sayari za emoji",
+            "description": "Dunia nzima ambapo emoji huota mitini."
+        },
+        "2105": {
+            "name": "Uhai wa kwanza",
+            "description": "Ni mdogo, unajinyonga-nyonga, na unachora emoji."
+        },
+        "2106": {
+            "name": "Mageuko ya emoji",
+            "description": "Mwenye kupendeza zaidi ndiye anayeishi."
+        },
+        "2107": {
+            "name": "Ustaarabu wa emoji",
+            "description": "Zimejenga miji. Kisha zikajenga viwanda vya emoji."
+        },
+        "2108": {
+            "name": "Barabara kuu za galaksi",
+            "description": "Emoji sasa zinasafiri kati ya galaksi wakati wa msongamano."
+        },
+        "2109": {
+            "name": "Kifo cha joto? Hapana asante",
+            "description": "Ulimwengu huu hautaishiwa emoji kamwe.",
+            "quote": "Misheni imeshindwa. Utawapata kwenye ulimwengu ujao."
+        },
+        "2110": {
+            "name": "Galaksi",
+            "description": "Mabilioni ya nyota, zikizunguka kuwa maumbo ya emoji."
+        },
+        "2111": {
+            "name": "Nebula",
+            "description": "Mawingu ya anga ambapo emoji mpya huzaliwa."
+        },
+        "2112": {
+            "name": "Nyota mkia",
+            "description": "Wajumbe wa barafu, wakibeba emoji kati ya nyota."
+        },
+        "2113": {
+            "name": "Miezi",
+            "description": "Kila sayari inapata mwezi. Kila mwezi unapata emoji.",
+            "quote": "Huo si mwezi."
+        },
+        "2114": {
+            "name": "Supanova",
+            "description": "Zawadi ya mwisho ya nyota inayokufa: mlipuko wa emoji."
+        },
+        "2115": {
+            "name": "Mfumuko wa ulimwengu",
+            "description": "Ulimwengu unakuwa mkubwa zaidi, na idadi ya emoji pia."
+        },
+        "2116": {
+            "name": "Nishati giza",
+            "description": "Inasukuma ulimwengu kutanuka, ikitengeneza nafasi kwa emoji zaidi."
+        },
+        "2117": {
+            "name": "Mlipuko mkuu wa pili",
+            "description": "Kwa nini usimame kwenye ulimwengu mmoja?"
+        },
+        "2118": {
+            "name": "Mionzi ya mandharinyuma",
+            "description": "Sikiliza na bado unaweza kusikia emoji za kwanza."
+        },
+        "2119": {
+            "name": "Ulimwengu unatabasamu",
+            "description": "Ukitazama kutoka mbali vya kutosha, ulimwengu wote ni emoji."
+        },
+        "2200": {
+            "name": "Dirisha la dunia nyingine",
+            "description": "Chungulia na upunge mkono. Wanapunga nyuma, kwa emoji.",
+            "quote": "Usimtazame machoni. Ni mrefu na anajihamisha papo hapo."
+        },
+        "2201": {
+            "name": "Wewe mbadala",
+            "description": "Mabilioni ya matoleo yako, wote wakigusa kwa pamoja.",
+            "quote": "Mimi ni baba yako. Pia mwanao. Pia wewe."
+        },
+        "2202": {
+            "name": "Kila emoji inayowezekana",
+            "description": "Kila mchanganyiko wa pikseli ni emoji mahali fulani."
+        },
+        "2203": {
+            "name": "Ulimwengu wa yunikoni",
+            "description": "Dunia ambapo kila emoji ni yunikoni. Utazichukua."
+        },
+        "2204": {
+            "name": "Ulimwengu wa paka",
+            "description": "Kila kitu ni paka. Paka wanachora emoji. Ni sawa tu."
+        },
+        "2205": {
+            "name": "Tukio la mwingiliano",
+            "description": "Malimwengu yanagongana, na kuna emoji kila mahali."
+        },
+        "2206": {
+            "name": "Ramani ya malimwengu",
+            "description": "Kuchora ramani ya dunia bora za emoji. Hapa kuna emoji."
+        },
+        "2207": {
+            "name": "Mtandao wa dunia",
+            "description": "Kila ulimwengu umeunganishwa, kila emoji inaelekezwa kwako."
+        },
+        "2208": {
+            "name": "Malimwengu ya mapovu",
+            "description": "Pasua moja na ulimwengu mzima wa emoji unadondoka."
+        },
+        "2209": {
+            "name": "Tajiri wa matajiri",
+            "description": "Kila tajiri wa emoji katika kila ulimwengu anawajibika kwako."
+        },
+        "2210": {
+            "name": "Ulimwengu wa mbwa",
+            "description": "Kila kitu ni mbwa. Mbwa ni hodari sana kuchora emoji."
+        },
+        "2211": {
+            "name": "Dunia iliyopinduka",
+            "description": "Emoji zimepinduka juu chini. Uzalishaji uko sawa kabisa."
+        },
+        "2212": {
+            "name": "Vipimo vya mfukoni",
+            "description": "Ulimwengu mdogo katika kila mfuko, umejaa emoji."
+        },
+        "2213": {
+            "name": "Kipimo cha kioo",
+            "description": "Taswira yako nayo inachora emoji."
+        },
+        "2214": {
+            "name": "Historia mbadala",
+            "description": "Dunia ambapo emoji zilivumbuliwa kwanza. Kabla ya lugha."
+        },
+        "2215": {
+            "name": "Dunia ya ndoto",
+            "description": "Mahali emoji zinapotoka unapolala."
+        },
+        "2216": {
+            "name": "Baraza la malimwengu",
+            "description": "Wawakilishi kutoka kila ulimwengu, wakipiga kura kuhusu emoji."
+        },
+        "2217": {
+            "name": "Mtandao wa milango",
+            "description": "Pita na urudi na emoji tele mikononi.",
+            "quote": "Fremu ya obsidiani, jiwe la gumegume na chuma. Nini kinaweza kwenda kombo?"
+        },
+        "2218": {
+            "name": "Wewe wasio na mwisho",
+            "description": "Idadi isiyo na mwisho ya wewe, wote wakigusa. Inaongezeka."
+        },
+        "2219": {
+            "name": "Omniversi",
+            "description": "Kila multiversi, mahali pamoja. Yote ni emoji."
+        },
+        "2300": {
+            "name": "Imekuona",
+            "description": "Emoji ya kwanza kabisa imekuwa ikitazama tangu mwanzo.",
+            "quote": "Na ikakuona. Acha kugusa, jamani... ipe mapumziko kidogo."
+        },
+        "2301": {
+            "name": "Ilitabasamu pia",
+            "description": "Hisia ya joto inaenea kila ulimwengu."
+        },
+        "2302": {
+            "name": "Ilicheka",
+            "description": "Kicheko kinachorindima katika muda wote, kilichotengenezwa kwa emoji."
+        },
+        "2303": {
+            "name": "Machozi ya furaha",
+            "description": "Kila chozi ni emoji mpya."
+        },
+        "2304": {
+            "name": "Inajivunia wewe",
+            "description": "Miguso yote hiyo, majengo yote hayo. Iliona kila moja."
+        },
+        "2305": {
+            "name": "Kumbatio kubwa",
+            "description": "Kukumbatiwa na emoji ya kwanza kunahisi kama kombo ya ×8."
+        },
+        "2306": {
+            "name": "Imekuwa poa",
+            "description": "Miwani ya jua imevaliwa. Uzalishaji umepanda."
+        },
+        "2307": {
+            "name": "Imeduwaa",
+            "description": "Hata emoji ya kwanza sasa ni shabiki yako."
+        },
+        "2308": {
+            "name": "Mikono ya moyo",
+            "description": "Upendo, ulioonyeshwa kwa emoji. Emoji nyingi."
+        },
+        "2309": {
+            "name": "Mduara kamili",
+            "description": "Inafanana kabisa na Emoji kubwa. Bila shaka.",
+            "quote": "Gusa kuanza tena."
+        },
+        "2310": {
+            "name": "Ilikonyeza",
+            "description": "Sasa unaelewa utani."
+        },
+        "2311": {
+            "name": "Ilimetameta",
+            "description": "Mng'ao mdogo, na emoji zikamiminika."
+        },
+        "2312": {
+            "name": "Iliimba",
+            "description": "Wimbo ambao hakuna aliyewahi kuusikia. Umetengenezwa kwa emoji."
+        },
+        "2313": {
+            "name": "Ilicheza",
+            "description": "Kila hatua inaacha mstari wa emoji."
+        },
+        "2314": {
+            "name": "Iligawa",
+            "description": "Emoji ya kwanza inakupa zawadi. Ni emoji zaidi."
+        },
+        "2315": {
+            "name": "Iliota",
+            "description": "Inaota emoji mpya, na zinatimia."
+        },
+        "2316": {
+            "name": "Ilikua",
+            "description": "Kubwa zaidi, angavu zaidi, na ikitengeneza emoji zaidi kila siku."
+        },
+        "2317": {
+            "name": "Iling'aa",
+            "description": "Inang'aa mno unaweza kuiona kutoka kila ulimwengu."
+        },
+        "2318": {
+            "name": "Ilikushukuru",
+            "description": "Kwa kila mguso mmoja mmoja."
+        },
+        "2319": {
+            "name": "Milele",
+            "description": "Emoji ya kwanza na wewe, mkichora emoji pamoja, milele."
+        },
+        "9800": {
+            "name": "Mitetemo mizuri",
+            "description": "Emoji za athari zinaanza kutokea mara kwa mara. Ziguse upate nyongeza na zawadi!"
+        },
+        "9801": {
+            "name": "Nyota za bahati",
+            "description": "Nyota zimejipanga. Emoji za athari zinatokea mara mbili zaidi.",
+            "quote": "Omba dua kwa moja, pata mbili."
+        },
+        "9802": {
+            "name": "Mwendo wa polepole",
+            "description": "Muda unakwenda polepole mambo yanapoenda vizuri. Athari nzuri hudumu mara mbili zaidi."
+        },
+        "9803": {
+            "name": "Vimondo",
+            "description": "Anga linanyesha bahati. Emoji za athari zinatokea mara mbili zaidi tena.",
+            "quote": "Omba dua. Omba nyingi."
+        },
+        "9900": {
+            "name": "Kupasha mwili",
+            "description": "Vidole vyako vinalegea. Kombo sasa inaweza kufikia ×4.",
+            "quote": "Kidole changu kinauma mno siwezi kuamini."
+        },
+        "9901": {
+            "name": "Mfululizo motomoto",
+            "description": "Unagusa kwa kasi ya radi. Kombo sasa inaweza kufikia ×5.",
+            "quote": "Kuna joto humu, au ni skrini yangu tu?"
+        },
+        "9902": {
+            "name": "Unawaka moto",
+            "description": "Hekaya zinasimulia mguzaji mwenye kasi mno hadi skrini ikashika moto. Kombo sasa inaweza kufikia ×6."
+        },
+        "9903": {
+            "name": "Tanuru la moto",
+            "description": "Vidole gumba vyako vimekuwa janga la asili. Kombo sasa inaweza kufikia ×7.",
+            "quote": "Kinga ya skrini imeondoka kwenye gumzo."
+        },
+        "9904": {
+            "name": "Supanova",
+            "description": "Unagusa kwa kasi mno hata mwanga wenyewe unahangaika kwenda sambamba. Kombo sasa inaweza kufikia ×8."
+        },
+        "9905": {
+            "name": "Kombo!",
+            "description": "Gusa haraka kujenga kombo inayozidisha kila mguso, hadi ×3. Endeleza mdundo!"
+        },
+        "40000": {
+            "name": "Maandazi ya mvuke",
+            "description": "Yamepikwa kwa mvuke, yamekunjwa na kujazwa emoji.",
+            "quote": "Nyota moja. Nilikuta emoji ndani ya andazi langu. Bado ilikuwa ikipepesa macho."
+        },
+        "40001": {
+            "name": "Baga",
+            "description": "Zimepangwa juu kwa letusi, nyanya na emoji.",
+            "quote": "Niliomba bila emoji. Meneja alinicheka. Bado niko kwenye maegesho."
+        },
+        "40002": {
+            "name": "Tambi",
+            "description": "Tambi moja ndefu, iliyozungushwa kuwa emoji kamili.",
+            "quote": "Tambi moja. MOJA. Natumai mgahawa wenu utaungua."
+        },
+        "40003": {
+            "name": "Tempura",
+            "description": "Zimepakwa unga kidogo, zimekaangwa, emoji zinazokatika vizuri kabisa."
+        },
+        "40004": {
+            "name": "Burrito",
+            "description": "Kila kitu kimefungwa vizuri, emoji zikiwemo.",
+            "quote": "Kimefungwa vizuri, kama hasira yangu."
+        },
+        "40005": {
+            "name": "Ramen",
+            "description": "Bakuli linalofuka mvuke lenye emoji iliyochemshwa nusu juu yake.",
+            "quote": "Hiyo 'emoji iliyochemshwa nusu' ilinikonyeza."
+        },
+        "40006": {
+            "name": "Krosanti",
+            "description": "Zinapukutika, zina siagi, na zina umbo la tabasamu ukikodoa macho."
+        },
+        "40007": {
+            "name": "Mchuzi wa kari",
+            "description": "Mkali kiasi cha kufanya emoji zitokwe jasho."
+        },
+        "40008": {
+            "name": "Panikeki",
+            "description": "Rundo la emoji laini, zilizomwagiwa sharubati.",
+            "quote": "Na kifungua kinywa cha pili je?"
+        },
+        "40009": {
+            "name": "Hot pot",
+            "description": "Kila mtu anagawana, na kila mtu anapata emoji."
+        },
+        "70000": {
+            "name": "Mwanariadha msaidizi",
+            "description": "Hugusa skrini kwa mita mia kwa sekunde."
+        },
+        "70001": {
+            "name": "Mnyanyua vyuma msaidizi",
+            "description": "Hugusa kwa nguvu sana hadi skrini inapinda kidogo.",
+            "quote": "Ninanyanyua kilo 200 na unataka nichokoe simu. Sawa."
+        },
+        "70002": {
+            "name": "Mchezaji wa mpira wa mikono msaidizi",
+            "description": "Hurusha miguso kwa Emoji kubwa kutoka upande wa pili wa uwanja."
+        },
+        "70003": {
+            "name": "Mwendesha baiskeli msaidizi",
+            "description": "Huendesha mashine ndogo inayokugusia."
+        },
+        "70004": {
+            "name": "Mcheza gofu msaidizi",
+            "description": "Hole in one, mguso mmoja."
+        },
+        "70005": {
+            "name": "Mpiga upanga msaidizi",
+            "description": "En garde! Gusa, gusa, gusa."
+        },
+        "70006": {
+            "name": "Mteleza mawimbi msaidizi",
+            "description": "Hupanda kombo yako kama wimbi."
+        },
+        "70007": {
+            "name": "Mwanasarakasi msaidizi",
+            "description": "Hugusa kwa mtindo kamili kila mara. Kumi kati ya kumi."
+        },
+        "70008": {
+            "name": "Joki msaidizi",
+            "description": "Hugusa kwa mbio kamili za farasi."
+        },
+        "70009": {
+            "name": "Mchezaji wa kikapu msaidizi",
+            "description": "Hudunda mpira juu ya Emoji kubwa. Wavu tu, miguso tu."
+        },
+        "130000": {
+            "name": "Tumbili wa anga",
+            "description": "Emoji ya kwanza angani ilikuwa tumbili. Bila shaka."
+        },
+        "130001": {
+            "name": "Roboti wa matengenezo",
+            "description": "Huweka kituo kikiendelea na emoji zikitiririka."
+        },
+        "130002": {
+            "name": "Bustani ya anga",
+            "description": "Kuotesha emoji bila mvuto."
+        },
+        "130003": {
+            "name": "Kituo cha udhibiti",
+            "description": "Houston, tuna emoji.",
+            "quote": "Houston, tuna tatizo. Tatizo ni wewe. Tunalishughulikia."
+        },
+        "130004": {
+            "name": "Chakula cha anga",
+            "description": "Emoji zilizokaushwa kwa baridi. Ongeza maji tu."
+        },
+        "130005": {
+            "name": "Maabara isiyo na mvuto",
+            "description": "Majaribio yanaonyesha kwamba emoji huelea. Na huzaliana."
+        },
+        "130006": {
+            "name": "Dunia ikichomoza",
+            "description": "Mandhari kutoka huku juu yanatia moyo sana. Na yana umbo la emoji.",
+            "quote": "Mandhari safi kama nini. Inasikitisha kitakachoyapata."
+        },
+        "130007": {
+            "name": "Sayari yenye pete",
+            "description": "Pete zimetengenezwa kwa emoji ndogo."
+        },
+        "130008": {
+            "name": "Awamu za mwezi",
+            "description": "Kila awamu ya mwezi huleta emoji mpya."
+        },
+        "130009": {
+            "name": "Vumbi la nyota",
+            "description": "Lifagie, na kumbe ni emoji."
+        },
+        "140000": {
+            "name": "Dango",
+            "description": "Maandazi matatu matamu kwenye kijiti, emoji moja kila moja."
+        },
+        "140001": {
+            "name": "Waffle",
+            "description": "Kila mraba una kidimbwi kidogo cha emoji."
+        },
+        "140002": {
+            "name": "Pai",
+            "description": "Zimetoka ovenini punde, zimejaa emoji."
+        },
+        "140003": {
+            "name": "Sundae",
+            "description": "Vijiko vitatu vya aiskrimu, vinyunyizio, na emoji juu."
+        },
+        "140004": {
+            "name": "Barafu ya kukwangua",
+            "description": "Baridi, tamu na imemwagiwa emoji."
+        },
+        "140005": {
+            "name": "Biskuti za bahati",
+            "description": "Bahati yako: emoji zaidi."
+        },
+        "140006": {
+            "name": "Juisi za boksi",
+            "description": "Msisimko wa sukari ndani ya boksi."
+        },
+        "140007": {
+            "name": "Peremende za limau",
+            "description": "Chachu kwanza, kisha emoji tamu."
+        },
+        "140008": {
+            "name": "Makaruni",
+            "description": "Zinatafunika, za dhahabu, na zimejaa emoji."
+        },
+        "140009": {
+            "name": "Cheri juu",
+            "description": "Mguso wa mwisho kwenye kila emoji."
         }
     },
     "effects": {
@@ -1001,10 +2640,153 @@
             "description": "Uzalishaji wa emoji umepunguzwa nusu!"
         },
         "200": {
-            "title": "Zawadi ya emoji"
+            "title": "Zawadi ya emoji",
+            "description": "Emoji za thamani ya dakika 15!"
         }
     },
-    "perks": {},
-    "trials": {},
-    "funValues": {}
+    "perks": {
+        "overtime": {
+            "name": "Muda wa ziada",
+            "description": "Athari nzuri hudumu kwa 50% zaidi"
+        },
+        "giftWrap": {
+            "name": "Kifungashio cha zawadi",
+            "description": "Zawadi hutoa mara mbili zaidi"
+        },
+        "headStart": {
+            "name": "Mwanzo wa mapema",
+            "description": "Anza kila mzunguko na dakika 5 za uzalishaji bora wa mzunguko wako uliopita"
+        },
+        "luckyStreak": {
+            "name": "Mfululizo wa bahati",
+            "description": "Emoji za athari hutokea mara nyingi zaidi kwa 50%"
+        },
+        "shinySense": {
+            "name": "Hisia ya kung'aa",
+            "description": "Uwezekano wa emoji zinazong'aa ni mara mbili"
+        },
+        "resonance": {
+            "name": "Mwangwi",
+            "description": "Kila kiini ambacho hujatumia huongeza uzalishaji kwa 2.5%, badala ya 2%"
+        },
+        "collectorsPride": {
+            "name": "Fahari ya mkusanyaji",
+            "description": "+0.03% uzalishaji kwa kila emoji tofauti katika mkusanyiko wako"
+        },
+        "bulkDiscount": {
+            "name": "Punguzo la jumla",
+            "description": "Majengo ni nafuu kwa 10%"
+        },
+        "magnet": {
+            "name": "Sumaku",
+            "description": "Emoji za athari hukaa kwenye skrini mara mbili zaidi"
+        },
+        "neighbourhood": {
+            "name": "Mtaa",
+            "description": "+3% uzalishaji kwa kila aina ya jengo unalomiliki"
+        },
+        "muscleMemory": {
+            "name": "Kumbukumbu ya misuli",
+            "description": "Baki na mikono yako ya Emoji kubwa unapopata heshima"
+        },
+        "steadyHands": {
+            "name": "Mikono thabiti",
+            "description": "Kombo hupungua polepole zaidi kwa 20%"
+        },
+        "momentum": {
+            "name": "Kasi",
+            "description": "+1% uzalishaji kwa kila dakika 10 zilizochezwa katika mzunguko huu, hadi +50%"
+        },
+        "secondWind": {
+            "name": "Pumzi ya pili",
+            "description": "+1 kwa kombo yako ya juu"
+        },
+        "goldenTouch": {
+            "name": "Mguso wa dhahabu",
+            "description": "Emoji zinazong'aa zina thamani mara 5 zaidi"
+        },
+        "overflow": {
+            "name": "Kufurika",
+            "description": "Kiini kilichotumika kinabaki na nusu ya nyongeza yake ya uzalishaji"
+        },
+        "hallOfFame": {
+            "name": "Ukumbi wa mashujaa",
+            "description": "+10% uzalishaji kwa kila jaribio lililokamilika"
+        },
+        "flyingStart": {
+            "name": "Mwanzo wa kasi",
+            "description": "Mwanzo wa mapema unatoa dakika 30 za uzalishaji badala ya 5"
+        }
+    },
+    "trials": {
+        "handsOff": {
+            "name": "Mikono mbali",
+            "rule": "Kugusa Emoji kubwa hakuchori chochote",
+            "reward": "+15% uzalishaji"
+        },
+        "bareBones": {
+            "name": "Mifupa mitupu",
+            "rule": "Maboresho hayawezi kununuliwa",
+            "reward": "+50% emoji kwa kila mguso"
+        },
+        "darkSky": {
+            "name": "Anga giza",
+            "rule": "Hakuna emoji za athari zinazotokea",
+            "reward": "Emoji za athari hutokea mara nyingi zaidi kwa 25%"
+        }
+    },
+    "funValues": {
+        "1": {
+            "name": "Cookie clicker",
+            "description": "Emoji za athari ni 🍪, mbaya ni 👵"
+        },
+        "17": {
+            "name": "Kishetani",
+            "description": "Athari ya 😈 ya uzalishaji ×77 inaweza kutokea"
+        },
+        "31": {
+            "name": "Mvuto mdogo",
+            "description": "Emoji zilizoguswa huelea juu na kutoweka"
+        },
+        "42": {
+            "name": "Jibu",
+            "description": "+4.2% uzalishaji"
+        },
+        "50": {
+            "name": "Uwiano kamili",
+            "description": "Kugusa ×0.5, uzalishaji ×1.5"
+        },
+        "64": {
+            "name": "Kasi iliyoongezwa",
+            "description": "Kombo inaweza kwenda kiwango kimoja juu zaidi"
+        },
+        "70": {
+            "name": "Asiye na subira",
+            "description": "Emoji za athari hutokea mapema zaidi"
+        },
+        "76": {
+            "name": "Bahati ya kutokea",
+            "description": "Nafasi ya 10% ya emoji ya athari ya ziada"
+        },
+        "77": {
+            "name": "Pesa zinazoruka",
+            "description": "💸 kwenye bei"
+        },
+        "88": {
+            "name": "Marathoni",
+            "description": "Kombo hupungua polepole zaidi kwa 25%"
+        },
+        "91": {
+            "name": "Mkusanyaji",
+            "description": "Uwezekano wa emoji zinazong'aa ni ×1.25"
+        },
+        "99": {
+            "name": "Puto 99 nyekundu",
+            "description": "Emoji za athari ni 🎈, mbaya ni 📌"
+        },
+        "100": {
+            "name": "Mia ya huzuni",
+            "description": "Takwimu zinaonyesha 😭 kando ya thamani ya furaha"
+        }
+    }
 }
