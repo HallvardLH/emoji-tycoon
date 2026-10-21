@@ -14,16 +14,7 @@
     },
     "common": {
         "buy": "购买",
-        "details": "详情",
-        "owned_other": "已拥有"
-    },
-    "buildings": {
-        "bulkBuy_other": "每次购买{{count}}座建筑",
-        "emojisPerSecond": "每秒<hl>{{eps}}</hl>个表情",
-        "youHave": "• 你拥有<hl>{{amount}}</hl>个{{building}}",
-        "eachProduces": "• 每个每秒生产<hl>{{eps}}</hl>个表情",
-        "totalProduces": "• 总计每秒<hl>{{eps}}</hl>个表情！",
-        "ownedUpgrades": "已拥有的升级"
+        "details": "详情"
     },
     "upgrades": {
         "bigEmoji": "大表情",
@@ -39,9 +30,6 @@
         "filterTitle": "筛选升级",
         "filterDescription": "选择要查看哪些建筑的升级。"
     },
-    "emojidex": {
-        "basePrice": "基础价格：{{price}}"
-    },
     "stats": {
         "totalEmojisDrawn": "累计绘制表情",
         "emojiTaps": "表情点击次数",
@@ -52,16 +40,12 @@
     "drawer": {
         "language": "语言",
         "deviceLanguage": "设备语言",
-        "funValue": "趣味值：{{value}}",
         "cheats": "作弊",
         "resetGame": "重置游戏",
-        "spawnEffect": "生成效果表情",
-        "giveEmojis": "获得{{amount}}个表情"
+        "spawnEffect": "生成效果表情"
     },
     "prestige": {
-        "title": "声望",
-        "accumulating": "你已创造了<hl>{{amount}}</hl>个表情，表情的本源精华开始在你身边汇聚。",
-        "essence": "表情精华是一种<hl>神奇物质</hl>，每次看它时形状都会改变，蕴含着未知的力量。"
+        "title": "声望"
     },
     "numbers": {
         "groupSize": "4",

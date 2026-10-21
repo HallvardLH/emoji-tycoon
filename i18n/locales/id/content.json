@@ -35,55 +35,54 @@
             "plural": "Pusat olahraga",
             "description": "Jaga emojimu tetap bugar."
         },
-        "7": {
+        "8": {
             "name": "Bank",
             "plural": "Bank",
             "description": "\"Emojimu aman bersama kami.\""
         },
-        "8": {
+        "9": {
             "name": "Taman hiburan emoji",
             "plural": "Taman hiburan emoji",
             "description": "\"Selamat datang di EmojiLand: tempat mimpi dan emosi jadi nyata!\""
         },
-        "9": {
+        "10": {
             "name": "Majelis emoji",
             "plural": "Majelis emoji",
             "description": "Tempat emoji berkumpul untuk memutuskan cara membuat lebih banyak emoji."
         },
-        "10": {
+        "12": {
             "name": "Stasiun luar angkasa",
             "plural": "Stasiun luar angkasa",
             "description": "Taklukkan dunia baru dan ambil emoji mereka."
         },
-        "11": {
+        "13": {
             "name": "Kerajaan permen",
             "plural": "Kerajaan permen",
             "description": "Surga manis yang dipimpin Raja Permen dan rakyat emojinya yang imut."
         },
-        "12": {
+        "14": {
             "name": "Gunung api emoji",
             "plural": "Gunung api emoji",
             "description": "Setiap letusan membawa banjir emoji baru yang masih panas!"
         },
-        "13": {
+        "15": {
             "name": "Kuil Emoji Agung di langit",
             "plural": "Kuil Emoji Agung di langit",
             "description": "Konon, Emoji Agung di langit menganugerahkan emoji tanpa batas kepada pengikut paling setianya."
         },
-        "14": {
+        "16": {
             "name": "Superkomputer emoji",
             "plural": "Superkomputer emoji",
             "description": "Mesin emoji pamungkas. Melipatgandakan emoji secepat cahaya."
         },
-        "15": {
+        "17": {
             "name": "Lubang hitam emoji",
             "plural": "Lubang hitam emoji",
             "description": "Tujuan akhir semua emoji... atau awal yang baru?"
         },
-        "16": {
+        "18": {
             "name": "Singularitas emoji",
-            "plural": "Singularitas emoji",
-            "description": "Selesai. Tak ada yang tersisa selain emoji. Kamu berhasil."
+            "plural": "Singularitas emoji"
         }
     },
     "upgrades": {
@@ -716,88 +715,88 @@
             "description": "Olahraga memukul bola pakai tongkat sambil menyetir mobil kecil yang keren.",
             "quote": "Olahraganya para presiden"
         },
-        "800": {
+        "900": {
             "name": "Celengan babi",
             "description": "Nguik nguik!"
         },
-        "801": {
+        "901": {
             "name": "Tas emoji lebih besar",
             "description": "Bisa membawa emoji lebih banyak lagi."
         },
-        "802": {
+        "902": {
             "name": "Kartu kredit emoji",
             "description": "Pas untuk menghabiskan emoji hasil kerja kerasmu."
         },
-        "803": {
+        "903": {
             "name": "Investasi pendidikan",
             "description": "Pendidikan lebih baik, keterampilan menggambar emoji lebih baik."
         },
-        "804": {
+        "904": {
             "name": "Investasi inovasi",
             "description": "Lebih banyak inovasi, emoji lebih inovatif."
         },
-        "900": {
+        "1000": {
             "name": "Komidi putar",
             "description": "You spin me right 'round, baby!"
         },
-        "901": {
+        "1001": {
             "name": "Perosotan",
             "description": "Do you slide on all your nights like this? (I might)"
         },
-        "902": {
+        "1002": {
             "name": "Bianglala",
             "description": "Di atas sana, di situlah dia mematahkan hatiku."
         },
-        "903": {
+        "1003": {
             "name": "Sirkus",
             "description": "Di dunia ini cuma ada dua tipe orang. Yang menghibur, dan yang menonton."
         },
-        "904": {
+        "1004": {
             "name": "Pemain juggling emoji",
             "description": "Katanya dia belum pernah sekali pun menjatuhkan bola."
         },
-        "1000": {
+        "1100": {
             "name": "Pemilu emoji",
             "description": "Semoga emoji terbaik yang menang!"
         },
-        "1001": {
+        "1101": {
             "name": "Bansos emoji",
             "description": "Kamu dapat emoji, kamu juga, kamu juga, semua dapat emoji!"
         },
-        "1002": {
+        "1102": {
             "name": "Ketua DPR emoji",
             "description": "Pasang ketua DPR emoji pilihanmu sendiri, biar semuanya sesuai maumu."
         },
-        "1003": {
+        "1103": {
             "name": "Undang-undang emoji",
             "description": "Kami, rakyat emoji..."
         },
-        "1004": {
+        "1104": {
             "name": "Konfederasi emoji global",
             "description": "Meningkatkan kerja sama antarnegara emoji."
         },
-        "1100": {
+        "1300": {
             "name": "Teleskop",
             "description": "Pandangi bintang-bintang untuk menemukan planet emoji."
         },
-        "1101": {
+        "1301": {
             "name": "Antena satelit",
             "description": "Lihat melampaui Bima Sakti menuju galaksi Emoji Sakti."
         },
-        "1102": {
+        "1302": {
             "name": "Astronaut",
             "description": "Seseorang harus mengurus stasiun luar angkasamu."
         },
-        "1103": {
+        "1303": {
             "name": "Roket",
             "description": "Terbangnya cepat banget."
         },
-        "1104": {
+        "1304": {
             "name": "☍⏃⋔⟟ ⎅⏃⏁⏃⋏☌ ⎅⟒⋏☌⏃⋏ ⎅⏃⋔⏃⟟...",
             "description": "...⎅⏃⋏ ⋔⟒⋔⏚⏃⍙⏃ ⟒⋔⍜⟊⟟ ⏚⏃⍀⎍ ⊬⏃⋏☌ ☌⟟⌰⏃.",
             "quote": "☍⟒⏁⎍☍ ⍙⏃⟊⏃⊑☍⎍ ⌰⟟⋔⏃ ☍⏃⌰⟟ ⎍⋏⏁⎍☍ ⋔⟒⋔⏚⎍☍⏃ ⍀⏃⊑⏃⌇⟟⏃☍⎍"
         },
-        "1105": {
+        "1305": {
             "name": "⏚⟒⋏⎅⏃ ⏃⋏⟒⊑",
             "description": "⏚⟒⋏⎅⏃ ⟟⋏⟟ ⋔⟒⋏⊬⟟⋔⌿⏃⋏ ☍⟒☍⎍⏃⏁⏃⋏ ⏁⏃☍ ⏁⟒⍀☍⟟⍀⏃."
         },
@@ -970,11 +969,11 @@
             "description": "Mematuk layarmu dengan paruhnya.",
             "quote": "Lenggak-lenggok! Aku bantu kamu dapat emoji!"
         },
-        "100000": {
+        "110000": {
             "name": "Anak magang emoji",
             "description": "Anak magang membantu pemerintahan emoji berjalan lancar!"
         },
-        "100001": {
+        "110001": {
             "name": "Birokrat emoji",
             "description": "Pemerintahan emoji butuh pegawai administrasi agar bisa berjalan.",
             "quote": "Sepertinya kamu sedang membuat undang-undang. Perlu bantuan?"
@@ -1002,8 +1001,10 @@
             "description": "Produksi emoji berkurang setengah!"
         },
         "200": {
-            "title": "Hadiah emoji",
-            "description": "Emoji senilai 1 jam!"
+            "title": "Hadiah emoji"
         }
-    }
+    },
+    "perks": {},
+    "trials": {},
+    "funValues": {}
 }

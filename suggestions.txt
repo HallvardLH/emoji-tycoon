@@ -1,0 +1,8 @@
+Note to Claude: ignore, these are suggesitions for me
+
+* Might be caused by lag from tapping emoji animations firing quickly as you tap, but active effects don't reliably tick down, last way longer than the given time. The time seems to almost stop, the bar sometimes jumps back up a little. As long as you're tap, the effects don't seem to tick down at all. Edit: I tested this while you were implementing prestige. Testing it again when you were done and it works fine. So must be sensitive to lag. 
+* The header emoji amount counter was optimized, but now it's not granular enough, it needs to be smoother.
+* Add more buildings. You do not need to worry about id shifting, the game is not live anywhere, so no one is affected. Feel free to alter any ID.
+* Need to add i18n
+* Need to implement proper offline production. When the app is not open, normal production should pause.
+* Forcing the big emoji. A mechanic, maybe mid- to late-game that allows users to select which emoji the big emoji is. Either restricting it to a certain category, to a selection of their own, or to a single emoji of their choosing. Maybe this could be unlocked by a perk, and appear as a small home button screen that opens a menu where the selection takes place.

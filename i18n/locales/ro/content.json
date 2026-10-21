@@ -35,55 +35,54 @@
             "plural": "Centre sportive",
             "description": "Ține-ți emoji-urile în formă."
         },
-        "7": {
+        "8": {
             "name": "Bancă",
             "plural": "Bănci",
             "description": "\"Îți păstrăm emoji-urile în siguranță.\""
         },
-        "8": {
+        "9": {
             "name": "Parc tematic emoji",
             "plural": "Parcuri tematice emoji",
             "description": "\"Bun venit în EmojiLand: unde visele și emoțiile prind viață!\""
         },
-        "9": {
+        "10": {
             "name": "Adunare emoji",
             "plural": "Adunări emoji",
             "description": "Unde emoji-urile se strâng ca să decidă cum să facă și mai multe emoji."
         },
-        "10": {
+        "12": {
             "name": "Stație spațială",
             "plural": "Stații spațiale",
             "description": "Cucerește lumi noi și ia-le emoji-urile."
         },
-        "11": {
+        "13": {
             "name": "Regat de bomboane",
             "plural": "Regate de bomboane",
             "description": "Un paradis dulce condus de Regele Bomboanelor și de supușii lui emoji, dulci foc."
         },
-        "12": {
+        "14": {
             "name": "Vulcan emoji",
             "plural": "Vulcani emoji",
             "description": "Fiecare erupție aduce un potop de emoji nou-nouțe, proaspăt făurite!"
         },
-        "13": {
+        "15": {
             "name": "Templul Marelui Emoji din cer",
             "plural": "Temple ale Marelui Emoji din cer",
             "description": "Legendele spun că Marele Emoji din cer le dăruiește emoji infinite celor mai loiali adepți ai săi."
         },
-        "14": {
+        "16": {
             "name": "Supercomputer emoji",
             "plural": "Supercomputere emoji",
             "description": "Motorul emoji suprem. Înmulțește emoji-urile cu viteza luminii."
         },
-        "15": {
+        "17": {
             "name": "Gaură neagră emoji",
             "plural": "Găuri negre emoji",
             "description": "Destinația finală a tuturor emoji-urilor... sau un nou început?"
         },
-        "16": {
+        "18": {
             "name": "Singularitate emoji",
-            "plural": "Singularități emoji",
-            "description": "Gata. Nu a mai rămas nimic în afară de emoji. Ai reușit."
+            "plural": "Singularități emoji"
         }
     },
     "upgrades": {
@@ -716,88 +715,88 @@
             "description": "Un sport în care lovești o minge cu un băț și conduci o mașinuță cool.",
             "quote": "Un sport prezidențial"
         },
-        "800": {
+        "900": {
             "name": "Pușculițe",
             "description": "Guiț guiț!"
         },
-        "801": {
+        "901": {
             "name": "Saci de emoji mai mari",
             "description": "Poți căra și mai multe emoji."
         },
-        "802": {
+        "902": {
             "name": "Carduri de credit emoji",
             "description": "Bune pentru a cheltui emoji-urile câștigate cu greu."
         },
-        "803": {
+        "903": {
             "name": "Investiții în educație",
             "description": "Educație mai bună, desene emoji mai bune."
         },
-        "804": {
+        "904": {
             "name": "Investiții în inovație",
             "description": "Mai multă inovație, emoji mai inovatoare."
         },
-        "900": {
+        "1000": {
             "name": "Carusele",
             "description": "You spin me right 'round, baby!"
         },
-        "901": {
+        "1001": {
             "name": "Tobogane",
             "description": "Do you slide on all your nights like this? (I might)"
         },
-        "902": {
+        "1002": {
             "name": "Roata mare",
             "description": "Way up, there is where she broke my heart."
         },
-        "903": {
+        "1003": {
             "name": "Circ",
             "description": "Există doar două tipuri de oameni pe lume. Cei care distrează și cei care privesc."
         },
-        "904": {
+        "1004": {
             "name": "Jongler de emoji",
             "description": "Se zice că n-a scăpat niciodată mingea."
         },
-        "1000": {
+        "1100": {
             "name": "Alegeri emoji",
             "description": "Să câștige cel mai bun emoji!"
         },
-        "1001": {
+        "1101": {
             "name": "Stimulent emoji",
             "description": "Primești un emoji, și tu, și tu, toată lumea primește emoji!"
         },
-        "1002": {
+        "1102": {
             "name": "Președintele camerei emoji",
             "description": "Instalează-ți propriul președinte emoji, ca lucrurile să meargă cum vrei tu."
         },
-        "1003": {
+        "1103": {
             "name": "Legi emoji",
             "description": "Noi, emoji-urile..."
         },
-        "1004": {
+        "1104": {
             "name": "Confederația globală emoji",
             "description": "Crește cooperarea dintre țările emoji."
         },
-        "1100": {
+        "1300": {
             "name": "Telescoape",
             "description": "Privește stelele ca să descoperi planete emoji."
         },
-        "1101": {
+        "1301": {
             "name": "Antene de satelit",
             "description": "Privește dincolo de Calea Lactee, spre galaxia Calea Emoji."
         },
-        "1102": {
+        "1302": {
             "name": "Astronauți",
             "description": "Cineva trebuie să-ți conducă stațiile spațiale."
         },
-        "1103": {
+        "1303": {
             "name": "Rachete",
             "description": "Zboară foarte repede."
         },
-        "1104": {
+        "1304": {
             "name": "⏃⋔ ⌇⍜⌇⟟⏁ ⟟⋏ ⌿⏃☊⟒...",
             "description": "...⌇⟟ ⏃⎅⎍☊⟒⋔ ⟒⋔⍜⟊⟟ ⋏⍜⟟ ⏁⍀⏃⌇⋏⟟⏁⟒.",
             "quote": "⏃⏁⟟⋏☌⟒ ⎎⏃⏁⏃ ⋔⟒⏃ ⎅⟒ ☊⟟⋏☊⟟ ⍜⍀⟟ ☊⏃ ⌇⏃ ⏃⎎⌰⟟ ⌇⟒☊⍀⟒⏁⎍⌰ ⋔⟒⎍"
         },
-        "1105": {
+        "1305": {
             "name": "⍜⏚⟟⟒☊⏁ ☊⟟⎍⎅⏃⏁",
             "description": "⏃☊⟒⌇⏁ ⍜⏚⟟⟒☊⏁ ⏃⌇☊⎍⋏⎅⟒ ⌿⎍⏁⟒⍀⟟ ⋏⟒⏚⏃⋏⎍⟟⏁⟒."
         },
@@ -970,11 +969,11 @@
             "description": "Îți ciocănește ecranul cu ciocul.",
             "quote": "Leg-leg! Te ajut să strângi emoji!"
         },
-        "100000": {
+        "110000": {
             "name": "Stagiari emoji",
             "description": "Stagiarii ajută guvernul emoji să meargă ca pe roate!"
         },
-        "100001": {
+        "110001": {
             "name": "Birocrați emoji",
             "description": "Un guvern emoji are nevoie de funcționari ca să funcționeze.",
             "quote": "Se pare că încerci să dai o lege. Ai nevoie de ajutor?"
@@ -1002,8 +1001,10 @@
             "description": "Producția de emoji s-a înjumătățit!"
         },
         "200": {
-            "title": "Cadou emoji",
-            "description": "Emoji cât pentru o oră!"
+            "title": "Cadou emoji"
         }
-    }
+    },
+    "perks": {},
+    "trials": {},
+    "funValues": {}
 }

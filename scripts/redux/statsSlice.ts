@@ -10,6 +10,22 @@ interface StatsState {
     bigEmojiTaps: number,
     emojisEarnedFromTap: number,
     effectEmojisCollected: number,
+    shinyEmojisTapped: number,
+    /**
+     * Taps weighted by the combo multiplier at the time (a tap at ×3 counts 3).
+     * Unlocks combo level upgrades. Undefined in saves from before it existed.
+     */
+    comboTaps?: number,
+    /**
+     * The highest emojis-drawn milestone celebrated, as a power of 1000 (1 = a thousand, 2 = a million...).
+     * Undefined in saves from before milestones existed.
+     */
+    bankMilestone?: number,
+    /**
+     * Emojis each building has made in total, by building id, with every buff counted
+     * (see creditBuildings). Undefined in saves from before it existed.
+     */
+    buildingEmojis?: Record<number, number>,
 }
 
 const initialState: StatsState = {
@@ -17,6 +33,10 @@ const initialState: StatsState = {
     bigEmojiTaps: 0,
     emojisEarnedFromTap: 0,
     effectEmojisCollected: 0,
+    shinyEmojisTapped: 0,
+    comboTaps: 0,
+    bankMilestone: 0,
+    buildingEmojis: {},
 };
 
 export const statsSlice = createSlice({
@@ -36,14 +56,32 @@ export const statsSlice = createSlice({
         addEffectEmojisCollected: (state, action: PayloadAction<number>) => {
             state.effectEmojisCollected = state.effectEmojisCollected + action.payload;
         },
+        addShinyEmojiTapped: (state) => {
+            state.shinyEmojisTapped = (state.shinyEmojisTapped ?? 0) + 1;
+        },
+        setBankMilestone: (state, action: PayloadAction<number>) => {
+            state.bankMilestone = action.payload;
+        },
+        setComboTaps: (state, action: PayloadAction<number>) => {
+            state.comboTaps = action.payload;
+        },
         updateTapStats: (state, action: PayloadAction<{
             emojisGained: number;
             bigEmojiTaps: number;
             emojisEarnedFromTap: number;
+            comboTaps: number;
         }>) => {
             state.emojisGained += action.payload.emojisGained;
             state.bigEmojiTaps += action.payload.bigEmojiTaps;
             state.emojisEarnedFromTap += action.payload.emojisEarnedFromTap;
+            state.comboTaps = (state.comboTaps ?? 0) + action.payload.comboTaps;
+        },
+        /** Adds to what each building has made, by building id */
+        addBuildingEmojis: (state, action: PayloadAction<Record<number, number>>) => {
+            const totals = state.buildingEmojis ?? (state.buildingEmojis = {});
+            for (const [id, amount] of Object.entries(action.payload)) {
+                totals[Number(id)] = (totals[Number(id)] ?? 0) + amount;
+            }
         },
         resetStats: (state) => {
             return initialState;
@@ -52,6 +90,6 @@ export const statsSlice = createSlice({
     },
 });
 
-export const { addBigEmojiTaps, addEmojisGained, addEmojisEarnedFromTap, addEffectEmojisCollected, updateTapStats, resetStats } = statsSlice.actions;
+export const { addBigEmojiTaps, addEmojisGained, addEmojisEarnedFromTap, addEffectEmojisCollected, addShinyEmojiTapped, setBankMilestone, setComboTaps, updateTapStats, addBuildingEmojis, resetStats } = statsSlice.actions;
 
 export default statsSlice.reducer;

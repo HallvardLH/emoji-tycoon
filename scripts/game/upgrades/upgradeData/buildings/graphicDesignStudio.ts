@@ -1,9 +1,10 @@
+import { buildingIdOf } from "../../../buildings/buildingData";
 import { BuildingNames } from "../../../buildings/buildingNamesType";
 import { UpgradeType, UnlockConditionType, UpgradeVariantsType, UpgradeCateogoriesType } from "../UpgradeType";
 
 const baseGraphicDesignStudioUpgrade = {
     building: "Graphic design studio" as BuildingNames,
-    buildingId: 1,
+    buildingId: buildingIdOf("Graphic design studio"),
     unlockCondition: "Building amount" as UnlockConditionType,
     categories: ["Multiply building production" as UpgradeCateogoriesType],
     emojisPerSecondMultiplier: 2,
@@ -17,6 +18,7 @@ export const graphicDesignStudioUpgrades: UpgradeType[] = [
         name: "Improved pencils",
         icon: "✏️",
         description: "Better pencils for more detailed emojis.",
+        quote: "Better pencils won't fix your talent.",
         tier: 0,
     },
     {
@@ -24,6 +26,7 @@ export const graphicDesignStudioUpgrades: UpgradeType[] = [
         name: "Specialized crayons",
         icon: "🖍️",
         description: "These special crayons allow artists to access their inner child.",
+        quote: "I found my inner child. He's disappointed in me too.",
         tier: 1,
     },
     {
@@ -31,6 +34,7 @@ export const graphicDesignStudioUpgrades: UpgradeType[] = [
         name: "Improved brushes",
         icon: "🖌️",
         description: "Improved brushes allow for more artistic emojis.",
+        quote: "Improved how? All I could paint was a creepy version of my wife. I want my money back.",
         tier: 2,
     },
     {
@@ -127,6 +131,7 @@ export const graphicDesignStudioUpgrades: UpgradeType[] = [
         name: "Comic Sans font",
         icon: "📝",
         description: "Love it or hate it, it makes your emojis look... unique!",
+        quote: "I quit.",
         tier: 15,
     },
     {
@@ -158,6 +163,7 @@ export const graphicDesignStudioUpgrades: UpgradeType[] = [
         name: "Blood",
         icon: "🩸",
         description: "Painting with blood makes for extra cool emojis!",
+        quote: "Whose? WHOSE?",
         tier: 19,
     },
 ];

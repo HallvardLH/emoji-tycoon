@@ -35,55 +35,54 @@
             "plural": "Sportzentren",
             "description": "Hält deine Emojis in Form."
         },
-        "7": {
+        "8": {
             "name": "Bank",
             "plural": "Banken",
             "description": "\"Bei uns sind deine Emojis sicher.\""
         },
-        "8": {
+        "9": {
             "name": "Emoji-Freizeitpark",
             "plural": "Emoji-Freizeitparks",
             "description": "\"Willkommen im EmojiLand: Wo Träume und Gefühle lebendig werden!\""
         },
-        "9": {
+        "10": {
             "name": "Emoji-Versammlung",
             "plural": "Emoji-Versammlungen",
             "description": "Hier beraten Emojis, wie man noch mehr Emojis macht."
         },
-        "10": {
+        "12": {
             "name": "Raumstation",
             "plural": "Raumstationen",
             "description": "Erobere neue Welten und schnapp dir ihre Emojis."
         },
-        "11": {
+        "13": {
             "name": "Zuckerkönigreich",
             "plural": "Zuckerkönigreiche",
             "description": "Ein zuckersüßes Paradies, regiert vom Zuckerkönig und seinen süßen Emoji-Untertanen."
         },
-        "12": {
+        "14": {
             "name": "Emoji-Vulkan",
             "plural": "Emoji-Vulkane",
             "description": "Jeder Ausbruch bringt eine Flut brandneuer, frisch geschmiedeter Emojis!"
         },
-        "13": {
+        "15": {
             "name": "Tempel des Großen Emojis im Himmel",
             "plural": "Tempel des Großen Emojis im Himmel",
             "description": "Der Legende nach schenkt das Große Emoji im Himmel seinen treuesten Anhängern unendlich viele Emojis."
         },
-        "14": {
+        "16": {
             "name": "Emoji-Supercomputer",
             "plural": "Emoji-Supercomputer",
             "description": "Die ultimative Emoji-Maschine. Vervielfacht Emojis mit Lichtgeschwindigkeit."
         },
-        "15": {
+        "17": {
             "name": "Schwarzes Emoji-Loch",
             "plural": "Schwarze Emoji-Löcher",
             "description": "Die Endstation aller Emojis... oder ein neuer Anfang?"
         },
-        "16": {
+        "18": {
             "name": "Emoji-Singularität",
-            "plural": "Emoji-Singularitäten",
-            "description": "Das war's. Nichts bleibt außer Emojis. Du hast es geschafft."
+            "plural": "Emoji-Singularitäten"
         }
     },
     "upgrades": {
@@ -716,88 +715,88 @@
             "description": "Ein Sport, bei dem man mit einem Stock einen Ball schlägt und ein cooles Wägelchen fährt.",
             "quote": "Ein Sport für Präsidenten"
         },
-        "800": {
+        "900": {
             "name": "Sparschweine",
             "description": "Grunz grunz!"
         },
-        "801": {
+        "901": {
             "name": "Größere Emoji-Beutel",
             "description": "Damit kannst du noch mehr Emojis tragen."
         },
-        "802": {
+        "902": {
             "name": "Emoji-Kreditkarten",
             "description": "Ideal, um deine hart verdienten Emojis auszugeben."
         },
-        "803": {
+        "903": {
             "name": "Investition in Bildung",
             "description": "Bessere Bildung, bessere Emoji-Zeichenkünste."
         },
-        "804": {
+        "904": {
             "name": "Investition in Innovation",
             "description": "Mehr Innovation, innovativere Emojis."
         },
-        "900": {
+        "1000": {
             "name": "Karussells",
             "description": "You spin me right 'round, baby!"
         },
-        "901": {
+        "1001": {
             "name": "Rutschen",
             "description": "Do you slide on all your nights like this? (I might)"
         },
-        "902": {
+        "1002": {
             "name": "Riesenrad",
             "description": "Ganz oben, genau da hat sie mir das Herz gebrochen."
         },
-        "903": {
+        "1003": {
             "name": "Zirkus",
             "description": "Es gibt nur zwei Arten von Menschen: die, die unterhalten, und die, die zuschauen."
         },
-        "904": {
+        "1004": {
             "name": "Emoji-Jongleur",
             "description": "Man sagt, er hat immer alle Bälle in der Luft."
         },
-        "1000": {
+        "1100": {
             "name": "Emoji-Wahlen",
             "description": "Möge das beste Emoji gewinnen!"
         },
-        "1001": {
+        "1101": {
             "name": "Emoji-Konjunkturpaket",
             "description": "Du kriegst ein Emoji, und du, und du, alle kriegen Emojis!"
         },
-        "1002": {
+        "1102": {
             "name": "Emoji-Parlamentschef",
             "description": "Setz deinen eigenen Emoji-Parlamentschef ein, damit alles nach deinem Willen läuft."
         },
-        "1003": {
+        "1103": {
             "name": "Emoji-Gesetze",
             "description": "Wir sind das Emoji-Volk!"
         },
-        "1004": {
+        "1104": {
             "name": "Globale Emoji-Konföderation",
             "description": "Fördert die Zusammenarbeit zwischen Emoji-Ländern."
         },
-        "1100": {
+        "1300": {
             "name": "Teleskope",
             "description": "Blick in die Sterne und entdecke Emoji-Planeten."
         },
-        "1101": {
+        "1301": {
             "name": "Satellitenschüsseln",
             "description": "Blick über die Milchstraße hinaus bis zur Emojistraße."
         },
-        "1102": {
+        "1302": {
             "name": "Astronauten",
             "description": "Irgendwer muss ja deine Raumstationen betreiben."
         },
-        "1103": {
+        "1303": {
             "name": "Raketen",
             "description": "Fliegen echt schnell."
         },
-        "1104": {
+        "1304": {
             "name": "⍙⟟⍀ ☍⍜⋔⋔⟒⋏ ⟟⋏ ⎎⍀⟟⟒⎅⟒⋏...",
             "description": "...⎍⋏⎅ ⏚⍀⟟⋏☌⟒⋏ ⟟⍀⍀⟒ ⋏⟒⎍⟒ ⟒⋔⍜⟊⟟⌇.",
             "quote": "⏁⟟⌿⌿ ⋔⟒⟟⋏ ☌⟒⌇⟟☊⊑⏁ ⎎⎍⟒⋏⎎⋔⏃⌰ ⏃⋏, ⎍⋔ ⋔⟒⟟⋏ ☌⟒⊑⟒⟟⋔⋏⟟⌇ ⋉⎍ ⌰⎍⟒⎎⏁⟒⋏"
         },
-        "1105": {
+        "1305": {
             "name": "⌇⟒⌰⏁⌇⏃⋔⟒⌇ ⍜⏚⟊⟒☍⏁",
             "description": "⎅⟟⟒⌇⟒⌇ ⍜⏚⟊⟒☍⏁ ⏚⟟⍀☌⏁ ⎍⋏☌⟒⏃⊑⋏⏁⟒ ☍⍀⏃⟒⎎⏁⟒."
         },
@@ -970,11 +969,11 @@
             "description": "Pickt mit dem Schnabel auf deinen Bildschirm.",
             "quote": "Watschel! Ich helf dir beim Emoji-Sammeln!"
         },
-        "100000": {
+        "110000": {
             "name": "Emoji-Praktikanten",
             "description": "Praktikanten sorgen dafür, dass die Emoji-Regierung rund läuft!"
         },
-        "100001": {
+        "110001": {
             "name": "Emoji-Bürokraten",
             "description": "Eine Emoji-Regierung braucht Beamte, um zu funktionieren.",
             "quote": "Sieht so aus, als würdest du ein Gesetz verabschieden. Brauchst du Hilfe?"
@@ -1002,8 +1001,10 @@
             "description": "Emoji-Produktion halbiert!"
         },
         "200": {
-            "title": "Emoji-Geschenk",
-            "description": "Emojis für eine ganze Stunde!"
+            "title": "Emoji-Geschenk"
         }
-    }
+    },
+    "perks": {},
+    "trials": {},
+    "funValues": {}
 }

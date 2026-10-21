@@ -1,13 +1,16 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import { useSelector } from 'react-redux';
+import { View, StyleSheet } from 'react-native';
 import { RootState } from '../../../scripts/redux/reduxStore';
-import BuildingListItem from './BuildingListItem';
+import BuildingListItem, { MysteryBuildingItem } from './BuildingListItem';
 import { buildingData } from '../../../scripts/game/buildings/buildingData';
-import { buyBuilding } from '../../../scripts/game/buildings/buildings';
-import { formatNumber } from '../../../scripts/misc';
-import { View } from 'react-native';
-import { calculateBuildingPrice } from '../../../scripts/game/buildings/buildings';
-import { getBuildingName, getBuildingDescription } from '../../../i18n/content';
+import { buyBuilding, calculateBuildingPrice, resolveBuyAmount } from '../../../scripts/game/buildings/buildings';
+import { getNextUpgradeRange } from '../../../scripts/game/upgrades/checks';
+import { formatNumber, formatPercentage } from '../../../scripts/misc';
+import i18n from '../../../i18n';
+import { getBuildingName, getBuildingNameForAmount, getBuildingDescription } from '../../../i18n/content';
+import { useBank, timeToAfford } from '../useBank';
+import { howFun } from '../../../scripts/game/shorthands';
 
 export interface BuildingInfo {
     name: string;
@@ -20,45 +23,63 @@ export interface BuildingInfo {
 
 export default function BuildingsList() {
     const { buildings } = useSelector((state: RootState) => state.buildings);
-
     const { bulkBuy } = useSelector((state: RootState) => state.preferences);
+    const totalBuildingEps = useSelector((state: RootState) => state.values.totalBuildingEps);
+    // Read live, not from useBank: both change together when a building is bought, and
+    // useBank's half-second sample made the rows flash a wrong value in between
+    const liveEmojisPerSecond = useSelector((state: RootState) => state.values.emojisPerSecond);
+    // Re-read so the next-upgrade progress updates when upgrades unlock
+    useSelector((state: RootState) => state.upgrades.unlocked);
+    const { emojis, emojisPerSecond } = useBank();
 
-    const [buildingPrices, setBuildingPrices] = useState<number[]>([]);
+    // Building EPS is before global bonuses; scale it so rows add up to the header's number
+    const globalFactor = totalBuildingEps > 0 ? liveEmojisPerSecond / totalBuildingEps : 1;
 
-    useEffect(() => {
-        const prices = buildingData.map(b => calculateBuildingPrice(b.buildingId, bulkBuy));
-        setBuildingPrices(prices);
-    }, [bulkBuy, buildings]);
-
+    const nextLocked = buildings.find(b => !b.unlocked);
 
     return (
-        <>
+        <View style={styles.list}>
             {buildingData.map((building: BuildingInfo) => {
-                // Find the building from Redux state using buildingId instead of name
                 const dynamicData = buildings.find(b => b.buildingId === building.buildingId);
-
-                // If no dynamic data is found (or building is locked), return null
                 if (!dynamicData || !dynamicData.unlocked) return null;
 
+                // Fit "max" into the same bank the button is checked against below
+                const price = calculateBuildingPrice(building.buildingId, bulkBuy, emojis);
+                const buyCount = resolveBuyAmount(building.buildingId, bulkBuy, emojis);
+                const epsEach = building.baseEps * dynamicData.epsMultipliers.filter(m => m !== 0).reduce((a, m) => a * m, 1) * globalFactor;
+                const share = totalBuildingEps > 0 ? (dynamicData.eps / totalBuildingEps) * 100 : 0;
+
                 return (
-                    <View key={building.icon}>
-                        <BuildingListItem
-                            buildingId={building.buildingId}
-                            name={getBuildingName(building.buildingId)}
-                            key={building.name}
-                            icon={building.icon}
-                            description={getBuildingDescription(building.buildingId)}
-                            price={formatNumber(buildingPrices[building.buildingId])}
-                            baseEps={building.baseEps * Math.pow(2, dynamicData.upgrades)}
-                            upgradeAmount={dynamicData.upgrades}
-                            eps={dynamicData.eps}
-                            amount={dynamicData.amount}
-                            buttonActive={dynamicData.canBuy}
-                            onPress={() => buyBuilding(building.buildingId)}
-                        />
-                    </View>
+                    <BuildingListItem
+                        key={building.name}
+                        name={getBuildingName(building.buildingId)}
+                        buyName={getBuildingNameForAmount(building.buildingId, buyCount)}
+                        icon={building.icon}
+                        description={getBuildingDescription(building.buildingId)}
+                        price={(howFun(77) ? "💸 " : "") + formatNumber(price, 2, true)}
+                        amount={dynamicData.amount}
+                        eps={formatNumber(dynamicData.eps * globalFactor, 1, true)}
+                        share={share < 0.1
+                            ? i18n.t("numbers.lessThan", { value: formatPercentage(0.1) })
+                            : formatPercentage(share < 10 ? +share.toFixed(1) : Math.round(share))}
+                        epsEach={formatNumber(epsEach, 1, true)}
+                        nextUpgrade={getNextUpgradeRange(building.name)}
+                        buyCount={buyCount}
+                        affordable={emojis >= price}
+                        waitLabel={timeToAfford(price, emojis, emojisPerSecond)}
+                        onPress={() => buyBuilding(building.buildingId)}
+                    />
                 );
             })}
-        </>
+            {nextLocked && (
+                <MysteryBuildingItem revealAt={formatNumber(nextLocked.price / 4, 2)} />
+            )}
+        </View>
     );
 }
+
+const styles = StyleSheet.create({
+    list: {
+        gap: 10,
+    },
+});

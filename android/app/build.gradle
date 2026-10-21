@@ -87,9 +87,9 @@ android {
     buildToolsVersion rootProject.ext.buildToolsVersion
     compileSdk rootProject.ext.compileSdkVersion
 
-    namespace 'com.whimsicalworks.emojitycoon'
+    namespace 'com.iagogames.emoji_tycoon'
     defaultConfig {
-        applicationId 'com.whimsicalworks.emojitycoon'
+        applicationId 'com.iagogames.emoji_tycoon'
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
         versionCode 1

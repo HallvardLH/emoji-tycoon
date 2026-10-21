@@ -1,12 +1,18 @@
 import store from '../../redux/reduxStore';
 import { updateTotalBuildingEps, updateEmojis } from '../../redux/valuesSlice';
-import { buildingData } from './buildingData';
+import { buildingData, BUILDING_PRICE_GROWTH } from './buildingData';
 import { getBuildingById } from './shorthands';
 import { unlockUpgrades } from '../upgrades/checks';
 import { updateBuildingValue } from './shorthands';
 import { canBuyBuilding } from './checks';
 import { calculateEmojisPerSecond, calculateEpt } from '../calculations';
 import * as Haptics from "expo-haptics"
+import { BulkBuyAmount } from '../../redux/preferencesSlice';
+import { celebrateMilestone } from '../milestones';
+import { buildingPriceMultiplier } from '../prestige/perks';
+import { playBuildingSound } from '../sounds';
+import i18n, { getLanguage } from '../../../i18n';
+import { getBuildingName } from '../../../i18n/content';
 
 type PluralNames = {
     [key: string]: string;
@@ -20,9 +26,11 @@ export const pluralNames: PluralNames = {
     "Petting zoo": "Petting zoos",
     "Factory": "Factories",
     "Sports center": "Sports centers",
+    "Emoji cinema": "Emoji cinemas",
     "Bank": "Banks",
     "Emoji theme park": "Emoji theme parks",
     "Emoji assembly": "Emoji assemblies",
+    "Emoji airline": "Emoji airlines",
     "Space station": "Space stations",
     "Candy kingdom": "Candy kingdoms",
     "Emoji volcano": "Emoji volcanoes",
@@ -30,41 +38,78 @@ export const pluralNames: PluralNames = {
     "Emoji supercomputer": "Emoji supercomputers",
     "Emoji black hole": "Emoji black holes",
     "Emoji singularity": "Emoji singularities",
+    "Emoji time machine": "Emoji time machines",
+    "Big bang": "Big bangs",
+    "Emoji multiverse": "Emoji multiverses",
+    "The first emoji": "First emojis",
 };
 
 type buildingName = {
     [key: string]: string;
 };
 
-export const buildingEmojis: buildingName = {
-    "Drawing hand": "✍️",
-    "Graphic design studio": "🎨",
-    "Farm": "🌽",
-    "Restaurant": "🍽️",
-    "Petting zoo": "🦒",
-    "Factory": "🏭",
-    "Sports center": "🏈",
-    "Bank": "🏦",
-    "Emoji theme park": "🎢",
-    "Emoji assembly": "🏛️",
-    "Space station": "🛰️",
-    "Candy kingdom": "🍭",
-    "Emoji volcano": "🌋",
-    "Temple of the Big Emoji in the sky": "🏯",
-    "Emoji supercomputer": "🖥️",
-    "Emoji black hole": "🕳️",
-    "Emoji singularity": "⚛️",
-};
+/** Each building's icon, by name */
+export const buildingEmojis: buildingName = Object.fromEntries(buildingData.map(building => [building.name, building.icon]));
 
+
+const PRICE_GROWTH = BUILDING_PRICE_GROWTH;
+
+/**
+ * A building name for the middle of a sentence, e.g. "Your first farm!".
+ * German keeps the capital, as its nouns always have one
+ */
+function midSentence(name: string) {
+    if (getLanguage() === "de") return name;
+    return name.charAt(0).toLocaleLowerCase(getLanguage()) + name.slice(1);
+}
+
+/** What the building costs when you own `amount` of it, with any Bulk discount (perk) */
+export function unitPrice(buildingId: number, amount: number) {
+    return Math.round(buildingData[buildingId].basePrice * Math.pow(PRICE_GROWTH, amount) * buildingPriceMultiplier());
+}
+
+/**
+ * Turns a bulk buy setting into a number of buildings.
+ *
+ * "max" is as many as the bank can afford (at least 1, so a price can still be shown).
+ * The closed form of the geometric price series gives a first guess; it uses unrounded
+ * prices, so it's adjusted until the real (rounded) total fits and one more wouldn't.
+ *
+ * @param emojis the bank to fit "max" into; pass the same number the price is compared against
+ */
+export function resolveBuyAmount(
+    buildingId: number,
+    bulkBuy: BulkBuyAmount = store.getState().preferences.bulkBuy,
+    emojis: number = store.getState().values.emojis,
+): number {
+    if (bulkBuy !== "max") return bulkBuy;
+
+    const owned = getBuildingById(buildingId).amount;
+    const nextPrice = unitPrice(buildingId, owned);
+
+    let count = Math.max(1, Math.floor(Math.log(emojis * (PRICE_GROWTH - 1) / nextPrice + 1) / Math.log(PRICE_GROWTH)));
+    let total = 0;
+    for (let i = 0; i < count; i++) total += unitPrice(buildingId, owned + i);
+    while (count > 1 && total > emojis) {
+        count--;
+        total -= unitPrice(buildingId, owned + count);
+    }
+    while (total + unitPrice(buildingId, owned + count) <= emojis) {
+        total += unitPrice(buildingId, owned + count);
+        count++;
+    }
+    return count;
+}
 
 /**
  * Buys a building, subtracting the price from bank.
  *
  * @param buildingId the ID of the building.
- * @param buyAmount the amount of buildings that will be bought (default is 1).
+ * @param bulkBuy the amount of buildings that will be bought (defaults to the bulk buy preference).
  */
-export const buyBuilding = (buildingId: number, buyAmount: number = store.getState().preferences.bulkBuy) => {
+export const buyBuilding = (buildingId: number, bulkBuy: BulkBuyAmount = store.getState().preferences.bulkBuy) => {
     const state = store.getState();
+    const buyAmount = resolveBuyAmount(buildingId, bulkBuy);
     let building = getBuildingById(buildingId);
 
     if (!building || building.amount === undefined) {
@@ -88,7 +133,7 @@ export const buyBuilding = (buildingId: number, buyAmount: number = store.getSta
 
     // Calculate total cost for all buildings at once
     for (let i = 0; i < actualBuyAmount; i++) {
-        const price = Math.round(data.basePrice * Math.pow(1.175, currentAmount + i));
+        const price = unitPrice(data.buildingId, currentAmount + i);
         totalCost += price;
     }
 
@@ -98,18 +143,40 @@ export const buyBuilding = (buildingId: number, buyAmount: number = store.getSta
     }
 
     const newAmount = currentAmount + actualBuyAmount;
-    const newPrice = Math.round(data.basePrice * Math.pow(1.175, newAmount));
+    const newPrice = unitPrice(data.buildingId, newAmount);
 
     updateBuildingValue(buildingId, "amount", newAmount);
     updateBuildingValue(buildingId, "price", newPrice);
 
-    // Trigger haptic feedback if buildings were bought
+    // Trigger haptic feedback and a sound if buildings were bought
     if (actualBuyAmount > 0) {
         Haptics.notificationAsync(Haptics.NotificationFeedbackType.Success);
+        playBuildingSound();
+    }
+
+    if (currentAmount === 0) {
+        celebrateMilestone({
+            icon: data.icon,
+            caption: i18n.t("buildings.milestoneCaption"),
+            title: i18n.t("buildings.milestoneTitle", { building: midSentence(getBuildingName(data.buildingId)) }),
+        });
     }
 
     batchRecalculations();
 };
+
+/**
+ * Recomputes every building's stored price from its base price, so saves pick up
+ * base price changes (e.g. the black hole and singularity getting cheaper)
+ *
+ * Called once at game start
+ */
+export function syncBuildingPrices() {
+    store.getState().buildings.buildings.forEach(building => {
+        const price = unitPrice(building.buildingId, building.amount);
+        if (building.price !== price) updateBuildingValue(building.buildingId, "price", price);
+    });
+}
 
 /**
  * Batching all expensive recalculations into a single function
@@ -127,7 +194,7 @@ const calculateAffordableBuildings = (building: any, data: any, currentEmojis: n
     let currentAmount = building.amount;
 
     for (let i = 0; i < maxAmount; i++) {
-        const nextPrice = Math.round(data.basePrice * Math.pow(1.175, currentAmount + i));
+        const nextPrice = unitPrice(data.buildingId, currentAmount + i);
 
         if (cumulativeCost + nextPrice <= currentEmojis) {
             cumulativeCost += nextPrice;
@@ -141,7 +208,17 @@ const calculateAffordableBuildings = (building: any, data: any, currentEmojis: n
 };
 
 
-export function calculateBuildingPrice(buildingId: number, buyAmount: number = store.getState().preferences.bulkBuy) {
+/**
+ * The total price of the next bulk buy
+ *
+ * @param emojis the bank "max" is fitted into (defaults to the live bank)
+ */
+export function calculateBuildingPrice(
+    buildingId: number,
+    bulkBuy: BulkBuyAmount = store.getState().preferences.bulkBuy,
+    emojis: number = store.getState().values.emojis,
+) {
+    const buyAmount = resolveBuyAmount(buildingId, bulkBuy, emojis);
     const building = getBuildingById(buildingId);
     const data = buildingData[building.buildingId];
     let currentAmount = building.amount;
@@ -152,7 +229,7 @@ export function calculateBuildingPrice(buildingId: number, buyAmount: number = s
         // We make sure to update the building value with each iteration
         const currentBuilding = getBuildingById(buildingId);
         // Check if the current building can be afforded
-        price += Math.round(data.basePrice * Math.pow(1.175, currentAmount));
+        price += unitPrice(data.buildingId, currentAmount);
         currentAmount += 1;
     }
 

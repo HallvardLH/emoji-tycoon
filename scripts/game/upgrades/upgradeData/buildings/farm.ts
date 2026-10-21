@@ -1,9 +1,10 @@
+import { buildingIdOf } from "../../../buildings/buildingData";
 import { BuildingNames } from "../../../buildings/buildingNamesType";
 import { UpgradeType, UnlockConditionType, UpgradeVariantsType, UpgradeCateogoriesType } from "../UpgradeType";
 
 const baseFarmUpgrade = {
     building: "Farm" as BuildingNames,
-    buildingId: 2,
+    buildingId: buildingIdOf("Farm"),
     unlockCondition: "Building amount" as UnlockConditionType,
     categories: ["Multiply building production" as UpgradeCateogoriesType],
     emojisPerSecondMultiplier: 2,
@@ -25,6 +26,7 @@ export const farmUpgrades: UpgradeType[] = [
         name: "Farmers",
         icon: "🧑‍🌾",
         description: "What is a farm without a farmer?!",
+        quote: "I inherited 200 acres from my father, and you have me growing smiley faces.",
         tier: 0,
         id: 300,
     },
@@ -42,6 +44,7 @@ export const farmUpgrades: UpgradeType[] = [
         name: "Better tools",
         icon: "🪚",
         description: "Allows for much faster farming!",
+        quote: "New tools, same pay. Thanks for nothing.",
         tier: 2,
         id: 302,
     },
@@ -58,6 +61,7 @@ export const farmUpgrades: UpgradeType[] = [
         name: "Farmhouses",
         icon: "🏡",
         description: "A cozy home for your farmers to rest and recharge.",
+        quote: "'Cozy' is a funny word for a shed with a bucket.",
         tier: 4,
         id: 304,
     },
@@ -66,6 +70,7 @@ export const farmUpgrades: UpgradeType[] = [
         name: "Emoji cows",
         icon: "🐄",
         description: "Creates more emooooooojis.",
+        quote: "Make one more moo joke and I'll tip YOU over.",
         tier: 5,
         id: 305,
     },
@@ -83,6 +88,7 @@ export const farmUpgrades: UpgradeType[] = [
         name: "Scarecrows",
         icon: "🎃",
         description: "Keeps those pesky bird emojis away from your farms!",
+        quote: "The birds aren't scared. The neighbours are.",
         tier: 7,
         id: 307,
     },
@@ -99,6 +105,7 @@ export const farmUpgrades: UpgradeType[] = [
         name: "Greenhouses",
         icon: "🌿",
         description: "Grow emojis year-round, no matter the weather!",
+        quote: "Another greenhouse needs your help. I'll mark it on your map.",
         tier: 9,
         id: 309,
     },
@@ -116,6 +123,7 @@ export const farmUpgrades: UpgradeType[] = [
         name: "Emoji orchards",
         icon: "🌳",
         description: "Grow emoji trees that bear fruit year-round!",
+        quote: "The trees are walking. The trees are angry.",
         tier: 11,
         id: 311,
     },
@@ -157,6 +165,7 @@ export const farmUpgrades: UpgradeType[] = [
         name: "The Emoji Farm of the Future",
         icon: "🤖",
         description: "Your farms are now high-tech utopias with robots, holograms, and flying tractors. Welcome to the future!",
+        quote: "A robot took my job. Then it asked me for directions.",
         tier: 16,
         id: 316,
     },
@@ -165,6 +174,7 @@ export const farmUpgrades: UpgradeType[] = [
         name: "Blood moon",
         icon: "🌕",
         description: "Under the blood moon, your crops grow faster... but they also grow teeth.",
+        quote: "The carrots have teeth now. The carrots bite back.",
         tier: 17,
         id: 317,
     },
@@ -191,6 +201,7 @@ export const farmUpgrades: UpgradeType[] = [
         name: "Potatoes",
         icon: "🥔",
         description: "Spud-tacular! Potatoes are the backbone of any farm.",
+        quote: "No salt, no pepper. Just give me a ripe old spud and I'm happy as the blight!",
         variant: "Helper",
         tier: 0,
         id: 30000
@@ -200,6 +211,7 @@ export const farmUpgrades: UpgradeType[] = [
         name: "Carrots",
         icon: "🥕",
         description: "Orange you glad we have carrots?",
+        quote: "No. I'm not glad. Make one more pun and I'll plant you.",
         variant: "Helper",
         tier: 1,
         id: 30001
@@ -229,6 +241,7 @@ export const farmUpgrades: UpgradeType[] = [
         name: "Tomatoes",
         icon: "🍅",
         description: "Juicy and versatile, tomatoes are a farm favorite.",
+        quote: "Great for throwing at whoever designed this farm.",
         variant: "Helper",
         tier: 4,
         id: 30004
@@ -238,6 +251,7 @@ export const farmUpgrades: UpgradeType[] = [
         name: "Lettuce",
         icon: "🥬",
         description: "Leaf it to lettuce to keep your farm fresh and green.",
+        quote: "The most boring thing on this farm. Other than the farmer.",
         variant: "Helper",
         tier: 5,
         id: 30005
@@ -247,6 +261,7 @@ export const farmUpgrades: UpgradeType[] = [
         name: "Broccoli",
         icon: "🥦",
         description: "Tiny trees with big benefits!",
+        quote: "My kid threw it at the waiter. Honestly, he deserved it.",
         variant: "Helper",
         tier: 6,
         id: 30006
@@ -381,6 +396,7 @@ export const farmUpgrades: UpgradeType[] = [
         name: "Peas",
         icon: "🫛",
         description: "Peas!",
+        quote: "Peas! PEAS! That's the whole description? Who's writing these?",
         variant: "Helper",
         emojisPerSecondPercentageIncrease: 0.02,
         tier: 19,
@@ -392,6 +408,7 @@ export const farmUpgrades: UpgradeType[] = [
         name: "Radishes",
         icon: "🌶️",
         description: "Spicy and crunchy, radishes add a kick to your farm and your dishes.",
+        quote: "Nobody wants radishes. Nobody has ever wanted radishes.",
         variant: "Helper",
         emojisPerSecondPercentageIncrease: 0.03,
         tier: 20,
@@ -405,7 +422,7 @@ export const farmUpgrades: UpgradeType[] = [
         quote: "He's a really fungi",
         variant: "Helper",
         emojisPerSecondPercentageIncrease: 0.03,
-        tier: 22,
+        tier: 21,
         id: 30021
     },
     {
@@ -413,9 +430,10 @@ export const farmUpgrades: UpgradeType[] = [
         name: "Pineapples",
         icon: "🍍",
         description: "Tropical and tangy.",
+        quote: "On pizza.",
         variant: "Helper",
         emojisPerSecondPercentageIncrease: 0.03,
-        tier: 23,
+        tier: 22,
         id: 30022
     },
     {
@@ -423,9 +441,10 @@ export const farmUpgrades: UpgradeType[] = [
         name: "Watermelons",
         icon: "🍉",
         description: "Juicy and refreshing, watermelons are the ultimate summer crop.",
+        quote: "My back hurts.",
         variant: "Helper",
         emojisPerSecondPercentageIncrease: 0.03,
-        tier: 24,
+        tier: 23,
         id: 30023
     },
     {
@@ -433,9 +452,10 @@ export const farmUpgrades: UpgradeType[] = [
         name: "Kiwis",
         icon: "🥝",
         description: "Fuzzy on the outside, sweet on the inside. Kiwis are a farm favorite!",
+        quote: "Oh my god, it itches.",
         variant: "Helper",
         emojisPerSecondPercentageIncrease: 0.03,
-        tier: 25,
+        tier: 24,
         id: 30024
     },
     {
@@ -446,7 +466,7 @@ export const farmUpgrades: UpgradeType[] = [
         quote: "In grapes, there is truth.",
         variant: "Helper",
         emojisPerSecondPercentageIncrease: 0.03,
-        tier: 26,
+        tier: 25,
         id: 30025
     },
     {
@@ -456,7 +476,7 @@ export const farmUpgrades: UpgradeType[] = [
         description: "Sweet and tart, cherries are a delightful treat and a farm favorite.",
         variant: "Helper",
         emojisPerSecondPercentageIncrease: 0.03,
-        tier: 27,
+        tier: 26,
         id: 30026
     },
 ];

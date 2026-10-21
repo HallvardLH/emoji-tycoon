@@ -35,55 +35,54 @@
             "plural": "Vituo vya michezo",
             "description": "Weka emoji zako katika hali nzuri ya mwili."
         },
-        "7": {
+        "8": {
             "name": "Benki",
             "plural": "Benki",
             "description": "\"Tunazilinda emoji zako kwa usalama.\""
         },
-        "8": {
+        "9": {
             "name": "Bustani ya burudani ya emoji",
             "plural": "Bustani za burudani za emoji",
             "description": "\"Karibu EmojiLand: Ambapo ndoto na hisia huwa hai!\""
         },
-        "9": {
+        "10": {
             "name": "Bunge la emoji",
             "plural": "Mabunge ya emoji",
             "description": "Ambapo emoji hukutana kuamua jinsi ya kutengeneza emoji zaidi."
         },
-        "10": {
+        "12": {
             "name": "Kituo cha anga",
             "plural": "Vituo vya anga",
             "description": "Teka dunia mpya na uchukue emoji zao."
         },
-        "11": {
+        "13": {
             "name": "Ufalme wa peremende",
             "plural": "Falme za peremende",
             "description": "Paradiso tamu inayotawaliwa na Mfalme Peremende na raia wake watamu wa emoji."
         },
-        "12": {
+        "14": {
             "name": "Volkano ya emoji",
             "plural": "Volkano za emoji",
             "description": "Kila mlipuko huleta mafuriko ya emoji mpya kabisa, zilizofuliwa punde!"
         },
-        "13": {
+        "15": {
             "name": "Hekalu la Emoji Kuu angani",
             "plural": "Mahekalu ya Emoji Kuu angani",
             "description": "Hekaya zinasema Emoji Kuu angani huwapa wafuasi wake waaminifu zaidi emoji zisizo na mwisho."
         },
-        "14": {
+        "16": {
             "name": "Kompyuta kuu ya emoji",
             "plural": "Kompyuta kuu za emoji",
             "description": "Injini kuu kabisa ya emoji. Huzidisha emoji kwa kasi ya mwanga."
         },
-        "15": {
+        "17": {
             "name": "Shimo jeusi la emoji",
             "plural": "Mashimo meusi ya emoji",
             "description": "Mwisho wa safari ya emoji zote... au mwanzo mpya?"
         },
-        "16": {
+        "18": {
             "name": "Singulariti ya emoji",
-            "plural": "Singulariti za emoji",
-            "description": "Basi. Hakuna kilichobaki ila emoji. Umefanikiwa."
+            "plural": "Singulariti za emoji"
         }
     },
     "upgrades": {
@@ -716,88 +715,88 @@
             "description": "Mchezo wa kugonga mpira kwa fimbo na kuendesha kigari cha poa.",
             "quote": "Mchezo wa marais"
         },
-        "800": {
+        "900": {
             "name": "Vibubu",
             "description": "Oink oink!"
         },
-        "801": {
+        "901": {
             "name": "Mifuko mikubwa ya emoji",
             "description": "Huruhusu kubeba emoji nyingi zaidi."
         },
-        "802": {
+        "902": {
             "name": "Kadi za mkopo za emoji",
             "description": "Nzuri kwa kutumia emoji zako ulizozitolea jasho."
         },
-        "803": {
+        "903": {
             "name": "Uwekezaji katika elimu",
             "description": "Elimu bora, ujuzi bora wa kuchora emoji."
         },
-        "804": {
+        "904": {
             "name": "Uwekezaji katika ubunifu",
             "description": "Ubunifu zaidi, emoji za kibunifu zaidi."
         },
-        "900": {
+        "1000": {
             "name": "Bembea za kuzunguka",
             "description": "You spin me right 'round, baby!"
         },
-        "901": {
+        "1001": {
             "name": "Mateleza",
             "description": "Do you slide on all your nights like this? (I might)"
         },
-        "902": {
+        "1002": {
             "name": "Gurudumu la Ferris",
             "description": "Kule juu, ndipo alipovunja moyo wangu."
         },
-        "903": {
+        "1003": {
             "name": "Sarakasi",
             "description": "Kuna aina mbili tu za watu duniani. Wanaoburudisha, na wanaotazama."
         },
-        "904": {
+        "1004": {
             "name": "Mchezesha emoji",
             "description": "Wanasema hajawahi kuangusha mpira hata mara moja."
         },
-        "1000": {
+        "1100": {
             "name": "Uchaguzi wa emoji",
             "description": "Emoji bora ashinde!"
         },
-        "1001": {
+        "1101": {
             "name": "Kichocheo cha emoji",
             "description": "Wewe unapata emoji, na wewe, na wewe, kila mtu anapata emoji!"
         },
-        "1002": {
+        "1102": {
             "name": "Spika wa bunge la emoji",
             "description": "Weka spika wako mwenyewe wa emoji, kuhakikisha mambo yanaenda unavyotaka."
         },
-        "1003": {
+        "1103": {
             "name": "Sheria za emoji",
             "description": "Sisi emoji..."
         },
-        "1004": {
+        "1104": {
             "name": "Shirikisho la emoji la dunia",
             "description": "Huongeza ushirikiano kati ya nchi za emoji."
         },
-        "1100": {
+        "1300": {
             "name": "Darubini",
             "description": "Tazama nyota kugundua sayari za emoji."
         },
-        "1101": {
+        "1301": {
             "name": "Antena za setilaiti",
             "description": "Tazama mbali zaidi ya Njia ya Maziwa kuelekea galaksi ya Njia ya Emoji."
         },
-        "1102": {
+        "1302": {
             "name": "Wanaanga",
             "description": "Mtu anahitajika kuendesha vituo vyako vya anga."
         },
-        "1103": {
+        "1303": {
             "name": "Roketi",
             "description": "Inaruka kwa kasi sana."
         },
-        "1104": {
+        "1304": {
             "name": "⏁⎍⋏⏃☍⎍⟊⏃ ☍⍙⏃ ⏃⋔⏃⋏⟟...",
             "description": "...⋏⏃ ⏁⎍⋏⏃⌰⟒⏁⏃ ⟒⋔⍜⟊⟟ ⋔⌿⊬⏃ ⋉⏃ ⏃⟊⏃⏚⎍.",
             "quote": "☌⎍⌇⏃ ⎍⌇⍜ ⍙⏃⋏☌⎍ ⋔⏃⍀⏃ ⏁⏃⋏⍜ ⟟⌰⟟ ☍⎍⎎⎍⋏☌⎍⏃ ⌇⟟⍀⟟ ⊬⏃⋏☌⎍"
         },
-        "1105": {
+        "1305": {
             "name": "☍⟟⏁⎍ ☊⊑⏃ ⏃⟊⏃⏚⎍",
             "description": "☍⟟⏁⎍ ⊑⟟☍⟟ ☍⟟⋏⏃ ⎍⍙⟒⋉⍜ ⎍⌇⟟⍜⟊⎍⌰⟟☍⏃⋏⏃."
         },
@@ -970,11 +969,11 @@
             "description": "Hudonoa skrini yako kwa mdomo wake.",
             "quote": "Yumba yumba! Nitakusaidia kupata emoji!"
         },
-        "100000": {
+        "110000": {
             "name": "Wanagenzi wa emoji",
             "description": "Wanagenzi husaidia serikali ya emoji kwenda vizuri!"
         },
-        "100001": {
+        "110001": {
             "name": "Warasimu wa emoji",
             "description": "Serikali ya emoji inahitaji watawala ili ifanye kazi.",
             "quote": "Inaonekana unapitisha sheria. Unahitaji msaada?"
@@ -1002,8 +1001,10 @@
             "description": "Uzalishaji wa emoji umepunguzwa nusu!"
         },
         "200": {
-            "title": "Zawadi ya emoji",
-            "description": "Emoji za saa 1!"
+            "title": "Zawadi ya emoji"
         }
-    }
+    },
+    "perks": {},
+    "trials": {},
+    "funValues": {}
 }

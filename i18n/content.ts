@@ -4,6 +4,9 @@ import { pluralNames } from "../scripts/game/buildings/buildings";
 import { getUpgradeDataById } from "../scripts/game/upgrades/shorthands";
 import { effectData } from "../scripts/game/effects/effectData";
 import { BuildingNames } from "../scripts/game/buildings/buildingNamesType";
+import type { Perk } from "../scripts/game/prestige/perks";
+import type { Trial } from "../scripts/game/prestige/trials";
+import type { FunValueEffect } from "../scripts/game/funValues";
 
 /**
  * Translated game content.
@@ -67,4 +70,35 @@ function getEffectData(effectId: number) {
 export function getEffectTitle(effectId: number, fallback = "") {
     const effect = getEffectData(effectId);
     return translate(`effects.${effectId}.title`, effect ? effect.title : fallback);
+}
+
+export function getPerkName(perk: Perk) {
+    return translate(`perks.${perk.id}.name`, perk.name);
+}
+
+export function getPerkDescription(perk: Perk) {
+    return translate(`perks.${perk.id}.description`, perk.description);
+}
+
+export function getTrialName(trial: Trial) {
+    return translate(`trials.${trial.id}.name`, trial.name);
+}
+
+/** What makes the trial's run harder */
+export function getTrialRule(trial: Trial) {
+    return translate(`trials.${trial.id}.rule`, trial.rule);
+}
+
+/** What completing the trial gives, forever */
+export function getTrialReward(trial: Trial) {
+    return translate(`trials.${trial.id}.reward`, trial.reward);
+}
+
+// Fun value quirks have no id, so they are keyed by where their range starts
+export function getFunValueEffectName(effect: FunValueEffect) {
+    return translate(`funValues.${effect.from}.name`, effect.name);
+}
+
+export function getFunValueEffectDescription(effect: FunValueEffect) {
+    return translate(`funValues.${effect.from}.description`, effect.description);
 }

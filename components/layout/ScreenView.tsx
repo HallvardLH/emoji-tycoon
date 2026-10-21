@@ -2,6 +2,7 @@ import React from 'react';
 import { ReactNode } from 'react';
 import { View, Dimensions, KeyboardAvoidingView, SafeAreaView, ScrollView, StyleSheet, StyleProp, TextStyle, StatusBar, Platform } from 'react-native';
 import GradientBackground from './GradientBackground';
+import { palette } from '../misc/theme';
 
 interface ScreenViewProps {
     children?: ReactNode;
@@ -40,7 +41,7 @@ export default function ScreenView(props: ScreenViewProps) {
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-        backgroundColor: "#7054FE"
+        backgroundColor: palette.grape,
     },
     screenContainer: {
         width: '100%',

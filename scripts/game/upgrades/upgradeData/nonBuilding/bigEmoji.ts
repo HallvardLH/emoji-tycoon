@@ -13,7 +13,7 @@ const baseBigEmojiUpgrade = {
     emojisPerTapPercentageOfEps: 0.01,
 };
 
-export const bigEmojiUpgrades: UpgradeType[] = [
+const hands: UpgradeType[] = [
     {
         ...baseBigEmojiUpgrade,
         name: "Another hand",
@@ -217,3 +217,13 @@ export const bigEmojiUpgrades: UpgradeType[] = [
 
 
 ];
+
+// The first hands each add 1% of production to every tap; from the sixth on, 0.1%.
+// Tap multipliers multiply the whole tap, hands included, so with every hand at 1%
+// (25% in all) tapping outgrew production by thousands of times late in the game.
+const FULL_SHARE_HANDS = 5;
+const LATE_HAND_SHARE = 0.001;
+
+export const bigEmojiUpgrades: UpgradeType[] = hands.map(upgrade => upgrade.tier < FULL_SHARE_HANDS
+    ? upgrade
+    : { ...upgrade, emojisPerTapPercentageOfEps: LATE_HAND_SHARE });

@@ -14,18 +14,7 @@
     },
     "common": {
         "buy": "Nunua",
-        "details": "Maelezo",
-        "owned_one": "umenunua",
-        "owned_other": "umenunua"
-    },
-    "buildings": {
-        "bulkBuy_one": "Unanunua jengo {{count}} kwa wakati mmoja",
-        "bulkBuy_other": "Unanunua majengo {{count}} kwa wakati mmoja",
-        "emojisPerSecond": "Emoji <hl>{{eps}}</hl> kwa sekunde",
-        "youHave": "• Idadi ya {{building}}: <hl>{{amount}}</hl>",
-        "eachProduces": "• Kila moja hutoa emoji <hl>{{eps}}</hl> kwa sekunde",
-        "totalProduces": "• Jumla ni emoji <hl>{{eps}}</hl> kwa sekunde!",
-        "ownedUpgrades": "Maboresho uliyonunua"
+        "details": "Maelezo"
     },
     "upgrades": {
         "bigEmoji": "Emoji kubwa",
@@ -41,9 +30,6 @@
         "filterTitle": "Chuja maboresho",
         "filterDescription": "Chagua majengo ambayo ungependa kuona maboresho yake."
     },
-    "emojidex": {
-        "basePrice": "Bei ya msingi: {{price}}"
-    },
     "stats": {
         "totalEmojisDrawn": "Jumla ya emoji zilizochorwa",
         "emojiTaps": "Miguso ya emoji",
@@ -54,16 +40,12 @@
     "drawer": {
         "language": "Lugha",
         "deviceLanguage": "Lugha ya kifaa",
-        "funValue": "Thamani ya furaha: {{value}}",
         "cheats": "Chiti",
         "resetGame": "Anzisha mchezo upya",
-        "spawnEffect": "Leta emoji ya athari",
-        "giveEmojis": "Toa emoji {{amount}}"
+        "spawnEffect": "Leta emoji ya athari"
     },
     "prestige": {
-        "title": "Heshima",
-        "accumulating": "Baada ya kuunda emoji <hl>{{amount}}</hl>, kiini halisi cha emoji kimeanza kujikusanya karibu nawe.",
-        "essence": "Kiini cha emoji ni <hl>dutu ya kichawi</hl> inayobadilisha umbo lake kila unapoitazama, na ina nguvu zisizojulikana."
+        "title": "Heshima"
     },
     "numbers": {
         "groupSize": "3",

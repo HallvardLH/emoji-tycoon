@@ -14,18 +14,7 @@
     },
     "common": {
         "buy": "Αγορά",
-        "details": "Στοιχεία",
-        "owned_one": "σε κατοχή",
-        "owned_other": "σε κατοχή"
-    },
-    "buildings": {
-        "bulkBuy_one": "Αγοράζεις {{count}} κτίριο τη φορά",
-        "bulkBuy_other": "Αγοράζεις {{count}} κτίρια τη φορά",
-        "emojisPerSecond": "<hl>{{eps}}</hl> emoji το δευτερόλεπτο",
-        "youHave": "• Έχεις <hl>{{amount}}</hl> {{building}}",
-        "eachProduces": "• Ανά κτίριο: <hl>{{eps}}</hl> emoji το δευτερόλεπτο",
-        "totalProduces": "• Δηλαδή συνολικά <hl>{{eps}}</hl> emoji το δευτερόλεπτο!",
-        "ownedUpgrades": "Βελτιώσεις που έχεις"
+        "details": "Στοιχεία"
     },
     "upgrades": {
         "bigEmoji": "Μεγάλο emoji",
@@ -41,9 +30,6 @@
         "filterTitle": "Φίλτρο βελτιώσεων",
         "filterDescription": "Διάλεξε για ποια κτίρια θα βλέπεις βελτιώσεις."
     },
-    "emojidex": {
-        "basePrice": "Βασική τιμή: {{price}}"
-    },
     "stats": {
         "totalEmojisDrawn": "Συνολικά emoji που ζωγράφισες",
         "emojiTaps": "Πατήματα σε emoji",
@@ -54,16 +40,12 @@
     "drawer": {
         "language": "Γλώσσα",
         "deviceLanguage": "Γλώσσα συσκευής",
-        "funValue": "Δείκτης πλάκας: {{value}}",
         "cheats": "Κόλπα",
         "resetGame": "Επαναφορά παιχνιδιού",
-        "spawnEffect": "Εμφάνιση emoji εφέ",
-        "giveEmojis": "Δώσε {{amount}} emoji"
+        "spawnEffect": "Εμφάνιση emoji εφέ"
     },
     "prestige": {
-        "title": "Κύρος",
-        "accumulating": "Αφού δημιούργησες <hl>{{amount}}</hl> emoji, το ίδιο το απόσταγμα των emoji άρχισε να μαζεύεται γύρω σου.",
-        "essence": "Το απόσταγμα emoji είναι μια <hl>μαγική ουσία</hl> που αλλάζει σχήμα κάθε φορά που την κοιτάς και κρύβει άγνωστες δυνάμεις."
+        "title": "Κύρος"
     },
     "numbers": {
         "groupSize": "3",

@@ -35,55 +35,54 @@
             "plural": "Sports center",
             "description": "Panatilihing fit ang mga emoji mo."
         },
-        "7": {
+        "8": {
             "name": "Bangko",
             "plural": "Bangko",
             "description": "\"Ligtas ang emoji mo sa amin.\""
         },
-        "8": {
+        "9": {
             "name": "Emoji theme park",
             "plural": "Emoji theme park",
             "description": "\"Welcome sa EmojiLand: Kung saan nabubuhay ang mga pangarap at emosyon!\""
         },
-        "9": {
+        "10": {
             "name": "Emoji kongreso",
             "plural": "Emoji kongreso",
             "description": "Dito nagpupulong ang mga emoji para pagpasyahan kung paano gagawa ng mas maraming emoji."
         },
-        "10": {
+        "12": {
             "name": "Space station",
             "plural": "Space station",
             "description": "Sakupin ang mga bagong mundo at kunin ang kanilang emoji."
         },
-        "11": {
+        "13": {
             "name": "Kaharian ng kendi",
             "plural": "Kaharian ng kendi",
             "description": "Isang matamis na paraiso na pinamumunuan ng Hari ng Kendi at ng kanyang sweet na emoji na nasasakupan."
         },
-        "12": {
+        "14": {
             "name": "Emoji bulkan",
             "plural": "Emoji bulkan",
             "description": "Bawat pagputok ay may dalang baha ng bagong-bago at bagong-hulmang emoji!"
         },
-        "13": {
+        "15": {
             "name": "Templo ng Dakilang Emoji sa langit",
             "plural": "Templo ng Dakilang Emoji sa langit",
             "description": "Ayon sa alamat, binibiyayaan ng Dakilang Emoji sa langit ng walang katapusang emoji ang pinakatapat nitong mga tagasunod."
         },
-        "14": {
+        "16": {
             "name": "Emoji supercomputer",
             "plural": "Emoji supercomputer",
             "description": "Ang sukdulang emoji engine. Nagpaparami ng emoji sa bilis ng liwanag."
         },
-        "15": {
+        "17": {
             "name": "Emoji black hole",
             "plural": "Emoji black hole",
             "description": "Ang huling hantungan ng lahat ng emoji... o isang bagong simula?"
         },
-        "16": {
+        "18": {
             "name": "Emoji singularity",
-            "plural": "Emoji singularity",
-            "description": "Ayan na. Wala nang natira kundi emoji. Nagawa mo."
+            "plural": "Emoji singularity"
         }
     },
     "upgrades": {
@@ -716,88 +715,88 @@
             "description": "Sport kung saan pinapalo mo ang bola gamit ang patpat at nagmamaneho ka ng astig na cart.",
             "quote": "Sport ng mga presidente"
         },
-        "800": {
+        "900": {
             "name": "Alkansiya",
             "description": "Oink oink!"
         },
-        "801": {
+        "901": {
             "name": "Mas malaking emoji bag",
             "description": "Mas maraming emoji ang madadala."
         },
-        "802": {
+        "902": {
             "name": "Emoji credit card",
             "description": "Para gastusin ang pinaghirapan mong emoji."
         },
-        "803": {
+        "903": {
             "name": "Puhunan sa edukasyon",
             "description": "Mas magandang edukasyon, mas magaling gumuhit ng emoji."
         },
-        "804": {
+        "904": {
             "name": "Puhunan sa inobasyon",
             "description": "Mas maraming inobasyon, mas innovative na emoji."
         },
-        "900": {
+        "1000": {
             "name": "Carousel",
             "description": "You spin me right 'round, baby!"
         },
-        "901": {
+        "1001": {
             "name": "Slide",
             "description": "Do you slide on all your nights like this? (I might)"
         },
-        "902": {
+        "1002": {
             "name": "Ferris wheel",
             "description": "Doon sa itaas, doon niya dinurog ang puso ko."
         },
-        "903": {
+        "1003": {
             "name": "Sirko",
             "description": "Dalawa lang ang klase ng tao sa mundo. Ang mga nagpapasaya, at ang mga nanonood."
         },
-        "904": {
+        "1004": {
             "name": "Emoji juggler",
             "description": "Ni minsan, hindi pa raw niya nabitawan ang bola."
         },
-        "1000": {
+        "1100": {
             "name": "Emoji eleksiyon",
             "description": "Manalo nawa ang pinakamagaling na emoji!"
         },
-        "1001": {
+        "1101": {
             "name": "Emoji ayuda",
             "description": "May emoji ka, ikaw rin, ikaw rin, lahat may emoji!"
         },
-        "1002": {
+        "1102": {
             "name": "Speaker ng emoji house",
             "description": "Maglagay ng sarili mong emoji speaker, para siguradong sa iyo ang pabor."
         },
-        "1003": {
+        "1103": {
             "name": "Emoji na batas",
             "description": "Kami, ang sambayanang emoji..."
         },
-        "1004": {
+        "1104": {
             "name": "Pandaigdigang emoji kompederasyon",
             "description": "Pinapalakas ang pagtutulungan ng mga emoji na bansa."
         },
-        "1100": {
+        "1300": {
             "name": "Teleskopyo",
             "description": "Tumingin sa mga bituin para makatuklas ng emoji na planeta."
         },
-        "1101": {
+        "1301": {
             "name": "Satellite antenna",
             "description": "Tumanaw lampas sa Milky Way patungo sa galaxy na Emojiway."
         },
-        "1102": {
+        "1302": {
             "name": "Astronaut",
             "description": "May kailangang magpatakbo ng space stations mo."
         },
-        "1103": {
+        "1303": {
             "name": "Rocket",
             "description": "Sobrang bilis lumipad."
         },
-        "1104": {
+        "1304": {
             "name": "⎅⎍⋔⏃⏁⟟⋏☌ ☍⏃⋔⟟ ⋏⏃⋏☌ ⌿⏃⊬⏃⌿⏃...",
             "description": "...⏃⏁ ⋔⏃⊬ ⎅⏃⌰⏃ ☍⏃⋔⟟⋏☌ ⏚⏃⌰⟟⍙ ⋏⏃ ⏚⏃☌⍜⋏☌ ⟒⋔⍜⟊⟟.",
             "quote": "⟟-⏁⏃⌿ ⏃⋏☌ ⋔⎍☍⊑⏃ ☍⍜ ⋏⏃⋏☌ ⌰⟟⋔⏃⋏☌ ⏚⟒⌇⟒⌇ ⌿⏃⍀⏃ ⋔⏃⏚⎍☍⌇⏃⋏ ⏃⋏☌ ⌇⟟☍⍀⟒⏁⍜ ☍⍜"
         },
-        "1105": {
+        "1305": {
             "name": "☍⏃☍⏃⟟⏚⏃⋏☌ ⏚⏃☌⏃⊬",
             "description": "⋔⏃⊬ ⏁⏃☌⌰⏃⊬ ⋏⏃ ⌰⟟⊑⟟⋔ ⋏⏃ ☍⏃⌿⏃⋏☌⊬⏃⍀⟟⊑⏃⋏ ⏃⋏☌ ⏚⏃☌⏃⊬ ⋏⏃ ⟟⏁⍜."
         },
@@ -970,11 +969,11 @@
             "description": "Tinutuka ang screen mo gamit ang tuka nito.",
             "quote": "Kendeng-kendeng! Tutulungan kitang kumuha ng emoji!"
         },
-        "100000": {
+        "110000": {
             "name": "Emoji intern",
             "description": "Tumutulong ang interns para maayos ang takbo ng emoji gobyerno!"
         },
-        "100001": {
+        "110001": {
             "name": "Emoji burukrata",
             "description": "Kailangan ng emoji gobyerno ng mga tagapangasiwa para gumana.",
             "quote": "Mukhang nagpapasa ka ng batas. Kailangan mo ng tulong?"
@@ -1002,8 +1001,10 @@
             "description": "Nahati sa dalawa ang emoji production!"
         },
         "200": {
-            "title": "Emoji regalo",
-            "description": "Emoji na katumbas ng 1 oras!"
+            "title": "Emoji regalo"
         }
-    }
+    },
+    "perks": {},
+    "trials": {},
+    "funValues": {}
 }

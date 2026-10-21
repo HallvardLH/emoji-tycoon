@@ -1,65 +1,241 @@
-import React, { useEffect, useRef } from "react";
-import { Animated, Pressable } from "react-native";
+import React, { useEffect, useRef, useState } from "react";
+import { Animated, Easing, Pressable, View, StyleSheet, LayoutChangeEvent } from "react-native";
+import { usePresence } from "../animations/usePresence";
+import Svg, { Defs, RadialGradient, Stop, Circle } from "react-native-svg";
+import Text from "../generalUI/Text";
+import { palette } from "../misc/theme";
 import Emoji from "./Emoji";
 import { useSelector } from 'react-redux';
 import { RootState } from '../../scripts/redux/reduxStore';
 import { tapEffect } from "../../scripts/game/effects/onScreenEffects";
 import { Effect } from "../../scripts/game/effects/effectType";
 import PulseAnimation from "../animations/PulseAnimation";
+import EffectBurst, { Celebration, EFFECT_BURST_WIDTH } from "./EffectBurst";
+import { formatDuration, formatNumber } from "../../scripts/misc";
+import i18n from "../../i18n";
+import { useTranslation } from "react-i18next";
+import { toCaps } from "../../scripts/utils";
+import { getEffectTitle } from "../../i18n/content";
+
+/** What to show when an effect emoji is tapped. `given` is the amount a gift gave. */
+function celebrationFor(effect: Effect, given?: number): Celebration {
+    const seconds = toCaps(formatDuration(effect.timeLeft));
+    const caps = (key: string) => toCaps(i18n.t(key));
+
+    if (effect.type === "give") {
+        const amount = given ?? 0;
+        return {
+            headline: `${effect.emoji} ${caps("effects.gift")}`,
+            value: `+${formatNumber(amount < 1e6 ? Math.floor(amount) : amount, 1)}`,
+            caption: caps("header.emojis"),
+            sparks: ["✨", "🎉", "⭐", "💫", "🪙", "💰", "✨", "🎊", "⭐", "💰"],
+            color: palette.sun,
+        };
+    }
+    if (effect.quality === "bad") {
+        return {
+            headline: `${effect.emoji} ${caps("effects.ohNo")}`,
+            value: `×${effect.epsMult || effect.eptMult}`,
+            caption: `${caps(effect.type === "tap" ? "effects.tapping" : "effects.production")} · ${seconds}`,
+            sparks: ["💥", "💨", "💥", "💨", "💥", "💨", "💥", "💨"],
+            color: palette.pop,
+        };
+    }
+    if (effect.type === "tap") {
+        return {
+            headline: `${effect.emoji} ${caps("effects.tapFrenzy")}`,
+            value: `×${effect.eptMult}`,
+            caption: `${caps("effects.tapping")} · ${seconds}`,
+            sparks: [effect.emoji, "👆", "✨", "💥", effect.emoji, "👆", "✨", "💥", effect.emoji, "⚡"],
+            color: palette.sun,
+        };
+    }
+    // Production boosts; the big ones get a louder headline
+    const huge = effect.epsMult >= 10;
+    return {
+        headline: `${effect.emoji} ${caps(huge ? "effects.unholyPower" : "effects.productionBoost")}`,
+        value: `×${effect.epsMult}`,
+        caption: `${caps("effects.production")} · ${seconds}`,
+        sparks: huge
+            ? [effect.emoji, "🔥", "⚡", "🔥", effect.emoji, "🔥", "⚡", "🔥", effect.emoji, "🔥", "⚡", "🔥"]
+            : [effect.emoji, "✨", "🌟", "✨", effect.emoji, "✨", "🌟", "✨", effect.emoji, "✨"],
+        color: palette.sun,
+    };
+}
 
 export default function EffectPopup() {
     const { effectsOnScreen } = useSelector((state: RootState) => state.effects);
+    // The real size of the play area (between the header and the tab bar)
+    const [area, setArea] = useState({ width: 0, height: 0 });
+    // Celebrations currently playing
+    const [bursts, setBursts] = useState<(Celebration & { id: number, x: number, y: number })[]>([]);
+    // Effects stay on screen a moment after they're gone, to animate out
+    const [shown, remove] = usePresence(effectsOnScreen, effect => effect.instanceId!);
+    // Tapped effects pop away quickly; ones that ran out fade slowly
+    const collected = useRef(new Set<string | number>());
+
+    const celebrate = (effect: Effect, given: number | undefined, centerX: number, centerY: number) => {
+        collected.current.add(effect.instanceId!);
+        // Keep the whole celebration on screen, including the text floating upwards
+        const x = Math.min(Math.max(centerX, EFFECT_BURST_WIDTH / 2), area.width - EFFECT_BURST_WIDTH / 2);
+        const y = Math.min(Math.max(centerY, 120), area.height - 50);
+        setBursts(current => [...current, { ...celebrationFor(effect, given), id: Date.now() + Math.random(), x, y }]);
+    };
 
     return (
-        <>
-            {effectsOnScreen.map((effect) => (
-                <FadeInOutEffect key={effect.instanceId} effect={effect} />
+        <View
+            style={StyleSheet.absoluteFill}
+            pointerEvents="box-none"
+            onLayout={(e: LayoutChangeEvent) => setArea({ width: e.nativeEvent.layout.width, height: e.nativeEvent.layout.height })}
+        >
+            {area.width > 0 && shown.map(({ key, item, leaving }) => (
+                <FadeInOutEffect
+                    key={key}
+                    effect={item}
+                    area={area}
+                    onCollect={celebrate}
+                    leaving={leaving ? (collected.current.has(key) ? "collected" : "expired") : undefined}
+                    onGone={() => { collected.current.delete(key); remove(key); }}
+                />
             ))}
-        </>
+            {bursts.map(({ id, ...burst }) => (
+                <EffectBurst
+                    key={id}
+                    {...burst}
+                    onDone={() => setBursts(current => current.filter(b => b.id !== id))}
+                />
+            ))}
+        </View>
     );
+}
+
+/**
+ * Turns a 0 - 1 position into pixels that keep the whole effect inside the area,
+ * including the glow's pulse, which grows it by 10%
+ */
+function toPixels(fraction: number, areaSize: number, effectSize: number) {
+    // Clamp, as saves from before positions were fractions hold pixel values
+    const clamped = Math.min(1, Math.max(0, fraction));
+    const free = Math.max(0, areaSize - effectSize - EDGE_INSET * 2);
+    return EDGE_INSET + clamped * free;
 }
 
 interface FadeInOutEffectProps {
     effect: Effect;
+    area: { width: number, height: number };
+    /** Called when the effect is tapped, with what a gift gave and where the effect was */
+    onCollect: (effect: Effect, given: number | undefined, centerX: number, centerY: number) => void;
+    /** Set once the effect is gone: tapped, or it ran out */
+    leaving?: "collected" | "expired";
+    /** Called when the exit animation has finished */
+    onGone: () => void;
 }
 
-function FadeInOutEffect({ effect }: FadeInOutEffectProps) {
-    const fadeAnim = useRef(new Animated.Value(0)).current; // Initial opacity value: 0
+function FadeInOutEffect({ effect, area, onCollect, leaving, onGone }: FadeInOutEffectProps) {
+    const { t } = useTranslation();
+    const left = toPixels(effect.xPos, area.width, EFFECT_WIDTH);
+    const top = toPixels(effect.yPos, area.height, EFFECT_HEIGHT);
+
+    // Set on the first tap, before `leaving` catches up, so a quick double tap collects it once
+    const tapped = useRef(false);
+    const onPress = () => {
+        // Still catchable while it fades away after running out, but not once collected
+        if (leaving === "collected" || tapped.current) return;
+        tapped.current = true;
+        // tapEffect plays the haptic
+        const given = tapEffect(effect);
+        onCollect(effect, given, left + EFFECT_WIDTH / 2, top + GLOW / 2);
+    };
+
+    const fadeAnim = useRef(new Animated.Value(0)).current;
+    const scaleAnim = useRef(new Animated.Value(0.6)).current;
 
     useEffect(() => {
-        // Fade in effect
-        Animated.timing(fadeAnim, {
-            toValue: 1,
-            duration: 1000, // 500ms fade-in duration
-            useNativeDriver: true,
-        }).start();
+        // Fade and grow in
+        Animated.parallel([
+            Animated.timing(fadeAnim, { toValue: 1, duration: 600, useNativeDriver: true }),
+            Animated.spring(scaleAnim, { toValue: 1, tension: 120, friction: 6, useNativeDriver: true }),
+        ]).start();
+    }, []);
 
-        return () => {
-            // Fade out effect
-            Animated.timing(fadeAnim, {
-                toValue: 0,
-                duration: 1000, // 500ms fade-out duration
-                useNativeDriver: true,
-            }).start();
-        };
-    }, [fadeAnim]);
+    useEffect(() => {
+        if (!leaving) return;
+        const exit = leaving === "collected"
+            // Tapped: bursts outwards as the celebration takes over
+            ? Animated.parallel([
+                Animated.timing(fadeAnim, { toValue: 0, duration: 220, easing: Easing.out(Easing.quad), useNativeDriver: true }),
+                Animated.timing(scaleAnim, { toValue: 1.5, duration: 220, easing: Easing.out(Easing.quad), useNativeDriver: true }),
+            ])
+            // Ran out: fades and shrinks away
+            : Animated.parallel([
+                Animated.timing(fadeAnim, { toValue: 0, duration: 900, easing: Easing.in(Easing.quad), useNativeDriver: true }),
+                Animated.timing(scaleAnim, { toValue: 0.7, duration: 900, easing: Easing.in(Easing.quad), useNativeDriver: true }),
+            ]);
+        // Not when cut short: tapping a fading effect swaps its fade for the collected burst
+        exit.start(({ finished }) => { if (finished) onGone(); });
+    }, [leaving]);
 
     return (
         <Animated.View
+            pointerEvents={leaving === "collected" ? "none" : "auto"}
             style={{
                 position: "absolute",
-                left: effect.xPos,
-                top: effect.yPos,
-                marginTop: effect.margin ? effect.margin / 2 : 25,
-                marginLeft: effect.margin ? effect.margin / 2 : 25,
-                opacity: fadeAnim, // Bind opacity to animated value
+                left: left,
+                top: top,
+                width: EFFECT_WIDTH,
+                height: EFFECT_HEIGHT,
+                opacity: fadeAnim,
+                transform: [{ scale: scaleAnim }],
             }}
         >
-            <PulseAnimation maxSize={1.1} duration={2000}>
-                <Pressable onPress={() => tapEffect(effect.instanceId!)}>
-                    <Emoji icon={effect.emoji} size={70} />
-                </Pressable>
-            </PulseAnimation>
+            <Pressable
+                accessibilityRole="button"
+                accessibilityLabel={t("effects.collectLabel", { title: getEffectTitle(effect.id, effect.title) })}
+                onPress={onPress}
+                style={styles.button}
+            >
+                <PulseAnimation maxSize={1.1} duration={2000}>
+                    <View style={styles.glowWrap}>
+                        <Svg style={StyleSheet.absoluteFill} width={GLOW} height={GLOW} pointerEvents="none">
+                            <Defs>
+                                <RadialGradient id="effectGlow" cx="50%" cy="50%" r="50%">
+                                    <Stop offset="0%" stopColor={palette.sun} stopOpacity="0.5" />
+                                    <Stop offset="100%" stopColor={palette.sun} stopOpacity="0" />
+                                </RadialGradient>
+                            </Defs>
+                            <Circle cx={GLOW / 2} cy={GLOW / 2} r={GLOW / 2} fill="url(#effectGlow)" />
+                        </Svg>
+                        <Emoji icon={effect.emoji} size={52} />
+                    </View>
+                </PulseAnimation>
+                <Text font="black" size={12} style={styles.label}>{toCaps(t("effects.tapMe"))}</Text>
+            </Pressable>
         </Animated.View>
     );
 }
+
+const GLOW = 84;
+const LABEL_HEIGHT = 16;
+const LABEL_GAP = 2;
+// The effect's full box: the glow plus the "TAP ME" label under it
+const EFFECT_WIDTH = GLOW;
+const EFFECT_HEIGHT = GLOW + LABEL_GAP + LABEL_HEIGHT;
+// Room for the pulse (up to 1.1×, so 5% of the glow on each side) plus breathing space
+const EDGE_INSET = Math.ceil(GLOW * 0.05) + 4;
+
+const styles = StyleSheet.create({
+    button: {
+        alignItems: "center",
+        gap: LABEL_GAP,
+    },
+    glowWrap: {
+        width: GLOW,
+        height: GLOW,
+        alignItems: "center",
+        justifyContent: "center",
+    },
+    label: {
+        letterSpacing: 0.8,
+        lineHeight: LABEL_HEIGHT,
+    },
+})

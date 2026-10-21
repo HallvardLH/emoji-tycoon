@@ -14,16 +14,7 @@
     },
     "common": {
         "buy": "Beli",
-        "details": "Detail",
-        "owned_other": "dimiliki"
-    },
-    "buildings": {
-        "bulkBuy_other": "Membeli {{count}} bangunan sekaligus",
-        "emojisPerSecond": "<hl>{{eps}}</hl> emoji per detik",
-        "youHave": "• Kamu punya <hl>{{amount}}</hl> {{building}}",
-        "eachProduces": "• Masing-masing menghasilkan <hl>{{eps}}</hl> emoji per detik",
-        "totalProduces": "• Totalnya <hl>{{eps}}</hl> emoji per detik!",
-        "ownedUpgrades": "Upgrade yang dimiliki"
+        "details": "Detail"
     },
     "upgrades": {
         "bigEmoji": "Emoji besar",
@@ -39,9 +30,6 @@
         "filterTitle": "Filter upgrade",
         "filterDescription": "Pilih bangunan yang upgrade-nya ingin kamu lihat."
     },
-    "emojidex": {
-        "basePrice": "Harga dasar: {{price}}"
-    },
     "stats": {
         "totalEmojisDrawn": "Total emoji digambar",
         "emojiTaps": "Ketukan emoji",
@@ -52,16 +40,12 @@
     "drawer": {
         "language": "Bahasa",
         "deviceLanguage": "Bahasa perangkat",
-        "funValue": "Nilai seru: {{value}}",
         "cheats": "Cheat",
         "resetGame": "Reset game",
-        "spawnEffect": "Munculkan emoji efek",
-        "giveEmojis": "Beri {{amount}} emoji"
+        "spawnEffect": "Munculkan emoji efek"
     },
     "prestige": {
-        "title": "Prestise",
-        "accumulating": "Setelah menciptakan <hl>{{amount}}</hl> emoji, esensi sejati emoji mulai berkumpul di sekitarmu.",
-        "essence": "Esensi emoji adalah <hl>zat ajaib</hl> yang berubah bentuk setiap kali kamu melihatnya, dan menyimpan kekuatan misterius."
+        "title": "Prestise"
     },
     "numbers": {
         "groupSize": "3",

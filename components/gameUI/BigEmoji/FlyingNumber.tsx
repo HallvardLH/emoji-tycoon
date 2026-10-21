@@ -1,37 +1,49 @@
 import { StyleSheet, Animated } from "react-native";
-import React from "react";
+import React, { useMemo } from "react";
+import { fontFamilyFor } from "../../generalUI/Text";
 
 interface FlyingNumberProps {
     number: string;
-    xAnim: Animated.Value;
-    yAnim: Animated.Value;
+    /** 0 → 1 over the flight, eased out */
+    progress: Animated.Value;
+    x: number;
+    y: number;
+    /** Degrees it tilts by the end */
+    tilt: number;
+    color?: string;
+    size?: number;
 }
 
-export const FlyingNumber = React.memo(({ number, xAnim, yAnim }: FlyingNumberProps) => (
-    <Animated.Text
-        style={[
-            styles.number,
-            {
-                transform: [{ translateY: yAnim }, { translateX: xAnim }],
-                opacity: yAnim.interpolate({
-                    inputRange: [0, 50, 100],
-                    outputRange: [1, 0.5, 0],
-                }),
-            },
-        ]}
-    >
-        {number}
-    </Animated.Text>
-));
+export const FlyingNumber = React.memo(({ number, progress, x, y, tilt, color = "#FFFFFF", size = 26 }: FlyingNumberProps) => {
+    const style = useMemo(() => ({
+        // The number can carry a number name ("+1.5 million"), so it follows the language's font.
+        // The app remounts when the language changes
+        fontFamily: fontFamilyFor("display"),
+        fontWeight: fontFamilyFor("display") === undefined ? "bold" as const : undefined,
+        color,
+        fontSize: size,
+        opacity: progress.interpolate({ inputRange: [0, 0.55, 1], outputRange: [1, 1, 0] }),
+        transform: [
+            { translateX: progress.interpolate({ inputRange: [0, 1], outputRange: [0, x] }) },
+            { translateY: progress.interpolate({ inputRange: [0, 1], outputRange: [0, y] }) },
+            { rotate: progress.interpolate({ inputRange: [0, 1], outputRange: ["0deg", `${tilt}deg`] }) },
+            // Punches in oversized, settles, then shrinks a little as it fades
+            { scale: progress.interpolate({ inputRange: [0, 0.1, 0.25, 1], outputRange: [0.3, 1.35, 1, 0.85] }) },
+        ],
+    }), [progress, x, y, tilt, color, size]);
+
+    return (
+        <Animated.Text pointerEvents="none" style={[styles.number, style]}>
+            {number}
+        </Animated.Text>
+    );
+});
 
 const styles = StyleSheet.create({
     number: {
-        fontSize: 40,
-        fontFamily: "Digitalt",
-        color: '#FFD700', // Gold color for the number
         position: 'absolute',
-        textShadowColor: "rgba(0, 0, 0, 0.2)",
-        textShadowOffset: { width: 0, height: 2.5 },
+        textShadowColor: "rgba(0, 0, 0, 0.35)",
+        textShadowOffset: { width: 0, height: 2 },
         textShadowRadius: 4
     },
 });

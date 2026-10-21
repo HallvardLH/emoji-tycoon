@@ -35,55 +35,54 @@
             "plural": "Sportcentra",
             "description": "Houd je emoji's in topvorm."
         },
-        "7": {
+        "8": {
             "name": "Bank",
             "plural": "Banken",
             "description": "\"Bij ons zijn je emoji's veilig.\""
         },
-        "8": {
+        "9": {
             "name": "Emoji-pretpark",
             "plural": "Emoji-pretparken",
             "description": "\"Welkom in EmojiLand: waar dromen en emoties tot leven komen!\""
         },
-        "9": {
+        "10": {
             "name": "Emoji-parlement",
             "plural": "Emoji-parlementen",
             "description": "Waar emoji's samenkomen om te beslissen hoe ze meer emoji's maken."
         },
-        "10": {
+        "12": {
             "name": "Ruimtestation",
             "plural": "Ruimtestations",
             "description": "Verover nieuwe werelden en pik hun emoji's in."
         },
-        "11": {
+        "13": {
             "name": "Snoepkoninkrijk",
             "plural": "Snoepkoninkrijken",
             "description": "Een suikerzoet paradijs, geregeerd door de Snoepkoning en zijn zoete emoji-onderdanen."
         },
-        "12": {
+        "14": {
             "name": "Emoji-vulkaan",
             "plural": "Emoji-vulkanen",
             "description": "Elke uitbarsting brengt een vloedgolf aan gloednieuwe, versgesmede emoji's!"
         },
-        "13": {
+        "15": {
             "name": "Tempel van de Grote Emoji in de lucht",
             "plural": "Tempels van de Grote Emoji in de lucht",
             "description": "Volgens de legende schenkt de Grote Emoji in de lucht oneindig veel emoji's aan zijn trouwste volgelingen."
         },
-        "14": {
+        "16": {
             "name": "Emoji-supercomputer",
             "plural": "Emoji-supercomputers",
             "description": "De ultieme emoji-machine. Vermenigvuldigt emoji's met de snelheid van het licht."
         },
-        "15": {
+        "17": {
             "name": "Zwart emoji-gat",
             "plural": "Zwarte emoji-gaten",
             "description": "De eindbestemming van alle emoji's... of een nieuw begin?"
         },
-        "16": {
+        "18": {
             "name": "Emoji-singulariteit",
-            "plural": "Emoji-singulariteiten",
-            "description": "Dat was het. Er is niets meer over behalve emoji's. Het is je gelukt."
+            "plural": "Emoji-singulariteiten"
         }
     },
     "upgrades": {
@@ -716,88 +715,88 @@
             "description": "Een sport waarbij je met een stok tegen een balletje slaat en in een cool karretje rijdt.",
             "quote": "Een presidentiële sport"
         },
-        "800": {
+        "900": {
             "name": "Spaarvarkens",
             "description": "Knor knor!"
         },
-        "801": {
+        "901": {
             "name": "Grotere emoji-zakken",
             "description": "Hiermee draag je nog meer emoji's mee."
         },
-        "802": {
+        "902": {
             "name": "Emoji-creditcards",
             "description": "Handig om je zuurverdiende emoji's uit te geven."
         },
-        "803": {
+        "903": {
             "name": "Investering in onderwijs",
             "description": "Beter onderwijs, betere emoji-tekenvaardigheden."
         },
-        "804": {
+        "904": {
             "name": "Investering in innovatie",
             "description": "Meer innovatie, innovatievere emoji's."
         },
-        "900": {
+        "1000": {
             "name": "Draaimolens",
             "description": "You spin me right 'round, baby!"
         },
-        "901": {
+        "1001": {
             "name": "Glijbanen",
             "description": "Do you slide on all your nights like this? (I might)"
         },
-        "902": {
+        "1002": {
             "name": "Reuzenrad",
             "description": "Daar, helemaal bovenin, brak ze mijn hart."
         },
-        "903": {
+        "1003": {
             "name": "Circus",
             "description": "There's only two types of people in the world. The ones that entertain, and the ones that observe."
         },
-        "904": {
+        "1004": {
             "name": "Emoji-jongleur",
             "description": "Ze zeggen dat hij nog nooit een steek heeft laten vallen."
         },
-        "1000": {
+        "1100": {
             "name": "Emoji-verkiezingen",
             "description": "Moge de beste emoji winnen!"
         },
-        "1001": {
+        "1101": {
             "name": "Emoji-steunpakket",
             "description": "Jij krijgt een emoji, en jij, en jij, iedereen krijgt emoji's!"
         },
-        "1002": {
+        "1102": {
             "name": "Voorzitter van de emoji-kamer",
             "description": "Installeer je eigen emoji-voorzitter, zodat alles gaat zoals jij wilt."
         },
-        "1003": {
+        "1103": {
             "name": "Emoji-wetten",
             "description": "Wij, de emoji's..."
         },
-        "1004": {
+        "1104": {
             "name": "Wereldwijde emoji-confederatie",
             "description": "Verbetert de samenwerking tussen emoji-landen."
         },
-        "1100": {
+        "1300": {
             "name": "Telescopen",
             "description": "Tuur naar de sterren om emoji-planeten te ontdekken."
         },
-        "1101": {
+        "1301": {
             "name": "Schotelantennes",
             "description": "Kijk voorbij de Melkweg, naar het Emojiwegstelsel."
         },
-        "1102": {
+        "1302": {
             "name": "Astronauten",
             "description": "Iemand moet je ruimtestations bemannen."
         },
-        "1103": {
+        "1303": {
             "name": "Raketten",
             "description": "Vliegt heel erg snel."
         },
-        "1104": {
+        "1304": {
             "name": "⍙⟟⟊ ☍⍜⋔⟒⋏ ⋔⟒⏁ ☌⍜⟒⎅⟒ ⏚⟒⎅⍜⟒⌰⟟⋏☌⟒⋏...",
             "description": "...⟒⋏ ⍙⟒ ⏚⍀⟒⋏☌⟒⋏ ☌⟒☍☍⟒ ⋏⟟⟒⎍⍙⟒ ⟒⋔⍜⟊⟟'⌇.",
             "quote": "⏁⟟☍ ⏁⍙⟒⟒ ⌿⌰⎍⌇ ⎅⍀⟟⟒ ☍⟒⟒⍀ ⍜⌿ ⋔⟟⟊⋏ ☌⟒⋉⟟☊⊑⏁ ⍜⋔ ⋔⟟⟊⋏ ☌⟒⊑⟒⟟⋔ ⏁⟒ ⍜⋏⏁⌇⌰⎍⟟⏁⟒⋏"
         },
-        "1105": {
+        "1305": {
             "name": "⍀⏃⏃⍀ ⍜⏚⟊⟒☊⏁",
             "description": "⎅⟟⏁ ⍜⏚⟊⟒☊⏁ ⏚⟒⋉⟟⏁ ⍜⋏☌⟒☍⟒⋏⎅⟒ ☍⍀⏃☊⊑⏁⟒⋏."
         },
@@ -970,11 +969,11 @@
             "description": "Pikt met zijn snavel op je scherm.",
             "quote": "Waggel! Ik help je aan emoji's!"
         },
-        "100000": {
+        "110000": {
             "name": "Emoji-stagiairs",
             "description": "Stagiairs zorgen dat de emoji-overheid soepel draait!"
         },
-        "100001": {
+        "110001": {
             "name": "Emoji-bureaucraten",
             "description": "Een emoji-overheid kan niet zonder ambtenaren.",
             "quote": "Het lijkt erop dat je een wet aanneemt. Hulp nodig?"
@@ -1002,8 +1001,10 @@
             "description": "Emoji-productie gehalveerd!"
         },
         "200": {
-            "title": "Emoji-cadeau",
-            "description": "Een uur aan emoji's!"
+            "title": "Emoji-cadeau"
         }
-    }
+    },
+    "perks": {},
+    "trials": {},
+    "funValues": {}
 }

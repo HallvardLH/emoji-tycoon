@@ -1,14 +1,23 @@
+import { buildingIdOf } from "../../../buildings/buildingData";
 import { BuildingNames } from "../../../buildings/buildingNamesType";
 import { UpgradeType, UnlockConditionType, UpgradeVariantsType, UpgradeCateogoriesType } from "../UpgradeType";
 
 const baseSportsCenterUpgrade = {
     building: "Sports center" as BuildingNames,
-    buildingId: 6,
+    buildingId: buildingIdOf("Sports center"),
     unlockCondition: "Building amount" as UnlockConditionType,
     categories: ["Multiply building production" as UpgradeCateogoriesType],
     emojisPerSecondMultiplier: 2,
     emojisPerTapMultiplier: 0,
     variant: "Standard building" as UpgradeVariantsType,
+};
+
+const sportsCenterHelperUpgrade = {
+    ...baseSportsCenterUpgrade,
+    categories: ["Percentage increase tap" as UpgradeCateogoriesType],
+    unlockCondition: "Building helper" as UnlockConditionType,
+    emojisPerTapPercentageIncrease: 0.1,
+    variant: "Helper" as UpgradeVariantsType,
 };
 
 export const sportsCenterUpgrades: UpgradeType[] = [
@@ -25,6 +34,7 @@ export const sportsCenterUpgrades: UpgradeType[] = [
         name: "Baseball fields",
         icon: "⚾",
         description: "This ought to be a total home run.",
+        quote: "Home run? The ball hit my car. Again.",
         tier: 1,
     },
     {
@@ -64,5 +74,171 @@ export const sportsCenterUpgrades: UpgradeType[] = [
         description: "A sport where you hit a ball with a stick and drive a cool cart.",
         quote: "A presidential sport",
         tier: 6,
+    },
+    {
+        ...baseSportsCenterUpgrade,
+        name: "Emoji olympics",
+        icon: "🏆",
+        description: "Every four years, the fastest emojis go for gold.",
+        tier: 7,
+    },
+    {
+        ...baseSportsCenterUpgrade,
+        name: "Emoji stadium",
+        icon: "🏟️",
+        description: "Eighty thousand seats, every one filled with a cheering emoji.",
+        tier: 8,
+    },
+    {
+        ...baseSportsCenterUpgrade,
+        name: "Marathon training",
+        icon: "🎽",
+        description: "Emojis that can draw for 42 kilometres without stopping.",
+        tier: 9,
+    },
+    {
+        ...baseSportsCenterUpgrade,
+        name: "Swimming pools",
+        icon: "🏊",
+        description: "Fifty metres of chlorinated emojis.",
+        quote: "Detecting multiple leviathan-class lifeforms in the deep end. Are you sure whatever you're doing is worth it?",
+        tier: 10,
+    },
+    {
+        ...baseSportsCenterUpgrade,
+        name: "Boxing ring",
+        icon: "🥊",
+        description: "Float like a butterfly, draw like an emoji.",
+        tier: 11,
+    },
+    {
+        ...baseSportsCenterUpgrade,
+        name: "Climbing wall",
+        icon: "🧗",
+        description: "Every hold is a smiley face. Great grip.",
+        tier: 12,
+    },
+    {
+        ...baseSportsCenterUpgrade,
+        name: "Ice rink",
+        icon: "⛸️",
+        description: "Emojis on ice. The sequins are sold separately.",
+        tier: 13,
+    },
+    {
+        ...baseSportsCenterUpgrade,
+        name: "Bowling alley",
+        icon: "🎳",
+        description: "Every strike knocks loose a pile of emojis.",
+        tier: 14,
+    },
+    {
+        ...baseSportsCenterUpgrade,
+        name: "Skate park",
+        icon: "🛹",
+        description: "Kickflips, grinds, and a lot of emojis.",
+        tier: 15,
+    },
+    {
+        ...baseSportsCenterUpgrade,
+        name: "Ski slopes",
+        icon: "🎿",
+        description: "Black diamond runs, groomed with emojis.",
+        tier: 16,
+    },
+    {
+        ...baseSportsCenterUpgrade,
+        name: "Martial arts dojo",
+        icon: "🥋",
+        description: "Wax on, wax off, draw emojis.",
+        quote: "Tap or tap not. There is no try.",
+        tier: 17,
+    },
+    {
+        ...baseSportsCenterUpgrade,
+        name: "Racing track",
+        icon: "🏎️",
+        description: "Zero to a million emojis in under three seconds.",
+        tier: 18,
+    },
+    {
+        ...baseSportsCenterUpgrade,
+        name: "Hall of fame",
+        icon: "🏅",
+        description: "Every legendary emoji athlete, immortalised in bronze.",
+        tier: 19,
+    },
+
+    // Helpers: one for every 10 owned
+    {
+        ...sportsCenterHelperUpgrade,
+        name: "Sprinter helper",
+        icon: "🏃",
+        description: "Taps the screen at a hundred metres per second.",
+        tier: 0,
+    },
+    {
+        ...sportsCenterHelperUpgrade,
+        name: "Weightlifter helper",
+        icon: "🏋️",
+        description: "Taps so hard the screen bends a little.",
+        quote: "I bench 200 kilos and you want me poking a phone. Fine.",
+        tier: 1,
+    },
+    {
+        ...sportsCenterHelperUpgrade,
+        name: "Handball helper",
+        icon: "🤾",
+        description: "Throws taps at the Big Emoji from across the court.",
+        tier: 2,
+    },
+    {
+        ...sportsCenterHelperUpgrade,
+        name: "Cyclist helper",
+        icon: "🚴",
+        description: "Pedals a little machine that taps for you.",
+        tier: 3,
+    },
+    {
+        ...sportsCenterHelperUpgrade,
+        name: "Golfer helper",
+        icon: "🏌️",
+        description: "Hole in one, tap in one.",
+        tier: 4,
+    },
+    {
+        ...sportsCenterHelperUpgrade,
+        name: "Fencer helper",
+        icon: "🤺",
+        description: "En garde! Tap, tap, tap.",
+        tier: 5,
+    },
+    {
+        ...sportsCenterHelperUpgrade,
+        name: "Surfer helper",
+        icon: "🏄",
+        description: "Rides your combo like a wave.",
+        tier: 6,
+    },
+    {
+        ...sportsCenterHelperUpgrade,
+        name: "Gymnast helper",
+        icon: "🤸‍♀️",
+        description: "Taps with perfect form every time. Ten out of ten.",
+        tier: 7,
+    },
+    {
+        ...sportsCenterHelperUpgrade,
+        name: "Jockey helper",
+        icon: "🏇",
+        description: "Taps at a full gallop.",
+        tier: 8,
+    },
+    {
+        ...sportsCenterHelperUpgrade,
+        name: "Basketball helper",
+        icon: "⛹️",
+        description: "Dribbles on the Big Emoji. Nothing but taps.",
+        tier: 9,
     },
 ];

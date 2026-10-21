@@ -20,9 +20,10 @@ export interface Effect {
     instanceId?: number;
     // The id of the effect, in relation to effectData
     id: number;
+    // Position on screen as a fraction (0 - 1) of the free space, see EffectPopup
     xPos: number;
     yPos: number;
-    // The style margin given to the on-screen effect
+    /** @deprecated no longer used, positions are fractions */
     margin?: number;
     type: EffectTypes;
     // Whether the effect helps or sabotages the player

@@ -14,22 +14,7 @@
     },
     "common": {
         "buy": "Koupit",
-        "details": "Detaily",
-        "owned_one": "vlastníš",
-        "owned_few": "vlastníš",
-        "owned_many": "vlastníš",
-        "owned_other": "vlastníš"
-    },
-    "buildings": {
-        "bulkBuy_one": "Kupuješ {{count}} budovu najednou",
-        "bulkBuy_few": "Kupuješ {{count}} budovy najednou",
-        "bulkBuy_many": "Kupuješ {{count}} budovy najednou",
-        "bulkBuy_other": "Kupuješ {{count}} budov najednou",
-        "emojisPerSecond": "<hl>{{eps}}</hl> emoji za sekundu",
-        "youHave": "• {{building}} máš: <hl>{{amount}}</hl>",
-        "eachProduces": "• Každá budova dává <hl>{{eps}}</hl> emoji za sekundu",
-        "totalProduces": "• Celkem tedy <hl>{{eps}}</hl> emoji za sekundu!",
-        "ownedUpgrades": "Koupená vylepšení"
+        "details": "Detaily"
     },
     "upgrades": {
         "bigEmoji": "Velké emoji",
@@ -45,9 +30,6 @@
         "filterTitle": "Filtr vylepšení",
         "filterDescription": "Vyber, pro které budovy chceš vidět vylepšení."
     },
-    "emojidex": {
-        "basePrice": "Základní cena: {{price}}"
-    },
     "stats": {
         "totalEmojisDrawn": "Celkem nakreslených emoji",
         "emojiTaps": "Ťuknutí na emoji",
@@ -58,16 +40,12 @@
     "drawer": {
         "language": "Jazyk",
         "deviceLanguage": "Jazyk zařízení",
-        "funValue": "Faktor zábavy: {{value}}",
         "cheats": "Cheaty",
         "resetGame": "Resetovat hru",
-        "spawnEffect": "Vytvořit efektové emoji",
-        "giveEmojis": "Dát {{amount}} emoji"
+        "spawnEffect": "Vytvořit efektové emoji"
     },
     "prestige": {
-        "title": "Prestiž",
-        "accumulating": "Po vytvoření <hl>{{amount}}</hl> emoji se kolem tebe začala hromadit samotná podstata emoji.",
-        "essence": "Emoji esence je <hl>kouzelná substance</hl>, která mění tvar pokaždé, když se na ni podíváš, a skrývá neznámé síly."
+        "title": "Prestiž"
     },
     "numbers": {
         "groupSize": "3",

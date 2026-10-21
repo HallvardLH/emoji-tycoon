@@ -14,18 +14,7 @@
     },
     "common": {
         "buy": "Kjøp",
-        "details": "Detaljer",
-        "owned_one": "eid",
-        "owned_other": "eid"
-    },
-    "buildings": {
-        "bulkBuy_one": "Kjøper {{count}} bygning om gangen",
-        "bulkBuy_other": "Kjøper {{count}} bygninger om gangen",
-        "emojisPerSecond": "<hl>{{eps}}</hl> emojier per sekund",
-        "youHave": "• Du har <hl>{{amount}}</hl> {{building}}",
-        "eachProduces": "• Hver lager <hl>{{eps}}</hl> emojier per sekund",
-        "totalProduces": "• Til sammen <hl>{{eps}}</hl> emojier per sekund!",
-        "ownedUpgrades": "Kjøpte oppgraderinger"
+        "details": "Detaljer"
     },
     "upgrades": {
         "bigEmoji": "Stor emoji",
@@ -41,9 +30,6 @@
         "filterTitle": "Filtrer oppgraderinger",
         "filterDescription": "Velg hvilke bygninger du vil se oppgraderinger for."
     },
-    "emojidex": {
-        "basePrice": "Grunnpris: {{price}}"
-    },
     "stats": {
         "totalEmojisDrawn": "Emojier tegnet totalt",
         "emojiTaps": "Emojitrykk",
@@ -54,16 +40,12 @@
     "drawer": {
         "language": "Språk",
         "deviceLanguage": "Enhetens språk",
-        "funValue": "Moroverdi: {{value}}",
         "cheats": "Juks",
         "resetGame": "Tilbakestill spillet",
-        "spawnEffect": "Lag effekt-emoji",
-        "giveEmojis": "Gi {{amount}} emojier"
+        "spawnEffect": "Lag effekt-emoji"
     },
     "prestige": {
-        "title": "Prestisje",
-        "accumulating": "Etter å ha skapt <hl>{{amount}}</hl> emojier har selve essensen av emojier begynt å samle seg rundt deg.",
-        "essence": "Emoji-essens er et <hl>magisk stoff</hl> som skifter form hver gang du ser på det, og har ukjente krefter."
+        "title": "Prestisje"
     },
     "numbers": {
         "groupSize": "3",

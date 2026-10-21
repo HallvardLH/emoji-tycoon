@@ -14,16 +14,7 @@
     },
     "common": {
         "buy": "Mua",
-        "details": "Chi tiết",
-        "owned_other": "đang có"
-    },
-    "buildings": {
-        "bulkBuy_other": "Mua {{count}} công trình mỗi lần",
-        "emojisPerSecond": "<hl>{{eps}}</hl> emoji mỗi giây",
-        "youHave": "• Bạn có <hl>{{amount}}</hl> {{building}}",
-        "eachProduces": "• Mỗi cái tạo ra <hl>{{eps}}</hl> emoji mỗi giây",
-        "totalProduces": "• Tổng cộng <hl>{{eps}}</hl> emoji mỗi giây!",
-        "ownedUpgrades": "Nâng cấp đã có"
+        "details": "Chi tiết"
     },
     "upgrades": {
         "bigEmoji": "Emoji khổng lồ",
@@ -39,9 +30,6 @@
         "filterTitle": "Lọc nâng cấp",
         "filterDescription": "Chọn công trình bạn muốn xem nâng cấp."
     },
-    "emojidex": {
-        "basePrice": "Giá gốc: {{price}}"
-    },
     "stats": {
         "totalEmojisDrawn": "Tổng số emoji đã vẽ",
         "emojiTaps": "Số lần chạm emoji",
@@ -52,16 +40,12 @@
     "drawer": {
         "language": "Ngôn ngữ",
         "deviceLanguage": "Ngôn ngữ thiết bị",
-        "funValue": "Chỉ số vui: {{value}}",
         "cheats": "Gian lận",
         "resetGame": "Chơi lại từ đầu",
-        "spawnEffect": "Gọi emoji hiệu ứng",
-        "giveEmojis": "Nhận {{amount}} emoji"
+        "spawnEffect": "Gọi emoji hiệu ứng"
     },
     "prestige": {
-        "title": "Danh vọng",
-        "accumulating": "Sau khi tạo ra <hl>{{amount}}</hl> emoji, tinh chất thuần khiết nhất của emoji đã bắt đầu tích tụ quanh bạn.",
-        "essence": "Tinh chất emoji là một <hl>chất phép thuật</hl> đổi hình dạng mỗi khi bạn nhìn vào, và ẩn chứa những sức mạnh chưa ai biết."
+        "title": "Danh vọng"
     },
     "numbers": {
         "groupSize": "3",

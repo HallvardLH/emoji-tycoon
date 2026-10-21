@@ -14,20 +14,7 @@
     },
     "common": {
         "buy": "Compra",
-        "details": "Dettagli",
-        "owned_one": "in possesso",
-        "owned_many": "in possesso",
-        "owned_other": "in possesso"
-    },
-    "buildings": {
-        "bulkBuy_one": "Acquisto di {{count}} edificio alla volta",
-        "bulkBuy_many": "Acquisto di {{count}} edifici alla volta",
-        "bulkBuy_other": "Acquisto di {{count}} edifici alla volta",
-        "emojisPerSecond": "<hl>{{eps}}</hl> emoji al secondo",
-        "youHave": "• Hai <hl>{{amount}}</hl> {{building}}",
-        "eachProduces": "• Produzione unitaria: <hl>{{eps}}</hl> emoji al secondo",
-        "totalProduces": "• Per un totale di <hl>{{eps}}</hl> emoji al secondo!",
-        "ownedUpgrades": "Migliorie possedute"
+        "details": "Dettagli"
     },
     "upgrades": {
         "bigEmoji": "Emoji gigante",
@@ -43,9 +30,6 @@
         "filterTitle": "Filtra migliorie",
         "filterDescription": "Scegli di quali edifici vedere le migliorie."
     },
-    "emojidex": {
-        "basePrice": "Prezzo base: {{price}}"
-    },
     "stats": {
         "totalEmojisDrawn": "Emoji disegnati in totale",
         "emojiTaps": "Tocchi sull'emoji",
@@ -56,16 +40,12 @@
     "drawer": {
         "language": "Lingua",
         "deviceLanguage": "Lingua del dispositivo",
-        "funValue": "Valore fun: {{value}}",
         "cheats": "Trucchi",
         "resetGame": "Ricomincia partita",
-        "spawnEffect": "Genera emoji effetto",
-        "giveEmojis": "Dai {{amount}} emoji"
+        "spawnEffect": "Genera emoji effetto"
     },
     "prestige": {
-        "title": "Prestigio",
-        "accumulating": "Dopo aver creato <hl>{{amount}}</hl> emoji, l'essenza stessa degli emoji ha iniziato ad accumularsi intorno a te.",
-        "essence": "L'essenza di emoji è una <hl>sostanza magica</hl> che cambia forma ogni volta che la guardi e custodisce poteri sconosciuti."
+        "title": "Prestigio"
     },
     "numbers": {
         "groupSize": "3",

@@ -35,55 +35,54 @@
             "plural": "Spor merkezleri",
             "description": "Emojilerini formda tut."
         },
-        "7": {
+        "8": {
             "name": "Banka",
             "plural": "Bankalar",
             "description": "\"Emojilerin bizimle güvende.\""
         },
-        "8": {
+        "9": {
             "name": "Emoji lunaparkı",
             "plural": "Emoji lunaparkları",
             "description": "\"EmojiLand'e hoş geldin: Hayallerin ve duyguların hayat bulduğu yer!\""
         },
-        "9": {
+        "10": {
             "name": "Emoji meclisi",
             "plural": "Emoji meclisleri",
             "description": "Emojilerin daha fazla emoji yapmanın yolunu konuşmak için toplandığı yer."
         },
-        "10": {
+        "12": {
             "name": "Uzay istasyonu",
             "plural": "Uzay istasyonları",
             "description": "Yeni dünyalar fethet ve emojilerini al."
         },
-        "11": {
+        "13": {
             "name": "Şeker krallığı",
             "plural": "Şeker krallıkları",
             "description": "Şeker Kral ve onun tatlı emoji tebaası tarafından yönetilen şekerli bir cennet."
         },
-        "12": {
+        "14": {
             "name": "Emoji yanardağı",
             "plural": "Emoji yanardağları",
             "description": "Her patlama, yepyeni ve taptaze dövülmüş bir emoji seli getirir!"
         },
-        "13": {
+        "15": {
             "name": "Gökteki Büyük Emoji tapınağı",
             "plural": "Gökteki Büyük Emoji tapınakları",
             "description": "Efsaneye göre gökteki Büyük Emoji, en sadık müritlerine sonsuz emoji bahşeder."
         },
-        "14": {
+        "16": {
             "name": "Emoji süper bilgisayarı",
             "plural": "Emoji süper bilgisayarları",
             "description": "En üst düzey emoji motoru. Emojileri ışık hızında çoğaltır."
         },
-        "15": {
+        "17": {
             "name": "Emoji kara deliği",
             "plural": "Emoji kara delikleri",
             "description": "Tüm emojilerin son durağı... yoksa yeni bir başlangıç mı?"
         },
-        "16": {
+        "18": {
             "name": "Emoji tekilliği",
-            "plural": "Emoji tekillikleri",
-            "description": "İşte bu. Emojiden başka hiçbir şey kalmadı. Başardın."
+            "plural": "Emoji tekillikleri"
         }
     },
     "upgrades": {
@@ -716,88 +715,88 @@
             "description": "Sopayla topa vurduğun ve havalı bir araba sürdüğün spor.",
             "quote": "Başkanların sporu"
         },
-        "800": {
+        "900": {
             "name": "Kumbaralar",
             "description": "Hörk hörk!"
         },
-        "801": {
+        "901": {
             "name": "Daha büyük emoji çantaları",
             "description": "Daha da fazla emoji taşımanı sağlar."
         },
-        "802": {
+        "902": {
             "name": "Emoji kredi kartları",
             "description": "Alın teriyle kazandığın emojileri harcamak için birebir."
         },
-        "803": {
+        "903": {
             "name": "Eğitime yatırım",
             "description": "Daha iyi eğitim, daha iyi emoji çizme becerisi."
         },
-        "804": {
+        "904": {
             "name": "İnovasyona yatırım",
             "description": "Daha çok inovasyon, daha yenilikçi emojiler."
         },
-        "900": {
+        "1000": {
             "name": "Atlıkarıncalar",
             "description": "You spin me right 'round, baby!"
         },
-        "901": {
+        "1001": {
             "name": "Kaydıraklar",
             "description": "Do you slide on all your nights like this? (I might)"
         },
-        "902": {
+        "1002": {
             "name": "Dönme dolap",
             "description": "Ta yukarıda, kalbimi orada kırdı."
         },
-        "903": {
+        "1003": {
             "name": "Sirk",
             "description": "Dünyada sadece iki tür insan vardır. Eğlendirenler ve izleyenler."
         },
-        "904": {
+        "1004": {
             "name": "Emoji hokkabazı",
             "description": "Topu hiç düşürmediği söylenir."
         },
-        "1000": {
+        "1100": {
             "name": "Emoji seçimleri",
             "description": "En iyi emoji kazansın!"
         },
-        "1001": {
+        "1101": {
             "name": "Emoji teşvik paketi",
             "description": "Sana bir emoji, sana da, sana da, herkese emoji!"
         },
-        "1002": {
+        "1102": {
             "name": "Emoji meclis başkanı",
             "description": "İşlerin senin istediğin gibi gitmesi için kendi emoji meclis başkanını ata."
         },
-        "1003": {
+        "1103": {
             "name": "Emoji yasaları",
             "description": "Biz emojiler..."
         },
-        "1004": {
+        "1104": {
             "name": "Küresel emoji konfederasyonu",
             "description": "Emoji ülkeleri arasındaki işbirliğini artırır."
         },
-        "1100": {
+        "1300": {
             "name": "Teleskoplar",
             "description": "Emoji gezegenleri keşfetmek için yıldızlara bak."
         },
-        "1101": {
+        "1301": {
             "name": "Uydu antenleri",
             "description": "Samanyolu'nun ötesine, Emojiyolu galaksisine bak."
         },
-        "1102": {
+        "1302": {
             "name": "Astronotlar",
             "description": "Uzay istasyonlarını birilerinin yönetmesi lazım."
         },
-        "1103": {
+        "1303": {
             "name": "Roketler",
             "description": "Çok hızlı uçar."
         },
-        "1104": {
+        "1304": {
             "name": "⏚⏃⍀⟟⌇ ⟟☊⟟⋏ ☌⟒⌰⎅⟟☍...",
             "description": "...⌇⟟⋉⟒ ☊⟟⌰☌⟟⋏ ⊬⟒⋏⟟ ⟒⋔⍜⟊⟟⌰⟒⍀ ☌⟒⏁⟟⍀⎅⟟☍.",
             "quote": "⌇⟟⍀⍀⟟⋔⟟ ☊⍜⋉⋔⟒☍ ⟟☊⟟⋏ ⊬⎍⋉⎍⋔⟒ ⏚⟒⌇ ☍⟒⋉ ⎅⍜☍⎍⋏"
         },
-        "1105": {
+        "1305": {
             "name": "☌⏃⍀⟟⌿ ⋏⟒⌇⋏⟒",
             "description": "⏚⎍ ⋏⟒⌇⋏⟒ ⏃⋏⌰⏃⏁⟟⌰⋔⏃⋉ ☌⎍☊⌰⟒⍀ ⏁⏃⌇⟟⍀."
         },
@@ -970,11 +969,11 @@
             "description": "Gagasıyla ekranını gagalar.",
             "quote": "Paytak paytak! Emoji toplamana yardım edeceğim!"
         },
-        "100000": {
+        "110000": {
             "name": "Emoji stajyerleri",
             "description": "Stajyerler emoji hükümetinin sorunsuz işlemesine yardım eder!"
         },
-        "100001": {
+        "110001": {
             "name": "Emoji bürokratları",
             "description": "Bir emoji hükümetinin işlemesi için yöneticilere ihtiyacı vardır.",
             "quote": "Görünüşe göre bir yasa çıkarıyorsun. Yardım ister misin?"
@@ -1002,8 +1001,10 @@
             "description": "Emoji üretimi yarıya indi!"
         },
         "200": {
-            "title": "Emoji hediyesi",
-            "description": "1 saatlik emoji!"
+            "title": "Emoji hediyesi"
         }
-    }
+    },
+    "perks": {},
+    "trials": {},
+    "funValues": {}
 }

@@ -14,16 +14,7 @@
     },
     "common": {
         "buy": "ซื้อ",
-        "details": "ดูเพิ่ม",
-        "owned_other": "ที่มี"
-    },
-    "buildings": {
-        "bulkBuy_other": "ซื้อทีละ {{count}} หลัง",
-        "emojisPerSecond": "<hl>{{eps}}</hl> อีโมจิต่อวินาที",
-        "youHave": "• คุณมี {{building}} <hl>{{amount}}</hl> แห่ง",
-        "eachProduces": "• แต่ละแห่งผลิต <hl>{{eps}}</hl> อีโมจิต่อวินาที",
-        "totalProduces": "• รวมทั้งหมด <hl>{{eps}}</hl> อีโมจิต่อวินาที!",
-        "ownedUpgrades": "อัปเกรดที่มี"
+        "details": "ดูเพิ่ม"
     },
     "upgrades": {
         "bigEmoji": "อีโมจิยักษ์",
@@ -39,9 +30,6 @@
         "filterTitle": "กรองอัปเกรด",
         "filterDescription": "เลือกอาคารที่อยากดูอัปเกรด"
     },
-    "emojidex": {
-        "basePrice": "ราคาเริ่มต้น: {{price}}"
-    },
     "stats": {
         "totalEmojisDrawn": "อีโมจิที่วาดทั้งหมด",
         "emojiTaps": "จำนวนครั้งที่แตะ",
@@ -52,16 +40,12 @@
     "drawer": {
         "language": "ภาษา",
         "deviceLanguage": "ภาษาของอุปกรณ์",
-        "funValue": "ค่าความสนุก: {{value}}",
         "cheats": "สูตรโกง",
         "resetGame": "เริ่มเกมใหม่",
-        "spawnEffect": "เรียกอีโมจิเอฟเฟกต์",
-        "giveEmojis": "รับ {{amount}} อีโมจิ"
+        "spawnEffect": "เรียกอีโมจิเอฟเฟกต์"
     },
     "prestige": {
-        "title": "เพรสทีจ",
-        "accumulating": "หลังจากสร้างอีโมจิไปแล้ว <hl>{{amount}}</hl> ตัว แก่นแท้ของอีโมจิก็เริ่มสะสมอยู่รอบตัวคุณ",
-        "essence": "แก่นอีโมจิคือ<hl>สารวิเศษ</hl>ที่เปลี่ยนรูปร่างทุกครั้งที่คุณมอง และซ่อนพลังลึกลับเอาไว้"
+        "title": "เพรสทีจ"
     },
     "numbers": {
         "groupSize": "3",

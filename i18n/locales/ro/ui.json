@@ -14,20 +14,7 @@
     },
     "common": {
         "buy": "Cumpără",
-        "details": "Detalii",
-        "owned_one": "bucată",
-        "owned_few": "bucăți",
-        "owned_other": "de bucăți"
-    },
-    "buildings": {
-        "bulkBuy_one": "Cumperi câte {{count}} clădire",
-        "bulkBuy_few": "Cumperi câte {{count}} clădiri",
-        "bulkBuy_other": "Cumperi câte {{count}} de clădiri",
-        "emojisPerSecond": "<hl>{{eps}}</hl> emoji pe secundă",
-        "youHave": "• Ai <hl>{{amount}}</hl> {{building}}",
-        "eachProduces": "• Fiecare produce <hl>{{eps}}</hl> emoji pe secundă",
-        "totalProduces": "• Adică un total de <hl>{{eps}}</hl> emoji pe secundă!",
-        "ownedUpgrades": "Bonusuri deținute"
+        "details": "Detalii"
     },
     "upgrades": {
         "bigEmoji": "Emoji mare",
@@ -43,9 +30,6 @@
         "filterTitle": "Filtrează bonusurile",
         "filterDescription": "Alege clădirile ale căror bonusuri vrei să le vezi."
     },
-    "emojidex": {
-        "basePrice": "Preț de bază: {{price}}"
-    },
     "stats": {
         "totalEmojisDrawn": "Total emoji desenate",
         "emojiTaps": "Atingeri de emoji",
@@ -56,16 +40,12 @@
     "drawer": {
         "language": "Limbă",
         "deviceLanguage": "Limba dispozitivului",
-        "funValue": "Valoare fun: {{value}}",
         "cheats": "Trișări",
         "resetGame": "Resetează jocul",
-        "spawnEffect": "Generează emoji cu efect",
-        "giveEmojis": "Primește {{amount}} emoji"
+        "spawnEffect": "Generează emoji cu efect"
     },
     "prestige": {
-        "title": "Prestigiu",
-        "accumulating": "După ce ai creat <hl>{{amount}}</hl> emoji, însăși esența emoji-urilor a început să se adune în jurul tău.",
-        "essence": "Esența de emoji este o <hl>substanță magică</hl> care își schimbă forma de fiecare dată când te uiți la ea și ascunde puteri necunoscute."
+        "title": "Prestigiu"
     },
     "numbers": {
         "groupSize": "3",

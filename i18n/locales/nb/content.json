@@ -35,55 +35,54 @@
             "plural": "Idrettssentre",
             "description": "Hold emojiene dine i god form."
         },
-        "7": {
+        "8": {
             "name": "Bank",
             "plural": "Banker",
             "description": "\"Vi passer godt på emojiene dine.\""
         },
-        "8": {
+        "9": {
             "name": "Emoji-fornøyelsespark",
             "plural": "Emoji-fornøyelsesparker",
             "description": "\"Velkommen til EmojiLand: Der drømmer og følelser blir levende!\""
         },
-        "9": {
+        "10": {
             "name": "Emojiforsamling",
             "plural": "Emojiforsamlinger",
             "description": "Der emojier samles for å bestemme hvordan de skal lage flere emojier."
         },
-        "10": {
+        "12": {
             "name": "Romstasjon",
             "plural": "Romstasjoner",
             "description": "Erobre nye verdener og ta emojiene deres."
         },
-        "11": {
+        "13": {
             "name": "Godterikongerike",
             "plural": "Godterikongeriker",
             "description": "Et sukkersøtt paradis styrt av Godterikongen og hans søte emoji-undersåtter."
         },
-        "12": {
+        "14": {
             "name": "Emojivulkan",
             "plural": "Emojivulkaner",
             "description": "Hvert utbrudd gir en flom av splitter nye, nysmidde emojier!"
         },
-        "13": {
+        "15": {
             "name": "Tempel for den store Emojien i himmelen",
             "plural": "Templer for den store Emojien i himmelen",
             "description": "Sagnet sier at den store Emojien i himmelen skjenker uendelig mange emojier til sine mest trofaste tilhengere."
         },
-        "14": {
+        "16": {
             "name": "Emoji-superdatamaskin",
             "plural": "Emoji-superdatamaskiner",
             "description": "Den ultimate emojimotoren. Mangedobler emojier i lysets hastighet."
         },
-        "15": {
+        "17": {
             "name": "Svart emojihull",
             "plural": "Svarte emojihull",
             "description": "Endestasjonen for alle emojier... eller en ny begynnelse?"
         },
-        "16": {
+        "18": {
             "name": "Emojisingularitet",
-            "plural": "Emojisingulariteter",
-            "description": "Det var det. Ingenting er igjen bortsett fra emojier. Du klarte det."
+            "plural": "Emojisingulariteter"
         }
     },
     "upgrades": {
@@ -716,88 +715,88 @@
             "description": "En sport der du slår en ball med en kølle og kjører en kul golfbil.",
             "quote": "En presidentsport"
         },
-        "800": {
+        "900": {
             "name": "Sparegriser",
             "description": "Nøff nøff!"
         },
-        "801": {
+        "901": {
             "name": "Større emojiposer",
             "description": "Gjør det mulig å bære enda flere emojier."
         },
-        "802": {
+        "902": {
             "name": "Emoji-kredittkort",
             "description": "Perfekt for å bruke opp de hardt opptjente emojiene dine."
         },
-        "803": {
+        "903": {
             "name": "Investering i utdanning",
             "description": "Bedre utdanning, bedre tegneferdigheter."
         },
-        "804": {
+        "904": {
             "name": "Investering i innovasjon",
             "description": "Mer innovasjon, mer innovative emojier."
         },
-        "900": {
+        "1000": {
             "name": "Karuseller",
             "description": "You spin me right 'round, baby!"
         },
-        "901": {
+        "1001": {
             "name": "Sklier",
             "description": "Do you slide on all your nights like this? (I might)"
         },
-        "902": {
+        "1002": {
             "name": "Pariserhjul",
             "description": "Way up, there is where she broke my heart."
         },
-        "903": {
+        "1003": {
             "name": "Sirkus",
             "description": "Det finnes bare to typer mennesker i verden. De som underholder, og de som ser på."
         },
-        "904": {
+        "1004": {
             "name": "Emojisjonglør",
             "description": "De sier han aldri har mistet grepet."
         },
-        "1000": {
+        "1100": {
             "name": "Emojivalg",
             "description": "Måtte den beste emojien vinne!"
         },
-        "1001": {
+        "1101": {
             "name": "Emoji-krisepakke",
             "description": "Du får en emoji, og du, og du, alle får emojier!"
         },
-        "1002": {
+        "1102": {
             "name": "Emojitingets president",
             "description": "Innsett din helt egen emojipresident, så alt går din vei."
         },
-        "1003": {
+        "1103": {
             "name": "Emojilover",
             "description": "Vi, emojiene..."
         },
-        "1004": {
+        "1104": {
             "name": "Global emojikonføderasjon",
             "description": "Øker samarbeidet mellom emojilandene."
         },
-        "1100": {
+        "1300": {
             "name": "Teleskoper",
             "description": "Se mot stjernene og oppdag emojiplaneter."
         },
-        "1101": {
+        "1301": {
             "name": "Parabolantenner",
             "description": "Se forbi Melkeveien mot Emojiveien-galaksen."
         },
-        "1102": {
+        "1302": {
             "name": "Astronauter",
             "description": "Noen må jo drifte romstasjonene dine."
         },
-        "1103": {
+        "1303": {
             "name": "Raketter",
             "description": "Flyr skikkelig fort."
         },
-        "1104": {
+        "1304": {
             "name": "☍⍜⋔⋔⟒⍀ ⟟ ⎎⍀⟒⎅...",
             "description": "...⍜☌ ⏚⍀⟟⋏☌⟒⍀ ☌⏃⌰⟒ ⋏⊬⟒ ⟒⋔⍜⟊⟟⟒⍀.",
             "quote": "⏁⍀⊬☍☍ ⌿⏃ ⎎⟊⟒⌇⟒⏁ ⋔⟟⏁⏁ ⎎⟒⋔ ☌⏃⋏☌⟒⍀ ⎎⍜⍀ ⏃ ⌰⏃⌇⟒ ⍜⌿⌿ ⊑⟒⋔⋔⟒⌰⟟☌⊑⟒⏁⟒⋏ ⋔⟟⋏"
         },
-        "1105": {
+        "1305": {
             "name": "⋔⟒⍀☍⟒⌰⟟☌ ⍜⏚⟊⟒☍⏁",
             "description": "⎅⟒⏁⏁⟒ ⍜⏚⟊⟒☍⏁⟒⏁ ⊑⏃⍀ ⎍☍⟊⟒⋏⏁⟒ ☍⍀⟒⎎⏁⟒⍀."
         },
@@ -970,11 +969,11 @@
             "description": "Hakker på skjermen med nebbet.",
             "quote": "Vagle! Jeg skal hjelpe deg å få emojier!"
         },
-        "100000": {
+        "110000": {
             "name": "Emojipraktikanter",
             "description": "Praktikanter får emojiregjeringen til å gå knirkefritt!"
         },
-        "100001": {
+        "110001": {
             "name": "Emojibyråkrater",
             "description": "En emojiregjering trenger byråkrater for å fungere.",
             "quote": "Det ser ut som du vedtar en lov. Trenger du hjelp?"
@@ -1002,8 +1001,10 @@
             "description": "Emojiproduksjonen halvert!"
         },
         "200": {
-            "title": "Emojigave",
-            "description": "Emojier verdt 1 time!"
+            "title": "Emojigave"
         }
-    }
+    },
+    "perks": {},
+    "trials": {},
+    "funValues": {}
 }

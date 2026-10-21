@@ -14,20 +14,7 @@
     },
     "common": {
         "buy": "Acheter",
-        "details": "Détails",
-        "owned_one": "possédé",
-        "owned_other": "possédés",
-        "owned_many": "possédés"
-    },
-    "buildings": {
-        "bulkBuy_one": "Achat de {{count}} bâtiment à la fois",
-        "bulkBuy_other": "Achat de {{count}} bâtiments à la fois",
-        "bulkBuy_many": "Achat de {{count}} bâtiments à la fois",
-        "emojisPerSecond": "<hl>{{eps}}</hl> emojis par seconde",
-        "youHave": "• Tu as <hl>{{amount}}</hl> {{building}}",
-        "eachProduces": "• Production unitaire : <hl>{{eps}}</hl> emojis par seconde",
-        "totalProduces": "• Soit un total de <hl>{{eps}}</hl> emojis par seconde !",
-        "ownedUpgrades": "Améliorations possédées"
+        "details": "Détails"
     },
     "upgrades": {
         "bigEmoji": "Gros emoji",
@@ -43,9 +30,6 @@
         "filterTitle": "Filtrer les améliorations",
         "filterDescription": "Choisis les bâtiments dont tu veux voir les améliorations."
     },
-    "emojidex": {
-        "basePrice": "Prix de base : {{price}}"
-    },
     "stats": {
         "totalEmojisDrawn": "Total d'emojis dessinés",
         "emojiTaps": "Tapotements d'emoji",
@@ -56,16 +40,12 @@
     "drawer": {
         "language": "Langue",
         "deviceLanguage": "Langue de l'appareil",
-        "funValue": "Valeur fun : {{value}}",
         "cheats": "Triche",
         "resetGame": "Réinitialiser la partie",
-        "spawnEffect": "Faire apparaître un emoji d'effet",
-        "giveEmojis": "Donner {{amount}} emojis"
+        "spawnEffect": "Faire apparaître un emoji d'effet"
     },
     "prestige": {
-        "title": "Prestige",
-        "accumulating": "Après avoir créé <hl>{{amount}}</hl> emojis, l'essence même des emojis a commencé à s'accumuler autour de toi.",
-        "essence": "L'essence d'emoji est une <hl>substance magique</hl> qui change de forme dès que tu la regardes, et recèle des pouvoirs inconnus."
+        "title": "Prestige"
     },
     "numbers": {
         "groupSize": "3",

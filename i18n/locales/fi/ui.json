@@ -14,18 +14,7 @@
     },
     "common": {
         "buy": "Osta",
-        "details": "Tiedot",
-        "owned_one": "hallussa",
-        "owned_other": "hallussa"
-    },
-    "buildings": {
-        "bulkBuy_one": "Ostat {{count}} rakennuksen kerrallaan",
-        "bulkBuy_other": "Ostat {{count}} rakennusta kerrallaan",
-        "emojisPerSecond": "<hl>{{eps}}</hl> emojia sekunnissa",
-        "youHave": "• {{building}}: sinulla on <hl>{{amount}}</hl>",
-        "eachProduces": "• Kukin tuottaa <hl>{{eps}}</hl> emojia sekunnissa",
-        "totalProduces": "• Yhteensä <hl>{{eps}}</hl> emojia sekunnissa!",
-        "ownedUpgrades": "Omat päivitykset"
+        "details": "Tiedot"
     },
     "upgrades": {
         "bigEmoji": "Iso emoji",
@@ -41,9 +30,6 @@
         "filterTitle": "Suodata päivitykset",
         "filterDescription": "Valitse, minkä rakennusten päivitykset näytetään."
     },
-    "emojidex": {
-        "basePrice": "Perushinta: {{price}}"
-    },
     "stats": {
         "totalEmojisDrawn": "Piirretyt emojit yhteensä",
         "emojiTaps": "Emojinapautukset",
@@ -54,16 +40,12 @@
     "drawer": {
         "language": "Kieli",
         "deviceLanguage": "Laitteen kieli",
-        "funValue": "Hauskuusarvo: {{value}}",
         "cheats": "Huijaukset",
         "resetGame": "Nollaa peli",
-        "spawnEffect": "Luo efektiemoji",
-        "giveEmojis": "Anna {{amount}} emojia"
+        "spawnEffect": "Luo efektiemoji"
     },
     "prestige": {
-        "title": "Prestiisi",
-        "accumulating": "Kun olet luonut <hl>{{amount}}</hl> emojia, emojien syvin olemus on alkanut kertyä ympärillesi.",
-        "essence": "Emojiesanssi on <hl>maaginen aine</hl>, joka muuttaa muotoaan aina kun katsot sitä, ja kätkee sisäänsä tuntemattomia voimia."
+        "title": "Prestiisi"
     },
     "numbers": {
         "groupSize": "3",

@@ -14,18 +14,7 @@
     },
     "common": {
         "buy": "Vétel",
-        "details": "Részletek",
-        "owned_one": "birtokban",
-        "owned_other": "birtokban"
-    },
-    "buildings": {
-        "bulkBuy_one": "Egyszerre {{count}} épületet veszel",
-        "bulkBuy_other": "Egyszerre {{count}} épületet veszel",
-        "emojisPerSecond": "<hl>{{eps}}</hl> emoji másodpercenként",
-        "youHave": "• {{building}} a birtokodban: <hl>{{amount}}</hl> db",
-        "eachProduces": "• Mindegyik másodpercenként <hl>{{eps}}</hl> emojit termel",
-        "totalProduces": "• Összesen másodpercenként <hl>{{eps}}</hl> emoji!",
-        "ownedUpgrades": "Megvett fejlesztések"
+        "details": "Részletek"
     },
     "upgrades": {
         "bigEmoji": "Nagy emoji",
@@ -41,9 +30,6 @@
         "filterTitle": "Fejlesztések szűrése",
         "filterDescription": "Válaszd ki, mely épületek fejlesztéseit szeretnéd látni."
     },
-    "emojidex": {
-        "basePrice": "Alapár: {{price}}"
-    },
     "stats": {
         "totalEmojisDrawn": "Összes rajzolt emoji",
         "emojiTaps": "Emojikoppintások",
@@ -54,16 +40,12 @@
     "drawer": {
         "language": "Nyelv",
         "deviceLanguage": "Eszköz nyelve",
-        "funValue": "Mókaérték: {{value}}",
         "cheats": "Csalások",
         "resetGame": "Játék visszaállítása",
-        "spawnEffect": "Effekt-emoji idézése",
-        "giveEmojis": "Emojik hozzáadása: {{amount}}"
+        "spawnEffect": "Effekt-emoji idézése"
     },
     "prestige": {
-        "title": "Presztízs",
-        "accumulating": "Miután <hl>{{amount}}</hl> emojit létrehoztál, az emojik legbelső esszenciája gyűlni kezdett körülötted.",
-        "essence": "Az emojiesszencia egy <hl>varázslatos anyag</hl>, amely alakot vált, valahányszor ránézel, és ismeretlen erőket rejt."
+        "title": "Presztízs"
     },
     "numbers": {
         "groupSize": "3",

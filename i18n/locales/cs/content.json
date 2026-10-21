@@ -35,55 +35,54 @@
             "plural": "Sportovní centra",
             "description": "Udrž svoje emoji v dobré kondici."
         },
-        "7": {
+        "8": {
             "name": "Banka",
             "plural": "Banky",
             "description": "\"Vaše emoji jsou u nás v bezpečí.\""
         },
-        "8": {
+        "9": {
             "name": "Emoji zábavní park",
             "plural": "Emoji zábavní parky",
             "description": "\"Vítejte v EmojiLandu: kde sny a emoce ožívají!\""
         },
-        "9": {
+        "10": {
             "name": "Emoji shromáždění",
             "plural": "Emoji shromáždění",
             "description": "Tady se emoji scházejí a rozhodují, jak vyrobit víc emoji."
         },
-        "10": {
+        "12": {
             "name": "Vesmírná stanice",
             "plural": "Vesmírné stanice",
             "description": "Dobývej nové světy a seber jim emoji."
         },
-        "11": {
+        "13": {
             "name": "Bonbonové království",
             "plural": "Bonbonová království",
             "description": "Cukrový ráj, kde vládne Bonbonový král se svými sladkými emoji poddanými."
         },
-        "12": {
+        "14": {
             "name": "Emoji sopka",
             "plural": "Emoji sopky",
             "description": "Každá erupce přinese záplavu zbrusu nových, čerstvě ukovaných emoji!"
         },
-        "13": {
+        "15": {
             "name": "Chrám Velkého Emoji na nebi",
             "plural": "Chrámy Velkého Emoji na nebi",
             "description": "Legendy praví, že Velké Emoji na nebi dopřává nekonečno emoji svým nejvěrnějším stoupencům."
         },
-        "14": {
+        "16": {
             "name": "Emoji superpočítač",
             "plural": "Emoji superpočítače",
             "description": "Dokonalý emoji stroj. Násobí emoji rychlostí světla."
         },
-        "15": {
+        "17": {
             "name": "Emoji černá díra",
             "plural": "Emoji černé díry",
             "description": "Konečná zastávka všech emoji... nebo nový začátek?"
         },
-        "16": {
+        "18": {
             "name": "Emoji singularita",
-            "plural": "Emoji singularity",
-            "description": "A je to. Kromě emoji už nezbylo nic. Máš hotovo."
+            "plural": "Emoji singularity"
         }
     },
     "upgrades": {
@@ -716,88 +715,88 @@
             "description": "Sport, kde odpaluješ míček holí a jezdíš v cool vozítku.",
             "quote": "Prezidentský sport"
         },
-        "800": {
+        "900": {
             "name": "Prasátka",
             "description": "Chro chro!"
         },
-        "801": {
+        "901": {
             "name": "Větší pytle na emoji",
             "description": "Uneseš ještě víc emoji."
         },
-        "802": {
+        "902": {
             "name": "Emoji kreditní karty",
             "description": "Ideální na utrácení tvrdě vydělaných emoji."
         },
-        "803": {
+        "903": {
             "name": "Investice do vzdělání",
             "description": "Lepší vzdělání, lepší dovednosti v kreslení emoji."
         },
-        "804": {
+        "904": {
             "name": "Investice do inovací",
             "description": "Víc inovací, inovativnější emoji."
         },
-        "900": {
+        "1000": {
             "name": "Kolotoče",
             "description": "You spin me right 'round, baby!"
         },
-        "901": {
+        "1001": {
             "name": "Skluzavky",
             "description": "Do you slide on all your nights like this? (I might)"
         },
-        "902": {
+        "1002": {
             "name": "Ruské kolo",
             "description": "Tam nahoře mi zlomila srdce."
         },
-        "903": {
+        "1003": {
             "name": "Cirkus",
             "description": "Na světě jsou jen dva typy lidí. Ti, co baví, a ti, co přihlížejí."
         },
-        "904": {
+        "1004": {
             "name": "Emoji žonglér",
             "description": "Prý mu ještě nikdy nic nespadlo."
         },
-        "1000": {
+        "1100": {
             "name": "Emoji volby",
             "description": "Ať vyhraje nejlepší emoji!"
         },
-        "1001": {
+        "1101": {
             "name": "Emoji stimul",
             "description": "Emoji dostaneš ty, a ty, a ty, emoji dostane každý!"
         },
-        "1002": {
+        "1102": {
             "name": "Předseda emoji sněmovny",
             "description": "Dosaď vlastního emoji předsedu, ať jde všechno podle tebe."
         },
-        "1003": {
+        "1103": {
             "name": "Emoji zákony",
             "description": "My, emoji..."
         },
-        "1004": {
+        "1104": {
             "name": "Globální emoji konfederace",
             "description": "Posiluje spolupráci mezi emoji státy."
         },
-        "1100": {
+        "1300": {
             "name": "Teleskopy",
             "description": "Pozoruj hvězdy a objevuj emoji planety."
         },
-        "1101": {
+        "1301": {
             "name": "Satelitní antény",
             "description": "Pohleď za Mléčnou dráhu až ke galaxii Emoji dráha."
         },
-        "1102": {
+        "1302": {
             "name": "Astronauti",
             "description": "Někdo musí řídit tvé vesmírné stanice."
         },
-        "1103": {
+        "1303": {
             "name": "Rakety",
             "description": "Létají fakt rychle."
         },
-        "1104": {
+        "1304": {
             "name": "⌿⍀⟟☊⊑⏃⋉⟟⋔⟒ ⌇ ⋔⟟⍀⟒⋔...",
             "description": "...⏃ ⋏⟒⌇⟒⋔⟒ ⌇⟟⌰⟒⋏⟒ ⋏⟒⋉⋏⏃⋔⟒ ⟒⋔⍜⟊⟟.",
             "quote": "⏁⎍☍⋏⟟ ⋔⟟ ⌿⟒⏁☍⍀⏃⏁ ⎅⍜ ⍜⏚⌰⟟☊⟒⟊⟒ ⏃ ⍜⎅⊑⏃⌰⟟⌇ ⋔⍜⎍ ⏁⏃⟊⋏⍜⌇⏁"
         },
-        "1105": {
+        "1305": {
             "name": "⋉⏃⊑⏃⎅⋏⊬ ⍜⏚⟊⟒☍⏁",
             "description": "⏁⟒⋏⏁⍜ ⍜⏚⟊⟒☍⏁ ⋔⏃ ⋏⟒⏁⎍⌇⟒⋏⟒ ⌇⟟⌰⊬."
         },
@@ -970,11 +969,11 @@
             "description": "Kluje ti zobákem do obrazovky.",
             "quote": "Cupity cup! Pomůžu ti získat emoji!"
         },
-        "100000": {
+        "110000": {
             "name": "Emoji stážisti",
             "description": "Stážisti pomáhají, aby emoji vláda běžela hladce!"
         },
-        "100001": {
+        "110001": {
             "name": "Emoji byrokrati",
             "description": "Emoji vláda potřebuje ke svému fungování úředníky.",
             "quote": "Vypadá to, že schvaluješ zákon. Potřebuješ pomoc?"
@@ -1002,8 +1001,10 @@
             "description": "Produkce emoji klesla na polovinu!"
         },
         "200": {
-            "title": "Emoji dárek",
-            "description": "Emoji za celou 1 hodinu!"
+            "title": "Emoji dárek"
         }
-    }
+    },
+    "perks": {},
+    "trials": {},
+    "funValues": {}
 }

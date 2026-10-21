@@ -88,3 +88,18 @@ export function formatPercentage(percentage: number) {
     }
     return percent(percentage);
 }
+
+/** A length of time, e.g. "45s", "12m", "2h 5m", "3d 4h" */
+export function formatDuration(seconds: number) {
+    const unit = (name: "seconds" | "minutes" | "hours" | "days", count: number) =>
+        i18n.t(`time.${name}`, { ns: "ui", count });
+    const pair = (a: string, b: string) => i18n.t("time.pair", { ns: "ui", a, b });
+
+    if (seconds < 60) return unit("seconds", Math.floor(seconds));
+    const days = Math.floor(seconds / 86400);
+    const hours = Math.floor((seconds % 86400) / 3600);
+    const minutes = Math.floor((seconds % 3600) / 60);
+    if (days > 0) return hours > 0 ? pair(unit("days", days), unit("hours", hours)) : unit("days", days);
+    if (hours > 0) return minutes > 0 ? pair(unit("hours", hours), unit("minutes", minutes)) : unit("hours", hours);
+    return unit("minutes", minutes);
+}

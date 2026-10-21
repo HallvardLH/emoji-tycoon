@@ -14,16 +14,7 @@
     },
     "common": {
         "buy": "購買",
-        "details": "詳情",
-        "owned_other": "已擁有"
-    },
-    "buildings": {
-        "bulkBuy_other": "一次購買 {{count}} 個建築",
-        "emojisPerSecond": "每秒 <hl>{{eps}}</hl> 個 Emoji",
-        "youHave": "• 你擁有的{{building}}：<hl>{{amount}}</hl>",
-        "eachProduces": "• 每個每秒產出 <hl>{{eps}}</hl> 個 Emoji",
-        "totalProduces": "• 總共每秒產出 <hl>{{eps}}</hl> 個 Emoji！",
-        "ownedUpgrades": "已擁有的升級"
+        "details": "詳情"
     },
     "upgrades": {
         "bigEmoji": "大 Emoji",
@@ -39,9 +30,6 @@
         "filterTitle": "篩選升級",
         "filterDescription": "選擇要顯示哪些建築的升級。"
     },
-    "emojidex": {
-        "basePrice": "基本價格：{{price}}"
-    },
     "stats": {
         "totalEmojisDrawn": "畫出的 Emoji 總數",
         "emojiTaps": "Emoji 點擊次數",
@@ -52,16 +40,12 @@
     "drawer": {
         "language": "語言",
         "deviceLanguage": "裝置語言",
-        "funValue": "趣味值：{{value}}",
         "cheats": "作弊",
         "resetGame": "重置遊戲",
-        "spawnEffect": "生成效果 Emoji",
-        "giveEmojis": "給予 {{amount}} 個 Emoji"
+        "spawnEffect": "生成效果 Emoji"
     },
     "prestige": {
-        "title": "聲望",
-        "accumulating": "在創造了 <hl>{{amount}}</hl> 個 Emoji 之後，Emoji 的精華開始在你身邊聚集。",
-        "essence": "Emoji 精華是一種<hl>魔法物質</hl>，每次你看它都會變換形狀，還蘊藏著未知的力量。"
+        "title": "聲望"
     },
     "numbers": {
         "groupSize": "4",
@@ -88,9 +72,23 @@
             "68_other": "無量大數"
         },
         "short": {
-            "4": "萬", "8": "億", "12": "兆", "16": "京", "20": "垓", "24": "秭",
-            "28": "穰", "32": "溝", "36": "澗", "40": "正", "44": "載", "48": "極",
-            "52": "恆河沙", "56": "阿僧祇", "60": "那由他", "64": "不可思議", "68": "無量大數"
+            "4": "萬",
+            "8": "億",
+            "12": "兆",
+            "16": "京",
+            "20": "垓",
+            "24": "秭",
+            "28": "穰",
+            "32": "溝",
+            "36": "澗",
+            "40": "正",
+            "44": "載",
+            "48": "極",
+            "52": "恆河沙",
+            "56": "阿僧祇",
+            "60": "那由他",
+            "64": "不可思議",
+            "68": "無量大數"
         }
     }
 }

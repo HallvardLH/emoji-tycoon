@@ -1,18 +1,18 @@
-import { Dimensions } from "react-native";
 import { effectData } from "./effectData";
 import { howFun } from "../shorthands";
 import { Effect } from "./effectType";
-import { HEADER_HEIGHT, TAB_BAR_HEIGHT } from "../../../components/layout/ScreenView";
 import { getEmojisPerSecond } from "../shorthands";
+import { effectOnScreenMultiplier, goodEffectDurationMultiplier } from "../prestige/perks";
+import { effectUpgradeDurationMultiplier } from "./effectUpgrades";
 
 interface EffectWeights {
     [key: string]: number;
 }
 
 const effectWeights: EffectWeights = {
-    tap: 100,
-    production: 0,
-    give: 0
+    tap: 40,
+    production: 40,
+    give: 20
 };
 
 // Function to pick an effect type based on weights
@@ -31,6 +31,13 @@ function pickEffectType(): string {
     return "tap"; // Fallback
 }
 
+// Effects made in the same millisecond (e.g. a double spawn) still need unique ids
+let instanceCounter = 0;
+function nextInstanceId() {
+    instanceCounter = (instanceCounter + 1) % 1000;
+    return Date.now() * 1000 + instanceCounter;
+}
+
 /**
  * Creates an effect
  *
@@ -38,12 +45,11 @@ function pickEffectType(): string {
  *
  */
 export function createEffect() {
-    const margin = 150;
-
-    // Generate random positions with a margin
-    const xPos = Math.floor(Math.random() * (Dimensions.get("window").width - margin));
-    // Ensure effects do not spawn off-screen
-    const yPos = Math.random() * (Dimensions.get("window").height - (HEADER_HEIGHT + TAB_BAR_HEIGHT + margin));
+    // Positions are fractions (0 - 1) of the free space on the home screen.
+    // EffectPopup turns them into pixels once it knows the real size of the
+    // play area and of the effect itself, so an effect is never off screen.
+    const xPos = Math.random();
+    const yPos = Math.random();
 
     const eps = getEmojisPerSecond();
 
@@ -75,32 +81,40 @@ export function createEffect() {
 
     } while (chosenEffect.id === 101);
 
-    // If fun value is 1 or 2, all effects emojis are replaced with cookie
+    // Fun value disguises for the effect emojis
+    // (kept on this effect only, so effectData itself is never changed)
+    let emoji = chosenEffect.emoji;
+    // 1 - 2: all effects emojis are replaced with cookie
     if (howFun(1, 2)) {
-        if (chosenEffect.quality === "good") {
-            chosenEffect.emoji = "🍪";
-        } else {
-            // Bad grandma
-            chosenEffect.emoji = "👵";
-        }
+        // Bad grandma
+        emoji = chosenEffect.quality === "good" ? "🍪" : "👵";
     }
+    // 99: 99 red balloons, and a pin for the bad ones
+    if (howFun(99)) {
+        emoji = chosenEffect.quality === "good" ? "🎈" : "📌";
+    }
+
+    // Overtime (perk) and Slow motion (upgrade) make good effects last longer,
+    // Magnet (perk) keeps effect emojis on screen longer
+    const timeLeft = chosenEffect.quality === "good"
+        ? Math.round(chosenEffect.timeLeft * goodEffectDurationMultiplier() * effectUpgradeDurationMultiplier())
+        : chosenEffect.timeLeft;
 
     const effect: Effect = {
         title: chosenEffect.title,
         description: chosenEffect.description,
-        emoji: chosenEffect.emoji,
+        emoji: emoji,
         eptMult: chosenEffect.eptMult,
         eptAdd: chosenEffect.eptAdd,
         epsMult: chosenEffect.epsMult,
-        timeLeft: chosenEffect.timeLeft,
-        originalDuration: chosenEffect.timeLeft,
-        timeLeftOnScreen: chosenEffect.timeLeftOnScreen,
+        timeLeft: timeLeft,
+        originalDuration: timeLeft,
+        timeLeftOnScreen: chosenEffect.timeLeftOnScreen * effectOnScreenMultiplier(),
         displayMeter: chosenEffect.displayMeter,
-        instanceId: Date.now(),
+        instanceId: nextInstanceId(),
         id: chosenEffect.id,
         xPos: xPos,
         yPos: yPos,
-        margin: margin,
         type: chosenEffect.type,
         quality: chosenEffect.quality,
     }

@@ -35,55 +35,54 @@
             "plural": "Urheilukeskukset",
             "description": "Pidä emojisi hyvässä kunnossa."
         },
-        "7": {
+        "8": {
             "name": "Pankki",
             "plural": "Pankit",
             "description": "\"Emojisi ovat turvassa meillä.\""
         },
-        "8": {
+        "9": {
             "name": "Emojihuvipuisto",
             "plural": "Emojihuvipuistot",
             "description": "\"Tervetuloa Emojimaahan: täällä unelmat ja tunteet heräävät henkiin!\""
         },
-        "9": {
+        "10": {
             "name": "Emojieduskunta",
             "plural": "Emojieduskunnat",
             "description": "Täällä emojit päättävät yhdessä, miten emojeja tehdään lisää."
         },
-        "10": {
+        "12": {
             "name": "Avaruusasema",
             "plural": "Avaruusasemat",
             "description": "Valloita uusia maailmoja ja vie niiden emojit."
         },
-        "11": {
+        "13": {
             "name": "Karkkikuningaskunta",
             "plural": "Karkkikuningaskunnat",
             "description": "Sokerinen paratiisi, jota hallitsevat Karkkikuningas ja hänen suloiset emojialamaisensa."
         },
-        "12": {
+        "14": {
             "name": "Emojitulivuori",
             "plural": "Emojitulivuoret",
             "description": "Jokainen purkaus tuo tulvan upouusia, tuoreeltaan taottuja emojeja!"
         },
-        "13": {
+        "15": {
             "name": "Taivaan Suuren Emojin temppeli",
             "plural": "Taivaan Suuren Emojin temppelit",
             "description": "Legendan mukaan taivaan Suuri Emoji suo loputtomasti emojeja uskollisimmille seuraajilleen."
         },
-        "14": {
+        "16": {
             "name": "Emojisupertietokone",
             "plural": "Emojisupertietokoneet",
             "description": "Emojimoottorien aatelia. Monistaa emojeja valon nopeudella."
         },
-        "15": {
+        "17": {
             "name": "Emojien musta aukko",
             "plural": "Emojien mustat aukot",
             "description": "Kaikkien emojien päätepysäkki... vai uusi alku?"
         },
-        "16": {
+        "18": {
             "name": "Emojisingulariteetti",
-            "plural": "Emojisingulariteetit",
-            "description": "Siinä se. Jäljellä ei ole muuta kuin emojeja. Teit sen."
+            "plural": "Emojisingulariteetit"
         }
     },
     "upgrades": {
@@ -716,88 +715,88 @@
             "description": "Laji, jossa lyödään palloa kepillä ja ajellaan siistillä kärryllä.",
             "quote": "Presidentillinen laji"
         },
-        "800": {
+        "900": {
             "name": "Säästöpossut",
             "description": "Röh röh!"
         },
-        "801": {
+        "901": {
             "name": "Isommat emojikassit",
             "description": "Niihin mahtuu vieläkin enemmän emojeja."
         },
-        "802": {
+        "902": {
             "name": "Emojiluottokortit",
             "description": "Kätevä tapa tuhlata kovalla työllä ansaitut emojisi."
         },
-        "803": {
+        "903": {
             "name": "Investointi koulutukseen",
             "description": "Parempi koulutus, paremmat emojinpiirtotaidot."
         },
-        "804": {
+        "904": {
             "name": "Investointi innovaatioihin",
             "description": "Enemmän innovaatioita, innovatiivisempia emojeja."
         },
-        "900": {
+        "1000": {
             "name": "Karusellit",
             "description": "You spin me right 'round, baby!"
         },
-        "901": {
+        "1001": {
             "name": "Liukumäet",
             "description": "Do you slide on all your nights like this? (I might)"
         },
-        "902": {
+        "1002": {
             "name": "Maailmanpyörä",
             "description": "Korkealla ylhäällä hän särki sydämeni."
         },
-        "903": {
+        "1003": {
             "name": "Sirkus",
             "description": "Maailmassa on vain kahdenlaisia ihmisiä: niitä, jotka viihdyttävät, ja niitä, jotka katsovat."
         },
-        "904": {
+        "1004": {
             "name": "Emojijonglööri",
             "description": "Hänen sanotaan pitävän aina kaikki pallot ilmassa."
         },
-        "1000": {
+        "1100": {
             "name": "Emojivaalit",
             "description": "Paras emoji voittakoon!"
         },
-        "1001": {
+        "1101": {
             "name": "Emojielvytys",
             "description": "Sinä saat emojin, ja sinä, ja sinä, kaikki saavat emojeja!"
         },
-        "1002": {
+        "1102": {
             "name": "Emojieduskunnan puhemies",
             "description": "Nimitä oma emojipuhemiehesi, niin asiat menevät tahtosi mukaan."
         },
-        "1003": {
+        "1103": {
             "name": "Emojilait",
             "description": "Me, emojit..."
         },
-        "1004": {
+        "1104": {
             "name": "Maailmanlaajuinen emojiliitto",
             "description": "Lisää emojivaltioiden välistä yhteistyötä."
         },
-        "1100": {
+        "1300": {
             "name": "Kaukoputket",
             "description": "Tähyile tähtiin ja löydä emojiplaneettoja."
         },
-        "1101": {
+        "1301": {
             "name": "Satelliittiantennit",
             "description": "Katso Linnunradan taakse kohti Emojiradan galaksia."
         },
-        "1102": {
+        "1302": {
             "name": "Astronautit",
             "description": "Jonkun on pyöritettävä avaruusasemiasi."
         },
-        "1103": {
+        "1303": {
             "name": "Raketit",
             "description": "Lentää tosi lujaa."
         },
-        "1104": {
+        "1304": {
             "name": "⏁⎍⌰⟒⋔⋔⟒ ⍀⏃⎍⊑⏃⌇⌇⏃...",
             "description": "...⟊⏃ ⏁⎍⍜⋔⋔⟒ ⊑⎍⌰⌰⎍⟊⏃ ⎍⎍⌇⟟⏃ ⟒⋔⍜⟊⟒⟊⏃.",
             "quote": "⋏⏃⌿⏃⎍⏁⏃ ⋏⏃⏃⋔⏃⏃⋏⟟ ☍⟒⍀⍀⏃⋏ ☍⎍⌰⌰⏃☍⟟⋏ ☍⏃⎅⟒⋏ ⌇⍜⍀⋔⟒⌰⌰⏃ ⌿⏃⌰⟊⏃⌇⏁⏃⏃☍⌇⟒⌇⟟ ⌇⏃⌰⏃⟟⌇⎍⎍⏁⟒⋏⟟"
         },
-        "1105": {
+        "1305": {
             "name": "⍜⎍⏁⍜ ⟒⌇⟟⋏⟒",
             "description": "⏁⏃⌇⌇⏃ ⟒⌇⟟⋏⟒⟒⌇⌇⏃ ⌿⟟⟟⌰⟒⟒ ⏁⎍⋏⏁⟒⋔⏃⏁⍜⋏ ⋔⏃⊑⏁⟟."
         },
@@ -970,11 +969,11 @@
             "description": "Nokkii näyttöäsi nokallaan.",
             "quote": "Tepsu! Autan sinua saamaan emojeja!"
         },
-        "100000": {
+        "110000": {
             "name": "Emojiharjoittelijat",
             "description": "Harjoittelijat pitävät emojihallinnon rattaat pyörimässä!"
         },
-        "100001": {
+        "110001": {
             "name": "Emojibyrokraatit",
             "description": "Emojihallinto tarvitsee virkamiehiä toimiakseen.",
             "quote": "Näyttää siltä, että olet säätämässä lakia. Tarvitsetko apua?"
@@ -1002,8 +1001,10 @@
             "description": "Emojituotanto puolitettu!"
         },
         "200": {
-            "title": "Emojilahja",
-            "description": "Tunnin edestä emojeja!"
+            "title": "Emojilahja"
         }
-    }
+    },
+    "perks": {},
+    "trials": {},
+    "funValues": {}
 }

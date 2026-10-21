@@ -1,29 +1,242 @@
-import { View, FlatList } from "react-native";
+import { useMemo, useState } from "react";
+import { View, FlatList, Pressable, StyleSheet } from "react-native";
+import { useSampledSelector } from "../gameUI/useBank";
 import Text from "../generalUI/Text";
-import { generateCollection } from "../../scripts/game/collection/emojiCategories";
-import Emoji from "../gameUI/Emoji";
+import { RootState } from "../../scripts/redux/reduxStore";
+import { CollectionState } from "../../scripts/redux/collectionSlice";
+import { emojiCategories } from "../../scripts/game/collection/emojiCategories";
+import { effectEmojis } from "../../scripts/game/effects/effectData";
+import { palette, radii } from "../misc/theme";
+import { useTranslation } from "react-i18next";
+import { formatNumber } from "../../scripts/misc";
+
+// Labels are translated, under collection.categories.<name>
+const categoryInfo: Record<string, { icon: string }> = {
+    faces: { icon: "😀" },
+    animals: { icon: "🐙" },
+    food: { icon: "🌮" },
+    objects: { icon: "⚽" },
+    people: { icon: "🧑" },
+    bodyParts: { icon: "💪" },
+    placesBuildings: { icon: "🏠" },
+    plants: { icon: "🌷" },
+    vehicles: { icon: "🚗" },
+    weather: { icon: "⛅" },
+    symbols: { icon: "💯" },
+};
+
+const COLUMNS = 6;
+
+type Cell = { key: string, emoji?: string, count: number, shiny?: number };
 
 export default function CollectionList() {
-    const collectedEmojis = generateCollection();
+    // Every tap adds to the collection; rebuilding ~1,600 cells per tap made tapping lag
+    const collection = useSampledSelector((state: RootState) => state.collection, 1000);
+    const [category, setCategory] = useState("faces");
+    const { t } = useTranslation();
+
+    // Every collectible emoji per category (effect emojis never show up on the Big Emoji)
+    const categories = useMemo(() => Object.keys(categoryInfo).map(name => {
+        const counts = collection[name as keyof CollectionState] ?? [];
+        const cells: Cell[] = emojiCategories[name]
+            .map((emoji, index) => ({ key: `${name}-${index}`, emoji, count: counts[index]?.amount ?? 0, shiny: counts[index]?.shiny ?? 0 }))
+            .filter(cell => !effectEmojis.includes(cell.emoji));
+        return { name, cells, found: cells.filter(cell => cell.count > 0).length };
+    }), [collection]);
+
+    const totalFound = categories.reduce((sum, c) => sum + c.found, 0);
+    const shinyFound = categories.reduce((sum, c) => sum + c.cells.filter(cell => (cell.shiny ?? 0) > 0).length, 0);
+    const total = categories.reduce((sum, c) => sum + c.cells.length, 0);
+    const percentage = total > 0 ? (totalFound / total) * 100 : 0;
+    const mostTapped = categories
+        .flatMap(c => c.cells)
+        .reduce<Cell | undefined>((best, cell) => cell.count > (best?.count ?? 0) ? cell : best, undefined);
+
+    const active = categories.find(c => c.name === category) ?? categories[0];
+    // Pad the last row so every cell keeps the same width
+    const cells = [...active.cells];
+    while (cells.length % COLUMNS !== 0) cells.push({ key: `pad-${cells.length}`, count: -1 });
+
+    const header = (
+        <View style={styles.header}>
+            <View style={styles.progressCard}>
+                <View style={styles.progressTop}>
+                    <View style={styles.progressCount}>
+                        <Text size={34} color={palette.ink} style={{ lineHeight: 38 }}>{formatNumber(totalFound)}</Text>
+                        <Text font="bold" size={15} color={palette.muted}>{t("collection.ofTotalFound", { total: formatNumber(total) })}</Text>
+                    </View>
+                    <Text size={17} color={palette.violetDeep}>{t("numbers.percent", { value: formatNumber(Math.floor(percentage)) })}</Text>
+                </View>
+                <View style={styles.track}>
+                    <View style={[styles.fill, { width: `${Math.max(percentage, totalFound > 0 ? 1 : 0)}%` }]} />
+                </View>
+                <Text font="body" size={12} color={palette.muted}>
+                    {mostTapped ? t("collection.mostTapped", { emoji: mostTapped.emoji, count: mostTapped.count, amount: formatNumber(mostTapped.count) }) : t("collection.startCollecting")}
+                    {shinyFound > 0 ? `  ·  ✨ ${t("collection.shinyFound", { count: shinyFound, amount: formatNumber(shinyFound) })}` : ""}
+                </Text>
+            </View>
+
+            <View style={styles.chips}>
+                {categories.map(c => {
+                    const selected = c.name === active.name;
+                    const info = categoryInfo[c.name];
+                    const label = t(`collection.categories.${c.name}`);
+                    return (
+                        <Pressable
+                            key={c.name}
+                            onPress={() => setCategory(c.name)}
+                            accessibilityRole="button"
+                            accessibilityState={{ selected }}
+                            accessibilityLabel={t("collection.categoryLabel", { label, found: c.found, total: c.cells.length })}
+                            style={[styles.chip, selected ? styles.chipActive : null]}
+                        >
+                            <Text font={selected ? "black" : "bold"} size={13} color={selected ? palette.ink : "#FFFFFF"}>
+                                {info.icon} {label} {c.found}/{c.cells.length}
+                            </Text>
+                        </Pressable>
+                    );
+                })}
+            </View>
+        </View>
+    );
 
     return (
-        <View>
-            <FlatList
-                data={collectedEmojis}
-                numColumns={6}
-                keyExtractor={(item, index) => `${item.category}-${index}`}
-                renderItem={({ item }) => (
-                    <View style={{
-                        flexDirection: 'column',
-                        margin: 10,
-                        alignItems: "center"
-                    }}>
-                        <Emoji icon={item.emoji!} />
-                        <Text> x {item.amount}</Text>
-                        {/* <Text> (Rarity: {item.rarity})</Text> */}
+        <FlatList
+            key={active.name}
+            data={cells}
+            numColumns={COLUMNS}
+            ListHeaderComponent={header}
+            keyExtractor={(cell) => cell.key}
+            contentContainerStyle={styles.content}
+            columnWrapperStyle={styles.row}
+            initialNumToRender={48}
+            renderItem={({ item }) => {
+                if (item.count < 0) return <View style={styles.cellPad} />;
+                if (item.count === 0) {
+                    return (
+                        <View style={styles.missing} accessibilityLabel={t("collection.notFound")}>
+                            <Text size={18} color="rgba(255,255,255,0.3)">?</Text>
+                        </View>
+                    );
+                }
+                const shiny = (item.shiny ?? 0) > 0;
+                return (
+                    <View
+                        style={[styles.found, shiny ? styles.foundShiny : null]}
+                        accessibilityLabel={shiny
+                            ? t("collection.cellLabelShiny", { emoji: item.emoji, count: item.count, shiny: item.shiny })
+                            : t("collection.cellLabel", { emoji: item.emoji, count: item.count })}
+                    >
+                        <Text size={28} style={{ lineHeight: 34 }}>{item.emoji}</Text>
+                        {shiny && <Text size={13} style={styles.shinyMark}>✨</Text>}
+                        <View style={styles.countBadge}>
+                            <Text font="black" size={10} color={palette.ink}>{item.count > 99 ? "99+" : item.count}</Text>
+                        </View>
                     </View>
-                )}
-            />
-        </View>
+                );
+            }}
+        />
     )
 }
+
+const styles = StyleSheet.create({
+    content: {
+        paddingHorizontal: 20,
+        paddingBottom: 32,
+    },
+    header: {
+        gap: 14,
+        paddingTop: 14,
+        paddingBottom: 14,
+    },
+    progressCard: {
+        padding: 16,
+        borderRadius: radii.xl,
+        backgroundColor: palette.paper,
+        gap: 10,
+    },
+    progressTop: {
+        flexDirection: "row",
+        justifyContent: "space-between",
+        alignItems: "baseline",
+    },
+    progressCount: {
+        flexDirection: "row",
+        alignItems: "baseline",
+        gap: 6,
+    },
+    track: {
+        height: 10,
+        borderRadius: 10,
+        backgroundColor: palette.track,
+        overflow: "hidden",
+    },
+    fill: {
+        height: 10,
+        borderRadius: 10,
+        backgroundColor: palette.violet,
+    },
+    chips: {
+        flexDirection: "row",
+        flexWrap: "wrap",
+        gap: 8,
+    },
+    chip: {
+        height: 36,
+        paddingHorizontal: 12,
+        borderRadius: 18,
+        backgroundColor: palette.glass,
+        justifyContent: "center",
+    },
+    chipActive: {
+        backgroundColor: palette.sun,
+    },
+    row: {
+        gap: 8,
+        marginBottom: 8,
+    },
+    found: {
+        flex: 1,
+        height: 52,
+        borderRadius: radii.md,
+        backgroundColor: palette.glass,
+        alignItems: "center",
+        justifyContent: "center",
+    },
+    foundShiny: {
+        backgroundColor: "rgba(255,197,61,0.18)",
+        borderWidth: 2,
+        borderColor: palette.sun,
+    },
+    shinyMark: {
+        position: "absolute",
+        top: -6,
+        left: -4,
+        lineHeight: 16,
+    },
+    countBadge: {
+        position: "absolute",
+        right: -4,
+        bottom: -4,
+        minWidth: 18,
+        height: 18,
+        paddingHorizontal: 4,
+        borderRadius: 9,
+        backgroundColor: palette.paper,
+        alignItems: "center",
+        justifyContent: "center",
+    },
+    missing: {
+        flex: 1,
+        height: 52,
+        borderRadius: radii.md,
+        borderWidth: 2,
+        borderStyle: "dashed",
+        borderColor: palette.glassLine,
+        alignItems: "center",
+        justifyContent: "center",
+    },
+    cellPad: {
+        flex: 1,
+    },
+})

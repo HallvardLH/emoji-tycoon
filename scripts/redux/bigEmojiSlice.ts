@@ -5,6 +5,8 @@ export type BigEmoji = {
     emoji: string,
     category: string,
     id: number,
+    /** A rare golden version, worth a big bonus when tapped */
+    shiny?: boolean,
 }
 
 interface BigEmojiState {
@@ -93,6 +95,13 @@ export const bigEmojiSlice = createSlice({
             }
         },
 
+        /** Replaces what upgrades add to tapping, rebuilt from the upgrades owned (see syncTapModifiers) */
+        setTapModifiers: (state, action: PayloadAction<{ multipliers: number[], percentages: number[], percentagesOfEps: number[] }>) => {
+            state.emojisPerTapMultipliers = action.payload.multipliers;
+            state.emojisPerTapPercentages = action.payload.percentages;
+            state.emojisPerTapPercentageOfEps = action.payload.percentagesOfEps;
+        },
+
         updateTapBoost: (state, action: PayloadAction<number>) => {
             state.tapBoost = action.payload;
         },
@@ -105,6 +114,6 @@ export const bigEmojiSlice = createSlice({
     },
 });
 
-export const { updateBigEmoji, updateNextEmoji, updateEmojisPerTap, updateBaseEmojisPerTap, addTapMultiplier, removeTapMultiplier, addTapPercentage, removeTapPercentage, addEmojisPerTapPercentageOfEps, removeEmojisPerTapPercentageOfEps, updateTapBoost, resetBigEmoji } = bigEmojiSlice.actions;
+export const { updateBigEmoji, updateNextEmoji, updateEmojisPerTap, updateBaseEmojisPerTap, addTapMultiplier, removeTapMultiplier, addTapPercentage, removeTapPercentage, addEmojisPerTapPercentageOfEps, removeEmojisPerTapPercentageOfEps, setTapModifiers, updateTapBoost, resetBigEmoji } = bigEmojiSlice.actions;
 
 export default bigEmojiSlice.reducer;

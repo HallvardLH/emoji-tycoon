@@ -14,22 +14,7 @@
     },
     "common": {
         "buy": "Kup",
-        "details": "Szczegóły",
-        "owned_one": "masz",
-        "owned_few": "masz",
-        "owned_many": "masz",
-        "owned_other": "masz"
-    },
-    "buildings": {
-        "bulkBuy_one": "Kupujesz {{count}} budynek naraz",
-        "bulkBuy_few": "Kupujesz {{count}} budynki naraz",
-        "bulkBuy_many": "Kupujesz {{count}} budynków naraz",
-        "bulkBuy_other": "Kupujesz {{count}} budynku naraz",
-        "emojisPerSecond": "<hl>{{eps}}</hl> emoji na sekundę",
-        "youHave": "• {{building}} w posiadaniu: <hl>{{amount}}</hl>",
-        "eachProduces": "• Na sztukę: <hl>{{eps}}</hl> emoji na sekundę",
-        "totalProduces": "• Łącznie: <hl>{{eps}}</hl> emoji na sekundę!",
-        "ownedUpgrades": "Posiadane ulepszenia"
+        "details": "Szczegóły"
     },
     "upgrades": {
         "bigEmoji": "Wielkie emoji",
@@ -45,9 +30,6 @@
         "filterTitle": "Filtruj ulepszenia",
         "filterDescription": "Wybierz, dla których budynków pokazywać ulepszenia."
     },
-    "emojidex": {
-        "basePrice": "Cena bazowa: {{price}}"
-    },
     "stats": {
         "totalEmojisDrawn": "Wszystkie narysowane emoji",
         "emojiTaps": "Stuknięcia w emoji",
@@ -58,16 +40,12 @@
     "drawer": {
         "language": "Język",
         "deviceLanguage": "Język urządzenia",
-        "funValue": "Poziom frajdy: {{value}}",
         "cheats": "Kody",
         "resetGame": "Resetuj grę",
-        "spawnEffect": "Przywołaj emoji efektu",
-        "giveEmojis": "Daj {{amount}} emoji"
+        "spawnEffect": "Przywołaj emoji efektu"
     },
     "prestige": {
-        "title": "Prestiż",
-        "accumulating": "Po stworzeniu <hl>{{amount}}</hl> emoji wokół ciebie zaczęła gromadzić się sama esencja emoji.",
-        "essence": "Esencja emoji to <hl>magiczna substancja</hl>, która zmienia kształt za każdym razem, gdy na nią patrzysz, i kryje nieznane moce."
+        "title": "Prestiż"
     },
     "numbers": {
         "groupSize": "3",

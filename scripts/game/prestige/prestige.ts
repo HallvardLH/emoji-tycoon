@@ -1,39 +1,216 @@
 import store from "../../redux/reduxStore";
-import { updateRemainingEmojisPrestigePerc } from "../../redux/prestigeSlice";
-import { formatNumber } from "../../misc";
+import { completePrestige, setRunPeakEps, setRunBestEssenceRate, buyPerk, migratePrestige, refundPerks, setLastSeen, updateRemainingEmojisPrestigePerc, PRESTIGE_STATE_VERSION } from "../../redux/prestigeSlice";
+import { resetBuildings } from "../../redux/buildingsSlice";
+import { resetUpgrades, addUpgrade } from "../../redux/upgradesSlice";
+import { resetBigEmoji, addEmojisPerTapPercentageOfEps } from "../../redux/bigEmojiSlice";
+import { resetEffects } from "../../redux/effectsSlice";
+import { resetValues, setFunValue, updateEmojis } from "../../redux/valuesSlice";
+import { isComboUpgradeId } from "../upgrades/upgradeData/nonBuilding/combo";
+import { isEffectEmojiUpgradeId } from "../upgrades/upgradeData/nonBuilding/effectEmojis";
+import { getUpgradeDataById } from "../upgrades/shorthands";
+import { calculateBuildingsEps, syncBuildingPrices } from "../buildings/buildings";
+import { calculateEpt } from "../calculations";
+import { pickNextEmoji } from "../bigEmoji";
+import { unlockUpgrades, canBuyUpgrade } from "../upgrades/checks";
+import { startingEmojis, hasPerk, perks, removedPerks, canBuyPerk } from "./perks";
+import { registerAway } from "../offline";
+import { trials, trialGoal } from "./trials";
 
-export function getPrestigeLevel() {
-    const emojisGained = store.getState().stats.emojisGained;
-    return Math.floor(Math.sqrt(emojisGained / 1e10));
+/**
+ * Emoji essence
+ *
+ * Essence comes from all the emojis you've ever drawn, on a fourth root curve:
+ * the total essence N emojis are worth is (N / ESSENCE_UNIT)^(1/4). Prestiging
+ * pays out whatever the all-time total is worth beyond the essence already earned,
+ * so each run has to go further than the last to earn as much again.
+ *
+ * Unspent essence boosts production (2% each), and essence buys perks.
+ *
+ * Tuned with the balance sim: a cube root let essence snowball into prestiging
+ * every hour mid-game; with a fourth root runs shrink from ~19 h to ~5 h and then
+ * lengthen again. The first prestige pays ~50 essence at ~1 Qa emojis drawn.
+ */
+export const ESSENCE_UNIT = 2e8;
+const ESSENCE_ROOT = 4;
+
+/** Total essence that a number of emojis drawn is worth */
+export function essenceForEmojis(emojis: number) {
+    return Math.floor(Math.pow(Math.max(0, emojis) / ESSENCE_UNIT, 1 / ESSENCE_ROOT));
 }
 
-export function emojisForNextPrestigeLevel() {
-    const currentPrestigeLevel = getPrestigeLevel();
-    // Calculate the emojis required for the next level
-    const nextPrestigeLevel = currentPrestigeLevel + 1;
-    return Math.pow(nextPrestigeLevel, 2) * 1e10;
+/** All-time emojis needed for a total amount of essence */
+export function emojisForEssence(essence: number) {
+    return Math.pow(essence, ESSENCE_ROOT) * ESSENCE_UNIT;
 }
 
-export function calculateRemainingEmojisForNextPrestige(asPercentage = false) {
+/** Essence a prestige right now would give */
+export function getPendingEssence() {
+    const { stats, prestige } = store.getState();
+    return Math.max(0, essenceForEmojis(stats.emojisGained) - prestige.totalEssenceEarned);
+}
+
+/** All-time emojis drawn needed for the next pending essence */
+export function emojisForNextEssence() {
+    const { stats } = store.getState();
+    return emojisForEssence(essenceForEmojis(stats.emojisGained) + 1);
+}
+
+/** Updates the progress towards the next essence (0 - 100), for the home screen meter */
+export function calculateRemainingEmojisForNextPrestige() {
     const emojisGained = store.getState().stats.emojisGained;
-    const emojisNeededForNextLevel = emojisForNextPrestigeLevel();
-    const currentLevelRequiredEmojis = Math.pow(getPrestigeLevel(), 2) * 1e10;
+    const current = emojisForEssence(essenceForEmojis(emojisGained));
+    const next = emojisForNextEssence();
+    const progress = Math.min(100, Math.max(0, (emojisGained - current) / (next - current) * 100));
+    store.dispatch(updateRemainingEmojisPrestigePerc(progress));
+    return progress;
+}
 
-    // console.log(formatNumber(currentLevelRequiredEmojis), getPrestigeLevel())
+/**
+ * Prestige: trade the run for emoji essence
+ *
+ * Resets the bank, buildings, building and hand upgrades and effects. Keeps the
+ * collection, all-time stats, combo level upgrades, the fun value and everything
+ * prestige-related (essence, perks). Muscle memory also keeps the hands.
+ *
+ * @param trialId starts the new run under this trial (see trials.ts)
+ * @returns the essence gained, or 0 if there was none to gain (nothing happens then)
+ */
+export function prestige(trialId?: string) {
+    const essence = getPendingEssence();
+    if (essence < 1) return 0;
 
-    // Calculate remaining emojis to reach next level
-    const remaining = emojisNeededForNextLevel - emojisGained;
+    const state = store.getState();
+    const { funValue } = state.values;
+    const keepHands = hasPerk("muscleMemory");
+    const keptUpgrades = state.upgrades.owned.filter(id =>
+        isComboUpgradeId(id) || isEffectEmojiUpgradeId(id) || (keepHands && getUpgradeDataById(id)?.variant === "Big emoji percentage"));
 
-    if (asPercentage) {
-        // Calculate the percentage progress towards the next level
-        const totalForNextLevel = emojisNeededForNextLevel - currentLevelRequiredEmojis;
-        const progress = ((emojisGained - currentLevelRequiredEmojis) / totalForNextLevel) * 100;
+    // The goal is set from the run that's ending, before it's reset
+    const trial = trials.find(t => t.id === trialId);
+    const activeTrial = trial ? { id: trial.id, goal: trialGoal(trial), completed: false } : undefined;
 
-        store.dispatch(updateRemainingEmojisPrestigePerc(progress));
-        // console.log(progress)
-        return progress
+    store.dispatch(completePrestige({ essence, runStartEmojis: state.stats.emojisGained, trial: activeTrial }));
 
+    store.dispatch(resetValues());
+    store.dispatch(setFunValue(funValue));
+    store.dispatch(resetBuildings());
+    store.dispatch(resetUpgrades());
+    store.dispatch(resetBigEmoji());
+    store.dispatch(resetEffects());
+
+    keptUpgrades.forEach(id => {
+        store.dispatch(addUpgrade(id));
+        const upgrade = getUpgradeDataById(id);
+        if (upgrade?.emojisPerTapPercentageOfEps) {
+            store.dispatch(addEmojisPerTapPercentageOfEps(upgrade.emojisPerTapPercentageOfEps));
+        }
+    });
+
+    // Head start (perk), and a stash for trials that would leave no way to get going
+    const start = startingEmojis() + (trial?.startingEmojis ?? 0);
+    if (start > 0) store.dispatch(updateEmojis(start));
+
+    syncBuildingPrices();
+    calculateBuildingsEps();
+    calculateEpt();
+    pickNextEmoji();
+    unlockUpgrades();
+    canBuyUpgrade();
+    calculateRemainingEmojisForNextPrestige();
+
+    return essence;
+}
+
+/** Essence a prestige right now would give, with the fraction towards the next one */
+export function exactPendingEssence() {
+    const { stats, prestige } = store.getState();
+    const exact = Math.pow(Math.max(0, stats.emojisGained) / ESSENCE_UNIT, 1 / ESSENCE_ROOT);
+    return Math.max(0, exact - prestige.totalEssenceEarned);
+}
+
+/** Runs shorter than this don't count towards the best essence rate: early on it swings wildly */
+const MIN_RATE_SECONDS = 10 * 60;
+
+/** Essence per hour played this run, or undefined while the run is too short to tell */
+export function essenceRate(runSeconds = store.getState().prestige.runSeconds ?? 0) {
+    if (runSeconds < MIN_RATE_SECONDS) return undefined;
+    return exactPendingEssence() / (runSeconds / 3600);
+}
+
+/**
+ * Keeps track of this run's best essence per hour. Once the rate falls well below
+ * it, the run is slowing down and it's a good time to prestige.
+ *
+ * Called every 2.5 s from the gameLoop
+ */
+export function trackEssenceRate() {
+    const rate = essenceRate();
+    if (rate !== undefined && rate > (store.getState().prestige.runBestEssenceRate ?? 0)) {
+        store.dispatch(setRunBestEssenceRate(rate));
+    }
+}
+
+/** Below this share of the run's best essence rate, the run counts as slowing down */
+export const SLOWING_DOWN_SHARE = 0.8;
+
+/**
+ * Buys a perk with essence, if it can be bought
+ *
+ * @returns whether it was bought
+ */
+export function purchasePerk(id: string) {
+    const perk = perks.find(p => p.id === id);
+    if (!perk || !canBuyPerk(perk)) return false;
+    store.dispatch(buyPerk({ id, cost: perk.cost }));
+    // Bought right after prestiging, Head start still applies to this run
+    const { buildings, values } = store.getState();
+    if (id === "headStart" && buildings.buildings.every(building => building.amount === 0)) {
+        store.dispatch(updateEmojis(values.emojis + startingEmojis()));
+    }
+    // Spent essence no longer boosts production, and some perks change prices
+    syncBuildingPrices();
+    calculateBuildingsEps();
+    calculateEpt();
+    return true;
+}
+
+/**
+ * Runs once at game start: migrates old saves, and offers offline earnings for the time away
+ */
+export function startPrestige() {
+    const prestigeState = store.getState().prestige;
+
+    if (prestigeState.version !== PRESTIGE_STATE_VERSION) {
+        store.dispatch(migratePrestige());
+        // Their old, unearned essence was boosting production
+        calculateBuildingsEps();
     }
 
-    return remaining
+    // The offline earnings perks were removed (offline earnings are claimed now, see offline.ts)
+    const removed = removedPerks.filter(perk => store.getState().prestige.perks.includes(perk.id));
+    if (removed.length > 0) {
+        store.dispatch(refundPerks(removed));
+        calculateBuildingsEps();
+    }
+
+    const lastSeen = store.getState().prestige.lastSeen;
+    if (lastSeen) registerAway((Date.now() - lastSeen) / 1000);
+    store.dispatch(setLastSeen(Date.now()));
+}
+
+/**
+ * Keeps track of this run's best production for Head start (perk). Skipped while a
+ * production effect is active, so a lucky ×77 doesn't set it.
+ */
+export function trackRunPeak() {
+    const { values, effects, prestige: prestigeState } = store.getState();
+    if (effects.effects.some(effect => effect.epsMult)) return;
+    if (values.emojisPerSecond > (prestigeState.runPeakEps ?? 0)) {
+        store.dispatch(setRunPeakEps(values.emojisPerSecond));
+    }
+}
+
+/** Called every second, so offline earnings know when the game stopped */
+export function updateLastSeen() {
+    store.dispatch(setLastSeen(Date.now()));
 }

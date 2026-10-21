@@ -35,55 +35,54 @@
             "plural": "Trung tâm thể thao",
             "description": "Giữ cho emoji của bạn luôn khỏe mạnh."
         },
-        "7": {
+        "8": {
             "name": "Ngân hàng",
             "plural": "Ngân hàng",
             "description": "\"Emoji của bạn an toàn với chúng tôi.\""
         },
-        "8": {
+        "9": {
             "name": "Công viên emoji",
             "plural": "Công viên emoji",
             "description": "\"Chào mừng đến EmojiLand: Nơi giấc mơ và cảm xúc thành hiện thực!\""
         },
-        "9": {
+        "10": {
             "name": "Quốc hội emoji",
             "plural": "Quốc hội emoji",
             "description": "Nơi các emoji họp bàn cách tạo thêm emoji."
         },
-        "10": {
+        "12": {
             "name": "Trạm vũ trụ",
             "plural": "Trạm vũ trụ",
             "description": "Chinh phục thế giới mới và lấy emoji của họ."
         },
-        "11": {
+        "13": {
             "name": "Vương quốc kẹo",
             "plural": "Vương quốc kẹo",
             "description": "Thiên đường ngọt ngào do Vua Kẹo và thần dân emoji đáng yêu của ngài cai quản."
         },
-        "12": {
+        "14": {
             "name": "Núi lửa emoji",
             "plural": "Núi lửa emoji",
             "description": "Mỗi lần phun trào là một cơn lũ emoji mới toanh, nóng hổi!"
         },
-        "13": {
+        "15": {
             "name": "Đền Đại Emoji trên trời",
             "plural": "Đền Đại Emoji trên trời",
             "description": "Truyền thuyết kể rằng Đại Emoji trên trời ban emoji vô tận cho những tín đồ trung thành nhất."
         },
-        "14": {
+        "16": {
             "name": "Siêu máy tính emoji",
             "plural": "Siêu máy tính emoji",
             "description": "Cỗ máy emoji tối thượng. Nhân bản emoji với tốc độ ánh sáng."
         },
-        "15": {
+        "17": {
             "name": "Hố đen emoji",
             "plural": "Hố đen emoji",
             "description": "Điểm đến cuối cùng của mọi emoji... hay một khởi đầu mới?"
         },
-        "16": {
+        "18": {
             "name": "Điểm kỳ dị emoji",
-            "plural": "Điểm kỳ dị emoji",
-            "description": "Thế đấy. Chẳng còn gì ngoài emoji. Bạn đã làm được rồi."
+            "plural": "Điểm kỳ dị emoji"
         }
     },
     "upgrades": {
@@ -716,88 +715,88 @@
             "description": "Môn thể thao đánh bóng bằng gậy và lái xe điện cực ngầu.",
             "quote": "Môn thể thao của các tổng thống"
         },
-        "800": {
+        "900": {
             "name": "Heo đất",
             "description": "Ụt ịt!"
         },
-        "801": {
+        "901": {
             "name": "Túi emoji to hơn",
             "description": "Mang được nhiều emoji hơn nữa."
         },
-        "802": {
+        "902": {
             "name": "Thẻ tín dụng emoji",
             "description": "Để tiêu số emoji kiếm được bằng mồ hôi nước mắt."
         },
-        "803": {
+        "903": {
             "name": "Đầu tư vào giáo dục",
             "description": "Giáo dục tốt hơn, kỹ năng vẽ emoji giỏi hơn."
         },
-        "804": {
+        "904": {
             "name": "Đầu tư vào đổi mới",
             "description": "Đổi mới nhiều hơn, emoji sáng tạo hơn."
         },
-        "900": {
+        "1000": {
             "name": "Vòng quay ngựa gỗ",
             "description": "You spin me right 'round, baby!"
         },
-        "901": {
+        "1001": {
             "name": "Cầu trượt",
             "description": "Do you slide on all your nights like this? (I might)"
         },
-        "902": {
+        "1002": {
             "name": "Vòng quay mặt trời",
             "description": "Way up, there is where she broke my heart."
         },
-        "903": {
+        "1003": {
             "name": "Rạp xiếc",
             "description": "There's only two types of people in the world. The ones that entertain, and the ones that observe."
         },
-        "904": {
+        "1004": {
             "name": "Người tung hứng emoji",
             "description": "Người ta đồn anh ấy chưa từng để rơi quả nào."
         },
-        "1000": {
+        "1100": {
             "name": "Bầu cử emoji",
             "description": "Chúc emoji xuất sắc nhất chiến thắng!"
         },
-        "1001": {
+        "1101": {
             "name": "Gói kích cầu emoji",
             "description": "Bạn có emoji, bạn cũng có, cả bạn nữa, ai cũng có emoji!"
         },
-        "1002": {
+        "1102": {
             "name": "Chủ tịch nghị viện emoji",
             "description": "Lắp một chiếc \"loa\" emoji của riêng bạn để mọi chuyện diễn ra theo ý mình."
         },
-        "1003": {
+        "1103": {
             "name": "Luật emoji",
             "description": "Chúng tôi, những emoji..."
         },
-        "1004": {
+        "1104": {
             "name": "Liên minh emoji toàn cầu",
             "description": "Tăng cường hợp tác giữa các quốc gia emoji."
         },
-        "1100": {
+        "1300": {
             "name": "Kính viễn vọng",
             "description": "Ngắm sao để khám phá những hành tinh emoji."
         },
-        "1101": {
+        "1301": {
             "name": "Ăng-ten vệ tinh",
             "description": "Nhìn xa hơn Dải Ngân Hà, tới thiên hà Emojiway."
         },
-        "1102": {
+        "1302": {
             "name": "Phi hành gia",
             "description": "Phải có người vận hành trạm vũ trụ chứ."
         },
-        "1103": {
+        "1303": {
             "name": "Tên lửa",
             "description": "Bay nhanh cực kỳ."
         },
-        "1104": {
+        "1304": {
             "name": "☊⊑⎍⋏☌ ⏁⍜⟟ ⎅⟒⋏ ⏁⍀⍜⋏☌ ⊑⍜⏃ ⏚⟟⋏⊑...",
             "description": "...⋔⏃⋏☌ ⏁⊑⟒⍜ ☊⏃ ⋏⊑⎍⋏☌ ⟒⋔⍜⟊⟟ ⋔⍜⟟ ⎅⟟⟒⋏ ⍀⍜.",
             "quote": "☊⊑⏃⋔ ⋔⏃⏁ ⏁⏃ ⋏⏃⋔ ⌰⏃⋏ ⎅⟒ ⋔⍜ ☍⊑⍜⏃ ⏚⟟ ⋔⏃⏁ ☊⎍⏃ ⏁⏃"
         },
-        "1105": {
+        "1305": {
             "name": "⋔⍜⋏ ⎅⍜ ☍⊬ ⌰⏃",
             "description": "⋔⍜⋏ ⎅⍜ ⋏⏃⊬ ☊⊑⎍⏃ ⌇⎍☊ ⋔⏃⋏⊑ ☍⊑⍜⋏ ⌰⎍⍜⋏☌."
         },
@@ -970,11 +969,11 @@
             "description": "Mổ màn hình bằng mỏ.",
             "quote": "Lạch bạch! Để tớ giúp bạn kiếm emoji!"
         },
-        "100000": {
+        "110000": {
             "name": "Thực tập sinh emoji",
             "description": "Thực tập sinh giúp chính phủ emoji vận hành trơn tru!"
         },
-        "100001": {
+        "110001": {
             "name": "Công chức emoji",
             "description": "Chính phủ emoji cần có người điều hành bộ máy.",
             "quote": "Có vẻ bạn đang soạn luật. Cần giúp không?"
@@ -1002,8 +1001,10 @@
             "description": "Sản lượng emoji giảm một nửa!"
         },
         "200": {
-            "title": "Quà emoji",
-            "description": "Lượng emoji bằng 1 giờ sản xuất!"
+            "title": "Quà emoji"
         }
-    }
+    },
+    "perks": {},
+    "trials": {},
+    "funValues": {}
 }

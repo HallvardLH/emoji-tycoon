@@ -1,4 +1,10 @@
 import * as Haptics from 'expo-haptics';
+import { getLanguage } from '../i18n';
+
+/** Text in capitals, the way the current language writes them (e.g. Turkish i becomes İ) */
+export function toCaps(text: string) {
+    return text.toLocaleUpperCase(getLanguage());
+}
 
 // Calculates percentage of a number
 export function percentageOf(percentage: number, number: number) {
@@ -18,6 +24,22 @@ export function roundToPrettyNumber(number: number) {
 
     const prettyRound = Math.pow(10, (Math.ceil(Math.log(Math.ceil(number)) / Math.LN10))) / 100;
     return Math.round(number / prettyRound) * prettyRound
+}
+
+// The round steps prices land on, at every scale (×10, ×100...)
+const PRICE_STEPS = [1, 1.5, 2, 2.5, 3, 4, 5, 7.5, 10];
+
+/**
+ * Rounds a price to the nearest round step: 10, 15, 20, 25, 30, 40, 50, 75 or 100,
+ * at whatever scale it is (47 → 50, 90 → 100, 63 → 75, 4,700 → 5,000)
+ */
+export function roundToPriceStep(price: number) {
+    if (price <= 0) return 0;
+    const scale = Math.pow(10, Math.floor(Math.log10(price)));
+    const mantissa = price / scale;
+    const step = PRICE_STEPS.reduce((best, s) => Math.abs(s - mantissa) < Math.abs(best - mantissa) ? s : best);
+    // Rounding cleans off float noise (2.5 × 10^7 is 25000000.000000004)
+    return scale >= 10 ? Math.round(step * scale) : +(step * scale).toPrecision(2);
 }
 
 export function getRandomBetween(min: number, max: number) {

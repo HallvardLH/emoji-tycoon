@@ -85,7 +85,7 @@ export const effectData: Effect[] = [
 
     {
         title: "Emoji gift",
-        description: "1 hour's worth of emojis!",
+        description: "15 minutes' worth of emojis!",
         eptMult: 0,
         eptAdd: 0,
         epsMult: 0,

@@ -1,10 +1,11 @@
+import { buildingIdOf } from "../../../buildings/buildingData";
 import { getBuildingUpgradePrice } from "../helpers";
 import { BuildingNames } from "../../../buildings/buildingNamesType";
 import { UpgradeType, UnlockConditionType, UpgradeVariantsType, UpgradeCateogoriesType } from "../UpgradeType";
 
 const basePettingZooUpgrade = {
     building: "Petting zoo" as BuildingNames,
-    buildingId: 4,
+    buildingId: buildingIdOf("Petting zoo"),
     unlockCondition: "Building amount" as UnlockConditionType,
     categories: ["Multiply building production" as UpgradeCateogoriesType],
     emojisPerSecondMultiplier: 2,
@@ -18,6 +19,7 @@ export const pettingZooUpgrades: UpgradeType[] = [
         name: "Brooms",
         icon: "🧹",
         description: "For cleaning up after the animals when they uhh... go number two.",
+        quote: "I have a master's degree. I'm sweeping up giraffe dung for emojis.",
         tier: 0,
         id: 500,
     },
@@ -26,6 +28,7 @@ export const pettingZooUpgrades: UpgradeType[] = [
         name: "Animal Trainers",
         icon: "🐕‍🦺",
         description: "Trainers teach the animals tricks, making the zoo more efficient.",
+        quote: "The llama spat on me. Again.",
         tier: 1,
         id: 501,
     },
@@ -42,6 +45,7 @@ export const pettingZooUpgrades: UpgradeType[] = [
         name: "Exotic Animals",
         icon: "🦒",
         description: "Introduce rare and exotic animals to draw in larger crowds.",
+        quote: "The penguin bit a child. Attendance is up 40%.",
         tier: 3,
         id: 503,
     },
@@ -50,6 +54,7 @@ export const pettingZooUpgrades: UpgradeType[] = [
         name: "Zoo Mascots",
         icon: "🎭",
         description: "Friendly mascots encourage visitors, boosting overall income.",
+        quote: "It's 35 degrees in this giraffe suit and a kid just kicked me.",
         tier: 4,
         id: 504,
     },
@@ -58,6 +63,7 @@ export const pettingZooUpgrades: UpgradeType[] = [
         name: "Veterinary Clinics",
         icon: "🩺",
         description: "A dedicated clinic keeps the animals healthy.",
+        quote: "Seven years of vet school. Today I'm treating a goat that ate a phone.",
         tier: 5,
         id: 505,
     },

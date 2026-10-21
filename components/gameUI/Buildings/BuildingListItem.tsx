@@ -1,138 +1,222 @@
+import { memo } from "react";
 import { StyleSheet, View } from "react-native";
 import Text from "../../generalUI/Text";
-import Button from "../../buttons/Button";
-import ContentBox from "../../generalUI/ContentBox";
-import Emoji from "../Emoji";
-import { colors } from "../../misc/Colors";
-import { useState } from "react";
-import { buildingData } from "../../../scripts/game/buildings/buildingData";
-import { getBuildingNameForAmount } from "../../../i18n/content";
-import { Trans, useTranslation } from "react-i18next";
-import DisplayUpgrades from "../DisplayUpgrades";
-import { formatNumber } from "../../../scripts/misc";
-import { howFun } from "../../../scripts/game/shorthands";
+import ChunkyButton from "../../generalUI/ChunkyButton";
+import { palette, radii } from "../../misc/theme";
+import { useTranslation } from "react-i18next";
 
 interface BuildingListItemProps {
-    buildingId: number;
     /** The displayed, translated, name */
     name: string;
+    /** The displayed name for the amount being bought, e.g. "Farms" when buying 10 */
+    buyName: string;
     icon: string;
     description: string;
-    price: number | string;
-    baseEps: number;
-    upgradeAmount: number;
-    eps: number;
+    /** Formatted price of the next purchase */
+    price: string;
     amount: number;
-    buttonActive?: boolean;
+    /** Formatted emojis per second this building makes, e.g. "7.5" */
+    eps: string;
+    /** Share of total production, e.g. "1.4%" */
+    share: string;
+    /** Emojis per second one more of these would add, for buildings you don't own yet */
+    epsEach: string;
+    /** Building amounts the next upgrade is worked towards between: from the last one's, to where it unlocks */
+    nextUpgrade?: { from: number, at: number };
+    buyCount: number;
+    affordable: boolean;
+    /** Shown under the price on a disabled button, e.g. "IN 3 MIN" */
+    waitLabel: string;
     onPress: () => void;
 }
 
-export default function BuildingListItem(props: BuildingListItemProps) {
-    const {
-        buildingId,
-        name,
-        icon,
-        description,
-        price,
-        baseEps,
-        upgradeAmount,
-        eps,
-        amount,
-        buttonActive = true,
-        onPress,
-    } = props;
-
-    const [showDetails, setShowDetails] = useState(false);
+function BuildingListItem(props: BuildingListItemProps) {
+    const { name, buyName, icon, description, price, amount, eps, share, epsEach, nextUpgrade, buyCount, affordable, waitLabel, onPress } = props;
     const { t } = useTranslation();
 
-    const highlight = <Text shadow={false} color={colors.yellow.highlight} size={15} />;
+    const owned = amount > 0;
+    // Starts over for each upgrade, from where the last one unlocked
+    const progress = nextUpgrade
+        ? Math.min(1, Math.max(0, (amount - nextUpgrade.from) / (nextUpgrade.at - nextUpgrade.from)))
+        : 1;
 
     return (
-        <ContentBox style={{ marginBottom: 18 }}>
-            <View style={listItemStyles.container}>
-                <View style={listItemStyles.left}>
-                    <Emoji icon={icon} />
-                </View>
-                <View style={listItemStyles.center}>
-                    <Text shadow={false} color={colors.purple.dark} size={20}>{name}</Text>
-                    {/* <Text style={{ letterSpacing: 0.5, marginVertical: -4 }} shadow={false} color={colors.blue.medium} size={14}>Produces {formatNumber(baseEps)} eps</Text> */}
-                    <Text shadow={false} color={colors.yellow.highlight} size={16}>{howFun(77) ? "💸" : "💵"} {price}</Text>
-                    {eps > 0 && (
-                        <Text style={{ lineHeight: 14 }} shadow={false} color={colors.purple.dark} size={14}>
-                            <Trans
-                                i18nKey="buildings.emojisPerSecond"
-                                values={{ eps: formatNumber(eps) }}
-                                components={{ hl: <Text style={{ lineHeight: 14 }} shadow={false} color={colors.yellow.highlight} size={14} /> }}
-                            />
-                        </Text>
-                    )}
-                    <Text style={{ letterSpacing: 0.05 }} shadow={false} color={"gray"} size={14}>{description}</Text>
-                </View>
-                <View style={listItemStyles.right}>
-                    <Text style={{ lineHeight: 30 }} shadow={false} size={amount < 1000 ? 30 : 26} color={colors.purple.medium}>{amount}</Text>
-                    <Text style={{ lineHeight: 15 }} shadow={false} color={colors.purple.medium} size={14}>{t("common.owned", { count: amount })}</Text>
-                </View>
+        <View style={styles.card}>
+            <View style={styles.tile}>
+                <Text size={32} style={styles.tileEmoji}>{icon}</Text>
             </View>
-            <View style={{
-                flexDirection: "row",
-                gap: 10,
-                justifyContent: "center"
-            }}>
-                <Button disabled={!buttonActive} shadowHeight={8} onPress={onPress} height={34} width={110} variant={"blue"} label={t("common.buy")} />
-                <Button shadowHeight={8} onPress={() => setShowDetails(!showDetails)} down={showDetails} height={34} width={110} variant="submit" label={t("common.details")} />
-            </View>
-            {showDetails && (
-                <View style={{
-                    marginHorizontal: 10,
-                }}>
-                    <Text shadow={false} color={colors.purple.dark} size={15}>
-                        <Trans
-                            i18nKey="buildings.youHave"
-                            values={{ amount: formatNumber(amount), building: getBuildingNameForAmount(buildingId, amount) }}
-                            components={{ hl: highlight }}
-                        />
-                    </Text>
-                    <Text shadow={false} color={colors.purple.dark} size={15}>
-                        <Trans i18nKey="buildings.eachProduces" values={{ eps: formatNumber(baseEps) }} components={{ hl: highlight }} />
-                    </Text>
-                    <Text shadow={false} color={colors.purple.dark} size={15}>
-                        <Trans i18nKey="buildings.totalProduces" values={{ eps: formatNumber(eps) }} components={{ hl: highlight }} />
-                    </Text>
-                    {upgradeAmount > 0 && (
-                        <View style={{
-                            justifyContent: "center",
-                            alignItems: "center",
-                            marginVertical: 10,
-                        }}>
-                            <Text shadow={false} color={colors.purple.dark} size={20}>{t("buildings.ownedUpgrades")}</Text>
-                            <DisplayUpgrades buildingName={buildingData[buildingId].name} />
+
+            <View style={styles.center}>
+                <View style={styles.titleRow}>
+                    <Text size={17} color={palette.ink} numberOfLines={1} style={styles.name}>{name}</Text>
+                    {owned ? (
+                        <View style={styles.ownedBadge} accessibilityLabel={t("buildings.ownedA11y", { count: amount })}>
+                            <Text font="black" size={12} color="#FFFFFF">{amount}</Text>
+                        </View>
+                    ) : (
+                        <View style={styles.newBadge}>
+                            <Text font="black" size={11} color="#FFFFFF">{t("buildings.newBadge")}</Text>
                         </View>
                     )}
                 </View>
-            )}
-        </ContentBox>
+
+                {/* Always two lines tall, so every card is the same height */}
+                <Text font="body" size={12} color={palette.muted} numberOfLines={2} style={styles.description}>{description}</Text>
+
+                {owned ? (
+                    <>
+                        <Text font="bold" size={11} color={palette.muted} numberOfLines={1} style={styles.statLine}>{t("buildings.statLine", { eps, share })}</Text>
+                        <View style={styles.progressRow}>
+                            <View style={styles.track}>
+                                <View style={[styles.fill, { width: `${progress * 100}%` }]} />
+                            </View>
+                            <Text font="bold" size={11} color={palette.muted} numberOfLines={1} style={styles.statLine}>
+                                {nextUpgrade ? t("buildings.nextUpgrade", { at: nextUpgrade.at }) : t("buildings.allUpgradesFound")}
+                            </Text>
+                        </View>
+                    </>
+                ) : (
+                    <>
+                        <Text font="bold" size={11} color={palette.muted} numberOfLines={1} style={styles.statLine}>{t("buildings.epsEach", { eps: epsEach })}</Text>
+                        {/* Where the progress row goes once owned */}
+                        <View style={styles.progressRow} />
+                    </>
+                )}
+            </View>
+
+            <ChunkyButton
+                width={96}
+                label={price}
+                labelSize={price.length > 7 ? 13 : 16}
+                sublabel={affordable ? (buyCount > 1 ? t("buildings.buyCount", { count: buyCount }) : t("buildings.buy")) : waitLabel}
+                accessibilityLabel={t("buildings.buyA11y", { count: buyCount, name: buyName, price })}
+                disabled={!affordable}
+                onPress={onPress}
+            />
+        </View>
     )
 }
 
-const listItemStyles = StyleSheet.create({
-    container: {
+/** The next locked building, teased as a silhouette */
+export function MysteryBuildingItem({ revealAt }: { revealAt: string }) {
+    const { t } = useTranslation();
+    return (
+        <View style={styles.mystery}>
+            <View style={[styles.tile, styles.mysteryTile]}>
+                <Text size={28} color={palette.lilac}>?</Text>
+            </View>
+            <View style={styles.center}>
+                <Text size={17} color={palette.lilacLight}>{t("buildings.mystery")}</Text>
+                <Text font="body" size={12} color={palette.lilac}>{t("buildings.revealsAt", { amount: revealAt })}</Text>
+            </View>
+        </View>
+    );
+}
+
+// Every card is this tall, whatever it shows, so the list doesn't jump as buildings are bought
+const CARD_HEIGHT = 113;
+
+const styles = StyleSheet.create({
+    card: {
         flexDirection: "row",
-        gap: 10,
-        marginTop: 8,
-    },
-
-    left: {
-        flexBasis: 56,
-        gap: 12,
         alignItems: "center",
+        gap: 12,
+        height: CARD_HEIGHT,
+        paddingHorizontal: 12,
+        borderRadius: radii.lg,
+        backgroundColor: palette.paper,
     },
-
+    tile: {
+        width: 56,
+        height: 56,
+        borderRadius: 16,
+        backgroundColor: palette.tile,
+        alignItems: "center",
+        justifyContent: "center",
+    },
+    tileEmoji: {
+        lineHeight: 40,
+    },
     center: {
         flex: 1,
+        minWidth: 0,
+        gap: 3,
     },
-
-    right: {
-        flexBasis: 56,
+    titleRow: {
+        flexDirection: "row",
         alignItems: "center",
+        gap: 6,
+    },
+    name: {
+        flexShrink: 1,
+        lineHeight: 22,
+    },
+    ownedBadge: {
+        paddingHorizontal: 7,
+        paddingVertical: 1,
+        borderRadius: 8,
+        backgroundColor: palette.ink,
+    },
+    newBadge: {
+        paddingHorizontal: 7,
+        paddingVertical: 1,
+        borderRadius: 8,
+        backgroundColor: palette.pop,
+    },
+    description: {
+        lineHeight: 16,
+        height: 32,
+    },
+    statLine: {
+        lineHeight: 14,
+    },
+    progressRow: {
+        flexDirection: "row",
+        alignItems: "center",
+        gap: 6,
+        height: 14,
+    },
+    track: {
+        flex: 1,
+        height: 5,
+        borderRadius: 5,
+        backgroundColor: palette.track,
+        overflow: "hidden",
+    },
+    fill: {
+        height: 5,
+        borderRadius: 5,
+        backgroundColor: palette.violet,
+    },
+    mystery: {
+        flexDirection: "row",
+        alignItems: "center",
+        gap: 12,
+        height: CARD_HEIGHT,
+        paddingHorizontal: 12,
+        borderRadius: radii.lg,
+        borderWidth: 2,
+        borderStyle: "dashed",
+        borderColor: "rgba(255,255,255,0.22)",
+    },
+    mysteryTile: {
+        backgroundColor: "rgba(255,255,255,0.08)",
     },
 })
+
+/**
+ * Rows re-render only when what they show changes. The list re-renders twice a second
+ * (the bank sample) and makes a new onPress and nextUpgrade each time; onPress always
+ * buys the same building, so it's left out, and nextUpgrade is compared by value.
+ */
+export default memo(BuildingListItem, (prev, next) => {
+    for (const key of Object.keys(next) as (keyof BuildingListItemProps)[]) {
+        if (key === "onPress") continue;
+        if (key === "nextUpgrade") {
+            if (prev.nextUpgrade?.from !== next.nextUpgrade?.from || prev.nextUpgrade?.at !== next.nextUpgrade?.at) return false;
+            continue;
+        }
+        if (prev[key] !== next[key]) return false;
+    }
+    return true;
+});

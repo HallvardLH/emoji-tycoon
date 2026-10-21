@@ -5,11 +5,25 @@ import { restaurantUpgrades } from "./buildings/restaurant";
 import { pettingZooUpgrades } from "./buildings/pettingZoo";
 import { factoryUpgrades } from "./buildings/factory";
 import { sportsCenterUpgrades } from "./buildings/sportsCenter";
+import { emojiCinemaUpgrades } from "./buildings/emojiCinema";
 import { bankUpgrades } from "./buildings/bank";
 import { emojiThemeParkUpgrades } from "./buildings/emojiThemePark";
 import { emojiAssemblyUpgrades } from "./buildings/emojiAssembly";
+import { emojiAirlineUpgrades } from "./buildings/emojiAirline";
 import { spaceStationUpgrades } from "./buildings/spaceStation";
+import { candyKingdomUpgrades } from "./buildings/candyKingdom";
+import { emojiVolcanoUpgrades } from "./buildings/emojiVolcano";
+import { templeOfTheBigEmojiUpgrades } from "./buildings/templeOfTheBigEmoji";
+import { emojiSupercomputerUpgrades } from "./buildings/emojiSupercomputer";
+import { emojiBlackHoleUpgrades } from "./buildings/emojiBlackHole";
+import { emojiSingularityUpgrades } from "./buildings/emojiSingularity";
+import { emojiTimeMachineUpgrades } from "./buildings/emojiTimeMachine";
+import { bigBangUpgrades } from "./buildings/bigBang";
+import { emojiMultiverseUpgrades } from "./buildings/emojiMultiverse";
+import { theFirstEmojiUpgrades } from "./buildings/theFirstEmoji";
 import { bigEmojiUpgrades } from "./nonBuilding/bigEmoji";
+import { comboUpgrades, COMBO_UPGRADE_ID_BLOCK } from "./nonBuilding/combo";
+import { effectEmojiUpgrades, EFFECT_EMOJI_UPGRADE_ID_BLOCK } from "./nonBuilding/effectEmojis";
 import { getBuildingIdFromName } from "../../buildings/shorthands";
 
 import { UpgradeType } from "./UpgradeType";
@@ -55,6 +69,8 @@ function assignIdsToUpgrades(upgrades: UpgradeType[], buildingId: number): Upgra
 // is not a true building, so it does not have a buildingId
 export const upgradeData: UpgradeType[] = [
     ...assignIdsToUpgrades(bigEmojiUpgrades, 0),
+    ...assignIdsToUpgrades(comboUpgrades, COMBO_UPGRADE_ID_BLOCK),
+    ...assignIdsToUpgrades(effectEmojiUpgrades, EFFECT_EMOJI_UPGRADE_ID_BLOCK),
     ...assignIdsToUpgrades(drawingHandUpgrades, getBuildingIdFromName("Drawing hand") + 1),
     ...assignIdsToUpgrades(graphicDesignStudioUpgrades, getBuildingIdFromName("Graphic design studio") + 1),
     ...assignIdsToUpgrades(farmUpgrades, getBuildingIdFromName("Farm") + 1),
@@ -62,8 +78,20 @@ export const upgradeData: UpgradeType[] = [
     ...assignIdsToUpgrades(pettingZooUpgrades, getBuildingIdFromName("Petting zoo") + 1),
     ...assignIdsToUpgrades(factoryUpgrades, getBuildingIdFromName("Factory") + 1),
     ...assignIdsToUpgrades(sportsCenterUpgrades, getBuildingIdFromName("Sports center") + 1),
+    ...assignIdsToUpgrades(emojiCinemaUpgrades, getBuildingIdFromName("Emoji cinema") + 1),
     ...assignIdsToUpgrades(bankUpgrades, getBuildingIdFromName("Bank") + 1),
     ...assignIdsToUpgrades(emojiThemeParkUpgrades, getBuildingIdFromName("Emoji theme park") + 1),
     ...assignIdsToUpgrades(emojiAssemblyUpgrades, getBuildingIdFromName("Emoji assembly") + 1),
+    ...assignIdsToUpgrades(emojiAirlineUpgrades, getBuildingIdFromName("Emoji airline") + 1),
     ...assignIdsToUpgrades(spaceStationUpgrades, getBuildingIdFromName("Space station") + 1),
+    ...assignIdsToUpgrades(candyKingdomUpgrades, getBuildingIdFromName("Candy kingdom") + 1),
+    ...assignIdsToUpgrades(emojiVolcanoUpgrades, getBuildingIdFromName("Emoji volcano") + 1),
+    ...assignIdsToUpgrades(templeOfTheBigEmojiUpgrades, getBuildingIdFromName("Temple of the Big Emoji in the sky") + 1),
+    ...assignIdsToUpgrades(emojiSupercomputerUpgrades, getBuildingIdFromName("Emoji supercomputer") + 1),
+    ...assignIdsToUpgrades(emojiBlackHoleUpgrades, getBuildingIdFromName("Emoji black hole") + 1),
+    ...assignIdsToUpgrades(emojiSingularityUpgrades, getBuildingIdFromName("Emoji singularity") + 1),
+    ...assignIdsToUpgrades(emojiTimeMachineUpgrades, getBuildingIdFromName("Emoji time machine") + 1),
+    ...assignIdsToUpgrades(bigBangUpgrades, getBuildingIdFromName("Big bang") + 1),
+    ...assignIdsToUpgrades(emojiMultiverseUpgrades, getBuildingIdFromName("Emoji multiverse") + 1),
+    ...assignIdsToUpgrades(theFirstEmojiUpgrades, getBuildingIdFromName("The first emoji") + 1),
 ];

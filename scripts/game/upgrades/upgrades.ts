@@ -6,19 +6,25 @@ import { updateBuildingValue } from "../buildings/shorthands";
 import { getBuilding, getBuildingIdFromName } from "../buildings/shorthands";
 import { updateEmojis } from "../../redux/valuesSlice";
 import { formatNumber, formatPercentage } from "../../misc";
-import { addTapMultiplier, addTapPercentage, addEmojisPerTapPercentageOfEps } from '../../redux/bigEmojiSlice';
+import { addTapMultiplier, addTapPercentage, addEmojisPerTapPercentageOfEps, setTapModifiers } from '../../redux/bigEmojiSlice';
 import { calculateEpt } from "../calculations";
 import { getUpgradeDataById } from './shorthands';
 import { canBuyUpgrade } from './checks';
 import { getUpgradePrice } from './upgradePrice';
 import { addEmojisPerSecondPercentage } from '../../redux/valuesSlice';
-import { calculateEpsBonus, calculateEptBonus } from '../calculations';
+import { previewUpgradeGains, formatGainPercentage, UpgradeChanges } from '../calculations';
 import { BIG_EMOJI_BUILDING_ID } from './upgradeData/nonBuilding/bigEmoji';
 import * as Haptics from "expo-haptics";
 import i18n from "../../../i18n";
 import { getBuildingPluralName } from "../../../i18n/content";
+import { comboLevelOfTier } from './upgradeData/nonBuilding/combo';
+import { effectEmojiUpgradeSummary } from './upgradeData/nonBuilding/effectEmojis';
+import { canBuyUpgrades } from '../prestige/trials';
+import { playUpgradeSound } from '../sounds';
 
 export function buyUpgrade(upgradeId: number) {
+    // Bare bones (trial): no upgrades
+    if (!canBuyUpgrades()) return;
     const upgrade = getUpgradeDataById(upgradeId);
     const emojis = store.getState().values.emojis;
     const price = getUpgradePrice(upgrade.tier, upgrade.variant, upgrade.building ? upgrade.buildingId : undefined)
@@ -59,6 +65,12 @@ export function buyUpgrade(upgradeId: number) {
                         store.dispatch(addEmojisPerTapPercentageOfEps(upgrade.emojisPerTapPercentageOfEps));
                     }
                     break;
+                case "Combo level":
+                    // Owning it is the effect: the max combo counts combo level upgrades owned
+                    break;
+                case "Effect emojis":
+                    // Owning it is the effect: effect emojis read the ones owned (effectUpgrades.ts)
+                    break;
                 default:
                     console.warn(`No action for category: ${category}`);
                     break;
@@ -77,6 +89,7 @@ export function buyUpgrade(upgradeId: number) {
         Haptics.notificationAsync(
             Haptics.NotificationFeedbackType.Success
         )
+        playUpgradeSound();
     }
 }
 
@@ -99,6 +112,14 @@ export function getEffectText(upgradeId: number) {
                 break
             case "Percentage increase production":
                 text += i18n.t("upgrades.effects.percentageIncreaseProduction", { percent: formatPercentage(upgrade.emojisPerSecondPercentageIncrease! * 100) }) + "\n";
+                break
+            case "Combo level":
+                text += (upgrade.tier === 0
+                    ? i18n.t("upgrades.effects.comboUnlock", { level: comboLevelOfTier(0) })
+                    : i18n.t("upgrades.effects.comboLevel", { level: comboLevelOfTier(upgrade.tier) })) + "\n";
+                break
+            case "Effect emojis":
+                text += i18n.t("upgrades.effects.effectEmojis", { summary: effectEmojiUpgradeSummary(upgrade) }) + "\n";
                 break
             default:
                 return ""
@@ -128,57 +149,80 @@ export function getDisplayUpgrades(buildingName: string) {
 
 export type UpgradeBonusKind = "production" | "tap";
 
+/**
+ * What buying an upgrade would add right now, per second and per tap
+ *
+ * Previews the whole upgrade at once, so an upgrade that raises production also
+ * shows what that adds to taps through the hands.
+ *
+ * @returns lists of bonuses, bonus percentages and whether each is to production or tapping
+ */
 export function getUpgradeBonus(upgradeId: number) {
     const upgrade = getUpgradeDataById(upgradeId);
-    const currentEps = store.getState().values.emojisPerSecond;
-    let bonuses: string[] = [];
-    let bonusPercentages: string[] = [];
-    // Whether each bonus is to emoji production or to tapping
-    let kinds: UpgradeBonusKind[] = [];
+    const { values, bigEmoji } = store.getState();
+    const changes: UpgradeChanges = {};
+
     upgrade.categories.forEach((category) => {
-        let bonus = 0
         switch (category) {
-            case "Multiply building production": {
-                const building = getBuilding(upgrade.building!);
-                bonus = (building.eps * upgrade.emojisPerSecondMultiplier!) - building.eps;
-                bonuses.push(formatNumber(bonus));
-
-                bonusPercentages.push(formatPercentage((bonus / currentEps) * 100));
-                kinds.push("production");
-                break
-            }
-            case "Multiply tap": {
-                const calculatedBonus = calculateEptBonus(undefined, upgrade.emojisPerTapMultiplier);
-                bonuses.push(calculatedBonus.bonus);
-                bonusPercentages.push(calculatedBonus.bonusPercentage);
-                kinds.push("tap");
-                break
-            }
-            case "Percentage increase tap": {
-                const calculatedBonus = calculateEptBonus(undefined, undefined, upgrade.emojisPerTapPercentageIncrease);
-                bonuses.push(calculatedBonus.bonus);
-                bonusPercentages.push(calculatedBonus.bonusPercentage);
-                kinds.push("tap");
-                break
-            }
-            case 'Tap percentage of eps': {
-                const calculatedBonus = calculateEptBonus(upgrade.emojisPerTapPercentageOfEps);
-                bonuses.push(calculatedBonus.bonus);
-                bonusPercentages.push(calculatedBonus.bonusPercentage);
-                kinds.push("tap");
-                break
-            }
-            case "Percentage increase production": {
-                const calculatedBonus = calculateEpsBonus(undefined, upgrade.emojisPerSecondPercentageIncrease);
-                bonuses.push(calculatedBonus.bonus);
-                bonusPercentages.push(calculatedBonus.bonusPercentage);
-                kinds.push("production");
-                break
-            }
-            default:
-
+            case "Multiply building production":
+                if (upgrade.building && upgrade.emojisPerSecondMultiplier) {
+                    const building = getBuilding(upgrade.building);
+                    changes.buildingEps = building.eps * (upgrade.emojisPerSecondMultiplier - 1);
+                }
+                break;
+            case "Multiply tap":
+                changes.tapMultiplier = upgrade.emojisPerTapMultiplier;
+                break;
+            case "Percentage increase tap":
+                changes.tapPercentage = upgrade.emojisPerTapPercentageIncrease;
+                break;
+            case "Tap percentage of eps":
+                changes.tapPercentageOfEps = upgrade.emojisPerTapPercentageOfEps;
+                break;
+            case "Percentage increase production":
+                changes.epsPercentage = upgrade.emojisPerSecondPercentageIncrease;
+                break;
         }
-    })
+    });
+
+    const gains = previewUpgradeGains(changes);
+    const bonuses: string[] = [];
+    const bonusPercentages: string[] = [];
+    const kinds: UpgradeBonusKind[] = [];
+
+    // Leaves out rounding noise
+    if (gains.eps > values.emojisPerSecond * 1e-9 && gains.eps > 0) {
+        bonuses.push(formatNumber(gains.eps));
+        bonusPercentages.push(formatGainPercentage(gains.eps, values.emojisPerSecond));
+        kinds.push("production");
+    }
+    if (gains.ept > bigEmoji.emojisPerTap * 1e-9 && gains.ept > 0) {
+        bonuses.push(formatNumber(gains.ept));
+        bonusPercentages.push(formatGainPercentage(gains.ept, bigEmoji.emojisPerTap));
+        kinds.push("tap");
+    }
 
     return { bonuses, bonusPercentages, kinds }
+}
+
+/**
+ * Rebuilds what upgrades add to tapping from the upgrades owned
+ *
+ * Buying an upgrade stores its values in the save, so when upgrade data changes,
+ * saves keep the old values. Runs at game start so they pick up the current ones.
+ */
+export function syncTapModifiers() {
+    const multipliers: number[] = [];
+    const percentages: number[] = [];
+    const percentagesOfEps: number[] = [];
+
+    store.getState().upgrades.owned.forEach(id => {
+        const upgrade = getUpgradeDataById(id);
+        if (!upgrade) return;
+        if (upgrade.categories.includes("Multiply tap") && upgrade.emojisPerTapMultiplier) multipliers.push(upgrade.emojisPerTapMultiplier);
+        if (upgrade.categories.includes("Percentage increase tap") && upgrade.emojisPerTapPercentageIncrease) percentages.push(upgrade.emojisPerTapPercentageIncrease);
+        if (upgrade.categories.includes("Tap percentage of eps") && upgrade.emojisPerTapPercentageOfEps) percentagesOfEps.push(upgrade.emojisPerTapPercentageOfEps);
+    });
+
+    store.dispatch(setTapModifiers({ multipliers, percentages, percentagesOfEps }));
 }

@@ -35,55 +35,54 @@
             "plural": "Sporthallar",
             "description": "Håll dina emojis i form."
         },
-        "7": {
+        "8": {
             "name": "Bank",
             "plural": "Banker",
             "description": "\"Hos oss är dina emojis i trygga händer.\""
         },
-        "8": {
+        "9": {
             "name": "Emojinöjespark",
             "plural": "Emojinöjesparker",
             "description": "\"Välkommen till Emojiland: Där drömmar och känslor blir verklighet!\""
         },
-        "9": {
+        "10": {
             "name": "Emojiriksdag",
             "plural": "Emojiriksdagar",
             "description": "Där emojis samlas för att besluta hur man gör fler emojis."
         },
-        "10": {
+        "12": {
             "name": "Rymdstation",
             "plural": "Rymdstationer",
             "description": "Erövra nya världar och ta deras emojis."
         },
-        "11": {
+        "13": {
             "name": "Godisrike",
             "plural": "Godisriken",
             "description": "Ett sockersött paradis styrt av Godiskungen och hans söta emojiundersåtar."
         },
-        "12": {
+        "14": {
             "name": "Emojivulkan",
             "plural": "Emojivulkaner",
             "description": "Varje utbrott för med sig en flod av splitternya, nysmidda emojis!"
         },
-        "13": {
+        "15": {
             "name": "Tempel åt Den stora emojin i skyn",
             "plural": "Tempel åt Den stora emojin i skyn",
             "description": "Legenden säger att Den stora emojin i skyn skänker oändligt många emojis till sina trognaste följare."
         },
-        "14": {
+        "16": {
             "name": "Emojisuperdator",
             "plural": "Emojisuperdatorer",
             "description": "Den ultimata emojimotorn. Mångfaldigar emojis i ljusets hastighet."
         },
-        "15": {
+        "17": {
             "name": "Svart emojihål",
             "plural": "Svarta emojihål",
             "description": "Alla emojis slutstation... eller en ny början?"
         },
-        "16": {
+        "18": {
             "name": "Emojisingularitet",
-            "plural": "Emojisingulariteter",
-            "description": "Det var det. Inget finns kvar utom emojis. Du har klarat det."
+            "plural": "Emojisingulariteter"
         }
     },
     "upgrades": {
@@ -716,88 +715,88 @@
             "description": "En sport där man slår på en boll med en klubba och kör en cool golfbil.",
             "quote": "En presidentsport"
         },
-        "800": {
+        "900": {
             "name": "Spargrisar",
             "description": "Nöff nöff!"
         },
-        "801": {
+        "901": {
             "name": "Större emojipåsar",
             "description": "Nu kan du bära ännu fler emojis."
         },
-        "802": {
+        "902": {
             "name": "Emojikreditkort",
             "description": "Perfekt för att spendera dina surt förvärvade emojis."
         },
-        "803": {
+        "903": {
             "name": "Satsning på utbildning",
             "description": "Bättre utbildning, bättre emojiritande."
         },
-        "804": {
+        "904": {
             "name": "Satsning på innovation",
             "description": "Mer innovation, mer innovativa emojis."
         },
-        "900": {
+        "1000": {
             "name": "Karuseller",
             "description": "You spin me right 'round, baby!"
         },
-        "901": {
+        "1001": {
             "name": "Rutschkanor",
             "description": "Do you slide on all your nights like this? (I might)"
         },
-        "902": {
+        "1002": {
             "name": "Pariserhjul",
             "description": "Högst upp, det var där hon krossade mitt hjärta."
         },
-        "903": {
+        "1003": {
             "name": "Cirkus",
             "description": "Det finns bara två sorters människor i världen. De som underhåller och de som tittar på."
         },
-        "904": {
+        "1004": {
             "name": "Emojijonglör",
             "description": "Det sägs att han aldrig har tappat bollen."
         },
-        "1000": {
+        "1100": {
             "name": "Emojival",
             "description": "Må den bästa emojin vinna!"
         },
-        "1001": {
+        "1101": {
             "name": "Emojistimulans",
             "description": "Du får en emoji, och du, och du, alla får emojis!"
         },
-        "1002": {
+        "1102": {
             "name": "Emojitalman",
             "description": "Tillsätt din alldeles egen emojitalman, så att allt går din väg."
         },
-        "1003": {
+        "1103": {
             "name": "Emojilagar",
             "description": "All offentlig makt utgår från emojifolket..."
         },
-        "1004": {
+        "1104": {
             "name": "Globalt emojiförbund",
             "description": "Ökar samarbetet mellan emojiländer."
         },
-        "1100": {
+        "1300": {
             "name": "Teleskop",
             "description": "Spana mot stjärnorna och upptäck emojiplaneter."
         },
-        "1101": {
+        "1301": {
             "name": "Parabolantenner",
             "description": "Blicka bortom Vintergatan mot galaxen Emojigatan."
         },
-        "1102": {
+        "1302": {
             "name": "Astronauter",
             "description": "Någon måste ju sköta dina rymdstationer."
         },
-        "1103": {
+        "1303": {
             "name": "Raketer",
             "description": "Flyger jättefort."
         },
-        "1104": {
+        "1304": {
             "name": "☍⍜⋔⋔⟒⍀ ⟟ ⎎⍀⟒⎅...",
             "description": "...⍜☊⊑ ⏁⏃⍀ ⋔⟒⎅ ☌⏃⌰⋏⏃ ⋏⊬⏃ ⟒⋔⍜⟊⟟⌇.",
             "quote": "⏁⍀⊬☊☍ ⌿⏃ ⋔⟟⏁⏁ ⏃⋏⌇⟟☍⏁⟒ ⎎⟒⋔ ☌⏃⋏☌⟒⍀ ⎎⍜⍀ ⏃⏁⏁ ⌰⏃⌇⏃ ⎍⌿⌿ ⋔⟟⋏ ⊑⟒⋔⌰⟟☌⊑⟒⏁"
         },
-        "1105": {
+        "1305": {
             "name": "☍⍜⋏⌇⏁⟟☌⏁ ⍜⏚⟊⟒☍⏁",
             "description": "⎅⟒⏁⏁⏃ ⍜⏚⟊⟒☍⏁ ⊑⏃⍀ ⍜⏃⋏⏃⎅⟒ ☍⍀⏃⎎⏁⟒⍀."
         },
@@ -970,11 +969,11 @@
             "description": "Pickar på skärmen med näbben.",
             "quote": "Vagg vagg! Jag hjälper dig att få emojis!"
         },
-        "100000": {
+        "110000": {
             "name": "Emojipraktikanter",
             "description": "Praktikanter ser till att emojiregeringen går smidigt!"
         },
-        "100001": {
+        "110001": {
             "name": "Emojibyråkrater",
             "description": "En emojiregering behöver tjänstemän för att fungera.",
             "quote": "Det ser ut som att du stiftar en lag. Behöver du hjälp?"
@@ -1002,8 +1001,10 @@
             "description": "Emojiproduktionen halverad!"
         },
         "200": {
-            "title": "Emojigåva",
-            "description": "En timmes emojis!"
+            "title": "Emojigåva"
         }
-    }
+    },
+    "perks": {},
+    "trials": {},
+    "funValues": {}
 }

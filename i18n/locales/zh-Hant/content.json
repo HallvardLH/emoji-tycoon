@@ -35,55 +35,54 @@
             "plural": "運動中心",
             "description": "讓你的 Emoji 保持好身材。"
         },
-        "7": {
+        "8": {
             "name": "銀行",
             "plural": "銀行",
             "description": "「我們幫你把 Emoji 顧得好好的。」"
         },
-        "8": {
+        "9": {
             "name": "Emoji 主題樂園",
             "plural": "Emoji 主題樂園",
             "description": "「歡迎來到 Emoji 樂園：讓夢想與情緒成真的地方！」"
         },
-        "9": {
+        "10": {
             "name": "Emoji 議會",
             "plural": "Emoji 議會",
             "description": "Emoji 們聚在一起，討論怎麼生出更多 Emoji。"
         },
-        "10": {
+        "12": {
             "name": "太空站",
             "plural": "太空站",
             "description": "征服新世界，把他們的 Emoji 通通帶走。"
         },
-        "11": {
+        "13": {
             "name": "糖果王國",
             "plural": "糖果王國",
             "description": "由糖果國王和他甜甜的 Emoji 子民統治的甜蜜天堂。"
         },
-        "12": {
+        "14": {
             "name": "Emoji 火山",
             "plural": "Emoji 火山",
             "description": "每次噴發都湧出大量剛出爐的全新 Emoji！"
         },
-        "13": {
+        "15": {
             "name": "天空大 Emoji 神殿",
             "plural": "天空大 Emoji 神殿",
             "description": "傳說天空中的大 Emoji 會賜予最忠誠的信徒無窮無盡的 Emoji。"
         },
-        "14": {
+        "16": {
             "name": "Emoji 超級電腦",
             "plural": "Emoji 超級電腦",
             "description": "終極 Emoji 引擎，以光速倍增 Emoji。"
         },
-        "15": {
+        "17": {
             "name": "Emoji 黑洞",
             "plural": "Emoji 黑洞",
             "description": "所有 Emoji 的終點...還是新的開始？"
         },
-        "16": {
+        "18": {
             "name": "Emoji 奇點",
-            "plural": "Emoji 奇點",
-            "description": "就這樣了。除了 Emoji 什麼都不剩。你做到了。"
+            "plural": "Emoji 奇點"
         }
     },
     "upgrades": {
@@ -716,88 +715,88 @@
             "description": "拿棍子打球，還能開超酷球車的運動。",
             "quote": "總統級的運動"
         },
-        "800": {
+        "900": {
             "name": "小豬撲滿",
             "description": "齁齁！"
         },
-        "801": {
+        "901": {
             "name": "更大的 Emoji 袋",
             "description": "能裝更多 Emoji。"
         },
-        "802": {
+        "902": {
             "name": "Emoji 信用卡",
             "description": "花掉辛苦賺來的 Emoji 好方便。"
         },
-        "803": {
+        "903": {
             "name": "投資教育",
             "description": "教育更好，畫 Emoji 的技術也更好。"
         },
-        "804": {
+        "904": {
             "name": "投資創新",
             "description": "創新更多，Emoji 也更創新。"
         },
-        "900": {
+        "1000": {
             "name": "旋轉木馬",
             "description": "You spin me right 'round, baby!"
         },
-        "901": {
+        "1001": {
             "name": "溜滑梯",
             "description": "Do you slide on all your nights like this? (I might)"
         },
-        "902": {
+        "1002": {
             "name": "摩天輪",
             "description": "就在那最高點，她讓我心碎了。"
         },
-        "903": {
+        "1003": {
             "name": "馬戲團",
             "description": "世界上只有兩種人：表演的人，和觀看的人。"
         },
-        "904": {
+        "1004": {
             "name": "Emoji 雜耍師",
             "description": "聽說他從來沒漏接過。"
         },
-        "1000": {
+        "1100": {
             "name": "Emoji 選舉",
             "description": "願最強的 Emoji 勝出！"
         },
-        "1001": {
+        "1101": {
             "name": "Emoji 振興券",
             "description": "你有 Emoji，你也有，你也有，人人都有 Emoji！"
         },
-        "1002": {
+        "1102": {
             "name": "Emoji 議長",
             "description": "安插你自己的 Emoji 議長，確保一切照你的意思走。"
         },
-        "1003": {
+        "1103": {
             "name": "Emoji 法律",
             "description": "我們 Emoji 子民..."
         },
-        "1004": {
+        "1104": {
             "name": "全球 Emoji 聯邦",
             "description": "增進 Emoji 國家之間的合作。"
         },
-        "1100": {
+        "1300": {
             "name": "望遠鏡",
             "description": "仰望星空，發現 Emoji 行星。"
         },
-        "1101": {
+        "1301": {
             "name": "衛星天線",
             "description": "望向銀河之外的 Emoji 河系。"
         },
-        "1102": {
+        "1302": {
             "name": "太空人",
             "description": "總得有人來管理你的太空站。"
         },
-        "1103": {
+        "1303": {
             "name": "火箭",
             "description": "飛超快。"
         },
-        "1104": {
+        "1304": {
             "name": "⍙⍜⋔⟒⋏ ⍙⟒⟟ ⊑⟒⌿⟟⋏☌ ⟒⍀ ⌰⏃⟟...",
             "description": "...⊑⏃⟟ ⎅⏃⟟⌰⏃⟟ ⎎⟒⋏☌☍⎍⏃⋏☌ ⎅⟒ ⟒⋔⍜⟊⟟.",
             "quote": "⎅⟟⏃⋏ ⍙⍜ ⎅⟒ ⌰⟟⏃⋏ ⍙⎍ ☊⟟, ⟊⟟⟒⌇⎍⍜ ⍙⍜ ⎅⟒ ⋔⟟⋔⟟"
         },
-        "1105": {
+        "1305": {
             "name": "⍾⟟☌⎍⏃⟟ ⎅⟒ ⍙⎍⏁⟟",
             "description": "⋉⊑⟒☌⟒ ⍙⎍⏁⟟ ⊬⍜⋏☌⊬⍜⎍ ⍙⟒⟟⋉⊑⟟ ⎅⟒ ⌰⟟⌰⟟⏃⋏☌."
         },
@@ -970,11 +969,11 @@
             "description": "用嘴啄你的螢幕。",
             "quote": "搖搖擺擺！我來幫你拿 Emoji！"
         },
-        "100000": {
+        "110000": {
             "name": "Emoji 實習生",
             "description": "實習生讓 Emoji 政府運作順暢！"
         },
-        "100001": {
+        "110001": {
             "name": "Emoji 官僚",
             "description": "Emoji 政府需要行政人員才能運作。",
             "quote": "看起來你正在通過一項法律。需要幫忙嗎？"
@@ -1002,8 +1001,10 @@
             "description": "Emoji 產量減半！"
         },
         "200": {
-            "title": "Emoji 禮物",
-            "description": "一小時份的 Emoji！"
+            "title": "Emoji 禮物"
         }
-    }
+    },
+    "perks": {},
+    "trials": {},
+    "funValues": {}
 }

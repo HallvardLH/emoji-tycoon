@@ -35,55 +35,54 @@
             "plural": "Sportközpontok",
             "description": "Tartsd formában az emojijaidat."
         },
-        "7": {
+        "8": {
             "name": "Bank",
             "plural": "Bankok",
             "description": "\"Nálunk biztonságban vannak az emojijaid.\""
         },
-        "8": {
+        "9": {
             "name": "Emoji-vidámpark",
             "plural": "Emoji-vidámparkok",
             "description": "\"Üdv Emojiországban, ahol az álmok és az érzelmek életre kelnek!\""
         },
-        "9": {
+        "10": {
             "name": "Emojigyűlés",
             "plural": "Emojigyűlések",
             "description": "Itt gyűlnek össze az emojik, hogy eldöntsék, hogyan legyen még több emoji."
         },
-        "10": {
+        "12": {
             "name": "Űrállomás",
             "plural": "Űrállomások",
             "description": "Hódíts meg új világokat, és vedd el az emojijaikat."
         },
-        "11": {
+        "13": {
             "name": "Cukorkakirályság",
             "plural": "Cukorkakirályságok",
             "description": "Cukros paradicsom, ahol a Cukorkakirály uralkodik édes emojialattvalói felett."
         },
-        "12": {
+        "14": {
             "name": "Emojivulkán",
             "plural": "Emojivulkánok",
             "description": "Minden kitörés vadonatúj, frissen kovácsolt emojik áradatát hozza!"
         },
-        "13": {
+        "15": {
             "name": "Az égi Nagy Emoji temploma",
             "plural": "Az égi Nagy Emoji templomai",
             "description": "A legenda szerint az égi Nagy Emoji végtelen emojival áldja meg leghűbb követőit."
         },
-        "14": {
+        "16": {
             "name": "Emoji-szuperszámítógép",
             "plural": "Emoji-szuperszámítógépek",
             "description": "A végső emojimotor. Fénysebességgel sokszorozza az emojikat."
         },
-        "15": {
+        "17": {
             "name": "Emoji fekete lyuk",
             "plural": "Emoji fekete lyukak",
             "description": "Minden emoji végállomása... vagy egy új kezdet?"
         },
-        "16": {
+        "18": {
             "name": "Emojiszingularitás",
-            "plural": "Emojiszingularitások",
-            "description": "Ennyi volt. Az emojikon kívül semmi sem maradt. Megcsináltad."
+            "plural": "Emojiszingularitások"
         }
     },
     "upgrades": {
@@ -716,88 +715,88 @@
             "description": "Egy sport, ahol bottal ütöd a labdát, és menő kocsival furikázol.",
             "quote": "Elnöki sport"
         },
-        "800": {
+        "900": {
             "name": "Malacperselyek",
             "description": "Röf röf!"
         },
-        "801": {
+        "901": {
             "name": "Nagyobb emojizsákok",
             "description": "Még több emojit cipelhetsz."
         },
-        "802": {
+        "902": {
             "name": "Emoji-hitelkártyák",
             "description": "Jól jönnek a nehezen megkeresett emojijaid elköltéséhez."
         },
-        "803": {
+        "903": {
             "name": "Befektetés az oktatásba",
             "description": "Jobb oktatás, jobb emojirajzolási tudás."
         },
-        "804": {
+        "904": {
             "name": "Befektetés az innovációba",
             "description": "Több innováció, innovatívabb emojik."
         },
-        "900": {
+        "1000": {
             "name": "Körhinták",
             "description": "You spin me right 'round, baby!"
         },
-        "901": {
+        "1001": {
             "name": "Csúszdák",
             "description": "Do you slide on all your nights like this? (I might)"
         },
-        "902": {
+        "1002": {
             "name": "Óriáskerék",
             "description": "Fent a magasban, ott törte össze a szívem."
         },
-        "903": {
+        "1003": {
             "name": "Cirkusz",
             "description": "A világon csak kétféle ember van. Akik szórakoztatnak, és akik nézik."
         },
-        "904": {
+        "1004": {
             "name": "Emojizsonglőr",
             "description": "Azt mondják, még sosem ejtette el a labdát."
         },
-        "1000": {
+        "1100": {
             "name": "Emojiválasztások",
             "description": "Győzzön a legjobb emoji!"
         },
-        "1001": {
+        "1101": {
             "name": "Emoji-mentőcsomag",
             "description": "Te is kapsz egy emojit, meg te, meg te, mindenki kap emojit!"
         },
-        "1002": {
+        "1102": {
             "name": "Az emojiház elnöke",
             "description": "Ültesd be a saját emojielnöködet, hogy minden úgy menjen, ahogy te akarod."
         },
-        "1003": {
+        "1103": {
             "name": "Emojitörvények",
             "description": "Mi, az emojik..."
         },
-        "1004": {
+        "1104": {
             "name": "Globális emojikonföderáció",
             "description": "Erősíti az együttműködést az emojiországok között."
         },
-        "1100": {
+        "1300": {
             "name": "Távcsövek",
             "description": "Kémleld a csillagokat, és fedezz fel emojibolygókat."
         },
-        "1101": {
+        "1301": {
             "name": "Parabolaantennák",
             "description": "Láss túl a Tejúton, egészen az Emojiút galaxisig."
         },
-        "1102": {
+        "1302": {
             "name": "Űrhajósok",
             "description": "Valakinek működtetnie kell az űrállomásaidat."
         },
-        "1103": {
+        "1303": {
             "name": "Rakéták",
             "description": "Nagyon gyorsan repülnek."
         },
-        "1104": {
+        "1304": {
             "name": "⏚⟒☍⟒⏚⟒⋏ ⟊⍜⏁⏁⎍⋏☍...",
             "description": "...⟒⌇ ⊑⍜⋉⏁⎍⋏☍ ⍜⍀⎍⌰⏁ ⎍⟊ ⟒⋔⍜⟊⟟☍⏃⏁.",
             "quote": "☍⍜⌿⌿⟟⋏⏁⌇ ⍜⏁⌇⋉⍜⍀ ⏃⋉ ⏃⍀☊⍜⋔⍀⏃ ⏃ ⏁⟟⏁☍⍜⋔⟒⍀⏁"
         },
-        "1105": {
+        "1305": {
             "name": "⎎⎍⍀☊⌇⏃ ⏁⏃⍀☌⊬",
             "description": "⟒⋉ ⏃ ⏁⏃⍀☌⊬ ⟟⌇⋔⟒⍀⟒⏁⌰⟒⋏ ⟒⍀⍜☍⟒⏁ ⍀⟒⟊⏁."
         },
@@ -970,11 +969,11 @@
             "description": "A csőrével kopogtatja a képernyődet.",
             "quote": "Tipeg-topog! Segítek emojikat szerezni!"
         },
-        "100000": {
+        "110000": {
             "name": "Emojigyakornokok",
             "description": "A gyakornokok segítenek, hogy az emojikormány olajozottan működjön!"
         },
-        "100001": {
+        "110001": {
             "name": "Emojibürokraták",
             "description": "Egy emojikormánynak adminisztrátorok kellenek a működéshez.",
             "quote": "Úgy tűnik, törvényt próbálsz elfogadni. Segíthetek?"
@@ -1002,8 +1001,10 @@
             "description": "Megfeleződött az emojitermelés!"
         },
         "200": {
-            "title": "Emojiajándék",
-            "description": "1 órányi emoji!"
+            "title": "Emojiajándék"
         }
-    }
+    },
+    "perks": {},
+    "trials": {},
+    "funValues": {}
 }

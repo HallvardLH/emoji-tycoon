@@ -14,26 +14,7 @@
     },
     "common": {
         "buy": "شراء",
-        "details": "تفاصيل",
-        "owned_zero": "لديك",
-        "owned_one": "لديك",
-        "owned_two": "لديك",
-        "owned_few": "لديك",
-        "owned_many": "لديك",
-        "owned_other": "لديك"
-    },
-    "buildings": {
-        "bulkBuy_zero": "شراء {{count}} مبنى في كل مرة",
-        "bulkBuy_one": "شراء {{count}} مبنى في كل مرة",
-        "bulkBuy_two": "شراء {{count}} مبنى في كل مرة",
-        "bulkBuy_few": "شراء {{count}} مبان في كل مرة",
-        "bulkBuy_many": "شراء {{count}} مبنى في كل مرة",
-        "bulkBuy_other": "شراء {{count}} مبنى في كل مرة",
-        "emojisPerSecond": "<hl>{{eps}}</hl> إيموجي في الثانية",
-        "youHave": "• لديك <hl>{{amount}}</hl> {{building}}",
-        "eachProduces": "• كل واحد ينتج <hl>{{eps}}</hl> إيموجي في الثانية",
-        "totalProduces": "• بإجمالي <hl>{{eps}}</hl> إيموجي في الثانية!",
-        "ownedUpgrades": "الترقيات المملوكة"
+        "details": "تفاصيل"
     },
     "upgrades": {
         "bigEmoji": "الإيموجي الكبير",
@@ -49,9 +30,6 @@
         "filterTitle": "تصفية الترقيات",
         "filterDescription": "اختر المباني التي تريد رؤية ترقياتها."
     },
-    "emojidex": {
-        "basePrice": "السعر الأساسي: {{price}}"
-    },
     "stats": {
         "totalEmojisDrawn": "إجمالي الإيموجي المرسومة",
         "emojiTaps": "نقرات الإيموجي",
@@ -62,16 +40,12 @@
     "drawer": {
         "language": "اللغة",
         "deviceLanguage": "لغة الجهاز",
-        "funValue": "قيمة المرح: {{value}}",
         "cheats": "الغش",
         "resetGame": "إعادة تعيين اللعبة",
-        "spawnEffect": "استدعاء إيموجي تأثير",
-        "giveEmojis": "احصل على {{amount}} إيموجي"
+        "spawnEffect": "استدعاء إيموجي تأثير"
     },
     "prestige": {
-        "title": "المجد",
-        "accumulating": "بعد أن صنعت <hl>{{amount}}</hl> إيموجي، بدأ جوهر الإيموجي نفسه يتراكم من حولك.",
-        "essence": "جوهر الإيموجي <hl>مادة سحرية</hl> يتغير شكلها كلما نظرت إليها، وتحمل قوى مجهولة."
+        "title": "المجد"
     },
     "numbers": {
         "groupSize": "3",

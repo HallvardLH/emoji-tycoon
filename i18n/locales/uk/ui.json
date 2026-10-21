@@ -14,22 +14,7 @@
     },
     "common": {
         "buy": "Купити",
-        "details": "Деталі",
-        "owned_one": "куплено",
-        "owned_few": "куплено",
-        "owned_many": "куплено",
-        "owned_other": "куплено"
-    },
-    "buildings": {
-        "bulkBuy_one": "Купуєш {{count}} будівлю за раз",
-        "bulkBuy_few": "Купуєш {{count}} будівлі за раз",
-        "bulkBuy_many": "Купуєш {{count}} будівель за раз",
-        "bulkBuy_other": "Купуєш {{count}} будівлі за раз",
-        "emojisPerSecond": "<hl>{{eps}}</hl> емодзі за секунду",
-        "youHave": "• {{building}} у тебе: <hl>{{amount}}</hl>",
-        "eachProduces": "• Кожна дає <hl>{{eps}}</hl> емодзі за секунду",
-        "totalProduces": "• А разом - <hl>{{eps}}</hl> емодзі за секунду!",
-        "ownedUpgrades": "Куплені покращення"
+        "details": "Деталі"
     },
     "upgrades": {
         "bigEmoji": "Велике емодзі",
@@ -45,9 +30,6 @@
         "filterTitle": "Фільтр покращень",
         "filterDescription": "Обери, для яких будівель показувати покращення."
     },
-    "emojidex": {
-        "basePrice": "Базова ціна: {{price}}"
-    },
     "stats": {
         "totalEmojisDrawn": "Усього намальовано емодзі",
         "emojiTaps": "Тапи по емодзі",
@@ -58,16 +40,12 @@
     "drawer": {
         "language": "Мова",
         "deviceLanguage": "Мова пристрою",
-        "funValue": "Фан-фактор: {{value}}",
         "cheats": "Чити",
         "resetGame": "Скинути гру",
-        "spawnEffect": "Створити емодзі-ефект",
-        "giveEmojis": "Дати {{amount}} емодзі"
+        "spawnEffect": "Створити емодзі-ефект"
     },
     "prestige": {
-        "title": "Престиж",
-        "accumulating": "Після створення <hl>{{amount}}</hl> емодзі навколо тебе почала накопичуватися сама сутність емодзі.",
-        "essence": "Емодзі-есенція - це <hl>магічна субстанція</hl>, що змінює форму щоразу, коли на неї дивишся, і має невідомі сили."
+        "title": "Престиж"
     },
     "numbers": {
         "groupSize": "3",

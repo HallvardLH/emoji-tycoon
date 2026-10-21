@@ -14,22 +14,7 @@
     },
     "common": {
         "buy": "Купить",
-        "details": "Детали",
-        "owned_one": "куплено",
-        "owned_few": "куплено",
-        "owned_many": "куплено",
-        "owned_other": "куплено"
-    },
-    "buildings": {
-        "bulkBuy_one": "Покупка по {{count}} зданию за раз",
-        "bulkBuy_few": "Покупка по {{count}} здания за раз",
-        "bulkBuy_many": "Покупка по {{count}} зданий за раз",
-        "bulkBuy_other": "Покупка по {{count}} здания за раз",
-        "emojisPerSecond": "<hl>{{eps}}</hl> эмодзи в секунду",
-        "youHave": "• {{building}} у тебя: <hl>{{amount}}</hl>",
-        "eachProduces": "• Каждое дает <hl>{{eps}}</hl> эмодзи в секунду",
-        "totalProduces": "• А всего - <hl>{{eps}}</hl> эмодзи в секунду!",
-        "ownedUpgrades": "Купленные улучшения"
+        "details": "Детали"
     },
     "upgrades": {
         "bigEmoji": "Большое эмодзи",
@@ -45,9 +30,6 @@
         "filterTitle": "Фильтр улучшений",
         "filterDescription": "Выбери, для каких зданий показывать улучшения."
     },
-    "emojidex": {
-        "basePrice": "Базовая цена: {{price}}"
-    },
     "stats": {
         "totalEmojisDrawn": "Всего нарисовано эмодзи",
         "emojiTaps": "Тапы по эмодзи",
@@ -58,16 +40,12 @@
     "drawer": {
         "language": "Язык",
         "deviceLanguage": "Язык устройства",
-        "funValue": "Фан-фактор: {{value}}",
         "cheats": "Читы",
         "resetGame": "Сбросить игру",
-        "spawnEffect": "Создать эмодзи-эффект",
-        "giveEmojis": "Дать {{amount}} эмодзи"
+        "spawnEffect": "Создать эмодзи-эффект"
     },
     "prestige": {
-        "title": "Престиж",
-        "accumulating": "После создания <hl>{{amount}}</hl> эмодзи вокруг тебя начала скапливаться сама сущность эмодзи.",
-        "essence": "Эссенция эмодзи - это <hl>магическая субстанция</hl>, которая меняет форму каждый раз, когда на нее смотришь, и обладает неведомыми силами."
+        "title": "Престиж"
     },
     "numbers": {
         "groupSize": "3",

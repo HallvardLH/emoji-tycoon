@@ -14,18 +14,7 @@
     },
     "common": {
         "buy": "Bilhin",
-        "details": "Detalye",
-        "owned_one": "pag-aari",
-        "owned_other": "pag-aari"
-    },
-    "buildings": {
-        "bulkBuy_one": "Bumibili ng {{count}} gusali kada bili",
-        "bulkBuy_other": "Bumibili ng {{count}} gusali kada bili",
-        "emojisPerSecond": "<hl>{{eps}}</hl> emoji kada segundo",
-        "youHave": "• May <hl>{{amount}}</hl> {{building}} ka",
-        "eachProduces": "• Bawat isa ay gumagawa ng <hl>{{eps}}</hl> emoji kada segundo",
-        "totalProduces": "• Kabuuang <hl>{{eps}}</hl> emoji kada segundo!",
-        "ownedUpgrades": "Mga upgrade mo"
+        "details": "Detalye"
     },
     "upgrades": {
         "bigEmoji": "Malaking emoji",
@@ -41,9 +30,6 @@
         "filterTitle": "I-filter ang upgrade",
         "filterDescription": "Piliin kung aling mga gusali ang may upgrade na ipapakita."
     },
-    "emojidex": {
-        "basePrice": "Panimulang presyo: {{price}}"
-    },
     "stats": {
         "totalEmojisDrawn": "Kabuuang emoji na naiguhit",
         "emojiTaps": "Mga emoji tap",
@@ -54,16 +40,12 @@
     "drawer": {
         "language": "Wika",
         "deviceLanguage": "Wika ng device",
-        "funValue": "Fun value: {{value}}",
         "cheats": "Cheats",
         "resetGame": "I-reset ang laro",
-        "spawnEffect": "Mag-spawn ng effect emoji",
-        "giveEmojis": "Magbigay ng {{amount}} emoji"
+        "spawnEffect": "Mag-spawn ng effect emoji"
     },
     "prestige": {
-        "title": "Prestige",
-        "accumulating": "Matapos lumikha ng <hl>{{amount}}</hl> emoji, nagsimula nang maipon sa paligid mo ang mismong diwa ng mga emoji.",
-        "essence": "Ang emoji essence ay isang <hl>mahiwagang sangkap</hl> na nag-iiba ng hugis tuwing titingnan mo ito, at may taglay na di-kilalang kapangyarihan."
+        "title": "Prestige"
     },
     "numbers": {
         "groupSize": "3",
@@ -71,31 +53,68 @@
         "percent": "{{value}}%",
         "lessThan": "<{{value}}",
         "long": {
-            "6_one": "milyon", "6_other": "milyon",
-            "9_one": "bilyon", "9_other": "bilyon",
-            "12_one": "trilyon", "12_other": "trilyon",
-            "15_one": "kuwadrilyon", "15_other": "kuwadrilyon",
-            "18_one": "kintilyon", "18_other": "kintilyon",
-            "21_one": "sekstilyon", "21_other": "sekstilyon",
-            "24_one": "septilyon", "24_other": "septilyon",
-            "27_one": "oktilyon", "27_other": "oktilyon",
-            "30_one": "nonilyon", "30_other": "nonilyon",
-            "33_one": "desilyon", "33_other": "desilyon",
-            "36_one": "undesilyon", "36_other": "undesilyon",
-            "39_one": "duodesilyon", "39_other": "duodesilyon",
-            "42_one": "tredesilyon", "42_other": "tredesilyon",
-            "45_one": "kuwatuordesilyon", "45_other": "kuwatuordesilyon",
-            "48_one": "kindesilyon", "48_other": "kindesilyon",
-            "51_one": "seksdesilyon", "51_other": "seksdesilyon",
-            "54_one": "septendesilyon", "54_other": "septendesilyon",
-            "57_one": "oktodesilyon", "57_other": "oktodesilyon",
-            "60_one": "nobemdesilyon", "60_other": "nobemdesilyon",
-            "63_one": "bihintilyon", "63_other": "bihintilyon"
+            "6_one": "milyon",
+            "6_other": "milyon",
+            "9_one": "bilyon",
+            "9_other": "bilyon",
+            "12_one": "trilyon",
+            "12_other": "trilyon",
+            "15_one": "kuwadrilyon",
+            "15_other": "kuwadrilyon",
+            "18_one": "kintilyon",
+            "18_other": "kintilyon",
+            "21_one": "sekstilyon",
+            "21_other": "sekstilyon",
+            "24_one": "septilyon",
+            "24_other": "septilyon",
+            "27_one": "oktilyon",
+            "27_other": "oktilyon",
+            "30_one": "nonilyon",
+            "30_other": "nonilyon",
+            "33_one": "desilyon",
+            "33_other": "desilyon",
+            "36_one": "undesilyon",
+            "36_other": "undesilyon",
+            "39_one": "duodesilyon",
+            "39_other": "duodesilyon",
+            "42_one": "tredesilyon",
+            "42_other": "tredesilyon",
+            "45_one": "kuwatuordesilyon",
+            "45_other": "kuwatuordesilyon",
+            "48_one": "kindesilyon",
+            "48_other": "kindesilyon",
+            "51_one": "seksdesilyon",
+            "51_other": "seksdesilyon",
+            "54_one": "septendesilyon",
+            "54_other": "septendesilyon",
+            "57_one": "oktodesilyon",
+            "57_other": "oktodesilyon",
+            "60_one": "nobemdesilyon",
+            "60_other": "nobemdesilyon",
+            "63_one": "bihintilyon",
+            "63_other": "bihintilyon"
         },
         "short": {
-            "6": "M", "9": "B", "12": "T", "15": "Kd", "18": "Kt", "21": "Sx", "24": "Sp",
-            "27": "Ok", "30": "No", "33": "Ds", "36": "Uds", "39": "Dds", "42": "Tds", "45": "Kds",
-            "48": "Kns", "51": "Sxs", "54": "Sps", "57": "Oks", "60": "Nbs", "63": "Bh"
+            "6": "M",
+            "9": "B",
+            "12": "T",
+            "15": "Kd",
+            "18": "Kt",
+            "21": "Sx",
+            "24": "Sp",
+            "27": "Ok",
+            "30": "No",
+            "33": "Ds",
+            "36": "Uds",
+            "39": "Dds",
+            "42": "Tds",
+            "45": "Kds",
+            "48": "Kns",
+            "51": "Sxs",
+            "54": "Sps",
+            "57": "Oks",
+            "60": "Nbs",
+            "63": "Bh"
         }
     }
 }

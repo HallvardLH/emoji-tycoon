@@ -1,9 +1,10 @@
+import { buildingIdOf } from "../../../buildings/buildingData";
 import { BuildingNames } from "../../../buildings/buildingNamesType";
 import { UpgradeType, UnlockConditionType, UpgradeVariantsType, UpgradeCateogoriesType } from "../UpgradeType";
 
 const baseFactoryUpgrade = {
     building: "Factory" as BuildingNames,
-    buildingId: 5,
+    buildingId: buildingIdOf("Factory"),
     unlockCondition: "Building amount" as UnlockConditionType,
     categories: ["Multiply building production" as UpgradeCateogoriesType],
     emojisPerSecondMultiplier: 2,
@@ -24,6 +25,7 @@ export const factoryUpgrades: UpgradeType[] = [
         name: "More workers",
         icon: "🧑‍🏭",
         description: "Increase the amount of factory employees.",
+        quote: "More workers, same bathroom. One bathroom.",
         tier: 1,
     },
     {
@@ -31,6 +33,7 @@ export const factoryUpgrades: UpgradeType[] = [
         name: "Bigger gears",
         icon: "⚙️",
         description: "Bigger gears allow for bigger machinery.",
+        quote: "Bigger gears, bigger accidents. Ask Dave. Oh, wait.",
         tier: 2,
     },
     {
@@ -38,6 +41,7 @@ export const factoryUpgrades: UpgradeType[] = [
         name: "Nuts and bolts",
         icon: "🔩",
         description: "These are used to make sure everything doesn't fall apart.",
+        quote: "Holding this place together. Barely. Like my marriage.",
         tier: 3,
     },
     {
@@ -80,6 +84,7 @@ export const factoryUpgrades: UpgradeType[] = [
         name: "Factory Security",
         icon: "🚨",
         description: "Protect your factory from emoji thieves and industrial espionage.",
+        quote: "YOU SHALL NOT PASS. Not without a lanyard.",
         tier: 9,
     },
     {
@@ -130,6 +135,7 @@ export const factoryUpgrades: UpgradeType[] = [
         name: "Reinforced Walls",
         icon: "🧱",
         description: "Strengthen your factory walls to withstand the chaos of high-speed production.",
+        quote: "Hold the door! HOLD THE DOOR!",
         tier: 16,
     },
     {
@@ -137,6 +143,7 @@ export const factoryUpgrades: UpgradeType[] = [
         name: "Mouse Traps",
         icon: "🪤",
         description: "Keep pesky rodents out of your factory. No more nibbled wires or stolen emojis!",
+        quote: "It's a trap!",
         tier: 17,
     },
     {

@@ -35,55 +35,54 @@
             "plural": "Centra sportowe",
             "description": "Utrzymuj swoje emoji w dobrej formie."
         },
-        "7": {
+        "8": {
             "name": "Bank",
             "plural": "Banki",
             "description": "\"Twoje emoji są u nas bezpieczne.\""
         },
-        "8": {
+        "9": {
             "name": "Park rozrywki emoji",
             "plural": "Parki rozrywki emoji",
             "description": "\"Witaj w EmojiLandzie: gdzie marzenia i emocje ożywają!\""
         },
-        "9": {
+        "10": {
             "name": "Zgromadzenie emoji",
             "plural": "Zgromadzenia emoji",
             "description": "Tu emoji zbierają się, by zdecydować, jak zrobić więcej emoji."
         },
-        "10": {
+        "12": {
             "name": "Stacja kosmiczna",
             "plural": "Stacje kosmiczne",
             "description": "Podbijaj nowe światy i zabieraj ich emoji."
         },
-        "11": {
+        "13": {
             "name": "Cukierkowe królestwo",
             "plural": "Cukierkowe królestwa",
             "description": "Słodki raj rządzony przez Cukierkowego Króla i jego słodkich poddanych emoji."
         },
-        "12": {
+        "14": {
             "name": "Wulkan emoji",
             "plural": "Wulkany emoji",
             "description": "Każda erupcja to zalew nowiutkich, świeżo wykutych emoji!"
         },
-        "13": {
+        "15": {
             "name": "Świątynia Wielkiego Emoji w niebie",
             "plural": "Świątynie Wielkiego Emoji w niebie",
             "description": "Legendy głoszą, że Wielkie Emoji w niebie obdarza najwierniejszych wyznawców nieskończonymi emoji."
         },
-        "14": {
+        "16": {
             "name": "Superkomputer emoji",
             "plural": "Superkomputery emoji",
             "description": "Ostateczny silnik emoji. Mnoży emoji z prędkością światła."
         },
-        "15": {
+        "17": {
             "name": "Czarna dziura emoji",
             "plural": "Czarne dziury emoji",
             "description": "Ostateczny cel wszystkich emoji... czy może nowy początek?"
         },
-        "16": {
+        "18": {
             "name": "Osobliwość emoji",
-            "plural": "Osobliwości emoji",
-            "description": "To już koniec. Nie zostało nic poza emoji. Udało ci się."
+            "plural": "Osobliwości emoji"
         }
     },
     "upgrades": {
@@ -716,88 +715,88 @@
             "description": "Sport, w którym uderzasz piłkę kijem i jeździsz fajnym wózkiem.",
             "quote": "Sport prezydentów"
         },
-        "800": {
+        "900": {
             "name": "Skarbonki świnki",
             "description": "Chrum chrum!"
         },
-        "801": {
+        "901": {
             "name": "Większe worki na emoji",
             "description": "Pozwalają nosić jeszcze więcej emoji."
         },
-        "802": {
+        "902": {
             "name": "Karty kredytowe emoji",
             "description": "Idealne do wydawania ciężko zarobionych emoji."
         },
-        "803": {
+        "903": {
             "name": "Inwestycja w edukację",
             "description": "Lepsza edukacja, lepsze rysowanie emoji."
         },
-        "804": {
+        "904": {
             "name": "Inwestycja w innowacje",
             "description": "Więcej innowacji, bardziej innowacyjne emoji."
         },
-        "900": {
+        "1000": {
             "name": "Karuzele",
             "description": "You spin me right 'round, baby!"
         },
-        "901": {
+        "1001": {
             "name": "Zjeżdżalnie",
             "description": "Do you slide on all your nights like this? (I might)"
         },
-        "902": {
+        "1002": {
             "name": "Diabelski młyn",
             "description": "Tam w górze złamała mi serce."
         },
-        "903": {
+        "1003": {
             "name": "Cyrk",
             "description": "Na świecie są tylko dwa rodzaje ludzi. Ci, którzy zabawiają, i ci, którzy patrzą."
         },
-        "904": {
+        "1004": {
             "name": "Żongler emoji",
             "description": "Podobno jeszcze nigdy nie upuścił piłki."
         },
-        "1000": {
+        "1100": {
             "name": "Wybory emoji",
             "description": "Niech wygra najlepsze emoji!"
         },
-        "1001": {
+        "1101": {
             "name": "Emoji zapomoga",
             "description": "Ty dostajesz emoji, i ty, i ty, wszyscy dostają emoji!"
         },
-        "1002": {
+        "1102": {
             "name": "Marszałek Sejmu Emoji",
             "description": "Posadź na stołku własnego marszałka emoji, żeby wszystko szło po twojej myśli."
         },
-        "1003": {
+        "1103": {
             "name": "Prawa emoji",
             "description": "My, Naród Emoji..."
         },
-        "1004": {
+        "1104": {
             "name": "Światowa konfederacja emoji",
             "description": "Wzmacnia współpracę między krajami emoji."
         },
-        "1100": {
+        "1300": {
             "name": "Teleskopy",
             "description": "Patrz w gwiazdy i odkrywaj planety emoji."
         },
-        "1101": {
+        "1301": {
             "name": "Anteny satelitarne",
             "description": "Spójrz poza Drogę Mleczną, w stronę galaktyki Drogi Emojicznej."
         },
-        "1102": {
+        "1302": {
             "name": "Astronauci",
             "description": "Ktoś musi obsługiwać twoje stacje kosmiczne."
         },
-        "1103": {
+        "1303": {
             "name": "Rakiety",
             "description": "Latają naprawdę szybko."
         },
-        "1104": {
+        "1304": {
             "name": "⌿⍀⋉⊬⏚⊬⍙⏃⋔⊬ ⍙ ⌿⍜☍⍜⟊⎍...",
             "description": "...⟟ ⌿⍀⋉⊬⍙⍜⋉⟟⋔⊬ ⌇⋉⏃⌰⍜⋏⟒ ⋏⍜⍙⟒ ⟒⋔⍜⟊⟟.",
             "quote": "⌇⏁⎍☍⋏⟟⟊ ⋔⍜⟊⏃ ⏁⍙⏃⍀⋉ ⌿⟟⟒☊ ⍀⏃⋉⊬, ⏃⏚⊬ ⌿⍜⋉⋏⏃☊ ⋔⍜⟊ ⌇⟒☍⍀⟒⏁"
         },
-        "1105": {
+        "1305": {
             "name": "⎅⋉⟟⍙⋏⊬ ⍜⏚⟟⟒☍⏁",
             "description": "⏁⟒⋏ ⍜⏚⟟⟒☍⏁ ⌇☍⍀⊬⍙⏃ ⋏⟟⟒⋉⌰⟟☊⋉⍜⋏⟒ ⋔⍜☊⟒."
         },
@@ -970,11 +969,11 @@
             "description": "Dziobie twój ekran.",
             "quote": "Człap! Pomogę ci zdobyć emoji!"
         },
-        "100000": {
+        "110000": {
             "name": "Stażyści emoji",
             "description": "Stażyści pomagają rządowi emoji działać sprawnie!"
         },
-        "100001": {
+        "110001": {
             "name": "Biurokraci emoji",
             "description": "Rząd emoji potrzebuje urzędników, żeby działać.",
             "quote": "Wygląda na to, że uchwalasz ustawę. Potrzebujesz pomocy?"
@@ -1002,8 +1001,10 @@
             "description": "Produkcja emoji o połowę mniejsza!"
         },
         "200": {
-            "title": "Prezent emoji",
-            "description": "Emoji z całej godziny!"
+            "title": "Prezent emoji"
         }
-    }
+    },
+    "perks": {},
+    "trials": {},
+    "funValues": {}
 }
