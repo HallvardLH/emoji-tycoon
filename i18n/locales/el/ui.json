@@ -6,11 +6,16 @@
         "buildings": "Κτίρια",
         "upgrades": "Βελτιώσεις",
         "stats": "Στατιστικά",
-        "collection": "Συλλογή"
+        "collection": "Συλλογή",
+        "newItemsLabel_one": "{{label}}, {{count}} νέο",
+        "newItemsLabel_other": "{{label}}, {{count}} νέα"
     },
     "header": {
         "emojis": "Emoji",
-        "perSecond": "Ανά δευτ.: {{value}}"
+        "perSecond": "Ανά δευτ.: {{value}}",
+        "rate": "+{{value}} / δευτ.",
+        "gemsLabel_one": "{{gems}} πετράδι. Άνοιξε το μαγαζί πετραδιών",
+        "gemsLabel_other": "{{gems}} πετράδια. Άνοιξε το μαγαζί πετραδιών"
     },
     "common": {
         "buy": "Αγορά",
@@ -23,29 +28,120 @@
             "multiplyTap": "• Το πάτημα είναι διπλάσια αποδοτικό.",
             "percentageIncreaseTap": "• Το πάτημα είναι {{percent}} πιο δυνατό.",
             "tapPercentageOfEps": "• Κάθε πάτημα δίνει το {{percent}} της συνολικής σου παραγωγής emoji.",
-            "percentageIncreaseProduction": "• Η συνολική παραγωγή emoji αυξάνεται κατά {{percent}}."
+            "percentageIncreaseProduction": "• Η συνολική παραγωγή emoji αυξάνεται κατά {{percent}}.",
+            "comboUnlock": "• Με γρήγορα πατήματα χτίζεις κόμπο, έως ×{{level}}.",
+            "comboLevel": "• Το κόμπο φτάνει έως ×{{level}}.",
+            "effectEmojis": "• {{summary}}."
         },
         "bonusProduction": "Αν αγοράσεις τώρα αυτή τη βελτίωση, θα πάρεις <hl>+{{bonus}}</hl> emoji το δευτερόλεπτο και η παραγωγή emoji θα αυξηθεί κατά <hl>{{percent}}</hl>",
         "bonusTap": "Αν αγοράσεις τώρα αυτή τη βελτίωση, θα πάρεις <hl>+{{bonus}}</hl> emoji ανά πάτημα και κάθε πάτημα θα σου δίνει <hl>{{percent}}</hl> περισσότερα emoji",
         "filterTitle": "Φίλτρο βελτιώσεων",
-        "filterDescription": "Διάλεξε για ποια κτίρια θα βλέπεις βελτιώσεις."
+        "filterDescription": "Διάλεξε για ποια κτίρια θα βλέπεις βελτιώσεις.",
+        "effectEmojiSummary": {
+            "spawnRate": "Τα emoji εφέ εμφανίζονται ×{{multiplier}} πιο συχνά",
+            "duration": "Τα καλά εφέ κρατάνε ×{{multiplier}} περισσότερο",
+            "start": "Αρχίζουν να εμφανίζονται emoji εφέ"
+        },
+        "chips": {
+            "multiplyBuildingProduction": "{{buildings}} ×{{multiplier}}",
+            "multiplyTap": "Πάτημα ×{{multiplier}}",
+            "percentageIncreaseTap": "Πάτημα +{{percent}}",
+            "percentageIncreaseProduction": "Παραγωγή +{{percent}}",
+            "tapPercentageOfEps": "Πάτημα +{{percent}} των emoji/δευτ.",
+            "comboUnlock": "Κόμπο έως ×{{level}}",
+            "comboLevel": "Μέγ. κόμπο ×{{level}}"
+        },
+        "impact": {
+            "perSecond": "+{{bonus}} /δευτ.",
+            "perTap": "+{{bonus}} ανά πάτημα",
+            "and": "{{a}} και {{b}}",
+            "rightNow": "{{gains}} αυτή τη στιγμή"
+        },
+        "tierLabel": {
+            "helper": "{{building}} · ΒΟΗΘΟΣ",
+            "hands": "ΜΕΓΑΛΟ EMOJI · ΧΕΡΙΑ",
+            "effectEmojisNew": "EMOJI ΕΦΕ · ΝΕΟ",
+            "effectEmojisLevel": "EMOJI ΕΦΕ · ΕΠΙΠΕΔΟ {{level}}",
+            "comboNew": "ΚΟΜΠΟ · ΝΕΟ",
+            "comboLevel": "ΚΟΜΠΟ · ΕΠΙΠΕΔΟ {{level}}",
+            "tier": "{{building}} · ΒΑΘΜΙΔΑ {{tier}}"
+        },
+        "forSale": "Προς πώληση",
+        "owned": "Δικές σου",
+        "available": "Διαθέσιμες",
+        "emptyOwnedTitle": "Δεν αγόρασες τίποτα ακόμα",
+        "emptyTitle": "Καμία βελτίωση ακόμα",
+        "emptyOwnedText": "Οι βελτιώσεις που αγοράζεις θα μαζεύονται εδώ.",
+        "emptyText": "Αγόρασε κτίρια και πάτα το Μεγάλο emoji για να ξεκλειδώσεις βελτιώσεις.",
+        "filterAll": "Όλα",
+        "quoted": "\"{{quote}}\"",
+        "ownedBadge": "✓ ΔΙΚΗ ΣΟΥ",
+        "paid": "Πλήρωσες {{price}}",
+        "bareBones": "🦴 Χωρίς βελτιώσεις: {{trial}}",
+        "buyFor": "Αγορά για {{price}}",
+        "priceAndTime": "{{price}} · {{time}}",
+        "ownedCount": "{{owned}} από {{total}} βελτιώσεις",
+        "availableCount": "{{affordable}} αγοράσιμες · {{unlocked}} ξεκλείδωτες",
+        "a11y": {
+            "owned": "{{name}}, δική σου",
+            "price": "{{name}}, {{price}}",
+            "affordable": "{{name}}, {{price}}, μπορείς να την αγοράσεις"
+        }
     },
     "stats": {
         "totalEmojisDrawn": "Συνολικά emoji που ζωγράφισες",
         "emojiTaps": "Πατήματα σε emoji",
         "emojisEarnedFromTapping": "Emoji από πατήματα",
         "magicalEmojisTapped": "Μαγικά emoji που πάτησες",
-        "funValue": "Δείκτης πλάκας"
+        "funValue": "Δείκτης πλάκας",
+        "shinyEmojisTapped": "Λαμπερά emoji που πάτησες",
+        "comboTaps": "Πατήματα κόμπο",
+        "madeByEachBuilding": "Παραγωγή ανά κτίριο"
     },
     "drawer": {
         "language": "Γλώσσα",
         "deviceLanguage": "Γλώσσα συσκευής",
         "cheats": "Κόλπα",
         "resetGame": "Επαναφορά παιχνιδιού",
-        "spawnEffect": "Εμφάνιση emoji εφέ"
+        "spawnEffect": "Εμφάνιση emoji εφέ",
+        "menu": "Μενού"
     },
     "prestige": {
-        "title": "Κύρος"
+        "title": "Κύρος",
+        "close": "Κλείσιμο",
+        "ordinal_ordinal_other": "{{count}}ο",
+        "celebrateCaption": "ΚΥΡΟΣ #{{count}}",
+        "celebrateTrialCaption": "ΚΥΡΟΣ #{{count}} · Η ΔΟΚΙΜΑΣΙΑ ΞΕΚΙΝΗΣΕ",
+        "celebrateTitle": "+{{essence}} ουσία",
+        "celebrateTierTitle": "+{{essence}} ουσία · ξεκλείδωσαν προνόμια βαθμίδας {{tier}}",
+        "essenceCaption": "ΟΥΣΙΑ EMOJI",
+        "essenceBonus": "+{{bonus}} παραγωγή ({{each}} η καθεμία)",
+        "intro": "Όταν ζωγραφίσεις αρκετά emoji, η ίδια τους η ουσία αρχίζει να μαζεύεται γύρω σου: μια μαγική ύλη που αλλάζει σχήμα κάθε φορά που την κοιτάς. Κάθε αξόδευτη ουσία ανεβάζει την παραγωγή, και με την ουσία αγοράζεις προνόμια που κρατάνε για πάντα.",
+        "startOver": "Από την αρχή",
+        "prestigesSoFar_one": "{{count}} ΚΥΡΟΣ ΜΕΧΡΙ ΤΩΡΑ",
+        "prestigesSoFar_other": "{{count}} ΚΥΡΗ ΜΕΧΡΙ ΤΩΡΑ",
+        "resetsWhat": "Μηδενίζει τα emoji, τα κτίρια, τις βελτιώσεις κτιρίων και τα χέρια σου. Κρατάς τη συλλογή, τα στατιστικά, τις βελτιώσεις κόμπο και emoji εφέ, την ουσία και τα προνόμια.",
+        "nextEssence": "Επόμενη ουσία",
+        "nextEssenceAt": "στα {{amount}} ζωγραφισμένα emoji",
+        "noEssenceYet": "Δεν υπάρχει ουσία να κερδίσεις ακόμα",
+        "tapAgainToPrestige": "Πάτα ξανά για Κύρος",
+        "prestigeFor": "Κύρος για +{{essence}} ✨",
+        "productionCaps": "+{{percent}} ΠΑΡΑΓΩΓΗ",
+        "playedThisRun": "Χρόνος σε αυτόν τον γύρο",
+        "drawnThisRun": "Ζωγράφισες σε αυτόν τον γύρο",
+        "essencePerHour": "Ουσία ανά ώρα",
+        "afterTenMinutes": "μετά από 10 λεπ.",
+        "essenceRate": "{{rate}} (ρεκόρ {{best}})",
+        "slowingDown": "📉 Η ουσία έρχεται πιο αργά απ' ό,τι νωρίτερα σε αυτόν τον γύρο. Καλή στιγμή για Κύρος.",
+        "drawnAmount": "{{amount}} ζωγραφισμένα",
+        "pastRuns": "Προηγούμενοι γύροι",
+        "pastRunLine": "{{duration}} · {{amount}} ζωγραφισμένα",
+        "pastRunTrialCompleted": "{{icon}} {{name}} ✓",
+        "pastRunTrialNotCompleted": "{{icon}} {{name}}, δεν ολοκληρώθηκε",
+        "chipLabel": "Ουσία emoji",
+        "chipLabelReady": "Κύρος για {{essence}} ουσία emoji",
+        "chipEssence": "Ουσία",
+        "chipPending": "+{{essence}} ουσία"
     },
     "numbers": {
         "groupSize": "3",
@@ -115,6 +211,289 @@
             "57": "δεκαοκτ.",
             "60": "δεκαενν.",
             "63": "εικοσ."
+        }
+    },
+    "buildings": {
+        "ownedA11y_one": "Έχεις {{count}}",
+        "ownedA11y_other": "Έχεις {{count}}",
+        "newBadge": "ΝΕΟ",
+        "statLine": "{{eps}} /δευτ. · {{share}} του συνόλου",
+        "nextUpgrade": "επόμενη βελτίωση {{at}}",
+        "allUpgradesFound": "βρέθηκαν όλες οι βελτιώσεις",
+        "epsEach": "+{{eps}} /δευτ. το καθένα",
+        "buy": "Αγορά",
+        "buyCount": "Αγορά ×{{count}}",
+        "buyA11y_one": "Αγόρασε {{count}} {{name}} για {{price}}",
+        "buyA11y_other": "Αγόρασε {{count}} {{name}} για {{price}}",
+        "mystery": "Μυστήριο κτίριο",
+        "revealsAt": "Αποκαλύπτεται στα {{amount}} emoji",
+        "bulkLabel": "Ποσότητα αγοράς",
+        "bulkMax": "Μέγ.",
+        "bulkA11yMax": "Αγόρασε όσα σου φτάνουν",
+        "bulkA11y_one": "Αγορά ανά {{count}}",
+        "bulkA11y_other": "Αγορά ανά {{count}}",
+        "milestoneCaption": "ΝΕΟ ΚΤΙΡΙΟ",
+        "milestoneTitle": "{{building}}: το πρώτο σου!"
+    },
+    "time": {
+        "seconds_one": "{{count}}δ",
+        "seconds_other": "{{count}}δ",
+        "minutes_one": "{{count}}λ",
+        "minutes_other": "{{count}}λ",
+        "hours_one": "{{count}}ώ",
+        "hours_other": "{{count}}ώ",
+        "days_one": "{{count}}ημ",
+        "days_other": "{{count}}ημ",
+        "pair": "{{a}} {{b}}"
+    },
+    "trials": {
+        "title": "Δοκιμασίες",
+        "completedCount": "{{done}} από {{total}} ολοκληρώθηκαν",
+        "intro": "Κάνε Κύρος σε έναν γύρο με έναν κανόνα που τον δυσκολεύει. Ζωγράφισε αρκετά emoji σε αυτόν τον γύρο για να κρατήσεις την ανταμοιβή για πάντα, και ο κανόνας αίρεται.",
+        "unlocksWith": "Ξεκλειδώνεται με το {{ordinal}} σου Κύρος.",
+        "completeCaps": "Η ΔΟΚΙΜΑΣΙΑ ΟΛΟΚΛΗΡΩΘΗΚΕ",
+        "inProgressCaps": "ΔΟΚΙΜΑΣΙΑ ΣΕ ΕΞΕΛΙΞΗ",
+        "completedText": "{{reward}}: δικό σου για πάντα, και ο κανόνας αίρεται για τον υπόλοιπο γύρο.",
+        "activeText": "{{rule}}. Ζωγράφισε {{goal}} σε αυτόν τον γύρο για να κερδίσεις για πάντα: {{reward}}.",
+        "giveUp": "Παράτα τη δοκιμασία",
+        "giveUpConfirm": "Πάτα ξανά για να τα παρατήσεις (χωρίς ανταμοιβή)",
+        "doneTag": "✓ ΕΓΙΝΕ",
+        "playingTag": "ΣΕ ΕΞΕΛΙΞΗ",
+        "ruleLine": "<hl>Κανόνας: </hl>{{rule}}",
+        "ruleLineWithStart": "<hl>Κανόνας: </hl>{{rule}} (ξεκινάς με {{amount}} emoji)",
+        "rewardLine": "<hl>Ανταμοιβή: </hl>{{reward}}",
+        "finishFirst": "Τελείωσε πρώτα τη δοκιμασία σου",
+        "needsEssence": "Χρειάζεσαι ουσία για Κύρος",
+        "tapAgainToStart": "Πάτα ξανά για να ξεκινήσεις",
+        "prestigeInto": "Κύρος σε δοκιμασία για +{{essence}} ✨",
+        "goalCaps": "ΣΤΟΧΟΣ: {{goal}}",
+        "goal": "{{amount}} emoji",
+        "completeTitle": "{{name}}: {{reward}}",
+        "rewardUnlocked": "Η ανταμοιβή ξεκλειδώθηκε"
+    },
+    "perks": {
+        "title": "Προνόμια",
+        "ownedCount": "Έχεις {{owned}} από {{total}}",
+        "spentKeepsHalf": "Η ξοδεμένη ουσία κρατάει το μισό μπόνους παραγωγής της.",
+        "spentNoBonus": "Η ξοδεμένη ουσία δεν ανεβάζει πια την παραγωγή.",
+        "tierCaps": "ΒΑΘΜΙΔΑ {{tier}}",
+        "tierLockedCaps": "ΒΑΘΜΙΔΑ {{tier}} · ΞΕΚΛΕΙΔΩΝΕΤΑΙ ΜΕ ΤΟ {{ordinal}} ΣΟΥ ΚΥΡΟΣ",
+        "hidden": "Κάνε Κύρος για να αποκαλύψεις αυτό το προνόμιο.",
+        "needsFirst": "Χρειάζεται πρώτα: {{perk}}",
+        "ownedTag": "✓ ΔΙΚΟ ΣΟΥ",
+        "buyLabel": "Αγόρασε {{perk}} για {{cost}} ουσία"
+    },
+    "gems": {
+        "title": "Μαγαζί πετραδιών",
+        "yourGemsCaps": "ΤΑ ΠΕΤΡΑΔΙΑ ΣΟΥ",
+        "gemsCaps": "ΠΕΤΡΑΔΙΑ",
+        "offlineClaim": "{{cost}} πετράδια για ×{{multiplier}} κέρδη εκτός σύνδεσης",
+        "storeUnavailable": "Το μαγαζί δεν είναι διαθέσιμο αυτή τη στιγμή. Έλεγξε τη σύνδεσή σου και δοκίμασε ξανά αργότερα.",
+        "purchaseFailed": "Η αγορά δεν ολοκληρώθηκε. Δεν χρεώθηκες.",
+        "keptOnPrestige": "Τα πετράδια μένουν όταν κάνεις Κύρος.",
+        "unavailable": "Μη διαθέσιμο",
+        "thankYouCaps": "ΕΥΧΑΡΙΣΤΟΥΜΕ!",
+        "gemsAdded_one": "+{{amount}} πετράδι",
+        "gemsAdded_other": "+{{amount}} πετράδια",
+        "buyLabel_one": "Αγόρασε {{amount}} πετράδι",
+        "buyLabel_other": "Αγόρασε {{amount}} πετράδια",
+        "buyLabelWithPrice_one": "Αγόρασε {{amount}} πετράδι για {{price}}",
+        "buyLabelWithPrice_other": "Αγόρασε {{amount}} πετράδια για {{price}}",
+        "tags": {
+            "popular": "ΔΗΜΟΦΙΛΕΣ",
+            "bestValue": "ΚΑΛΥΤΕΡΗ ΤΙΜΗ"
+        }
+    },
+    "offline": {
+        "welcomeBack": "Καλώς ήρθες πίσω!",
+        "away": "Έλειπες για {{duration}}.",
+        "awayCapped": "Έλειπες πάνω από {{duration}}, το μέγιστο που μετράει.",
+        "rested": "Η αυτοκρατορία σου ξεκουράστηκε όσο έλειπες.",
+        "missedCaps": "ΧΑΜΕΝΗ ΠΑΡΑΓΩΓΗ",
+        "perSecond": "{{value}} / δευτ.",
+        "gemOfferCaps": "×{{multiplier}} ΓΙΑ {{cost}} ΠΕΤΡΑΔΙΑ · ΕΧΕΙΣ {{gems}}",
+        "gemOfferGetCaps": "×{{multiplier}} ΓΙΑ {{cost}} ΠΕΤΡΑΔΙΑ · ΠΑΡΕ ΠΕΤΡΑΔΙΑ",
+        "noThanks": "Όχι, ευχαριστώ"
+    },
+    "ads": {
+        "watchCaps": "ΔΕΣ ΔΙΑΦΗΜΙΣΗ",
+        "loadingCaps": "ΦΟΡΤΩΣΗ ΔΙΑΦΗΜΙΣΗΣ...",
+        "failed": "Η διαφήμιση δεν έπαιξε μέχρι το τέλος. Έλεγξε τη σύνδεσή σου και δοκίμασε ξανά."
+    },
+    "reset": {
+        "title": "Από την αρχή;",
+        "warning": "Αυτό επαναφέρει το παιχνίδι σου. Τα emoji, τα κτίρια, οι βελτιώσεις, η ουσία, τα προνόμια, η συλλογή και τα στατιστικά σου θα χαθούν όλα. Δεν αναιρείται.",
+        "purchasesSafe": "Οι αγορές σου μέσα στο παιχνίδι είναι ασφαλείς. Τα πετράδια και ό,τι αγόρασες περνάνε στο νέο σου παιχνίδι.",
+        "confirm": "Ναι, επαναφορά",
+        "cancel": "Συνέχισε να παίζεις"
+    },
+    "milestones": {
+        "caption": "ΟΡΟΣΗΜΟ",
+        "emojisDrawn": "{{amount}} ζωγραφισμένα emoji!"
+    },
+    "settings": {
+        "title": "Ρυθμίσεις",
+        "close": "Κλείσιμο ρυθμίσεων",
+        "sound": "Ήχος",
+        "soundEffects": "Ηχητικά εφέ",
+        "soundEffectsHint": "Ένα απαλό ποπ σε κάθε πάτημα κι ένα κουδουνάκι για τα λαμπερά emoji.",
+        "performance": "Απόδοση",
+        "reduceAnimations": "Λιγότερα κινούμενα εφέ",
+        "reduceAnimationsHint": "Τα emoji που πατάς δεν πετάγονται πια από το Μεγάλο emoji. Δοκίμασέ το αν το πάτημα κολλάει.",
+        "dangerZone": "Επικίνδυνη ζώνη"
+    },
+    "cheats": {
+        "subtitle": "Για δοκιμές. Οι αλλαγές ισχύουν στην αποθήκευσή σου.",
+        "simulateAway": "Προσομοίωση 1 ώρας απουσίας",
+        "gems": "Πετράδια",
+        "addGems_one": "+{{count}} πετράδι",
+        "addGems_other": "+{{count}} πετράδια",
+        "addComboTaps": "+{{amount}} πατήματα κόμπο",
+        "multiplyTapEarnings": "×{{factor}} κέρδη πατήματος",
+        "addCollection_one": "+{{count}} στη συλλογή",
+        "addCollection_other": "+{{count}} στη συλλογή",
+        "addShiny_one": "+{{count}} λαμπερό",
+        "addShiny_other": "+{{count}} λαμπερά",
+        "addMagical_one": "+{{count}} μαγικό",
+        "addMagical_other": "+{{count}} μαγικά",
+        "addEssence_one": "+{{count}} ουσία",
+        "addEssence_other": "+{{count}} ουσία",
+        "addPerkTier_one": "+{{count}} βαθμίδα προνομίων",
+        "addPerkTier_other": "+{{count}} βαθμίδες προνομίων",
+        "addRunTime": "+{{time}} χρόνος γύρου",
+        "reachTrialGoal": "Φτάσε τον στόχο δοκιμασίας",
+        "effectEmojis": "Emoji εφέ",
+        "spawnEffects_one": "Εμφάνισε {{count}} emoji εφέ",
+        "spawnEffects_other": "Εμφάνισε {{count}} emoji εφέ",
+        "speed": "Ταχύτητα",
+        "speedLabel": "{{speed}}× ταχύτητα",
+        "speedHint": "Παραγωγή και χρόνος γύρου. Τα εφέ και το κόμπο μένουν σε πραγματικό χρόνο. Απενεργοποιείται μετά από επαναφόρτωση.",
+        "shiny": "Λαμπερά",
+        "onlyShiny": "Μόνο λαμπερά emoji",
+        "funValueQuirk": "{{name}}: {{description}}",
+        "noQuirk": "Καμία ιδιορρυθμία",
+        "hideFunValueTable": "Απόκρυψη πίνακα δείκτη πλάκας",
+        "showFunValueTable": "Εμφάνιση πίνακα δείκτη πλάκας",
+        "setFunValueLabel": "Όρισε δείκτη πλάκας {{value}}: {{name}}",
+        "changeFunValueLabel": "Άλλαξε τον δείκτη πλάκας κατά {{change}}"
+    },
+    "collection": {
+        "ofTotalFound": "/ {{total}} βρέθηκαν",
+        "mostTapped": "Πιο πατημένο: {{emoji}} ×{{amount}}",
+        "startCollecting": "Πάτα το Μεγάλο emoji για να ξεκινήσεις τη συλλογή",
+        "shinyFound_one": "{{amount}} λαμπερό",
+        "shinyFound_other": "{{amount}} λαμπερά",
+        "categories": {
+            "faces": "Φατσούλες",
+            "animals": "Ζώα",
+            "food": "Φαγητό",
+            "objects": "Αντικείμενα",
+            "people": "Άνθρωποι",
+            "bodyParts": "Σώμα",
+            "placesBuildings": "Μέρη",
+            "plants": "Φυτά",
+            "vehicles": "Οχήματα",
+            "weather": "Καιρός",
+            "symbols": "Σύμβολα"
+        },
+        "categoryLabel": "{{label}}, βρέθηκαν {{found}} από {{total}}",
+        "notFound": "Δεν βρέθηκε ακόμα",
+        "cellLabel_one": "{{emoji}}, πατήθηκε {{count}} φορά",
+        "cellLabel_other": "{{emoji}}, πατήθηκε {{count}} φορές",
+        "cellLabelShiny_one": "{{emoji}}, πατήθηκε {{count}} φορά, {{shiny}} λαμπερά",
+        "cellLabelShiny_other": "{{emoji}}, πατήθηκε {{count}} φορές, {{shiny}} λαμπερά"
+    },
+    "effects": {
+        "chipTapping": "×{{multiplier}} πάτημα",
+        "chipProduction": "×{{multiplier}} παραγωγή",
+        "stackLabel_one": "{{count}} μαζί: {{label}}, το επόμενο λήγει σε {{time}}",
+        "stackLabel_other": "{{count}} μαζί: {{label}}, το επόμενο λήγει σε {{time}}",
+        "chipLabel": "{{title}}, απομένουν {{time}}",
+        "gift": "Δώρο!",
+        "ohNo": "Ωχ, όχι!",
+        "tapping": "Πάτημα",
+        "production": "Παραγωγή",
+        "tapFrenzy": "Φρενίτιδα πατημάτων!",
+        "unholyPower": "Δαιμονική δύναμη!",
+        "productionBoost": "Ώθηση παραγωγής!",
+        "collectLabel": "Μάζεψε: {{title}}",
+        "tapMe": "Πάτα με"
+    },
+    "combo": {
+        "level": "Κόμπο ×{{multiplier}}",
+        "max": "Μέγ. κόμπο ×{{multiplier}}",
+        "label": "Κόμπο επί {{multiplier}}",
+        "maxLabel": "Κόμπο επί {{multiplier}}, μέγιστο"
+    },
+    "bigEmoji": {
+        "tapLabel": "Πάτα το Μεγάλο emoji",
+        "tapShinyLabel": "Πάτα το λαμπερό Μεγάλο emoji",
+        "shiny": "Λαμπερό",
+        "shinyBurst": "Λαμπερό!",
+        "handsOff": "{{trial}} · τα πατήματα δεν ζωγραφίζουν τίποτα",
+        "perTap": "+{{value}} ανά πάτημα"
+    },
+    "bank": {
+        "timeToAfford": {
+            "needMore": "Θέλεις κι άλλα",
+            "seconds_one": "Σε {{count}} δευτ.",
+            "seconds_other": "Σε {{count}} δευτ.",
+            "minutes_one": "Σε {{count}} λεπ.",
+            "minutes_other": "Σε {{count}} λεπ.",
+            "hours_one": "Σε {{count}} ώρα",
+            "hours_other": "Σε {{count}} ώρες",
+            "days_one": "Σε {{count}} μέρα",
+            "days_other": "Σε {{count}} μέρες",
+            "aLongTime": "Σε πολύ καιρό"
+        },
+        "timeToAffordInline": {
+            "needMore": "θέλεις κι άλλα",
+            "seconds_one": "σε {{count}} δευτ.",
+            "seconds_other": "σε {{count}} δευτ.",
+            "minutes_one": "σε {{count}} λεπ.",
+            "minutes_other": "σε {{count}} λεπ.",
+            "hours_one": "σε {{count}} ώρα",
+            "hours_other": "σε {{count}} ώρες",
+            "days_one": "σε {{count}} μέρα",
+            "days_other": "σε {{count}} μέρες",
+            "aLongTime": "σε πολύ καιρό"
+        }
+    },
+    "catalogue": {
+        "title": "Όλες οι βελτιώσεις",
+        "counts": "{{owned}} δικές σου · {{forSale}} προς πώληση · {{locked}} κλειδωμένες · {{total}} συνολικά",
+        "filter": {
+            "owned": "Δικές σου {{count}}",
+            "forSale": "Προς πώληση {{count}}",
+            "locked": "Κλειδωμένες {{count}}"
+        },
+        "combo": "Κόμπο",
+        "effectEmojis": "Emoji εφέ",
+        "unlock": {
+            "own": "Απόκτησε {{count}} {{buildings}}",
+            "tapping": "Κέρδισε {{amount}} emoji από πατήματα",
+            "comboTaps": "{{amount}} πατήματα κόμπο",
+            "earned": "Κέρδισε {{amount}} emoji"
+        },
+        "state": {
+            "owned": "✓ ΔΙΚΗ ΣΟΥ",
+            "forSale": "ΠΡΟΣ ΠΩΛΗΣΗ",
+            "locked": "🔒 ΚΛΕΙΔΩΜΕΝΗ"
+        },
+        "stateA11y": {
+            "owned": "δική σου",
+            "forSale": "προς πώληση",
+            "locked": "κλειδωμένη"
+        },
+        "tileA11y": "{{name}}, {{state}}",
+        "prev": "Προηγ.",
+        "next": "Επόμ.",
+        "prevA11y": "Προηγούμενη βελτίωση",
+        "nextA11y": "Επόμενη βελτίωση",
+        "fact": {
+            "price": "ΤΙΜΗ",
+            "unlocks": "ΞΕΚΛΕΙΔΩΝΕΤΑΙ",
+            "id": "ID"
         }
     }
 }

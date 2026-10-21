@@ -3,7 +3,11 @@ import { getLanguage } from '../i18n';
 
 /** Text in capitals, the way the current language writes them (e.g. Turkish i becomes İ) */
 export function toCaps(text: string) {
-    return text.toLocaleUpperCase(getLanguage());
+    const language = getLanguage();
+    const caps = text.toLocaleUpperCase(language);
+    // Greek drops the accent (tonos) in capitals, but keeps the diaeresis
+    if (language === "el") return caps.normalize("NFD").replace(/\u0301/g, "").normalize("NFC");
+    return caps;
 }
 
 // Calculates percentage of a number

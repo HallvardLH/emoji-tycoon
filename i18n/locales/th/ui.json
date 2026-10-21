@@ -6,11 +6,14 @@
         "buildings": "อาคาร",
         "upgrades": "อัปเกรด",
         "stats": "สถิติ",
-        "collection": "คอลเลกชัน"
+        "collection": "คอลเลกชัน",
+        "newItemsLabel_other": "{{label}}, ใหม่ {{count}}"
     },
     "header": {
         "emojis": "อีโมจิ",
-        "perSecond": "ต่อวินาที: {{value}}"
+        "perSecond": "ต่อวินาที: {{value}}",
+        "rate": "+{{value}} /วิ",
+        "gemsLabel_other": "{{gems}} เพชร เปิดร้านเพชร"
     },
     "common": {
         "buy": "ซื้อ",
@@ -23,29 +26,119 @@
             "multiplyTap": "• การแตะมีประสิทธิภาพเพิ่มเป็น 2 เท่า",
             "percentageIncreaseTap": "• การแตะแรงขึ้น {{percent}}",
             "tapPercentageOfEps": "• การแตะได้รับ {{percent}} ของการผลิตอีโมจิทั้งหมด",
-            "percentageIncreaseProduction": "• การผลิตอีโมจิทั้งหมดเพิ่มขึ้น {{percent}}"
+            "percentageIncreaseProduction": "• การผลิตอีโมจิทั้งหมดเพิ่มขึ้น {{percent}}",
+            "comboUnlock": "• แตะรัวๆ เพื่อสร้างคอมโบ ได้สูงสุด ×{{level}}",
+            "comboLevel": "• คอมโบไปได้ถึง ×{{level}}",
+            "effectEmojis": "• {{summary}}"
         },
         "bonusProduction": "ซื้ออัปเกรดนี้ตอนนี้จะได้ <hl>+{{bonus}}</hl> อีโมจิต่อวินาที เพิ่มการผลิตอีโมจิ <hl>{{percent}}</hl>",
         "bonusTap": "ซื้ออัปเกรดนี้ตอนนี้จะได้ <hl>+{{bonus}}</hl> อีโมจิต่อการแตะ เพิ่มอีโมจิที่ได้จากการแตะแต่ละครั้ง <hl>{{percent}}</hl>",
         "filterTitle": "กรองอัปเกรด",
-        "filterDescription": "เลือกอาคารที่อยากดูอัปเกรด"
+        "filterDescription": "เลือกอาคารที่อยากดูอัปเกรด",
+        "effectEmojiSummary": {
+            "spawnRate": "อีโมจิเอฟเฟกต์โผล่บ่อยขึ้น ×{{multiplier}}",
+            "duration": "เอฟเฟกต์ดีๆ อยู่นานขึ้น ×{{multiplier}}",
+            "start": "อีโมจิเอฟเฟกต์เริ่มโผล่มาแล้ว"
+        },
+        "chips": {
+            "multiplyBuildingProduction": "{{buildings}} ×{{multiplier}}",
+            "multiplyTap": "การแตะ ×{{multiplier}}",
+            "percentageIncreaseTap": "การแตะ +{{percent}}",
+            "percentageIncreaseProduction": "การผลิต +{{percent}}",
+            "tapPercentageOfEps": "แตะ +{{percent}} ของอีโมจิ/วิ",
+            "comboUnlock": "คอมโบสูงสุด ×{{level}}",
+            "comboLevel": "คอมโบสูงสุด ×{{level}}"
+        },
+        "impact": {
+            "perSecond": "+{{bonus}} /วิ",
+            "perTap": "+{{bonus}} ต่อการแตะ",
+            "and": "{{a}} และ {{b}}",
+            "rightNow": "{{gains}} ทันที"
+        },
+        "tierLabel": {
+            "helper": "{{building}} · ผู้ช่วย",
+            "hands": "อีโมจิยักษ์ · มือ",
+            "effectEmojisNew": "อีโมจิเอฟเฟกต์ · ใหม่",
+            "effectEmojisLevel": "อีโมจิเอฟเฟกต์ · เลเวล {{level}}",
+            "comboNew": "คอมโบ · ใหม่",
+            "comboLevel": "คอมโบ · เลเวล {{level}}",
+            "tier": "{{building}} · ขั้น {{tier}}"
+        },
+        "forSale": "วางขาย",
+        "owned": "มีแล้ว",
+        "available": "ซื้อได้",
+        "emptyOwnedTitle": "ยังไม่ได้ซื้ออะไรเลย",
+        "emptyTitle": "ยังไม่มีอัปเกรด",
+        "emptyOwnedText": "อัปเกรดที่คุณซื้อจะมารวมอยู่ที่นี่",
+        "emptyText": "ซื้ออาคารและแตะอีโมจิยักษ์เพื่อปลดล็อกอัปเกรด",
+        "filterAll": "ทั้งหมด",
+        "quoted": "\"{{quote}}\"",
+        "ownedBadge": "✓ มีแล้ว",
+        "paid": "จ่ายไป {{price}}",
+        "bareBones": "🦴 {{trial}}: ห้ามอัปเกรด",
+        "buyFor": "ซื้อในราคา {{price}}",
+        "priceAndTime": "{{price}} · {{time}}",
+        "ownedCount": "{{owned}} จาก {{total}} อัปเกรด",
+        "availableCount": "ซื้อไหว {{affordable}} · ปลดล็อก {{unlocked}}",
+        "a11y": {
+            "owned": "{{name}}, มีแล้ว",
+            "price": "{{name}}, {{price}}",
+            "affordable": "{{name}}, {{price}}, ซื้อไหว"
+        }
     },
     "stats": {
         "totalEmojisDrawn": "อีโมจิที่วาดทั้งหมด",
         "emojiTaps": "จำนวนครั้งที่แตะ",
         "emojisEarnedFromTapping": "อีโมจิที่ได้จากการแตะ",
         "magicalEmojisTapped": "อีโมจิวิเศษที่แตะได้",
-        "funValue": "ค่าความสนุก"
+        "funValue": "ค่าความสนุก",
+        "shinyEmojisTapped": "อีโมจิแวววาวที่แตะได้",
+        "comboTaps": "จำนวนแตะคอมโบ",
+        "madeByEachBuilding": "ผลผลิตของแต่ละอาคาร"
     },
     "drawer": {
         "language": "ภาษา",
         "deviceLanguage": "ภาษาของอุปกรณ์",
         "cheats": "สูตรโกง",
         "resetGame": "เริ่มเกมใหม่",
-        "spawnEffect": "เรียกอีโมจิเอฟเฟกต์"
+        "spawnEffect": "เรียกอีโมจิเอฟเฟกต์",
+        "menu": "เมนู"
     },
     "prestige": {
-        "title": "เพรสทีจ"
+        "title": "เพรสทีจ",
+        "close": "ปิด",
+        "ordinal_ordinal_other": "ครั้งที่ {{count}}",
+        "celebrateCaption": "เพรสทีจ #{{count}}",
+        "celebrateTrialCaption": "เพรสทีจ #{{count}} · เริ่มบททดสอบ",
+        "celebrateTitle": "+{{essence}} เอสเซนส์",
+        "celebrateTierTitle": "+{{essence}} เอสเซนส์ · ปลดล็อกเพิร์กขั้น {{tier}}",
+        "essenceCaption": "เอสเซนส์อีโมจิ",
+        "essenceBonus": "การผลิต +{{bonus}} (ชิ้นละ {{each}})",
+        "intro": "เมื่อวาดอีโมจิมากพอ แก่นแท้ของพวกมันจะเริ่มมารวมตัวรอบตัวคุณ: สสารวิเศษที่เปลี่ยนรูปร่างทุกครั้งที่คุณมอง เอสเซนส์ทุกชิ้นที่ยังไม่ใช้จะช่วยเพิ่มการผลิต และเอสเซนส์ยังใช้ซื้อเพิร์กที่อยู่กับคุณตลอดไป",
+        "startOver": "เริ่มใหม่",
+        "prestigesSoFar_other": "เพรสทีจไปแล้ว {{count}} ครั้ง",
+        "resetsWhat": "รีเซ็ตอีโมจิ อาคาร อัปเกรดอาคาร และมือของคุณ แต่คุณยังเก็บคอลเลกชัน สถิติ อัปเกรดคอมโบและอีโมจิเอฟเฟกต์ เอสเซนส์ และเพิร์กไว้ได้",
+        "nextEssence": "เอสเซนส์ถัดไป",
+        "nextEssenceAt": "เมื่อวาดครบ {{amount}} อีโมจิ",
+        "noEssenceYet": "ยังไม่มีเอสเซนส์ให้รับ",
+        "tapAgainToPrestige": "แตะอีกครั้งเพื่อเพรสทีจ",
+        "prestigeFor": "เพรสทีจรับ +{{essence}} ✨",
+        "productionCaps": "การผลิต +{{percent}}",
+        "playedThisRun": "เวลาเล่นรอบนี้",
+        "drawnThisRun": "วาดในรอบนี้",
+        "essencePerHour": "เอสเซนส์ต่อชั่วโมง",
+        "afterTenMinutes": "หลัง 10 นาที",
+        "essenceRate": "{{rate}} (ดีสุด {{best}})",
+        "slowingDown": "📉 เอสเซนส์มาช้ากว่าช่วงก่อนหน้าในรอบนี้แล้ว ถึงเวลาเพรสทีจพอดี",
+        "drawnAmount": "วาดไป {{amount}}",
+        "pastRuns": "รอบที่ผ่านมา",
+        "pastRunLine": "{{duration}} · วาดไป {{amount}}",
+        "pastRunTrialCompleted": "{{icon}} {{name}} ✓",
+        "pastRunTrialNotCompleted": "{{icon}} {{name}}, ไม่สำเร็จ",
+        "chipLabel": "เอสเซนส์อีโมจิ",
+        "chipLabelReady": "เพรสทีจรับเอสเซนส์อีโมจิ {{essence}}",
+        "chipEssence": "เอสเซนส์",
+        "chipPending": "+{{essence}} เอสเซนส์"
     },
     "numbers": {
         "groupSize": "3",
@@ -95,6 +188,260 @@
             "57": "Od",
             "60": "Nd",
             "63": "Vg"
+        }
+    },
+    "buildings": {
+        "ownedA11y_other": "มีอยู่ {{count}}",
+        "newBadge": "ใหม่",
+        "statLine": "{{eps}} /วิ · {{share}} ของทั้งหมด",
+        "nextUpgrade": "อัปเกรดถัดไปที่ {{at}}",
+        "allUpgradesFound": "ครบทุกอัปเกรดแล้ว",
+        "epsEach": "+{{eps}} /วิ ต่อหน่วย",
+        "buy": "ซื้อ",
+        "buyCount": "ซื้อ ×{{count}}",
+        "buyA11y_other": "ซื้อ {{name}} จำนวน {{count}} ในราคา {{price}}",
+        "mystery": "อาคารปริศนา",
+        "revealsAt": "เผยโฉมเมื่อมี {{amount}} อีโมจิ",
+        "bulkLabel": "จำนวนที่ซื้อ",
+        "bulkMax": "สูงสุด",
+        "bulkA11yMax": "ซื้อให้มากที่สุดเท่าที่จ่ายไหว",
+        "bulkA11y_other": "ซื้อครั้งละ {{count}}",
+        "milestoneCaption": "อาคารใหม่",
+        "milestoneTitle": "{{building}} อันแรกของคุณ!"
+    },
+    "time": {
+        "seconds_other": "{{count}} วิ",
+        "minutes_other": "{{count}} น.",
+        "hours_other": "{{count}} ชม.",
+        "days_other": "{{count}} วัน",
+        "pair": "{{a}} {{b}}"
+    },
+    "trials": {
+        "title": "บททดสอบ",
+        "completedCount": "ผ่านแล้ว {{done}} จาก {{total}}",
+        "intro": "เพรสทีจเข้าสู่รอบที่มีกฎทำให้ยากขึ้น วาดอีโมจิให้ครบเป้าในรอบนั้นเพื่อรับรางวัลถาวร แล้วกฎก็จะถูกยกเลิก",
+        "unlocksWith": "ปลดล็อกเมื่อเพรสทีจ{{ordinal}}",
+        "completeCaps": "ผ่านบททดสอบ",
+        "inProgressCaps": "บททดสอบกำลังดำเนินอยู่",
+        "completedText": "{{reward}} เป็นของคุณตลอดไป และกฎถูกยกเลิกไปตลอดรอบนี้",
+        "activeText": "{{rule}} วาด {{goal}} ในรอบนี้เพื่อรับ {{reward}} ถาวร",
+        "giveUp": "ยอมแพ้บททดสอบนี้",
+        "giveUpConfirm": "แตะอีกครั้งเพื่อยอมแพ้ (ไม่ได้รางวัล)",
+        "doneTag": "✓ ผ่าน",
+        "playingTag": "กำลังเล่น",
+        "ruleLine": "<hl>กฎ: </hl>{{rule}}",
+        "ruleLineWithStart": "<hl>กฎ: </hl>{{rule}} (เริ่มด้วย {{amount}} อีโมจิ)",
+        "rewardLine": "<hl>รางวัล: </hl>{{reward}}",
+        "finishFirst": "ทำบททดสอบให้จบก่อน",
+        "needsEssence": "ต้องมีเอสเซนส์จึงจะเพรสทีจได้",
+        "tapAgainToStart": "แตะอีกครั้งเพื่อเริ่ม",
+        "prestigeInto": "เพรสทีจเข้าบททดสอบ รับ +{{essence}} ✨",
+        "goalCaps": "เป้าหมาย: {{goal}}",
+        "goal": "{{amount}} อีโมจิ",
+        "completeTitle": "{{name}}: {{reward}}",
+        "rewardUnlocked": "ปลดล็อกรางวัลแล้ว"
+    },
+    "perks": {
+        "title": "เพิร์ก",
+        "ownedCount": "มีแล้ว {{owned}} จาก {{total}}",
+        "spentKeepsHalf": "เอสเซนส์ที่ใช้ไปยังคงโบนัสการผลิตไว้ครึ่งหนึ่ง",
+        "spentNoBonus": "เอสเซนส์ที่ใช้ไปแล้วจะไม่เพิ่มการผลิตอีก",
+        "tierCaps": "ขั้น {{tier}}",
+        "tierLockedCaps": "ขั้น {{tier}} · ปลดล็อกเมื่อเพรสทีจ{{ordinal}}",
+        "hidden": "เพรสทีจเพื่อเผยเพิร์กนี้",
+        "needsFirst": "ต้องมี {{perk}} ก่อน",
+        "ownedTag": "✓ มีแล้ว",
+        "buyLabel": "ซื้อ {{perk}} ด้วย {{cost}} เอสเซนส์"
+    },
+    "gems": {
+        "title": "ร้านเพชร",
+        "yourGemsCaps": "เพชรของคุณ",
+        "gemsCaps": "เพชร",
+        "offlineClaim": "ใช้ {{cost}} เพชร รับรายได้ออฟไลน์ ×{{multiplier}}",
+        "storeUnavailable": "ร้านค้ายังใช้งานไม่ได้ตอนนี้ ตรวจสอบการเชื่อมต่อแล้วลองใหม่ภายหลัง",
+        "purchaseFailed": "การซื้อไม่สำเร็จ คุณยังไม่ถูกเรียกเก็บเงิน",
+        "keptOnPrestige": "เพชรจะไม่หายไปเมื่อเพรสทีจ",
+        "unavailable": "ไม่พร้อมใช้งาน",
+        "thankYouCaps": "ขอบคุณ!",
+        "gemsAdded_other": "+{{amount}} เพชร",
+        "buyLabel_other": "ซื้อ {{amount}} เพชร",
+        "buyLabelWithPrice_other": "ซื้อ {{amount}} เพชรในราคา {{price}}",
+        "tags": {
+            "popular": "ยอดนิยม",
+            "bestValue": "คุ้มสุด"
+        }
+    },
+    "offline": {
+        "welcomeBack": "ยินดีต้อนรับกลับมา!",
+        "away": "คุณหายไป {{duration}}",
+        "awayCapped": "คุณหายไปนานกว่า {{duration}} ซึ่งนับได้สูงสุดแค่นั้น",
+        "rested": "อาณาจักรของคุณได้พักผ่อนระหว่างที่คุณไม่อยู่",
+        "missedCaps": "ผลผลิตที่พลาดไป",
+        "perSecond": "{{value}} /วิ",
+        "gemOfferCaps": "×{{multiplier}} ด้วย {{cost}} เพชร · คุณมี {{gems}}",
+        "gemOfferGetCaps": "×{{multiplier}} ด้วย {{cost}} เพชร · รับเพชร",
+        "noThanks": "ไม่เป็นไร"
+    },
+    "ads": {
+        "watchCaps": "ดูโฆษณา",
+        "loadingCaps": "กำลังโหลดโฆษณา...",
+        "failed": "โฆษณาเล่นไม่จบ ตรวจสอบการเชื่อมต่อแล้วลองใหม่"
+    },
+    "reset": {
+        "title": "เริ่มใหม่หมดเลยไหม?",
+        "warning": "การนี้จะรีเซ็ตเกมของคุณ อีโมจิ อาคาร อัปเกรด เอสเซนส์ เพิร์ก คอลเลกชัน และสถิติจะหายไปทั้งหมด และย้อนกลับไม่ได้",
+        "purchasesSafe": "สิ่งที่คุณซื้อในเกมยังปลอดภัย เพชรและทุกอย่างที่ซื้อไว้จะตามไปยังเกมใหม่",
+        "confirm": "ใช่ รีเซ็ตเกมเลย",
+        "cancel": "เล่นต่อ"
+    },
+    "milestones": {
+        "caption": "หมุดหมาย",
+        "emojisDrawn": "วาดอีโมจิครบ {{amount}} แล้ว!"
+    },
+    "settings": {
+        "title": "การตั้งค่า",
+        "close": "ปิดการตั้งค่า",
+        "sound": "เสียง",
+        "soundEffects": "เสียงเอฟเฟกต์",
+        "soundEffectsHint": "เสียงป๊อปเบาๆ ตอนแตะ และเสียงกริ๊งเมื่อเจออีโมจิแวววาว",
+        "performance": "ประสิทธิภาพ",
+        "reduceAnimations": "ลดแอนิเมชัน",
+        "reduceAnimationsHint": "อีโมจิที่แตะจะไม่ลอยออกจากอีโมจิยักษ์อีก ลองเปิดถ้าแตะแล้วรู้สึกหน่วง",
+        "dangerZone": "โซนอันตราย"
+    },
+    "cheats": {
+        "subtitle": "สำหรับทดสอบ การเปลี่ยนแปลงจะมีผลกับเซฟของคุณ",
+        "simulateAway": "จำลองหายไป 1 ชั่วโมง",
+        "gems": "เพชร",
+        "addGems_other": "+{{count}} เพชร",
+        "addComboTaps": "+{{amount}} แตะคอมโบ",
+        "multiplyTapEarnings": "รายได้จากการแตะ ×{{factor}}",
+        "addCollection_other": "+{{count}} คอลเลกชัน",
+        "addShiny_other": "+{{count}} แวววาว",
+        "addMagical_other": "+{{count}} วิเศษ",
+        "addEssence_other": "+{{count}} เอสเซนส์",
+        "addPerkTier_other": "+{{count}} ขั้นเพิร์ก",
+        "addRunTime": "+{{time}} เวลารอบ",
+        "reachTrialGoal": "ถึงเป้าบททดสอบ",
+        "effectEmojis": "อีโมจิเอฟเฟกต์",
+        "spawnEffects_other": "เรียกอีโมจิเอฟเฟกต์ {{count}} ตัว",
+        "speed": "ความเร็ว",
+        "speedLabel": "ความเร็ว {{speed}}×",
+        "speedHint": "มีผลกับการผลิตและเวลารอบ เอฟเฟกต์และคอมโบยังเป็นเวลาจริง ปิดเองเมื่อโหลดใหม่",
+        "shiny": "แวววาว",
+        "onlyShiny": "อีโมจิแวววาวล้วน",
+        "funValueQuirk": "{{name}}: {{description}}",
+        "noQuirk": "ไม่มีลูกเล่น",
+        "hideFunValueTable": "ซ่อนตารางค่าความสนุก",
+        "showFunValueTable": "แสดงตารางค่าความสนุก",
+        "setFunValueLabel": "ตั้งค่าความสนุกเป็น {{value}}: {{name}}",
+        "changeFunValueLabel": "เปลี่ยนค่าความสนุก {{change}}"
+    },
+    "collection": {
+        "ofTotalFound": "/ {{total}} ที่พบ",
+        "mostTapped": "แตะบ่อยสุด: {{emoji}} ×{{amount}}",
+        "startCollecting": "แตะอีโมจิยักษ์เพื่อเริ่มสะสม",
+        "shinyFound_other": "แวววาว {{amount}}",
+        "categories": {
+            "faces": "ใบหน้า",
+            "animals": "สัตว์",
+            "food": "อาหาร",
+            "objects": "สิ่งของ",
+            "people": "ผู้คน",
+            "bodyParts": "ร่างกาย",
+            "placesBuildings": "สถานที่",
+            "plants": "พืช",
+            "vehicles": "ยานพาหนะ",
+            "weather": "อากาศ",
+            "symbols": "สัญลักษณ์"
+        },
+        "categoryLabel": "{{label}}, พบ {{found}} จาก {{total}}",
+        "notFound": "ยังไม่พบ",
+        "cellLabel_other": "{{emoji}}, แตะไป {{count}} ครั้ง",
+        "cellLabelShiny_other": "{{emoji}}, แตะไป {{count}} ครั้ง, แวววาว {{shiny}}"
+    },
+    "effects": {
+        "chipTapping": "การแตะ ×{{multiplier}}",
+        "chipProduction": "การผลิต ×{{multiplier}}",
+        "stackLabel_other": "ซ้อน {{count}}: {{label}}, อันถัดไปหมดใน {{time}}",
+        "chipLabel": "{{title}}, เหลือ {{time}}",
+        "gift": "ของขวัญ!",
+        "ohNo": "แย่แล้ว!",
+        "tapping": "การแตะ",
+        "production": "การผลิต",
+        "tapFrenzy": "แตะกระหน่ำ!",
+        "unholyPower": "พลังอธรรม!",
+        "productionBoost": "ผลิตพุ่ง!",
+        "collectLabel": "เก็บ{{title}}",
+        "tapMe": "แตะฉันสิ"
+    },
+    "combo": {
+        "level": "คอมโบ ×{{multiplier}}",
+        "max": "คอมโบสูงสุด ×{{multiplier}}",
+        "label": "คอมโบคูณ {{multiplier}}",
+        "maxLabel": "คอมโบคูณ {{multiplier}}, สูงสุด"
+    },
+    "bigEmoji": {
+        "tapLabel": "แตะอีโมจิยักษ์",
+        "tapShinyLabel": "แตะอีโมจิยักษ์แวววาว",
+        "shiny": "แวววาว",
+        "shinyBurst": "แวววาว!",
+        "handsOff": "บททดสอบ{{trial}} · แตะแล้วไม่ได้อะไร",
+        "perTap": "+{{value}} ต่อการแตะ"
+    },
+    "bank": {
+        "timeToAfford": {
+            "needMore": "ยังไม่พอ",
+            "seconds_other": "อีก {{count}} วิ",
+            "minutes_other": "อีก {{count}} นาที",
+            "hours_other": "อีก {{count}} ชม.",
+            "days_other": "อีก {{count}} วัน",
+            "aLongTime": "อีกนานมาก"
+        },
+        "timeToAffordInline": {
+            "needMore": "ยังไม่พอ",
+            "seconds_other": "อีก {{count}} วิ",
+            "minutes_other": "อีก {{count}} นาที",
+            "hours_other": "อีก {{count}} ชม.",
+            "days_other": "อีก {{count}} วัน",
+            "aLongTime": "อีกนานมาก"
+        }
+    },
+    "catalogue": {
+        "title": "อัปเกรดทั้งหมด",
+        "counts": "มีแล้ว {{owned}} · วางขาย {{forSale}} · ล็อก {{locked}} · ทั้งหมด {{total}}",
+        "filter": {
+            "owned": "มีแล้ว {{count}}",
+            "forSale": "วางขาย {{count}}",
+            "locked": "ล็อก {{count}}"
+        },
+        "combo": "คอมโบ",
+        "effectEmojis": "อีโมจิเอฟเฟกต์",
+        "unlock": {
+            "own": "มี{{buildings}}ครบ {{count}}",
+            "tapping": "ได้ {{amount}} อีโมจิจากการแตะ",
+            "comboTaps": "แตะคอมโบ {{amount}} ครั้ง",
+            "earned": "ได้ {{amount}} อีโมจิ"
+        },
+        "state": {
+            "owned": "✓ มีแล้ว",
+            "forSale": "วางขาย",
+            "locked": "🔒 ล็อก"
+        },
+        "stateA11y": {
+            "owned": "มีแล้ว",
+            "forSale": "วางขาย",
+            "locked": "ล็อกอยู่"
+        },
+        "tileA11y": "{{name}}, {{state}}",
+        "prev": "ก่อนหน้า",
+        "next": "ถัดไป",
+        "prevA11y": "อัปเกรดก่อนหน้า",
+        "nextA11y": "อัปเกรดถัดไป",
+        "fact": {
+            "price": "ราคา",
+            "unlocks": "ปลดล็อก",
+            "id": "ID"
         }
     }
 }
