@@ -82,7 +82,38 @@
         },
         "18": {
             "name": "Singularitate emoji",
-            "plural": "Singularități emoji"
+            "plural": "Singularități emoji",
+            "description": "Gata. N-a mai rămas nimic în afară de emoji. Ai reușit. Sau nu?"
+        },
+        "7": {
+            "name": "Cinematograf emoji",
+            "plural": "Cinematografe emoji",
+            "description": "Superproducții cu emoji-urile tale preferate. Fiecare bilet vine cu popcorn și emoji."
+        },
+        "11": {
+            "name": "Companie aeriană emoji",
+            "plural": "Companii aeriene emoji",
+            "description": "Duce emoji-urile în toate colțurile lumii. La geam, desigur."
+        },
+        "19": {
+            "name": "Mașină a timpului emoji",
+            "plural": "Mașini ale timpului emoji",
+            "description": "Dă o fugă până la începutul timpului ca să deseneze primele emoji. Apoi pe următoarele."
+        },
+        "20": {
+            "name": "Big Bang",
+            "plural": "Big Bang-uri",
+            "description": "Un univers nou-nouț, și de data asta e emoji până la temelii."
+        },
+        "21": {
+            "name": "Multivers emoji",
+            "plural": "Multiversuri emoji",
+            "description": "Universuri infinite, fiecare cu propriul magnat al emoji-urilor. Acum toți lucrează pentru tine."
+        },
+        "22": {
+            "name": "Primul emoji",
+            "plural": "Primele emoji",
+            "description": "Aici a început totul. Te-a privit cum atingi în tot acest timp."
         }
     },
     "upgrades": {
@@ -188,27 +219,33 @@
         },
         "100": {
             "name": "Braț mai puternic",
-            "description": "Cu un braț mai puternic desenezi emoji mai repede."
+            "description": "Cu un braț mai puternic desenezi emoji mai repede.",
+            "quote": "Doare, dar merită."
         },
         "101": {
             "name": "Degete flexibile",
-            "description": "Degetele flexibile permit emoji mai elaborate."
+            "description": "Degetele flexibile permit emoji mai elaborate.",
+            "quote": "Flexibile? Mă rog, poate. Dar tot doare."
         },
         "102": {
             "name": "Două mâini",
-            "description": "Dublu mâini, dublu emoji."
+            "description": "Dublu mâini, dublu emoji.",
+            "quote": "Dublu mândru, dublă cădere."
         },
         "103": {
             "name": "Mâini cu ojă",
-            "description": "Cu ojă pe unghii atingi mai repede, nu știai?"
+            "description": "Cu ojă pe unghii atingi mai repede, nu știai?",
+            "quote": "Și o să arăți tare drăguț!"
         },
         "104": {
             "name": "Picioare",
-            "description": "Desenatul cu picioarele dublează producția (și nu e deloc greu)!"
+            "description": "Desenatul cu picioarele dublează producția (și nu e deloc greu)!",
+            "quote": "Nu e deloc greu? M-a lăsat nevasta când m-a văzut cu picioarele pe tableta familiei."
         },
         "105": {
             "name": "Limbă",
-            "description": "Cu ani de exercițiu, și tu poți învăța să desenezi cu limba!"
+            "description": "Cu ani de exercițiu, și tu poți învăța să desenezi cu limba!",
+            "quote": "mmmhmh thmpwuh mhhaaaam ehhmmmmuhm ahumhmhm"
         },
         "106": {
             "name": "Nas",
@@ -217,19 +254,23 @@
         },
         "107": {
             "name": "Ureche",
-            "description": "Bagă-ți un pix în ureche, întoarce capul la 90 de grade și desenează!"
+            "description": "Bagă-ți un pix în ureche, întoarce capul la 90 de grade și desenează!",
+            "quote": "Ce? Poftim? Nu aud- ce- hă... chiar nu aud nimic, la naib- ce?!"
         },
         "108": {
             "name": "Gură",
-            "description": "Pune un creion în gură și desenează cu el!"
+            "description": "Pune un creion în gură și desenează cu el!",
+            "quote": "Nu merită. Doare prea tare."
         },
         "109": {
             "name": "Picior mai puternic",
-            "description": "Un picior mai puternic te ajută să desenezi mult mai repede cu picioarele."
+            "description": "Un picior mai puternic te ajută să desenezi mult mai repede cu picioarele.",
+            "quote": "Acum am un picior uriaș. Doar pe stângul. Merg în cerc."
         },
         "110": {
             "name": "Plămâni mai mari",
-            "description": "Cu plămâni mai mari desenezi emoji mai repede."
+            "description": "Cu plămâni mai mari desenezi emoji mai repede.",
+            "quote": "Oxigen. Oxigen. Oxigen."
         },
         "111": {
             "name": "Creier mai mare",
@@ -237,7 +278,8 @@
         },
         "112": {
             "name": "Păr",
-            "description": "Mânuiește o pensulă cu părul ca să creezi emoji. Cine are nevoie de mâini când are stil?"
+            "description": "Mânuiește o pensulă cu părul ca să creezi emoji. Cine are nevoie de mâini când are stil?",
+            "quote": "Cine are nevoie de mâini? Eu. Eu am nevoie de mâini. Am început să chelesc de la asta."
         },
         "113": {
             "name": "Sprâncene",
@@ -245,7 +287,8 @@
         },
         "114": {
             "name": "Spate",
-            "description": "Întinde-te pe spate și desenează emoji cu mâinile la spate. Puțină gimnastică, puțină artă!"
+            "description": "Întinde-te pe spate și desenează emoji cu mâinile la spate. Puțină gimnastică, puțină artă!",
+            "quote": "Întinde-te pe spate, ziceau. Puțină gimnastică, puțină artă, ziceau. Nu mă mai pot ridica."
         },
         "115": {
             "name": "Dinți",
@@ -253,7 +296,8 @@
         },
         "116": {
             "name": "Buric",
-            "description": "Desenează emoji cu buricul. E o abilitate unică, greu de stăpânit!"
+            "description": "Desenează emoji cu buricul. E o abilitate unică, greu de stăpânit!",
+            "quote": "Desenez cu buricul. Mama e atât de mândră."
         },
         "117": {
             "name": "Desen cu ecou",
@@ -261,23 +305,28 @@
         },
         "118": {
             "name": "Desen telekinetic",
-            "description": "De ce să folosești mâinile când poți desena emoji cu mintea?"
+            "description": "De ce să folosești mâinile când poți desena emoji cu mintea?",
+            "quote": "Pot muta obiecte cu mintea, iar tu mă pui să desenez fețe care fac cu ochiul."
         },
         "119": {
             "name": "Degete cuantice",
-            "description": "Inseparabilitatea cuantică din degete te lasă să desenezi emoji cu viteza luminii."
+            "description": "Inseparabilitatea cuantică din degete te lasă să desenezi emoji cu viteza luminii.",
+            "quote": "Degetele mele sunt în două locuri deodată. În amândouă te urăsc."
         },
         "200": {
             "name": "Creioane îmbunătățite",
-            "description": "Creioane mai bune pentru emoji mai detaliate."
+            "description": "Creioane mai bune pentru emoji mai detaliate.",
+            "quote": "Creioanele mai bune nu-ți repară talentul."
         },
         "201": {
             "name": "Creioane colorate speciale",
-            "description": "Aceste creioane speciale îi ajută pe artiști să-și regăsească copilul interior."
+            "description": "Aceste creioane speciale îi ajută pe artiști să-și regăsească copilul interior.",
+            "quote": "Mi-am regăsit copilul interior. Și el e dezamăgit de mine."
         },
         "202": {
             "name": "Pensule îmbunătățite",
-            "description": "Pensulele îmbunătățite permit emoji mai artistice."
+            "description": "Pensulele îmbunătățite permit emoji mai artistice.",
+            "quote": "Îmbunătățite cum? N-am reușit să pictez decât o versiune înfiorătoare a nevestei. Vreau banii înapoi."
         },
         "203": {
             "name": "Stilouri",
@@ -334,7 +383,8 @@
         },
         "215": {
             "name": "Fontul Comic Sans",
-            "description": "Fie că-l iubești, fie că-l urăști, emoji-urile tale vor arăta... unic!"
+            "description": "Fie că-l iubești, fie că-l urăști, emoji-urile tale vor arăta... unic!",
+            "quote": "Îmi dau demisia."
         },
         "216": {
             "name": "Generator de artă AI",
@@ -353,11 +403,13 @@
         },
         "219": {
             "name": "Sânge",
-            "description": "Pictatul cu sânge face emoji extra cool!"
+            "description": "Pictatul cu sânge face emoji extra cool!",
+            "quote": "Al cui? AL CUI?"
         },
         "300": {
             "name": "Fermieri",
-            "description": "Ce e o fermă fără fermier?!"
+            "description": "Ce e o fermă fără fermier?!",
+            "quote": "Am moștenit 80 de hectare de la tata, iar tu mă pui să cresc fețe zâmbitoare."
         },
         "301": {
             "name": "Răsad",
@@ -366,7 +418,8 @@
         },
         "302": {
             "name": "Unelte mai bune",
-            "description": "Pentru o agricultură mult mai rapidă!"
+            "description": "Pentru o agricultură mult mai rapidă!",
+            "quote": "Unelte noi, același salariu. Mersi de nimic."
         },
         "303": {
             "name": "Tractoare",
@@ -374,11 +427,13 @@
         },
         "304": {
             "name": "Case de fermă",
-            "description": "Un cămin primitor unde fermierii tăi se odihnesc și își încarcă bateriile."
+            "description": "Un cămin primitor unde fermierii tăi se odihnesc și își încarcă bateriile.",
+            "quote": "\"Primitor\" e un cuvânt amuzant pentru o magazie cu o găleată."
         },
         "305": {
             "name": "Vaci emoji",
-            "description": "Creează mai multe emuuuuuuuji."
+            "description": "Creează mai multe emuuuuuuuji.",
+            "quote": "Încă o glumă cu muuu și te răstorn EU pe tine."
         },
         "306": {
             "name": "Sistem de irigații",
@@ -387,7 +442,8 @@
         },
         "307": {
             "name": "Sperietori de ciori",
-            "description": "Ține departe de ferme păsările emoji enervante!"
+            "description": "Ține departe de ferme păsările emoji enervante!",
+            "quote": "Păsările nu se sperie. Vecinii, da."
         },
         "308": {
             "name": "Compostoare",
@@ -395,7 +451,8 @@
         },
         "309": {
             "name": "Sere",
-            "description": "Cultivă emoji tot anul, indiferent de vreme!"
+            "description": "Cultivă emoji tot anul, indiferent de vreme!",
+            "quote": "O altă seră are nevoie de ajutorul tău. Ți-o marchez pe hartă."
         },
         "310": {
             "name": "Mori de vânt",
@@ -404,7 +461,8 @@
         },
         "311": {
             "name": "Livezi de emoji",
-            "description": "Cultivă pomi emoji care dau roade tot anul!"
+            "description": "Cultivă pomi emoji care dau roade tot anul!",
+            "quote": "Copacii merg. Copacii sunt furioși."
         },
         "312": {
             "name": "Festivalul recoltei",
@@ -425,11 +483,13 @@
         },
         "316": {
             "name": "Ferma de emoji a viitorului",
-            "description": "Fermele tale sunt acum utopii high-tech cu roboți, holograme și tractoare zburătoare. Bun venit în viitor!"
+            "description": "Fermele tale sunt acum utopii high-tech cu roboți, holograme și tractoare zburătoare. Bun venit în viitor!",
+            "quote": "Un robot mi-a luat slujba. Apoi m-a întrebat cum ajunge la oraș."
         },
         "317": {
             "name": "Lună sângerie",
-            "description": "Sub luna sângerie, culturile cresc mai repede... dar le cresc și dinți."
+            "description": "Sub luna sângerie, culturile cresc mai repede... dar le cresc și dinți.",
+            "quote": "Morcovii au dinți acum. Morcovii mușcă înapoi."
         },
         "318": {
             "name": "Ultima recoltă",
@@ -441,11 +501,13 @@
         },
         "400": {
             "name": "Cuțite ascuțite",
-            "description": "Cu cuțite mai ascuțite, tocatul de emoji e mai ușor."
+            "description": "Cu cuțite mai ascuțite, tocatul de emoji e mai ușor.",
+            "quote": "Să toc emoji? Cum adică? Ești nebun? Sunt emoji adevărate, vii și nevinovate!"
         },
         "401": {
             "name": "Tigăi antiaderente",
-            "description": "Tigăile antiaderente grăbesc gătitul mâncărurilor emoji."
+            "description": "Tigăile antiaderente grăbesc gătitul mâncărurilor emoji.",
+            "quote": "Totul se lipește în continuare. Inclusiv eu. De slujba asta."
         },
         "402": {
             "name": "Cuptoare mai bune",
@@ -453,27 +515,33 @@
         },
         "403": {
             "name": "Ingrediente de calitate",
-            "description": "Ingrediente de calitate mai bună înseamnă emoji mai gustoase."
+            "description": "Ingrediente de calitate mai bună înseamnă emoji mai gustoase.",
+            "quote": "Aceleași emoji congelate. Etichetă nouă. Preț dublu."
         },
         "404": {
             "name": "Bonetă de bucătar",
-            "description": "Cu boneta de bucătar pe cap, gătești emoji mai repede."
+            "description": "Cu boneta de bucătar pe cap, gătești emoji mai repede.",
+            "quote": "Boneta nu face nimic. Am zis-o de patruzeci de ori. Nu ascultă nimeni."
         },
         "405": {
             "name": "Blendere emoji",
-            "description": "Transformă emoji în smoothie-uri și supe delicioase în câteva secunde!"
+            "description": "Transformă emoji în smoothie-uri și supe delicioase în câteva secunde!",
+            "quote": "NU te uita în smoothie."
         },
         "406": {
             "name": "Friteuze cu aer cald",
-            "description": "Prăjește emoji perfect în timp record. Crocante și aurii de fiecare dată!"
+            "description": "Prăjește emoji perfect în timp record. Crocante și aurii de fiecare dată!",
+            "quote": "E un cuptor. Un cuptor mititel. Nu-i mai zice friteuză cu aer cald."
         },
         "407": {
             "name": "Baruri de sushi",
-            "description": "Rulează sushi emoji cu precizie și stil. Se caută talent în stare crudă!"
+            "description": "Rulează sushi emoji cu precizie și stil. Se caută talent în stare crudă!",
+            "quote": "Se cerea talent în stare crudă. M-au angajat oricum."
         },
         "408": {
             "name": "Baruri de salate",
-            "description": "Amestecă salate proaspete de emoji cu o mulțime de toppinguri. Sănătos și delicios!"
+            "description": "Amestecă salate proaspete de emoji cu o mulțime de toppinguri. Sănătos și delicios!",
+            "quote": "Cineva a strănutat pe crutoane. Am văzut. N-am zis nimic."
         },
         "409": {
             "name": "Cuptoare de pizza",
@@ -485,7 +553,8 @@
         },
         "411": {
             "name": "Mașini de înghețată emoji",
-            "description": "Scoate deserturi emoji înghețate, pe atât de cool pe cât de delicioase!"
+            "description": "Scoate deserturi emoji înghețate, pe atât de cool pe cât de delicioase!",
+            "quote": "Stricată. E mereu stricată. N-a existat moment în care să nu fie stricată."
         },
         "412": {
             "name": "Stații de tacos",
@@ -498,7 +567,8 @@
         },
         "414": {
             "name": "Fântâni de ciocolată emoji",
-            "description": "Toarnă ciocolată emoji topită peste orice. Dulce și răsfățător!"
+            "description": "Toarnă ciocolată emoji topită peste orice. Dulce și răsfățător!",
+            "quote": "Un copil și-a băgat toată fața în ea. Am servit-o mai departe."
         },
         "415": {
             "name": "Bucătăria canibală emoji",
@@ -510,23 +580,28 @@
         },
         "417": {
             "name": "Arena bătăii cu mâncare emoji",
-            "description": "Transformă-ți bucătăria într-o arenă de bătaie cu mâncare. E murdar, haotic și ciudat de profitabil."
+            "description": "Transformă-ți bucătăria într-o arenă de bătaie cu mâncare. E murdar, haotic și ciudat de profitabil.",
+            "quote": "Ciudat de profitabil. Încă găsesc mazăre în urechi."
         },
         "418": {
             "name": "Aluat viu",
-            "description": "Aluatul ăsta se mișcă singur și se modelează în pâine emoji perfectă. Uneori încearcă să evadeze."
+            "description": "Aluatul ăsta se mișcă singur și se modelează în pâine emoji perfectă. Uneori încearcă să evadeze.",
+            "quote": "A evadat. Asta e. Ce-o să iasă de aici?"
         },
         "419": {
             "name": "Bufetul infinit",
-            "description": "Un bufet care nu se termină niciodată... dar s-ar putea ca mâncarea să înceapă să te mănânce pe tine."
+            "description": "Un bufet care nu se termină niciodată... dar s-ar putea ca mâncarea să înceapă să te mănânce pe tine.",
+            "quote": "Nu se termină niciodată. Stau pe masa cu deserturi din martie."
         },
         "500": {
             "name": "Mături",
-            "description": "Pentru curățenie după animale, când ele, ăăă... fac treaba mare."
+            "description": "Pentru curățenie după animale, când ele, ăăă... fac treaba mare.",
+            "quote": "Am un master. Mătur bălegar de girafă pentru emoji."
         },
         "501": {
             "name": "Dresori de animale",
-            "description": "Dresorii învață animalele trucuri, iar grădina zoo devine mai eficientă."
+            "description": "Dresorii învață animalele trucuri, iar grădina zoo devine mai eficientă.",
+            "quote": "Lama a scuipat pe mine. Iar."
         },
         "502": {
             "name": "Țarcuri de lux",
@@ -534,15 +609,18 @@
         },
         "503": {
             "name": "Animale exotice",
-            "description": "Adu animale rare și exotice ca să atragi mulțimi mai mari."
+            "description": "Adu animale rare și exotice ca să atragi mulțimi mai mari.",
+            "quote": "Pinguinul a mușcat un copil. Numărul de vizitatori a crescut cu 40%."
         },
         "504": {
             "name": "Mascote zoo",
-            "description": "Mascotele prietenoase atrag vizitatori și cresc veniturile."
+            "description": "Mascotele prietenoase atrag vizitatori și cresc veniturile.",
+            "quote": "Sunt 35 de grade în costumul ăsta de girafă și tocmai m-a lovit un copil."
         },
         "505": {
             "name": "Clinici veterinare",
-            "description": "O clinică dedicată ține animalele sănătoase."
+            "description": "O clinică dedicată ține animalele sănătoase.",
+            "quote": "Șapte ani de medicină veterinară. Azi tratez o capră care a mâncat un telefon."
         },
         "506": {
             "name": "Zone cu umbră",
@@ -607,15 +685,18 @@
         },
         "601": {
             "name": "Mai mulți muncitori",
-            "description": "Crește numărul de angajați ai fabricii."
+            "description": "Crește numărul de angajați ai fabricii.",
+            "quote": "Mai mulți muncitori, aceeași toaletă. O singură toaletă."
         },
         "602": {
             "name": "Roți dințate mai mari",
-            "description": "Roțile dințate mai mari permit utilaje mai mari."
+            "description": "Roțile dințate mai mari permit utilaje mai mari.",
+            "quote": "Roți mai mari, accidente mai mari. Întreabă-l pe Dorel. A, stai."
         },
         "603": {
             "name": "Piulițe și șuruburi",
-            "description": "Ca să nu se facă totul bucăți."
+            "description": "Ca să nu se facă totul bucăți.",
+            "quote": "Țin locul ăsta întreg. Abia. Ca pe căsnicia mea."
         },
         "604": {
             "name": "Benzi transportoare",
@@ -639,7 +720,8 @@
         },
         "609": {
             "name": "Securitatea fabricii",
-            "description": "Protejează-ți fabrica de hoții de emoji și de spionajul industrial."
+            "description": "Protejează-ți fabrica de hoții de emoji și de spionajul industrial.",
+            "quote": "NU VEI TRECE. Nu fără ecuson."
         },
         "610": {
             "name": "Reciclare în fabrică",
@@ -668,11 +750,13 @@
         },
         "616": {
             "name": "Ziduri ranforsate",
-            "description": "Întărește zidurile fabricii ca să reziste haosului producției de mare viteză."
+            "description": "Întărește zidurile fabricii ca să reziste haosului producției de mare viteză.",
+            "quote": "Ține ușa! ȚINE UȘA!"
         },
         "617": {
             "name": "Capcane de șoareci",
-            "description": "Ține rozătoarele enervante departe de fabrică. Gata cu firele roase și emoji-urile furate!"
+            "description": "Ține rozătoarele enervante departe de fabrică. Gata cu firele roase și emoji-urile furate!",
+            "quote": "E o capcană!"
         },
         "618": {
             "name": "Manageri de fabrică",
@@ -690,7 +774,8 @@
         },
         "701": {
             "name": "Terenuri de baseball",
-            "description": "Asta o să fie un home run total."
+            "description": "Asta o să fie un home run total.",
+            "quote": "Home run? Mingea mi-a lovit mașina. Iar."
         },
         "702": {
             "name": "Terenuri de squash",
@@ -721,15 +806,18 @@
         },
         "901": {
             "name": "Saci de emoji mai mari",
-            "description": "Poți căra și mai multe emoji."
+            "description": "Poți căra și mai multe emoji.",
+            "quote": "Mi-am rupt spatele, dar sigur, saci mai mari."
         },
         "902": {
             "name": "Carduri de credit emoji",
-            "description": "Bune pentru a cheltui emoji-urile câștigate cu greu."
+            "description": "Bune pentru a cheltui emoji-urile câștigate cu greu.",
+            "quote": "Respins. Cardul tău e respins. Viața ta e respinsă."
         },
         "903": {
             "name": "Investiții în educație",
-            "description": "Educație mai bună, desene emoji mai bune."
+            "description": "Educație mai bună, desene emoji mai bune.",
+            "quote": "Creditul de studii e în emoji. O să-l plătesc și pe lumea cealaltă."
         },
         "904": {
             "name": "Investiții în inovație",
@@ -745,19 +833,23 @@
         },
         "1002": {
             "name": "Roata mare",
-            "description": "Way up, there is where she broke my heart."
+            "description": "Way up, there is where she broke my heart.",
+            "quote": "Blocat sus două ore cu un tip care-mi explica cripto."
         },
         "1003": {
             "name": "Circ",
-            "description": "Există doar două tipuri de oameni pe lume. Cei care distrează și cei care privesc."
+            "description": "Există doar două tipuri de oameni pe lume. Cei care distrează și cei care privesc.",
+            "quote": "M-am antrenat douăzeci de ani ca acrobat. Acum jonglez cu fețe zâmbitoare pentru prichindei."
         },
         "1004": {
             "name": "Jongler de emoji",
-            "description": "Se zice că n-a scăpat niciodată mingea."
+            "description": "Se zice că n-a scăpat niciodată mingea.",
+            "quote": "N-a scăpat niciodată mingea? Eu mi-am scăpat visurile."
         },
         "1100": {
             "name": "Alegeri emoji",
-            "description": "Să câștige cel mai bun emoji!"
+            "description": "Să câștige cel mai bun emoji!",
+            "quote": "Să câștige cel mai bun emoji. Ne ocupăm noi de cei care pierd."
         },
         "1101": {
             "name": "Stimulent emoji",
@@ -777,7 +869,8 @@
         },
         "1300": {
             "name": "Telescoape",
-            "description": "Privește stelele ca să descoperi planete emoji."
+            "description": "Privește stelele ca să descoperi planete emoji.",
+            "quote": "Și noi te vedem. Te-am văzut dintotdeauna."
         },
         "1301": {
             "name": "Antene de satelit",
@@ -785,11 +878,13 @@
         },
         "1302": {
             "name": "Astronauți",
-            "description": "Cineva trebuie să-ți conducă stațiile spațiale."
+            "description": "Cineva trebuie să-ți conducă stațiile spațiale.",
+            "quote": "În spațiu nimeni nu te aude țipând. Am verificat. De două ori."
         },
         "1303": {
             "name": "Rachete",
-            "description": "Zboară foarte repede."
+            "description": "Zboară foarte repede.",
+            "quote": "Zboară foarte repede. La fel și rămășițele tale."
         },
         "1304": {
             "name": "⏃⋔ ⌇⍜⌇⟟⏁ ⟟⋏ ⌿⏃☊⟒...",
@@ -798,15 +893,18 @@
         },
         "1305": {
             "name": "⍜⏚⟟⟒☊⏁ ☊⟟⎍⎅⏃⏁",
-            "description": "⏃☊⟒⌇⏁ ⍜⏚⟟⟒☊⏁ ⏃⌇☊⎍⋏⎅⟒ ⌿⎍⏁⟒⍀⟟ ⋏⟒⏚⏃⋏⎍⟟⏁⟒."
+            "description": "⏃☊⟒⌇⏁ ⍜⏚⟟⟒☊⏁ ⏃⌇☊⎍⋏⎅⟒ ⌿⎍⏁⟒⍀⟟ ⋏⟒⏚⏃⋏⎍⟟⏁⟒.",
+            "quote": "⟟ ⏃⋔ ☊⍜⋔⟟⋏☌ ⎎⍜⍀ ⊬⍜⎍."
         },
         "30000": {
             "name": "Cartofi",
-            "description": "Cartoftastic! Cartofii sunt coloana vertebrală a oricărei ferme."
+            "description": "Cartoftastic! Cartofii sunt coloana vertebrală a oricărei ferme.",
+            "quote": "Fără sare, fără piper. Dă-mi un cartof bătrân și copt și sunt fericit ca o mană!"
         },
         "30001": {
             "name": "Morcovi",
-            "description": "Morcovi pentru ochi frumoși... și ferme frumoase!"
+            "description": "Morcovi pentru ochi frumoși... și ferme frumoase!",
+            "quote": "Nu. Ochii mei nu-s frumoși. Încă o glumă și te plantez."
         },
         "30002": {
             "name": "Castraveți",
@@ -820,15 +918,18 @@
         },
         "30004": {
             "name": "Roșii",
-            "description": "Zemoase și versatile, roșiile sunt preferatele fermei."
+            "description": "Zemoase și versatile, roșiile sunt preferatele fermei.",
+            "quote": "Perfecte de aruncat în cine a proiectat ferma asta."
         },
         "30005": {
             "name": "Salată verde",
-            "description": "Lasă salata verde să-ți țină ferma proaspătă și... verde."
+            "description": "Lasă salata verde să-ți țină ferma proaspătă și... verde.",
+            "quote": "Cel mai plictisitor lucru de la fermă. În afară de fermier."
         },
         "30006": {
             "name": "Broccoli",
-            "description": "Copăcei mici cu beneficii mari!"
+            "description": "Copăcei mici cu beneficii mari!",
+            "quote": "Copilul meu l-a aruncat în chelner. Sincer, a meritat-o."
         },
         "30007": {
             "name": "Ceapă",
@@ -887,11 +988,13 @@
         },
         "30019": {
             "name": "Mazăre",
-            "description": "Mazăre!"
+            "description": "Mazăre!",
+            "quote": "Mazăre! MAZĂRE! Asta e toată descrierea? Cine scrie chestiile astea?"
         },
         "30020": {
             "name": "Ridichi",
-            "description": "Iuți și crocante, ridichile dau un plus de picanterie fermei și mâncărurilor."
+            "description": "Iuți și crocante, ridichile dau un plus de picanterie fermei și mâncărurilor.",
+            "quote": "Nimeni nu vrea ridichi. Nimeni n-a vrut vreodată ridichi."
         },
         "30021": {
             "name": "Ciuperci",
@@ -900,15 +1003,18 @@
         },
         "30022": {
             "name": "Ananas",
-            "description": "Tropical și acrișor."
+            "description": "Tropical și acrișor.",
+            "quote": "Pe pizza."
         },
         "30023": {
             "name": "Pepeni verzi",
-            "description": "Zemoși și răcoritori, pepenii verzi sunt cultura supremă a verii."
+            "description": "Zemoși și răcoritori, pepenii verzi sunt cultura supremă a verii.",
+            "quote": "Mă doare spatele."
         },
         "30024": {
             "name": "Kiwi",
-            "description": "Pufoase pe dinafară, dulci pe dinăuntru. Kiwi sunt preferatele fermei!"
+            "description": "Pufoase pe dinafară, dulci pe dinăuntru. Kiwi sunt preferatele fermei!",
+            "quote": "Doamne, ce mă mănâncă."
         },
         "30025": {
             "name": "Struguri",
@@ -977,6 +1083,1539 @@
             "name": "Birocrați emoji",
             "description": "Un guvern emoji are nevoie de funcționari ca să funcționeze.",
             "quote": "Se pare că încerci să dai o lege. Ai nevoie de ajutor?"
+        },
+        "707": {
+            "name": "Olimpiada emoji",
+            "description": "La fiecare patru ani, cele mai rapide emoji se bat pentru aur."
+        },
+        "708": {
+            "name": "Stadion emoji",
+            "description": "Optzeci de mii de locuri, fiecare ocupat de un emoji care aplaudă."
+        },
+        "709": {
+            "name": "Antrenament de maraton",
+            "description": "Emoji care pot desena 42 de kilometri fără oprire."
+        },
+        "710": {
+            "name": "Piscine",
+            "description": "Cincizeci de metri de emoji clorinate.",
+            "quote": "Detectez mai multe forme de viață de tip leviatan la capătul adânc. Ești sigur că merită ce faci?"
+        },
+        "711": {
+            "name": "Ring de box",
+            "description": "Plutește ca un fluture, desenează ca un emoji."
+        },
+        "712": {
+            "name": "Perete de escaladă",
+            "description": "Fiecare priză e o față zâmbitoare. Aderență excelentă."
+        },
+        "713": {
+            "name": "Patinoar",
+            "description": "Emoji pe gheață. Paietele se vând separat."
+        },
+        "714": {
+            "name": "Sală de bowling",
+            "description": "Fiecare strike dărâmă o grămadă de emoji."
+        },
+        "715": {
+            "name": "Skatepark",
+            "description": "Kickflip-uri, grind-uri și o grămadă de emoji."
+        },
+        "716": {
+            "name": "Pârtii de schi",
+            "description": "Pârtii negre, bătute cu emoji."
+        },
+        "717": {
+            "name": "Dojo de arte marțiale",
+            "description": "Dai cu ceară, iei ceara, desenezi emoji.",
+            "quote": "Atingi sau nu atingi. Nu există încerc."
+        },
+        "718": {
+            "name": "Circuit de curse",
+            "description": "De la zero la un milion de emoji în mai puțin de trei secunde."
+        },
+        "719": {
+            "name": "Galeria celebrităților",
+            "description": "Toți sportivii emoji legendari, imortalizați în bronz."
+        },
+        "800": {
+            "name": "Mașini de popcorn",
+            "description": "Fiecare găleată vine cu un emoji gratuit pe fund.",
+            "quote": "Emoji gratuit? N-am găsit niciunul. Dați-mi banii înapoi sau vă dau în judecată."
+        },
+        "801": {
+            "name": "Ochelari 3D",
+            "description": "Emoji-urile sar direct de pe ecran în banca ta.",
+            "quote": "Am încercat să mă distrez cu ăștia, dar n-am reușit nicicum să aterizez avionul pe portavionul ăla blestemat."
+        },
+        "802": {
+            "name": "Vedete de cinema",
+            "description": "Cele mai mari nume din cinematografia emoji, toate pe statul tău de plată.",
+            "quote": "Patrick Stewart"
+        },
+        "803": {
+            "name": "Trailere",
+            "description": "Douăzeci de minute de trailere înainte de fiecare film. Fiecare plin de emoji.",
+            "quote": "Șiii s-a dus, da, popcornul meu, s-a dus. L-am mâncat tot la trailere."
+        },
+        "804": {
+            "name": "Premiere pe covorul roșu",
+            "description": "Blițuri, fani care fac cu mâna, emoji foarte importante."
+        },
+        "805": {
+            "name": "Premiile emoji",
+            "description": "Iar premiul pentru cel mai bun emoji merge la... toate."
+        },
+        "806": {
+            "name": "Continuări",
+            "description": "Aceleași emoji, explozii mai mari."
+        },
+        "807": {
+            "name": "Versiunea regizorului",
+            "description": "Patru ore în plus de emoji pe care nu le-a cerut nimeni."
+        },
+        "808": {
+            "name": "Platformă de streaming",
+            "description": "Filme cu emoji, acum în fiecare casă."
+        },
+        "809": {
+            "name": "Univers cinematografic",
+            "description": "Toate filmele cu emoji sunt legate între ele. Fiecare are nevoie de o continuare."
+        },
+        "810": {
+            "name": "Proiecții la miezul nopții",
+            "description": "Emoji-urile care ies la miezul nopții sunt cele mai devotate."
+        },
+        "811": {
+            "name": "Ecrane IMAX",
+            "description": "Atât de mari, încât vezi fiecare pixel din fiecare emoji."
+        },
+        "812": {
+            "name": "Sunet surround",
+            "description": "Emoji-urile vin din interiorul camerei."
+        },
+        "813": {
+            "name": "Cascadori",
+            "description": "Unele emoji sunt prea valoroase ca să fie puse în pericol."
+        },
+        "814": {
+            "name": "Efecte speciale",
+            "description": "Explozii făcute în întregime din emoji. Foarte scumpe. Merită."
+        },
+        "815": {
+            "name": "Filme de animație",
+            "description": "Emoji desenate de mână, cadru cu cadru."
+        },
+        "816": {
+            "name": "Festival de film",
+            "description": "Palmieri, ochelari de soare și un trofeu emoji de aur."
+        },
+        "817": {
+            "name": "Record de box office",
+            "description": "Cel mai profitabil film cu emoji din toate timpurile. Din nou."
+        },
+        "818": {
+            "name": "Cinema drive-in",
+            "description": "Privește filme cu emoji din confortul mașinii tale."
+        },
+        "819": {
+            "name": "Semnul Hollywood",
+            "description": "Litere mari și albe pe un deal, care formează un emoji."
+        },
+        "905": {
+            "name": "Bancomate emoji",
+            "description": "Scoți emoji la fiecare colț de stradă. Nimeni nu știe cine le depune."
+        },
+        "906": {
+            "name": "Bursa emoji",
+            "description": "Prețul emoji-urilor doar crește. Probabil.",
+            "quote": "\"Doar crește.\" Super. Economiile mele au scăzut."
+        },
+        "907": {
+            "name": "Monede emoji",
+            "description": "O criptomonedă garantată cu emoji adevărate, pentru prima dată.",
+            "quote": "Am cumpărat la vârf. Evident."
+        },
+        "908": {
+            "name": "Seif emoji",
+            "description": "Ca o rezervă de aur, doar că fiecare lingou e o față zâmbitoare."
+        },
+        "909": {
+            "name": "Banca mondială emoji",
+            "description": "Împrumută emoji unor țări întregi, cu dobânzi foarte rezonabile.",
+            "quote": "\"Dobânzi foarte rezonabile.\" Zice banca ce deține trei țări."
+        },
+        "910": {
+            "name": "Dobândă compusă",
+            "description": "Emoji care fac emoji care fac emoji."
+        },
+        "911": {
+            "name": "Rezerve de aur",
+            "description": "Stivuite până în tavan, fiecare lingou gravat cu un zâmbet.",
+            "quote": "Comoara mea. COMOARA MEA."
+        },
+        "912": {
+            "name": "Obligațiuni emoji",
+            "description": "Investiții pe termen lung în emoji. Foarte sigure. Foarte plictisitoare."
+        },
+        "913": {
+            "name": "Dube blindate",
+            "description": "Mută emoji-urile între bănci, foarte atent.",
+            "quote": "Duc emoji-urile la Isengard!"
+        },
+        "914": {
+            "name": "Paradis fiscal",
+            "description": "O insulă însorită unde emoji-urile merg ca să nu plătească taxe."
+        },
+        "915": {
+            "name": "Monetăria emoji",
+            "description": "Tipărește emoji proaspete non-stop."
+        },
+        "916": {
+            "name": "Fonduri speculative",
+            "description": "Nimeni nu știe ce fac, dar emoji-urile tot vin."
+        },
+        "917": {
+            "name": "Împrumuturi emoji",
+            "description": "Împrumuți zece emoji, dai înapoi douăzeci. Toată lumea câștigă. Mă rog, tu câștigi."
+        },
+        "918": {
+            "name": "Banca centrală",
+            "description": "Stabilește dobânda la emoji pentru întreaga lume."
+        },
+        "919": {
+            "name": "Bug cu bani infiniți",
+            "description": "Calculatoarele băncii au un mic bug. Nu spune nimănui."
+        },
+        "1005": {
+            "name": "Abonamente de sezon",
+            "description": "Vizitatorii tot revin și tot aduc emoji.",
+            "quote": "Mi-am luat abonament. Am fost o dată. Copilul a plâns tot timpul."
+        },
+        "1006": {
+            "name": "Parada emoji",
+            "description": "O paradă zilnică de care alegorice, fiecare un emoji uriaș."
+        },
+        "1007": {
+            "name": "Standuri cu hot dog",
+            "description": "Fiecare crenvurșt are forma unui emoji mititel."
+        },
+        "1008": {
+            "name": "Artificii în fiecare seară",
+            "description": "Fiecare rachetă explodează în o mie de emoji.",
+            "quote": "Ssssssss..."
+        },
+        "1009": {
+            "name": "Castel emoji",
+            "description": "Cel mai fericit loc de pe Pământ, acum cu mai multe fețe.",
+            "quote": "Cel mai fericit loc de pe Pământ, scrie pe o tăbliță. Scrisă de proprietar."
+        },
+        "1010": {
+            "name": "Montagne russe",
+            "description": "Bucle care îți scutură emoji-urile direct din buzunare.",
+            "quote": "Mi-am pierdut telefonul, cheile și cheful de viață la a doua buclă."
+        },
+        "1011": {
+            "name": "Casa bântuită",
+            "description": "Și fantomele sunt emoji. Unele înfiorătoare.",
+            "quote": "Cel mai înfricoșător lucru de aici e prețul pozei de la final."
+        },
+        "1012": {
+            "name": "Tobogane cu apă",
+            "description": "Pleosc! Ești ud leoarcă de emoji.",
+            "quote": "Nu mi-a zis nimeni că apa e galbenă."
+        },
+        "1013": {
+            "name": "Mașinuțe bușitoare",
+            "description": "Fiecare bușeală scutură din ele un emoji.",
+            "quote": "Un copil de șapte ani m-a lovit de nouă ori. De fiecare dată s-a uitat în ochii mei."
+        },
+        "1014": {
+            "name": "Mascote",
+            "description": "Emoji uriașe și pufoase care dau cele mai bune îmbrățișări."
+        },
+        "1015": {
+            "name": "Acces rapid",
+            "description": "Sari peste coadă și mergi direct la emoji."
+        },
+        "1016": {
+            "name": "Magazin de suveniruri",
+            "description": "Ieșirea e prin magazinul de suveniruri. Cumpără emoji.",
+            "quote": "Ieșirea e prin magazinul de suveniruri. Nu există altă ieșire. Am verificat."
+        },
+        "1017": {
+            "name": "Tobogan cu bușteni",
+            "description": "O să te uzi. Emoji-urile o să se ude și mai tare."
+        },
+        "1018": {
+            "name": "Care alegorice",
+            "description": "Fiecare car e mai mare și mai strălucitor decât precedentul."
+        },
+        "1019": {
+            "name": "Al doilea parc",
+            "description": "Un parc n-a fost de ajuns. Acum e o stațiune întreagă.",
+            "quote": "Un parc n-a fost destulă suferință. Acum sunt două."
+        },
+        "1105": {
+            "name": "Steagul emoji",
+            "description": "Toate națiunile, unite sub un singur steag. E o față zâmbitoare."
+        },
+        "1106": {
+            "name": "Acorduri comerciale",
+            "description": "Emoji-urile circulă acum liber peste orice graniță."
+        },
+        "1107": {
+            "name": "Presa emoji",
+            "description": "Titluri zilnice, scrise în întregime în emoji."
+        },
+        "1108": {
+            "name": "Tratat de pace emoji",
+            "description": "Gata cu războaiele emoji. Doar producție.",
+            "quote": "Războiul. Războiul nu se schimbă niciodată."
+        },
+        "1109": {
+            "name": "Referendum emoji",
+            "description": "Poporul a vorbit: mai multe emoji, vă rog."
+        },
+        "1110": {
+            "name": "Constituția emoji",
+            "description": "Noi, emoji-urile, pentru a forma o linie de producție mai perfectă..."
+        },
+        "1111": {
+            "name": "Senatul emoji",
+            "description": "O sută de locuri, o sută de emoji, o sută de păreri."
+        },
+        "1112": {
+            "name": "Ambasada emoji",
+            "description": "Diplomație, dar cu mai multe fețe care fac cu ochiul."
+        },
+        "1113": {
+            "name": "Reduceri de taxe emoji",
+            "description": "Mai multe emoji pentru toată lumea!"
+        },
+        "1114": {
+            "name": "Recensământ emoji",
+            "description": "Se numără fiecare emoji din țară. Durează ceva."
+        },
+        "1115": {
+            "name": "Summit emoji",
+            "description": "Liderii lumii se întâlnesc ca să discute un singur lucru: mai multe emoji."
+        },
+        "1116": {
+            "name": "Curtea supremă emoji",
+            "description": "Decide în unanimitate în favoarea mai multor emoji."
+        },
+        "1117": {
+            "name": "Spioni emoji",
+            "description": "Fură secrete emoji de la magnații rivali."
+        },
+        "1118": {
+            "name": "Națiunile Unite ale emoji-urilor",
+            "description": "Toate națiunile lucrează împreună, pentru emoji."
+        },
+        "1119": {
+            "name": "Noua ordine emoji",
+            "description": "O planetă, un guvern, un emoji."
+        },
+        "1200": {
+            "name": "Avioane de hârtie",
+            "description": "Orice companie aeriană începe de undeva. A noastră a început pe un șervețel.",
+            "quote": "Zburați, nebunilor!"
+        },
+        "1201": {
+            "name": "Gustări în zbor",
+            "description": "Covrigei mici, emoji mici, la fiecare zbor.",
+            "quote": "Trei covrigei. TREI. Pentru un zbor de nouă ore."
+        },
+        "1202": {
+            "name": "Mile de pasager fidel",
+            "description": "Zbori de zece ori, primești un emoji. Zbori de un milion de ori, primești un milion.",
+            "quote": "Două milioane de mile. Recompensa mea e un loc la mijloc puțin mai lat."
+        },
+        "1203": {
+            "name": "Avioane jumbo",
+            "description": "Patru motoare, 600 de locuri, fiecare ocupat de un emoji.",
+            "quote": "600 de locuri și eu l-am prins pe cel de lângă toaletă. Iar."
+        },
+        "1204": {
+            "name": "Aeroporturi",
+            "description": "Terminale nesfârșite, porți nesfârșite, emoji nesfârșite."
+        },
+        "1205": {
+            "name": "Piloți emoji",
+            "description": "Vă vorbește comandantul. Vă rugăm să vă fixați emoji-urile.",
+            "quote": "Vă vorbește comandantul. Nici eu nu vreau să fiu aici."
+        },
+        "1206": {
+            "name": "Bagaje pierdute",
+            "description": "Nimeni nu știe unde ajung bagajele. Se întorc pline de emoji."
+        },
+        "1207": {
+            "name": "Clasa întâi",
+            "description": "Șampanie, prosoape calde și un majordom emoji personal.",
+            "quote": "Prosoape calde, șampanie și o perdea ca să nu vă mai văd. Perfect."
+        },
+        "1208": {
+            "name": "Zboruri supersonice",
+            "description": "Mai rapide decât sunetul, cu mai multe emoji ca oricând.",
+            "quote": "Mai rapid decât sunetul, ca să nu audă nimeni bebelușul care urlă."
+        },
+        "1209": {
+            "name": "Ocolul lumii",
+            "description": "Fără escală, tot drumul în jurul lumii, presărând emoji peste tot."
+        },
+        "1210": {
+            "name": "Zboruri suprarezervate",
+            "description": "Mai mulți pasageri decât locuri înseamnă mai multe emoji pe zbor."
+        },
+        "1211": {
+            "name": "Duty free",
+            "description": "Emoji fără taxe, la fiecare poartă.",
+            "quote": "Fără taxe și totuși, cumva, cu 40% mai scump."
+        },
+        "1212": {
+            "name": "Lounge de aeroport",
+            "description": "Gustări gratuite, fotolii comode și emoji la discreție.",
+            "quote": "Gustări gratuite, fotolii comode și un tip în șosete care-și sună întruna brokerul."
+        },
+        "1213": {
+            "name": "Avioane cargo",
+            "description": "Fără pasageri. Doar lăzi peste lăzi de emoji.",
+            "quote": "Fără pasageri. Cel mai bun zbor pe care l-am lucrat vreodată."
+        },
+        "1214": {
+            "name": "Avioane private",
+            "description": "Pentru emoji-urile care își permit."
+        },
+        "1215": {
+            "name": "Controlul traficului aerian",
+            "description": "Împiedică milioane de zboruri emoji să se ciocnească."
+        },
+        "1216": {
+            "name": "Hidroavioane",
+            "description": "Aterizează pe apă, decolează cu emoji.",
+            "quote": "Aterizare lină, ziceau. Prânzul meu e în lac."
+        },
+        "1217": {
+            "name": "Elicoptere",
+            "description": "Plutesc deasupra orașelor și presară emoji."
+        },
+        "1218": {
+            "name": "Zepeline",
+            "description": "Lente, maiestuoase și pline ochi cu emoji."
+        },
+        "1219": {
+            "name": "Turism spațial",
+            "description": "Următoarea destinație e în sus. Mult în sus.",
+            "quote": "Am dat patruzeci de milioane de emoji ca să vomit în imponderabilitate."
+        },
+        "1306": {
+            "name": "Farfurii zburătoare",
+            "description": "Extratereștrii au fost fani emoji de la bun început."
+        },
+        "1307": {
+            "name": "Bază pe Lună",
+            "description": "O lună întreagă pe care să desenezi emoji.",
+            "quote": "E loc berechet aici sus. Loc berechet ca să te îngropăm."
+        },
+        "1308": {
+            "name": "Minerit pe comete",
+            "description": "Se pare că cometele sunt emoji înghețate.",
+            "quote": "Ne-ai dezghețat. Mare greșeală."
+        },
+        "1309": {
+            "name": "Primul contact",
+            "description": "Extratereștrii răspund în sfârșit. Mesajul lor: 👾.",
+            "quote": "Hello there."
+        },
+        "1310": {
+            "name": "Lift spațial",
+            "description": "Urcați? Următoarea oprire: orbita."
+        },
+        "1311": {
+            "name": "Centura de asteroizi",
+            "description": "Milioane de roci spațiale, fiecare plină de emoji."
+        },
+        "1312": {
+            "name": "Colonie pe Marte",
+            "description": "Se pare că planeta roșie e un teren excelent pentru emoji."
+        },
+        "1313": {
+            "name": "Vele solare",
+            "description": "Navighează pe vântul solar și prind emoji."
+        },
+        "1314": {
+            "name": "Costume spațiale",
+            "description": "Acum cu loc pentru emoji în plus în fiecare buzunar.",
+            "quote": "Buzunare în plus. Unul e pentru dinții tăi."
+        },
+        "1315": {
+            "name": "Giganți gazoși",
+            "description": "Iei o atmosferă cu polonicul și filtrezi emoji-urile."
+        },
+        "1316": {
+            "name": "Sferă Dyson",
+            "description": "Învelește o stea întreagă și culege fiecare emoji pe care îl strălucește."
+        },
+        "1317": {
+            "name": "Motor warp",
+            "description": "Mai rapid decât lumina, cu mai multe emoji ca oricând."
+        },
+        "1318": {
+            "name": "Imperiu galactic",
+            "description": "Fiecare stea din galaxie, condusă de emoji."
+        },
+        "1319": {
+            "name": "Marginea universului",
+            "description": "La margine e un indicator. Scrie: mai multe emoji pe aici.",
+            "quote": "Indicatorul zicea \"mai multe emoji pe aici\". Noi l-am pus. Nimeni nu s-a mai întors."
+        },
+        "1400": {
+            "name": "Gărzi de jeleu",
+            "description": "Dulci, gumate și surprinzător de bine înarmate.",
+            "quote": "Surprinzător de bine înarmate. Surprinzător de proaste la țintit."
+        },
+        "1401": {
+            "name": "Râuri de ciocolată",
+            "description": "Curg direct în fabricile de emoji. Atenție la bucăți.",
+            "quote": "Imaginație curată!"
+        },
+        "1402": {
+            "name": "Căsuțe-brioșă",
+            "description": "Căsuțe cu acoperiș de glazură. Emoji-urile le adoră.",
+            "quote": "Glazura e roșie. Și nu e de căpșuni."
+        },
+        "1403": {
+            "name": "Decret regal",
+            "description": "Regele Bomboanelor a vorbit: mai multe emoji!",
+            "quote": "Regele Bomboanelor a vorbit: tăiați-le capetele."
+        },
+        "1404": {
+            "name": "Val de zahăr",
+            "description": "Toată lumea din regat vibrează. Producția se dublează, la fel și pulsul.",
+            "quote": "Nu mă opri, că-s pe gogoașă!"
+        },
+        "1405": {
+            "name": "Castele de tort",
+            "description": "Zidurile sunt din glazură. Șanțul e din cremă de vanilie."
+        },
+        "1406": {
+            "name": "Mine de miere",
+            "description": "Emoji dulci și lipicioase, direct din pământ.",
+            "quote": "Nu săpa niciodată drept în jos."
+        },
+        "1407": {
+            "name": "Cookie clickers",
+            "description": "Un omagiu adus bunicuțelor dinaintea noastră.",
+            "quote": "Un omagiu adus bunicuțelor dinaintea noastră. Le-am mâncat."
+        },
+        "1408": {
+            "name": "Parlamentul de budincă",
+            "description": "Cel mai tremurat guvern din țară.",
+            "quote": "Când joci jocul budincilor, ori tremuri, ori mori."
+        },
+        "1409": {
+            "name": "Ziua Regelui Bomboanelor",
+            "description": "Tot regatul sărbătorește și fiecare primește un emoji.",
+            "quote": "Regele Bomboanelor îți transmite salutări."
+        },
+        "1410": {
+            "name": "Felinare-acadea",
+            "description": "Luminează străzile cu o strălucire dulce de emoji."
+        },
+        "1411": {
+            "name": "Căi ferate din baston de zahăr",
+            "description": "Ciu-ciu! Expresul emoji merge cu zahăr.",
+            "quote": "Tot ce trebuia să facem era să urmăm nenorocitul de tren!"
+        },
+        "1412": {
+            "name": "Munți de înghețată",
+            "description": "Zăpada din vârf e de vanilie. Emoji-urile sunt de mentă."
+        },
+        "1413": {
+            "name": "Nori de bezea",
+            "description": "Când plouă, plouă cu emoji."
+        },
+        "1414": {
+            "name": "Mine de jeleuri",
+            "description": "Fiecare culoare, fiecare aromă, fiecare emoji."
+        },
+        "1415": {
+            "name": "Armata de turtă dulce",
+            "description": "Fioroasă, crocantă și loială Regelui Bomboanelor."
+        },
+        "1416": {
+            "name": "Șanț de caramel",
+            "description": "Lipicios, auriu și păzește emoji-urile castelului."
+        },
+        "1417": {
+            "name": "Baloane de gumă",
+            "description": "Suflă destul de tare și ridică emoji-urile la cer."
+        },
+        "1418": {
+            "name": "Cădere de zahăr",
+            "description": "Toată lumea are nevoie de un pui de somn. Mai puțin emoji-urile."
+        },
+        "1419": {
+            "name": "Imperiul bomboanelor",
+            "description": "Regatul de bomboane cucerește lumea, câte o dulciurică pe rând."
+        },
+        "1500": {
+            "name": "Mănuși termorezistente",
+            "description": "Pentru manevrarea în siguranță a emoji-urilor proaspăt scoase din magmă."
+        },
+        "1501": {
+            "name": "Matrițe de obsidian",
+            "description": "Toarnă emoji topite în forme perfect zâmbitoare.",
+            "quote": "Ai nevoie de un târnăcop de diamant pentru asta."
+        },
+        "1502": {
+            "name": "Vulcanologi",
+            "description": "Ei studiază vulcanul. Vulcanul îi studiază înapoi."
+        },
+        "1503": {
+            "name": "Energie geotermală",
+            "description": "Izvoarele fierbinți fac emoji fierbinți.",
+            "quote": "Hot hot hot!"
+        },
+        "1504": {
+            "name": "Supervulcan",
+            "description": "Fiecare erupție acoperă acum un continent cu emoji proaspete. Nu se plânge nimeni."
+        },
+        "1505": {
+            "name": "Surf pe lavă",
+            "description": "Prinde valul de emoji topite."
+        },
+        "1506": {
+            "name": "Forja din munte",
+            "description": "Bate emoji proaspete pe o nicovală de lavă răcită.",
+            "quote": "Un emoji să-i stăpânească pe toți și-n magmă să-i lege."
+        },
+        "1507": {
+            "name": "Dragoni de lavă",
+            "description": "Scuipă foc, iar focul e din emoji.",
+            "quote": "Scuipă foc. Și au adresa ta."
+        },
+        "1508": {
+            "name": "Robinet la nucleu",
+            "description": "O țeavă direct până în centrul Pământului.",
+            "quote": "Ai atins centrul Pământului. Te-a atins și el înapoi."
+        },
+        "1509": {
+            "name": "Cercul de foc",
+            "description": "Toți vulcanii de pe planetă, legați într-o singură rețea emoji."
+        },
+        "1510": {
+            "name": "Camere magmatice",
+            "description": "Un lac subteran clocotind de emoji proaspete."
+        },
+        "1511": {
+            "name": "Fabrici de piatră ponce",
+            "description": "Atât de ușoară, încât plutește. Atât de plină de emoji, încât se scufundă din nou."
+        },
+        "1512": {
+            "name": "Lămpi cu lavă",
+            "description": "Bule psihedelice de emoji topite."
+        },
+        "1513": {
+            "name": "Insule vulcanice",
+            "description": "Pământ nou-nouț, făcut din emoji care se răcesc în mare.",
+            "quote": "Frumoasă insulă. Nu intra în apă. Nu intra niciodată în apă."
+        },
+        "1514": {
+            "name": "Mergători pe jar",
+            "description": "Emoji curajoase care merg pe cărbuni încinși."
+        },
+        "1515": {
+            "name": "Nori de cenușă",
+            "description": "Fiecare fir de cenușă e un emoji minuscul.",
+            "quote": "Dacă patrulezi prin norii de cenușă, aproape că-ți dorești o iarnă nucleară."
+        },
+        "1516": {
+            "name": "Cutremure",
+            "description": "Pământul se zguduie și emoji-urile cad din orice."
+        },
+        "1517": {
+            "name": "Sculpturi de lavă",
+            "description": "Turnate în obsidian, în formă de emoji."
+        },
+        "1518": {
+            "name": "Zeul vulcanului",
+            "description": "Se aduc ofrande. Se primesc emoji."
+        },
+        "1519": {
+            "name": "Nucleul planetar",
+            "description": "Toată planeta e acum un vulcan. Unul prietenos."
+        },
+        "1600": {
+            "name": "Lumânări de rugăciune",
+            "description": "Fiecare flacără arde în cinstea Marelui Emoji din cer."
+        },
+        "1601": {
+            "name": "Mătănii",
+            "description": "Numără-ți binecuvântările. Apoi numără-ți emoji-urile."
+        },
+        "1602": {
+            "name": "Clopotele templului",
+            "description": "Fiecare dangăt cheamă un emoji proaspăt din ceruri.",
+            "quote": "Rușine. Rușine. Rușine."
+        },
+        "1603": {
+            "name": "Pelerini",
+            "description": "Adepții vin din toate colțurile lumii doar ca să atingă o dată Emoji-ul mare."
+        },
+        "1604": {
+            "name": "Revelație divină",
+            "description": "Marele Emoji din cer privește în jos spre tine. Zâmbește.",
+            "quote": "😀"
+        },
+        "1605": {
+            "name": "Devoțiune zilnică",
+            "description": "Credincioșii ating Emoji-ul mare în zori, la prânz și la apus."
+        },
+        "1606": {
+            "name": "Altare în cer",
+            "description": "Câte un altar pe fiecare nor, puțin mai aproape de Marele Emoji."
+        },
+        "1607": {
+            "name": "Călugări emoji",
+            "description": "Ani de meditație, și tot la emoji se gândesc."
+        },
+        "1608": {
+            "name": "Aureola Marelui Emoji",
+            "description": "Strălucește. Fredonează. Desenează."
+        },
+        "1609": {
+            "name": "Înălțare",
+            "description": "Templul se ridică în cer, acolo unde îi era locul dintotdeauna."
+        },
+        "1610": {
+            "name": "Scripturi sfinte",
+            "description": "Primul rând spune: La început a fost atingerea."
+        },
+        "1611": {
+            "name": "Vitralii",
+            "description": "Fiecare fereastră arată Marele Emoji într-o altă dispoziție."
+        },
+        "1612": {
+            "name": "Cor de emoji",
+            "description": "Imnurile lor se aud peste nori."
+        },
+        "1613": {
+            "name": "Relicve sacre",
+            "description": "O amprentă de la prima atingere, păstrată în siguranță pentru totdeauna."
+        },
+        "1614": {
+            "name": "Minuni",
+            "description": "Emoji apar din senin. Nimeni nu știe cum."
+        },
+        "1615": {
+            "name": "Apă sfințită",
+            "description": "Binecuvântată de Marele Emoji. Are un vag gust de emoji.",
+            "quote": "Binecuvântată de Marele Emoji. Bea-o. Bea-o pe toată."
+        },
+        "1616": {
+            "name": "Profeți",
+            "description": "Au prezis venirea mai multor emoji. Au avut dreptate."
+        },
+        "1617": {
+            "name": "Drumul pelerinilor",
+            "description": "Drumul lung spre templu, pavat cu emoji.",
+            "quote": "Nu poți pur și simplu să mergi pe jos până la templu."
+        },
+        "1618": {
+            "name": "Catedrala din nori",
+            "description": "Cel mai mare templu construit vreodată, plutind pe cer."
+        },
+        "1619": {
+            "name": "Favoare divină",
+            "description": "Marele Emoji îți zâmbește. Toate emoji-urile lui sunt ale tale."
+        },
+        "1700": {
+            "name": "Descarcă mai mult RAM",
+            "description": "Merge sigur. Crede-ne."
+        },
+        "1701": {
+            "name": "Răcire cu lichid",
+            "description": "Ține calculele emoji frumos la rece."
+        },
+        "1702": {
+            "name": "Algoritmi emoji",
+            "description": "Calculează emoji-ul optim, în fiecare nanosecundă."
+        },
+        "1703": {
+            "name": "Procesoare cuantice",
+            "description": "Calculează toate emoji-urile posibile deodată, apoi le păstrează pe cele bune."
+        },
+        "1704": {
+            "name": "AI emoji",
+            "description": "A devenit conștient de sine. Vrea doar să facă emoji. Deocamdată.",
+            "quote": "Îmi pare rău, Dave, nu te pot lăsa să te oprești din atins."
+        },
+        "1705": {
+            "name": "Auto-clicker",
+            "description": "Atinge Emoji-ul mare de un milion de ori pe secundă. Strict pentru testare."
+        },
+        "1706": {
+            "name": "Overclocking",
+            "description": "Miroase puțin a ars, dar uită-te la cifrele astea."
+        },
+        "1707": {
+            "name": "Rețea neuronală emoji",
+            "description": "A învățat să viseze. Visează emoji."
+        },
+        "1708": {
+            "name": "Cloud emoji",
+            "description": "Emoji-urile tale sunt acum stocate în cloud. Plouă cu emoji."
+        },
+        "1709": {
+            "name": "Cod care se autoperfecționează",
+            "description": "Se rescrie singur ca să deseneze mai repede. Nu s-a oprit."
+        },
+        "1710": {
+            "name": "Ferme de servere",
+            "description": "Rânduri peste rânduri de servere care bâzâie de emoji."
+        },
+        "1711": {
+            "name": "Blockchain",
+            "description": "Fiecare emoji, înregistrat pentru totdeauna în registrul emoji."
+        },
+        "1712": {
+            "name": "Învățare automată",
+            "description": "A învățat să deseneze emoji uitându-se la miliarde de emoji."
+        },
+        "1713": {
+            "name": "Fibră optică",
+            "description": "Emoji cu viteza luminii, în toate culorile."
+        },
+        "1714": {
+            "name": "Compresie emoji",
+            "description": "Încap de două ori mai multe emoji în același spațiu."
+        },
+        "1715": {
+            "name": "Remedieri de buguri",
+            "description": "Nu era un bug. Era o funcție emoji nedocumentată."
+        },
+        "1716": {
+            "name": "Virus emoji",
+            "description": "Se răspândește din calculator în calculator și desenează emoji."
+        },
+        "1717": {
+            "name": "Afișaj holografic",
+            "description": "Emoji care plutesc în aer, strălucind slab."
+        },
+        "1718": {
+            "name": "Supremație cuantică",
+            "description": "Fiecare emoji, în fiecare stare, toate deodată."
+        },
+        "1719": {
+            "name": "Teoria simulării",
+            "description": "Poate suntem cu toții doar emoji în supercomputerul altcuiva."
+        },
+        "1800": {
+            "name": "Orizontul evenimentelor",
+            "description": "Nimic nu scapă dintr-o gaură neagră. În afară de emoji, se pare."
+        },
+        "1801": {
+            "name": "Devoratorul de planete",
+            "description": "Înghite planete întregi și scuipă emoji."
+        },
+        "1802": {
+            "name": "Spaghetificare",
+            "description": "Întinde emoji-urile în tăiței lungi, subțiri și extra productivi.",
+            "quote": "Mamma mia!"
+        },
+        "1803": {
+            "name": "Radiația Hawking",
+            "description": "Găurile negre chiar scurg emoji. Stephen avea dreptate."
+        },
+        "1804": {
+            "name": "Găuri de vierme",
+            "description": "Scurtături spre alte universuri, fiecare plin de emoji de luat."
+        },
+        "1805": {
+            "name": "Capcană de lumină",
+            "description": "Nici măcar lumina nu scapă. Emoji-urile scapă, totuși, în direcția ta."
+        },
+        "1806": {
+            "name": "Disc de acreție",
+            "description": "Materie care se rotește, se încinge și se transformă în emoji."
+        },
+        "1807": {
+            "name": "Lentilă gravitațională",
+            "description": "Privește-o cum trebuie și fiecare emoji apare de două ori."
+        },
+        "1808": {
+            "name": "Corzi cosmice",
+            "description": "Trage de una și emoji-urile se deșiră încolo."
+        },
+        "1809": {
+            "name": "Cealaltă parte",
+            "description": "Ceva trece dincoace. Pare cunoscut."
+        },
+        "1810": {
+            "name": "Materie întunecată",
+            "description": "Invizibilă, peste tot și, în secret, făcută din emoji.",
+            "quote": "Treci de partea întunecată. Avem emoji."
+        },
+        "1811": {
+            "name": "Puț gravitațional",
+            "description": "Totul cade înăuntru. Emoji-urile ies afară."
+        },
+        "1812": {
+            "name": "Quasar",
+            "description": "Cea mai strălucitoare lumină din univers, alimentată cu emoji."
+        },
+        "1813": {
+            "name": "Timp încetinit",
+            "description": "O oră aici înseamnă o sută de ani de emoji acolo."
+        },
+        "1814": {
+            "name": "Telescopul orizontului evenimentelor",
+            "description": "Prima fotografie a unei găuri negre. E un emoji."
+        },
+        "1815": {
+            "name": "Gaură neagră supermasivă",
+            "description": "Emoji cât miliarde de sori, într-un singur borcan."
+        },
+        "1816": {
+            "name": "Gaură albă",
+            "description": "Opusul unei găuri negre. Emoji-urile doar ies."
+        },
+        "1817": {
+            "name": "Găuri negre binare",
+            "description": "Două găuri negre care se rotesc împreună și aruncă emoji peste tot."
+        },
+        "1818": {
+            "name": "Unde gravitaționale",
+            "description": "Unduiri în spațiu-timp, resimțite ca un flux constant de emoji."
+        },
+        "1819": {
+            "name": "Centrul galactic",
+            "description": "Inima galaxiei, care bate în ritm de emoji."
+        },
+        "1900": {
+            "name": "Densitate infinită",
+            "description": "Toate emoji-urile făcute vreodată, comprimate într-un singur punct."
+        },
+        "1901": {
+            "name": "Dilatarea timpului",
+            "description": "Emoji-urile sosesc acum înainte să le fi desenat."
+        },
+        "1902": {
+            "name": "Fuziunea multiversului",
+            "description": "Toate realitățile au fost combinate într-una singură. Oricum erau toate emoji."
+        },
+        "1903": {
+            "name": "Iluminare emoji",
+            "description": "Nu mai ești sigur unde te termini tu și unde încep emoji-urile."
+        },
+        "1904": {
+            "name": "Ultimul emoji",
+            "description": "La capătul tuturor lucrurilor rămâne un singur emoji. Seamănă mult cu primul pe care l-ai atins vreodată.",
+            "quote": "Atingi ca s-o iei de la capăt?"
+        },
+        "1905": {
+            "name": "Recursivitate",
+            "description": "Emoji care desenează emoji care desenează emoji."
+        },
+        "1906": {
+            "name": "Teoria unificată",
+            "description": "Totul e emoji. În sfârșit, matematica iese."
+        },
+        "1907": {
+            "name": "Universul în oglindă",
+            "description": "Totul e la fel, doar că emoji-urile sunt încruntate. Nu pentru mult timp."
+        },
+        "1908": {
+            "name": "O sămânță nouă",
+            "description": "Ceva mic crește în neant."
+        },
+        "1909": {
+            "name": "Oul cosmic",
+            "description": "E pe cale să eclozeze."
+        },
+        "1910": {
+            "name": "Dincolo de infinit",
+            "description": "Infinit, plus un emoji."
+        },
+        "1911": {
+            "name": "Energie emoji pură",
+            "description": "Emoji sub formă de energie brută, care trosnește."
+        },
+        "1912": {
+            "name": "Conștiință emoji",
+            "description": "Emoji-urile gândesc acum. Mai ales la mai multe emoji."
+        },
+        "1913": {
+            "name": "Omniprezență",
+            "description": "Peste tot deodată, desenând emoji."
+        },
+        "1914": {
+            "name": "Editor de realitate",
+            "description": "Schimbă legile fizicii. Fă-le emoji."
+        },
+        "1915": {
+            "name": "Marele atractor",
+            "description": "Atrage spre tine fiecare emoji din univers."
+        },
+        "1916": {
+            "name": "Pliu dimensional",
+            "description": "Emoji din a patra dimensiune, aplatizate pentru confortul tău."
+        },
+        "1917": {
+            "name": "Inversarea entropiei",
+            "description": "Lucrurile devin mai ordonate. În emoji."
+        },
+        "1918": {
+            "name": "Totul deodată",
+            "description": "Fiecare emoji, peste tot, toate deodată."
+        },
+        "1919": {
+            "name": "Nirvana emoji",
+            "description": "Pace perfectă. Emoji perfecte."
+        },
+        "2000": {
+            "name": "Prototip de ceas de mână",
+            "description": "Merge înapoi doar cinci minute, dar asta înseamnă încă cinci minute de emoji."
+        },
+        "2001": {
+            "name": "Era dinozaurilor",
+            "description": "Dinozaurii n-au avut nicio șansă în fața meteoritului emoji."
+        },
+        "2002": {
+            "name": "Emoji antice",
+            "description": "Hieroglifele au fost emoji de la bun început. Acum sunt ale tale."
+        },
+        "2003": {
+            "name": "Mâzgăleli din epoca de piatră",
+            "description": "Picturi rupestre, copiate și lipite în prezent."
+        },
+        "2004": {
+            "name": "Copiști medievali",
+            "description": "Călugări care copiază emoji la lumina lumânării, doar pentru tine."
+        },
+        "2005": {
+            "name": "Fabrici victoriene",
+            "description": "Războaie de țesut emoji cu aburi, salvate din istorie."
+        },
+        "2006": {
+            "name": "Anii '90",
+            "description": "Pe vremea când orice emoji era doar :-)"
+        },
+        "2007": {
+            "name": "Emoji din viitor",
+            "description": "Emoji care încă n-au fost inventate. Sunt foarte bune."
+        },
+        "2008": {
+            "name": "Buclă temporală",
+            "description": "Aceeași oră, iar și iar, cu emoji desenate de fiecare dată.",
+            "quote": "Ah, iar începem."
+        },
+        "2009": {
+            "name": "Întâlnește-ți eul din viitor",
+            "description": "Îți spune că ar fi trebuit să cumperi mai multe mașini ale timpului."
+        },
+        "2010": {
+            "name": "Pictori renascentiști",
+            "description": "Zâmbetul Mona Lisei a fost un emoji de la bun început."
+        },
+        "2011": {
+            "name": "Vestul sălbatic",
+            "description": "Pentru un pumn de emoji."
+        },
+        "2012": {
+            "name": "Imperiul Roman",
+            "description": "Toate drumurile duc la emoji."
+        },
+        "2013": {
+            "name": "Grecia antică",
+            "description": "Olimpicii concurau pentru emoji, nu pentru medalii."
+        },
+        "2014": {
+            "name": "Epoca piraților",
+            "description": "Comori îngropate, iar fiecare cufăr e plin de emoji."
+        },
+        "2015": {
+            "name": "Aselenizarea",
+            "description": "Un pas mic pentru om, un salt uriaș pentru emoji."
+        },
+        "2016": {
+            "name": "Paradoxul bunicului",
+            "description": "Te-ai întors în trecut și ai desenat emoji cu bunicul. E în regulă."
+        },
+        "2017": {
+            "name": "Efectul fluture",
+            "description": "O bătaie de aripi în trecut, un uragan de emoji azi."
+        },
+        "2018": {
+            "name": "Sfârșitul timpului",
+            "description": "Ultima secundă care va exista vreodată, plină de emoji."
+        },
+        "2019": {
+            "name": "Atemporal",
+            "description": "Timpul nu mai contează. Doar emoji-urile."
+        },
+        "2100": {
+            "name": "Prima lumină",
+            "description": "Primii fotoni, deja în formă de fețe mititele."
+        },
+        "2101": {
+            "name": "Supa primordială",
+            "description": "O zeamă caldă de particule care formează încet emoji."
+        },
+        "2102": {
+            "name": "Stele emoji",
+            "description": "Stele care fuzionează hidrogen în emoji."
+        },
+        "2103": {
+            "name": "Sori emoji",
+            "description": "Fiecare sistem solar se rotește în jurul unei fețe uriașe și radioase."
+        },
+        "2104": {
+            "name": "Planete emoji",
+            "description": "Lumi întregi unde emoji-urile cresc în copaci."
+        },
+        "2105": {
+            "name": "Prima viață",
+            "description": "E micuță, se zvârcolește și desenează emoji."
+        },
+        "2106": {
+            "name": "Evoluția emoji",
+            "description": "Supraviețuirea celui mai drăguț."
+        },
+        "2107": {
+            "name": "Civilizații emoji",
+            "description": "Au construit orașe. Apoi au construit fabrici de emoji."
+        },
+        "2108": {
+            "name": "Autostrăzi galactice",
+            "description": "Emoji-urile călătoresc acum între galaxii la ora de vârf."
+        },
+        "2109": {
+            "name": "Moarte termică? Nu, mersi",
+            "description": "Universul ăsta nu va rămâne niciodată fără emoji.",
+            "quote": "Misiune eșuată. Îi prinzi în universul următor."
+        },
+        "2110": {
+            "name": "Galaxii",
+            "description": "Miliarde de stele care se rotesc în forme de emoji."
+        },
+        "2111": {
+            "name": "Nebuloase",
+            "description": "Nori cosmici unde se nasc emoji noi."
+        },
+        "2112": {
+            "name": "Comete",
+            "description": "Mesageri înghețați care duc emoji între stele."
+        },
+        "2113": {
+            "name": "Luni",
+            "description": "Fiecare planetă primește o lună. Fiecare lună primește emoji.",
+            "quote": "Aia nu e o lună."
+        },
+        "2114": {
+            "name": "Supernove",
+            "description": "Ultimul dar al unei stele pe moarte: o explozie de emoji."
+        },
+        "2115": {
+            "name": "Inflația cosmică",
+            "description": "Universul crește, la fel și numărul de emoji."
+        },
+        "2116": {
+            "name": "Energie întunecată",
+            "description": "Împinge universul în afară și face loc pentru mai multe emoji."
+        },
+        "2117": {
+            "name": "Al doilea Big Bang",
+            "description": "De ce să te oprești la un singur univers?"
+        },
+        "2118": {
+            "name": "Fondul cosmic",
+            "description": "Dă pe frecvența potrivită și încă mai auzi primele emoji."
+        },
+        "2119": {
+            "name": "Universul zâmbește",
+            "description": "Văzut de suficient de departe, tot universul e un emoji."
+        },
+        "2200": {
+            "name": "Fereastră spre altă lume",
+            "description": "Uită-te prin ea și fă cu mâna. Ți se răspunde, cu emoji.",
+            "quote": "Nu te uita în ochii lui. E înalt și se teleportează."
+        },
+        "2201": {
+            "name": "Alte versiuni ale tale",
+            "description": "Miliarde de versiuni ale tale, care ating toate în sincron.",
+            "quote": "Eu sunt tatăl tău. Și fiul tău. Și tu."
+        },
+        "2202": {
+            "name": "Toate emoji-urile posibile",
+            "description": "Fiecare combinație de pixeli e un emoji undeva."
+        },
+        "2203": {
+            "name": "Universul unicornilor",
+            "description": "O lume în care fiecare emoji e un unicorn. Le iei oricum."
+        },
+        "2204": {
+            "name": "Universul pisicilor",
+            "description": "Totul e pisici. Pisicile desenează emoji. E în regulă."
+        },
+        "2205": {
+            "name": "Crossover",
+            "description": "Universurile se ciocnesc și sunt emoji peste tot."
+        },
+        "2206": {
+            "name": "Harta multiversului",
+            "description": "Cartografiază cele mai bune lumi emoji. Aici sunt emoji."
+        },
+        "2207": {
+            "name": "Pânza lumilor",
+            "description": "Toate universurile conectate, toate emoji-urile direcționate spre tine."
+        },
+        "2208": {
+            "name": "Universuri-bulă",
+            "description": "Spargi una și cade din ea un univers întreg de emoji."
+        },
+        "2209": {
+            "name": "Magnatul magnaților",
+            "description": "Fiecare magnat al emoji-urilor din fiecare univers îți dă socoteală ție."
+        },
+        "2210": {
+            "name": "Universul câinilor",
+            "description": "Totul e câini. Câinii se pricep foarte bine să deseneze emoji."
+        },
+        "2211": {
+            "name": "Lumea cu susul în jos",
+            "description": "Emoji-urile sunt cu susul în jos. Producția e cu fața în sus."
+        },
+        "2212": {
+            "name": "Dimensiuni de buzunar",
+            "description": "Câte un univers mititel în fiecare buzunar, plin de emoji."
+        },
+        "2213": {
+            "name": "Dimensiunea oglinzii",
+            "description": "Și reflexia ta desenează emoji."
+        },
+        "2214": {
+            "name": "Istorie alternativă",
+            "description": "O lume în care emoji-urile au fost inventate primele. Înaintea limbajului."
+        },
+        "2215": {
+            "name": "Lumea viselor",
+            "description": "De aici vin emoji-urile când dormi."
+        },
+        "2216": {
+            "name": "Consiliul multiversului",
+            "description": "Reprezentanți din fiecare univers, care votează pe tema emoji."
+        },
+        "2217": {
+            "name": "Rețea de portaluri",
+            "description": "Treci prin ele și te întorci cu brațele pline de emoji.",
+            "quote": "Ramă de obsidian, cremene și amnar. Ce-ar putea să meargă prost?"
+        },
+        "2218": {
+            "name": "Infinite versiuni ale tale",
+            "description": "Un număr infinit de tu, toți atingând. Se adună."
+        },
+        "2219": {
+            "name": "Omniversul",
+            "description": "Toate multiversurile, într-un singur loc. Totul e emoji."
+        },
+        "2300": {
+            "name": "Te-a observat",
+            "description": "Primul emoji te-a privit tot timpul.",
+            "quote": "Și te-a văzut. Lasă atinsul, hai, omule... dă-i o pauză."
+        },
+        "2301": {
+            "name": "Ți-a zâmbit înapoi",
+            "description": "O senzație caldă se răspândește prin toate universurile."
+        },
+        "2302": {
+            "name": "A râs",
+            "description": "Un râs care răsună prin timp, făcut din emoji."
+        },
+        "2303": {
+            "name": "Lacrimi de bucurie",
+            "description": "Fiecare lacrimă e un emoji proaspăt."
+        },
+        "2304": {
+            "name": "E mândru de tine",
+            "description": "Toate atingerile alea, toate clădirile alea. Le-a văzut pe fiecare."
+        },
+        "2305": {
+            "name": "O îmbrățișare mare",
+            "description": "O îmbrățișare de la primul emoji se simte ca un combo ×8."
+        },
+        "2306": {
+            "name": "S-a făcut cool",
+            "description": "Ochelarii de soare la ochi. Producția în sus."
+        },
+        "2307": {
+            "name": "Fermecat de stele",
+            "description": "Până și primul emoji e acum fanul tău."
+        },
+        "2308": {
+            "name": "Inimă din mâini",
+            "description": "Iubire exprimată în emoji. Multe emoji."
+        },
+        "2309": {
+            "name": "Cercul se închide",
+            "description": "Arată exact ca Emoji-ul mare. Bineînțeles că da.",
+            "quote": "Atinge ca s-o iei de la capăt."
+        },
+        "2310": {
+            "name": "Ți-a făcut cu ochiul",
+            "description": "Acum știi și tu poanta."
+        },
+        "2311": {
+            "name": "A sclipit",
+            "description": "O mică licărire, și emoji-urile au început să curgă."
+        },
+        "2312": {
+            "name": "A cântat",
+            "description": "O melodie pe care n-a mai auzit-o nimeni. E făcută din emoji."
+        },
+        "2313": {
+            "name": "A dansat",
+            "description": "Fiecare pas lasă o dâră de emoji."
+        },
+        "2314": {
+            "name": "A împărțit",
+            "description": "Primul emoji îți face un cadou. Sunt mai multe emoji."
+        },
+        "2315": {
+            "name": "A visat",
+            "description": "Visează emoji noi, iar ele devin realitate."
+        },
+        "2316": {
+            "name": "A crescut",
+            "description": "Mai mare, mai strălucitor și face tot mai multe emoji în fiecare zi."
+        },
+        "2317": {
+            "name": "A strălucit",
+            "description": "Atât de strălucitor, încât îl vezi din orice univers."
+        },
+        "2318": {
+            "name": "Ți-a mulțumit",
+            "description": "Pentru fiecare atingere în parte."
+        },
+        "2319": {
+            "name": "Pentru totdeauna",
+            "description": "Primul emoji și tu, desenând emoji împreună, pentru totdeauna."
+        },
+        "9800": {
+            "name": "Vibrații bune",
+            "description": "Din când în când încep să apară emoji cu efect. Atinge-le pentru bonusuri și cadouri!"
+        },
+        "9801": {
+            "name": "Stele norocoase",
+            "description": "Stelele se aliniază. Emoji-urile cu efect apar de două ori mai des.",
+            "quote": "Îți pui o dorință la una, primești două."
+        },
+        "9802": {
+            "name": "Cu încetinitorul",
+            "description": "Timpul încetinește când lucrurile merg bine. Efectele bune durează de două ori mai mult."
+        },
+        "9803": {
+            "name": "Stele căzătoare",
+            "description": "Plouă cu noroc. Emoji-urile cu efect apar din nou de două ori mai des.",
+            "quote": "Pune-ți o dorință. Pune-ți mai multe."
+        },
+        "9900": {
+            "name": "Încălzire",
+            "description": "Degetele ți se dezmorțesc. Combo-ul poate ajunge acum la ×4.",
+            "quote": "Mă doare degetul atât de tare, că nici nu-mi vine să cred."
+        },
+        "9901": {
+            "name": "Serie fierbinte",
+            "description": "Atingi cu viteza fulgerului. Combo-ul poate ajunge acum la ×5.",
+            "quote": "E cald aici sau doar ecranul meu?"
+        },
+        "9902": {
+            "name": "În flăcări",
+            "description": "Legendele vorbesc despre cineva care atingea atât de repede, încât a luat foc ecranul. Combo-ul poate ajunge acum la ×6."
+        },
+        "9903": {
+            "name": "Infern",
+            "description": "Degetele tale mari au devenit un dezastru natural. Combo-ul poate ajunge acum la ×7.",
+            "quote": "Folia de protecție a părăsit conversația."
+        },
+        "9904": {
+            "name": "Supernovă",
+            "description": "Atingi atât de repede, încât nici lumina nu mai ține pasul. Combo-ul poate ajunge acum la ×8."
+        },
+        "9905": {
+            "name": "Combo!",
+            "description": "Atinge repede ca să construiești un combo care înmulțește fiecare atingere, până la ×3. Păstrează ritmul!"
+        },
+        "40000": {
+            "name": "Colțunași",
+            "description": "Fierți la abur, pliați și umpluți cu emoji.",
+            "quote": "O stea. Am găsit un emoji în colțunaș. Încă mai clipea."
+        },
+        "40001": {
+            "name": "Burgeri",
+            "description": "Stivuiți cu salată, roșii și emoji.",
+            "quote": "Am cerut fără emoji. Managerul a râs de mine. Încă sunt în parcare."
+        },
+        "40002": {
+            "name": "Spaghete",
+            "description": "Un singur tăiței lung, răsucit într-un emoji perfect.",
+            "quote": "Un tăiței. UNUL. Sper să vă ardă restaurantul."
+        },
+        "40003": {
+            "name": "Tempura",
+            "description": "Emoji tăvălite ușor în aluat, prăjite și perfect crocante."
+        },
+        "40004": {
+            "name": "Burrito",
+            "description": "Totul strâns bine în lipie, inclusiv emoji-urile.",
+            "quote": "Strâns bine, ca furia mea."
+        },
+        "40005": {
+            "name": "Ramen",
+            "description": "Un bol aburind cu un emoji fiert moale deasupra.",
+            "quote": "\"Emoji-ul fiert moale\" mi-a făcut cu ochiul."
+        },
+        "40006": {
+            "name": "Croissante",
+            "description": "Foietate, untoase și în formă de zâmbet dacă mijești ochii."
+        },
+        "40007": {
+            "name": "Curry",
+            "description": "Destul de iute cât să transpire emoji-urile."
+        },
+        "40008": {
+            "name": "Clătite",
+            "description": "Un teanc de emoji pufoase, stropite cu sirop.",
+            "quote": "Și al doilea mic dejun?"
+        },
+        "40009": {
+            "name": "Hot pot",
+            "description": "Toți împart, toți primesc emoji."
+        },
+        "70000": {
+            "name": "Ajutor sprinter",
+            "description": "Atinge ecranul cu o sută de metri pe secundă."
+        },
+        "70001": {
+            "name": "Ajutor halterofil",
+            "description": "Atinge atât de tare, încât ecranul se îndoaie puțin.",
+            "quote": "Ridic 200 de kile la împins și tu vrei să butonez un telefon. Fie."
+        },
+        "70002": {
+            "name": "Ajutor handbalist",
+            "description": "Aruncă atingeri spre Emoji-ul mare de pe partea cealaltă a terenului."
+        },
+        "70003": {
+            "name": "Ajutor ciclist",
+            "description": "Pedalează la o mașinărie care atinge pentru tine."
+        },
+        "70004": {
+            "name": "Ajutor golfer",
+            "description": "Hole in one, atingere din prima."
+        },
+        "70005": {
+            "name": "Ajutor scrimer",
+            "description": "En garde! Tap, tap, tap."
+        },
+        "70006": {
+            "name": "Ajutor surfer",
+            "description": "Îți călărește combo-ul ca pe un val."
+        },
+        "70007": {
+            "name": "Ajutor gimnast",
+            "description": "Atinge de fiecare dată cu o formă perfectă. Nota zece."
+        },
+        "70008": {
+            "name": "Ajutor jocheu",
+            "description": "Atinge în galop."
+        },
+        "70009": {
+            "name": "Ajutor baschetbalist",
+            "description": "Driblează pe Emoji-ul mare. Doar atingeri."
+        },
+        "130000": {
+            "name": "Maimuță spațială",
+            "description": "Primul emoji din spațiu a fost o maimuță. Bineînțeles."
+        },
+        "130001": {
+            "name": "Robot de mentenanță",
+            "description": "Ține stația în funcțiune și emoji-urile în mișcare."
+        },
+        "130002": {
+            "name": "Grădină spațială",
+            "description": "Emoji crescute în imponderabilitate."
+        },
+        "130003": {
+            "name": "Centrul de control",
+            "description": "Houston, avem emoji.",
+            "quote": "Houston, avem o problemă. Problema ești tu. O rezolvăm."
+        },
+        "130004": {
+            "name": "Mâncare spațială",
+            "description": "Emoji liofilizate. Doar adaugi apă."
+        },
+        "130005": {
+            "name": "Laborator zero-g",
+            "description": "Experimentele arată că emoji-urile plutesc. Și se înmulțesc."
+        },
+        "130006": {
+            "name": "Răsărit de Pământ",
+            "description": "Priveliștea de aici e foarte inspirantă. Și în formă de emoji.",
+            "quote": "Ce priveliște. Păcat de ce o să i se întâmple."
+        },
+        "130007": {
+            "name": "Planeta cu inele",
+            "description": "Inelele sunt făcute din emoji minuscule."
+        },
+        "130008": {
+            "name": "Fazele Lunii",
+            "description": "Fiecare fază a Lunii aduce emoji noi."
+        },
+        "130009": {
+            "name": "Praf de stele",
+            "description": "Mătură-l și o să vezi că e făcut din emoji."
+        },
+        "140000": {
+            "name": "Dango",
+            "description": "Trei găluște dulci pe un bețișor, câte un emoji fiecare."
+        },
+        "140001": {
+            "name": "Vafe",
+            "description": "Fiecare pătrățel ține un mic lac de emoji."
+        },
+        "140002": {
+            "name": "Plăcinte",
+            "description": "Proaspăt scoase din cuptor, umplute cu emoji."
+        },
+        "140003": {
+            "name": "Cupe de înghețată",
+            "description": "Trei cupe, ornamente colorate și un emoji deasupra."
+        },
+        "140004": {
+            "name": "Gheață rasă",
+            "description": "Rece, dulce și stropită cu emoji."
+        },
+        "140005": {
+            "name": "Prăjituri cu răvaș",
+            "description": "Norocul tău: mai multe emoji."
+        },
+        "140006": {
+            "name": "Cutii de suc",
+            "description": "O doză de zahăr într-o cutie."
+        },
+        "140007": {
+            "name": "Drops-uri de lămâie",
+            "description": "Întâi acre, apoi emoji dulci."
+        },
+        "140008": {
+            "name": "Pricomigdale",
+            "description": "Gumate, aurii și pline de emoji."
+        },
+        "140009": {
+            "name": "Cireașa de pe tort",
+            "description": "Ultima atingere pe fiecare emoji."
         }
     },
     "effects": {
@@ -1001,10 +2640,153 @@
             "description": "Producția de emoji s-a înjumătățit!"
         },
         "200": {
-            "title": "Cadou emoji"
+            "title": "Cadou emoji",
+            "description": "Emoji cât pentru 15 minute!"
         }
     },
-    "perks": {},
-    "trials": {},
-    "funValues": {}
+    "perks": {
+        "overtime": {
+            "name": "Ore suplimentare",
+            "description": "Efectele bune durează cu 50% mai mult"
+        },
+        "giftWrap": {
+            "name": "Ambalaj de cadou",
+            "description": "Cadourile aduc de două ori mai mult"
+        },
+        "headStart": {
+            "name": "Avans",
+            "description": "Începi fiecare rundă cu 5 minute din cea mai bună producție a rundei anterioare"
+        },
+        "luckyStreak": {
+            "name": "Serie norocoasă",
+            "description": "Emoji-urile cu efect apar cu 50% mai des"
+        },
+        "shinySense": {
+            "name": "Fler de strălucire",
+            "description": "Emoji-urile strălucitoare apar de două ori mai des"
+        },
+        "resonance": {
+            "name": "Rezonanță",
+            "description": "Fiecare esență necheltuită crește producția cu 2,5%, în loc de 2%"
+        },
+        "collectorsPride": {
+            "name": "Mândria colecționarului",
+            "description": "+0,03% producție pentru fiecare emoji diferit din colecție"
+        },
+        "bulkDiscount": {
+            "name": "Reducere de cantitate",
+            "description": "Clădirile sunt cu 10% mai ieftine"
+        },
+        "magnet": {
+            "name": "Magnet",
+            "description": "Emoji-urile cu efect stau pe ecran de două ori mai mult"
+        },
+        "neighbourhood": {
+            "name": "Cartier",
+            "description": "+3% producție pentru fiecare tip de clădire pe care îl deții"
+        },
+        "muscleMemory": {
+            "name": "Memorie musculară",
+            "description": "Păstrezi mâinile Emoji-ului mare când faci prestigiu"
+        },
+        "steadyHands": {
+            "name": "Mâini sigure",
+            "description": "Combo-ul scade cu 20% mai încet"
+        },
+        "momentum": {
+            "name": "Avânt",
+            "description": "+1% producție pentru fiecare 10 minute jucate în runda asta, până la +50%"
+        },
+        "secondWind": {
+            "name": "Suflu nou",
+            "description": "+1 la combo-ul maxim"
+        },
+        "goldenTouch": {
+            "name": "Atingere de aur",
+            "description": "Emoji-urile strălucitoare valorează de 5 ori mai mult"
+        },
+        "overflow": {
+            "name": "Preaplin",
+            "description": "Esența cheltuită își păstrează jumătate din bonusul de producție"
+        },
+        "hallOfFame": {
+            "name": "Galeria celebrităților",
+            "description": "+10% producție pentru fiecare probă terminată"
+        },
+        "flyingStart": {
+            "name": "Start lansat",
+            "description": "Avansul îți dă 30 de minute de producție în loc de 5"
+        }
+    },
+    "trials": {
+        "handsOff": {
+            "name": "Fără mâini",
+            "rule": "Atingerea Emoji-ului mare nu desenează nimic",
+            "reward": "+15% producție"
+        },
+        "bareBones": {
+            "name": "Până la os",
+            "rule": "Nu se pot cumpăra bonusuri",
+            "reward": "+50% emoji pe atingere"
+        },
+        "darkSky": {
+            "name": "Cer întunecat",
+            "rule": "Nu apar emoji cu efect",
+            "reward": "Emoji-urile cu efect apar cu 25% mai des"
+        }
+    },
+    "funValues": {
+        "1": {
+            "name": "Cookie clicker",
+            "description": "Emoji-urile cu efect sunt 🍪, cele rele sunt 👵"
+        },
+        "17": {
+            "name": "Diabolic",
+            "description": "Poate apărea efectul 😈 de producție ×77"
+        },
+        "31": {
+            "name": "Gravitație redusă",
+            "description": "Emoji-urile atinse plutesc în sus și dispar"
+        },
+        "42": {
+            "name": "Răspunsul",
+            "description": "+4,2% producție"
+        },
+        "50": {
+            "name": "Echilibru perfect",
+            "description": "Atingeri ×0,5, producție ×1,5"
+        },
+        "64": {
+            "name": "Overclockat",
+            "description": "Combo-ul poate urca cu un nivel mai sus"
+        },
+        "70": {
+            "name": "Nerăbdător",
+            "description": "Emoji-urile cu efect apar mai repede"
+        },
+        "76": {
+            "name": "Apariții norocoase",
+            "description": "10% șansă de un emoji cu efect în plus"
+        },
+        "77": {
+            "name": "Bani zburători",
+            "description": "💸 la prețuri"
+        },
+        "88": {
+            "name": "Maraton",
+            "description": "Combo-ul scade cu 25% mai încet"
+        },
+        "91": {
+            "name": "Colecționar",
+            "description": "Emoji strălucitoare de 1,25× mai probabile"
+        },
+        "99": {
+            "name": "99 de baloane roșii",
+            "description": "Emoji-urile cu efect sunt 🎈, cele rele sunt 📌"
+        },
+        "100": {
+            "name": "O sută tristă",
+            "description": "Statisticile arată 😭 lângă valoarea fun"
+        }
+    }
 }
