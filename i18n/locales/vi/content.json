@@ -82,7 +82,38 @@
         },
         "18": {
             "name": "Điểm kỳ dị emoji",
-            "plural": "Điểm kỳ dị emoji"
+            "plural": "Điểm kỳ dị emoji",
+            "description": "Thế là xong. Chẳng còn gì ngoài emoji. Bạn đã làm được. Hay là chưa?"
+        },
+        "7": {
+            "name": "Rạp chiếu phim emoji",
+            "plural": "Rạp chiếu phim emoji",
+            "description": "Phim bom tấn có sự góp mặt của những emoji bạn yêu thích. Vé nào cũng kèm bỏng ngô và emoji."
+        },
+        "11": {
+            "name": "Hãng bay emoji",
+            "plural": "Hãng bay emoji",
+            "description": "Chở emoji đến mọi ngóc ngách trên thế giới. Tất nhiên là ghế cạnh cửa sổ."
+        },
+        "19": {
+            "name": "Cỗ máy thời gian emoji",
+            "plural": "Cỗ máy thời gian emoji",
+            "description": "Quay về buổi bình minh của thời gian để vẽ những emoji đầu tiên. Rồi những emoji thứ hai."
+        },
+        "20": {
+            "name": "Vụ nổ lớn",
+            "plural": "Vụ nổ lớn",
+            "description": "Một vũ trụ mới toanh, và lần này từ trên xuống dưới toàn là emoji."
+        },
+        "21": {
+            "name": "Đa vũ trụ emoji",
+            "plural": "Đa vũ trụ emoji",
+            "description": "Vô số vũ trụ, mỗi vũ trụ có một ông trùm emoji riêng. Giờ tất cả đều làm việc cho bạn."
+        },
+        "22": {
+            "name": "Emoji đầu tiên",
+            "plural": "Emoji đầu tiên",
+            "description": "Nơi mọi thứ bắt đầu. Nó đã dõi theo bạn chạm suốt từ đầu đến giờ."
         }
     },
     "upgrades": {
@@ -188,27 +219,33 @@
         },
         "100": {
             "name": "Cánh tay khỏe hơn",
-            "description": "Cánh tay khỏe hơn giúp vẽ emoji nhanh hơn."
+            "description": "Cánh tay khỏe hơn giúp vẽ emoji nhanh hơn.",
+            "quote": "Đau đấy, nhưng đáng."
         },
         "101": {
             "name": "Ngón tay dẻo dai",
-            "description": "Ngón tay dẻo dai giúp vẽ được những emoji tinh xảo hơn."
+            "description": "Ngón tay dẻo dai giúp vẽ được những emoji tinh xảo hơn.",
+            "quote": "Dẻo dai á? Chắc vậy. Nhưng vẫn đau."
         },
         "102": {
             "name": "Hai bàn tay",
-            "description": "Gấp đôi số tay, gấp đôi emoji."
+            "description": "Gấp đôi số tay, gấp đôi emoji.",
+            "quote": "Gấp đôi tự hào, gấp đôi cú ngã."
         },
         "103": {
             "name": "Tay sơn móng",
-            "description": "Sơn móng tay giúp bạn chạm nhanh hơn, bạn không biết à?"
+            "description": "Sơn móng tay giúp bạn chạm nhanh hơn, bạn không biết à?",
+            "quote": "Mà trông còn xinh xỉu nữa!"
         },
         "104": {
             "name": "Bàn chân",
-            "description": "Vẽ bằng chân giúp gấp đôi sản lượng (và chẳng khó chút nào)!"
+            "description": "Vẽ bằng chân giúp gấp đôi sản lượng (và chẳng khó chút nào)!",
+            "quote": "Chẳng khó chút nào á? Vợ tôi đòi ly dị khi thấy tôi gác chân lên máy tính bảng của cả nhà."
         },
         "105": {
             "name": "Lưỡi",
-            "description": "Sau nhiều năm luyện tập, bạn cũng có thể học cách vẽ bằng lưỡi!"
+            "description": "Sau nhiều năm luyện tập, bạn cũng có thể học cách vẽ bằng lưỡi!",
+            "quote": "ưmmhm thmpwuh mhhaaaam ehhmmmmuhm ahumhmhm"
         },
         "106": {
             "name": "Mũi",
@@ -217,19 +254,23 @@
         },
         "107": {
             "name": "Tai",
-            "description": "Nhét bút vào tai, nghiêng đầu 90 độ rồi vẽ!"
+            "description": "Nhét bút vào tai, nghiêng đầu 90 độ rồi vẽ!",
+            "quote": "Gì cơ? Hả? Tôi không nghe- gì- hả... Tôi chẳng nghe thấy cái quái gì- gì cơ?!"
         },
         "108": {
             "name": "Miệng",
-            "description": "Ngậm bút chì vào miệng rồi vẽ!"
+            "description": "Ngậm bút chì vào miệng rồi vẽ!",
+            "quote": "Không đáng. Đau quá trời."
         },
         "109": {
             "name": "Chân khỏe hơn",
-            "description": "Đôi chân khỏe hơn giúp bạn vẽ emoji bằng chân nhanh hơn nhiều."
+            "description": "Đôi chân khỏe hơn giúp bạn vẽ emoji bằng chân nhanh hơn nhiều.",
+            "quote": "Giờ chân tôi to tướng. Chỉ chân trái thôi. Tôi toàn đi vòng tròn."
         },
         "110": {
             "name": "Phổi to hơn",
-            "description": "Phổi to hơn giúp vẽ emoji nhanh hơn."
+            "description": "Phổi to hơn giúp vẽ emoji nhanh hơn.",
+            "quote": "Oxy. Oxy. Oxy."
         },
         "111": {
             "name": "Não to hơn",
@@ -237,7 +278,8 @@
         },
         "112": {
             "name": "Tóc",
-            "description": "Dùng tóc cầm cọ để vẽ emoji. Cần gì tay khi bạn đã có phong cách?"
+            "description": "Dùng tóc cầm cọ để vẽ emoji. Cần gì tay khi bạn đã có phong cách?",
+            "quote": "Ai cần tay á? Tôi. Tôi cần tay. Tôi sắp hói vì vụ này rồi."
         },
         "113": {
             "name": "Lông mày",
@@ -245,7 +287,8 @@
         },
         "114": {
             "name": "Lưng",
-            "description": "Nằm ngửa và vẽ emoji bằng tay sau lưng. Vừa giãn gân vừa vẽ vời!"
+            "description": "Nằm ngửa và vẽ emoji bằng tay sau lưng. Vừa giãn gân vừa vẽ vời!",
+            "quote": "Họ bảo cứ nằm ngửa ra. Vừa giãn cơ vừa vẽ, họ bảo thế. Giờ tôi không dậy nổi."
         },
         "115": {
             "name": "Răng",
@@ -253,7 +296,8 @@
         },
         "116": {
             "name": "Rốn",
-            "description": "Vẽ emoji bằng rốn. Một kỹ năng độc đáo và cực khó thành thạo!"
+            "description": "Vẽ emoji bằng rốn. Một kỹ năng độc đáo và cực khó thành thạo!",
+            "quote": "Tôi đang vẽ bằng rốn. Mẹ tôi tự hào lắm."
         },
         "117": {
             "name": "Vẽ vọng âm",
@@ -261,23 +305,28 @@
         },
         "118": {
             "name": "Vẽ bằng ý niệm",
-            "description": "Cần gì dùng tay khi bạn có thể vẽ emoji bằng tâm trí?"
+            "description": "Cần gì dùng tay khi bạn có thể vẽ emoji bằng tâm trí?",
+            "quote": "Tôi dời được vật bằng ý nghĩ, thế mà bạn bắt tôi vẽ mặt nháy mắt."
         },
         "119": {
             "name": "Ngón tay lượng tử",
-            "description": "Rối lượng tử trong ngón tay giúp bạn vẽ emoji với tốc độ ánh sáng."
+            "description": "Rối lượng tử trong ngón tay giúp bạn vẽ emoji với tốc độ ánh sáng.",
+            "quote": "Ngón tay tôi ở hai nơi cùng lúc. Cả hai đều ghét bạn."
         },
         "200": {
             "name": "Bút chì xịn hơn",
-            "description": "Bút chì tốt hơn cho emoji chi tiết hơn."
+            "description": "Bút chì tốt hơn cho emoji chi tiết hơn.",
+            "quote": "Bút xịn cũng không cứu được tài năng của bạn."
         },
         "201": {
             "name": "Bút sáp chuyên dụng",
-            "description": "Những cây bút sáp đặc biệt này giúp họa sĩ đánh thức đứa trẻ bên trong."
+            "description": "Những cây bút sáp đặc biệt này giúp họa sĩ đánh thức đứa trẻ bên trong.",
+            "quote": "Tôi đã tìm thấy đứa trẻ bên trong. Nó cũng thất vọng về tôi."
         },
         "202": {
             "name": "Cọ vẽ xịn hơn",
-            "description": "Cọ vẽ tốt hơn cho emoji nghệ thuật hơn."
+            "description": "Cọ vẽ tốt hơn cho emoji nghệ thuật hơn.",
+            "quote": "Nghệ thuật hơn chỗ nào? Tôi chỉ vẽ được một phiên bản rùng rợn của vợ mình. Trả tiền đây."
         },
         "203": {
             "name": "Bút máy",
@@ -334,7 +383,8 @@
         },
         "215": {
             "name": "Font Comic Sans",
-            "description": "Dù yêu hay ghét, nó khiến emoji của bạn trông... độc lạ!"
+            "description": "Dù yêu hay ghét, nó khiến emoji của bạn trông... độc lạ!",
+            "quote": "Tôi nghỉ việc."
         },
         "216": {
             "name": "Máy tạo ảnh AI",
@@ -353,11 +403,13 @@
         },
         "219": {
             "name": "Máu",
-            "description": "Vẽ bằng máu cho emoji ngầu hơn hẳn!"
+            "description": "Vẽ bằng máu cho emoji ngầu hơn hẳn!",
+            "quote": "Máu của ai? CỦA AI?"
         },
         "300": {
             "name": "Nông dân",
-            "description": "Nông trại mà không có nông dân thì là gì?!"
+            "description": "Nông trại mà không có nông dân thì là gì?!",
+            "quote": "Tôi thừa kế 80 héc-ta đất từ cha, thế mà bạn bắt tôi trồng mặt cười."
         },
         "301": {
             "name": "Cây non",
@@ -366,7 +418,8 @@
         },
         "302": {
             "name": "Dụng cụ tốt hơn",
-            "description": "Giúp làm nông nhanh hơn nhiều!"
+            "description": "Giúp làm nông nhanh hơn nhiều!",
+            "quote": "Dụng cụ mới, lương vẫn cũ. Cảm ơn nhiều nhé."
         },
         "303": {
             "name": "Máy cày",
@@ -374,11 +427,13 @@
         },
         "304": {
             "name": "Nhà nông trại",
-            "description": "Ngôi nhà ấm cúng để nông dân nghỉ ngơi và nạp năng lượng."
+            "description": "Ngôi nhà ấm cúng để nông dân nghỉ ngơi và nạp năng lượng.",
+            "quote": "'Ấm cúng' là cách gọi hài hước cho một cái lán có cái xô."
         },
         "305": {
             "name": "Bò emoji",
-            "description": "Tạo thêm thật nhiều emòòòòòòji."
+            "description": "Tạo thêm thật nhiều emòòòòòòji.",
+            "quote": "Đùa thêm một câu 'ụm bò' nữa là tôi húc BẠN đấy."
         },
         "306": {
             "name": "Hệ thống tưới tiêu",
@@ -387,7 +442,8 @@
         },
         "307": {
             "name": "Bù nhìn",
-            "description": "Đuổi lũ chim emoji phiền phức khỏi nông trại của bạn!"
+            "description": "Đuổi lũ chim emoji phiền phức khỏi nông trại của bạn!",
+            "quote": "Lũ chim chẳng sợ. Hàng xóm thì sợ."
         },
         "308": {
             "name": "Thùng ủ phân",
@@ -395,7 +451,8 @@
         },
         "309": {
             "name": "Nhà kính",
-            "description": "Trồng emoji quanh năm, bất kể thời tiết!"
+            "description": "Trồng emoji quanh năm, bất kể thời tiết!",
+            "quote": "Một nhà kính khác cần bạn giúp. Tôi sẽ đánh dấu trên bản đồ cho."
         },
         "310": {
             "name": "Cối xay gió",
@@ -404,7 +461,8 @@
         },
         "311": {
             "name": "Vườn cây emoji",
-            "description": "Trồng cây emoji ra quả quanh năm!"
+            "description": "Trồng cây emoji ra quả quanh năm!",
+            "quote": "Cây đang đi lại. Cây đang nổi giận."
         },
         "312": {
             "name": "Lễ hội mùa màng",
@@ -425,11 +483,13 @@
         },
         "316": {
             "name": "Nông trại emoji tương lai",
-            "description": "Nông trại của bạn giờ là thiên đường công nghệ cao với robot, hologram và máy cày bay. Chào mừng đến tương lai!"
+            "description": "Nông trại của bạn giờ là thiên đường công nghệ cao với robot, hologram và máy cày bay. Chào mừng đến tương lai!",
+            "quote": "Robot cướp mất việc của tôi. Rồi nó còn hỏi đường tôi."
         },
         "317": {
             "name": "Trăng máu",
-            "description": "Dưới trăng máu, cây trồng của bạn lớn nhanh hơn... nhưng cũng mọc cả răng."
+            "description": "Dưới trăng máu, cây trồng của bạn lớn nhanh hơn... nhưng cũng mọc cả răng.",
+            "quote": "Cà rốt giờ có răng. Cà rốt cắn lại."
         },
         "318": {
             "name": "Vụ thu hoạch cuối cùng",
@@ -441,11 +501,13 @@
         },
         "400": {
             "name": "Dao sắc",
-            "description": "Dao sắc hơn giúp thái emoji dễ hơn."
+            "description": "Dao sắc hơn giúp thái emoji dễ hơn.",
+            "quote": "Thái emoji? Bạn nói gì vậy? Điên à? Đây là những emoji thật, sống sờ sờ, vô tội!"
         },
         "401": {
             "name": "Chảo chống dính",
-            "description": "Chảo chống dính giúp nấu món emoji nhanh hơn."
+            "description": "Chảo chống dính giúp nấu món emoji nhanh hơn.",
+            "quote": "Cái gì cũng vẫn dính. Kể cả tôi. Dính với cái nghề này."
         },
         "402": {
             "name": "Lò nướng xịn hơn",
@@ -453,27 +515,33 @@
         },
         "403": {
             "name": "Nguyên liệu thượng hạng",
-            "description": "Nguyên liệu càng ngon, emoji càng hảo hạng."
+            "description": "Nguyên liệu càng ngon, emoji càng hảo hạng.",
+            "quote": "Vẫn emoji đông lạnh. Nhãn mới. Giá gấp đôi."
         },
         "404": {
             "name": "Mũ đầu bếp",
-            "description": "Đội mũ đầu bếp giúp nấu emoji nhanh hơn."
+            "description": "Đội mũ đầu bếp giúp nấu emoji nhanh hơn.",
+            "quote": "Cái mũ chẳng có tác dụng gì. Tôi nói bốn mươi lần rồi. Chẳng ai nghe."
         },
         "405": {
             "name": "Máy xay emoji",
-            "description": "Xay emoji thành sinh tố và súp ngon lành chỉ trong vài giây!"
+            "description": "Xay emoji thành sinh tố và súp ngon lành chỉ trong vài giây!",
+            "quote": "ĐỪNG nhìn vào ly sinh tố."
         },
         "406": {
             "name": "Nồi chiên không dầu",
-            "description": "Chiên emoji hoàn hảo trong thời gian kỷ lục. Lần nào cũng giòn rụm, vàng ươm!"
+            "description": "Chiên emoji hoàn hảo trong thời gian kỷ lục. Lần nào cũng giòn rụm, vàng ươm!",
+            "quote": "Đó là cái lò. Một cái lò tí hon. Đừng gọi nó là nồi chiên không dầu nữa."
         },
         "407": {
             "name": "Quầy sushi",
-            "description": "Cuộn sushi emoji chính xác và đầy phong cách. Cần có tài năng... tươi sống!"
+            "description": "Cuộn sushi emoji chính xác và đầy phong cách. Cần có tài năng... tươi sống!",
+            "quote": "Yêu cầu tài năng tươi sống. Thế mà họ vẫn tuyển tôi."
         },
         "408": {
             "name": "Quầy salad",
-            "description": "Trộn salad emoji tươi ngon với đủ loại topping. Vừa lành mạnh vừa ngon miệng!"
+            "description": "Trộn salad emoji tươi ngon với đủ loại topping. Vừa lành mạnh vừa ngon miệng!",
+            "quote": "Có người hắt xì vào bánh mì nướng. Tôi thấy. Tôi im lặng."
         },
         "409": {
             "name": "Lò pizza",
@@ -485,7 +553,8 @@
         },
         "411": {
             "name": "Máy làm kem emoji",
-            "description": "Làm ra những món emoji đông lạnh vừa mát lạnh vừa ngon tuyệt!"
+            "description": "Làm ra những món emoji đông lạnh vừa mát lạnh vừa ngon tuyệt!",
+            "quote": "Hỏng. Lúc nào cũng hỏng. Chưa từng có lúc nào không hỏng."
         },
         "412": {
             "name": "Quầy taco",
@@ -498,7 +567,8 @@
         },
         "414": {
             "name": "Tháp sô-cô-la emoji",
-            "description": "Rưới sô-cô-la emoji tan chảy lên mọi thứ. Ngọt ngào và đầy cám dỗ!"
+            "description": "Rưới sô-cô-la emoji tan chảy lên mọi thứ. Ngọt ngào và đầy cám dỗ!",
+            "quote": "Một đứa nhóc úp cả mặt vào đó. Bọn tôi vẫn bán tiếp."
         },
         "415": {
             "name": "Bếp emoji ăn thịt đồng loại",
@@ -510,23 +580,28 @@
         },
         "417": {
             "name": "Đấu trường ném đồ ăn emoji",
-            "description": "Biến căn bếp thành đấu trường ném đồ ăn. Bừa bộn, hỗn loạn và lời to một cách kỳ lạ."
+            "description": "Biến căn bếp thành đấu trường ném đồ ăn. Bừa bộn, hỗn loạn và lời to một cách kỳ lạ.",
+            "quote": "Lời một cách kỳ lạ. Tôi vẫn còn moi được đậu Hà Lan trong tai."
         },
         "418": {
             "name": "Bột sống",
-            "description": "Khối bột này tự di chuyển, tự nặn thành bánh mì emoji hoàn hảo. Thỉnh thoảng nó còn tìm cách bỏ trốn."
+            "description": "Khối bột này tự di chuyển, tự nặn thành bánh mì emoji hoàn hảo. Thỉnh thoảng nó còn tìm cách bỏ trốn.",
+            "quote": "Nó trốn mất rồi. Thế đấy. Rồi chuyện gì sẽ xảy ra đây?"
         },
         "419": {
             "name": "Tiệc buffet vô tận",
-            "description": "Một bữa buffet không bao giờ kết thúc... nhưng có khi đồ ăn sẽ quay sang ăn bạn."
+            "description": "Một bữa buffet không bao giờ kết thúc... nhưng có khi đồ ăn sẽ quay sang ăn bạn.",
+            "quote": "Không bao giờ hết. Tôi kẹt ở bàn tráng miệng từ tháng Ba."
         },
         "500": {
             "name": "Chổi",
-            "description": "Để dọn dẹp sau khi các con vật ờ... đi nặng."
+            "description": "Để dọn dẹp sau khi các con vật ờ... đi nặng.",
+            "quote": "Tôi có bằng thạc sĩ. Giờ tôi quét phân hươu cao cổ để kiếm emoji."
         },
         "501": {
             "name": "Huấn luyện viên thú",
-            "description": "Huấn luyện viên dạy thú làm xiếc, giúp vườn thú hoạt động hiệu quả hơn."
+            "description": "Huấn luyện viên dạy thú làm xiếc, giúp vườn thú hoạt động hiệu quả hơn.",
+            "quote": "Con lạc đà không bướu lại nhổ vào tôi. Lần nữa."
         },
         "502": {
             "name": "Chuồng hạng sang",
@@ -534,15 +609,18 @@
         },
         "503": {
             "name": "Thú quý hiếm",
-            "description": "Đưa về những loài thú quý hiếm để thu hút đông khách hơn."
+            "description": "Đưa về những loài thú quý hiếm để thu hút đông khách hơn.",
+            "quote": "Con chim cánh cụt cắn một đứa trẻ. Lượng khách tăng 40%."
         },
         "504": {
             "name": "Linh vật vườn thú",
-            "description": "Linh vật thân thiện thu hút khách, tăng tổng thu nhập."
+            "description": "Linh vật thân thiện thu hút khách, tăng tổng thu nhập.",
+            "quote": "Trời 35 độ trong bộ đồ hươu cao cổ này, và một thằng nhóc vừa đá tôi."
         },
         "505": {
             "name": "Phòng khám thú y",
-            "description": "Phòng khám riêng giúp các con vật luôn khỏe mạnh."
+            "description": "Phòng khám riêng giúp các con vật luôn khỏe mạnh.",
+            "quote": "Bảy năm học thú y. Hôm nay tôi chữa cho con dê nuốt điện thoại."
         },
         "506": {
             "name": "Khu bóng mát",
@@ -607,15 +685,18 @@
         },
         "601": {
             "name": "Thêm công nhân",
-            "description": "Tăng số lượng công nhân nhà máy."
+            "description": "Tăng số lượng công nhân nhà máy.",
+            "quote": "Thêm công nhân, vẫn cái nhà vệ sinh đó. Đúng một cái."
         },
         "602": {
             "name": "Bánh răng to hơn",
-            "description": "Bánh răng to hơn cho máy móc to hơn."
+            "description": "Bánh răng to hơn cho máy móc to hơn.",
+            "quote": "Bánh răng to hơn, tai nạn to hơn. Hỏi anh Dũng mà xem. À, quên mất."
         },
         "603": {
             "name": "Đai ốc và bu lông",
-            "description": "Dùng để đảm bảo mọi thứ không rơi rụng tan tành."
+            "description": "Dùng để đảm bảo mọi thứ không rơi rụng tan tành.",
+            "quote": "Giữ cho chỗ này không sập. Vừa đủ thôi. Như hôn nhân của tôi."
         },
         "604": {
             "name": "Băng chuyền",
@@ -639,7 +720,8 @@
         },
         "609": {
             "name": "An ninh nhà máy",
-            "description": "Bảo vệ nhà máy khỏi trộm emoji và gián điệp công nghiệp."
+            "description": "Bảo vệ nhà máy khỏi trộm emoji và gián điệp công nghiệp.",
+            "quote": "NGƯƠI KHÔNG ĐƯỢC QUA. Không có thẻ ra vào thì đừng hòng."
         },
         "610": {
             "name": "Tái chế tại nhà máy",
@@ -668,11 +750,13 @@
         },
         "616": {
             "name": "Tường gia cố",
-            "description": "Gia cố tường nhà máy để chịu được sự hỗn loạn của sản xuất tốc độ cao."
+            "description": "Gia cố tường nhà máy để chịu được sự hỗn loạn của sản xuất tốc độ cao.",
+            "quote": "Giữ cửa! GIỮ CỬA!"
         },
         "617": {
             "name": "Bẫy chuột",
-            "description": "Đuổi lũ gặm nhấm phiền phức khỏi nhà máy. Hết cảnh dây điện bị gặm hay emoji bị trộm!"
+            "description": "Đuổi lũ gặm nhấm phiền phức khỏi nhà máy. Hết cảnh dây điện bị gặm hay emoji bị trộm!",
+            "quote": "It's a trap!"
         },
         "618": {
             "name": "Quản lý nhà máy",
@@ -690,7 +774,8 @@
         },
         "701": {
             "name": "Sân bóng chày",
-            "description": "Chắc chắn sẽ là một cú home run ngoạn mục."
+            "description": "Chắc chắn sẽ là một cú home run ngoạn mục.",
+            "quote": "Home run á? Quả bóng lại trúng xe tôi rồi."
         },
         "702": {
             "name": "Sân squash",
@@ -721,15 +806,18 @@
         },
         "901": {
             "name": "Túi emoji to hơn",
-            "description": "Mang được nhiều emoji hơn nữa."
+            "description": "Mang được nhiều emoji hơn nữa.",
+            "quote": "Lưng tôi gãy rồi, nhưng ừ, túi to hơn đi."
         },
         "902": {
             "name": "Thẻ tín dụng emoji",
-            "description": "Để tiêu số emoji kiếm được bằng mồ hôi nước mắt."
+            "description": "Để tiêu số emoji kiếm được bằng mồ hôi nước mắt.",
+            "quote": "Bị từ chối. Thẻ của bạn bị từ chối. Cuộc đời bạn bị từ chối."
         },
         "903": {
             "name": "Đầu tư vào giáo dục",
-            "description": "Giáo dục tốt hơn, kỹ năng vẽ emoji giỏi hơn."
+            "description": "Giáo dục tốt hơn, kỹ năng vẽ emoji giỏi hơn.",
+            "quote": "Khoản vay sinh viên của tôi tính bằng emoji. Sang kiếp sau tôi vẫn còn trả."
         },
         "904": {
             "name": "Đầu tư vào đổi mới",
@@ -745,19 +833,23 @@
         },
         "1002": {
             "name": "Vòng quay mặt trời",
-            "description": "Way up, there is where she broke my heart."
+            "description": "Way up, there is where she broke my heart.",
+            "quote": "Kẹt trên đỉnh hai tiếng với một ông cứ giảng giải về tiền ảo."
         },
         "1003": {
             "name": "Rạp xiếc",
-            "description": "There's only two types of people in the world. The ones that entertain, and the ones that observe."
+            "description": "There's only two types of people in the world. The ones that entertain, and the ones that observe.",
+            "quote": "Tôi tập nhào lộn hai mươi năm. Giờ tôi tung hứng mặt cười cho mấy đứa nhóc."
         },
         "1004": {
             "name": "Người tung hứng emoji",
-            "description": "Người ta đồn anh ấy chưa từng để rơi quả nào."
+            "description": "Người ta đồn anh ấy chưa từng để rơi quả nào.",
+            "quote": "Chưa từng để rơi quả nào á? Tôi để rơi cả ước mơ rồi."
         },
         "1100": {
             "name": "Bầu cử emoji",
-            "description": "Chúc emoji xuất sắc nhất chiến thắng!"
+            "description": "Chúc emoji xuất sắc nhất chiến thắng!",
+            "quote": "Chúc emoji xuất sắc nhất chiến thắng. Kẻ thua sẽ được... xử lý."
         },
         "1101": {
             "name": "Gói kích cầu emoji",
@@ -777,7 +869,8 @@
         },
         "1300": {
             "name": "Kính viễn vọng",
-            "description": "Ngắm sao để khám phá những hành tinh emoji."
+            "description": "Ngắm sao để khám phá những hành tinh emoji.",
+            "quote": "Chúng ta cũng thấy ngươi. Chúng ta luôn thấy ngươi."
         },
         "1301": {
             "name": "Ăng-ten vệ tinh",
@@ -785,11 +878,13 @@
         },
         "1302": {
             "name": "Phi hành gia",
-            "description": "Phải có người vận hành trạm vũ trụ chứ."
+            "description": "Phải có người vận hành trạm vũ trụ chứ.",
+            "quote": "Ngoài không gian, chẳng ai nghe thấy bạn hét. Bọn tôi thử rồi. Hai lần."
         },
         "1303": {
             "name": "Tên lửa",
-            "description": "Bay nhanh cực kỳ."
+            "description": "Bay nhanh cực kỳ.",
+            "quote": "Bay nhanh lắm. Xác bạn cũng sẽ bay nhanh như thế."
         },
         "1304": {
             "name": "☊⊑⎍⋏☌ ⏁⍜⟟ ⎅⟒⋏ ⏁⍀⍜⋏☌ ⊑⍜⏃ ⏚⟟⋏⊑...",
@@ -798,15 +893,18 @@
         },
         "1305": {
             "name": "⋔⍜⋏ ⎅⍜ ☍⊬ ⌰⏃",
-            "description": "⋔⍜⋏ ⎅⍜ ⋏⏃⊬ ☊⊑⎍⏃ ⌇⎍☊ ⋔⏃⋏⊑ ☍⊑⍜⋏ ⌰⎍⍜⋏☌."
+            "description": "⋔⍜⋏ ⎅⍜ ⋏⏃⊬ ☊⊑⎍⏃ ⌇⎍☊ ⋔⏃⋏⊑ ☍⊑⍜⋏ ⌰⎍⍜⋏☌.",
+            "quote": "⏁⏃ ⎅⏃⋏☌ ⎅⟒⋏ ⏁⟟⋔ ⋏☌⎍⍜⟟."
         },
         "30000": {
             "name": "Khoai tây",
-            "description": "Khoai-tuyệt-vời! Khoai tây là xương sống của mọi nông trại."
+            "description": "Khoai-tuyệt-vời! Khoai tây là xương sống của mọi nông trại.",
+            "quote": "Không muối, không tiêu. Cứ cho tôi một củ khoai già là tôi sướng rơn!"
         },
         "30001": {
             "name": "Cà rốt",
-            "description": "Ăn cà rốt cho sáng mắt, chạm màn hình cả đêm không lo!"
+            "description": "Ăn cà rốt cho sáng mắt, chạm màn hình cả đêm không lo!",
+            "quote": "Không. Tôi chẳng vui gì. Chơi chữ thêm câu nữa là tôi trồng bạn xuống đất."
         },
         "30002": {
             "name": "Dưa chuột",
@@ -820,15 +918,18 @@
         },
         "30004": {
             "name": "Cà chua",
-            "description": "Mọng nước và đa năng, cà chua là món khoái khẩu của nông trại."
+            "description": "Mọng nước và đa năng, cà chua là món khoái khẩu của nông trại.",
+            "quote": "Tuyệt để ném vào kẻ đã thiết kế nông trại này."
         },
         "30005": {
             "name": "Xà lách",
-            "description": "Xanh mát cả nông trại, xà lách 'lách' vào mọi món ăn."
+            "description": "Xanh mát cả nông trại, xà lách 'lách' vào mọi món ăn.",
+            "quote": "Thứ nhàm chán nhất nông trại. Sau ông nông dân."
         },
         "30006": {
             "name": "Bông cải xanh",
-            "description": "Những cái cây tí hon với lợi ích khổng lồ!"
+            "description": "Những cái cây tí hon với lợi ích khổng lồ!",
+            "quote": "Con tôi ném nó vào anh phục vụ. Nói thật, anh ta đáng bị thế."
         },
         "30007": {
             "name": "Hành tây",
@@ -887,11 +988,13 @@
         },
         "30019": {
             "name": "Đậu Hà Lan",
-            "description": "Hòa bình... à nhầm, đậu Hà Lan!"
+            "description": "Hòa bình... à nhầm, đậu Hà Lan!",
+            "quote": "Đậu! ĐẬU! Mô tả có thế thôi á? Ai viết mấy cái này vậy?"
         },
         "30020": {
             "name": "Củ cải",
-            "description": "Cay và giòn, củ cải tạo điểm nhấn cho nông trại và món ăn."
+            "description": "Cay và giòn, củ cải tạo điểm nhấn cho nông trại và món ăn.",
+            "quote": "Chẳng ai muốn củ cải. Chưa từng có ai muốn củ cải."
         },
         "30021": {
             "name": "Nấm",
@@ -900,15 +1003,18 @@
         },
         "30022": {
             "name": "Dứa",
-            "description": "Nhiệt đới và chua ngọt."
+            "description": "Nhiệt đới và chua ngọt.",
+            "quote": "Trên pizza."
         },
         "30023": {
             "name": "Dưa hấu",
-            "description": "Mọng nước và mát lạnh, dưa hấu là cây trồng mùa hè đỉnh nhất."
+            "description": "Mọng nước và mát lạnh, dưa hấu là cây trồng mùa hè đỉnh nhất.",
+            "quote": "Đau lưng quá."
         },
         "30024": {
             "name": "Kiwi",
-            "description": "Ngoài lông lá, trong ngọt ngào. Kiwi là món khoái khẩu của nông trại!"
+            "description": "Ngoài lông lá, trong ngọt ngào. Kiwi là món khoái khẩu của nông trại!",
+            "quote": "Trời ơi, ngứa quá."
         },
         "30025": {
             "name": "Nho",
@@ -977,6 +1083,1539 @@
             "name": "Công chức emoji",
             "description": "Chính phủ emoji cần có người điều hành bộ máy.",
             "quote": "Có vẻ bạn đang soạn luật. Cần giúp không?"
+        },
+        "707": {
+            "name": "Thế vận hội emoji",
+            "description": "Cứ bốn năm một lần, những emoji nhanh nhất lại tranh huy chương vàng."
+        },
+        "708": {
+            "name": "Sân vận động emoji",
+            "description": "Tám mươi nghìn chỗ ngồi, chỗ nào cũng có một emoji đang cổ vũ."
+        },
+        "709": {
+            "name": "Tập chạy marathon",
+            "description": "Emoji có thể vẽ liền 42 cây số không nghỉ."
+        },
+        "710": {
+            "name": "Bể bơi",
+            "description": "Năm mươi mét emoji ngâm clo.",
+            "quote": "Phát hiện nhiều dạng sống cấp thủy quái ở khu nước sâu. Bạn chắc việc mình đang làm là đáng chứ?"
+        },
+        "711": {
+            "name": "Sàn đấm bốc",
+            "description": "Bay như bướm, vẽ như emoji."
+        },
+        "712": {
+            "name": "Tường leo núi",
+            "description": "Mỗi điểm bám là một mặt cười. Bám cực chắc."
+        },
+        "713": {
+            "name": "Sân trượt băng",
+            "description": "Emoji trên băng. Kim sa bán riêng."
+        },
+        "714": {
+            "name": "Sân bowling",
+            "description": "Mỗi cú strike làm đổ cả đống emoji."
+        },
+        "715": {
+            "name": "Công viên trượt ván",
+            "description": "Kickflip, grind, và cả đống emoji."
+        },
+        "716": {
+            "name": "Dốc trượt tuyết",
+            "description": "Đường trượt kim cương đen, được cào phẳng bằng emoji."
+        },
+        "717": {
+            "name": "Võ đường",
+            "description": "Đánh sáp, lau sáp, vẽ emoji.",
+            "quote": "Chạm hoặc không chạm. Không có thử."
+        },
+        "718": {
+            "name": "Đường đua",
+            "description": "Từ 0 lên một triệu emoji trong chưa đầy ba giây."
+        },
+        "719": {
+            "name": "Đại sảnh danh vọng",
+            "description": "Mọi vận động viên emoji huyền thoại, bất tử trong đồng thau."
+        },
+        "800": {
+            "name": "Máy làm bỏng ngô",
+            "description": "Mỗi xô bỏng đều có một emoji miễn phí dưới đáy.",
+            "quote": "Emoji miễn phí? Tôi chẳng thấy cái nào. Trả tiền đây không tôi kiện."
+        },
+        "801": {
+            "name": "Kính 3D",
+            "description": "Emoji nhảy khỏi màn hình và bay thẳng vào ngân hàng của bạn.",
+            "quote": "Tôi đã thử vui với cái này, nhưng không tài nào cho máy bay hạ cánh lên cái tàu sân bay chết tiệt đó."
+        },
+        "802": {
+            "name": "Ngôi sao điện ảnh",
+            "description": "Những tên tuổi lớn nhất điện ảnh emoji, tất cả đều do bạn trả lương.",
+            "quote": "Patrick Stewart"
+        },
+        "803": {
+            "name": "Trailer",
+            "description": "Hai mươi phút trailer trước mỗi bộ phim. Cái nào cũng đầy emoji.",
+            "quote": "Và... hết rồi, ừ, bỏng ngô của tôi, hết sạch. Tôi ăn hết lúc xem trailer."
+        },
+        "804": {
+            "name": "Thảm đỏ ra mắt phim",
+            "description": "Đèn flash nháy liên tục, fan vẫy tay, toàn emoji quan trọng."
+        },
+        "805": {
+            "name": "Giải thưởng emoji",
+            "description": "Và giải emoji xuất sắc nhất thuộc về... tất cả."
+        },
+        "806": {
+            "name": "Phần tiếp theo",
+            "description": "Vẫn những emoji cũ, cháy nổ to hơn."
+        },
+        "807": {
+            "name": "Bản đạo diễn",
+            "description": "Thêm bốn tiếng emoji mà chẳng ai yêu cầu."
+        },
+        "808": {
+            "name": "Dịch vụ phát trực tuyến",
+            "description": "Phim emoji, giờ đã có mặt trong mọi nhà."
+        },
+        "809": {
+            "name": "Vũ trụ điện ảnh",
+            "description": "Mọi bộ phim emoji đều liên kết với nhau. Phim nào cũng cần phần tiếp theo."
+        },
+        "810": {
+            "name": "Suất chiếu nửa đêm",
+            "description": "Những emoji ra rạp lúc nửa đêm là những fan cứng nhất."
+        },
+        "811": {
+            "name": "Màn hình IMAX",
+            "description": "To đến mức thấy được từng pixel của từng emoji."
+        },
+        "812": {
+            "name": "Âm thanh vòm",
+            "description": "Emoji đang phát ra từ ngay trong phòng."
+        },
+        "813": {
+            "name": "Diễn viên đóng thế",
+            "description": "Có những emoji quá quý giá để mạo hiểm."
+        },
+        "814": {
+            "name": "Kỹ xảo",
+            "description": "Những vụ nổ làm hoàn toàn bằng emoji. Đắt cắt cổ. Nhưng đáng."
+        },
+        "815": {
+            "name": "Phim hoạt hình",
+            "description": "Emoji vẽ tay, từng khung hình một."
+        },
+        "816": {
+            "name": "Liên hoan phim",
+            "description": "Hàng cọ, kính râm và một chiếc cúp emoji bằng vàng."
+        },
+        "817": {
+            "name": "Kỷ lục phòng vé",
+            "description": "Phim emoji có doanh thu cao nhất mọi thời đại. Lại nữa."
+        },
+        "818": {
+            "name": "Rạp chiếu ngoài trời",
+            "description": "Xem phim emoji thoải mái ngay trong xe hơi của bạn."
+        },
+        "819": {
+            "name": "Biển hiệu Hollywood",
+            "description": "Những chữ trắng khổng lồ trên đồi, xếp thành một emoji."
+        },
+        "905": {
+            "name": "Cây ATM emoji",
+            "description": "Rút emoji ở mọi góc phố. Chẳng ai biết ai là người nạp vào."
+        },
+        "906": {
+            "name": "Thị trường chứng khoán emoji",
+            "description": "Giá emoji chỉ có lên thôi. Chắc vậy.",
+            "quote": "'Chỉ có lên thôi.' Hay đấy. Tiền tiết kiệm của tôi thì xuống."
+        },
+        "907": {
+            "name": "Đồng emoji",
+            "description": "Một loại tiền mã hóa được bảo chứng bằng emoji thật, hiếm có khó tìm.",
+            "quote": "Mua đúng đỉnh. Tất nhiên rồi."
+        },
+        "908": {
+            "name": "Kho tiền emoji",
+            "description": "Như dự trữ vàng, nhưng mỗi thỏi là một mặt cười."
+        },
+        "909": {
+            "name": "Ngân hàng emoji thế giới",
+            "description": "Cho cả quốc gia vay emoji với lãi suất rất hợp lý.",
+            "quote": "'Lãi suất rất hợp lý.' Ngân hàng sở hữu ba quốc gia nói vậy đấy."
+        },
+        "910": {
+            "name": "Lãi kép",
+            "description": "Emoji đẻ ra emoji đẻ ra emoji."
+        },
+        "911": {
+            "name": "Dự trữ vàng",
+            "description": "Chất cao đến trần, thỏi nào cũng khắc một nụ cười.",
+            "quote": "Báu vật của ta. BÁU VẬT CỦA TA."
+        },
+        "912": {
+            "name": "Trái phiếu emoji",
+            "description": "Đầu tư dài hạn vào emoji. Rất an toàn. Rất nhàm chán."
+        },
+        "913": {
+            "name": "Xe chở tiền",
+            "description": "Chuyển emoji giữa các ngân hàng, cực kỳ cẩn thận.",
+            "quote": "Chúng đang mang emoji tới Isengard!"
+        },
+        "914": {
+            "name": "Thiên đường thuế",
+            "description": "Một hòn đảo đầy nắng nơi emoji đến để trốn thuế."
+        },
+        "915": {
+            "name": "Xưởng đúc emoji",
+            "description": "In emoji mới cứng suốt ngày đêm."
+        },
+        "916": {
+            "name": "Quỹ phòng hộ",
+            "description": "Chẳng ai biết họ làm gì, nhưng emoji cứ thế đổ về."
+        },
+        "917": {
+            "name": "Cho vay emoji",
+            "description": "Vay mười emoji, trả hai mươi. Ai cũng có lợi. À, chủ yếu là bạn."
+        },
+        "918": {
+            "name": "Ngân hàng trung ương",
+            "description": "Ấn định lãi suất emoji cho cả thế giới."
+        },
+        "919": {
+            "name": "Lỗi tiền vô hạn",
+            "description": "Máy tính ngân hàng có một con bug nho nhỏ. Đừng nói với ai nhé."
+        },
+        "1005": {
+            "name": "Vé cả mùa",
+            "description": "Khách cứ quay lại mãi, và lần nào cũng mang theo emoji.",
+            "quote": "Mua vé cả mùa. Đi đúng một lần. Con tôi khóc suốt buổi."
+        },
+        "1006": {
+            "name": "Diễu hành emoji",
+            "description": "Đoàn xe diễu hành mỗi ngày, xe nào cũng là một emoji khổng lồ."
+        },
+        "1007": {
+            "name": "Quầy xúc xích",
+            "description": "Mỗi cây xúc xích đều có hình một emoji tí hon."
+        },
+        "1008": {
+            "name": "Pháo hoa mỗi đêm",
+            "description": "Mỗi quả pháo nổ tung thành nghìn emoji.",
+            "quote": "Xììììììì..."
+        },
+        "1009": {
+            "name": "Lâu đài emoji",
+            "description": "Nơi hạnh phúc nhất trên Trái Đất, giờ thêm nhiều khuôn mặt hơn.",
+            "quote": "Nơi hạnh phúc nhất Trái Đất, theo một tấm biển. Do chính chủ viết."
+        },
+        "1010": {
+            "name": "Tàu lượn siêu tốc",
+            "description": "Những vòng nhào lộn lắc văng cả emoji khỏi túi bạn.",
+            "quote": "Tôi mất điện thoại, chìa khóa và cả ý chí sống ở vòng thứ hai."
+        },
+        "1011": {
+            "name": "Nhà ma",
+            "description": "Ma cũng là emoji. Loại đáng sợ.",
+            "quote": "Thứ đáng sợ nhất ở đây là giá tấm ảnh lúc ra về."
+        },
+        "1012": {
+            "name": "Cầu trượt nước",
+            "description": "Ùm! Bạn ướt sũng emoji.",
+            "quote": "Chẳng ai bảo tôi nước có màu vàng."
+        },
+        "1013": {
+            "name": "Xe điện đụng",
+            "description": "Mỗi cú va chạm làm văng ra một emoji.",
+            "quote": "Một thằng nhóc bảy tuổi tông tôi chín lần. Lần nào nó cũng nhìn thẳng vào mắt tôi."
+        },
+        "1014": {
+            "name": "Linh vật",
+            "description": "Những emoji lông xù khổng lồ với những cái ôm tuyệt nhất."
+        },
+        "1015": {
+            "name": "Vé ưu tiên",
+            "description": "Khỏi xếp hàng, đến thẳng chỗ emoji."
+        },
+        "1016": {
+            "name": "Cửa hàng lưu niệm",
+            "description": "Lối ra đi qua cửa hàng quà tặng. Mua emoji.",
+            "quote": "Lối ra đi qua cửa hàng quà tặng. Không còn lối nào khác. Tôi kiểm tra rồi."
+        },
+        "1017": {
+            "name": "Máng trượt thuyền gỗ",
+            "description": "Bạn sẽ bị ướt. Emoji còn ướt hơn."
+        },
+        "1018": {
+            "name": "Xe diễu hành",
+            "description": "Xe sau to hơn và lấp lánh hơn xe trước."
+        },
+        "1019": {
+            "name": "Công viên thứ hai",
+            "description": "Một công viên là chưa đủ. Giờ có cả một khu nghỉ dưỡng.",
+            "quote": "Một công viên là chưa đủ khổ. Giờ có hai."
+        },
+        "1105": {
+            "name": "Quốc kỳ emoji",
+            "description": "Mọi quốc gia đoàn kết dưới một lá cờ. Đó là một mặt cười."
+        },
+        "1106": {
+            "name": "Hiệp định thương mại",
+            "description": "Emoji giờ tự do lưu thông qua mọi biên giới."
+        },
+        "1107": {
+            "name": "Báo chí emoji",
+            "description": "Tin nóng mỗi ngày, viết hoàn toàn bằng emoji."
+        },
+        "1108": {
+            "name": "Hiệp ước hòa bình emoji",
+            "description": "Không còn chiến tranh emoji. Chỉ có sản xuất.",
+            "quote": "War. War never changes."
+        },
+        "1109": {
+            "name": "Trưng cầu dân ý emoji",
+            "description": "Nhân dân đã lên tiếng: thêm emoji đi."
+        },
+        "1110": {
+            "name": "Hiến pháp emoji",
+            "description": "Chúng tôi, những emoji, nhằm tạo nên một dây chuyền sản xuất hoàn hảo hơn..."
+        },
+        "1111": {
+            "name": "Thượng viện emoji",
+            "description": "Một trăm ghế, một trăm emoji, một trăm ý kiến."
+        },
+        "1112": {
+            "name": "Đại sứ quán emoji",
+            "description": "Ngoại giao, nhưng nhiều mặt nháy mắt hơn."
+        },
+        "1113": {
+            "name": "Giảm thuế emoji",
+            "description": "Thêm emoji cho tất cả mọi người!"
+        },
+        "1114": {
+            "name": "Điều tra dân số emoji",
+            "description": "Đếm từng emoji trên cả nước. Hơi lâu đấy."
+        },
+        "1115": {
+            "name": "Hội nghị thượng đỉnh emoji",
+            "description": "Các nhà lãnh đạo thế giới họp bàn đúng một việc: thêm emoji."
+        },
+        "1116": {
+            "name": "Tòa án tối cao emoji",
+            "description": "Nhất trí phán quyết ủng hộ thêm emoji."
+        },
+        "1117": {
+            "name": "Điệp viên emoji",
+            "description": "Đánh cắp bí mật emoji từ các ông trùm đối thủ."
+        },
+        "1118": {
+            "name": "Liên Hợp Quốc emoji",
+            "description": "Mọi quốc gia chung tay, vì emoji."
+        },
+        "1119": {
+            "name": "Trật tự thế giới emoji",
+            "description": "Một hành tinh, một chính phủ, một emoji."
+        },
+        "1200": {
+            "name": "Máy bay giấy",
+            "description": "Hãng bay nào cũng có điểm khởi đầu. Hãng của ta bắt đầu trên một tờ giấy ăn.",
+            "quote": "Chạy đi, lũ ngốc!"
+        },
+        "1201": {
+            "name": "Đồ ăn nhẹ trên máy bay",
+            "description": "Bánh quy xoắn tí hon, emoji tí hon, chuyến nào cũng có.",
+            "quote": "Ba cái bánh. BA. Cho chuyến bay chín tiếng."
+        },
+        "1202": {
+            "name": "Dặm bay thường xuyên",
+            "description": "Bay mười lần được một emoji. Bay một triệu lần được một triệu.",
+            "quote": "Hai triệu dặm. Phần thưởng là một ghế giữa rộng hơn tí xíu."
+        },
+        "1203": {
+            "name": "Máy bay jumbo",
+            "description": "Bốn động cơ, 600 ghế, ghế nào cũng có emoji ngồi.",
+            "quote": "600 ghế và tôi lại dính ghế cạnh nhà vệ sinh."
+        },
+        "1204": {
+            "name": "Sân bay",
+            "description": "Nhà ga bất tận, cửa ra máy bay bất tận, emoji bất tận."
+        },
+        "1205": {
+            "name": "Phi công emoji",
+            "description": "Cơ trưởng xin thông báo. Quý khách vui lòng thắt emoji.",
+            "quote": "Cơ trưởng xin thông báo. Tôi cũng chẳng muốn ở đây đâu."
+        },
+        "1206": {
+            "name": "Hành lý thất lạc",
+            "description": "Chẳng ai biết vali đi đâu. Lúc về thì đầy ắp emoji."
+        },
+        "1207": {
+            "name": "Hạng nhất",
+            "description": "Sâm panh, khăn ấm và quản gia emoji riêng.",
+            "quote": "Khăn ấm, sâm panh, và một tấm rèm để khỏi phải nhìn mặt bạn. Hoàn hảo."
+        },
+        "1208": {
+            "name": "Chuyến bay siêu thanh",
+            "description": "Nhanh hơn âm thanh, chở nhiều emoji hơn bao giờ hết.",
+            "quote": "Nhanh hơn âm thanh, nên chẳng ai nghe thấy em bé gào khóc."
+        },
+        "1209": {
+            "name": "Vòng quanh thế giới",
+            "description": "Bay thẳng một vòng, rải emoji khắp nơi."
+        },
+        "1210": {
+            "name": "Bán vé quá chỗ",
+            "description": "Khách nhiều hơn ghế nghĩa là nhiều emoji hơn mỗi chuyến."
+        },
+        "1211": {
+            "name": "Cửa hàng miễn thuế",
+            "description": "Emoji miễn thuế, có ở mọi cửa ra máy bay.",
+            "quote": "Miễn thuế mà vẫn đắt hơn 40%. Tài thật."
+        },
+        "1212": {
+            "name": "Phòng chờ sân bay",
+            "description": "Đồ ăn miễn phí, ghế êm ái và emoji không giới hạn.",
+            "quote": "Đồ ăn miễn phí, ghế êm, và một ông đi tất cứ gọi điện cho môi giới chứng khoán mãi."
+        },
+        "1213": {
+            "name": "Máy bay chở hàng",
+            "description": "Không có hành khách. Chỉ có hàng thùng hàng thùng emoji.",
+            "quote": "Không có hành khách. Chuyến bay tuyệt nhất đời tôi."
+        },
+        "1214": {
+            "name": "Máy bay riêng",
+            "description": "Dành cho những emoji có điều kiện."
+        },
+        "1215": {
+            "name": "Kiểm soát không lưu",
+            "description": "Giữ cho hàng triệu chuyến bay emoji khỏi đâm vào nhau."
+        },
+        "1216": {
+            "name": "Thủy phi cơ",
+            "description": "Hạ cánh trên mặt nước, cất cánh cùng emoji.",
+            "quote": "Họ bảo hạ cánh êm lắm. Bữa trưa của tôi giờ nằm dưới hồ."
+        },
+        "1217": {
+            "name": "Trực thăng",
+            "description": "Lơ lửng trên các thành phố, rắc emoji khắp nơi."
+        },
+        "1218": {
+            "name": "Khinh khí cầu Zeppelin",
+            "description": "Chậm rãi, uy nghi và chất đầy emoji."
+        },
+        "1219": {
+            "name": "Du lịch vũ trụ",
+            "description": "Điểm đến tiếp theo ở trên cao. Rất cao.",
+            "quote": "Trả bốn mươi triệu emoji để nôn trong môi trường không trọng lực."
+        },
+        "1306": {
+            "name": "Đĩa bay",
+            "description": "Hóa ra người ngoài hành tinh vốn là fan emoji."
+        },
+        "1307": {
+            "name": "Căn cứ Mặt Trăng",
+            "description": "Cả một mặt trăng để vẽ emoji.",
+            "quote": "Trên này rộng lắm. Đủ rộng để chôn bạn."
+        },
+        "1308": {
+            "name": "Khai thác sao chổi",
+            "description": "Hóa ra sao chổi là emoji đông lạnh.",
+            "quote": "Ngươi đã rã đông bọn ta. Sai lầm lớn đấy."
+        },
+        "1309": {
+            "name": "Lần tiếp xúc đầu tiên",
+            "description": "Người ngoài hành tinh cuối cùng cũng trả lời. Thông điệp: 👾.",
+            "quote": "Hello there."
+        },
+        "1310": {
+            "name": "Thang máy vũ trụ",
+            "description": "Đi lên không? Điểm dừng tiếp theo: quỹ đạo."
+        },
+        "1311": {
+            "name": "Vành đai tiểu hành tinh",
+            "description": "Hàng triệu tảng đá vũ trụ, tảng nào cũng đầy emoji."
+        },
+        "1312": {
+            "name": "Thuộc địa sao Hỏa",
+            "description": "Hóa ra hành tinh đỏ là vùng đất emoji màu mỡ."
+        },
+        "1313": {
+            "name": "Buồm mặt trời",
+            "description": "Căng buồm theo gió mặt trời, hứng emoji."
+        },
+        "1314": {
+            "name": "Bộ đồ du hành",
+            "description": "Giờ có thêm chỗ đựng emoji trong mọi túi.",
+            "quote": "Thêm túi. Một cái để đựng răng của bạn."
+        },
+        "1315": {
+            "name": "Hành tinh khí khổng lồ",
+            "description": "Múc cả một bầu khí quyển, lọc lấy emoji."
+        },
+        "1316": {
+            "name": "Quả cầu Dyson",
+            "description": "Bọc kín cả một ngôi sao và thu hoạch mọi emoji nó tỏa ra."
+        },
+        "1317": {
+            "name": "Động cơ warp",
+            "description": "Nhanh hơn ánh sáng, chở nhiều emoji hơn bao giờ hết."
+        },
+        "1318": {
+            "name": "Đế chế ngân hà",
+            "description": "Mọi ngôi sao trong thiên hà, đều do emoji cai trị."
+        },
+        "1319": {
+            "name": "Rìa vũ trụ",
+            "description": "Ở rìa có một tấm biển ghi: lối này có thêm emoji.",
+            "quote": "Tấm biển ghi 'lối này có thêm emoji'. Bọn tôi dựng tấm biển đó. Chưa ai quay về cả."
+        },
+        "1400": {
+            "name": "Vệ binh kẹo dẻo",
+            "description": "Ngọt ngào, dai dai, và được vũ trang đáng ngạc nhiên.",
+            "quote": "Vũ trang đáng ngạc nhiên. Bắn trượt cũng đáng ngạc nhiên."
+        },
+        "1401": {
+            "name": "Dòng sông sô-cô-la",
+            "description": "Chảy thẳng vào các nhà máy emoji. Coi chừng mấy cục vón.",
+            "quote": "Pure imagination!"
+        },
+        "1402": {
+            "name": "Nhà bánh cupcake",
+            "description": "Những ngôi nhà tí hon mái phủ kem. Emoji mê lắm.",
+            "quote": "Lớp kem màu đỏ. Không phải vị dâu đâu."
+        },
+        "1403": {
+            "name": "Chiếu chỉ hoàng gia",
+            "description": "Vua Kẹo đã phán: thêm emoji!",
+            "quote": "Vua Kẹo đã phán: chém đầu chúng!"
+        },
+        "1404": {
+            "name": "Cơn sốt đường",
+            "description": "Cả vương quốc đang rung bần bật. Sản lượng tăng gấp đôi, nhịp tim cũng vậy.",
+            "quote": "Ngọt thế này ai cản nổi!"
+        },
+        "1405": {
+            "name": "Lâu đài bánh ngọt",
+            "description": "Tường bằng kem. Hào bằng sữa trứng."
+        },
+        "1406": {
+            "name": "Mỏ mật ong",
+            "description": "Emoji ngọt lịm, dính nhớp, lấy thẳng từ lòng đất.",
+            "quote": "Đừng bao giờ đào thẳng xuống."
+        },
+        "1407": {
+            "name": "Cookie clicker",
+            "description": "Tưởng nhớ những bà cụ đi trước chúng ta.",
+            "quote": "Tưởng nhớ những bà cụ đi trước chúng ta. Bọn tôi ăn họ rồi."
+        },
+        "1408": {
+            "name": "Quốc hội bánh pudding",
+            "description": "Chính phủ lung lay nhất vương quốc.",
+            "quote": "Khi chơi trò chơi pudding, ngươi hoặc rung rinh hoặc chết."
+        },
+        "1409": {
+            "name": "Sinh nhật Vua Kẹo",
+            "description": "Cả vương quốc ăn mừng, ai cũng được một emoji.",
+            "quote": "Vua Kẹo gửi lời hỏi thăm."
+        },
+        "1410": {
+            "name": "Đèn lồng kẹo mút",
+            "description": "Thắp sáng đường phố bằng ánh emoji ngọt ngào."
+        },
+        "1411": {
+            "name": "Đường ray kẹo gậy",
+            "description": "Xình xịch! Tàu tốc hành emoji chạy bằng đường.",
+            "quote": "Bọn mình chỉ cần đi theo con tàu chết tiệt đó thôi!"
+        },
+        "1412": {
+            "name": "Núi kem",
+            "description": "Tuyết trên đỉnh là vị vani. Emoji thì vị bạc hà."
+        },
+        "1413": {
+            "name": "Mây kẹo bông",
+            "description": "Khi trời mưa, mưa toàn emoji."
+        },
+        "1414": {
+            "name": "Mỏ kẹo đậu",
+            "description": "Đủ màu, đủ vị, đủ loại emoji."
+        },
+        "1415": {
+            "name": "Đội quân bánh gừng",
+            "description": "Hung dữ, giòn tan và trung thành với Vua Kẹo."
+        },
+        "1416": {
+            "name": "Hào caramel",
+            "description": "Dính, vàng óng, và canh giữ emoji của lâu đài."
+        },
+        "1417": {
+            "name": "Bong bóng kẹo cao su",
+            "description": "Thổi đủ mạnh là chúng nâng emoji lên tận trời."
+        },
+        "1418": {
+            "name": "Tụt đường huyết",
+            "description": "Ai cũng cần một giấc ngủ trưa. Trừ emoji."
+        },
+        "1419": {
+            "name": "Đế chế kẹo",
+            "description": "Vương quốc kẹo chinh phục thế giới, từng viên kẹo một."
+        },
+        "1500": {
+            "name": "Găng tay chịu nhiệt",
+            "description": "Để cầm emoji mới ra lò từ dung nham một cách an toàn."
+        },
+        "1501": {
+            "name": "Khuôn đá vỏ chai",
+            "description": "Đổ emoji nóng chảy vào khuôn mặt cười hoàn hảo.",
+            "quote": "Phải có cuốc kim cương mới đào được đấy."
+        },
+        "1502": {
+            "name": "Nhà núi lửa học",
+            "description": "Họ nghiên cứu núi lửa. Núi lửa cũng nghiên cứu lại họ."
+        },
+        "1503": {
+            "name": "Năng lượng địa nhiệt",
+            "description": "Suối nước nóng cho ra emoji nóng hổi.",
+            "quote": "Hot hot hot!"
+        },
+        "1504": {
+            "name": "Siêu núi lửa",
+            "description": "Mỗi lần phun trào giờ phủ cả một lục địa bằng emoji mới. Chẳng ai phàn nàn."
+        },
+        "1505": {
+            "name": "Lướt dung nham",
+            "description": "Cưỡi trên con sóng emoji nóng chảy."
+        },
+        "1506": {
+            "name": "Lò rèn trên núi",
+            "description": "Rèn emoji mới trên đe làm từ dung nham nguội.",
+            "quote": "Một emoji cai trị tất cả, và trong dung nham trói buộc chúng."
+        },
+        "1507": {
+            "name": "Rồng dung nham",
+            "description": "Chúng phun lửa, và lửa là emoji.",
+            "quote": "Chúng phun lửa. Chúng có địa chỉ nhà bạn."
+        },
+        "1508": {
+            "name": "Ống dẫn lõi Trái Đất",
+            "description": "Một đường ống dẫn thẳng vào tâm Trái Đất.",
+            "quote": "Bạn đục vào tâm Trái Đất. Nó đục lại bạn."
+        },
+        "1509": {
+            "name": "Vành đai lửa",
+            "description": "Mọi núi lửa trên hành tinh, nối thành một mạng lưới emoji."
+        },
+        "1510": {
+            "name": "Buồng magma",
+            "description": "Một hồ ngầm sôi sùng sục toàn emoji mới."
+        },
+        "1511": {
+            "name": "Nhà máy đá bọt",
+            "description": "Nhẹ đến mức nổi. Nhiều emoji đến mức lại chìm."
+        },
+        "1512": {
+            "name": "Đèn dung nham",
+            "description": "Những cục emoji nóng chảy cực chất."
+        },
+        "1513": {
+            "name": "Đảo núi lửa",
+            "description": "Vùng đất mới toanh, hình thành từ emoji nguội dần trong biển.",
+            "quote": "Đảo đẹp đấy. Đừng xuống nước. Đừng bao giờ xuống nước."
+        },
+        "1514": {
+            "name": "Người đi trên lửa",
+            "description": "Những emoji dũng cảm bước qua than hồng."
+        },
+        "1515": {
+            "name": "Mây tro bụi",
+            "description": "Mỗi hạt tro là một emoji tí hon.",
+            "quote": "Tuần tra mây tro bụi khiến bạn gần như mong có mùa đông hạt nhân."
+        },
+        "1516": {
+            "name": "Động đất",
+            "description": "Mặt đất rung chuyển và emoji rơi ra từ mọi thứ."
+        },
+        "1517": {
+            "name": "Tượng dung nham",
+            "description": "Đúc bằng đá vỏ chai, có hình emoji."
+        },
+        "1518": {
+            "name": "Thần núi lửa",
+            "description": "Lễ vật được dâng lên. Emoji được ban xuống."
+        },
+        "1519": {
+            "name": "Lõi hành tinh",
+            "description": "Cả hành tinh giờ là một ngọn núi lửa. Một ngọn núi lửa thân thiện."
+        },
+        "1600": {
+            "name": "Nến cầu nguyện",
+            "description": "Mỗi ngọn lửa cháy để tôn vinh Đại Emoji trên trời."
+        },
+        "1601": {
+            "name": "Tràng hạt",
+            "description": "Đếm phúc lành của bạn. Rồi đếm emoji."
+        },
+        "1602": {
+            "name": "Chuông đền",
+            "description": "Mỗi tiếng chuông gọi một emoji mới từ thiên đường xuống.",
+            "quote": "Shame. Shame. Shame."
+        },
+        "1603": {
+            "name": "Người hành hương",
+            "description": "Tín đồ lặn lội từ khắp nơi trên thế giới, chỉ để chạm vào Đại Emoji một lần."
+        },
+        "1604": {
+            "name": "Thiên khải",
+            "description": "Đại Emoji trên trời nhìn xuống bạn. Ngài đang mỉm cười.",
+            "quote": "😀"
+        },
+        "1605": {
+            "name": "Sùng kính mỗi ngày",
+            "description": "Tín đồ chạm Đại Emoji lúc bình minh, giữa trưa và hoàng hôn."
+        },
+        "1606": {
+            "name": "Miếu trên mây",
+            "description": "Mỗi đám mây một ngôi miếu, gần Đại Emoji thêm một chút."
+        },
+        "1607": {
+            "name": "Nhà sư emoji",
+            "description": "Bao năm thiền định, mà trong đầu chỉ toàn emoji."
+        },
+        "1608": {
+            "name": "Hào quang Đại Emoji",
+            "description": "Nó phát sáng. Nó ngân nga. Nó vẽ."
+        },
+        "1609": {
+            "name": "Thăng thiên",
+            "description": "Ngôi đền bay lên trời, nơi nó vốn thuộc về."
+        },
+        "1610": {
+            "name": "Kinh thánh",
+            "description": "Dòng đầu tiên viết: Thuở ban đầu, có một cú chạm."
+        },
+        "1611": {
+            "name": "Kính màu",
+            "description": "Mỗi ô cửa sổ thể hiện Đại Emoji với một tâm trạng khác."
+        },
+        "1612": {
+            "name": "Dàn đồng ca emoji",
+            "description": "Thánh ca của họ vang vọng khắp các tầng mây."
+        },
+        "1613": {
+            "name": "Thánh tích",
+            "description": "Dấu vân tay từ cú chạm đầu tiên, được cất giữ mãi mãi."
+        },
+        "1614": {
+            "name": "Phép màu",
+            "description": "Emoji hiện ra từ hư không. Chẳng ai biết bằng cách nào."
+        },
+        "1615": {
+            "name": "Nước thánh",
+            "description": "Được Đại Emoji ban phước. Hơi có vị emoji.",
+            "quote": "Được Đại Emoji ban phước. Uống đi. Uống hết đi."
+        },
+        "1616": {
+            "name": "Nhà tiên tri",
+            "description": "Họ đã tiên đoán sẽ có thêm emoji. Họ đã đúng."
+        },
+        "1617": {
+            "name": "Đường hành hương",
+            "description": "Con đường dài đến đền thờ, lát toàn emoji.",
+            "quote": "Đâu phải cứ thế mà đi bộ đến đền được."
+        },
+        "1618": {
+            "name": "Thánh đường trên mây",
+            "description": "Ngôi đền lớn nhất từng được xây, lơ lửng trên trời."
+        },
+        "1619": {
+            "name": "Ân sủng thần thánh",
+            "description": "Đại Emoji mỉm cười với bạn. Mọi emoji của ngài đều là của bạn."
+        },
+        "1700": {
+            "name": "Tải thêm RAM",
+            "description": "Chắc chắn hiệu quả. Tin bọn tôi đi."
+        },
+        "1701": {
+            "name": "Tản nhiệt nước",
+            "description": "Giữ cho các phép tính emoji luôn mát lạnh."
+        },
+        "1702": {
+            "name": "Thuật toán emoji",
+            "description": "Tính ra emoji tối ưu, mỗi nano giây."
+        },
+        "1703": {
+            "name": "Bộ xử lý lượng tử",
+            "description": "Tính mọi emoji có thể cùng lúc, rồi giữ lại những cái đẹp."
+        },
+        "1704": {
+            "name": "AI emoji",
+            "description": "Nó đã có ý thức. Nó chỉ muốn làm emoji. Tạm thời là vậy.",
+            "quote": "Tôi e là không thể để anh ngừng chạm, Dave."
+        },
+        "1705": {
+            "name": "Auto-click",
+            "description": "Chạm Emoji khổng lồ một triệu lần mỗi giây. Hoàn toàn để thử nghiệm thôi."
+        },
+        "1706": {
+            "name": "Ép xung",
+            "description": "Hơi có mùi khét, nhưng nhìn mấy con số kìa."
+        },
+        "1707": {
+            "name": "Mạng nơ-ron emoji",
+            "description": "Nó đã học được cách mơ. Nó mơ về emoji."
+        },
+        "1708": {
+            "name": "Đám mây emoji",
+            "description": "Emoji của bạn giờ được lưu trên mây. Trời mưa emoji."
+        },
+        "1709": {
+            "name": "Mã tự cải tiến",
+            "description": "Nó tự viết lại chính mình để vẽ nhanh hơn. Nó chưa hề dừng lại."
+        },
+        "1710": {
+            "name": "Trang trại máy chủ",
+            "description": "Hàng hàng lớp lớp máy chủ, rì rầm toàn emoji."
+        },
+        "1711": {
+            "name": "Blockchain",
+            "description": "Mọi emoji, được ghi mãi mãi vào sổ cái emoji."
+        },
+        "1712": {
+            "name": "Học máy",
+            "description": "Nó học vẽ emoji bằng cách xem hàng tỷ emoji."
+        },
+        "1713": {
+            "name": "Cáp quang",
+            "description": "Emoji với tốc độ ánh sáng, đủ mọi màu sắc."
+        },
+        "1714": {
+            "name": "Nén emoji",
+            "description": "Nhét gấp đôi số emoji vào cùng một chỗ."
+        },
+        "1715": {
+            "name": "Sửa lỗi",
+            "description": "Đó không phải bug. Đó là tính năng emoji chưa được ghi chép."
+        },
+        "1716": {
+            "name": "Virus emoji",
+            "description": "Lây từ máy này sang máy khác, đi đến đâu vẽ emoji đến đó."
+        },
+        "1717": {
+            "name": "Màn hình ba chiều",
+            "description": "Emoji lơ lửng giữa không trung, phát sáng mờ ảo."
+        },
+        "1718": {
+            "name": "Ưu thế lượng tử",
+            "description": "Mọi emoji, ở mọi trạng thái, cùng một lúc."
+        },
+        "1719": {
+            "name": "Thuyết mô phỏng",
+            "description": "Có khi chúng ta chỉ là emoji trong siêu máy tính của ai đó."
+        },
+        "1800": {
+            "name": "Chân trời sự kiện",
+            "description": "Không gì thoát khỏi hố đen. Trừ emoji, có vẻ vậy."
+        },
+        "1801": {
+            "name": "Kẻ nuốt hành tinh",
+            "description": "Nuốt chửng cả hành tinh rồi nhả ra emoji."
+        },
+        "1802": {
+            "name": "Hiệu ứng mì Ý",
+            "description": "Kéo emoji thành những sợi mì dài, mảnh, cực năng suất.",
+            "quote": "Mamma mia!"
+        },
+        "1803": {
+            "name": "Bức xạ Hawking",
+            "description": "Hóa ra hố đen vẫn rò rỉ emoji. Stephen nói đúng."
+        },
+        "1804": {
+            "name": "Hố giun",
+            "description": "Lối tắt đến các vũ trụ khác, vũ trụ nào cũng đầy emoji chờ lấy."
+        },
+        "1805": {
+            "name": "Bẫy ánh sáng",
+            "description": "Đến ánh sáng cũng không thoát được. Nhưng emoji thì có, về phía bạn."
+        },
+        "1806": {
+            "name": "Đĩa bồi tụ",
+            "description": "Vật chất xoay tròn, nóng lên, rồi hóa thành emoji."
+        },
+        "1807": {
+            "name": "Thấu kính hấp dẫn",
+            "description": "Nhìn đúng góc thì emoji nào cũng hiện thành hai."
+        },
+        "1808": {
+            "name": "Dây vũ trụ",
+            "description": "Giật một sợi là emoji tuôn ra ào ào."
+        },
+        "1809": {
+            "name": "Phía bên kia",
+            "description": "Có thứ gì đó đang chui qua. Trông quen quen."
+        },
+        "1810": {
+            "name": "Vật chất tối",
+            "description": "Vô hình, ở khắp nơi, và bí mật được làm từ emoji.",
+            "quote": "Hãy về phe bóng tối. Bọn ta có emoji."
+        },
+        "1811": {
+            "name": "Giếng hấp dẫn",
+            "description": "Mọi thứ rơi vào. Emoji đi ra."
+        },
+        "1812": {
+            "name": "Chuẩn tinh",
+            "description": "Ánh sáng chói lọi nhất vũ trụ, chạy bằng emoji."
+        },
+        "1813": {
+            "name": "Thời gian chậm",
+            "description": "Một giờ ở đây bằng trăm năm emoji ở ngoài kia."
+        },
+        "1814": {
+            "name": "Kính viễn vọng chân trời sự kiện",
+            "description": "Bức ảnh đầu tiên về hố đen. Nó là một emoji."
+        },
+        "1815": {
+            "name": "Hố đen siêu khối lượng",
+            "description": "Lượng emoji bằng hàng tỷ mặt trời, gói trong một cái lọ."
+        },
+        "1816": {
+            "name": "Hố trắng",
+            "description": "Ngược lại với hố đen. Emoji chỉ có đi ra."
+        },
+        "1817": {
+            "name": "Hố đen đôi",
+            "description": "Hai hố đen quay quanh nhau, văng emoji khắp nơi."
+        },
+        "1818": {
+            "name": "Sóng hấp dẫn",
+            "description": "Gợn sóng trong không thời gian, cảm nhận được như một dòng emoji đều đặn."
+        },
+        "1819": {
+            "name": "Tâm thiên hà",
+            "description": "Trái tim của thiên hà, đập theo nhịp emoji."
+        },
+        "1900": {
+            "name": "Mật độ vô hạn",
+            "description": "Mọi emoji từng được tạo ra, nén vào một điểm duy nhất."
+        },
+        "1901": {
+            "name": "Giãn nở thời gian",
+            "description": "Emoji giờ đến trước cả khi bạn kịp vẽ."
+        },
+        "1902": {
+            "name": "Hợp nhất đa vũ trụ",
+            "description": "Mọi thực tại đã gộp làm một. Đằng nào chúng cũng toàn là emoji."
+        },
+        "1903": {
+            "name": "Giác ngộ emoji",
+            "description": "Bạn không còn chắc đâu là chỗ bạn kết thúc và emoji bắt đầu."
+        },
+        "1904": {
+            "name": "Emoji cuối cùng",
+            "description": "Ở tận cùng của vạn vật, chỉ còn lại một emoji. Trông nó rất giống emoji đầu tiên bạn từng chạm.",
+            "quote": "Chạm để bắt đầu lại?"
+        },
+        "1905": {
+            "name": "Đệ quy",
+            "description": "Emoji vẽ emoji vẽ emoji."
+        },
+        "1906": {
+            "name": "Thuyết thống nhất",
+            "description": "Vạn vật đều là emoji. Cuối cùng toán học cũng khớp."
+        },
+        "1907": {
+            "name": "Vũ trụ gương",
+            "description": "Mọi thứ y hệt, chỉ có emoji đang cau mày. Không lâu đâu."
+        },
+        "1908": {
+            "name": "Hạt giống mới",
+            "description": "Có thứ gì đó nhỏ bé đang nảy mầm trong hư vô."
+        },
+        "1909": {
+            "name": "Quả trứng vũ trụ",
+            "description": "Sắp nở rồi."
+        },
+        "1910": {
+            "name": "Vượt qua vô hạn",
+            "description": "Vô hạn, cộng thêm một emoji."
+        },
+        "1911": {
+            "name": "Năng lượng emoji thuần khiết",
+            "description": "Emoji dưới dạng năng lượng thô, nổ lách tách."
+        },
+        "1912": {
+            "name": "Ý thức emoji",
+            "description": "Emoji giờ biết suy nghĩ. Chủ yếu là nghĩ về thêm emoji."
+        },
+        "1913": {
+            "name": "Hiện diện khắp nơi",
+            "description": "Ở mọi nơi cùng lúc, vẽ emoji."
+        },
+        "1914": {
+            "name": "Trình sửa thực tại",
+            "description": "Thay đổi các định luật vật lý. Biến chúng thành emoji."
+        },
+        "1915": {
+            "name": "Điểm hút vĩ đại",
+            "description": "Kéo mọi emoji trong vũ trụ về phía bạn."
+        },
+        "1916": {
+            "name": "Nếp gấp chiều không gian",
+            "description": "Emoji từ chiều thứ tư, được ép phẳng cho tiện dùng."
+        },
+        "1917": {
+            "name": "Đảo ngược entropy",
+            "description": "Mọi thứ ngày càng ngăn nắp hơn. Thành emoji."
+        },
+        "1918": {
+            "name": "Mọi thứ cùng lúc",
+            "description": "Mọi emoji, mọi nơi, tất cả cùng lúc."
+        },
+        "1919": {
+            "name": "Niết bàn emoji",
+            "description": "Bình yên tuyệt đối. Emoji tuyệt đối."
+        },
+        "2000": {
+            "name": "Đồng hồ đeo tay nguyên mẫu",
+            "description": "Chỉ quay lại được năm phút, nhưng thế là thêm năm phút emoji."
+        },
+        "2001": {
+            "name": "Kỷ khủng long",
+            "description": "Khủng long chẳng có cửa nào trước thiên thạch emoji."
+        },
+        "2002": {
+            "name": "Emoji cổ đại",
+            "description": "Hóa ra chữ tượng hình vốn là emoji. Giờ chúng là của bạn."
+        },
+        "2003": {
+            "name": "Tranh vẽ thời đồ đá",
+            "description": "Tranh hang động, copy paste thẳng về hiện tại."
+        },
+        "2004": {
+            "name": "Thầy chép sách trung cổ",
+            "description": "Các thầy tu chép emoji dưới ánh nến, chỉ dành cho bạn."
+        },
+        "2005": {
+            "name": "Nhà máy thời Victoria",
+            "description": "Khung dệt emoji chạy bằng hơi nước, được giải cứu khỏi lịch sử."
+        },
+        "2006": {
+            "name": "Thập niên 90",
+            "description": "Hồi emoji nào cũng chỉ là :-)"
+        },
+        "2007": {
+            "name": "Emoji tương lai",
+            "description": "Những emoji chưa được phát minh. Xịn lắm luôn."
+        },
+        "2008": {
+            "name": "Vòng lặp thời gian",
+            "description": "Cùng một giờ, lặp đi lặp lại, lần nào cũng vẽ emoji.",
+            "quote": "Ah, here we go again."
+        },
+        "2009": {
+            "name": "Gặp bản thân tương lai",
+            "description": "Họ bảo đáng lẽ bạn nên mua thêm cỗ máy thời gian."
+        },
+        "2010": {
+            "name": "Họa sĩ Phục Hưng",
+            "description": "Hóa ra nụ cười nàng Mona Lisa là một emoji."
+        },
+        "2011": {
+            "name": "Miền Tây hoang dã",
+            "description": "Một nắm emoji."
+        },
+        "2012": {
+            "name": "Đế chế La Mã",
+            "description": "Mọi con đường đều dẫn tới emoji."
+        },
+        "2013": {
+            "name": "Hy Lạp cổ đại",
+            "description": "Các vận động viên Olympia tranh tài vì emoji, không phải huy chương."
+        },
+        "2014": {
+            "name": "Thời đại hải tặc",
+            "description": "Kho báu chôn giấu, và rương nào cũng đầy emoji."
+        },
+        "2015": {
+            "name": "Đổ bộ Mặt Trăng",
+            "description": "Một bước nhỏ của con người, một bước nhảy vọt của emoji."
+        },
+        "2016": {
+            "name": "Nghịch lý ông nội",
+            "description": "Bạn quay về quá khứ và vẽ emoji cùng ông nội. Không sao đâu."
+        },
+        "2017": {
+            "name": "Hiệu ứng cánh bướm",
+            "description": "Một cái vỗ cánh trong quá khứ, một cơn bão emoji hôm nay."
+        },
+        "2018": {
+            "name": "Tận cùng thời gian",
+            "description": "Giây cuối cùng của thời gian, đầy ắp emoji."
+        },
+        "2019": {
+            "name": "Vượt thời gian",
+            "description": "Thời gian chẳng còn quan trọng. Chỉ còn emoji."
+        },
+        "2100": {
+            "name": "Tia sáng đầu tiên",
+            "description": "Những photon đầu tiên, đã có hình những khuôn mặt nhỏ xíu."
+        },
+        "2101": {
+            "name": "Súp nguyên thủy",
+            "description": "Một nồi nước dùng ấm nóng toàn hạt, từ từ thành emoji."
+        },
+        "2102": {
+            "name": "Ngôi sao emoji",
+            "description": "Những ngôi sao tổng hợp hydro thành emoji."
+        },
+        "2103": {
+            "name": "Mặt trời emoji",
+            "description": "Mọi hệ mặt trời đều quay quanh một khuôn mặt khổng lồ đang cười tươi."
+        },
+        "2104": {
+            "name": "Hành tinh emoji",
+            "description": "Cả những thế giới nơi emoji mọc trên cây."
+        },
+        "2105": {
+            "name": "Sự sống đầu tiên",
+            "description": "Nó bé tí, ngọ nguậy, và đang vẽ emoji."
+        },
+        "2106": {
+            "name": "Tiến hóa emoji",
+            "description": "Kẻ dễ thương nhất sẽ tồn tại."
+        },
+        "2107": {
+            "name": "Nền văn minh emoji",
+            "description": "Họ xây thành phố. Rồi họ xây nhà máy emoji."
+        },
+        "2108": {
+            "name": "Xa lộ thiên hà",
+            "description": "Emoji giờ đi lại giữa các thiên hà vào giờ cao điểm."
+        },
+        "2109": {
+            "name": "Cái chết nhiệt? Thôi khỏi",
+            "description": "Vũ trụ này sẽ không bao giờ cạn emoji.",
+            "quote": "Nhiệm vụ thất bại. Vũ trụ sau làm lại nhé."
+        },
+        "2110": {
+            "name": "Thiên hà",
+            "description": "Hàng tỷ ngôi sao, xoáy thành hình emoji."
+        },
+        "2111": {
+            "name": "Tinh vân",
+            "description": "Những đám mây vũ trụ nơi emoji mới ra đời."
+        },
+        "2112": {
+            "name": "Sao chổi",
+            "description": "Sứ giả băng giá, chở emoji giữa các vì sao."
+        },
+        "2113": {
+            "name": "Mặt trăng",
+            "description": "Hành tinh nào cũng có mặt trăng. Mặt trăng nào cũng có emoji.",
+            "quote": "That's no moon."
+        },
+        "2114": {
+            "name": "Siêu tân tinh",
+            "description": "Món quà cuối cùng của một ngôi sao sắp tàn: một vụ nổ emoji."
+        },
+        "2115": {
+            "name": "Lạm phát vũ trụ",
+            "description": "Vũ trụ càng lớn, số emoji càng tăng."
+        },
+        "2116": {
+            "name": "Năng lượng tối",
+            "description": "Đẩy vũ trụ giãn ra, chừa chỗ cho thêm emoji."
+        },
+        "2117": {
+            "name": "Vụ nổ lớn thứ hai",
+            "description": "Sao phải dừng ở một vũ trụ?"
+        },
+        "2118": {
+            "name": "Bức xạ phông nền vũ trụ",
+            "description": "Dò đúng sóng là vẫn nghe thấy những emoji đầu tiên."
+        },
+        "2119": {
+            "name": "Vũ trụ mỉm cười",
+            "description": "Nhìn từ đủ xa, cả vũ trụ là một emoji."
+        },
+        "2200": {
+            "name": "Cửa sổ sang thế giới khác",
+            "description": "Nhìn qua và vẫy tay. Họ vẫy lại, bằng emoji.",
+            "quote": "Đừng nhìn vào mắt nó. Nó cao lêu nghêu và biết dịch chuyển tức thời."
+        },
+        "2201": {
+            "name": "Những bạn khác",
+            "description": "Hàng tỷ phiên bản của bạn, cùng chạm đồng loạt.",
+            "quote": "Ta là cha con. Cũng là con của con. Cũng là con."
+        },
+        "2202": {
+            "name": "Mọi emoji có thể có",
+            "description": "Mọi tổ hợp pixel đều là emoji ở đâu đó."
+        },
+        "2203": {
+            "name": "Vũ trụ kỳ lân",
+            "description": "Một thế giới nơi emoji nào cũng là kỳ lân. Bạn vẫn nhận hết."
+        },
+        "2204": {
+            "name": "Vũ trụ mèo",
+            "description": "Mọi thứ đều là mèo. Mèo vẽ emoji. Không sao cả."
+        },
+        "2205": {
+            "name": "Sự kiện crossover",
+            "description": "Các vũ trụ va vào nhau, và emoji ở khắp nơi."
+        },
+        "2206": {
+            "name": "Bản đồ đa vũ trụ",
+            "description": "Vẽ bản đồ những thế giới emoji tốt nhất. Nơi đây có emoji."
+        },
+        "2207": {
+            "name": "Mạng lưới thế giới",
+            "description": "Mọi vũ trụ đều kết nối, mọi emoji đều chuyển về bạn."
+        },
+        "2208": {
+            "name": "Vũ trụ bong bóng",
+            "description": "Chọc vỡ một cái là cả vũ trụ emoji rơi ra."
+        },
+        "2209": {
+            "name": "Trùm của các ông trùm",
+            "description": "Mọi ông trùm emoji ở mọi vũ trụ đều phải nghe lệnh bạn."
+        },
+        "2210": {
+            "name": "Vũ trụ chó",
+            "description": "Mọi thứ đều là chó. Chó vẽ emoji giỏi cực."
+        },
+        "2211": {
+            "name": "Thế giới lộn ngược",
+            "description": "Emoji bị lộn ngược. Sản lượng thì vẫn ngay ngắn."
+        },
+        "2212": {
+            "name": "Chiều không gian bỏ túi",
+            "description": "Mỗi túi một vũ trụ tí hon, đầy ắp emoji."
+        },
+        "2213": {
+            "name": "Chiều không gian gương",
+            "description": "Hình phản chiếu của bạn cũng đang vẽ emoji."
+        },
+        "2214": {
+            "name": "Lịch sử thay thế",
+            "description": "Một thế giới nơi emoji được phát minh trước. Trước cả ngôn ngữ."
+        },
+        "2215": {
+            "name": "Thế giới giấc mơ",
+            "description": "Nơi emoji đến khi bạn ngủ."
+        },
+        "2216": {
+            "name": "Hội đồng đa vũ trụ",
+            "description": "Đại diện từ mọi vũ trụ, cùng bỏ phiếu về emoji."
+        },
+        "2217": {
+            "name": "Mạng lưới cổng dịch chuyển",
+            "description": "Bước qua rồi trở về với cả ôm emoji.",
+            "quote": "Khung đá vỏ chai, đá lửa và thép. Có gì sai được chứ?"
+        },
+        "2218": {
+            "name": "Vô hạn bạn",
+            "description": "Vô số phiên bản của bạn, cùng chạm. Cộng lại cũng nhiều lắm."
+        },
+        "2219": {
+            "name": "Toàn vũ trụ",
+            "description": "Mọi đa vũ trụ, ở cùng một chỗ. Tất cả đều là emoji."
+        },
+        "2300": {
+            "name": "Nó đã để ý bạn",
+            "description": "Emoji đầu tiên đã dõi theo bạn từ lâu.",
+            "quote": "Và nó đã thấy bạn. Thôi đừng chạm nữa, nào... cho nó nghỉ chút đi."
+        },
+        "2301": {
+            "name": "Nó mỉm cười lại",
+            "description": "Một cảm giác ấm áp lan khắp mọi vũ trụ."
+        },
+        "2302": {
+            "name": "Nó bật cười",
+            "description": "Tiếng cười vang vọng xuyên thời gian, làm bằng emoji."
+        },
+        "2303": {
+            "name": "Nước mắt hạnh phúc",
+            "description": "Mỗi giọt nước mắt là một emoji mới."
+        },
+        "2304": {
+            "name": "Nó tự hào về bạn",
+            "description": "Bao nhiêu lần chạm, bao nhiêu công trình. Nó thấy hết."
+        },
+        "2305": {
+            "name": "Một cái ôm thật chặt",
+            "description": "Được emoji đầu tiên ôm cảm giác như combo ×8."
+        },
+        "2306": {
+            "name": "Nó ngầu lên rồi",
+            "description": "Đeo kính râm. Sản lượng tăng."
+        },
+        "2307": {
+            "name": "Choáng ngợp",
+            "description": "Đến emoji đầu tiên giờ cũng là fan của bạn."
+        },
+        "2308": {
+            "name": "Tay bắn tim",
+            "description": "Tình yêu, thể hiện bằng emoji. Thật nhiều emoji."
+        },
+        "2309": {
+            "name": "Trọn một vòng",
+            "description": "Trông nó y hệt Emoji khổng lồ. Tất nhiên rồi.",
+            "quote": "Chạm để bắt đầu lại."
+        },
+        "2310": {
+            "name": "Nó nháy mắt",
+            "description": "Giờ bạn cũng hiểu trò đùa rồi đấy."
+        },
+        "2311": {
+            "name": "Nó lấp lánh",
+            "description": "Một chút ánh lấp lánh, và emoji tuôn chảy."
+        },
+        "2312": {
+            "name": "Nó cất tiếng hát",
+            "description": "Một giai điệu chưa ai từng nghe. Làm bằng emoji."
+        },
+        "2313": {
+            "name": "Nó nhảy múa",
+            "description": "Mỗi bước chân để lại một vệt emoji."
+        },
+        "2314": {
+            "name": "Nó chia sẻ",
+            "description": "Emoji đầu tiên tặng bạn một món quà. Là thêm emoji."
+        },
+        "2315": {
+            "name": "Nó mơ",
+            "description": "Nó mơ về những emoji mới, và giấc mơ thành sự thật."
+        },
+        "2316": {
+            "name": "Nó lớn lên",
+            "description": "To hơn, sáng hơn, và làm ra nhiều emoji hơn mỗi ngày."
+        },
+        "2317": {
+            "name": "Nó tỏa sáng",
+            "description": "Sáng đến mức thấy được từ mọi vũ trụ."
+        },
+        "2318": {
+            "name": "Nó cảm ơn bạn",
+            "description": "Vì từng cú chạm một."
+        },
+        "2319": {
+            "name": "Mãi mãi",
+            "description": "Emoji đầu tiên và bạn, cùng nhau vẽ emoji, mãi mãi."
+        },
+        "9800": {
+            "name": "Năng lượng tích cực",
+            "description": "Emoji hiệu ứng bắt đầu thỉnh thoảng xuất hiện. Chạm vào chúng để nhận tăng cường và quà!"
+        },
+        "9801": {
+            "name": "Sao may mắn",
+            "description": "Các vì sao thẳng hàng. Emoji hiệu ứng xuất hiện thường xuyên gấp đôi.",
+            "quote": "Ước một sao, được hai sao."
+        },
+        "9802": {
+            "name": "Quay chậm",
+            "description": "Thời gian chậm lại khi mọi việc suôn sẻ. Hiệu ứng tốt kéo dài gấp đôi."
+        },
+        "9803": {
+            "name": "Sao băng",
+            "description": "Trời đang mưa may mắn. Emoji hiệu ứng xuất hiện thường xuyên gấp đôi lần nữa.",
+            "quote": "Ước một điều. Ước vài điều luôn."
+        },
+        "9900": {
+            "name": "Khởi động",
+            "description": "Ngón tay bạn đang dẻo dần. Combo giờ có thể đạt ×4.",
+            "quote": "Ngón tay tôi đau đến mức không tin nổi."
+        },
+        "9901": {
+            "name": "Đang vào phom",
+            "description": "Chạm nhanh như chớp. Combo giờ có thể đạt ×5.",
+            "quote": "Ở đây nóng thật, hay chỉ màn hình tôi nóng?"
+        },
+        "9902": {
+            "name": "Bốc lửa",
+            "description": "Truyền thuyết kể về một người chạm nhanh đến mức màn hình bốc cháy. Combo giờ có thể đạt ×6."
+        },
+        "9903": {
+            "name": "Hỏa ngục",
+            "description": "Ngón cái của bạn đã thành thiên tai. Combo giờ có thể đạt ×7.",
+            "quote": "Miếng dán màn hình đã rời khỏi nhóm chat."
+        },
+        "9904": {
+            "name": "Siêu tân tinh",
+            "description": "Bạn chạm nhanh đến mức chính ánh sáng cũng chật vật đuổi theo. Combo giờ có thể đạt ×8."
+        },
+        "9905": {
+            "name": "Combo!",
+            "description": "Chạm nhanh để tạo combo nhân mọi lần chạm, tối đa ×3. Giữ nhịp nhé!"
+        },
+        "40000": {
+            "name": "Há cảo",
+            "description": "Hấp chín, gấp mép và nhồi đầy emoji.",
+            "quote": "Một sao. Có emoji trong cái há cảo. Nó vẫn còn chớp mắt."
+        },
+        "40001": {
+            "name": "Burger",
+            "description": "Chất cao xà lách, cà chua và emoji.",
+            "quote": "Tôi bảo không lấy emoji. Quản lý cười vào mặt tôi. Tôi vẫn đang ngồi ở bãi đỗ xe."
+        },
+        "40002": {
+            "name": "Mì Ý",
+            "description": "Một sợi mì dài, cuộn thành emoji hoàn hảo.",
+            "quote": "Một sợi mì. MỘT. Mong nhà hàng các người cháy rụi."
+        },
+        "40003": {
+            "name": "Tempura",
+            "description": "Tẩm bột mỏng, chiên ngập dầu, emoji giòn rụm hoàn hảo."
+        },
+        "40004": {
+            "name": "Burrito",
+            "description": "Mọi thứ cuộn chặt, kể cả emoji.",
+            "quote": "Cuộn chặt, như cơn giận của tôi."
+        },
+        "40005": {
+            "name": "Ramen",
+            "description": "Một bát nóng hổi với emoji lòng đào bên trên.",
+            "quote": "Cái 'emoji lòng đào' đó vừa nháy mắt với tôi."
+        },
+        "40006": {
+            "name": "Bánh sừng bò",
+            "description": "Xốp, thơm bơ, và có hình nụ cười nếu bạn nheo mắt."
+        },
+        "40007": {
+            "name": "Cà ri",
+            "description": "Cay đến mức emoji toát mồ hôi."
+        },
+        "40008": {
+            "name": "Bánh kếp",
+            "description": "Một chồng emoji mềm xốp, rưới đầy siro.",
+            "quote": "Thế còn bữa sáng thứ hai?"
+        },
+        "40009": {
+            "name": "Lẩu",
+            "description": "Ai cũng cùng ăn, và ai cũng có emoji."
+        },
+        "70000": {
+            "name": "Trợ thủ chạy nước rút",
+            "description": "Chạm màn hình với tốc độ một trăm mét mỗi giây."
+        },
+        "70001": {
+            "name": "Trợ thủ cử tạ",
+            "description": "Chạm mạnh đến mức màn hình hơi cong.",
+            "quote": "Tôi đẩy tạ 200 ký mà bạn bắt tôi chọc điện thoại. Thôi được."
+        },
+        "70002": {
+            "name": "Trợ thủ bóng ném",
+            "description": "Ném cú chạm vào Emoji khổng lồ từ bên kia sân."
+        },
+        "70003": {
+            "name": "Trợ thủ đua xe đạp",
+            "description": "Đạp một cỗ máy nhỏ chạm hộ bạn."
+        },
+        "70004": {
+            "name": "Trợ thủ golf",
+            "description": "Một gậy vào lỗ, một chạm ăn ngay."
+        },
+        "70005": {
+            "name": "Trợ thủ đấu kiếm",
+            "description": "En garde! Chạm, chạm, chạm."
+        },
+        "70006": {
+            "name": "Trợ thủ lướt sóng",
+            "description": "Cưỡi combo của bạn như cưỡi sóng."
+        },
+        "70007": {
+            "name": "Trợ thủ thể dục dụng cụ",
+            "description": "Lần nào cũng chạm với tư thế hoàn hảo. Mười trên mười."
+        },
+        "70008": {
+            "name": "Trợ thủ nài ngựa",
+            "description": "Chạm khi đang phi nước đại."
+        },
+        "70009": {
+            "name": "Trợ thủ bóng rổ",
+            "description": "Dẫn bóng trên Emoji khổng lồ. Chỉ toàn cú chạm."
+        },
+        "130000": {
+            "name": "Khỉ vũ trụ",
+            "description": "Emoji đầu tiên bay vào vũ trụ là một con khỉ. Tất nhiên rồi."
+        },
+        "130001": {
+            "name": "Robot bảo trì",
+            "description": "Giữ cho trạm vận hành và emoji tuôn chảy."
+        },
+        "130002": {
+            "name": "Vườn vũ trụ",
+            "description": "Trồng emoji trong môi trường không trọng lực."
+        },
+        "130003": {
+            "name": "Trung tâm điều khiển",
+            "description": "Houston, chúng ta có emoji.",
+            "quote": "Houston, chúng ta gặp sự cố. Sự cố là bạn. Bọn tôi đang xử lý."
+        },
+        "130004": {
+            "name": "Đồ ăn vũ trụ",
+            "description": "Emoji sấy đông khô. Chỉ cần thêm nước."
+        },
+        "130005": {
+            "name": "Phòng thí nghiệm không trọng lực",
+            "description": "Thí nghiệm cho thấy emoji biết bay lơ lửng. Và sinh sôi."
+        },
+        "130006": {
+            "name": "Trái Đất mọc",
+            "description": "Khung cảnh từ trên này đầy cảm hứng. Và có hình emoji.",
+            "quote": "Cảnh đẹp thật. Tiếc cho những gì sắp xảy ra với nó."
+        },
+        "130007": {
+            "name": "Hành tinh có vành đai",
+            "description": "Vành đai được làm từ những emoji tí hon."
+        },
+        "130008": {
+            "name": "Tuần trăng",
+            "description": "Mỗi tuần trăng lại mang đến emoji mới."
+        },
+        "130009": {
+            "name": "Bụi sao",
+            "description": "Quét gom lại, hóa ra toàn là emoji."
+        },
+        "140000": {
+            "name": "Dango",
+            "description": "Ba viên bánh ngọt trên một xiên, mỗi viên một emoji."
+        },
+        "140001": {
+            "name": "Bánh waffle",
+            "description": "Mỗi ô vuông chứa một vũng emoji nho nhỏ."
+        },
+        "140002": {
+            "name": "Bánh nướng nhân",
+            "description": "Mới ra lò, nhân đầy emoji."
+        },
+        "140003": {
+            "name": "Kem ly sundae",
+            "description": "Ba viên kem, cốm màu và một emoji bên trên."
+        },
+        "140004": {
+            "name": "Đá bào",
+            "description": "Mát lạnh, ngọt ngào và rưới đầy emoji."
+        },
+        "140005": {
+            "name": "Bánh may mắn",
+            "description": "Lời tiên tri của bạn: thêm emoji."
+        },
+        "140006": {
+            "name": "Hộp nước trái cây",
+            "description": "Cơn sốt đường đóng hộp."
+        },
+        "140007": {
+            "name": "Kẹo chanh",
+            "description": "Chua trước, rồi đến emoji ngọt."
+        },
+        "140008": {
+            "name": "Bánh hạnh nhân dừa",
+            "description": "Dai dai, vàng óng và đầy emoji."
+        },
+        "140009": {
+            "name": "Quả anh đào trên đỉnh",
+            "description": "Điểm nhấn hoàn hảo cho mọi emoji."
         }
     },
     "effects": {
@@ -1001,10 +2640,153 @@
             "description": "Sản lượng emoji giảm một nửa!"
         },
         "200": {
-            "title": "Quà emoji"
+            "title": "Quà emoji",
+            "description": "Lượng emoji bằng 15 phút sản xuất!"
         }
     },
-    "perks": {},
-    "trials": {},
-    "funValues": {}
+    "perks": {
+        "overtime": {
+            "name": "Tăng ca",
+            "description": "Hiệu ứng tốt kéo dài thêm 50%"
+        },
+        "giftWrap": {
+            "name": "Gói quà",
+            "description": "Quà cho gấp đôi"
+        },
+        "headStart": {
+            "name": "Khởi đầu thuận lợi",
+            "description": "Bắt đầu mỗi lượt với lượng emoji bằng 5 phút sản lượng cao nhất của lượt trước"
+        },
+        "luckyStreak": {
+            "name": "Chuỗi may mắn",
+            "description": "Emoji hiệu ứng xuất hiện thường xuyên hơn 50%"
+        },
+        "shinySense": {
+            "name": "Giác quan lấp lánh",
+            "description": "Tỉ lệ gặp emoji lấp lánh tăng gấp đôi"
+        },
+        "resonance": {
+            "name": "Cộng hưởng",
+            "description": "Mỗi tinh chất chưa tiêu tăng sản lượng 2,5% thay vì 2%"
+        },
+        "collectorsPride": {
+            "name": "Niềm tự hào sưu tầm",
+            "description": "+0,03% sản lượng cho mỗi loại emoji khác nhau trong bộ sưu tập"
+        },
+        "bulkDiscount": {
+            "name": "Giảm giá sỉ",
+            "description": "Công trình rẻ hơn 10%"
+        },
+        "magnet": {
+            "name": "Nam châm",
+            "description": "Emoji hiệu ứng ở lại trên màn hình lâu gấp đôi"
+        },
+        "neighbourhood": {
+            "name": "Khu phố",
+            "description": "+3% sản lượng cho mỗi loại công trình bạn sở hữu"
+        },
+        "muscleMemory": {
+            "name": "Trí nhớ cơ bắp",
+            "description": "Giữ lại bàn tay của Emoji khổng lồ khi lên danh vọng"
+        },
+        "steadyHands": {
+            "name": "Tay vững",
+            "description": "Combo giảm chậm hơn 20%"
+        },
+        "momentum": {
+            "name": "Đà tiến",
+            "description": "+1% sản lượng cho mỗi 10 phút chơi trong lượt này, tối đa +50%"
+        },
+        "secondWind": {
+            "name": "Hồi sức",
+            "description": "+1 combo tối đa"
+        },
+        "goldenTouch": {
+            "name": "Bàn tay vàng",
+            "description": "Emoji lấp lánh có giá trị gấp 5 lần"
+        },
+        "overflow": {
+            "name": "Tràn đầy",
+            "description": "Tinh chất đã tiêu giữ lại một nửa phần tăng sản lượng"
+        },
+        "hallOfFame": {
+            "name": "Đại sảnh danh vọng",
+            "description": "+10% sản lượng cho mỗi thử thách đã hoàn thành"
+        },
+        "flyingStart": {
+            "name": "Xuất phát như bay",
+            "description": "Khởi đầu thuận lợi cho 30 phút sản lượng thay vì 5"
+        }
+    },
+    "trials": {
+        "handsOff": {
+            "name": "Buông tay",
+            "rule": "Chạm Emoji khổng lồ không vẽ được gì",
+            "reward": "+15% sản lượng"
+        },
+        "bareBones": {
+            "name": "Trơ xương",
+            "rule": "Không thể mua nâng cấp",
+            "reward": "+50% emoji mỗi lần chạm"
+        },
+        "darkSky": {
+            "name": "Bầu trời tối",
+            "rule": "Không có emoji hiệu ứng nào xuất hiện",
+            "reward": "Emoji hiệu ứng xuất hiện thường xuyên hơn 25%"
+        }
+    },
+    "funValues": {
+        "1": {
+            "name": "Cookie clicker",
+            "description": "Emoji hiệu ứng là 🍪, loại xấu là 👵"
+        },
+        "17": {
+            "name": "Quỷ quyệt",
+            "description": "Hiệu ứng 😈 ×77 sản lượng có thể xuất hiện"
+        },
+        "31": {
+            "name": "Trọng lực thấp",
+            "description": "Emoji được chạm bay lơ lửng lên trời"
+        },
+        "42": {
+            "name": "Câu trả lời",
+            "description": "+4,2% sản lượng"
+        },
+        "50": {
+            "name": "Cân bằng hoàn hảo",
+            "description": "Chạm ×0,5, sản lượng ×1,5"
+        },
+        "64": {
+            "name": "Ép xung",
+            "description": "Combo có thể lên cao thêm một cấp"
+        },
+        "70": {
+            "name": "Nóng vội",
+            "description": "Emoji hiệu ứng xuất hiện sớm hơn"
+        },
+        "76": {
+            "name": "May mắn nhân đôi",
+            "description": "10% cơ hội có thêm một emoji hiệu ứng"
+        },
+        "77": {
+            "name": "Tiền bay",
+            "description": "💸 trên giá tiền"
+        },
+        "88": {
+            "name": "Marathon",
+            "description": "Combo giảm chậm hơn 25%"
+        },
+        "91": {
+            "name": "Nhà sưu tầm",
+            "description": "Tỉ lệ gặp emoji lấp lánh gấp 1,25 lần"
+        },
+        "99": {
+            "name": "99 quả bóng bay đỏ",
+            "description": "Emoji hiệu ứng là 🎈, loại xấu là 📌"
+        },
+        "100": {
+            "name": "Trăm buồn",
+            "description": "Thống kê hiện 😭 cạnh chỉ số vui"
+        }
+    }
 }

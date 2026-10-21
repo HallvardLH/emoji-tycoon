@@ -6,11 +6,14 @@
         "buildings": "Công trình",
         "upgrades": "Nâng cấp",
         "stats": "Thống kê",
-        "collection": "Bộ sưu tập"
+        "collection": "Bộ sưu tập",
+        "newItemsLabel_other": "{{label}}, {{count}} mới"
     },
     "header": {
         "emojis": "Emoji",
-        "perSecond": "Mỗi giây: {{value}}"
+        "perSecond": "Mỗi giây: {{value}}",
+        "rate": "+{{value}} / giây",
+        "gemsLabel_other": "{{gems}} đá quý. Mở cửa hàng đá quý"
     },
     "common": {
         "buy": "Mua",
@@ -23,29 +26,120 @@
             "multiplyTap": "• Chạm hiệu quả gấp đôi.",
             "percentageIncreaseTap": "• Chạm mạnh hơn {{percent}}.",
             "tapPercentageOfEps": "• Mỗi lần chạm nhận thêm {{percent}} tổng sản lượng emoji của bạn.",
-            "percentageIncreaseProduction": "• Tổng sản lượng emoji tăng {{percent}}."
+            "percentageIncreaseProduction": "• Tổng sản lượng emoji tăng {{percent}}.",
+            "comboUnlock": "• Chạm nhanh để tạo combo, tối đa ×{{level}}.",
+            "comboLevel": "• Combo có thể đạt ×{{level}}.",
+            "effectEmojis": "• {{summary}}."
         },
         "bonusProduction": "Mua nâng cấp này ngay sẽ thêm <hl>+{{bonus}}</hl> emoji mỗi giây, tăng sản lượng emoji thêm <hl>{{percent}}</hl>",
         "bonusTap": "Mua nâng cấp này ngay sẽ thêm <hl>+{{bonus}}</hl> emoji mỗi lần chạm, tăng số emoji bạn nhận được từ mỗi lần chạm thêm <hl>{{percent}}</hl>",
         "filterTitle": "Lọc nâng cấp",
-        "filterDescription": "Chọn công trình bạn muốn xem nâng cấp."
+        "filterDescription": "Chọn công trình bạn muốn xem nâng cấp.",
+        "effectEmojiSummary": {
+            "spawnRate": "Emoji hiệu ứng xuất hiện thường xuyên gấp ×{{multiplier}}",
+            "duration": "Hiệu ứng tốt kéo dài gấp ×{{multiplier}}",
+            "start": "Emoji hiệu ứng bắt đầu xuất hiện"
+        },
+        "chips": {
+            "multiplyBuildingProduction": "{{buildings}} ×{{multiplier}}",
+            "multiplyTap": "Chạm ×{{multiplier}}",
+            "percentageIncreaseTap": "Chạm +{{percent}}",
+            "percentageIncreaseProduction": "Sản lượng +{{percent}}",
+            "tapPercentageOfEps": "Chạm +{{percent}} emoji/giây",
+            "comboUnlock": "Combo tối đa ×{{level}}",
+            "comboLevel": "Combo tối đa ×{{level}}"
+        },
+        "impact": {
+            "perSecond": "+{{bonus}} /giây",
+            "perTap": "+{{bonus}} mỗi lần chạm",
+            "and": "{{a}} và {{b}}",
+            "rightNow": "{{gains}} ngay lúc này"
+        },
+        "tierLabel": {
+            "helper": "{{building}} · TRỢ THỦ",
+            "hands": "EMOJI KHỔNG LỒ · BÀN TAY",
+            "effectEmojisNew": "EMOJI HIỆU ỨNG · MỚI",
+            "effectEmojisLevel": "EMOJI HIỆU ỨNG · CẤP {{level}}",
+            "comboNew": "COMBO · MỚI",
+            "comboLevel": "COMBO · CẤP {{level}}",
+            "tier": "{{building}} · BẬC {{tier}}"
+        },
+        "forSale": "Đang bán",
+        "owned": "Đã có",
+        "available": "Có sẵn",
+        "emptyOwnedTitle": "Chưa mua gì cả",
+        "emptyTitle": "Chưa có nâng cấp nào",
+        "emptyOwnedText": "Nâng cấp bạn mua sẽ được gom vào đây.",
+        "emptyText": "Mua công trình và chạm Emoji khổng lồ để mở khóa nâng cấp.",
+        "filterAll": "Tất cả",
+        "quoted": "\"{{quote}}\"",
+        "ownedBadge": "✓ ĐÃ CÓ",
+        "paid": "Đã trả {{price}}",
+        "bareBones": "🦴 Không có nâng cấp trong {{trial}}",
+        "buyFor": "Mua với giá {{price}}",
+        "priceAndTime": "{{price}} · {{time}}",
+        "ownedCount": "{{owned}}/{{total}} nâng cấp",
+        "availableCount": "{{affordable}} đủ tiền mua · {{unlocked}} đã mở khóa",
+        "a11y": {
+            "owned": "{{name}}, đã có",
+            "price": "{{name}}, {{price}}",
+            "affordable": "{{name}}, {{price}}, đủ tiền mua"
+        }
     },
     "stats": {
         "totalEmojisDrawn": "Tổng số emoji đã vẽ",
         "emojiTaps": "Số lần chạm emoji",
         "emojisEarnedFromTapping": "Emoji kiếm được từ chạm",
         "magicalEmojisTapped": "Emoji phép thuật đã chạm",
-        "funValue": "Chỉ số vui"
+        "funValue": "Chỉ số vui",
+        "shinyEmojisTapped": "Emoji lấp lánh đã chạm",
+        "comboTaps": "Lần chạm combo",
+        "madeByEachBuilding": "Sản lượng từng công trình"
     },
     "drawer": {
         "language": "Ngôn ngữ",
         "deviceLanguage": "Ngôn ngữ thiết bị",
         "cheats": "Gian lận",
         "resetGame": "Chơi lại từ đầu",
-        "spawnEffect": "Gọi emoji hiệu ứng"
+        "spawnEffect": "Gọi emoji hiệu ứng",
+        "menu": "Menu"
     },
     "prestige": {
-        "title": "Danh vọng"
+        "title": "Danh vọng",
+        "close": "Đóng",
+        "ordinal_ordinal_one": "thứ {{count}}",
+        "ordinal_ordinal_other": "thứ {{count}}",
+        "celebrateCaption": "DANH VỌNG #{{count}}",
+        "celebrateTrialCaption": "DANH VỌNG #{{count}} · BẮT ĐẦU THỬ THÁCH",
+        "celebrateTitle": "+{{essence}} tinh chất",
+        "celebrateTierTitle": "+{{essence}} tinh chất · mở khóa đặc quyền bậc {{tier}}",
+        "essenceCaption": "TINH CHẤT EMOJI",
+        "essenceBonus": "+{{bonus}} sản lượng ({{each}} mỗi đơn vị)",
+        "intro": "Khi bạn đã vẽ đủ nhiều emoji, tinh chất của chúng bắt đầu tụ lại quanh bạn: một chất liệu kỳ diệu đổi hình dạng mỗi khi bạn nhìn vào. Mỗi đơn vị tinh chất chưa tiêu đều tăng sản lượng, và tinh chất mua được những đặc quyền tồn tại mãi mãi.",
+        "startOver": "Bắt đầu lại",
+        "prestigesSoFar_other": "ĐÃ ĐẠT DANH VỌNG {{count}} LẦN",
+        "resetsWhat": "Đặt lại emoji, công trình, nâng cấp công trình và bàn tay. Bạn giữ lại bộ sưu tập, thống kê, nâng cấp combo và emoji hiệu ứng, tinh chất và đặc quyền.",
+        "nextEssence": "Tinh chất tiếp theo",
+        "nextEssenceAt": "khi vẽ được {{amount}} emoji",
+        "noEssenceYet": "Chưa có tinh chất để nhận",
+        "tapAgainToPrestige": "Chạm lần nữa để lên danh vọng",
+        "prestigeFor": "Lên danh vọng nhận +{{essence}} ✨",
+        "productionCaps": "+{{percent}} SẢN LƯỢNG",
+        "playedThisRun": "Thời gian chơi lượt này",
+        "drawnThisRun": "Đã vẽ lượt này",
+        "essencePerHour": "Tinh chất mỗi giờ",
+        "afterTenMinutes": "sau 10 phút",
+        "essenceRate": "{{rate}} (cao nhất {{best}})",
+        "slowingDown": "📉 Tinh chất đang về chậm hơn so với đầu lượt này. Đây là lúc tốt để lên danh vọng.",
+        "drawnAmount": "Đã vẽ {{amount}}",
+        "pastRuns": "Các lượt trước",
+        "pastRunLine": "{{duration}} · đã vẽ {{amount}}",
+        "pastRunTrialCompleted": "{{icon}} {{name}} ✓",
+        "pastRunTrialNotCompleted": "{{icon}} {{name}}, chưa hoàn thành",
+        "chipLabel": "Tinh chất emoji",
+        "chipLabelReady": "Lên danh vọng nhận {{essence}} tinh chất emoji",
+        "chipEssence": "Tinh chất",
+        "chipPending": "+{{essence}} tinh chất"
     },
     "numbers": {
         "groupSize": "3",
@@ -95,6 +189,260 @@
             "57": "Od",
             "60": "Nd",
             "63": "Vg"
+        }
+    },
+    "buildings": {
+        "ownedA11y_other": "Đang có {{count}}",
+        "newBadge": "MỚI",
+        "statLine": "{{eps}} /giây · {{share}} tổng số",
+        "nextUpgrade": "nâng cấp tiếp theo {{at}}",
+        "allUpgradesFound": "đã tìm thấy mọi nâng cấp",
+        "epsEach": "+{{eps}} /giây mỗi cái",
+        "buy": "MUA",
+        "buyCount": "MUA ×{{count}}",
+        "buyA11y_other": "Mua {{count}} {{name}} với giá {{price}}",
+        "mystery": "Công trình bí ẩn",
+        "revealsAt": "Lộ diện khi có {{amount}} emoji",
+        "bulkLabel": "Số lượng mua",
+        "bulkMax": "Tối đa",
+        "bulkA11yMax": "Mua nhiều nhất có thể",
+        "bulkA11y_other": "Mua {{count}} cái mỗi lần",
+        "milestoneCaption": "CÔNG TRÌNH MỚI",
+        "milestoneTitle": "{{building}} đầu tiên của bạn!"
+    },
+    "time": {
+        "seconds_other": "{{count}}s",
+        "minutes_other": "{{count}}p",
+        "hours_other": "{{count}}h",
+        "days_other": "{{count}} ngày",
+        "pair": "{{a}} {{b}}"
+    },
+    "trials": {
+        "title": "Thử thách",
+        "completedCount": "Hoàn thành {{done}}/{{total}}",
+        "intro": "Lên danh vọng vào một lượt chơi có luật khiến mọi thứ khó hơn. Vẽ đủ emoji trong lượt đó để giữ phần thưởng mãi mãi, và luật sẽ được gỡ bỏ.",
+        "unlocksWith": "Mở khóa ở lần danh vọng {{ordinal}}.",
+        "completeCaps": "HOÀN THÀNH THỬ THÁCH",
+        "inProgressCaps": "ĐANG THỬ THÁCH",
+        "completedText": "{{reward}} giờ là của bạn mãi mãi, và luật được gỡ bỏ cho phần còn lại của lượt này.",
+        "activeText": "{{rule}}. Vẽ {{goal}} trong lượt này để nhận {{reward}} mãi mãi.",
+        "giveUp": "Bỏ cuộc thử thách này",
+        "giveUpConfirm": "Chạm lần nữa để bỏ cuộc (không có thưởng)",
+        "doneTag": "✓ XONG",
+        "playingTag": "ĐANG CHƠI",
+        "ruleLine": "<hl>Luật: </hl>{{rule}}",
+        "ruleLineWithStart": "<hl>Luật: </hl>{{rule}} (bạn bắt đầu với {{amount}} emoji)",
+        "rewardLine": "<hl>Thưởng: </hl>{{reward}}",
+        "finishFirst": "Hãy hoàn thành thử thách trước",
+        "needsEssence": "Cần có tinh chất để lên danh vọng",
+        "tapAgainToStart": "Chạm lần nữa để bắt đầu",
+        "prestigeInto": "Vào thử thách, nhận +{{essence}} ✨",
+        "goalCaps": "MỤC TIÊU: {{goal}}",
+        "goal": "{{amount}} emoji",
+        "completeTitle": "{{name}}: {{reward}}",
+        "rewardUnlocked": "Đã mở khóa phần thưởng"
+    },
+    "perks": {
+        "title": "Đặc quyền",
+        "ownedCount": "Đã có {{owned}}/{{total}}",
+        "spentKeepsHalf": "Tinh chất đã tiêu giữ lại một nửa phần tăng sản lượng.",
+        "spentNoBonus": "Tinh chất đã tiêu không còn tăng sản lượng.",
+        "tierCaps": "BẬC {{tier}}",
+        "tierLockedCaps": "BẬC {{tier}} · MỞ KHÓA Ở LẦN DANH VỌNG {{ordinal}}",
+        "hidden": "Lên danh vọng để hé lộ đặc quyền này.",
+        "needsFirst": "Cần có {{perk}} trước",
+        "ownedTag": "✓ ĐÃ CÓ",
+        "buyLabel": "Mua {{perk}} với giá {{cost}} tinh chất"
+    },
+    "gems": {
+        "title": "Cửa hàng đá quý",
+        "yourGemsCaps": "ĐÁ QUÝ CỦA BẠN",
+        "gemsCaps": "ĐÁ QUÝ",
+        "offlineClaim": "{{cost}} đá quý để nhận ×{{multiplier}} thu nhập khi vắng mặt",
+        "storeUnavailable": "Cửa hàng hiện không khả dụng. Hãy kiểm tra kết nối và thử lại sau.",
+        "purchaseFailed": "Giao dịch không thành công. Bạn chưa bị trừ tiền.",
+        "keptOnPrestige": "Đá quý được giữ lại khi lên danh vọng.",
+        "unavailable": "Không khả dụng",
+        "thankYouCaps": "CẢM ƠN BẠN!",
+        "gemsAdded_other": "+{{amount}} đá quý",
+        "buyLabel_other": "Mua {{amount}} đá quý",
+        "buyLabelWithPrice_other": "Mua {{amount}} đá quý với giá {{price}}",
+        "tags": {
+            "popular": "PHỔ BIẾN",
+            "bestValue": "HỜI NHẤT"
+        }
+    },
+    "offline": {
+        "welcomeBack": "Chào mừng trở lại!",
+        "away": "Bạn đã vắng mặt {{duration}}.",
+        "awayCapped": "Bạn đã vắng mặt hơn {{duration}}, mức tối đa được tính.",
+        "rested": "Đế chế của bạn đã nghỉ ngơi khi bạn đi vắng.",
+        "missedCaps": "SẢN LƯỢNG BỎ LỠ",
+        "perSecond": "{{value}} / giây",
+        "gemOfferCaps": "×{{multiplier}} VỚI {{cost}} ĐÁ QUÝ · BẠN CÓ {{gems}}",
+        "gemOfferGetCaps": "×{{multiplier}} VỚI {{cost}} ĐÁ QUÝ · MUA ĐÁ QUÝ",
+        "noThanks": "Không, cảm ơn"
+    },
+    "ads": {
+        "watchCaps": "XEM QUẢNG CÁO",
+        "loadingCaps": "ĐANG TẢI QUẢNG CÁO...",
+        "failed": "Quảng cáo chưa phát hết. Hãy kiểm tra kết nối và thử lại."
+    },
+    "reset": {
+        "title": "Chơi lại từ đầu?",
+        "warning": "Thao tác này sẽ đặt lại trò chơi. Toàn bộ emoji, công trình, nâng cấp, tinh chất, đặc quyền, bộ sưu tập và thống kê sẽ biến mất. Không thể hoàn tác.",
+        "purchasesSafe": "Các giao dịch trong game của bạn vẫn an toàn. Đá quý và mọi thứ bạn đã mua sẽ được chuyển sang ván mới.",
+        "confirm": "Có, đặt lại trò chơi",
+        "cancel": "Chơi tiếp"
+    },
+    "milestones": {
+        "caption": "CỘT MỐC",
+        "emojisDrawn": "Đã vẽ {{amount}} emoji!"
+    },
+    "settings": {
+        "title": "Cài đặt",
+        "close": "Đóng cài đặt",
+        "sound": "Âm thanh",
+        "soundEffects": "Hiệu ứng âm thanh",
+        "soundEffectsHint": "Tiếng bụp nhẹ khi chạm, và tiếng chuông khi gặp emoji lấp lánh.",
+        "performance": "Hiệu năng",
+        "reduceAnimations": "Giảm hoạt ảnh",
+        "reduceAnimationsHint": "Emoji được chạm sẽ không bay ra khỏi Emoji khổng lồ nữa. Hãy thử nếu chạm bị giật lag.",
+        "dangerZone": "Vùng nguy hiểm"
+    },
+    "cheats": {
+        "subtitle": "Dùng để thử nghiệm. Thay đổi sẽ áp dụng vào bản lưu.",
+        "simulateAway": "Giả lập vắng mặt 1 giờ",
+        "gems": "Đá quý",
+        "addGems_other": "+{{count}} đá quý",
+        "addComboTaps": "+{{amount}} lần chạm combo",
+        "multiplyTapEarnings": "×{{factor}} thu nhập từ chạm",
+        "addCollection_other": "+{{count}} bộ sưu tập",
+        "addShiny_other": "+{{count}} lấp lánh",
+        "addMagical_other": "+{{count}} phép thuật",
+        "addEssence_other": "+{{count}} tinh chất",
+        "addPerkTier_other": "+{{count}} bậc đặc quyền",
+        "addRunTime": "+{{time}} thời gian lượt chơi",
+        "reachTrialGoal": "Đạt mục tiêu thử thách",
+        "effectEmojis": "Emoji hiệu ứng",
+        "spawnEffects_other": "Gọi {{count}} emoji hiệu ứng",
+        "speed": "Tốc độ",
+        "speedLabel": "Tốc độ {{speed}}×",
+        "speedHint": "Áp dụng cho sản lượng và thời gian lượt chơi. Hiệu ứng và combo vẫn theo thời gian thực. Tắt sau khi tải lại.",
+        "shiny": "Lấp lánh",
+        "onlyShiny": "Chỉ emoji lấp lánh",
+        "funValueQuirk": "{{name}}: {{description}}",
+        "noQuirk": "Không có hiệu ứng lạ",
+        "hideFunValueTable": "Ẩn bảng chỉ số vui",
+        "showFunValueTable": "Hiện bảng chỉ số vui",
+        "setFunValueLabel": "Đặt chỉ số vui thành {{value}}: {{name}}",
+        "changeFunValueLabel": "Thay đổi chỉ số vui thêm {{change}}"
+    },
+    "collection": {
+        "ofTotalFound": "/ {{total}} đã tìm thấy",
+        "mostTapped": "Chạm nhiều nhất: {{emoji}} ×{{amount}}",
+        "startCollecting": "Chạm Emoji khổng lồ để bắt đầu sưu tầm",
+        "shinyFound_other": "{{amount}} lấp lánh",
+        "categories": {
+            "faces": "Khuôn mặt",
+            "animals": "Động vật",
+            "food": "Đồ ăn",
+            "objects": "Đồ vật",
+            "people": "Con người",
+            "bodyParts": "Cơ thể",
+            "placesBuildings": "Địa điểm",
+            "plants": "Thực vật",
+            "vehicles": "Xe cộ",
+            "weather": "Thời tiết",
+            "symbols": "Ký hiệu"
+        },
+        "categoryLabel": "{{label}}, đã tìm thấy {{found}}/{{total}}",
+        "notFound": "Chưa tìm thấy",
+        "cellLabel_other": "{{emoji}}, đã chạm {{count}} lần",
+        "cellLabelShiny_other": "{{emoji}}, đã chạm {{count}} lần, {{shiny}} lấp lánh"
+    },
+    "effects": {
+        "chipTapping": "×{{multiplier}} chạm",
+        "chipProduction": "×{{multiplier}} sản lượng",
+        "stackLabel_other": "{{count}} cộng dồn: {{label}}, cái tiếp theo hết sau {{time}}",
+        "chipLabel": "{{title}}, còn {{time}}",
+        "gift": "Quà!",
+        "ohNo": "Ôi không!",
+        "tapping": "Chạm",
+        "production": "Sản lượng",
+        "tapFrenzy": "Chạm cuồng nhiệt!",
+        "unholyPower": "Sức mạnh hắc ám!",
+        "productionBoost": "Tăng sản lượng!",
+        "collectLabel": "Nhận {{title}}",
+        "tapMe": "Chạm vào tôi"
+    },
+    "combo": {
+        "level": "Combo ×{{multiplier}}",
+        "max": "Combo tối đa ×{{multiplier}}",
+        "label": "Combo nhân {{multiplier}}",
+        "maxLabel": "Combo nhân {{multiplier}}, tối đa"
+    },
+    "bigEmoji": {
+        "tapLabel": "Chạm Emoji khổng lồ",
+        "tapShinyLabel": "Chạm Emoji khổng lồ lấp lánh",
+        "shiny": "Lấp lánh",
+        "shinyBurst": "Lấp lánh!",
+        "handsOff": "Thử thách {{trial}} · chạm không vẽ được gì",
+        "perTap": "+{{value}} mỗi lần chạm"
+    },
+    "bank": {
+        "timeToAfford": {
+            "needMore": "Cần thêm",
+            "seconds_other": "Sau {{count}} giây",
+            "minutes_other": "Sau {{count}} phút",
+            "hours_other": "Sau {{count}} giờ",
+            "days_other": "Sau {{count}} ngày",
+            "aLongTime": "Rất lâu nữa"
+        },
+        "timeToAffordInline": {
+            "needMore": "cần thêm",
+            "seconds_other": "sau {{count}} giây",
+            "minutes_other": "sau {{count}} phút",
+            "hours_other": "sau {{count}} giờ",
+            "days_other": "sau {{count}} ngày",
+            "aLongTime": "rất lâu nữa"
+        }
+    },
+    "catalogue": {
+        "title": "Tất cả nâng cấp",
+        "counts": "{{owned}} đã có · {{forSale}} đang bán · {{locked}} đã khóa · {{total}} tổng",
+        "filter": {
+            "owned": "Đã có {{count}}",
+            "forSale": "Đang bán {{count}}",
+            "locked": "Đã khóa {{count}}"
+        },
+        "combo": "Combo",
+        "effectEmojis": "Emoji hiệu ứng",
+        "unlock": {
+            "own": "Sở hữu {{count}} {{buildings}}",
+            "tapping": "Kiếm {{amount}} emoji từ chạm",
+            "comboTaps": "{{amount}} lần chạm combo",
+            "earned": "Kiếm {{amount}} emoji"
+        },
+        "state": {
+            "owned": "✓ ĐÃ CÓ",
+            "forSale": "ĐANG BÁN",
+            "locked": "🔒 ĐÃ KHÓA"
+        },
+        "stateA11y": {
+            "owned": "đã có",
+            "forSale": "đang bán",
+            "locked": "đã khóa"
+        },
+        "tileA11y": "{{name}}, {{state}}",
+        "prev": "Trước",
+        "next": "Sau",
+        "prevA11y": "Nâng cấp trước",
+        "nextA11y": "Nâng cấp sau",
+        "fact": {
+            "price": "GIÁ",
+            "unlocks": "MỞ KHÓA",
+            "id": "ID"
         }
     }
 }
