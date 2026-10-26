@@ -6,6 +6,7 @@ import { View, StyleSheet, Platform } from "react-native";
 import store, { whenSaveLoaded } from "../scripts/redux/reduxStore";
 import { gameLoop } from "../scripts/game/gameLoop";
 import { preloadRewardedAd } from "../scripts/ads";
+import { ADS_ENABLED } from "../scripts/monetization";
 import Header from "../components/header/Header";
 import MilestoneToast from "../components/gameUI/MilestoneToast";
 import OfflineModal from "../components/gameUI/OfflineModal";
@@ -45,7 +46,7 @@ export default function RootLayout() {
     }, []);
 
     // Ready before the welcome back screen asks for one
-    useEffect(() => { preloadRewardedAd(); }, []);
+    useEffect(() => { if (ADS_ENABLED) preloadRewardedAd(); }, []);
 
     // The save loads asynchronously (slowly on some phones). Nothing runs or shows until it's
     // in: the game's startup checks, migrations and the welcome back offer all read it, and

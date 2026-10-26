@@ -1,7 +1,7 @@
 import { useSyncExternalStore } from "react";
 import store from "./redux/reduxStore";
 import { addGems, spendGems as spendGemsAction } from "./redux/gemsSlice";
-import { preloadRewardedAd, showRewardedAd } from "./ads";
+import { showRewardedAd } from "./ads";
 import { buyProduct } from "./purchases";
 import { GemPack, PurchaseResult } from "./game/gemPacks";
 
@@ -11,21 +11,18 @@ import { GemPack, PurchaseResult } from "./game/gemPacks";
  */
 
 /**
+ * Whether the game offers rewarded ads. Off until AdMob approves the account:
+ * until then no ad would ever load, so the ad options are hidden
+ */
+export const ADS_ENABLED = false;
+
+/**
  * Shows a rewarded ad
  *
  * @returns whether the player watched it to the end and earned the reward
  */
 export function watchRewardedAd(): Promise<boolean> {
     return showRewardedAd();
-}
-
-/**
- * Whether a rewarded ad can be shown: loads one if needed
- *
- * @returns false when there's none to show (offline, no consent, or AdMob not serving the app)
- */
-export function rewardedAdAvailable(): Promise<boolean> {
-    return preloadRewardedAd();
 }
 
 export function getGems() {

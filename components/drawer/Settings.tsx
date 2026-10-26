@@ -9,6 +9,7 @@ import ResetButton from './ResetButton';
 import Text from '../generalUI/Text';
 import { palette, radii } from '../misc/theme';
 import { privacyOptionsRequired, showPrivacyOptions } from '../../scripts/ads';
+import { ADS_ENABLED } from '../../scripts/monetization';
 
 interface SettingsProps {
     /** Called when the reset button is pressed, to close the drawer */
@@ -23,6 +24,8 @@ export default function Settings({ onReset }: SettingsProps) {
     // Where the law asks for it, players can change their ad consent at any time
     const [showPrivacy, setShowPrivacy] = useState(false);
     useEffect(() => {
+        // No ads, no consent to ask for
+        if (!ADS_ENABLED) return;
         let cancelled = false;
         privacyOptionsRequired().then(required => { if (!cancelled) setShowPrivacy(required); });
         return () => { cancelled = true; };
