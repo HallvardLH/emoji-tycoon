@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Pressable, StyleSheet, View } from "react-native";
 import { useSelector } from "react-redux";
 import { useRouter } from "expo-router";
@@ -9,7 +9,7 @@ import ChunkyButton from "../generalUI/ChunkyButton";
 import { palette, radii } from "../misc/theme";
 import { formatDuration, formatNumber } from "../../scripts/misc";
 import { AD_MULTIPLIER, GEM_COST, GEM_MULTIPLIER, MAX_AWAY_SECONDS, claimOffline, dismissOffline } from "../../scripts/game/offline";
-import { spendGems, useGemStoreOpen, watchRewardedAd } from "../../scripts/monetization";
+import { rewardedAdAvailable, spendGems, useGemStoreOpen, watchRewardedAd } from "../../scripts/monetization";
 
 /**
  * Welcome back: offers the production missed while away, for watching an ad
@@ -25,6 +25,16 @@ export default function OfflineModal() {
     const [busy, setBusy] = useState(false);
     // The last ad couldn't be shown (offline, none available) or was closed early
     const [adFailed, setAdFailed] = useState(false);
+    // No ad to show at all: the ad button collects without one, so the free claim
+    // still works when ads don't (offline, no consent, AdMob not serving the app)
+    const [noAds, setNoAds] = useState(false);
+
+    useEffect(() => {
+        if (!offer) return;
+        let current = true;
+        rewardedAdAvailable().then(available => { if (current) setNoAds(!available); });
+        return () => { current = false; };
+    }, [offer]);
 
     // Offers saved with no production (before that was ruled out in registerAway) are worth nothing
     if (!offer || inGemStore || !(offer.eps > 0)) return null;
@@ -37,8 +47,11 @@ export default function OfflineModal() {
         setBusy(true);
         setAdFailed(false);
         try {
-            if (await watchRewardedAd()) claimOffline(AD_MULTIPLIER);
-            else setAdFailed(true);
+            if (noAds) claimOffline(AD_MULTIPLIER);
+            else if (await watchRewardedAd()) claimOffline(AD_MULTIPLIER);
+            // Closed early, or there turned out to be no ad: the button collects without one from now on
+            else if (await rewardedAdAvailable()) setAdFailed(true);
+            else setNoAds(true);
         } finally {
             setBusy(false);
         }
@@ -73,8 +86,8 @@ export default function OfflineModal() {
 
                 <View style={styles.buttons}>
                     <ChunkyButton
-                        label={`📺 +${formatNumber(missed * AD_MULTIPLIER, 1)}`}
-                        sublabel={busy ? "LOADING AD…" : "WATCH AN AD"}
+                        label={`${noAds ? "🌙" : "📺"} +${formatNumber(missed * AD_MULTIPLIER, 1)}`}
+                        sublabel={noAds ? "COLLECT" : busy ? "LOADING AD…" : "WATCH AN AD"}
                         height={56}
                         disabled={busy}
                         onPress={claimWithAd}
