@@ -128,7 +128,7 @@ export const emojiBlackHoleUpgrades: UpgradeType[] = [
     {
         ...baseEmojiBlackHoleUpgrade,
         name: "Supermassive black hole",
-        icon: "🫙",
+        icon: "🕳️",
         description: "Billions of suns' worth of emojis, in one jar.",
         tier: 15,
     },

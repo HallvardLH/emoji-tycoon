@@ -6,6 +6,8 @@ export interface OfflineOffer {
     seconds: number;
     /** Production per second (without effects) when they came back */
     eps: number;
+    /** Of the seconds away, how many the gem boost was on for (they pay double) */
+    boostedSeconds?: number;
 }
 
 interface OfflineState {

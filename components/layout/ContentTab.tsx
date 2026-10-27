@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { View, StyleSheet, StyleProp, ViewStyle } from "react-native";
 import SegmentedControl from "../generalUI/SegmentedControl";
+import { Freeze } from "./FreezeWhenBlurred";
 
 interface ContentTabProps {
     tabs: Array<{
@@ -15,10 +16,16 @@ interface ContentTabProps {
     containerStyle?: StyleProp<ViewStyle>;
 }
 
-/** A segmented control with the active tab's content below it */
+/**
+ * A segmented control with the active tab's content below it.
+ *
+ * Tabs stay mounted once visited, hidden and paused, so switching back is instant
+ * instead of rebuilding big screens (like the upgrade catalogue) from scratch.
+ */
 export default function ContentTab(props: ContentTabProps) {
     const { tabs, initialIndex = 0, containerStyle } = props;
     const [activeTab, setActiveTab] = useState(initialIndex);
+    const [visited, setVisited] = useState(() => new Set([initialIndex]));
 
     return (
         <View style={styles.container}>
@@ -30,13 +37,16 @@ export default function ContentTab(props: ContentTabProps) {
                     badge: tab.notification,
                     onPress: () => {
                         setActiveTab(index);
+                        setVisited(current => current.has(index) ? current : new Set(current).add(index));
                         tab.onNavigateTo?.();
                     },
                 }))}
             />
-            <View style={[styles.child, containerStyle]}>
-                {tabs[activeTab].component}
-            </View>
+            {tabs.map((tab, index) => visited.has(index) && (
+                <View key={index} style={[styles.child, containerStyle, index !== activeTab && styles.hidden]}>
+                    <Freeze freeze={index !== activeTab}>{tab.component}</Freeze>
+                </View>
+            ))}
         </View>
     );
 }
@@ -52,5 +62,8 @@ const styles = StyleSheet.create({
     },
     child: {
         flex: 1,
+    },
+    hidden: {
+        display: "none",
     },
 });

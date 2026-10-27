@@ -4,7 +4,7 @@ import { buildingData } from "./buildings/buildingData";
 import { perks } from "./prestige/perks";
 import { trials } from "./prestige/trials";
 import { emojiCategories } from "./collection/emojiCategories";
-import { effectEmojis } from "./effects/effectData";
+import { isCollectible } from "./collection/emojiSupport";
 import { celebrateMilestone } from "./milestones";
 import { formatNumber } from "../misc";
 
@@ -21,7 +21,7 @@ export interface Achievement {
     icon: string;
     name: string;
     description: string;
-    /** Shown as ??? until unlocked */
+    /** Every locked one shows as ???; a secret one also hints that it's a secret */
     secret?: boolean;
     /** No banner of its own, as another one celebrates the same moment (bank milestones, the first building) */
     quiet?: boolean;
@@ -50,18 +50,20 @@ const ownedOf = (state: RootState, name: string) => state.buildings.buildings.fi
 let collectedCache: { collection: RootState["collection"], count: number } | undefined;
 function collectedCount(state: RootState) {
     if (collectedCache?.collection !== state.collection) {
-        const count = Object.values(state.collection)
-            .reduce((sum, list) => sum + (list as ({ amount: number } | null)[]).filter(entry => (entry?.amount ?? 0) > 0).length, 0);
+        // Only ones this device can show, like the collection and its total
+        const count = Object.entries(state.collection)
+            .reduce((sum, [category, list]) => sum + (list as ({ amount: number } | null)[])
+                .filter((entry, index) => (entry?.amount ?? 0) > 0 && isCollectible(category, index)).length, 0);
         collectedCache = { collection: state.collection, count };
     }
     return collectedCache.count;
 }
 
-/** Every emoji that can show up on the Big Emoji */
+/** Every emoji that can show up on the Big Emoji (on this device) */
 let collectibleTotal: number | undefined;
 export function collectibleCount() {
-    collectibleTotal ??= Object.values(emojiCategories)
-        .reduce((sum, list) => sum + list.filter(emoji => !effectEmojis.includes(emoji)).length, 0);
+    collectibleTotal ??= Object.entries(emojiCategories)
+        .reduce((sum, [category, list]) => sum + list.filter((_, index) => isCollectible(category, index)).length, 0);
     return collectibleTotal;
 }
 

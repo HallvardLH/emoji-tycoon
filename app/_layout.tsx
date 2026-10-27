@@ -14,7 +14,10 @@ import ResetModal from "../components/gameUI/ResetModal";
 import { useFonts } from "expo-font";
 import { LilitaOne_400Regular } from "@expo-google-fonts/lilita-one";
 import { Nunito_700Bold, Nunito_700Bold_Italic, Nunito_800ExtraBold, Nunito_900Black } from "@expo-google-fonts/nunito";
-import { palette } from "../components/misc/theme";
+import { palette, themedStyles, applyPalette, useThemeVersion } from "../components/misc/theme";
+import { themeById } from "../scripts/game/gems/themes";
+import { useSelector } from "react-redux";
+import { RootState } from "../scripts/redux/reduxStore";
 
 export default function RootLayout() {
     const [fontsLoaded] = useFonts({
@@ -54,7 +57,12 @@ export default function RootLayout() {
     const [saveLoaded, setSaveLoaded] = useState(false);
     useEffect(() => {
         let cancelled = false;
-        whenSaveLoaded().then(() => { if (!cancelled) setSaveLoaded(true); });
+        whenSaveLoaded().then(() => {
+            if (cancelled) return;
+            // The app theme (gems) colours everything, so it's on before anything shows
+            applyPalette(themeById(store.getState().gems.theme).colours);
+            setSaveLoaded(true);
+        });
         return () => { cancelled = true; };
     }, []);
 
@@ -71,25 +79,45 @@ export default function RootLayout() {
 
     return (
         <Provider store={store}>
-            <View style={styles.container}>
-                <StatusBar style="light" />
-                <Stack
-                    screenOptions={{
-                        header: () => <Header />,
-                    }}
-                />
-                {/* Over every screen, as milestones can happen anywhere */}
-                <MilestoneToast />
-                <OfflineModal />
-                <ResetModal />
-            </View>
+            <ThemedApp />
         </Provider>
     );
 }
 
-const styles = StyleSheet.create({
+/**
+ * The app, in the colours of the app theme. Switching theme swaps the palette and
+ * remounts everything under the new colours (styles are rebuilt, see themedStyles)
+ */
+function ThemedApp() {
+    const themeId = useSelector((state: RootState) => state.gems.theme);
+    useEffect(() => {
+        const { colours } = themeById(themeId);
+        // Only when it's really a different theme: the first one went on with the save
+        if (colours.grape !== palette.grape || colours.sun !== palette.sun || colours.paper !== palette.paper) {
+            applyPalette(colours);
+        }
+    }, [themeId]);
+    const themeVersion = useThemeVersion();
+
+    return (
+        <View key={themeVersion} style={styles.container}>
+            <StatusBar style="light" />
+            <Stack
+                screenOptions={{
+                    header: () => <Header />,
+                }}
+            />
+            {/* Over every screen, as milestones can happen anywhere */}
+            <MilestoneToast />
+            <OfflineModal />
+            <ResetModal />
+        </View>
+    );
+}
+
+const styles = themedStyles(() => StyleSheet.create({
     container: {
         flex: 1,
         backgroundColor: palette.grape,
     },
-});
+}));

@@ -7,7 +7,7 @@ import { updateReduceAnimations, updateSoundEffects, updateVibration } from '../
 import SwitchRow from './SwitchRow';
 import ResetButton from './ResetButton';
 import Text from '../generalUI/Text';
-import { palette, radii } from '../misc/theme';
+import { palette, radii, themedStyles } from '../misc/theme';
 import { privacyOptionsRequired, showPrivacyOptions } from '../../scripts/ads';
 import { ADS_ENABLED } from '../../scripts/monetization';
 
@@ -98,7 +98,7 @@ export default function Settings({ onReset }: SettingsProps) {
     );
 }
 
-const styles = StyleSheet.create({
+const styles = themedStyles(() => StyleSheet.create({
     container: {
         alignSelf: "stretch",
         paddingHorizontal: 20,
@@ -128,4 +128,4 @@ const styles = StyleSheet.create({
         textAlign: "center",
         opacity: 0.7,
     },
-});
+}));

@@ -1,6 +1,6 @@
 import React, { ReactNode } from "react";
 import { Text as RNText, StyleProp, TextStyle, StyleSheet, LayoutChangeEvent } from "react-native";
-import { fonts, palette } from "../misc/theme";
+import { fonts, palette, themedStyles } from "../misc/theme";
 
 interface TextProps {
     children?: ReactNode;
@@ -39,7 +39,7 @@ export default function Text(props: TextProps) {
     );
 }
 
-const textStyles = StyleSheet.create({
+const textStyles = themedStyles(() => StyleSheet.create({
     text: {
         fontFamily: fonts.display,
         color: palette.paper,
@@ -51,6 +51,6 @@ const textStyles = StyleSheet.create({
         textShadowOffset: { width: 0, height: 2 },
         textShadowRadius: 4
     }
-})
+}))
 
 export { textStyles };

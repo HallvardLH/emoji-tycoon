@@ -3,7 +3,7 @@ import Text from "../generalUI/Text";
 import { useSelector } from 'react-redux';
 import { RootState } from "../../scripts/redux/reduxStore";
 import { formatNumber } from "../../scripts/misc";
-import { palette, radii } from "../misc/theme";
+import { palette, radii, themedStyles } from "../misc/theme";
 import { useSampledSelector } from "../gameUI/useBank";
 
 export default function StatsList() {
@@ -58,7 +58,7 @@ function StatsCard({ rows }: { rows: [string, string, string][] }) {
     );
 }
 
-const styles = StyleSheet.create({
+const styles = themedStyles(() => StyleSheet.create({
     card: {
         marginHorizontal: 20,
         marginTop: 14,
@@ -93,4 +93,4 @@ const styles = StyleSheet.create({
         marginTop: 22,
         letterSpacing: 1.3,
     },
-})
+}))

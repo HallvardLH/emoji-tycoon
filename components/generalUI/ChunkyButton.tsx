@@ -1,6 +1,6 @@
 import { Pressable, View, StyleSheet, StyleProp, ViewStyle } from "react-native";
 import Text from "./Text";
-import { palette, radii } from "../misc/theme";
+import { palette, radii, themedStyles } from "../misc/theme";
 
 interface ChunkyButtonProps {
     label: string;
@@ -52,7 +52,7 @@ export default function ChunkyButton(props: ChunkyButtonProps) {
     );
 }
 
-const styles = StyleSheet.create({
+const styles = themedStyles(() => StyleSheet.create({
     ledge: {
         position: "absolute",
         left: 0,
@@ -74,4 +74,4 @@ const styles = StyleSheet.create({
         letterSpacing: 0.6,
         marginTop: -1,
     },
-});
+}));

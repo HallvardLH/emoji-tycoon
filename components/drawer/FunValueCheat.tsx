@@ -7,7 +7,7 @@ import { setFunValue } from "../../scripts/redux/valuesSlice";
 import { funValueEffects, getFunValueEffect } from "../../scripts/game/funValues";
 import { calculateBuildingsEps } from "../../scripts/game/buildings/buildings";
 import { calculateEpt } from "../../scripts/game/calculations";
-import { palette, radii } from "../misc/theme";
+import { palette, radii, themedStyles } from "../misc/theme";
 
 /** Cheat menu: set the fun value by hand, and a lookup table of what each value does */
 export default function FunValueCheat() {
@@ -88,7 +88,7 @@ function StepButton({ label, onPress }: { label: string, onPress: () => void }) 
     );
 }
 
-const styles = StyleSheet.create({
+const styles = themedStyles(() => StyleSheet.create({
     container: {
         alignItems: "center",
         gap: 8,
@@ -138,4 +138,4 @@ const styles = StyleSheet.create({
     range: {
         width: 46,
     },
-});
+}));

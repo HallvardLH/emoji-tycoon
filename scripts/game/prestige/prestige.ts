@@ -1,5 +1,5 @@
 import store from "../../redux/reduxStore";
-import { completePrestige, setRunPeakEps, setRunBestEssenceRate, buyPerk, migratePrestige, refundPerks, setLastSeen, updateRemainingEmojisPrestigePerc, PRESTIGE_STATE_VERSION } from "../../redux/prestigeSlice";
+import { completePrestige, addBonusEssence, setRunPeakEps, setRunBestEssenceRate, buyPerk, migratePrestige, refundPerks, setLastSeen, updateRemainingEmojisPrestigePerc, PRESTIGE_STATE_VERSION } from "../../redux/prestigeSlice";
 import { resetBuildings } from "../../redux/buildingsSlice";
 import { resetUpgrades, addUpgrade } from "../../redux/upgradesSlice";
 import { resetBigEmoji, addEmojisPerTapPercentageOfEps } from "../../redux/bigEmojiSlice";
@@ -15,6 +15,11 @@ import { unlockUpgrades, canBuyUpgrade } from "../upgrades/checks";
 import { startingEmojis, hasPerk, perks, removedPerks, canBuyPerk } from "./perks";
 import { registerAway } from "../offline";
 import { trials, trialGoal } from "./trials";
+import { setEssenceCharm } from "../../redux/gemsSlice";
+import { rewardGems, PRESTIGE_GEMS } from "../gems/gemRewards";
+
+/** Share of a prestige's essence that the Essence charm (gems) adds */
+export const ESSENCE_CHARM_BONUS = 0.25;
 
 /**
  * Emoji essence
@@ -73,11 +78,12 @@ export function calculateRemainingEmojisForNextPrestige() {
  * prestige-related (essence, perks). Muscle memory also keeps the hands.
  *
  * @param trialId starts the new run under this trial (see trials.ts)
- * @returns the essence gained, or 0 if there was none to gain (nothing happens then)
+ * @returns the essence gained (with any Essence charm bonus) and the gems it paid,
+ * or 0 essence if there was none to gain (nothing happens then)
  */
 export function prestige(trialId?: string) {
     const essence = getPendingEssence();
-    if (essence < 1) return 0;
+    if (essence < 1) return { essence: 0, gems: 0 };
 
     const state = store.getState();
     const { funValue } = state.values;
@@ -90,6 +96,14 @@ export function prestige(trialId?: string) {
     const activeTrial = trial ? { id: trial.id, goal: trialGoal(trial), completed: false } : undefined;
 
     store.dispatch(completePrestige({ essence, runStartEmojis: state.stats.emojisGained, trial: activeTrial }));
+
+    // Essence charm (gems): extra essence, used up by this prestige
+    const bonus = state.gems.essenceCharm ? Math.ceil(essence * ESSENCE_CHARM_BONUS) : 0;
+    if (bonus > 0) {
+        store.dispatch(addBonusEssence(bonus));
+        store.dispatch(setEssenceCharm(false));
+    }
+    const gems = rewardGems([{ key: `prestige:${state.prestige.prestiges + 1}`, gems: PRESTIGE_GEMS }]);
 
     store.dispatch(resetValues());
     store.dispatch(setFunValue(funValue));
@@ -118,7 +132,7 @@ export function prestige(trialId?: string) {
     canBuyUpgrade();
     calculateRemainingEmojisForNextPrestige();
 
-    return essence;
+    return { essence: essence + bonus, gems };
 }
 
 /** Essence a prestige right now would give, with the fraction towards the next one */

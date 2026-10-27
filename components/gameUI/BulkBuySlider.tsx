@@ -3,7 +3,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import Text from "../generalUI/Text";
 import { updateBulkBuy, BulkBuyAmount } from "../../scripts/redux/preferencesSlice";
 import { RootState } from '../../scripts/redux/reduxStore';
-import { palette, radii } from "../misc/theme";
+import { palette, radii, themedStyles } from "../misc/theme";
 
 const options: { value: BulkBuyAmount, label: string }[] = [
     { value: 1, label: "×1" },
@@ -41,7 +41,7 @@ export default function BulkBuySlider() {
     );
 }
 
-const styles = StyleSheet.create({
+const styles = themedStyles(() => StyleSheet.create({
     container: {
         flexDirection: "row",
         alignItems: "center",
@@ -63,4 +63,4 @@ const styles = StyleSheet.create({
     optionActive: {
         backgroundColor: palette.sun,
     },
-});
+}));

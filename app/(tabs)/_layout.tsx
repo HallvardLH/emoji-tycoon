@@ -4,6 +4,11 @@ import DesktopLayout from "../../components/layout/DesktopLayout";
 import { useIsDesktop } from "../../components/layout/desktop";
 import FreezeWhenBlurred from "../../components/layout/FreezeWhenBlurred";
 
+// Open on the Big Emoji, not the first tab in the bar (Shop)
+export const unstable_settings = {
+    initialRouteName: "index",
+};
+
 export default function TabLayout() {
     // On desktop every tab is on screen at once (see desktop.ts)
     const isDesktop = useIsDesktop();
@@ -11,6 +16,7 @@ export default function TabLayout() {
 
     return (
         <Tabs
+            initialRouteName="index"
             screenOptions={{ headerShown: false }}
             tabBar={(props) => <TabBar {...props} />}
             // Hidden tabs stay mounted; pause them so they don't re-render with the game

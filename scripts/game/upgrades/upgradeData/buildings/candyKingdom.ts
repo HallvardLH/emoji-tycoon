@@ -137,7 +137,7 @@ export const candyKingdomUpgrades: UpgradeType[] = [
     {
         ...baseCandyKingdomUpgrade,
         name: "Jelly bean mines",
-        icon: "🫘",
+        icon: "⛏️",
         description: "Every colour, every flavour, every emoji.",
         tier: 14,
     },

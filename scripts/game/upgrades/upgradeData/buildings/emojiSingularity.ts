@@ -40,7 +40,7 @@ export const emojiSingularityUpgrades: UpgradeType[] = [
     {
         ...baseEmojiSingularityUpgrade,
         name: "Emoji enlightenment",
-        icon: "🫥",
+        icon: "🧘",
         description: "You are no longer sure where you end and the emojis begin.",
         tier: 3,
         id: 1703,
@@ -155,7 +155,7 @@ export const emojiSingularityUpgrades: UpgradeType[] = [
     {
         ...baseEmojiSingularityUpgrade,
         name: "Emoji nirvana",
-        icon: "🪷",
+        icon: "☮️",
         description: "Perfect peace. Perfect emojis.",
         tier: 19,
     },

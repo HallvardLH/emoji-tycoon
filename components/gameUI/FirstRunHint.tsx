@@ -3,7 +3,7 @@ import { Animated, Easing, StyleSheet } from "react-native";
 import { useSelector } from "react-redux";
 import { RootState } from "../../scripts/redux/reduxStore";
 import Text from "../generalUI/Text";
-import { palette, radii } from "../misc/theme";
+import { palette, radii, themedStyles } from "../misc/theme";
 import { useIsDesktop } from "../layout/desktop";
 
 // Taps before the first hint goes away, if no building has been bought by then
@@ -63,7 +63,7 @@ function HintBubble({ text }: { text: string }) {
     );
 }
 
-const styles = StyleSheet.create({
+const styles = themedStyles(() => StyleSheet.create({
     bubble: {
         alignSelf: "center",
         paddingVertical: 10,
@@ -71,4 +71,4 @@ const styles = StyleSheet.create({
         borderRadius: radii.pill,
         backgroundColor: palette.sun,
     },
-});
+}));

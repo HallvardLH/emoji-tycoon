@@ -1,6 +1,6 @@
 import { View, Pressable, StyleSheet } from 'react-native';
 import Text from '../generalUI/Text';
-import { palette, radii } from '../misc/theme';
+import { palette, radii, themedStyles } from '../misc/theme';
 
 interface SwitchRowProps {
     icon: string;
@@ -33,7 +33,7 @@ export default function SwitchRow({ icon, label, hint, value, onChange }: Switch
     );
 }
 
-const styles = StyleSheet.create({
+const styles = themedStyles(() => StyleSheet.create({
     button: {
         minHeight: 48,
         flexDirection: "row",
@@ -74,4 +74,4 @@ const styles = StyleSheet.create({
         marginLeft: 18,
         backgroundColor: "#FFFFFF",
     },
-});
+}));

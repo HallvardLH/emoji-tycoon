@@ -1,7 +1,7 @@
 import React from 'react';
 import { ReactNode, useState } from 'react';
 import { Modal as RNModal, View, StyleSheet, TouchableWithoutFeedback } from 'react-native';
-import CircularButton from '../buttons/CircularButton';
+import CloseButton from './CloseButton';
 
 interface ModalProps {
     children?: ReactNode;
@@ -26,14 +26,14 @@ export default function Modal(props: ModalProps) {
                 <View style={styles.fullScreenView}>
                     <TouchableWithoutFeedback onPress={(e) => e.stopPropagation()}>
                         <View style={styles.modalView}>
+                            {/* Above the card's right corner. Inside the modal's bounds, as
+                                Android ignores taps on anything hanging outside its parent */}
+                            {!noExit && (
+                                <CloseButton onPress={onRequestClose} style={styles.closeButton} />
+                            )}
                             {children}
                         </View>
                     </TouchableWithoutFeedback>
-                    {!noExit && (
-                        <View style={styles.closeButton}>
-                            <CircularButton size={36} variant="close" onPress={onRequestClose} />
-                        </View>
-                    )}
                 </View>
             </TouchableWithoutFeedback>
         </RNModal>
@@ -53,8 +53,7 @@ const styles = StyleSheet.create({
         width: '88%',
     },
     closeButton: {
-        position: "absolute",
-        right: 10,
-        top: 10,
+        alignSelf: "flex-end",
+        marginBottom: 10,
     },
 });

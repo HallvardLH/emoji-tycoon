@@ -28,7 +28,7 @@ export const emojiThemeParkUpgrades: UpgradeType[] = [
     {
         ...baseEmojiThemeParkUpgrade,
         name: "Slides",
-        icon: "🛝",
+        icon: "🛷",
         description: "Do you slide on all your nights like this? (I might)",
         price: getBuildingUpgradePrice(1, 6),
         tier: 1,

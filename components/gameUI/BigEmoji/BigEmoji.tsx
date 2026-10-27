@@ -16,8 +16,10 @@ import EffectBurst from '../EffectBurst';
 import ComboRain from './ComboRain';
 import store from '../../../scripts/redux/reduxStore';
 import { howFun } from '../../../scripts/game/shorthands';
-import { palette, radii } from '../../misc/theme';
+import { palette, radii, themedStyles } from '../../misc/theme';
 import { playShinySound, playTapSound } from '../../../scripts/game/sounds';
+import { isComboKept } from '../../../scripts/game/gems/boost';
+import { TAP_GEM_EVERY } from '../../../scripts/game/gems/gemRewards';
 // import { useFonts } from "expo-font";
 
 interface AnimatedEmoji {
@@ -58,10 +60,12 @@ const randomBetween = (min: number, max: number) => min + Math.random() * (max -
 const randomSign = () => (Math.random() < 0.5 ? -1 : 1);
 
 // "+N" numbers get bigger and warmer as the combo rises: ×1 white → ×5 hot pink
-const COMBO_NUMBER_COLORS = ["#FFFFFF", "#FFE08A", palette.sun, "#FF9F43", palette.pop];
+// A function, so it picks up the palette of the current app theme
+const comboNumberColors = () => ["#FFFFFF", "#FFE08A", palette.sun, "#FF9F43", palette.pop];
 function comboNumberStyle(multiplier: number) {
-    const level = Math.min(multiplier, COMBO_NUMBER_COLORS.length) - 1;
-    return { color: COMBO_NUMBER_COLORS[level], size: 26 + level * 5 };
+    const colors = comboNumberColors();
+    const level = Math.min(multiplier, colors.length) - 1;
+    return { color: colors[level], size: 26 + level * 5 };
 }
 
 export default function BigEmoji() {
@@ -92,7 +96,8 @@ export default function BigEmoji() {
     const [, forceUpdate] = useState(0);
 
     // Celebrations for shiny emojis that were just tapped
-    const [shinyBursts, setShinyBursts] = useState<{ id: number, amount: number }[]>([]);
+    // (and the gem every 500th tap, which celebrates the same way)
+    const [shinyBursts, setShinyBursts] = useState<{ id: number, amount: number, gem?: boolean }[]>([]);
 
     const animatingSparks = useRef<AnimatedSparks[]>([]);
 
@@ -225,13 +230,14 @@ export default function BigEmoji() {
         rings[ring].setValue(0);
         Animated.timing(rings[ring], { toValue: 1, duration: RING_MS, easing: Easing.out(Easing.quad), useNativeDriver: true }).start();
 
-        const shinyReward = tapEmoji();
-        if (shinyReward === undefined) {
+        const { shinyReward, tapGem } = tapEmoji();
+        if (shinyReward === undefined && !tapGem) {
             playTapSound();
         } else {
             playShinySound();
             Haptics.notificationAsync(Haptics.NotificationFeedbackType.Success);
-            setShinyBursts(current => [...current, { id: Date.now() + Math.random(), amount: shinyReward }]);
+            if (shinyReward !== undefined) setShinyBursts(current => [...current, { id: Date.now() + Math.random(), amount: shinyReward }]);
+            if (tapGem) setShinyBursts(current => [...current, { id: Date.now() + Math.random(), amount: 1, gem: true }]);
         }
     }, [staticEmoji, emojisPerTapDisplay]);
 
@@ -324,11 +330,13 @@ export default function BigEmoji() {
                 {shinyBursts.map(burst => (
                     <EffectBurst
                         key={burst.id}
-                        headline="✨ SHINY!"
-                        value={`+${formatNumber(burst.amount < 1e6 ? Math.floor(burst.amount) : burst.amount, 1)}`}
-                        caption="EMOJIS"
-                        sparks={["✨", "🌟", "💛", "⭐", "🪙", "✨", "🌟", "💛", "⭐", "🪙", "✨", "🌟"]}
-                        color={palette.sun}
+                        headline={burst.gem ? `💎 ${TAP_GEM_EVERY} TAPS!` : "✨ SHINY!"}
+                        value={burst.gem ? "+1" : `+${formatNumber(burst.amount < 1e6 ? Math.floor(burst.amount) : burst.amount, 1)}`}
+                        caption={burst.gem ? "GEM" : "EMOJIS"}
+                        sparks={burst.gem
+                            ? ["💎", "✨", "💠", "⭐", "💎", "✨", "💠", "⭐", "💎", "✨", "💠", "⭐"]
+                            : ["✨", "🌟", "💛", "⭐", "🪙", "✨", "🌟", "💛", "⭐", "🪙", "✨", "🌟"]}
+                        color={burst.gem ? "#7DD3FC" : palette.sun}
                         x={DISC / 2}
                         y={DISC / 2}
                         onDone={() => setShinyBursts(current => current.filter(b => b.id !== burst.id))}
@@ -476,7 +484,9 @@ function ComboMeter() {
                     );
                 })}
             </View>
-            <GameText size={16} color={palette.sun}>{isMax ? `MAX COMBO ×${multiplier}` : `COMBO ×${multiplier}`}</GameText>
+            <GameText size={16} color={palette.sun}>
+                {isMax ? `MAX COMBO ×${multiplier}` : `COMBO ×${multiplier}`}{isComboKept() && !idle ? " · 🧊 HELD" : ""}
+            </GameText>
         </View>
     );
 }
@@ -488,7 +498,7 @@ const LOW_GRAVITY_RISE = 260;
 const FALL_DISTANCE = 240;
 const DISC = 220;
 
-const styles = StyleSheet.create({
+const styles = themedStyles(() => StyleSheet.create({
     container: {
         flex: 1,
         justifyContent: 'center',
@@ -576,4 +586,4 @@ const styles = StyleSheet.create({
         backgroundColor: palette.sun,
         transformOrigin: 'left',
     },
-});
+}));

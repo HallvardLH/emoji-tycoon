@@ -4,7 +4,7 @@ import { useSelector } from "react-redux";
 import { RootState } from "../../../scripts/redux/reduxStore";
 import { Effect } from "../../../scripts/game/effects/effectType";
 import Text from "../../generalUI/Text";
-import { palette, radii } from "../../misc/theme";
+import { palette, radii, themedStyles } from "../../misc/theme";
 import { usePresence } from "../../animations/usePresence";
 
 /** Active effects of the same kind, shown as one chip */
@@ -166,7 +166,7 @@ function StackChip({ stack, leaving, onGone }: { stack: EffectStack, leaving: bo
         );
 }
 
-const styles = StyleSheet.create({
+const styles = themedStyles(() => StyleSheet.create({
     container: {
         // Take the row's width so chips wrap instead of running off screen
         flex: 1,
@@ -225,4 +225,4 @@ const styles = StyleSheet.create({
         height: 4,
         borderRadius: 4,
     },
-})
+}))

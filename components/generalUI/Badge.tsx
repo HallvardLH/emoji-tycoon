@@ -1,6 +1,6 @@
 import { View, StyleSheet, StyleProp, ViewStyle } from "react-native";
 import Text from "./Text";
-import { palette } from "../misc/theme";
+import { palette, themedStyles } from "../misc/theme";
 
 interface BadgeProps {
     value: number | string;
@@ -19,7 +19,7 @@ export default function Badge({ value, ringColor, style }: BadgeProps) {
     );
 }
 
-const styles = StyleSheet.create({
+const styles = themedStyles(() => StyleSheet.create({
     badge: {
         minWidth: 22,
         height: 22,
@@ -29,4 +29,4 @@ const styles = StyleSheet.create({
         alignItems: "center",
         justifyContent: "center",
     },
-});
+}));

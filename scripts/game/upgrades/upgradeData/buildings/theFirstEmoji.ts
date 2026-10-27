@@ -45,7 +45,7 @@ export const theFirstEmojiUpgrades: UpgradeType[] = [
     {
         ...baseTheFirstEmojiUpgrade,
         name: "It's proud of you",
-        icon: "🥹",
+        icon: "🥲",
         description: "All those taps, all those buildings. It saw every one.",
         tier: 4,
     },
@@ -73,7 +73,7 @@ export const theFirstEmojiUpgrades: UpgradeType[] = [
     {
         ...baseTheFirstEmojiUpgrade,
         name: "Heart hands",
-        icon: "🫶",
+        icon: "💞",
         description: "Love, expressed in emojis. Lots of emojis.",
         tier: 8,
     },

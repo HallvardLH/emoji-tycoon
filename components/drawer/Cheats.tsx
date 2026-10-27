@@ -12,7 +12,7 @@ import { addGems } from '../../scripts/redux/gemsSlice';
 import store from '../../scripts/redux/reduxStore';
 import { DEBUG_SPEED, setGameSpeed, useGameSpeed } from '../../scripts/game/gameSpeed';
 import Text from '../generalUI/Text';
-import { palette, radii } from '../misc/theme';
+import { palette, radii, themedStyles } from '../misc/theme';
 
 interface CheatsProps {
     /** Closes the drawer */
@@ -135,7 +135,7 @@ function CheatButton({ label, icon, onPress, compact }: CheatButtonProps) {
     );
 }
 
-const styles = StyleSheet.create({
+const styles = themedStyles(() => StyleSheet.create({
     container: {
         alignSelf: "stretch",
         paddingHorizontal: 20,
@@ -180,4 +180,4 @@ const styles = StyleSheet.create({
     compactLabel: {
         textAlign: "center",
     },
-});
+}));

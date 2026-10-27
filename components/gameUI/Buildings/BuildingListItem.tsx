@@ -2,7 +2,9 @@ import { memo } from "react";
 import { StyleSheet, View } from "react-native";
 import Text from "../../generalUI/Text";
 import ChunkyButton from "../../generalUI/ChunkyButton";
-import { palette, radii } from "../../misc/theme";
+import { palette, radii, themedStyles } from "../../misc/theme";
+import GemButton from "../../gems/GemButton";
+import { GemBuyResult } from "../../../scripts/game/gems/gemShop";
 
 interface BuildingListItemProps {
     name: string;
@@ -24,10 +26,13 @@ interface BuildingListItemProps {
     /** Shown under the price on a disabled button, e.g. "IN 3 MIN" */
     waitLabel: string;
     onPress: () => void;
+    /** Gems to buy it now while it's not affordable (see gemShop.ts) */
+    gemPrice?: number;
+    onGemBuy?: () => GemBuyResult;
 }
 
 function BuildingListItem(props: BuildingListItemProps) {
-    const { name, icon, description, price, amount, eps, share, epsEach, nextUpgrade, buyCount, affordable, waitLabel, onPress } = props;
+    const { name, icon, description, price, amount, eps, share, epsEach, nextUpgrade, buyCount, affordable, waitLabel, onPress, gemPrice, onGemBuy } = props;
 
     const owned = amount > 0;
     // Starts over for each upgrade, from where the last one unlocked
@@ -79,15 +84,21 @@ function BuildingListItem(props: BuildingListItemProps) {
                 )}
             </View>
 
-            <ChunkyButton
-                width={96}
-                label={price}
-                labelSize={price.length > 7 ? 13 : 16}
-                sublabel={affordable ? (buyCount > 1 ? `BUY ×${buyCount}` : "BUY") : waitLabel}
-                accessibilityLabel={`Buy ${buyCount} ${name} for ${price}`}
-                disabled={!affordable}
-                onPress={onPress}
-            />
+            <View style={styles.buy}>
+                <ChunkyButton
+                    width={96}
+                    label={price}
+                    labelSize={price.length > 7 ? 13 : 16}
+                    sublabel={affordable ? (buyCount > 1 ? `BUY ×${buyCount}` : "BUY") : waitLabel}
+                    accessibilityLabel={`Buy ${buyCount} ${name} for ${price}`}
+                    disabled={!affordable}
+                    onPress={onPress}
+                />
+                {/* Not affordable yet: skip the wait with gems */}
+                {!affordable && gemPrice !== undefined && onGemBuy && (
+                    <GemButton compact cost={gemPrice} onBuy={onGemBuy} accessibilityLabel={`Buy ${buyCount} ${name} now`} style={{ width: 96 }} />
+                )}
+            </View>
         </View>
     )
 }
@@ -110,7 +121,11 @@ export function MysteryBuildingItem({ revealAt }: { revealAt: string }) {
 // Every card is this tall, whatever it shows, so the list doesn't jump as buildings are bought
 const CARD_HEIGHT = 113;
 
-const styles = StyleSheet.create({
+const styles = themedStyles(() => StyleSheet.create({
+    buy: {
+        alignItems: "center",
+        gap: 4,
+    },
     card: {
         flexDirection: "row",
         alignItems: "center",
@@ -196,7 +211,7 @@ const styles = StyleSheet.create({
     mysteryTile: {
         backgroundColor: "rgba(255,255,255,0.08)",
     },
-})
+}))
 
 /**
  * Rows re-render only when what they show changes. The list re-renders twice a second
@@ -205,7 +220,7 @@ const styles = StyleSheet.create({
  */
 export default memo(BuildingListItem, (prev, next) => {
     for (const key of Object.keys(next) as (keyof BuildingListItemProps)[]) {
-        if (key === "onPress") continue;
+        if (key === "onPress" || key === "onGemBuy") continue;
         if (key === "nextUpgrade") {
             if (prev.nextUpgrade?.from !== next.nextUpgrade?.from || prev.nextUpgrade?.at !== next.nextUpgrade?.at) return false;
             continue;

@@ -17,7 +17,9 @@ import { useBank, timeToAfford } from '../useBank';
 import { howFun } from '../../../scripts/game/shorthands';
 import { comboLevelOfTier } from '../../../scripts/game/upgrades/upgradeData/nonBuilding/combo';
 import { effectEmojiUpgradeSummary } from '../../../scripts/game/upgrades/upgradeData/nonBuilding/effectEmojis';
-import { palette, radii } from '../../misc/theme';
+import { palette, radii, themedStyles } from '../../misc/theme';
+import GemButton from '../../gems/GemButton';
+import { upgradeGemPrice, buyUpgradeWithGems } from '../../../scripts/game/gems/gemShop';
 
 const BIG_EMOJI = "Big emoji";
 const COLUMNS = 5;
@@ -25,6 +27,16 @@ const GAP = 10;
 
 export const priceOf = (upgrade: UpgradeType) => getUpgradePrice(upgrade.tier, upgrade.variant, upgrade.buildingId);
 export const iconOf = (building?: string) => building === BIG_EMOJI ? "👆" : buildingEmojis[building ?? ""];
+
+/**
+ * Tile size and row width for a grid of square tiles filling `width`. Tiles are whole
+ * points so a full row never comes out a fraction too wide and wraps a tile early
+ * (Android snaps layout to pixels); the row is centered to share what's left over.
+ */
+export function tileGrid(width: number, columns: number, gap: number) {
+    const tileSize = width > 0 ? Math.floor((width - gap * (columns - 1)) / columns) : 0;
+    return { tileSize, rowWidth: tileSize * columns + gap * (columns - 1) };
+}
 
 /** One chip per effect, e.g. "Drawing hands ×2", "Tapping +10%" */
 export function effectChips(upgrade: UpgradeType) {
@@ -109,7 +121,7 @@ export default function UpgradesList() {
     // Fun value 77: prices come with flying money
     const money = howFun(77) ? "💸 " : "";
 
-    const tileSize = gridWidth > 0 ? (gridWidth - GAP * (COLUMNS - 1)) / COLUMNS : 0;
+    const { tileSize, rowWidth } = tileGrid(gridWidth, COLUMNS, GAP);
 
     const toggle = (
         <View style={styles.viewToggle} accessibilityRole="tablist">
@@ -195,6 +207,15 @@ export default function UpgradesList() {
                                 disabled={bareBones || emojis < priceOf(selected)}
                                 onPress={() => buyUpgrade(selected.id!)}
                             />
+                            {/* Not affordable yet: skip the wait with gems */}
+                            {!bareBones && emojis < priceOf(selected) && upgradeGemPrice(selected.id!) !== undefined && (
+                                <GemButton
+                                    cost={upgradeGemPrice(selected.id!)!}
+                                    label="Buy now"
+                                    onBuy={() => buyUpgradeWithGems(selected.id!)}
+                                    accessibilityLabel={`Buy ${selected.name} now`}
+                                />
+                            )}
                         </>
                     )}
                 </View>
@@ -209,7 +230,8 @@ export default function UpgradesList() {
                 </Text>
             </View>
 
-            <View style={styles.grid} onLayout={(e: LayoutChangeEvent) => setGridWidth(e.nativeEvent.layout.width)}>
+            <View onLayout={(e: LayoutChangeEvent) => setGridWidth(e.nativeEvent.layout.width)}>
+            <View style={[styles.grid, { width: rowWidth }]}>
                 {tileSize > 0 && shown.map(upgrade => {
                     const isSelected = upgrade.id === selected?.id;
                     // Owned upgrades always show as full, bright tiles
@@ -233,6 +255,7 @@ export default function UpgradesList() {
                         </Pressable>
                     );
                 })}
+            </View>
             </View>
         </ScrollView>
     );
@@ -280,7 +303,7 @@ function FilterChip({ label, icon, active, accessibilityLabel, onPress }: Filter
     );
 }
 
-const styles = StyleSheet.create({
+const styles = themedStyles(() => StyleSheet.create({
     content: {
         paddingHorizontal: 20,
         paddingTop: 14,
@@ -407,6 +430,7 @@ const styles = StyleSheet.create({
         flexDirection: "row",
         flexWrap: "wrap",
         gap: GAP,
+        alignSelf: "center",
     },
     tile: {
         borderRadius: 18,
@@ -426,4 +450,4 @@ const styles = StyleSheet.create({
     tileLocked: {
         backgroundColor: "rgba(255,255,255,0.08)",
     },
-});
+}));

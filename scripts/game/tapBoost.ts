@@ -6,6 +6,7 @@ import { comboDrainMultiplier, maxComboBonus } from "./prestige/perks";
 import { comboLevelOfTier, isComboUpgradeId } from "./upgrades/upgradeData/nonBuilding/combo";
 import { getUpgradeDataById } from "./upgrades/shorthands";
 import { setBestCombo } from "../redux/statsSlice";
+import { isComboKept } from "./gems/boost";
 
 // Every tap adds 1 boost, and every 10 boost adds ×1 to emojis per tap (see calculateEpt)
 export const BOOST_PER_MULTIPLIER = 10;
@@ -56,6 +57,8 @@ const EXTRA_DRAIN_PER_LEVEL = 1;
 export function decrementTapBoost(seconds = 0.1) {
     const tapBoost = store.getState().bigEmoji.tapBoost;
     if (tapBoost == 0) return
+    // The combo keeper (gems) holds it where it is
+    if (isComboKept()) return;
     const { multiplier } = getComboProgress(tapBoost);
     const drainPerSecond = BASE_DRAIN_PER_SECOND + EXTRA_DRAIN_PER_LEVEL * (multiplier - 1);
     const decrement = drainPerSecond * seconds * (howFun(88, 90) ? 0.75 : 1) * comboDrainMultiplier();

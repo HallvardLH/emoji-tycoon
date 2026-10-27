@@ -6,7 +6,7 @@ import { RootState } from "../../scripts/redux/reduxStore";
 import Modal from "../generalUI/Modal";
 import Text from "../generalUI/Text";
 import ChunkyButton from "../generalUI/ChunkyButton";
-import { palette, radii } from "../misc/theme";
+import { palette, radii, themedStyles } from "../misc/theme";
 import { formatDuration, formatNumber } from "../../scripts/misc";
 import { AD_MULTIPLIER, GEM_COST, GEM_MULTIPLIER, MAX_AWAY_SECONDS, claimOffline, dismissOffline } from "../../scripts/game/offline";
 import { ADS_ENABLED, spendGems, useGemStoreOpen, watchRewardedAd } from "../../scripts/monetization";
@@ -109,7 +109,7 @@ export default function OfflineModal() {
     );
 }
 
-const styles = StyleSheet.create({
+const styles = themedStyles(() => StyleSheet.create({
     card: {
         alignSelf: "stretch",
         maxWidth: 400,
@@ -150,4 +150,4 @@ const styles = StyleSheet.create({
     pressed: {
         opacity: 0.6,
     },
-});
+}));

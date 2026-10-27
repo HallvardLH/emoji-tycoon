@@ -23,6 +23,7 @@ import { AWAY_THRESHOLD_SECONDS, isGameHidden, registerAway } from "./offline";
 import { getGameSpeed } from "./gameSpeed";
 import { creditBuildings } from "./buildings/buildingTotals";
 import { checkAchievements } from "./achievements";
+import { isBoostActive } from "./gems/boost";
 
 let lastUpdateTime = Date.now();
 let started = false;
@@ -31,6 +32,8 @@ let loggedBigEmojiTaps = 0;
 let awaySince: number | undefined;
 // Time played since it was last added to the run's play time (once a second)
 let playedSeconds = 0;
+// Whether the gem boost was on at the last check, to recalculate when it starts or runs out
+let boostWasActive = false;
 
 // Timers run on real elapsed time, not on how often the loop gets to run: when the
 // page lags, the 100ms interval fires late, and counting ticks stretched every
@@ -148,6 +151,13 @@ function everySecond() {
     // Not while hidden, so closing a hidden game still counts the time it was hidden as away
     if (!isGameHidden()) updateLastSeen();
     checkBankMilestone();
+    // The gem boost runs on the clock; production and taps change when it runs out
+    const boostActive = isBoostActive();
+    if (boostActive !== boostWasActive) {
+        boostWasActive = boostActive;
+        calculateEmojisPerSecond();
+        calculateEpt();
+    }
 }
 
 export function giveEmojis(delta: number, state = store.getState()) {

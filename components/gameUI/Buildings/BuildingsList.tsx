@@ -9,6 +9,7 @@ import { getNextUpgradeRange } from '../../../scripts/game/upgrades/checks';
 import { formatNumber } from '../../../scripts/misc';
 import { useBank, timeToAfford } from '../useBank';
 import { howFun } from '../../../scripts/game/shorthands';
+import { buildingGemPrice, buyBuildingWithGems } from '../../../scripts/game/gems/gemShop';
 
 export interface BuildingInfo {
     name: string;
@@ -63,6 +64,8 @@ export default function BuildingsList() {
                         affordable={emojis >= price}
                         waitLabel={timeToAfford(price, emojis, emojisPerSecond)}
                         onPress={() => buyBuilding(building.buildingId)}
+                        gemPrice={emojis >= price ? undefined : buildingGemPrice(building.buildingId)}
+                        onGemBuy={() => buyBuildingWithGems(building.buildingId)}
                     />
                 );
             })}

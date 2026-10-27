@@ -90,6 +90,10 @@ export const prestigeSlice = createSlice({
             state.runBestEssenceRate = 0;
             state.activeTrial = action.payload.trial;
         },
+        /** Essence on top of what the emojis drawn are worth (the Essence charm, bought with gems) */
+        addBonusEssence: (state, action: PayloadAction<number>) => {
+            state.emojiEssence += action.payload;
+        },
         addRunSeconds: (state, action: PayloadAction<number>) => {
             state.runSeconds = (state.runSeconds ?? 0) + action.payload;
         },
@@ -148,6 +152,6 @@ export const prestigeSlice = createSlice({
     },
 });
 
-export const { completePrestige, addRunSeconds, setRunBestEssenceRate, completeTrial, abandonTrial, setRunPeakEps, buyPerk, cheatPrestige, refundPerks, setLastSeen, updateRemainingEmojisPrestigePerc, migratePrestige, resetPrestige } = prestigeSlice.actions;
+export const { completePrestige, addBonusEssence, addRunSeconds, setRunBestEssenceRate, completeTrial, abandonTrial, setRunPeakEps, buyPerk, cheatPrestige, refundPerks, setLastSeen, updateRemainingEmojisPrestigePerc, migratePrestige, resetPrestige } = prestigeSlice.actions;
 
 export default prestigeSlice.reducer;

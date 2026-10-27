@@ -3,7 +3,7 @@ import { Animated, Easing, Pressable, View, StyleSheet, LayoutChangeEvent } from
 import { usePresence } from "../animations/usePresence";
 import Svg, { Defs, RadialGradient, Stop, Circle } from "react-native-svg";
 import Text from "../generalUI/Text";
-import { palette } from "../misc/theme";
+import { palette, themedStyles } from "../misc/theme";
 import Emoji from "./Emoji";
 import { useSelector } from 'react-redux';
 import { RootState } from '../../scripts/redux/reduxStore';
@@ -217,7 +217,7 @@ const EFFECT_HEIGHT = GLOW + LABEL_GAP + LABEL_HEIGHT;
 // Room for the pulse (up to 1.1×, so 5% of the glow on each side) plus breathing space
 const EDGE_INSET = Math.ceil(GLOW * 0.05) + 4;
 
-const styles = StyleSheet.create({
+const styles = themedStyles(() => StyleSheet.create({
     button: {
         alignItems: "center",
         gap: LABEL_GAP,
@@ -232,4 +232,4 @@ const styles = StyleSheet.create({
         letterSpacing: 0.8,
         lineHeight: LABEL_HEIGHT,
     },
-})
+}))

@@ -5,14 +5,17 @@ import { SafeAreaView } from "react-native-safe-area-context";
 import { useSelector } from "react-redux";
 import store, { RootState } from "../scripts/redux/reduxStore";
 import { PastRun } from "../scripts/redux/prestigeSlice";
-import { prestige, purchasePerk, essenceForEmojis, emojisForEssence, essenceRate, SLOWING_DOWN_SHARE } from "../scripts/game/prestige/prestige";
+import { prestige, purchasePerk, essenceForEmojis, emojisForEssence, essenceRate, SLOWING_DOWN_SHARE, ESSENCE_CHARM_BONUS } from "../scripts/game/prestige/prestige";
+import { ESSENCE_CHARM_COST, RESPEC_COST, buyEssenceCharm, buyRespec } from "../scripts/game/gems/gemShop";
+import GemButton from "../components/gems/GemButton";
 import { perks, Perk, MAX_PERK_TIER, essenceBonusPerEssence, essenceForBonus, hasPerk } from "../scripts/game/prestige/perks";
 import { trials, Trial, TRIALS_UNLOCK_PRESTIGES, trialGoal, runEmojis, abandonTrial, formatGoal } from "../scripts/game/prestige/trials";
 import { celebrateMilestone } from "../scripts/game/milestones";
 import { formatDuration, formatNumber } from "../scripts/misc";
 import Text from "../components/generalUI/Text";
 import ChunkyButton from "../components/generalUI/ChunkyButton";
-import { palette, radii } from "../components/misc/theme";
+import CloseButton from "../components/generalUI/CloseButton";
+import { palette, radii, themedStyles } from "../components/misc/theme";
 
 // How long the "tap again" confirmation stays armed
 const CONFIRM_MS = 3000;
@@ -54,12 +57,13 @@ export default function PrestigeScreen() {
 
     const onPrestige = (trial?: Trial) => {
         if (!confirm(trial?.id ?? "prestige")) return;
-        const gained = prestige(trial?.id);
+        const { essence: gained, gems } = prestige(trial?.id);
         if (gained > 0) {
             const count = prestiges + 1;
+            const gemsText = gems > 0 ? ` · +${gems} 💎` : "";
             celebrateMilestone({
                 icon: trial?.icon ?? "✨",
-                caption: trial ? `PRESTIGE #${count} · TRIAL STARTED` : `PRESTIGE #${count}`,
+                caption: (trial ? `PRESTIGE #${count} · TRIAL STARTED` : `PRESTIGE #${count}`) + gemsText,
                 title: count <= MAX_PERK_TIER ? `+${gained} essence · tier ${count} perks unlocked` : `+${gained} essence`,
             });
         }
@@ -72,14 +76,7 @@ export default function PrestigeScreen() {
             <Stack.Screen options={{ headerShown: false, presentation: "modal" }} />
             <SafeAreaView edges={["top"]} style={styles.topBar}>
                 <Text size={30} style={{ lineHeight: 44 }}>Prestige</Text>
-                <Pressable
-                    onPress={() => router.back()}
-                    accessibilityRole="button"
-                    accessibilityLabel="Close"
-                    style={({ pressed }) => [styles.close, pressed ? { opacity: 0.7 } : null]}
-                >
-                    <Text size={20} style={{ lineHeight: 24 }}>✕</Text>
-                </Pressable>
+                <CloseButton size={44} onPress={() => router.back()} />
             </SafeAreaView>
 
             <ScrollView contentContainerStyle={styles.content}>
@@ -139,6 +136,8 @@ export default function PrestigeScreen() {
                     />
                 </View>
 
+                <GemExtras pending={pending} perksOwned={owned.length} />
+
                 {/* Trials: prestige into a harder run for a reward kept forever */}
                 <View style={styles.rowBetween}>
                     <Text size={20}>Trials</Text>
@@ -177,6 +176,47 @@ export default function PrestigeScreen() {
 
                 {history && history.length > 0 ? <PastRuns history={history} prestiges={prestiges} /> : null}
             </ScrollView>
+        </View>
+    );
+}
+
+/** Gem buys for prestiging: more essence from the next one, and taking perks back */
+function GemExtras({ pending, perksOwned }: { pending: number, perksOwned: number }) {
+    const charmOn = useSelector((state: RootState) => state.gems.essenceCharm ?? false);
+    return (
+        <View style={styles.card}>
+            <View style={styles.rowBetween}>
+                <Text size={20} color={palette.ink}>Gem extras</Text>
+                <Text font="black" size={12} color={palette.violetDeep}>💎</Text>
+            </View>
+            <View style={styles.gemExtra}>
+                <View style={{ flex: 1, gap: 2 }}>
+                    <Text size={16} color={palette.ink}>🍀 Essence charm</Text>
+                    <Text font="body" size={13} color={palette.muted} style={{ lineHeight: 18 }}>
+                        {charmOn
+                            ? `On: your next prestige gives ${Math.round(ESSENCE_CHARM_BONUS * 100)}% more essence${pending >= 1 ? ` (+${formatNumber(Math.ceil(pending * ESSENCE_CHARM_BONUS))} ✨)` : ""}.`
+                            : `Your next prestige gives ${Math.round(ESSENCE_CHARM_BONUS * 100)}% more essence.`}
+                    </Text>
+                </View>
+                <GemButton
+                    cost={ESSENCE_CHARM_COST}
+                    onBuy={buyEssenceCharm}
+                    disabled={charmOn}
+                    disabledLabel="✓ ON"
+                    accessibilityLabel="Buy the essence charm"
+                />
+            </View>
+            {perksOwned > 0 && (
+                <View style={styles.gemExtra}>
+                    <View style={{ flex: 1, gap: 2 }}>
+                        <Text size={16} color={palette.ink}>🔄 Perk respec</Text>
+                        <Text font="body" size={13} color={palette.muted} style={{ lineHeight: 18 }}>
+                            Take back every perk and get all its essence back, to choose again.
+                        </Text>
+                    </View>
+                    <GemButton cost={RESPEC_COST} onBuy={buyRespec} accessibilityLabel="Respec perks" />
+                </View>
+            )}
         </View>
     );
 }
@@ -399,10 +439,15 @@ function PerkCard({ perk, unlocked, essence, owned }: { perk: Perk, unlocked: bo
     );
 }
 
-const styles = StyleSheet.create({
+const styles = themedStyles(() => StyleSheet.create({
     screen: {
         flex: 1,
         backgroundColor: palette.grape,
+    },
+    gemExtra: {
+        flexDirection: "row",
+        alignItems: "center",
+        gap: 10,
     },
     topBar: {
         flexDirection: "row",
@@ -411,14 +456,6 @@ const styles = StyleSheet.create({
         paddingTop: 18,
         paddingHorizontal: 20,
         paddingBottom: 4,
-    },
-    close: {
-        width: 44,
-        height: 44,
-        borderRadius: radii.md,
-        backgroundColor: palette.glass,
-        alignItems: "center",
-        justifyContent: "center",
     },
     content: {
         paddingHorizontal: 20,
@@ -534,4 +571,4 @@ const styles = StyleSheet.create({
     runNumber: {
         width: 30,
     },
-});
+}));

@@ -14,7 +14,7 @@ import { resetOffline } from "../../scripts/redux/offlineSlice";
 import { resetAchievements } from "../../scripts/redux/achievementsSlice";
 import Modal from "../generalUI/Modal";
 import Text from "../generalUI/Text";
-import { palette, radii } from "../misc/theme";
+import { palette, radii, themedStyles } from "../misc/theme";
 
 // ---- Whether the confirmation is showing. It lives at the root, not in the drawer
 // that opens it, because a modal inside the drawer ends up hidden behind it ----
@@ -98,7 +98,7 @@ export default function ResetModal() {
     );
 }
 
-const styles = StyleSheet.create({
+const styles = themedStyles(() => StyleSheet.create({
     card: {
         alignSelf: "stretch",
         maxWidth: 400,
@@ -148,4 +148,4 @@ const styles = StyleSheet.create({
     pressed: {
         opacity: 0.7,
     },
-});
+}));

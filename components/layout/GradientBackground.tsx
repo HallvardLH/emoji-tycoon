@@ -1,5 +1,5 @@
 import { View, StyleSheet } from "react-native";
-import { palette } from "../misc/theme";
+import { palette, themedStyles } from "../misc/theme";
 
 // The stage is a flat grape color, so the emojis are the only loud color on screen.
 // The home screen adds its own spotlight behind the Big Emoji.
@@ -7,7 +7,7 @@ export default function GradientBackground() {
     return <View style={styles.container} />
 }
 
-const styles = StyleSheet.create({
+const styles = themedStyles(() => StyleSheet.create({
     container: {
         position: "absolute",
         top: 0,
@@ -16,4 +16,4 @@ const styles = StyleSheet.create({
         bottom: 0,
         backgroundColor: palette.grape,
     }
-})
+}))

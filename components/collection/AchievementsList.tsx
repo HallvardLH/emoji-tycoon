@@ -4,13 +4,17 @@ import { useSelector } from "react-redux";
 import Text from "../generalUI/Text";
 import { RootState } from "../../scripts/redux/reduxStore";
 import { Achievement, AchievementGroup, achievementGroups, achievements } from "../../scripts/game/achievements";
-import { palette, radii } from "../misc/theme";
+import { palette, radii, themedStyles } from "../misc/theme";
 
-/** Every achievement by group, unlocked ones in full colour, with overall progress */
+/**
+ * Every achievement by group, with overall progress. Locked ones are hidden (???), as
+ * they'd give away buildings and features the player hasn't found yet, and so is a
+ * group's filter until something in it unlocks
+ */
 export default function AchievementsList() {
     // Changes only when one unlocks
     const unlocked = useSelector((state: RootState) => state.achievements.unlocked);
-    const [group, setGroup] = useState<AchievementGroup | "All">("All");
+    const [selectedGroup, setGroup] = useState<AchievementGroup | "All">("All");
 
     const unlockedSet = useMemo(() => new Set(unlocked), [unlocked]);
     const total = achievements.length;
@@ -20,7 +24,8 @@ export default function AchievementsList() {
     const groups = useMemo(() => achievementGroups.map(({ group, icon }) => {
         const list = achievements.filter(a => a.group === group);
         return { group, icon, total: list.length, done: list.filter(a => unlockedSet.has(a.id)).length };
-    }), [unlockedSet]);
+    }).filter(g => g.done > 0), [unlockedSet]);
+    const group = groups.some(g => g.group === selectedGroup) ? selectedGroup : "All";
 
     // Unlocked first, then in their order (easiest first)
     const shown = useMemo(() => {
@@ -84,27 +89,37 @@ function Chip({ label, selected, onPress }: { label: string, selected: boolean, 
 }
 
 function AchievementRow({ achievement, unlocked }: { achievement: Achievement, unlocked: boolean }) {
-    const hidden = achievement.secret && !unlocked;
+    if (!unlocked) {
+        const hint = achievement.secret ? "A secret. Keep playing to find it" : "Keep playing to unlock it";
+        return (
+            <View style={[styles.row, styles.rowLocked]} accessibilityLabel={`Hidden trophy, not unlocked yet. ${hint}`}>
+                <View style={styles.iconTile}>
+                    <Text size={24} style={[{ lineHeight: 30 }, styles.iconLocked]}>❔</Text>
+                </View>
+                <View style={styles.text}>
+                    <Text size={16} color={palette.muted} numberOfLines={1}>???</Text>
+                    <Text font="bold" size={12} color={palette.muted}>{hint}</Text>
+                </View>
+                <Text size={18} style={{ lineHeight: 24 }}>🔒</Text>
+            </View>
+        );
+    }
+
     return (
-        <View
-            style={[styles.row, unlocked ? null : styles.rowLocked]}
-            accessibilityLabel={hidden
-                ? "Secret trophy, not unlocked yet"
-                : `${achievement.name}. ${achievement.description}. ${unlocked ? "Unlocked" : "Not unlocked yet"}`}
-        >
-            <View style={[styles.iconTile, unlocked ? styles.iconTileUnlocked : null]}>
-                <Text size={24} style={[{ lineHeight: 30 }, unlocked ? null : styles.iconLocked]}>{hidden ? "❔" : achievement.icon}</Text>
+        <View style={styles.row} accessibilityLabel={`${achievement.name}. ${achievement.description}. Unlocked`}>
+            <View style={[styles.iconTile, styles.iconTileUnlocked]}>
+                <Text size={24} style={{ lineHeight: 30 }}>{achievement.icon}</Text>
             </View>
             <View style={styles.text}>
-                <Text size={16} color={unlocked ? palette.ink : palette.muted} numberOfLines={1}>{hidden ? "???" : achievement.name}</Text>
-                <Text font="bold" size={12} color={palette.muted}>{hidden ? "A secret. Keep playing to find it" : achievement.description}</Text>
+                <Text size={16} color={palette.ink} numberOfLines={1}>{achievement.name}</Text>
+                <Text font="bold" size={12} color={palette.muted}>{achievement.description}</Text>
             </View>
-            <Text size={18} style={{ lineHeight: 24 }}>{unlocked ? "✅" : "🔒"}</Text>
+            <Text size={18} style={{ lineHeight: 24 }}>✅</Text>
         </View>
     );
 }
 
-const styles = StyleSheet.create({
+const styles = themedStyles(() => StyleSheet.create({
     content: {
         paddingHorizontal: 20,
         paddingBottom: 32,
@@ -186,4 +201,4 @@ const styles = StyleSheet.create({
         flex: 1,
         gap: 2,
     },
-});
+}));
