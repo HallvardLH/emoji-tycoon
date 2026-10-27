@@ -1,6 +1,9 @@
 import i18n from "./index";
 import { buildingData } from "../scripts/game/buildings/buildingData";
-import { pluralNames } from "../scripts/game/buildings/buildings";
+import { pluralNames, midSentence } from "../scripts/game/buildings/buildings";
+import { trials } from "../scripts/game/prestige/trials";
+import { formatNumber } from "../scripts/misc";
+import type { TrophyText } from "../scripts/game/achievements";
 import { getUpgradeDataById } from "../scripts/game/upgrades/shorthands";
 import { effectData } from "../scripts/game/effects/effectData";
 import { BuildingNames } from "../scripts/game/buildings/buildingNamesType";
@@ -92,6 +95,23 @@ export function getTrialRule(trial: Trial) {
 /** What completing the trial gives, forever */
 export function getTrialReward(trial: Trial) {
     return translate(`trials.${trial.id}.reward`, trial.reward);
+}
+
+/**
+ * A trophy's name or description, filled in for the current language: numbers in its
+ * format, building names mid-sentence, and the trial's and tier's translated names
+ */
+export function getTrophyText(text: TrophyText) {
+    const trial = text.trialId ? trials.find(t => t.id === text.trialId) : undefined;
+    return i18n.t(`trophies.${text.key}`, {
+        ns: "ui",
+        amount: text.amount !== undefined ? formatNumber(text.amount, 0) : undefined,
+        building: text.buildingId !== undefined ? getBuildingName(text.buildingId) : undefined,
+        buildingMid: text.buildingId !== undefined ? midSentence(getBuildingName(text.buildingId)) : undefined,
+        buildingsMid: text.buildingId !== undefined ? midSentence(getBuildingPluralName(text.buildingId)) : undefined,
+        trial: trial ? getTrialName(trial) : undefined,
+        tier: text.tier ? i18n.t(`trophies.tiers.${text.tier}`, { ns: "ui" }) : undefined,
+    });
 }
 
 // Fun value quirks have no id, so they are keyed by where their range starts

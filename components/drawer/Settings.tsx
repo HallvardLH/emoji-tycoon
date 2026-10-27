@@ -58,8 +58,8 @@ export default function Settings({ onReset }: SettingsProps) {
                 {Platform.OS !== "web" && (
                     <SwitchRow
                         icon="📳"
-                        label="Vibration"
-                        hint="A buzz as you tap, buy and celebrate."
+                        label={t("settings.vibration")}
+                        hint={t("settings.vibrationHint")}
                         value={vibration}
                         onChange={value => dispatch(updateVibration(value))}
                     />
@@ -79,17 +79,17 @@ export default function Settings({ onReset }: SettingsProps) {
 
             {showPrivacy && (
                 <View style={styles.section}>
-                    <Text font="black" size={11} color={palette.lilac} style={styles.sectionTitle}>PRIVACY</Text>
+                    <Text font="black" size={11} color={palette.lilac} style={styles.sectionTitle}>{caps(t("settings.privacy"))}</Text>
                     <Pressable
                         accessibilityRole="button"
-                        accessibilityLabel="Privacy choices"
+                        accessibilityLabel={t("settings.privacyChoices")}
                         onPress={showPrivacyOptions}
                         style={({ pressed }) => [styles.row, pressed ? { opacity: 0.7 } : null]}
                     >
                         <Text size={18} style={{ lineHeight: 24 }}>🛡️</Text>
                         <View style={styles.rowText}>
-                            <Text font="bold" size={14}>Privacy choices</Text>
-                            <Text font="bold" size={12} color={palette.lilac}>Change how ads may use your data.</Text>
+                            <Text font="bold" size={14}>{t("settings.privacyChoices")}</Text>
+                            <Text font="bold" size={12} color={palette.lilac}>{t("settings.privacyHint")}</Text>
                         </View>
                         <Text font="black" size={18} color={palette.lilac}>›</Text>
                     </Pressable>

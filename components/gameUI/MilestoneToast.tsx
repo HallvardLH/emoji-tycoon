@@ -6,6 +6,7 @@ import * as Haptics from "../../scripts/game/haptics";
 import Text from "../generalUI/Text";
 import { Milestone, onMilestone } from "../../scripts/game/milestones";
 import { palette, radii, themedStyles } from "../misc/theme";
+import i18n from "../../i18n";
 
 // How long each banner stays up
 const SHOW_FOR = 3200;
@@ -36,18 +37,20 @@ export default function MilestoneToast() {
     );
 }
 
-/** Each kind of banner has its own colour, read from its caption */
-function accentOf(caption: string) {
-    if (caption.startsWith("TROPHY")) return { color: palette.sun, ledge: palette.sunLedge };
-    if (caption.startsWith("NEW BUILDING")) return { color: "#5BE39A", ledge: palette.green };
-    if (caption.startsWith("PRESTIGE")) return { color: palette.pop, ledge: "#C23A57" };
-    if (caption.startsWith("THANK") || caption.includes("GEM")) return { color: "#7DD3FC", ledge: "#2B7FD9" };
-    return { color: palette.lilac, ledge: palette.violet };
+/** Each kind of banner has its own colour */
+function accentOf(kind: Milestone["kind"]) {
+    switch (kind) {
+        case "trophy": return { color: palette.sun, ledge: palette.sunLedge };
+        case "building": return { color: "#5BE39A", ledge: palette.green };
+        case "prestige": return { color: palette.pop, ledge: "#C23A57" };
+        case "gems": return { color: "#7DD3FC", ledge: "#2B7FD9" };
+        default: return { color: palette.lilac, ledge: palette.violet };
+    }
 }
 
 function Banner({ milestone, onDone }: { milestone: Milestone, onDone: () => void }) {
     const insets = useSafeAreaInsets();
-    const accent = accentOf(milestone.caption);
+    const accent = accentOf(milestone.kind);
     const slide = useRef(new Animated.Value(0)).current;
     const burst = useRef(new Animated.Value(0)).current;
     // The icon pops in a moment after the card lands
@@ -106,7 +109,7 @@ function Banner({ milestone, onDone }: { milestone: Milestone, onDone: () => voi
 
     return (
         <View style={[styles.wrapper, { top: insets.top + 10 }]} pointerEvents="box-none">
-            <Pressable onPress={dismiss} accessibilityRole="button" accessibilityHint="Dismisses the notification" style={styles.pressable}>
+            <Pressable onPress={dismiss} accessibilityRole="button" accessibilityHint={i18n.t("common.dismissHint")} style={styles.pressable}>
             <Animated.View
                 accessibilityLiveRegion="polite"
                 accessibilityLabel={`${milestone.caption}: ${milestone.title}`}

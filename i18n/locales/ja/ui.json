@@ -7,7 +7,8 @@
         "upgrades": "強化",
         "stats": "統計",
         "collection": "収集",
-        "newItemsLabel_other": "{{label}}、新着{{count}}件"
+        "newItemsLabel_other": "{{label}}、新着{{count}}件",
+        "trophies": "トロフィー"
     },
     "header": {
         "emojis": "絵文字",
@@ -17,7 +18,9 @@
     },
     "common": {
         "buy": "購入",
-        "details": "詳細"
+        "details": "詳細",
+        "close": "閉じる",
+        "dismissHint": "通知を閉じます"
     },
     "upgrades": {
         "bigEmoji": "大きな絵文字",
@@ -94,7 +97,8 @@
         "funValue": "おたのしみ値",
         "shinyEmojisTapped": "タップしたキラキラ絵文字",
         "comboTaps": "コンボタップ数",
-        "madeByEachBuilding": "施設ごとの生産量"
+        "madeByEachBuilding": "施設ごとの生産量",
+        "bestCombo": "最高コンボ"
     },
     "drawer": {
         "language": "言語",
@@ -138,7 +142,17 @@
         "chipLabel": "絵文字エッセンス",
         "chipLabelReady": "転生して絵文字エッセンスを{{essence}}獲得",
         "chipEssence": "エッセンス",
-        "chipPending": "エッセンス+{{essence}}"
+        "chipPending": "エッセンス+{{essence}}",
+        "gemExtras": "ジェム特典",
+        "charmName": "エッセンスのお守り",
+        "charmOff": "次の転生でもらえるエッセンスが{{percent}}増えます。",
+        "charmOn": "有効：次の転生でもらえるエッセンスが{{percent}}増えます。",
+        "charmOnAmount": "有効：次の転生でもらえるエッセンスが{{percent}}増えます（+{{essence}} ✨）。",
+        "charmA11y": "エッセンスのお守りを購入",
+        "onCaps": "有効",
+        "respecName": "パークのリセット",
+        "respecDescription": "すべてのパークを返却し、そのエッセンスを全額取り戻して選び直せます。",
+        "respecA11y": "パークをリセット"
     },
     "numbers": {
         "groupSize": "4",
@@ -201,7 +215,8 @@
         "bulkA11yMax": "買えるだけ購入",
         "bulkA11y_other": "{{count}}個ずつ購入",
         "milestoneCaption": "新しい施設",
-        "milestoneTitle": "はじめての{{building}}！"
+        "milestoneTitle": "はじめての{{building}}！",
+        "buyNowA11y": "ジェムで今すぐ購入：{{name}}"
     },
     "time": {
         "seconds_other": "{{count}}秒",
@@ -263,6 +278,29 @@
         "tags": {
             "popular": "人気",
             "bestValue": "一番お得"
+        },
+        "openStoreA11y": "ジェムショップを開く",
+        "storeCardSubtitle": "ジェム{{gems}}個 · ブースト、テーマなど",
+        "storeCardA11y": "ジェムショップ。ジェム{{gems}}個を所持",
+        "skipWait": "建物やアップグレードにまだ手が届かない？ジェムで今すぐ購入できます。待ち時間{{minutes}}分ごとにおよそ1ジェムです。",
+        "themesTitle": "アプリのテーマ",
+        "themesIntro": "ゲーム全体の見た目を変えましょう。一度買えばいつでも切り替えられます。",
+        "inUseCaps": "使用中",
+        "useTheme": "使う",
+        "useThemeA11y": "{{theme}}テーマを使う",
+        "buyThemeA11y": "{{theme}}テーマを購入",
+        "freeTitle": "無料ジェム",
+        "freeTaps": "大きな絵文字を{{taps}}回タップするごとに1ジェム",
+        "freePrestige": "転生するたびにジェム{{gems}}個",
+        "tapGemCaps": "{{taps}}タップ！",
+        "gemCaps": "ジェム",
+        "themes": {
+            "classic": "クラシック",
+            "sunset": "夕焼け",
+            "ocean": "海",
+            "forest": "森",
+            "candy": "キャンディ",
+            "gold": "ゴールド"
         }
     },
     "offline": {
@@ -301,7 +339,12 @@
         "performance": "パフォーマンス",
         "reduceAnimations": "アニメーションを減らす",
         "reduceAnimationsHint": "タップした絵文字が大きな絵文字から飛び出さなくなります。タップが重いと感じたら試してみてね。",
-        "dangerZone": "危険ゾーン"
+        "dangerZone": "危険ゾーン",
+        "vibration": "バイブレーション",
+        "vibrationHint": "タップ、購入、お祝いのときに軽く振動します。",
+        "privacy": "プライバシー",
+        "privacyChoices": "プライバシー設定",
+        "privacyHint": "広告によるデータの使われ方を変更します。"
     },
     "cheats": {
         "subtitle": "テスト用。変更はセーブデータに反映されます。",
@@ -436,6 +479,173 @@
             "price": "価格",
             "unlocks": "解放条件",
             "id": "ID"
+        },
+        "loadingA11y": "アップグレードを読み込み中",
+        "lockedHint": "プレイを続けると解放されます。",
+        "unlocksLine": "解放条件：{{condition}}"
+    },
+    "gemButton": {
+        "confirm": "確定",
+        "confirmShort": "買う？",
+        "hint": "もう一度タップするとジェムを使います",
+        "costA11y": "ジェム{{cost}}個",
+        "labelA11y": "{{label}}、ジェム{{cost}}個",
+        "buyNow": "今すぐ購入"
+    },
+    "gemPowers": {
+        "title": "ジェムパワー",
+        "subtitle": "ジェムで本格ブースト",
+        "boostOn": "×{{multiplier}}ブースト中 · 残り{{time}}",
+        "buttonCaps": "ブースト",
+        "buttonA11y": "ジェムパワーを開く",
+        "buttonActiveA11y": "ブースト中、残り{{time}}。ジェムパワーを開く",
+        "getMoreGems": "ジェムをもっと手に入れる",
+        "fullCaps": "上限",
+        "boost": {
+            "name": "×{{multiplier}}ブースト",
+            "description": "{{minutes}}分間、生産とタップが×{{multiplier}}。もう一度買うと時間を延長できます（最大{{hours}}時間）。留守中も続きます。",
+            "statusCaps": "有効 · 残り{{time}}",
+            "buy": "ブースト",
+            "extend": "+{{minutes}}分",
+            "a11y": "ブーストを購入"
+        },
+        "timeWarp": {
+            "name": "タイムワープ",
+            "description": "数時間分の生産を今すぐ手に入れます。",
+            "hours": "{{hours}}時間",
+            "a11y": "{{hours}}時間ワープ"
+        },
+        "shower": {
+            "name": "エフェクトシャワー",
+            "description": "良いエフェクト絵文字が{{amount}}個いっせいに出現。消える前にタップしよう！",
+            "buy": "召喚",
+            "a11y": "エフェクトシャワーを召喚"
+        },
+        "comboKeeper": {
+            "name": "コンボキーパー",
+            "description": "{{minutes}}分間コンボが下がりません。タップで上げてキープしよう。",
+            "statusCaps": "キープ中 · 残り{{time}}",
+            "buy": "キープ",
+            "a11y": "コンボキーパーを購入"
+        },
+        "discovery": {
+            "name": "ディスカバリー",
+            "description": "次の大きな絵文字{{amount}}個は、まだ見つけていない絵文字になります。",
+            "status": "これから出る新しい絵文字：{{amount}}",
+            "buy": "発見する",
+            "allFoundCaps": "すべて発見済み",
+            "a11y": "ディスカバリーを購入"
+        }
+    },
+    "trophies": {
+        "unlockedCaps": "トロフィー獲得",
+        "ofTotalUnlocked": "/ {{total}} 獲得",
+        "all": "すべて",
+        "hiddenHint": "プレイを続けると解放されます",
+        "secretHint": "ひみつ。プレイを続けて見つけよう",
+        "hiddenA11y": "隠されたトロフィー、未獲得。{{hint}}",
+        "unlockedA11y": "{{name}}。{{description}}。獲得済み",
+        "groups": {
+            "Emojis": "絵文字",
+            "Production": "生産",
+            "Tapping": "タップ",
+            "Buildings": "建物",
+            "Collection": "収集",
+            "Magic": "魔法",
+            "Prestige": "転生",
+            "Secret": "ひみつ"
+        },
+        "tiers": {
+            "hired": "雇用",
+            "fifty": "50",
+            "century": "100",
+            "empire": "帝国"
+        },
+        "names": {
+            "drawn1": "らくがき",
+            "drawn2": "スケッチブック",
+            "drawn3": "壁画",
+            "drawn4": "ギャラリー",
+            "drawn5": "傑作",
+            "drawn6": "ルネサンス",
+            "drawn7": "すべての博物館",
+            "drawn8": "絵文字の宇宙",
+            "drawn9": "無限のキャンバス",
+            "drawn10": "数えきれない",
+            "drawn11": "最後のページ",
+            "eps1": "しずく",
+            "eps2": "小川",
+            "eps3": "大河",
+            "eps4": "激流",
+            "eps5": "噴火",
+            "eps6": "流星群",
+            "eps7": "太陽フレア",
+            "eps8": "超新星",
+            "eps9": "事象の地平線",
+            "taps1": "つんつん",
+            "taps2": "そわそわ",
+            "taps3": "タップダンサー",
+            "taps4": "ドラムロール",
+            "taps5": "サイボーグの指",
+            "taps6": "腱鞘炎",
+            "combo3": "コンボ！",
+            "combo5": "絶好調",
+            "combo8": "超新星コンボ",
+            "tapEarnings": "現場主義",
+            "building": "{{building}}：{{tier}}",
+            "buildings100": "スモールビジネス",
+            "buildings500": "コングロマリット",
+            "buildings1000": "巨大企業",
+            "buildings2500": "世界征服",
+            "upgrades10": "いじり屋",
+            "upgrades50": "エンジニア",
+            "upgrades150": "発明家",
+            "upgrades300": "マッドサイエンティスト",
+            "collected50": "コレクター",
+            "collected250": "ためこみ屋",
+            "collected500": "アーキビスト",
+            "collected1000": "学芸員",
+            "collectedAll": "ぜんぶタップ",
+            "shiny1": "わあ、キラキラ",
+            "shiny10": "光り物好き",
+            "shiny50": "ゴールドラッシュ",
+            "magic1": "アブラカダブラ",
+            "magic25": "見習い",
+            "magic100": "魔法使い",
+            "magic500": "大魔導師",
+            "prestige1": "生まれ変わり",
+            "prestige5": "恋はデジャ・ブ",
+            "prestige10": "リサイクラー",
+            "prestige25": "永劫回帰",
+            "trial": "生還者：{{trial}}",
+            "allPerks": "パーク完全制覇",
+            "secretAnswer": "パニクるな",
+            "secretHoarder": "竜の財宝",
+            "secretGems": "キラキラの石"
+        },
+        "descriptions": {
+            "drawn": "絵文字を合計{{amount}}個描く",
+            "eps": "毎秒{{amount}}個の絵文字を生産する",
+            "taps": "大きな絵文字を{{amount}}回タップする",
+            "combo": "×{{amount}}コンボに到達する",
+            "tapEarnings": "タップで絵文字を{{amount}}個稼ぐ",
+            "buildingFirst": "最初の建物：{{buildingMid}}",
+            "buildingOwned": "{{buildingsMid}}を{{amount}}個持つ",
+            "buildingsTotal": "建物を同時に{{amount}}個持つ",
+            "upgradesOwned": "アップグレードを同時に{{amount}}個持つ",
+            "collected": "異なる絵文字を{{amount}}個見つける",
+            "collectedAll": "すべての絵文字を見つける",
+            "shinyFirst": "キラキラ絵文字をタップする",
+            "shiny": "キラキラ絵文字を{{amount}}個タップする",
+            "magicFirst": "エフェクト絵文字をタップする",
+            "magic": "エフェクト絵文字を{{amount}}個タップする",
+            "prestigeFirst": "初めて転生する",
+            "prestige": "{{amount}}回転生する",
+            "trial": "試練をクリアする：{{trial}}",
+            "allPerks": "すべてのパークを手に入れる",
+            "secretAnswer": "おたのしみ値{{amount}}で遊ぶ",
+            "secretHoarder": "建物を一つも持たずに絵文字を{{amount}}個ためる",
+            "secretGems": "ジェムを同時に{{amount}}個持つ"
         }
     }
 }

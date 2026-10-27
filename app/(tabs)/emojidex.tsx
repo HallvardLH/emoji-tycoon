@@ -27,7 +27,7 @@ export default function Emojidex() {
                         component: <Collection />
                     },
                     {
-                        name: "Trophies",
+                        name: t("tabs.trophies"),
                         component: <AchievementsList />
                     }
                 ]}

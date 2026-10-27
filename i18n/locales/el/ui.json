@@ -8,7 +8,8 @@
         "stats": "Στατιστικά",
         "collection": "Συλλογή",
         "newItemsLabel_one": "{{label}}, {{count}} νέο",
-        "newItemsLabel_other": "{{label}}, {{count}} νέα"
+        "newItemsLabel_other": "{{label}}, {{count}} νέα",
+        "trophies": "Τρόπαια"
     },
     "header": {
         "emojis": "Emoji",
@@ -19,7 +20,9 @@
     },
     "common": {
         "buy": "Αγορά",
-        "details": "Στοιχεία"
+        "details": "Στοιχεία",
+        "close": "Κλείσιμο",
+        "dismissHint": "Κλείνει την ειδοποίηση"
     },
     "upgrades": {
         "bigEmoji": "Μεγάλο emoji",
@@ -96,7 +99,8 @@
         "funValue": "Δείκτης πλάκας",
         "shinyEmojisTapped": "Λαμπερά emoji που πάτησες",
         "comboTaps": "Πατήματα κόμπο",
-        "madeByEachBuilding": "Παραγωγή ανά κτίριο"
+        "madeByEachBuilding": "Παραγωγή ανά κτίριο",
+        "bestCombo": "Καλύτερο κόμπο"
     },
     "drawer": {
         "language": "Γλώσσα",
@@ -141,7 +145,17 @@
         "chipLabel": "Ουσία emoji",
         "chipLabelReady": "Κύρος για {{essence}} ουσία emoji",
         "chipEssence": "Ουσία",
-        "chipPending": "+{{essence}} ουσία"
+        "chipPending": "+{{essence}} ουσία",
+        "gemExtras": "Έξτρα με πετράδια",
+        "charmName": "Φυλαχτό ουσίας",
+        "charmOff": "Το επόμενο κύρος σου δίνει {{percent}} περισσότερη ουσία.",
+        "charmOn": "Ενεργό: το επόμενο κύρος σου δίνει {{percent}} περισσότερη ουσία.",
+        "charmOnAmount": "Ενεργό: το επόμενο κύρος σου δίνει {{percent}} περισσότερη ουσία (+{{essence}} ✨).",
+        "charmA11y": "Αγορά του φυλαχτού ουσίας",
+        "onCaps": "Ενεργό",
+        "respecName": "Επαναφορά προνομίων",
+        "respecDescription": "Πάρε πίσω όλα τα προνόμια και όλη τους την ουσία, για να διαλέξεις ξανά.",
+        "respecA11y": "Επαναφορά προνομίων"
     },
     "numbers": {
         "groupSize": "3",
@@ -233,7 +247,8 @@
         "bulkA11y_one": "Αγορά ανά {{count}}",
         "bulkA11y_other": "Αγορά ανά {{count}}",
         "milestoneCaption": "ΝΕΟ ΚΤΙΡΙΟ",
-        "milestoneTitle": "{{building}}: το πρώτο σου!"
+        "milestoneTitle": "{{building}}: το πρώτο σου!",
+        "buyNowA11y": "Αγορά τώρα με πετράδια: {{name}}"
     },
     "time": {
         "seconds_one": "{{count}}δ",
@@ -302,6 +317,29 @@
         "tags": {
             "popular": "ΔΗΜΟΦΙΛΕΣ",
             "bestValue": "ΚΑΛΥΤΕΡΗ ΤΙΜΗ"
+        },
+        "openStoreA11y": "Άνοιγμα μαγαζιού πετραδιών",
+        "storeCardSubtitle": "Πετράδια: {{gems}} · ενισχύσεις, θέματα και άλλα",
+        "storeCardA11y": "Μαγαζί πετραδιών. Τα πετράδιά σου: {{gems}}",
+        "skipWait": "Δεν σου φτάνουν ακόμα για ένα κτίριο ή μια αναβάθμιση; Αγόρασέ τα τώρα με πετράδια, περίπου 1 πετράδι για κάθε {{minutes}} λεπτά αναμονής.",
+        "themesTitle": "Θέματα εφαρμογής",
+        "themesIntro": "Δώσε νέα εμφάνιση σε όλο το παιχνίδι. Αγόρασε μία φορά, άλλαξε όποτε θες.",
+        "inUseCaps": "Σε χρήση",
+        "useTheme": "Χρήση",
+        "useThemeA11y": "Χρήση του θέματος {{theme}}",
+        "buyThemeA11y": "Αγορά του θέματος {{theme}}",
+        "freeTitle": "Δωρεάν πετράδια",
+        "freeTaps": "1 πετράδι κάθε {{taps}} πατήματα στο μεγάλο emoji",
+        "freePrestige": "Πετράδια σε κάθε κύρος: {{gems}}",
+        "tapGemCaps": "Πατήματα: {{taps}}!",
+        "gemCaps": "Πετράδι",
+        "themes": {
+            "classic": "Κλασικό",
+            "sunset": "Ηλιοβασίλεμα",
+            "ocean": "Ωκεανός",
+            "forest": "Δάσος",
+            "candy": "Καραμέλα",
+            "gold": "Χρυσό"
         }
     },
     "offline": {
@@ -340,7 +378,12 @@
         "performance": "Απόδοση",
         "reduceAnimations": "Λιγότερα κινούμενα εφέ",
         "reduceAnimationsHint": "Τα emoji που πατάς δεν πετάγονται πια από το Μεγάλο emoji. Δοκίμασέ το αν το πάτημα κολλάει.",
-        "dangerZone": "Επικίνδυνη ζώνη"
+        "dangerZone": "Επικίνδυνη ζώνη",
+        "vibration": "Δόνηση",
+        "vibrationHint": "Μια δόνηση όταν πατάς, αγοράζεις και γιορτάζεις.",
+        "privacy": "Απόρρητο",
+        "privacyChoices": "Επιλογές απορρήτου",
+        "privacyHint": "Άλλαξε πώς μπορούν οι διαφημίσεις να χρησιμοποιούν τα δεδομένα σου."
     },
     "cheats": {
         "subtitle": "Για δοκιμές. Οι αλλαγές ισχύουν στην αποθήκευσή σου.",
@@ -494,6 +537,173 @@
             "price": "ΤΙΜΗ",
             "unlocks": "ΞΕΚΛΕΙΔΩΝΕΤΑΙ",
             "id": "ID"
+        },
+        "loadingA11y": "Φόρτωση αναβαθμίσεων",
+        "lockedHint": "Συνέχισε να παίζεις για να την ξεκλειδώσεις.",
+        "unlocksLine": "Ξεκλείδωμα: {{condition}}"
+    },
+    "gemButton": {
+        "confirm": "Επιβεβαίωση",
+        "confirmShort": "Αγορά;",
+        "hint": "Πάτα ξανά για να ξοδέψεις τα πετράδια",
+        "costA11y": "Πετράδια: {{cost}}",
+        "labelA11y": "{{label}}, πετράδια: {{cost}}",
+        "buyNow": "Αγορά τώρα"
+    },
+    "gemPowers": {
+        "title": "Δυνάμεις πετραδιών",
+        "subtitle": "Ξόδεψε πετράδια για πραγματική ώθηση",
+        "boostOn": "Ώθηση ×{{multiplier}} ενεργή · μένουν {{time}}",
+        "buttonCaps": "Ώθηση",
+        "buttonA11y": "Άνοιγμα δυνάμεων πετραδιών",
+        "buttonActiveA11y": "Ώθηση ενεργή, μένουν {{time}}. Άνοιγμα δυνάμεων πετραδιών",
+        "getMoreGems": "Πάρε κι άλλα πετράδια",
+        "fullCaps": "Γεμάτο",
+        "boost": {
+            "name": "Ώθηση ×{{multiplier}}",
+            "description": "×{{multiplier}} παραγωγή και πατήματα για {{minutes}} λεπτά. Αγόρασε ξανά για περισσότερο χρόνο (έως {{hours}} ώρες). Συνεχίζει όσο λείπεις.",
+            "statusCaps": "Ενεργή · μένουν {{time}}",
+            "buy": "Ώθηση",
+            "extend": "+{{minutes}} λεπ.",
+            "a11y": "Αγορά της ώθησης"
+        },
+        "timeWarp": {
+            "name": "Χρονικό άλμα",
+            "description": "Πάρε τώρα ώρες παραγωγής.",
+            "hours": "{{hours}} ώρ.",
+            "a11y": "Άλμα {{hours}} ωρών"
+        },
+        "shower": {
+            "name": "Βροχή εφέ",
+            "description": "Εμφανίζονται μαζί καλά emoji εφέ, συνολικά: {{amount}}. Πάτα τα πριν σβήσουν!",
+            "buy": "Κάλεσμα",
+            "a11y": "Κάλεσμα βροχής εφέ"
+        },
+        "comboKeeper": {
+            "name": "Φύλακας κόμπο",
+            "description": "Το κόμπο σου δεν πέφτει για {{minutes}} λεπτά. Ανέβασέ το και κράτα το.",
+            "statusCaps": "Κρατά · μένουν {{time}}",
+            "buy": "Κράτα",
+            "a11y": "Αγορά φύλακα κόμπο"
+        },
+        "discovery": {
+            "name": "Ανακάλυψη",
+            "description": "Τα επόμενα μεγάλα emoji (συνολικά: {{amount}}) θα είναι emoji που δεν έχεις βρει ποτέ.",
+            "status": "Νέα emoji στον δρόμο: {{amount}}",
+            "buy": "Ανακάλυψη",
+            "allFoundCaps": "Βρέθηκαν όλα",
+            "a11y": "Αγορά ανακαλύψεων"
+        }
+    },
+    "trophies": {
+        "unlockedCaps": "Τρόπαιο ξεκλειδώθηκε",
+        "ofTotalUnlocked": "/ {{total}} ξεκλειδωμένα",
+        "all": "Όλα",
+        "hiddenHint": "Συνέχισε να παίζεις για να το ξεκλειδώσεις",
+        "secretHint": "Ένα μυστικό. Συνέχισε να παίζεις για να το βρεις",
+        "hiddenA11y": "Κρυφό τρόπαιο, δεν έχει ξεκλειδωθεί ακόμα. {{hint}}",
+        "unlockedA11y": "{{name}}. {{description}}. Ξεκλειδωμένο",
+        "groups": {
+            "Emojis": "Emoji",
+            "Production": "Παραγωγή",
+            "Tapping": "Πατήματα",
+            "Buildings": "Κτίρια",
+            "Collection": "Συλλογή",
+            "Magic": "Μαγεία",
+            "Prestige": "Κύρος",
+            "Secret": "Μυστικό"
+        },
+        "tiers": {
+            "hired": "Προσλήφθηκε",
+            "fifty": "Πενήντα",
+            "century": "Εκατό",
+            "empire": "Αυτοκρατορία"
+        },
+        "names": {
+            "drawn1": "Μουτζουρωτής",
+            "drawn2": "Μπλοκ σκίτσων",
+            "drawn3": "Τοιχογραφία",
+            "drawn4": "Γκαλερί",
+            "drawn5": "Αριστούργημα",
+            "drawn6": "Αναγέννηση",
+            "drawn7": "Μουσείο των πάντων",
+            "drawn8": "Σύμπαν emoji",
+            "drawn9": "Ατελείωτος καμβάς",
+            "drawn10": "Πέρα από τους αριθμούς",
+            "drawn11": "Η τελευταία σελίδα",
+            "eps1": "Σταγόνα",
+            "eps2": "Ρυάκι",
+            "eps3": "Ποτάμι",
+            "eps4": "Χείμαρρος",
+            "eps5": "Έκρηξη",
+            "eps6": "Βροχή μετεωριτών",
+            "eps7": "Ηλιακή έκλαμψη",
+            "eps8": "Σουπερνόβα",
+            "eps9": "Ορίζοντας γεγονότων",
+            "taps1": "Σκούντημα",
+            "taps2": "Νευρικά δάχτυλα",
+            "taps3": "Χορευτής κλακέτας",
+            "taps4": "Τυμπανοκρουσία",
+            "taps5": "Βιονικό δάχτυλο",
+            "taps6": "Καρπιαίος σωλήνας",
+            "combo3": "Κόμπο!",
+            "combo5": "Καυτά χέρια",
+            "combo8": "Κόμπο σουπερνόβα",
+            "tapEarnings": "Διοίκηση με τα χέρια",
+            "building": "{{building}}: {{tier}}",
+            "buildings100": "Μικρή επιχείρηση",
+            "buildings500": "Όμιλος",
+            "buildings1000": "Μεγαεταιρεία",
+            "buildings2500": "Παγκόσμια κυριαρχία",
+            "upgrades10": "Μαστορευτής",
+            "upgrades50": "Μηχανικός",
+            "upgrades150": "Εφευρέτης",
+            "upgrades300": "Τρελός επιστήμονας",
+            "collected50": "Συλλέκτης",
+            "collected250": "Μαζευτής",
+            "collected500": "Αρχειοθέτης",
+            "collected1000": "Επιμελητής",
+            "collectedAll": "Πάτα τα όλα",
+            "shiny1": "Ωχ, λάμπει",
+            "shiny10": "Κίσσα",
+            "shiny50": "Πυρετός του χρυσού",
+            "magic1": "Αμπρακατάμπρα",
+            "magic25": "Μαθητευόμενος",
+            "magic100": "Μάγος",
+            "magic500": "Αρχιμάγος",
+            "prestige1": "Αναγεννημένος",
+            "prestige5": "Η μέρα της μαρμότας",
+            "prestige10": "Ανακυκλωτής",
+            "prestige25": "Αιώνια επιστροφή",
+            "trial": "Επιζών: {{trial}}",
+            "allPerks": "Πλήρως εξοπλισμένος",
+            "secretAnswer": "Μην πανικοβάλλεσαι",
+            "secretHoarder": "Θησαυρός του δράκου",
+            "secretGems": "Λαμπερές πέτρες"
+        },
+        "descriptions": {
+            "drawn": "Ζωγράφισε συνολικά emoji: {{amount}}",
+            "eps": "Παρήγαγε emoji το δευτερόλεπτο: {{amount}}",
+            "taps": "Πάτα το μεγάλο emoji: {{amount}} φορές",
+            "combo": "Φτάσε σε κόμπο ×{{amount}}",
+            "tapEarnings": "Κέρδισε πατώντας emoji: {{amount}}",
+            "buildingFirst": "Πρώτο κτίριο: {{buildingMid}}",
+            "buildingOwned": "{{buildingsMid}}: απόκτησε {{amount}}",
+            "buildingsTotal": "Έχε μαζί κτίρια: {{amount}}",
+            "upgradesOwned": "Έχε μαζί αναβαθμίσεις: {{amount}}",
+            "collected": "Βρες διαφορετικά emoji: {{amount}}",
+            "collectedAll": "Βρες κάθε emoji",
+            "shinyFirst": "Πάτα ένα λαμπερό emoji",
+            "shiny": "Πάτα λαμπερά emoji: {{amount}}",
+            "magicFirst": "Πάτα ένα emoji εφέ",
+            "magic": "Πάτα emoji εφέ: {{amount}}",
+            "prestigeFirst": "Κάνε το πρώτο σου κύρος",
+            "prestige": "Κάνε κύρος: {{amount}} φορές",
+            "trial": "Ολοκλήρωσε τη δοκιμασία: {{trial}}",
+            "allPerks": "Απόκτησε κάθε προνόμιο",
+            "secretAnswer": "Παίξε με δείκτη πλάκας {{amount}}",
+            "secretHoarder": "Έχε στην τράπεζα emoji ({{amount}}) χωρίς κανένα κτίριο",
+            "secretGems": "Έχε μαζί πετράδια: {{amount}}"
         }
     }
 }

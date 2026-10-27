@@ -1,6 +1,7 @@
 import { Pressable, StyleSheet, StyleProp, ViewStyle } from "react-native";
 import Svg, { Path } from "react-native-svg";
 import { palette, radii, themedStyles } from "../misc/theme";
+import i18n from "../../i18n";
 
 interface CloseButtonProps {
     onPress?: () => void;
@@ -14,7 +15,7 @@ interface CloseButtonProps {
  * buttons. Keep it inside its parent's bounds: Android doesn't pass on taps to
  * anything that hangs outside them
  */
-export default function CloseButton({ onPress, size = 40, accessibilityLabel = "Close", style }: CloseButtonProps) {
+export default function CloseButton({ onPress, size = 40, accessibilityLabel = i18n.t("common.close"), style }: CloseButtonProps) {
     const cross = Math.round(size * 0.34);
     return (
         <Pressable

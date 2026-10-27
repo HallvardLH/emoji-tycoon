@@ -102,7 +102,7 @@ function BuildingListItem(props: BuildingListItemProps) {
                 />
                 {/* Not affordable yet: skip the wait with gems */}
                 {!affordable && gemPrice !== undefined && onGemBuy && (
-                    <GemButton compact cost={gemPrice} onBuy={onGemBuy} accessibilityLabel={`Buy ${buyCount} ${name} now`} style={{ width: 96 }} />
+                    <GemButton compact cost={gemPrice} onBuy={onGemBuy} accessibilityLabel={t("buildings.buyNowA11y", { name: buyName })} style={{ width: 96 }} />
                 )}
             </View>
         </View>

@@ -8,7 +8,8 @@
         "stats": "Takwimu",
         "collection": "Mkusanyiko",
         "newItemsLabel_one": "{{label}}, {{count}} mpya",
-        "newItemsLabel_other": "{{label}}, {{count}} mpya"
+        "newItemsLabel_other": "{{label}}, {{count}} mpya",
+        "trophies": "Vikombe"
     },
     "header": {
         "emojis": "Emoji",
@@ -19,7 +20,9 @@
     },
     "common": {
         "buy": "Nunua",
-        "details": "Maelezo"
+        "details": "Maelezo",
+        "close": "Funga",
+        "dismissHint": "Hufunga arifa"
     },
     "upgrades": {
         "bigEmoji": "Emoji kubwa",
@@ -96,7 +99,8 @@
         "funValue": "Thamani ya furaha",
         "shinyEmojisTapped": "Emoji zinazong'aa zilizoguswa",
         "comboTaps": "Miguso ya kombo",
-        "madeByEachBuilding": "Zilizotengenezwa na kila jengo"
+        "madeByEachBuilding": "Zilizotengenezwa na kila jengo",
+        "bestCombo": "Kombo bora"
     },
     "drawer": {
         "language": "Lugha",
@@ -141,7 +145,17 @@
         "chipLabel": "Kiini cha emoji",
         "chipLabelReady": "Pata heshima kwa kiini cha emoji {{essence}}",
         "chipEssence": "Kiini",
-        "chipPending": "+{{essence}} kiini"
+        "chipPending": "+{{essence}} kiini",
+        "gemExtras": "Ziada za vito",
+        "charmName": "Hirizi ya kiini",
+        "charmOff": "Heshima yako ijayo inatoa kiini zaidi kwa {{percent}}.",
+        "charmOn": "Imewashwa: heshima yako ijayo inatoa kiini zaidi kwa {{percent}}.",
+        "charmOnAmount": "Imewashwa: heshima yako ijayo inatoa kiini zaidi kwa {{percent}} (+{{essence}} ✨).",
+        "charmA11y": "Nunua hirizi ya kiini",
+        "onCaps": "Imewashwa",
+        "respecName": "Weka upya faida",
+        "respecDescription": "Rudisha faida zote na upate tena kiini chake chote, ili uchague upya.",
+        "respecA11y": "Weka upya faida"
     },
     "numbers": {
         "groupSize": "3",
@@ -233,7 +247,8 @@
         "bulkA11y_one": "Nunua {{count}} kwa mara moja",
         "bulkA11y_other": "Nunua {{count}} kwa mara moja",
         "milestoneCaption": "Jengo jipya",
-        "milestoneTitle": "Jengo lako la kwanza: {{building}}!"
+        "milestoneTitle": "Jengo lako la kwanza: {{building}}!",
+        "buyNowA11y": "Nunua sasa kwa vito: {{name}}"
     },
     "time": {
         "seconds_one": "sek {{count}}",
@@ -302,6 +317,29 @@
         "tags": {
             "popular": "Maarufu",
             "bestValue": "Thamani bora"
+        },
+        "openStoreA11y": "Fungua duka la vito",
+        "storeCardSubtitle": "Vito {{gems}} · nyongeza, mandhari na zaidi",
+        "storeCardA11y": "Duka la vito. Una vito {{gems}}",
+        "skipWait": "Bado huwezi kumudu jengo au uboreshaji? Nunua sasa kwa vito, takriban kito 1 kwa kila dakika {{minutes}} za kusubiri.",
+        "themesTitle": "Mandhari ya programu",
+        "themesIntro": "Badilisha mwonekano wa mchezo mzima. Nunua mara moja, badilisha wakati wowote.",
+        "inUseCaps": "Inatumika",
+        "useTheme": "Tumia",
+        "useThemeA11y": "Tumia mandhari ya {{theme}}",
+        "buyThemeA11y": "Nunua mandhari ya {{theme}}",
+        "freeTitle": "Vito vya bure",
+        "freeTaps": "Kito 1 kwa kila miguso {{taps}} kwenye emoji kubwa",
+        "freePrestige": "Vito {{gems}} kwa kila heshima",
+        "tapGemCaps": "Miguso {{taps}}!",
+        "gemCaps": "Kito",
+        "themes": {
+            "classic": "Asili",
+            "sunset": "Machweo",
+            "ocean": "Bahari",
+            "forest": "Msitu",
+            "candy": "Peremende",
+            "gold": "Dhahabu"
         }
     },
     "offline": {
@@ -340,7 +378,12 @@
         "performance": "Utendaji",
         "reduceAnimations": "Punguza uhuishaji",
         "reduceAnimationsHint": "Emoji zilizoguswa hazirushwi tena kutoka Emoji kubwa. Jaribu hili kama kugusa kunakwama.",
-        "dangerZone": "Eneo la hatari"
+        "dangerZone": "Eneo la hatari",
+        "vibration": "Mtetemo",
+        "vibrationHint": "Mtetemo mdogo unapogusa, kununua na kusherehekea.",
+        "privacy": "Faragha",
+        "privacyChoices": "Chaguo za faragha",
+        "privacyHint": "Badilisha jinsi matangazo yanavyoweza kutumia data yako."
     },
     "cheats": {
         "subtitle": "Kwa majaribio. Mabadiliko yanaathiri hifadhi yako.",
@@ -494,6 +537,173 @@
             "price": "Bei",
             "unlocks": "Hufunguka",
             "id": "ID"
+        },
+        "loadingA11y": "Inapakia maboresho",
+        "lockedHint": "Endelea kucheza ili kuifungua.",
+        "unlocksLine": "Hufunguka: {{condition}}"
+    },
+    "gemButton": {
+        "confirm": "Thibitisha",
+        "confirmShort": "Nunua?",
+        "hint": "Gusa tena ili kutumia vito",
+        "costA11y": "Vito {{cost}}",
+        "labelA11y": "{{label}}, vito {{cost}}",
+        "buyNow": "Nunua sasa"
+    },
+    "gemPowers": {
+        "title": "Nguvu za vito",
+        "subtitle": "Tumia vito kwa nyongeza ya kweli",
+        "boostOn": "Nyongeza ×{{multiplier}} imewashwa · imebaki {{time}}",
+        "buttonCaps": "Nyongeza",
+        "buttonA11y": "Fungua nguvu za vito",
+        "buttonActiveA11y": "Nyongeza imewashwa, imebaki {{time}}. Fungua nguvu za vito",
+        "getMoreGems": "Pata vito zaidi",
+        "fullCaps": "Imejaa",
+        "boost": {
+            "name": "Nyongeza ×{{multiplier}}",
+            "description": "Uzalishaji na miguso ×{{multiplier}} kwa dakika {{minutes}}. Nunua tena kuongeza muda (hadi saa {{hours}}). Inaendelea hata ukiwa mbali.",
+            "statusCaps": "Imewashwa · imebaki {{time}}",
+            "buy": "Ongeza",
+            "extend": "+dk {{minutes}}",
+            "a11y": "Nunua nyongeza"
+        },
+        "timeWarp": {
+            "name": "Kuruka muda",
+            "description": "Pata saa za uzalishaji papo hapo.",
+            "hours": "Saa {{hours}}",
+            "a11y": "Ruka saa {{hours}}"
+        },
+        "shower": {
+            "name": "Mvua ya athari",
+            "description": "Emoji {{amount}} nzuri za athari zinatokea kwa pamoja. Zigusa kabla hazijafifia!",
+            "buy": "Ita",
+            "a11y": "Ita mvua ya athari"
+        },
+        "comboKeeper": {
+            "name": "Mlinzi wa kombo",
+            "description": "Kombo yako haishuki kwa dakika {{minutes}}. Ipandishe, kisha uidumishe.",
+            "statusCaps": "Inashikilia · imebaki {{time}}",
+            "buy": "Dumisha",
+            "a11y": "Nunua mlinzi wa kombo"
+        },
+        "discovery": {
+            "name": "Ugunduzi",
+            "description": "Emoji kubwa {{amount}} zijazo zitakuwa zile ambazo hujawahi kupata.",
+            "status": "Emoji mpya zinazokuja: {{amount}}",
+            "buy": "Gundua",
+            "allFoundCaps": "Zote zimepatikana",
+            "a11y": "Nunua ugunduzi"
+        }
+    },
+    "trophies": {
+        "unlockedCaps": "Kikombe kimefunguliwa",
+        "ofTotalUnlocked": "/ {{total}} vimefunguliwa",
+        "all": "Vyote",
+        "hiddenHint": "Endelea kucheza ili kukifungua",
+        "secretHint": "Siri. Endelea kucheza ili uipate",
+        "hiddenA11y": "Kikombe kilichofichwa, bado hakijafunguliwa. {{hint}}",
+        "unlockedA11y": "{{name}}. {{description}}. Kimefunguliwa",
+        "groups": {
+            "Emojis": "Emoji",
+            "Production": "Uzalishaji",
+            "Tapping": "Kugusa",
+            "Buildings": "Majengo",
+            "Collection": "Mkusanyiko",
+            "Magic": "Uchawi",
+            "Prestige": "Heshima",
+            "Secret": "Siri"
+        },
+        "tiers": {
+            "hired": "Ameajiriwa",
+            "fifty": "Hamsini",
+            "century": "Mia",
+            "empire": "Dola"
+        },
+        "names": {
+            "drawn1": "Mchoraji wa kubahatisha",
+            "drawn2": "Daftari la michoro",
+            "drawn3": "Mchoro wa ukutani",
+            "drawn4": "Jumba la sanaa",
+            "drawn5": "Kazi bora",
+            "drawn6": "Mwamko",
+            "drawn7": "Makumbusho ya kila kitu",
+            "drawn8": "Ulimwengu wa emoji",
+            "drawn9": "Turubai isiyo na mwisho",
+            "drawn10": "Zaidi ya kuhesabika",
+            "drawn11": "Ukurasa wa mwisho",
+            "eps1": "Mtiririko mdogo",
+            "eps2": "Kijito",
+            "eps3": "Mto",
+            "eps4": "Mafuriko",
+            "eps5": "Mlipuko",
+            "eps6": "Mvua ya vimondo",
+            "eps7": "Mlipuko wa jua",
+            "eps8": "Supanova",
+            "eps9": "Upeo wa matukio",
+            "taps1": "Kidokezo",
+            "taps2": "Kutotulia",
+            "taps3": "Mchezaji wa tap",
+            "taps4": "Mdundo wa ngoma",
+            "taps5": "Kidole cha kibionik",
+            "taps6": "Uchovu wa kifundo",
+            "combo3": "Kombo!",
+            "combo5": "Mikono ya moto",
+            "combo8": "Kombo ya supanova",
+            "tapEarnings": "Usimamizi wa vitendo",
+            "building": "{{building}}: {{tier}}",
+            "buildings100": "Biashara ndogo",
+            "buildings500": "Muungano wa makampuni",
+            "buildings1000": "Kampuni kubwa mno",
+            "buildings2500": "Kutawala dunia",
+            "upgrades10": "Fundi",
+            "upgrades50": "Mhandisi",
+            "upgrades150": "Mvumbuzi",
+            "upgrades300": "Mwanasayansi kichaa",
+            "collected50": "Mkusanyaji",
+            "collected250": "Mlimbikizaji",
+            "collected500": "Mtunza kumbukumbu",
+            "collected1000": "Msimamizi wa makumbusho",
+            "collectedAll": "Zigusa zote",
+            "shiny1": "Lo, inang'aa",
+            "shiny10": "Kunguru mpenda vitu",
+            "shiny50": "Homa ya dhahabu",
+            "magic1": "Abrakadabra",
+            "magic25": "Mwanafunzi",
+            "magic100": "Mchawi",
+            "magic500": "Mchawi mkuu",
+            "prestige1": "Kuzaliwa upya",
+            "prestige5": "Siku inayojirudia",
+            "prestige10": "Mtumiaji upya",
+            "prestige25": "Kurudi milele",
+            "trial": "Mwokokaji: {{trial}}",
+            "allPerks": "Faida kamili",
+            "secretAnswer": "Usiogope",
+            "secretHoarder": "Hazina ya joka",
+            "secretGems": "Mawe yanayong'aa"
+        },
+        "descriptions": {
+            "drawn": "Chora jumla ya emoji {{amount}}",
+            "eps": "Tengeneza emoji {{amount}} kwa sekunde",
+            "taps": "Gusa emoji kubwa mara {{amount}}",
+            "combo": "Fikia kombo ×{{amount}}",
+            "tapEarnings": "Pata emoji {{amount}} kwa kugusa",
+            "buildingFirst": "Jengo la kwanza: {{buildingMid}}",
+            "buildingOwned": "{{buildingsMid}}: miliki {{amount}}",
+            "buildingsTotal": "Miliki majengo {{amount}} kwa wakati mmoja",
+            "upgradesOwned": "Miliki maboresho {{amount}} kwa wakati mmoja",
+            "collected": "Pata emoji {{amount}} tofauti",
+            "collectedAll": "Pata kila emoji",
+            "shinyFirst": "Gusa emoji inayong'aa",
+            "shiny": "Gusa emoji {{amount}} zinazong'aa",
+            "magicFirst": "Gusa emoji ya athari",
+            "magic": "Gusa emoji {{amount}} za athari",
+            "prestigeFirst": "Pata heshima kwa mara ya kwanza",
+            "prestige": "Pata heshima mara {{amount}}",
+            "trial": "Kamilisha jaribio: {{trial}}",
+            "allPerks": "Miliki kila faida",
+            "secretAnswer": "Cheza na thamani ya furaha ya {{amount}}",
+            "secretHoarder": "Kuwa na emoji {{amount}} benki bila kumiliki jengo lolote",
+            "secretGems": "Kuwa na vito {{amount}} kwa wakati mmoja"
         }
     }
 }

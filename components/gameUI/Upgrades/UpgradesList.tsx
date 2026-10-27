@@ -220,9 +220,9 @@ export default function UpgradesList() {
                             {!bareBones && emojis < priceOf(selected) && upgradeGemPrice(selected.id!) !== undefined && (
                                 <GemButton
                                     cost={upgradeGemPrice(selected.id!)!}
-                                    label="Buy now"
+                                    label={t("gemButton.buyNow")}
                                     onBuy={() => buyUpgradeWithGems(selected.id!)}
-                                    accessibilityLabel={`Buy ${selected.name} now`}
+                                    accessibilityLabel={t("buildings.buyNowA11y", { name: getUpgradeName(selected.id!) })}
                                 />
                             )}
                         </>

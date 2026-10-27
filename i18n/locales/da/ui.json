@@ -8,7 +8,8 @@
         "stats": "Statistik",
         "collection": "Samling",
         "newItemsLabel_one": "{{label}}, {{count}} ny",
-        "newItemsLabel_other": "{{label}}, {{count}} nye"
+        "newItemsLabel_other": "{{label}}, {{count}} nye",
+        "trophies": "Trofæer"
     },
     "header": {
         "emojis": "Emojis",
@@ -19,7 +20,9 @@
     },
     "common": {
         "buy": "Køb",
-        "details": "Detaljer"
+        "details": "Detaljer",
+        "close": "Luk",
+        "dismissHint": "Lukker notifikationen"
     },
     "upgrades": {
         "bigEmoji": "Stor emoji",
@@ -96,7 +99,8 @@
         "funValue": "Sjovfaktor",
         "shinyEmojisTapped": "Skinnende emojis trykket",
         "comboTaps": "Combo-tryk",
-        "madeByEachBuilding": "Lavet af hver bygning"
+        "madeByEachBuilding": "Lavet af hver bygning",
+        "bestCombo": "Bedste combo"
     },
     "drawer": {
         "language": "Sprog",
@@ -141,7 +145,17 @@
         "chipLabel": "Emoji-essens",
         "chipLabelReady": "Prestige for {{essence}} emoji-essens",
         "chipEssence": "Essens",
-        "chipPending": "+{{essence}} essens"
+        "chipPending": "+{{essence}} essens",
+        "gemExtras": "Ædelstensekstra",
+        "charmName": "Essensamulet",
+        "charmOff": "Din næste prestige giver {{percent}} mere essens.",
+        "charmOn": "Til: din næste prestige giver {{percent}} mere essens.",
+        "charmOnAmount": "Til: din næste prestige giver {{percent}} mere essens (+{{essence}} ✨).",
+        "charmA11y": "Køb essensamuletten",
+        "onCaps": "Til",
+        "respecName": "Nulstil fordele",
+        "respecDescription": "Tag alle fordele tilbage og få al deres essens igen, så du kan vælge på ny.",
+        "respecA11y": "Nulstil fordele"
     },
     "numbers": {
         "groupSize": "3",
@@ -233,7 +247,8 @@
         "bulkA11y_one": "Køb {{count}} ad gangen",
         "bulkA11y_other": "Køb {{count}} ad gangen",
         "milestoneCaption": "NY BYGNING",
-        "milestoneTitle": "Din første: {{building}}!"
+        "milestoneTitle": "Din første: {{building}}!",
+        "buyNowA11y": "Køb {{name}} nu med ædelsten"
     },
     "time": {
         "seconds_one": "{{count}}s",
@@ -302,6 +317,29 @@
         "tags": {
             "popular": "POPULÆR",
             "bestValue": "BEDSTE KØB"
+        },
+        "openStoreA11y": "Åbn ædelstensbutikken",
+        "storeCardSubtitle": "{{gems}} ædelsten · boosts, temaer og mere",
+        "storeCardA11y": "Ædelstensbutik. Du har {{gems}} ædelsten",
+        "skipWait": "Har du ikke råd til en bygning eller opgradering endnu? Køb den nu med ædelsten, cirka 1 ædelsten per {{minutes}} minutters venten.",
+        "themesTitle": "App-temaer",
+        "themesIntro": "Giv hele spillet et nyt look. Køb én gang, skift når du vil.",
+        "inUseCaps": "I brug",
+        "useTheme": "Brug",
+        "useThemeA11y": "Brug temaet {{theme}}",
+        "buyThemeA11y": "Køb temaet {{theme}}",
+        "freeTitle": "Gratis ædelsten",
+        "freeTaps": "1 ædelsten for hver {{taps}} tryk på den store emoji",
+        "freePrestige": "{{gems}} ædelsten for hver prestige",
+        "tapGemCaps": "{{taps}} tryk!",
+        "gemCaps": "Ædelsten",
+        "themes": {
+            "classic": "Klassisk",
+            "sunset": "Solnedgang",
+            "ocean": "Hav",
+            "forest": "Skov",
+            "candy": "Slik",
+            "gold": "Guld"
         }
     },
     "offline": {
@@ -340,7 +378,12 @@
         "performance": "Ydeevne",
         "reduceAnimations": "Færre animationer",
         "reduceAnimationsHint": "Trykkede emojis flyver ikke længere ud fra den store emoji. Prøv det, hvis tryk føles langsomme.",
-        "dangerZone": "Farezone"
+        "dangerZone": "Farezone",
+        "vibration": "Vibration",
+        "vibrationHint": "En summen, når du trykker, køber og fejrer.",
+        "privacy": "Privatliv",
+        "privacyChoices": "Privatlivsvalg",
+        "privacyHint": "Skift, hvordan annoncer må bruge dine data."
     },
     "cheats": {
         "subtitle": "Til test. Ændringer gælder dit gemte spil.",
@@ -494,6 +537,173 @@
             "price": "PRIS",
             "unlocks": "LÅSES OP",
             "id": "ID"
+        },
+        "loadingA11y": "Indlæser opgraderinger",
+        "lockedHint": "Bliv ved med at spille for at låse den op.",
+        "unlocksLine": "Låses op: {{condition}}"
+    },
+    "gemButton": {
+        "confirm": "Bekræft",
+        "confirmShort": "Køb?",
+        "hint": "Tryk igen for at bruge ædelstenene",
+        "costA11y": "{{cost}} ædelsten",
+        "labelA11y": "{{label}}, {{cost}} ædelsten",
+        "buyNow": "Køb nu"
+    },
+    "gemPowers": {
+        "title": "Ædelstenskræfter",
+        "subtitle": "Brug ædelsten på et ordentligt boost",
+        "boostOn": "×{{multiplier}}-boost til · {{time}} tilbage",
+        "buttonCaps": "Boost",
+        "buttonA11y": "Åbn ædelstenskræfter",
+        "buttonActiveA11y": "Boost til, {{time}} tilbage. Åbn ædelstenskræfter",
+        "getMoreGems": "Få flere ædelsten",
+        "fullCaps": "Fuld",
+        "boost": {
+            "name": "×{{multiplier}}-boost",
+            "description": "×{{multiplier}} produktion og tryk i {{minutes}} minutter. Køb igen for mere tid (op til {{hours}} timer). Kører videre, mens du er væk.",
+            "statusCaps": "Til · {{time}} tilbage",
+            "buy": "Boost",
+            "extend": "+{{minutes}} min",
+            "a11y": "Køb boostet"
+        },
+        "timeWarp": {
+            "name": "Tidsspring",
+            "description": "Få flere timers produktion med det samme.",
+            "hours": "{{hours}} t",
+            "a11y": "Spring {{hours}} timer"
+        },
+        "shower": {
+            "name": "Effektregn",
+            "description": "{{amount}} gode effekt-emojis dukker op på én gang. Tryk på dem, før de forsvinder!",
+            "buy": "Tilkald",
+            "a11y": "Tilkald et effektregn"
+        },
+        "comboKeeper": {
+            "name": "Combovogter",
+            "description": "Din combo falder ikke i {{minutes}} minutter. Tryk den op, og hold den.",
+            "statusCaps": "Holder · {{time}} tilbage",
+            "buy": "Hold",
+            "a11y": "Køb combovogteren"
+        },
+        "discovery": {
+            "name": "Opdagelse",
+            "description": "De næste {{amount}} store emojis er nogle, du aldrig har fundet.",
+            "status": "Nye emojis på vej: {{amount}}",
+            "buy": "Opdag",
+            "allFoundCaps": "Alle fundet",
+            "a11y": "Køb opdagelser"
+        }
+    },
+    "trophies": {
+        "unlockedCaps": "Trofæ låst op",
+        "ofTotalUnlocked": "/ {{total}} låst op",
+        "all": "Alle",
+        "hiddenHint": "Bliv ved med at spille for at låse det op",
+        "secretHint": "En hemmelighed. Bliv ved med at spille for at finde den",
+        "hiddenA11y": "Skjult trofæ, ikke låst op endnu. {{hint}}",
+        "unlockedA11y": "{{name}}. {{description}}. Låst op",
+        "groups": {
+            "Emojis": "Emojis",
+            "Production": "Produktion",
+            "Tapping": "Tryk",
+            "Buildings": "Bygninger",
+            "Collection": "Samling",
+            "Magic": "Magi",
+            "Prestige": "Prestige",
+            "Secret": "Hemmelig"
+        },
+        "tiers": {
+            "hired": "Ansat",
+            "fifty": "Halvtreds",
+            "century": "Hundrede",
+            "empire": "Imperium"
+        },
+        "names": {
+            "drawn1": "Kruseduller",
+            "drawn2": "Skitsebog",
+            "drawn3": "Vægmaleri",
+            "drawn4": "Galleri",
+            "drawn5": "Mesterværk",
+            "drawn6": "Renæssance",
+            "drawn7": "Museum for alt",
+            "drawn8": "Emoji-kosmos",
+            "drawn9": "Uendeligt lærred",
+            "drawn10": "Ud over al tælling",
+            "drawn11": "Sidste side",
+            "eps1": "Sildren",
+            "eps2": "Bæk",
+            "eps3": "Flod",
+            "eps4": "Strøm",
+            "eps5": "Udbrud",
+            "eps6": "Meteorregn",
+            "eps7": "Soludbrud",
+            "eps8": "Supernova",
+            "eps9": "Begivenhedshorisont",
+            "taps1": "Prik",
+            "taps2": "Fumlefingre",
+            "taps3": "Stepdanser",
+            "taps4": "Trommehvirvel",
+            "taps5": "Bionisk finger",
+            "taps6": "Museskulder",
+            "combo3": "Combo!",
+            "combo5": "Varme hænder",
+            "combo8": "Supernova-combo",
+            "tapEarnings": "Hands-on-ledelse",
+            "building": "{{building}}: {{tier}}",
+            "buildings100": "Lille virksomhed",
+            "buildings500": "Konglomerat",
+            "buildings1000": "Megakoncern",
+            "buildings2500": "Verdensherredømme",
+            "upgrades10": "Fikser",
+            "upgrades50": "Ingeniør",
+            "upgrades150": "Opfinder",
+            "upgrades300": "Gal videnskabsmand",
+            "collected50": "Samler",
+            "collected250": "Hamstrer",
+            "collected500": "Arkivar",
+            "collected1000": "Kurator",
+            "collectedAll": "Tryk på dem alle",
+            "shiny1": "Uh, skinnende",
+            "shiny10": "Husskade",
+            "shiny50": "Guldfeber",
+            "magic1": "Abrakadabra",
+            "magic25": "Lærling",
+            "magic100": "Troldmand",
+            "magic500": "Ærkemagiker",
+            "prestige1": "Genfødt",
+            "prestige5": "En ny dag truer",
+            "prestige10": "Genbruger",
+            "prestige25": "Evig genkomst",
+            "trial": "Overlevede: {{trial}}",
+            "allPerks": "Fuldt udstyret",
+            "secretAnswer": "Ingen panik",
+            "secretHoarder": "Dragens skat",
+            "secretGems": "Skinnende sten"
+        },
+        "descriptions": {
+            "drawn": "Tegn {{amount}} emojis i alt",
+            "eps": "Lav {{amount}} emojis i sekundet",
+            "taps": "Tryk på den store emoji {{amount}} gange",
+            "combo": "Nå en ×{{amount}}-combo",
+            "tapEarnings": "Tjen {{amount}} emojis ved at trykke",
+            "buildingFirst": "Første bygning: {{buildingMid}}",
+            "buildingOwned": "Ej {{amount}} {{buildingsMid}}",
+            "buildingsTotal": "Ej {{amount}} bygninger på én gang",
+            "upgradesOwned": "Ej {{amount}} opgraderinger på én gang",
+            "collected": "Find {{amount}} forskellige emojis",
+            "collectedAll": "Find alle emojis",
+            "shinyFirst": "Tryk på en skinnende emoji",
+            "shiny": "Tryk på {{amount}} skinnende emojis",
+            "magicFirst": "Tryk på en effekt-emoji",
+            "magic": "Tryk på {{amount}} effekt-emojis",
+            "prestigeFirst": "Tag prestige for første gang",
+            "prestige": "Tag prestige {{amount}} gange",
+            "trial": "Gennemfør prøvelsen: {{trial}}",
+            "allPerks": "Ej alle fordele",
+            "secretAnswer": "Spil med en sjovfaktor på {{amount}}",
+            "secretHoarder": "Hav {{amount}} emojis i banken uden at eje en eneste bygning",
+            "secretGems": "Hav {{amount}} ædelsten på én gang"
         }
     }
 }

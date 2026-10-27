@@ -12,7 +12,8 @@
         "newItemsLabel_two": "{{label}}، جديد: {{count}}",
         "newItemsLabel_few": "{{label}}، جديد: {{count}}",
         "newItemsLabel_many": "{{label}}، جديد: {{count}}",
-        "newItemsLabel_other": "{{label}}، جديد: {{count}}"
+        "newItemsLabel_other": "{{label}}، جديد: {{count}}",
+        "trophies": "الجوائز"
     },
     "header": {
         "emojis": "إيموجي",
@@ -27,7 +28,9 @@
     },
     "common": {
         "buy": "شراء",
-        "details": "تفاصيل"
+        "details": "تفاصيل",
+        "close": "إغلاق",
+        "dismissHint": "يغلق الإشعار"
     },
     "upgrades": {
         "bigEmoji": "الإيموجي الكبير",
@@ -104,7 +107,8 @@
         "funValue": "قيمة المرح",
         "shinyEmojisTapped": "إيموجي لامعة منقورة",
         "comboTaps": "نقرات الكومبو",
-        "madeByEachBuilding": "إنتاج كل مبنى"
+        "madeByEachBuilding": "إنتاج كل مبنى",
+        "bestCombo": "أفضل كومبو"
     },
     "drawer": {
         "language": "اللغة",
@@ -153,7 +157,17 @@
         "chipLabel": "جوهر الإيموجي",
         "chipLabelReady": "نل المجد مقابل {{essence}} من جوهر الإيموجي",
         "chipEssence": "الجوهر",
-        "chipPending": "+{{essence}} جوهر"
+        "chipPending": "+{{essence}} جوهر",
+        "gemExtras": "إضافات الماسات",
+        "charmName": "تميمة الجوهر",
+        "charmOff": "مجدك القادم يمنحك جوهرًا أكثر بنسبة {{percent}}.",
+        "charmOn": "مفعّلة: مجدك القادم يمنحك جوهرًا أكثر بنسبة {{percent}}.",
+        "charmOnAmount": "مفعّلة: مجدك القادم يمنحك جوهرًا أكثر بنسبة {{percent}} (+{{essence}} ✨).",
+        "charmA11y": "اشترِ تميمة الجوهر",
+        "onCaps": "مفعّلة",
+        "respecName": "إعادة تعيين الامتيازات",
+        "respecDescription": "استرجع كل الامتيازات واستعد كل جوهرها لتختار من جديد.",
+        "respecA11y": "أعد تعيين الامتيازات"
     },
     "numbers": {
         "groupSize": "3",
@@ -337,7 +351,8 @@
         "bulkA11y_many": "شراء {{count}} مبنى في كل مرة",
         "bulkA11y_other": "شراء {{count}} مبنى في كل مرة",
         "milestoneCaption": "مبنى جديد",
-        "milestoneTitle": "أول {{building}} لك!"
+        "milestoneTitle": "أول {{building}} لك!",
+        "buyNowA11y": "اشترِ الآن بالماسات: {{name}}"
     },
     "time": {
         "seconds_zero": "{{count}} ث",
@@ -434,6 +449,29 @@
         "tags": {
             "popular": "الأكثر شعبية",
             "bestValue": "أفضل قيمة"
+        },
+        "openStoreA11y": "افتح متجر الماسات",
+        "storeCardSubtitle": "الماسات: {{gems}} · تعزيزات وسمات والمزيد",
+        "storeCardA11y": "متجر الماسات. ماساتك: {{gems}}",
+        "skipWait": "لا تستطيع شراء مبنى أو تحسين بعد؟ اشترِه الآن بالماسات، نحو ماسة واحدة لكل {{minutes}} دقيقة انتظار.",
+        "themesTitle": "سمات التطبيق",
+        "themesIntro": "غيّر مظهر اللعبة كلها. اشترِ مرة وبدّل متى شئت.",
+        "inUseCaps": "مستخدمة",
+        "useTheme": "استخدم",
+        "useThemeA11y": "استخدم سمة {{theme}}",
+        "buyThemeA11y": "اشترِ سمة {{theme}}",
+        "freeTitle": "ماسات مجانية",
+        "freeTaps": "ماسة واحدة كل {{taps}} نقرة على الإيموجي الكبير",
+        "freePrestige": "ماسات مع كل مجد: {{gems}}",
+        "tapGemCaps": "النقرات: {{taps}}!",
+        "gemCaps": "ماسة",
+        "themes": {
+            "classic": "كلاسيكي",
+            "sunset": "غروب",
+            "ocean": "محيط",
+            "forest": "غابة",
+            "candy": "حلوى",
+            "gold": "ذهب"
         }
     },
     "offline": {
@@ -472,7 +510,12 @@
         "performance": "الأداء",
         "reduceAnimations": "تقليل الحركات",
         "reduceAnimationsHint": "لن تتطاير الإيموجي المنقورة من الإيموجي الكبير. جرب هذا إذا بدا النقر بطيئا.",
-        "dangerZone": "منطقة الخطر"
+        "dangerZone": "منطقة الخطر",
+        "vibration": "الاهتزاز",
+        "vibrationHint": "اهتزاز خفيف عند النقر والشراء والاحتفال.",
+        "privacy": "الخصوصية",
+        "privacyChoices": "خيارات الخصوصية",
+        "privacyHint": "غيّر طريقة استخدام الإعلانات لبياناتك."
     },
     "cheats": {
         "subtitle": "للاختبار. التغييرات تطبق على ملف الحفظ.",
@@ -702,6 +745,173 @@
             "price": "السعر",
             "unlocks": "يفتح عند",
             "id": "الرقم"
+        },
+        "loadingA11y": "جارٍ تحميل التحسينات",
+        "lockedHint": "واصل اللعب لفتحها.",
+        "unlocksLine": "يفتح عند: {{condition}}"
+    },
+    "gemButton": {
+        "confirm": "تأكيد",
+        "confirmShort": "شراء؟",
+        "hint": "انقر مرة أخرى لإنفاق الماسات",
+        "costA11y": "الماسات: {{cost}}",
+        "labelA11y": "{{label}}، الماسات: {{cost}}",
+        "buyNow": "اشترِ الآن"
+    },
+    "gemPowers": {
+        "title": "قوى الماسات",
+        "subtitle": "أنفق الماسات لتعزيز حقيقي",
+        "boostOn": "تعزيز ×{{multiplier}} مفعّل · متبقٍ {{time}}",
+        "buttonCaps": "تعزيز",
+        "buttonA11y": "افتح قوى الماسات",
+        "buttonActiveA11y": "التعزيز مفعّل، متبقٍ {{time}}. افتح قوى الماسات",
+        "getMoreGems": "احصل على مزيد من الماسات",
+        "fullCaps": "ممتلئ",
+        "boost": {
+            "name": "تعزيز ×{{multiplier}}",
+            "description": "إنتاج ونقرات ×{{multiplier}} لمدة {{minutes}} دقيقة. اشترِه مجددًا لإضافة وقت (حتى {{hours}} ساعات). يستمر وأنت بعيد.",
+            "statusCaps": "مفعّل · متبقٍ {{time}}",
+            "buy": "عزّز",
+            "extend": "+{{minutes}} د",
+            "a11y": "اشترِ التعزيز"
+        },
+        "timeWarp": {
+            "name": "قفزة زمنية",
+            "description": "احصل على ساعات من الإنتاج فورًا.",
+            "hours": "{{hours}} س",
+            "a11y": "اقفز {{hours}} ساعات"
+        },
+        "shower": {
+            "name": "مطر التأثيرات",
+            "description": "تظهر إيموجي تأثيرات جيدة دفعة واحدة، عددها: {{amount}}. انقرها قبل أن تختفي!",
+            "buy": "استدعِ",
+            "a11y": "استدعِ مطر التأثيرات"
+        },
+        "comboKeeper": {
+            "name": "حارس الكومبو",
+            "description": "لن ينخفض الكومبو لمدة {{minutes}} دقيقة. ارفعه بالنقر ثم احتفظ به.",
+            "statusCaps": "يحتفظ · متبقٍ {{time}}",
+            "buy": "احتفظ",
+            "a11y": "اشترِ حارس الكومبو"
+        },
+        "discovery": {
+            "name": "اكتشاف",
+            "description": "ستكون الإيموجي الكبيرة القادمة (عددها: {{amount}}) مما لم تجده من قبل.",
+            "status": "إيموجي جديدة قادمة: {{amount}}",
+            "buy": "اكتشف",
+            "allFoundCaps": "وُجدت كلها",
+            "a11y": "اشترِ الاكتشافات"
+        }
+    },
+    "trophies": {
+        "unlockedCaps": "جائزة جديدة",
+        "ofTotalUnlocked": "/ {{total}} مفتوحة",
+        "all": "الكل",
+        "hiddenHint": "واصل اللعب لفتحها",
+        "secretHint": "سرّ. واصل اللعب لتجده",
+        "hiddenA11y": "جائزة مخفية لم تُفتح بعد. {{hint}}",
+        "unlockedA11y": "{{name}}. {{description}}. مفتوحة",
+        "groups": {
+            "Emojis": "الإيموجي",
+            "Production": "الإنتاج",
+            "Tapping": "النقر",
+            "Buildings": "المباني",
+            "Collection": "المجموعة",
+            "Magic": "السحر",
+            "Prestige": "المجد",
+            "Secret": "سرّي"
+        },
+        "tiers": {
+            "hired": "التوظيف",
+            "fifty": "خمسون",
+            "century": "مئة",
+            "empire": "إمبراطورية"
+        },
+        "names": {
+            "drawn1": "خربشة",
+            "drawn2": "دفتر رسم",
+            "drawn3": "جدارية",
+            "drawn4": "معرض",
+            "drawn5": "تحفة فنية",
+            "drawn6": "نهضة",
+            "drawn7": "متحف كل شيء",
+            "drawn8": "كون الإيموجي",
+            "drawn9": "لوحة لا نهائية",
+            "drawn10": "فوق العدّ",
+            "drawn11": "الصفحة الأخيرة",
+            "eps1": "قطرات",
+            "eps2": "جدول",
+            "eps3": "نهر",
+            "eps4": "سيل",
+            "eps5": "ثوران",
+            "eps6": "زخات الشهب",
+            "eps7": "توهج شمسي",
+            "eps8": "مستعر أعظم",
+            "eps9": "أفق الحدث",
+            "taps1": "نكزة",
+            "taps2": "أصابع قلقة",
+            "taps3": "راقص النقر",
+            "taps4": "قرع الطبول",
+            "taps5": "إصبع آلي",
+            "taps6": "متلازمة الرسغ",
+            "combo3": "كومبو!",
+            "combo5": "أيادٍ ساخنة",
+            "combo8": "كومبو المستعر الأعظم",
+            "tapEarnings": "إدارة بيدك",
+            "building": "{{building}}: {{tier}}",
+            "buildings100": "مشروع صغير",
+            "buildings500": "تكتّل",
+            "buildings1000": "شركة عملاقة",
+            "buildings2500": "السيطرة على العالم",
+            "upgrades10": "هاوي تصليح",
+            "upgrades50": "مهندس",
+            "upgrades150": "مخترع",
+            "upgrades300": "عالم مجنون",
+            "collected50": "جامع",
+            "collected250": "مكتنز",
+            "collected500": "أمين أرشيف",
+            "collected1000": "أمين متحف",
+            "collectedAll": "انقرها كلها",
+            "shiny1": "واو، لامع",
+            "shiny10": "عقعق",
+            "shiny50": "حمّى الذهب",
+            "magic1": "أبرا كادابرا",
+            "magic25": "متدرب",
+            "magic100": "ساحر",
+            "magic500": "كبير السحرة",
+            "prestige1": "ولادة جديدة",
+            "prestige5": "يوم يتكرر",
+            "prestige10": "معيد تدوير",
+            "prestige25": "العود الأبدي",
+            "trial": "ناجٍ: {{trial}}",
+            "allPerks": "امتيازات كاملة",
+            "secretAnswer": "لا داعي للذعر",
+            "secretHoarder": "كنز التنين",
+            "secretGems": "أحجار لامعة"
+        },
+        "descriptions": {
+            "drawn": "ارسم إجمالًا من الإيموجي: {{amount}}",
+            "eps": "أنتج من الإيموجي في الثانية: {{amount}}",
+            "taps": "انقر الإيموجي الكبير، عدد المرات: {{amount}}",
+            "combo": "صِل إلى كومبو ×{{amount}}",
+            "tapEarnings": "اكسب بالنقر من الإيموجي: {{amount}}",
+            "buildingFirst": "أول مبنى: {{buildingMid}}",
+            "buildingOwned": "{{buildingsMid}}: امتلك {{amount}}",
+            "buildingsTotal": "امتلك من المباني في آن واحد: {{amount}}",
+            "upgradesOwned": "امتلك من التحسينات في آن واحد: {{amount}}",
+            "collected": "اعثر على إيموجي مختلفة: {{amount}}",
+            "collectedAll": "اعثر على كل إيموجي",
+            "shinyFirst": "انقر إيموجي لامعًا",
+            "shiny": "انقر إيموجي لامعة: {{amount}}",
+            "magicFirst": "انقر إيموجي تأثير",
+            "magic": "انقر إيموجي تأثيرات: {{amount}}",
+            "prestigeFirst": "حقّق مجدك الأول",
+            "prestige": "حقّق المجد، عدد المرات: {{amount}}",
+            "trial": "أكمل التحدي: {{trial}}",
+            "allPerks": "امتلك كل الامتيازات",
+            "secretAnswer": "العب بقيمة مرح {{amount}}",
+            "secretHoarder": "احتفظ في البنك بإيموجي ({{amount}}) دون أن تملك أي مبنى",
+            "secretGems": "احتفظ بماسات في آن واحد: {{amount}}"
         }
     }
 }

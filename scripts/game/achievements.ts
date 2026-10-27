@@ -6,7 +6,9 @@ import { trials } from "./prestige/trials";
 import { emojiCategories } from "./collection/emojiCategories";
 import { isCollectible } from "./collection/emojiSupport";
 import { celebrateMilestone } from "./milestones";
-import { formatNumber } from "../misc";
+import i18n from "../../i18n";
+import { getTrophyText } from "../../i18n/content";
+import { toCaps } from "../utils";
 
 /**
  * Achievements: long-term goals across everything the game tracks
@@ -15,12 +17,26 @@ import { formatNumber } from "../misc";
  * point at what's left to do and mark the way. Checked every 2.5 s from the gameLoop.
  */
 
+/**
+ * A trophy's text: a key under "trophies" in the ui translations, and the values it's
+ * filled in with. They stay raw (numbers, ids) and are formatted when shown, in the
+ * player's language (see getTrophyText)
+ */
+export interface TrophyText {
+    key: string;
+    amount?: number;
+    buildingId?: number;
+    trialId?: string;
+    /** Building trophy tier, a key under "trophies.tiers" */
+    tier?: string;
+}
+
 export interface Achievement {
     id: string;
     group: AchievementGroup;
     icon: string;
-    name: string;
-    description: string;
+    name: TrophyText;
+    description: TrophyText;
     /** Every locked one shows as ???; a secret one also hints that it's a secret */
     secret?: boolean;
     /** No banner of its own, as another one celebrates the same moment (bank milestones, the first building) */
@@ -69,196 +85,196 @@ export function collectibleCount() {
 
 // ---- The achievements ----
 
-const NUMBER_NAMES = ["thousand", "million", "billion", "trillion", "quadrillion", "quintillion", "sextillion", "septillion", "octillion", "nonillion", "decillion"];
 const DRAWN_ICONS = ["🎈", "🎉", "🏆", "💎", "👑", "🚀", "🌌", "🪐", "🌠", "♾️", "🔱"];
-const DRAWN_NAMES = ["Doodler", "Sketchbook", "Mural", "Gallery", "Masterpiece", "Renaissance", "Museum of everything", "Emoji cosmos", "Infinite canvas", "Beyond counting", "The last page"];
 
-// One per power of 1000, matching the bank milestones (which give the banner)
-const drawn: Achievement[] = NUMBER_NAMES.map((word, i) => ({
+// One per power of 1000 (a thousand up to a decillion), matching the bank milestones (which give the banner)
+const drawn: Achievement[] = DRAWN_ICONS.map((icon, i) => ({
     id: `drawn${i + 1}`,
     group: "Emojis",
-    icon: DRAWN_ICONS[i],
-    name: DRAWN_NAMES[i],
-    description: `Draw 1 ${word} emojis in total`,
+    icon,
+    name: { key: `names.drawn${i + 1}` },
+    description: { key: "descriptions.drawn", amount: Math.pow(1000, i + 1) },
     quiet: true,
     unlocked: state => state.stats.emojisGained >= Math.pow(1000, i + 1),
 }));
 
-const PRODUCTION: [number, string, string][] = [
-    [10, "🚰", "Trickle"],
-    [1e3, "🌊", "Stream"],
-    [1e6, "🏞️", "River"],
-    [1e9, "🌀", "Torrent"],
-    [1e12, "🌋", "Eruption"],
-    [1e15, "☄️", "Meteor shower"],
-    [1e18, "🌞", "Solar flare"],
-    [1e21, "💫", "Supernova"],
-    [1e24, "🕳️", "Event horizon"],
+const PRODUCTION: [number, string][] = [
+    [10, "🚰"],
+    [1e3, "🌊"],
+    [1e6, "🏞️"],
+    [1e9, "🌀"],
+    [1e12, "🌋"],
+    [1e15, "☄️"],
+    [1e18, "🌞"],
+    [1e21, "💫"],
+    [1e24, "🕳️"],
 ];
-const production: Achievement[] = PRODUCTION.map(([amount, icon, name], i) => ({
+const production: Achievement[] = PRODUCTION.map(([amount, icon], i) => ({
     id: `eps${i + 1}`,
     group: "Production",
     icon,
-    name,
-    description: `Make ${formatNumber(amount, 0)} emojis per second`,
+    name: { key: `names.eps${i + 1}` },
+    description: { key: "descriptions.eps", amount },
     unlocked: state => state.values.emojisPerSecond >= amount,
 }));
 
-const TAPS: [number, string, string][] = [
-    [100, "👆", "Poke"],
-    [1_000, "✌️", "Fidget"],
-    [10_000, "🤌", "Tap dancer"],
-    [50_000, "🥁", "Drum roll"],
-    [100_000, "🦾", "Bionic finger"],
-    [500_000, "🪨", "Carpal tunnel"],
+const TAPS: [number, string][] = [
+    [100, "👆"],
+    [1_000, "✌️"],
+    [10_000, "🤌"],
+    [50_000, "🥁"],
+    [100_000, "🦾"],
+    [500_000, "🪨"],
 ];
-const COMBOS: [number, string, string][] = [
-    [3, "🔥", "Combo!"],
-    [5, "⚡", "Hot hands"],
-    [8, "🌟", "Supernova combo"],
+const COMBOS: [number, string][] = [
+    [3, "🔥"],
+    [5, "⚡"],
+    [8, "🌟"],
 ];
 const tapping: Achievement[] = [
-    ...TAPS.map(([taps, icon, name], i): Achievement => ({
+    ...TAPS.map(([taps, icon], i): Achievement => ({
         id: `taps${i + 1}`,
         group: "Tapping",
         icon,
-        name,
-        description: `Tap the Big Emoji ${formatNumber(taps)} times`,
+        name: { key: `names.taps${i + 1}` },
+        description: { key: "descriptions.taps", amount: taps },
         unlocked: state => state.stats.bigEmojiTaps >= taps,
     })),
-    ...COMBOS.map(([combo, icon, name]): Achievement => ({
+    ...COMBOS.map(([combo, icon]): Achievement => ({
         id: `combo${combo}`,
         group: "Tapping",
         icon,
-        name,
-        description: `Reach a ×${combo} combo`,
+        name: { key: `names.combo${combo}` },
+        description: { key: "descriptions.combo", amount: combo },
         unlocked: state => (state.stats.bestCombo ?? 1) >= combo,
     })),
     {
         id: "tapEarnings",
         group: "Tapping",
         icon: "💪",
-        name: "Hands-on management",
-        description: "Earn 1 trillion emojis from tapping",
+        name: { key: "names.tapEarnings" },
+        description: { key: "descriptions.tapEarnings", amount: 1e12 },
         unlocked: state => state.stats.emojisEarnedFromTap >= 1e12,
     },
 ];
 
 // Owning a few of each building, then a lot
-const BUILDING_TIERS: [number, string][] = [[1, "Hired"], [50, "Fifty"], [100, "Century"], [200, "Empire"]];
+const BUILDING_TIERS: [number, string][] = [[1, "hired"], [50, "fifty"], [100, "century"], [200, "empire"]];
 const buildings: Achievement[] = [
     ...buildingData.flatMap(building => BUILDING_TIERS.map(([amount, label], tier): Achievement => ({
         id: `building-${building.name}-${amount}`,
         group: "Buildings",
         icon: building.icon,
-        name: `${building.name}: ${label}`,
-        description: amount === 1 ? `Get your first ${building.name.toLowerCase()}` : `Own ${amount} of ${building.name.toLowerCase()}`,
+        name: { key: "names.building", buildingId: building.buildingId, tier: label },
+        description: amount === 1
+            ? { key: "descriptions.buildingFirst", buildingId: building.buildingId }
+            : { key: "descriptions.buildingOwned", buildingId: building.buildingId, amount },
         // The first building has its own banner
         quiet: building.buildingId === 0 && tier === 0,
         unlocked: state => ownedOf(state, building.name) >= amount,
     }))),
-    ...([[100, "🏘️", "Small business"], [500, "🏙️", "Conglomerate"], [1000, "🌆", "Megacorp"], [2500, "🌍", "World domination"]] as [number, string, string][])
-        .map(([amount, icon, name]): Achievement => ({
+    ...([[100, "🏘️"], [500, "🏙️"], [1000, "🌆"], [2500, "🌍"]] as [number, string][])
+        .map(([amount, icon]): Achievement => ({
             id: `buildings${amount}`,
             group: "Buildings",
             icon,
-            name,
-            description: `Own ${formatNumber(amount)} buildings at once`,
+            name: { key: `names.buildings${amount}` },
+            description: { key: "descriptions.buildingsTotal", amount },
             unlocked: state => totalBuildings(state) >= amount,
         })),
-    ...([[10, "🔧", "Tinkerer"], [50, "🛠️", "Engineer"], [150, "⚙️", "Inventor"], [300, "🧠", "Mad scientist"]] as [number, string, string][])
-        .map(([amount, icon, name]): Achievement => ({
+    ...([[10, "🔧"], [50, "🛠️"], [150, "⚙️"], [300, "🧠"]] as [number, string][])
+        .map(([amount, icon]): Achievement => ({
             id: `upgrades${amount}`,
             group: "Buildings",
             icon,
-            name,
-            description: `Own ${amount} upgrades at once`,
+            name: { key: `names.upgrades${amount}` },
+            description: { key: "descriptions.upgradesOwned", amount },
             unlocked: state => state.upgrades.owned.length >= amount,
         })),
 ];
 
-const COLLECTED: [number, string, string][] = [
-    [50, "📗", "Collector"],
-    [250, "📚", "Hoarder"],
-    [500, "🗃️", "Archivist"],
-    [1000, "🏛️", "Curator"],
+const COLLECTED: [number, string][] = [
+    [50, "📗"],
+    [250, "📚"],
+    [500, "🗃️"],
+    [1000, "🏛️"],
 ];
-const SHINIES: [number, string, string][] = [
-    [1, "✨", "Ooh, shiny"],
-    [10, "🌟", "Magpie"],
-    [50, "💛", "Gold rush"],
+const SHINIES: [number, string][] = [
+    [1, "✨"],
+    [10, "🌟"],
+    [50, "💛"],
 ];
 const collection: Achievement[] = [
-    ...COLLECTED.map(([amount, icon, name]): Achievement => ({
+    ...COLLECTED.map(([amount, icon]): Achievement => ({
         id: `collected${amount}`,
         group: "Collection",
         icon,
-        name,
-        description: `Find ${formatNumber(amount)} different emojis`,
+        name: { key: `names.collected${amount}` },
+        description: { key: "descriptions.collected", amount },
         unlocked: state => collectedCount(state) >= amount,
     })),
     {
         id: "collectedAll",
         group: "Collection",
         icon: "🏆",
-        name: "Gotta tap 'em all",
-        description: "Find every emoji",
+        name: { key: "names.collectedAll" },
+        description: { key: "descriptions.collectedAll" },
         unlocked: state => collectedCount(state) >= collectibleCount(),
     },
-    ...SHINIES.map(([amount, icon, name]): Achievement => ({
+    ...SHINIES.map(([amount, icon]): Achievement => ({
         id: `shiny${amount}`,
         group: "Collection",
         icon,
-        name,
-        description: amount === 1 ? "Tap a shiny emoji" : `Tap ${amount} shiny emojis`,
+        name: { key: `names.shiny${amount}` },
+        description: amount === 1 ? { key: "descriptions.shinyFirst" } : { key: "descriptions.shiny", amount },
         unlocked: state => (state.stats.shinyEmojisTapped ?? 0) >= amount,
     })),
 ];
 
-const MAGIC: [number, string, string][] = [
-    [1, "🪄", "Abracadabra"],
-    [25, "🔮", "Apprentice"],
-    [100, "🧙", "Wizard"],
-    [500, "🌠", "Archmage"],
+const MAGIC: [number, string][] = [
+    [1, "🪄"],
+    [25, "🔮"],
+    [100, "🧙"],
+    [500, "🌠"],
 ];
-const magic: Achievement[] = MAGIC.map(([amount, icon, name]) => ({
+const magic: Achievement[] = MAGIC.map(([amount, icon]) => ({
     id: `magic${amount}`,
     group: "Magic",
     icon,
-    name,
-    description: amount === 1 ? "Tap an effect emoji" : `Tap ${amount} effect emojis`,
+    name: { key: `names.magic${amount}` },
+    description: amount === 1 ? { key: "descriptions.magicFirst" } : { key: "descriptions.magic", amount },
     unlocked: state => state.stats.effectEmojisCollected >= amount,
 }));
 
-const PRESTIGES: [number, string, string][] = [
-    [1, "🌱", "Born again"],
-    [5, "🔁", "Groundhog day"],
-    [10, "♻️", "Recycler"],
-    [25, "🌀", "Eternal return"],
+const PRESTIGES: [number, string][] = [
+    [1, "🌱"],
+    [5, "🔁"],
+    [10, "♻️"],
+    [25, "🌀"],
 ];
 const prestige: Achievement[] = [
-    ...PRESTIGES.map(([amount, icon, name]): Achievement => ({
+    ...PRESTIGES.map(([amount, icon]): Achievement => ({
         id: `prestige${amount}`,
         group: "Prestige",
         icon,
-        name,
-        description: amount === 1 ? "Prestige for the first time" : `Prestige ${amount} times`,
+        name: { key: `names.prestige${amount}` },
+        description: amount === 1 ? { key: "descriptions.prestigeFirst" } : { key: "descriptions.prestige", amount },
         unlocked: state => state.prestige.prestiges >= amount,
     })),
     ...trials.map((trial): Achievement => ({
         id: `trial-${trial.id}`,
         group: "Prestige",
         icon: trial.icon,
-        name: `${trial.name} survivor`,
-        description: `Complete the ${trial.name} trial`,
+        name: { key: "names.trial", trialId: trial.id },
+        description: { key: "descriptions.trial", trialId: trial.id },
         unlocked: state => (state.prestige.trialsCompleted ?? []).includes(trial.id),
     })),
     {
         id: "allPerks",
         group: "Prestige",
         icon: "👑",
-        name: "Perfectly perked",
-        description: "Own every perk",
+        name: { key: "names.allPerks" },
+        description: { key: "descriptions.allPerks" },
         unlocked: state => perks.every(perk => state.prestige.perks.includes(perk.id)),
     },
 ];
@@ -268,8 +284,8 @@ const secret: Achievement[] = [
         id: "secretAnswer",
         group: "Secret",
         icon: "🐬",
-        name: "Don't panic",
-        description: "Play with a fun value of 42",
+        name: { key: "names.secretAnswer" },
+        description: { key: "descriptions.secretAnswer", amount: 42 },
         secret: true,
         unlocked: state => state.values.funValue === 42,
     },
@@ -277,8 +293,8 @@ const secret: Achievement[] = [
         id: "secretHoarder",
         group: "Secret",
         icon: "🐉",
-        name: "Dragon's hoard",
-        description: "Have 1 million emojis in the bank without owning a building",
+        name: { key: "names.secretHoarder" },
+        description: { key: "descriptions.secretHoarder", amount: 1e6 },
         secret: true,
         unlocked: state => state.values.emojis >= 1e6 && totalBuildings(state) === 0,
     },
@@ -286,8 +302,8 @@ const secret: Achievement[] = [
         id: "secretGems",
         group: "Secret",
         icon: "💎",
-        name: "Shiny rocks",
-        description: "Hold 100 gems at once",
+        name: { key: "names.secretGems" },
+        description: { key: "descriptions.secretGems", amount: 100 },
         secret: true,
         unlocked: state => state.gems.gems >= 100,
     },
@@ -321,5 +337,10 @@ export function checkAchievements() {
 
     store.dispatch(unlockAchievements(earned.map(a => a.id)));
     if (!checked) return;
-    earned.filter(a => !a.quiet).forEach(a => celebrateMilestone({ icon: a.icon, caption: "TROPHY UNLOCKED", title: a.name }));
+    earned.filter(a => !a.quiet).forEach(a => celebrateMilestone({
+        icon: a.icon,
+        caption: toCaps(i18n.t("trophies.unlockedCaps")),
+        title: getTrophyText(a.name),
+        kind: "trophy",
+    }));
 }

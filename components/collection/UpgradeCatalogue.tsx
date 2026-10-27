@@ -120,7 +120,7 @@ export default function UpgradeCatalogue() {
     if (tileSize === 0) {
         return (
             <View style={styles.loading} onLayout={measure}>
-                <ActivityIndicator size="large" color={palette.sun} accessibilityLabel="Loading upgrades" />
+                <ActivityIndicator size="large" color={palette.sun} accessibilityLabel={t("catalogue.loadingA11y")} />
             </View>
         );
     }
@@ -294,7 +294,7 @@ function LockedDetail({ upgrade, revealed }: { upgrade: UpgradeType, revealed: b
                 </View>
             </View>
             <Text font="body" size={14} color={palette.muted} style={{ lineHeight: 20 }}>
-                {revealed ? `${i18n.t("catalogue.fact.unlocks")}: ${unlockText(upgrade)}` : "Keep playing to unlock it."}
+                {revealed ? i18n.t("catalogue.unlocksLine", { condition: unlockText(upgrade) }) : i18n.t("catalogue.lockedHint")}
             </Text>
         </View>
     );

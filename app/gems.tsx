@@ -43,6 +43,7 @@ function ThemePreview({ theme }: { theme: AppTheme }) {
 
 /** Reskins of the whole app: bought once with gems, then switched freely */
 function AppThemes() {
+    const { t } = useTranslation();
     const current = useSelector((state: RootState) => state.gems.theme ?? "classic");
     // Re-render when one is bought
     useSelector((state: RootState) => state.gems.themes);
@@ -51,23 +52,24 @@ function AppThemes() {
             {appThemes.map(theme => {
                 const owned = ownsTheme(theme.id);
                 const inUse = current === theme.id;
+                const name = t(`gems.themes.${theme.id}`);
                 return (
                     <View key={theme.id} style={[styles.theme, inUse ? styles.packTagged : null]}>
                         <ThemePreview theme={theme} />
-                        <Text size={16} color={palette.ink}>{theme.name}</Text>
+                        <Text size={16} color={palette.ink}>{name}</Text>
                         {inUse ? (
-                            <Text font="black" size={12} color={palette.greenText} style={styles.themeAction}>✓ IN USE</Text>
+                            <Text font="black" size={12} color={palette.greenText} style={styles.themeAction}>✓ {toCaps(t("gems.inUseCaps"))}</Text>
                         ) : owned ? (
                             <Pressable
                                 onPress={() => buyTheme(theme.id)}
                                 accessibilityRole="button"
-                                accessibilityLabel={`Use the ${theme.name} theme`}
+                                accessibilityLabel={t("gems.useThemeA11y", { theme: name })}
                                 style={({ pressed }) => [styles.useTheme, pressed ? { opacity: 0.8 } : null]}
                             >
-                                <Text font="black" size={13} color={palette.ink}>Use</Text>
+                                <Text font="black" size={13} color={palette.ink}>{t("gems.useTheme")}</Text>
                             </Pressable>
                         ) : (
-                            <GemButton compact cost={theme.price} onBuy={() => buyTheme(theme.id)} accessibilityLabel={`Buy the ${theme.name} theme`} />
+                            <GemButton compact cost={theme.price} onBuy={() => buyTheme(theme.id)} accessibilityLabel={t("gems.buyThemeA11y", { theme: name })} />
                         )}
                     </View>
                 );
@@ -106,7 +108,7 @@ export default function GemStoreScreen() {
         try {
             const result = await buyGemPack(pack);
             if (result === "bought") {
-                celebrateMilestone({ icon: pack.icon, caption: toCaps(t("gems.thankYouCaps")), title: t("gems.gemsAdded", { count: pack.gems, amount: formatNumber(pack.gems) }) });
+                celebrateMilestone({ icon: pack.icon, caption: toCaps(t("gems.thankYouCaps")), title: t("gems.gemsAdded", { count: pack.gems, amount: formatNumber(pack.gems) }), kind: "gems" });
             } else if (result === "failed") {
                 setFailed(true);
             }
@@ -168,26 +170,26 @@ export default function GemStoreScreen() {
                 </Text>
 
                 {/* What gems are for */}
-                <Text size={22}>Gem powers</Text>
+                <Text size={22}>{t("gemPowers.title")}</Text>
                 <GemPowers />
                 <View style={styles.notice}>
                     <Text font="bold" size={13} color={palette.muted} style={{ lineHeight: 19 }}>
-                        💎 Can't afford a building or upgrade yet? Buy it now with gems, about 1 gem per {MINUTES_PER_GEM} minutes of waiting.{"\n"}
-                        🌙 Coming back after a while: {GEM_COST} gems for ×{GEM_MULTIPLIER} offline earnings.
+                        💎 {t("gems.skipWait", { minutes: MINUTES_PER_GEM })}{"\n"}
+                        🌙 {t("gems.offlineClaim", { cost: GEM_COST, multiplier: GEM_MULTIPLIER })}
                     </Text>
                 </View>
 
-                <Text size={22}>App themes</Text>
+                <Text size={22}>{t("gems.themesTitle")}</Text>
                 <Text font="bold" size={13} color={palette.lilac} style={{ marginTop: -8 }}>
-                    Reskin the whole game. Buy once, switch any time.
+                    {t("gems.themesIntro")}
                 </Text>
                 <AppThemes />
 
-                <Text size={22}>Free gems</Text>
+                <Text size={22}>{t("gems.freeTitle")}</Text>
                 <View style={styles.notice}>
                     <Text font="bold" size={13} color={palette.muted} style={{ lineHeight: 20 }}>
-                        👆 Every {TAP_GEM_EVERY}th tap of the Big Emoji: 1 gem{"\n"}
-                        ✨ Every prestige: {PRESTIGE_GEMS} gems
+                        👆 {t("gems.freeTaps", { taps: formatNumber(TAP_GEM_EVERY) })}{"\n"}
+                        ✨ {t("gems.freePrestige", { gems: PRESTIGE_GEMS })}
                     </Text>
                 </View>
             </ScrollView>

@@ -5,6 +5,8 @@ import Text from "../generalUI/Text";
 import { RootState } from "../../scripts/redux/reduxStore";
 import { Achievement, AchievementGroup, achievementGroups, achievements } from "../../scripts/game/achievements";
 import { palette, radii, themedStyles } from "../misc/theme";
+import { useTranslation } from "react-i18next";
+import { getTrophyText } from "../../i18n/content";
 
 /**
  * Every achievement by group, with overall progress. Locked ones are hidden (???), as
@@ -15,6 +17,7 @@ export default function AchievementsList() {
     // Changes only when one unlocks
     const unlocked = useSelector((state: RootState) => state.achievements.unlocked);
     const [selectedGroup, setGroup] = useState<AchievementGroup | "All">("All");
+    const { t } = useTranslation();
 
     const unlockedSet = useMemo(() => new Set(unlocked), [unlocked]);
     const total = achievements.length;
@@ -39,7 +42,7 @@ export default function AchievementsList() {
                 <View style={styles.progressTop}>
                     <View style={styles.progressCount}>
                         <Text size={34} color={palette.ink} style={{ lineHeight: 38 }}>{done}</Text>
-                        <Text font="bold" size={15} color={palette.muted}>/ {total} unlocked</Text>
+                        <Text font="bold" size={15} color={palette.muted}>{t("trophies.ofTotalUnlocked", { total })}</Text>
                     </View>
                     <Text size={17} color={palette.violetDeep}>{Math.floor(percentage)}%</Text>
                 </View>
@@ -49,11 +52,11 @@ export default function AchievementsList() {
             </View>
 
             <View style={styles.chips}>
-                <Chip label={`🏅 All ${done}/${total}`} selected={group === "All"} onPress={() => setGroup("All")} />
+                <Chip label={`🏅 ${t("trophies.all")} ${done}/${total}`} selected={group === "All"} onPress={() => setGroup("All")} />
                 {groups.map(g => (
                     <Chip
                         key={g.group}
-                        label={`${g.icon} ${g.group} ${g.done}/${g.total}`}
+                        label={`${g.icon} ${t(`trophies.groups.${g.group}`)} ${g.done}/${g.total}`}
                         selected={group === g.group}
                         onPress={() => setGroup(g.group)}
                     />
@@ -89,10 +92,11 @@ function Chip({ label, selected, onPress }: { label: string, selected: boolean, 
 }
 
 function AchievementRow({ achievement, unlocked }: { achievement: Achievement, unlocked: boolean }) {
+    const { t } = useTranslation();
     if (!unlocked) {
-        const hint = achievement.secret ? "A secret. Keep playing to find it" : "Keep playing to unlock it";
+        const hint = t(achievement.secret ? "trophies.secretHint" : "trophies.hiddenHint");
         return (
-            <View style={[styles.row, styles.rowLocked]} accessibilityLabel={`Hidden trophy, not unlocked yet. ${hint}`}>
+            <View style={[styles.row, styles.rowLocked]} accessibilityLabel={t("trophies.hiddenA11y", { hint })}>
                 <View style={styles.iconTile}>
                     <Text size={24} style={[{ lineHeight: 30 }, styles.iconLocked]}>❔</Text>
                 </View>
@@ -105,14 +109,16 @@ function AchievementRow({ achievement, unlocked }: { achievement: Achievement, u
         );
     }
 
+    const name = getTrophyText(achievement.name);
+    const description = getTrophyText(achievement.description);
     return (
-        <View style={styles.row} accessibilityLabel={`${achievement.name}. ${achievement.description}. Unlocked`}>
+        <View style={styles.row} accessibilityLabel={t("trophies.unlockedA11y", { name, description })}>
             <View style={[styles.iconTile, styles.iconTileUnlocked]}>
                 <Text size={24} style={{ lineHeight: 30 }}>{achievement.icon}</Text>
             </View>
             <View style={styles.text}>
-                <Text size={16} color={palette.ink} numberOfLines={1}>{achievement.name}</Text>
-                <Text font="bold" size={12} color={palette.muted}>{achievement.description}</Text>
+                <Text size={16} color={palette.ink} numberOfLines={1}>{name}</Text>
+                <Text font="bold" size={12} color={palette.muted}>{description}</Text>
             </View>
             <Text size={18} style={{ lineHeight: 24 }}>✅</Text>
         </View>

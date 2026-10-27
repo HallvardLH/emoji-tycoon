@@ -8,7 +8,8 @@
         "stats": "Statistikk",
         "collection": "Samling",
         "newItemsLabel_one": "{{label}}, {{count}} ny",
-        "newItemsLabel_other": "{{label}}, {{count}} nye"
+        "newItemsLabel_other": "{{label}}, {{count}} nye",
+        "trophies": "Trofeer"
     },
     "header": {
         "emojis": "Emojier",
@@ -19,7 +20,9 @@
     },
     "common": {
         "buy": "Kjøp",
-        "details": "Detaljer"
+        "details": "Detaljer",
+        "close": "Lukk",
+        "dismissHint": "Lukker varselet"
     },
     "upgrades": {
         "bigEmoji": "Stor emoji",
@@ -96,7 +99,8 @@
         "funValue": "Moroverdi",
         "shinyEmojisTapped": "Skinnende emojier trykket på",
         "comboTaps": "Kombotrykk",
-        "madeByEachBuilding": "Laget av hver bygning"
+        "madeByEachBuilding": "Laget av hver bygning",
+        "bestCombo": "Beste kombo"
     },
     "drawer": {
         "language": "Språk",
@@ -141,7 +145,17 @@
         "chipLabel": "Emojiessens",
         "chipLabelReady": "Prestisje for {{essence}} emojiessens",
         "chipEssence": "Essens",
-        "chipPending": "+{{essence}} essens"
+        "chipPending": "+{{essence}} essens",
+        "gemExtras": "Juvelekstra",
+        "charmName": "Essenssjarm",
+        "charmOff": "Neste prestisje gir {{percent}} mer essens.",
+        "charmOn": "På: neste prestisje gir {{percent}} mer essens.",
+        "charmOnAmount": "På: neste prestisje gir {{percent}} mer essens (+{{essence}} ✨).",
+        "charmA11y": "Kjøp essenssjarmen",
+        "onCaps": "På",
+        "respecName": "Tilbakestill fordeler",
+        "respecDescription": "Ta tilbake alle fordelene og få all essensen deres tilbake, så du kan velge på nytt.",
+        "respecA11y": "Tilbakestill fordeler"
     },
     "numbers": {
         "groupSize": "3",
@@ -233,7 +247,8 @@
         "bulkA11y_one": "Kjøp {{count}} om gangen",
         "bulkA11y_other": "Kjøp {{count}} om gangen",
         "milestoneCaption": "NY BYGNING",
-        "milestoneTitle": "Første {{building}} er på plass!"
+        "milestoneTitle": "Første {{building}} er på plass!",
+        "buyNowA11y": "Kjøp {{name}} nå med juveler"
     },
     "time": {
         "seconds_one": "{{count}}s",
@@ -302,6 +317,29 @@
         "tags": {
             "popular": "POPULÆR",
             "bestValue": "MEST FOR PENGENE"
+        },
+        "openStoreA11y": "Åpne juvelbutikken",
+        "storeCardSubtitle": "{{gems}} juveler · boost, temaer og mer",
+        "storeCardA11y": "Juvelbutikk. Du har {{gems}} juveler",
+        "skipWait": "Har du ikke råd til en bygning eller oppgradering ennå? Kjøp den nå med juveler, omtrent 1 juvel per {{minutes}} minutter med venting.",
+        "themesTitle": "Apptemaer",
+        "themesIntro": "Gi hele spillet et nytt utseende. Kjøp én gang, bytt når du vil.",
+        "inUseCaps": "I bruk",
+        "useTheme": "Bruk",
+        "useThemeA11y": "Bruk temaet {{theme}}",
+        "buyThemeA11y": "Kjøp temaet {{theme}}",
+        "freeTitle": "Gratis juveler",
+        "freeTaps": "1 juvel for hvert {{taps}}. trykk på den store emojien",
+        "freePrestige": "{{gems}} juveler for hver prestisje",
+        "tapGemCaps": "{{taps}} trykk!",
+        "gemCaps": "Juvel",
+        "themes": {
+            "classic": "Klassisk",
+            "sunset": "Solnedgang",
+            "ocean": "Hav",
+            "forest": "Skog",
+            "candy": "Godteri",
+            "gold": "Gull"
         }
     },
     "offline": {
@@ -340,7 +378,12 @@
         "performance": "Ytelse",
         "reduceAnimations": "Færre animasjoner",
         "reduceAnimationsHint": "Emojier du trykker på, flyr ikke lenger ut fra den store emojien. Prøv dette hvis trykkingen føles treg.",
-        "dangerZone": "Faresone"
+        "dangerZone": "Faresone",
+        "vibration": "Vibrasjon",
+        "vibrationHint": "En liten summing når du trykker, kjøper og feirer.",
+        "privacy": "Personvern",
+        "privacyChoices": "Personvernvalg",
+        "privacyHint": "Endre hvordan annonser kan bruke dataene dine."
     },
     "cheats": {
         "subtitle": "For testing. Endringene gjelder lagringen din.",
@@ -494,6 +537,173 @@
             "price": "PRIS",
             "unlocks": "LÅSES OPP",
             "id": "ID"
+        },
+        "loadingA11y": "Laster oppgraderinger",
+        "lockedHint": "Fortsett å spille for å låse den opp.",
+        "unlocksLine": "Låses opp: {{condition}}"
+    },
+    "gemButton": {
+        "confirm": "Bekreft",
+        "confirmShort": "Kjøpe?",
+        "hint": "Trykk igjen for å bruke juvelene",
+        "costA11y": "{{cost}} juveler",
+        "labelA11y": "{{label}}, {{cost}} juveler",
+        "buyNow": "Kjøp nå"
+    },
+    "gemPowers": {
+        "title": "Juvelkrefter",
+        "subtitle": "Bruk juveler for et skikkelig løft",
+        "boostOn": "×{{multiplier}}-boost på · {{time}} igjen",
+        "buttonCaps": "Boost",
+        "buttonA11y": "Åpne juvelkrefter",
+        "buttonActiveA11y": "Boost på, {{time}} igjen. Åpne juvelkrefter",
+        "getMoreGems": "Få flere juveler",
+        "fullCaps": "Fullt",
+        "boost": {
+            "name": "×{{multiplier}}-boost",
+            "description": "×{{multiplier}} produksjon og trykk i {{minutes}} minutter. Kjøp igjen for mer tid (opptil {{hours}} timer). Fortsetter mens du er borte.",
+            "statusCaps": "På · {{time}} igjen",
+            "buy": "Boost",
+            "extend": "+{{minutes}} min",
+            "a11y": "Kjøp boosten"
+        },
+        "timeWarp": {
+            "name": "Tidshopp",
+            "description": "Få flere timer med produksjon med en gang.",
+            "hours": "{{hours}} t",
+            "a11y": "Hopp {{hours}} timer"
+        },
+        "shower": {
+            "name": "Effektregn",
+            "description": "{{amount}} gode effektemojier dukker opp samtidig. Trykk på dem før de forsvinner!",
+            "buy": "Tilkall",
+            "a11y": "Tilkall et effektregn"
+        },
+        "comboKeeper": {
+            "name": "Kombovokter",
+            "description": "Komboen din synker ikke på {{minutes}} minutter. Trykk den opp, og hold den.",
+            "statusCaps": "Holder · {{time}} igjen",
+            "buy": "Hold",
+            "a11y": "Kjøp kombovokteren"
+        },
+        "discovery": {
+            "name": "Oppdagelse",
+            "description": "De neste {{amount}} store emojiene er noen du aldri har funnet.",
+            "status": "Nye emojier på vei: {{amount}}",
+            "buy": "Oppdag",
+            "allFoundCaps": "Alle funnet",
+            "a11y": "Kjøp oppdagelser"
+        }
+    },
+    "trophies": {
+        "unlockedCaps": "Trofé låst opp",
+        "ofTotalUnlocked": "/ {{total}} låst opp",
+        "all": "Alle",
+        "hiddenHint": "Fortsett å spille for å låse det opp",
+        "secretHint": "En hemmelighet. Fortsett å spille for å finne den",
+        "hiddenA11y": "Skjult trofé, ikke låst opp ennå. {{hint}}",
+        "unlockedA11y": "{{name}}. {{description}}. Låst opp",
+        "groups": {
+            "Emojis": "Emojier",
+            "Production": "Produksjon",
+            "Tapping": "Trykking",
+            "Buildings": "Bygninger",
+            "Collection": "Samling",
+            "Magic": "Magi",
+            "Prestige": "Prestisje",
+            "Secret": "Hemmelig"
+        },
+        "tiers": {
+            "hired": "Ansatt",
+            "fifty": "Femti",
+            "century": "Hundre",
+            "empire": "Imperium"
+        },
+        "names": {
+            "drawn1": "Krusedull",
+            "drawn2": "Skissebok",
+            "drawn3": "Veggmaleri",
+            "drawn4": "Galleri",
+            "drawn5": "Mesterverk",
+            "drawn6": "Renessanse",
+            "drawn7": "Museum for alt",
+            "drawn8": "Emojikosmos",
+            "drawn9": "Uendelig lerret",
+            "drawn10": "Forbi all telling",
+            "drawn11": "Den siste siden",
+            "eps1": "Sildring",
+            "eps2": "Bekk",
+            "eps3": "Elv",
+            "eps4": "Fossestryk",
+            "eps5": "Utbrudd",
+            "eps6": "Meteorsverm",
+            "eps7": "Solstorm",
+            "eps8": "Supernova",
+            "eps9": "Hendelseshorisont",
+            "taps1": "Prikk",
+            "taps2": "Urolige fingre",
+            "taps3": "Steppdanser",
+            "taps4": "Trommevirvel",
+            "taps5": "Bionisk finger",
+            "taps6": "Musearm",
+            "combo3": "Kombo!",
+            "combo5": "Varme hender",
+            "combo8": "Supernovakombo",
+            "tapEarnings": "Hands-on-ledelse",
+            "building": "{{building}}: {{tier}}",
+            "buildings100": "Småbedrift",
+            "buildings500": "Konglomerat",
+            "buildings1000": "Megakonsern",
+            "buildings2500": "Verdensherredømme",
+            "upgrades10": "Fikser",
+            "upgrades50": "Ingeniør",
+            "upgrades150": "Oppfinner",
+            "upgrades300": "Gal vitenskapsmann",
+            "collected50": "Samler",
+            "collected250": "Hamstrer",
+            "collected500": "Arkivar",
+            "collected1000": "Kurator",
+            "collectedAll": "Trykk på dem alle",
+            "shiny1": "Oi, skinnende",
+            "shiny10": "Skjære",
+            "shiny50": "Gullrush",
+            "magic1": "Abrakadabra",
+            "magic25": "Lærling",
+            "magic100": "Trollmann",
+            "magic500": "Erkemagiker",
+            "prestige1": "Gjenfødt",
+            "prestige5": "Monsterdagen",
+            "prestige10": "Gjenvinner",
+            "prestige25": "Evig gjentakelse",
+            "trial": "Overlevde: {{trial}}",
+            "allPerks": "Fullt utstyrt",
+            "secretAnswer": "Ingen panikk",
+            "secretHoarder": "Dragens skatt",
+            "secretGems": "Skinnende steiner"
+        },
+        "descriptions": {
+            "drawn": "Tegn {{amount}} emojier totalt",
+            "eps": "Lag {{amount}} emojier per sekund",
+            "taps": "Trykk på den store emojien {{amount}} ganger",
+            "combo": "Nå en ×{{amount}}-kombo",
+            "tapEarnings": "Tjen {{amount}} emojier på trykking",
+            "buildingFirst": "Første bygning: {{buildingMid}}",
+            "buildingOwned": "Eie {{amount}} {{buildingsMid}}",
+            "buildingsTotal": "Eie {{amount}} bygninger samtidig",
+            "upgradesOwned": "Eie {{amount}} oppgraderinger samtidig",
+            "collected": "Finn {{amount}} forskjellige emojier",
+            "collectedAll": "Finn alle emojiene",
+            "shinyFirst": "Trykk på en skinnende emoji",
+            "shiny": "Trykk på {{amount}} skinnende emojier",
+            "magicFirst": "Trykk på en effektemoji",
+            "magic": "Trykk på {{amount}} effektemojier",
+            "prestigeFirst": "Ta prestisje for første gang",
+            "prestige": "Ta prestisje {{amount}} ganger",
+            "trial": "Fullfør utfordringen: {{trial}}",
+            "allPerks": "Eie alle fordelene",
+            "secretAnswer": "Spill med en moroverdi på {{amount}}",
+            "secretHoarder": "Ha {{amount}} emojier i banken uten å eie en eneste bygning",
+            "secretGems": "Ha {{amount}} juveler samtidig"
         }
     }
 }

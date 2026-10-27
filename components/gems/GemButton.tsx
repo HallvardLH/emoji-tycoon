@@ -6,6 +6,7 @@ import { GemBuyResult } from "../../scripts/game/gems/gemShop";
 import { palette, radii, themedStyles } from "../misc/theme";
 import * as Haptics from "../../scripts/game/haptics";
 import { useGemStoreOpen } from "../../scripts/monetization";
+import i18n from "../../i18n";
 
 // How long a first tap waits for the second
 const CONFIRM_MS = 3000;
@@ -55,15 +56,15 @@ export default function GemButton({ cost, onBuy, label, disabled, disabledLabel,
 
     const text = disabled
         ? disabledLabel ?? `💎 ${cost}`
-        : armed ? `${compact ? "Buy?" : "Confirm"} 💎 ${cost}` : `${label ? `${label} ` : ""}💎 ${cost}`;
+        : armed ? `${i18n.t(compact ? "gemButton.confirmShort" : "gemButton.confirm")} 💎 ${cost}` : `${label ? `${label} ` : ""}💎 ${cost}`;
 
     return (
         <Pressable
             onPress={onPress}
             disabled={disabled}
             accessibilityRole="button"
-            accessibilityLabel={accessibilityLabel ? `${accessibilityLabel}, ${cost} gems` : `${cost} gems`}
-            accessibilityHint={armed ? "Tap again to spend the gems" : undefined}
+            accessibilityLabel={accessibilityLabel ? i18n.t("gemButton.labelA11y", { label: accessibilityLabel, cost }) : i18n.t("gemButton.costA11y", { cost })}
+            accessibilityHint={armed ? i18n.t("gemButton.hint") : undefined}
             accessibilityState={{ disabled }}
             style={({ pressed }) => [
                 styles.button,

@@ -7,7 +7,8 @@
         "upgrades": "升级",
         "stats": "统计",
         "collection": "收藏",
-        "newItemsLabel_other": "{{label}}，{{count}}个新内容"
+        "newItemsLabel_other": "{{label}}，{{count}}个新内容",
+        "trophies": "奖杯"
     },
     "header": {
         "emojis": "表情",
@@ -17,7 +18,9 @@
     },
     "common": {
         "buy": "购买",
-        "details": "详情"
+        "details": "详情",
+        "close": "关闭",
+        "dismissHint": "关闭通知"
     },
     "upgrades": {
         "bigEmoji": "大表情",
@@ -94,7 +97,8 @@
         "funValue": "趣味值",
         "shinyEmojisTapped": "点中的闪光表情",
         "comboTaps": "连击点击次数",
-        "madeByEachBuilding": "各建筑产量"
+        "madeByEachBuilding": "各建筑产量",
+        "bestCombo": "最高连击"
     },
     "drawer": {
         "language": "语言",
@@ -138,7 +142,17 @@
         "chipLabel": "表情精华",
         "chipLabelReady": "声望可获得{{essence}}表情精华",
         "chipEssence": "精华",
-        "chipPending": "+{{essence}}精华"
+        "chipPending": "+{{essence}}精华",
+        "gemExtras": "宝石特权",
+        "charmName": "精华护符",
+        "charmOff": "下次声望多获得{{percent}}精华。",
+        "charmOn": "已开启：下次声望多获得{{percent}}精华。",
+        "charmOnAmount": "已开启：下次声望多获得{{percent}}精华（+{{essence}} ✨）。",
+        "charmA11y": "购买精华护符",
+        "onCaps": "已开启",
+        "respecName": "重置天赋",
+        "respecDescription": "收回所有天赋并拿回全部精华，重新选择。",
+        "respecA11y": "重置天赋"
     },
     "numbers": {
         "groupSize": "4",
@@ -201,7 +215,8 @@
         "bulkA11yMax": "能买多少买多少",
         "bulkA11y_other": "每次购买{{count}}个",
         "milestoneCaption": "新建筑",
-        "milestoneTitle": "你的第一个{{building}}！"
+        "milestoneTitle": "你的第一个{{building}}！",
+        "buyNowA11y": "用宝石立即购买：{{name}}"
     },
     "time": {
         "seconds_other": "{{count}}秒",
@@ -263,6 +278,29 @@
         "tags": {
             "popular": "热门",
             "bestValue": "最超值"
+        },
+        "openStoreA11y": "打开宝石商店",
+        "storeCardSubtitle": "{{gems}}宝石 · 加速、主题等",
+        "storeCardA11y": "宝石商店。你有{{gems}}宝石",
+        "skipWait": "还买不起建筑或升级？现在就用宝石购买，每等待{{minutes}}分钟约需1宝石。",
+        "themesTitle": "应用主题",
+        "themesIntro": "为整个游戏换上新外观。买一次，随时切换。",
+        "inUseCaps": "使用中",
+        "useTheme": "使用",
+        "useThemeA11y": "使用{{theme}}主题",
+        "buyThemeA11y": "购买{{theme}}主题",
+        "freeTitle": "免费宝石",
+        "freeTaps": "每点击大表情{{taps}}次获得1宝石",
+        "freePrestige": "每次声望获得{{gems}}宝石",
+        "tapGemCaps": "{{taps}}次点击！",
+        "gemCaps": "宝石",
+        "themes": {
+            "classic": "经典",
+            "sunset": "日落",
+            "ocean": "海洋",
+            "forest": "森林",
+            "candy": "糖果",
+            "gold": "黄金"
         }
     },
     "offline": {
@@ -301,7 +339,12 @@
         "performance": "性能",
         "reduceAnimations": "减少动画",
         "reduceAnimationsHint": "点击的表情不再从大表情上飞出。如果点击感觉卡顿，可以试试这个。",
-        "dangerZone": "危险区域"
+        "dangerZone": "危险区域",
+        "vibration": "振动",
+        "vibrationHint": "点击、购买和庆祝时轻轻振动。",
+        "privacy": "隐私",
+        "privacyChoices": "隐私选项",
+        "privacyHint": "更改广告使用你数据的方式。"
     },
     "cheats": {
         "subtitle": "测试用。更改会直接应用到你的存档。",
@@ -436,6 +479,173 @@
             "price": "价格",
             "unlocks": "解锁条件",
             "id": "ID"
+        },
+        "loadingA11y": "正在加载升级",
+        "lockedHint": "继续游戏即可解锁。",
+        "unlocksLine": "解锁条件：{{condition}}"
+    },
+    "gemButton": {
+        "confirm": "确认",
+        "confirmShort": "购买？",
+        "hint": "再点一次即可花费宝石",
+        "costA11y": "{{cost}}宝石",
+        "labelA11y": "{{label}}，{{cost}}宝石",
+        "buyNow": "立即购买"
+    },
+    "gemPowers": {
+        "title": "宝石之力",
+        "subtitle": "花宝石获得真正的加速",
+        "boostOn": "×{{multiplier}}加速中 · 剩余{{time}}",
+        "buttonCaps": "加速",
+        "buttonA11y": "打开宝石之力",
+        "buttonActiveA11y": "加速中，剩余{{time}}。打开宝石之力",
+        "getMoreGems": "获取更多宝石",
+        "fullCaps": "已满",
+        "boost": {
+            "name": "×{{multiplier}}加速",
+            "description": "{{minutes}}分钟内产量和点击×{{multiplier}}。再次购买可延长时间（最多{{hours}}小时）。离开期间也会持续。",
+            "statusCaps": "开启 · 剩余{{time}}",
+            "buy": "加速",
+            "extend": "+{{minutes}}分钟",
+            "a11y": "购买加速"
+        },
+        "timeWarp": {
+            "name": "时间跳跃",
+            "description": "立即获得数小时的产量。",
+            "hours": "{{hours}}小时",
+            "a11y": "跳跃{{hours}}小时"
+        },
+        "shower": {
+            "name": "效果雨",
+            "description": "一次出现{{amount}}个好的效果表情。在它们消失前点击！",
+            "buy": "召唤",
+            "a11y": "召唤效果雨"
+        },
+        "comboKeeper": {
+            "name": "连击守护",
+            "description": "你的连击{{minutes}}分钟内不会下降。点上去，然后保持住。",
+            "statusCaps": "保持中 · 剩余{{time}}",
+            "buy": "保持",
+            "a11y": "购买连击守护"
+        },
+        "discovery": {
+            "name": "发现",
+            "description": "接下来的{{amount}}个大表情都是你从未发现过的。",
+            "status": "即将出现的新表情：{{amount}}",
+            "buy": "发现",
+            "allFoundCaps": "已全部发现",
+            "a11y": "购买发现"
+        }
+    },
+    "trophies": {
+        "unlockedCaps": "获得奖杯",
+        "ofTotalUnlocked": "/ {{total}} 已获得",
+        "all": "全部",
+        "hiddenHint": "继续游戏即可解锁",
+        "secretHint": "一个秘密。继续游戏去发现它",
+        "hiddenA11y": "隐藏奖杯，尚未获得。{{hint}}",
+        "unlockedA11y": "{{name}}。{{description}}。已获得",
+        "groups": {
+            "Emojis": "表情",
+            "Production": "生产",
+            "Tapping": "点击",
+            "Buildings": "建筑",
+            "Collection": "收藏",
+            "Magic": "魔法",
+            "Prestige": "声望",
+            "Secret": "秘密"
+        },
+        "tiers": {
+            "hired": "雇佣",
+            "fifty": "五十",
+            "century": "一百",
+            "empire": "帝国"
+        },
+        "names": {
+            "drawn1": "涂鸦者",
+            "drawn2": "速写本",
+            "drawn3": "壁画",
+            "drawn4": "画廊",
+            "drawn5": "杰作",
+            "drawn6": "文艺复兴",
+            "drawn7": "万物博物馆",
+            "drawn8": "表情宇宙",
+            "drawn9": "无尽画布",
+            "drawn10": "数不胜数",
+            "drawn11": "最后一页",
+            "eps1": "涓涓细流",
+            "eps2": "小溪",
+            "eps3": "大河",
+            "eps4": "激流",
+            "eps5": "喷发",
+            "eps6": "流星雨",
+            "eps7": "太阳耀斑",
+            "eps8": "超新星",
+            "eps9": "事件视界",
+            "taps1": "戳一下",
+            "taps2": "坐不住",
+            "taps3": "踢踏舞者",
+            "taps4": "击鼓",
+            "taps5": "仿生手指",
+            "taps6": "腕管综合征",
+            "combo3": "连击！",
+            "combo5": "手感火热",
+            "combo8": "超新星连击",
+            "tapEarnings": "亲力亲为",
+            "building": "{{building}}：{{tier}}",
+            "buildings100": "小生意",
+            "buildings500": "企业集团",
+            "buildings1000": "超级公司",
+            "buildings2500": "统治世界",
+            "upgrades10": "爱折腾",
+            "upgrades50": "工程师",
+            "upgrades150": "发明家",
+            "upgrades300": "疯狂科学家",
+            "collected50": "收藏家",
+            "collected250": "囤积者",
+            "collected500": "档案员",
+            "collected1000": "策展人",
+            "collectedAll": "全部点一遍",
+            "shiny1": "哇，闪闪的",
+            "shiny10": "喜鹊",
+            "shiny50": "淘金热",
+            "magic1": "阿布拉卡达布拉",
+            "magic25": "学徒",
+            "magic100": "巫师",
+            "magic500": "大法师",
+            "prestige1": "重获新生",
+            "prestige5": "土拨鼠之日",
+            "prestige10": "回收者",
+            "prestige25": "永恒轮回",
+            "trial": "幸存者：{{trial}}",
+            "allPerks": "天赋全满",
+            "secretAnswer": "别慌",
+            "secretHoarder": "巨龙宝藏",
+            "secretGems": "闪亮石头"
+        },
+        "descriptions": {
+            "drawn": "累计绘制{{amount}}个表情",
+            "eps": "每秒生产{{amount}}个表情",
+            "taps": "点击大表情{{amount}}次",
+            "combo": "达到×{{amount}}连击",
+            "tapEarnings": "通过点击赚取{{amount}}个表情",
+            "buildingFirst": "第一座建筑：{{buildingMid}}",
+            "buildingOwned": "拥有{{amount}}个{{buildingsMid}}",
+            "buildingsTotal": "同时拥有{{amount}}座建筑",
+            "upgradesOwned": "同时拥有{{amount}}个升级",
+            "collected": "发现{{amount}}种不同的表情",
+            "collectedAll": "发现所有表情",
+            "shinyFirst": "点击一个闪光表情",
+            "shiny": "点击{{amount}}个闪光表情",
+            "magicFirst": "点击一个效果表情",
+            "magic": "点击{{amount}}个效果表情",
+            "prestigeFirst": "第一次声望",
+            "prestige": "声望{{amount}}次",
+            "trial": "完成挑战：{{trial}}",
+            "allPerks": "拥有所有天赋",
+            "secretAnswer": "以趣味值{{amount}}进行游戏",
+            "secretHoarder": "不拥有任何建筑，银行里存有{{amount}}个表情",
+            "secretGems": "同时持有{{amount}}宝石"
         }
     }
 }

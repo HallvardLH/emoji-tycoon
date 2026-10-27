@@ -9,7 +9,8 @@
         "collection": "Collezione",
         "newItemsLabel_one": "{{label}}, {{count}} nuovo",
         "newItemsLabel_many": "{{label}}, {{count}} nuovi",
-        "newItemsLabel_other": "{{label}}, {{count}} nuovi"
+        "newItemsLabel_other": "{{label}}, {{count}} nuovi",
+        "trophies": "Trofei"
     },
     "header": {
         "emojis": "Emoji",
@@ -21,7 +22,9 @@
     },
     "common": {
         "buy": "Compra",
-        "details": "Dettagli"
+        "details": "Dettagli",
+        "close": "Chiudi",
+        "dismissHint": "Chiude la notifica"
     },
     "upgrades": {
         "bigEmoji": "Emoji gigante",
@@ -98,7 +101,8 @@
         "funValue": "Valore fun",
         "shinyEmojisTapped": "Emoji brillanti toccati",
         "comboTaps": "Tocchi in combo",
-        "madeByEachBuilding": "Prodotti da ogni edificio"
+        "madeByEachBuilding": "Prodotti da ogni edificio",
+        "bestCombo": "Combo migliore"
     },
     "drawer": {
         "language": "Lingua",
@@ -145,7 +149,17 @@
         "chipLabel": "Essenza di emoji",
         "chipLabelReady": "Prestigio per {{essence}} essenza di emoji",
         "chipEssence": "Essenza",
-        "chipPending": "+{{essence}} essenza"
+        "chipPending": "+{{essence}} essenza",
+        "gemExtras": "Extra con le gemme",
+        "charmName": "Amuleto dell'essenza",
+        "charmOff": "Il tuo prossimo prestigio dà il {{percent}} di essenza in più.",
+        "charmOn": "Attivo: il tuo prossimo prestigio dà il {{percent}} di essenza in più.",
+        "charmOnAmount": "Attivo: il tuo prossimo prestigio dà il {{percent}} di essenza in più (+{{essence}} ✨).",
+        "charmA11y": "Compra l'amuleto dell'essenza",
+        "onCaps": "Attivo",
+        "respecName": "Reimposta vantaggi",
+        "respecDescription": "Riprenditi tutti i vantaggi e recupera tutta la loro essenza per scegliere di nuovo.",
+        "respecA11y": "Reimposta i vantaggi"
     },
     "numbers": {
         "groupSize": "3",
@@ -260,7 +274,8 @@
         "bulkA11y_many": "Compra {{count}} alla volta",
         "bulkA11y_other": "Compra {{count}} alla volta",
         "milestoneCaption": "NUOVO EDIFICIO",
-        "milestoneTitle": "Il tuo primo edificio: {{building}}!"
+        "milestoneTitle": "Il tuo primo edificio: {{building}}!",
+        "buyNowA11y": "Compra {{name}} ora con le gemme"
     },
     "time": {
         "seconds_one": "{{count}}s",
@@ -336,6 +351,29 @@
         "tags": {
             "popular": "POPOLARE",
             "bestValue": "PIÙ CONVENIENTE"
+        },
+        "openStoreA11y": "Apri il negozio di gemme",
+        "storeCardSubtitle": "{{gems}} gemme · potenziamenti, temi e altro",
+        "storeCardA11y": "Negozio di gemme. Hai {{gems}} gemme",
+        "skipWait": "Non puoi ancora permetterti un edificio o un potenziamento? Compralo subito con le gemme, circa 1 gemma ogni {{minutes}} minuti di attesa.",
+        "themesTitle": "Temi dell'app",
+        "themesIntro": "Cambia l'aspetto di tutto il gioco. Compra una volta, cambia quando vuoi.",
+        "inUseCaps": "In uso",
+        "useTheme": "Usa",
+        "useThemeA11y": "Usa il tema {{theme}}",
+        "buyThemeA11y": "Compra il tema {{theme}}",
+        "freeTitle": "Gemme gratis",
+        "freeTaps": "1 gemma ogni {{taps}} tocchi all'emoji gigante",
+        "freePrestige": "{{gems}} gemme per ogni prestigio",
+        "tapGemCaps": "{{taps}} tocchi!",
+        "gemCaps": "Gemma",
+        "themes": {
+            "classic": "Classico",
+            "sunset": "Tramonto",
+            "ocean": "Oceano",
+            "forest": "Foresta",
+            "candy": "Caramella",
+            "gold": "Oro"
         }
     },
     "offline": {
@@ -374,7 +412,12 @@
         "performance": "Prestazioni",
         "reduceAnimations": "Riduci animazioni",
         "reduceAnimationsHint": "Gli emoji toccati non volano più via dall'Emoji gigante. Provalo se i tocchi sembrano lenti.",
-        "dangerZone": "Zona pericolosa"
+        "dangerZone": "Zona pericolosa",
+        "vibration": "Vibrazione",
+        "vibrationHint": "Una vibrazione quando tocchi, compri e festeggi.",
+        "privacy": "Privacy",
+        "privacyChoices": "Scelte sulla privacy",
+        "privacyHint": "Cambia come le pubblicità possono usare i tuoi dati."
     },
     "cheats": {
         "subtitle": "Per i test. Le modifiche valgono per il tuo salvataggio.",
@@ -547,6 +590,173 @@
             "price": "PREZZO",
             "unlocks": "SBLOCCO",
             "id": "ID"
+        },
+        "loadingA11y": "Caricamento potenziamenti",
+        "lockedHint": "Continua a giocare per sbloccarlo.",
+        "unlocksLine": "Sblocco: {{condition}}"
+    },
+    "gemButton": {
+        "confirm": "Conferma",
+        "confirmShort": "Compri?",
+        "hint": "Tocca di nuovo per spendere le gemme",
+        "costA11y": "{{cost}} gemme",
+        "labelA11y": "{{label}}, {{cost}} gemme",
+        "buyNow": "Compra ora"
+    },
+    "gemPowers": {
+        "title": "Poteri delle gemme",
+        "subtitle": "Spendi gemme per una vera spinta",
+        "boostOn": "Spinta ×{{multiplier}} attiva · mancano {{time}}",
+        "buttonCaps": "Spinta",
+        "buttonA11y": "Apri i poteri delle gemme",
+        "buttonActiveA11y": "Spinta attiva, mancano {{time}}. Apri i poteri delle gemme",
+        "getMoreGems": "Ottieni altre gemme",
+        "fullCaps": "Pieno",
+        "boost": {
+            "name": "Spinta ×{{multiplier}}",
+            "description": "Produzione e tocchi ×{{multiplier}} per {{minutes}} minuti. Ricomprala per aggiungere tempo (fino a {{hours}} ore). Continua mentre sei via.",
+            "statusCaps": "Attiva · mancano {{time}}",
+            "buy": "Spingi",
+            "extend": "+{{minutes}} min",
+            "a11y": "Compra la spinta"
+        },
+        "timeWarp": {
+            "name": "Salto temporale",
+            "description": "Ottieni subito ore di produzione.",
+            "hours": "{{hours}} h",
+            "a11y": "Salta {{hours}} ore"
+        },
+        "shower": {
+            "name": "Pioggia di effetti",
+            "description": "Appaiono insieme {{amount}} emoji effetto buoni. Toccali prima che svaniscano!",
+            "buy": "Evoca",
+            "a11y": "Evoca una pioggia di effetti"
+        },
+        "comboKeeper": {
+            "name": "Custode della combo",
+            "description": "La tua combo non cala per {{minutes}} minuti. Alzala, poi tienila.",
+            "statusCaps": "Tenuta · mancano {{time}}",
+            "buy": "Tieni",
+            "a11y": "Compra il custode della combo"
+        },
+        "discovery": {
+            "name": "Scoperta",
+            "description": "I prossimi {{amount}} emoji giganti saranno emoji che non hai mai trovato.",
+            "status": "Nuovi emoji in arrivo: {{amount}}",
+            "buy": "Scopri",
+            "allFoundCaps": "Tutti trovati",
+            "a11y": "Compra scoperte"
+        }
+    },
+    "trophies": {
+        "unlockedCaps": "Trofeo sbloccato",
+        "ofTotalUnlocked": "/ {{total}} sbloccati",
+        "all": "Tutti",
+        "hiddenHint": "Continua a giocare per sbloccarlo",
+        "secretHint": "Un segreto. Continua a giocare per trovarlo",
+        "hiddenA11y": "Trofeo nascosto, non ancora sbloccato. {{hint}}",
+        "unlockedA11y": "{{name}}. {{description}}. Sbloccato",
+        "groups": {
+            "Emojis": "Emoji",
+            "Production": "Produzione",
+            "Tapping": "Tocchi",
+            "Buildings": "Edifici",
+            "Collection": "Collezione",
+            "Magic": "Magia",
+            "Prestige": "Prestigio",
+            "Secret": "Segreto"
+        },
+        "tiers": {
+            "hired": "Assunto",
+            "fifty": "Cinquanta",
+            "century": "Centinaio",
+            "empire": "Impero"
+        },
+        "names": {
+            "drawn1": "Scarabocchio",
+            "drawn2": "Album di schizzi",
+            "drawn3": "Murale",
+            "drawn4": "Galleria",
+            "drawn5": "Capolavoro",
+            "drawn6": "Rinascimento",
+            "drawn7": "Museo di tutto",
+            "drawn8": "Cosmo di emoji",
+            "drawn9": "Tela infinita",
+            "drawn10": "Oltre ogni conto",
+            "drawn11": "L'ultima pagina",
+            "eps1": "Rivolo",
+            "eps2": "Ruscello",
+            "eps3": "Fiume",
+            "eps4": "Torrente",
+            "eps5": "Eruzione",
+            "eps6": "Pioggia di meteore",
+            "eps7": "Brillamento solare",
+            "eps8": "Supernova",
+            "eps9": "Orizzonte degli eventi",
+            "taps1": "Colpetto",
+            "taps2": "Irrequieto",
+            "taps3": "Ballerino di tip tap",
+            "taps4": "Rullo di tamburi",
+            "taps5": "Dito bionico",
+            "taps6": "Tunnel carpale",
+            "combo3": "Combo!",
+            "combo5": "Mani calde",
+            "combo8": "Combo supernova",
+            "tapEarnings": "Gestione sul campo",
+            "building": "{{building}}: {{tier}}",
+            "buildings100": "Piccola impresa",
+            "buildings500": "Conglomerato",
+            "buildings1000": "Megacorporazione",
+            "buildings2500": "Dominio del mondo",
+            "upgrades10": "Smanettone",
+            "upgrades50": "Ingegnere",
+            "upgrades150": "Inventore",
+            "upgrades300": "Scienziato pazzo",
+            "collected50": "Collezionista",
+            "collected250": "Accumulatore",
+            "collected500": "Archivista",
+            "collected1000": "Curatore",
+            "collectedAll": "Acchiappali tutti",
+            "shiny1": "Oh, che brillio",
+            "shiny10": "Gazza ladra",
+            "shiny50": "Corsa all'oro",
+            "magic1": "Abracadabra",
+            "magic25": "Apprendista",
+            "magic100": "Mago",
+            "magic500": "Arcimago",
+            "prestige1": "Rinato",
+            "prestige5": "Ricomincio da capo",
+            "prestige10": "Riciclatore",
+            "prestige25": "Eterno ritorno",
+            "trial": "Sopravvissuto: {{trial}}",
+            "allPerks": "Vantaggi al completo",
+            "secretAnswer": "Niente panico",
+            "secretHoarder": "Tesoro del drago",
+            "secretGems": "Sassi luccicanti"
+        },
+        "descriptions": {
+            "drawn": "Disegna {{amount}} emoji in totale",
+            "eps": "Produci {{amount}} emoji al secondo",
+            "taps": "Tocca l'emoji gigante {{amount}} volte",
+            "combo": "Raggiungi una combo ×{{amount}}",
+            "tapEarnings": "Guadagna {{amount}} emoji toccando",
+            "buildingFirst": "Primo edificio: {{buildingMid}}",
+            "buildingOwned": "{{buildingsMid}}: possiedine {{amount}}",
+            "buildingsTotal": "Possiedi {{amount}} edifici insieme",
+            "upgradesOwned": "Possiedi {{amount}} potenziamenti insieme",
+            "collected": "Trova {{amount}} emoji diversi",
+            "collectedAll": "Trova tutti gli emoji",
+            "shinyFirst": "Tocca un emoji brillante",
+            "shiny": "Tocca {{amount}} emoji brillanti",
+            "magicFirst": "Tocca un emoji effetto",
+            "magic": "Tocca {{amount}} emoji effetto",
+            "prestigeFirst": "Fai il tuo primo prestigio",
+            "prestige": "Fai prestigio {{amount}} volte",
+            "trial": "Completa la sfida: {{trial}}",
+            "allPerks": "Possiedi tutti i vantaggi",
+            "secretAnswer": "Gioca con un valore fun di {{amount}}",
+            "secretHoarder": "Abbi {{amount}} emoji in banca senza possedere edifici",
+            "secretGems": "Possiedi {{amount}} gemme insieme"
         }
     }
 }

@@ -8,7 +8,8 @@
         "stats": "Tilastot",
         "collection": "Kokoelma",
         "newItemsLabel_one": "{{label}}, {{count}} uusi",
-        "newItemsLabel_other": "{{label}}, {{count}} uutta"
+        "newItemsLabel_other": "{{label}}, {{count}} uutta",
+        "trophies": "Palkinnot"
     },
     "header": {
         "emojis": "Emojit",
@@ -19,7 +20,9 @@
     },
     "common": {
         "buy": "Osta",
-        "details": "Tiedot"
+        "details": "Tiedot",
+        "close": "Sulje",
+        "dismissHint": "Sulkee ilmoituksen"
     },
     "upgrades": {
         "bigEmoji": "Iso emoji",
@@ -96,7 +99,8 @@
         "funValue": "Hauskuusarvo",
         "shinyEmojisTapped": "Napautetut kiiltävät emojit",
         "comboTaps": "Kombonapautukset",
-        "madeByEachBuilding": "Laitosten tuotanto"
+        "madeByEachBuilding": "Laitosten tuotanto",
+        "bestCombo": "Paras kombo"
     },
     "drawer": {
         "language": "Kieli",
@@ -141,7 +145,17 @@
         "chipLabel": "Emojiessenssi",
         "chipLabelReady": "Tee prestiisi ja saa emojiessenssiä: {{essence}}",
         "chipEssence": "Essenssi",
-        "chipPending": "+{{essence}} essenssiä"
+        "chipPending": "+{{essence}} essenssiä",
+        "gemExtras": "Jalokivilisät",
+        "charmName": "Essenssiamuletti",
+        "charmOff": "Seuraava prestiisisi antaa {{percent}} enemmän essenssiä.",
+        "charmOn": "Päällä: seuraava prestiisisi antaa {{percent}} enemmän essenssiä.",
+        "charmOnAmount": "Päällä: seuraava prestiisisi antaa {{percent}} enemmän essenssiä (+{{essence}} ✨).",
+        "charmA11y": "Osta essenssiamuletti",
+        "onCaps": "Päällä",
+        "respecName": "Nollaa edut",
+        "respecDescription": "Ota kaikki edut takaisin ja saat niiden essenssin takaisin, jotta voit valita uudelleen.",
+        "respecA11y": "Nollaa edut"
     },
     "numbers": {
         "groupSize": "3",
@@ -233,7 +247,8 @@
         "bulkA11y_one": "Osta {{count}} kerralla",
         "bulkA11y_other": "Osta {{count}} kerralla",
         "milestoneCaption": "Uusi laitos",
-        "milestoneTitle": "Ensimmäinen laitoksesi: {{building}}!"
+        "milestoneTitle": "Ensimmäinen laitoksesi: {{building}}!",
+        "buyNowA11y": "Osta {{name}} nyt jalokivillä"
     },
     "time": {
         "seconds_one": "{{count}}s",
@@ -302,6 +317,29 @@
         "tags": {
             "popular": "Suosittu",
             "bestValue": "Paras hinta"
+        },
+        "openStoreA11y": "Avaa jalokivikauppa",
+        "storeCardSubtitle": "Jalokivet: {{gems}} · tehosteet, teemat ja muuta",
+        "storeCardA11y": "Jalokivikauppa. Jalokiviä: {{gems}}",
+        "skipWait": "Eikö rahat vielä riitä rakennukseen tai päivitykseen? Osta se heti jalokivillä, noin 1 jalokivi per {{minutes}} minuuttia odotusta.",
+        "themesTitle": "Sovelluksen teemat",
+        "themesIntro": "Anna koko pelille uusi ilme. Osta kerran, vaihda milloin vain.",
+        "inUseCaps": "Käytössä",
+        "useTheme": "Käytä",
+        "useThemeA11y": "Käytä teemaa {{theme}}",
+        "buyThemeA11y": "Osta teema {{theme}}",
+        "freeTitle": "Ilmaiset jalokivet",
+        "freeTaps": "1 jalokivi joka {{taps}}. Ison emojin napautuksesta",
+        "freePrestige": "Jokaisesta prestiisistä jalokiviä: {{gems}}",
+        "tapGemCaps": "{{taps}} napautusta!",
+        "gemCaps": "Jalokivi",
+        "themes": {
+            "classic": "Klassinen",
+            "sunset": "Auringonlasku",
+            "ocean": "Meri",
+            "forest": "Metsä",
+            "candy": "Karkki",
+            "gold": "Kulta"
         }
     },
     "offline": {
@@ -340,7 +378,12 @@
         "performance": "Suorituskyky",
         "reduceAnimations": "Vähennä animaatioita",
         "reduceAnimationsHint": "Napautetut emojit eivät enää lennä ison emojin luota. Kokeile tätä, jos napauttaminen tuntuu takkuilevan.",
-        "dangerZone": "Vaaravyöhyke"
+        "dangerZone": "Vaaravyöhyke",
+        "vibration": "Värinä",
+        "vibrationHint": "Pieni värähdys, kun napautat, ostat ja juhlit.",
+        "privacy": "Yksityisyys",
+        "privacyChoices": "Yksityisyysvalinnat",
+        "privacyHint": "Muuta, miten mainokset saavat käyttää tietojasi."
     },
     "cheats": {
         "subtitle": "Testaukseen. Muutokset tallentuvat peliisi.",
@@ -494,6 +537,173 @@
             "price": "Hinta",
             "unlocks": "Avautuu",
             "id": "ID"
+        },
+        "loadingA11y": "Ladataan päivityksiä",
+        "lockedHint": "Jatka pelaamista avataksesi sen.",
+        "unlocksLine": "Avautuu: {{condition}}"
+    },
+    "gemButton": {
+        "confirm": "Vahvista",
+        "confirmShort": "Ostetaanko?",
+        "hint": "Napauta uudelleen käyttääksesi jalokivet",
+        "costA11y": "Jalokiviä: {{cost}}",
+        "labelA11y": "{{label}}, jalokiviä: {{cost}}",
+        "buyNow": "Osta nyt"
+    },
+    "gemPowers": {
+        "title": "Jalokivivoimat",
+        "subtitle": "Käytä jalokiviä kunnon tehosteeseen",
+        "boostOn": "×{{multiplier}}-tehoste päällä · {{time}} jäljellä",
+        "buttonCaps": "Tehoste",
+        "buttonA11y": "Avaa jalokivivoimat",
+        "buttonActiveA11y": "Tehoste päällä, {{time}} jäljellä. Avaa jalokivivoimat",
+        "getMoreGems": "Hanki lisää jalokiviä",
+        "fullCaps": "Täynnä",
+        "boost": {
+            "name": "×{{multiplier}}-tehoste",
+            "description": "×{{multiplier}} tuotanto ja napautukset {{minutes}} minuutin ajan. Osta uudelleen lisäajasta (enintään {{hours}} tuntia). Jatkuu, vaikka olisit poissa.",
+            "statusCaps": "Päällä · {{time}} jäljellä",
+            "buy": "Tehosta",
+            "extend": "+{{minutes}} min",
+            "a11y": "Osta tehoste"
+        },
+        "timeWarp": {
+            "name": "Aikahyppy",
+            "description": "Saat tuntien tuotannon heti.",
+            "hours": "{{hours}} h",
+            "a11y": "Hyppää eteenpäin, tunteja: {{hours}}"
+        },
+        "shower": {
+            "name": "Efektisade",
+            "description": "Hyviä efektiemojeja ilmestyy kerralla: {{amount}}. Napauta ne ennen kuin ne katoavat!",
+            "buy": "Kutsu",
+            "a11y": "Kutsu efektisade"
+        },
+        "comboKeeper": {
+            "name": "Kombonvartija",
+            "description": "Kombosi ei laske {{minutes}} minuuttiin. Napauta se ylös ja pidä se.",
+            "statusCaps": "Pitää · {{time}} jäljellä",
+            "buy": "Pidä",
+            "a11y": "Osta kombonvartija"
+        },
+        "discovery": {
+            "name": "Löytö",
+            "description": "Seuraavat isot emojit ovat sellaisia, joita et ole koskaan löytänyt. Määrä: {{amount}}.",
+            "status": "Uusia emojeja tulossa: {{amount}}",
+            "buy": "Löydä",
+            "allFoundCaps": "Kaikki löydetty",
+            "a11y": "Osta löytöjä"
+        }
+    },
+    "trophies": {
+        "unlockedCaps": "Palkinto avattu",
+        "ofTotalUnlocked": "/ {{total}} avattu",
+        "all": "Kaikki",
+        "hiddenHint": "Jatka pelaamista avataksesi sen",
+        "secretHint": "Salaisuus. Jatka pelaamista löytääksesi sen",
+        "hiddenA11y": "Piilotettu palkinto, ei vielä avattu. {{hint}}",
+        "unlockedA11y": "{{name}}. {{description}}. Avattu",
+        "groups": {
+            "Emojis": "Emojit",
+            "Production": "Tuotanto",
+            "Tapping": "Napauttelu",
+            "Buildings": "Rakennukset",
+            "Collection": "Kokoelma",
+            "Magic": "Taika",
+            "Prestige": "Prestiisi",
+            "Secret": "Salainen"
+        },
+        "tiers": {
+            "hired": "Palkattu",
+            "fifty": "Viisikymmentä",
+            "century": "Sata",
+            "empire": "Imperiumi"
+        },
+        "names": {
+            "drawn1": "Töhertäjä",
+            "drawn2": "Luonnoskirja",
+            "drawn3": "Seinämaalaus",
+            "drawn4": "Galleria",
+            "drawn5": "Mestariteos",
+            "drawn6": "Renessanssi",
+            "drawn7": "Kaiken museo",
+            "drawn8": "Emojikosmos",
+            "drawn9": "Loputon kangas",
+            "drawn10": "Laskemattomissa",
+            "drawn11": "Viimeinen sivu",
+            "eps1": "Noro",
+            "eps2": "Puro",
+            "eps3": "Joki",
+            "eps4": "Koski",
+            "eps5": "Purkaus",
+            "eps6": "Meteorisade",
+            "eps7": "Auringonpurkaus",
+            "eps8": "Supernova",
+            "eps9": "Tapahtumahorisontti",
+            "taps1": "Tökkäys",
+            "taps2": "Näpertäjä",
+            "taps3": "Steppaaja",
+            "taps4": "Rumpujen pärinä",
+            "taps5": "Bioninen sormi",
+            "taps6": "Hiirikäsi",
+            "combo3": "Kombo!",
+            "combo5": "Kuumat kädet",
+            "combo8": "Supernovakombo",
+            "tapEarnings": "Käytännön johtaja",
+            "building": "{{building}}: {{tier}}",
+            "buildings100": "Pienyritys",
+            "buildings500": "Konglomeraatti",
+            "buildings1000": "Megayhtiö",
+            "buildings2500": "Maailmanvalta",
+            "upgrades10": "Näpertelijä",
+            "upgrades50": "Insinööri",
+            "upgrades150": "Keksijä",
+            "upgrades300": "Hullu tiedemies",
+            "collected50": "Keräilijä",
+            "collected250": "Hamstraaja",
+            "collected500": "Arkistonhoitaja",
+            "collected1000": "Kuraattori",
+            "collectedAll": "Napauta ne kaikki",
+            "shiny1": "Oho, kiiltävä",
+            "shiny10": "Harakka",
+            "shiny50": "Kultakuume",
+            "magic1": "Abrakadabra",
+            "magic25": "Oppipoika",
+            "magic100": "Velho",
+            "magic500": "Arkkivelho",
+            "prestige1": "Uudestisyntynyt",
+            "prestige5": "Päiväni murmelina",
+            "prestige10": "Kierrättäjä",
+            "prestige25": "Ikuinen paluu",
+            "trial": "Selviytyjä: {{trial}}",
+            "allPerks": "Täysin varusteltu",
+            "secretAnswer": "Ei paniikkia",
+            "secretHoarder": "Lohikäärmeen aarre",
+            "secretGems": "Kiiltäviä kiviä"
+        },
+        "descriptions": {
+            "drawn": "Piirrä emojeja yhteensä: {{amount}}",
+            "eps": "Tuota emojeja sekunnissa: {{amount}}",
+            "taps": "Napauta Isoa emojia: {{amount}} kertaa",
+            "combo": "Saavuta ×{{amount}}-kombo",
+            "tapEarnings": "Ansaitse napauttamalla emojeja: {{amount}}",
+            "buildingFirst": "Ensimmäinen rakennus: {{buildingMid}}",
+            "buildingOwned": "{{buildingsMid}}: omista {{amount}}",
+            "buildingsTotal": "Omista rakennuksia yhtä aikaa: {{amount}}",
+            "upgradesOwned": "Omista päivityksiä yhtä aikaa: {{amount}}",
+            "collected": "Löydä eri emojeja: {{amount}}",
+            "collectedAll": "Löydä jokainen emoji",
+            "shinyFirst": "Napauta kiiltävää emojia",
+            "shiny": "Napauta kiiltäviä emojeja: {{amount}}",
+            "magicFirst": "Napauta efektiemojia",
+            "magic": "Napauta efektiemojeja: {{amount}}",
+            "prestigeFirst": "Tee ensimmäinen prestiisisi",
+            "prestige": "Tee prestiisi: {{amount}} kertaa",
+            "trial": "Suorita haaste: {{trial}}",
+            "allPerks": "Omista jokainen etu",
+            "secretAnswer": "Pelaa hauskuusarvolla {{amount}}",
+            "secretHoarder": "Pidä pankissa emojeja ({{amount}}) omistamatta yhtään rakennusta",
+            "secretGems": "Pidä jalokiviä yhtä aikaa: {{amount}}"
         }
     }
 }

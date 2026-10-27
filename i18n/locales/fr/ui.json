@@ -9,7 +9,8 @@
         "collection": "Collection",
         "newItemsLabel_one": "{{label}}, {{count}} nouveau",
         "newItemsLabel_many": "{{label}}, {{count}} nouveaux",
-        "newItemsLabel_other": "{{label}}, {{count}} nouveaux"
+        "newItemsLabel_other": "{{label}}, {{count}} nouveaux",
+        "trophies": "Trophées"
     },
     "header": {
         "emojis": "Emojis",
@@ -21,7 +22,9 @@
     },
     "common": {
         "buy": "Acheter",
-        "details": "Détails"
+        "details": "Détails",
+        "close": "Fermer",
+        "dismissHint": "Ferme la notification"
     },
     "upgrades": {
         "bigEmoji": "Gros emoji",
@@ -98,7 +101,8 @@
         "funValue": "Valeur fun",
         "shinyEmojisTapped": "Emojis brillants tapotés",
         "comboTaps": "Tapotements en combo",
-        "madeByEachBuilding": "Production par bâtiment"
+        "madeByEachBuilding": "Production par bâtiment",
+        "bestCombo": "Meilleur combo"
     },
     "drawer": {
         "language": "Langue",
@@ -145,7 +149,17 @@
         "chipLabel": "Essence d'emoji",
         "chipLabelReady": "Prestige pour {{essence}} essence d'emoji",
         "chipEssence": "Essence",
-        "chipPending": "+{{essence}} essence"
+        "chipPending": "+{{essence}} essence",
+        "gemExtras": "Bonus en gemmes",
+        "charmName": "Charme d'essence",
+        "charmOff": "Ton prochain prestige rapporte {{percent}} d'essence en plus.",
+        "charmOn": "Actif : ton prochain prestige rapporte {{percent}} d'essence en plus.",
+        "charmOnAmount": "Actif : ton prochain prestige rapporte {{percent}} d'essence en plus (+{{essence}} ✨).",
+        "charmA11y": "Acheter le charme d'essence",
+        "onCaps": "Actif",
+        "respecName": "Réinitialiser les atouts",
+        "respecDescription": "Reprends tous tes atouts et récupère toute leur essence pour choisir à nouveau.",
+        "respecA11y": "Réinitialiser les atouts"
     },
     "numbers": {
         "groupSize": "3",
@@ -260,7 +274,8 @@
         "bulkA11y_many": "Acheter {{count}} à la fois",
         "bulkA11y_other": "Acheter {{count}} à la fois",
         "milestoneCaption": "NOUVEAU BÂTIMENT",
-        "milestoneTitle": "Ton premier bâtiment : {{building}} !"
+        "milestoneTitle": "Ton premier bâtiment : {{building}} !",
+        "buyNowA11y": "Acheter {{name}} maintenant avec des gemmes"
     },
     "time": {
         "seconds_one": "{{count}}s",
@@ -336,6 +351,29 @@
         "tags": {
             "popular": "POPULAIRE",
             "bestValue": "MEILLEURE OFFRE"
+        },
+        "openStoreA11y": "Ouvrir la boutique de gemmes",
+        "storeCardSubtitle": "{{gems}} gemmes · boosts, thèmes et plus",
+        "storeCardA11y": "Boutique de gemmes. Tu as {{gems}} gemmes",
+        "skipWait": "Pas encore assez pour un bâtiment ou une amélioration ? Achète-le tout de suite avec des gemmes, environ 1 gemme par {{minutes}} minutes d'attente.",
+        "themesTitle": "Thèmes de l'appli",
+        "themesIntro": "Change le look de tout le jeu. Achète une fois, change quand tu veux.",
+        "inUseCaps": "Utilisé",
+        "useTheme": "Utiliser",
+        "useThemeA11y": "Utiliser le thème {{theme}}",
+        "buyThemeA11y": "Acheter le thème {{theme}}",
+        "freeTitle": "Gemmes gratuites",
+        "freeTaps": "1 gemme tous les {{taps}} tapotements sur le gros emoji",
+        "freePrestige": "{{gems}} gemmes à chaque prestige",
+        "tapGemCaps": "{{taps}} tapotements !",
+        "gemCaps": "Gemme",
+        "themes": {
+            "classic": "Classique",
+            "sunset": "Coucher de soleil",
+            "ocean": "Océan",
+            "forest": "Forêt",
+            "candy": "Bonbon",
+            "gold": "Or"
         }
     },
     "offline": {
@@ -374,7 +412,12 @@
         "performance": "Performances",
         "reduceAnimations": "Réduire les animations",
         "reduceAnimationsHint": "Les emojis tapotés ne s'envolent plus du Gros emoji. Essaie si le tapotement semble saccadé.",
-        "dangerZone": "Zone de danger"
+        "dangerZone": "Zone de danger",
+        "vibration": "Vibrations",
+        "vibrationHint": "Une vibration quand tu tapotes, achètes et célèbres.",
+        "privacy": "Confidentialité",
+        "privacyChoices": "Choix de confidentialité",
+        "privacyHint": "Choisis comment les pubs peuvent utiliser tes données."
     },
     "cheats": {
         "subtitle": "Pour les tests. Les changements s'appliquent à ta sauvegarde.",
@@ -547,6 +590,173 @@
             "price": "PRIX",
             "unlocks": "DÉBLOCAGE",
             "id": "ID"
+        },
+        "loadingA11y": "Chargement des améliorations",
+        "lockedHint": "Continue à jouer pour la débloquer.",
+        "unlocksLine": "Déblocage : {{condition}}"
+    },
+    "gemButton": {
+        "confirm": "Confirmer",
+        "confirmShort": "Acheter ?",
+        "hint": "Tapote encore pour dépenser les gemmes",
+        "costA11y": "{{cost}} gemmes",
+        "labelA11y": "{{label}}, {{cost}} gemmes",
+        "buyNow": "Acheter"
+    },
+    "gemPowers": {
+        "title": "Pouvoirs des gemmes",
+        "subtitle": "Dépense des gemmes pour un vrai coup de pouce",
+        "boostOn": "Boost ×{{multiplier}} actif · encore {{time}}",
+        "buttonCaps": "Boost",
+        "buttonA11y": "Ouvrir les pouvoirs des gemmes",
+        "buttonActiveA11y": "Boost actif, encore {{time}}. Ouvrir les pouvoirs des gemmes",
+        "getMoreGems": "Obtenir plus de gemmes",
+        "fullCaps": "Plein",
+        "boost": {
+            "name": "Boost ×{{multiplier}}",
+            "description": "Production et tapotements ×{{multiplier}} pendant {{minutes}} minutes. Rachète-le pour ajouter du temps (jusqu'à {{hours}} heures). Continue pendant ton absence.",
+            "statusCaps": "Actif · encore {{time}}",
+            "buy": "Booster",
+            "extend": "+{{minutes}} min",
+            "a11y": "Acheter le boost"
+        },
+        "timeWarp": {
+            "name": "Saut dans le temps",
+            "description": "Obtiens des heures de production tout de suite.",
+            "hours": "{{hours}} h",
+            "a11y": "Sauter {{hours}} heures"
+        },
+        "shower": {
+            "name": "Pluie d'effets",
+            "description": "{{amount}} bons emojis d'effet apparaissent d'un coup. Tapote-les avant qu'ils disparaissent !",
+            "buy": "Invoquer",
+            "a11y": "Invoquer une pluie d'effets"
+        },
+        "comboKeeper": {
+            "name": "Gardien de combo",
+            "description": "Ton combo ne baisse pas pendant {{minutes}} minutes. Monte-le, puis garde-le.",
+            "statusCaps": "Maintenu · encore {{time}}",
+            "buy": "Garder",
+            "a11y": "Acheter le gardien de combo"
+        },
+        "discovery": {
+            "name": "Découverte",
+            "description": "Les {{amount}} prochains gros emojis seront des emojis jamais trouvés.",
+            "status": "Nouveaux emojis à venir : {{amount}}",
+            "buy": "Découvrir",
+            "allFoundCaps": "Tous trouvés",
+            "a11y": "Acheter des découvertes"
+        }
+    },
+    "trophies": {
+        "unlockedCaps": "Trophée débloqué",
+        "ofTotalUnlocked": "/ {{total}} débloqués",
+        "all": "Tous",
+        "hiddenHint": "Continue à jouer pour le débloquer",
+        "secretHint": "Un secret. Continue à jouer pour le trouver",
+        "hiddenA11y": "Trophée caché, pas encore débloqué. {{hint}}",
+        "unlockedA11y": "{{name}}. {{description}}. Débloqué",
+        "groups": {
+            "Emojis": "Emojis",
+            "Production": "Production",
+            "Tapping": "Tapotements",
+            "Buildings": "Bâtiments",
+            "Collection": "Collection",
+            "Magic": "Magie",
+            "Prestige": "Prestige",
+            "Secret": "Secret"
+        },
+        "tiers": {
+            "hired": "Embauché",
+            "fifty": "Cinquante",
+            "century": "Centaine",
+            "empire": "Empire"
+        },
+        "names": {
+            "drawn1": "Gribouilleur",
+            "drawn2": "Carnet de croquis",
+            "drawn3": "Fresque",
+            "drawn4": "Galerie",
+            "drawn5": "Chef-d'œuvre",
+            "drawn6": "Renaissance",
+            "drawn7": "Musée de tout",
+            "drawn8": "Cosmos d'emojis",
+            "drawn9": "Toile infinie",
+            "drawn10": "Au-delà du compte",
+            "drawn11": "La dernière page",
+            "eps1": "Filet d'eau",
+            "eps2": "Ruisseau",
+            "eps3": "Rivière",
+            "eps4": "Torrent",
+            "eps5": "Éruption",
+            "eps6": "Pluie de météores",
+            "eps7": "Éruption solaire",
+            "eps8": "Supernova",
+            "eps9": "Horizon des événements",
+            "taps1": "Petit coup",
+            "taps2": "Bougeotte",
+            "taps3": "Danseur de claquettes",
+            "taps4": "Roulement de tambour",
+            "taps5": "Doigt bionique",
+            "taps6": "Canal carpien",
+            "combo3": "Combo !",
+            "combo5": "Mains brûlantes",
+            "combo8": "Combo supernova",
+            "tapEarnings": "Gestion de terrain",
+            "building": "{{building}} : {{tier}}",
+            "buildings100": "Petite entreprise",
+            "buildings500": "Conglomérat",
+            "buildings1000": "Méga-entreprise",
+            "buildings2500": "Domination mondiale",
+            "upgrades10": "Bricoleur",
+            "upgrades50": "Ingénieur",
+            "upgrades150": "Inventeur",
+            "upgrades300": "Savant fou",
+            "collected50": "Collectionneur",
+            "collected250": "Accumulateur",
+            "collected500": "Archiviste",
+            "collected1000": "Conservateur",
+            "collectedAll": "Attrapez-les tous",
+            "shiny1": "Oh, ça brille",
+            "shiny10": "Pie voleuse",
+            "shiny50": "Ruée vers l'or",
+            "magic1": "Abracadabra",
+            "magic25": "Apprenti",
+            "magic100": "Magicien",
+            "magic500": "Archimage",
+            "prestige1": "Seconde vie",
+            "prestige5": "Un jour sans fin",
+            "prestige10": "Recycleur",
+            "prestige25": "Éternel retour",
+            "trial": "Survivant : {{trial}}",
+            "allPerks": "Atouts au complet",
+            "secretAnswer": "Pas de panique",
+            "secretHoarder": "Trésor du dragon",
+            "secretGems": "Cailloux brillants"
+        },
+        "descriptions": {
+            "drawn": "Dessine {{amount}} emojis au total",
+            "eps": "Produis {{amount}} emojis par seconde",
+            "taps": "Tapote le gros emoji {{amount}} fois",
+            "combo": "Atteins un combo ×{{amount}}",
+            "tapEarnings": "Gagne {{amount}} emojis en tapotant",
+            "buildingFirst": "Premier bâtiment : {{buildingMid}}",
+            "buildingOwned": "Possède {{amount}} {{buildingsMid}}",
+            "buildingsTotal": "Possède {{amount}} bâtiments en même temps",
+            "upgradesOwned": "Possède {{amount}} améliorations en même temps",
+            "collected": "Trouve {{amount}} emojis différents",
+            "collectedAll": "Trouve tous les emojis",
+            "shinyFirst": "Tapote un emoji brillant",
+            "shiny": "Tapote {{amount}} emojis brillants",
+            "magicFirst": "Tapote un emoji d'effet",
+            "magic": "Tapote {{amount}} emojis d'effet",
+            "prestigeFirst": "Fais ton premier prestige",
+            "prestige": "Fais {{amount}} prestiges",
+            "trial": "Termine l'épreuve : {{trial}}",
+            "allPerks": "Possède tous les atouts",
+            "secretAnswer": "Joue avec une valeur fun de {{amount}}",
+            "secretHoarder": "Aie {{amount}} emojis en banque sans posséder de bâtiment",
+            "secretGems": "Possède {{amount}} gemmes en même temps"
         }
     }
 }

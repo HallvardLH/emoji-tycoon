@@ -59,7 +59,7 @@ const PRICE_GROWTH = BUILDING_PRICE_GROWTH;
  * A building name for the middle of a sentence, e.g. "Your first farm!".
  * German keeps the capital, as its nouns always have one
  */
-function midSentence(name: string) {
+export function midSentence(name: string) {
     if (getLanguage() === "de") return name;
     return name.charAt(0).toLocaleLowerCase(getLanguage()) + name.slice(1);
 }
@@ -160,6 +160,7 @@ export const buyBuilding = (buildingId: number, bulkBuy: BulkBuyAmount = store.g
             icon: data.icon,
             caption: toCaps(i18n.t("buildings.milestoneCaption")),
             title: i18n.t("buildings.milestoneTitle", { building: midSentence(getBuildingName(data.buildingId)) }),
+            kind: "building",
         });
     }
 

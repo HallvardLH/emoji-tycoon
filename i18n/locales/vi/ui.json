@@ -7,7 +7,8 @@
         "upgrades": "Nâng cấp",
         "stats": "Thống kê",
         "collection": "Bộ sưu tập",
-        "newItemsLabel_other": "{{label}}, {{count}} mới"
+        "newItemsLabel_other": "{{label}}, {{count}} mới",
+        "trophies": "Danh hiệu"
     },
     "header": {
         "emojis": "Emoji",
@@ -17,7 +18,9 @@
     },
     "common": {
         "buy": "Mua",
-        "details": "Chi tiết"
+        "details": "Chi tiết",
+        "close": "Đóng",
+        "dismissHint": "Đóng thông báo"
     },
     "upgrades": {
         "bigEmoji": "Emoji khổng lồ",
@@ -94,7 +97,8 @@
         "funValue": "Chỉ số vui",
         "shinyEmojisTapped": "Emoji lấp lánh đã chạm",
         "comboTaps": "Lần chạm combo",
-        "madeByEachBuilding": "Sản lượng từng công trình"
+        "madeByEachBuilding": "Sản lượng từng công trình",
+        "bestCombo": "Combo cao nhất"
     },
     "drawer": {
         "language": "Ngôn ngữ",
@@ -139,7 +143,17 @@
         "chipLabel": "Tinh chất emoji",
         "chipLabelReady": "Lên danh vọng nhận {{essence}} tinh chất emoji",
         "chipEssence": "Tinh chất",
-        "chipPending": "+{{essence}} tinh chất"
+        "chipPending": "+{{essence}} tinh chất",
+        "gemExtras": "Tiện ích đá quý",
+        "charmName": "Bùa tinh chất",
+        "charmOff": "Lần danh vọng tiếp theo cho thêm {{percent}} tinh chất.",
+        "charmOn": "Đang bật: lần danh vọng tiếp theo cho thêm {{percent}} tinh chất.",
+        "charmOnAmount": "Đang bật: lần danh vọng tiếp theo cho thêm {{percent}} tinh chất (+{{essence}} ✨).",
+        "charmA11y": "Mua bùa tinh chất",
+        "onCaps": "Bật",
+        "respecName": "Đặt lại đặc quyền",
+        "respecDescription": "Lấy lại mọi đặc quyền và nhận lại toàn bộ tinh chất của chúng để chọn lại.",
+        "respecA11y": "Đặt lại đặc quyền"
     },
     "numbers": {
         "groupSize": "3",
@@ -208,7 +222,8 @@
         "bulkA11yMax": "Mua nhiều nhất có thể",
         "bulkA11y_other": "Mua {{count}} cái mỗi lần",
         "milestoneCaption": "CÔNG TRÌNH MỚI",
-        "milestoneTitle": "{{building}} đầu tiên của bạn!"
+        "milestoneTitle": "{{building}} đầu tiên của bạn!",
+        "buyNowA11y": "Mua ngay bằng đá quý: {{name}}"
     },
     "time": {
         "seconds_other": "{{count}}s",
@@ -270,6 +285,29 @@
         "tags": {
             "popular": "PHỔ BIẾN",
             "bestValue": "HỜI NHẤT"
+        },
+        "openStoreA11y": "Mở cửa hàng đá quý",
+        "storeCardSubtitle": "{{gems}} đá quý · tăng tốc, giao diện và hơn thế",
+        "storeCardA11y": "Cửa hàng đá quý. Bạn có {{gems}} đá quý",
+        "skipWait": "Chưa đủ tiền mua công trình hay nâng cấp? Mua ngay bằng đá quý, khoảng 1 đá quý cho mỗi {{minutes}} phút chờ.",
+        "themesTitle": "Giao diện ứng dụng",
+        "themesIntro": "Thay áo mới cho cả trò chơi. Mua một lần, đổi bất cứ lúc nào.",
+        "inUseCaps": "Đang dùng",
+        "useTheme": "Dùng",
+        "useThemeA11y": "Dùng giao diện {{theme}}",
+        "buyThemeA11y": "Mua giao diện {{theme}}",
+        "freeTitle": "Đá quý miễn phí",
+        "freeTaps": "1 đá quý cho mỗi {{taps}} lần chạm emoji khổng lồ",
+        "freePrestige": "{{gems}} đá quý mỗi lần danh vọng",
+        "tapGemCaps": "{{taps}} lần chạm!",
+        "gemCaps": "Đá quý",
+        "themes": {
+            "classic": "Cổ điển",
+            "sunset": "Hoàng hôn",
+            "ocean": "Đại dương",
+            "forest": "Rừng xanh",
+            "candy": "Kẹo ngọt",
+            "gold": "Vàng"
         }
     },
     "offline": {
@@ -308,7 +346,12 @@
         "performance": "Hiệu năng",
         "reduceAnimations": "Giảm hoạt ảnh",
         "reduceAnimationsHint": "Emoji được chạm sẽ không bay ra khỏi Emoji khổng lồ nữa. Hãy thử nếu chạm bị giật lag.",
-        "dangerZone": "Vùng nguy hiểm"
+        "dangerZone": "Vùng nguy hiểm",
+        "vibration": "Rung",
+        "vibrationHint": "Rung nhẹ khi bạn chạm, mua và ăn mừng.",
+        "privacy": "Quyền riêng tư",
+        "privacyChoices": "Lựa chọn quyền riêng tư",
+        "privacyHint": "Thay đổi cách quảng cáo được dùng dữ liệu của bạn."
     },
     "cheats": {
         "subtitle": "Dùng để thử nghiệm. Thay đổi sẽ áp dụng vào bản lưu.",
@@ -443,6 +486,173 @@
             "price": "GIÁ",
             "unlocks": "MỞ KHÓA",
             "id": "ID"
+        },
+        "loadingA11y": "Đang tải nâng cấp",
+        "lockedHint": "Tiếp tục chơi để mở khóa.",
+        "unlocksLine": "Mở khóa: {{condition}}"
+    },
+    "gemButton": {
+        "confirm": "Xác nhận",
+        "confirmShort": "Mua?",
+        "hint": "Chạm lần nữa để tiêu đá quý",
+        "costA11y": "{{cost}} đá quý",
+        "labelA11y": "{{label}}, {{cost}} đá quý",
+        "buyNow": "Mua ngay"
+    },
+    "gemPowers": {
+        "title": "Sức mạnh đá quý",
+        "subtitle": "Tiêu đá quý để tăng tốc thật sự",
+        "boostOn": "Tăng tốc ×{{multiplier}} đang bật · còn {{time}}",
+        "buttonCaps": "Tăng tốc",
+        "buttonA11y": "Mở sức mạnh đá quý",
+        "buttonActiveA11y": "Tăng tốc đang bật, còn {{time}}. Mở sức mạnh đá quý",
+        "getMoreGems": "Nhận thêm đá quý",
+        "fullCaps": "Đầy",
+        "boost": {
+            "name": "Tăng tốc ×{{multiplier}}",
+            "description": "Sản lượng và lượt chạm ×{{multiplier}} trong {{minutes}} phút. Mua tiếp để cộng thêm giờ (tối đa {{hours}} giờ). Vẫn chạy khi bạn vắng mặt.",
+            "statusCaps": "Đang bật · còn {{time}}",
+            "buy": "Tăng tốc",
+            "extend": "+{{minutes}} phút",
+            "a11y": "Mua tăng tốc"
+        },
+        "timeWarp": {
+            "name": "Nhảy thời gian",
+            "description": "Nhận ngay nhiều giờ sản lượng.",
+            "hours": "{{hours}} giờ",
+            "a11y": "Nhảy {{hours}} giờ"
+        },
+        "shower": {
+            "name": "Mưa hiệu ứng",
+            "description": "{{amount}} emoji hiệu ứng tốt cùng xuất hiện. Chạm vào trước khi chúng biến mất!",
+            "buy": "Triệu hồi",
+            "a11y": "Triệu hồi mưa hiệu ứng"
+        },
+        "comboKeeper": {
+            "name": "Giữ combo",
+            "description": "Combo của bạn không giảm trong {{minutes}} phút. Chạm cho cao rồi giữ nguyên.",
+            "statusCaps": "Đang giữ · còn {{time}}",
+            "buy": "Giữ",
+            "a11y": "Mua giữ combo"
+        },
+        "discovery": {
+            "name": "Khám phá",
+            "description": "{{amount}} emoji khổng lồ tiếp theo sẽ là những emoji bạn chưa từng tìm thấy.",
+            "status": "Emoji mới sắp tới: {{amount}}",
+            "buy": "Khám phá",
+            "allFoundCaps": "Đã tìm hết",
+            "a11y": "Mua khám phá"
+        }
+    },
+    "trophies": {
+        "unlockedCaps": "Đã mở danh hiệu",
+        "ofTotalUnlocked": "/ {{total}} đã mở",
+        "all": "Tất cả",
+        "hiddenHint": "Tiếp tục chơi để mở khóa",
+        "secretHint": "Một bí mật. Tiếp tục chơi để tìm ra",
+        "hiddenA11y": "Danh hiệu ẩn, chưa mở khóa. {{hint}}",
+        "unlockedA11y": "{{name}}. {{description}}. Đã mở",
+        "groups": {
+            "Emojis": "Emoji",
+            "Production": "Sản lượng",
+            "Tapping": "Chạm",
+            "Buildings": "Công trình",
+            "Collection": "Bộ sưu tập",
+            "Magic": "Phép thuật",
+            "Prestige": "Danh vọng",
+            "Secret": "Bí mật"
+        },
+        "tiers": {
+            "hired": "Thuê",
+            "fifty": "Năm mươi",
+            "century": "Một trăm",
+            "empire": "Đế chế"
+        },
+        "names": {
+            "drawn1": "Vẽ nguệch ngoạc",
+            "drawn2": "Sổ phác thảo",
+            "drawn3": "Bích họa",
+            "drawn4": "Phòng tranh",
+            "drawn5": "Kiệt tác",
+            "drawn6": "Phục hưng",
+            "drawn7": "Bảo tàng của mọi thứ",
+            "drawn8": "Vũ trụ emoji",
+            "drawn9": "Tấm toan vô tận",
+            "drawn10": "Không đếm xuể",
+            "drawn11": "Trang cuối cùng",
+            "eps1": "Nhỏ giọt",
+            "eps2": "Suối nhỏ",
+            "eps3": "Dòng sông",
+            "eps4": "Thác lũ",
+            "eps5": "Phun trào",
+            "eps6": "Mưa sao băng",
+            "eps7": "Bão mặt trời",
+            "eps8": "Siêu tân tinh",
+            "eps9": "Chân trời sự kiện",
+            "taps1": "Chọc nhẹ",
+            "taps2": "Táy máy",
+            "taps3": "Vũ công tap",
+            "taps4": "Hồi trống",
+            "taps5": "Ngón tay sinh học",
+            "taps6": "Mỏi cổ tay",
+            "combo3": "Combo!",
+            "combo5": "Bàn tay nóng",
+            "combo8": "Combo siêu tân tinh",
+            "tapEarnings": "Sếp xắn tay áo",
+            "building": "{{building}}: {{tier}}",
+            "buildings100": "Doanh nghiệp nhỏ",
+            "buildings500": "Tập đoàn",
+            "buildings1000": "Siêu tập đoàn",
+            "buildings2500": "Thống trị thế giới",
+            "upgrades10": "Thợ mày mò",
+            "upgrades50": "Kỹ sư",
+            "upgrades150": "Nhà phát minh",
+            "upgrades300": "Nhà khoa học điên",
+            "collected50": "Nhà sưu tầm",
+            "collected250": "Người tích trữ",
+            "collected500": "Người lưu trữ",
+            "collected1000": "Người quản lý bảo tàng",
+            "collectedAll": "Chạm hết tất cả",
+            "shiny1": "Ồ, lấp lánh",
+            "shiny10": "Chim ác là",
+            "shiny50": "Cơn sốt vàng",
+            "magic1": "Úm ba la",
+            "magic25": "Học việc",
+            "magic100": "Phù thủy",
+            "magic500": "Đại pháp sư",
+            "prestige1": "Tái sinh",
+            "prestige5": "Ngày lặp lại",
+            "prestige10": "Người tái chế",
+            "prestige25": "Vòng lặp vĩnh cửu",
+            "trial": "Sống sót: {{trial}}",
+            "allPerks": "Đủ bộ đặc quyền",
+            "secretAnswer": "Đừng hoảng",
+            "secretHoarder": "Kho báu của rồng",
+            "secretGems": "Đá lấp lánh"
+        },
+        "descriptions": {
+            "drawn": "Vẽ tổng cộng {{amount}} emoji",
+            "eps": "Làm ra {{amount}} emoji mỗi giây",
+            "taps": "Chạm emoji khổng lồ {{amount}} lần",
+            "combo": "Đạt combo ×{{amount}}",
+            "tapEarnings": "Kiếm {{amount}} emoji nhờ chạm",
+            "buildingFirst": "Công trình đầu tiên: {{buildingMid}}",
+            "buildingOwned": "Sở hữu {{amount}} {{buildingsMid}}",
+            "buildingsTotal": "Sở hữu cùng lúc {{amount}} công trình",
+            "upgradesOwned": "Sở hữu cùng lúc {{amount}} nâng cấp",
+            "collected": "Tìm {{amount}} emoji khác nhau",
+            "collectedAll": "Tìm mọi emoji",
+            "shinyFirst": "Chạm một emoji lấp lánh",
+            "shiny": "Chạm {{amount}} emoji lấp lánh",
+            "magicFirst": "Chạm một emoji hiệu ứng",
+            "magic": "Chạm {{amount}} emoji hiệu ứng",
+            "prestigeFirst": "Đạt danh vọng lần đầu",
+            "prestige": "Đạt danh vọng {{amount}} lần",
+            "trial": "Hoàn thành thử thách: {{trial}}",
+            "allPerks": "Sở hữu mọi đặc quyền",
+            "secretAnswer": "Chơi với chỉ số vui {{amount}}",
+            "secretHoarder": "Có {{amount}} emoji trong kho mà không sở hữu công trình nào",
+            "secretGems": "Giữ cùng lúc {{amount}} đá quý"
         }
     }
 }

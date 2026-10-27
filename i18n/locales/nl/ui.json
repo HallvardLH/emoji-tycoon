@@ -8,7 +8,8 @@
         "stats": "Statistiek",
         "collection": "Collectie",
         "newItemsLabel_one": "{{label}}, {{count}} nieuw",
-        "newItemsLabel_other": "{{label}}, {{count}} nieuw"
+        "newItemsLabel_other": "{{label}}, {{count}} nieuw",
+        "trophies": "Trofeeën"
     },
     "header": {
         "emojis": "Emoji's",
@@ -19,7 +20,9 @@
     },
     "common": {
         "buy": "Kopen",
-        "details": "Details"
+        "details": "Details",
+        "close": "Sluiten",
+        "dismissHint": "Sluit de melding"
     },
     "upgrades": {
         "bigEmoji": "Grote emoji",
@@ -96,7 +99,8 @@
         "funValue": "Funfactor",
         "shinyEmojisTapped": "Glimmende emoji's getikt",
         "comboTaps": "Combotikken",
-        "madeByEachBuilding": "Gemaakt per gebouw"
+        "madeByEachBuilding": "Gemaakt per gebouw",
+        "bestCombo": "Beste combo"
     },
     "drawer": {
         "language": "Taal",
@@ -141,7 +145,17 @@
         "chipLabel": "Emoji-essentie",
         "chipLabelReady": "Prestige voor {{essence}} emoji-essentie",
         "chipEssence": "Essentie",
-        "chipPending": "+{{essence}} essentie"
+        "chipPending": "+{{essence}} essentie",
+        "gemExtras": "Juwelenextra's",
+        "charmName": "Essentiebedel",
+        "charmOff": "Je volgende prestige geeft {{percent}} meer essentie.",
+        "charmOn": "Actief: je volgende prestige geeft {{percent}} meer essentie.",
+        "charmOnAmount": "Actief: je volgende prestige geeft {{percent}} meer essentie (+{{essence}} ✨).",
+        "charmA11y": "Essentiebedel kopen",
+        "onCaps": "Actief",
+        "respecName": "Voordelen resetten",
+        "respecDescription": "Neem alle voordelen terug en krijg al hun essentie terug om opnieuw te kiezen.",
+        "respecA11y": "Voordelen resetten"
     },
     "numbers": {
         "groupSize": "3",
@@ -233,7 +247,8 @@
         "bulkA11y_one": "Koop er {{count}} tegelijk",
         "bulkA11y_other": "Koop er {{count}} tegelijk",
         "milestoneCaption": "Nieuw gebouw",
-        "milestoneTitle": "Je eerste {{building}}!"
+        "milestoneTitle": "Je eerste {{building}}!",
+        "buyNowA11y": "{{name}} nu kopen met juwelen"
     },
     "time": {
         "seconds_one": "{{count}}s",
@@ -302,6 +317,29 @@
         "tags": {
             "popular": "Populair",
             "bestValue": "Beste deal"
+        },
+        "openStoreA11y": "Juwelenwinkel openen",
+        "storeCardSubtitle": "{{gems}} juwelen · boosts, thema's en meer",
+        "storeCardA11y": "Juwelenwinkel. Je hebt {{gems}} juwelen",
+        "skipWait": "Kun je een gebouw of upgrade nog niet betalen? Koop het nu met juwelen, ongeveer 1 juweel per {{minutes}} minuten wachten.",
+        "themesTitle": "App-thema's",
+        "themesIntro": "Geef het hele spel een nieuwe look. Eén keer kopen, altijd wisselen.",
+        "inUseCaps": "In gebruik",
+        "useTheme": "Gebruiken",
+        "useThemeA11y": "Thema {{theme}} gebruiken",
+        "buyThemeA11y": "Thema {{theme}} kopen",
+        "freeTitle": "Gratis juwelen",
+        "freeTaps": "1 juweel per {{taps}} tikken op de grote emoji",
+        "freePrestige": "{{gems}} juwelen bij elke prestige",
+        "tapGemCaps": "{{taps}} tikken!",
+        "gemCaps": "Juweel",
+        "themes": {
+            "classic": "Klassiek",
+            "sunset": "Zonsondergang",
+            "ocean": "Oceaan",
+            "forest": "Bos",
+            "candy": "Snoep",
+            "gold": "Goud"
         }
     },
     "offline": {
@@ -340,7 +378,12 @@
         "performance": "Prestaties",
         "reduceAnimations": "Minder animaties",
         "reduceAnimationsHint": "Getikte emoji's vliegen niet meer van de grote emoji af. Probeer dit als tikken traag aanvoelt.",
-        "dangerZone": "Gevarenzone"
+        "dangerZone": "Gevarenzone",
+        "vibration": "Trillen",
+        "vibrationHint": "Een trilling als je tikt, koopt en viert.",
+        "privacy": "Privacy",
+        "privacyChoices": "Privacykeuzes",
+        "privacyHint": "Bepaal hoe advertenties je gegevens mogen gebruiken."
     },
     "cheats": {
         "subtitle": "Om te testen. Wijzigingen gelden voor je opgeslagen spel.",
@@ -494,6 +537,173 @@
             "price": "Prijs",
             "unlocks": "Ontgrendeling",
             "id": "ID"
+        },
+        "loadingA11y": "Upgrades laden",
+        "lockedHint": "Blijf spelen om hem te ontgrendelen.",
+        "unlocksLine": "Ontgrendeling: {{condition}}"
+    },
+    "gemButton": {
+        "confirm": "Bevestigen",
+        "confirmShort": "Kopen?",
+        "hint": "Tik nog eens om de juwelen uit te geven",
+        "costA11y": "{{cost}} juwelen",
+        "labelA11y": "{{label}}, {{cost}} juwelen",
+        "buyNow": "Nu kopen"
+    },
+    "gemPowers": {
+        "title": "Juwelenkrachten",
+        "subtitle": "Geef juwelen uit voor een echte boost",
+        "boostOn": "×{{multiplier}}-boost actief · nog {{time}}",
+        "buttonCaps": "Boost",
+        "buttonA11y": "Juwelenkrachten openen",
+        "buttonActiveA11y": "Boost actief, nog {{time}}. Juwelenkrachten openen",
+        "getMoreGems": "Meer juwelen halen",
+        "fullCaps": "Vol",
+        "boost": {
+            "name": "×{{multiplier}}-boost",
+            "description": "×{{multiplier}} productie en tikken voor {{minutes}} minuten. Koop opnieuw voor meer tijd (tot {{hours}} uur). Gaat door terwijl je weg bent.",
+            "statusCaps": "Actief · nog {{time}}",
+            "buy": "Boosten",
+            "extend": "+{{minutes}} min",
+            "a11y": "Boost kopen"
+        },
+        "timeWarp": {
+            "name": "Tijdsprong",
+            "description": "Krijg meteen uren aan productie.",
+            "hours": "{{hours}} u",
+            "a11y": "{{hours}} uur vooruitspringen"
+        },
+        "shower": {
+            "name": "Effectregen",
+            "description": "{{amount}} goede effect-emoji's verschijnen tegelijk. Tik ze voordat ze vervagen!",
+            "buy": "Oproepen",
+            "a11y": "Een effectregen oproepen"
+        },
+        "comboKeeper": {
+            "name": "Combobewaarder",
+            "description": "Je combo zakt {{minutes}} minuten lang niet. Tik hem omhoog en houd hem vast.",
+            "statusCaps": "Vastgehouden · nog {{time}}",
+            "buy": "Vasthouden",
+            "a11y": "Combobewaarder kopen"
+        },
+        "discovery": {
+            "name": "Ontdekking",
+            "description": "De volgende {{amount}} grote emoji's zijn emoji's die je nog nooit hebt gevonden.",
+            "status": "Nieuwe emoji's op komst: {{amount}}",
+            "buy": "Ontdekken",
+            "allFoundCaps": "Alles gevonden",
+            "a11y": "Ontdekkingen kopen"
+        }
+    },
+    "trophies": {
+        "unlockedCaps": "Trofee ontgrendeld",
+        "ofTotalUnlocked": "/ {{total}} ontgrendeld",
+        "all": "Alle",
+        "hiddenHint": "Blijf spelen om hem te ontgrendelen",
+        "secretHint": "Een geheim. Blijf spelen om het te vinden",
+        "hiddenA11y": "Verborgen trofee, nog niet ontgrendeld. {{hint}}",
+        "unlockedA11y": "{{name}}. {{description}}. Ontgrendeld",
+        "groups": {
+            "Emojis": "Emoji's",
+            "Production": "Productie",
+            "Tapping": "Tikken",
+            "Buildings": "Gebouwen",
+            "Collection": "Collectie",
+            "Magic": "Magie",
+            "Prestige": "Prestige",
+            "Secret": "Geheim"
+        },
+        "tiers": {
+            "hired": "Aangenomen",
+            "fifty": "Vijftig",
+            "century": "Honderd",
+            "empire": "Imperium"
+        },
+        "names": {
+            "drawn1": "Krabbelaar",
+            "drawn2": "Schetsboek",
+            "drawn3": "Muurschildering",
+            "drawn4": "Galerie",
+            "drawn5": "Meesterwerk",
+            "drawn6": "Renaissance",
+            "drawn7": "Museum van alles",
+            "drawn8": "Emoji-kosmos",
+            "drawn9": "Eindeloos doek",
+            "drawn10": "Niet meer te tellen",
+            "drawn11": "De laatste bladzijde",
+            "eps1": "Druppeltje",
+            "eps2": "Beek",
+            "eps3": "Rivier",
+            "eps4": "Woeste stroom",
+            "eps5": "Uitbarsting",
+            "eps6": "Meteorenregen",
+            "eps7": "Zonnevlam",
+            "eps8": "Supernova",
+            "eps9": "Waarnemingshorizon",
+            "taps1": "Por",
+            "taps2": "Friemelaar",
+            "taps3": "Tapdanser",
+            "taps4": "Tromgeroffel",
+            "taps5": "Bionische vinger",
+            "taps6": "Muisarm",
+            "combo3": "Combo!",
+            "combo5": "Hete handen",
+            "combo8": "Supernovacombo",
+            "tapEarnings": "Zelf de handen uit de mouwen",
+            "building": "{{building}}: {{tier}}",
+            "buildings100": "Klein bedrijf",
+            "buildings500": "Conglomeraat",
+            "buildings1000": "Megaconcern",
+            "buildings2500": "Wereldheerschappij",
+            "upgrades10": "Knutselaar",
+            "upgrades50": "Ingenieur",
+            "upgrades150": "Uitvinder",
+            "upgrades300": "Gekke professor",
+            "collected50": "Verzamelaar",
+            "collected250": "Hamsteraar",
+            "collected500": "Archivaris",
+            "collected1000": "Conservator",
+            "collectedAll": "Tik ze allemaal",
+            "shiny1": "Oeh, glimmend",
+            "shiny10": "Ekster",
+            "shiny50": "Goudkoorts",
+            "magic1": "Abracadabra",
+            "magic25": "Leerling",
+            "magic100": "Tovenaar",
+            "magic500": "Aartsmagiër",
+            "prestige1": "Herboren",
+            "prestige5": "Groundhog Day",
+            "prestige10": "Recycler",
+            "prestige25": "Eeuwige terugkeer",
+            "trial": "Overlevende: {{trial}}",
+            "allPerks": "Volledig uitgerust",
+            "secretAnswer": "Geen paniek",
+            "secretHoarder": "Drakenschat",
+            "secretGems": "Glimmende steentjes"
+        },
+        "descriptions": {
+            "drawn": "Teken in totaal {{amount}} emoji's",
+            "eps": "Maak {{amount}} emoji's per seconde",
+            "taps": "Tik {{amount}} keer op de grote emoji",
+            "combo": "Haal een ×{{amount}}-combo",
+            "tapEarnings": "Verdien {{amount}} emoji's met tikken",
+            "buildingFirst": "Eerste gebouw: {{buildingMid}}",
+            "buildingOwned": "Bezit {{amount}} {{buildingsMid}}",
+            "buildingsTotal": "Bezit {{amount}} gebouwen tegelijk",
+            "upgradesOwned": "Bezit {{amount}} upgrades tegelijk",
+            "collected": "Vind {{amount}} verschillende emoji's",
+            "collectedAll": "Vind elke emoji",
+            "shinyFirst": "Tik een glimmende emoji",
+            "shiny": "Tik {{amount}} glimmende emoji's",
+            "magicFirst": "Tik een effect-emoji",
+            "magic": "Tik {{amount}} effect-emoji's",
+            "prestigeFirst": "Doe je eerste prestige",
+            "prestige": "Doe {{amount}} keer prestige",
+            "trial": "Voltooi de uitdaging: {{trial}}",
+            "allPerks": "Bezit elk voordeel",
+            "secretAnswer": "Speel met een funfactor van {{amount}}",
+            "secretHoarder": "Heb {{amount}} emoji's op de bank zonder een gebouw te bezitten",
+            "secretGems": "Bezit {{amount}} juwelen tegelijk"
         }
     }
 }

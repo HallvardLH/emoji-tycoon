@@ -9,6 +9,8 @@ export interface Milestone {
     /** Small caps line, e.g. "MILESTONE" */
     caption: string;
     title: string;
+    /** What it celebrates, which sets the banner's colour (the caption is translated, so it can't) */
+    kind?: "milestone" | "trophy" | "building" | "prestige" | "gems";
 }
 
 type Listener = (milestone: Milestone) => void;
@@ -50,6 +52,7 @@ export function checkBankMilestone() {
             icon: bankIcons[Math.min(reached - 1, bankIcons.length - 1)],
             caption: toCaps(i18n.t("milestones.caption")),
             title: i18n.t("milestones.emojisDrawn", { amount: formatNumber(Math.pow(1000, reached), 0) }),
+            kind: "milestone",
         });
     }
 }

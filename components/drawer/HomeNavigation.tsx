@@ -37,7 +37,7 @@ export default function HomeNavigation() {
                     <Text size={18} style={{ lineHeight: 24 }}>🧪</Text>
                 </HeaderButton>
             )}
-            <HeaderButton label="Open the gem store" onPress={() => router.push("/gems")}>
+            <HeaderButton label={t("gems.openStoreA11y")} onPress={() => router.push("/gems")}>
                 <Text size={18} style={{ lineHeight: 24 }}>💎</Text>
             </HeaderButton>
             {/* A plain menu icon, so the drawer can hold more than settings later.
@@ -71,18 +71,19 @@ export default function HomeNavigation() {
 
 /** The gem store, first thing in the menu */
 function GemStoreCard({ onPress }: { onPress: () => void }) {
+    const { t } = useTranslation();
     const gems = useSelector((state: RootState) => state.gems.gems);
     return (
         <Pressable
             onPress={onPress}
             accessibilityRole="button"
-            accessibilityLabel={`Gem store. You have ${gems} gems`}
+            accessibilityLabel={t("gems.storeCardA11y", { gems: formatNumber(gems) })}
             style={({ pressed }) => [styles.gemCard, pressed ? { opacity: 0.85 } : null]}
         >
             <Text size={34} style={{ lineHeight: 40 }}>💎</Text>
             <View style={{ flex: 1, gap: 2 }}>
-                <Text size={20} color={palette.ink}>Gem store</Text>
-                <Text font="bold" size={13} color={palette.muted}>{formatNumber(gems)} gems · boosts, themes and more</Text>
+                <Text size={20} color={palette.ink}>{t("gems.title")}</Text>
+                <Text font="bold" size={13} color={palette.muted}>{t("gems.storeCardSubtitle", { gems: formatNumber(gems) })}</Text>
             </View>
             <Text size={22} color={palette.violetDeep}>›</Text>
         </Pressable>

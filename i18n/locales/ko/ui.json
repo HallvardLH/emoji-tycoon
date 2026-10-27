@@ -7,7 +7,8 @@
         "upgrades": "업그레이드",
         "stats": "통계",
         "collection": "컬렉션",
-        "newItemsLabel_other": "{{label}}, 새 항목 {{count}}개"
+        "newItemsLabel_other": "{{label}}, 새 항목 {{count}}개",
+        "trophies": "트로피"
     },
     "header": {
         "emojis": "이모지",
@@ -17,7 +18,9 @@
     },
     "common": {
         "buy": "구매",
-        "details": "상세"
+        "details": "상세",
+        "close": "닫기",
+        "dismissHint": "알림을 닫습니다"
     },
     "upgrades": {
         "bigEmoji": "큰 이모지",
@@ -94,7 +97,8 @@
         "funValue": "재미 수치",
         "shinyEmojisTapped": "탭한 반짝이 이모지",
         "comboTaps": "콤보 탭 횟수",
-        "madeByEachBuilding": "건물별 생산량"
+        "madeByEachBuilding": "건물별 생산량",
+        "bestCombo": "최고 콤보"
     },
     "drawer": {
         "language": "언어",
@@ -138,7 +142,17 @@
         "chipLabel": "이모지 정수",
         "chipLabelReady": "프레스티지하고 이모지 정수 {{essence}}개 받기",
         "chipEssence": "정수",
-        "chipPending": "정수 +{{essence}}"
+        "chipPending": "정수 +{{essence}}",
+        "gemExtras": "보석 특전",
+        "charmName": "정수 부적",
+        "charmOff": "다음 프레스티지에서 정수를 {{percent}} 더 받아요.",
+        "charmOn": "켜짐: 다음 프레스티지에서 정수를 {{percent}} 더 받아요.",
+        "charmOnAmount": "켜짐: 다음 프레스티지에서 정수를 {{percent}} 더 받아요 (+{{essence}} ✨).",
+        "charmA11y": "정수 부적 구매",
+        "onCaps": "켜짐",
+        "respecName": "특전 초기화",
+        "respecDescription": "모든 특전을 돌려받고 정수를 전부 되찾아 다시 고를 수 있어요.",
+        "respecA11y": "특전 초기화"
     },
     "numbers": {
         "groupSize": "4",
@@ -201,7 +215,8 @@
         "bulkA11yMax": "살 수 있는 만큼 구매",
         "bulkA11y_other": "한 번에 {{count}}개씩 구매",
         "milestoneCaption": "새 건물",
-        "milestoneTitle": "첫 번째 {{building}}!"
+        "milestoneTitle": "첫 번째 {{building}}!",
+        "buyNowA11y": "보석으로 지금 구매: {{name}}"
     },
     "time": {
         "seconds_other": "{{count}}초",
@@ -263,6 +278,29 @@
         "tags": {
             "popular": "인기",
             "bestValue": "최고 가성비"
+        },
+        "openStoreA11y": "보석 상점 열기",
+        "storeCardSubtitle": "보석 {{gems}}개 · 부스트, 테마 등",
+        "storeCardA11y": "보석 상점. 보석 {{gems}}개 보유",
+        "skipWait": "아직 건물이나 업그레이드를 살 수 없나요? 보석으로 지금 사세요. 기다릴 시간 {{minutes}}분당 보석 약 1개예요.",
+        "themesTitle": "앱 테마",
+        "themesIntro": "게임 전체를 새롭게 꾸며 보세요. 한 번 사면 언제든 바꿀 수 있어요.",
+        "inUseCaps": "사용 중",
+        "useTheme": "사용",
+        "useThemeA11y": "{{theme}} 테마 사용",
+        "buyThemeA11y": "{{theme}} 테마 구매",
+        "freeTitle": "무료 보석",
+        "freeTaps": "큰 이모지를 {{taps}}번 탭할 때마다 보석 1개",
+        "freePrestige": "프레스티지마다 보석 {{gems}}개",
+        "tapGemCaps": "{{taps}}번 탭!",
+        "gemCaps": "보석",
+        "themes": {
+            "classic": "클래식",
+            "sunset": "노을",
+            "ocean": "바다",
+            "forest": "숲",
+            "candy": "사탕",
+            "gold": "골드"
         }
     },
     "offline": {
@@ -301,7 +339,12 @@
         "performance": "성능",
         "reduceAnimations": "애니메이션 줄이기",
         "reduceAnimationsHint": "탭한 이모지가 큰 이모지에서 튀어 나가지 않아요. 탭이 버벅일 때 켜 보세요.",
-        "dangerZone": "위험 구역"
+        "dangerZone": "위험 구역",
+        "vibration": "진동",
+        "vibrationHint": "탭하고, 사고, 축하할 때 살짝 진동해요.",
+        "privacy": "개인정보",
+        "privacyChoices": "개인정보 선택",
+        "privacyHint": "광고가 내 데이터를 쓰는 방식을 바꿔요."
     },
     "cheats": {
         "subtitle": "테스트용이에요. 변경 사항이 저장 데이터에 적용돼요.",
@@ -436,6 +479,173 @@
             "price": "가격",
             "unlocks": "해금 조건",
             "id": "ID"
+        },
+        "loadingA11y": "업그레이드 불러오는 중",
+        "lockedHint": "계속 플레이하면 해금됩니다.",
+        "unlocksLine": "해금 조건: {{condition}}"
+    },
+    "gemButton": {
+        "confirm": "확인",
+        "confirmShort": "살까요?",
+        "hint": "한 번 더 탭하면 보석을 써요",
+        "costA11y": "보석 {{cost}}개",
+        "labelA11y": "{{label}}, 보석 {{cost}}개",
+        "buyNow": "지금 구매"
+    },
+    "gemPowers": {
+        "title": "보석 파워",
+        "subtitle": "보석으로 확실한 부스트를",
+        "boostOn": "×{{multiplier}} 부스트 중 · {{time}} 남음",
+        "buttonCaps": "부스트",
+        "buttonA11y": "보석 파워 열기",
+        "buttonActiveA11y": "부스트 중, {{time}} 남음. 보석 파워 열기",
+        "getMoreGems": "보석 더 받기",
+        "fullCaps": "가득",
+        "boost": {
+            "name": "×{{multiplier}} 부스트",
+            "description": "{{minutes}}분 동안 생산과 탭 ×{{multiplier}}. 다시 사면 시간이 늘어나요(최대 {{hours}}시간). 자리를 비워도 계속돼요.",
+            "statusCaps": "켜짐 · {{time}} 남음",
+            "buy": "부스트",
+            "extend": "+{{minutes}}분",
+            "a11y": "부스트 구매"
+        },
+        "timeWarp": {
+            "name": "타임 워프",
+            "description": "몇 시간 분량의 생산을 바로 받아요.",
+            "hours": "{{hours}}시간",
+            "a11y": "{{hours}}시간 워프"
+        },
+        "shower": {
+            "name": "효과 소나기",
+            "description": "좋은 효과 이모지 {{amount}}개가 한꺼번에 나타나요. 사라지기 전에 탭하세요!",
+            "buy": "소환",
+            "a11y": "효과 소나기 소환"
+        },
+        "comboKeeper": {
+            "name": "콤보 지킴이",
+            "description": "{{minutes}}분 동안 콤보가 떨어지지 않아요. 탭으로 올리고 그대로 유지하세요.",
+            "statusCaps": "유지 중 · {{time}} 남음",
+            "buy": "유지",
+            "a11y": "콤보 지킴이 구매"
+        },
+        "discovery": {
+            "name": "발견",
+            "description": "다음 큰 이모지 {{amount}}개는 한 번도 찾지 못한 이모지예요.",
+            "status": "나올 새 이모지: {{amount}}",
+            "buy": "발견하기",
+            "allFoundCaps": "모두 찾음",
+            "a11y": "발견 구매"
+        }
+    },
+    "trophies": {
+        "unlockedCaps": "트로피 획득",
+        "ofTotalUnlocked": "/ {{total}} 획득",
+        "all": "전체",
+        "hiddenHint": "계속 플레이하면 해금돼요",
+        "secretHint": "비밀이에요. 계속 플레이해서 찾아보세요",
+        "hiddenA11y": "숨겨진 트로피, 아직 미획득. {{hint}}",
+        "unlockedA11y": "{{name}}. {{description}}. 획득함",
+        "groups": {
+            "Emojis": "이모지",
+            "Production": "생산",
+            "Tapping": "탭",
+            "Buildings": "건물",
+            "Collection": "컬렉션",
+            "Magic": "마법",
+            "Prestige": "프레스티지",
+            "Secret": "비밀"
+        },
+        "tiers": {
+            "hired": "고용",
+            "fifty": "50",
+            "century": "100",
+            "empire": "제국"
+        },
+        "names": {
+            "drawn1": "낙서꾼",
+            "drawn2": "스케치북",
+            "drawn3": "벽화",
+            "drawn4": "갤러리",
+            "drawn5": "걸작",
+            "drawn6": "르네상스",
+            "drawn7": "모든 것의 박물관",
+            "drawn8": "이모지 우주",
+            "drawn9": "무한한 캔버스",
+            "drawn10": "셀 수 없음",
+            "drawn11": "마지막 페이지",
+            "eps1": "졸졸",
+            "eps2": "시냇물",
+            "eps3": "강",
+            "eps4": "급류",
+            "eps5": "분화",
+            "eps6": "유성우",
+            "eps7": "태양 플레어",
+            "eps8": "초신성",
+            "eps9": "사건의 지평선",
+            "taps1": "콕",
+            "taps2": "꼼지락",
+            "taps3": "탭댄서",
+            "taps4": "드럼롤",
+            "taps5": "생체공학 손가락",
+            "taps6": "손목 터널",
+            "combo3": "콤보!",
+            "combo5": "불붙은 손",
+            "combo8": "초신성 콤보",
+            "tapEarnings": "현장 경영",
+            "building": "{{building}}: {{tier}}",
+            "buildings100": "소기업",
+            "buildings500": "대기업 집단",
+            "buildings1000": "거대 기업",
+            "buildings2500": "세계 정복",
+            "upgrades10": "손재주꾼",
+            "upgrades50": "엔지니어",
+            "upgrades150": "발명가",
+            "upgrades300": "미친 과학자",
+            "collected50": "수집가",
+            "collected250": "모으기 대장",
+            "collected500": "기록 보관인",
+            "collected1000": "큐레이터",
+            "collectedAll": "전부 탭하자",
+            "shiny1": "와, 반짝여",
+            "shiny10": "까치",
+            "shiny50": "골드러시",
+            "magic1": "아브라카다브라",
+            "magic25": "견습생",
+            "magic100": "마법사",
+            "magic500": "대마법사",
+            "prestige1": "다시 태어남",
+            "prestige5": "사랑의 블랙홀",
+            "prestige10": "재활용가",
+            "prestige25": "영원회귀",
+            "trial": "생존자: {{trial}}",
+            "allPerks": "특전 완성",
+            "secretAnswer": "당황하지 마",
+            "secretHoarder": "용의 보물",
+            "secretGems": "반짝이는 돌"
+        },
+        "descriptions": {
+            "drawn": "이모지 총 {{amount}}개 그리기",
+            "eps": "초당 이모지 {{amount}}개 생산",
+            "taps": "큰 이모지 {{amount}}번 탭",
+            "combo": "×{{amount}} 콤보 달성",
+            "tapEarnings": "탭으로 이모지 {{amount}}개 벌기",
+            "buildingFirst": "첫 건물: {{buildingMid}}",
+            "buildingOwned": "{{buildingsMid}} {{amount}}개 보유",
+            "buildingsTotal": "건물 {{amount}}개 동시 보유",
+            "upgradesOwned": "업그레이드 {{amount}}개 동시 보유",
+            "collected": "서로 다른 이모지 {{amount}}개 찾기",
+            "collectedAll": "모든 이모지 찾기",
+            "shinyFirst": "반짝이 이모지 탭하기",
+            "shiny": "반짝이 이모지 {{amount}}개 탭하기",
+            "magicFirst": "효과 이모지 탭하기",
+            "magic": "효과 이모지 {{amount}}개 탭하기",
+            "prestigeFirst": "첫 프레스티지 하기",
+            "prestige": "프레스티지 {{amount}}번 하기",
+            "trial": "시련 완료: {{trial}}",
+            "allPerks": "모든 특전 보유",
+            "secretAnswer": "재미 수치 {{amount}}(으)로 플레이",
+            "secretHoarder": "건물 하나 없이 은행에 이모지 {{amount}}개 모으기",
+            "secretGems": "보석 {{amount}}개 동시 보유"
         }
     }
 }

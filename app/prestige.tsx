@@ -73,6 +73,7 @@ export default function PrestigeScreen() {
                 icon: trial?.icon ?? "✨",
                 caption: (trial ? toCaps(t("prestige.celebrateTrialCaption", { count })) : toCaps(t("prestige.celebrateCaption", { count }))) + gemsText,
                 title: count <= MAX_PERK_TIER ? t("prestige.celebrateTierTitle", { essence: gained, tier: count }) : t("prestige.celebrateTitle", { essence: gained }),
+                kind: "prestige",
             });
         }
     };
@@ -190,39 +191,43 @@ export default function PrestigeScreen() {
 
 /** Gem buys for prestiging: more essence from the next one, and taking perks back */
 function GemExtras({ pending, perksOwned }: { pending: number, perksOwned: number }) {
+    const { t } = useTranslation();
     const charmOn = useSelector((state: RootState) => state.gems.essenceCharm ?? false);
+    const percent = t("numbers.percent", { value: Math.round(ESSENCE_CHARM_BONUS * 100) });
     return (
         <View style={styles.card}>
             <View style={styles.rowBetween}>
-                <Text size={20} color={palette.ink}>Gem extras</Text>
+                <Text size={20} color={palette.ink}>{t("prestige.gemExtras")}</Text>
                 <Text font="black" size={12} color={palette.violetDeep}>💎</Text>
             </View>
             <View style={styles.gemExtra}>
                 <View style={{ flex: 1, gap: 2 }}>
-                    <Text size={16} color={palette.ink}>🍀 Essence charm</Text>
+                    <Text size={16} color={palette.ink}>🍀 {t("prestige.charmName")}</Text>
                     <Text font="body" size={13} color={palette.muted} style={{ lineHeight: 18 }}>
-                        {charmOn
-                            ? `On: your next prestige gives ${Math.round(ESSENCE_CHARM_BONUS * 100)}% more essence${pending >= 1 ? ` (+${formatNumber(Math.ceil(pending * ESSENCE_CHARM_BONUS))} ✨)` : ""}.`
-                            : `Your next prestige gives ${Math.round(ESSENCE_CHARM_BONUS * 100)}% more essence.`}
+                        {!charmOn
+                            ? t("prestige.charmOff", { percent })
+                            : pending >= 1
+                                ? t("prestige.charmOnAmount", { percent, essence: formatNumber(Math.ceil(pending * ESSENCE_CHARM_BONUS)) })
+                                : t("prestige.charmOn", { percent })}
                     </Text>
                 </View>
                 <GemButton
                     cost={ESSENCE_CHARM_COST}
                     onBuy={buyEssenceCharm}
                     disabled={charmOn}
-                    disabledLabel="✓ ON"
-                    accessibilityLabel="Buy the essence charm"
+                    disabledLabel={`✓ ${toCaps(t("prestige.onCaps"))}`}
+                    accessibilityLabel={t("prestige.charmA11y")}
                 />
             </View>
             {perksOwned > 0 && (
                 <View style={styles.gemExtra}>
                     <View style={{ flex: 1, gap: 2 }}>
-                        <Text size={16} color={palette.ink}>🔄 Perk respec</Text>
+                        <Text size={16} color={palette.ink}>🔄 {t("prestige.respecName")}</Text>
                         <Text font="body" size={13} color={palette.muted} style={{ lineHeight: 18 }}>
-                            Take back every perk and get all its essence back, to choose again.
+                            {t("prestige.respecDescription")}
                         </Text>
                     </View>
-                    <GemButton cost={RESPEC_COST} onBuy={buyRespec} accessibilityLabel="Respec perks" />
+                    <GemButton cost={RESPEC_COST} onBuy={buyRespec} accessibilityLabel={t("prestige.respecA11y")} />
                 </View>
             )}
         </View>

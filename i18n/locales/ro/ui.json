@@ -9,7 +9,8 @@
         "collection": "Colecție",
         "newItemsLabel_one": "{{label}}, {{count}} nou",
         "newItemsLabel_few": "{{label}}, {{count}} noi",
-        "newItemsLabel_other": "{{label}}, {{count}} noi"
+        "newItemsLabel_other": "{{label}}, {{count}} noi",
+        "trophies": "Trofee"
     },
     "header": {
         "emojis": "Emoji",
@@ -21,7 +22,9 @@
     },
     "common": {
         "buy": "Cumpără",
-        "details": "Detalii"
+        "details": "Detalii",
+        "close": "Închide",
+        "dismissHint": "Închide notificarea"
     },
     "upgrades": {
         "bigEmoji": "Emoji mare",
@@ -98,7 +101,8 @@
         "funValue": "Valoare fun",
         "shinyEmojisTapped": "Emoji strălucitoare atinse",
         "comboTaps": "Atingeri în combo",
-        "madeByEachBuilding": "Produse de fiecare clădire"
+        "madeByEachBuilding": "Produse de fiecare clădire",
+        "bestCombo": "Cel mai bun combo"
     },
     "drawer": {
         "language": "Limbă",
@@ -145,7 +149,17 @@
         "chipLabel": "Esență de emoji",
         "chipLabelReady": "Prestigiu pentru {{essence}} esență de emoji",
         "chipEssence": "Esență",
-        "chipPending": "+{{essence}} esență"
+        "chipPending": "+{{essence}} esență",
+        "gemExtras": "Extra cu nestemate",
+        "charmName": "Amuleta esenței",
+        "charmOff": "Următorul prestigiu îți dă cu {{percent}} mai multă esență.",
+        "charmOn": "Activ: următorul prestigiu îți dă cu {{percent}} mai multă esență.",
+        "charmOnAmount": "Activ: următorul prestigiu îți dă cu {{percent}} mai multă esență (+{{essence}} ✨).",
+        "charmA11y": "Cumpără amuleta esenței",
+        "onCaps": "Activ",
+        "respecName": "Resetare avantaje",
+        "respecDescription": "Ia înapoi toate avantajele și recuperează toată esența lor, ca să alegi din nou.",
+        "respecA11y": "Resetează avantajele"
     },
     "numbers": {
         "groupSize": "3",
@@ -260,7 +274,8 @@
         "bulkA11y_few": "Cumpără câte {{count}}",
         "bulkA11y_other": "Cumpără câte {{count}}",
         "milestoneCaption": "CLĂDIRE NOUĂ",
-        "milestoneTitle": "Prima achiziție: {{building}}!"
+        "milestoneTitle": "Prima achiziție: {{building}}!",
+        "buyNowA11y": "Cumpără acum cu nestemate: {{name}}"
     },
     "time": {
         "seconds_one": "{{count}}s",
@@ -336,6 +351,29 @@
         "tags": {
             "popular": "POPULAR",
             "bestValue": "CEL MAI AVANTAJOS"
+        },
+        "openStoreA11y": "Deschide magazinul de nestemate",
+        "storeCardSubtitle": "Nestemate: {{gems}} · impulsuri, teme și altele",
+        "storeCardA11y": "Magazin de nestemate. Ai nestemate: {{gems}}",
+        "skipWait": "Nu-ți permiți încă o clădire sau o îmbunătățire? Cumpăr-o acum cu nestemate, cam 1 nestemată la fiecare {{minutes}} minute de așteptare.",
+        "themesTitle": "Teme pentru aplicație",
+        "themesIntro": "Schimbă aspectul întregului joc. Cumperi o dată, schimbi oricând.",
+        "inUseCaps": "În uz",
+        "useTheme": "Folosește",
+        "useThemeA11y": "Folosește tema {{theme}}",
+        "buyThemeA11y": "Cumpără tema {{theme}}",
+        "freeTitle": "Nestemate gratuite",
+        "freeTaps": "1 nestemată la fiecare {{taps}} atingeri pe emoji-ul mare",
+        "freePrestige": "Nestemate la fiecare prestigiu: {{gems}}",
+        "tapGemCaps": "Atingeri: {{taps}}!",
+        "gemCaps": "Nestemată",
+        "themes": {
+            "classic": "Clasic",
+            "sunset": "Apus",
+            "ocean": "Ocean",
+            "forest": "Pădure",
+            "candy": "Bomboană",
+            "gold": "Aur"
         }
     },
     "offline": {
@@ -374,7 +412,12 @@
         "performance": "Performanță",
         "reduceAnimations": "Mai puține animații",
         "reduceAnimationsHint": "Emoji-urile atinse nu mai zboară de pe Emoji-ul mare. Încearcă asta dacă atingerile par să se blocheze.",
-        "dangerZone": "Zonă periculoasă"
+        "dangerZone": "Zonă periculoasă",
+        "vibration": "Vibrații",
+        "vibrationHint": "O vibrație când atingi, cumperi și sărbătorești.",
+        "privacy": "Confidențialitate",
+        "privacyChoices": "Opțiuni de confidențialitate",
+        "privacyHint": "Schimbă modul în care reclamele îți pot folosi datele."
     },
     "cheats": {
         "subtitle": "Pentru testare. Modificările se aplică salvării tale.",
@@ -547,6 +590,173 @@
             "price": "PREȚ",
             "unlocks": "DEBLOCARE",
             "id": "ID"
+        },
+        "loadingA11y": "Se încarcă îmbunătățirile",
+        "lockedHint": "Continuă să joci ca s-o deblochezi.",
+        "unlocksLine": "Deblocare: {{condition}}"
+    },
+    "gemButton": {
+        "confirm": "Confirmă",
+        "confirmShort": "Cumperi?",
+        "hint": "Atinge din nou ca să cheltui nestematele",
+        "costA11y": "Nestemate: {{cost}}",
+        "labelA11y": "{{label}}, nestemate: {{cost}}",
+        "buyNow": "Cumpără acum"
+    },
+    "gemPowers": {
+        "title": "Puterile nestematelor",
+        "subtitle": "Cheltuie nestemate pentru un impuls adevărat",
+        "boostOn": "Impuls ×{{multiplier}} activ · mai sunt {{time}}",
+        "buttonCaps": "Impuls",
+        "buttonA11y": "Deschide puterile nestematelor",
+        "buttonActiveA11y": "Impuls activ, mai sunt {{time}}. Deschide puterile nestematelor",
+        "getMoreGems": "Ia mai multe nestemate",
+        "fullCaps": "Plin",
+        "boost": {
+            "name": "Impuls ×{{multiplier}}",
+            "description": "Producție și atingeri ×{{multiplier}} timp de {{minutes}} minute. Cumpără din nou pentru mai mult timp (până la {{hours}} ore). Continuă cât lipsești.",
+            "statusCaps": "Activ · mai sunt {{time}}",
+            "buy": "Impulsionează",
+            "extend": "+{{minutes}} min",
+            "a11y": "Cumpără impulsul"
+        },
+        "timeWarp": {
+            "name": "Salt în timp",
+            "description": "Primește chiar acum ore de producție.",
+            "hours": "{{hours}} h",
+            "a11y": "Sari peste {{hours}} ore"
+        },
+        "shower": {
+            "name": "Ploaie de efecte",
+            "description": "Apar deodată emoji de efect bune, în total: {{amount}}. Atinge-le înainte să dispară!",
+            "buy": "Invocă",
+            "a11y": "Invocă o ploaie de efecte"
+        },
+        "comboKeeper": {
+            "name": "Paznicul combo-ului",
+            "description": "Combo-ul tău nu scade timp de {{minutes}} minute. Urcă-l, apoi păstrează-l.",
+            "statusCaps": "Ține · mai sunt {{time}}",
+            "buy": "Păstrează",
+            "a11y": "Cumpără paznicul combo-ului"
+        },
+        "discovery": {
+            "name": "Descoperire",
+            "description": "Următoarele emoji mari (în total: {{amount}}) vor fi unele pe care nu le-ai găsit niciodată.",
+            "status": "Emoji noi pe drum: {{amount}}",
+            "buy": "Descoperă",
+            "allFoundCaps": "Toate găsite",
+            "a11y": "Cumpără descoperiri"
+        }
+    },
+    "trophies": {
+        "unlockedCaps": "Trofeu deblocat",
+        "ofTotalUnlocked": "/ {{total}} deblocate",
+        "all": "Toate",
+        "hiddenHint": "Continuă să joci ca să-l deblochezi",
+        "secretHint": "Un secret. Continuă să joci ca să-l găsești",
+        "hiddenA11y": "Trofeu ascuns, încă nedeblocat. {{hint}}",
+        "unlockedA11y": "{{name}}. {{description}}. Deblocat",
+        "groups": {
+            "Emojis": "Emoji",
+            "Production": "Producție",
+            "Tapping": "Atingeri",
+            "Buildings": "Clădiri",
+            "Collection": "Colecție",
+            "Magic": "Magie",
+            "Prestige": "Prestigiu",
+            "Secret": "Secret"
+        },
+        "tiers": {
+            "hired": "Angajat",
+            "fifty": "Cincizeci",
+            "century": "Sută",
+            "empire": "Imperiu"
+        },
+        "names": {
+            "drawn1": "Mâzgălitor",
+            "drawn2": "Caiet de schițe",
+            "drawn3": "Pictură murală",
+            "drawn4": "Galerie",
+            "drawn5": "Capodoperă",
+            "drawn6": "Renaștere",
+            "drawn7": "Muzeul tuturor lucrurilor",
+            "drawn8": "Cosmos de emoji",
+            "drawn9": "Pânză infinită",
+            "drawn10": "Dincolo de numere",
+            "drawn11": "Ultima pagină",
+            "eps1": "Firicel",
+            "eps2": "Pârâu",
+            "eps3": "Râu",
+            "eps4": "Torent",
+            "eps5": "Erupție",
+            "eps6": "Ploaie de meteori",
+            "eps7": "Erupție solară",
+            "eps8": "Supernovă",
+            "eps9": "Orizontul evenimentelor",
+            "taps1": "Ghiont",
+            "taps2": "Neastâmpărat",
+            "taps3": "Dansator de step",
+            "taps4": "Rulmentul tobei",
+            "taps5": "Deget bionic",
+            "taps6": "Tunel carpian",
+            "combo3": "Combo!",
+            "combo5": "Mâini fierbinți",
+            "combo8": "Combo supernovă",
+            "tapEarnings": "Management practic",
+            "building": "{{building}}: {{tier}}",
+            "buildings100": "Afacere mică",
+            "buildings500": "Conglomerat",
+            "buildings1000": "Megacorporație",
+            "buildings2500": "Dominație mondială",
+            "upgrades10": "Meșterar",
+            "upgrades50": "Inginer",
+            "upgrades150": "Inventator",
+            "upgrades300": "Savant nebun",
+            "collected50": "Colecționar",
+            "collected250": "Strângător",
+            "collected500": "Arhivar",
+            "collected1000": "Curator",
+            "collectedAll": "Să-i atingem pe toți",
+            "shiny1": "Uau, strălucește",
+            "shiny10": "Coțofană",
+            "shiny50": "Goana după aur",
+            "magic1": "Abracadabra",
+            "magic25": "Ucenic",
+            "magic100": "Vrăjitor",
+            "magic500": "Arhimag",
+            "prestige1": "Renăscut",
+            "prestige5": "Ziua cârtiței",
+            "prestige10": "Reciclator",
+            "prestige25": "Eterna reîntoarcere",
+            "trial": "Supraviețuitor: {{trial}}",
+            "allPerks": "Avantaje complete",
+            "secretAnswer": "Fără panică",
+            "secretHoarder": "Comoara dragonului",
+            "secretGems": "Pietricele strălucitoare"
+        },
+        "descriptions": {
+            "drawn": "Desenează în total emoji: {{amount}}",
+            "eps": "Produci emoji pe secundă: {{amount}}",
+            "taps": "Atinge emoji-ul mare: {{amount}} ori",
+            "combo": "Atinge un combo ×{{amount}}",
+            "tapEarnings": "Câștigă prin atingeri emoji: {{amount}}",
+            "buildingFirst": "Prima clădire: {{buildingMid}}",
+            "buildingOwned": "{{buildingsMid}}: deține {{amount}}",
+            "buildingsTotal": "Deține deodată clădiri: {{amount}}",
+            "upgradesOwned": "Deține deodată îmbunătățiri: {{amount}}",
+            "collected": "Găsește emoji diferite: {{amount}}",
+            "collectedAll": "Găsește toate emoji-urile",
+            "shinyFirst": "Atinge un emoji strălucitor",
+            "shiny": "Atinge emoji strălucitoare: {{amount}}",
+            "magicFirst": "Atinge un emoji de efect",
+            "magic": "Atinge emoji de efect: {{amount}}",
+            "prestigeFirst": "Fă primul tău prestigiu",
+            "prestige": "Fă prestigiu: {{amount}} ori",
+            "trial": "Termină proba: {{trial}}",
+            "allPerks": "Deține toate avantajele",
+            "secretAnswer": "Joacă cu valoarea fun {{amount}}",
+            "secretHoarder": "Ai în bancă emoji ({{amount}}) fără să deții vreo clădire",
+            "secretGems": "Deține deodată nestemate: {{amount}}"
         }
     }
 }

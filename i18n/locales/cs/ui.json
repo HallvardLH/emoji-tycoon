@@ -10,7 +10,8 @@
         "newItemsLabel_one": "{{label}}, nové: {{count}}",
         "newItemsLabel_few": "{{label}}, nové: {{count}}",
         "newItemsLabel_many": "{{label}}, nové: {{count}}",
-        "newItemsLabel_other": "{{label}}, nové: {{count}}"
+        "newItemsLabel_other": "{{label}}, nové: {{count}}",
+        "trophies": "Trofeje"
     },
     "header": {
         "emojis": "Emoji",
@@ -23,7 +24,9 @@
     },
     "common": {
         "buy": "Koupit",
-        "details": "Detaily"
+        "details": "Detaily",
+        "close": "Zavřít",
+        "dismissHint": "Zavře oznámení"
     },
     "upgrades": {
         "bigEmoji": "Velké emoji",
@@ -100,7 +103,8 @@
         "funValue": "Faktor zábavy",
         "shinyEmojisTapped": "Ťuknutá třpytivá emoji",
         "comboTaps": "Ťuknutí v kombu",
-        "madeByEachBuilding": "Výroba jednotlivých budov"
+        "madeByEachBuilding": "Výroba jednotlivých budov",
+        "bestCombo": "Nejlepší kombo"
     },
     "drawer": {
         "language": "Jazyk",
@@ -147,7 +151,17 @@
         "chipLabel": "Emoji esence",
         "chipLabelReady": "Prestiž za {{essence}} emoji esence",
         "chipEssence": "Esence",
-        "chipPending": "+{{essence}} esence"
+        "chipPending": "+{{essence}} esence",
+        "gemExtras": "Extra za drahokamy",
+        "charmName": "Amulet esence",
+        "charmOff": "Tvoje příští prestiž dá o {{percent}} víc esence.",
+        "charmOn": "Zapnuto: tvoje příští prestiž dá o {{percent}} víc esence.",
+        "charmOnAmount": "Zapnuto: tvoje příští prestiž dá o {{percent}} víc esence (+{{essence}} ✨).",
+        "charmA11y": "Koupit amulet esence",
+        "onCaps": "Zapnuto",
+        "respecName": "Reset výhod",
+        "respecDescription": "Vezmi zpět všechny výhody a získej zpět všechnu jejich esenci, abys mohl vybrat znovu.",
+        "respecA11y": "Resetovat výhody"
     },
     "numbers": {
         "groupSize": "3",
@@ -285,7 +299,8 @@
         "bulkA11y_many": "Kupovat po {{count}}",
         "bulkA11y_other": "Kupovat po {{count}}",
         "milestoneCaption": "NOVÁ BUDOVA",
-        "milestoneTitle": "První {{building}} ti patří!"
+        "milestoneTitle": "První {{building}} ti patří!",
+        "buyNowA11y": "Koupit hned za drahokamy: {{name}}"
     },
     "time": {
         "seconds_one": "{{count}} s",
@@ -368,6 +383,29 @@
         "tags": {
             "popular": "OBLÍBENÉ",
             "bestValue": "NEJVÝHODNĚJŠÍ"
+        },
+        "openStoreA11y": "Otevřít obchod s drahokamy",
+        "storeCardSubtitle": "Drahokamy: {{gems}} · posílení, motivy a další",
+        "storeCardA11y": "Obchod s drahokamy. Tvoje drahokamy: {{gems}}",
+        "skipWait": "Na budovu nebo vylepšení ještě nemáš? Kup je hned za drahokamy, zhruba 1 drahokam za každých {{minutes}} min čekání.",
+        "themesTitle": "Motivy aplikace",
+        "themesIntro": "Dej celé hře nový vzhled. Kup jednou, přepínej kdykoli.",
+        "inUseCaps": "Používá se",
+        "useTheme": "Použít",
+        "useThemeA11y": "Použít motiv: {{theme}}",
+        "buyThemeA11y": "Koupit motiv: {{theme}}",
+        "freeTitle": "Drahokamy zdarma",
+        "freeTaps": "1 drahokam za každých {{taps}} ťuknutí na velké emoji",
+        "freePrestige": "Drahokamy za každou prestiž: {{gems}}",
+        "tapGemCaps": "Ťuknutí: {{taps}}!",
+        "gemCaps": "Drahokam",
+        "themes": {
+            "classic": "Klasika",
+            "sunset": "Západ slunce",
+            "ocean": "Oceán",
+            "forest": "Les",
+            "candy": "Bonbon",
+            "gold": "Zlato"
         }
     },
     "offline": {
@@ -406,7 +444,12 @@
         "performance": "Výkon",
         "reduceAnimations": "Omezit animace",
         "reduceAnimationsHint": "Ťuknutá emoji už nebudou odlétat z Velkého emoji. Zkus to, pokud se ťukání seká.",
-        "dangerZone": "Nebezpečná zóna"
+        "dangerZone": "Nebezpečná zóna",
+        "vibration": "Vibrace",
+        "vibrationHint": "Zabzučení, když ťukáš, kupuješ a slavíš.",
+        "privacy": "Soukromí",
+        "privacyChoices": "Volby soukromí",
+        "privacyHint": "Změň, jak smí reklamy používat tvoje data."
     },
     "cheats": {
         "subtitle": "Pro testování. Změny se projeví v tvé uložené hře.",
@@ -598,6 +641,173 @@
             "price": "CENA",
             "unlocks": "ODEMČENÍ",
             "id": "ID"
+        },
+        "loadingA11y": "Načítání vylepšení",
+        "lockedHint": "Hraj dál, abys ho odemkl.",
+        "unlocksLine": "Odemčení: {{condition}}"
+    },
+    "gemButton": {
+        "confirm": "Potvrdit",
+        "confirmShort": "Koupit?",
+        "hint": "Ťukni znovu a utrať drahokamy",
+        "costA11y": "Drahokamy: {{cost}}",
+        "labelA11y": "{{label}}, drahokamy: {{cost}}",
+        "buyNow": "Koupit hned"
+    },
+    "gemPowers": {
+        "title": "Síly drahokamů",
+        "subtitle": "Utrať drahokamy za pořádné posílení",
+        "boostOn": "Posílení ×{{multiplier}} běží · zbývá {{time}}",
+        "buttonCaps": "Posílení",
+        "buttonA11y": "Otevřít síly drahokamů",
+        "buttonActiveA11y": "Posílení běží, zbývá {{time}}. Otevřít síly drahokamů",
+        "getMoreGems": "Získat další drahokamy",
+        "fullCaps": "Plno",
+        "boost": {
+            "name": "Posílení ×{{multiplier}}",
+            "description": "×{{multiplier}} produkce a ťuknutí na {{minutes}} min. Kup znovu pro víc času (až {{hours}} h). Běží, i když jsi pryč.",
+            "statusCaps": "Běží · zbývá {{time}}",
+            "buy": "Posílit",
+            "extend": "+{{minutes}} min",
+            "a11y": "Koupit posílení"
+        },
+        "timeWarp": {
+            "name": "Skok v čase",
+            "description": "Získej hned hodiny produkce.",
+            "hours": "{{hours}} h",
+            "a11y": "Přeskočit {{hours}} h"
+        },
+        "shower": {
+            "name": "Déšť efektů",
+            "description": "Naráz se objeví dobrá efektová emoji (počet: {{amount}}). Ťukni na ně, než zmizí!",
+            "buy": "Přivolat",
+            "a11y": "Přivolat déšť efektů"
+        },
+        "comboKeeper": {
+            "name": "Strážce komba",
+            "description": "Tvoje kombo neklesá po {{minutes}} min. Vyťukej ho a udrž ho.",
+            "statusCaps": "Drží · zbývá {{time}}",
+            "buy": "Držet",
+            "a11y": "Koupit strážce komba"
+        },
+        "discovery": {
+            "name": "Objev",
+            "description": "Další velká emoji (počet: {{amount}}) budou ta, která jsi ještě nenašel.",
+            "status": "Nová emoji na cestě: {{amount}}",
+            "buy": "Objevit",
+            "allFoundCaps": "Vše nalezeno",
+            "a11y": "Koupit objevy"
+        }
+    },
+    "trophies": {
+        "unlockedCaps": "Trofej odemčena",
+        "ofTotalUnlocked": "/ {{total}} odemčeno",
+        "all": "Vše",
+        "hiddenHint": "Hraj dál, abys ji odemkl",
+        "secretHint": "Tajemství. Hraj dál, abys ho našel",
+        "hiddenA11y": "Skrytá trofej, zatím neodemčená. {{hint}}",
+        "unlockedA11y": "{{name}}. {{description}}. Odemčeno",
+        "groups": {
+            "Emojis": "Emoji",
+            "Production": "Produkce",
+            "Tapping": "Ťukání",
+            "Buildings": "Budovy",
+            "Collection": "Sbírka",
+            "Magic": "Magie",
+            "Prestige": "Prestiž",
+            "Secret": "Tajné"
+        },
+        "tiers": {
+            "hired": "Najato",
+            "fifty": "Padesátka",
+            "century": "Stovka",
+            "empire": "Impérium"
+        },
+        "names": {
+            "drawn1": "Čmárač",
+            "drawn2": "Skicák",
+            "drawn3": "Nástěnná malba",
+            "drawn4": "Galerie",
+            "drawn5": "Mistrovské dílo",
+            "drawn6": "Renesance",
+            "drawn7": "Muzeum všeho",
+            "drawn8": "Vesmír emoji",
+            "drawn9": "Nekonečné plátno",
+            "drawn10": "Nad všechna čísla",
+            "drawn11": "Poslední stránka",
+            "eps1": "Pramínek",
+            "eps2": "Potok",
+            "eps3": "Řeka",
+            "eps4": "Bystřina",
+            "eps5": "Erupce",
+            "eps6": "Meteorický roj",
+            "eps7": "Sluneční erupce",
+            "eps8": "Supernova",
+            "eps9": "Horizont událostí",
+            "taps1": "Šťouchnutí",
+            "taps2": "Neposeda",
+            "taps3": "Stepař",
+            "taps4": "Víření bubnů",
+            "taps5": "Bionický prst",
+            "taps6": "Karpální tunel",
+            "combo3": "Kombo!",
+            "combo5": "Rozpálené ruce",
+            "combo8": "Kombo supernovy",
+            "tapEarnings": "Řízení vlastníma rukama",
+            "building": "{{building}}: {{tier}}",
+            "buildings100": "Malá firma",
+            "buildings500": "Konglomerát",
+            "buildings1000": "Megakorporace",
+            "buildings2500": "Nadvláda nad světem",
+            "upgrades10": "Kutil",
+            "upgrades50": "Inženýr",
+            "upgrades150": "Vynálezce",
+            "upgrades300": "Šílený vědec",
+            "collected50": "Sběratel",
+            "collected250": "Křeček",
+            "collected500": "Archivář",
+            "collected1000": "Kurátor",
+            "collectedAll": "Ťukni na všechny",
+            "shiny1": "Jé, třpytí se",
+            "shiny10": "Straka",
+            "shiny50": "Zlatá horečka",
+            "magic1": "Abrakadabra",
+            "magic25": "Učeň",
+            "magic100": "Čaroděj",
+            "magic500": "Arcimág",
+            "prestige1": "Znovuzrozený",
+            "prestige5": "Na Hromnice o den více",
+            "prestige10": "Recyklátor",
+            "prestige25": "Věčný návrat",
+            "trial": "Přeživší: {{trial}}",
+            "allPerks": "Plně vybavený",
+            "secretAnswer": "Nepanikař",
+            "secretHoarder": "Dračí poklad",
+            "secretGems": "Třpytivé kamínky"
+        },
+        "descriptions": {
+            "drawn": "Nakresli celkem emoji: {{amount}}",
+            "eps": "Vyráběj emoji za sekundu: {{amount}}",
+            "taps": "Ťukni na velké emoji: {{amount}}×",
+            "combo": "Dosáhni komba ×{{amount}}",
+            "tapEarnings": "Vydělej ťukáním emoji: {{amount}}",
+            "buildingFirst": "První budova: {{buildingMid}}",
+            "buildingOwned": "{{buildingsMid}}: vlastni {{amount}}",
+            "buildingsTotal": "Vlastni naráz budovy: {{amount}}",
+            "upgradesOwned": "Vlastni naráz vylepšení: {{amount}}",
+            "collected": "Najdi různá emoji: {{amount}}",
+            "collectedAll": "Najdi všechna emoji",
+            "shinyFirst": "Ťukni na třpytivé emoji",
+            "shiny": "Ťukni na třpytivá emoji: {{amount}}",
+            "magicFirst": "Ťukni na efektové emoji",
+            "magic": "Ťukni na efektová emoji: {{amount}}",
+            "prestigeFirst": "Udělej svou první prestiž",
+            "prestige": "Udělej prestiž: {{amount}}×",
+            "trial": "Dokonči zkoušku: {{trial}}",
+            "allPerks": "Vlastni všechny výhody",
+            "secretAnswer": "Hraj s faktorem zábavy {{amount}}",
+            "secretHoarder": "Měj v bance emoji ({{amount}}), aniž bys vlastnil jedinou budovu",
+            "secretGems": "Měj naráz drahokamy: {{amount}}"
         }
     }
 }

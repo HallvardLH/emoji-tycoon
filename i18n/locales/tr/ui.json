@@ -8,7 +8,8 @@
         "stats": "İstatistik",
         "collection": "Koleksiyon",
         "newItemsLabel_one": "{{label}}, {{count}} yeni",
-        "newItemsLabel_other": "{{label}}, {{count}} yeni"
+        "newItemsLabel_other": "{{label}}, {{count}} yeni",
+        "trophies": "Kupalar"
     },
     "header": {
         "emojis": "Emojiler",
@@ -19,7 +20,9 @@
     },
     "common": {
         "buy": "Satın al",
-        "details": "Detaylar"
+        "details": "Detaylar",
+        "close": "Kapat",
+        "dismissHint": "Bildirimi kapatır"
     },
     "upgrades": {
         "bigEmoji": "Büyük emoji",
@@ -96,7 +99,8 @@
         "funValue": "Eğlence değeri",
         "shinyEmojisTapped": "Dokunulan parlak emoji",
         "comboTaps": "Kombo dokunuşları",
-        "madeByEachBuilding": "Her binanın ürettiği"
+        "madeByEachBuilding": "Her binanın ürettiği",
+        "bestCombo": "En iyi kombo"
     },
     "drawer": {
         "language": "Dil",
@@ -141,7 +145,17 @@
         "chipLabel": "Emoji esansı",
         "chipLabelReady": "Prestij yap, kazanç: {{essence}} emoji esansı",
         "chipEssence": "Esans",
-        "chipPending": "+{{essence}} esans"
+        "chipPending": "+{{essence}} esans",
+        "gemExtras": "Elmas ekstraları",
+        "charmName": "Öz tılsımı",
+        "charmOff": "Bir sonraki prestijin {{percent}} daha fazla öz verir.",
+        "charmOn": "Açık: bir sonraki prestijin {{percent}} daha fazla öz verir.",
+        "charmOnAmount": "Açık: bir sonraki prestijin {{percent}} daha fazla öz verir (+{{essence}} ✨).",
+        "charmA11y": "Öz tılsımını satın al",
+        "onCaps": "Açık",
+        "respecName": "Ayrıcalıkları sıfırla",
+        "respecDescription": "Tüm ayrıcalıkları geri al ve yeniden seçmek için bütün özlerini geri kazan.",
+        "respecA11y": "Ayrıcalıkları sıfırla"
     },
     "numbers": {
         "groupSize": "3",
@@ -233,7 +247,8 @@
         "bulkA11y_one": "Tek seferde {{count}} adet al",
         "bulkA11y_other": "Tek seferde {{count}} adet al",
         "milestoneCaption": "YENİ BİNA",
-        "milestoneTitle": "İşte ilk {{building}}!"
+        "milestoneTitle": "İşte ilk {{building}}!",
+        "buyNowA11y": "Şimdi elmasla satın al: {{name}}"
     },
     "time": {
         "seconds_one": "{{count}}sn",
@@ -302,6 +317,29 @@
         "tags": {
             "popular": "POPÜLER",
             "bestValue": "EN İYİ FİYAT"
+        },
+        "openStoreA11y": "Elmas mağazasını aç",
+        "storeCardSubtitle": "Elmas: {{gems}} · güçlendirmeler, temalar ve dahası",
+        "storeCardA11y": "Elmas mağazası. Elmasların: {{gems}}",
+        "skipWait": "Bir binaya ya da geliştirmeye henüz paran yetmiyor mu? Hemen elmasla al, beklenen her {{minutes}} dakika için yaklaşık 1 elmas.",
+        "themesTitle": "Uygulama temaları",
+        "themesIntro": "Tüm oyunun görünümünü değiştir. Bir kez al, istediğin zaman değiştir.",
+        "inUseCaps": "Kullanımda",
+        "useTheme": "Kullan",
+        "useThemeA11y": "Temayı kullan: {{theme}}",
+        "buyThemeA11y": "Temayı satın al: {{theme}}",
+        "freeTitle": "Bedava elmas",
+        "freeTaps": "Büyük emojiye her {{taps}} dokunuşta 1 elmas",
+        "freePrestige": "Her prestijde elmas: {{gems}}",
+        "tapGemCaps": "Dokunuş: {{taps}}!",
+        "gemCaps": "Elmas",
+        "themes": {
+            "classic": "Klasik",
+            "sunset": "Gün batımı",
+            "ocean": "Okyanus",
+            "forest": "Orman",
+            "candy": "Şeker",
+            "gold": "Altın"
         }
     },
     "offline": {
@@ -340,7 +378,12 @@
         "performance": "Performans",
         "reduceAnimations": "Animasyonları azalt",
         "reduceAnimationsHint": "Dokunulan emojiler artık Büyük Emoji'den fırlamaz. Dokunmak takılıyorsa bunu dene.",
-        "dangerZone": "Tehlikeli bölge"
+        "dangerZone": "Tehlikeli bölge",
+        "vibration": "Titreşim",
+        "vibrationHint": "Dokunurken, satın alırken ve kutlarken hafif bir titreşim.",
+        "privacy": "Gizlilik",
+        "privacyChoices": "Gizlilik seçenekleri",
+        "privacyHint": "Reklamların verilerini nasıl kullanabileceğini değiştir."
     },
     "cheats": {
         "subtitle": "Test için. Değişiklikler kayıt dosyana uygulanır.",
@@ -494,6 +537,173 @@
             "price": "FİYAT",
             "unlocks": "KOŞUL",
             "id": "ID"
+        },
+        "loadingA11y": "Geliştirmeler yükleniyor",
+        "lockedHint": "Açmak için oynamaya devam et.",
+        "unlocksLine": "Koşul: {{condition}}"
+    },
+    "gemButton": {
+        "confirm": "Onayla",
+        "confirmShort": "Alınsın mı?",
+        "hint": "Elmasları harcamak için tekrar dokun",
+        "costA11y": "Elmas: {{cost}}",
+        "labelA11y": "{{label}}, elmas: {{cost}}",
+        "buyNow": "Hemen al"
+    },
+    "gemPowers": {
+        "title": "Elmas güçleri",
+        "subtitle": "Gerçek bir güçlendirme için elmas harca",
+        "boostOn": "×{{multiplier}} güçlendirme açık · kalan {{time}}",
+        "buttonCaps": "Güçlendir",
+        "buttonA11y": "Elmas güçlerini aç",
+        "buttonActiveA11y": "Güçlendirme açık, kalan {{time}}. Elmas güçlerini aç",
+        "getMoreGems": "Daha fazla elmas al",
+        "fullCaps": "Dolu",
+        "boost": {
+            "name": "×{{multiplier}} güçlendirme",
+            "description": "{{minutes}} dakika boyunca ×{{multiplier}} üretim ve dokunuş. Daha fazla süre için tekrar al (en fazla {{hours}} saat). Sen yokken de devam eder.",
+            "statusCaps": "Açık · kalan {{time}}",
+            "buy": "Güçlendir",
+            "extend": "+{{minutes}} dk",
+            "a11y": "Güçlendirmeyi satın al"
+        },
+        "timeWarp": {
+            "name": "Zaman atlaması",
+            "description": "Saatlerce üretimi hemen al.",
+            "hours": "{{hours}} sa",
+            "a11y": "{{hours}} saat atla"
+        },
+        "shower": {
+            "name": "Efekt yağmuru",
+            "description": "Aynı anda iyi efekt emojileri çıkar, toplam: {{amount}}. Kaybolmadan dokun!",
+            "buy": "Çağır",
+            "a11y": "Efekt yağmuru çağır"
+        },
+        "comboKeeper": {
+            "name": "Kombo koruyucu",
+            "description": "Kombon {{minutes}} dakika boyunca düşmez. Yükselt, sonra koru.",
+            "statusCaps": "Koruyor · kalan {{time}}",
+            "buy": "Koru",
+            "a11y": "Kombo koruyucuyu satın al"
+        },
+        "discovery": {
+            "name": "Keşif",
+            "description": "Sonraki büyük emojiler (toplam: {{amount}}) hiç bulmadığın emojiler olacak.",
+            "status": "Gelecek yeni emojiler: {{amount}}",
+            "buy": "Keşfet",
+            "allFoundCaps": "Hepsi bulundu",
+            "a11y": "Keşif satın al"
+        }
+    },
+    "trophies": {
+        "unlockedCaps": "Kupa kazanıldı",
+        "ofTotalUnlocked": "/ {{total}} kazanıldı",
+        "all": "Tümü",
+        "hiddenHint": "Kazanmak için oynamaya devam et",
+        "secretHint": "Bir sır. Bulmak için oynamaya devam et",
+        "hiddenA11y": "Gizli kupa, henüz kazanılmadı. {{hint}}",
+        "unlockedA11y": "{{name}}. {{description}}. Kazanıldı",
+        "groups": {
+            "Emojis": "Emojiler",
+            "Production": "Üretim",
+            "Tapping": "Dokunma",
+            "Buildings": "Binalar",
+            "Collection": "Koleksiyon",
+            "Magic": "Sihir",
+            "Prestige": "Prestij",
+            "Secret": "Gizli"
+        },
+        "tiers": {
+            "hired": "İşe alındı",
+            "fifty": "Elli",
+            "century": "Yüz",
+            "empire": "İmparatorluk"
+        },
+        "names": {
+            "drawn1": "Karalamacı",
+            "drawn2": "Eskiz defteri",
+            "drawn3": "Duvar resmi",
+            "drawn4": "Galeri",
+            "drawn5": "Başyapıt",
+            "drawn6": "Rönesans",
+            "drawn7": "Her şeyin müzesi",
+            "drawn8": "Emoji evreni",
+            "drawn9": "Sonsuz tuval",
+            "drawn10": "Sayılamaz",
+            "drawn11": "Son sayfa",
+            "eps1": "Damla damla",
+            "eps2": "Dere",
+            "eps3": "Nehir",
+            "eps4": "Sel",
+            "eps5": "Patlama",
+            "eps6": "Meteor yağmuru",
+            "eps7": "Güneş patlaması",
+            "eps8": "Süpernova",
+            "eps9": "Olay ufku",
+            "taps1": "Dürtme",
+            "taps2": "Kıpır kıpır",
+            "taps3": "Step dansçısı",
+            "taps4": "Davul sesi",
+            "taps5": "Biyonik parmak",
+            "taps6": "Karpal tünel",
+            "combo3": "Kombo!",
+            "combo5": "Sıcak eller",
+            "combo8": "Süpernova kombosu",
+            "tapEarnings": "Sahada yönetim",
+            "building": "{{building}}: {{tier}}",
+            "buildings100": "Küçük işletme",
+            "buildings500": "Holding",
+            "buildings1000": "Mega şirket",
+            "buildings2500": "Dünya hâkimiyeti",
+            "upgrades10": "Tamirci",
+            "upgrades50": "Mühendis",
+            "upgrades150": "Mucit",
+            "upgrades300": "Çılgın bilim insanı",
+            "collected50": "Koleksiyoncu",
+            "collected250": "İstifçi",
+            "collected500": "Arşivci",
+            "collected1000": "Küratör",
+            "collectedAll": "Hepsine dokun",
+            "shiny1": "Vay, parlak",
+            "shiny10": "Saksağan",
+            "shiny50": "Altına hücum",
+            "magic1": "Abrakadabra",
+            "magic25": "Çırak",
+            "magic100": "Büyücü",
+            "magic500": "Başbüyücü",
+            "prestige1": "Yeniden doğuş",
+            "prestige5": "Bugün aslında dündü",
+            "prestige10": "Geri dönüştürücü",
+            "prestige25": "Ebedi dönüş",
+            "trial": "Hayatta kalan: {{trial}}",
+            "allPerks": "Tam donanımlı",
+            "secretAnswer": "Panik yok",
+            "secretHoarder": "Ejderha hazinesi",
+            "secretGems": "Parlak taşlar"
+        },
+        "descriptions": {
+            "drawn": "Toplamda çizilen emoji: {{amount}}",
+            "eps": "Saniyede üretilen emoji: {{amount}}",
+            "taps": "Büyük emojiye dokunuş: {{amount}}",
+            "combo": "×{{amount}} komboya ulaş",
+            "tapEarnings": "Dokunarak kazanılan emoji: {{amount}}",
+            "buildingFirst": "İlk bina: {{buildingMid}}",
+            "buildingOwned": "{{buildingsMid}}: {{amount}} tane",
+            "buildingsTotal": "Aynı anda sahip olunan bina: {{amount}}",
+            "upgradesOwned": "Aynı anda sahip olunan geliştirme: {{amount}}",
+            "collected": "Bulunan farklı emoji: {{amount}}",
+            "collectedAll": "Her emojiyi bul",
+            "shinyFirst": "Parlak bir emojiye dokun",
+            "shiny": "Dokunulan parlak emoji: {{amount}}",
+            "magicFirst": "Bir efekt emojisine dokun",
+            "magic": "Dokunulan efekt emojisi: {{amount}}",
+            "prestigeFirst": "İlk prestijini yap",
+            "prestige": "Yapılan prestij: {{amount}}",
+            "trial": "Sınavı tamamla: {{trial}}",
+            "allPerks": "Tüm ayrıcalıklara sahip ol",
+            "secretAnswer": "{{amount}} eğlence değeriyle oyna",
+            "secretHoarder": "Hiç binan yokken bankada emoji olsun: {{amount}}",
+            "secretGems": "Aynı anda sahip olunan elmas: {{amount}}"
         }
     }
 }

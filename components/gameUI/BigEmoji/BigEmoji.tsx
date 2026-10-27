@@ -334,9 +334,9 @@ export default function BigEmoji() {
                 {shinyBursts.map(burst => (
                     <EffectBurst
                         key={burst.id}
-                        headline={burst.gem ? `💎 ${TAP_GEM_EVERY} TAPS!` : `✨ ${toCaps(i18n.t("bigEmoji.shinyBurst"))}`}
+                        headline={burst.gem ? `💎 ${toCaps(i18n.t("gems.tapGemCaps", { taps: formatNumber(TAP_GEM_EVERY) }))}` : `✨ ${toCaps(i18n.t("bigEmoji.shinyBurst"))}`}
                         value={burst.gem ? "+1" : `+${formatNumber(burst.amount < 1e6 ? Math.floor(burst.amount) : burst.amount, 1)}`}
-                        caption={burst.gem ? "GEM" : toCaps(i18n.t("header.emojis"))}
+                        caption={burst.gem ? toCaps(i18n.t("gems.gemCaps")) : toCaps(i18n.t("header.emojis"))}
                         sparks={burst.gem
                             ? ["💎", "✨", "💠", "⭐", "💎", "✨", "💠", "⭐", "💎", "✨", "💠", "⭐"]
                             : ["✨", "🌟", "💛", "⭐", "🪙", "✨", "🌟", "💛", "⭐", "🪙", "✨", "🌟"]}

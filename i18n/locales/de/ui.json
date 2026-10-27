@@ -8,7 +8,8 @@
         "stats": "Statistik",
         "collection": "Sammlung",
         "newItemsLabel_one": "{{label}}, {{count}} neu",
-        "newItemsLabel_other": "{{label}}, {{count}} neu"
+        "newItemsLabel_other": "{{label}}, {{count}} neu",
+        "trophies": "Trophäen"
     },
     "header": {
         "emojis": "Emojis",
@@ -19,7 +20,9 @@
     },
     "common": {
         "buy": "Kaufen",
-        "details": "Details"
+        "details": "Details",
+        "close": "Schließen",
+        "dismissHint": "Schließt die Benachrichtigung"
     },
     "upgrades": {
         "bigEmoji": "Großes Emoji",
@@ -96,7 +99,8 @@
         "funValue": "Spaßfaktor",
         "shinyEmojisTapped": "Getippte glänzende Emojis",
         "comboTaps": "Combo-Tipps",
-        "madeByEachBuilding": "Produziert pro Gebäude"
+        "madeByEachBuilding": "Produziert pro Gebäude",
+        "bestCombo": "Beste Combo"
     },
     "drawer": {
         "language": "Sprache",
@@ -141,7 +145,17 @@
         "chipLabel": "Emoji-Essenz",
         "chipLabelReady": "Prestige für {{essence}} Emoji-Essenz",
         "chipEssence": "Essenz",
-        "chipPending": "+{{essence}} Essenz"
+        "chipPending": "+{{essence}} Essenz",
+        "gemExtras": "Juwelen-Extras",
+        "charmName": "Essenz-Talisman",
+        "charmOff": "Dein nächstes Prestige bringt {{percent}} mehr Essenz.",
+        "charmOn": "Aktiv: Dein nächstes Prestige bringt {{percent}} mehr Essenz.",
+        "charmOnAmount": "Aktiv: Dein nächstes Prestige bringt {{percent}} mehr Essenz (+{{essence}} ✨).",
+        "charmA11y": "Essenz-Talisman kaufen",
+        "onCaps": "Aktiv",
+        "respecName": "Perks zurücksetzen",
+        "respecDescription": "Nimm alle Perks zurück und erhalte ihre Essenz zurück, um neu zu wählen.",
+        "respecA11y": "Perks zurücksetzen"
     },
     "numbers": {
         "groupSize": "3",
@@ -233,7 +247,8 @@
         "bulkA11y_one": "{{count}} auf einmal kaufen",
         "bulkA11y_other": "{{count}} auf einmal kaufen",
         "milestoneCaption": "Neues Gebäude",
-        "milestoneTitle": "Neu: {{building}}!"
+        "milestoneTitle": "Neu: {{building}}!",
+        "buyNowA11y": "{{name}} jetzt mit Juwelen kaufen"
     },
     "time": {
         "seconds_one": "{{count}}s",
@@ -302,6 +317,29 @@
         "tags": {
             "popular": "Beliebt",
             "bestValue": "Bester Preis"
+        },
+        "openStoreA11y": "Juwelenladen öffnen",
+        "storeCardSubtitle": "{{gems}} Juwelen · Boosts, Themes und mehr",
+        "storeCardA11y": "Juwelenladen. Du hast {{gems}} Juwelen",
+        "skipWait": "Ein Gebäude oder Upgrade ist noch zu teuer? Kauf es jetzt mit Juwelen, etwa 1 Juwel pro {{minutes}} Minuten Wartezeit.",
+        "themesTitle": "App-Themes",
+        "themesIntro": "Gib dem ganzen Spiel einen neuen Look. Einmal kaufen, jederzeit wechseln.",
+        "inUseCaps": "Aktiv",
+        "useTheme": "Nutzen",
+        "useThemeA11y": "Theme {{theme}} nutzen",
+        "buyThemeA11y": "Theme {{theme}} kaufen",
+        "freeTitle": "Gratis-Juwelen",
+        "freeTaps": "1 Juwel alle {{taps}} Tipps auf das Große Emoji",
+        "freePrestige": "{{gems}} Juwelen für jedes Prestige",
+        "tapGemCaps": "{{taps}} Tipps!",
+        "gemCaps": "Juwel",
+        "themes": {
+            "classic": "Klassisch",
+            "sunset": "Sonnenuntergang",
+            "ocean": "Ozean",
+            "forest": "Wald",
+            "candy": "Bonbon",
+            "gold": "Gold"
         }
     },
     "offline": {
@@ -340,7 +378,12 @@
         "performance": "Leistung",
         "reduceAnimations": "Animationen reduzieren",
         "reduceAnimationsHint": "Getippte Emojis fliegen nicht mehr vom Großen Emoji weg. Probier das, wenn das Tippen ruckelt.",
-        "dangerZone": "Gefahrenzone"
+        "dangerZone": "Gefahrenzone",
+        "vibration": "Vibration",
+        "vibrationHint": "Ein Summen beim Tippen, Kaufen und Feiern.",
+        "privacy": "Datenschutz",
+        "privacyChoices": "Datenschutzoptionen",
+        "privacyHint": "Lege fest, wie Werbung deine Daten nutzen darf."
     },
     "cheats": {
         "subtitle": "Zum Testen. Änderungen gelten für deinen Spielstand.",
@@ -494,6 +537,173 @@
             "price": "Preis",
             "unlocks": "Freischaltung",
             "id": "ID"
+        },
+        "loadingA11y": "Upgrades werden geladen",
+        "lockedHint": "Spiel weiter, um es freizuschalten.",
+        "unlocksLine": "Freischaltung: {{condition}}"
+    },
+    "gemButton": {
+        "confirm": "Bestätigen",
+        "confirmShort": "Kaufen?",
+        "hint": "Tippe erneut, um die Juwelen auszugeben",
+        "costA11y": "{{cost}} Juwelen",
+        "labelA11y": "{{label}}, {{cost}} Juwelen",
+        "buyNow": "Jetzt kaufen"
+    },
+    "gemPowers": {
+        "title": "Juwelenkräfte",
+        "subtitle": "Gib Juwelen für einen echten Schub aus",
+        "boostOn": "×{{multiplier}}-Boost aktiv · noch {{time}}",
+        "buttonCaps": "Boost",
+        "buttonA11y": "Juwelenkräfte öffnen",
+        "buttonActiveA11y": "Boost aktiv, noch {{time}}. Juwelenkräfte öffnen",
+        "getMoreGems": "Mehr Juwelen holen",
+        "fullCaps": "Voll",
+        "boost": {
+            "name": "×{{multiplier}}-Boost",
+            "description": "×{{multiplier}} Produktion und Tipps für {{minutes}} Minuten. Kauf erneut für mehr Zeit (bis zu {{hours}} Stunden). Läuft weiter, während du weg bist.",
+            "statusCaps": "Aktiv · noch {{time}}",
+            "buy": "Boost",
+            "extend": "+{{minutes}} Min.",
+            "a11y": "Boost kaufen"
+        },
+        "timeWarp": {
+            "name": "Zeitsprung",
+            "description": "Hol dir sofort Stunden an Produktion.",
+            "hours": "{{hours}} Std.",
+            "a11y": "{{hours}} Stunden springen"
+        },
+        "shower": {
+            "name": "Effektregen",
+            "description": "{{amount}} gute Effekt-Emojis erscheinen auf einmal. Tippe sie, bevor sie verblassen!",
+            "buy": "Rufen",
+            "a11y": "Effektregen rufen"
+        },
+        "comboKeeper": {
+            "name": "Combo-Halter",
+            "description": "Deine Combo sinkt {{minutes}} Minuten lang nicht. Tipp sie hoch und halte sie.",
+            "statusCaps": "Hält · noch {{time}}",
+            "buy": "Halten",
+            "a11y": "Combo-Halter kaufen"
+        },
+        "discovery": {
+            "name": "Entdeckung",
+            "description": "Die nächsten {{amount}} Großen Emojis sind welche, die du noch nie gefunden hast.",
+            "status": "Neue Emojis noch: {{amount}}",
+            "buy": "Entdecken",
+            "allFoundCaps": "Alle gefunden",
+            "a11y": "Entdeckungen kaufen"
+        }
+    },
+    "trophies": {
+        "unlockedCaps": "Trophäe freigeschaltet",
+        "ofTotalUnlocked": "/ {{total}} freigeschaltet",
+        "all": "Alle",
+        "hiddenHint": "Spiel weiter, um sie freizuschalten",
+        "secretHint": "Ein Geheimnis. Spiel weiter, um es zu finden",
+        "hiddenA11y": "Versteckte Trophäe, noch nicht freigeschaltet. {{hint}}",
+        "unlockedA11y": "{{name}}. {{description}}. Freigeschaltet",
+        "groups": {
+            "Emojis": "Emojis",
+            "Production": "Produktion",
+            "Tapping": "Tippen",
+            "Buildings": "Gebäude",
+            "Collection": "Sammlung",
+            "Magic": "Magie",
+            "Prestige": "Prestige",
+            "Secret": "Geheim"
+        },
+        "tiers": {
+            "hired": "Eingestellt",
+            "fifty": "Fünfzig",
+            "century": "Hundert",
+            "empire": "Imperium"
+        },
+        "names": {
+            "drawn1": "Kritzler",
+            "drawn2": "Skizzenbuch",
+            "drawn3": "Wandbild",
+            "drawn4": "Galerie",
+            "drawn5": "Meisterwerk",
+            "drawn6": "Renaissance",
+            "drawn7": "Museum von allem",
+            "drawn8": "Emoji-Kosmos",
+            "drawn9": "Endlose Leinwand",
+            "drawn10": "Nicht mehr zu zählen",
+            "drawn11": "Die letzte Seite",
+            "eps1": "Rinnsal",
+            "eps2": "Bach",
+            "eps3": "Fluss",
+            "eps4": "Sturzbach",
+            "eps5": "Ausbruch",
+            "eps6": "Meteorschauer",
+            "eps7": "Sonneneruption",
+            "eps8": "Supernova",
+            "eps9": "Ereignishorizont",
+            "taps1": "Stups",
+            "taps2": "Zappelig",
+            "taps3": "Stepptänzer",
+            "taps4": "Trommelwirbel",
+            "taps5": "Bionischer Finger",
+            "taps6": "Sehnenscheide",
+            "combo3": "Combo!",
+            "combo5": "Heiße Hände",
+            "combo8": "Supernova-Combo",
+            "tapEarnings": "Chefsache",
+            "building": "{{building}}: {{tier}}",
+            "buildings100": "Kleinbetrieb",
+            "buildings500": "Konzern",
+            "buildings1000": "Megakonzern",
+            "buildings2500": "Weltherrschaft",
+            "upgrades10": "Bastler",
+            "upgrades50": "Ingenieur",
+            "upgrades150": "Erfinder",
+            "upgrades300": "Verrückter Wissenschaftler",
+            "collected50": "Sammler",
+            "collected250": "Hamsterer",
+            "collected500": "Archivar",
+            "collected1000": "Kurator",
+            "collectedAll": "Schnapp sie dir alle",
+            "shiny1": "Oh, glänzend",
+            "shiny10": "Elster",
+            "shiny50": "Goldrausch",
+            "magic1": "Abrakadabra",
+            "magic25": "Lehrling",
+            "magic100": "Zauberer",
+            "magic500": "Erzmagier",
+            "prestige1": "Wiedergeboren",
+            "prestige5": "Und täglich grüßt",
+            "prestige10": "Wiederverwerter",
+            "prestige25": "Ewige Wiederkehr",
+            "trial": "Überlebt: {{trial}}",
+            "allPerks": "Perfekt ausgestattet",
+            "secretAnswer": "Keine Panik",
+            "secretHoarder": "Drachenhort",
+            "secretGems": "Glitzersteine"
+        },
+        "descriptions": {
+            "drawn": "Zeichne insgesamt {{amount}} Emojis",
+            "eps": "Produziere {{amount}} Emojis pro Sekunde",
+            "taps": "Tippe {{amount}}-mal auf das Große Emoji",
+            "combo": "Erreiche eine ×{{amount}}-Combo",
+            "tapEarnings": "Verdiene {{amount}} Emojis durch Tippen",
+            "buildingFirst": "Erstes Gebäude: {{buildingMid}}",
+            "buildingOwned": "Besitze {{amount}} {{buildingsMid}}",
+            "buildingsTotal": "Besitze {{amount}} Gebäude gleichzeitig",
+            "upgradesOwned": "Besitze {{amount}} Upgrades gleichzeitig",
+            "collected": "Finde {{amount}} verschiedene Emojis",
+            "collectedAll": "Finde jedes Emoji",
+            "shinyFirst": "Tippe ein glänzendes Emoji",
+            "shiny": "Tippe {{amount}} glänzende Emojis",
+            "magicFirst": "Tippe ein Effekt-Emoji",
+            "magic": "Tippe {{amount}} Effekt-Emojis",
+            "prestigeFirst": "Mach dein erstes Prestige",
+            "prestige": "Mach {{amount}}-mal Prestige",
+            "trial": "Schließe diese Prüfung ab: {{trial}}",
+            "allPerks": "Besitze jeden Perk",
+            "secretAnswer": "Spiele mit einem Spaßfaktor von {{amount}}",
+            "secretHoarder": "Hab {{amount}} Emojis auf der Bank, ohne ein Gebäude zu besitzen",
+            "secretGems": "Besitze {{amount}} Juwelen gleichzeitig"
         }
     }
 }

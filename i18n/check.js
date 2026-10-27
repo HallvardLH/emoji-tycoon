@@ -33,7 +33,8 @@ const nodePackages = ["opentype.js", "sucrase", "i18next", "intl-pluralrules", "
 const originalLoad = Module._load;
 Module._load = function (request, parent) {
     if (/redux\/reduxStore$/.test(request)) return { default: { getState: () => ({}), dispatch: () => { }, subscribe: () => () => { } } };
-    if (!request.startsWith(".") && !request.startsWith("/") && !request.startsWith("node:")
+    // Absolute paths are files too: on Windows they start with a drive letter (C:\...), not "/"
+    if (!request.startsWith(".") && !path.isAbsolute(request) && !request.startsWith("node:")
         && !nodePackages.some(name => request === name || request.startsWith(name + "/"))
         && !Module.builtinModules.includes(request)) {
         return stub;

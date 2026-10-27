@@ -7,7 +7,8 @@
         "upgrades": "อัปเกรด",
         "stats": "สถิติ",
         "collection": "คอลเลกชัน",
-        "newItemsLabel_other": "{{label}}, ใหม่ {{count}}"
+        "newItemsLabel_other": "{{label}}, ใหม่ {{count}}",
+        "trophies": "ถ้วยรางวัล"
     },
     "header": {
         "emojis": "อีโมจิ",
@@ -17,7 +18,9 @@
     },
     "common": {
         "buy": "ซื้อ",
-        "details": "ดูเพิ่ม"
+        "details": "ดูเพิ่ม",
+        "close": "ปิด",
+        "dismissHint": "ปิดการแจ้งเตือน"
     },
     "upgrades": {
         "bigEmoji": "อีโมจิยักษ์",
@@ -94,7 +97,8 @@
         "funValue": "ค่าความสนุก",
         "shinyEmojisTapped": "อีโมจิแวววาวที่แตะได้",
         "comboTaps": "จำนวนแตะคอมโบ",
-        "madeByEachBuilding": "ผลผลิตของแต่ละอาคาร"
+        "madeByEachBuilding": "ผลผลิตของแต่ละอาคาร",
+        "bestCombo": "คอมโบสูงสุด"
     },
     "drawer": {
         "language": "ภาษา",
@@ -138,7 +142,17 @@
         "chipLabel": "เอสเซนส์อีโมจิ",
         "chipLabelReady": "เพรสทีจรับเอสเซนส์อีโมจิ {{essence}}",
         "chipEssence": "เอสเซนส์",
-        "chipPending": "+{{essence}} เอสเซนส์"
+        "chipPending": "+{{essence}} เอสเซนส์",
+        "gemExtras": "ของพิเศษจากเพชร",
+        "charmName": "เครื่องรางเอสเซนส์",
+        "charmOff": "เพรสทีจครั้งถัดไปให้เอสเซนส์เพิ่ม {{percent}}",
+        "charmOn": "เปิดอยู่: เพรสทีจครั้งถัดไปให้เอสเซนส์เพิ่ม {{percent}}",
+        "charmOnAmount": "เปิดอยู่: เพรสทีจครั้งถัดไปให้เอสเซนส์เพิ่ม {{percent}} (+{{essence}} ✨)",
+        "charmA11y": "ซื้อเครื่องรางเอสเซนส์",
+        "onCaps": "เปิด",
+        "respecName": "รีเซ็ตเพิร์ก",
+        "respecDescription": "คืนเพิร์กทั้งหมดและรับเอสเซนส์ทั้งหมดกลับมา เพื่อเลือกใหม่",
+        "respecA11y": "รีเซ็ตเพิร์ก"
     },
     "numbers": {
         "groupSize": "3",
@@ -207,7 +221,8 @@
         "bulkA11yMax": "ซื้อให้มากที่สุดเท่าที่จ่ายไหว",
         "bulkA11y_other": "ซื้อครั้งละ {{count}}",
         "milestoneCaption": "อาคารใหม่",
-        "milestoneTitle": "{{building}} อันแรกของคุณ!"
+        "milestoneTitle": "{{building}} อันแรกของคุณ!",
+        "buyNowA11y": "ซื้อด้วยเพชรตอนนี้: {{name}}"
     },
     "time": {
         "seconds_other": "{{count}} วิ",
@@ -269,6 +284,29 @@
         "tags": {
             "popular": "ยอดนิยม",
             "bestValue": "คุ้มสุด"
+        },
+        "openStoreA11y": "เปิดร้านเพชร",
+        "storeCardSubtitle": "เพชร {{gems}} · บูสต์ ธีม และอื่นๆ",
+        "storeCardA11y": "ร้านเพชร คุณมีเพชร {{gems}}",
+        "skipWait": "ยังซื้ออาคารหรืออัปเกรดไม่ไหว? ซื้อเลยด้วยเพชร ประมาณ 1 เพชรต่อการรอทุก {{minutes}} นาที",
+        "themesTitle": "ธีมแอป",
+        "themesIntro": "เปลี่ยนโฉมทั้งเกม ซื้อครั้งเดียว สลับได้ตลอด",
+        "inUseCaps": "ใช้อยู่",
+        "useTheme": "ใช้",
+        "useThemeA11y": "ใช้ธีม {{theme}}",
+        "buyThemeA11y": "ซื้อธีม {{theme}}",
+        "freeTitle": "เพชรฟรี",
+        "freeTaps": "1 เพชรทุกการแตะอีโมจิยักษ์ {{taps}} ครั้ง",
+        "freePrestige": "เพชร {{gems}} ทุกครั้งที่เพรสทีจ",
+        "tapGemCaps": "แตะครบ {{taps}}!",
+        "gemCaps": "เพชร",
+        "themes": {
+            "classic": "คลาสสิก",
+            "sunset": "พระอาทิตย์ตก",
+            "ocean": "มหาสมุทร",
+            "forest": "ป่า",
+            "candy": "ลูกอม",
+            "gold": "ทอง"
         }
     },
     "offline": {
@@ -307,7 +345,12 @@
         "performance": "ประสิทธิภาพ",
         "reduceAnimations": "ลดแอนิเมชัน",
         "reduceAnimationsHint": "อีโมจิที่แตะจะไม่ลอยออกจากอีโมจิยักษ์อีก ลองเปิดถ้าแตะแล้วรู้สึกหน่วง",
-        "dangerZone": "โซนอันตราย"
+        "dangerZone": "โซนอันตราย",
+        "vibration": "การสั่น",
+        "vibrationHint": "สั่นเบาๆ เมื่อแตะ ซื้อ และฉลอง",
+        "privacy": "ความเป็นส่วนตัว",
+        "privacyChoices": "ตัวเลือกความเป็นส่วนตัว",
+        "privacyHint": "เปลี่ยนวิธีที่โฆษณาใช้ข้อมูลของคุณ"
     },
     "cheats": {
         "subtitle": "สำหรับทดสอบ การเปลี่ยนแปลงจะมีผลกับเซฟของคุณ",
@@ -442,6 +485,173 @@
             "price": "ราคา",
             "unlocks": "ปลดล็อก",
             "id": "ID"
+        },
+        "loadingA11y": "กำลังโหลดอัปเกรด",
+        "lockedHint": "เล่นต่อไปเพื่อปลดล็อก",
+        "unlocksLine": "ปลดล็อกเมื่อ: {{condition}}"
+    },
+    "gemButton": {
+        "confirm": "ยืนยัน",
+        "confirmShort": "ซื้อ?",
+        "hint": "แตะอีกครั้งเพื่อใช้เพชร",
+        "costA11y": "เพชร {{cost}}",
+        "labelA11y": "{{label}}, เพชร {{cost}}",
+        "buyNow": "ซื้อเลย"
+    },
+    "gemPowers": {
+        "title": "พลังเพชร",
+        "subtitle": "ใช้เพชรเพื่อบูสต์อย่างจริงจัง",
+        "boostOn": "บูสต์ ×{{multiplier}} เปิดอยู่ · เหลือ {{time}}",
+        "buttonCaps": "บูสต์",
+        "buttonA11y": "เปิดพลังเพชร",
+        "buttonActiveA11y": "บูสต์เปิดอยู่ เหลือ {{time}} เปิดพลังเพชร",
+        "getMoreGems": "รับเพชรเพิ่ม",
+        "fullCaps": "เต็ม",
+        "boost": {
+            "name": "บูสต์ ×{{multiplier}}",
+            "description": "ผลผลิตและการแตะ ×{{multiplier}} นาน {{minutes}} นาที ซื้อซ้ำเพื่อเพิ่มเวลา (สูงสุด {{hours}} ชั่วโมง) ทำงานต่อแม้คุณไม่อยู่",
+            "statusCaps": "เปิด · เหลือ {{time}}",
+            "buy": "บูสต์",
+            "extend": "+{{minutes}} นาที",
+            "a11y": "ซื้อบูสต์"
+        },
+        "timeWarp": {
+            "name": "วาร์ปเวลา",
+            "description": "รับผลผลิตหลายชั่วโมงทันที",
+            "hours": "{{hours}} ชม.",
+            "a11y": "วาร์ป {{hours}} ชั่วโมง"
+        },
+        "shower": {
+            "name": "ฝนเอฟเฟกต์",
+            "description": "อีโมจิเอฟเฟกต์ดีๆ {{amount}} ตัวโผล่มาพร้อมกัน แตะก่อนจะหายไป!",
+            "buy": "เรียก",
+            "a11y": "เรียกฝนเอฟเฟกต์"
+        },
+        "comboKeeper": {
+            "name": "ผู้รักษาคอมโบ",
+            "description": "คอมโบของคุณจะไม่ลดลงนาน {{minutes}} นาที แตะขึ้นไปแล้วรักษาไว้",
+            "statusCaps": "รักษาอยู่ · เหลือ {{time}}",
+            "buy": "รักษา",
+            "a11y": "ซื้อผู้รักษาคอมโบ"
+        },
+        "discovery": {
+            "name": "การค้นพบ",
+            "description": "อีโมจิยักษ์ {{amount}} ตัวถัดไปจะเป็นตัวที่คุณยังไม่เคยเจอ",
+            "status": "อีโมจิใหม่ที่กำลังมา: {{amount}}",
+            "buy": "ค้นพบ",
+            "allFoundCaps": "เจอครบแล้ว",
+            "a11y": "ซื้อการค้นพบ"
+        }
+    },
+    "trophies": {
+        "unlockedCaps": "ปลดล็อกถ้วยรางวัล",
+        "ofTotalUnlocked": "/ {{total}} ปลดล็อกแล้ว",
+        "all": "ทั้งหมด",
+        "hiddenHint": "เล่นต่อไปเพื่อปลดล็อก",
+        "secretHint": "ความลับ เล่นต่อไปเพื่อค้นหา",
+        "hiddenA11y": "ถ้วยรางวัลซ่อนอยู่ ยังไม่ปลดล็อก {{hint}}",
+        "unlockedA11y": "{{name}} {{description}} ปลดล็อกแล้ว",
+        "groups": {
+            "Emojis": "อีโมจิ",
+            "Production": "ผลผลิต",
+            "Tapping": "การแตะ",
+            "Buildings": "อาคาร",
+            "Collection": "คอลเลกชัน",
+            "Magic": "เวทมนตร์",
+            "Prestige": "เพรสทีจ",
+            "Secret": "ความลับ"
+        },
+        "tiers": {
+            "hired": "จ้างแล้ว",
+            "fifty": "ห้าสิบ",
+            "century": "ร้อย",
+            "empire": "จักรวรรดิ"
+        },
+        "names": {
+            "drawn1": "นักขีดเขียน",
+            "drawn2": "สมุดสเก็ตช์",
+            "drawn3": "จิตรกรรมฝาผนัง",
+            "drawn4": "แกลเลอรี",
+            "drawn5": "ผลงานชิ้นเอก",
+            "drawn6": "เรอเนซองส์",
+            "drawn7": "พิพิธภัณฑ์ของทุกสิ่ง",
+            "drawn8": "จักรวาลอีโมจิ",
+            "drawn9": "ผืนผ้าใบไร้ขอบเขต",
+            "drawn10": "เกินจะนับ",
+            "drawn11": "หน้าสุดท้าย",
+            "eps1": "หยดเล็กๆ",
+            "eps2": "ลำธาร",
+            "eps3": "แม่น้ำ",
+            "eps4": "กระแสเชี่ยว",
+            "eps5": "ปะทุ",
+            "eps6": "ฝนดาวตก",
+            "eps7": "เปลวสุริยะ",
+            "eps8": "ซูเปอร์โนวา",
+            "eps9": "ขอบฟ้าเหตุการณ์",
+            "taps1": "จิ้ม",
+            "taps2": "มืออยู่ไม่สุข",
+            "taps3": "นักเต้นแท็ป",
+            "taps4": "รัวกลอง",
+            "taps5": "นิ้วไบโอนิก",
+            "taps6": "ข้อมืออักเสบ",
+            "combo3": "คอมโบ!",
+            "combo5": "มือร้อน",
+            "combo8": "คอมโบซูเปอร์โนวา",
+            "tapEarnings": "ลงมือเอง",
+            "building": "{{building}}: {{tier}}",
+            "buildings100": "ธุรกิจเล็ก",
+            "buildings500": "กลุ่มบริษัท",
+            "buildings1000": "เมกะคอร์ป",
+            "buildings2500": "ครองโลก",
+            "upgrades10": "นักซ่อม",
+            "upgrades50": "วิศวกร",
+            "upgrades150": "นักประดิษฐ์",
+            "upgrades300": "นักวิทยาศาสตร์สติเฟื่อง",
+            "collected50": "นักสะสม",
+            "collected250": "นักกักตุน",
+            "collected500": "บรรณารักษ์",
+            "collected1000": "ภัณฑารักษ์",
+            "collectedAll": "แตะให้ครบทุกตัว",
+            "shiny1": "ว้าว แวววาว",
+            "shiny10": "นกกางเขนชอบของวาว",
+            "shiny50": "ตื่นทอง",
+            "magic1": "อะบราคาดาบรา",
+            "magic25": "ศิษย์ฝึกหัด",
+            "magic100": "พ่อมด",
+            "magic500": "จอมเวท",
+            "prestige1": "เกิดใหม่",
+            "prestige5": "วันซ้ำซาก",
+            "prestige10": "นักรีไซเคิล",
+            "prestige25": "การกลับมาชั่วนิรันดร์",
+            "trial": "ผู้รอดชีวิต: {{trial}}",
+            "allPerks": "เพิร์กครบชุด",
+            "secretAnswer": "อย่าตื่นตกใจ",
+            "secretHoarder": "สมบัติมังกร",
+            "secretGems": "ก้อนหินแวววาว"
+        },
+        "descriptions": {
+            "drawn": "วาดอีโมจิรวม {{amount}} ตัว",
+            "eps": "ผลิตอีโมจิ {{amount}} ตัวต่อวินาที",
+            "taps": "แตะอีโมจิยักษ์ {{amount}} ครั้ง",
+            "combo": "ทำคอมโบ ×{{amount}}",
+            "tapEarnings": "ได้อีโมจิ {{amount}} ตัวจากการแตะ",
+            "buildingFirst": "อาคารแรก: {{buildingMid}}",
+            "buildingOwned": "{{buildingsMid}}: มี {{amount}}",
+            "buildingsTotal": "มีอาคาร {{amount}} หลังพร้อมกัน",
+            "upgradesOwned": "มีอัปเกรด {{amount}} รายการพร้อมกัน",
+            "collected": "ค้นพบอีโมจิต่างกัน {{amount}} ตัว",
+            "collectedAll": "ค้นพบอีโมจิทุกตัว",
+            "shinyFirst": "แตะอีโมจิแวววาว",
+            "shiny": "แตะอีโมจิแวววาว {{amount}} ตัว",
+            "magicFirst": "แตะอีโมจิเอฟเฟกต์",
+            "magic": "แตะอีโมจิเอฟเฟกต์ {{amount}} ตัว",
+            "prestigeFirst": "เพรสทีจครั้งแรก",
+            "prestige": "เพรสทีจ {{amount}} ครั้ง",
+            "trial": "ผ่านบททดสอบ: {{trial}}",
+            "allPerks": "มีเพิร์กครบทุกตัว",
+            "secretAnswer": "เล่นด้วยค่าความสนุก {{amount}}",
+            "secretHoarder": "มีอีโมจิ {{amount}} ในคลังโดยไม่มีอาคารสักหลัง",
+            "secretGems": "มีเพชร {{amount}} พร้อมกัน"
         }
     }
 }

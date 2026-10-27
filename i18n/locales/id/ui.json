@@ -7,7 +7,8 @@
         "upgrades": "Upgrade",
         "stats": "Statistik",
         "collection": "Koleksi",
-        "newItemsLabel_other": "{{label}}, {{count}} baru"
+        "newItemsLabel_other": "{{label}}, {{count}} baru",
+        "trophies": "Trofi"
     },
     "header": {
         "emojis": "Emoji",
@@ -17,7 +18,9 @@
     },
     "common": {
         "buy": "Beli",
-        "details": "Detail"
+        "details": "Detail",
+        "close": "Tutup",
+        "dismissHint": "Menutup notifikasi"
     },
     "upgrades": {
         "bigEmoji": "Emoji besar",
@@ -94,7 +97,8 @@
         "funValue": "Nilai seru",
         "shinyEmojisTapped": "Emoji berkilau diketuk",
         "comboTaps": "Ketukan kombo",
-        "madeByEachBuilding": "Hasil tiap bangunan"
+        "madeByEachBuilding": "Hasil tiap bangunan",
+        "bestCombo": "Kombo terbaik"
     },
     "drawer": {
         "language": "Bahasa",
@@ -138,7 +142,17 @@
         "chipLabel": "Esensi emoji",
         "chipLabelReady": "Prestise untuk {{essence}} esensi emoji",
         "chipEssence": "Esensi",
-        "chipPending": "+{{essence}} esensi"
+        "chipPending": "+{{essence}} esensi",
+        "gemExtras": "Ekstra permata",
+        "charmName": "Jimat esensi",
+        "charmOff": "Prestise berikutnya memberi {{percent}} lebih banyak esensi.",
+        "charmOn": "Aktif: prestise berikutnya memberi {{percent}} lebih banyak esensi.",
+        "charmOnAmount": "Aktif: prestise berikutnya memberi {{percent}} lebih banyak esensi (+{{essence}} ✨).",
+        "charmA11y": "Beli jimat esensi",
+        "onCaps": "Aktif",
+        "respecName": "Atur ulang perk",
+        "respecDescription": "Ambil kembali semua perk dan dapatkan lagi semua esensinya untuk memilih ulang.",
+        "respecA11y": "Atur ulang perk"
     },
     "numbers": {
         "groupSize": "3",
@@ -207,7 +221,8 @@
         "bulkA11yMax": "Beli sebanyak yang kamu mampu",
         "bulkA11y_other": "Beli {{count}} sekaligus",
         "milestoneCaption": "BANGUNAN BARU",
-        "milestoneTitle": "{{building}} pertamamu!"
+        "milestoneTitle": "{{building}} pertamamu!",
+        "buyNowA11y": "Beli {{name}} sekarang dengan permata"
     },
     "time": {
         "seconds_other": "{{count}}d",
@@ -269,6 +284,29 @@
         "tags": {
             "popular": "POPULER",
             "bestValue": "PALING HEMAT"
+        },
+        "openStoreA11y": "Buka toko permata",
+        "storeCardSubtitle": "{{gems}} permata · boost, tema, dan lainnya",
+        "storeCardA11y": "Toko permata. Kamu punya {{gems}} permata",
+        "skipWait": "Belum cukup untuk bangunan atau peningkatan? Beli sekarang dengan permata, sekitar 1 permata per {{minutes}} menit menunggu.",
+        "themesTitle": "Tema aplikasi",
+        "themesIntro": "Ubah tampilan seluruh game. Beli sekali, ganti kapan saja.",
+        "inUseCaps": "Dipakai",
+        "useTheme": "Pakai",
+        "useThemeA11y": "Pakai tema {{theme}}",
+        "buyThemeA11y": "Beli tema {{theme}}",
+        "freeTitle": "Permata gratis",
+        "freeTaps": "1 permata setiap {{taps}} ketukan emoji besar",
+        "freePrestige": "{{gems}} permata setiap prestise",
+        "tapGemCaps": "{{taps}} ketukan!",
+        "gemCaps": "Permata",
+        "themes": {
+            "classic": "Klasik",
+            "sunset": "Senja",
+            "ocean": "Samudra",
+            "forest": "Hutan",
+            "candy": "Permen",
+            "gold": "Emas"
         }
     },
     "offline": {
@@ -307,7 +345,12 @@
         "performance": "Performa",
         "reduceAnimations": "Kurangi animasi",
         "reduceAnimationsHint": "Emoji yang diketuk tidak lagi terlempar dari Emoji besar. Coba ini kalau ketukan terasa lag.",
-        "dangerZone": "Zona bahaya"
+        "dangerZone": "Zona bahaya",
+        "vibration": "Getaran",
+        "vibrationHint": "Getaran kecil saat kamu mengetuk, membeli, dan merayakan.",
+        "privacy": "Privasi",
+        "privacyChoices": "Pilihan privasi",
+        "privacyHint": "Ubah cara iklan boleh memakai datamu."
     },
     "cheats": {
         "subtitle": "Untuk pengujian. Perubahan berlaku pada simpananmu.",
@@ -442,6 +485,173 @@
             "price": "HARGA",
             "unlocks": "TERBUKA",
             "id": "ID"
+        },
+        "loadingA11y": "Memuat peningkatan",
+        "lockedHint": "Terus bermain untuk membukanya.",
+        "unlocksLine": "Terbuka: {{condition}}"
+    },
+    "gemButton": {
+        "confirm": "Konfirmasi",
+        "confirmShort": "Beli?",
+        "hint": "Ketuk lagi untuk memakai permata",
+        "costA11y": "{{cost}} permata",
+        "labelA11y": "{{label}}, {{cost}} permata",
+        "buyNow": "Beli sekarang"
+    },
+    "gemPowers": {
+        "title": "Kekuatan permata",
+        "subtitle": "Pakai permata untuk dorongan nyata",
+        "boostOn": "Boost ×{{multiplier}} aktif · sisa {{time}}",
+        "buttonCaps": "Boost",
+        "buttonA11y": "Buka kekuatan permata",
+        "buttonActiveA11y": "Boost aktif, sisa {{time}}. Buka kekuatan permata",
+        "getMoreGems": "Dapatkan permata lagi",
+        "fullCaps": "Penuh",
+        "boost": {
+            "name": "Boost ×{{multiplier}}",
+            "description": "Produksi dan ketukan ×{{multiplier}} selama {{minutes}} menit. Beli lagi untuk menambah waktu (hingga {{hours}} jam). Tetap jalan saat kamu pergi.",
+            "statusCaps": "Aktif · sisa {{time}}",
+            "buy": "Boost",
+            "extend": "+{{minutes}} mnt",
+            "a11y": "Beli boost"
+        },
+        "timeWarp": {
+            "name": "Lompatan waktu",
+            "description": "Dapatkan produksi berjam-jam sekarang juga.",
+            "hours": "{{hours}} jam",
+            "a11y": "Lompat {{hours}} jam"
+        },
+        "shower": {
+            "name": "Hujan efek",
+            "description": "{{amount}} emoji efek bagus muncul sekaligus. Ketuk sebelum menghilang!",
+            "buy": "Panggil",
+            "a11y": "Panggil hujan efek"
+        },
+        "comboKeeper": {
+            "name": "Penjaga kombo",
+            "description": "Kombomu tidak turun selama {{minutes}} menit. Naikkan, lalu pertahankan.",
+            "statusCaps": "Menahan · sisa {{time}}",
+            "buy": "Tahan",
+            "a11y": "Beli penjaga kombo"
+        },
+        "discovery": {
+            "name": "Penemuan",
+            "description": "{{amount}} emoji besar berikutnya adalah emoji yang belum pernah kamu temukan.",
+            "status": "Emoji baru menyusul: {{amount}}",
+            "buy": "Temukan",
+            "allFoundCaps": "Semua ditemukan",
+            "a11y": "Beli penemuan"
+        }
+    },
+    "trophies": {
+        "unlockedCaps": "Trofi terbuka",
+        "ofTotalUnlocked": "/ {{total}} terbuka",
+        "all": "Semua",
+        "hiddenHint": "Terus bermain untuk membukanya",
+        "secretHint": "Sebuah rahasia. Terus bermain untuk menemukannya",
+        "hiddenA11y": "Trofi tersembunyi, belum terbuka. {{hint}}",
+        "unlockedA11y": "{{name}}. {{description}}. Terbuka",
+        "groups": {
+            "Emojis": "Emoji",
+            "Production": "Produksi",
+            "Tapping": "Ketukan",
+            "Buildings": "Bangunan",
+            "Collection": "Koleksi",
+            "Magic": "Sihir",
+            "Prestige": "Prestise",
+            "Secret": "Rahasia"
+        },
+        "tiers": {
+            "hired": "Direkrut",
+            "fifty": "Lima puluh",
+            "century": "Seratus",
+            "empire": "Kekaisaran"
+        },
+        "names": {
+            "drawn1": "Pencoret",
+            "drawn2": "Buku sketsa",
+            "drawn3": "Mural",
+            "drawn4": "Galeri",
+            "drawn5": "Mahakarya",
+            "drawn6": "Renaisans",
+            "drawn7": "Museum segalanya",
+            "drawn8": "Kosmos emoji",
+            "drawn9": "Kanvas tanpa batas",
+            "drawn10": "Tak terhitung",
+            "drawn11": "Halaman terakhir",
+            "eps1": "Tetesan",
+            "eps2": "Aliran",
+            "eps3": "Sungai",
+            "eps4": "Arus deras",
+            "eps5": "Letusan",
+            "eps6": "Hujan meteor",
+            "eps7": "Suar matahari",
+            "eps8": "Supernova",
+            "eps9": "Cakrawala peristiwa",
+            "taps1": "Colek",
+            "taps2": "Gelisah",
+            "taps3": "Penari tap",
+            "taps4": "Gebukan drum",
+            "taps5": "Jari bionik",
+            "taps6": "Pegal pergelangan",
+            "combo3": "Kombo!",
+            "combo5": "Tangan panas",
+            "combo8": "Kombo supernova",
+            "tapEarnings": "Bos turun tangan",
+            "building": "{{building}}: {{tier}}",
+            "buildings100": "Usaha kecil",
+            "buildings500": "Konglomerat",
+            "buildings1000": "Megakorporasi",
+            "buildings2500": "Menguasai dunia",
+            "upgrades10": "Tukang oprek",
+            "upgrades50": "Insinyur",
+            "upgrades150": "Penemu",
+            "upgrades300": "Ilmuwan gila",
+            "collected50": "Kolektor",
+            "collected250": "Penimbun",
+            "collected500": "Arsiparis",
+            "collected1000": "Kurator",
+            "collectedAll": "Ketuk semuanya",
+            "shiny1": "Wah, berkilau",
+            "shiny10": "Burung murai",
+            "shiny50": "Demam emas",
+            "magic1": "Abrakadabra",
+            "magic25": "Murid",
+            "magic100": "Penyihir",
+            "magic500": "Penyihir agung",
+            "prestige1": "Terlahir kembali",
+            "prestige5": "Hari yang berulang",
+            "prestige10": "Pendaur ulang",
+            "prestige25": "Kembali abadi",
+            "trial": "Penyintas: {{trial}}",
+            "allPerks": "Perk lengkap",
+            "secretAnswer": "Jangan panik",
+            "secretHoarder": "Harta naga",
+            "secretGems": "Batu berkilau"
+        },
+        "descriptions": {
+            "drawn": "Gambar total {{amount}} emoji",
+            "eps": "Hasilkan {{amount}} emoji per detik",
+            "taps": "Ketuk emoji besar {{amount}} kali",
+            "combo": "Capai kombo ×{{amount}}",
+            "tapEarnings": "Dapatkan {{amount}} emoji dari mengetuk",
+            "buildingFirst": "Bangunan pertama: {{buildingMid}}",
+            "buildingOwned": "Punya {{amount}} {{buildingsMid}}",
+            "buildingsTotal": "Punya {{amount}} bangunan sekaligus",
+            "upgradesOwned": "Punya {{amount}} peningkatan sekaligus",
+            "collected": "Temukan {{amount}} emoji berbeda",
+            "collectedAll": "Temukan semua emoji",
+            "shinyFirst": "Ketuk emoji berkilau",
+            "shiny": "Ketuk {{amount}} emoji berkilau",
+            "magicFirst": "Ketuk emoji efek",
+            "magic": "Ketuk {{amount}} emoji efek",
+            "prestigeFirst": "Lakukan prestise pertamamu",
+            "prestige": "Lakukan prestise {{amount}} kali",
+            "trial": "Selesaikan tantangan: {{trial}}",
+            "allPerks": "Punya semua perk",
+            "secretAnswer": "Main dengan nilai seru {{amount}}",
+            "secretHoarder": "Punya {{amount}} emoji di bank tanpa punya bangunan",
+            "secretGems": "Punya {{amount}} permata sekaligus"
         }
     }
 }

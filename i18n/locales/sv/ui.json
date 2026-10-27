@@ -8,7 +8,8 @@
         "stats": "Statistik",
         "collection": "Samling",
         "newItemsLabel_one": "{{label}}, {{count}} ny",
-        "newItemsLabel_other": "{{label}}, {{count}} nya"
+        "newItemsLabel_other": "{{label}}, {{count}} nya",
+        "trophies": "Troféer"
     },
     "header": {
         "emojis": "Emojis",
@@ -19,7 +20,9 @@
     },
     "common": {
         "buy": "Köp",
-        "details": "Detaljer"
+        "details": "Detaljer",
+        "close": "Stäng",
+        "dismissHint": "Stänger aviseringen"
     },
     "upgrades": {
         "bigEmoji": "Stora emojin",
@@ -96,7 +99,8 @@
         "funValue": "Kul-värde",
         "shinyEmojisTapped": "Glänsande emojis tryckta",
         "comboTaps": "Kombotryck",
-        "madeByEachBuilding": "Gjort av varje byggnad"
+        "madeByEachBuilding": "Gjort av varje byggnad",
+        "bestCombo": "Bästa kombo"
     },
     "drawer": {
         "language": "Språk",
@@ -142,7 +146,17 @@
         "chipLabel": "Emojiessens",
         "chipLabelReady": "Prestige för {{essence}} emojiessens",
         "chipEssence": "Essens",
-        "chipPending": "+{{essence}} essens"
+        "chipPending": "+{{essence}} essens",
+        "gemExtras": "Juvelextra",
+        "charmName": "Essensamulett",
+        "charmOff": "Din nästa prestige ger {{percent}} mer essens.",
+        "charmOn": "På: din nästa prestige ger {{percent}} mer essens.",
+        "charmOnAmount": "På: din nästa prestige ger {{percent}} mer essens (+{{essence}} ✨).",
+        "charmA11y": "Köp essensamuletten",
+        "onCaps": "På",
+        "respecName": "Återställ förmåner",
+        "respecDescription": "Ta tillbaka alla förmåner och få tillbaka all deras essens, så att du kan välja igen.",
+        "respecA11y": "Återställ förmåner"
     },
     "numbers": {
         "groupSize": "3",
@@ -234,7 +248,8 @@
         "bulkA11y_one": "Köp {{count}} åt gången",
         "bulkA11y_other": "Köp {{count}} åt gången",
         "milestoneCaption": "NY BYGGNAD",
-        "milestoneTitle": "Välkommen, {{building}}!"
+        "milestoneTitle": "Välkommen, {{building}}!",
+        "buyNowA11y": "Köp {{name}} nu med juveler"
     },
     "time": {
         "seconds_one": "{{count}}s",
@@ -303,6 +318,29 @@
         "tags": {
             "popular": "POPULÄR",
             "bestValue": "BÄST VÄRDE"
+        },
+        "openStoreA11y": "Öppna juvelbutiken",
+        "storeCardSubtitle": "{{gems}} juveler · boostar, teman och mer",
+        "storeCardA11y": "Juvelbutik. Du har {{gems}} juveler",
+        "skipWait": "Har du inte råd med en byggnad eller uppgradering än? Köp den nu med juveler, ungefär 1 juvel per {{minutes}} minuters väntan.",
+        "themesTitle": "Appteman",
+        "themesIntro": "Ge hela spelet ett nytt utseende. Köp en gång, byt när du vill.",
+        "inUseCaps": "Används",
+        "useTheme": "Använd",
+        "useThemeA11y": "Använd temat {{theme}}",
+        "buyThemeA11y": "Köp temat {{theme}}",
+        "freeTitle": "Gratis juveler",
+        "freeTaps": "1 juvel per {{taps}} tryck på stora emojin",
+        "freePrestige": "{{gems}} juveler för varje prestige",
+        "tapGemCaps": "{{taps}} tryck!",
+        "gemCaps": "Juvel",
+        "themes": {
+            "classic": "Klassisk",
+            "sunset": "Solnedgång",
+            "ocean": "Hav",
+            "forest": "Skog",
+            "candy": "Godis",
+            "gold": "Guld"
         }
     },
     "offline": {
@@ -341,7 +379,12 @@
         "performance": "Prestanda",
         "reduceAnimations": "Minska animationer",
         "reduceAnimationsHint": "Tryckta emojis flyger inte längre iväg från Stora emojin. Testa detta om trycken känns sega.",
-        "dangerZone": "Farozon"
+        "dangerZone": "Farozon",
+        "vibration": "Vibration",
+        "vibrationHint": "Ett surr när du trycker, köper och firar.",
+        "privacy": "Integritet",
+        "privacyChoices": "Integritetsval",
+        "privacyHint": "Ändra hur annonser får använda dina data."
     },
     "cheats": {
         "subtitle": "För testning. Ändringarna sparas i ditt spel.",
@@ -495,6 +538,173 @@
             "price": "PRIS",
             "unlocks": "LÅSER UPP",
             "id": "ID"
+        },
+        "loadingA11y": "Laddar uppgraderingar",
+        "lockedHint": "Fortsätt spela för att låsa upp den.",
+        "unlocksLine": "Låses upp: {{condition}}"
+    },
+    "gemButton": {
+        "confirm": "Bekräfta",
+        "confirmShort": "Köpa?",
+        "hint": "Tryck igen för att använda juvelerna",
+        "costA11y": "{{cost}} juveler",
+        "labelA11y": "{{label}}, {{cost}} juveler",
+        "buyNow": "Köp nu"
+    },
+    "gemPowers": {
+        "title": "Juvelkrafter",
+        "subtitle": "Använd juveler för en rejäl boost",
+        "boostOn": "×{{multiplier}}-boost på · {{time}} kvar",
+        "buttonCaps": "Boost",
+        "buttonA11y": "Öppna juvelkrafter",
+        "buttonActiveA11y": "Boost på, {{time}} kvar. Öppna juvelkrafter",
+        "getMoreGems": "Skaffa fler juveler",
+        "fullCaps": "Fullt",
+        "boost": {
+            "name": "×{{multiplier}}-boost",
+            "description": "×{{multiplier}} produktion och tryck i {{minutes}} minuter. Köp igen för mer tid (upp till {{hours}} timmar). Fortsätter medan du är borta.",
+            "statusCaps": "På · {{time}} kvar",
+            "buy": "Boosta",
+            "extend": "+{{minutes}} min",
+            "a11y": "Köp boosten"
+        },
+        "timeWarp": {
+            "name": "Tidshopp",
+            "description": "Få flera timmars produktion direkt.",
+            "hours": "{{hours}} h",
+            "a11y": "Hoppa {{hours}} timmar"
+        },
+        "shower": {
+            "name": "Effektregn",
+            "description": "{{amount}} bra effektemojis dyker upp samtidigt. Tryck på dem innan de bleknar!",
+            "buy": "Frammana",
+            "a11y": "Frammana ett effektregn"
+        },
+        "comboKeeper": {
+            "name": "Kombovakt",
+            "description": "Din kombo sjunker inte på {{minutes}} minuter. Tryck upp den och håll den.",
+            "statusCaps": "Håller · {{time}} kvar",
+            "buy": "Håll",
+            "a11y": "Köp kombovakten"
+        },
+        "discovery": {
+            "name": "Upptäckt",
+            "description": "De nästa {{amount}} stora emojisarna är sådana du aldrig hittat.",
+            "status": "Nya emojis på väg: {{amount}}",
+            "buy": "Upptäck",
+            "allFoundCaps": "Alla hittade",
+            "a11y": "Köp upptäckter"
+        }
+    },
+    "trophies": {
+        "unlockedCaps": "Trofé upplåst",
+        "ofTotalUnlocked": "/ {{total}} upplåsta",
+        "all": "Alla",
+        "hiddenHint": "Fortsätt spela för att låsa upp den",
+        "secretHint": "En hemlighet. Fortsätt spela för att hitta den",
+        "hiddenA11y": "Dold trofé, inte upplåst än. {{hint}}",
+        "unlockedA11y": "{{name}}. {{description}}. Upplåst",
+        "groups": {
+            "Emojis": "Emojis",
+            "Production": "Produktion",
+            "Tapping": "Tryckande",
+            "Buildings": "Byggnader",
+            "Collection": "Samling",
+            "Magic": "Magi",
+            "Prestige": "Prestige",
+            "Secret": "Hemligt"
+        },
+        "tiers": {
+            "hired": "Anställd",
+            "fifty": "Femtio",
+            "century": "Hundra",
+            "empire": "Imperium"
+        },
+        "names": {
+            "drawn1": "Klottrare",
+            "drawn2": "Skissbok",
+            "drawn3": "Väggmålning",
+            "drawn4": "Galleri",
+            "drawn5": "Mästerverk",
+            "drawn6": "Renässans",
+            "drawn7": "Museum över allt",
+            "drawn8": "Emojikosmos",
+            "drawn9": "Oändlig duk",
+            "drawn10": "Bortom all räkning",
+            "drawn11": "Sista sidan",
+            "eps1": "Sipprande",
+            "eps2": "Bäck",
+            "eps3": "Flod",
+            "eps4": "Fors",
+            "eps5": "Utbrott",
+            "eps6": "Meteorregn",
+            "eps7": "Solflare",
+            "eps8": "Supernova",
+            "eps9": "Händelsehorisont",
+            "taps1": "Peta",
+            "taps2": "Fipplare",
+            "taps3": "Steppdansare",
+            "taps4": "Trumvirvel",
+            "taps5": "Bionisk finger",
+            "taps6": "Musarm",
+            "combo3": "Kombo!",
+            "combo5": "Heta händer",
+            "combo8": "Supernovakombo",
+            "tapEarnings": "Praktiskt ledarskap",
+            "building": "{{building}}: {{tier}}",
+            "buildings100": "Småföretag",
+            "buildings500": "Konglomerat",
+            "buildings1000": "Megakoncern",
+            "buildings2500": "Världsherravälde",
+            "upgrades10": "Mekare",
+            "upgrades50": "Ingenjör",
+            "upgrades150": "Uppfinnare",
+            "upgrades300": "Galen vetenskapsman",
+            "collected50": "Samlare",
+            "collected250": "Hamstrare",
+            "collected500": "Arkivarie",
+            "collected1000": "Intendent",
+            "collectedAll": "Tryck på dem alla",
+            "shiny1": "Oj, glänsande",
+            "shiny10": "Skata",
+            "shiny50": "Guldrusch",
+            "magic1": "Abrakadabra",
+            "magic25": "Lärling",
+            "magic100": "Trollkarl",
+            "magic500": "Ärkemagiker",
+            "prestige1": "Pånyttfödd",
+            "prestige5": "Måndag hela veckan",
+            "prestige10": "Återvinnare",
+            "prestige25": "Evig återkomst",
+            "trial": "Överlevde: {{trial}}",
+            "allPerks": "Fullt utrustad",
+            "secretAnswer": "Ingen panik",
+            "secretHoarder": "Drakens skatt",
+            "secretGems": "Glänsande stenar"
+        },
+        "descriptions": {
+            "drawn": "Rita {{amount}} emojis totalt",
+            "eps": "Gör {{amount}} emojis per sekund",
+            "taps": "Tryck på stora emojin {{amount}} gånger",
+            "combo": "Nå en ×{{amount}}-kombo",
+            "tapEarnings": "Tjäna {{amount}} emojis genom att trycka",
+            "buildingFirst": "Första byggnaden: {{buildingMid}}",
+            "buildingOwned": "Äg {{amount}} {{buildingsMid}}",
+            "buildingsTotal": "Äg {{amount}} byggnader samtidigt",
+            "upgradesOwned": "Äg {{amount}} uppgraderingar samtidigt",
+            "collected": "Hitta {{amount}} olika emojis",
+            "collectedAll": "Hitta alla emojis",
+            "shinyFirst": "Tryck på en glänsande emoji",
+            "shiny": "Tryck på {{amount}} glänsande emojis",
+            "magicFirst": "Tryck på en effektemoji",
+            "magic": "Tryck på {{amount}} effektemojis",
+            "prestigeFirst": "Gör prestige för första gången",
+            "prestige": "Gör prestige {{amount}} gånger",
+            "trial": "Klara utmaningen: {{trial}}",
+            "allPerks": "Äg alla förmåner",
+            "secretAnswer": "Spela med kul-värdet {{amount}}",
+            "secretHoarder": "Ha {{amount}} emojis på banken utan att äga en enda byggnad",
+            "secretGems": "Ha {{amount}} juveler samtidigt"
         }
     }
 }

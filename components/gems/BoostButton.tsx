@@ -10,6 +10,8 @@ import ChunkyButton from "../generalUI/ChunkyButton";
 import { boostSecondsLeft, formatCountdown, BOOST_MULTIPLIER } from "../../scripts/game/gems/boost";
 import { formatNumber } from "../../scripts/misc";
 import { palette, radii, themedStyles } from "../misc/theme";
+import { useTranslation } from "react-i18next";
+import { toCaps } from "../../scripts/utils";
 
 /**
  * The gem powers button, bottom left of the Big Emoji. Shows the boost counting down
@@ -17,6 +19,7 @@ import { palette, radii, themedStyles } from "../misc/theme";
  * rest of the game around the Big Emoji
  */
 export default function BoostButton() {
+    const { t } = useTranslation();
     const show = useSelector((state: RootState) =>
         state.prestige.prestiges > 0 || state.buildings.buildings.some(building => building.amount > 0));
     const gems = useSelector((state: RootState) => state.gems.gems);
@@ -53,13 +56,13 @@ export default function BoostButton() {
             <Pressable
                 onPress={() => setOpen(true)}
                 accessibilityRole="button"
-                accessibilityLabel={active ? `Boost on, ${formatCountdown(secondsLeft)} left. Open gem powers` : "Open gem powers"}
+                accessibilityLabel={active ? t("gemPowers.buttonActiveA11y", { time: formatCountdown(secondsLeft) }) : t("gemPowers.buttonA11y")}
                 style={({ pressed }) => [styles.button, active ? styles.buttonActive : null, pressed ? { transform: [{ scale: 0.94 }] } : null]}
             >
                 {active && <Animated.View pointerEvents="none" style={[styles.glow, { opacity: glow }]} />}
                 <Text size={24} style={{ lineHeight: 28 }}>{active ? "⚡" : "💎"}</Text>
                 <Text font="black" size={10} color={active ? palette.sun : palette.lilac} style={{ letterSpacing: 0.6 }}>
-                    {active ? formatCountdown(secondsLeft) : "BOOST"}
+                    {active ? formatCountdown(secondsLeft) : toCaps(t("gemPowers.buttonCaps"))}
                 </Text>
             </Pressable>
 
@@ -67,15 +70,15 @@ export default function BoostButton() {
                 <View style={styles.sheet}>
                     <View style={styles.sheetHead}>
                         <View style={{ flex: 1 }}>
-                            <Text size={24} style={{ lineHeight: 30 }}>Gem powers</Text>
+                            <Text size={24} style={{ lineHeight: 30 }}>{t("gemPowers.title")}</Text>
                             <Text font="bold" size={13} color={palette.lilac}>
-                                {active ? `×${BOOST_MULTIPLIER} boost on · ${formatCountdown(secondsLeft)} left` : "Spend gems for a real boost"}
+                                {active ? t("gemPowers.boostOn", { multiplier: BOOST_MULTIPLIER, time: formatCountdown(secondsLeft) }) : t("gemPowers.subtitle")}
                             </Text>
                         </View>
                         <Pressable
                             onPress={() => { setOpen(false); router.push("/gems"); }}
                             accessibilityRole="button"
-                            accessibilityLabel={`${gems} gems. Open the gem store`}
+                            accessibilityLabel={t("header.gemsLabel", { count: gems, gems: formatNumber(gems) })}
                             style={({ pressed }) => [styles.gemPill, pressed ? { opacity: 0.8 } : null]}
                         >
                             <Text font="black" size={14} color="#FFFFFF">💎 {formatNumber(gems)} +</Text>
@@ -87,7 +90,7 @@ export default function BoostButton() {
                     <ChunkyButton
                         height={50}
                         labelSize={17}
-                        label="💎 Get more gems"
+                        label={`💎 ${t("gemPowers.getMoreGems")}`}
                         onPress={() => { setOpen(false); router.push("/gems"); }}
                     />
                 </View>

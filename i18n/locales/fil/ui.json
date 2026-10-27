@@ -8,7 +8,8 @@
         "stats": "Stats",
         "collection": "Koleksiyon",
         "newItemsLabel_one": "{{label}}, {{count}} bago",
-        "newItemsLabel_other": "{{label}}, {{count}} bago"
+        "newItemsLabel_other": "{{label}}, {{count}} bago",
+        "trophies": "Mga tropeo"
     },
     "header": {
         "emojis": "Emoji",
@@ -19,7 +20,9 @@
     },
     "common": {
         "buy": "Bilhin",
-        "details": "Detalye"
+        "details": "Detalye",
+        "close": "Isara",
+        "dismissHint": "Isinasara ang abiso"
     },
     "upgrades": {
         "bigEmoji": "Malaking emoji",
@@ -96,7 +99,8 @@
         "funValue": "Fun value",
         "shinyEmojisTapped": "Makintab na emoji na na-tap",
         "comboTaps": "Mga combo tap",
-        "madeByEachBuilding": "Gawa ng bawat gusali"
+        "madeByEachBuilding": "Gawa ng bawat gusali",
+        "bestCombo": "Pinakamataas na combo"
     },
     "drawer": {
         "language": "Wika",
@@ -142,7 +146,17 @@
         "chipLabel": "Emoji esensiya",
         "chipLabelReady": "Mag-prestige para sa {{essence}} emoji esensiya",
         "chipEssence": "Esensiya",
-        "chipPending": "+{{essence}} esensiya"
+        "chipPending": "+{{essence}} esensiya",
+        "gemExtras": "Mga extra sa gem",
+        "charmName": "Anting ng esensiya",
+        "charmOff": "Ang susunod mong prestige ay magbibigay ng {{percent}} na dagdag na esensiya.",
+        "charmOn": "Bukas: ang susunod mong prestige ay magbibigay ng {{percent}} na dagdag na esensiya.",
+        "charmOnAmount": "Bukas: ang susunod mong prestige ay magbibigay ng {{percent}} na dagdag na esensiya (+{{essence}} ✨).",
+        "charmA11y": "Bilhin ang anting ng esensiya",
+        "onCaps": "Bukas",
+        "respecName": "I-reset ang perks",
+        "respecDescription": "Bawiin ang lahat ng perks at makuha ulit ang lahat ng esensiya nila para pumili ulit.",
+        "respecA11y": "I-reset ang perks"
     },
     "numbers": {
         "groupSize": "3",
@@ -234,7 +248,8 @@
         "bulkA11y_one": "Bumili ng {{count}} kada bili",
         "bulkA11y_other": "Bumili ng {{count}} kada bili",
         "milestoneCaption": "Bagong gusali",
-        "milestoneTitle": "Ang una mong {{building}}!"
+        "milestoneTitle": "Ang una mong {{building}}!",
+        "buyNowA11y": "Bilhin na ang {{name}} gamit ang gem"
     },
     "time": {
         "seconds_one": "{{count}} seg",
@@ -303,6 +318,29 @@
         "tags": {
             "popular": "Patok",
             "bestValue": "Pinakasulit"
+        },
+        "openStoreA11y": "Buksan ang tindahan ng gem",
+        "storeCardSubtitle": "{{gems}} gem · boost, tema, at iba pa",
+        "storeCardA11y": "Tindahan ng gem. May {{gems}} gem ka",
+        "skipWait": "Hindi pa kaya ang isang building o upgrade? Bilhin na gamit ang gem, mga 1 gem sa bawat {{minutes}} minutong paghihintay.",
+        "themesTitle": "Mga tema ng app",
+        "themesIntro": "Bigyan ng bagong itsura ang buong laro. Bilhin minsan, palitan kahit kailan.",
+        "inUseCaps": "Gamit",
+        "useTheme": "Gamitin",
+        "useThemeA11y": "Gamitin ang temang {{theme}}",
+        "buyThemeA11y": "Bilhin ang temang {{theme}}",
+        "freeTitle": "Libreng gem",
+        "freeTaps": "1 gem sa bawat {{taps}} tap sa malaking emoji",
+        "freePrestige": "{{gems}} gem sa bawat prestige",
+        "tapGemCaps": "{{taps}} tap!",
+        "gemCaps": "Gem",
+        "themes": {
+            "classic": "Klasiko",
+            "sunset": "Paglubog ng araw",
+            "ocean": "Karagatan",
+            "forest": "Gubat",
+            "candy": "Kendi",
+            "gold": "Ginto"
         }
     },
     "offline": {
@@ -341,7 +379,12 @@
         "performance": "Performance",
         "reduceAnimations": "Bawasan ang animation",
         "reduceAnimationsHint": "Hindi na lilipad ang mga na-tap na emoji mula sa Malaking Emoji. Subukan ito kung parang nagla-lag ang pag-tap.",
-        "dangerZone": "Danger zone"
+        "dangerZone": "Danger zone",
+        "vibration": "Pag-vibrate",
+        "vibrationHint": "Kaunting vibrate kapag nag-tap, bumili, at nagdiwang ka.",
+        "privacy": "Privacy",
+        "privacyChoices": "Mga pagpipilian sa privacy",
+        "privacyHint": "Baguhin kung paano magagamit ng mga ad ang data mo."
     },
     "cheats": {
         "subtitle": "Pang-testing. Mababago ang save mo.",
@@ -495,6 +538,173 @@
             "price": "Presyo",
             "unlocks": "Mabubuksan",
             "id": "ID"
+        },
+        "loadingA11y": "Nilo-load ang mga upgrade",
+        "lockedHint": "Maglaro pa para mabuksan ito.",
+        "unlocksLine": "Mabubuksan: {{condition}}"
+    },
+    "gemButton": {
+        "confirm": "Kumpirmahin",
+        "confirmShort": "Bilhin?",
+        "hint": "I-tap ulit para gastusin ang gem",
+        "costA11y": "{{cost}} gem",
+        "labelA11y": "{{label}}, {{cost}} gem",
+        "buyNow": "Bilhin na"
+    },
+    "gemPowers": {
+        "title": "Kapangyarihan ng gem",
+        "subtitle": "Gumastos ng gem para sa tunay na boost",
+        "boostOn": "Bukas ang ×{{multiplier}} boost · {{time}} pa",
+        "buttonCaps": "Boost",
+        "buttonA11y": "Buksan ang kapangyarihan ng gem",
+        "buttonActiveA11y": "Bukas ang boost, {{time}} pa. Buksan ang kapangyarihan ng gem",
+        "getMoreGems": "Kumuha pa ng gem",
+        "fullCaps": "Puno",
+        "boost": {
+            "name": "×{{multiplier}} Boost",
+            "description": "×{{multiplier}} na produksiyon at tap sa loob ng {{minutes}} minuto. Bilhin ulit para dagdagan ang oras (hanggang {{hours}} oras). Tuloy kahit wala ka.",
+            "statusCaps": "Bukas · {{time}} pa",
+            "buy": "I-boost",
+            "extend": "+{{minutes}} min",
+            "a11y": "Bilhin ang boost"
+        },
+        "timeWarp": {
+            "name": "Talon sa oras",
+            "description": "Kunin agad ang ilang oras na produksiyon.",
+            "hours": "{{hours}} oras",
+            "a11y": "Tumalon ng {{hours}} oras"
+        },
+        "shower": {
+            "name": "Ulan ng epekto",
+            "description": "{{amount}} magandang effect emoji ang sabay-sabay na lalabas. I-tap bago maglaho!",
+            "buy": "Tawagin",
+            "a11y": "Tumawag ng ulan ng epekto"
+        },
+        "comboKeeper": {
+            "name": "Bantay ng combo",
+            "description": "Hindi bababa ang combo mo sa loob ng {{minutes}} minuto. Pataasin, saka panatilihin.",
+            "statusCaps": "Hawak · {{time}} pa",
+            "buy": "Panatilihin",
+            "a11y": "Bilhin ang bantay ng combo"
+        },
+        "discovery": {
+            "name": "Pagtuklas",
+            "description": "Ang susunod na {{amount}} malaking emoji ay mga emoji na hindi mo pa natatagpuan.",
+            "status": "Paparating na bagong emoji: {{amount}}",
+            "buy": "Tumuklas",
+            "allFoundCaps": "Nahanap lahat",
+            "a11y": "Bumili ng pagtuklas"
+        }
+    },
+    "trophies": {
+        "unlockedCaps": "Bukas na ang tropeo",
+        "ofTotalUnlocked": "/ {{total}} bukas",
+        "all": "Lahat",
+        "hiddenHint": "Maglaro pa para mabuksan ito",
+        "secretHint": "Isang sikreto. Maglaro pa para matagpuan ito",
+        "hiddenA11y": "Nakatagong tropeo, hindi pa bukas. {{hint}}",
+        "unlockedA11y": "{{name}}. {{description}}. Bukas",
+        "groups": {
+            "Emojis": "Emoji",
+            "Production": "Produksiyon",
+            "Tapping": "Pag-tap",
+            "Buildings": "Mga building",
+            "Collection": "Koleksiyon",
+            "Magic": "Mahika",
+            "Prestige": "Prestige",
+            "Secret": "Sikreto"
+        },
+        "tiers": {
+            "hired": "Kinuha",
+            "fifty": "Limampu",
+            "century": "Isandaan",
+            "empire": "Imperyo"
+        },
+        "names": {
+            "drawn1": "Pangguhit-guhit",
+            "drawn2": "Sketchbook",
+            "drawn3": "Mural",
+            "drawn4": "Galeriya",
+            "drawn5": "Obra maestra",
+            "drawn6": "Renaissance",
+            "drawn7": "Museo ng lahat",
+            "drawn8": "Kosmos ng emoji",
+            "drawn9": "Walang hanggang canvas",
+            "drawn10": "Hindi na mabilang",
+            "drawn11": "Ang huling pahina",
+            "eps1": "Patak",
+            "eps2": "Batis",
+            "eps3": "Ilog",
+            "eps4": "Rumaragasa",
+            "eps5": "Pagsabog",
+            "eps6": "Ulan ng bulalakaw",
+            "eps7": "Solar flare",
+            "eps8": "Supernova",
+            "eps9": "Event horizon",
+            "taps1": "Sundot",
+            "taps2": "Malikot",
+            "taps3": "Tap dancer",
+            "taps4": "Pagtambol",
+            "taps5": "Bionic na daliri",
+            "taps6": "Ngawit na pulso",
+            "combo3": "Combo!",
+            "combo5": "Mainit na kamay",
+            "combo8": "Supernova combo",
+            "tapEarnings": "Hands-on na boss",
+            "building": "{{building}}: {{tier}}",
+            "buildings100": "Maliit na negosyo",
+            "buildings500": "Konglomerado",
+            "buildings1000": "Megakorporasyon",
+            "buildings2500": "Paghahari sa mundo",
+            "upgrades10": "Kutingting",
+            "upgrades50": "Inhinyero",
+            "upgrades150": "Imbentor",
+            "upgrades300": "Baliw na siyentipiko",
+            "collected50": "Kolektor",
+            "collected250": "Mapag-imbak",
+            "collected500": "Arkibista",
+            "collected1000": "Kurador",
+            "collectedAll": "I-tap silang lahat",
+            "shiny1": "Uy, makintab",
+            "shiny10": "Uwak na mahilig sa kinang",
+            "shiny50": "Gold rush",
+            "magic1": "Abrakadabra",
+            "magic25": "Aprentis",
+            "magic100": "Salamangkero",
+            "magic500": "Punong salamangkero",
+            "prestige1": "Isinilang muli",
+            "prestige5": "Paulit-ulit na araw",
+            "prestige10": "Tagapag-recycle",
+            "prestige25": "Walang hanggang pagbabalik",
+            "trial": "Nakaligtas: {{trial}}",
+            "allPerks": "Kumpleto sa perks",
+            "secretAnswer": "Huwag mag-panic",
+            "secretHoarder": "Kayamanan ng dragon",
+            "secretGems": "Makikintab na bato"
+        },
+        "descriptions": {
+            "drawn": "Gumuhit ng kabuuang {{amount}} emoji",
+            "eps": "Gumawa ng {{amount}} emoji kada segundo",
+            "taps": "I-tap ang malaking emoji nang {{amount}} beses",
+            "combo": "Umabot sa ×{{amount}} na combo",
+            "tapEarnings": "Kumita ng {{amount}} emoji sa pag-tap",
+            "buildingFirst": "Unang building: {{buildingMid}}",
+            "buildingOwned": "Magkaroon ng {{amount}} {{buildingsMid}}",
+            "buildingsTotal": "Magkaroon ng {{amount}} building nang sabay",
+            "upgradesOwned": "Magkaroon ng {{amount}} upgrade nang sabay",
+            "collected": "Makahanap ng {{amount}} magkakaibang emoji",
+            "collectedAll": "Hanapin ang bawat emoji",
+            "shinyFirst": "Mag-tap ng makintab na emoji",
+            "shiny": "Mag-tap ng {{amount}} makintab na emoji",
+            "magicFirst": "Mag-tap ng effect emoji",
+            "magic": "Mag-tap ng {{amount}} effect emoji",
+            "prestigeFirst": "Mag-prestige sa unang pagkakataon",
+            "prestige": "Mag-prestige nang {{amount}} beses",
+            "trial": "Tapusin ang hamon: {{trial}}",
+            "allPerks": "Magkaroon ng lahat ng perk",
+            "secretAnswer": "Maglaro na may fun value na {{amount}}",
+            "secretHoarder": "Magkaroon ng {{amount}} emoji sa bangko nang walang kahit isang building",
+            "secretGems": "Magkaroon ng {{amount}} gem nang sabay"
         }
     }
 }

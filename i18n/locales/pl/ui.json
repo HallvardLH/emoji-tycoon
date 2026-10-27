@@ -10,7 +10,8 @@
         "newItemsLabel_one": "{{label}}, nowe: {{count}}",
         "newItemsLabel_few": "{{label}}, nowe: {{count}}",
         "newItemsLabel_many": "{{label}}, nowe: {{count}}",
-        "newItemsLabel_other": "{{label}}, nowe: {{count}}"
+        "newItemsLabel_other": "{{label}}, nowe: {{count}}",
+        "trophies": "Trofea"
     },
     "header": {
         "emojis": "Emoji",
@@ -23,7 +24,9 @@
     },
     "common": {
         "buy": "Kup",
-        "details": "Szczegóły"
+        "details": "Szczegóły",
+        "close": "Zamknij",
+        "dismissHint": "Zamyka powiadomienie"
     },
     "upgrades": {
         "bigEmoji": "Wielkie emoji",
@@ -100,7 +103,8 @@
         "funValue": "Poziom frajdy",
         "shinyEmojisTapped": "Stuknięte lśniące emoji",
         "comboTaps": "Stuknięcia w kombo",
-        "madeByEachBuilding": "Produkcja według budynków"
+        "madeByEachBuilding": "Produkcja według budynków",
+        "bestCombo": "Najlepsze kombo"
     },
     "drawer": {
         "language": "Język",
@@ -147,7 +151,17 @@
         "chipLabel": "Esencja emoji",
         "chipLabelReady": "Prestiż za {{essence}} esencji emoji",
         "chipEssence": "Esencja",
-        "chipPending": "+{{essence}} esencji"
+        "chipPending": "+{{essence}} esencji",
+        "gemExtras": "Dodatki za klejnoty",
+        "charmName": "Amulet esencji",
+        "charmOff": "Twój następny prestiż da o {{percent}} więcej esencji.",
+        "charmOn": "Aktywny: Twój następny prestiż da o {{percent}} więcej esencji.",
+        "charmOnAmount": "Aktywny: Twój następny prestiż da o {{percent}} więcej esencji (+{{essence}} ✨).",
+        "charmA11y": "Kup amulet esencji",
+        "onCaps": "Aktywny",
+        "respecName": "Reset atutów",
+        "respecDescription": "Odbierz wszystkie atuty i odzyskaj całą ich esencję, aby wybrać od nowa.",
+        "respecA11y": "Zresetuj atuty"
     },
     "numbers": {
         "groupSize": "3",
@@ -285,7 +299,8 @@
         "bulkA11y_many": "Kupuj po {{count}}",
         "bulkA11y_other": "Kupuj po {{count}}",
         "milestoneCaption": "NOWY BUDYNEK",
-        "milestoneTitle": "Twój pierwszy budynek: {{building}}!"
+        "milestoneTitle": "Twój pierwszy budynek: {{building}}!",
+        "buyNowA11y": "Kup teraz za klejnoty: {{name}}"
     },
     "time": {
         "seconds_one": "{{count}} s",
@@ -368,6 +383,29 @@
         "tags": {
             "popular": "POPULARNE",
             "bestValue": "NAJLEPSZA OFERTA"
+        },
+        "openStoreA11y": "Otwórz sklep z klejnotami",
+        "storeCardSubtitle": "Klejnoty: {{gems}} · wzmocnienia, motywy i więcej",
+        "storeCardA11y": "Sklep z klejnotami. Twoje klejnoty: {{gems}}",
+        "skipWait": "Nie stać Cię jeszcze na budynek lub ulepszenie? Kup je od razu za klejnoty, ok. 1 klejnot za każde {{minutes}} min czekania.",
+        "themesTitle": "Motywy aplikacji",
+        "themesIntro": "Odmień wygląd całej gry. Kup raz, zmieniaj, kiedy chcesz.",
+        "inUseCaps": "W użyciu",
+        "useTheme": "Użyj",
+        "useThemeA11y": "Użyj motywu: {{theme}}",
+        "buyThemeA11y": "Kup motyw: {{theme}}",
+        "freeTitle": "Darmowe klejnoty",
+        "freeTaps": "1 klejnot za każde {{taps}} stuknięć w wielkie emoji",
+        "freePrestige": "Klejnoty za każdy prestiż: {{gems}}",
+        "tapGemCaps": "Stuknięcia: {{taps}}!",
+        "gemCaps": "Klejnot",
+        "themes": {
+            "classic": "Klasyczny",
+            "sunset": "Zachód słońca",
+            "ocean": "Ocean",
+            "forest": "Las",
+            "candy": "Cukierek",
+            "gold": "Złoto"
         }
     },
     "offline": {
@@ -406,7 +444,12 @@
         "performance": "Wydajność",
         "reduceAnimations": "Ogranicz animacje",
         "reduceAnimationsHint": "Stuknięte emoji nie wylatują już z Wielkiego emoji. Włącz, jeśli stukanie się zacina.",
-        "dangerZone": "Strefa zagrożenia"
+        "dangerZone": "Strefa zagrożenia",
+        "vibration": "Wibracje",
+        "vibrationHint": "Lekka wibracja przy stukaniu, kupowaniu i świętowaniu.",
+        "privacy": "Prywatność",
+        "privacyChoices": "Ustawienia prywatności",
+        "privacyHint": "Zmień, jak reklamy mogą używać Twoich danych."
     },
     "cheats": {
         "subtitle": "Do testów. Zmiany trafiają do twojego zapisu.",
@@ -598,6 +641,173 @@
             "price": "CENA",
             "unlocks": "ODBLOKOWANIE",
             "id": "ID"
+        },
+        "loadingA11y": "Wczytywanie ulepszeń",
+        "lockedHint": "Graj dalej, aby to odblokować.",
+        "unlocksLine": "Odblokowanie: {{condition}}"
+    },
+    "gemButton": {
+        "confirm": "Potwierdź",
+        "confirmShort": "Kupić?",
+        "hint": "Stuknij ponownie, aby wydać klejnoty",
+        "costA11y": "Klejnoty: {{cost}}",
+        "labelA11y": "{{label}}, klejnoty: {{cost}}",
+        "buyNow": "Kup teraz"
+    },
+    "gemPowers": {
+        "title": "Moce klejnotów",
+        "subtitle": "Wydaj klejnoty na porządne wzmocnienie",
+        "boostOn": "Wzmocnienie ×{{multiplier}} aktywne · zostało {{time}}",
+        "buttonCaps": "Wzmocnienie",
+        "buttonA11y": "Otwórz moce klejnotów",
+        "buttonActiveA11y": "Wzmocnienie aktywne, zostało {{time}}. Otwórz moce klejnotów",
+        "getMoreGems": "Zdobądź więcej klejnotów",
+        "fullCaps": "Pełne",
+        "boost": {
+            "name": "Wzmocnienie ×{{multiplier}}",
+            "description": "×{{multiplier}} produkcji i stuknięć przez {{minutes}} min. Kup ponownie, by dodać czas (do {{hours}} godz.). Działa, nawet gdy Cię nie ma.",
+            "statusCaps": "Aktywne · zostało {{time}}",
+            "buy": "Wzmocnij",
+            "extend": "+{{minutes}} min",
+            "a11y": "Kup wzmocnienie"
+        },
+        "timeWarp": {
+            "name": "Skok w czasie",
+            "description": "Zdobądź od razu godziny produkcji.",
+            "hours": "{{hours}} godz.",
+            "a11y": "Przeskocz {{hours}} godz."
+        },
+        "shower": {
+            "name": "Deszcz efektów",
+            "description": "Pojawia się naraz tyle dobrych emoji efektów: {{amount}}. Stuknij je, zanim znikną!",
+            "buy": "Przywołaj",
+            "a11y": "Przywołaj deszcz efektów"
+        },
+        "comboKeeper": {
+            "name": "Strażnik kombo",
+            "description": "Twoje kombo nie spada przez {{minutes}} min. Nabij je i utrzymaj.",
+            "statusCaps": "Trzyma · zostało {{time}}",
+            "buy": "Trzymaj",
+            "a11y": "Kup strażnika kombo"
+        },
+        "discovery": {
+            "name": "Odkrycie",
+            "description": "Kolejne wielkie emoji (sztuk: {{amount}}) będą takimi, których nigdy nie znaleziono.",
+            "status": "Nowe emoji w drodze: {{amount}}",
+            "buy": "Odkryj",
+            "allFoundCaps": "Wszystkie znalezione",
+            "a11y": "Kup odkrycia"
+        }
+    },
+    "trophies": {
+        "unlockedCaps": "Trofeum odblokowane",
+        "ofTotalUnlocked": "/ {{total}} odblokowanych",
+        "all": "Wszystkie",
+        "hiddenHint": "Graj dalej, aby je odblokować",
+        "secretHint": "Sekret. Graj dalej, aby go odkryć",
+        "hiddenA11y": "Ukryte trofeum, jeszcze nieodblokowane. {{hint}}",
+        "unlockedA11y": "{{name}}. {{description}}. Odblokowane",
+        "groups": {
+            "Emojis": "Emoji",
+            "Production": "Produkcja",
+            "Tapping": "Stukanie",
+            "Buildings": "Budynki",
+            "Collection": "Kolekcja",
+            "Magic": "Magia",
+            "Prestige": "Prestiż",
+            "Secret": "Sekret"
+        },
+        "tiers": {
+            "hired": "Zatrudniony",
+            "fifty": "Pięćdziesiątka",
+            "century": "Setka",
+            "empire": "Imperium"
+        },
+        "names": {
+            "drawn1": "Bazgracz",
+            "drawn2": "Szkicownik",
+            "drawn3": "Mural",
+            "drawn4": "Galeria",
+            "drawn5": "Arcydzieło",
+            "drawn6": "Renesans",
+            "drawn7": "Muzeum wszystkiego",
+            "drawn8": "Kosmos emoji",
+            "drawn9": "Nieskończone płótno",
+            "drawn10": "Nie do zliczenia",
+            "drawn11": "Ostatnia strona",
+            "eps1": "Strużka",
+            "eps2": "Strumień",
+            "eps3": "Rzeka",
+            "eps4": "Rwący potok",
+            "eps5": "Erupcja",
+            "eps6": "Deszcz meteorów",
+            "eps7": "Rozbłysk słoneczny",
+            "eps8": "Supernowa",
+            "eps9": "Horyzont zdarzeń",
+            "taps1": "Szturchnięcie",
+            "taps2": "Wiercipięta",
+            "taps3": "Stepujący tancerz",
+            "taps4": "Werbel",
+            "taps5": "Bioniczny palec",
+            "taps6": "Cieśń nadgarstka",
+            "combo3": "Kombo!",
+            "combo5": "Gorące dłonie",
+            "combo8": "Kombo supernowej",
+            "tapEarnings": "Zarządzanie w praktyce",
+            "building": "{{building}}: {{tier}}",
+            "buildings100": "Mała firma",
+            "buildings500": "Konglomerat",
+            "buildings1000": "Megakorporacja",
+            "buildings2500": "Dominacja nad światem",
+            "upgrades10": "Majsterkowicz",
+            "upgrades50": "Inżynier",
+            "upgrades150": "Wynalazca",
+            "upgrades300": "Szalony naukowiec",
+            "collected50": "Kolekcjoner",
+            "collected250": "Zbieracz",
+            "collected500": "Archiwista",
+            "collected1000": "Kustosz",
+            "collectedAll": "Stuknij je wszystkie",
+            "shiny1": "Och, błyszczy",
+            "shiny10": "Sroka",
+            "shiny50": "Gorączka złota",
+            "magic1": "Abrakadabra",
+            "magic25": "Uczeń",
+            "magic100": "Czarodziej",
+            "magic500": "Arcymag",
+            "prestige1": "Odrodzony",
+            "prestige5": "Dzień świstaka",
+            "prestige10": "Recykler",
+            "prestige25": "Wieczny powrót",
+            "trial": "Ocalały: {{trial}}",
+            "allPerks": "Pełen zestaw atutów",
+            "secretAnswer": "Nie panikuj",
+            "secretHoarder": "Skarb smoka",
+            "secretGems": "Błyszczące kamyki"
+        },
+        "descriptions": {
+            "drawn": "Narysuj łącznie emoji: {{amount}}",
+            "eps": "Produkuj emoji na sekundę: {{amount}}",
+            "taps": "Stuknij w wielkie emoji: {{amount}} razy",
+            "combo": "Osiągnij kombo ×{{amount}}",
+            "tapEarnings": "Zarób stukaniem emoji: {{amount}}",
+            "buildingFirst": "Pierwszy budynek: {{buildingMid}}",
+            "buildingOwned": "{{buildingsMid}}: miej {{amount}}",
+            "buildingsTotal": "Miej naraz budynki: {{amount}}",
+            "upgradesOwned": "Miej naraz ulepszenia: {{amount}}",
+            "collected": "Znajdź różne emoji: {{amount}}",
+            "collectedAll": "Znajdź każde emoji",
+            "shinyFirst": "Stuknij lśniące emoji",
+            "shiny": "Stuknij lśniące emoji: {{amount}}",
+            "magicFirst": "Stuknij emoji efektu",
+            "magic": "Stuknij emoji efektów: {{amount}}",
+            "prestigeFirst": "Zrób swój pierwszy prestiż",
+            "prestige": "Zrób prestiż: {{amount}} razy",
+            "trial": "Ukończ próbę: {{trial}}",
+            "allPerks": "Zdobądź każdy atut",
+            "secretAnswer": "Graj z poziomem frajdy {{amount}}",
+            "secretHoarder": "Miej w banku emoji ({{amount}}) bez żadnego budynku",
+            "secretGems": "Miej naraz klejnoty: {{amount}}"
         }
     }
 }

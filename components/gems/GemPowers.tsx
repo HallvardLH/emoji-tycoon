@@ -15,6 +15,8 @@ import {
 import { boostSecondsLeft, comboKeeperSecondsLeft, formatCountdown, BOOST_MULTIPLIER } from "../../scripts/game/gems/boost";
 import { hasCombo } from "../../scripts/game/tapBoost";
 import { palette, radii, themedStyles } from "../misc/theme";
+import { useTranslation } from "react-i18next";
+import { toCaps } from "../../scripts/utils";
 
 /** Re-renders once a second, for the countdowns and what can be bought */
 function useTicker() {
@@ -31,6 +33,8 @@ function useTicker() {
  */
 export default function GemPowers() {
     useTicker();
+    const { t } = useTranslation();
+    const full = toCaps(t("gemPowers.fullCaps"));
     // Re-render when gems or what they bought change, not only on the tick
     useSelector((state: RootState) => state.gems);
     const comboOn = useSelector(() => hasCombo());
@@ -46,34 +50,34 @@ export default function GemPowers() {
         <View style={styles.list}>
             <Power
                 icon="⚡"
-                name={`×${BOOST_MULTIPLIER} Boost`}
-                description={`×${BOOST_MULTIPLIER} production and taps for ${BOOST_SECONDS / 60} minutes. Buy again to add more time (up to ${BOOST_MAX_SECONDS / 3600} hours). Keeps going while you're away.`}
-                status={boostLeft > 0 ? `⚡ ON · ${formatCountdown(boostLeft)} left` : undefined}
+                name={t("gemPowers.boost.name", { multiplier: BOOST_MULTIPLIER })}
+                description={t("gemPowers.boost.description", { multiplier: BOOST_MULTIPLIER, minutes: BOOST_SECONDS / 60, hours: BOOST_MAX_SECONDS / 3600 })}
+                status={boostLeft > 0 ? `⚡ ${toCaps(t("gemPowers.boost.statusCaps", { time: formatCountdown(boostLeft) }))}` : undefined}
             >
                 <GemButton
                     cost={BOOST_COST}
-                    label={boostLeft > 0 ? "+30 min" : "Boost"}
+                    label={boostLeft > 0 ? t("gemPowers.boost.extend", { minutes: BOOST_SECONDS / 60 }) : t("gemPowers.boost.buy")}
                     onBuy={buyBoost}
                     disabled={!canBuyBoost()}
-                    disabledLabel="FULL"
-                    accessibilityLabel="Buy the boost"
+                    disabledLabel={full}
+                    accessibilityLabel={t("gemPowers.boost.a11y")}
                 />
             </Power>
 
             {warpOn && (
                 <Power
                     icon="⏩"
-                    name="Time warp"
-                    description="Get hours of production right now."
+                    name={t("gemPowers.timeWarp.name")}
+                    description={t("gemPowers.timeWarp.description")}
                 >
                     {TIME_WARPS.map(warp => (
                         <View key={warp.hours} style={styles.warp}>
                             <Text font="bold" size={11} color={palette.muted}>+{formatNumber(timeWarpEmojis(warp.hours), 1)}</Text>
                             <GemButton
                                 cost={warp.cost}
-                                label={`${warp.hours} h`}
+                                label={t("gemPowers.timeWarp.hours", { hours: warp.hours })}
                                 onBuy={() => buyTimeWarp(warp.hours)}
-                                accessibilityLabel={`Warp ${warp.hours} hours`}
+                                accessibilityLabel={t("gemPowers.timeWarp.a11y", { hours: warp.hours })}
                             />
                         </View>
                     ))}
@@ -83,27 +87,27 @@ export default function GemPowers() {
             {showerOn && (
                 <Power
                     icon="🎆"
-                    name="Effect shower"
-                    description={`${SHOWER_EFFECTS} good effect emojis appear at once. Tap them before they fade!`}
+                    name={t("gemPowers.shower.name")}
+                    description={t("gemPowers.shower.description", { amount: SHOWER_EFFECTS })}
                 >
-                    <GemButton cost={SHOWER_COST} label="Summon" onBuy={buyShower} accessibilityLabel="Summon an effect shower" />
+                    <GemButton cost={SHOWER_COST} label={t("gemPowers.shower.buy")} onBuy={buyShower} accessibilityLabel={t("gemPowers.shower.a11y")} />
                 </Power>
             )}
 
             {comboOn && (
                 <Power
                     icon="🧊"
-                    name="Combo keeper"
-                    description={`Your combo doesn't drop for ${COMBO_KEEPER_SECONDS / 60} minutes. Tap it up, then keep it.`}
-                    status={keeperLeft > 0 ? `🧊 HOLDING · ${formatCountdown(keeperLeft)} left` : undefined}
+                    name={t("gemPowers.comboKeeper.name")}
+                    description={t("gemPowers.comboKeeper.description", { minutes: COMBO_KEEPER_SECONDS / 60 })}
+                    status={keeperLeft > 0 ? `🧊 ${toCaps(t("gemPowers.comboKeeper.statusCaps", { time: formatCountdown(keeperLeft) }))}` : undefined}
                 >
                     <GemButton
                         cost={COMBO_KEEPER_COST}
-                        label="Keep"
+                        label={t("gemPowers.comboKeeper.buy")}
                         onBuy={buyComboKeeper}
                         disabled={!canBuyComboKeeper()}
-                        disabledLabel="FULL"
-                        accessibilityLabel="Buy the combo keeper"
+                        disabledLabel={full}
+                        accessibilityLabel={t("gemPowers.comboKeeper.a11y")}
                     />
                 </Power>
             )}
@@ -111,17 +115,17 @@ export default function GemPowers() {
             {(discoveryOn || discoveries > 0) && (
                 <Power
                     icon="🔍"
-                    name="Discovery"
-                    description={`The next ${DISCOVERY_EMOJIS} Big Emojis are ones you've never found.`}
-                    status={discoveries > 0 ? `🔍 ${discoveries} new emoji${discoveries === 1 ? "" : "s"} to come` : undefined}
+                    name={t("gemPowers.discovery.name")}
+                    description={t("gemPowers.discovery.description", { amount: DISCOVERY_EMOJIS })}
+                    status={discoveries > 0 ? `🔍 ${t("gemPowers.discovery.status", { amount: discoveries })}` : undefined}
                 >
                     <GemButton
                         cost={DISCOVERY_COST}
-                        label="Discover"
+                        label={t("gemPowers.discovery.buy")}
                         onBuy={buyDiscovery}
                         disabled={!discoveryOn}
-                        disabledLabel="ALL FOUND"
-                        accessibilityLabel="Buy discoveries"
+                        disabledLabel={toCaps(t("gemPowers.discovery.allFoundCaps"))}
+                        accessibilityLabel={t("gemPowers.discovery.a11y")}
                     />
                 </Power>
             )}

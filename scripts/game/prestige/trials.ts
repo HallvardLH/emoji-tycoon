@@ -86,6 +86,7 @@ export function checkTrial() {
         icon: trial?.icon ?? "🏅",
         caption: toCaps(i18n.t("trials.completeCaps")),
         title: trial ? i18n.t("trials.completeTitle", { name: getTrialName(trial), reward: getTrialReward(trial) }) : i18n.t("trials.rewardUnlocked"),
+        kind: "prestige",
     });
 }
 

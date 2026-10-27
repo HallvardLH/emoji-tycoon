@@ -8,7 +8,8 @@
         "stats": "Stats",
         "collection": "Collection",
         "newItemsLabel_one": "{{label}}, {{count}} new",
-        "newItemsLabel_other": "{{label}}, {{count}} new"
+        "newItemsLabel_other": "{{label}}, {{count}} new",
+        "trophies": "Trophies"
     },
     "header": {
         "emojis": "Emojis",
@@ -19,7 +20,9 @@
     },
     "common": {
         "buy": "Buy",
-        "details": "Details"
+        "details": "Details",
+        "close": "Close",
+        "dismissHint": "Dismisses the notification"
     },
     "buildings": {
         "ownedA11y_one": "{{count}} owned",
@@ -41,7 +44,8 @@
         "bulkA11y_one": "Buy {{count}} at a time",
         "bulkA11y_other": "Buy {{count}} at a time",
         "milestoneCaption": "NEW BUILDING",
-        "milestoneTitle": "Your first {{building}}!"
+        "milestoneTitle": "Your first {{building}}!",
+        "buyNowA11y": "Buy {{name}} now with gems"
     },
     "upgrades": {
         "bigEmoji": "Big emoji",
@@ -167,7 +171,17 @@
         "chipLabel": "Emoji essence",
         "chipLabelReady": "Prestige for {{essence}} emoji essence",
         "chipEssence": "Essence",
-        "chipPending": "+{{essence}} essence"
+        "chipPending": "+{{essence}} essence",
+        "gemExtras": "Gem extras",
+        "charmName": "Essence charm",
+        "charmOff": "Your next prestige gives {{percent}} more essence.",
+        "charmOn": "On: your next prestige gives {{percent}} more essence.",
+        "charmOnAmount": "On: your next prestige gives {{percent}} more essence (+{{essence}} ✨).",
+        "charmA11y": "Buy the essence charm",
+        "onCaps": "ON",
+        "respecName": "Perk respec",
+        "respecDescription": "Take back every perk and get all its essence back, to choose again.",
+        "respecA11y": "Respec perks"
     },
     "time": {
         "seconds_one": "{{count}}s",
@@ -306,6 +320,29 @@
         "tags": {
             "popular": "POPULAR",
             "bestValue": "BEST VALUE"
+        },
+        "openStoreA11y": "Open the gem store",
+        "storeCardSubtitle": "{{gems}} gems · boosts, themes and more",
+        "storeCardA11y": "Gem store. You have {{gems}} gems",
+        "skipWait": "Can't afford a building or upgrade yet? Buy it now with gems, about 1 gem per {{minutes}} minutes of waiting.",
+        "themesTitle": "App themes",
+        "themesIntro": "Reskin the whole game. Buy once, switch any time.",
+        "inUseCaps": "IN USE",
+        "useTheme": "Use",
+        "useThemeA11y": "Use the {{theme}} theme",
+        "buyThemeA11y": "Buy the {{theme}} theme",
+        "freeTitle": "Free gems",
+        "freeTaps": "1 gem every {{taps}} taps of the Big Emoji",
+        "freePrestige": "{{gems}} gems for every prestige",
+        "tapGemCaps": "{{taps}} TAPS!",
+        "gemCaps": "GEM",
+        "themes": {
+            "classic": "Classic",
+            "sunset": "Sunset",
+            "ocean": "Ocean",
+            "forest": "Forest",
+            "candy": "Candy",
+            "gold": "Gold"
         }
     },
     "offline": {
@@ -344,7 +381,12 @@
         "performance": "Performance",
         "reduceAnimations": "Reduce animations",
         "reduceAnimationsHint": "Tapped emojis no longer fly off the Big Emoji. Try this if tapping feels laggy.",
-        "dangerZone": "Danger zone"
+        "dangerZone": "Danger zone",
+        "vibration": "Vibration",
+        "vibrationHint": "A buzz as you tap, buy and celebrate.",
+        "privacy": "Privacy",
+        "privacyChoices": "Privacy choices",
+        "privacyHint": "Change how ads may use your data."
     },
     "cheats": {
         "subtitle": "For testing. Changes apply to your save.",
@@ -498,6 +540,173 @@
             "price": "PRICE",
             "unlocks": "UNLOCKS",
             "id": "ID"
+        },
+        "loadingA11y": "Loading upgrades",
+        "lockedHint": "Keep playing to unlock it.",
+        "unlocksLine": "Unlocks: {{condition}}"
+    },
+    "gemButton": {
+        "confirm": "Confirm",
+        "confirmShort": "Buy?",
+        "hint": "Tap again to spend the gems",
+        "costA11y": "{{cost}} gems",
+        "labelA11y": "{{label}}, {{cost}} gems",
+        "buyNow": "Buy now"
+    },
+    "gemPowers": {
+        "title": "Gem powers",
+        "subtitle": "Spend gems for a real boost",
+        "boostOn": "×{{multiplier}} boost on · {{time}} left",
+        "buttonCaps": "BOOST",
+        "buttonA11y": "Open gem powers",
+        "buttonActiveA11y": "Boost on, {{time}} left. Open gem powers",
+        "getMoreGems": "Get more gems",
+        "fullCaps": "FULL",
+        "boost": {
+            "name": "×{{multiplier}} Boost",
+            "description": "×{{multiplier}} production and taps for {{minutes}} minutes. Buy again to add more time (up to {{hours}} hours). Keeps going while you're away.",
+            "statusCaps": "ON · {{time}} LEFT",
+            "buy": "Boost",
+            "extend": "+{{minutes}} min",
+            "a11y": "Buy the boost"
+        },
+        "timeWarp": {
+            "name": "Time warp",
+            "description": "Get hours of production right now.",
+            "hours": "{{hours}} h",
+            "a11y": "Warp {{hours}} hours"
+        },
+        "shower": {
+            "name": "Effect shower",
+            "description": "{{amount}} good effect emojis appear at once. Tap them before they fade!",
+            "buy": "Summon",
+            "a11y": "Summon an effect shower"
+        },
+        "comboKeeper": {
+            "name": "Combo keeper",
+            "description": "Your combo doesn't drop for {{minutes}} minutes. Tap it up, then keep it.",
+            "statusCaps": "HOLDING · {{time}} LEFT",
+            "buy": "Keep",
+            "a11y": "Buy the combo keeper"
+        },
+        "discovery": {
+            "name": "Discovery",
+            "description": "The next {{amount}} Big Emojis are ones you've never found.",
+            "status": "New emojis to come: {{amount}}",
+            "buy": "Discover",
+            "allFoundCaps": "ALL FOUND",
+            "a11y": "Buy discoveries"
+        }
+    },
+    "trophies": {
+        "unlockedCaps": "TROPHY UNLOCKED",
+        "ofTotalUnlocked": "/ {{total}} unlocked",
+        "all": "All",
+        "hiddenHint": "Keep playing to unlock it",
+        "secretHint": "A secret. Keep playing to find it",
+        "hiddenA11y": "Hidden trophy, not unlocked yet. {{hint}}",
+        "unlockedA11y": "{{name}}. {{description}}. Unlocked",
+        "groups": {
+            "Emojis": "Emojis",
+            "Production": "Production",
+            "Tapping": "Tapping",
+            "Buildings": "Buildings",
+            "Collection": "Collection",
+            "Magic": "Magic",
+            "Prestige": "Prestige",
+            "Secret": "Secret"
+        },
+        "tiers": {
+            "hired": "Hired",
+            "fifty": "Fifty",
+            "century": "Century",
+            "empire": "Empire"
+        },
+        "names": {
+            "drawn1": "Doodler",
+            "drawn2": "Sketchbook",
+            "drawn3": "Mural",
+            "drawn4": "Gallery",
+            "drawn5": "Masterpiece",
+            "drawn6": "Renaissance",
+            "drawn7": "Museum of everything",
+            "drawn8": "Emoji cosmos",
+            "drawn9": "Infinite canvas",
+            "drawn10": "Beyond counting",
+            "drawn11": "The last page",
+            "eps1": "Trickle",
+            "eps2": "Stream",
+            "eps3": "River",
+            "eps4": "Torrent",
+            "eps5": "Eruption",
+            "eps6": "Meteor shower",
+            "eps7": "Solar flare",
+            "eps8": "Supernova",
+            "eps9": "Event horizon",
+            "taps1": "Poke",
+            "taps2": "Fidget",
+            "taps3": "Tap dancer",
+            "taps4": "Drum roll",
+            "taps5": "Bionic finger",
+            "taps6": "Carpal tunnel",
+            "combo3": "Combo!",
+            "combo5": "Hot hands",
+            "combo8": "Supernova combo",
+            "tapEarnings": "Hands-on management",
+            "building": "{{building}}: {{tier}}",
+            "buildings100": "Small business",
+            "buildings500": "Conglomerate",
+            "buildings1000": "Megacorp",
+            "buildings2500": "World domination",
+            "upgrades10": "Tinkerer",
+            "upgrades50": "Engineer",
+            "upgrades150": "Inventor",
+            "upgrades300": "Mad scientist",
+            "collected50": "Collector",
+            "collected250": "Hoarder",
+            "collected500": "Archivist",
+            "collected1000": "Curator",
+            "collectedAll": "Gotta tap 'em all",
+            "shiny1": "Ooh, shiny",
+            "shiny10": "Magpie",
+            "shiny50": "Gold rush",
+            "magic1": "Abracadabra",
+            "magic25": "Apprentice",
+            "magic100": "Wizard",
+            "magic500": "Archmage",
+            "prestige1": "Born again",
+            "prestige5": "Groundhog day",
+            "prestige10": "Recycler",
+            "prestige25": "Eternal return",
+            "trial": "{{trial}} survivor",
+            "allPerks": "Perfectly perked",
+            "secretAnswer": "Don't panic",
+            "secretHoarder": "Dragon's hoard",
+            "secretGems": "Shiny rocks"
+        },
+        "descriptions": {
+            "drawn": "Draw {{amount}} emojis in total",
+            "eps": "Make {{amount}} emojis per second",
+            "taps": "Tap the Big Emoji {{amount}} times",
+            "combo": "Reach a ×{{amount}} combo",
+            "tapEarnings": "Earn {{amount}} emojis from tapping",
+            "buildingFirst": "Get your first {{buildingMid}}",
+            "buildingOwned": "Own {{amount}} {{buildingsMid}}",
+            "buildingsTotal": "Own {{amount}} buildings at once",
+            "upgradesOwned": "Own {{amount}} upgrades at once",
+            "collected": "Find {{amount}} different emojis",
+            "collectedAll": "Find every emoji",
+            "shinyFirst": "Tap a shiny emoji",
+            "shiny": "Tap {{amount}} shiny emojis",
+            "magicFirst": "Tap an effect emoji",
+            "magic": "Tap {{amount}} effect emojis",
+            "prestigeFirst": "Prestige for the first time",
+            "prestige": "Prestige {{amount}} times",
+            "trial": "Complete the {{trial}} trial",
+            "allPerks": "Own every perk",
+            "secretAnswer": "Play with a fun value of {{amount}}",
+            "secretHoarder": "Have {{amount}} emojis in the bank without owning a building",
+            "secretGems": "Hold {{amount}} gems at once"
         }
     }
 }

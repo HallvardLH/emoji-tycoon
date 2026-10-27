@@ -8,7 +8,8 @@
         "stats": "Adatok",
         "collection": "Gyűjtemény",
         "newItemsLabel_one": "{{label}}, {{count}} új",
-        "newItemsLabel_other": "{{label}}, {{count}} új"
+        "newItemsLabel_other": "{{label}}, {{count}} új",
+        "trophies": "Trófeák"
     },
     "header": {
         "emojis": "Emojik",
@@ -19,7 +20,9 @@
     },
     "common": {
         "buy": "Vétel",
-        "details": "Részletek"
+        "details": "Részletek",
+        "close": "Bezárás",
+        "dismissHint": "Bezárja az értesítést"
     },
     "upgrades": {
         "bigEmoji": "Nagy emoji",
@@ -96,7 +99,8 @@
         "funValue": "Mókaérték",
         "shinyEmojisTapped": "Megkoppintott csillogó emojik",
         "comboTaps": "Kombókoppintások",
-        "madeByEachBuilding": "Épületenkénti termelés"
+        "madeByEachBuilding": "Épületenkénti termelés",
+        "bestCombo": "Legjobb kombó"
     },
     "drawer": {
         "language": "Nyelv",
@@ -142,7 +146,17 @@
         "chipLabel": "Emojiesszencia",
         "chipLabelReady": "Presztízs, jutalom: {{essence}} emojiesszencia",
         "chipEssence": "Esszencia",
-        "chipPending": "+{{essence}} esszencia"
+        "chipPending": "+{{essence}} esszencia",
+        "gemExtras": "Drágakő-extrák",
+        "charmName": "Esszenciaamulett",
+        "charmOff": "A következő presztízsed {{percent}}-kal több esszenciát ad.",
+        "charmOn": "Bekapcsolva: a következő presztízsed {{percent}}-kal több esszenciát ad.",
+        "charmOnAmount": "Bekapcsolva: a következő presztízsed {{percent}}-kal több esszenciát ad (+{{essence}} ✨).",
+        "charmA11y": "Esszenciaamulett megvétele",
+        "onCaps": "Be",
+        "respecName": "Előnyök visszaállítása",
+        "respecDescription": "Vedd vissza az összes előnyt, és kapd vissza az összes esszenciájukat, hogy újra választhass.",
+        "respecA11y": "Előnyök visszaállítása"
     },
     "numbers": {
         "groupSize": "3",
@@ -234,7 +248,8 @@
         "bulkA11y_one": "Egyszerre {{count}} darab vétele",
         "bulkA11y_other": "Egyszerre {{count}} darab vétele",
         "milestoneCaption": "Új épület",
-        "milestoneTitle": "Az első épületed: {{building}}!"
+        "milestoneTitle": "Az első épületed: {{building}}!",
+        "buyNowA11y": "Megvétel most drágakövekért: {{name}}"
     },
     "time": {
         "seconds_one": "{{count}}mp",
@@ -303,6 +318,29 @@
         "tags": {
             "popular": "Népszerű",
             "bestValue": "Legjobb ár"
+        },
+        "openStoreA11y": "Drágakőbolt megnyitása",
+        "storeCardSubtitle": "Drágakövek: {{gems}} · gyorsítók, témák és más",
+        "storeCardA11y": "Drágakőbolt. Drágaköveid: {{gems}}",
+        "skipWait": "Még nem telik épületre vagy fejlesztésre? Vedd meg most drágakövekért, nagyjából 1 drágakő minden {{minutes}} perc várakozásért.",
+        "themesTitle": "Alkalmazástémák",
+        "themesIntro": "Adj új külsőt az egész játéknak. Egyszer veszed meg, bármikor válthatsz.",
+        "inUseCaps": "Használatban",
+        "useTheme": "Használat",
+        "useThemeA11y": "Téma használata: {{theme}}",
+        "buyThemeA11y": "Téma megvétele: {{theme}}",
+        "freeTitle": "Ingyen drágakövek",
+        "freeTaps": "1 drágakő minden {{taps}} koppintásért a nagy emojira",
+        "freePrestige": "Drágakövek minden presztízsért: {{gems}}",
+        "tapGemCaps": "Koppintás: {{taps}}!",
+        "gemCaps": "Drágakő",
+        "themes": {
+            "classic": "Klasszikus",
+            "sunset": "Naplemente",
+            "ocean": "Óceán",
+            "forest": "Erdő",
+            "candy": "Cukorka",
+            "gold": "Arany"
         }
     },
     "offline": {
@@ -341,7 +379,12 @@
         "performance": "Teljesítmény",
         "reduceAnimations": "Kevesebb animáció",
         "reduceAnimationsHint": "A megkoppintott emojik nem repülnek le a Nagy emojiról. Próbáld ki, ha akadozik a koppintás.",
-        "dangerZone": "Veszélyzóna"
+        "dangerZone": "Veszélyzóna",
+        "vibration": "Rezgés",
+        "vibrationHint": "Egy kis rezgés koppintáskor, vásárláskor és ünnepléskor.",
+        "privacy": "Adatvédelem",
+        "privacyChoices": "Adatvédelmi beállítások",
+        "privacyHint": "Állítsd be, hogyan használhatják a hirdetések az adataidat."
     },
     "cheats": {
         "subtitle": "Teszteléshez. A változások a mentésedre hatnak.",
@@ -495,6 +538,173 @@
             "price": "Ár",
             "unlocks": "Feloldás",
             "id": "ID"
+        },
+        "loadingA11y": "Fejlesztések betöltése",
+        "lockedHint": "Játssz tovább a feloldásához.",
+        "unlocksLine": "Feloldás: {{condition}}"
+    },
+    "gemButton": {
+        "confirm": "Megerősítés",
+        "confirmShort": "Veszed?",
+        "hint": "Koppints újra a drágakövek elköltéséhez",
+        "costA11y": "Drágakövek: {{cost}}",
+        "labelA11y": "{{label}}, drágakövek: {{cost}}",
+        "buyNow": "Vétel most"
+    },
+    "gemPowers": {
+        "title": "Drágakőerők",
+        "subtitle": "Költs drágaköveket egy igazi lendületre",
+        "boostOn": "×{{multiplier}} gyorsító aktív · még {{time}}",
+        "buttonCaps": "Gyorsító",
+        "buttonA11y": "Drágakőerők megnyitása",
+        "buttonActiveA11y": "Gyorsító aktív, még {{time}}. Drágakőerők megnyitása",
+        "getMoreGems": "Több drágakő",
+        "fullCaps": "Tele",
+        "boost": {
+            "name": "×{{multiplier}} gyorsító",
+            "description": "×{{multiplier}} termelés és koppintás {{minutes}} percig. Vedd meg újra több időért (legfeljebb {{hours}} óra). Akkor is fut, ha nem vagy itt.",
+            "statusCaps": "Aktív · még {{time}}",
+            "buy": "Gyorsítás",
+            "extend": "+{{minutes}} perc",
+            "a11y": "Gyorsító megvétele"
+        },
+        "timeWarp": {
+            "name": "Időugrás",
+            "description": "Kapj meg azonnal órányi termelést.",
+            "hours": "{{hours}} ó",
+            "a11y": "Ugrás, órák: {{hours}}"
+        },
+        "shower": {
+            "name": "Effektzápor",
+            "description": "Egyszerre jelennek meg jó effektemojik, ennyi: {{amount}}. Koppints rájuk, mielőtt eltűnnek!",
+            "buy": "Megidézés",
+            "a11y": "Effektzápor megidézése"
+        },
+        "comboKeeper": {
+            "name": "Kombóőr",
+            "description": "A kombód {{minutes}} percig nem csökken. Koppintsd fel, aztán tartsd meg.",
+            "statusCaps": "Tart · még {{time}}",
+            "buy": "Megtartás",
+            "a11y": "Kombóőr megvétele"
+        },
+        "discovery": {
+            "name": "Felfedezés",
+            "description": "A következő nagy emojik (ennyi: {{amount}}) olyanok lesznek, amilyeneket még sosem találtál.",
+            "status": "Érkező új emojik: {{amount}}",
+            "buy": "Felfedezés",
+            "allFoundCaps": "Mind megvan",
+            "a11y": "Felfedezések megvétele"
+        }
+    },
+    "trophies": {
+        "unlockedCaps": "Trófea feloldva",
+        "ofTotalUnlocked": "/ {{total}} feloldva",
+        "all": "Mind",
+        "hiddenHint": "Játssz tovább a feloldásához",
+        "secretHint": "Titok. Játssz tovább, hogy megtaláld",
+        "hiddenA11y": "Rejtett trófea, még nincs feloldva. {{hint}}",
+        "unlockedA11y": "{{name}}. {{description}}. Feloldva",
+        "groups": {
+            "Emojis": "Emojik",
+            "Production": "Termelés",
+            "Tapping": "Koppintás",
+            "Buildings": "Épületek",
+            "Collection": "Gyűjtemény",
+            "Magic": "Varázslat",
+            "Prestige": "Presztízs",
+            "Secret": "Titkos"
+        },
+        "tiers": {
+            "hired": "Felvéve",
+            "fifty": "Ötven",
+            "century": "Száz",
+            "empire": "Birodalom"
+        },
+        "names": {
+            "drawn1": "Firkász",
+            "drawn2": "Vázlatfüzet",
+            "drawn3": "Falfestmény",
+            "drawn4": "Galéria",
+            "drawn5": "Mestermű",
+            "drawn6": "Reneszánsz",
+            "drawn7": "Mindenség múzeuma",
+            "drawn8": "Emojikozmosz",
+            "drawn9": "Végtelen vászon",
+            "drawn10": "Megszámlálhatatlan",
+            "drawn11": "Az utolsó oldal",
+            "eps1": "Csordogálás",
+            "eps2": "Patak",
+            "eps3": "Folyó",
+            "eps4": "Áradat",
+            "eps5": "Kitörés",
+            "eps6": "Meteorzápor",
+            "eps7": "Napkitörés",
+            "eps8": "Szupernóva",
+            "eps9": "Eseményhorizont",
+            "taps1": "Bökés",
+            "taps2": "Izgő-mozgó",
+            "taps3": "Sztepptáncos",
+            "taps4": "Dobpergés",
+            "taps5": "Bionikus ujj",
+            "taps6": "Ínhüvelygyulladás",
+            "combo3": "Kombó!",
+            "combo5": "Forró kezek",
+            "combo8": "Szupernóva-kombó",
+            "tapEarnings": "Gyakorlati vezetés",
+            "building": "{{building}}: {{tier}}",
+            "buildings100": "Kisvállalkozás",
+            "buildings500": "Konglomerátum",
+            "buildings1000": "Megavállalat",
+            "buildings2500": "Világuralom",
+            "upgrades10": "Ezermester",
+            "upgrades50": "Mérnök",
+            "upgrades150": "Feltaláló",
+            "upgrades300": "Őrült tudós",
+            "collected50": "Gyűjtő",
+            "collected250": "Halmozó",
+            "collected500": "Levéltáros",
+            "collected1000": "Kurátor",
+            "collectedAll": "Koppintsd mindet",
+            "shiny1": "Hű, csillog",
+            "shiny10": "Szarka",
+            "shiny50": "Aranyláz",
+            "magic1": "Abrakadabra",
+            "magic25": "Tanonc",
+            "magic100": "Varázsló",
+            "magic500": "Főmágus",
+            "prestige1": "Újjászületés",
+            "prestige5": "Idétlen időkig",
+            "prestige10": "Újrahasznosító",
+            "prestige25": "Örök visszatérés",
+            "trial": "Túlélő: {{trial}}",
+            "allPerks": "Teljes felszerelés",
+            "secretAnswer": "Ne ess pánikba",
+            "secretHoarder": "Sárkánykincs",
+            "secretGems": "Csillogó kavicsok"
+        },
+        "descriptions": {
+            "drawn": "Rajzolj összesen emojit: {{amount}}",
+            "eps": "Termelj másodpercenként emojit: {{amount}}",
+            "taps": "Koppints a nagy emojira: {{amount}}×",
+            "combo": "Érj el ×{{amount}} kombót",
+            "tapEarnings": "Keress koppintással emojit: {{amount}}",
+            "buildingFirst": "Első épület: {{buildingMid}}",
+            "buildingOwned": "{{buildingsMid}}: legyen {{amount}}",
+            "buildingsTotal": "Birtokolj egyszerre épületet: {{amount}}",
+            "upgradesOwned": "Birtokolj egyszerre fejlesztést: {{amount}}",
+            "collected": "Találj különböző emojit: {{amount}}",
+            "collectedAll": "Találd meg az összes emojit",
+            "shinyFirst": "Koppints egy csillogó emojira",
+            "shiny": "Koppints csillogó emojira: {{amount}}",
+            "magicFirst": "Koppints egy effektemojira",
+            "magic": "Koppints effektemojira: {{amount}}",
+            "prestigeFirst": "Hajtsd végre az első presztízsed",
+            "prestige": "Presztízs: {{amount}}×",
+            "trial": "Teljesítsd a próbát: {{trial}}",
+            "allPerks": "Szerezd meg az összes előnyt",
+            "secretAnswer": "Játssz {{amount}} mókaértékkel",
+            "secretHoarder": "Legyen a bankban emoji ({{amount}}) úgy, hogy nincs egy épületed sem",
+            "secretGems": "Legyen egyszerre drágakő: {{amount}}"
         }
     }
 }
