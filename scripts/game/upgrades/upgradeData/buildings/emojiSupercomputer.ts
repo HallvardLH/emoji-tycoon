@@ -141,7 +141,7 @@ export const emojiSupercomputerUpgrades: UpgradeType[] = [
     {
         ...baseEmojiSupercomputerUpgrade,
         name: "Holographic display",
-        icon: "🫥",
+        icon: "📽️",
         description: "Emojis floating in the air, glowing faintly.",
         tier: 17,
     },

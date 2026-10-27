@@ -1,7 +1,8 @@
 {
   "expo": {
-    "name": "emoji-tycoon",
+    "name": "Emoji Tycoon",
     "slug": "emoji-tycoon",
+    "owner": "hallvardlh",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
@@ -10,7 +11,7 @@
     "splash": {
       "image": "./assets/splash.png",
       "resizeMode": "contain",
-      "backgroundColor": "#ffffff"
+      "backgroundColor": "#22154A"
     },
     "assetBundlePatterns": [
       "**/*"
@@ -63,7 +64,11 @@
         "backgroundColor": "#22154A"
       },
       "package": "com.iagogames.emoji_tycoon",
-      "versionCode": 1
+      "versionCode": 1,
+      "permissions": [
+        "android.permission.RECORD_AUDIO",
+        "android.permission.MODIFY_AUDIO_SETTINGS"
+      ]
     },
     "web": {
       "favicon": "./assets/favicon.png"
@@ -73,24 +78,40 @@
         "expo-build-properties",
         {
           "android": {
-            "compileSdkVersion": 35,
-            "targetSdkVersion": 35,
-            "buildToolsVersion": "35.0.0"
+            "compileSdkVersion": 36,
+            "targetSdkVersion": 36,
+            "buildToolsVersion": "36.0.0"
           }
         }
       ],
       "expo-localization",
       "expo-font",
-      "expo-audio",
+      [
+        "expo-audio",
+        {
+          "microphonePermission": false
+        }
+      ],
       [
         "react-native-google-mobile-ads",
         {
-          "androidAppId": "ca-app-pub-5996643289244524~1864050818"
+          "androidAppId": "ca-app-pub-5996643289244524~1864050818",
+          "iosAppId": "ca-app-pub-5996643289244524~2471214614",
+          "userTrackingUsageDescription": "Your data is used to show you ads that suit you better, which keeps Emoji Tycoon free.",
+          "skAdNetworkItems": [
+            "cstr6suwn9.skadnetwork"
+          ]
         }
       ]
-    ]
+    ],
+    "extra": {
+      "eas": {
+        "projectId": "19abdfb7-d586-491a-b047-82dc48fb0f12"
+      }
+    }
   },
   "react-native-google-mobile-ads": {
-    "android_app_id": "ca-app-pub-5996643289244524~1864050818"
+    "android_app_id": "ca-app-pub-5996643289244524~1864050818",
+    "ios_app_id": "ca-app-pub-5996643289244524~2471214614"
   }
 }

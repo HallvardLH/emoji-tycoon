@@ -158,7 +158,7 @@ export const templeOfTheBigEmojiUpgrades: UpgradeType[] = [
     {
         ...baseTempleUpgrade,
         name: "Divine favour",
-        icon: "🫅",
+        icon: "😇",
         description: "The Big Emoji smiles upon you. All of its emojis are yours.",
         tier: 19,
     },

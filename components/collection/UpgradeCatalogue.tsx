@@ -1,5 +1,5 @@
 import { useEffect, useMemo, useState } from "react";
-import { View, ScrollView, Pressable, StyleSheet, LayoutChangeEvent, Platform } from "react-native";
+import { View, ScrollView, Pressable, StyleSheet, LayoutChangeEvent, Platform, ActivityIndicator } from "react-native";
 import { useSelector } from "react-redux";
 import { RootState } from "../../scripts/redux/reduxStore";
 import { upgradeData } from "../../scripts/game/upgrades/upgradeData/upgradeData";
@@ -9,10 +9,10 @@ import { getBuildingUnlockRequirement } from "../../scripts/game/upgrades/checks
 import { COMBO_LEVEL_UNLOCK_TAPS } from "../../scripts/game/upgrades/upgradeData/nonBuilding/combo";
 import { EFFECT_EMOJI_UNLOCK_EARNED } from "../../scripts/game/upgrades/upgradeData/nonBuilding/effectEmojis";
 import { formatNumber, formatPercentage } from "../../scripts/misc";
-import { priceOf, iconOf, effectChips, tierLabel } from "../gameUI/Upgrades/UpgradesList";
+import { priceOf, iconOf, effectChips, tierLabel, tileGrid } from "../gameUI/Upgrades/UpgradesList";
 import Text from "../generalUI/Text";
 import Modal from "../generalUI/Modal";
-import { palette, radii } from "../misc/theme";
+import { palette, radii, themedStyles } from "../misc/theme";
 import { useTranslation } from "react-i18next";
 import i18n from "../../i18n";
 import { getBuildingNameForAmount, getUpgradeBuildingName, getUpgradeName, getUpgradeDescription, getUpgradeQuote } from "../../i18n/content";
@@ -24,6 +24,7 @@ type Filter = "all" | UpgradeState;
 
 const COLUMNS = 5;
 const GAP = 8;
+const PADDING = 20;
 const COMBO = "Combo";
 const EFFECT_EMOJIS = "Effect emojis";
 
@@ -82,16 +83,27 @@ export default function UpgradeCatalogue() {
     const [selectedId, setSelectedId] = useState<number | undefined>(undefined);
     const [gridWidth, setGridWidth] = useState(0);
 
+    // Joined, so the selector only changes when a building unlocks
+    const unlockedBuildings = useSelector((state: RootState) =>
+        state.buildings.buildings.filter(b => b.unlocked).map(b => b.name).join("|"));
+
     const sections = useMemo(buildSections, []);
     const stateOf = (upgrade: UpgradeType): UpgradeState =>
         owned.includes(upgrade.id!) ? "owned" : unlocked.includes(upgrade.id!) ? "forSale" : "locked";
+
+    // Locked upgrades, and sections for buildings or features not found yet, stay hidden:
+    // they'd give away what's still to come. The Big Emoji is there from the start
+    const isRevealed = (section: Section) =>
+        section.name === "Big emoji"
+        || unlockedBuildings.split("|").includes(section.name)
+        || section.upgrades.some(u => stateOf(u) !== "locked");
 
     const total = upgradeData.length;
     const counts = { owned: 0, forSale: 0, locked: 0 };
     upgradeData.forEach(upgrade => counts[stateOf(upgrade)]++);
     const percentage = total > 0 ? (counts.owned / total) * 100 : 0;
 
-    const tileSize = gridWidth > 0 ? (gridWidth - GAP * (COLUMNS - 1)) / COLUMNS : 0;
+    const { tileSize, rowWidth } = tileGrid(gridWidth, COLUMNS, GAP);
 
     // Every upgrade the filter shows, in the order the grid shows them, for stepping through in the modal
     const matches = (upgrade: UpgradeType) => filter === "all" || stateOf(upgrade) === filter;
@@ -102,8 +114,19 @@ export default function UpgradeCatalogue() {
     const next = selectedIndex >= 0 && selectedIndex < browsable.length - 1 ? browsable[selectedIndex + 1] : undefined;
     const close = () => setSelectedId(undefined);
 
+    // The tiles are sized from the width, so nothing shows until it's measured: a spinner
+    // instead of headers whose emojis pop in later
+    const measure = (e: LayoutChangeEvent) => setGridWidth(e.nativeEvent.layout.width - PADDING * 2);
+    if (tileSize === 0) {
+        return (
+            <View style={styles.loading} onLayout={measure}>
+                <ActivityIndicator size="large" color={palette.sun} accessibilityLabel="Loading upgrades" />
+            </View>
+        );
+    }
+
     return (
-        <ScrollView contentContainerStyle={styles.content}>
+        <ScrollView contentContainerStyle={styles.content} onLayout={measure}>
             <View style={styles.summary}>
                 <View style={styles.summaryHead}>
                     <Text size={20} color={palette.ink}>{t("catalogue.title")}</Text>
@@ -128,15 +151,16 @@ export default function UpgradeCatalogue() {
                 const shown = section.upgrades.filter(matches);
                 if (shown.length === 0) return null;
                 const ownedHere = section.upgrades.filter(u => stateOf(u) === "owned").length;
+                const revealed = isRevealed(section);
 
                 return (
                     <View key={section.name} style={styles.section}>
                         <View style={styles.sectionHead}>
                             <View style={styles.sectionIcon}>
-                                <Text size={20} style={{ lineHeight: 26 }}>{section.icon}</Text>
+                                <Text size={20} style={{ lineHeight: 26, opacity: revealed ? 1 : 0.5 }}>{revealed ? section.icon : "❔"}</Text>
                             </View>
                             <View style={{ flex: 1, gap: 4 }}>
-                                <Text size={16} numberOfLines={1}>{sectionLabel(section.name)}</Text>
+                                <Text size={16} numberOfLines={1} color={revealed ? undefined : palette.lilac}>{revealed ? sectionLabel(section.name) : "???"}</Text>
                                 <View style={styles.miniTrack}>
                                     <View style={[styles.miniFill, { width: `${(ownedHere / section.upgrades.length) * 100}%` }]} />
                                 </View>
@@ -144,8 +168,8 @@ export default function UpgradeCatalogue() {
                             <Text font="black" size={13} color={palette.lilac}>{ownedHere}/{section.upgrades.length}</Text>
                         </View>
 
-                        <View style={styles.grid} onLayout={(e: LayoutChangeEvent) => setGridWidth(e.nativeEvent.layout.width)}>
-                            {tileSize > 0 && shown.map(upgrade => {
+                        <View style={[styles.grid, { width: rowWidth }]}>
+                            {shown.map(upgrade => {
                                 const state = stateOf(upgrade);
                                 const isSelected = upgrade.id === selectedId;
                                 return (
@@ -154,7 +178,7 @@ export default function UpgradeCatalogue() {
                                         onPress={() => setSelectedId(upgrade.id)}
                                         accessibilityRole="button"
                                         accessibilityState={{ selected: isSelected }}
-                                        accessibilityLabel={t("catalogue.tileA11y", { name: getUpgradeName(upgrade.id!), state: t(`catalogue.stateA11y.${state}`) })}
+                                        accessibilityLabel={state === "locked" ? t(`catalogue.stateA11y.locked`) : t("catalogue.tileA11y", { name: getUpgradeName(upgrade.id!), state: t(`catalogue.stateA11y.${state}`) })}
                                         style={[
                                             styles.tile,
                                             { width: tileSize, height: tileSize },
@@ -162,7 +186,11 @@ export default function UpgradeCatalogue() {
                                             isSelected ? styles.tileSelected : null,
                                         ]}
                                     >
-                                        <Text size={Math.min(30, tileSize * 0.44)} style={{ opacity: state === "locked" ? 0.35 : 1 }}>{upgrade.icon}</Text>
+                                        {state === "locked" ? (
+                                            <Text size={Math.min(20, tileSize * 0.3)} style={{ opacity: 0.35 }}>🔒</Text>
+                                        ) : (
+                                            <Text size={Math.min(30, tileSize * 0.44)}>{upgrade.icon}</Text>
+                                        )}
                                         {state === "owned" && (
                                             <View style={styles.check}>
                                                 <Text font="black" size={9} color="#FFFFFF" style={{ lineHeight: 11 }}>✓</Text>
@@ -181,11 +209,18 @@ export default function UpgradeCatalogue() {
             <Modal modalVisible={selected !== undefined} onRequestClose={close}>
                 {selected && (
                     <View style={styles.modalCard}>
-                        <UpgradeDetail upgrade={selected} state={stateOf(selected)} />
+                        {stateOf(selected) === "locked" ? (
+                            <LockedDetail
+                                upgrade={selected}
+                                revealed={isRevealed(sections.find(s => s.upgrades.includes(selected))!)}
+                            />
+                        ) : (
+                            <UpgradeDetail upgrade={selected} state={stateOf(selected)} />
+                        )}
                         <View style={styles.nav}>
-                            <NavButton label={t("catalogue.prev")} accessibilityLabel={t("catalogue.prevA11y")} icon={prev?.icon} direction="prev" onPress={prev ? () => setSelectedId(prev.id) : undefined} />
+                            <NavButton label={t("catalogue.prev")} accessibilityLabel={t("catalogue.prevA11y")} icon={prev && (stateOf(prev) === "locked" ? "🔒" : prev.icon)} direction="prev" onPress={prev ? () => setSelectedId(prev.id) : undefined} />
                             <Text font="black" size={12} color={palette.muted}>{selectedIndex + 1} / {browsable.length}</Text>
-                            <NavButton label={t("catalogue.next")} accessibilityLabel={t("catalogue.nextA11y")} icon={next?.icon} direction="next" onPress={next ? () => setSelectedId(next.id) : undefined} />
+                            <NavButton label={t("catalogue.next")} accessibilityLabel={t("catalogue.nextA11y")} icon={next && (stateOf(next) === "locked" ? "🔒" : next.icon)} direction="next" onPress={next ? () => setSelectedId(next.id) : undefined} />
                         </View>
                         <ArrowKeys
                             onPrev={prev ? () => setSelectedId(prev.id) : undefined}
@@ -236,6 +271,33 @@ function ArrowKeys({ onPrev, onNext, onClose }: { onPrev?: () => void, onNext?: 
         return () => window.removeEventListener("keydown", onKey);
     }, [onPrev, onNext, onClose]);
     return null;
+}
+
+/**
+ * A locked upgrade: no name, icon or effect. What unlocks it is shown only once its
+ * building or feature has been found, so it gives nothing new away
+ */
+function LockedDetail({ upgrade, revealed }: { upgrade: UpgradeType, revealed: boolean }) {
+    return (
+        <View style={styles.detail}>
+            <View style={styles.detailHead}>
+                <View style={styles.detailTile}>
+                    <Text size={32} style={{ lineHeight: 40, opacity: 0.5 }}>🔒</Text>
+                </View>
+                <View style={{ flex: 1, gap: 4 }}>
+                    <View style={styles.detailTags}>
+                        <View style={styles.tag}>
+                            <Text font="black" size={10} color={palette.muted}>{stateLabel("locked")}</Text>
+                        </View>
+                    </View>
+                    <Text size={19} color={palette.muted} style={{ lineHeight: 22 }}>???</Text>
+                </View>
+            </View>
+            <Text font="body" size={14} color={palette.muted} style={{ lineHeight: 20 }}>
+                {revealed ? `${i18n.t("catalogue.fact.unlocks")}: ${unlockText(upgrade)}` : "Keep playing to unlock it."}
+            </Text>
+        </View>
+    );
 }
 
 function UpgradeDetail({ upgrade, state }: { upgrade: UpgradeType, state: UpgradeState }) {
@@ -305,9 +367,14 @@ function FilterChip({ label, active, onPress }: { label: string, active: boolean
     );
 }
 
-const styles = StyleSheet.create({
+const styles = themedStyles(() => StyleSheet.create({
+    loading: {
+        flex: 1,
+        alignItems: "center",
+        justifyContent: "center",
+    },
     content: {
-        paddingHorizontal: 20,
+        paddingHorizontal: PADDING,
         paddingTop: 14,
         paddingBottom: 40,
         gap: 16,
@@ -381,6 +448,7 @@ const styles = StyleSheet.create({
         flexDirection: "row",
         flexWrap: "wrap",
         gap: GAP,
+        alignSelf: "center",
     },
     tile: {
         borderRadius: 14,
@@ -511,4 +579,4 @@ const styles = StyleSheet.create({
         borderRadius: radii.sm,
         backgroundColor: palette.tile,
     },
-});
+}));

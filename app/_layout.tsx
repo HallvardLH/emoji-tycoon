@@ -2,14 +2,15 @@ import "../i18n";
 import { Stack } from "expo-router";
 import { Provider, useSelector } from "react-redux";
 import { StatusBar } from "expo-status-bar";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { View, StyleSheet, Platform } from "react-native";
-import store, { RootState } from "../scripts/redux/reduxStore";
+import store, { RootState, whenSaveLoaded } from "../scripts/redux/reduxStore";
 import { useTranslation } from "react-i18next";
 import { useLocales } from "expo-localization";
 import { applyLanguagePreference } from "../i18n";
 import { gameLoop } from "../scripts/game/gameLoop";
 import { preloadRewardedAd } from "../scripts/ads";
+import { ADS_ENABLED } from "../scripts/monetization";
 import Header from "../components/header/Header";
 import MilestoneToast from "../components/gameUI/MilestoneToast";
 import OfflineModal from "../components/gameUI/OfflineModal";
@@ -17,7 +18,8 @@ import ResetModal from "../components/gameUI/ResetModal";
 import { useFonts } from "expo-font";
 import { LilitaOne_400Regular } from "@expo-google-fonts/lilita-one";
 import { Nunito_700Bold, Nunito_700Bold_Italic, Nunito_800ExtraBold, Nunito_900Black } from "@expo-google-fonts/nunito";
-import { palette } from "../components/misc/theme";
+import { palette, themedStyles, applyPalette, useThemeVersion } from "../components/misc/theme";
+import { themeById } from "../scripts/game/gems/themes";
 // Fonts for languages the game's fonts cannot display, see i18n/fonts.ts
 import { RussoOne_400Regular } from "@expo-google-fonts/russo-one/400Regular";
 import { Baloo2_800ExtraBold } from "@expo-google-fonts/baloo-2/800ExtraBold";
@@ -62,15 +64,31 @@ export default function RootLayout() {
     }, []);
 
     // Ready before the welcome back screen asks for one
-    useEffect(() => { preloadRewardedAd(); }, []);
+    useEffect(() => { if (ADS_ENABLED) preloadRewardedAd(); }, []);
+
+    // The save loads asynchronously (slowly on some phones). Nothing runs or shows until it's
+    // in: the game's startup checks, migrations and the welcome back offer all read it, and
+    // taps on a fresh game in the meantime would be thrown away when it arrived
+    const [saveLoaded, setSaveLoaded] = useState(false);
+    useEffect(() => {
+        let cancelled = false;
+        whenSaveLoaded().then(() => {
+            if (cancelled) return;
+            // The app theme (gems) colours everything, so it's on before anything shows
+            applyPalette(themeById(store.getState().gems.theme).colours);
+            setSaveLoaded(true);
+        });
+        return () => { cancelled = true; };
+    }, []);
 
     // Game loop
     useEffect(() => {
+        if (!saveLoaded) return;
         const intervalId = setInterval(gameLoop, 100);
         return () => clearInterval(intervalId);
-    }, []);
+    }, [saveLoaded]);
 
-    if (!fontsLoaded) {
+    if (!fontsLoaded || !saveLoaded) {
         return <View style={styles.container} />;
     }
 
@@ -81,6 +99,11 @@ export default function RootLayout() {
     );
 }
 
+/**
+ * The app, in the player's language and the colours of their app theme. Changing either
+ * remounts everything, so every text (formatted numbers outside of components too) and
+ * every style (rebuilt for the new palette, see themedStyles) picks it up
+ */
 function LocalizedApp() {
     // Older saves have no language preference
     const languagePreference = useSelector((state: RootState) => state.preferences.language) ?? "system";
@@ -92,10 +115,18 @@ function LocalizedApp() {
         applyLanguagePreference(languagePreference);
     }, [languagePreference, deviceLocales]);
 
-    // Remount the app when the language changes, so that every text,
-    // including formatted numbers outside of components, is rendered in the new language
+    const themeId = useSelector((state: RootState) => state.gems.theme);
+    useEffect(() => {
+        const { colours } = themeById(themeId);
+        // Only when it's really a different theme: the first one went on with the save
+        if (colours.grape !== palette.grape || colours.sun !== palette.sun || colours.paper !== palette.paper) {
+            applyPalette(colours);
+        }
+    }, [themeId]);
+    const themeVersion = useThemeVersion();
+
     return (
-        <View key={i18n.language} style={styles.container}>
+        <View key={`${i18n.language}-${themeVersion}`} style={styles.container}>
             <StatusBar style="light" />
             <Stack
                 screenOptions={{
@@ -110,9 +141,9 @@ function LocalizedApp() {
     );
 }
 
-const styles = StyleSheet.create({
+const styles = themedStyles(() => StyleSheet.create({
     container: {
         flex: 1,
         backgroundColor: palette.grape,
     },
-});
+}));

@@ -1,4 +1,4 @@
-import * as Haptics from 'expo-haptics';
+import * as Haptics from "./game/haptics";
 import { getLanguage } from '../i18n';
 
 /** Text in capitals, the way the current language writes them (e.g. Turkish i becomes İ) */

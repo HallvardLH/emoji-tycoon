@@ -12,7 +12,7 @@ import { formatNumber } from "../../scripts/misc";
 import { getGameSpeed, useGameSpeed } from "../../scripts/game/gameSpeed";
 import { getLastTickTime } from "../../scripts/game/gameLoop";
 import { useIsDesktop } from "../layout/desktop";
-import { palette, radii } from "../misc/theme";
+import { palette, radii, themedStyles } from "../misc/theme";
 import { useTranslation } from "react-i18next";
 import i18n, { getLanguage } from "../../i18n";
 
@@ -134,7 +134,10 @@ function GemsPill() {
             style={({ pressed }) => [styles.epsPill, styles.gemsPill, pressed ? { opacity: 0.8 } : null]}
         >
             <Text font="bold" size={14} color="#FFFFFF">💎 {formatNumber(gems)}</Text>
-            <Text font="black" size={14} color={palette.sun}>+</Text>
+            {/* A button of its own, so it reads as "get more" */}
+            <View style={styles.gemsPlus}>
+                <Text font="black" size={14} color={palette.ink} style={{ lineHeight: 16 }}>+</Text>
+            </View>
         </Pressable>
     );
 }
@@ -186,7 +189,7 @@ function RateBump({ children, glow, origin = "center", style }: { children: Reac
     );
 }
 
-const styles = StyleSheet.create({
+const styles = themedStyles(() => StyleSheet.create({
     container: {
         flexDirection: "row",
         justifyContent: "space-between",
@@ -226,7 +229,16 @@ const styles = StyleSheet.create({
     gemsPill: {
         flexDirection: "row",
         alignItems: "center",
-        gap: 6,
+        gap: 8,
+        paddingRight: 5,
+    },
+    gemsPlus: {
+        width: 20,
+        height: 20,
+        borderRadius: 10,
+        backgroundColor: palette.sun,
+        alignItems: "center",
+        justifyContent: "center",
     },
     // Flashes over the rate pill when production goes up
     bumpGlow: {
@@ -240,4 +252,4 @@ const styles = StyleSheet.create({
     title: {
         lineHeight: 44,
     },
-})
+}))

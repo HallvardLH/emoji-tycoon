@@ -12,3 +12,10 @@ export function preloadRewardedAd(): Promise<boolean> {
 export async function showRewardedAd(): Promise<boolean> {
     return true;
 }
+
+/** No ad consent to manage on the web */
+export async function privacyOptionsRequired() {
+    return false;
+}
+
+export async function showPrivacyOptions() {}

@@ -5,7 +5,7 @@ import { markAffordableUpgradesSeen, selectNewAffordableUpgrades } from "../../s
 import { MaterialTopTabBarProps } from "@react-navigation/material-top-tabs";
 import SegmentedControl from "../generalUI/SegmentedControl";
 import { RootState } from "../../scripts/redux/reduxStore";
-import { palette } from "../misc/theme";
+import { palette, themedStyles } from "../misc/theme";
 
 /** Buildings / Upgrades switch at the top of the Shop */
 export default function TopTabBar({ state, descriptors, navigation }: MaterialTopTabBarProps) {
@@ -36,10 +36,10 @@ export default function TopTabBar({ state, descriptors, navigation }: MaterialTo
     );
 }
 
-const styles = StyleSheet.create({
+const styles = themedStyles(() => StyleSheet.create({
     container: {
         paddingTop: 12,
         paddingHorizontal: 20,
         backgroundColor: palette.grape,
     },
-});
+}));

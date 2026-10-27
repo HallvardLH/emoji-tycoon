@@ -300,7 +300,7 @@ export const farmUpgrades: UpgradeType[] = [
     {
         ...farmHelperUpgrade,
         name: "Beans",
-        icon: "🫘",
+        icon: "🥜",
         description: "High in protein and perfect for expanding your farm.",
         quote: "Beans!",
         variant: "Helper",
@@ -394,7 +394,7 @@ export const farmUpgrades: UpgradeType[] = [
     {
         ...farmHelperUpgrade,
         name: "Peas",
-        icon: "🫛",
+        icon: "🟢",
         description: "Peas!",
         quote: "Peas! PEAS! That's the whole description? Who's writing these?",
         variant: "Helper",

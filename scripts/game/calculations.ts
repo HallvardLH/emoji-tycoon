@@ -5,6 +5,7 @@ import { funProductionMultiplier, funTapMultiplier } from "./shorthands";
 import { prestigeProductionMultiplier } from "./prestige/perks";
 import { trialTapMultiplier } from "./prestige/trials";
 import { formatPercentage } from "../misc";
+import { boostMultiplier } from "./gems/boost";
 
 const multiplyAll = (mults: number[]) => mults
     .filter(mult => mult !== 0) // Removes 0
@@ -32,9 +33,10 @@ function computeEpt(inputs: Partial<TapInputs> = {}) {
     const state = store.getState();
     const { bigEmoji } = state;
 
-    // Tap multipliers from upgrades and active effects
+    // Tap multipliers from upgrades, active effects and the gem boost
     const multiplier = multiplyAll([
         ...state.effects.effects.map(effect => effect.eptMult),
+        boostMultiplier(),
         ...(inputs.tapMultipliers ?? bigEmoji.emojisPerTapMultipliers),
     ]);
 
@@ -45,7 +47,8 @@ function computeEpt(inputs: Partial<TapInputs> = {}) {
     // Shares add up, no compounding here
     const totalPercentageOfEps = (inputs.tapPercentagesOfEps ?? bigEmoji.emojisPerTapPercentageOfEps)
         .reduce((acc, perc) => acc + perc, 0);
-    const epsBonus = (inputs.eps ?? state.values.emojisPerSecond) * totalPercentageOfEps;
+    // Production without the gem boost: it's in the multiplier above, and would count twice
+    const epsBonus = (inputs.eps ?? state.values.emojisPerSecond) / boostMultiplier() * totalPercentageOfEps;
 
     // For every 10 tap boost, multiply EPT
     const tapBoost = (Math.floor(bigEmoji.tapBoost / 10)) + 1;
@@ -80,15 +83,16 @@ function computeBaseEps(inputs: Partial<ProductionInputs> = {}) {
         * prestigeProductionMultiplier();
 }
 
-/** Production multiplier from active effects */
-const effectProductionMultiplier = () => multiplyAll(store.getState().effects.effects.map(effect => effect.epsMult));
+/** Production multiplier from active effects and the gem boost */
+const effectProductionMultiplier = () => multiplyAll(store.getState().effects.effects.map(effect => effect.epsMult)) * boostMultiplier();
 
 export function calculateEmojisPerSecond() {
     store.dispatch(updateEmojisPerSecond(computeBaseEps() * effectProductionMultiplier()));
 }
 
 /**
- * Emojis per second without effects. Offline earnings use it, as effects run out while away.
+ * Emojis per second without effects or the gem boost. Offline earnings use it, as
+ * effects run out while away (the boost is added for the part of the time it was on).
  */
 export function calculateBaseEmojisPerSecond() {
     return computeBaseEps();

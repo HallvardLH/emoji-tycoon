@@ -6,8 +6,6 @@ import { calculateEmojisPerSecond, calculateEpt } from '../calculations';
 import { howFun } from '../shorthands';
 import { addEffectEmojisCollected } from '../../redux/statsSlice';
 import { emojiGiveEffect } from '../giveEmojis';
-import * as Haptics from "expo-haptics"
-import { vibrateForDuration } from '../../utils';
 import { playHaptic } from '../../utils';
 import { effectSpawnRateMultiplier } from '../prestige/perks';
 import { canSpawnEffects } from '../prestige/trials';
@@ -44,7 +42,6 @@ export function tapEffect(effect: Effect): number | undefined {
     // Add to stats
     store.dispatch(addEffectEmojisCollected(1));
 
-    // vibrateForDuration(5000)
     playHaptic("boost");
 
     return given;

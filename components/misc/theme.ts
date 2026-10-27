@@ -1,8 +1,14 @@
+import { useSyncExternalStore } from "react";
+
 /**
  * Design tokens for the "Candy Arcade" style.
  *
  * A dark grape stage lets the emojis be the only loud color,
  * paper cards hold information, and sun yellow means "you can spend this".
+ *
+ * The palette is live: app themes (bought with gems, see themes.ts) swap its colours
+ * with applyPalette. Read it while rendering, and make style sheets that use it with
+ * themedStyles, so they're rebuilt for the new colours.
  */
 export const palette = {
     // Stage
@@ -41,6 +47,49 @@ export const palette = {
     glassLine: "rgba(255,255,255,0.18)",
     shade: "rgba(0,0,0,0.25)",
 };
+
+export type Palette = typeof palette;
+
+// Goes up each time the palette changes
+let paletteVersion = 0;
+const listeners = new Set<() => void>();
+
+/** Swaps the palette's colours; the app re-renders under them (see useThemeVersion) */
+export function applyPalette(colours: Palette) {
+    Object.assign(palette, colours);
+    paletteVersion++;
+    listeners.forEach(listener => listener());
+}
+
+/** Changes whenever the palette does. The root layout remounts the app with it, so everything picks up the new colours */
+export function useThemeVersion() {
+    return useSyncExternalStore(
+        listener => { listeners.add(listener); return () => { listeners.delete(listener); }; },
+        () => paletteVersion,
+    );
+}
+
+/**
+ * A style sheet that uses the palette, rebuilt when the palette changes. Use it like
+ * StyleSheet.create's result: `const styles = themedStyles(() => StyleSheet.create({...}))`
+ */
+export function themedStyles<T extends object>(make: () => T): T {
+    let built: T | undefined;
+    let builtFor = -1;
+    const current = () => {
+        if (builtFor !== paletteVersion) {
+            built = make();
+            builtFor = paletteVersion;
+        }
+        return built!;
+    };
+    return new Proxy({} as T, {
+        get: (_, key) => (current() as any)[key],
+        has: (_, key) => key in current(),
+        ownKeys: () => Reflect.ownKeys(current()),
+        getOwnPropertyDescriptor: (_, key) => Object.getOwnPropertyDescriptor(current(), key),
+    });
+}
 
 export const fonts = {
     display: "LilitaOne_400Regular",

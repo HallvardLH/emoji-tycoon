@@ -1,6 +1,6 @@
 import React, { ReactNode } from "react";
 import { Text as RNText, StyleProp, TextStyle, StyleSheet, LayoutChangeEvent } from "react-native";
-import { fonts, palette } from "../misc/theme";
+import { fonts, palette, themedStyles } from "../misc/theme";
 import { getLanguage } from "../../i18n";
 import { languageTextStyles } from "../../i18n/fonts";
 
@@ -73,7 +73,7 @@ function getTallLineHeight(style: StyleProp<TextStyle>, size: number) {
     return Math.max(lineHeight, Math.round(fontSize * 1.6));
 }
 
-const textStyles = StyleSheet.create({
+const textStyles = themedStyles(() => StyleSheet.create({
     text: {
         fontFamily: fonts.display,
         color: palette.paper,
@@ -85,6 +85,6 @@ const textStyles = StyleSheet.create({
         textShadowOffset: { width: 0, height: 2 },
         textShadowRadius: 4
     }
-})
+}))
 
 export { textStyles };

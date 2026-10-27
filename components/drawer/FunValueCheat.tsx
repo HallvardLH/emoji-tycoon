@@ -7,7 +7,7 @@ import { setFunValue } from "../../scripts/redux/valuesSlice";
 import { funValueEffects, getFunValueEffect } from "../../scripts/game/funValues";
 import { calculateBuildingsEps } from "../../scripts/game/buildings/buildings";
 import { calculateEpt } from "../../scripts/game/calculations";
-import { palette, radii } from "../misc/theme";
+import { palette, radii, themedStyles } from "../misc/theme";
 import { useTranslation } from "react-i18next";
 import { getFunValueEffectName, getFunValueEffectDescription } from "../../i18n/content";
 
@@ -92,7 +92,7 @@ function StepButton({ label, onPress }: { label: string, onPress: () => void }) 
     );
 }
 
-const styles = StyleSheet.create({
+const styles = themedStyles(() => StyleSheet.create({
     container: {
         alignItems: "center",
         gap: 8,
@@ -142,4 +142,4 @@ const styles = StyleSheet.create({
     range: {
         width: 46,
     },
-});
+}));

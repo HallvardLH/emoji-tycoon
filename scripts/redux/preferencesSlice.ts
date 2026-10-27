@@ -34,6 +34,10 @@ interface PreferencesState {
     * @property Sound effects for tapping. Missing from saves made before it existed, so read it as on when undefined.
     */
     soundEffects?: boolean,
+    /**
+    * @property Vibration on taps, purchases and celebrations. Missing from saves made before it existed, so read it as on when undefined.
+    */
+    vibration?: boolean,
 }
 
 const initialState: PreferencesState = {
@@ -46,6 +50,7 @@ const initialState: PreferencesState = {
     language: "system",
     reduceAnimations: false,
     soundEffects: true,
+    vibration: true,
 };
 
 export const preferencesSlice = createSlice({
@@ -74,6 +79,9 @@ export const preferencesSlice = createSlice({
         updateSoundEffects: (state, action: PayloadAction<boolean>) => {
             state.soundEffects = action.payload;
         },
+        updateVibration: (state, action: PayloadAction<boolean>) => {
+            state.vibration = action.payload;
+        },
         updateReduceAnimations: (state, action: PayloadAction<boolean>) => {
             state.reduceAnimations = action.payload;
         },
@@ -84,12 +92,13 @@ export const preferencesSlice = createSlice({
                 language: state.language,
                 reduceAnimations: state.reduceAnimations ?? false,
                 soundEffects: state.soundEffects ?? true,
+                vibration: state.vibration ?? true,
             };
         },
 
     },
 });
 
-export const { updateBulkBuy, updateShowDetails, toggleUpgradeFilter, setLanguage, updateReduceAnimations, updateSoundEffects, resetPreferences } = preferencesSlice.actions;
+export const { updateBulkBuy, updateShowDetails, toggleUpgradeFilter, setLanguage, updateReduceAnimations, updateSoundEffects, updateVibration, resetPreferences } = preferencesSlice.actions;
 
 export default preferencesSlice.reducer;

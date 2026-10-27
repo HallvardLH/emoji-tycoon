@@ -6,7 +6,7 @@ import Emojidex from "../../app/(tabs)/emojidex";
 import Settings from "../drawer/Settings";
 import SegmentedControl from "../generalUI/SegmentedControl";
 import { StageHeader } from "../header/Header";
-import { palette } from "../misc/theme";
+import { palette, themedStyles } from "../misc/theme";
 import { DesktopPanel, setDesktopPanel, useDesktopPanel } from "./desktop";
 import { useTranslation } from "react-i18next";
 
@@ -55,7 +55,7 @@ export default function DesktopLayout() {
     );
 }
 
-const styles = StyleSheet.create({
+const styles = themedStyles(() => StyleSheet.create({
     row: {
         flex: 1,
         flexDirection: "row",
@@ -84,4 +84,4 @@ const styles = StyleSheet.create({
         paddingTop: 16,
         paddingBottom: 20,
     },
-});
+}));

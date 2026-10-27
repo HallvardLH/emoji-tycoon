@@ -1,14 +1,18 @@
-import { View, StyleSheet } from 'react-native';
+import { useEffect, useState } from 'react';
+import { View, StyleSheet, Platform, Pressable } from 'react-native';
+import Constants from 'expo-constants';
 import { useDispatch, useSelector } from 'react-redux';
 import { RootState } from '../../scripts/redux/reduxStore';
-import { updateReduceAnimations, updateSoundEffects } from '../../scripts/redux/preferencesSlice';
+import { updateReduceAnimations, updateSoundEffects, updateVibration } from '../../scripts/redux/preferencesSlice';
 import SwitchRow from './SwitchRow';
 import ResetButton from './ResetButton';
 import Text from '../generalUI/Text';
-import { palette } from '../misc/theme';
+import { palette, radii, themedStyles } from '../misc/theme';
 import LanguagePicker from './LanguagePicker';
 import { useTranslation } from 'react-i18next';
 import { getLanguage } from '../../i18n';
+import { privacyOptionsRequired, showPrivacyOptions } from '../../scripts/ads';
+import { ADS_ENABLED } from '../../scripts/monetization';
 
 interface SettingsProps {
     /** Called when the reset button is pressed, to close the drawer */
@@ -21,6 +25,16 @@ export default function Settings({ onReset }: SettingsProps) {
     const caps = (text: string) => text.toLocaleUpperCase(getLanguage());
     const reduceAnimations = useSelector((state: RootState) => state.preferences.reduceAnimations ?? false);
     const soundEffects = useSelector((state: RootState) => state.preferences.soundEffects ?? true);
+    const vibration = useSelector((state: RootState) => state.preferences.vibration ?? true);
+    // Where the law asks for it, players can change their ad consent at any time
+    const [showPrivacy, setShowPrivacy] = useState(false);
+    useEffect(() => {
+        // No ads, no consent to ask for
+        if (!ADS_ENABLED) return;
+        let cancelled = false;
+        privacyOptionsRequired().then(required => { if (!cancelled) setShowPrivacy(required); });
+        return () => { cancelled = true; };
+    }, []);
 
     return (
         <View style={styles.container}>
@@ -40,6 +54,16 @@ export default function Settings({ onReset }: SettingsProps) {
                     value={soundEffects}
                     onChange={value => dispatch(updateSoundEffects(value))}
                 />
+                {/* Phones only: browsers don't vibrate for the game */}
+                {Platform.OS !== "web" && (
+                    <SwitchRow
+                        icon="📳"
+                        label="Vibration"
+                        hint="A buzz as you tap, buy and celebrate."
+                        value={vibration}
+                        onChange={value => dispatch(updateVibration(value))}
+                    />
+                )}
             </View>
 
             <View style={styles.section}>
@@ -53,15 +77,38 @@ export default function Settings({ onReset }: SettingsProps) {
                 />
             </View>
 
+            {showPrivacy && (
+                <View style={styles.section}>
+                    <Text font="black" size={11} color={palette.lilac} style={styles.sectionTitle}>PRIVACY</Text>
+                    <Pressable
+                        accessibilityRole="button"
+                        accessibilityLabel="Privacy choices"
+                        onPress={showPrivacyOptions}
+                        style={({ pressed }) => [styles.row, pressed ? { opacity: 0.7 } : null]}
+                    >
+                        <Text size={18} style={{ lineHeight: 24 }}>🛡️</Text>
+                        <View style={styles.rowText}>
+                            <Text font="bold" size={14}>Privacy choices</Text>
+                            <Text font="bold" size={12} color={palette.lilac}>Change how ads may use your data.</Text>
+                        </View>
+                        <Text font="black" size={18} color={palette.lilac}>›</Text>
+                    </Pressable>
+                </View>
+            )}
+
             <View style={styles.section}>
                 <Text font="black" size={11} color={palette.lilac} style={styles.sectionTitle}>{caps(t("settings.dangerZone"))}</Text>
                 <ResetButton onPress={onReset} />
             </View>
+
+            <Text font="bold" size={12} color={palette.lilac} style={styles.version}>
+                Emoji Tycoon {Constants.expoConfig?.version ?? ""}
+            </Text>
         </View>
     );
 }
 
-const styles = StyleSheet.create({
+const styles = themedStyles(() => StyleSheet.create({
     container: {
         alignSelf: "stretch",
         paddingHorizontal: 20,
@@ -73,4 +120,22 @@ const styles = StyleSheet.create({
     sectionTitle: {
         letterSpacing: 1.3,
     },
-});
+    row: {
+        minHeight: 48,
+        flexDirection: "row",
+        alignItems: "center",
+        gap: 10,
+        paddingHorizontal: 14,
+        paddingVertical: 8,
+        borderRadius: radii.md,
+        backgroundColor: palette.glass,
+    },
+    rowText: {
+        flex: 1,
+        gap: 2,
+    },
+    version: {
+        textAlign: "center",
+        opacity: 0.7,
+    },
+}));

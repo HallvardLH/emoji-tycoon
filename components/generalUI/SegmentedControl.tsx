@@ -1,7 +1,7 @@
 import { View, Pressable, StyleSheet, StyleProp, ViewStyle } from "react-native";
 import Text from "./Text";
 import Badge from "./Badge";
-import { palette, radii } from "../misc/theme";
+import { palette, radii, themedStyles } from "../misc/theme";
 
 interface Segment {
     label: string;
@@ -38,7 +38,7 @@ export default function SegmentedControl({ segments, activeIndex, style }: Segme
     );
 }
 
-const styles = StyleSheet.create({
+const styles = themedStyles(() => StyleSheet.create({
     track: {
         flexDirection: "row",
         gap: 4,
@@ -58,4 +58,4 @@ const styles = StyleSheet.create({
     segmentActive: {
         backgroundColor: palette.paper,
     },
-});
+}));

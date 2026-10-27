@@ -5,8 +5,8 @@ import Text from "../generalUI/Text";
 import { RootState } from "../../scripts/redux/reduxStore";
 import { CollectionState } from "../../scripts/redux/collectionSlice";
 import { emojiCategories } from "../../scripts/game/collection/emojiCategories";
-import { effectEmojis } from "../../scripts/game/effects/effectData";
-import { palette, radii } from "../misc/theme";
+import { isCollectible } from "../../scripts/game/collection/emojiSupport";
+import { palette, radii, themedStyles } from "../misc/theme";
 import { useTranslation } from "react-i18next";
 import { formatNumber } from "../../scripts/misc";
 
@@ -27,7 +27,7 @@ const categoryInfo: Record<string, { icon: string }> = {
 
 const COLUMNS = 6;
 
-type Cell = { key: string, emoji?: string, count: number, shiny?: number };
+type Cell = { key: string, emoji?: string, index?: number, count: number, shiny?: number };
 
 export default function CollectionList() {
     // Every tap adds to the collection; rebuilding ~1,600 cells per tap made tapping lag
@@ -35,12 +35,13 @@ export default function CollectionList() {
     const [category, setCategory] = useState("faces");
     const { t } = useTranslation();
 
-    // Every collectible emoji per category (effect emojis never show up on the Big Emoji)
+    // Every collectible emoji per category: not effect emojis (those never show up on the
+    // Big Emoji), nor ones too new for this device to draw (see emojiSupport.ts)
     const categories = useMemo(() => Object.keys(categoryInfo).map(name => {
         const counts = collection[name as keyof CollectionState] ?? [];
         const cells: Cell[] = emojiCategories[name]
-            .map((emoji, index) => ({ key: `${name}-${index}`, emoji, count: counts[index]?.amount ?? 0, shiny: counts[index]?.shiny ?? 0 }))
-            .filter(cell => !effectEmojis.includes(cell.emoji));
+            .map((emoji, index) => ({ key: `${name}-${index}`, emoji, index, count: counts[index]?.amount ?? 0, shiny: counts[index]?.shiny ?? 0 }))
+            .filter(cell => isCollectible(name, cell.index));
         return { name, cells, found: cells.filter(cell => cell.count > 0).length };
     }), [collection]);
 
@@ -139,7 +140,7 @@ export default function CollectionList() {
     )
 }
 
-const styles = StyleSheet.create({
+const styles = themedStyles(() => StyleSheet.create({
     content: {
         paddingHorizontal: 20,
         paddingBottom: 32,
@@ -239,4 +240,4 @@ const styles = StyleSheet.create({
     cellPad: {
         flex: 1,
     },
-})
+}))

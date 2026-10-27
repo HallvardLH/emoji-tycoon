@@ -5,6 +5,7 @@ import { calculateBaseEmojisPerSecond } from "./calculations";
 import { giveEmojis } from "./gameLoop";
 import { giveOneOffEmojis } from "./giveEmojis";
 import { creditBuildings } from "./buildings/buildingTotals";
+import { BOOST_MULTIPLIER, boostedSecondsBetween } from "./gems/boost";
 
 /**
  * Offline production
@@ -45,10 +46,19 @@ export function registerAway(seconds: number) {
         return;
     }
 
-    const previous = store.getState().offline.offer?.seconds ?? 0;
+    // Nothing to offer before there's any production (a new game, or right after a prestige)
+    const eps = calculateBaseEmojisPerSecond();
+    if (!(eps > 0)) return;
+
+    const previous = store.getState().offline.offer;
+    const total = Math.min((previous?.seconds ?? 0) + seconds, MAX_AWAY_SECONDS);
+    // The gem boost kept running while away (it's on the clock)
+    const now = Date.now();
+    const boosted = boostedSecondsBetween(now - seconds * 1000, now);
     store.dispatch(setOfflineOffer({
-        seconds: Math.min(previous + seconds, MAX_AWAY_SECONDS),
-        eps: calculateBaseEmojisPerSecond(),
+        seconds: total,
+        eps,
+        boostedSeconds: Math.min(total, (previous?.boostedSeconds ?? 0) + boosted),
     }));
 }
 
@@ -56,7 +66,8 @@ export function registerAway(seconds: number) {
 export function offlineEarnings(multiplier: number) {
     const offer = store.getState().offline.offer;
     if (!offer) return 0;
-    return offer.eps * offer.seconds * multiplier;
+    const extraFromBoost = (offer.boostedSeconds ?? 0) * (BOOST_MULTIPLIER - 1);
+    return offer.eps * (offer.seconds + extraFromBoost) * multiplier;
 }
 
 /**

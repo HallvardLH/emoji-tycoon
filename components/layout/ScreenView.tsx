@@ -2,7 +2,7 @@ import React from 'react';
 import { ReactNode } from 'react';
 import { View, Dimensions, KeyboardAvoidingView, SafeAreaView, ScrollView, StyleSheet, StyleProp, TextStyle, StatusBar, Platform } from 'react-native';
 import GradientBackground from './GradientBackground';
-import { palette } from '../misc/theme';
+import { palette, themedStyles } from '../misc/theme';
 
 interface ScreenViewProps {
     children?: ReactNode;
@@ -38,7 +38,7 @@ export default function ScreenView(props: ScreenViewProps) {
     );
 }
 
-const styles = StyleSheet.create({
+const styles = themedStyles(() => StyleSheet.create({
     container: {
         flex: 1,
         backgroundColor: palette.grape,
@@ -55,4 +55,4 @@ const styles = StyleSheet.create({
         // marginBottom: TAB_BAR_HEIGHT,
         overflow: "hidden",
     },
-});
+}));

@@ -3,7 +3,7 @@ import Text from "../generalUI/Text";
 import { useSelector } from 'react-redux';
 import { RootState } from "../../scripts/redux/reduxStore";
 import { formatNumber } from "../../scripts/misc";
-import { palette, radii } from "../misc/theme";
+import { palette, radii, themedStyles } from "../misc/theme";
 import { useSampledSelector } from "../gameUI/useBank";
 import { useTranslation } from "react-i18next";
 import { getLanguage } from "../../i18n";
@@ -11,7 +11,7 @@ import { getBuildingName } from "../../i18n/content";
 
 export default function StatsList() {
     // Stats change every tick and tap; twice a second is plenty for reading them
-    const { bigEmojiTaps, emojisEarnedFromTap, effectEmojisCollected, emojisGained, shinyEmojisTapped, comboTaps, buildingEmojis } = useSampledSelector((state: RootState) => state.stats);
+    const { bigEmojiTaps, emojisEarnedFromTap, effectEmojisCollected, emojisGained, shinyEmojisTapped, comboTaps, bestCombo, buildingEmojis } = useSampledSelector((state: RootState) => state.stats);
     const { funValue } = useSelector((state: RootState) => state.values);
     const buildings = useSelector((state: RootState) => state.buildings.buildings);
     const { t } = useTranslation();
@@ -30,6 +30,7 @@ export default function StatsList() {
         ["🪄", t("stats.magicalEmojisTapped"), formatNumber(effectEmojisCollected)],
         ["✨", t("stats.shinyEmojisTapped"), formatNumber(shinyEmojisTapped ?? 0)],
         ["🔥", t("stats.comboTaps"), formatNumber(comboTaps ?? 0, 0)],
+        ["🥁", t("stats.bestCombo"), `×${bestCombo ?? 1}`],
     ];
     // The fun value, deliberately unexplained: players who know about it will recognise it
     rows.push(["🔮", "???", funValue == 100 ? `${funValue} 😭` : String(funValue)]);
@@ -61,7 +62,7 @@ function StatsCard({ rows }: { rows: [string, string, string][] }) {
     );
 }
 
-const styles = StyleSheet.create({
+const styles = themedStyles(() => StyleSheet.create({
     card: {
         marginHorizontal: 20,
         marginTop: 14,
@@ -96,4 +97,4 @@ const styles = StyleSheet.create({
         marginTop: 22,
         letterSpacing: 1.3,
     },
-})
+}))

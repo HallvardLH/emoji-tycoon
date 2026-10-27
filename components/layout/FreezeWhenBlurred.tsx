@@ -8,6 +8,15 @@ function Suspender({ freeze, children }: { freeze: boolean, children: ReactNode 
     return children;
 }
 
+/** Pauses its children while `freeze` is on: they keep their state but don't re-render */
+export function Freeze({ freeze, children }: { freeze: boolean, children: ReactNode }) {
+    return (
+        <Suspense fallback={null}>
+            <Suspender freeze={freeze}>{children}</Suspender>
+        </Suspense>
+    );
+}
+
 interface Focusable {
     isFocused: () => boolean;
     addListener: (event: "focus" | "blur", callback: () => void) => () => void;
@@ -32,9 +41,5 @@ export default function FreezeWhenBlurred({ navigation, children }: { navigation
         return () => { offFocus(); offBlur(); };
     }, [navigation]);
 
-    return (
-        <Suspense fallback={null}>
-            <Suspender freeze={!focused}>{children}</Suspender>
-        </Suspense>
-    );
+    return <Freeze freeze={!focused}>{children}</Freeze>;
 }

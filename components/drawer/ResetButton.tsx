@@ -1,6 +1,6 @@
 import { Pressable, StyleSheet } from 'react-native';
 import Text from '../generalUI/Text';
-import { palette, radii } from '../misc/theme';
+import { palette, radii, themedStyles } from '../misc/theme';
 import { openResetConfirm } from '../gameUI/ResetModal';
 import { useTranslation } from 'react-i18next';
 
@@ -28,7 +28,7 @@ export default function ResetButton({ onPress }: ResetButtonProps) {
     )
 }
 
-const styles = StyleSheet.create({
+const styles = themedStyles(() => StyleSheet.create({
     button: {
         minHeight: 48,
         flexDirection: "row",
@@ -39,4 +39,4 @@ const styles = StyleSheet.create({
         borderWidth: 2,
         borderColor: palette.pop,
     },
-})
+}))

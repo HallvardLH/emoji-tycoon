@@ -11,9 +11,10 @@ import { resetStats } from "../../scripts/redux/statsSlice";
 import { resetPrestige } from "../../scripts/redux/prestigeSlice";
 import { resetTabs } from "../../scripts/redux/tabsSlice";
 import { resetOffline } from "../../scripts/redux/offlineSlice";
+import { resetAchievements } from "../../scripts/redux/achievementsSlice";
 import Modal from "../generalUI/Modal";
 import Text from "../generalUI/Text";
-import { palette, radii } from "../misc/theme";
+import { palette, radii, themedStyles } from "../misc/theme";
 import { useTranslation } from "react-i18next";
 
 // ---- Whether the confirmation is showing. It lives at the root, not in the drawer
@@ -52,6 +53,7 @@ function resetGame() {
     store.dispatch(resetPrestige());
     store.dispatch(resetTabs());
     store.dispatch(resetOffline());
+    store.dispatch(resetAchievements());
 }
 
 /** Resetting wipes the save, so it asks first, and says that purchases carry over */
@@ -97,7 +99,7 @@ export default function ResetModal() {
     );
 }
 
-const styles = StyleSheet.create({
+const styles = themedStyles(() => StyleSheet.create({
     card: {
         alignSelf: "stretch",
         maxWidth: 400,
@@ -147,4 +149,4 @@ const styles = StyleSheet.create({
     pressed: {
         opacity: 0.7,
     },
-});
+}));

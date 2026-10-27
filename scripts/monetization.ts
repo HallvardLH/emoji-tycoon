@@ -11,6 +11,17 @@ import { GemPack, PurchaseResult } from "./game/gemPacks";
  */
 
 /**
+ * Whether the game offers rewarded ads. Off until AdMob approves the account:
+ * until then no ad would ever load, so the ad options are hidden
+ *
+ * TODO when AdMob approves: set this to true. It brings back the "📺 Watch an ad"
+ * button in the welcome back popup (OfflineModal.tsx), preloading the ad at start
+ * (app/_layout.tsx) and the ad privacy option in settings (Settings.tsx).
+ * Also listed in CLAUDE.md.
+ */
+export const ADS_ENABLED = false;
+
+/**
  * Shows a rewarded ad
  *
  * @returns whether the player watched it to the end and earned the reward

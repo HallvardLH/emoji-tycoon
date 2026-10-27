@@ -4,7 +4,7 @@ import { useRouter } from "expo-router";
 import { RootState } from "../../../scripts/redux/reduxStore";
 import { essenceForEmojis, emojisForEssence } from "../../../scripts/game/prestige/prestige";
 import Text from "../../generalUI/Text";
-import { palette, radii } from "../../misc/theme";
+import { palette, radii, themedStyles } from "../../misc/theme";
 import { useTranslation } from "react-i18next";
 
 // Shows up once the first essence is a tenth of the way there
@@ -47,7 +47,7 @@ export default function PrestigeMeter() {
     );
 }
 
-const styles = StyleSheet.create({
+const styles = themedStyles(() => StyleSheet.create({
     chip: {
         flexDirection: "row",
         alignItems: "center",
@@ -82,4 +82,4 @@ const styles = StyleSheet.create({
     fillReady: {
         backgroundColor: palette.ink,
     },
-});
+}));

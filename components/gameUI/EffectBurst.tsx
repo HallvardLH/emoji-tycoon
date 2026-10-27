@@ -1,7 +1,7 @@
 import React, { useEffect, useMemo, useRef } from "react";
 import { Animated, Easing, StyleSheet, View } from "react-native";
 import Text from "../generalUI/Text";
-import { palette } from "../misc/theme";
+import { palette, themedStyles } from "../misc/theme";
 
 // How long the whole celebration lasts; the text holds for most of it
 const DURATION = 3400;
@@ -95,7 +95,7 @@ export default function EffectBurst({ headline, value, caption, sparks, color, x
     );
 }
 
-const styles = StyleSheet.create({
+const styles = themedStyles(() => StyleSheet.create({
     // A zero-size point at the effect's centre that everything radiates from
     origin: {
         position: "absolute",
@@ -122,4 +122,4 @@ const styles = StyleSheet.create({
     caption: {
         letterSpacing: 1.2,
     },
-});
+}));

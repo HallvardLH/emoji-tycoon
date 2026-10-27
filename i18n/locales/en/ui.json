@@ -118,6 +118,7 @@
         "funValue": "Fun value",
         "shinyEmojisTapped": "Shiny emojis tapped",
         "comboTaps": "Combo taps",
+        "bestCombo": "Best combo",
         "madeByEachBuilding": "Made by each building"
     },
     "drawer": {

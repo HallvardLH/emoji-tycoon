@@ -74,7 +74,7 @@ export const emojiMultiverseUpgrades: UpgradeType[] = [
     {
         ...baseEmojiMultiverseUpgrade,
         name: "Bubble universes",
-        icon: "🫧",
+        icon: "🎈",
         description: "Pop one and a whole universe of emojis falls out.",
         tier: 8,
     },

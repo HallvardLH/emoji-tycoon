@@ -9,6 +9,13 @@ dist/
 web-build/
 
 # Native
+# Also listed in android/.gitignore, but EAS Build only reads this file. Uploading
+# android/build sent autolinking.json with Windows paths, which broke the build
+/android/build/
+/android/app/build/
+/android/.gradle/
+/android/.kotlin/
+/android/app/.cxx/
 *.orig.*
 *.jks
 *.p8

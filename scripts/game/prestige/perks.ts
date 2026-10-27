@@ -44,7 +44,7 @@ export const perks: Perk[] = [
     { id: "goldenTouch", tier: 5, icon: "👑", name: "Golden touch", description: "Shiny emojis are worth 5 times as much", cost: 600 },
 
     // Tier 6: the late game, where runs get long and essence piles up
-    { id: "overflow", tier: 6, icon: "🫗", name: "Overflow", description: "Spent essence keeps half its production bonus", cost: 2500 },
+    { id: "overflow", tier: 6, icon: "💧", name: "Overflow", description: "Spent essence keeps half its production bonus", cost: 2500 },
     { id: "hallOfFame", tier: 6, icon: "🏆", name: "Hall of fame", description: "+10% production for every trial completed", cost: 2000 },
     { id: "flyingStart", tier: 6, icon: "🚀", name: "Flying start", description: "Head start gives 30 minutes of production instead of 5", cost: 1500, requires: "headStart" },
 ];

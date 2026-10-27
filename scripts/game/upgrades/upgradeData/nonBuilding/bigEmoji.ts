@@ -57,7 +57,7 @@ const hands: UpgradeType[] = [
     {
         ...baseBigEmojiUpgrade,
         name: "Million hands",
-        icon: "🫵",
+        icon: "🤞",
         description: "Who are you pointing at? Are you pointing at me? How rude...",
         tier: 5,
         id: 5,
@@ -153,7 +153,7 @@ const hands: UpgradeType[] = [
     {
         ...baseBigEmojiUpgrade,
         name: "Tredecillion hands",
-        icon: "🫱",
+        icon: "🤏",
         description: "The hands begin to warp. They're no longer human.",
         tier: 17,
         id: 17,
@@ -161,7 +161,7 @@ const hands: UpgradeType[] = [
     {
         ...baseBigEmojiUpgrade,
         name: "Quattuordecillion hands",
-        icon: "🫲",
+        icon: "👐",
         description: "A presence lurks behind the hands, guiding them with malicious intent.",
         tier: 18,
         id: 18,

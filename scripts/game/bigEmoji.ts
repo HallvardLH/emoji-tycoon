@@ -14,12 +14,14 @@ import plants from '../../assets/emojis/plants.json';
 import vehicles from '../../assets/emojis/vehicles.json';
 import weather from '../../assets/emojis/weather.json';
 import { updateTapStats, addShinyEmojiTapped } from '../redux/statsSlice';
-import { effectEmojis } from './effects/effectData';
 import { incrementTapBoost, getComboProgress } from './tapBoost';
 import { calculateEpt } from './calculations';
 import { howFun } from './shorthands';
 import { shinyChanceMultiplier, shinyRewardMultiplier } from './prestige/perks';
 import { isTrialActive } from './prestige/trials';
+import { addDiscoveries } from '../redux/gemsSlice';
+import { checkTapGem } from './gems/gemRewards';
+import { isCollectible } from './collection/emojiSupport';
 
 /** Chance that a new Big Emoji is shiny */
 export const SHINY_CHANCE = 1 / 200;
@@ -52,9 +54,9 @@ function getShinyReward(emojisPerTap: number, emojisPerSecond: number) {
 /**
  * Taps the Big Emoji, which then becomes the next emoji
  *
- * @returns the bonus given if the tapped emoji was shiny
+ * @returns the bonus given if the tapped emoji was shiny, and whether this tap earned a gem
  */
-export function tapEmoji(): number | undefined {
+export function tapEmoji(): { shinyReward?: number, tapGem: boolean } {
     const state = store.getState();
     const { emojis, emojisPerSecond } = state.values;
     const { emojisPerTap, bigEmoji, nextEmoji } = state.bigEmoji;
@@ -91,8 +93,28 @@ export function tapEmoji(): number | undefined {
     incrementTapBoost();
     calculateEpt();
 
-    return bigEmoji.shiny ? shinyReward : undefined;
+    // Every 500th tap earns a gem
+    const tapGem = checkTapGem(state.stats.bigEmojiTaps + 1);
+
+    return { shinyReward: bigEmoji.shiny ? shinyReward : undefined, tapGem };
 }
+
+/** Every emoji that can be on the Big Emoji and hasn't been found yet */
+function undiscoveredEmojis() {
+    const collection = store.getState().collection;
+    const found: { emoji: string, index: number, category: string }[] = [];
+    (Object.keys(emojiData) as (keyof typeof emojiData)[]).forEach(category => {
+        const owned = collection[category] ?? [];
+        emojiData[category].forEach((emoji, index) => {
+            if (!isCollectible(category, index)) return;
+            if ((owned[index]?.amount ?? 0) > 0) return;
+            found.push({ emoji, index, category });
+        });
+    });
+    return found;
+}
+
+export const hasUndiscoveredEmojis = () => undiscoveredEmojis().length > 0;
 
 interface EmojiWeights {
     [key: string]: number;
@@ -131,6 +153,16 @@ const emojiData = {
  */
 export function pickNextEmoji() {
     let randomEmoji = selectRandomEmoji();
+    // Discoveries (gems): one never found before, while there are any left
+    if ((store.getState().gems.discoveries ?? 0) > 0) {
+        const undiscovered = undiscoveredEmojis();
+        if (undiscovered.length > 0) {
+            randomEmoji = undiscovered[Math.floor(Math.random() * undiscovered.length)];
+            store.dispatch(addDiscoveries(-1));
+        } else {
+            store.dispatch(addDiscoveries(-(store.getState().gems.discoveries ?? 0)));
+        }
+    }
     // Fun value 91 - 98 (collector): shiny emojis are 1.25× as likely
     const shinyChance = SHINY_CHANCE * (howFun(91, 98) ? 1.25 : 1) * shinyChanceMultiplier();
     // None in the first stretch of the game, so the first one comes once there's more going on
@@ -166,23 +198,23 @@ export function selectRandomEmoji() {
     // Find the emoji type corresponding to the random number
     for (const category of emojiCategories) {
         // Check if the random number falls within the current category's weight
-        if (randomNum < emojiWeights[category]) {
-            const allEmojis = emojiData[category as keyof typeof emojiData];
-            // Filter out effect emojis, as these are to be reserved
-            const emojis = allEmojis.filter(emoji => !effectEmojis.includes(emoji));
-            // Randomly select an emoji from the chosen category
-            const emoji = emojis[Math.floor(Math.random() * emojis.length)];
-
-            // The index is into the full category list, which is what the collection is keyed by
-            return { emoji: emoji, index: allEmojis.indexOf(emoji), category: category };
-        }
+        if (randomNum < emojiWeights[category]) return randomCollectible(category);
         randomNum -= emojiWeights[category];  // Decrease randomNum by the current weight
     }
 
     // Fallback: Pick a completely random emoji from any category
-    const randomCategory = emojiCategories[Math.floor(Math.random() * emojiCategories.length)];
-    const randomEmojis = emojiData[randomCategory as keyof typeof emojiData];
-    const randomEmojiIndex = Math.floor(Math.random() * randomEmojis.length);
+    return randomCollectible(emojiCategories[Math.floor(Math.random() * emojiCategories.length)]);
+}
 
-    return { emoji: randomEmojis[randomEmojiIndex], index: randomEmojiIndex, category: randomCategory };
+// Indexes of the emojis in each category that can be on the Big Emoji (see isCollectible), worked out once
+const collectibleIndexes: Record<string, number[]> = {};
+
+/** A random emoji from a category, one that's collectible on this device */
+function randomCollectible(category: string) {
+    const allEmojis = emojiData[category as keyof typeof emojiData];
+    collectibleIndexes[category] ??= allEmojis.map((_, index) => index).filter(index => isCollectible(category, index));
+    const indexes = collectibleIndexes[category];
+    const index = indexes[Math.floor(Math.random() * indexes.length)];
+    // The index is into the full category list, which is what the collection is keyed by
+    return { emoji: allEmojis[index], index, category };
 }

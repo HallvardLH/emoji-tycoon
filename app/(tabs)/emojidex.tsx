@@ -5,6 +5,7 @@ import Collection from "../../screens/Emojidex/Collection";
 import Stats from "../../screens/Emojidex/Stats";
 import Upgrades from "../../screens/Emojidex/Upgrades";
 import { useTranslation } from "react-i18next";
+import AchievementsList from "../../components/collection/AchievementsList";
 
 export default function Emojidex() {
     const { t } = useTranslation();
@@ -24,6 +25,10 @@ export default function Emojidex() {
                     {
                         name: t("tabs.collection"),
                         component: <Collection />
+                    },
+                    {
+                        name: "Trophies",
+                        component: <AchievementsList />
                     }
                 ]}
             />

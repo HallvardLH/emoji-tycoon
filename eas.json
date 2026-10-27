@@ -1,0 +1,14 @@
+{
+  "cli": {
+    "version": ">= 25.2.0",
+    "appVersionSource": "remote"
+  },
+  "build": {
+    "production": {
+      "autoIncrement": true,
+      "android": {
+        "buildType": "app-bundle"
+      }
+    }
+  }
+}

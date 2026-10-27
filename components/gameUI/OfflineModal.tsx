@@ -6,16 +6,16 @@ import { RootState } from "../../scripts/redux/reduxStore";
 import Modal from "../generalUI/Modal";
 import Text from "../generalUI/Text";
 import ChunkyButton from "../generalUI/ChunkyButton";
-import { palette, radii } from "../misc/theme";
+import { palette, radii, themedStyles } from "../misc/theme";
 import { formatDuration, formatNumber } from "../../scripts/misc";
 import { AD_MULTIPLIER, GEM_COST, GEM_MULTIPLIER, MAX_AWAY_SECONDS, claimOffline, dismissOffline } from "../../scripts/game/offline";
-import { spendGems, useGemStoreOpen, watchRewardedAd } from "../../scripts/monetization";
+import { ADS_ENABLED, spendGems, useGemStoreOpen, watchRewardedAd } from "../../scripts/monetization";
 import { useTranslation } from "react-i18next";
 import { toCaps } from "../../scripts/utils";
 
 /**
  * Welcome back: offers the production missed while away, for watching an ad
- * or spending gems (see offline.ts)
+ * (while ads are enabled) or spending gems (see offline.ts)
  */
 export default function OfflineModal() {
     const offer = useSelector((state: RootState) => state.offline.offer);
@@ -29,7 +29,8 @@ export default function OfflineModal() {
     const [adFailed, setAdFailed] = useState(false);
     const { t } = useTranslation();
 
-    if (!offer || inGemStore) return null;
+    // Offers saved with no production (before that was ruled out in registerAway) are worth nothing
+    if (!offer || inGemStore || !(offer.eps > 0)) return null;
 
     const missed = offer.eps * offer.seconds;
     const capped = offer.seconds >= MAX_AWAY_SECONDS;
@@ -53,8 +54,10 @@ export default function OfflineModal() {
         else if (spendGems(GEM_COST)) claimOffline(GEM_MULTIPLIER);
     };
 
+    // Android's back button and taps outside the card do nothing here: one stray press
+    // threw the earnings away. Only "No thanks" dismisses them
     return (
-        <Modal modalVisible noExit onRequestClose={() => { if (!busy) dismissOffline(); }}>
+        <Modal modalVisible noExit onRequestClose={() => {}}>
             <View style={styles.card}>
                 <Text size={44} style={styles.icon}>🌙</Text>
                 <Text size={28} color={palette.ink} style={styles.center}>{t("offline.welcomeBack")}</Text>
@@ -72,13 +75,15 @@ export default function OfflineModal() {
                 </View>
 
                 <View style={styles.buttons}>
-                    <ChunkyButton
-                        label={`📺 +${formatNumber(missed * AD_MULTIPLIER, 1)}`}
-                        sublabel={busy ? toCaps(t("ads.loadingCaps")) : toCaps(t("ads.watchCaps"))}
-                        height={56}
-                        disabled={busy}
-                        onPress={claimWithAd}
-                    />
+                    {ADS_ENABLED && (
+                        <ChunkyButton
+                            label={`📺 +${formatNumber(missed * AD_MULTIPLIER, 1)}`}
+                            sublabel={busy ? toCaps(t("ads.loadingCaps")) : toCaps(t("ads.watchCaps"))}
+                            height={56}
+                            disabled={busy}
+                            onPress={claimWithAd}
+                        />
+                    )}
                     <ChunkyButton
                         label={`💎 +${formatNumber(missed * GEM_MULTIPLIER, 1)}`}
                         sublabel={canAffordGems
@@ -107,7 +112,7 @@ export default function OfflineModal() {
     );
 }
 
-const styles = StyleSheet.create({
+const styles = themedStyles(() => StyleSheet.create({
     card: {
         alignSelf: "stretch",
         maxWidth: 400,
@@ -148,4 +153,4 @@ const styles = StyleSheet.create({
     pressed: {
         opacity: 0.6,
     },
-});
+}));
