@@ -3,6 +3,7 @@ import { combineReducers } from 'redux';
 import { persistReducer } from 'react-native-redux-persist2';
 import { startPersistence } from './persistence';
 export { whenSaveLoaded } from './persistence';
+import { SCREENSHOT_MODE } from '../screenshotMode';
 import valuesSlice from './valuesSlice';
 import buildingsSlice from './buildingsSlice';
 import upgradesSlice from './upgradesSlice';
@@ -42,9 +43,12 @@ const store = configureStore({
     reducer: persistedReducer,
     middleware: (getDefaultMiddleware) =>
         getDefaultMiddleware({
-            serializableCheck: {
+            // Development-only checks. A late-game save is big enough that running them on every
+            // game loop tick starves the JS thread, so screenshot mode (which stages one) skips them
+            serializableCheck: SCREENSHOT_MODE ? false : {
                 ignoredActions: ['persist/PERSIST'], // Ignore persist actions
             },
+            immutableCheck: !SCREENSHOT_MODE,
         }),
 });
 

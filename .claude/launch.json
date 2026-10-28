@@ -12,6 +12,13 @@
       "runtimeExecutable": "C:\\Program Files\\nodejs\\npx.cmd",
       "runtimeArgs": ["expo", "start", "--port", "8082"],
       "port": 8082
+    },
+    {
+      "name": "expo-screenshots-8083",
+      "runtimeExecutable": "C:\\Program Files\\nodejs\\npx.cmd",
+      "runtimeArgs": ["expo", "start", "--port", "8083", "--clear"],
+      "env": { "EXPO_PUBLIC_SCREENSHOT_MODE": "1" },
+      "port": 8083
     }
   ]
 }

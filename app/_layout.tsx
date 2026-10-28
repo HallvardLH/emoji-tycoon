@@ -1,4 +1,5 @@
 import "../i18n";
+import "../scripts/screenshotMode";
 import { Stack } from "expo-router";
 import { Provider, useSelector } from "react-redux";
 import { StatusBar } from "expo-status-bar";
@@ -15,6 +16,7 @@ import Header from "../components/header/Header";
 import MilestoneToast from "../components/gameUI/MilestoneToast";
 import OfflineModal from "../components/gameUI/OfflineModal";
 import ResetModal from "../components/gameUI/ResetModal";
+import ScreenshotCheatsTrigger from "../components/drawer/ScreenshotCheatsTrigger";
 import { useFonts } from "expo-font";
 import { LilitaOne_400Regular } from "@expo-google-fonts/lilita-one";
 import { Nunito_700Bold, Nunito_700Bold_Italic, Nunito_800ExtraBold, Nunito_900Black } from "@expo-google-fonts/nunito";
@@ -137,6 +139,7 @@ function LocalizedApp() {
             <MilestoneToast />
             <OfflineModal />
             <ResetModal />
+            <ScreenshotCheatsTrigger />
         </View>
     );
 }

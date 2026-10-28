@@ -61,7 +61,8 @@ export default function BoostButton() {
             >
                 {active && <Animated.View pointerEvents="none" style={[styles.glow, { opacity: glow }]} />}
                 <Text size={24} style={{ lineHeight: 28 }}>{active ? "⚡" : "💎"}</Text>
-                <Text font="black" size={10} color={active ? palette.sun : palette.lilac} style={{ letterSpacing: 0.6 }}>
+                {/* One line in a fixed-width button: longer words (Turkish "GÜÇLENDİR") shrink rather than wrap */}
+                <Text font="black" size={10} color={active ? palette.sun : palette.lilac} style={{ letterSpacing: 0.6, maxWidth: SIZE - 6 }} numberOfLines={1} adjustsFontSizeToFit minimumFontScale={0.6}>
                     {active ? formatCountdown(secondsLeft) : toCaps(t("gemPowers.buttonCaps"))}
                 </Text>
             </Pressable>

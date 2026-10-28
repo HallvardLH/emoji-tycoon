@@ -195,9 +195,13 @@ const Drawer = forwardRef((props: DrawerProps, ref) => {
                     The order of these - reverse or not - are determined by whether the drawer is right- or left aligned */}
                     <View style={{ flex: 1, flexDirection: side == 'right' ? 'row' : 'row-reverse'}}>
                         <Pressable style={{ width: maskWidth }} onPress={() => closeDrawerInternal()} />
+                        {/* Only a sideways drag swipes the drawer shut. Without these offsets the pan
+                            took vertical drags too, so a drawer taller than the screen would not scroll */}
                         <PanGestureHandler
                             onHandlerStateChange={onSwipeHandler}
                             onGestureEvent={gestureEvent}
+                            activeOffsetX={[-15, 15]}
+                            failOffsetY={[-15, 15]}
                         >
                             <Animated.View
                                 style={[

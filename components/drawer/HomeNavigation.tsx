@@ -1,4 +1,4 @@
-import { ReactNode, useRef } from "react";
+import { ReactNode, useEffect, useRef } from "react";
 import Drawer from "./Drawer";
 import Cheats from "./Cheats";
 import Settings from "./Settings";
@@ -12,6 +12,7 @@ import { router } from "expo-router";
 import { useSelector } from "react-redux";
 import { RootState } from "../../scripts/redux/reduxStore";
 import { formatNumber } from "../../scripts/misc";
+import { SCREENSHOT_MODE, onOpenCheatsRequest } from "../../scripts/screenshotMode";
 
 type DrawerRef = {
     openDrawer: () => void;
@@ -28,11 +29,13 @@ export default function HomeNavigation() {
     const isDesktop = useIsDesktop();
     const panel = useDesktopPanel();
     const { t } = useTranslation();
+    useEffect(() => onOpenCheatsRequest(() => cheatsDrawerRef.current?.openDrawer()), []);
 
     return (
         <View style={styles.buttons}>
-            {/* Cheats are for testing: development builds only, never in a release */}
-            {__DEV__ && (
+            {/* Cheats are for testing: development builds only, never in a release.
+                Screenshot mode hides the button; ScreenshotCheatsTrigger opens them instead */}
+            {__DEV__ && !SCREENSHOT_MODE && (
                 <HeaderButton label={t("drawer.cheats")} onPress={() => cheatsDrawerRef.current?.openDrawer()}>
                     <Text size={18} style={{ lineHeight: 24 }}>🧪</Text>
                 </HeaderButton>
