@@ -1,0 +1,41 @@
+{
+  "_help": "Indonesian. Same markup as en.json.",
+  "locale": "id-ID",
+  "slides": {
+    "tap": {
+      "title": "KETUK SAMPAI\n[TRILIUNAN]",
+      "subtitle": "Bangun kombo. Lipat gandakan setiap ketukan.",
+      "sticker": "KETUK! KETUK!"
+    },
+    "buildings": {
+      "title": "DARI [CORETAN]\nKE [BIG BANG]",
+      "subtitle": "{buildings} bangunan, makin lama makin absurd",
+      "path": "✍️ Tangan penggambar → … → 🙂 Emoji pertama"
+    },
+    "shop": {
+      "title": "BANGUN\n[KERAJAAN EMOJI]",
+      "subtitle": "Peternakan, bank, maskapai… semua membuat emoji"
+    },
+    "upgrades": {
+      "title": "[{upgrades}] PENINGKATAN\nKONYOL",
+      "subtitle": "Baca keluhan para karyawan yang kelelahan"
+    },
+    "collect": {
+      "title": "KUMPULKAN\n[{emojis}] EMOJI",
+      "subtitle": "Dan buru emoji berkilau yang langka ✨",
+      "sticker": "BERKILAU!"
+    },
+    "closer": {
+      "title": "TANPA DAFTAR.\nCUKUP KETUK.",
+      "chips": [
+        "🌙 Tetap menghasilkan saat kamu pergi",
+        "✨ Prestise untuk bonus permanen",
+        "🏆 {trophies} trofi untuk dibuka"
+      ]
+    }
+  },
+  "featureGraphic": {
+    "title": "Emoji [Tycoon]",
+    "tagline": "Ketuk. Bangun. Kumpulkan [{emojis}] emoji."
+  }
+}

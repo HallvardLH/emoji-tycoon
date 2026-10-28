@@ -1,0 +1,84 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Store Listing Template</title>
+<!--
+  Renders one store image. Served by render.mjs, which screenshots it:
+    template.html?device=phone&lang=en&slide=1   one screenshot at the device's size (devices and slides in config.json)
+    template.html?lang=en&fg                     the 1024x500 feature graphic
+  Layouts live in slides.js, text in i18n/<lang>.json, captures and tuning in config.json.
+-->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Lilita+One&family=Nunito:wght@800;900&family=Noto+Color+Emoji&display=block" rel="stylesheet">
+<style>
+  :root { --title-font: "Lilita One"; --body-font: "Nunito"; }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body { background: #170E36; overflow: hidden; }
+  .e { font-family: "Noto Color Emoji"; line-height: 1; display: inline-block; }
+  .slide { position: relative; width: 1080px; height: 1920px; overflow: hidden; font-family: var(--body-font), sans-serif; }
+  .fg { position: relative; width: 1024px; height: 500px; overflow: hidden; font-family: var(--body-font), sans-serif; }
+  .abs { position: absolute; }
+  .title { font-family: var(--title-font), var(--body-font), sans-serif; color: #fff; text-align: center; line-height: .98; letter-spacing: 1px;
+           -webkit-text-stroke: 14px #1C1233; paint-order: stroke fill; text-shadow: 0 14px 0 #1C1233; }
+  .hl { color: #FFC53D; }
+  .closer .title .hl { color: #fff; }
+  .sub { font-weight: 900; text-align: center; color: #fff; font-size: 46px; line-height: 1.15; }
+  .frame { position: absolute; background: #0d0724; }
+  .frame img { display: block; width: 100%; }
+  .deco { position: absolute; filter: drop-shadow(0 18px 18px rgba(0,0,0,.35)); }
+  .callout { position: absolute; border-radius: 44px; border: 10px solid #FFC53D; background-repeat: no-repeat; background-color: #FBF8FF;
+             box-shadow: 0 30px 60px rgba(0,0,0,.5); }
+  .chip { display: inline-flex; align-items: center; gap: 18px; background: #FBF8FF; color: #1C1233; box-shadow: 0 8px 0 rgba(28,18,51,.25);
+          border-radius: 999px; padding: 16px 34px; font-weight: 900; font-size: 46px; white-space: nowrap; }
+  .missing { display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 30px; padding: 60px; border-radius: 66px;
+             background: repeating-linear-gradient(45deg, #2a1d5c 0 40px, #241850 40px 80px); color: #D9D0FA; text-align: center;
+             font: 900 44px var(--body-font), sans-serif; border: 6px dashed #6A4BE0; }
+</style>
+</head>
+<body>
+<div id="root"></div>
+<script src="slides.js"></script>
+<script>
+(async () => {
+  const q = new URLSearchParams(location.search);
+  const lang = q.get("lang") || "en";
+  const deviceName = q.get("device") || "phone";
+  const [config, strings] = await Promise.all([
+    fetch("config.json").then(r => r.json()),
+    fetch(`i18n/${lang}.json`).then(r => r.json()),
+  ]);
+
+  // A language whose script the default fonts don't cover names its own Google fonts
+  const fonts = strings.fonts || {};
+  if (fonts.title || fonts.body) {
+    // A replacement title font (Baloo 2 for Turkish) needs its heavy weight; a fallback one has one weight
+    const weight = f => f === fonts.body ? ":wght@800;900" : fonts.replace ? ":wght@800" : "";
+    const families = [fonts.title, fonts.body].filter(Boolean).map(f => "family=" + f.replaceAll(" ", "+") + weight(f));
+    document.head.insertAdjacentHTML("beforeend", `<link rel="stylesheet" href="https://fonts.googleapis.com/css2?${families.join("&")}&display=block">`);
+    // Normally after the game fonts, so Latin letters and numbers keep their look and only the rest
+    // falls through. "replace" uses them alone, for scripts the game fonts cover only partly
+    const stack = (game, own) => fonts.replace ? `"${own}"` : `"${game}", "${own}"`;
+    if (fonts.title) document.documentElement.style.setProperty("--title-font", stack("Lilita One", fonts.title));
+    if (fonts.body) document.documentElement.style.setProperty("--body-font", stack("Nunito", fonts.body));
+  }
+
+  const ctx = makeContext(config, strings, lang, deviceName);
+  const root = document.getElementById("root");
+  if (q.has("fg")) {
+    root.innerHTML = featureGraphic(ctx);
+  } else {
+    const index = Number(q.get("slide") || 1) - 1;
+    const slide = config.slides[index];
+    const capture = slide.capture ? await loadCapture(slide.capture, lang, deviceName) : null;
+    root.innerHTML = renderSlide(ctx, slide, index, capture);
+    // Laid out 1080 wide, scaled up to the device's output size
+    root.style.zoom = ctx.scale;
+  }
+  await document.fonts.ready;
+  fitText(root);
+  document.body.dataset.ready = "1";
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,42 @@
+{
+  "_help": "Korean. Same markup as en.json. Lilita One and Nunito have no Hangul, so chunky Korean Google fonts stand in. Korean groups big numbers by 10^4 (조 = 10^12).",
+  "locale": "ko-KR",
+  "fonts": { "title": "Black Han Sans", "body": "Noto Sans KR" },
+  "slides": {
+    "tap": {
+      "title": "탭해서\n[조 단위]까지!",
+      "subtitle": "콤보를 쌓아 모든 탭을 몇 배로",
+      "sticker": "탭! 탭! 탭!"
+    },
+    "buildings": {
+      "title": "[낙서]에서\n[빅뱅]까지",
+      "subtitle": "갈수록 황당해지는 건물 {buildings}종",
+      "path": "✍️ 그리는 손 → … → 🙂 최초의 이모지"
+    },
+    "shop": {
+      "title": "나만의\n[이모지 제국]",
+      "subtitle": "농장, 은행, 항공사… 전부 이모지를 만들어요"
+    },
+    "upgrades": {
+      "title": "엉뚱한 업그레이드\n[{upgrades}]개",
+      "subtitle": "지친 직원들의 하소연을 들어 보세요"
+    },
+    "collect": {
+      "title": "이모지\n[{emojis}]개 수집",
+      "subtitle": "희귀한 반짝이 이모지도 찾아보세요 ✨",
+      "sticker": "반짝!"
+    },
+    "closer": {
+      "title": "가입 없이\n그냥 탭!",
+      "chips": [
+        "🌙 자리를 비워도 계속 벌어요",
+        "✨ 프레스티지로 영구 보너스",
+        "🏆 트로피 {trophies}개 잠금 해제"
+      ]
+    }
+  },
+  "featureGraphic": {
+    "title": "Emoji [Tycoon]",
+    "tagline": "탭하고, 짓고, 이모지 [{emojis}]개를 모으세요"
+  }
+}

@@ -1,0 +1,41 @@
+{
+  "_help": "German. Same markup as en.json. Number words follow German usage: Billion = 10^12 (English trillion).",
+  "locale": "de-DE",
+  "slides": {
+    "tap": {
+      "title": "TIPP DICH ZU\n[BILLIONEN]",
+      "subtitle": "Baue Combos auf. Vervielfache jeden Tipp.",
+      "sticker": "TIPP! TIPP! TIPP!"
+    },
+    "buildings": {
+      "title": "VOM [GEKRITZEL]\nZUM [URKNALL]",
+      "subtitle": "{buildings} Gebäude, eins absurder als das andere",
+      "path": "✍️ Zeichenhand → … → 🙂 Ur-Emoji"
+    },
+    "shop": {
+      "title": "BAU DEIN\n[EMOJI-IMPERIUM]",
+      "subtitle": "Farmen, Banken, Airlines … alle machen Emojis"
+    },
+    "upgrades": {
+      "title": "[{upgrades}] VERRÜCKTE\nUPGRADES",
+      "subtitle": "Lies die Klagen sehr müder Angestellter"
+    },
+    "collect": {
+      "title": "SAMMLE\n[{emojis}] EMOJIS",
+      "subtitle": "Und jag seltene glänzende Emojis ✨",
+      "sticker": "GLÄNZEND!"
+    },
+    "closer": {
+      "title": "KEIN KONTO.\nEINFACH TIPPEN.",
+      "chips": [
+        "🌙 Verdient, während du weg bist",
+        "✨ Prestige für dauerhafte Boni",
+        "🏆 {trophies} Trophäen zum Freischalten"
+      ]
+    }
+  },
+  "featureGraphic": {
+    "title": "Emoji [Tycoon]",
+    "tagline": "Tippen. Bauen. [{emojis}] Emojis sammeln."
+  }
+}

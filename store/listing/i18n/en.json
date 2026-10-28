@@ -1,0 +1,41 @@
+{
+  "_help": "[word] = highlighted, \\n = new line, {emojis} {upgrades} {trophies} {buildings} = numbers from config.json, formatted for the locale. Text shrinks to fit, but keep it short.",
+  "locale": "en-US",
+  "slides": {
+    "tap": {
+      "title": "TAP YOUR WAY\nTO [TRILLIONS]",
+      "subtitle": "Build combos. Multiply every tap.",
+      "sticker": "TAP! TAP! TAP!"
+    },
+    "buildings": {
+      "title": "FROM [DOODLES]\nTO THE [BIG BANG]",
+      "subtitle": "{buildings} buildings, each one more absurd",
+      "path": "✍️ Drawing hand → … → 🙂 The first emoji"
+    },
+    "shop": {
+      "title": "BUILD AN\n[EMOJI EMPIRE]",
+      "subtitle": "Farms, banks, airlines… all making emojis"
+    },
+    "upgrades": {
+      "title": "[{upgrades}] SILLY\nUPGRADES",
+      "subtitle": "Read the complaints of very tired employees"
+    },
+    "collect": {
+      "title": "COLLECT\n[{emojis}] EMOJIS",
+      "subtitle": "And hunt for rare shiny ones ✨",
+      "sticker": "SHINY!"
+    },
+    "closer": {
+      "title": "NO SIGN-UP.\nJUST TAP.",
+      "chips": [
+        "🌙 Earns while you're away",
+        "✨ Prestige for permanent boosts",
+        "🏆 {trophies} trophies to unlock"
+      ]
+    }
+  },
+  "featureGraphic": {
+    "title": "Emoji [Tycoon]",
+    "tagline": "Tap. Build. Collect [{emojis}] emojis."
+  }
+}

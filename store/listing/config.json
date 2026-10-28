@@ -1,0 +1,80 @@
+{
+  "numbers": {
+    "_note": "Shown in captions as {emojis}, {upgrades}... Rounded on purpose (1,594 emojis, 574 upgrades, 153 trophies); update as the game grows.",
+    "emojis": 1600,
+    "upgrades": 570,
+    "trophies": 150,
+    "buildings": 23
+  },
+
+  "languages": ["en", "nb", "es", "pt", "de", "fr", "ko", "id", "tr", "it"],
+
+  "devices": {
+    "phone": {
+      "_note": "Google Play phone screenshots. Frame units are on the 1080-wide layout.",
+      "size": [1080, 1920],
+      "frame": { "left": 120, "top": 560, "width": 840, "pad": 22, "radius": 88 }
+    },
+    "tablet7": {
+      "_note": "Google Play 7-inch tablet screenshots (9:16). Capture on the Tablet_7in emulator (1200x1920, portrait).",
+      "size": [1080, 1920],
+      "trimTop": 0.0375,
+      "frame": { "left": 100, "top": 560, "width": 880, "pad": 30, "radius": 60 }
+    },
+    "tablet10": {
+      "_note": "Google Play 10-inch tablet screenshots (9:16, at least 1080 px wide). Capture on the Tablet_10in emulator (1600x2560, portrait).",
+      "size": [1440, 2560],
+      "trimTop": 0.028,
+      "frame": { "left": 100, "top": 560, "width": 880, "pad": 30, "radius": 60 }
+    }
+  },
+
+  "captures": {
+    "home": {
+      "moment": "Mid-combo on the Big Emoji: combo meter at ×3, numbers flying, a magical effect emoji on screen",
+      "setup": [
+        "Start from a save with a big counter (Cheats › +1 Qa, or play)",
+        "Cheats › +10k combo taps, then Cheats › Spawn an effect emoji",
+        "Tap the Big Emoji fast and keep tapping while the burst is taken"
+      ],
+      "burst": 8
+    },
+    "shop": {
+      "moment": "Shop › Buildings, late game: five buildings with fun icons, several yellow (affordable) buy buttons",
+      "setup": [
+        "Cheats › +1 Oc emojis, then buy into the later buildings (space station, candy kingdom, volcano...)",
+        "Scroll so five full cards show, ideally late ones, and pick a ×10 or Max buy amount"
+      ],
+      "burst": 1
+    },
+    "upgrades": {
+      "moment": "Shop › Upgrades with a funny employee quote open (the Farmers card works well)",
+      "setup": [
+        "Open Upgrades, choose a building filter, tap an upgrade with a good quote",
+        "Make sure its buy button is yellow (affordable)"
+      ],
+      "burst": 1
+    },
+    "emojidex": {
+      "moment": "Emojidex › Collection, about half found, shiny emojis visible in the grid",
+      "setup": [
+        "Cheats › +25 collection a few times, then +5 shiny",
+        "Pick the Faces category so the grid is full of familiar faces"
+      ],
+      "burst": 1
+    }
+  },
+
+  "slides": [
+    {
+      "id": "tap", "background": ["#FFB703", "#FB5607"], "capture": "home",
+      "_pops": "Fallbacks for the numbers popping out of the screen; each capture folder's tune.json sets the ones its captures show",
+      "pops": ["36.2 Qi", 8]
+    },
+    { "id": "buildings", "background": ["#3A86FF", "#4A33A6"] },
+    { "id": "shop", "background": ["#2EC4B6", "#1A7F8E"], "capture": "shop", "pops": ["145 Qa"] },
+    { "id": "upgrades", "background": ["#FF5C7A", "#B5179E"], "capture": "upgrades" },
+    { "id": "collect", "background": ["#8338EC", "#3A0CA3"], "capture": "emojidex" },
+    { "id": "closer", "background": ["#FFC53D", "#FF8A00"] }
+  ]
+}

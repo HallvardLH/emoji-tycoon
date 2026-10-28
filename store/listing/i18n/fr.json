@@ -1,0 +1,41 @@
+{
+  "_help": "French. Same markup as en.json. Number words follow French usage: billion = 10^12 (English trillion). French puts a space before ! and ?, written here as a non-breaking space.",
+  "locale": "fr-FR",
+  "slides": {
+    "tap": {
+      "title": "TAPE JUSQU'AUX\n[BILLIONS]",
+      "subtitle": "Enchaîne les combos. Multiplie chaque tap.",
+      "sticker": "TAPE ! TAPE !"
+    },
+    "buildings": {
+      "title": "DU [GRIBOUILLIS]\nAU [BIG BANG]",
+      "subtitle": "{buildings} bâtiments, tous plus absurdes",
+      "path": "✍️ Main dessinatrice → … → 🙂 Le premier emoji"
+    },
+    "shop": {
+      "title": "BÂTIS UN\n[EMPIRE D'EMOJIS]",
+      "subtitle": "Fermes, banques, compagnies aériennes… tout fabrique des emojis"
+    },
+    "upgrades": {
+      "title": "[{upgrades}] AMÉLIORATIONS\nLOUFOQUES",
+      "subtitle": "Lis les plaintes d'employés épuisés"
+    },
+    "collect": {
+      "title": "COLLECTIONNE\n[{emojis}] EMOJIS",
+      "subtitle": "Et traque les rares emojis brillants ✨",
+      "sticker": "BRILLANT !"
+    },
+    "closer": {
+      "title": "SANS COMPTE.\nIL SUFFIT DE TAPER.",
+      "chips": [
+        "🌙 Gagne des emojis même absent",
+        "✨ Prestige et bonus permanents",
+        "🏆 {trophies} trophées à débloquer"
+      ]
+    }
+  },
+  "featureGraphic": {
+    "title": "Emoji [Tycoon]",
+    "tagline": "Tape. Construis. Collectionne [{emojis}] emojis."
+  }
+}

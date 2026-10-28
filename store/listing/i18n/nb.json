@@ -1,0 +1,41 @@
+{
+  "_help": "Norwegian Bokmål. A first draft, to be checked by a native speaker. Same markup as en.json.",
+  "locale": "nb-NO",
+  "slides": {
+    "tap": {
+      "title": "TRYKK DEG\nTIL [BILLIONER]",
+      "subtitle": "Bygg komboer. Gang opp hvert trykk.",
+      "sticker": "TRYKK! TRYKK!"
+    },
+    "buildings": {
+      "title": "FRA [KRUSEDULLER]\nTIL [BIG BANG]",
+      "subtitle": "{buildings} bygninger, den ene sprøere enn den andre",
+      "path": "✍️ Tegnehånd → … → 🙂 Den første emojien"
+    },
+    "shop": {
+      "title": "BYGG ET\n[EMOJI-IMPERIUM]",
+      "subtitle": "Gårder, banker, flyselskap … alle lager emojier"
+    },
+    "upgrades": {
+      "title": "[{upgrades}] TULLETE\nOPPGRADERINGER",
+      "subtitle": "Les klagene fra svært slitne ansatte"
+    },
+    "collect": {
+      "title": "SAMLE\n[{emojis}] EMOJIER",
+      "subtitle": "Og jakt på sjeldne, skinnende emojier ✨",
+      "sticker": "SKINNENDE!"
+    },
+    "closer": {
+      "title": "INGEN KONTO.\nBARE TRYKK.",
+      "chips": [
+        "🌙 Tjener mens du er borte",
+        "✨ Prestisje gir varige bonuser",
+        "🏆 {trophies} trofeer å låse opp"
+      ]
+    }
+  },
+  "featureGraphic": {
+    "title": "Emoji [Tycoon]",
+    "tagline": "Trykk. Bygg. Samle [{emojis}] emojier."
+  }
+}

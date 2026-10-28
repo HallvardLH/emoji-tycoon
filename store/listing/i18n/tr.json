@@ -1,0 +1,42 @@
+{
+  "_help": "Turkish. Same markup as en.json. Lilita One lacks some Turkish letters (ğ, ş, ı, İ), so Baloo 2 replaces it, as in the app (i18n/fonts.ts).",
+  "locale": "tr-TR",
+  "fonts": { "title": "Baloo 2", "replace": true },
+  "slides": {
+    "tap": {
+      "title": "DOKUN DOKUN\n[TRİLYONLARA]",
+      "subtitle": "Kombo yap. Her dokunuşu katla.",
+      "sticker": "DOKUN! DOKUN!"
+    },
+    "buildings": {
+      "title": "[KARALAMADAN]\n[BÜYÜK PATLAMAYA]",
+      "subtitle": "Biri diğerinden saçma {buildings} bina",
+      "path": "✍️ Çizen el → … → 🙂 İlk emoji"
+    },
+    "shop": {
+      "title": "EMOJİ\n[İMPARATORLUĞU] KUR",
+      "subtitle": "Çiftlikler, bankalar, havayolları… hepsi emoji üretiyor"
+    },
+    "upgrades": {
+      "title": "[{upgrades}] ÇILGIN\nGELİŞTİRME",
+      "subtitle": "Çok yorgun çalışanların şikâyetlerini oku"
+    },
+    "collect": {
+      "title": "[{emojis}] EMOJİ\nTOPLA",
+      "subtitle": "Nadir parlak emojilerin peşine düş ✨",
+      "sticker": "PARLAK!"
+    },
+    "closer": {
+      "title": "ÜYELİK YOK.\nSADECE DOKUN.",
+      "chips": [
+        "🌙 Sen yokken de kazanır",
+        "✨ Kalıcı bonuslar için prestij",
+        "🏆 Açılacak {trophies} kupa"
+      ]
+    }
+  },
+  "featureGraphic": {
+    "title": "Emoji [Tycoon]",
+    "tagline": "Dokun. İnşa et. [{emojis}] emoji topla."
+  }
+}

@@ -1,0 +1,41 @@
+{
+  "_help": "Italian. Same markup as en.json. Number words follow Italian usage: bilione = 10^12 (English trillion), though 'mille miliardi' is common in speech.",
+  "locale": "it-IT",
+  "slides": {
+    "tap": {
+      "title": "TOCCA FINO AI\n[MILIARDI]",
+      "subtitle": "Crea combo. Moltiplica ogni tocco.",
+      "sticker": "TOCCA! TOCCA!"
+    },
+    "buildings": {
+      "title": "DAGLI [SCARABOCCHI]\nAL [BIG BANG]",
+      "subtitle": "{buildings} edifici, uno più assurdo dell'altro",
+      "path": "✍️ Mano che disegna → … → 🙂 Il primo emoji"
+    },
+    "shop": {
+      "title": "COSTRUISCI UN\n[IMPERO DI EMOJI]",
+      "subtitle": "Fattorie, banche, compagnie aeree… tutto crea emoji"
+    },
+    "upgrades": {
+      "title": "[{upgrades}] POTENZIAMENTI\nASSURDI",
+      "subtitle": "Leggi le lamentele di dipendenti esausti"
+    },
+    "collect": {
+      "title": "COLLEZIONA\n[{emojis}] EMOJI",
+      "subtitle": "E dai la caccia ai rari emoji brillanti ✨",
+      "sticker": "BRILLANTE!"
+    },
+    "closer": {
+      "title": "NIENTE ACCOUNT.\nBASTA TOCCARE.",
+      "chips": [
+        "🌙 Guadagna anche mentre sei via",
+        "✨ Prestigio con bonus permanenti",
+        "🏆 {trophies} trofei da sbloccare"
+      ]
+    }
+  },
+  "featureGraphic": {
+    "title": "Emoji [Tycoon]",
+    "tagline": "Tocca. Costruisci. Colleziona [{emojis}] emoji."
+  }
+}

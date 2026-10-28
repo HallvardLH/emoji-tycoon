@@ -1,0 +1,419 @@
+EMOJI TYCOON – GOOGLE PLAY LISTING TRANSLATIONS (DRAFT FOR REVIEW)
+===================================================================
+
+Languages: Spanish, Portuguese, German, French, Korean, Indonesian, Turkish, Italian.
+Source: store/listing.md (en-US). These are adaptations, not word-for-word translations.
+
+Play limits: app name 30 characters, short description 80, full description 4000.
+
+Notes for the reviewer
+----------------------
+- Game terms (Emojidex, shiny, essence, trials, gems, combo, the drawing hand) match the app's own translations in i18n/locales, so the listing uses the same words players see in the game.
+- The numbers are exact, as in the English (1,594 emojis, 574 upgrades, 153 trophies, 23 buildings), formatted for each locale.
+- English says "numbers into the decillions". Spanish, French, Italian and German use the long scale, where "decillion" means 10^60 rather than 10^33, so those versions say "astronomical numbers" instead. Korean does the same, since 조/경 don't line up with "decillion". Portuguese (Brazil) uses the short scale, so it keeps "decilhões".
+- Register: informal "you" throughout (tú, você, du, tu, 해요체, kamu, sen, tu), which is normal for casual games in all of these markets.
+- Spanish is neutral, for es-419, es-ES and es-US (no vosotros, no regional slang).
+- Portuguese is Brazilian (pt-BR). For pt-PT, "você" and the gerunds would need changing.
+- French has a non-breaking space before ! ? : ;
+- The English full description says you can "collect the production you missed by watching a short ad" and "Contains ads". Ads are currently switched off (ADS_ENABLED = false), so the translations mirror the English, but the English and every translation should drop that part until ads are on. A version without ads is given at the end of each language.
+
+
+===================================================================
+SPANISH (es-419 / es-ES / es-US)
+===================================================================
+
+APP NAME
+Recommended: Emoji Tycoon
+Alternative: Emoji Tycoon: Clicker emoji
+
+SHORT DESCRIPTION
+Toca emojis, levanta un imperio y colecciona los 1594 emojis. Sin registro.
+
+FULL DESCRIPTION
+Toca el Gran Emoji. Contrata una mano dibujante. Abre una granja donde las caritas sonrientes brotan de la tierra. En nada estarás al frente de una aerolínea de emojis, una estación espacial y algo llamado la Singularidad emoji, y los números ya no tendrán ningún sentido.
+
+Emoji Tycoon es un clicker idle relajante donde todo el arte son emojis.
+
+🏭 LEVANTA UN IMPERIO DE EMOJIS
+• 23 edificios, desde una humilde mano dibujante hasta el Big Bang, el multiverso y el primer emoji de la historia
+• 574 mejoras, muchas con una frase de un empleado agotadísimo
+• La producción sigue mientras juegas, hasta llegar a cifras astronómicas
+
+👆 TOCA, HAZ COMBO, REPITE
+• Toca rápido para encadenar un combo y multiplicar cada toque
+• Atrapa emojis mágicos con efectos: regalos, producción doble y toques potenciados
+• Busca los emojis brillantes, versiones raras y resplandecientes de los de siempre
+
+📖 COLECCIÓNALOS TODOS
+• Completa el Emojidex: 1594 emojis de caras, animales, comida, lugares y mucho más
+• 153 trofeos por desbloquear, algunos secretos
+• Estadísticas de todo, incluido lo que ha producido cada edificio
+
+✨ HAZ PRESTIGIO Y LLEGA MÁS LEJOS
+• Empieza de cero a cambio de esencia emoji, que aumenta toda tu producción
+• Gasta la esencia en ventajas que duran para siempre
+• Acepta desafíos: partidas más difíciles con recompensas que conservas
+
+🌙 VUELVE Y ENCUENTRA UNA FORTUNA
+Cuando vuelvas después de un descanso, recoge lo que se produjo en tu ausencia viendo un anuncio corto, o llévate el doble con gemas.
+
+💎 GEMAS
+Las gemas son opcionales. Todos los edificios, mejoras y emojis se consiguen gratis jugando.
+
+Sin cuenta y sin registro: tu imperio se guarda en tu teléfono. Contiene anuncios (solo cuando tú decides ver uno) y compras opcionales dentro de la aplicación.
+
+WITHOUT ADS (use while ads are off)
+🌙 VUELVE Y ENCUENTRA UNA FORTUNA
+Cuando vuelvas después de un descanso, recoge lo que se produjo en tu ausencia, o llévate el doble con gemas.
+[last line] Sin cuenta y sin registro: tu imperio se guarda en tu teléfono. Contiene compras opcionales dentro de la aplicación.
+
+
+===================================================================
+PORTUGUESE (pt-BR)
+===================================================================
+
+APP NAME
+Recommended: Emoji Tycoon
+Alternative: Emoji Tycoon: Clicker de Emoji
+
+SHORT DESCRIPTION
+Toque em emojis, monte um império e colecione todos os 1.594. Sem cadastro.
+
+FULL DESCRIPTION
+Toque no Emoji Grande. Contrate uma mão desenhista. Abra uma fazenda onde carinhas sorridentes brotam da terra. Quando você perceber, já vai estar comandando uma companhia aérea de emojis, uma estação espacial e uma tal de Singularidade emoji, e os números já não vão fazer o menor sentido.
+
+Emoji Tycoon é um clicker idle relaxante em que toda a arte é feita de emojis.
+
+🏭 MONTE UM IMPÉRIO DE EMOJIS
+• 23 edifícios, de uma humilde mão desenhista até o Big Bang, o multiverso e o primeiríssimo emoji
+• 574 melhorias, muitas com uma frase de um funcionário exausto
+• A produção continua enquanto você joga, chegando aos decilhões
+
+👆 TOQUE, FAÇA COMBO, REPITA
+• Toque rápido para criar um combo e multiplicar cada toque
+• Pegue emojis mágicos com efeitos: presentes, produção em dobro e toques turbinados
+• Fique de olho nos emojis brilhantes, versões raras e cintilantes dos que você já conhece
+
+📖 COLECIONE TODOS
+• Complete o Emojidex: 1.594 emojis de rostos, animais, comidas, lugares e muito mais
+• 153 troféus para desbloquear, alguns secretos
+• Estatísticas de tudo, inclusive o total que cada edifício já produziu
+
+✨ FAÇA PRESTÍGIO E VÁ ALÉM
+• Recomece do zero em troca de essência de emoji, que aumenta toda a produção
+• Gaste a essência em vantagens permanentes
+• Encare desafios: partidas mais difíceis com recompensas que ficam com você
+
+🌙 VOLTE E ENCONTRE UMA FORTUNA
+Quando você voltar depois de uma pausa, assista a um anúncio curto para coletar o que foi produzido enquanto você estava fora, ou pegue o dobro com gemas.
+
+💎 GEMAS
+As gemas são opcionais. Todos os edifícios, melhorias e emojis podem ser conquistados de graça jogando.
+
+Sem conta, sem cadastro: seu império fica salvo no seu celular. Contém anúncios (só quando você escolhe assistir) e compras opcionais no app.
+
+WITHOUT ADS (use while ads are off)
+🌙 VOLTE E ENCONTRE UMA FORTUNA
+Quando você voltar depois de uma pausa, colete o que foi produzido enquanto você estava fora, ou pegue o dobro com gemas.
+[last line] Sem conta, sem cadastro: seu império fica salvo no seu celular. Contém compras opcionais no app.
+
+
+===================================================================
+GERMAN (de-DE)
+===================================================================
+
+APP NAME
+Recommended: Emoji Tycoon
+Alternative: Emoji Tycoon: Idle-Clicker
+
+SHORT DESCRIPTION
+Tippe auf Emojis, bau ein Imperium und sammle alle 1.594 Emojis. Ohne Anmeldung.
+
+FULL DESCRIPTION
+Tippe auf das Große Emoji. Stell eine Zeichenhand ein. Eröffne eine Farm, auf der Smileys aus der Erde sprießen. Ehe du dich versiehst, leitest du eine Emoji-Airline, eine Raumstation und etwas namens Emoji-Singularität – und die Zahlen ergeben längst keinen Sinn mehr.
+
+Emoji Tycoon ist ein entspannter Idle-Clicker, in dem alles aus Emojis besteht.
+
+🏭 BAU EIN EMOJI-IMPERIUM
+• 23 Gebäude, von der bescheidenen Zeichenhand bis zum Urknall, dem Multiversum und dem Ur-Emoji
+• 574 Upgrades, viele mit einem Spruch eines sehr erschöpften Angestellten
+• Die Produktion läuft weiter, während du spielst – bis zu astronomischen Zahlen
+
+👆 TIPPEN, COMBO, NOCHMAL
+• Tippe schnell für eine Combo, die jeden Tipp vervielfacht
+• Schnapp dir magische Effekt-Emojis für Geschenke, doppelte Produktion und stärkere Tipps
+• Halte Ausschau nach glänzenden Emojis, seltenen funkelnden Versionen der Emojis, die du kennst
+
+📖 SAMMLE SIE ALLE
+• Füll den Emojidex: 1.594 Emojis – Gesichter, Tiere, Essen, Orte und vieles mehr
+• 153 Trophäen zum Freischalten, manche davon geheim
+• Statistiken zu allem, auch dazu, was jedes Gebäude insgesamt produziert hat
+
+✨ PRESTIGE UND NOCH WEITER
+• Fang neu an und erhalte Emoji-Essenz, die deine gesamte Produktion steigert
+• Gib Essenz für Vorteile aus, die für immer bleiben
+• Stell dich Prüfungen: schwerere Durchläufe mit Belohnungen, die du behältst
+
+🌙 KOMM ZURÜCK UND FINDE EIN VERMÖGEN
+Wenn du nach einer Pause zurückkommst, holst du dir die verpasste Produktion mit einem kurzen Werbevideo ab – oder das Doppelte mit Juwelen.
+
+💎 JUWELEN
+Juwelen sind optional. Jedes Gebäude, jedes Upgrade und jedes Emoji kannst du dir kostenlos erspielen.
+
+Kein Konto, keine Anmeldung: Dein Imperium wird auf deinem Handy gespeichert. Enthält Werbung (nur wenn du sie selbst ansehen willst) und optionale In-App-Käufe.
+
+WITHOUT ADS (use while ads are off)
+🌙 KOMM ZURÜCK UND FINDE EIN VERMÖGEN
+Wenn du nach einer Pause zurückkommst, holst du dir die verpasste Produktion ab – oder das Doppelte mit Juwelen.
+[last line] Kein Konto, keine Anmeldung: Dein Imperium wird auf deinem Handy gespeichert. Enthält optionale In-App-Käufe.
+
+
+===================================================================
+FRENCH (fr-FR)
+===================================================================
+
+APP NAME
+Recommended: Emoji Tycoon
+Alternative: Emoji Tycoon : Clicker idle
+
+SHORT DESCRIPTION
+Tapote des emojis, bâtis un empire et collectionne les 1 594. Sans inscription.
+
+FULL DESCRIPTION
+Tapote le Gros Emoji. Embauche une main dessinatrice. Ouvre une ferme où les smileys poussent dans les champs. Sans t'en rendre compte, tu diriges une compagnie aérienne d'emojis, une station spatiale et un truc appelé la Singularité emoji, et les chiffres n'ont plus aucun sens.
+
+Emoji Tycoon est un jeu idle relaxant à base de clics, où tout est fait d'emojis.
+
+🏭 BÂTIS UN EMPIRE D'EMOJIS
+• 23 bâtiments, de l'humble main dessinatrice au Big Bang, au multivers et au tout premier emoji
+• 574 améliorations, souvent accompagnées d'une phrase d'un employé à bout de forces
+• La production continue pendant que tu joues, jusqu'à des chiffres astronomiques
+
+👆 TAPOTE, ENCHAÎNE, RECOMMENCE
+• Tapote vite pour lancer un combo et multiplier chaque tapotement
+• Attrape les emojis magiques : cadeaux, production doublée et tapotements boostés
+• Repère les emojis brillants, des versions rares et scintillantes de ceux que tu connais
+
+📖 COLLECTIONNE-LES TOUS
+• Remplis l'Emojidex : 1 594 emojis, visages, animaux, nourriture, lieux et bien plus
+• 153 trophées à débloquer, dont certains secrets
+• Des statistiques sur tout, y compris ce que chaque bâtiment a produit au total
+
+✨ FAIS UN PRESTIGE ET VA PLUS LOIN
+• Recommence à zéro contre de l'essence d'emoji, qui booste toute ta production
+• Dépense ton essence en avantages permanents
+• Relève des épreuves : des parties plus corsées, avec des récompenses que tu gardes
+
+🌙 REVIENS ET TROUVE UNE FORTUNE
+Quand tu reviens après une pause, récupère la production que tu as manquée en regardant une courte pub, ou le double avec des gemmes.
+
+💎 GEMMES
+Les gemmes sont facultatives. Tous les bâtiments, améliorations et emojis s'obtiennent gratuitement en jouant.
+
+Pas de compte, pas d'inscription : ton empire est sauvegardé sur ton téléphone. Contient des publicités (seulement si tu choisis d'en regarder une) et des achats intégrés facultatifs.
+
+WITHOUT ADS (use while ads are off)
+🌙 REVIENS ET TROUVE UNE FORTUNE
+Quand tu reviens après une pause, récupère la production que tu as manquée, ou le double avec des gemmes.
+[last line] Pas de compte, pas d'inscription : ton empire est sauvegardé sur ton téléphone. Contient des achats intégrés facultatifs.
+
+
+===================================================================
+KOREAN (ko-KR)
+===================================================================
+
+APP NAME
+Recommended: 이모지 타이쿤
+Alternative: Emoji Tycoon: 이모지 타이쿤
+Note: Korean players search in Hangul, and Korean game listings usually transliterate English titles. "이모지 타이쿤" reads naturally and is easy to find. The alternative keeps the English name for brand recognition (21 characters).
+
+SHORT DESCRIPTION
+이모지를 탭해 제국을 세우고 1,594개 이모지를 모두 모아요. 가입 필요 없어요!
+
+FULL DESCRIPTION
+큰 이모지를 탭하세요. 그리는 손을 고용하고, 땅에서 웃는 얼굴이 쑥쑥 자라는 농장을 열어 보세요. 정신을 차려 보면 이모지 항공사와 우주 정거장, 그리고 '이모지 특이점'이라는 무언가를 운영하고 있을 거예요. 숫자는 이미 상상을 넘어섰고요.
+
+이모지 타이쿤은 모든 그림이 이모지로 된 힐링 방치형 클리커 게임이에요.
+
+🏭 이모지 제국을 세우세요
+• 소박한 그리는 손부터 빅뱅, 멀티버스, 최초의 이모지까지 23개의 건물
+• 574개의 업그레이드, 그중 상당수엔 지칠 대로 지친 직원의 한마디가 담겨 있어요
+• 플레이하는 동안에도 생산은 계속되고, 숫자는 끝없이 커져요
+
+👆 탭하고, 콤보 쌓고, 또 탭!
+• 빠르게 탭해서 콤보를 쌓고 모든 탭의 효과를 몇 배로 키우세요
+• 특별한 효과 이모지를 잡으면 선물, 생산량 2배, 탭 강화가 와르르
+• 익숙한 이모지의 희귀하고 반짝이는 버전, 반짝이 이모지를 찾아보세요
+
+📖 모두 모아 보세요
+• 이모지 도감 완성하기: 얼굴, 동물, 음식, 장소 등 1,594개의 이모지
+• 잠금 해제할 트로피 153개, 그중엔 비밀 트로피도 있어요
+• 건물마다 지금까지 만든 총량까지, 모든 기록을 한눈에
+
+✨ 프레스티지로 더 멀리
+• 처음부터 다시 시작하고 모든 생산량을 높여 주는 이모지 정수를 받으세요
+• 정수로 영구적인 특전을 얻으세요
+• 시련에 도전하세요: 더 어렵지만 보상은 계속 남아요
+
+🌙 돌아오면 부자가 되어 있어요
+잠시 쉬었다 돌아오면 짧은 광고를 보고 그동안 놓친 생산량을 받거나, 보석으로 2배를 받을 수 있어요.
+
+💎 보석
+보석은 선택 사항이에요. 모든 건물, 업그레이드, 이모지는 플레이만으로 무료로 얻을 수 있어요.
+
+계정도 가입도 필요 없어요. 제국은 휴대폰에 저장돼요. 광고(직접 보기를 선택할 때만)와 선택형 인앱 구매가 포함되어 있어요.
+
+WITHOUT ADS (use while ads are off)
+🌙 돌아오면 부자가 되어 있어요
+잠시 쉬었다 돌아오면 그동안 놓친 생산량을 받거나, 보석으로 2배를 받을 수 있어요.
+[last line] 계정도 가입도 필요 없어요. 제국은 휴대폰에 저장돼요. 선택형 인앱 구매가 포함되어 있어요.
+
+
+===================================================================
+INDONESIAN (id-ID)
+===================================================================
+
+APP NAME
+Recommended: Emoji Tycoon
+Alternative: Emoji Tycoon: Game Idle Emoji
+
+SHORT DESCRIPTION
+Ketuk emoji, bangun kerajaan, dan kumpulkan 1.594 emoji. Tanpa perlu daftar.
+
+FULL DESCRIPTION
+Ketuk Emoji Besar. Rekrut tangan penggambar. Buka ladang tempat wajah-wajah tersenyum tumbuh dari tanah. Tahu-tahu kamu sudah mengelola maskapai emoji, stasiun luar angkasa, dan sesuatu bernama Singularitas emoji, dan angkanya sudah tidak masuk akal lagi.
+
+Emoji Tycoon adalah game idle clicker santai yang semua gambarnya berupa emoji.
+
+🏭 BANGUN KERAJAAN EMOJI
+• 23 bangunan, dari tangan penggambar yang sederhana sampai Big Bang, multisemesta, dan emoji pertama di dunia
+• 574 upgrade, banyak di antaranya dengan celetukan karyawan yang sudah sangat lelah
+• Produksi terus berjalan selama kamu bermain, sampai angka desiliun
+
+👆 KETUK, KOMBO, ULANGI
+• Ketuk cepat untuk membangun kombo dan melipatgandakan setiap ketukan
+• Tangkap emoji efek ajaib untuk hadiah, produksi dua kali lipat, dan ketukan super
+• Temukan emoji berkilau, versi langka dan gemerlap dari emoji yang kamu kenal
+
+📖 KUMPULKAN SEMUANYA
+• Lengkapi Emojidex: 1.594 emoji, dari wajah, hewan, makanan, tempat, dan banyak lagi
+• 153 trofi untuk dibuka, beberapa di antaranya rahasia
+• Statistik untuk segalanya, termasuk total produksi tiap bangunan
+
+✨ PRESTISE DAN MELAJU LEBIH JAUH
+• Mulai dari awal untuk mendapatkan esensi emoji yang meningkatkan semua produksi
+• Gunakan esensi untuk keuntungan yang berlaku selamanya
+• Hadapi tantangan: permainan lebih sulit dengan hadiah yang tetap kamu simpan
+
+🌙 KEMBALI DAN TEMUKAN HARTA KARUN
+Saat kembali setelah istirahat, ambil produksi yang terlewat dengan menonton iklan singkat, atau klaim dua kali lipat dengan permata.
+
+💎 PERMATA
+Permata bersifat opsional. Semua bangunan, upgrade, dan emoji bisa didapat gratis dengan bermain.
+
+Tanpa akun, tanpa daftar: kerajaanmu tersimpan di ponselmu. Berisi iklan (hanya jika kamu memilih menontonnya) dan pembelian dalam aplikasi opsional.
+
+WITHOUT ADS (use while ads are off)
+🌙 KEMBALI DAN TEMUKAN HARTA KARUN
+Saat kembali setelah istirahat, ambil produksi yang terlewat, atau klaim dua kali lipat dengan permata.
+[last line] Tanpa akun, tanpa daftar: kerajaanmu tersimpan di ponselmu. Berisi pembelian dalam aplikasi opsional.
+
+
+===================================================================
+TURKISH (tr-TR)
+===================================================================
+
+APP NAME
+Recommended: Emoji Tycoon
+Alternative: Emoji Tycoon: Emoji İmparatoru
+
+SHORT DESCRIPTION
+Emojilere dokun, imparatorluk kur ve 1.594 emojiyi topla. Üyelik gerekmez.
+
+FULL DESCRIPTION
+Büyük Emoji'ye dokun. Bir çizen el işe al. Gülen yüzlerin topraktan fışkırdığı bir çiftlik aç. Bir bakmışsın, bir emoji havayolu şirketi, bir uzay istasyonu ve adı Emoji Tekilliği olan bir şey yönetiyorsun; sayılar da çoktan anlamını yitirmiş.
+
+Emoji Tycoon, bütün çizimlerin emojilerden oluştuğu rahatlatıcı bir idle tıklama oyunu.
+
+🏭 EMOJİ İMPARATORLUĞU KUR
+• Mütevazı bir çizen elden Büyük Patlama'ya, çoklu evrene ve ilk emojiye kadar 23 bina
+• 574 geliştirme, çoğunda çok yorgun bir çalışandan bir söz
+• Sen oynarken üretim devam eder, sayılar desilyonlara ulaşır
+
+👆 DOKUN, KOMBO YAP, TEKRARLA
+• Hızlı dokunarak kombo yap ve her dokunuşu katla
+• Hediye, iki kat üretim ve güçlü dokunuşlar için sihirli efekt emojilerini yakala
+• Tanıdığın emojilerin nadir, ışıl ışıl versiyonları olan parlak emojileri bul
+
+📖 HEPSİNİ TOPLA
+• Emojidex'i doldur: yüzler, hayvanlar, yiyecekler, yerler ve daha fazlası, toplam 1.594 emoji
+• Bazıları gizli, açılacak 153 kupa
+• Her şeyin istatistiği, her binanın toplamda ne ürettiği dahil
+
+✨ PRESTİJ YAP, DAHA DA İLERİ GİT
+• Baştan başla, tüm üretimi artıran emoji esansı kazan
+• Esansını kalıcı avantajlara harca
+• Sınavlara gir: daha zorlu turlar, kazandığın ödüller sende kalır
+
+🌙 DÖNDÜĞÜNDE SERVET SENİ BEKLİYOR
+Bir moladan sonra döndüğünde, kısa bir reklam izleyerek kaçırdığın üretimi topla ya da elmaslarla iki katını al.
+
+💎 ELMASLAR
+Elmaslar isteğe bağlıdır. Her bina, geliştirme ve emoji oynayarak ücretsiz kazanılabilir.
+
+Hesap yok, üyelik yok: imparatorluğun telefonunda kayıtlı. Reklam (yalnızca sen izlemeyi seçersen) ve isteğe bağlı uygulama içi satın alımlar içerir.
+
+WITHOUT ADS (use while ads are off)
+🌙 DÖNDÜĞÜNDE SERVET SENİ BEKLİYOR
+Bir moladan sonra döndüğünde kaçırdığın üretimi topla ya da elmaslarla iki katını al.
+[last line] Hesap yok, üyelik yok: imparatorluğun telefonunda kayıtlı. İsteğe bağlı uygulama içi satın alımlar içerir.
+
+
+===================================================================
+ITALIAN (it-IT)
+===================================================================
+
+APP NAME
+Recommended: Emoji Tycoon
+Alternative: Emoji Tycoon: Clicker Idle
+
+SHORT DESCRIPTION
+Tocca emoji, costruisci un impero e collezionali tutti e 1.594. Senza account.
+
+FULL DESCRIPTION
+Tocca l'Emoji Gigante. Assumi una mano che disegna. Apri una fattoria dove le faccine sorridenti spuntano dalla terra. In men che non si dica gestirai una compagnia aerea di emoji, una stazione spaziale e una cosa chiamata Singolarità emoji, e i numeri non avranno più alcun senso.
+
+Emoji Tycoon è un clicker idle rilassante dove tutta la grafica è fatta di emoji.
+
+🏭 COSTRUISCI UN IMPERO DI EMOJI
+• 23 edifici, dall'umile mano che disegna al Big Bang, al multiverso e al primissimo emoji
+• 574 potenziamenti, molti con una battuta di un dipendente esausto
+• La produzione continua mentre giochi, fino a numeri astronomici
+
+👆 TOCCA, FAI COMBO, RIPETI
+• Tocca veloce per creare una combo e moltiplicare ogni tocco
+• Acchiappa gli emoji magici per regali, produzione doppia e tocchi potenziati
+• Scova gli emoji brillanti, versioni rare e scintillanti di quelli che conosci
+
+📖 COLLEZIONALI TUTTI
+• Completa l'Emojidex: 1.594 emoji tra facce, animali, cibo, luoghi e tanto altro
+• 153 trofei da sbloccare, alcuni segreti
+• Statistiche su tutto, compreso quanto ha prodotto in totale ogni edificio
+
+✨ FAI PRESTIGIO E VAI OLTRE
+• Ricomincia da capo in cambio di essenza di emoji, che aumenta tutta la produzione
+• Spendi l'essenza in vantaggi che durano per sempre
+• Affronta le sfide: partite più difficili con ricompense che restano tue
+
+🌙 TORNA E TROVA UNA FORTUNA
+Quando torni dopo una pausa, raccogli la produzione che hai perso guardando un breve annuncio, oppure prendi il doppio con le gemme.
+
+💎 GEMME
+Le gemme sono facoltative. Ogni edificio, potenziamento ed emoji si può ottenere gratis giocando.
+
+Niente account, niente registrazione: il tuo impero è salvato sul telefono. Contiene pubblicità (solo quando scegli di guardarla) e acquisti in-app facoltativi.
+
+WITHOUT ADS (use while ads are off)
+🌙 TORNA E TROVA UNA FORTUNA
+Quando torni dopo una pausa, raccogli la produzione che hai perso, oppure prendi il doppio con le gemme.
+[last line] Niente account, niente registrazione: il tuo impero è salvato sul telefono. Contiene acquisti in-app facoltativi.

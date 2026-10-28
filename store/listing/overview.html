@@ -1,0 +1,31 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Store Listing Overview</title>
+<!-- Every rendered image for one language on one sheet: overview.html?lang=en&devices=phone,tablet -->
+<style>
+  body { margin: 0; padding: 30px; background: #2a2a33; color: #fff; font: 700 30px system-ui, sans-serif; }
+  h2 { font-size: 30px; margin: 10px 0 14px; }
+  .row { display: flex; gap: 18px; align-items: flex-start; margin-bottom: 30px; }
+  .row img { height: 560px; border-radius: 10px; }
+  .fg { height: 400px; border-radius: 10px; }
+</style>
+</head>
+<body>
+<script>
+(async () => {
+  const q = new URLSearchParams(location.search);
+  const lang = q.get("lang") || "en";
+  const config = await fetch("config.json").then(r => r.json());
+  let html = `<h2>${lang} · feature graphic</h2><img class="fg" src="out/${lang}/feature-graphic.png">`;
+  for (const device of (q.get("devices") || "phone").split(",")) {
+    html += `<h2>${lang} · ${device}</h2><div class="row">`;
+    config.slides.forEach((s, i) => html += `<img src="out/${lang}/${device}/${String(i + 1).padStart(2, "0")}_${s.id}.png">`);
+    html += `</div>`;
+  }
+  document.body.innerHTML = html;
+})();
+</script>
+</body>
+</html>

@@ -40,3 +40,6 @@ yarn-error.*
 
 # typescript
 *.tsbuildinfo
+
+# Google Play service account key for eas submit
+/credentials/

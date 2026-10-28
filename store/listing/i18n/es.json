@@ -1,0 +1,41 @@
+{
+  "_help": "Spanish. Same markup as en.json. Number words follow Spanish usage: billón = 10^12 (English trillion).",
+  "locale": "es-ES",
+  "slides": {
+    "tap": {
+      "title": "TOCA HASTA\nLOS [BILLONES]",
+      "subtitle": "Haz combos. Multiplica cada toque.",
+      "sticker": "¡TOCA! ¡TOCA!"
+    },
+    "buildings": {
+      "title": "DE [GARABATOS]\nAL [BIG BANG]",
+      "subtitle": "{buildings} edificios, a cuál más absurdo",
+      "path": "✍️ Mano dibujante → … → 🙂 El primer emoji"
+    },
+    "shop": {
+      "title": "CREA UN\n[IMPERIO EMOJI]",
+      "subtitle": "Granjas, bancos, aerolíneas… todo fabrica emojis"
+    },
+    "upgrades": {
+      "title": "[{upgrades}] MEJORAS\nDISPARATADAS",
+      "subtitle": "Lee las quejas de unos empleados agotados"
+    },
+    "collect": {
+      "title": "COLECCIONA\n[{emojis}] EMOJIS",
+      "subtitle": "Y caza los raros emojis brillantes ✨",
+      "sticker": "¡BRILLANTE!"
+    },
+    "closer": {
+      "title": "SIN REGISTRO.\nSOLO TOCA.",
+      "chips": [
+        "🌙 Gana emojis aunque no juegues",
+        "✨ Prestigio con mejoras permanentes",
+        "🏆 {trophies} trofeos por desbloquear"
+      ]
+    }
+  },
+  "featureGraphic": {
+    "title": "Emoji [Tycoon]",
+    "tagline": "Toca. Construye. Colecciona [{emojis}] emojis."
+  }
+}

@@ -1,0 +1,41 @@
+{
+  "_help": "Portuguese (Brazil), for the pt-BR listing. Same markup as en.json. Number words follow Brazilian usage: trilhão = 10^12.",
+  "locale": "pt-BR",
+  "slides": {
+    "tap": {
+      "title": "TOQUE ATÉ\nOS [TRILHÕES]",
+      "subtitle": "Faça combos. Multiplique cada toque.",
+      "sticker": "TOQUE! TOQUE!"
+    },
+    "buildings": {
+      "title": "DOS [RABISCOS]\nAO [BIG BANG]",
+      "subtitle": "{buildings} edifícios, um mais absurdo que o outro",
+      "path": "✍️ Mão desenhista → … → 🙂 O primeiro emoji"
+    },
+    "shop": {
+      "title": "CRIE UM\n[IMPÉRIO EMOJI]",
+      "subtitle": "Fazendas, bancos, companhias aéreas… tudo fazendo emojis"
+    },
+    "upgrades": {
+      "title": "[{upgrades}] MELHORIAS\nMALUCAS",
+      "subtitle": "Leia as reclamações de funcionários exaustos"
+    },
+    "collect": {
+      "title": "COLECIONE\n[{emojis}] EMOJIS",
+      "subtitle": "E cace os raros emojis brilhantes ✨",
+      "sticker": "BRILHANTE!"
+    },
+    "closer": {
+      "title": "SEM CADASTRO.\nSÓ TOCAR.",
+      "chips": [
+        "🌙 Ganha emojis enquanto você está fora",
+        "✨ Prestígio com bônus permanentes",
+        "🏆 {trophies} troféus para desbloquear"
+      ]
+    }
+  },
+  "featureGraphic": {
+    "title": "Emoji [Tycoon]",
+    "tagline": "Toque. Construa. Colecione [{emojis}] emojis."
+  }
+}

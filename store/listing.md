@@ -4,7 +4,7 @@
 Emoji Tycoon
 
 ## Short description (80 max)
-Tap emojis, build an emoji empire and collect all 1,594 emojis. No sign-up.
+Tap. Build. Collect over 1,500 emojis. Become an emoji tycoon!
 
 ## Full description (4000 max)
 Tap the Big Emoji. Hire a drawing hand. Open a farm where smiley faces sprout from the ground. Before long you're running an emoji airline, a space station and something called the Emoji singularity, and the numbers have stopped making sense.
@@ -32,9 +32,9 @@ Emoji Tycoon is a relaxing idle clicker where the only art is emojis.
 • Take on trials: harder runs with rewards you keep
 
 🌙 COME BACK TO A FORTUNE
-When you return after a break, collect the production you missed by watching a short ad, or claim double with gems.
+When you return after a break, collect the production you missed, or claim double with gems.
 
 💎 GEMS
 Gems are optional. Every building, upgrade and emoji can be earned for free by playing.
 
-No account, no sign-up: your empire is saved on your phone. Contains ads (only when you choose to watch one) and optional in-app purchases.
+No account, no sign-up: your empire is saved on your phone. Contains optional in-app purchases.
