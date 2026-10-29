@@ -1,5 +1,6 @@
 import "../i18n";
 import "../scripts/screenshotMode";
+import "../scripts/screenshotHooks";
 import { Stack } from "expo-router";
 import { Provider, useSelector } from "react-redux";
 import { StatusBar } from "expo-status-bar";
