@@ -544,6 +544,7 @@
     },
     "trophies": {
         "unlockedCaps": "트로피 획득",
+        "unlockedManyCaps": "트로피 여러 개 획득",
         "ofTotalUnlocked": "/ {{total}} 획득",
         "all": "전체",
         "hiddenHint": "계속 플레이하면 해금돼요",

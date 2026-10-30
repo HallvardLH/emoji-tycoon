@@ -169,8 +169,8 @@ const buildings: Achievement[] = [
         description: amount === 1
             ? { key: "descriptions.buildingFirst", buildingId: building.buildingId }
             : { key: "descriptions.buildingOwned", buildingId: building.buildingId, amount },
-        // The first building has its own banner
-        quiet: building.buildingId === 0 && tier === 0,
+        // The first of each building has its own banner ("Your first farm!")
+        quiet: tier === 0,
         unlocked: state => ownedOf(state, building.name) >= amount,
     }))),
     ...([[100, "🏘️"], [500, "🏙️"], [1000, "🌆"], [2500, "🌍"]] as [number, string][])
@@ -320,9 +320,31 @@ export const achievements: Achievement[] = [
     ...secret,
 ];
 
+// Trophy banners come at most this often. Early in a game several trophies land within
+// seconds of each other (nearly every tap collects a new emoji), and a banner each was a flood
+const TROPHY_BANNER_GAP_MS = 60_000;
+
+// Unlocked, waiting for their banner
+let waiting: Achievement[] = [];
+let lastBannerAt = 0;
+
+/** One banner for the trophies waiting, however many: "Poke · Hoarder" */
+function showWaitingTrophies() {
+    if (waiting.length === 0 || Date.now() - lastBannerAt < TROPHY_BANNER_GAP_MS) return;
+    celebrateMilestone({
+        icon: waiting[0].icon,
+        caption: toCaps(i18n.t(waiting.length === 1 ? "trophies.unlockedCaps" : "trophies.unlockedManyCaps")),
+        title: waiting.map(a => getTrophyText(a.name)).join(" · "),
+        kind: "trophy",
+    });
+    waiting = [];
+    lastBannerAt = Date.now();
+}
+
 /**
- * Unlocks every achievement that's been earned, with a banner for each new one
- * (except on a save's first check, see achievementsSlice)
+ * Unlocks every achievement that's been earned (except on a save's first check, see
+ * achievementsSlice). Their banners are spaced out: trophies earned while one is due
+ * wait and share the next banner
  *
  * Called every 2.5 s from the gameLoop
  */
@@ -332,15 +354,17 @@ export function checkAchievements() {
     const earned = achievements.filter(a => !unlocked.includes(a.id) && a.unlocked(state));
     if (earned.length === 0) {
         if (!checked) store.dispatch(unlockAchievements([]));
+        showWaitingTrophies();
         return;
     }
 
     store.dispatch(unlockAchievements(earned.map(a => a.id)));
     if (!checked) return;
-    earned.filter(a => !a.quiet).forEach(a => celebrateMilestone({
-        icon: a.icon,
-        caption: toCaps(i18n.t("trophies.unlockedCaps")),
-        title: getTrophyText(a.name),
-        kind: "trophy",
-    }));
+    waiting.push(...earned.filter(a => !a.quiet));
+    showWaitingTrophies();
+}
+
+/** Forgets trophies waiting for a banner, for a reset game */
+export function clearWaitingTrophies() {
+    waiting = [];
 }

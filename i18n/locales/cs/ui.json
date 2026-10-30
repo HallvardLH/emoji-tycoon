@@ -706,6 +706,7 @@
     },
     "trophies": {
         "unlockedCaps": "Trofej odemčena",
+        "unlockedManyCaps": "Trofeje odemčeny",
         "ofTotalUnlocked": "/ {{total}} odemčeno",
         "all": "Vše",
         "hiddenHint": "Hraj dál, abys ji odemkl",

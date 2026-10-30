@@ -606,6 +606,7 @@
     },
     "trophies": {
         "unlockedCaps": "ट्रॉफ़ी अनलॉक",
+        "unlockedManyCaps": "ट्रॉफ़ियाँ अनलॉक",
         "ofTotalUnlocked": "/ {{total}} अनलॉक",
         "all": "सभी",
         "hiddenHint": "इसे अनलॉक करने के लिए खेलते रहो",

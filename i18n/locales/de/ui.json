@@ -602,6 +602,7 @@
     },
     "trophies": {
         "unlockedCaps": "Trophäe freigeschaltet",
+        "unlockedManyCaps": "Trophäen freigeschaltet",
         "ofTotalUnlocked": "/ {{total}} freigeschaltet",
         "all": "Alle",
         "hiddenHint": "Spiel weiter, um sie freizuschalten",

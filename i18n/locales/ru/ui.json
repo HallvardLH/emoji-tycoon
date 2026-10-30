@@ -706,6 +706,7 @@
     },
     "trophies": {
         "unlockedCaps": "Трофей получен",
+        "unlockedManyCaps": "Трофеи получены",
         "ofTotalUnlocked": "/ {{total}} получено",
         "all": "Все",
         "hiddenHint": "Играй дальше, чтобы получить его",

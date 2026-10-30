@@ -606,6 +606,7 @@
     },
     "trophies": {
         "unlockedCaps": "ট্রফি আনলক হলো",
+        "unlockedManyCaps": "ট্রফিগুলো আনলক হলো",
         "ofTotalUnlocked": "/ {{total}} আনলক",
         "all": "সব",
         "hiddenHint": "আনলক করতে খেলা চালিয়ে যাও",

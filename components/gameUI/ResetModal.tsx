@@ -12,6 +12,7 @@ import { resetPrestige } from "../../scripts/redux/prestigeSlice";
 import { resetTabs } from "../../scripts/redux/tabsSlice";
 import { resetOffline } from "../../scripts/redux/offlineSlice";
 import { resetAchievements } from "../../scripts/redux/achievementsSlice";
+import { clearWaitingTrophies } from "../../scripts/game/achievements";
 import Modal from "../generalUI/Modal";
 import Text from "../generalUI/Text";
 import { palette, radii, themedStyles } from "../misc/theme";
@@ -54,6 +55,7 @@ function resetGame() {
     store.dispatch(resetTabs());
     store.dispatch(resetOffline());
     store.dispatch(resetAchievements());
+    clearWaitingTrophies();
 }
 
 /** Resetting wipes the save, so it asks first, and says that purchases carry over */

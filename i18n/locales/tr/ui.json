@@ -602,6 +602,7 @@
     },
     "trophies": {
         "unlockedCaps": "Kupa kazanıldı",
+        "unlockedManyCaps": "Kupalar kazanıldı",
         "ofTotalUnlocked": "/ {{total}} kazanıldı",
         "all": "Tümü",
         "hiddenHint": "Kazanmak için oynamaya devam et",

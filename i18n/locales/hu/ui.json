@@ -603,6 +603,7 @@
     },
     "trophies": {
         "unlockedCaps": "Trófea feloldva",
+        "unlockedManyCaps": "Trófeák feloldva",
         "ofTotalUnlocked": "/ {{total}} feloldva",
         "all": "Mind",
         "hiddenHint": "Játssz tovább a feloldásához",

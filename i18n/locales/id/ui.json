@@ -550,6 +550,7 @@
     },
     "trophies": {
         "unlockedCaps": "Trofi terbuka",
+        "unlockedManyCaps": "Trofi-trofi terbuka",
         "ofTotalUnlocked": "/ {{total}} terbuka",
         "all": "Semua",
         "hiddenHint": "Terus bermain untuk membukanya",

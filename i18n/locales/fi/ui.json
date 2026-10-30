@@ -602,6 +602,7 @@
     },
     "trophies": {
         "unlockedCaps": "Palkinto avattu",
+        "unlockedManyCaps": "Palkintoja avattu",
         "ofTotalUnlocked": "/ {{total}} avattu",
         "all": "Kaikki",
         "hiddenHint": "Jatka pelaamista avataksesi sen",

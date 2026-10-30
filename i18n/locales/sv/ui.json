@@ -603,6 +603,7 @@
     },
     "trophies": {
         "unlockedCaps": "Trofé upplåst",
+        "unlockedManyCaps": "Troféer upplåsta",
         "ofTotalUnlocked": "/ {{total}} upplåsta",
         "all": "Alla",
         "hiddenHint": "Fortsätt spela för att låsa upp den",

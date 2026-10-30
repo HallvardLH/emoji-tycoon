@@ -707,6 +707,7 @@
     },
     "trophies": {
         "unlockedCaps": "Трофей отримано",
+        "unlockedManyCaps": "Трофеї отримано",
         "ofTotalUnlocked": "/ {{total}} отримано",
         "all": "Усі",
         "hiddenHint": "Грай далі, щоб отримати його",

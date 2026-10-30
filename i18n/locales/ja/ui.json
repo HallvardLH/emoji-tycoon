@@ -544,6 +544,7 @@
     },
     "trophies": {
         "unlockedCaps": "トロフィー獲得",
+        "unlockedManyCaps": "トロフィーをまとめて獲得",
         "ofTotalUnlocked": "/ {{total}} 獲得",
         "all": "すべて",
         "hiddenHint": "プレイを続けると解放されます",

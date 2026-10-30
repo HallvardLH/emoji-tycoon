@@ -544,6 +544,7 @@
     },
     "trophies": {
         "unlockedCaps": "获得奖杯",
+        "unlockedManyCaps": "获得多个奖杯",
         "ofTotalUnlocked": "/ {{total}} 已获得",
         "all": "全部",
         "hiddenHint": "继续游戏即可解锁",

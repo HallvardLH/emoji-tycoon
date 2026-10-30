@@ -602,6 +602,7 @@
     },
     "trophies": {
         "unlockedCaps": "Trofee ontgrendeld",
+        "unlockedManyCaps": "Trofeeën ontgrendeld",
         "ofTotalUnlocked": "/ {{total}} ontgrendeld",
         "all": "Alle",
         "hiddenHint": "Blijf spelen om hem te ontgrendelen",

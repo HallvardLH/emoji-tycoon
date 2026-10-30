@@ -655,6 +655,7 @@
     },
     "trophies": {
         "unlockedCaps": "Trofeu deblocat",
+        "unlockedManyCaps": "Trofee deblocate",
         "ofTotalUnlocked": "/ {{total}} deblocate",
         "all": "Toate",
         "hiddenHint": "Continuă să joci ca să-l deblochezi",

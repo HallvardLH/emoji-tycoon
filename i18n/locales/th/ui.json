@@ -550,6 +550,7 @@
     },
     "trophies": {
         "unlockedCaps": "ปลดล็อกถ้วยรางวัล",
+        "unlockedManyCaps": "ปลดล็อกถ้วยรางวัลหลายใบ",
         "ofTotalUnlocked": "/ {{total}} ปลดล็อกแล้ว",
         "all": "ทั้งหมด",
         "hiddenHint": "เล่นต่อไปเพื่อปลดล็อก",

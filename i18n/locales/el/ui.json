@@ -602,6 +602,7 @@
     },
     "trophies": {
         "unlockedCaps": "Τρόπαιο ξεκλειδώθηκε",
+        "unlockedManyCaps": "Τρόπαια ξεκλειδώθηκαν",
         "ofTotalUnlocked": "/ {{total}} ξεκλειδωμένα",
         "all": "Όλα",
         "hiddenHint": "Συνέχισε να παίζεις για να το ξεκλειδώσεις",

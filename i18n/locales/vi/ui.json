@@ -551,6 +551,7 @@
     },
     "trophies": {
         "unlockedCaps": "Đã mở danh hiệu",
+        "unlockedManyCaps": "Đã mở nhiều danh hiệu",
         "ofTotalUnlocked": "/ {{total}} đã mở",
         "all": "Tất cả",
         "hiddenHint": "Tiếp tục chơi để mở khóa",

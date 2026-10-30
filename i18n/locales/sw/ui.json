@@ -602,6 +602,7 @@
     },
     "trophies": {
         "unlockedCaps": "Kikombe kimefunguliwa",
+        "unlockedManyCaps": "Vikombe vimefunguliwa",
         "ofTotalUnlocked": "/ {{total}} vimefunguliwa",
         "all": "Vyote",
         "hiddenHint": "Endelea kucheza ili kukifungua",

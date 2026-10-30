@@ -810,6 +810,7 @@
     },
     "trophies": {
         "unlockedCaps": "جائزة جديدة",
+        "unlockedManyCaps": "جوائز جديدة",
         "ofTotalUnlocked": "/ {{total}} مفتوحة",
         "all": "الكل",
         "hiddenHint": "واصل اللعب لفتحها",

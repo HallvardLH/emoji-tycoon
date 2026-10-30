@@ -654,6 +654,7 @@
     },
     "trophies": {
         "unlockedCaps": "Troféu desbloqueado",
+        "unlockedManyCaps": "Troféus desbloqueados",
         "ofTotalUnlocked": "/ {{total}} desbloqueados",
         "all": "Todos",
         "hiddenHint": "Continue jogando para desbloquear",

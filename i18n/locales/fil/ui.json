@@ -603,6 +603,7 @@
     },
     "trophies": {
         "unlockedCaps": "Bukas na ang tropeo",
+        "unlockedManyCaps": "Bukas na ang mga tropeo",
         "ofTotalUnlocked": "/ {{total}} bukas",
         "all": "Lahat",
         "hiddenHint": "Maglaro pa para mabuksan ito",
