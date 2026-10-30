@@ -204,7 +204,6 @@
         "statLine": "{{eps}}/秒 · 佔總產量 {{share}}",
         "nextUpgrade": "下個升級：{{at}} 個",
         "allUpgradesFound": "已找到所有升級",
-        "epsEach": "每個 +{{eps}}/秒",
         "buy": "購買",
         "buyCount": "購買 ×{{count}}",
         "buyA11y_other": "以 {{price}} 購買 {{count}} 個{{name}}",
@@ -212,6 +211,12 @@
         "revealsAt": "{{amount}} 個 Emoji 時揭曉",
         "bulkLabel": "購買數量",
         "bulkMax": "最多",
+        "sortLabel": "排序",
+        "sort": {
+            "shop": "商店順序",
+            "value": "最划算"
+        },
+        "sortValueHint": "依價格計算，每秒 Emoji 增加最多的排在前面",
         "bulkA11yMax": "買到買不起為止",
         "bulkA11y_other": "一次購買 {{count}} 個",
         "milestoneCaption": "新建築",

@@ -238,7 +238,6 @@
         "statLine": "{{eps}} /সে · মোটের {{share}}",
         "nextUpgrade": "পরের আপগ্রেড {{at}}টিতে",
         "allUpgradesFound": "সব আপগ্রেড পাওয়া গেছে",
-        "epsEach": "প্রতিটি +{{eps}} /সে",
         "buy": "কেনো",
         "buyCount": "কেনো ×{{count}}",
         "buyA11y_one": "{{price}} দিয়ে {{count}}টি {{name}} কেনো",
@@ -247,6 +246,12 @@
         "revealsAt": "{{amount}} ইমোজিতে দেখা যাবে",
         "bulkLabel": "কতগুলো কিনবে",
         "bulkMax": "সর্বোচ্চ",
+        "sortLabel": "সাজানো",
+        "sort": {
+            "shop": "দোকানের ক্রম",
+            "value": "সেরা দাম"
+        },
+        "sortValueHint": "দামের তুলনায় প্রতি সেকেন্ডে সবচেয়ে বেশি ইমোজি যা দেয়, তা আগে দেখায়",
         "bulkA11yMax": "যতগুলো কেনার সামর্থ্য আছে, সব কেনো",
         "bulkA11y_one": "একবারে {{count}}টি কেনো",
         "bulkA11y_other": "একবারে {{count}}টি কেনো",

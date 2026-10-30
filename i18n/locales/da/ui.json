@@ -234,7 +234,6 @@
         "statLine": "{{eps}} /sek. · {{share}} af totalen",
         "nextUpgrade": "næste upgrade ved {{at}}",
         "allUpgradesFound": "alle upgrades fundet",
-        "epsEach": "+{{eps}} /sek. hver",
         "buy": "KØB",
         "buyCount": "KØB ×{{count}}",
         "buyA11y_one": "Køb {{count}} {{name}} for {{price}}",
@@ -243,6 +242,12 @@
         "revealsAt": "Afsløres ved {{amount}} emojis",
         "bulkLabel": "Købsantal",
         "bulkMax": "Maks",
+        "sortLabel": "Sortér",
+        "sort": {
+            "shop": "Butiksorden",
+            "value": "Bedste værdi"
+        },
+        "sortValueHint": "Viser først det, der giver flest emojis pr. sekund for prisen",
         "bulkA11yMax": "Køb så mange, du har råd til",
         "bulkA11y_one": "Køb {{count}} ad gangen",
         "bulkA11y_other": "Køb {{count}} ad gangen",

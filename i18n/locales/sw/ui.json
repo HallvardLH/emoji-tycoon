@@ -234,7 +234,6 @@
         "statLine": "{{eps}} /sek · {{share}} ya jumla",
         "nextUpgrade": "boresho lijalo: {{at}}",
         "allUpgradesFound": "maboresho yote yamepatikana",
-        "epsEach": "+{{eps}} /sek kila moja",
         "buy": "Nunua",
         "buyCount": "Nunua ×{{count}}",
         "buyA11y_one": "Nunua {{name}} {{count}} kwa {{price}}",
@@ -243,6 +242,12 @@
         "revealsAt": "Litafichuka kwa emoji {{amount}}",
         "bulkLabel": "Kiasi cha kununua",
         "bulkMax": "Upeo",
+        "sortLabel": "Panga",
+        "sort": {
+            "shop": "Duka",
+            "value": "Thamani bora"
+        },
+        "sortValueHint": "Huweka kwanza kinachotoa emoji nyingi zaidi kwa sekunde kwa bei yake",
         "bulkA11yMax": "Nunua kadiri unavyoweza kumudu",
         "bulkA11y_one": "Nunua {{count}} kwa mara moja",
         "bulkA11y_other": "Nunua {{count}} kwa mara moja",

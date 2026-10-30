@@ -234,7 +234,6 @@
         "statLine": "{{eps}} /sn · toplamın {{share}} kadarı",
         "nextUpgrade": "sonraki yükseltme: {{at}}",
         "allUpgradesFound": "tüm yükseltmeler bulundu",
-        "epsEach": "her biri +{{eps}} /sn",
         "buy": "AL",
         "buyCount": "AL ×{{count}}",
         "buyA11y_one": "{{count}} adet satın al: {{name}}, fiyatı {{price}}",
@@ -243,6 +242,12 @@
         "revealsAt": "{{amount}} emojide ortaya çıkar",
         "bulkLabel": "Alım miktarı",
         "bulkMax": "Maks",
+        "sortLabel": "Sıralama",
+        "sort": {
+            "shop": "Mağaza",
+            "value": "En iyi değer"
+        },
+        "sortValueHint": "Fiyatına göre saniyede en çok emoji kazandıranı öne alır",
         "bulkA11yMax": "Gücünün yettiği kadar al",
         "bulkA11y_one": "Tek seferde {{count}} adet al",
         "bulkA11y_other": "Tek seferde {{count}} adet al",

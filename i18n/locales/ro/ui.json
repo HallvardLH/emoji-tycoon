@@ -259,7 +259,6 @@
         "statLine": "{{eps}} /sec · {{share}} din total",
         "nextUpgrade": "următorul bonus la {{at}}",
         "allUpgradesFound": "toate bonusurile găsite",
-        "epsEach": "+{{eps}} /sec fiecare",
         "buy": "CUMPĂRĂ",
         "buyCount": "CUMPĂRĂ ×{{count}}",
         "buyA11y_one": "Cumpără {{count}} {{name}} pentru {{price}}",
@@ -269,6 +268,12 @@
         "revealsAt": "Apare la {{amount}} emoji",
         "bulkLabel": "Cantitate",
         "bulkMax": "Max",
+        "sortLabel": "Sortare",
+        "sort": {
+            "shop": "Magazin",
+            "value": "Avantajos"
+        },
+        "sortValueHint": "Arată mai întâi ce aduce cele mai multe emoji pe secundă pentru preț",
         "bulkA11yMax": "Cumpără cât îți permiți",
         "bulkA11y_one": "Cumpără câte {{count}}",
         "bulkA11y_few": "Cumpără câte {{count}}",

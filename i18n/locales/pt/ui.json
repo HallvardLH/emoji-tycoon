@@ -258,7 +258,6 @@
         "statLine": "{{eps}} /s · {{share}} do total",
         "nextUpgrade": "próxima melhoria com {{at}}",
         "allUpgradesFound": "todas as melhorias encontradas",
-        "epsEach": "+{{eps}} /s cada",
         "buy": "COMPRAR",
         "buyCount": "COMPRAR ×{{count}}",
         "buyA11y_one": "Comprar {{count}} {{name}} por {{price}}",
@@ -268,6 +267,12 @@
         "revealsAt": "Revelado com {{amount}} emojis",
         "bulkLabel": "Quantidade",
         "bulkMax": "Máx",
+        "sortLabel": "Ordem",
+        "sort": {
+            "shop": "Ordem da loja",
+            "value": "Melhor valor"
+        },
+        "sortValueHint": "Mostra primeiro o que dá mais emojis por segundo pelo preço",
         "bulkA11yMax": "Comprar o máximo que der",
         "bulkA11y_one": "Comprar {{count}} por vez",
         "bulkA11y_other": "Comprar {{count}} por vez",

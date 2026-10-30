@@ -210,7 +210,6 @@
         "statLine": "{{eps}} /dtk · {{share}} dari total",
         "nextUpgrade": "upgrade berikutnya {{at}}",
         "allUpgradesFound": "semua upgrade ditemukan",
-        "epsEach": "+{{eps}} /dtk per unit",
         "buy": "BELI",
         "buyCount": "BELI ×{{count}}",
         "buyA11y_other": "Beli {{count}} {{name}} seharga {{price}}",
@@ -218,6 +217,12 @@
         "revealsAt": "Terungkap di {{amount}} emoji",
         "bulkLabel": "Jumlah beli",
         "bulkMax": "Maks",
+        "sortLabel": "Urutan",
+        "sort": {
+            "shop": "Toko",
+            "value": "Paling untung"
+        },
+        "sortValueHint": "Menaruh yang memberi emoji per detik terbanyak untuk harganya di atas",
         "bulkA11yMax": "Beli sebanyak yang kamu mampu",
         "bulkA11y_other": "Beli {{count}} sekaligus",
         "milestoneCaption": "BANGUNAN BARU",

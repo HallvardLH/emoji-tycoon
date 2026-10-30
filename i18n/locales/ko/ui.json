@@ -204,7 +204,6 @@
         "statLine": "초당 {{eps}} · 전체의 {{share}}",
         "nextUpgrade": "다음 업그레이드: {{at}}개",
         "allUpgradesFound": "업그레이드 모두 발견",
-        "epsEach": "개당 초당 +{{eps}}",
         "buy": "구매",
         "buyCount": "구매 ×{{count}}",
         "buyA11y_other": "{{name}} {{count}}개를 {{price}}에 구매",
@@ -212,6 +211,12 @@
         "revealsAt": "이모지 {{amount}}개 달성 시 공개",
         "bulkLabel": "구매 수량",
         "bulkMax": "최대",
+        "sortLabel": "정렬",
+        "sort": {
+            "shop": "상점 순서",
+            "value": "가성비순"
+        },
+        "sortValueHint": "가격 대비 초당 이모지가 가장 많이 늘어나는 것을 먼저 보여줘요",
         "bulkA11yMax": "살 수 있는 만큼 구매",
         "bulkA11y_other": "한 번에 {{count}}개씩 구매",
         "milestoneCaption": "새 건물",

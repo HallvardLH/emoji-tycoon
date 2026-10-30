@@ -330,7 +330,6 @@
         "statLine": "{{eps}} /ث · {{share}} من الإجمالي",
         "nextUpgrade": "الترقية التالية عند {{at}}",
         "allUpgradesFound": "كل الترقيات مكتشفة",
-        "epsEach": "+{{eps}} /ث للواحد",
         "buy": "شراء",
         "buyCount": "شراء ×{{count}}",
         "buyA11y_zero": "شراء {{count}} {{name}} مقابل {{price}}",
@@ -343,6 +342,12 @@
         "revealsAt": "يظهر عند {{amount}} إيموجي",
         "bulkLabel": "كمية الشراء",
         "bulkMax": "الأقصى",
+        "sortLabel": "الترتيب",
+        "sort": {
+            "shop": "ترتيب المتجر",
+            "value": "أفضل قيمة"
+        },
+        "sortValueHint": "يضع أولًا ما يعطي أكثر إيموجي في الثانية مقابل سعره",
         "bulkA11yMax": "اشتر أكبر عدد ممكن بما لديك",
         "bulkA11y_zero": "شراء {{count}} مبنى في كل مرة",
         "bulkA11y_one": "شراء {{count}} مبنى في كل مرة",

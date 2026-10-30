@@ -234,7 +234,6 @@
         "statLine": "{{eps}} /sec · {{share}} van totaal",
         "nextUpgrade": "volgende upgrade bij {{at}}",
         "allUpgradesFound": "alle upgrades gevonden",
-        "epsEach": "+{{eps}} /sec per stuk",
         "buy": "Kopen",
         "buyCount": "Koop ×{{count}}",
         "buyA11y_one": "Koop {{count}} {{name}} voor {{price}}",
@@ -243,6 +242,12 @@
         "revealsAt": "Onthuld bij {{amount}} emoji's",
         "bulkLabel": "Aantal kopen",
         "bulkMax": "Max",
+        "sortLabel": "Sorteren",
+        "sort": {
+            "shop": "Winkel",
+            "value": "Beste waarde"
+        },
+        "sortValueHint": "Zet bovenaan wat voor de prijs de meeste emoji's per seconde oplevert",
         "bulkA11yMax": "Koop er zoveel als je kunt betalen",
         "bulkA11y_one": "Koop er {{count}} tegelijk",
         "bulkA11y_other": "Koop er {{count}} tegelijk",

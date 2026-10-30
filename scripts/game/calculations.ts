@@ -98,10 +98,12 @@ export function calculateBaseEmojisPerSecond() {
     return computeBaseEps();
 }
 
-/** What an upgrade changes, for previewing it */
-export interface UpgradeChanges {
+/** What an upgrade or more buildings change, for previewing it */
+export interface ProductionChanges {
     /** Production added to the buildings' combined total, before multipliers */
     buildingEps?: number;
+    /** Multiplies all production on top, e.g. Neighbourhood (perk) when buying a new kind of building */
+    productionFactor?: number;
     epsPercentage?: number;
     tapMultiplier?: number;
     tapPercentage?: number;
@@ -115,14 +117,14 @@ export interface UpgradeChanges {
  * production also makes taps worth more through the hands, and effects and the combo
  * count as they are at the moment.
  */
-export function previewUpgradeGains(changes: UpgradeChanges) {
+export function previewGains(changes: ProductionChanges) {
     const { values, bigEmoji } = store.getState();
     const add = (list: number[], value?: number) => value ? [...list, value] : list;
 
     const eps = computeBaseEps({
         totalBuildingEps: values.totalBuildingEps + (changes.buildingEps ?? 0),
         epsPercentages: add(values.emojisPerSecondPercentages, changes.epsPercentage),
-    }) * effectProductionMultiplier();
+    }) * effectProductionMultiplier() * (changes.productionFactor ?? 1);
 
     const ept = computeEpt({
         eps,

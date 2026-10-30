@@ -234,7 +234,6 @@
         "statLine": "{{eps}} /s · {{share}} kaikesta",
         "nextUpgrade": "seuraava päivitys: {{at}}",
         "allUpgradesFound": "kaikki päivitykset löydetty",
-        "epsEach": "+{{eps}} /s / kpl",
         "buy": "Osta",
         "buyCount": "Osta ×{{count}}",
         "buyA11y_one": "Osta {{count}} kpl: {{name}}, hinta {{price}}",
@@ -243,6 +242,12 @@
         "revealsAt": "Paljastuu, kun emojeja on {{amount}}",
         "bulkLabel": "Ostomäärä",
         "bulkMax": "Maks.",
+        "sortLabel": "Järjestys",
+        "sort": {
+            "shop": "Kauppa",
+            "value": "Paras arvo"
+        },
+        "sortValueHint": "Näyttää ensin sen, mikä tuottaa hintaansa nähden eniten emojeja sekunnissa",
         "bulkA11yMax": "Osta niin monta kuin on varaa",
         "bulkA11y_one": "Osta {{count}} kerralla",
         "bulkA11y_other": "Osta {{count}} kerralla",

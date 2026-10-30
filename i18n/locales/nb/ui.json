@@ -234,7 +234,6 @@
         "statLine": "{{eps}} /sek · {{share}} av totalen",
         "nextUpgrade": "neste oppgradering {{at}}",
         "allUpgradesFound": "alle oppgraderinger funnet",
-        "epsEach": "+{{eps}} /sek hver",
         "buy": "KJØP",
         "buyCount": "KJØP ×{{count}}",
         "buyA11y_one": "Kjøp {{count}} {{name}} for {{price}}",
@@ -243,6 +242,12 @@
         "revealsAt": "Avsløres ved {{amount}} emojier",
         "bulkLabel": "Antall å kjøpe",
         "bulkMax": "Maks",
+        "sortLabel": "Sortering",
+        "sort": {
+            "shop": "Butikk",
+            "value": "Best verdi"
+        },
+        "sortValueHint": "Viser først det som gir flest emojier per sekund for prisen",
         "bulkA11yMax": "Kjøp så mange du har råd til",
         "bulkA11y_one": "Kjøp {{count}} om gangen",
         "bulkA11y_other": "Kjøp {{count}} om gangen",

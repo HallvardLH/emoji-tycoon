@@ -282,7 +282,6 @@
         "statLine": "{{eps}} /s · {{share}} całości",
         "nextUpgrade": "następne ulepszenie: {{at}}",
         "allUpgradesFound": "wszystkie ulepszenia odkryte",
-        "epsEach": "+{{eps}} /s za sztukę",
         "buy": "KUP",
         "buyCount": "KUP ×{{count}}",
         "buyA11y_one": "Kup: {{name}}, {{count}} szt., za {{price}}",
@@ -293,6 +292,12 @@
         "revealsAt": "Odsłoni się przy {{amount}} emoji",
         "bulkLabel": "Ile kupić",
         "bulkMax": "Maks.",
+        "sortLabel": "Sortuj",
+        "sort": {
+            "shop": "Sklep",
+            "value": "Opłacalność"
+        },
+        "sortValueHint": "Najpierw pokazuje to, co za swoją cenę daje najwięcej emoji na sekundę",
         "bulkA11yMax": "Kup tyle, na ile cię stać",
         "bulkA11y_one": "Kupuj po {{count}}",
         "bulkA11y_few": "Kupuj po {{count}}",

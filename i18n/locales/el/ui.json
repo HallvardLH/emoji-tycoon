@@ -234,7 +234,6 @@
         "statLine": "{{eps}} /δευτ. · {{share}} του συνόλου",
         "nextUpgrade": "επόμενη βελτίωση {{at}}",
         "allUpgradesFound": "βρέθηκαν όλες οι βελτιώσεις",
-        "epsEach": "+{{eps}} /δευτ. το καθένα",
         "buy": "Αγορά",
         "buyCount": "Αγορά ×{{count}}",
         "buyA11y_one": "Αγόρασε {{count}} {{name}} για {{price}}",
@@ -243,6 +242,12 @@
         "revealsAt": "Αποκαλύπτεται στα {{amount}} emoji",
         "bulkLabel": "Ποσότητα αγοράς",
         "bulkMax": "Μέγ.",
+        "sortLabel": "Ταξινόμηση",
+        "sort": {
+            "shop": "Μαγαζί",
+            "value": "Καλύτερη αξία"
+        },
+        "sortValueHint": "Βάζει πρώτα ό,τι δίνει τα περισσότερα emoji ανά δευτερόλεπτο για την τιμή του",
         "bulkA11yMax": "Αγόρασε όσα σου φτάνουν",
         "bulkA11y_one": "Αγορά ανά {{count}}",
         "bulkA11y_other": "Αγορά ανά {{count}}",

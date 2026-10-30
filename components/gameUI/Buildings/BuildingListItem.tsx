@@ -22,8 +22,8 @@ interface BuildingListItemProps {
     eps: string;
     /** Share of total production, e.g. "1.4%" */
     share: string;
-    /** Emojis per second one more of these would add, for buildings you don't own yet */
-    epsEach: string;
+    /** What buying adds to production right now, e.g. "+7.5 /sec right now" */
+    gain: string;
     /** Building amounts the next upgrade is worked towards between: from the last one's, to where it unlocks */
     nextUpgrade?: { from: number, at: number };
     buyCount: number;
@@ -37,7 +37,7 @@ interface BuildingListItemProps {
 }
 
 function BuildingListItem(props: BuildingListItemProps) {
-    const { name, buyName, icon, description, price, amount, eps, share, epsEach, nextUpgrade, buyCount, affordable, waitLabel, onPress, gemPrice, onGemBuy } = props;
+    const { name, buyName, icon, description, price, amount, eps, share, gain, nextUpgrade, buyCount, affordable, waitLabel, onPress, gemPrice, onGemBuy } = props;
     const { t } = useTranslation();
 
     const owned = amount > 0;
@@ -69,6 +69,8 @@ function BuildingListItem(props: BuildingListItemProps) {
                 {/* Always two lines tall, so every card is the same height */}
                 <Text font="body" size={12} color={palette.muted} numberOfLines={2} style={styles.description}>{description}</Text>
 
+                <Text font="bold" size={12} color={palette.greenText} numberOfLines={1} adjustsFontSizeToFit minimumFontScale={0.7} style={styles.gainLine}>{gain}</Text>
+
                 {owned ? (
                     <>
                         <Text font="bold" size={11} color={palette.muted} numberOfLines={1} style={styles.statLine}>{t("buildings.statLine", { eps, share })}</Text>
@@ -82,11 +84,8 @@ function BuildingListItem(props: BuildingListItemProps) {
                         </View>
                     </>
                 ) : (
-                    <>
-                        <Text font="bold" size={11} color={palette.muted} numberOfLines={1} style={styles.statLine}>{t("buildings.epsEach", { eps: epsEach })}</Text>
-                        {/* Where the progress row goes once owned */}
-                        <View style={styles.progressRow} />
-                    </>
+                    // Where the stat line and progress row go once owned
+                    <View style={styles.unownedSpace} />
                 )}
             </View>
 
@@ -126,7 +125,7 @@ export function MysteryBuildingItem({ revealAt }: { revealAt: string }) {
 }
 
 // Every card is this tall, whatever it shows, so the list doesn't jump as buildings are bought
-const CARD_HEIGHT = 113;
+const CARD_HEIGHT = 132;
 
 const styles = themedStyles(() => StyleSheet.create({
     buy: {
@@ -185,6 +184,14 @@ const styles = themedStyles(() => StyleSheet.create({
     },
     statLine: {
         lineHeight: 14,
+    },
+    gainLine: {
+        lineHeight: 16,
+        height: 16,
+    },
+    unownedSpace: {
+        // A stat line and the progress row, with the gap between them
+        height: 14 + 3 + 14,
     },
     progressRow: {
         flexDirection: "row",

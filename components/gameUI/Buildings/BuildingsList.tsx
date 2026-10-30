@@ -4,7 +4,7 @@ import { View, StyleSheet } from 'react-native';
 import { RootState } from '../../../scripts/redux/reduxStore';
 import BuildingListItem, { MysteryBuildingItem } from './BuildingListItem';
 import { buildingData } from '../../../scripts/game/buildings/buildingData';
-import { buyBuilding, calculateBuildingPrice, resolveBuyAmount } from '../../../scripts/game/buildings/buildings';
+import { buyBuilding, buildingEpsGain, calculateBuildingPrice, resolveBuyAmount, unitPrice } from '../../../scripts/game/buildings/buildings';
 import { getNextUpgradeRange } from '../../../scripts/game/upgrades/checks';
 import { formatNumber, formatPercentage } from '../../../scripts/misc';
 import i18n from '../../../i18n';
@@ -25,6 +25,7 @@ export interface BuildingInfo {
 export default function BuildingsList() {
     const { buildings } = useSelector((state: RootState) => state.buildings);
     const { bulkBuy } = useSelector((state: RootState) => state.preferences);
+    const sort = useSelector((state: RootState) => state.preferences.buildingSort) ?? "shop";
     const totalBuildingEps = useSelector((state: RootState) => state.values.totalBuildingEps);
     // Read live, not from useBank: both change together when a building is bought, and
     // useBank's half-second sample made the rows flash a wrong value in between
@@ -38,16 +39,25 @@ export default function BuildingsList() {
 
     const nextLocked = buildings.find(b => !b.unlocked);
 
+    const rows = buildingData.flatMap((building: BuildingInfo) => {
+        const dynamicData = buildings.find(b => b.buildingId === building.buildingId);
+        if (!dynamicData || !dynamicData.unlocked) return [];
+        // Fit "max" into the same bank the button is checked against below
+        const price = calculateBuildingPrice(building.buildingId, bulkBuy, emojis);
+        const buyCount = resolveBuyAmount(building.buildingId, bulkBuy, emojis);
+        // What this buy adds to production right now, for the amount being bought
+        const gain = buildingEpsGain(building.buildingId, buyCount);
+        // Emojis per second for each emoji spent on the next one. Ranked by one, not the bulk
+        // amount, which changes with the bank on Max and would reshuffle the list as it grows
+        const value = (buyCount === 1 ? gain : buildingEpsGain(building.buildingId, 1)) / unitPrice(building.buildingId, dynamicData.amount);
+        return [{ building, dynamicData, price, buyCount, gain, value }];
+    });
+    // Best value first. Ties keep shop order (the sort is stable)
+    if (sort === "value") rows.sort((a, b) => b.value - a.value);
+
     return (
         <View style={styles.list}>
-            {buildingData.map((building: BuildingInfo) => {
-                const dynamicData = buildings.find(b => b.buildingId === building.buildingId);
-                if (!dynamicData || !dynamicData.unlocked) return null;
-
-                // Fit "max" into the same bank the button is checked against below
-                const price = calculateBuildingPrice(building.buildingId, bulkBuy, emojis);
-                const buyCount = resolveBuyAmount(building.buildingId, bulkBuy, emojis);
-                const epsEach = building.baseEps * dynamicData.epsMultipliers.filter(m => m !== 0).reduce((a, m) => a * m, 1) * globalFactor;
+            {rows.map(({ building, dynamicData, price, buyCount, gain }) => {
                 const share = totalBuildingEps > 0 ? (dynamicData.eps / totalBuildingEps) * 100 : 0;
 
                 return (
@@ -63,7 +73,9 @@ export default function BuildingsList() {
                         share={share < 0.1
                             ? i18n.t("numbers.lessThan", { value: formatPercentage(0.1) })
                             : formatPercentage(share < 10 ? +share.toFixed(1) : Math.round(share))}
-                        epsEach={formatNumber(epsEach, 1, true)}
+                        gain={gain > liveEmojisPerSecond * 1e-9 && gain > 0
+                            ? i18n.t("upgrades.impact.rightNow", { gains: i18n.t("upgrades.impact.perSecond", { bonus: formatNumber(gain, 1, true) }) })
+                            : ""}
                         nextUpgrade={getNextUpgradeRange(building.name)}
                         buyCount={buyCount}
                         affordable={emojis >= price}

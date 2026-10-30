@@ -238,7 +238,6 @@
         "statLine": "{{eps}} /सेकंड · कुल का {{share}}",
         "nextUpgrade": "अगला अपग्रेड {{at}} पर",
         "allUpgradesFound": "सारे अपग्रेड मिल गए",
-        "epsEach": "हर एक +{{eps}} /सेकंड",
         "buy": "खरीदो",
         "buyCount": "खरीदो ×{{count}}",
         "buyA11y_one": "{{count}} {{name}} {{price}} में खरीदो",
@@ -247,6 +246,12 @@
         "revealsAt": "{{amount}} इमोजी पर दिखेगी",
         "bulkLabel": "कितने खरीदने हैं",
         "bulkMax": "मैक्स",
+        "sortLabel": "क्रम",
+        "sort": {
+            "shop": "दुकान का क्रम",
+            "value": "सबसे किफ़ायती"
+        },
+        "sortValueHint": "कीमत के हिसाब से सबसे ज़्यादा इमोजी प्रति सेकंड देने वाले को पहले दिखाता है",
         "bulkA11yMax": "जितने खरीद सको, उतने खरीदो",
         "bulkA11y_one": "एक बार में {{count}} खरीदो",
         "bulkA11y_other": "एक बार में {{count}} खरीदो",

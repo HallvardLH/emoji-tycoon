@@ -2,12 +2,14 @@ import { ScrollView, View, StyleSheet } from "react-native";
 import BuildingsList from "../../../components/gameUI/Buildings/BuildingsList";
 import ScreenView from "../../../components/layout/ScreenView";
 import BulkBuySlider from "../../../components/gameUI/BulkBuySlider";
+import BuildingSortToggle from "../../../components/gameUI/Buildings/BuildingSortToggle";
 
 export default function BuildingsTab() {
     return (
         <ScreenView scrollView={false} style={styles.screen}>
             <View style={styles.bulk}>
                 <BulkBuySlider />
+                <BuildingSortToggle />
             </View>
             <ScrollView style={styles.scroll} contentContainerStyle={styles.content}>
                 <BuildingsList />
@@ -26,6 +28,7 @@ const styles = StyleSheet.create({
         paddingHorizontal: 20,
         paddingTop: 14,
         paddingBottom: 14,
+        gap: 10,
     },
     scroll: {
         flex: 1,

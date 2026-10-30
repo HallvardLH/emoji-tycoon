@@ -12,7 +12,7 @@ import { getUpgradeDataById } from './shorthands';
 import { canBuyUpgrade } from './checks';
 import { getUpgradePrice } from './upgradePrice';
 import { addEmojisPerSecondPercentage } from '../../redux/valuesSlice';
-import { previewUpgradeGains, formatGainPercentage, UpgradeChanges } from '../calculations';
+import { previewGains, formatGainPercentage, ProductionChanges } from '../calculations';
 import { BIG_EMOJI_BUILDING_ID } from './upgradeData/nonBuilding/bigEmoji';
 import * as Haptics from "../haptics";
 import i18n from "../../../i18n";
@@ -160,7 +160,7 @@ export type UpgradeBonusKind = "production" | "tap";
 export function getUpgradeBonus(upgradeId: number) {
     const upgrade = getUpgradeDataById(upgradeId);
     const { values, bigEmoji } = store.getState();
-    const changes: UpgradeChanges = {};
+    const changes: ProductionChanges = {};
 
     upgrade.categories.forEach((category) => {
         switch (category) {
@@ -185,7 +185,7 @@ export function getUpgradeBonus(upgradeId: number) {
         }
     });
 
-    const gains = previewUpgradeGains(changes);
+    const gains = previewGains(changes);
     const bonuses: string[] = [];
     const bonusPercentages: string[] = [];
     const kinds: UpgradeBonusKind[] = [];

@@ -153,9 +153,9 @@ export function prestigeProductionMultiplier() {
         * trialProductionMultiplier();
 }
 
-/** Neighbourhood: +10% per kind of building owned */
-export function neighbourhoodMultiplier() {
+/** Neighbourhood: +3% per kind of building owned, with `extraKinds` more for previews */
+export function neighbourhoodMultiplier(extraKinds = 0) {
     if (!hasPerk("neighbourhood")) return 1;
-    const kinds = store.getState().buildings.buildings.filter(building => building.amount > 0).length;
+    const kinds = store.getState().buildings.buildings.filter(building => building.amount > 0).length + extraKinds;
     return 1 + kinds * 0.03;
 }

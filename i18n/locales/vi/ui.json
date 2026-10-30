@@ -211,7 +211,6 @@
         "statLine": "{{eps}} /giây · {{share}} tổng số",
         "nextUpgrade": "nâng cấp tiếp theo {{at}}",
         "allUpgradesFound": "đã tìm thấy mọi nâng cấp",
-        "epsEach": "+{{eps}} /giây mỗi cái",
         "buy": "MUA",
         "buyCount": "MUA ×{{count}}",
         "buyA11y_other": "Mua {{count}} {{name}} với giá {{price}}",
@@ -219,6 +218,12 @@
         "revealsAt": "Lộ diện khi có {{amount}} emoji",
         "bulkLabel": "Số lượng mua",
         "bulkMax": "Tối đa",
+        "sortLabel": "Sắp xếp",
+        "sort": {
+            "shop": "Cửa hàng",
+            "value": "Đáng tiền nhất"
+        },
+        "sortValueHint": "Đưa lên trước thứ cho nhiều emoji mỗi giây nhất so với giá",
         "bulkA11yMax": "Mua nhiều nhất có thể",
         "bulkA11y_other": "Mua {{count}} cái mỗi lần",
         "milestoneCaption": "CÔNG TRÌNH MỚI",

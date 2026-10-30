@@ -5,11 +5,11 @@ import { getBuildingById } from './shorthands';
 import { unlockUpgrades } from '../upgrades/checks';
 import { updateBuildingValue } from './shorthands';
 import { canBuyBuilding } from './checks';
-import { calculateEmojisPerSecond, calculateEpt } from '../calculations';
+import { calculateEmojisPerSecond, calculateEpt, previewGains } from '../calculations';
 import * as Haptics from "../haptics";
 import { BulkBuyAmount } from '../../redux/preferencesSlice';
 import { celebrateMilestone } from '../milestones';
-import { buildingPriceMultiplier } from '../prestige/perks';
+import { buildingPriceMultiplier, neighbourhoodMultiplier } from '../prestige/perks';
 import { playBuildingSound } from '../sounds';
 import i18n, { getLanguage } from '../../../i18n';
 import { getBuildingName } from '../../../i18n/content';
@@ -166,6 +166,20 @@ export const buyBuilding = (buildingId: number, bulkBuy: BulkBuyAmount = store.g
 
     batchRecalculations();
 };
+
+/**
+ * How much emojis per second would go up right now from buying `count` more of a building
+ *
+ * The same calculation as upgrade previews (see previewGains), so it includes everything
+ * production goes through: upgrades, perks, effects and the gem boost.
+ */
+export function buildingEpsGain(buildingId: number, count: number) {
+    const building = getBuildingById(buildingId);
+    const multiplier = building.epsMultipliers.filter(mult => mult !== 0).reduce((acc, mult) => acc * mult, 1);
+    // Neighbourhood (perk): the first of a kind raises all production
+    const productionFactor = building.amount === 0 ? neighbourhoodMultiplier(1) / neighbourhoodMultiplier() : 1;
+    return previewGains({ buildingEps: buildingData[buildingId].baseEps * multiplier * count, productionFactor }).eps;
+}
 
 /**
  * Recomputes every building's stored price from its base price, so saves pick up

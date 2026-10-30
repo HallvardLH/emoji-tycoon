@@ -235,7 +235,6 @@
         "statLine": "{{eps}} /s · {{share}} av totalen",
         "nextUpgrade": "nästa uppgradering {{at}}",
         "allUpgradesFound": "alla uppgraderingar hittade",
-        "epsEach": "+{{eps}} /s styck",
         "buy": "KÖP",
         "buyCount": "KÖP ×{{count}}",
         "buyA11y_one": "Köp {{count}} {{name}} för {{price}}",
@@ -244,6 +243,12 @@
         "revealsAt": "Avslöjas vid {{amount}} emojis",
         "bulkLabel": "Antal att köpa",
         "bulkMax": "Max",
+        "sortLabel": "Sortering",
+        "sort": {
+            "shop": "Butik",
+            "value": "Bäst värde"
+        },
+        "sortValueHint": "Visar först det som ger flest emojis per sekund för priset",
         "bulkA11yMax": "Köp så många du har råd med",
         "bulkA11y_one": "Köp {{count}} åt gången",
         "bulkA11y_other": "Köp {{count}} åt gången",

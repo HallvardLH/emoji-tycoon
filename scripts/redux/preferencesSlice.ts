@@ -8,11 +8,18 @@ export type upgradeFilters = BuildingNames | "all";
 /** How many buildings the buy button buys. "max" buys as many as you can afford. */
 export type BulkBuyAmount = 1 | 10 | 100 | "max";
 
+/** How the building list is ordered: as in the shop, or most emojis per second for the price first */
+export type BuildingSort = "shop" | "value";
+
 interface PreferencesState {
     /** 
     * @property The amount of buildings that are bought by clicking the buy button
     */
     bulkBuy: BulkBuyAmount,
+    /**
+    * @property The order of the building list. Missing from saves made before it existed, so read it as "shop" when undefined.
+    */
+    buildingSort?: BuildingSort,
     /** 
     * @property Whether to show extra details, namely in upgrade list items
     */
@@ -42,6 +49,7 @@ interface PreferencesState {
 
 const initialState: PreferencesState = {
     bulkBuy: 1,
+    buildingSort: "shop",
     showDetails: true,
     upgradeFilter: [
         ...buildingData.map(building => building.name as BuildingNames),
@@ -59,6 +67,9 @@ export const preferencesSlice = createSlice({
     reducers: {
         updateBulkBuy: (state, action: PayloadAction<BulkBuyAmount>) => {
             state.bulkBuy = action.payload;
+        },
+        updateBuildingSort: (state, action: PayloadAction<BuildingSort>) => {
+            state.buildingSort = action.payload;
         },
         updateShowDetails: (state, action: PayloadAction<boolean>) => {
             state.showDetails = action.payload;
@@ -99,6 +110,6 @@ export const preferencesSlice = createSlice({
     },
 });
 
-export const { updateBulkBuy, updateShowDetails, toggleUpgradeFilter, setLanguage, updateReduceAnimations, updateSoundEffects, updateVibration, resetPreferences } = preferencesSlice.actions;
+export const { updateBulkBuy, updateBuildingSort, updateShowDetails, toggleUpgradeFilter, setLanguage, updateReduceAnimations, updateSoundEffects, updateVibration, resetPreferences } = preferencesSlice.actions;
 
 export default preferencesSlice.reducer;

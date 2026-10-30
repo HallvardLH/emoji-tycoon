@@ -204,7 +204,6 @@
         "statLine": "{{eps}}/秒 · 占总产量{{share}}",
         "nextUpgrade": "下个升级：{{at}}",
         "allUpgradesFound": "已解锁全部升级",
-        "epsEach": "每个+{{eps}}/秒",
         "buy": "购买",
         "buyCount": "购买×{{count}}",
         "buyA11y_other": "花{{price}}购买{{count}}个{{name}}",
@@ -212,6 +211,12 @@
         "revealsAt": "表情达到{{amount}}时揭晓",
         "bulkLabel": "购买数量",
         "bulkMax": "最大",
+        "sortLabel": "排序",
+        "sort": {
+            "shop": "商店顺序",
+            "value": "最划算"
+        },
+        "sortValueHint": "按价格算，每秒表情增加最多的排在前面",
         "bulkA11yMax": "能买多少买多少",
         "bulkA11y_other": "每次购买{{count}}个",
         "milestoneCaption": "新建筑",

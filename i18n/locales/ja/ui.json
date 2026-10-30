@@ -204,7 +204,6 @@
         "statLine": "毎秒{{eps}} · 全体の{{share}}",
         "nextUpgrade": "次の強化：{{at}}",
         "allUpgradesFound": "強化をすべて発見",
-        "epsEach": "1つにつき毎秒+{{eps}}",
         "buy": "購入",
         "buyCount": "購入 ×{{count}}",
         "buyA11y_other": "{{name}}を{{count}}個、{{price}}で購入",
@@ -212,6 +211,12 @@
         "revealsAt": "絵文字{{amount}}個で出現",
         "bulkLabel": "購入数",
         "bulkMax": "最大",
+        "sortLabel": "並び順",
+        "sort": {
+            "shop": "ショップ順",
+            "value": "コスパ順"
+        },
+        "sortValueHint": "価格に対して毎秒の絵文字が最も増えるものを先に表示",
         "bulkA11yMax": "買えるだけ購入",
         "bulkA11y_other": "{{count}}個ずつ購入",
         "milestoneCaption": "新しい施設",

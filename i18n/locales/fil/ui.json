@@ -235,7 +235,6 @@
         "statLine": "{{eps}} /seg · {{share}} ng kabuuan",
         "nextUpgrade": "susunod na upgrade sa {{at}}",
         "allUpgradesFound": "nahanap na lahat ng upgrade",
-        "epsEach": "+{{eps}} /seg bawat isa",
         "buy": "Bilhin",
         "buyCount": "Bilhin ×{{count}}",
         "buyA11y_one": "Bilhin ang {{count}} {{name}} sa halagang {{price}}",
@@ -244,6 +243,12 @@
         "revealsAt": "Lalabas sa {{amount}} emoji",
         "bulkLabel": "Dami ng bibilhin",
         "bulkMax": "Max",
+        "sortLabel": "Ayos",
+        "sort": {
+            "shop": "Tindahan",
+            "value": "Pinakasulit"
+        },
+        "sortValueHint": "Inuuna ang nagbibigay ng pinakamaraming emoji bawat segundo para sa presyo nito",
         "bulkA11yMax": "Bilhin hangga't kaya mo",
         "bulkA11y_one": "Bumili ng {{count}} kada bili",
         "bulkA11y_other": "Bumili ng {{count}} kada bili",

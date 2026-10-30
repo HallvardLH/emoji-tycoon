@@ -210,7 +210,6 @@
         "statLine": "{{eps}} /วิ · {{share}} ของทั้งหมด",
         "nextUpgrade": "อัปเกรดถัดไปที่ {{at}}",
         "allUpgradesFound": "ครบทุกอัปเกรดแล้ว",
-        "epsEach": "+{{eps}} /วิ ต่อหน่วย",
         "buy": "ซื้อ",
         "buyCount": "ซื้อ ×{{count}}",
         "buyA11y_other": "ซื้อ {{name}} จำนวน {{count}} ในราคา {{price}}",
@@ -218,6 +217,12 @@
         "revealsAt": "เผยโฉมเมื่อมี {{amount}} อีโมจิ",
         "bulkLabel": "จำนวนที่ซื้อ",
         "bulkMax": "สูงสุด",
+        "sortLabel": "เรียง",
+        "sort": {
+            "shop": "ตามร้านค้า",
+            "value": "คุ้มที่สุด"
+        },
+        "sortValueHint": "แสดงสิ่งที่ให้อีโมจิต่อวินาทีมากที่สุดเมื่อเทียบกับราคาก่อน",
         "bulkA11yMax": "ซื้อให้มากที่สุดเท่าที่จ่ายไหว",
         "bulkA11y_other": "ซื้อครั้งละ {{count}}",
         "milestoneCaption": "อาคารใหม่",

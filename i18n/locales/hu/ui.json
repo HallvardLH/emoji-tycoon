@@ -235,7 +235,6 @@
         "statLine": "{{eps}} /mp · {{share}} az összesből",
         "nextUpgrade": "következő fejlesztés: {{at}}",
         "allUpgradesFound": "minden fejlesztés megvan",
-        "epsEach": "+{{eps}} /mp darabonként",
         "buy": "Vétel",
         "buyCount": "Vétel ×{{count}}",
         "buyA11y_one": "Vétel: {{name}} ×{{count}}, ár: {{price}}",
@@ -244,6 +243,12 @@
         "revealsAt": "Felfedés {{amount}} emojinál",
         "bulkLabel": "Vételi mennyiség",
         "bulkMax": "Max",
+        "sortLabel": "Rendezés",
+        "sort": {
+            "shop": "Bolt",
+            "value": "Ár-érték"
+        },
+        "sortValueHint": "Előre teszi, ami az árához képest a legtöbb emojit adja másodpercenként",
         "bulkA11yMax": "Annyit veszel, amennyire futja",
         "bulkA11y_one": "Egyszerre {{count}} darab vétele",
         "bulkA11y_other": "Egyszerre {{count}} darab vétele",

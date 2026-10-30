@@ -283,7 +283,6 @@
         "statLine": "{{eps}} /с · {{share}} від усього",
         "nextUpgrade": "наступне покращення: {{at}}",
         "allUpgradesFound": "усі покращення знайдено",
-        "epsEach": "+{{eps}} /с кожна",
         "buy": "Купити",
         "buyCount": "Купити ×{{count}}",
         "buyA11y_one": "Купити {{name}}, {{count}} шт., за {{price}}",
@@ -294,6 +293,12 @@
         "revealsAt": "З'явиться на {{amount}} емодзі",
         "bulkLabel": "Скільки купувати",
         "bulkMax": "Макс",
+        "sortLabel": "Порядок",
+        "sort": {
+            "shop": "Магазин",
+            "value": "Вигода"
+        },
+        "sortValueHint": "Спершу те, що дає найбільше емодзі за секунду за свою ціну",
         "bulkA11yMax": "Купувати стільки, скільки вистачає",
         "bulkA11y_one": "Купувати по {{count}}",
         "bulkA11y_few": "Купувати по {{count}}",

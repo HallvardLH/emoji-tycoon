@@ -282,7 +282,6 @@
         "statLine": "{{eps}} /s · {{share}} celku",
         "nextUpgrade": "další vylepšení při {{at}}",
         "allUpgradesFound": "všechna vylepšení nalezena",
-        "epsEach": "+{{eps}} /s za kus",
         "buy": "KOUPIT",
         "buyCount": "KOUPIT ×{{count}}",
         "buyA11y_one": "Koupit {{count}}× {{name}} za {{price}}",
@@ -293,6 +292,12 @@
         "revealsAt": "Odhalí se při {{amount}} emoji",
         "bulkLabel": "Kolik koupit",
         "bulkMax": "Max",
+        "sortLabel": "Řazení",
+        "sort": {
+            "shop": "Obchod",
+            "value": "Nejvýhodnější"
+        },
+        "sortValueHint": "Nahoru dá to, co za svou cenu přidá nejvíc emoji za sekundu",
         "bulkA11yMax": "Koupit tolik, kolik si můžeš dovolit",
         "bulkA11y_one": "Kupovat po {{count}}",
         "bulkA11y_few": "Kupovat po {{count}}",

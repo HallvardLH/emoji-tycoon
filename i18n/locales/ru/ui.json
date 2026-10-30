@@ -282,7 +282,6 @@
         "statLine": "{{eps}} /сек · {{share}} от общего",
         "nextUpgrade": "след. улучшение: {{at}} шт.",
         "allUpgradesFound": "все улучшения найдены",
-        "epsEach": "+{{eps}} /сек за штуку",
         "buy": "КУПИТЬ",
         "buyCount": "КУПИТЬ ×{{count}}",
         "buyA11y_one": "{{name}}: купить {{count}} шт. за {{price}}",
@@ -293,6 +292,12 @@
         "revealsAt": "Откроется при {{amount}} эмодзи",
         "bulkLabel": "Сколько купить",
         "bulkMax": "Макс.",
+        "sortLabel": "Порядок",
+        "sort": {
+            "shop": "Магазин",
+            "value": "Выгода"
+        },
+        "sortValueHint": "Сначала то, что даёт больше всего эмодзи в секунду за свою цену",
         "bulkA11yMax": "Купить столько, на сколько хватает",
         "bulkA11y_one": "Покупать по {{count}}",
         "bulkA11y_few": "Покупать по {{count}}",
