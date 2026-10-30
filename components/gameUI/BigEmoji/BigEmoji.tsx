@@ -295,36 +295,41 @@ export default function BigEmoji() {
                 // Squash down on press, then spring back with a wobble on release
                 onPressIn={() => Animated.spring(squish, { toValue: 0.86, tension: 400, friction: 12, useNativeDriver: true }).start()}
                 onPressOut={() => Animated.spring(squish, { toValue: 1, tension: 220, friction: 4, useNativeDriver: true }).start()}
-                style={[styles.disc, bigEmoji.shiny ? styles.discShiny : null]}>
-                {bigEmoji.shiny && <ShinyGlow />}
+                // Fast tapping drifts off the disc, so taps around it count too. A real margin rather
+                // than hitSlop, which the web ignores. The buttons around it render later, so they win where they overlap
+                pressRetentionOffset={HIT_SLOP}
+                style={styles.hitArea}>
+                <View style={[styles.disc, bigEmoji.shiny ? styles.discShiny : null]}>
+                    {bigEmoji.shiny && <ShinyGlow />}
 
-                {animatingSparks.current.map(({ key, progress, sparks, color }) => (
-                    <TapSparks key={key} progress={progress} sparks={sparks} color={color} />
-                ))}
+                    {animatingSparks.current.map(({ key, progress, sparks, color }) => (
+                        <TapSparks key={key} progress={progress} sparks={sparks} color={color} />
+                    ))}
 
-                {/* Static Emoji */}
-                <Animated.View style={staticEmojiStyle}>
-                    <PulseAnimation maxSize={1.06} duration={4000}>
-                        <Text style={styles.bigEmoji}>{staticEmoji}</Text>
-                    </PulseAnimation>
-                </Animated.View>
+                    {/* Static Emoji */}
+                    <Animated.View style={staticEmojiStyle}>
+                        <PulseAnimation maxSize={1.06} duration={4000}>
+                            <Text style={styles.bigEmoji}>{staticEmoji}</Text>
+                        </PulseAnimation>
+                    </Animated.View>
 
-                {animatingEmojis.current.map(({ key, emoji, progress, path }) => (
-                    <FlyingEmoji key={key} emoji={emoji} progress={progress} path={path} />
-                ))}
+                    {animatingEmojis.current.map(({ key, emoji, progress, path }) => (
+                        <FlyingEmoji key={key} emoji={emoji} progress={progress} path={path} />
+                    ))}
 
-                {animatingNumbers.current.map(({ key, number, progress, x, y, tilt, color, size }) => (
-                    <FlyingNumber
-                        key={key}
-                        number={number}
-                        progress={progress}
-                        x={x}
-                        y={y}
-                        tilt={tilt}
-                        color={color}
-                        size={size}
-                    />
-                ))}
+                    {animatingNumbers.current.map(({ key, number, progress, x, y, tilt, color, size }) => (
+                        <FlyingNumber
+                            key={key}
+                            number={number}
+                            progress={progress}
+                            x={x}
+                            y={y}
+                            tilt={tilt}
+                            color={color}
+                            size={size}
+                        />
+                    ))}
+                </View>
             </Pressable>
                 {bigEmoji.shiny && (
                     <View style={styles.shinyTag} pointerEvents="none">
@@ -501,6 +506,8 @@ const LOW_GRAVITY_RISE = 260;
 // How far below the disc centre tapped emojis tumble to
 const FALL_DISTANCE = 240;
 const DISC = 220;
+// How far past the disc a tap still counts
+const HIT_SLOP = 40;
 
 const styles = themedStyles(() => StyleSheet.create({
     container: {
@@ -539,6 +546,13 @@ const styles = themedStyles(() => StyleSheet.create({
         paddingVertical: 4,
         borderRadius: radii.pill,
         backgroundColor: palette.sun,
+    },
+    // The disc plus HIT_SLOP all round, over the stage
+    hitArea: {
+        position: 'absolute',
+        top: -HIT_SLOP,
+        left: -HIT_SLOP,
+        padding: HIT_SLOP,
     },
     disc: {
         width: DISC,
