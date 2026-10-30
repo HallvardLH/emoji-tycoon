@@ -21,6 +21,7 @@
       "bundleIdentifier": "com.iagogames.emojitycoon",
       "buildNumber": "1",
       "infoPlist": {
+        "ITSAppUsesNonExemptEncryption": false,
         "CFBundleDevelopmentRegion": "en",
         "CFBundleLocalizations": [
           "en",
