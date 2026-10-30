@@ -8,6 +8,9 @@
       "autoIncrement": true,
       "android": {
         "buildType": "app-bundle"
+      },
+      "ios": {
+        "image": "macos-sequoia-15.6-xcode-26.0"
       }
     }
   },
@@ -17,6 +20,10 @@
         "serviceAccountKeyPath": "./credentials/play-service-account.json",
         "track": "production",
         "releaseStatus": "completed"
+      },
+      "ios": {
+        "ascAppId": "6828963047",
+        "appleTeamId": "YTHVV9ZC64"
       }
     }
   }
