@@ -343,7 +343,7 @@
         "soundEffectsHint": "タップするとポンとやさしい音、キラキラ絵文字ではチャイムが鳴ります。",
         "performance": "パフォーマンス",
         "reduceAnimations": "アニメーションを減らす",
-        "reduceAnimationsHint": "タップした絵文字が大きな絵文字から飛び出さなくなります。タップが重いと感じたら試してみてね。",
+        "reduceAnimationsHint": "背景の絵文字の雨が止まり、タップした絵文字が大きな絵文字から飛び出さなくなります。タップが重いと感じたら試してみてね。",
         "dangerZone": "危険ゾーン",
         "vibration": "バイブレーション",
         "vibrationHint": "タップ、購入、お祝いのときに軽く振動します。",

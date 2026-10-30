@@ -383,7 +383,7 @@
         "soundEffectsHint": "Ett mjukt plopp när du trycker och ett klingande för glänsande emojis.",
         "performance": "Prestanda",
         "reduceAnimations": "Minska animationer",
-        "reduceAnimationsHint": "Tryckta emojis flyger inte längre iväg från Stora emojin. Testa detta om trycken känns sega.",
+        "reduceAnimationsHint": "Inget emojiregn i bakgrunden, och tryckta emojis flyger inte längre iväg från Stora emojin. Testa detta om trycken känns sega.",
         "dangerZone": "Farozon",
         "vibration": "Vibration",
         "vibrationHint": "Ett surr när du trycker, köper och firar.",

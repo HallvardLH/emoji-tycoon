@@ -1,187 +1,158 @@
-import React, { useEffect, useRef, useState } from "react";
-import { Animated, StyleSheet, View, Dimensions, Easing } from "react-native";
+import React, { useLayoutEffect, useRef, useState } from "react";
+import { Animated, Easing, LayoutChangeEvent, StyleSheet, View } from "react-native";
+import { useSelector } from "react-redux";
+import store, { RootState } from "../../scripts/redux/reduxStore";
 import { selectRandomEmoji } from "../../scripts/game/bigEmoji";
 import Emoji from "./Emoji";
-import { useSelector } from "react-redux";
-import { RootState } from "../../scripts/redux/reduxStore";
-import { HEADER_HEIGHT, TAB_BAR_HEIGHT } from "../layout/ScreenView";
 
-const { width, height } = Dimensions.get("window");
+// How long a drop takes to fall one screen height
+const FALL_MS = 9000;
+const MAX_DROPS = 40;
+const MIN_SIZE = 22;
+const MAX_SIZE = 40;
+const MIN_OPACITY = 0.12;
+const MAX_OPACITY = 0.5;
+// Closest two drops get, centre to centre
+const MIN_DISTANCE = 48;
 
-interface EmojiRainProps {
-    delay?: number;
-    bg?: string;
+interface Drop {
+    emoji: string;
+    x: number;
+    y: number;
+    size: number;
+    opacity: number;
 }
 
-export default function EmojiRain({ delay = 0, bg }: EmojiRainProps) {
-    const { emojisPerSecond } = useSelector((state: RootState) => state.values);
-    const { effects } = useSelector((state: RootState) => state.effects);
+interface Size {
+    width: number;
+    height: number;
+}
 
-    interface Raindrop {
-        emoji: string;
-        xPos: number;
-        yPos: number;
-        size: number;
-        opacity: number;
-        id: string;
+/**
+ * Drops per screen. Grows with production on a log scale, so every upgrade that raises it
+ * thickens the rain a little: about 2 at 1 /sec, 10 at 100, 30 at a million
+ */
+function dropCount() {
+    const eps = store.getState().values.emojisPerSecond;
+    return Math.min(MAX_DROPS, Math.round(Math.log10(eps + 1) * 5));
+}
+
+/** The active effects' emojis while any are on, otherwise any emoji that can be on the Big Emoji */
+function pickEmoji() {
+    const effects = store.getState().effects.effects;
+    if (effects.length > 0) return effects[Math.floor(Math.random() * effects.length)].emoji;
+    return selectRandomEmoji().emoji;
+}
+
+/** A screenful of drops, scattered so none overlap. Read from the store once per fall, not on every tick */
+function makeDrops({ width, height }: Size): Drop[] {
+    const count = dropCount();
+    const drops: Drop[] = [];
+    for (let attempt = 0; drops.length < count && attempt < count * 4; attempt++) {
+        const size = MIN_SIZE + Math.random() * (MAX_SIZE - MIN_SIZE);
+        const x = Math.random() * Math.max(0, width - size);
+        const y = Math.random() * Math.max(0, height - size);
+        if (drops.some(drop => Math.hypot(drop.x - x, drop.y - y) < MIN_DISTANCE)) continue;
+        // Bigger drops are nearer, so brighter
+        const opacity = MIN_OPACITY + ((size - MIN_SIZE) / (MAX_SIZE - MIN_SIZE)) * (MAX_OPACITY - MIN_OPACITY);
+        drops.push({ emoji: pickEmoji(), x, y, size: Math.round(size), opacity });
     }
+    return drops;
+}
 
-    const [section, setSection] = useState<Raindrop[]>([]);
-    const rainAnim = useRef(new Animated.Value(-height + HEADER_HEIGHT)).current;
+/**
+ * Emojis drifting down behind the Big Emoji, more of them as production grows, and the
+ * active effects' emojis while any are on. Off with Reduce animations.
+ *
+ * Kept cheap, as it runs all the time: two screen-tall tiles of drops slide down on the
+ * native driver, half a fall apart, and each is refilled only once it has left the screen.
+ * So the rain renders once per fall and never with the game ticks (it subscribes to none of
+ * the game), and the drops keep their views from one fall to the next.
+ */
+export default function EmojiRain() {
+    const reduceAnimations = useSelector((state: RootState) => state.preferences.reduceAnimations ?? false);
+    const [size, setSize] = useState<Size | null>(null);
 
-    // Use a ref to store the latest value of emojisPerSecond
-    // This is required to access the newest value of emojisPerSecond
-    const emojisPerSecondRef = useRef(emojisPerSecond);
-    useEffect(() => {
-        emojisPerSecondRef.current = emojisPerSecond;
-    }, [emojisPerSecond]);
-
-    const effectsRef = useRef(effects);
-    useEffect(() => {
-        effectsRef.current = effects;
-    }, [effects]);
-
-    const selectEmoji = () => {
-        const activeEffects = effectsRef.current;
-        // If there are any active effects...
-        if (activeEffects.length > 0) {
-            let emojiPool: string[] = [];
-            // Add all active effect emojis to a pool
-            activeEffects.forEach((effect) => {
-                emojiPool.push(effect.emoji);
-            })
-
-            // Pick a random emoji from that pool
-            return emojiPool[Math.floor(Math.random() * emojiPool.length)];
-
-        }
-        // If there is no active effect, return any random emoji
-        return selectRandomEmoji().emoji;
-    }
-
-    const populateSection = () => {
-        const newSection: Raindrop[] = [];
-        // Use the ref value to ensure we're working with the latest value
-        let emojiAmount = Math.floor(emojisPerSecondRef.current);
-        const maxEmojiAmount = 75;
-
-        // The minimum and maximum size an emoji can be on the screen
-        const minEmojiSize = 25;
-        const maxEmojiSize = 45;
-
-        const minEmojiOpacity = 0.15;
-        const maxEmojiOpacity = 0.75;
-
-        // Cap the amount of emojis that can be added at once
-        if (emojisPerSecondRef.current > maxEmojiAmount) {
-            emojiAmount = maxEmojiAmount;
-        }
-
-        // Minimum distance between emojis
-        const minDist = 50;
-        // TODO: Make distance higher if emojiAmount is small
-        const points: { x: number; y: number }[] = [];
-
-        function isFarEnough(x: number, y: number): boolean {
-            return points.every(p => Math.hypot(p.x - x, p.y - y) >= minDist);
-        }
-
-        let attempts = 0;
-        while (newSection.length < emojiAmount && attempts < emojiAmount * 3) {
-            const x = Math.floor(Math.random() * (width - 25));
-            const y = Math.floor(Math.random() * (height - 50));
-
-            if (isFarEnough(x, y)) {
-                let size = Math.floor(Math.random() * (maxEmojiSize - minEmojiSize + 1)) + minEmojiSize;
-
-                // Calculate opacity based on size
-                // The minimum size gives the minimum possible opacity,
-                // Max size gives the max opacity
-                // Anything else fits somewhere in between
-                let opacity = minEmojiOpacity + ((size - minEmojiSize) / (maxEmojiSize - minEmojiSize)) * (maxEmojiOpacity - minEmojiOpacity);
-
-                let chosenEmoji = selectEmoji();
-
-                points.push({ x, y });
-                newSection.push({
-                    emoji: chosenEmoji,
-                    xPos: x,
-                    yPos: y,
-                    size: size,
-                    opacity: opacity,
-                    id: `${newSection.length}-${Date.now()}`,
-                });
-            }
-
-            attempts++; // Prevent infinite loops
-        }
-        setSection(newSection);
+    const onLayout = (event: LayoutChangeEvent) => {
+        const { width, height } = event.nativeEvent.layout;
+        if (width > 0 && height > 0 && (width !== size?.width || height !== size?.height)) setSize({ width, height });
     };
 
-    useEffect(() => {
-        const startAnimation = () => {
-            // Generate new emojis at the start of each cycle
-            populateSection();
-
-            Animated.timing(rainAnim, {
-                toValue: height - TAB_BAR_HEIGHT,
-                duration: 10000,
-                easing: Easing.linear,
-                useNativeDriver: true,
-            }).start(() => {
-                // Reset animation position
-                rainAnim.setValue(-height + HEADER_HEIGHT);
-                // Restart animation when complete
-                startAnimation();
-            });
-        };
-
-        // Delay execution initially if a delay is specified
-        const timeout = setTimeout(startAnimation, delay);
-
-        // Cleanup on unmount
-        return () => clearTimeout(timeout);
-    }, []); // Empty dependency array ensures this runs only once on mount
+    if (reduceAnimations) return null;
 
     return (
-        <View style={styles.container}>
-            <Animated.View style={[
-                styles.emojiSection,
-                {
-                    transform: [{ translateY: rainAnim }],
-                    backgroundColor: bg
-                }
-            ]}>
-                {section.map(item => (
-                    <View
-                        key={item.id}
-                        style={{
-                            position: 'absolute',
-                            top: item.yPos,
-                            left: item.xPos,
-                            opacity: item.opacity,
-                        }}>
-
-                        <Emoji size={item.size} icon={item.emoji} />
-
-                    </View>
-                ))}
-            </Animated.View>
+        <View style={StyleSheet.absoluteFill} pointerEvents="none" onLayout={onLayout}>
+            {size && (
+                <>
+                    <RainTile size={size} startAt={0} />
+                    <RainTile size={size} startAt={0.5} />
+                </>
+            )}
         </View>
     );
 }
 
+/**
+ * One tile, falling from just above the screen to just below it, then refilled and sent back up.
+ * `startAt` is how far through its fall it starts, so the two tiles always cover the screen
+ */
+function RainTile({ size, startAt }: { size: Size, startAt: number }) {
+    const [drops, setDrops] = useState(() => makeDrops(size));
+    const progress = useRef(new Animated.Value(startAt)).current;
+    // Where it was stopped, to carry on from there
+    const at = useRef(startAt);
+
+    // A layout effect, so it stops while the tab is hidden: FreezeWhenBlurred suspends hidden
+    // tabs, and React unmounts layout effects in a hidden Suspense tree and remounts them when shown
+    useLayoutEffect(() => {
+        let stopped = false;
+        const fall = (from: number) => {
+            progress.setValue(from);
+            Animated.timing(progress, {
+                toValue: 1,
+                duration: FALL_MS * 2 * (1 - from),
+                easing: Easing.linear,
+                useNativeDriver: true,
+            }).start(({ finished }) => {
+                if (!finished || stopped) return;
+                // Below the screen now: refill it while it's out of sight, then back to the top
+                setDrops(makeDrops(size));
+                fall(0);
+            });
+        };
+        fall(at.current);
+        return () => {
+            stopped = true;
+            progress.stopAnimation(value => { at.current = value; });
+        };
+    }, [size.width, size.height]);
+
+    const translateY = progress.interpolate({ inputRange: [0, 1], outputRange: [-size.height, size.height] });
+
+    return (
+        <Animated.View
+            style={[styles.tile, { width: size.width, height: size.height, transform: [{ translateY }] }]}
+            // Drawn once as a bitmap and moved, rather than redrawing every emoji each frame
+            shouldRasterizeIOS
+            renderToHardwareTextureAndroid
+        >
+            {drops.map((drop, i) => (
+                // Keyed by place, so a refill updates the same views instead of making new ones
+                <View key={i} style={[styles.drop, { left: drop.x, top: drop.y }]}>
+                    <Emoji icon={drop.emoji} size={drop.size} opacity={drop.opacity} />
+                </View>
+            ))}
+        </Animated.View>
+    );
+}
+
 const styles = StyleSheet.create({
-    container: {
-        flex: 1,
+    tile: {
         position: "absolute",
-        width,
-        height,
-        backgroundColor: "transparent",
+        top: 0,
+        left: 0,
     },
-    emojiSection: {
+    drop: {
         position: "absolute",
-        width,
-        height,
     },
 });

@@ -382,7 +382,7 @@
         "soundEffectsHint": "Een zachte plop als je tikt, en een belletje voor glimmende emoji's.",
         "performance": "Prestaties",
         "reduceAnimations": "Minder animaties",
-        "reduceAnimationsHint": "Getikte emoji's vliegen niet meer van de grote emoji af. Probeer dit als tikken traag aanvoelt.",
+        "reduceAnimationsHint": "Geen emojiregen op de achtergrond, en getikte emoji's vliegen niet meer van de grote emoji af. Probeer dit als tikken traag aanvoelt.",
         "dangerZone": "Gevarenzone",
         "vibration": "Trillen",
         "vibrationHint": "Een trilling als je tikt, koopt en viert.",

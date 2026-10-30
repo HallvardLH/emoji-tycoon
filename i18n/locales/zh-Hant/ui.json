@@ -343,7 +343,7 @@
         "soundEffectsHint": "點擊時發出輕柔的啵聲，點到閃亮 Emoji 時會有叮噹聲。",
         "performance": "效能",
         "reduceAnimations": "減少動畫",
-        "reduceAnimationsHint": "點擊的 Emoji 不再從大 Emoji 上飛出去。如果點擊感覺卡頓，可以試試看。",
+        "reduceAnimationsHint": "背景不再下 Emoji 雨，點擊的 Emoji 也不再從大 Emoji 上飛出去。如果點擊感覺卡頓，可以試試看。",
         "dangerZone": "危險區域",
         "vibration": "震動",
         "vibrationHint": "點擊、購買和慶祝時輕輕震動。",

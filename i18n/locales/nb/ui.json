@@ -382,7 +382,7 @@
         "soundEffectsHint": "Et mykt plopp når du trykker, og et klokkespill for skinnende emojier.",
         "performance": "Ytelse",
         "reduceAnimations": "Færre animasjoner",
-        "reduceAnimationsHint": "Emojier du trykker på, flyr ikke lenger ut fra den store emojien. Prøv dette hvis trykkingen føles treg.",
+        "reduceAnimationsHint": "Ingen emojiregn i bakgrunnen, og emojier du trykker på, flyr ikke lenger ut fra den store emojien. Prøv dette hvis trykkingen føles treg.",
         "dangerZone": "Faresone",
         "vibration": "Vibrasjon",
         "vibrationHint": "En liten summing når du trykker, kjøper og feirer.",

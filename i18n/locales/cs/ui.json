@@ -448,7 +448,7 @@
         "soundEffectsHint": "Jemné lupnutí při ťuknutí a cinknutí u třpytivých emoji.",
         "performance": "Výkon",
         "reduceAnimations": "Omezit animace",
-        "reduceAnimationsHint": "Ťuknutá emoji už nebudou odlétat z Velkého emoji. Zkus to, pokud se ťukání seká.",
+        "reduceAnimationsHint": "V pozadí už nebude pršet emoji a ťuknutá emoji nebudou odlétat z Velkého emoji. Zkus to, pokud se ťukání seká.",
         "dangerZone": "Nebezpečná zóna",
         "vibration": "Vibrace",
         "vibrationHint": "Zabzučení, když ťukáš, kupuješ a slavíš.",

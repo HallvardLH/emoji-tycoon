@@ -350,7 +350,7 @@
         "soundEffectsHint": "Tiếng bụp nhẹ khi chạm, và tiếng chuông khi gặp emoji lấp lánh.",
         "performance": "Hiệu năng",
         "reduceAnimations": "Giảm hoạt ảnh",
-        "reduceAnimationsHint": "Emoji được chạm sẽ không bay ra khỏi Emoji khổng lồ nữa. Hãy thử nếu chạm bị giật lag.",
+        "reduceAnimationsHint": "Không còn mưa emoji ở nền, và emoji được chạm sẽ không bay ra khỏi Emoji khổng lồ nữa. Hãy thử nếu chạm bị giật lag.",
         "dangerZone": "Vùng nguy hiểm",
         "vibration": "Rung",
         "vibrationHint": "Rung nhẹ khi bạn chạm, mua và ăn mừng.",

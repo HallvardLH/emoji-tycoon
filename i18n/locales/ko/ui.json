@@ -343,7 +343,7 @@
         "soundEffectsHint": "탭할 때 부드러운 뽁 소리, 반짝이 이모지에는 맑은 종소리가 나요.",
         "performance": "성능",
         "reduceAnimations": "애니메이션 줄이기",
-        "reduceAnimationsHint": "탭한 이모지가 큰 이모지에서 튀어 나가지 않아요. 탭이 버벅일 때 켜 보세요.",
+        "reduceAnimationsHint": "배경의 이모지 비가 멈추고, 탭한 이모지가 큰 이모지에서 튀어 나가지 않아요. 탭이 버벅일 때 켜 보세요.",
         "dangerZone": "위험 구역",
         "vibration": "진동",
         "vibrationHint": "탭하고, 사고, 축하할 때 살짝 진동해요.",

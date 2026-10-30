@@ -382,7 +382,7 @@
         "soundEffectsHint": "Dokunurken yumuşak bir pıt sesi, parlak emojilerde de bir çınlama.",
         "performance": "Performans",
         "reduceAnimations": "Animasyonları azalt",
-        "reduceAnimationsHint": "Dokunulan emojiler artık Büyük Emoji'den fırlamaz. Dokunmak takılıyorsa bunu dene.",
+        "reduceAnimationsHint": "Arka planda emoji yağmuru olmaz ve dokunulan emojiler artık Büyük Emoji'den fırlamaz. Dokunmak takılıyorsa bunu dene.",
         "dangerZone": "Tehlikeli bölge",
         "vibration": "Titreşim",
         "vibrationHint": "Dokunurken, satın alırken ve kutlarken hafif bir titreşim.",

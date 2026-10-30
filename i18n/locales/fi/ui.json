@@ -382,7 +382,7 @@
         "soundEffectsHint": "Pehmeä poksahdus napautuksesta ja kilahdus kiiltävistä emojeista.",
         "performance": "Suorituskyky",
         "reduceAnimations": "Vähennä animaatioita",
-        "reduceAnimationsHint": "Napautetut emojit eivät enää lennä ison emojin luota. Kokeile tätä, jos napauttaminen tuntuu takkuilevan.",
+        "reduceAnimationsHint": "Taustalla ei sada emojeja, eivätkä napautetut emojit enää lennä ison emojin luota. Kokeile tätä, jos napauttaminen tuntuu takkuilevan.",
         "dangerZone": "Vaaravyöhyke",
         "vibration": "Värinä",
         "vibrationHint": "Pieni värähdys, kun napautat, ostat ja juhlit.",

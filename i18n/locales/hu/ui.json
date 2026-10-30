@@ -383,7 +383,7 @@
         "soundEffectsHint": "Halk pukkanás koppintáskor, csilingelés a csillogó emojiknál.",
         "performance": "Teljesítmény",
         "reduceAnimations": "Kevesebb animáció",
-        "reduceAnimationsHint": "A megkoppintott emojik nem repülnek le a Nagy emojiról. Próbáld ki, ha akadozik a koppintás.",
+        "reduceAnimationsHint": "Nem esik emojieső a háttérben, és a megkoppintott emojik nem repülnek le a Nagy emojiról. Próbáld ki, ha akadozik a koppintás.",
         "dangerZone": "Veszélyzóna",
         "vibration": "Rezgés",
         "vibrationHint": "Egy kis rezgés koppintáskor, vásárláskor és ünnepléskor.",

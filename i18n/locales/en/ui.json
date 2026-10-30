@@ -385,7 +385,7 @@
         "soundEffectsHint": "A soft pop as you tap, and a chime for shiny emojis.",
         "performance": "Performance",
         "reduceAnimations": "Reduce animations",
-        "reduceAnimationsHint": "Tapped emojis no longer fly off the Big Emoji. Try this if tapping feels laggy.",
+        "reduceAnimationsHint": "No emoji rain in the background, and tapped emojis no longer fly off the Big Emoji. Try this if tapping feels laggy.",
         "dangerZone": "Danger zone",
         "vibration": "Vibration",
         "vibrationHint": "A buzz as you tap, buy and celebrate.",

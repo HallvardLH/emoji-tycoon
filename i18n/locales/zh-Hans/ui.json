@@ -343,7 +343,7 @@
         "soundEffectsHint": "点击时有轻柔的「啵」声，点中闪光表情时有叮咚声。",
         "performance": "性能",
         "reduceAnimations": "减少动画",
-        "reduceAnimationsHint": "点击的表情不再从大表情上飞出。如果点击感觉卡顿，可以试试这个。",
+        "reduceAnimationsHint": "背景不再下表情雨，点击的表情也不再从大表情上飞出。如果点击感觉卡顿，可以试试这个。",
         "dangerZone": "危险区域",
         "vibration": "振动",
         "vibrationHint": "点击、购买和庆祝时轻轻振动。",

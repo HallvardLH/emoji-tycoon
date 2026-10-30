@@ -5,12 +5,14 @@ import EffectMeters from "../../components/gameUI/Meters/EffectMeters";
 import EffectPopup from "../../components/gameUI/EffectPopup";
 import FirstRunHint from "../../components/gameUI/FirstRunHint";
 import BoostButton from "../../components/gems/BoostButton";
+import EmojiRain from "../../components/gameUI/EmojiRain";
 import { View, StyleSheet } from "react-native";
 
 export default function Home() {
     return (
         <ScreenView scrollView={false}>
-            {/* <EmojiRain delay={1000} /> */}
+            {/* Behind everything, filling the stage */}
+            <EmojiRain />
             <BigEmoji />
             {/* Floats over the stage so chips appearing don't shift the Big Emoji */}
             <View style={styles.overlay} pointerEvents="box-none">
