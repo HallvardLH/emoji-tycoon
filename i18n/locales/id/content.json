@@ -1135,7 +1135,7 @@
             "description": "Nol sampai sejuta emoji dalam kurang dari tiga detik."
         },
         "719": {
-            "name": "Hall of fame",
+            "name": "Aula kemasyhuran",
             "description": "Setiap atlet emoji legendaris, diabadikan dalam perunggu."
         },
         "800": {
@@ -2710,7 +2710,7 @@
             "description": "Esensi yang dipakai tetap memberi separuh bonus produksinya"
         },
         "hallOfFame": {
-            "name": "Hall of fame",
+            "name": "Aula kemasyhuran",
             "description": "+10% produksi untuk setiap tantangan yang selesai"
         },
         "flyingStart": {

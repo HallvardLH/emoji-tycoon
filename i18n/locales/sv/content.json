@@ -958,7 +958,7 @@
         "30012": {
             "name": "Pumpor",
             "description": "Jättestora, orangea och perfekta till pajer eller att skrämma kråkor. Pumpor är en höstfavorit!",
-            "quote": "Pumpkin spice and everything nice!"
+            "quote": "Pumpkin spice och allt som är gott!"
         },
         "30013": {
             "name": "Jordgubbar",
@@ -1135,7 +1135,7 @@
             "description": "Noll till en miljon emojis på under tre sekunder."
         },
         "719": {
-            "name": "Hall of fame",
+            "name": "Hederns hall",
             "description": "Varenda legendarisk emojiatlet, förevigad i brons."
         },
         "800": {
@@ -2710,7 +2710,7 @@
             "description": "Spenderad essens behåller halva sin produktionsbonus"
         },
         "hallOfFame": {
-            "name": "Hall of fame",
+            "name": "Hederns hall",
             "description": "+10 % produktion för varje klarad utmaning"
         },
         "flyingStart": {

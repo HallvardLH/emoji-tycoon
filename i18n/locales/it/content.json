@@ -1135,7 +1135,7 @@
             "description": "Da zero a un milione di emoji in meno di tre secondi."
         },
         "719": {
-            "name": "Hall of fame",
+            "name": "Albo d'oro",
             "description": "Tutti gli atleti emoji leggendari, immortalati nel bronzo."
         },
         "800": {
@@ -2710,7 +2710,7 @@
             "description": "L'essenza spesa mantiene metà del suo bonus di produzione"
         },
         "hallOfFame": {
-            "name": "Hall of fame",
+            "name": "Albo d'oro",
             "description": "+10% di produzione per ogni sfida completata"
         },
         "flyingStart": {
