@@ -137,7 +137,12 @@ function LocalizedApp() {
                     // iOS 26 headers are transparent by default, which slid the screens under the Header
                     headerTransparent: false,
                 }}
-            />
+            >
+                {/* Modals from the start. Set from inside the screens, they were pushed as regular
+                    screens and switched to modals once on screen, which iOS can re-present */}
+                <Stack.Screen name="gems" options={{ headerShown: false, presentation: "modal" }} />
+                <Stack.Screen name="prestige" options={{ headerShown: false, presentation: "modal" }} />
+            </Stack>
             {/* Over every screen, as milestones can happen anywhere */}
             <MilestoneToast />
             <OfflineModal />

@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { View, ScrollView, Pressable, StyleSheet } from "react-native";
-import { Stack, useRouter } from "expo-router";
+import { useRouter } from "expo-router";
 import { SafeAreaView } from "react-native-safe-area-context";
 import { useSelector } from "react-redux";
 import { RootState } from "../scripts/redux/reduxStore";
@@ -119,7 +119,6 @@ export default function GemStoreScreen() {
 
     return (
         <View style={styles.screen}>
-            <Stack.Screen options={{ headerShown: false, presentation: "modal" }} />
             <SafeAreaView edges={["top"]} style={styles.topBar}>
                 <Text size={30} style={{ lineHeight: 44 }}>{t("gems.title")}</Text>
                 <CloseButton size={44} accessibilityLabel={t("prestige.close")} onPress={() => router.back()} />

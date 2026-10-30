@@ -1,11 +1,11 @@
 import { useEffect, useRef, useState } from "react";
 import { Animated, Easing, Pressable, ScrollView, StyleSheet, View, useWindowDimensions } from "react-native";
 import { useSelector } from "react-redux";
-import { router } from "expo-router";
 import { RootState } from "../../scripts/redux/reduxStore";
 import Text from "../generalUI/Text";
 import Modal from "../generalUI/Modal";
 import GemPowers from "./GemPowers";
+import { useOpenGemStore } from "./useOpenGemStore";
 import ChunkyButton from "../generalUI/ChunkyButton";
 import { boostSecondsLeft, formatCountdown, BOOST_MULTIPLIER } from "../../scripts/game/gems/boost";
 import { formatNumber } from "../../scripts/misc";
@@ -22,10 +22,8 @@ export default function BoostButton() {
     const { t } = useTranslation();
     const show = useSelector((state: RootState) =>
         state.prestige.prestiges > 0 || state.buildings.buildings.some(building => building.amount > 0));
-    const gems = useSelector((state: RootState) => state.gems.gems);
     const boostUntil = useSelector((state: RootState) => state.gems.boostUntil ?? 0);
     const [open, setOpen] = useState(false);
-    const { height } = useWindowDimensions();
 
     // Counts down once a second while the boost is on
     const [secondsLeft, setSecondsLeft] = useState(() => boostSecondsLeft());
@@ -68,35 +66,47 @@ export default function BoostButton() {
             </Pressable>
 
             <Modal modalVisible={open} onRequestClose={() => setOpen(false)}>
-                <View style={styles.sheet}>
-                    <View style={styles.sheetHead}>
-                        <View style={{ flex: 1 }}>
-                            <Text size={24} style={{ lineHeight: 30 }}>{t("gemPowers.title")}</Text>
-                            <Text font="bold" size={13} color={palette.lilac}>
-                                {active ? t("gemPowers.boostOn", { multiplier: BOOST_MULTIPLIER, time: formatCountdown(secondsLeft) }) : t("gemPowers.subtitle")}
-                            </Text>
-                        </View>
-                        <Pressable
-                            onPress={() => { setOpen(false); router.push("/gems"); }}
-                            accessibilityRole="button"
-                            accessibilityLabel={t("header.gemsLabel", { count: gems, gems: formatNumber(gems) })}
-                            style={({ pressed }) => [styles.gemPill, pressed ? { opacity: 0.8 } : null]}
-                        >
-                            <Text font="black" size={14} color="#FFFFFF">💎 {formatNumber(gems)} +</Text>
-                        </Pressable>
-                    </View>
-                    <ScrollView style={{ maxHeight: height * 0.55 }} contentContainerStyle={{ paddingBottom: 4 }}>
-                        <GemPowers />
-                    </ScrollView>
-                    <ChunkyButton
-                        height={50}
-                        labelSize={17}
-                        label={`💎 ${t("gemPowers.getMoreGems")}`}
-                        onPress={() => { setOpen(false); router.push("/gems"); }}
-                    />
-                </View>
+                <GemPowersSheet active={active} secondsLeft={secondsLeft} />
             </Modal>
         </>
+    );
+}
+
+/** The gem powers popup's contents. Inside the Modal, so the gem store opens once it has closed */
+function GemPowersSheet({ active, secondsLeft }: { active: boolean, secondsLeft: number }) {
+    const { t } = useTranslation();
+    const gems = useSelector((state: RootState) => state.gems.gems);
+    const { height } = useWindowDimensions();
+    const openGemStore = useOpenGemStore();
+
+    return (
+        <View style={styles.sheet}>
+            <View style={styles.sheetHead}>
+                <View style={{ flex: 1 }}>
+                    <Text size={24} style={{ lineHeight: 30 }}>{t("gemPowers.title")}</Text>
+                    <Text font="bold" size={13} color={palette.lilac}>
+                        {active ? t("gemPowers.boostOn", { multiplier: BOOST_MULTIPLIER, time: formatCountdown(secondsLeft) }) : t("gemPowers.subtitle")}
+                    </Text>
+                </View>
+                <Pressable
+                    onPress={openGemStore}
+                    accessibilityRole="button"
+                    accessibilityLabel={t("header.gemsLabel", { count: gems, gems: formatNumber(gems) })}
+                    style={({ pressed }) => [styles.gemPill, pressed ? { opacity: 0.8 } : null]}
+                >
+                    <Text font="black" size={14} color="#FFFFFF">💎 {formatNumber(gems)} +</Text>
+                </Pressable>
+            </View>
+            <ScrollView style={{ maxHeight: height * 0.55 }} contentContainerStyle={{ paddingBottom: 4 }}>
+                <GemPowers />
+            </ScrollView>
+            <ChunkyButton
+                height={50}
+                labelSize={17}
+                label={`💎 ${t("gemPowers.getMoreGems")}`}
+                onPress={openGemStore}
+            />
+        </View>
     );
 }
 

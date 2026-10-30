@@ -27,6 +27,8 @@ export default function OfflineModal() {
     const [busy, setBusy] = useState(false);
     // The last ad couldn't be shown (offline, none available) or was closed early
     const [adFailed, setAdFailed] = useState(false);
+    // Off to get gems: hides, and the gem store opens once it's gone (see useAfterDismiss)
+    const [toGemStore, setToGemStore] = useState(false);
     const { t } = useTranslation();
 
     // Offers saved with no production (before that was ruled out in registerAway) are worth nothing
@@ -50,14 +52,14 @@ export default function OfflineModal() {
     const canAffordGems = gems >= GEM_COST;
     const claimWithGems = () => {
         if (busy) return;
-        if (!canAffordGems) router.push("/gems");
+        if (!canAffordGems) setToGemStore(true);
         else if (spendGems(GEM_COST)) claimOffline(GEM_MULTIPLIER);
     };
 
     // Android's back button and taps outside the card do nothing here: one stray press
     // threw the earnings away. Only "No thanks" dismisses them
     return (
-        <Modal modalVisible noExit onRequestClose={() => {}}>
+        <Modal modalVisible={!toGemStore} noExit onRequestClose={() => {}} onDismiss={() => { if (toGemStore) router.push("/gems"); }}>
             <View style={styles.card}>
                 <Text size={44} style={styles.icon}>🌙</Text>
                 <Text size={28} color={palette.ink} style={styles.center}>{t("offline.welcomeBack")}</Text>

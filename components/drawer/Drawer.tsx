@@ -2,6 +2,7 @@ import React, { forwardRef, useRef, useState, useImperativeHandle, ReactNode } f
 import { Animated, Easing, Dimensions, Modal, View, Pressable, SafeAreaView, StyleProp, ViewStyle, StyleSheet } from "react-native";
 import { PanGestureHandler, State, GestureHandlerRootView } from "react-native-gesture-handler";
 import GradientBackground from "../layout/GradientBackground";
+import { useAfterDismiss } from "../generalUI/Modal";
 
 interface DrawerProps {
     children?: ReactNode;
@@ -120,14 +121,17 @@ const Drawer = forwardRef((props: DrawerProps, ref) => {
         slideAnim.setValue(translationX);
     };
     
-    // This function handles the animation and setting visibility after the animation is complete
+    const dismissal = useAfterDismiss(isVisible);
+
+    // This function handles the animation and setting visibility after the animation is complete.
+    // The callback runs once the drawer is fully gone, so it can open a screen (see useAfterDismiss)
     const closeDrawerInternal = (callback?: () => void) => {
         animateDrawer(false, () => {
+            if (callback) dismissal.afterDismiss(callback);
             setIsVisible(false);
             if (onStateChange) {
                 onStateChange(false);
             }
-            if (callback) callback();
         });
     };
 
@@ -188,6 +192,7 @@ const Drawer = forwardRef((props: DrawerProps, ref) => {
             animationType="none"
             transparent={true}
             visible={isVisible}
+            onDismiss={dismissal.onDismiss}
         >
             <GestureHandlerRootView style={{ flex: 1 }}>
                 <Animated.View style={{ flex: 1, backgroundColor: backdropColor }}>

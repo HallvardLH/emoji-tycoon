@@ -16,7 +16,8 @@ import { SCREENSHOT_MODE, onOpenCheatsRequest } from "../../scripts/screenshotMo
 
 type DrawerRef = {
     openDrawer: () => void;
-    closeDrawer: () => void;
+    /** The callback runs once the drawer is fully gone */
+    closeDrawer: (callback?: () => void) => void;
 };
 
 /**
@@ -64,7 +65,7 @@ export default function HomeNavigation() {
             )}
             <Drawer ref={settingsDrawerRef} side="right">
                 <ScrollView contentContainerStyle={styles.drawerContent}>
-                    <GemStoreCard onPress={() => { settingsDrawerRef.current?.closeDrawer(); router.push("/gems"); }} />
+                    <GemStoreCard onPress={() => settingsDrawerRef.current?.closeDrawer(() => router.push("/gems"))} />
                     <Settings onReset={() => settingsDrawerRef.current?.closeDrawer()} />
                 </ScrollView>
             </Drawer>

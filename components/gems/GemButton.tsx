@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { Pressable, StyleSheet, StyleProp, ViewStyle } from "react-native";
-import { router } from "expo-router";
 import Text from "../generalUI/Text";
+import { useOpenGemStore } from "./useOpenGemStore";
 import { GemBuyResult } from "../../scripts/game/gems/gemShop";
 import { palette, radii, themedStyles } from "../misc/theme";
 import * as Haptics from "../../scripts/game/haptics";
@@ -33,6 +33,8 @@ export default function GemButton({ cost, onBuy, label, disabled, disabledLabel,
     const [armed, setArmed] = useState(false);
     // Already in the gem store: the packs are right there
     const inStore = useGemStoreOpen();
+    // In the gem powers popup, it closes first
+    const openGemStore = useOpenGemStore();
 
     useEffect(() => {
         if (!armed) return;
@@ -50,7 +52,7 @@ export default function GemButton({ cost, onBuy, label, disabled, disabledLabel,
         const result = onBuy();
         if (result === "needGems") {
             Haptics.notificationAsync(Haptics.NotificationFeedbackType.Error);
-            if (!inStore) router.push("/gems");
+            if (!inStore) openGemStore();
         } else if (result === "bought") Haptics.notificationAsync(Haptics.NotificationFeedbackType.Success);
     };
 
