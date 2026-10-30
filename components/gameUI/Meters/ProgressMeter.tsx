@@ -2,7 +2,6 @@ import React, { useEffect, useRef } from "react";
 import { View, StyleSheet, Animated } from "react-native";
 import Emoji from "../Emoji";
 import { colors } from "../../misc/Colors";
-import { ViewStyle } from "react-native";
 import Text from "../../generalUI/Text";
 
 interface ProgressMeterProps {
@@ -50,7 +49,7 @@ export default function ProgressMeter(props: ProgressMeterProps) {
                         inputRange: [0, 100],
                         outputRange: ['0%', '100%']
                     })
-                } as ViewStyle]}>
+                }]}>
                     <View style={[
                         styles.fillTop, { backgroundColor: barTopColor }
                     ]} />

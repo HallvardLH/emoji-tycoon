@@ -1,6 +1,6 @@
 import { StyleSheet, View, TouchableOpacity } from "react-native";
 import Text from "../generalUI/Text";
-import { useNavigation, NavigationProp, ParamListBase } from "@react-navigation/native";
+import { useNavigation, NavigationProp, ParamListBase } from "expo-router/react-navigation";
 
 interface DrawerLinkProps {
     text?: string;

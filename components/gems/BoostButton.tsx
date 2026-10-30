@@ -118,7 +118,7 @@ const styles = themedStyles(() => StyleSheet.create({
         backgroundColor: "rgba(255,197,61,0.12)",
     },
     glow: {
-        ...StyleSheet.absoluteFillObject,
+        ...StyleSheet.absoluteFill,
         borderRadius: radii.lg,
         backgroundColor: "rgba(255,197,61,0.22)",
     },

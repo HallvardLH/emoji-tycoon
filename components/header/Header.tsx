@@ -242,7 +242,7 @@ const styles = themedStyles(() => StyleSheet.create({
     },
     // Flashes over the rate pill when production goes up
     bumpGlow: {
-        ...StyleSheet.absoluteFillObject,
+        ...StyleSheet.absoluteFill,
         borderRadius: radii.pill,
         backgroundColor: "rgba(255,197,61,0.35)",
     },

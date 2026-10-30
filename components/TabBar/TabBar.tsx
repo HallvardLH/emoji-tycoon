@@ -13,7 +13,7 @@ import { canBuyUpgrade } from "../../scripts/game/upgrades/checks";
 import { clearUnlockedBuildingsNotifications } from "../../scripts/redux/buildingsSlice";
 import { selectNewAffordableUpgrades } from "../../scripts/redux/upgradesSlice";
 import * as Haptics from "../../scripts/game/haptics";
-import { BottomTabBarProps } from "@react-navigation/bottom-tabs";
+import { BottomTabBarProps } from "expo-router/js-tabs";
 import { Tab } from "../../scripts/redux/tabsSlice";
 import { useTranslation } from "react-i18next";
 
@@ -42,7 +42,7 @@ const tabData: Record<string, TabData> = {
     },
 };
 
-export default function TabBar({ state, navigation }: BottomTabBarProps) {
+export default function TabBar({ state, emitter, navigateToTab }: BottomTabBarProps) {
     const insets = useSafeAreaInsets();
     const dispatch = useDispatch();
     const { t } = useTranslation();
@@ -80,7 +80,7 @@ export default function TabBar({ state, navigation }: BottomTabBarProps) {
                 const { title, labelKey, icon } = tabData[route.name];
 
                 const onPress = () => {
-                    const event = navigation.emit({
+                    const event = emitter.emit({
                         type: "tabPress",
                         target: route.key,
                         canPreventDefault: true
@@ -89,7 +89,7 @@ export default function TabBar({ state, navigation }: BottomTabBarProps) {
                     Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Rigid);
 
                     if (!isFocused && !event.defaultPrevented) {
-                        navigation.navigate(route.name);
+                        navigateToTab(route.key);
                         dispatch(setActiveTab(title as Tab));
 
                         if (route.name === "shop") {

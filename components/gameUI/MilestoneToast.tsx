@@ -221,7 +221,7 @@ const styles = themedStyles(() => StyleSheet.create({
         elevation: 12,
     },
     clip: {
-        ...StyleSheet.absoluteFillObject,
+        ...StyleSheet.absoluteFill,
         borderRadius: radii.xl,
         overflow: "hidden",
     },

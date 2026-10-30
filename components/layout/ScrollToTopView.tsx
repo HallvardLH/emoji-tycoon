@@ -1,5 +1,5 @@
 import React, { useState, useRef, ReactNode } from "react";
-import { ScrollView, Pressable, Image, StyleSheet} from "react-native";
+import { ScrollView, ScrollViewInstance, Pressable, Image, StyleSheet} from "react-native";
 import { colors } from "../misc/Colors";
 
 interface ScrollToTopViewProps {
@@ -11,7 +11,7 @@ export default function ScrollToTopView(props: ScrollToTopViewProps) {
     const { children, scrollToTopThreshold = 200 } = props;
     const [showScrollToTop, setShowScrollToTop] = useState(false);
     const [scrollingBack, setScrollingBack] = useState(false);
-    const scrollViewRef = useRef<ScrollView>(null);
+    const scrollViewRef = useRef<ScrollViewInstance>(null);
 
     const handleScroll = (event: any) => {
         const scrollPosition = event.nativeEvent.contentOffset.y;

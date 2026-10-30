@@ -58,7 +58,7 @@ export const TapSparks = React.memo(({ progress, sparks, color }: TapSparksProps
 
 const base = StyleSheet.create({
     layer: {
-        ...StyleSheet.absoluteFillObject,
+        ...StyleSheet.absoluteFill,
         alignItems: "center",
         justifyContent: "center",
     },

@@ -134,6 +134,8 @@ function LocalizedApp() {
             <Stack
                 screenOptions={{
                     header: () => <Header />,
+                    // iOS 26 headers are transparent by default, which slid the screens under the Header
+                    headerTransparent: false,
                 }}
             />
             {/* Over every screen, as milestones can happen anywhere */}

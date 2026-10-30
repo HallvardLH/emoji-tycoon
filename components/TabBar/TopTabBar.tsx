@@ -2,17 +2,17 @@ import React, { useEffect } from "react";
 import { View, StyleSheet } from "react-native";
 import { useDispatch, useSelector } from "react-redux";
 import { markAffordableUpgradesSeen, selectNewAffordableUpgrades } from "../../scripts/redux/upgradesSlice";
-import { MaterialTopTabBarProps } from "@react-navigation/material-top-tabs";
+import { MaterialTopTabBarProps } from "expo-router/js-top-tabs";
 import SegmentedControl from "../generalUI/SegmentedControl";
 import { RootState } from "../../scripts/redux/reduxStore";
 import { palette, themedStyles } from "../misc/theme";
 
 /** Buildings / Upgrades switch at the top of the Shop */
-export default function TopTabBar({ state, descriptors, navigation }: MaterialTopTabBarProps) {
+export default function TopTabBar({ state, descriptors, navigateToTab }: MaterialTopTabBarProps) {
     const dispatch = useDispatch();
     // Affordable upgrades the player hasn't seen on the Upgrades tab yet
     const newAffordableUpgrades = useSelector(selectNewAffordableUpgrades);
-    const upgradesOpen = state.routes[state.index]?.name === "Upgrades";
+    const upgradesOpen = state.routes[state.index]?.name === "upgrades";
 
     // While the Upgrades tab is open, whatever is affordable counts as seen
     useEffect(() => {
@@ -24,8 +24,8 @@ export default function TopTabBar({ state, descriptors, navigation }: MaterialTo
         const label = typeof options.tabBarLabel === "string" ? options.tabBarLabel : options.title ?? route.name;
         return {
             label,
-            badge: route.name === "Upgrades" ? newAffordableUpgrades : undefined,
-            onPress: () => navigation.navigate(route.name),
+            badge: route.name === "upgrades" ? newAffordableUpgrades : undefined,
+            onPress: () => navigateToTab(route.key),
         };
     });
 
