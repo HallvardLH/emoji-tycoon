@@ -43,3 +43,6 @@ yarn-error.*
 
 # Google Play service account key for eas submit
 /credentials/
+
+# launch video output from /brag
+brag-output/
