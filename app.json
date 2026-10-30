@@ -18,7 +18,7 @@
     ],
     "ios": {
       "supportsTablet": true,
-      "bundleIdentifier": "com.whimsicalworks.emojitycoon",
+      "bundleIdentifier": "com.iagogames.emojitycoon",
       "buildNumber": "1",
       "infoPlist": {
         "CFBundleDevelopmentRegion": "en",
