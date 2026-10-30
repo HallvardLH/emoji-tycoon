@@ -27,7 +27,7 @@ export default function StatsList() {
         ["✍️", t("stats.totalEmojisDrawn"), formatNumber(emojisGained, 0)],
         ["👆", t("stats.emojiTaps"), formatNumber(bigEmojiTaps)],
         ["💥", t("stats.emojisEarnedFromTapping"), formatNumber(emojisEarnedFromTap)],
-        ["🪄", t("stats.magicalEmojisTapped"), formatNumber(effectEmojisCollected)],
+        ["✨", t("stats.magicalEmojisTapped"), formatNumber(effectEmojisCollected)],
         ["✨", t("stats.shinyEmojisTapped"), formatNumber(shinyEmojisTapped ?? 0)],
         ["🔥", t("stats.comboTaps"), formatNumber(comboTaps ?? 0, 0)],
         ["🥁", t("stats.bestCombo"), `×${bestCombo ?? 1}`],

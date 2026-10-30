@@ -95,7 +95,7 @@
         "totalEmojisDrawn": "মোট আঁকা ইমোজি",
         "emojiTaps": "ইমোজি ট্যাপ",
         "emojisEarnedFromTapping": "ট্যাপ করে পাওয়া ইমোজি",
-        "magicalEmojisTapped": "ট্যাপ করা জাদুর ইমোজি",
+        "magicalEmojisTapped": "ট্যাপ করা ইফেক্ট ইমোজি",
         "funValue": "মজার মান",
         "shinyEmojisTapped": "ট্যাপ করা ঝকঝকে ইমোজি",
         "comboTaps": "কম্বো ট্যাপ",
@@ -401,8 +401,8 @@
         "addCollection_other": "+{{count}} সংগ্রহ",
         "addShiny_one": "+{{count}} ঝকঝকে",
         "addShiny_other": "+{{count}} ঝকঝকে",
-        "addMagical_one": "+{{count}} জাদুর",
-        "addMagical_other": "+{{count}} জাদুর",
+        "addMagical_one": "+{{count}} ইফেক্ট",
+        "addMagical_other": "+{{count}} ইফেক্ট",
         "addEssence_one": "+{{count}} নির্যাস",
         "addEssence_other": "+{{count}} নির্যাস",
         "addPerkTier_one": "+{{count}} সুবিধার স্তর",
@@ -578,10 +578,10 @@
             "a11y": "{{hours}} ঘণ্টা লাফ দাও"
         },
         "shower": {
-            "name": "এফেক্টের বৃষ্টি",
-            "description": "{{amount}}টি ভালো এফেক্ট ইমোজি একসাথে আসে। মিলিয়ে যাওয়ার আগে ট্যাপ করো!",
+            "name": "ইফেক্টের বৃষ্টি",
+            "description": "{{amount}}টি ভালো ইফেক্ট ইমোজি একসাথে আসে। মিলিয়ে যাওয়ার আগে ট্যাপ করো!",
             "buy": "ডাকো",
-            "a11y": "এফেক্টের বৃষ্টি ডাকো"
+            "a11y": "ইফেক্টের বৃষ্টি ডাকো"
         },
         "comboKeeper": {
             "name": "কম্বো রক্ষক",
@@ -613,7 +613,7 @@
             "Tapping": "ট্যাপিং",
             "Buildings": "ভবন",
             "Collection": "সংগ্রহ",
-            "Magic": "জাদু",
+            "Magic": "ইফেক্ট ইমোজি",
             "Prestige": "প্রেস্টিজ",
             "Secret": "রহস্য"
         },
@@ -699,8 +699,8 @@
             "collectedAll": "প্রতিটি ইমোজি খুঁজে বের করো",
             "shinyFirst": "একটা ঝকঝকে ইমোজিতে ট্যাপ করো",
             "shiny": "{{amount}}টি ঝকঝকে ইমোজিতে ট্যাপ করো",
-            "magicFirst": "একটা এফেক্ট ইমোজিতে ট্যাপ করো",
-            "magic": "{{amount}}টি এফেক্ট ইমোজিতে ট্যাপ করো",
+            "magicFirst": "একটা ইফেক্ট ইমোজিতে ট্যাপ করো",
+            "magic": "{{amount}}টি ইফেক্ট ইমোজিতে ট্যাপ করো",
             "prestigeFirst": "প্রথমবার প্রেস্টিজ করো",
             "prestige": "{{amount}} বার প্রেস্টিজ করো",
             "trial": "চ্যালেঞ্জ শেষ করো: {{trial}}",
