@@ -336,7 +336,6 @@
         "freeTitle": "Bedava elmas",
         "freeTaps": "Büyük emojiye her {{taps}} dokunuşta 1 elmas",
         "freePrestige": "Her prestijde elmas: {{gems}}",
-        "tapGemCaps": "Dokunuş: {{taps}}!",
         "gemCaps": "Elmas",
         "themes": {
             "classic": "Klasik",

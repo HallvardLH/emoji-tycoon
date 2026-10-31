@@ -23,7 +23,6 @@ import { toCaps } from '../../../scripts/utils';
 import { getTrialName } from '../../../i18n/content';
 import { trials } from '../../../scripts/game/prestige/trials';
 import { isComboKept } from '../../../scripts/game/gems/boost';
-import { TAP_GEM_EVERY } from '../../../scripts/game/gems/gemRewards';
 // import { useFonts } from "expo-font";
 
 interface AnimatedEmoji {
@@ -339,7 +338,7 @@ export default function BigEmoji() {
                 {shinyBursts.map(burst => (
                     <EffectBurst
                         key={burst.id}
-                        headline={burst.gem ? `💎 ${toCaps(i18n.t("gems.tapGemCaps", { taps: formatNumber(TAP_GEM_EVERY) }))}` : `✨ ${toCaps(i18n.t("bigEmoji.shinyBurst"))}`}
+                        headline={burst.gem ? undefined : `✨ ${toCaps(i18n.t("bigEmoji.shinyBurst"))}`}
                         value={burst.gem ? "+1" : `+${formatNumber(burst.amount < 1e6 ? Math.floor(burst.amount) : burst.amount, 1)}`}
                         caption={burst.gem ? toCaps(i18n.t("gems.gemCaps")) : toCaps(i18n.t("header.emojis"))}
                         sparks={burst.gem

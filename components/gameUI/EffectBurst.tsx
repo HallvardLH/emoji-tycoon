@@ -11,8 +11,8 @@ const SPARK_DURATION = 1100;
 export const EFFECT_BURST_WIDTH = 260;
 
 export interface Celebration {
-    /** Small line above, e.g. "🎁 GIFT!" */
-    headline: string;
+    /** Small line above, e.g. "🎁 GIFT!". Left out when the number says it all */
+    headline?: string;
     /** The big number, e.g. "+352,690" or "×2" */
     value: string;
     /** Small line below, e.g. "EMOJIS" or "TAPPING · 20 SEC" */
@@ -87,7 +87,7 @@ export default function EffectBurst({ headline, value, caption, sparks, color, x
                     { scale: pop.interpolate({ inputRange: [0, 1], outputRange: [0.2, 1] }) },
                 ],
             }]}>
-                <Text font="black" size={13} color={palette.lilacLight} style={styles.caption} shadow>{headline}</Text>
+                {headline ? <Text font="black" size={13} color={palette.lilacLight} style={styles.caption} shadow>{headline}</Text> : null}
                 <Text size={36} color={color} shadow style={styles.value} numberOfLines={1}>{value}</Text>
                 <Text font="black" size={12} color="#FFFFFF" style={styles.caption} shadow>{caption}</Text>
             </Animated.View>

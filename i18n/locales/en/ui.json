@@ -339,7 +339,6 @@
         "freeTitle": "Free gems",
         "freeTaps": "1 gem every {{taps}} taps of the Big Emoji",
         "freePrestige": "{{gems}} gems for every prestige",
-        "tapGemCaps": "{{taps}} TAPS!",
         "gemCaps": "GEM",
         "themes": {
             "classic": "Classic",

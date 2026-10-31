@@ -297,7 +297,6 @@
         "freeTitle": "免费宝石",
         "freeTaps": "每点击大表情{{taps}}次获得1宝石",
         "freePrestige": "每次声望获得{{gems}}宝石",
-        "tapGemCaps": "{{taps}}次点击！",
         "gemCaps": "宝石",
         "themes": {
             "classic": "经典",

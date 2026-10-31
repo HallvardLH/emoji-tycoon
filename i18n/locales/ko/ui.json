@@ -297,7 +297,6 @@
         "freeTitle": "무료 보석",
         "freeTaps": "큰 이모지를 {{taps}}번 탭할 때마다 보석 1개",
         "freePrestige": "프레스티지마다 보석 {{gems}}개",
-        "tapGemCaps": "{{taps}}번 탭!",
         "gemCaps": "보석",
         "themes": {
             "classic": "클래식",

@@ -336,7 +336,6 @@
         "freeTitle": "Ilmaiset jalokivet",
         "freeTaps": "1 jalokivi joka {{taps}}. Ison emojin napautuksesta",
         "freePrestige": "Jokaisesta prestiisistä jalokiviä: {{gems}}",
-        "tapGemCaps": "{{taps}} napautusta!",
         "gemCaps": "Jalokivi",
         "themes": {
             "classic": "Klassinen",

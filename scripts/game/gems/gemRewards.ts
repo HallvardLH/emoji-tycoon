@@ -12,7 +12,7 @@ import { addGems, markRewarded } from "../../redux/gemsSlice";
 export const PRESTIGE_GEMS = 10;
 
 /** Every this many Big Emoji taps (all-time) gives a gem */
-export const TAP_GEM_EVERY = 500;
+export const TAP_GEM_EVERY = 2500;
 
 const isRewarded = (key: string) => (store.getState().gems.rewarded ?? []).includes(key);
 
