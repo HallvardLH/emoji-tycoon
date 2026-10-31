@@ -26,7 +26,7 @@ import { themeById } from "./themes";
  * Everything is priced against production, so no buy is a trap and none is far
  * better than the rest: one gem is worth about MINUTES_PER_GEM minutes of what the
  * buildings make. (For scale: 80 gems cost $0.99, and claiming double offline
- * earnings, 10 gems for up to 8 hours more, is the most generous buy of all.)
+ * earnings, 10 gems for up to 4 hours more, is the most generous buy of all.)
  */
 export const MINUTES_PER_GEM = 5;
 

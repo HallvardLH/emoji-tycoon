@@ -31,7 +31,7 @@ The game loop (`scripts/game/gameLoop.ts`) runs every 100 ms:
 - **Every 1 s:** count effects down, maybe spawn an effect emoji, update prestige progress and check bank milestones.
 - **Every 2.5 s:** check which buildings and upgrades are affordable or unlocked.
 
-Time away (closed, in the background or in a hidden tab) produces nothing. Coming back after more than a minute offers the missed production, up to 8 h: 100% for watching a rewarded ad, 200% for 10 gems. Shorter breaks pay full production, and there's no offer while nothing is produced yet. The offer is only dismissed by "No thanks": Android's back button and taps outside the card leave it be. See `scripts/game/offline.ts`.
+Time away (closed, in the background or in a hidden tab) produces nothing. Coming back after more than a minute offers the missed production, up to 4 h: 100% for watching a rewarded ad, 200% for 10 gems. Shorter breaks pay full production, and there's no offer while nothing is produced yet. The offer is only dismissed by "No thanks": Android's back button and taps outside the card leave it be. See `scripts/game/offline.ts`.
 
 **Saving and loading** (`scripts/redux/persistence.ts`): the save loads asynchronously, and the game shows nothing and doesn't start its loop until it's in (`whenSaveLoaded`), since startup checks, migrations and the welcome back offer read it. Each good save that loads is copied to a backup key; a save that can't be read is put aside under `…:corrupt` and the backup loads instead. The bank, production and emojis drawn ignore NaN and Infinity, which would otherwise stick for good.
 

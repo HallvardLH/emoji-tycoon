@@ -19,7 +19,7 @@ import { BOOST_MULTIPLIER, boostedSecondsBetween } from "./gems/boost";
 /** Breaks up to this long count as playing */
 export const AWAY_THRESHOLD_SECONDS = 60;
 /** Time away past this isn't paid for */
-export const MAX_AWAY_SECONDS = 8 * 3600;
+export const MAX_AWAY_SECONDS = 4 * 3600;
 /** Share of production paid for each way of claiming */
 export const AD_MULTIPLIER = 1;
 export const GEM_MULTIPLIER = 2;
@@ -66,8 +66,11 @@ export function registerAway(seconds: number) {
 export function offlineEarnings(multiplier: number) {
     const offer = store.getState().offline.offer;
     if (!offer) return 0;
-    const extraFromBoost = (offer.boostedSeconds ?? 0) * (BOOST_MULTIPLIER - 1);
-    return offer.eps * (offer.seconds + extraFromBoost) * multiplier;
+    // Offers saved before the cap was lowered are held to it too
+    const seconds = Math.min(offer.seconds, MAX_AWAY_SECONDS);
+    const boostedSeconds = Math.min(offer.boostedSeconds ?? 0, seconds);
+    const extraFromBoost = boostedSeconds * (BOOST_MULTIPLIER - 1);
+    return offer.eps * (seconds + extraFromBoost) * multiplier;
 }
 
 /**
