@@ -51,7 +51,7 @@ The header shows your bank, with the per-second rate at a fixed position under i
 ### The Big Emoji
 - **Tapping:** every tap swaps it for a new random emoji, and the tapped one is added to your Collection.
 - **Weighted picks:** categories are weighted (faces 30, animals/food 20, objects 15, … symbols 3), about 1,600 emojis in total.
-- **Reserved emojis:** effect emojis (🚀💎🍀😈💣🎁) are never picked, so they stay special.
+- **Reserved emojis:** effect emojis (🚀🦾🍀😈💣🎁) are never picked, so they stay special.
 - **Tap feel:**
   - The emoji squishes while pressed and springs back with a wobble.
   - The next emoji pops in with a slight tilt.
@@ -168,7 +168,7 @@ None appear until **Good vibes** is bought. Like Cookie Clicker's golden cookie 
 | Emoji | Effect | Duration | On screen for |
 |---|---|---|---|
 | 🚀 | ×2 tapping | 20 s | 25 s |
-| 💎 | ×3 tapping | 15 s | 25 s |
+| 🦾 | ×3 tapping | 15 s | 25 s |
 | 🍀 | ×2 production | 30 s | 25 s |
 | 😈 | ×77 production (fun value 17 only, 5%) | 4 s | 10 s |
 | 💣 | ×0.5 production (bad, only after 1 M EPS) | 15 s | 15 s |

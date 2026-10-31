@@ -26,7 +26,7 @@ export const effectData: Effect[] = [
         timeLeft: 15,
         timeLeftOnScreen: 25,
         displayMeter: true,
-        emoji: "💎",
+        emoji: "🦾",
         xPos: 100,
         yPos: 100,
         id: 1,
