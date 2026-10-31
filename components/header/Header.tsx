@@ -1,5 +1,5 @@
 import React, { ReactNode, useEffect, useMemo, useRef, useState } from "react";
-import { Animated, Easing, Pressable, StyleSheet, View } from "react-native";
+import { Animated, AppState, Easing, Pressable, StyleSheet, View } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 import { useSelector } from "react-redux";
 import { usePathname, useRouter } from "expo-router";
@@ -89,34 +89,71 @@ export function StageHeader() {
  * Between ticks it projects the bank forward at the current production, never past
  * where the next tick will land. It reads the store directly each frame and only
  * re-renders when the shown text changes, so the header itself stays still.
+ *
+ * The frame loop has to keep itself alive: on iOS a frame callback can be dropped (the
+ * app going to the background, the screen locking), and a single dropped or failed
+ * frame used to end the loop for good, leaving the counter frozen. So the next frame
+ * is asked for before any work, the loop restarts when the app comes back, and a slow
+ * timer restarts it if frames have stopped arriving.
  */
 const Bank = React.memo(() => {
     const [text, setText] = useState(() => formatBank(store.getState().values.emojis));
 
     useEffect(() => {
-        let frame: number;
+        let frame: number | undefined;
+        let lastFrameAt = Date.now();
         let shown = text;
 
-        const step = () => {
+        const update = () => {
             const { emojis, emojisPerSecond } = store.getState().values;
             // Projected from the last tick, not the last change: taps change the bank between
             // ticks, and restarting the projection on each one made the count crawl while tapping.
             // At most one game tick ahead, so it never runs past the real bank
             const sinceTick = (Date.now() - getLastTickTime()) / 1000;
-            const ahead = Math.min(sinceTick, 0.1) * emojisPerSecond * getGameSpeed();
+            const ahead = Math.min(Math.max(0, sinceTick), 0.1) * emojisPerSecond * getGameSpeed();
             const next = formatBank(emojis + Math.max(0, ahead));
             if (next !== shown) {
                 shown = next;
                 setText(next);
             }
+        };
+
+        const step = () => {
+            // Asked for first, so an error in the update can't end the loop
+            frame = requestAnimationFrame(step);
+            lastFrameAt = Date.now();
+            update();
+        };
+
+        const restart = () => {
+            if (frame !== undefined) cancelAnimationFrame(frame);
+            lastFrameAt = Date.now();
             frame = requestAnimationFrame(step);
         };
-        frame = requestAnimationFrame(step);
-        return () => cancelAnimationFrame(frame);
+
+        restart();
+        const appState = AppState.addEventListener("change", (state) => {
+            if (state === "active") restart();
+        });
+        // Backup: keeps the count moving and revives the loop if frames have stopped
+        const watchdog = setInterval(() => {
+            if (Date.now() - lastFrameAt < WATCHDOG_MS) return;
+            update();
+            restart();
+        }, WATCHDOG_MS);
+
+        return () => {
+            if (frame !== undefined) cancelAnimationFrame(frame);
+            appState.remove();
+            clearInterval(watchdog);
+        };
     }, []);
 
     return <>{text}</>;
 });
+
+// How often the bank's backup timer checks that frames are still arriving
+const WATCHDOG_MS = 500;
 
 /** Whole numbers with separators, then three decimals from a million up ("24.231 million") */
 const formatBank = (emojis: number) => emojis < 1e6 ? formatNumber(Math.floor(emojis)) : formatNumber(emojis, 3);
