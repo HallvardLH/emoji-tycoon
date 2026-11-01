@@ -34,7 +34,10 @@ export default function PrestigeMeter() {
             accessibilityLabel={ready ? t("prestige.chipLabelReady", { essence: pending }) : t("prestige.chipLabel")}
             style={({ pressed }) => [styles.chip, ready ? styles.chipReady : null, pressed ? { opacity: 0.8 } : null]}
         >
-            <Text size={18} style={{ lineHeight: 22 }}>✨</Text>
+            {/* On white once the pill turns yellow, where the yellow sparkles were hard to see */}
+            <View style={[styles.icon, ready ? styles.iconReady : null]}>
+                <Text size={16} style={{ lineHeight: 20 }}>✨</Text>
+            </View>
             <View style={styles.body}>
                 <Text font="black" size={12} color={ready ? palette.ink : "#FFFFFF"}>
                     {ready ? t("prestige.chipPending", { essence: pending }) : t("prestige.chipEssence")}
@@ -52,14 +55,24 @@ const styles = themedStyles(() => StyleSheet.create({
         flexDirection: "row",
         alignItems: "center",
         gap: 8,
-        paddingVertical: 6,
-        paddingLeft: 10,
+        paddingVertical: 4,
+        paddingLeft: 6,
         paddingRight: 12,
         borderRadius: radii.pill,
         backgroundColor: palette.glass,
     },
     chipReady: {
         backgroundColor: palette.sun,
+    },
+    icon: {
+        width: 28,
+        height: 28,
+        borderRadius: 14,
+        alignItems: "center",
+        justifyContent: "center",
+    },
+    iconReady: {
+        backgroundColor: "#FFFFFF",
     },
     body: {
         gap: 3,
