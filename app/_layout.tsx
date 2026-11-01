@@ -134,8 +134,9 @@ function LocalizedApp() {
             <Stack
                 screenOptions={{
                     header: () => <Header />,
-                    // iOS 26 headers are transparent by default, which slid the screens under the Header
-                    headerTransparent: false,
+                    // The screens run up under the Header, so the emoji rain falls behind it.
+                    // They start their content below it themselves (see headerHeight.ts)
+                    headerTransparent: true,
                 }}
             >
                 {/* Modals from the start. Set from inside the screens, they were pushed as regular

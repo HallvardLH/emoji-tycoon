@@ -12,6 +12,7 @@ import { formatNumber } from "../../scripts/misc";
 import { getGameSpeed, useGameSpeed } from "../../scripts/game/gameSpeed";
 import { getLastTickTime } from "../../scripts/game/gameLoop";
 import { useIsDesktop } from "../layout/desktop";
+import { setHeaderHeight } from "./headerHeight";
 import { palette, radii, themedStyles } from "../misc/theme";
 import { useTranslation } from "react-i18next";
 import i18n, { getLanguage } from "../../i18n";
@@ -29,11 +30,13 @@ export default function Header() {
     const isHome = pathname === "/";
     const isEmojidex = pathname.startsWith("/emojidex");
 
+    useEffect(() => { if (isDesktop) setHeaderHeight(0); }, [isDesktop]);
+
     // On desktop the counter and buttons sit above the Big Emoji instead (StageHeader)
     if (isDesktop) return null;
 
     return (
-        <SafeAreaView edges={["top"]} style={styles.container}>
+        <SafeAreaView edges={["top"]} style={styles.container} onLayout={event => setHeaderHeight(event.nativeEvent.layout.height)}>
             {isHome ? (
                 // Home: the bank is the hero
                 <HomeCounter />
@@ -234,7 +237,7 @@ const styles = themedStyles(() => StyleSheet.create({
         paddingTop: 18,
         paddingHorizontal: 20,
         paddingBottom: 4,
-        backgroundColor: palette.grape,
+        // No background: the emoji rain falls behind it
     },
     bigCounter: {
         gap: 4,

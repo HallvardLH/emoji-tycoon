@@ -10,9 +10,8 @@ import { View, StyleSheet } from "react-native";
 
 export default function Home() {
     return (
-        <ScreenView scrollView={false}>
-            {/* Behind everything, filling the stage */}
-            <EmojiRain />
+        // The rain is behind everything, filling the stage and up behind the Header
+        <ScreenView scrollView={false} behindHeader={<EmojiRain />}>
             <BigEmoji />
             {/* Floats over the stage so chips appearing don't shift the Big Emoji */}
             <View style={styles.overlay} pointerEvents="box-none">

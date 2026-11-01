@@ -3,11 +3,19 @@ import { ReactNode } from 'react';
 import { View, Dimensions, KeyboardAvoidingView, SafeAreaView, ScrollView, StyleSheet, StyleProp, TextStyle, StatusBar, Platform } from 'react-native';
 import GradientBackground from './GradientBackground';
 import { palette, themedStyles } from '../misc/theme';
+import { useHeaderHeight } from '../header/headerHeight';
 
 interface ScreenViewProps {
     children?: ReactNode;
     style?: StyleProp<TextStyle>;
     scrollView?: boolean;
+    /**
+     * Drawn behind the screen, reaching up under the transparent Header (the emoji rain).
+     * Such a screen isn't moved below the Header by its tab (see (tabs)/_layout.tsx),
+     * so its content is moved down here instead. The content isn't cut off at the Header
+     * either, so the spotlight and emojis flying off the Big Emoji carry on up behind it
+     */
+    behindHeader?: ReactNode;
 }
 
 export const HEADER_HEIGHT = 64 + (StatusBar.currentHeight ? StatusBar.currentHeight : 0);
@@ -16,19 +24,21 @@ export const TAB_BAR_HEIGHT = Platform.OS == "android" ? 100 : 120;
 export const SCREEN_HEIGHT = Dimensions.get("screen").height - (HEADER_HEIGHT + TAB_BAR_HEIGHT + 20);
 
 export default function ScreenView(props: ScreenViewProps) {
-    const { children, style, scrollView = true } = props;
+    const { children, style, scrollView = true, behindHeader } = props;
+    const headerHeight = useHeaderHeight();
 
     return (
         <View style={styles.container}>
             <GradientBackground />
-            <SafeAreaView style={{ flex: 1 }}>
+            {behindHeader}
+            <SafeAreaView style={{ flex: 1, marginTop: behindHeader ? headerHeight : 0 }}>
                 <KeyboardAvoidingView style={{ flex: 1 }}>
                     {scrollView ? (
                         <ScrollView contentContainerStyle={[styles.screenContainer, style]}>
                             {children}
                         </ScrollView>
                     ) : (
-                        <View style={[styles.screenContainer, style]}>
+                        <View style={[styles.screenContainer, behindHeader ? styles.showOverflow : null, style]}>
                             {children}
                         </View>
                     )}
@@ -42,6 +52,7 @@ const styles = themedStyles(() => StyleSheet.create({
     container: {
         flex: 1,
         backgroundColor: palette.grape,
+        overflow: "hidden",
     },
     screenContainer: {
         width: '100%',
@@ -54,5 +65,8 @@ const styles = themedStyles(() => StyleSheet.create({
         // marginTop: HEADER_HEIGHT,
         // marginBottom: TAB_BAR_HEIGHT,
         overflow: "hidden",
+    },
+    showOverflow: {
+        overflow: "visible",
     },
 }));
