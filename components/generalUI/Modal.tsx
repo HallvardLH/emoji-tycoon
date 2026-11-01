@@ -1,6 +1,6 @@
 import React, { createContext, useContext, useEffect, useRef } from 'react';
 import { ReactNode } from 'react';
-import { Modal as RNModal, View, StyleSheet, TouchableWithoutFeedback, Platform } from 'react-native';
+import { Modal as RNModal, View, StyleSheet, Pressable, Platform } from 'react-native';
 import CloseButton from './CloseButton';
 
 /**
@@ -69,20 +69,20 @@ export default function Modal(props: ModalProps) {
             onRequestClose={onRequestClose}
         >
             <CloseModalContext.Provider value={closeThen}>
-                <TouchableWithoutFeedback onPress={onRequestClose}>
-                    <View style={styles.fullScreenView}>
-                        <TouchableWithoutFeedback onPress={(e) => e.stopPropagation()}>
-                            <View style={styles.modalView}>
-                                {/* Above the card's right corner. Inside the modal's bounds, as
-                                    Android ignores taps on anything hanging outside its parent */}
-                                {!noExit && (
-                                    <CloseButton onPress={onRequestClose} style={styles.closeButton} />
-                                )}
-                                {children}
-                            </View>
-                        </TouchableWithoutFeedback>
+                <View style={styles.fullScreenView}>
+                    {/* Tapping outside the card closes it. A layer behind the card rather than a
+                        touchable around it: wrapping the card in one (to stop taps on it closing the
+                        modal) took every touch on the card, so lists in it couldn't be scrolled */}
+                    <Pressable style={StyleSheet.absoluteFill} onPress={onRequestClose} accessible={false} />
+                    <View style={styles.modalView}>
+                        {/* Above the card's right corner. Inside the modal's bounds, as
+                            Android ignores taps on anything hanging outside its parent */}
+                        {!noExit && (
+                            <CloseButton onPress={onRequestClose} style={styles.closeButton} />
+                        )}
+                        {children}
                     </View>
-                </TouchableWithoutFeedback>
+                </View>
             </CloseModalContext.Provider>
         </RNModal>
     );
