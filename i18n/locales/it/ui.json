@@ -487,6 +487,13 @@
         },
         "categoryLabel": "{{label}}, {{found}} su {{total}} trovati",
         "notFound": "Non ancora trovato",
+        "rarity": {
+            "common": "Comune",
+            "uncommon": "Non comune",
+            "rare": "Raro",
+            "epic": "Epico",
+            "legendary": "Leggendario"
+        },
         "cellLabel_one": "{{emoji}}, toccato {{count}} volta",
         "cellLabel_many": "{{emoji}}, toccato {{count}} volte",
         "cellLabel_other": "{{emoji}}, toccato {{count}} volte",
@@ -522,6 +529,7 @@
         "tapShinyLabel": "Tocca l'Emoji gigante brillante",
         "shiny": "Brillante",
         "shinyBurst": "Brillante!",
+        "newFindCaps": "Nuova scoperta!",
         "handsOff": "Sfida {{trial}} · i tocchi non disegnano nulla",
         "perTap": "+{{value}} per tocco"
     },

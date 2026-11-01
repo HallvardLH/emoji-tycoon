@@ -449,6 +449,13 @@
         },
         "categoryLabel": "{{label}}, {{total}} में से {{found}} मिले",
         "notFound": "अभी नहीं मिला",
+        "rarity": {
+            "common": "आम",
+            "uncommon": "असामान्य",
+            "rare": "दुर्लभ",
+            "epic": "महाकाव्य",
+            "legendary": "पौराणिक"
+        },
         "cellLabel_one": "{{emoji}}, {{count}} बार टैप किया",
         "cellLabel_other": "{{emoji}}, {{count}} बार टैप किया",
         "cellLabelShiny_one": "{{emoji}}, {{count}} बार टैप किया, {{shiny}} चमकीले",
@@ -481,6 +488,7 @@
         "tapShinyLabel": "चमकीले बड़े इमोजी को टैप करो",
         "shiny": "चमकीला",
         "shinyBurst": "चमकीला!",
+        "newFindCaps": "नई खोज!",
         "handsOff": "{{trial}} चुनौती · टैप से कुछ नहीं बनता",
         "perTap": "+{{value}} प्रति टैप"
     },

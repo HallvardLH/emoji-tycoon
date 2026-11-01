@@ -446,6 +446,13 @@
         },
         "categoryLabel": "{{label}}, {{found}} sa {{total}} ang nahanap",
         "notFound": "Hindi pa nahahanap",
+        "rarity": {
+            "common": "Karaniwan",
+            "uncommon": "Di-karaniwan",
+            "rare": "Bihira",
+            "epic": "Epiko",
+            "legendary": "Maalamat"
+        },
         "cellLabel_one": "{{emoji}}, na-tap nang {{count}} beses",
         "cellLabel_other": "{{emoji}}, na-tap nang {{count}} beses",
         "cellLabelShiny_one": "{{emoji}}, na-tap nang {{count}} beses, {{shiny}} makintab",
@@ -478,6 +485,7 @@
         "tapShinyLabel": "I-tap ang makintab na Malaking Emoji",
         "shiny": "Makintab",
         "shinyBurst": "Makintab!",
+        "newFindCaps": "Bagong tuklas!",
         "handsOff": "{{trial}} · walang naiguguhit ang tap",
         "perTap": "+{{value}} kada tap"
     },

@@ -527,6 +527,13 @@
         },
         "categoryLabel": "{{label}}, nalezeno {{found}} z {{total}}",
         "notFound": "Zatím nenalezeno",
+        "rarity": {
+            "common": "Běžné",
+            "uncommon": "Neobvyklé",
+            "rare": "Vzácné",
+            "epic": "Epické",
+            "legendary": "Legendární"
+        },
         "cellLabel_one": "{{emoji}}, ťuknuto {{count}}×",
         "cellLabel_few": "{{emoji}}, ťuknuto {{count}}×",
         "cellLabel_many": "{{emoji}}, ťuknuto {{count}}×",
@@ -565,6 +572,7 @@
         "tapShinyLabel": "Ťukni na třpytivé Velké emoji",
         "shiny": "Třpytivé",
         "shinyBurst": "Třpyt!",
+        "newFindCaps": "Nový nález!",
         "handsOff": "Zkouška {{trial}} · ťukání nic nenakreslí",
         "perTap": "+{{value}} za ťuknutí"
     },

@@ -448,6 +448,13 @@
         },
         "categoryLabel": "{{label}}, {{found}} of {{total}} found",
         "notFound": "Not found yet",
+        "rarity": {
+            "common": "Common",
+            "uncommon": "Uncommon",
+            "rare": "Rare",
+            "epic": "Epic",
+            "legendary": "Legendary"
+        },
         "cellLabel_one": "{{emoji}}, tapped {{count}} time",
         "cellLabel_other": "{{emoji}}, tapped {{count}} times",
         "cellLabelShiny_one": "{{emoji}}, tapped {{count}} time, {{shiny}} shiny",
@@ -480,6 +487,7 @@
         "tapShinyLabel": "Tap the shiny Big Emoji",
         "shiny": "Shiny",
         "shinyBurst": "Shiny!",
+        "newFindCaps": "New find!",
         "handsOff": "{{trial}} trial · taps draw nothing",
         "perTap": "+{{value}} per tap"
     },

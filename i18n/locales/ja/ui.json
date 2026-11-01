@@ -398,6 +398,13 @@
         },
         "categoryLabel": "{{label}}、{{total}}個中{{found}}個発見",
         "notFound": "まだ見つかっていません",
+        "rarity": {
+            "common": "コモン",
+            "uncommon": "アンコモン",
+            "rare": "レア",
+            "epic": "エピック",
+            "legendary": "レジェンド"
+        },
         "cellLabel_other": "{{emoji}}、{{count}}回タップ",
         "cellLabelShiny_other": "{{emoji}}、{{count}}回タップ、キラキラ{{shiny}}個"
     },
@@ -427,6 +434,7 @@
         "tapShinyLabel": "キラキラの大きな絵文字をタップ",
         "shiny": "キラキラ",
         "shinyBurst": "キラキラ！",
+        "newFindCaps": "新発見！",
         "handsOff": "試練「{{trial}}」 · タップしても描けない",
         "perTap": "タップごとに+{{value}}"
     },

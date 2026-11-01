@@ -527,6 +527,13 @@
         },
         "categoryLabel": "{{label}}, найдено {{found}} из {{total}}",
         "notFound": "Еще не найдено",
+        "rarity": {
+            "common": "Обычный",
+            "uncommon": "Необычный",
+            "rare": "Редкий",
+            "epic": "Эпический",
+            "legendary": "Легендарный"
+        },
         "cellLabel_one": "{{emoji}}, тапнуто {{count}} раз",
         "cellLabel_few": "{{emoji}}, тапнуто {{count}} раза",
         "cellLabel_many": "{{emoji}}, тапнуто {{count}} раз",
@@ -565,6 +572,7 @@
         "tapShinyLabel": "Тапнуть блестящее Большое эмодзи",
         "shiny": "Блестящее",
         "shinyBurst": "Блеск!",
+        "newFindCaps": "Новая находка!",
         "handsOff": "Испытание \"{{trial}}\" · тапы ничего не рисуют",
         "perTap": "+{{value}} за тап"
     },

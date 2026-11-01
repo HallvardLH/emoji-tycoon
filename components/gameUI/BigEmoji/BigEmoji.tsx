@@ -12,7 +12,8 @@ import { TapSparks, Spark, makeSparks } from './TapSparks';
 import Svg, { Defs, RadialGradient, Stop, Circle } from 'react-native-svg';
 import GameText from '../../generalUI/Text';
 import { getComboProgress, getMaxComboMultiplier, hasCombo, BOOST_PER_MULTIPLIER } from '../../../scripts/game/tapBoost';
-import EffectBurst from '../EffectBurst';
+import EffectBurst, { Celebration } from '../EffectBurst';
+import { Rarity, RARITY_COLORS } from '../../../scripts/game/collection/rarity';
 import ComboRain from './ComboRain';
 import store from '../../../scripts/redux/reduxStore';
 import { howFun } from '../../../scripts/game/shorthands';
@@ -71,6 +72,41 @@ function comboNumberStyle(multiplier: number) {
     return { color: colors[level], size: 26 + level * 5 };
 }
 
+type Burst = { id: number } & (
+    | { kind: "shiny", amount: number }
+    | { kind: "gem" }
+    | { kind: "find", emoji: string, rarity: Rarity }
+);
+
+/** What a burst over the Big Emoji says: a shiny's bonus, a tap gem, or a first find of a rare emoji */
+function burstCelebration(burst: Burst): Celebration {
+    switch (burst.kind) {
+        case "gem":
+            return {
+                value: "+1",
+                caption: toCaps(i18n.t("gems.gemCaps")),
+                sparks: ["💎", "✨", "💠", "⭐", "💎", "✨", "💠", "⭐", "💎", "✨", "💠", "⭐"],
+                color: "#7DD3FC",
+            };
+        case "find":
+            return {
+                headline: `🆕 ${toCaps(i18n.t("bigEmoji.newFindCaps"))}`,
+                value: burst.emoji,
+                caption: toCaps(i18n.t(`collection.rarity.${burst.rarity}`)),
+                sparks: Array.from({ length: 12 }, (_, i) => i % 2 === 0 ? burst.emoji : "✨"),
+                color: RARITY_COLORS[burst.rarity],
+            };
+        case "shiny":
+            return {
+                headline: `✨ ${toCaps(i18n.t("bigEmoji.shinyBurst"))}`,
+                value: `+${formatNumber(burst.amount < 1e6 ? Math.floor(burst.amount) : burst.amount, 1)}`,
+                caption: toCaps(i18n.t("header.emojis")),
+                sparks: ["✨", "🌟", "💛", "⭐", "🪙", "✨", "🌟", "💛", "⭐", "🪙", "✨", "🌟"],
+                color: palette.sun,
+            };
+    }
+}
+
 export default function BigEmoji() {
     // Select only what this renders. The bigEmoji slice also holds the combo, which
     // changes every 100ms; subscribing to the whole slice re-rendered the entire
@@ -100,7 +136,7 @@ export default function BigEmoji() {
 
     // Celebrations for shiny emojis that were just tapped
     // (and the gem every 500th tap, which celebrates the same way)
-    const [shinyBursts, setShinyBursts] = useState<{ id: number, amount: number, gem?: boolean }[]>([]);
+    const [shinyBursts, setShinyBursts] = useState<Burst[]>([]);
 
     const animatingSparks = useRef<AnimatedSparks[]>([]);
 
@@ -233,14 +269,16 @@ export default function BigEmoji() {
         rings[ring].setValue(0);
         Animated.timing(rings[ring], { toValue: 1, duration: RING_MS, easing: Easing.out(Easing.quad), useNativeDriver: true }).start();
 
-        const { shinyReward, tapGem } = tapEmoji();
-        if (shinyReward === undefined && !tapGem) {
+        const { shinyReward, tapGem, newFind } = tapEmoji();
+        if (shinyReward === undefined && !tapGem && !newFind) {
             playTapSound();
         } else {
             playShinySound();
             Haptics.notificationAsync(Haptics.NotificationFeedbackType.Success);
-            if (shinyReward !== undefined) setShinyBursts(current => [...current, { id: Date.now() + Math.random(), amount: shinyReward }]);
-            if (tapGem) setShinyBursts(current => [...current, { id: Date.now() + Math.random(), amount: 1, gem: true }]);
+            const id = () => Date.now() + Math.random();
+            if (shinyReward !== undefined) setShinyBursts(current => [...current, { id: id(), kind: "shiny", amount: shinyReward }]);
+            if (tapGem) setShinyBursts(current => [...current, { id: id(), kind: "gem" }]);
+            if (newFind) setShinyBursts(current => [...current, { id: id(), kind: "find", ...newFind }]);
         }
     }, [staticEmoji, emojisPerTapDisplay]);
 
@@ -338,13 +376,7 @@ export default function BigEmoji() {
                 {shinyBursts.map(burst => (
                     <EffectBurst
                         key={burst.id}
-                        headline={burst.gem ? undefined : `✨ ${toCaps(i18n.t("bigEmoji.shinyBurst"))}`}
-                        value={burst.gem ? "+1" : `+${formatNumber(burst.amount < 1e6 ? Math.floor(burst.amount) : burst.amount, 1)}`}
-                        caption={burst.gem ? toCaps(i18n.t("gems.gemCaps")) : toCaps(i18n.t("header.emojis"))}
-                        sparks={burst.gem
-                            ? ["💎", "✨", "💠", "⭐", "💎", "✨", "💠", "⭐", "💎", "✨", "💠", "⭐"]
-                            : ["✨", "🌟", "💛", "⭐", "🪙", "✨", "🌟", "💛", "⭐", "🪙", "✨", "🌟"]}
-                        color={burst.gem ? "#7DD3FC" : palette.sun}
+                        {...burstCelebration(burst)}
                         x={DISC / 2}
                         y={DISC / 2}
                         onDone={() => setShinyBursts(current => current.filter(b => b.id !== burst.id))}

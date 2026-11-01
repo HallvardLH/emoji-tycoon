@@ -405,6 +405,13 @@
         },
         "categoryLabel": "{{label}}, đã tìm thấy {{found}}/{{total}}",
         "notFound": "Chưa tìm thấy",
+        "rarity": {
+            "common": "Thường",
+            "uncommon": "Không phổ biến",
+            "rare": "Hiếm",
+            "epic": "Sử thi",
+            "legendary": "Huyền thoại"
+        },
         "cellLabel_other": "{{emoji}}, đã chạm {{count}} lần",
         "cellLabelShiny_other": "{{emoji}}, đã chạm {{count}} lần, {{shiny}} lấp lánh"
     },
@@ -434,6 +441,7 @@
         "tapShinyLabel": "Chạm Emoji khổng lồ lấp lánh",
         "shiny": "Lấp lánh",
         "shinyBurst": "Lấp lánh!",
+        "newFindCaps": "Phát hiện mới!",
         "handsOff": "Thử thách {{trial}} · chạm không vẽ được gì",
         "perTap": "+{{value}} mỗi lần chạm"
     },

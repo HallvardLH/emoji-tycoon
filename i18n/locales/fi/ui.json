@@ -445,6 +445,13 @@
         },
         "categoryLabel": "{{label}}, {{found}}/{{total}} löydetty",
         "notFound": "Ei vielä löydetty",
+        "rarity": {
+            "common": "Yleinen",
+            "uncommon": "Epätavallinen",
+            "rare": "Harvinainen",
+            "epic": "Eeppinen",
+            "legendary": "Legendaarinen"
+        },
         "cellLabel_one": "{{emoji}}, napautettu {{count}} kerran",
         "cellLabel_other": "{{emoji}}, napautettu {{count}} kertaa",
         "cellLabelShiny_one": "{{emoji}}, napautettu {{count}} kerran, kiiltäviä {{shiny}}",
@@ -477,6 +484,7 @@
         "tapShinyLabel": "Napauta kiiltävää isoa emojia",
         "shiny": "Kiiltävä",
         "shinyBurst": "Kiiltävä!",
+        "newFindCaps": "Uusi löytö!",
         "handsOff": "Haaste: {{trial}} · napautukset eivät piirrä mitään",
         "perTap": "+{{value}} / napautus"
     },

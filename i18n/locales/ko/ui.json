@@ -398,6 +398,13 @@
         },
         "categoryLabel": "{{label}}, {{total}}개 중 {{found}}개 발견",
         "notFound": "아직 발견 못 함",
+        "rarity": {
+            "common": "일반",
+            "uncommon": "고급",
+            "rare": "희귀",
+            "epic": "영웅",
+            "legendary": "전설"
+        },
         "cellLabel_other": "{{emoji}}, {{count}}번 탭함",
         "cellLabelShiny_other": "{{emoji}}, {{count}}번 탭함, 반짝이 {{shiny}}개"
     },
@@ -427,6 +434,7 @@
         "tapShinyLabel": "반짝이는 큰 이모지 탭하기",
         "shiny": "반짝이",
         "shinyBurst": "반짝!",
+        "newFindCaps": "새로운 발견!",
         "handsOff": "{{trial}} 시련 · 탭해도 안 그려져요",
         "perTap": "탭당 +{{value}}"
     },

@@ -449,6 +449,13 @@
         },
         "categoryLabel": "{{label}}, {{total}}টির মধ্যে {{found}}টি পাওয়া গেছে",
         "notFound": "এখনো পাওয়া যায়নি",
+        "rarity": {
+            "common": "সাধারণ",
+            "uncommon": "অসাধারণ",
+            "rare": "বিরল",
+            "epic": "মহাকাব্যিক",
+            "legendary": "কিংবদন্তি"
+        },
         "cellLabel_one": "{{emoji}}, {{count}} বার ট্যাপ করা",
         "cellLabel_other": "{{emoji}}, {{count}} বার ট্যাপ করা",
         "cellLabelShiny_one": "{{emoji}}, {{count}} বার ট্যাপ করা, {{shiny}} ঝকঝকে",
@@ -481,6 +488,7 @@
         "tapShinyLabel": "ঝকঝকে বড় ইমোজিতে ট্যাপ করো",
         "shiny": "ঝকঝকে",
         "shinyBurst": "ঝকঝকে!",
+        "newFindCaps": "নতুন আবিষ্কার!",
         "handsOff": "{{trial}} চ্যালেঞ্জ · ট্যাপে কিছু আঁকা হয় না",
         "perTap": "প্রতি ট্যাপে +{{value}}"
     },

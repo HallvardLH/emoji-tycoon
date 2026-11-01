@@ -445,6 +445,13 @@
         },
         "categoryLabel": "{{label}}, {{found}} af {{total}} fundet",
         "notFound": "Ikke fundet endnu",
+        "rarity": {
+            "common": "Almindelig",
+            "uncommon": "Usædvanlig",
+            "rare": "Sjælden",
+            "epic": "Episk",
+            "legendary": "Legendarisk"
+        },
         "cellLabel_one": "{{emoji}}, trykket {{count}} gang",
         "cellLabel_other": "{{emoji}}, trykket {{count}} gange",
         "cellLabelShiny_one": "{{emoji}}, trykket {{count}} gang, {{shiny}} skinnende",
@@ -477,6 +484,7 @@
         "tapShinyLabel": "Tryk på den skinnende store emoji",
         "shiny": "Skinnende",
         "shinyBurst": "Skinnende!",
+        "newFindCaps": "Nyt fund!",
         "handsOff": "Prøvelsen {{trial}} · tryk tegner intet",
         "perTap": "+{{value}} pr. tryk"
     },

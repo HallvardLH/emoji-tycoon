@@ -487,6 +487,13 @@
         },
         "categoryLabel": "{{label}}, {{found}} sur {{total}} trouvés",
         "notFound": "Pas encore trouvé",
+        "rarity": {
+            "common": "Commun",
+            "uncommon": "Peu commun",
+            "rare": "Rare",
+            "epic": "Épique",
+            "legendary": "Légendaire"
+        },
         "cellLabel_one": "{{emoji}}, tapoté {{count}} fois",
         "cellLabel_many": "{{emoji}}, tapoté {{count}} fois",
         "cellLabel_other": "{{emoji}}, tapoté {{count}} fois",
@@ -522,6 +529,7 @@
         "tapShinyLabel": "Tapote le Gros emoji brillant",
         "shiny": "Brillant",
         "shinyBurst": "Brillant !",
+        "newFindCaps": "Nouvelle trouvaille !",
         "handsOff": "Épreuve {{trial}} · les tapotements ne dessinent rien",
         "perTap": "+{{value}} par tapotement"
     },

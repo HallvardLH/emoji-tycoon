@@ -445,6 +445,13 @@
         },
         "categoryLabel": "{{label}}, {{found}} av {{total}} funnet",
         "notFound": "Ikke funnet ennå",
+        "rarity": {
+            "common": "Vanlig",
+            "uncommon": "Uvanlig",
+            "rare": "Sjelden",
+            "epic": "Episk",
+            "legendary": "Legendarisk"
+        },
         "cellLabel_one": "{{emoji}}, trykket {{count}} gang",
         "cellLabel_other": "{{emoji}}, trykket {{count}} ganger",
         "cellLabelShiny_one": "{{emoji}}, trykket {{count}} gang, {{shiny}} skinnende",
@@ -477,6 +484,7 @@
         "tapShinyLabel": "Trykk på den skinnende store emojien",
         "shiny": "Skinnende",
         "shinyBurst": "Skinnende!",
+        "newFindCaps": "Nytt funn!",
         "handsOff": "Utfordring: {{trial}} · trykk tegner ingenting",
         "perTap": "+{{value}} per trykk"
     },

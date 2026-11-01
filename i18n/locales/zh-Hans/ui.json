@@ -398,6 +398,13 @@
         },
         "categoryLabel": "{{label}}，已发现{{found}}/{{total}}",
         "notFound": "尚未发现",
+        "rarity": {
+            "common": "普通",
+            "uncommon": "优秀",
+            "rare": "稀有",
+            "epic": "史诗",
+            "legendary": "传说"
+        },
         "cellLabel_other": "{{emoji}}，已点击{{count}}次",
         "cellLabelShiny_other": "{{emoji}}，已点击{{count}}次，{{shiny}}个闪光"
     },
@@ -427,6 +434,7 @@
         "tapShinyLabel": "点击闪光大表情",
         "shiny": "闪光",
         "shinyBurst": "闪光！",
+        "newFindCaps": "新发现！",
         "handsOff": "{{trial}}挑战 · 点击画不出表情",
         "perTap": "每次点击+{{value}}"
     },

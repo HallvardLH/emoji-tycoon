@@ -609,6 +609,13 @@
         },
         "categoryLabel": "{{label}}، {{found}} من {{total}} مكتشفة",
         "notFound": "لم يكتشف بعد",
+        "rarity": {
+            "common": "شائع",
+            "uncommon": "غير شائع",
+            "rare": "نادر",
+            "epic": "ملحمي",
+            "legendary": "أسطوري"
+        },
         "cellLabel_zero": "{{emoji}}، نقرت {{count}} مرة",
         "cellLabel_one": "{{emoji}}، نقرت {{count}} مرة",
         "cellLabel_two": "{{emoji}}، نقرت {{count}} مرة",
@@ -653,6 +660,7 @@
         "tapShinyLabel": "انقر على الإيموجي الكبير اللامع",
         "shiny": "لامع",
         "shinyBurst": "لامع!",
+        "newFindCaps": "اكتشاف جديد!",
         "handsOff": "تحدي {{trial}} · النقر لا يرسم شيئا",
         "perTap": "+{{value}} لكل نقرة"
     },

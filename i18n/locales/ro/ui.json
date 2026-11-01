@@ -487,6 +487,13 @@
         },
         "categoryLabel": "{{label}}, {{found}} din {{total}} găsite",
         "notFound": "Negăsit încă",
+        "rarity": {
+            "common": "Comun",
+            "uncommon": "Neobișnuit",
+            "rare": "Rar",
+            "epic": "Epic",
+            "legendary": "Legendar"
+        },
         "cellLabel_one": "{{emoji}}, atingeri: {{count}}",
         "cellLabel_few": "{{emoji}}, atingeri: {{count}}",
         "cellLabel_other": "{{emoji}}, atingeri: {{count}}",
@@ -522,6 +529,7 @@
         "tapShinyLabel": "Atinge Emoji-ul mare strălucitor",
         "shiny": "Strălucitor",
         "shinyBurst": "Strălucitor!",
+        "newFindCaps": "Descoperire nouă!",
         "handsOff": "Proba {{trial}} · atingerile nu desenează nimic",
         "perTap": "+{{value}} pe atingere"
     },

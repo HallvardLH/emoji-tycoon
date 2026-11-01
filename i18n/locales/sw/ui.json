@@ -445,6 +445,13 @@
         },
         "categoryLabel": "{{label}}, {{found}} kati ya {{total}} zimepatikana",
         "notFound": "Bado haijapatikana",
+        "rarity": {
+            "common": "Kawaida",
+            "uncommon": "Si kawaida",
+            "rare": "Adimu",
+            "epic": "Kuu",
+            "legendary": "Hadithi"
+        },
         "cellLabel_one": "{{emoji}}, imeguswa mara {{count}}",
         "cellLabel_other": "{{emoji}}, imeguswa mara {{count}}",
         "cellLabelShiny_one": "{{emoji}}, imeguswa mara {{count}}, zinazong'aa: {{shiny}}",
@@ -477,6 +484,7 @@
         "tapShinyLabel": "Gusa Emoji kubwa inayong'aa",
         "shiny": "Inang'aa",
         "shinyBurst": "Inang'aa!",
+        "newFindCaps": "Ugunduzi mpya!",
         "handsOff": "Jaribio la {{trial}} · miguso haichori kitu",
         "perTap": "+{{value}} kwa mguso"
     },

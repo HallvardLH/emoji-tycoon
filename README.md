@@ -50,7 +50,14 @@ The header shows your bank, with the per-second rate at a fixed position under i
 
 ### The Big Emoji
 - **Tapping:** every tap swaps it for a new random emoji, and the tapped one is added to your Collection.
-- **Weighted picks:** categories are weighted (faces 30, animals/food 20, objects 15, … symbols 3), about 1,600 emojis in total.
+- **Rarity:** every emoji is common, uncommon, rare, epic or legendary, which sets how often it turns up (`scripts/game/collection/rarity.ts`). It's worked out from the emoji, the same for everyone, with nothing stored:
+  1. **Legendary** (29): hand-picked treasures, myths and wonders (🦄🐉👑💎🔮🌈🛸🗿…).
+  2. **Epic** (94): hand-picked special ones (🦋🌟🎆💍🗝️…) and the newest emojis (Emoji 14+).
+  3. Newer emojis are rarer: Emoji 12 - 13.1 are **rare**, Emoji 5 - 11 **uncommon**.
+  4. The classics are mostly **common**, with a fixed share (by a hash of the emoji) uncommon or rare.
+- **Weighted picks:** each emoji's chance is its rarity's weight (common 100, uncommon 45, rare 20, epic 7, legendary 2.5) times a mild category bias (faces 1.5, animals/food 1.25, people 0.85, symbols 0.75, the rest 1), out of all ~1,600 collectible emojis. Some legendary turns up about once in 1,400 taps, a given one about once in 30,000 - 55,000; half the collection takes ~1,500 taps, all of it ~170,000.
+- **New finds:** the first time you tap a rare, epic or legendary emoji, a "🆕 NEW FIND!" burst shows it with its rarity, in the rarity's color.
+- **Discovery** (gem power) picks undiscovered emojis by the same weights, so it finds rare ones sooner without handing out every legendary.
 - **Reserved emojis:** effect emojis (🚀🦾🍀😈💣🎁) are never picked, so they stay special.
 - **Tap feel:**
   - The emoji squishes while pressed and springs back with a wobble.
@@ -184,7 +191,7 @@ None appear until **Good vibes** is bought. Like Cookie Clicker's golden cookie 
 - **First building:** buying your first building also gets one.
 
 ### Collection and Stats
-- **Collection:** a grid of every emoji by category, with filter chips (wrapping), found / total and %, a shiny count, and per-emoji tap counts.
+- **Collection:** a grid of every emoji by category, with filter chips (wrapping), found / total and %, found / total per rarity, a shiny count, and per-emoji tap counts. Each found emoji has a strip in its rarity's color (grey, green, blue, purple, gold), and missing ones that aren't common show a "?" in their rarity's color.
 - **Stats:**
   - total emojis drawn
   - taps

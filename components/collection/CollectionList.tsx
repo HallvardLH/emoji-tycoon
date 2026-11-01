@@ -6,6 +6,7 @@ import { RootState } from "../../scripts/redux/reduxStore";
 import { CollectionState } from "../../scripts/redux/collectionSlice";
 import { emojiCategories } from "../../scripts/game/collection/emojiCategories";
 import { isCollectible } from "../../scripts/game/collection/emojiSupport";
+import { RARITIES, RARITY_COLORS, Rarity, rarityOf } from "../../scripts/game/collection/rarity";
 import { palette, radii, themedStyles } from "../misc/theme";
 import { useTranslation } from "react-i18next";
 import { formatNumber } from "../../scripts/misc";
@@ -27,7 +28,7 @@ const categoryInfo: Record<string, { icon: string }> = {
 
 const COLUMNS = 6;
 
-type Cell = { key: string, emoji?: string, index?: number, count: number, shiny?: number };
+type Cell = { key: string, emoji?: string, index?: number, count: number, shiny?: number, rarity?: Rarity };
 
 export default function CollectionList() {
     // Every tap adds to the collection; rebuilding ~1,600 cells per tap made tapping lag
@@ -40,7 +41,7 @@ export default function CollectionList() {
     const categories = useMemo(() => Object.keys(categoryInfo).map(name => {
         const counts = collection[name as keyof CollectionState] ?? [];
         const cells: Cell[] = emojiCategories[name]
-            .map((emoji, index) => ({ key: `${name}-${index}`, emoji, index, count: counts[index]?.amount ?? 0, shiny: counts[index]?.shiny ?? 0 }))
+            .map((emoji, index) => ({ key: `${name}-${index}`, emoji, index, count: counts[index]?.amount ?? 0, shiny: counts[index]?.shiny ?? 0, rarity: rarityOf(name, index) }))
             .filter(cell => isCollectible(name, cell.index));
         return { name, cells, found: cells.filter(cell => cell.count > 0).length };
     }), [collection]);
@@ -52,6 +53,12 @@ export default function CollectionList() {
     const mostTapped = categories
         .flatMap(c => c.cells)
         .reduce<Cell | undefined>((best, cell) => cell.count > (best?.count ?? 0) ? cell : best, undefined);
+
+    // Found / total for each rarity, across every category
+    const byRarity = RARITIES.map(rarity => {
+        const cellsOfRarity = categories.flatMap(c => c.cells).filter(cell => cell.rarity === rarity);
+        return { rarity, total: cellsOfRarity.length, found: cellsOfRarity.filter(cell => cell.count > 0).length };
+    });
 
     const active = categories.find(c => c.name === category) ?? categories[0];
     // Pad the last row so every cell keeps the same width
@@ -75,6 +82,16 @@ export default function CollectionList() {
                     {mostTapped ? t("collection.mostTapped", { emoji: mostTapped.emoji, count: mostTapped.count, amount: formatNumber(mostTapped.count) }) : t("collection.startCollecting")}
                     {shinyFound > 0 ? `  ·  ✨ ${t("collection.shinyFound", { count: shinyFound, amount: formatNumber(shinyFound) })}` : ""}
                 </Text>
+                <View style={styles.rarities}>
+                    {byRarity.map(({ rarity, found, total: ofRarity }) => (
+                        <View key={rarity} style={styles.rarity}>
+                            <View style={[styles.rarityDot, { backgroundColor: RARITY_COLORS[rarity] }]} />
+                            <Text font="bold" size={12} color={palette.muted}>
+                                {t(`collection.rarity.${rarity}`)} {found}/{ofRarity}
+                            </Text>
+                        </View>
+                    ))}
+                </View>
             </View>
 
             <View style={styles.chips}>
@@ -113,10 +130,17 @@ export default function CollectionList() {
             initialNumToRender={48}
             renderItem={({ item }) => {
                 if (item.count < 0) return <View style={styles.cellPad} />;
+                const rarity = item.rarity ?? "common";
+                const rarityName = t(`collection.rarity.${rarity}`);
+                // Missing ones show their rarity too, so you know when a legendary is still out there
                 if (item.count === 0) {
+                    const notCommon = rarity !== "common";
                     return (
-                        <View style={styles.missing} accessibilityLabel={t("collection.notFound")}>
-                            <Text size={18} color="rgba(255,255,255,0.3)">?</Text>
+                        <View
+                            style={[styles.missing, notCommon ? { borderColor: RARITY_COLORS[rarity] } : null]}
+                            accessibilityLabel={`${t("collection.notFound")}, ${rarityName}`}
+                        >
+                            <Text size={18} color={notCommon ? RARITY_COLORS[rarity] : "rgba(255,255,255,0.3)"}>?</Text>
                         </View>
                     );
                 }
@@ -124,10 +148,11 @@ export default function CollectionList() {
                 return (
                     <View
                         style={[styles.found, shiny ? styles.foundShiny : null]}
-                        accessibilityLabel={shiny
+                        accessibilityLabel={`${shiny
                             ? t("collection.cellLabelShiny", { emoji: item.emoji, count: item.count, shiny: item.shiny })
-                            : t("collection.cellLabel", { emoji: item.emoji, count: item.count })}
+                            : t("collection.cellLabel", { emoji: item.emoji, count: item.count })}, ${rarityName}`}
                     >
+                        <View style={[styles.rarityStrip, { backgroundColor: RARITY_COLORS[rarity] }]} />
                         <Text size={28} style={{ lineHeight: 34 }}>{item.emoji}</Text>
                         {shiny && <Text size={13} style={styles.shinyMark}>✨</Text>}
                         <View style={styles.countBadge}>
@@ -176,6 +201,31 @@ const styles = themedStyles(() => StyleSheet.create({
         height: 10,
         borderRadius: 10,
         backgroundColor: palette.violet,
+    },
+    rarities: {
+        flexDirection: "row",
+        flexWrap: "wrap",
+        columnGap: 12,
+        rowGap: 4,
+    },
+    rarity: {
+        flexDirection: "row",
+        alignItems: "center",
+        gap: 5,
+    },
+    rarityDot: {
+        width: 8,
+        height: 8,
+        borderRadius: 4,
+    },
+    // Along the bottom of a found emoji's cell, in its rarity's color
+    rarityStrip: {
+        position: "absolute",
+        left: 10,
+        right: 10,
+        bottom: 3,
+        height: 3,
+        borderRadius: 2,
     },
     chips: {
         flexDirection: "row",

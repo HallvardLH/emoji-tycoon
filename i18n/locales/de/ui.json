@@ -445,6 +445,13 @@
         },
         "categoryLabel": "{{label}}, {{found}} von {{total}} gefunden",
         "notFound": "Noch nicht gefunden",
+        "rarity": {
+            "common": "Gewöhnlich",
+            "uncommon": "Ungewöhnlich",
+            "rare": "Selten",
+            "epic": "Episch",
+            "legendary": "Legendär"
+        },
         "cellLabel_one": "{{emoji}}, {{count}}-mal getippt",
         "cellLabel_other": "{{emoji}}, {{count}}-mal getippt",
         "cellLabelShiny_one": "{{emoji}}, {{count}}-mal getippt, {{shiny}} glänzend",
@@ -477,6 +484,7 @@
         "tapShinyLabel": "Tippe auf das glänzende Große Emoji",
         "shiny": "Glänzend",
         "shinyBurst": "Glanz!",
+        "newFindCaps": "Neuer Fund!",
         "handsOff": "Prüfung {{trial}} · Tippen zeichnet nichts",
         "perTap": "+{{value}} pro Tipp"
     },

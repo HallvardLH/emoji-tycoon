@@ -446,6 +446,13 @@
         },
         "categoryLabel": "{{label}}, {{found}} / {{total}} megtalálva",
         "notFound": "Még nem találtad meg",
+        "rarity": {
+            "common": "Gyakori",
+            "uncommon": "Szokatlan",
+            "rare": "Ritka",
+            "epic": "Epikus",
+            "legendary": "Legendás"
+        },
         "cellLabel_one": "{{emoji}}, koppintva: {{count}}",
         "cellLabel_other": "{{emoji}}, koppintva: {{count}}",
         "cellLabelShiny_one": "{{emoji}}, koppintva: {{count}}, csillogó: {{shiny}}",
@@ -478,6 +485,7 @@
         "tapShinyLabel": "Koppintsd a csillogó Nagy emojit",
         "shiny": "Csillogó",
         "shinyBurst": "Csillogó!",
+        "newFindCaps": "Új lelet!",
         "handsOff": "{{trial}} próba · a koppintás nem rajzol",
         "perTap": "+{{value}} koppintásonként"
     },

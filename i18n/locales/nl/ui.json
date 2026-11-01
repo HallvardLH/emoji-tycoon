@@ -445,6 +445,13 @@
         },
         "categoryLabel": "{{label}}, {{found}} van {{total}} gevonden",
         "notFound": "Nog niet gevonden",
+        "rarity": {
+            "common": "Gewoon",
+            "uncommon": "Ongewoon",
+            "rare": "Zeldzaam",
+            "epic": "Episch",
+            "legendary": "Legendarisch"
+        },
         "cellLabel_one": "{{emoji}}, {{count}} keer getikt",
         "cellLabel_other": "{{emoji}}, {{count}} keer getikt",
         "cellLabelShiny_one": "{{emoji}}, {{count}} keer getikt, {{shiny}} glimmend",
@@ -477,6 +484,7 @@
         "tapShinyLabel": "Tik op de glimmende grote emoji",
         "shiny": "Glimmend",
         "shinyBurst": "Glimmer!",
+        "newFindCaps": "Nieuwe vondst!",
         "handsOff": "Uitdaging {{trial}} · tikken tekent niets",
         "perTap": "+{{value}} per tik"
     },

@@ -404,6 +404,13 @@
         },
         "categoryLabel": "{{label}}, พบ {{found}} จาก {{total}}",
         "notFound": "ยังไม่พบ",
+        "rarity": {
+            "common": "ธรรมดา",
+            "uncommon": "ไม่ธรรมดา",
+            "rare": "หายาก",
+            "epic": "มหากาพย์",
+            "legendary": "ตำนาน"
+        },
         "cellLabel_other": "{{emoji}}, แตะไป {{count}} ครั้ง",
         "cellLabelShiny_other": "{{emoji}}, แตะไป {{count}} ครั้ง, แวววาว {{shiny}}"
     },
@@ -433,6 +440,7 @@
         "tapShinyLabel": "แตะอีโมจิยักษ์แวววาว",
         "shiny": "แวววาว",
         "shinyBurst": "แวววาว!",
+        "newFindCaps": "ค้นพบใหม่!",
         "handsOff": "บททดสอบ{{trial}} · แตะแล้วไม่ได้อะไร",
         "perTap": "+{{value}} ต่อการแตะ"
     },

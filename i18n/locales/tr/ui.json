@@ -445,6 +445,13 @@
         },
         "categoryLabel": "{{label}}, {{found}}/{{total}} bulundu",
         "notFound": "Henüz bulunmadı",
+        "rarity": {
+            "common": "Yaygın",
+            "uncommon": "Sıra dışı",
+            "rare": "Nadir",
+            "epic": "Destansı",
+            "legendary": "Efsanevi"
+        },
         "cellLabel_one": "{{emoji}}, {{count}} kez dokunuldu",
         "cellLabel_other": "{{emoji}}, {{count}} kez dokunuldu",
         "cellLabelShiny_one": "{{emoji}}, {{count}} kez dokunuldu, {{shiny}} parlak",
@@ -477,6 +484,7 @@
         "tapShinyLabel": "Parlak Büyük Emoji'ye dokun",
         "shiny": "Parlak",
         "shinyBurst": "Parlak!",
+        "newFindCaps": "Yeni keşif!",
         "handsOff": "{{trial}} sınavı · dokunuşlar hiçbir şey çizmez",
         "perTap": "Dokunuş başına +{{value}}"
     },

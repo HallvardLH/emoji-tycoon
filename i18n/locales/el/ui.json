@@ -445,6 +445,13 @@
         },
         "categoryLabel": "{{label}}, βρέθηκαν {{found}} από {{total}}",
         "notFound": "Δεν βρέθηκε ακόμα",
+        "rarity": {
+            "common": "Κοινό",
+            "uncommon": "Ασυνήθιστο",
+            "rare": "Σπάνιο",
+            "epic": "Επικό",
+            "legendary": "Θρυλικό"
+        },
         "cellLabel_one": "{{emoji}}, πατήθηκε {{count}} φορά",
         "cellLabel_other": "{{emoji}}, πατήθηκε {{count}} φορές",
         "cellLabelShiny_one": "{{emoji}}, πατήθηκε {{count}} φορά, {{shiny}} λαμπερά",
@@ -477,6 +484,7 @@
         "tapShinyLabel": "Πάτα το λαμπερό Μεγάλο emoji",
         "shiny": "Λαμπερό",
         "shinyBurst": "Λαμπερό!",
+        "newFindCaps": "Νέο εύρημα!",
         "handsOff": "{{trial}} · τα πατήματα δεν ζωγραφίζουν τίποτα",
         "perTap": "+{{value}} ανά πάτημα"
     },

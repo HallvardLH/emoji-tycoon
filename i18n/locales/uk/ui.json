@@ -528,6 +528,13 @@
         },
         "categoryLabel": "{{label}}, знайдено {{found}} з {{total}}",
         "notFound": "Ще не знайдено",
+        "rarity": {
+            "common": "Звичайний",
+            "uncommon": "Незвичайний",
+            "rare": "Рідкісний",
+            "epic": "Епічний",
+            "legendary": "Легендарний"
+        },
         "cellLabel_one": "{{emoji}}, тапнуто {{count}} раз",
         "cellLabel_few": "{{emoji}}, тапнуто {{count}} рази",
         "cellLabel_many": "{{emoji}}, тапнуто {{count}} разів",
@@ -566,6 +573,7 @@
         "tapShinyLabel": "Тапни блискуче Велике емодзі",
         "shiny": "Блискуче",
         "shinyBurst": "Блиск!",
+        "newFindCaps": "Нова знахідка!",
         "handsOff": "Випробування \"{{trial}}\" · тапи нічого не малюють",
         "perTap": "+{{value}} за тап"
     },

@@ -404,6 +404,13 @@
         },
         "categoryLabel": "{{label}}, {{found}} dari {{total}} ditemukan",
         "notFound": "Belum ditemukan",
+        "rarity": {
+            "common": "Umum",
+            "uncommon": "Tak umum",
+            "rare": "Langka",
+            "epic": "Epik",
+            "legendary": "Legendaris"
+        },
         "cellLabel_other": "{{emoji}}, diketuk {{count}} kali",
         "cellLabelShiny_other": "{{emoji}}, diketuk {{count}} kali, {{shiny}} berkilau"
     },
@@ -433,6 +440,7 @@
         "tapShinyLabel": "Ketuk Emoji besar yang berkilau",
         "shiny": "Berkilau",
         "shinyBurst": "Berkilau!",
+        "newFindCaps": "Temuan baru!",
         "handsOff": "Tantangan {{trial}} · ketukan tak menggambar apa pun",
         "perTap": "+{{value}} per ketukan"
     },

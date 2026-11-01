@@ -446,6 +446,13 @@
         },
         "categoryLabel": "{{label}}, {{found}} av {{total}} hittade",
         "notFound": "Inte hittad än",
+        "rarity": {
+            "common": "Vanlig",
+            "uncommon": "Ovanlig",
+            "rare": "Sällsynt",
+            "epic": "Episk",
+            "legendary": "Legendarisk"
+        },
         "cellLabel_one": "{{emoji}}, tryckt {{count}} gång",
         "cellLabel_other": "{{emoji}}, tryckt {{count}} gånger",
         "cellLabelShiny_one": "{{emoji}}, tryckt {{count}} gång, {{shiny}} glänsande",
@@ -478,6 +485,7 @@
         "tapShinyLabel": "Tryck på den glänsande Stora emojin",
         "shiny": "Glänsande",
         "shinyBurst": "Glans!",
+        "newFindCaps": "Nytt fynd!",
         "handsOff": "Utmaningen {{trial}} · tryck ritar ingenting",
         "perTap": "+{{value}} per tryck"
     },

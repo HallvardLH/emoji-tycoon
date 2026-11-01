@@ -527,6 +527,13 @@
         },
         "categoryLabel": "{{label}}, odkryte: {{found}} z {{total}}",
         "notFound": "Jeszcze nieodkryte",
+        "rarity": {
+            "common": "Pospolite",
+            "uncommon": "Niepospolite",
+            "rare": "Rzadkie",
+            "epic": "Epickie",
+            "legendary": "Legendarne"
+        },
         "cellLabel_one": "{{emoji}}, stuknięte {{count}} raz",
         "cellLabel_few": "{{emoji}}, stuknięte {{count}} razy",
         "cellLabel_many": "{{emoji}}, stuknięte {{count}} razy",
@@ -565,6 +572,7 @@
         "tapShinyLabel": "Stuknij lśniące Wielkie emoji",
         "shiny": "Lśniące",
         "shinyBurst": "Lśniące!",
+        "newFindCaps": "Nowe znalezisko!",
         "handsOff": "Próba: {{trial}} · stuknięcia nic nie rysują",
         "perTap": "+{{value}} na stuknięcie"
     },
