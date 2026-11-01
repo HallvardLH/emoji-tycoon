@@ -32,7 +32,7 @@
         "bigEmoji": "Большое эмодзи",
         "effects": {
             "multiplyBuildingProduction": "• {{buildings}}: эффективность удвоена.",
-            "multiplyTap": "• Тапы вдвое эффективнее.",
+            "multiplyTap": "• Тапы стоят ×{{multiplier}}.",
             "percentageIncreaseTap": "• Тапы мощнее на {{percent}}.",
             "tapPercentageOfEps": "• Тап дает {{percent}} от всего твоего производства эмодзи.",
             "percentageIncreaseProduction": "• Общее производство эмодзи выросло на {{percent}}.",

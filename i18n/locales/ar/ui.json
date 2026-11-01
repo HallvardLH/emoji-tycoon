@@ -36,7 +36,7 @@
         "bigEmoji": "الإيموجي الكبير",
         "effects": {
             "multiplyBuildingProduction": "• {{buildings}}: كفاءة مضاعفة.",
-            "multiplyTap": "• كفاءة النقر مضاعفة.",
+            "multiplyTap": "• قيمة النقرات ×{{multiplier}}.",
             "percentageIncreaseTap": "• النقر أقوى بنسبة {{percent}}.",
             "tapPercentageOfEps": "• كل نقرة تمنحك {{percent}} من إجمالي إنتاج الإيموجي.",
             "percentageIncreaseProduction": "• زيادة إجمالي إنتاج الإيموجي بنسبة {{percent}}.",

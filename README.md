@@ -64,10 +64,10 @@ The header shows your bank, with the per-second rate at a fixed position under i
 ```
 EPT = (baseEPT  +  EPS × Σ tap-% of EPS)
       × Π tap multipliers (upgrades, effects)
-      × Π (1 + tap % increases)
+      × (1 + Σ tap % increases)
       × combo multiplier × fun value multiplier
 ```
-Tap multipliers boost the whole tap, including the share of production the "hands" add. (They used to boost only the base tap, which made "Tapping ×2" worth next to nothing once hands carried tapping.)
+Tap multipliers boost the whole tap, including the share of production the "hands" add. Tap % increases (the Petting zoo and Sports center helpers) add up rather than compound. Active effects of the same kind add up too (see Effect emojis). (They used to boost only the base tap, which made "Tapping ×2" worth next to nothing once hands carried tapping.)
 
 ### Combo
 - **Hidden tap boost:** each tap adds 1 to it, and every 10 boost is one combo level (×1, ×2, ×3…). The multiplier applies to EPT.
@@ -132,9 +132,9 @@ Tap multipliers boost the whole tap, including the share of production the "hand
 ### Upgrades
 | Kind | Effect | Unlock | Price |
 |---|---|---|---|
-| **Standard building** | ×2 that building's EPS (some Drawing hand ones also multiply tapping: ×2, then ×1.25 from tier 12) | Own 5 / 10 / 15 / 20 / 30 / 40 / 50 / 60 / 75 / 90 / 100 / 125 / 150, then +25 per tier | 4 × the building's price at the unlock amount |
+| **Standard building** | ×2 that building's EPS (some Drawing hand ones also multiply tapping: ×1.5, then ×1.25 from tier 12) | Own 5 / 10 / 15 / 20 / 30 / 40 / 50 / 60 / 75 / 90 / 100 / 125 / 150, then +25 per tier | 4 × the building's price at the unlock amount |
 | **Helper** | +X% total EPS or +X% tapping | Every 10 of a building | The building's price at 10t + 5 owned |
-| **Big Emoji ("hands")** | Tapping gains +1% of EPS (the first five), +0.1% (the rest) | Emojis earned from tapping ≥ 10^(tier+2) | `10^(tier+4) + taps × 10^tier` |
+| **Big Emoji ("hands")** | Tapping gains +1% of EPS (the first), then 0.1% less each (0.9%, 0.8%…) down to +0.1% (the 10th on) | Emojis earned from tapping ≥ 10^(tier+2) | `10^(tier+4) + taps × 10^tier` |
 | **Combo level** | Turns the combo on, then +1 max combo | Combo taps (see Combo) | Fixed, see table above |
 | **Effect emojis** | Turns effect emojis on, then more often / longer | Emojis earned (see Effect emojis) | Fixed, see Effect emojis |
 
@@ -142,9 +142,9 @@ Tap multipliers boost the whole tap, including the share of production the "hand
 
 Each building has its own themed set:
 - **Farm:** veggie helpers.
-- **Petting zoo:** animal helpers, +10% tapping each.
+- **Petting zoo:** animal helpers, +10% tapping each (added, not compounded).
 - **Restaurant:** dish helpers, +1% total EPS each.
-- **Sports center:** athlete helpers, +10% tapping each.
+- **Sports center:** athlete helpers, +10% tapping each (added, not compounded).
 - **Space station:** crew and sights helpers, +1% total EPS each.
 - **Candy kingdom:** sweet helpers, +1% total EPS each.
 - **Big Emoji:** 25 "hands" that turn demonic late on.
@@ -154,7 +154,7 @@ Each building has its own themed set:
 The tone leans on puns, pop-culture jokes and upgrades that get darker the further you go. The upgrade data lives in `scripts/game/upgrades/upgradeData/`.
 
 ### Effect emojis
-Effect emojis spawn at random on-screen positions and grow in with a pulse. Tap one to activate it. Active boosts show as chips with a smoothly draining bar. Several effects of the same kind **stack** into one chip, with a count and their multipliers combined.
+Effect emojis spawn at random on-screen positions and grow in with a pulse. Tap one to activate it. Active boosts show as chips with a smoothly draining bar. Several effects of the same kind **stack** into one chip, with a count and their multipliers combined. The same kind **adds up** rather than multiplying (two 🦾 ×3 make ×5, not ×9; bad ones still multiply, two 💣 make ×0.25), while different kinds multiply each other (🚀 and 🦾 make ×6). See `scripts/game/effects/effectStacking.ts`.
 
 None appear until **Good vibes** is bought. Like Cookie Clicker's golden cookie upgrades, its siblings then make them appear more often and the good ones last longer. Each needs the one before it, and all are kept through prestige (`scripts/game/upgrades/upgradeData/nonBuilding/effectEmojis.ts`, read by `scripts/game/effects/effectUpgrades.ts`).
 

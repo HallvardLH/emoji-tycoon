@@ -28,7 +28,7 @@
         "bigEmoji": "Großes Emoji",
         "effects": {
             "multiplyBuildingProduction": "• {{buildings}} sind doppelt so effizient.",
-            "multiplyTap": "• Tippen ist doppelt so effizient.",
+            "multiplyTap": "• Tippen ist ×{{multiplier}} so viel wert.",
             "percentageIncreaseTap": "• Tippen ist {{percent}} stärker.",
             "tapPercentageOfEps": "• Tippen bringt {{percent}} deiner gesamten Emoji-Produktion.",
             "percentageIncreaseProduction": "• Gesamte Emoji-Produktion um {{percent}} erhöht.",

@@ -26,7 +26,7 @@
         "bigEmoji": "อีโมจิยักษ์",
         "effects": {
             "multiplyBuildingProduction": "• {{buildings}}: ประสิทธิภาพเพิ่มเป็น 2 เท่า",
-            "multiplyTap": "• การแตะมีประสิทธิภาพเพิ่มเป็น 2 เท่า",
+            "multiplyTap": "• การแตะมีค่า ×{{multiplier}}",
             "percentageIncreaseTap": "• การแตะแรงขึ้น {{percent}}",
             "tapPercentageOfEps": "• การแตะได้รับ {{percent}} ของการผลิตอีโมจิทั้งหมด",
             "percentageIncreaseProduction": "• การผลิตอีโมจิทั้งหมดเพิ่มขึ้น {{percent}}",

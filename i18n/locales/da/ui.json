@@ -28,7 +28,7 @@
         "bigEmoji": "Stor emoji",
         "effects": {
             "multiplyBuildingProduction": "• {{buildings}} er dobbelt så effektive.",
-            "multiplyTap": "• Tryk er dobbelt så effektive.",
+            "multiplyTap": "• Tryk er ×{{multiplier}} så meget værd.",
             "percentageIncreaseTap": "• Tryk er {{percent}} kraftigere.",
             "tapPercentageOfEps": "• Tryk giver {{percent}} af din samlede emoji-produktion.",
             "percentageIncreaseProduction": "• Samlet emoji-produktion øget med {{percent}}.",

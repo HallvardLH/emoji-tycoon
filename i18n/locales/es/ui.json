@@ -30,7 +30,7 @@
         "bigEmoji": "Gran emoji",
         "effects": {
             "multiplyBuildingProduction": "• {{buildings}}: el doble de eficiencia.",
-            "multiplyTap": "• Tocar es el doble de eficaz.",
+            "multiplyTap": "• Cada toque vale ×{{multiplier}}.",
             "percentageIncreaseTap": "• Tocar es un {{percent}} más potente.",
             "tapPercentageOfEps": "• Cada toque te da el {{percent}} de tu producción total de emojis.",
             "percentageIncreaseProduction": "• La producción total de emojis aumenta un {{percent}}.",

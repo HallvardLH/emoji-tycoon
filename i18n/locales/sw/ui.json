@@ -28,7 +28,7 @@
         "bigEmoji": "Emoji kubwa",
         "effects": {
             "multiplyBuildingProduction": "• {{buildings}}: ufanisi mara mbili.",
-            "multiplyTap": "• Kugusa kuna ufanisi mara mbili.",
+            "multiplyTap": "• Thamani ya kugusa ×{{multiplier}}.",
             "percentageIncreaseTap": "• Kugusa kuna nguvu zaidi kwa {{percent}}.",
             "tapPercentageOfEps": "• Kila mguso unakupa {{percent}} ya uzalishaji wako wote wa emoji.",
             "percentageIncreaseProduction": "• Uzalishaji wote wa emoji umeongezeka kwa {{percent}}.",

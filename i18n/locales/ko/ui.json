@@ -26,7 +26,7 @@
         "bigEmoji": "큰 이모지",
         "effects": {
             "multiplyBuildingProduction": "• {{buildings}}: 효율 2배.",
-            "multiplyTap": "• 탭 효율 2배.",
+            "multiplyTap": "• 탭의 가치 ×{{multiplier}}.",
             "percentageIncreaseTap": "• 탭 파워 {{percent}} 증가.",
             "tapPercentageOfEps": "• 탭할 때마다 총 이모지 생산량의 {{percent}}만큼 획득.",
             "percentageIncreaseProduction": "• 총 이모지 생산량 {{percent}} 증가.",

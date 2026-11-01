@@ -32,7 +32,7 @@
         "bigEmoji": "Wielkie emoji",
         "effects": {
             "multiplyBuildingProduction": "• {{buildings}}: dwa razy większa wydajność.",
-            "multiplyTap": "• Stukanie jest dwa razy wydajniejsze.",
+            "multiplyTap": "• Stuknięcia są warte ×{{multiplier}}.",
             "percentageIncreaseTap": "• Stukanie jest silniejsze o {{percent}}.",
             "tapPercentageOfEps": "• Stuknięcie daje {{percent}} twojej łącznej produkcji emoji.",
             "percentageIncreaseProduction": "• Łączna produkcja emoji rośnie o {{percent}}.",

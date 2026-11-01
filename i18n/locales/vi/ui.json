@@ -26,7 +26,7 @@
         "bigEmoji": "Emoji khổng lồ",
         "effects": {
             "multiplyBuildingProduction": "• {{buildings}}: hiệu suất gấp đôi.",
-            "multiplyTap": "• Chạm hiệu quả gấp đôi.",
+            "multiplyTap": "• Mỗi lần chạm có giá trị ×{{multiplier}}.",
             "percentageIncreaseTap": "• Chạm mạnh hơn {{percent}}.",
             "tapPercentageOfEps": "• Mỗi lần chạm nhận thêm {{percent}} tổng sản lượng emoji của bạn.",
             "percentageIncreaseProduction": "• Tổng sản lượng emoji tăng {{percent}}.",

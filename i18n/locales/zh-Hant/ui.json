@@ -26,7 +26,7 @@
         "bigEmoji": "大 Emoji",
         "effects": {
             "multiplyBuildingProduction": "• {{buildings}}：效率翻倍。",
-            "multiplyTap": "• 點擊效率翻倍。",
+            "multiplyTap": "• 點擊價值 ×{{multiplier}}。",
             "percentageIncreaseTap": "• 點擊威力提升 {{percent}}。",
             "tapPercentageOfEps": "• 每次點擊可獲得 Emoji 總產量的 {{percent}}。",
             "percentageIncreaseProduction": "• Emoji 總產量提升 {{percent}}。",

@@ -102,7 +102,7 @@ export function getEffectText(upgradeId: number) {
                 text += i18n.t("upgrades.effects.multiplyBuildingProduction", { buildings: getBuildingPluralName(upgrade.buildingId!) }) + "\n";
                 break
             case "Multiply tap":
-                text += i18n.t("upgrades.effects.multiplyTap") + "\n";
+                text += i18n.t("upgrades.effects.multiplyTap", { multiplier: upgrade.emojisPerTapMultiplier }) + "\n";
                 break
             case "Percentage increase tap":
                 text += i18n.t("upgrades.effects.percentageIncreaseTap", { percent: formatPercentage(upgrade.emojisPerTapPercentageIncrease! * 100) }) + "\n";

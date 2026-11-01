@@ -28,7 +28,7 @@
         "bigEmoji": "বড় ইমোজি",
         "effects": {
             "multiplyBuildingProduction": "• {{buildings}}: দ্বিগুণ দক্ষতা।",
-            "multiplyTap": "• ট্যাপ করা দ্বিগুণ কার্যকর।",
+            "multiplyTap": "• প্রতিটি ট্যাপের মূল্য ×{{multiplier}}।",
             "percentageIncreaseTap": "• ট্যাপ {{percent}} বেশি শক্তিশালী।",
             "tapPercentageOfEps": "• প্রতি ট্যাপে মোট ইমোজি উৎপাদনের {{percent}} পাবে।",
             "percentageIncreaseProduction": "• মোট ইমোজি উৎপাদন {{percent}} বেড়েছে।",

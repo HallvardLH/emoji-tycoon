@@ -26,7 +26,7 @@
         "bigEmoji": "大きな絵文字",
         "effects": {
             "multiplyBuildingProduction": "• {{buildings}}：効率が2倍。",
-            "multiplyTap": "• タップの効率が2倍。",
+            "multiplyTap": "• タップの価値が×{{multiplier}}。",
             "percentageIncreaseTap": "• タップの威力が{{percent}}アップ。",
             "tapPercentageOfEps": "• タップで絵文字総生産量の{{percent}}を獲得。",
             "percentageIncreaseProduction": "• 絵文字の総生産量が{{percent}}アップ。",

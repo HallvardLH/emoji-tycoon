@@ -28,7 +28,7 @@
         "bigEmoji": "Iso emoji",
         "effects": {
             "multiplyBuildingProduction": "• {{buildings}}: tuplateho.",
-            "multiplyTap": "• Napautukset ovat tuplasti tehokkaampia.",
+            "multiplyTap": "• Napautukset ovat ×{{multiplier}} arvokkaampia.",
             "percentageIncreaseTap": "• Napautukset ovat {{percent}} tehokkaampia.",
             "tapPercentageOfEps": "• Napautus tuottaa {{percent}} koko emojituotannostasi.",
             "percentageIncreaseProduction": "• Emojien kokonaistuotanto kasvaa {{percent}}.",

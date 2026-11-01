@@ -32,7 +32,7 @@
         "bigEmoji": "Велике емодзі",
         "effects": {
             "multiplyBuildingProduction": "• {{buildings}}: ефективність удвічі вища.",
-            "multiplyTap": "• Тапання вдвічі ефективніше.",
+            "multiplyTap": "• Тапи варті ×{{multiplier}}.",
             "percentageIncreaseTap": "• Тапання потужніше на {{percent}}.",
             "tapPercentageOfEps": "• Тап дає {{percent}} від усього твого виробництва емодзі.",
             "percentageIncreaseProduction": "• Загальне виробництво емодзі зросло на {{percent}}.",

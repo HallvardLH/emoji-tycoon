@@ -28,7 +28,7 @@
         "bigEmoji": "Büyük emoji",
         "effects": {
             "multiplyBuildingProduction": "• {{buildings}} iki kat daha verimli.",
-            "multiplyTap": "• Dokunmak iki kat daha verimli.",
+            "multiplyTap": "• Dokunuşlar ×{{multiplier}} değerinde.",
             "percentageIncreaseTap": "• Dokunmak {{percent}} daha güçlü.",
             "tapPercentageOfEps": "• Dokunmak, toplam emoji üretiminin {{percent}} kadarını kazandırır.",
             "percentageIncreaseProduction": "• Toplam emoji üretimi {{percent}} arttı.",

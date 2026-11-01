@@ -6,10 +6,14 @@ import { prestigeProductionMultiplier } from "./prestige/perks";
 import { trialTapMultiplier } from "./prestige/trials";
 import { formatPercentage } from "../misc";
 import { boostMultiplier } from "./gems/boost";
+import { combinedEffectMultiplier } from "./effects/effectStacking";
 
 const multiplyAll = (mults: number[]) => mults
     .filter(mult => mult !== 0) // Removes 0
     .reduce((acc, mult) => acc * mult, 1);
+
+/** Adds percentage increases up (in decimal form, e.g. 0.1 for 10%): ten +10% make ×2, not ×2.59 */
+const addUp = (percentages: number[]) => percentages.reduce((acc, perc) => acc + perc, 1);
 
 // Compound the percentage increases (percentages are already in decimal form, e.g., 0.01 for 1%)
 const compound = (percentages: number[]) => percentages
@@ -33,15 +37,16 @@ function computeEpt(inputs: Partial<TapInputs> = {}) {
     const state = store.getState();
     const { bigEmoji } = state;
 
-    // Tap multipliers from upgrades, active effects and the gem boost
-    const multiplier = multiplyAll([
-        ...state.effects.effects.map(effect => effect.eptMult),
+    // Tap multipliers from upgrades, active effects (the same kind adds up) and the gem boost
+    const multiplier = combinedEffectMultiplier(state.effects.effects, "eptMult") * multiplyAll([
         boostMultiplier(),
         ...(inputs.tapMultipliers ?? bigEmoji.emojisPerTapMultipliers),
     ]);
 
-    // Rounded down to the nearest 10%
-    const percentageIncrease = Math.floor(compound(inputs.tapPercentages ?? bigEmoji.emojisPerTapPercentages) * 10) / 10;
+    // The helpers' tapping bonuses add up rather than compound (30 helpers at +10% compounded
+    // to ×17). Rounded down to the nearest 10%; the small epsilon keeps 1 + 0.1 × 3 from
+    // landing a hair under 1.3
+    const percentageIncrease = Math.floor(addUp(inputs.tapPercentages ?? bigEmoji.emojisPerTapPercentages) * 10 + 1e-9) / 10;
 
     // A share of emojis per second (eps) is added to emojis per tap (ept), so tapping keeps up with production.
     // Shares add up, no compounding here
@@ -84,7 +89,7 @@ function computeBaseEps(inputs: Partial<ProductionInputs> = {}) {
 }
 
 /** Production multiplier from active effects and the gem boost */
-const effectProductionMultiplier = () => multiplyAll(store.getState().effects.effects.map(effect => effect.epsMult)) * boostMultiplier();
+const effectProductionMultiplier = () => combinedEffectMultiplier(store.getState().effects.effects, "epsMult") * boostMultiplier();
 
 export function calculateEmojisPerSecond() {
     store.dispatch(updateEmojisPerSecond(computeBaseEps() * effectProductionMultiplier()));

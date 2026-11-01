@@ -56,7 +56,7 @@
         "bigEmoji": "Big emoji",
         "effects": {
             "multiplyBuildingProduction": "• {{buildings}} are twice as efficient.",
-            "multiplyTap": "• Tapping is twice as efficient.",
+            "multiplyTap": "• Taps are worth ×{{multiplier}} as much.",
             "percentageIncreaseTap": "• Tapping is {{percent}} more powerful.",
             "tapPercentageOfEps": "• Tapping gains {{percent}} of your total emoji production.",
             "percentageIncreaseProduction": "• Total emoji production increased by {{percent}}.",

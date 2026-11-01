@@ -28,7 +28,7 @@
         "bigEmoji": "Grote emoji",
         "effects": {
             "multiplyBuildingProduction": "• {{buildings}}: twee keer zo efficiënt.",
-            "multiplyTap": "• Tikken is twee keer zo efficiënt.",
+            "multiplyTap": "• Tikken zijn ×{{multiplier}} zoveel waard.",
             "percentageIncreaseTap": "• Tikken is {{percent}} krachtiger.",
             "tapPercentageOfEps": "• Tikken levert {{percent}} van je totale emoji-productie op.",
             "percentageIncreaseProduction": "• Totale emoji-productie met {{percent}} verhoogd.",

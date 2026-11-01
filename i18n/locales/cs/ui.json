@@ -32,7 +32,7 @@
         "bigEmoji": "Velké emoji",
         "effects": {
             "multiplyBuildingProduction": "• {{buildings}}: dvojnásobná efektivita.",
-            "multiplyTap": "• Ťukání je dvakrát efektivnější.",
+            "multiplyTap": "• Ťuknutí mají ×{{multiplier}} větší hodnotu.",
             "percentageIncreaseTap": "• Ťukání je o {{percent}} silnější.",
             "tapPercentageOfEps": "• Ťuknutí ti dá {{percent}} celkové produkce emoji.",
             "percentageIncreaseProduction": "• Celková produkce emoji vzrostla o {{percent}}.",

@@ -18,7 +18,7 @@ export const drawingHandUpgrades: UpgradeType[] = [
         quote: "It hurts, but it's worth it.",
         categories: ["Multiply building production", "Multiply tap"],
         emojisPerSecondMultiplier: 2,
-        emojisPerTapMultiplier: 2,
+        emojisPerTapMultiplier: 1.5,
         tier: 0,
     },
     {
@@ -51,7 +51,7 @@ export const drawingHandUpgrades: UpgradeType[] = [
         quote: "And you'll look real cute!",
         categories: ["Multiply building production", "Multiply tap"],
         emojisPerSecondMultiplier: 2,
-        emojisPerTapMultiplier: 2,
+        emojisPerTapMultiplier: 1.5,
         tier: 3,
     },
     {
@@ -84,7 +84,7 @@ export const drawingHandUpgrades: UpgradeType[] = [
         quote: "*Sniff* Why does the screen smell like feet?",
         categories: ["Multiply building production", "Multiply tap"],
         emojisPerSecondMultiplier: 2,
-        emojisPerTapMultiplier: 2,
+        emojisPerTapMultiplier: 1.5,
         tier: 6,
     },
     {
@@ -117,7 +117,7 @@ export const drawingHandUpgrades: UpgradeType[] = [
         quote: "My leg is huge now. Only the left one. I walk in circles.",
         categories: ["Multiply building production", "Multiply tap"],
         emojisPerSecondMultiplier: 2,
-        emojisPerTapMultiplier: 2,
+        emojisPerTapMultiplier: 1.5,
         tier: 9,
     },
     {

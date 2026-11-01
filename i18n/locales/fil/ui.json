@@ -28,7 +28,7 @@
         "bigEmoji": "Malaking emoji",
         "effects": {
             "multiplyBuildingProduction": "• {{buildings}}: doble ang husay.",
-            "multiplyTap": "• Doble ang lakas ng pag-tap.",
+            "multiplyTap": "• ×{{multiplier}} ang halaga ng bawat tap.",
             "percentageIncreaseTap": "• {{percent}} na mas malakas ang pag-tap.",
             "tapPercentageOfEps": "• Bawat tap ay nagbibigay ng {{percent}} ng kabuuang emoji production mo.",
             "percentageIncreaseProduction": "• Tumaas nang {{percent}} ang kabuuang emoji production.",

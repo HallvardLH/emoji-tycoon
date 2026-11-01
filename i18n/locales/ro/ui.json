@@ -30,7 +30,7 @@
         "bigEmoji": "Emoji mare",
         "effects": {
             "multiplyBuildingProduction": "• {{buildings}}: eficiență dublă.",
-            "multiplyTap": "• Atingerile sunt de două ori mai eficiente.",
+            "multiplyTap": "• Atingerile valorează ×{{multiplier}}.",
             "percentageIncreaseTap": "• Atingerile sunt cu {{percent}} mai puternice.",
             "tapPercentageOfEps": "• Fiecare atingere îți aduce {{percent}} din producția totală de emoji.",
             "percentageIncreaseProduction": "• Producția totală de emoji crește cu {{percent}}.",

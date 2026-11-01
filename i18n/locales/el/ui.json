@@ -28,7 +28,7 @@
         "bigEmoji": "Μεγάλο emoji",
         "effects": {
             "multiplyBuildingProduction": "• {{buildings}}: διπλάσια απόδοση.",
-            "multiplyTap": "• Το πάτημα είναι διπλάσια αποδοτικό.",
+            "multiplyTap": "• Κάθε πάτημα αξίζει ×{{multiplier}}.",
             "percentageIncreaseTap": "• Το πάτημα είναι {{percent}} πιο δυνατό.",
             "tapPercentageOfEps": "• Κάθε πάτημα δίνει το {{percent}} της συνολικής σου παραγωγής emoji.",
             "percentageIncreaseProduction": "• Η συνολική παραγωγή emoji αυξάνεται κατά {{percent}}.",

@@ -28,7 +28,7 @@
         "bigEmoji": "बड़ा इमोजी",
         "effects": {
             "multiplyBuildingProduction": "• {{buildings}}: दोगुनी कुशलता।",
-            "multiplyTap": "• टैप करना दोगुना असरदार होता है।",
+            "multiplyTap": "• हर टैप का मूल्य ×{{multiplier}}।",
             "percentageIncreaseTap": "• टैप {{percent}} ज़्यादा ताक़तवर होता है।",
             "tapPercentageOfEps": "• हर टैप से कुल इमोजी उत्पादन का {{percent}} मिलता है।",
             "percentageIncreaseProduction": "• कुल इमोजी उत्पादन में {{percent}} की बढ़त।",

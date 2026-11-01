@@ -30,7 +30,7 @@
         "bigEmoji": "Gros emoji",
         "effects": {
             "multiplyBuildingProduction": "• {{buildings}} : efficacité doublée.",
-            "multiplyTap": "• Tapoter est deux fois plus efficace.",
+            "multiplyTap": "• Chaque tapotement vaut ×{{multiplier}}.",
             "percentageIncreaseTap": "• Tapoter est {{percent}} plus puissant.",
             "tapPercentageOfEps": "• Chaque tapotement rapporte {{percent}} de ta production totale d'emojis.",
             "percentageIncreaseProduction": "• Production totale d'emojis augmentée de {{percent}}.",

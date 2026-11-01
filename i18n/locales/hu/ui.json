@@ -28,7 +28,7 @@
         "bigEmoji": "Nagy emoji",
         "effects": {
             "multiplyBuildingProduction": "• {{buildings}}: dupla hatékonyság.",
-            "multiplyTap": "• A koppintás kétszer olyan hatékony.",
+            "multiplyTap": "• A koppintások ×{{multiplier}} értékűek.",
             "percentageIncreaseTap": "• Koppintás ereje: +{{percent}}.",
             "tapPercentageOfEps": "• Koppintásonként a teljes emojitermelésedből kapsz: {{percent}}.",
             "percentageIncreaseProduction": "• Teljes emojitermelés: +{{percent}}.",

@@ -28,7 +28,7 @@
         "bigEmoji": "Stora emojin",
         "effects": {
             "multiplyBuildingProduction": "• {{buildings}} är dubbelt så effektiva.",
-            "multiplyTap": "• Dina tryck är dubbelt så effektiva.",
+            "multiplyTap": "• Dina tryck är värda ×{{multiplier}} så mycket.",
             "percentageIncreaseTap": "• Dina tryck är {{percent}} kraftfullare.",
             "tapPercentageOfEps": "• Varje tryck ger {{percent}} av din totala emojiproduktion.",
             "percentageIncreaseProduction": "• Total emojiproduktion ökar med {{percent}}.",

@@ -8,6 +8,7 @@ import { palette, radii, themedStyles } from "../../misc/theme";
 import { usePresence } from "../../animations/usePresence";
 import i18n from "../../../i18n";
 import { getEffectTitle } from "../../../i18n/content";
+import { stackMultiplier } from "../../../scripts/game/effects/effectStacking";
 import { formatDuration } from "../../../scripts/misc";
 
 /** Active effects of the same kind, shown as one chip */
@@ -33,8 +34,9 @@ function stackEffects(effects: Effect[]): EffectStack[] {
         id,
         effects: group,
         next: group.reduce((soonest, effect) => effect.timeLeft < soonest.timeLeft ? effect : soonest),
-        eptMult: group.reduce((total, effect) => effect.eptMult ? total * effect.eptMult : total, 1),
-        epsMult: group.reduce((total, effect) => effect.epsMult ? total * effect.epsMult : total, 1),
+        // Combined the way the game counts them: the same kind adds up (see effectStacking.ts)
+        eptMult: stackMultiplier(group.map(effect => effect.eptMult)),
+        epsMult: stackMultiplier(group.map(effect => effect.epsMult)),
     }));
 }
 

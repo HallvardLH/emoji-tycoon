@@ -26,7 +26,7 @@
         "bigEmoji": "大表情",
         "effects": {
             "multiplyBuildingProduction": "• {{buildings}}：效率翻倍。",
-            "multiplyTap": "• 点击效率翻倍。",
+            "multiplyTap": "• 点击价值 ×{{multiplier}}。",
             "percentageIncreaseTap": "• 点击威力提升{{percent}}。",
             "tapPercentageOfEps": "• 每次点击额外获得表情总产量的{{percent}}。",
             "percentageIncreaseProduction": "• 表情总产量提升{{percent}}。",
