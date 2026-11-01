@@ -219,8 +219,6 @@
         "sortValueHint": "依價格計算，每秒 Emoji 增加最多的排在前面",
         "bulkA11yMax": "買到買不起為止",
         "bulkA11y_other": "一次購買 {{count}} 個",
-        "milestoneCaption": "新建築",
-        "milestoneTitle": "你的第一個{{building}}！",
         "buyNowA11y": "用寶石立即購買：{{name}}"
     },
     "time": {

@@ -39,7 +39,7 @@ export interface Achievement {
     description: TrophyText;
     /** Every locked one shows as ???; a secret one also hints that it's a secret */
     secret?: boolean;
-    /** No banner of its own, as another one celebrates the same moment (bank milestones, the first building) */
+    /** No banner of its own, as another one celebrates the same moment (bank milestones) */
     quiet?: boolean;
     unlocked: (state: RootState) => boolean;
 }
@@ -161,7 +161,7 @@ const tapping: Achievement[] = [
 // Owning a few of each building, then a lot
 const BUILDING_TIERS: [number, string][] = [[1, "hired"], [50, "fifty"], [100, "century"], [200, "empire"]];
 const buildings: Achievement[] = [
-    ...buildingData.flatMap(building => BUILDING_TIERS.map(([amount, label], tier): Achievement => ({
+    ...buildingData.flatMap(building => BUILDING_TIERS.map(([amount, label]): Achievement => ({
         id: `building-${building.name}-${amount}`,
         group: "Buildings",
         icon: building.icon,
@@ -169,8 +169,6 @@ const buildings: Achievement[] = [
         description: amount === 1
             ? { key: "descriptions.buildingFirst", buildingId: building.buildingId }
             : { key: "descriptions.buildingOwned", buildingId: building.buildingId, amount },
-        // The first of each building has its own banner ("Your first farm!")
-        quiet: tier === 0,
         unlocked: state => ownedOf(state, building.name) >= amount,
     }))),
     ...([[100, "🏘️"], [500, "🏙️"], [1000, "🌆"], [2500, "🌍"]] as [number, string][])

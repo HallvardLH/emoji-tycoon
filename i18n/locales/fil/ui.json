@@ -252,8 +252,6 @@
         "bulkA11yMax": "Bilhin hangga't kaya mo",
         "bulkA11y_one": "Bumili ng {{count}} kada bili",
         "bulkA11y_other": "Bumili ng {{count}} kada bili",
-        "milestoneCaption": "Bagong gusali",
-        "milestoneTitle": "Ang una mong {{building}}!",
         "buyNowA11y": "Bilhin na ang {{name}} gamit ang gem"
     },
     "time": {

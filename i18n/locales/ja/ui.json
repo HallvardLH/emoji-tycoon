@@ -219,8 +219,6 @@
         "sortValueHint": "価格に対して毎秒の絵文字が最も増えるものを先に表示",
         "bulkA11yMax": "買えるだけ購入",
         "bulkA11y_other": "{{count}}個ずつ購入",
-        "milestoneCaption": "新しい施設",
-        "milestoneTitle": "はじめての{{building}}！",
         "buyNowA11y": "ジェムで今すぐ購入：{{name}}"
     },
     "time": {

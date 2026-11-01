@@ -355,8 +355,6 @@
         "bulkA11y_few": "شراء {{count}} مبان في كل مرة",
         "bulkA11y_many": "شراء {{count}} مبنى في كل مرة",
         "bulkA11y_other": "شراء {{count}} مبنى في كل مرة",
-        "milestoneCaption": "مبنى جديد",
-        "milestoneTitle": "أول {{building}} لك!",
         "buyNowA11y": "اشترِ الآن بالماسات: {{name}}"
     },
     "time": {

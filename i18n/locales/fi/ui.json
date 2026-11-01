@@ -251,8 +251,6 @@
         "bulkA11yMax": "Osta niin monta kuin on varaa",
         "bulkA11y_one": "Osta {{count}} kerralla",
         "bulkA11y_other": "Osta {{count}} kerralla",
-        "milestoneCaption": "Uusi laitos",
-        "milestoneTitle": "Ensimmäinen laitoksesi: {{building}}!",
         "buyNowA11y": "Osta {{name}} nyt jalokivillä"
     },
     "time": {

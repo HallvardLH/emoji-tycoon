@@ -303,8 +303,6 @@
         "bulkA11y_few": "Покупать по {{count}}",
         "bulkA11y_many": "Покупать по {{count}}",
         "bulkA11y_other": "Покупать по {{count}}",
-        "milestoneCaption": "НОВОЕ ЗДАНИЕ",
-        "milestoneTitle": "Новое здание: {{building}}!",
         "buyNowA11y": "Купить сейчас за кристаллы: {{name}}"
     },
     "time": {

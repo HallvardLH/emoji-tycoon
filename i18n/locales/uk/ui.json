@@ -304,8 +304,6 @@
         "bulkA11y_few": "Купувати по {{count}}",
         "bulkA11y_many": "Купувати по {{count}}",
         "bulkA11y_other": "Купувати по {{count}}",
-        "milestoneCaption": "Нова будівля",
-        "milestoneTitle": "Вітаємо з покупкою: {{building}}!",
         "buyNowA11y": "Купити зараз за самоцвіти: {{name}}"
     },
     "time": {

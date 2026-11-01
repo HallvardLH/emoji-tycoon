@@ -278,8 +278,6 @@
         "bulkA11y_one": "Cumpără câte {{count}}",
         "bulkA11y_few": "Cumpără câte {{count}}",
         "bulkA11y_other": "Cumpără câte {{count}}",
-        "milestoneCaption": "CLĂDIRE NOUĂ",
-        "milestoneTitle": "Prima achiziție: {{building}}!",
         "buyNowA11y": "Cumpără acum cu nestemate: {{name}}"
     },
     "time": {

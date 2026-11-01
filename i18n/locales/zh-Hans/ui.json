@@ -219,8 +219,6 @@
         "sortValueHint": "按价格算，每秒表情增加最多的排在前面",
         "bulkA11yMax": "能买多少买多少",
         "bulkA11y_other": "每次购买{{count}}个",
-        "milestoneCaption": "新建筑",
-        "milestoneTitle": "你的第一个{{building}}！",
         "buyNowA11y": "用宝石立即购买：{{name}}"
     },
     "time": {

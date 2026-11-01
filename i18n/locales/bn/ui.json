@@ -255,8 +255,6 @@
         "bulkA11yMax": "যতগুলো কেনার সামর্থ্য আছে, সব কেনো",
         "bulkA11y_one": "একবারে {{count}}টি কেনো",
         "bulkA11y_other": "একবারে {{count}}টি কেনো",
-        "milestoneCaption": "নতুন ভবন",
-        "milestoneTitle": "তোমার প্রথম {{building}}!",
         "buyNowA11y": "এখনই রত্ন দিয়ে কেনো: {{name}}"
     },
     "time": {

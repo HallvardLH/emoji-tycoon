@@ -48,8 +48,6 @@
         "bulkA11yMax": "Buy as many as you can afford",
         "bulkA11y_one": "Buy {{count}} at a time",
         "bulkA11y_other": "Buy {{count}} at a time",
-        "milestoneCaption": "NEW BUILDING",
-        "milestoneTitle": "Your first {{building}}!",
         "buyNowA11y": "Buy {{name}} now with gems"
     },
     "upgrades": {

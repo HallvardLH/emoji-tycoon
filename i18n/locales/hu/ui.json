@@ -252,8 +252,6 @@
         "bulkA11yMax": "Annyit veszel, amennyire futja",
         "bulkA11y_one": "Egyszerre {{count}} darab vétele",
         "bulkA11y_other": "Egyszerre {{count}} darab vétele",
-        "milestoneCaption": "Új épület",
-        "milestoneTitle": "Az első épületed: {{building}}!",
         "buyNowA11y": "Megvétel most drágakövekért: {{name}}"
     },
     "time": {

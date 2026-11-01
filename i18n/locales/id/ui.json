@@ -225,8 +225,6 @@
         "sortValueHint": "Menaruh yang memberi emoji per detik terbanyak untuk harganya di atas",
         "bulkA11yMax": "Beli sebanyak yang kamu mampu",
         "bulkA11y_other": "Beli {{count}} sekaligus",
-        "milestoneCaption": "BANGUNAN BARU",
-        "milestoneTitle": "{{building}} pertamamu!",
         "buyNowA11y": "Beli {{name}} sekarang dengan permata"
     },
     "time": {

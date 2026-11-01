@@ -255,8 +255,6 @@
         "bulkA11yMax": "जितने खरीद सको, उतने खरीदो",
         "bulkA11y_one": "एक बार में {{count}} खरीदो",
         "bulkA11y_other": "एक बार में {{count}} खरीदो",
-        "milestoneCaption": "नई इमारत",
-        "milestoneTitle": "{{building}} की शुरुआत!",
         "buyNowA11y": "अभी रत्नों से खरीदो: {{name}}"
     },
     "time": {

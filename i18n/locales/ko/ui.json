@@ -219,8 +219,6 @@
         "sortValueHint": "가격 대비 초당 이모지가 가장 많이 늘어나는 것을 먼저 보여줘요",
         "bulkA11yMax": "살 수 있는 만큼 구매",
         "bulkA11y_other": "한 번에 {{count}}개씩 구매",
-        "milestoneCaption": "새 건물",
-        "milestoneTitle": "첫 번째 {{building}}!",
         "buyNowA11y": "보석으로 지금 구매: {{name}}"
     },
     "time": {

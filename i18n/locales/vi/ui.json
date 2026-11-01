@@ -226,8 +226,6 @@
         "sortValueHint": "Đưa lên trước thứ cho nhiều emoji mỗi giây nhất so với giá",
         "bulkA11yMax": "Mua nhiều nhất có thể",
         "bulkA11y_other": "Mua {{count}} cái mỗi lần",
-        "milestoneCaption": "CÔNG TRÌNH MỚI",
-        "milestoneTitle": "{{building}} đầu tiên của bạn!",
         "buyNowA11y": "Mua ngay bằng đá quý: {{name}}"
     },
     "time": {

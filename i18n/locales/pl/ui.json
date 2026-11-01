@@ -303,8 +303,6 @@
         "bulkA11y_few": "Kupuj po {{count}}",
         "bulkA11y_many": "Kupuj po {{count}}",
         "bulkA11y_other": "Kupuj po {{count}}",
-        "milestoneCaption": "NOWY BUDYNEK",
-        "milestoneTitle": "Twój pierwszy budynek: {{building}}!",
         "buyNowA11y": "Kup teraz za klejnoty: {{name}}"
     },
     "time": {

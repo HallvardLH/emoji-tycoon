@@ -10,7 +10,7 @@ export interface Milestone {
     caption: string;
     title: string;
     /** What it celebrates, which sets the banner's colour (the caption is translated, so it can't) */
-    kind?: "milestone" | "trophy" | "building" | "prestige" | "gems";
+    kind?: "milestone" | "trophy" | "prestige" | "gems";
 }
 
 type Listener = (milestone: Milestone) => void;

@@ -41,7 +41,6 @@ export default function MilestoneToast() {
 function accentOf(kind: Milestone["kind"]) {
     switch (kind) {
         case "trophy": return { color: palette.sun, ledge: palette.sunLedge };
-        case "building": return { color: "#5BE39A", ledge: palette.green };
         case "prestige": return { color: palette.pop, ledge: "#C23A57" };
         case "gems": return { color: "#7DD3FC", ledge: "#2B7FD9" };
         default: return { color: palette.lilac, ledge: palette.violet };

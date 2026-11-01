@@ -251,8 +251,6 @@
         "bulkA11yMax": "Αγόρασε όσα σου φτάνουν",
         "bulkA11y_one": "Αγορά ανά {{count}}",
         "bulkA11y_other": "Αγορά ανά {{count}}",
-        "milestoneCaption": "ΝΕΟ ΚΤΙΡΙΟ",
-        "milestoneTitle": "{{building}}: το πρώτο σου!",
         "buyNowA11y": "Αγορά τώρα με πετράδια: {{name}}"
     },
     "time": {

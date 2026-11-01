@@ -252,8 +252,6 @@
         "bulkA11yMax": "Köp så många du har råd med",
         "bulkA11y_one": "Köp {{count}} åt gången",
         "bulkA11y_other": "Köp {{count}} åt gången",
-        "milestoneCaption": "NY BYGGNAD",
-        "milestoneTitle": "Välkommen, {{building}}!",
         "buyNowA11y": "Köp {{name}} nu med juveler"
     },
     "time": {

@@ -251,8 +251,6 @@
         "bulkA11yMax": "So viele kaufen, wie du dir leisten kannst",
         "bulkA11y_one": "{{count}} auf einmal kaufen",
         "bulkA11y_other": "{{count}} auf einmal kaufen",
-        "milestoneCaption": "Neues Gebäude",
-        "milestoneTitle": "Neu: {{building}}!",
         "buyNowA11y": "{{name}} jetzt mit Juwelen kaufen"
     },
     "time": {

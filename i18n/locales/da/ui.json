@@ -251,8 +251,6 @@
         "bulkA11yMax": "Køb så mange, du har råd til",
         "bulkA11y_one": "Køb {{count}} ad gangen",
         "bulkA11y_other": "Køb {{count}} ad gangen",
-        "milestoneCaption": "NY BYGNING",
-        "milestoneTitle": "Din første: {{building}}!",
         "buyNowA11y": "Køb {{name}} nu med ædelsten"
     },
     "time": {

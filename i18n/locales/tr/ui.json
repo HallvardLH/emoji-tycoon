@@ -251,8 +251,6 @@
         "bulkA11yMax": "Gücünün yettiği kadar al",
         "bulkA11y_one": "Tek seferde {{count}} adet al",
         "bulkA11y_other": "Tek seferde {{count}} adet al",
-        "milestoneCaption": "YENİ BİNA",
-        "milestoneTitle": "İşte ilk {{building}}!",
         "buyNowA11y": "Şimdi elmasla satın al: {{name}}"
     },
     "time": {

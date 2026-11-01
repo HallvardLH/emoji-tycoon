@@ -8,12 +8,9 @@ import { canBuyBuilding } from './checks';
 import { calculateEmojisPerSecond, calculateEpt, previewGains } from '../calculations';
 import * as Haptics from "../haptics";
 import { BulkBuyAmount } from '../../redux/preferencesSlice';
-import { celebrateMilestone } from '../milestones';
 import { buildingPriceMultiplier, neighbourhoodMultiplier } from '../prestige/perks';
 import { playBuildingSound } from '../sounds';
-import i18n, { getLanguage } from '../../../i18n';
-import { getBuildingName } from '../../../i18n/content';
-import { toCaps } from "../../utils";
+import { getLanguage } from '../../../i18n';
 
 type PluralNames = {
     [key: string]: string;
@@ -56,7 +53,7 @@ export const buildingEmojis: buildingName = Object.fromEntries(buildingData.map(
 const PRICE_GROWTH = BUILDING_PRICE_GROWTH;
 
 /**
- * A building name for the middle of a sentence, e.g. "Your first farm!".
+ * A building name for the middle of a sentence, e.g. "Get your first farm".
  * German keeps the capital, as its nouns always have one
  */
 export function midSentence(name: string) {
@@ -153,15 +150,6 @@ export const buyBuilding = (buildingId: number, bulkBuy: BulkBuyAmount = store.g
     if (actualBuyAmount > 0) {
         Haptics.notificationAsync(Haptics.NotificationFeedbackType.Success);
         playBuildingSound();
-    }
-
-    if (currentAmount === 0) {
-        celebrateMilestone({
-            icon: data.icon,
-            caption: toCaps(i18n.t("buildings.milestoneCaption")),
-            title: i18n.t("buildings.milestoneTitle", { building: midSentence(getBuildingName(data.buildingId)) }),
-            kind: "building",
-        });
     }
 
     batchRecalculations();

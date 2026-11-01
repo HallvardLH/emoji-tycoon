@@ -188,7 +188,7 @@ None appear until **Good vibes** is bought. Like Cookie Clicker's golden cookie 
 
 ### Milestones
 - **Bank milestones:** a toast celebrates each power of 1,000 emojis drawn all-time (1 K, 1 M, 1 B…).
-- **First building:** buying your first building also gets one.
+- **First building:** the first of each building has no toast of its own; its trophy's banner marks it.
 
 ### Collection and Stats
 - **Collection:** a grid of every emoji by category, with filter chips (wrapping), found / total and %, found / total per rarity, a shiny count, and per-emoji tap counts. Each found emoji has a strip in its rarity's color (grey, green, blue, purple, gold), and missing ones that aren't common show a "?" in their rarity's color.

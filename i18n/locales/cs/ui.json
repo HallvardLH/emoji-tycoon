@@ -303,8 +303,6 @@
         "bulkA11y_few": "Kupovat po {{count}}",
         "bulkA11y_many": "Kupovat po {{count}}",
         "bulkA11y_other": "Kupovat po {{count}}",
-        "milestoneCaption": "NOVÁ BUDOVA",
-        "milestoneTitle": "První {{building}} ti patří!",
         "buyNowA11y": "Koupit hned za drahokamy: {{name}}"
     },
     "time": {

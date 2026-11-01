@@ -277,8 +277,6 @@
         "bulkA11y_one": "Comprar {{count}} por vez",
         "bulkA11y_other": "Comprar {{count}} por vez",
         "bulkA11y_many": "Comprar {{count}} por vez",
-        "milestoneCaption": "NOVO EDIFÍCIO",
-        "milestoneTitle": "Seu primeiro {{building}}!",
         "buyNowA11y": "Comprar {{name}} agora com gemas"
     },
     "time": {

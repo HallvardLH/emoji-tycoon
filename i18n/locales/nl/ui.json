@@ -251,8 +251,6 @@
         "bulkA11yMax": "Koop er zoveel als je kunt betalen",
         "bulkA11y_one": "Koop er {{count}} tegelijk",
         "bulkA11y_other": "Koop er {{count}} tegelijk",
-        "milestoneCaption": "Nieuw gebouw",
-        "milestoneTitle": "Je eerste {{building}}!",
         "buyNowA11y": "{{name}} nu kopen met juwelen"
     },
     "time": {

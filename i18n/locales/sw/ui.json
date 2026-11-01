@@ -251,8 +251,6 @@
         "bulkA11yMax": "Nunua kadiri unavyoweza kumudu",
         "bulkA11y_one": "Nunua {{count}} kwa mara moja",
         "bulkA11y_other": "Nunua {{count}} kwa mara moja",
-        "milestoneCaption": "Jengo jipya",
-        "milestoneTitle": "Jengo lako la kwanza: {{building}}!",
         "buyNowA11y": "Nunua sasa kwa vito: {{name}}"
     },
     "time": {
