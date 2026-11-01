@@ -632,7 +632,8 @@
         },
         "shower": {
             "name": "Ploaie de efecte",
-            "description": "Apar deodată emoji cu efect bune, în total: {{amount}}. Atinge-le înainte să dispară!",
+            "description": "Apar deodată emoji cu efect bune, în total: {{amount}}. Atinge-le înainte să dispară! O dată la {{minutes}} minute.",
+            "readyCaps": "Gata în {{time}}",
             "buy": "Invocă",
             "a11y": "Invocă o ploaie de efecte"
         },

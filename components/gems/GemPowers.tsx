@@ -8,7 +8,7 @@ import { formatNumber } from "../../scripts/misc";
 import {
     BOOST_COST, BOOST_SECONDS, BOOST_MAX_SECONDS, buyBoost, canBuyBoost,
     TIME_WARPS, buyTimeWarp, canBuyTimeWarp, timeWarpEmojis,
-    SHOWER_COST, SHOWER_EFFECTS, buyShower, canBuyShower,
+    SHOWER_COST, SHOWER_EFFECTS, SHOWER_COOLDOWN_SECONDS, buyShower, canBuyShower, showerCooldownLeft,
     COMBO_KEEPER_COST, COMBO_KEEPER_SECONDS, buyComboKeeper, canBuyComboKeeper,
     DISCOVERY_COST, DISCOVERY_EMOJIS, buyDiscovery, canBuyDiscovery,
 } from "../../scripts/game/gems/gemShop";
@@ -43,6 +43,7 @@ export default function GemPowers() {
     const boostLeft = boostSecondsLeft();
     const keeperLeft = comboKeeperSecondsLeft();
     const showerOn = canBuyShower();
+    const showerLeft = showerCooldownLeft();
     const warpOn = canBuyTimeWarp();
     const discoveryOn = canBuyDiscovery();
 
@@ -88,9 +89,17 @@ export default function GemPowers() {
                 <Power
                     icon="🎆"
                     name={t("gemPowers.shower.name")}
-                    description={t("gemPowers.shower.description", { amount: SHOWER_EFFECTS })}
+                    description={t("gemPowers.shower.description", { amount: SHOWER_EFFECTS, minutes: SHOWER_COOLDOWN_SECONDS / 60 })}
+                    status={showerLeft > 0 ? `⏳ ${toCaps(t("gemPowers.shower.readyCaps", { time: formatCountdown(showerLeft) }))}` : undefined}
                 >
-                    <GemButton cost={SHOWER_COST} label={t("gemPowers.shower.buy")} onBuy={buyShower} accessibilityLabel={t("gemPowers.shower.a11y")} />
+                    <GemButton
+                        cost={SHOWER_COST}
+                        label={t("gemPowers.shower.buy")}
+                        onBuy={buyShower}
+                        disabled={showerLeft > 0}
+                        disabledLabel={`⏳ ${formatCountdown(showerLeft)}`}
+                        accessibilityLabel={t("gemPowers.shower.a11y")}
+                    />
                 </Power>
             )}
 

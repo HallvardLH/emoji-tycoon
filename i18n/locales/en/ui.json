@@ -582,7 +582,8 @@
         },
         "shower": {
             "name": "Effect shower",
-            "description": "{{amount}} good effect emojis appear at once. Tap them before they fade!",
+            "description": "{{amount}} good effect emojis appear at once. Tap them before they fade! Once every {{minutes}} minutes.",
+            "readyCaps": "READY IN {{time}}",
             "buy": "Summon",
             "a11y": "Summon an effect shower"
         },

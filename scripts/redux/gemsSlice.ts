@@ -15,6 +15,8 @@ interface GemsState {
     boostUntil?: number;
     /** When the combo keeper (no combo drain) runs out, as a timestamp in ms */
     comboKeeperUntil?: number;
+    /** When the effect shower can be summoned again, as a timestamp in ms */
+    showerReadyAt?: number;
     /** Big Emojis still to come that are guaranteed to be ones never found before */
     discoveries?: number;
     /** The next prestige gives extra essence (Essence charm) */
@@ -54,6 +56,9 @@ export const gemsSlice = createSlice({
         setComboKeeperUntil: (state, action: PayloadAction<number>) => {
             state.comboKeeperUntil = action.payload;
         },
+        setShowerReadyAt: (state, action: PayloadAction<number>) => {
+            state.showerReadyAt = action.payload;
+        },
         addDiscoveries: (state, action: PayloadAction<number>) => {
             state.discoveries = Math.max(0, (state.discoveries ?? 0) + action.payload);
         },
@@ -77,6 +82,7 @@ export const {
     markRewarded,
     setBoostUntil,
     setComboKeeperUntil,
+    setShowerReadyAt,
     addDiscoveries,
     setEssenceCharm,
     unlockTheme,

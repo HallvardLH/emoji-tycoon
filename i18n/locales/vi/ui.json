@@ -528,7 +528,8 @@
         },
         "shower": {
             "name": "Mưa hiệu ứng",
-            "description": "{{amount}} emoji hiệu ứng tốt cùng xuất hiện. Chạm vào trước khi chúng biến mất!",
+            "description": "{{amount}} emoji hiệu ứng tốt cùng xuất hiện. Chạm vào trước khi chúng biến mất! Mỗi {{minutes}} phút một lần.",
+            "readyCaps": "Sẵn sàng sau {{time}}",
             "buy": "Triệu hồi",
             "a11y": "Triệu hồi mưa hiệu ứng"
         },

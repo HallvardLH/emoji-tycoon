@@ -527,7 +527,8 @@
         },
         "shower": {
             "name": "Hujan efek",
-            "description": "{{amount}} emoji efek bagus muncul sekaligus. Ketuk sebelum menghilang!",
+            "description": "{{amount}} emoji efek bagus muncul sekaligus. Ketuk sebelum menghilang! Sekali setiap {{minutes}} menit.",
+            "readyCaps": "Siap dalam {{time}}",
             "buy": "Panggil",
             "a11y": "Panggil hujan efek"
         },

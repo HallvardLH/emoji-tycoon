@@ -579,7 +579,8 @@
         },
         "shower": {
             "name": "Efekt yağmuru",
-            "description": "Aynı anda iyi efekt emojileri çıkar, toplam: {{amount}}. Kaybolmadan dokun!",
+            "description": "Aynı anda iyi efekt emojileri çıkar, toplam: {{amount}}. Kaybolmadan dokun! {{minutes}} dakikada bir kez.",
+            "readyCaps": "{{time}} sonra hazır",
             "buy": "Çağır",
             "a11y": "Efekt yağmuru çağır"
         },

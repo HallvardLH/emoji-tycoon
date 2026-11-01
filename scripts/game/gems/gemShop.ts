@@ -1,6 +1,6 @@
 import store from "../../redux/reduxStore";
 import { spendGems, getGems } from "../../monetization";
-import { setBoostUntil, setComboKeeperUntil, addDiscoveries, setEssenceCharm, unlockTheme, setTheme } from "../../redux/gemsSlice";
+import { setBoostUntil, setComboKeeperUntil, setShowerReadyAt, addDiscoveries, setEssenceCharm, unlockTheme, setTheme } from "../../redux/gemsSlice";
 import { updateEmojis } from "../../redux/valuesSlice";
 import { addEffectOnScreen, updateTimeSinceLastEffect } from "../../redux/effectsSlice";
 import { refundPerks } from "../../redux/prestigeSlice";
@@ -118,8 +118,10 @@ export const COMBO_KEEPER_COST = 3;
 export const COMBO_KEEPER_SECONDS = 10 * MINUTE;
 export const COMBO_KEEPER_MAX_SECONDS = HOUR;
 
-export const SHOWER_COST = 3;
+export const SHOWER_COST = 30;
 export const SHOWER_EFFECTS = 5;
+/** Time between showers, so they can't be bought back to back and stacked */
+export const SHOWER_COOLDOWN_SECONDS = 5 * MINUTE;
 
 export const DISCOVERY_COST = 3;
 export const DISCOVERY_EMOJIS = 10;
@@ -161,13 +163,24 @@ export function buyComboKeeper(): GemBuyResult {
     return "bought";
 }
 
+/** Whether the shower is offered at all (effect emojis are on in this run) */
 export const canBuyShower = () => canSpawnEffects() && hasEffectEmojis();
 
-/** Five good effect emojis appear at once */
+/**
+ * Seconds until the shower can be summoned again, 0 when it's ready. Never more
+ * than the cooldown, so turning the device clock back can't lock it for good
+ */
+export function showerCooldownLeft() {
+    const readyAt = store.getState().gems.showerReadyAt ?? 0;
+    return Math.min(SHOWER_COOLDOWN_SECONDS, Math.max(0, (readyAt - Date.now()) / 1000));
+}
+
+/** Five good effect emojis appear at once, then a cooldown */
 export function buyShower(): GemBuyResult {
-    if (!canBuyShower()) return "unavailable";
+    if (!canBuyShower() || showerCooldownLeft() > 0) return "unavailable";
     const paid = pay(SHOWER_COST);
     if (paid !== "bought") return paid;
+    store.dispatch(setShowerReadyAt(Date.now() + SHOWER_COOLDOWN_SECONDS * 1000));
     for (let i = 0; i < SHOWER_EFFECTS; i++) {
         let effect = createEffect();
         // Only good ones: it was paid for

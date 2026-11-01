@@ -579,7 +579,8 @@
         },
         "shower": {
             "name": "Effectregen",
-            "description": "{{amount}} goede effect-emoji's verschijnen tegelijk. Tik ze voordat ze vervagen!",
+            "description": "{{amount}} goede effect-emoji's verschijnen tegelijk. Tik ze voordat ze vervagen! Eens per {{minutes}} minuten.",
+            "readyCaps": "Klaar over {{time}}",
             "buy": "Oproepen",
             "a11y": "Een effectregen oproepen"
         },

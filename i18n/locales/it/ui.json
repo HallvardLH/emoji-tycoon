@@ -632,7 +632,8 @@
         },
         "shower": {
             "name": "Pioggia di effetti",
-            "description": "Appaiono insieme {{amount}} emoji effetto buoni. Toccali prima che svaniscano!",
+            "description": "Appaiono insieme {{amount}} emoji effetto buoni. Toccali prima che svaniscano! Una volta ogni {{minutes}} minuti.",
+            "readyCaps": "Pronta tra {{time}}",
             "buy": "Evoca",
             "a11y": "Evoca una pioggia di effetti"
         },

@@ -580,7 +580,8 @@
         },
         "shower": {
             "name": "Effektzápor",
-            "description": "Egyszerre jelennek meg jó effekt-emojik, ennyi: {{amount}}. Koppints rájuk, mielőtt eltűnnek!",
+            "description": "Egyszerre jelennek meg jó effekt-emojik, ennyi: {{amount}}. Koppints rájuk, mielőtt eltűnnek! {{minutes}} percenként egyszer.",
+            "readyCaps": "Kész: {{time}} múlva",
             "buy": "Megidézés",
             "a11y": "Effektzápor megidézése"
         },

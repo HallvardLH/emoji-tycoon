@@ -579,7 +579,8 @@
         },
         "shower": {
             "name": "Mvua ya athari",
-            "description": "Emoji {{amount}} nzuri za athari zinatokea kwa pamoja. Zigusa kabla hazijafifia!",
+            "description": "Emoji {{amount}} nzuri za athari zinatokea kwa pamoja. Zigusa kabla hazijafifia! Mara moja kila dakika {{minutes}}.",
+            "readyCaps": "Tayari baada ya {{time}}",
             "buy": "Ita",
             "a11y": "Ita mvua ya athari"
         },

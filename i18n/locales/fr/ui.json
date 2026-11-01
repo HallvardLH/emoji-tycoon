@@ -632,7 +632,8 @@
         },
         "shower": {
             "name": "Pluie d'effets",
-            "description": "{{amount}} bons emojis d'effet apparaissent d'un coup. Tapote-les avant qu'ils disparaissent !",
+            "description": "{{amount}} bons emojis d'effet apparaissent d'un coup. Tapote-les avant qu'ils disparaissent ! Une fois toutes les {{minutes}} minutes.",
+            "readyCaps": "Prête dans {{time}}",
             "buy": "Invoquer",
             "a11y": "Invoquer une pluie d'effets"
         },

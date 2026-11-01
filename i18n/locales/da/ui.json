@@ -579,7 +579,8 @@
         },
         "shower": {
             "name": "Effektregn",
-            "description": "{{amount}} gode effekt-emojis dukker op på én gang. Tryk på dem, før de forsvinder!",
+            "description": "{{amount}} gode effekt-emojis dukker op på én gang. Tryk på dem, før de forsvinder! Én gang hvert {{minutes}}. minut.",
+            "readyCaps": "Klar om {{time}}",
             "buy": "Tilkald",
             "a11y": "Tilkald et effektregn"
         },

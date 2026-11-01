@@ -683,7 +683,8 @@
         },
         "shower": {
             "name": "Déšť efektů",
-            "description": "Naráz se objeví dobrá efektová emoji (počet: {{amount}}). Ťukni na ně, než zmizí!",
+            "description": "Naráz se objeví dobrá efektová emoji (počet: {{amount}}). Ťukni na ně, než zmizí! Jednou za {{minutes}} minut.",
+            "readyCaps": "Připraveno za {{time}}",
             "buy": "Přivolat",
             "a11y": "Přivolat déšť efektů"
         },

@@ -521,7 +521,8 @@
         },
         "shower": {
             "name": "效果雨",
-            "description": "一次出現 {{amount}} 個好的效果 Emoji。在它們消失前點擊！",
+            "description": "一次出現 {{amount}} 個好的效果 Emoji。在它們消失前點擊！每 {{minutes}} 分鐘一次。",
+            "readyCaps": "{{time}} 後可用",
             "buy": "召喚",
             "a11y": "召喚效果雨"
         },

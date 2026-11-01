@@ -683,7 +683,8 @@
         },
         "shower": {
             "name": "Deszcz efektów",
-            "description": "Pojawia się naraz tyle dobrych emoji efektów: {{amount}}. Stuknij je, zanim znikną!",
+            "description": "Pojawia się naraz tyle dobrych emoji efektów: {{amount}}. Stuknij je, zanim znikną! Raz na {{minutes}} minut.",
+            "readyCaps": "Gotowe za {{time}}",
             "buy": "Przywołaj",
             "a11y": "Przywołaj deszcz efektów"
         },

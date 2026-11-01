@@ -579,7 +579,8 @@
         },
         "shower": {
             "name": "Efektisade",
-            "description": "Hyviä efektiemojeja ilmestyy kerralla: {{amount}}. Napauta ne ennen kuin ne katoavat!",
+            "description": "Hyviä efektiemojeja ilmestyy kerralla: {{amount}}. Napauta ne ennen kuin ne katoavat! Kerran {{minutes}} minuutin välein.",
+            "readyCaps": "Valmis {{time}} päästä",
             "buy": "Kutsu",
             "a11y": "Kutsu efektisade"
         },

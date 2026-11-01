@@ -580,7 +580,8 @@
         },
         "shower": {
             "name": "Ulan ng epekto",
-            "description": "{{amount}} magandang effect emoji ang sabay-sabay na lalabas. I-tap bago maglaho!",
+            "description": "{{amount}} magandang effect emoji ang sabay-sabay na lalabas. I-tap bago maglaho! Isang beses bawat {{minutes}} minuto.",
+            "readyCaps": "Handa sa loob ng {{time}}",
             "buy": "Tawagin",
             "a11y": "Tumawag ng ulan ng epekto"
         },

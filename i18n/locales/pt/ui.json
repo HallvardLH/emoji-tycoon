@@ -631,7 +631,8 @@
         },
         "shower": {
             "name": "Chuva de efeitos",
-            "description": "{{amount}} emojis de efeito bons aparecem de uma vez. Toque neles antes que sumam!",
+            "description": "{{amount}} emojis de efeito bons aparecem de uma vez. Toque neles antes que sumam! Uma vez a cada {{minutes}} minutos.",
+            "readyCaps": "Pronta em {{time}}",
             "buy": "Invocar",
             "a11y": "Invocar uma chuva de efeitos"
         },

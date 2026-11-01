@@ -521,7 +521,8 @@
         },
         "shower": {
             "name": "效果雨",
-            "description": "一次出现{{amount}}个好的效果表情。在它们消失前点击！",
+            "description": "一次出现{{amount}}个好的效果表情。在它们消失前点击！每{{minutes}}分钟一次。",
+            "readyCaps": "{{time}}后可用",
             "buy": "召唤",
             "a11y": "召唤效果雨"
         },

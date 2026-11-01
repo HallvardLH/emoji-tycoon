@@ -579,7 +579,8 @@
         },
         "shower": {
             "name": "Effektregen",
-            "description": "{{amount}} gute Effekt-Emojis erscheinen auf einmal. Tippe sie, bevor sie verblassen!",
+            "description": "{{amount}} gute Effekt-Emojis erscheinen auf einmal. Tippe sie, bevor sie verblassen! Einmal alle {{minutes}} Minuten.",
+            "readyCaps": "Bereit in {{time}}",
             "buy": "Rufen",
             "a11y": "Effektregen rufen"
         },

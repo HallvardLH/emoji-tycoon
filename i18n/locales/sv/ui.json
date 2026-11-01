@@ -580,7 +580,8 @@
         },
         "shower": {
             "name": "Effektregn",
-            "description": "{{amount}} bra effekt-emojis dyker upp samtidigt. Tryck på dem innan de bleknar!",
+            "description": "{{amount}} bra effekt-emojis dyker upp samtidigt. Tryck på dem innan de bleknar! En gång var {{minutes}}:e minut.",
+            "readyCaps": "Redo om {{time}}",
             "buy": "Frammana",
             "a11y": "Frammana ett effektregn"
         },
