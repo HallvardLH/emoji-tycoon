@@ -59,14 +59,14 @@ export default function HomeNavigation() {
             {__DEV__ && (
                 <Drawer ref={cheatsDrawerRef} side="left">
                     <ScrollView contentContainerStyle={styles.drawerContent}>
-                        <Cheats onPress={() => cheatsDrawerRef.current?.closeDrawer()} />
+                        <Cheats onPress={then => cheatsDrawerRef.current?.closeDrawer(then)} />
                     </ScrollView>
                 </Drawer>
             )}
             <Drawer ref={settingsDrawerRef} side="right">
                 <ScrollView contentContainerStyle={styles.drawerContent}>
                     <GemStoreCard onPress={() => settingsDrawerRef.current?.closeDrawer(() => router.push("/gems"))} />
-                    <Settings onReset={() => settingsDrawerRef.current?.closeDrawer()} />
+                    <Settings onReset={then => settingsDrawerRef.current?.closeDrawer(then)} />
                 </ScrollView>
             </Drawer>
         </View>

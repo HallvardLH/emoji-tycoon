@@ -15,8 +15,8 @@ import { privacyOptionsRequired, showPrivacyOptions } from '../../scripts/ads';
 import { ADS_ENABLED } from '../../scripts/monetization';
 
 interface SettingsProps {
-    /** Called when the reset button is pressed, to close the drawer */
-    onReset?: () => void;
+    /** Called when the reset button is pressed: closes the drawer, then calls `then` (see ResetButton) */
+    onReset?: (then: () => void) => void;
 }
 
 export default function Settings({ onReset }: SettingsProps) {

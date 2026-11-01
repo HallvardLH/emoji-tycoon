@@ -5,8 +5,14 @@ import { openResetConfirm } from '../gameUI/ResetModal';
 import { useTranslation } from 'react-i18next';
 
 interface ResetButtonProps {
-    /** Called when it's pressed, e.g. to close the drawer so the confirmation shows */
-    onPress?: () => void;
+    /**
+     * Closes the drawer the button is in, then calls `then` once it's fully gone, which
+     * opens the confirmation. On iOS a drawer is a modal, and opening the confirmation
+     * while it was still closing presented it on the way-out drawer: it went down with
+     * it, left an invisible modal over the whole app that swallowed every tap, and the
+     * game was never reset. Without it, the confirmation opens straight away
+     */
+    onPress?: (then: () => void) => void;
 }
 
 /** Opens the confirmation that resets the game (see ResetModal) */
@@ -17,8 +23,8 @@ export default function ResetButton({ onPress }: ResetButtonProps) {
             accessibilityRole="button"
             accessibilityLabel={t("drawer.resetGame")}
             onPress={() => {
-                onPress?.();
-                openResetConfirm();
+                if (onPress) onPress(openResetConfirm);
+                else openResetConfirm();
             }}
             style={({ pressed }) => [styles.button, pressed ? { opacity: 0.7 } : null]}
         >

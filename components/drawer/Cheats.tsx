@@ -18,8 +18,8 @@ import { useTranslation } from 'react-i18next';
 import { getLanguage } from '../../i18n';
 
 interface CheatsProps {
-    /** Closes the drawer */
-    onPress: () => void;
+    /** Closes the drawer, then calls `then` once it's fully gone (for opening a modal, see ResetButton) */
+    onPress: (then?: () => void) => void;
 }
 
 export default function Cheats({ onPress }: CheatsProps) {
@@ -41,7 +41,7 @@ export default function Cheats({ onPress }: CheatsProps) {
                     <CheatButton label={plus(1e15)} onPress={() => giveOneOffEmojis(1e15)} compact />
                     <CheatButton label={plus(1e27)} onPress={() => giveOneOffEmojis(1e27)} compact />
                 </View>
-                <CheatButton icon="🌙" label={t("cheats.simulateAway")} onPress={() => { registerAway(3600); onPress(); }} />
+                <CheatButton icon="🌙" label={t("cheats.simulateAway")} onPress={() => onPress(() => registerAway(3600))} />
             </Section>
 
             <Section title={t("cheats.gems")}>
