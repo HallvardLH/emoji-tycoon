@@ -1,10 +1,11 @@
 import StatsList from "../../components/collection/StatsList";
-import { View } from "react-native";
+import { ScrollView } from "react-native";
 
 export default function Stats() {
     return (
-        <View style={{ width: "100%" }}>
+        // Scrolls once the per-building stats run past the screen
+        <ScrollView style={{ flex: 1, width: "100%" }} contentContainerStyle={{ paddingBottom: 32 }}>
             <StatsList />
-        </View>
+        </ScrollView>
     )
 }
