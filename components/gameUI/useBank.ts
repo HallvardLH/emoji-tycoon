@@ -8,8 +8,10 @@ import { toCaps } from "../../scripts/utils";
  *
  * The bank changes every game tick (100ms); lists that only need to know
  * what's affordable use this instead of re-rendering on every tick.
+ *
+ * `paused` stops sampling, for a list that isn't showing; it catches up when unpaused.
  */
-export function useBank(interval = 500) {
+export function useBank(interval = 500, paused = false) {
     const read = () => {
         const { emojis, emojisPerSecond } = store.getState().values;
         return { emojis, emojisPerSecond };
@@ -17,9 +19,11 @@ export function useBank(interval = 500) {
     const [bank, setBank] = useState(read);
 
     useEffect(() => {
+        if (paused) return;
+        setBank(read());
         const id = setInterval(() => setBank(read()), interval);
         return () => clearInterval(id);
-    }, [interval]);
+    }, [interval, paused]);
 
     return bank;
 }

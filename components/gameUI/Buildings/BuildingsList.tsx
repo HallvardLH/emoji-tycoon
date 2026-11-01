@@ -1,5 +1,6 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
+import { useIsFocused } from 'expo-router';
 import { View, StyleSheet } from 'react-native';
 import { RootState } from '../../../scripts/redux/reduxStore';
 import BuildingListItem, { MysteryBuildingItem } from './BuildingListItem';
@@ -32,7 +33,8 @@ export default function BuildingsList() {
     const liveEmojisPerSecond = useSelector((state: RootState) => state.values.emojisPerSecond);
     // Re-read so the next-upgrade progress updates when upgrades unlock
     useSelector((state: RootState) => state.upgrades.unlocked);
-    const { emojis, emojisPerSecond } = useBank();
+    // Not while Upgrades is showing (see shop/_layout.tsx)
+    const { emojis, emojisPerSecond } = useBank(500, !useIsFocused());
 
     // Building EPS is before global bonuses; scale it so rows add up to the header's number
     const globalFactor = totalBuildingEps > 0 ? liveEmojisPerSecond / totalBuildingEps : 1;

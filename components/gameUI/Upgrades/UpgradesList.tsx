@@ -1,5 +1,6 @@
 import { useMemo, useRef, useState } from 'react';
 import { useSelector } from 'react-redux';
+import { useIsFocused } from 'expo-router';
 import { View, ScrollView, Pressable, StyleSheet, LayoutChangeEvent } from 'react-native';
 import { RootState } from '../../../scripts/redux/reduxStore';
 import store from '../../../scripts/redux/reduxStore';
@@ -87,7 +88,8 @@ const toUpgrades = (ids: number[]) => ids
 export default function UpgradesList() {
     const { t } = useTranslation();
     const { unlocked, owned: ownedIds } = useSelector((state: RootState) => state.upgrades);
-    const { emojis, emojisPerSecond } = useBank();
+    // Not while Buildings is showing (see shop/_layout.tsx)
+    const { emojis, emojisPerSecond } = useBank(500, !useIsFocused());
     // Bare bones (trial): nothing can be bought
     const bareBones = useSelector((state: RootState) => state.prestige.activeTrial?.id === "bareBones" && !state.prestige.activeTrial.completed);
 
