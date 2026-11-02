@@ -659,9 +659,25 @@
         }
     },
     "traits": {
-        "unlocksWith": "{{ordinal}} 프레스티지 때 해금돼요."
+        "unlocksWith": "{{ordinal}} 프레스티지 때 해금돼요.",
+        "title": "특성",
+        "slots": "{{picked}}/{{slots}} 선택",
+        "introAscending": "다음 회차의 플레이 방식을 고르세요. 특성마다 장점과 단점이 있고, 회차가 끝날 때까지 유지돼요.",
+        "introRun": "이번 회차의 특성이에요. 다음에 프레스티지할 때 다시 고를 수 있어요.",
+        "pickedTag": "✓ 선택됨"
     },
-    "lore": {
-        "unlocksWith": "{{ordinal}} 프레스티지 때 해금돼요."
+    "ascension": {
+        "title": "승천",
+        "subtitleAscending": "{{count}}회차를 준비하세요",
+        "beginRun": "{{count}}회차 시작",
+        "withTraits": "특성: {{traits}}",
+        "noTraits": "선택한 특성 없음",
+        "runComplete": "{{count}}회차 완료",
+        "essenceGained": "이모지 정수",
+        "unlockPerkTier": "🔓 {{tier}}단계 특전 해금",
+        "unlockTrait": "🔓 새 특성: {{icon}} {{name}}",
+        "unlockTrials": "🔓 시련 해금",
+        "continue": "계속",
+        "skip": "건너뛰기"
     }
 }

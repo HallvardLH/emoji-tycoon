@@ -2741,6 +2741,34 @@
         "flyingStart": {
             "name": "Lotny start",
             "description": "Fory dają 30 minut produkcji zamiast 5"
+        },
+        "oldHands": {
+            "name": "Stare wygi",
+            "description": "Każde podejście zaczynasz z 10 Rysującymi rękami"
+        },
+        "echo": {
+            "name": "Echo",
+            "description": "Stuknięcia są warte o 25% więcej"
+        },
+        "blueprints": {
+            "name": "Plany",
+            "description": "Ulepszenia budynków są o 25% tańsze"
+        },
+        "polymath": {
+            "name": "Erudyta",
+            "description": "Wybierasz o jedną cechę więcej w każdym podejściu"
+        },
+        "enlightenment": {
+            "name": "Oświecenie",
+            "description": "Każda niewydana esencja zwiększa produkcję o 3%"
+        },
+        "ascendant": {
+            "name": "Wzniesiony",
+            "description": "Wybierasz o jedną cechę więcej w każdym podejściu"
+        },
+        "stargazer": {
+            "name": "Astronom",
+            "description": "+3% produkcji za każdą gwiazdę na twoim niebie"
         }
     },
     "trials": {
@@ -2812,6 +2840,38 @@
         "100": {
             "name": "Smutna setka",
             "description": "Statystyki pokazują 😭 przy poziomie frajdy"
+        }
+    },
+    "traits": {
+        "tapper": {
+            "name": "Stukacz",
+            "upside": "Stuknięcia warte ×3",
+            "downside": "Produkcja ×0,6"
+        },
+        "idler": {
+            "name": "Leniuch",
+            "upside": "Produkcja ×1,4",
+            "downside": "Stuknięcia warte ×0,25"
+        },
+        "architect": {
+            "name": "Architekt",
+            "upside": "Budynki są o 20% tańsze",
+            "downside": "Ulepszenia budynków kosztują ×3"
+        },
+        "gambler": {
+            "name": "Hazardzista",
+            "upside": "Emoji efektu pojawiają się dwa razy częściej",
+            "downside": "Dobre efekty trwają o połowę krócej"
+        },
+        "treasureHunter": {
+            "name": "Łowca skarbów",
+            "upside": "Lśniące emoji trafiają się 3 razy częściej",
+            "downside": "Produkcja ×0,85"
+        },
+        "comboArtist": {
+            "name": "Mistrz kombo",
+            "upside": "+2 do maksymalnego kombo",
+            "downside": "Kombo opada o 50% szybciej"
         }
     }
 }

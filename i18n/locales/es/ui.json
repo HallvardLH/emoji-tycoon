@@ -769,9 +769,25 @@
         }
     },
     "traits": {
-        "unlocksWith": "Se desbloquea con tu {{ordinal}} prestigio."
+        "unlocksWith": "Se desbloquea con tu {{ordinal}} prestigio.",
+        "title": "Rasgos",
+        "slots": "{{picked}} de {{slots}} elegidos",
+        "introAscending": "Elige cómo se juega la próxima partida. Cada rasgo tiene un lado bueno y uno malo, y dura toda la partida.",
+        "introRun": "Los rasgos de esta partida. Podrás elegir de nuevo la próxima vez que hagas prestigio.",
+        "pickedTag": "✓ ELEGIDO"
     },
-    "lore": {
-        "unlocksWith": "Se desbloquea con tu {{ordinal}} prestigio."
+    "ascension": {
+        "title": "Ascensión",
+        "subtitleAscending": "Prepárate para la partida #{{count}}",
+        "beginRun": "Empezar partida #{{count}}",
+        "withTraits": "Rasgos: {{traits}}",
+        "noTraits": "Ningún rasgo elegido",
+        "runComplete": "Partida #{{count}} completada",
+        "essenceGained": "esencia emoji",
+        "unlockPerkTier": "🔓 Ventajas de rango {{tier}} desbloqueadas",
+        "unlockTrait": "🔓 Nuevo rasgo: {{icon}} {{name}}",
+        "unlockTrials": "🔓 Desafíos desbloqueados",
+        "continue": "Continuar",
+        "skip": "Saltar"
     }
 }

@@ -3,7 +3,7 @@ import { View, ScrollView, Pressable, StyleSheet, Animated, Easing } from "react
 import { SafeAreaView } from "react-native-safe-area-context";
 import { useTranslation } from "react-i18next";
 import store from "../../scripts/redux/reduxStore";
-import { newestChapter } from "../../scripts/game/prestige/lore";
+import { starCount, showsFace, MAX_STARS } from "../../scripts/game/prestige/story";
 import { traits } from "../../scripts/game/prestige/traits";
 import { MAX_PERK_TIER } from "../../scripts/game/prestige/perks";
 import { TRIALS_UNLOCK_PRESTIGES } from "../../scripts/game/prestige/trials";
@@ -14,18 +14,22 @@ import Text from "../generalUI/Text";
 import ChunkyButton from "../generalUI/ChunkyButton";
 import { palette, radii, themedStyles } from "../misc/theme";
 import { toCaps } from "../../scripts/utils";
-import { LoreCard } from "./LoreList";
+import Sky from "../gameUI/Sky";
 
 const COUNT_MS = 1400;
 
 /**
- * The moment after a prestige: the world folds away, the essence counts up, and what
- * the prestige opened up is listed, with the new lore chapter. Tap to skip ahead.
+ * The moment after a prestige: the world folds away, the essence counts up, what the
+ * prestige opened up is listed, and a new star lights up in the sky (the story, see
+ * story.ts). Tap to skip ahead.
  */
 export default function AscensionReveal({ essence, gems, onContinue }: { essence: number, gems: number, onContinue: () => void }) {
     const { t } = useTranslation();
     const { prestiges } = store.getState().prestige;
-    const chapter = newestChapter();
+    const stars = starCount();
+    const newStar = prestiges <= MAX_STARS;
+    // The sky comes in once the essence has counted up, so its new star is seen arriving
+    const [showSky, setShowSky] = useState(false);
 
     const burst = useRef(new Animated.Value(0)).current;
     const count = useRef(new Animated.Value(0)).current;
@@ -41,10 +45,13 @@ export default function AscensionReveal({ essence, gems, onContinue }: { essence
             Animated.spring(burst, { toValue: 1, friction: 5, tension: 40, useNativeDriver: false }),
             Animated.timing(count, { toValue: essence, duration: COUNT_MS, easing: Easing.out(Easing.cubic), useNativeDriver: false }),
             Animated.timing(details, { toValue: 1, duration: 400, useNativeDriver: false }),
-            Animated.delay(300),
-            Animated.timing(story, { toValue: 1, duration: 700, useNativeDriver: false }),
+            Animated.delay(200),
         ]);
-        sequence.start(({ finished }) => { if (finished) setDone(true); });
+        sequence.start(({ finished }) => {
+            if (!finished) return;
+            setShowSky(true);
+            Animated.timing(story, { toValue: 1, duration: 900, useNativeDriver: false }).start(() => setDone(true));
+        });
         return () => { sequence.stop(); count.removeListener(id); };
     }, []);
 
@@ -54,6 +61,7 @@ export default function AscensionReveal({ essence, gems, onContinue }: { essence
         [burst, details, story].forEach(value => { value.stopAnimation(); value.setValue(1); });
         count.stopAnimation();
         count.setValue(essence);
+        setShowSky(true);
         setDone(true);
     };
 
@@ -91,12 +99,11 @@ export default function AscensionReveal({ essence, gems, onContinue }: { essence
                             ))}
                         </Animated.View> : null}
 
-                        {chapter ? (
-                            <Animated.View style={[{ alignSelf: "stretch", gap: 8 }, fadeUp(story)]}>
-                                <Text font="black" size={11} color={palette.sun} style={[styles.caps, { textAlign: "center" }]}>{toCaps(t("ascension.newChapter"))}</Text>
-                                <LoreCard chapter={chapter} />
+                        {showSky ? (
+                            <Animated.View style={[styles.sky, { opacity: story }]}>
+                                <Sky size={300} stars={stars} face={showsFace()} faceOpacity={0.2} revealNewest={newStar} />
                             </Animated.View>
-                        ) : null}
+                        ) : <View style={styles.skySpace} />}
                     </ScrollView>
                 </Pressable>
                 <View style={styles.footer}>
@@ -148,6 +155,13 @@ const styles = themedStyles(() => StyleSheet.create({
         paddingHorizontal: 16,
         borderRadius: radii.lg,
         backgroundColor: palette.glassSoft,
+    },
+    sky: {
+        width: 300,
+        height: 300,
+    },
+    skySpace: {
+        height: 300,
     },
     footer: {
         paddingHorizontal: 20,

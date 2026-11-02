@@ -769,9 +769,25 @@
         }
     },
     "traits": {
-        "unlocksWith": "Desbloqueia no seu {{ordinal}} prestígio."
+        "unlocksWith": "Desbloqueia no seu {{ordinal}} prestígio.",
+        "title": "Traços",
+        "slots": "{{picked}} de {{slots}} escolhidos",
+        "introAscending": "Escolha como será a próxima rodada. Cada traço tem um lado bom e um lado ruim, e dura a rodada inteira.",
+        "introRun": "Os traços desta rodada. Você pode escolher de novo no próximo prestígio.",
+        "pickedTag": "✓ ESCOLHIDO"
     },
-    "lore": {
-        "unlocksWith": "Desbloqueia no seu {{ordinal}} prestígio."
+    "ascension": {
+        "title": "Ascensão",
+        "subtitleAscending": "Prepare-se para a rodada #{{count}}",
+        "beginRun": "Começar rodada #{{count}}",
+        "withTraits": "Traços: {{traits}}",
+        "noTraits": "Nenhum traço escolhido",
+        "runComplete": "Rodada #{{count}} concluída",
+        "essenceGained": "essência de emoji",
+        "unlockPerkTier": "🔓 Vantagens de nível {{tier}} desbloqueadas",
+        "unlockTrait": "🔓 Novo traço: {{icon}} {{name}}",
+        "unlockTrials": "🔓 Desafios desbloqueados",
+        "continue": "Continuar",
+        "skip": "Pular"
     }
 }

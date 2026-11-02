@@ -2741,6 +2741,34 @@
         "flyingStart": {
             "name": "Flygende start",
             "description": "Forsprang gir 30 minutter produksjon i stedet for 5"
+        },
+        "oldHands": {
+            "name": "Gamle hender",
+            "description": "Start hver runde med 10 Tegnehender"
+        },
+        "echo": {
+            "name": "Ekko",
+            "description": "Trykk er verdt 25 % mer"
+        },
+        "blueprints": {
+            "name": "Blåkopier",
+            "description": "Bygningsoppgraderinger er 25 % billigere"
+        },
+        "polymath": {
+            "name": "Universalgeni",
+            "description": "Velg én egenskap til hver runde"
+        },
+        "enlightenment": {
+            "name": "Opplysning",
+            "description": "Ubrukt essens øker produksjonen med 3 % hver"
+        },
+        "ascendant": {
+            "name": "Oppsteget",
+            "description": "Velg én egenskap til hver runde"
+        },
+        "stargazer": {
+            "name": "Stjernekikker",
+            "description": "+3 % produksjon for hver stjerne på himmelen din"
         }
     },
     "trials": {
@@ -2812,6 +2840,38 @@
         "100": {
             "name": "Trist hundre",
             "description": "Statistikken viser 😭 ved moroverdien"
+        }
+    },
+    "traits": {
+        "tapper": {
+            "name": "Trykker",
+            "upside": "Trykk er verdt ×3",
+            "downside": "Produksjon ×0,6"
+        },
+        "idler": {
+            "name": "Latsabb",
+            "upside": "Produksjon ×1,4",
+            "downside": "Trykk er verdt ×0,25"
+        },
+        "architect": {
+            "name": "Arkitekt",
+            "upside": "Bygninger er 20 % billigere",
+            "downside": "Bygningsoppgraderinger koster ×3"
+        },
+        "gambler": {
+            "name": "Gambler",
+            "upside": "Effekt-emojier dukker opp dobbelt så ofte",
+            "downside": "Gode effekter varer halvparten så lenge"
+        },
+        "treasureHunter": {
+            "name": "Skattejeger",
+            "upside": "Skinnende emojier er 3 ganger så sannsynlige",
+            "downside": "Produksjon ×0,85"
+        },
+        "comboArtist": {
+            "name": "Kombokunstner",
+            "upside": "+2 på maks kombo",
+            "downside": "Komboen tømmes 50 % raskere"
         }
     }
 }

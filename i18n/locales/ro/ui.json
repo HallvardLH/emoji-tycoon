@@ -770,9 +770,25 @@
         }
     },
     "traits": {
-        "unlocksWith": "Se deblochează la prestigiul {{ordinal}}."
+        "unlocksWith": "Se deblochează la prestigiul {{ordinal}}.",
+        "title": "Trăsături",
+        "slots": "{{picked}} din {{slots}} alese",
+        "introAscending": "Alege cum se joacă runda următoare. Fiecare trăsătură are o parte bună și una rea și rămâne toată runda.",
+        "introRun": "Trăsăturile rundei acesteia. Poți alege din nou la următorul prestigiu.",
+        "pickedTag": "✓ ALEASĂ"
     },
-    "lore": {
-        "unlocksWith": "Se deblochează la prestigiul {{ordinal}}."
+    "ascension": {
+        "title": "Ascensiune",
+        "subtitleAscending": "Pregătește-te de runda #{{count}}",
+        "beginRun": "Începe runda #{{count}}",
+        "withTraits": "Trăsături: {{traits}}",
+        "noTraits": "Nicio trăsătură aleasă",
+        "runComplete": "Runda #{{count}} încheiată",
+        "essenceGained": "esență de emoji",
+        "unlockPerkTier": "🔓 Avantaje de treapta {{tier}} deblocate",
+        "unlockTrait": "🔓 Trăsătură nouă: {{icon}} {{name}}",
+        "unlockTrials": "🔓 Probe deblocate",
+        "continue": "Continuă",
+        "skip": "Sari peste"
     }
 }

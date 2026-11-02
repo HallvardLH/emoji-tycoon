@@ -821,9 +821,25 @@
         }
     },
     "traits": {
-        "unlocksWith": "Нужен {{ordinal}} престиж."
+        "unlocksWith": "Нужен {{ordinal}} престиж.",
+        "title": "Черты",
+        "slots": "Выбрано: {{picked}} из {{slots}}",
+        "introAscending": "Выбери, каким будет следующий забег. У каждой черты есть плюс и минус, и она действует весь забег.",
+        "introRun": "Черты этого забега. Выбрать заново можно при следующем престиже.",
+        "pickedTag": "✓ ВЫБРАНО"
     },
-    "lore": {
-        "unlocksWith": "Нужен {{ordinal}} престиж."
+    "ascension": {
+        "title": "Вознесение",
+        "subtitleAscending": "Готовься к забегу #{{count}}",
+        "beginRun": "Начать забег #{{count}}",
+        "withTraits": "Черты: {{traits}}",
+        "noTraits": "Черты не выбраны",
+        "runComplete": "Забег #{{count}} завершен",
+        "essenceGained": "эссенция эмодзи",
+        "unlockPerkTier": "🔓 Открыты перки уровня {{tier}}",
+        "unlockTrait": "🔓 Новая черта: {{icon}} {{name}}",
+        "unlockTrials": "🔓 Открыты испытания",
+        "continue": "Далее",
+        "skip": "Пропустить"
     }
 }

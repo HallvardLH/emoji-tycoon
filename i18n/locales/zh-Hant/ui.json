@@ -659,9 +659,25 @@
         }
     },
     "traits": {
-        "unlocksWith": "{{ordinal}}聲望時解鎖。"
+        "unlocksWith": "{{ordinal}}聲望時解鎖。",
+        "title": "特質",
+        "slots": "已選 {{picked}}/{{slots}}",
+        "introAscending": "選擇下一輪的玩法。每個特質都有優點和缺點，並會持續整輪。",
+        "introRun": "本輪的特質。下次聲望時可以重新選擇。",
+        "pickedTag": "✓ 已選擇"
     },
-    "lore": {
-        "unlocksWith": "{{ordinal}}聲望時解鎖。"
+    "ascension": {
+        "title": "飛昇",
+        "subtitleAscending": "準備開始第 {{count}} 輪",
+        "beginRun": "開始第 {{count}} 輪",
+        "withTraits": "特質：{{traits}}",
+        "noTraits": "未選擇特質",
+        "runComplete": "第 {{count}} 輪完成",
+        "essenceGained": "Emoji 精華",
+        "unlockPerkTier": "🔓 已解鎖第 {{tier}} 階天賦",
+        "unlockTrait": "🔓 新特質：{{icon}} {{name}}",
+        "unlockTrials": "🔓 已解鎖試煉",
+        "continue": "繼續",
+        "skip": "跳過"
     }
 }

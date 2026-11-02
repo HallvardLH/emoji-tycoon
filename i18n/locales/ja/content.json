@@ -2741,6 +2741,34 @@
         "flyingStart": {
             "name": "フライングスタート",
             "description": "スタートダッシュでもらえる生産量が5分ぶんから30分ぶんに"
+        },
+        "oldHands": {
+            "name": "熟練の手",
+            "description": "毎回の周回をお絵かきハンド10個で始める"
+        },
+        "echo": {
+            "name": "こだま",
+            "description": "タップの価値が25%アップ"
+        },
+        "blueprints": {
+            "name": "設計図",
+            "description": "施設の強化が25%安くなる"
+        },
+        "polymath": {
+            "name": "博識",
+            "description": "周回ごとに選べる特性が1つ増える"
+        },
+        "enlightenment": {
+            "name": "悟り",
+            "description": "未使用のエッセンス1つごとに生産量+3%"
+        },
+        "ascendant": {
+            "name": "超越者",
+            "description": "周回ごとに選べる特性が1つ増える"
+        },
+        "stargazer": {
+            "name": "星詠み",
+            "description": "空の星1つごとに生産量+3%"
         }
     },
     "trials": {
@@ -2812,6 +2840,38 @@
         "100": {
             "name": "悲しい100",
             "description": "統計のおたのしみ値の横に😭が表示される"
+        }
+    },
+    "traits": {
+        "tapper": {
+            "name": "連打派",
+            "upside": "タップの価値×3",
+            "downside": "生産量×0.6"
+        },
+        "idler": {
+            "name": "放置派",
+            "upside": "生産量×1.4",
+            "downside": "タップの価値×0.25"
+        },
+        "architect": {
+            "name": "建築家",
+            "upside": "施設が20%安くなる",
+            "downside": "施設の強化コスト×3"
+        },
+        "gambler": {
+            "name": "ギャンブラー",
+            "upside": "効果絵文字の出現が2倍",
+            "downside": "良い効果の持続時間が半分"
+        },
+        "treasureHunter": {
+            "name": "トレジャーハンター",
+            "upside": "キラキラ絵文字の出現率が3倍",
+            "downside": "生産量×0.85"
+        },
+        "comboArtist": {
+            "name": "コンボ職人",
+            "upside": "最大コンボ+2",
+            "downside": "コンボの減りが50%速くなる"
         }
     }
 }

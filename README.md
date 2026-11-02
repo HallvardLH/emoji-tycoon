@@ -255,7 +255,7 @@ A secret number from 1–100, rolled on a new game and on reset, like Cookie Cli
 - **Earning essence:** the essence all-time emojis drawn are worth is `floor((total drawn / 2×10^8)^(1/4))`. Prestiging pays out what that's worth beyond the essence already earned, so each run has to go further to earn as much again. About 50 essence for the first prestige, at ~1 Qa drawn.
 - **What it does:** each *unspent* essence gives +2% production (2.5% with Resonance, 3% with Enlightenment). Essence also buys perks, which gives up that bonus (Overflow gives half of it back).
 - **Resets:** bank, buildings, building upgrades, hands, effects. **Keeps:** collection, all-time stats, combo and effect emoji upgrades, fun value, essence, perks, traits and trial rewards.
-- **Ascension** (`app/ascension.tsx`): prestiging opens a full-screen reveal (the essence counts up, what the prestige unlocked, and the new lore chapter), then the ascension menu with three tabs: Perks, Traits and Lore. The game holds while ascending (`prestige.ascending`: no production, play time or effects, see `gameLoop.ts`) until **Begin run**, which applies the run's head start (Head start, Old hands, a trial's stash) and traits (`beginRun()` in `prestige.ts`). It can't be swiped or backed out of, and closing the app mid-ascension returns to it. During a run the same menu opens from the prestige screen to buy perks and read the lore; traits are shown but locked.
+- **Ascension** (`app/ascension.tsx`): prestiging opens a full-screen reveal (the essence counts up, what the prestige unlocked, and a new star lighting up in the sky), then the ascension menu with two tabs: Perks and Traits. The game holds while ascending (`prestige.ascending`: no production, play time or effects, see `gameLoop.ts`) until **Begin run**, which applies the run's head start (Head start, Old hands, a trial's stash) and traits (`beginRun()` in `prestige.ts`). It can't be swiped or backed out of, and closing the app mid-ascension returns to it. During a run the same menu opens from the prestige screen to buy perks; traits are shown but locked.
 - **Perks:** each prestige unlocks the next tier (tier 1 after the first prestige, and so on):
 
 | Tier | Perk | Cost | Effect |
@@ -282,7 +282,7 @@ A secret number from 1–100, rolled on a new game and on reset, like Cookie Cli
 | 6 | Overflow 🫗 | 2,500 | Spent essence keeps half its production bonus |
 | 6 | Hall of fame 🏆 | 2,000 | +10% production per trial completed |
 | 6 | Flying start 🚀 | 1,500 | Head start gives 30 minutes instead of 5 (needs Head start) |
-| 7 | Lore keeper 📜 | 4,000 | +3% production per lore chapter unlocked |
+| 7 | Stargazer 🔭 | 4,000 | +3% production per star in the sky (one per prestige) |
 | 7 | Enlightenment 🪷 | 6,000 | Unspent essence gives +3% each (needs Resonance) |
 | 7 | Ascendant 🌌 | 5,000 | +1 trait slot (needs Polymath) |
 
@@ -297,7 +297,15 @@ A secret number from 1–100, rolled on a new game and on reset, like Cookie Cli
 | Treasure hunter 🔍 | Shiny emojis 3× as likely | Production ×0.85 | 3 |
 | Combo artist 🥁 | +2 max combo | Combo drains 50% faster | 4 |
 
-- **Lore** (`scripts/game/prestige/lore.ts`): the story of the Big Emoji and the First Emoji, a prologue plus a chapter per prestige (11 chapters). The ascension reveals each new one; the Lore tab keeps them all. English first: translations fall back to English, and `i18n:check` doesn't report the missing ones yet.
+- **Story** (`scripts/game/prestige/story.ts`): told without words, as signs that build up over the game. Something has been watching the Big Emoji since the first tap: the First Emoji, a wobbly face drawn by a beginner.
+  1. **Watching:** now and then a pair of 👀 falls with the emoji rain (from your first Bank, or any prestige). A little more often as prestiges add up.
+  2. **Blinking:** the Big Emoji blinks (😑) every 45 to 90 seconds (from your first Temple of the Big Emoji in the sky, or the 2nd prestige).
+  3. **Stars:** each prestige lights a star in the sky behind the Big Emoji (`components/gameUI/Sky.tsx`). They look scattered at first.
+  4. **The face:** a faint, wobbly face shows through the sky, and the stars turn out to sit on its lines (from your first Emoji black hole, or the 4th prestige). It gets a little clearer with each prestige after.
+  5. **Its gaze:** the face's eyes wander, and look down at the Big Emoji whenever you tap it (from your first The first emoji, or the 8th prestige).
+  6. **Complete:** the 11th star finishes its smile, and the Big Emoji winks (😉) instead of blinking.
+
+  The building signs show in any run where the building is owned, and stay for good once enough prestiges have passed. The ascension's reveal shows the sky, with the new star arriving.
 
 Saves that bought the old offline perks (Night shift, Graveyard shift) get their essence back on load.
 

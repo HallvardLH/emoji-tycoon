@@ -721,9 +721,25 @@
         }
     },
     "traits": {
-        "unlocksWith": "{{ordinal}} बार प्रेस्टीज करने पर अनलॉक होती हैं।"
+        "unlocksWith": "{{ordinal}} बार प्रेस्टीज करने पर अनलॉक होती हैं।",
+        "title": "गुण",
+        "slots": "{{slots}} में से {{picked}} चुने",
+        "introAscending": "चुनो कि अगला दौर कैसे खेला जाए। हर गुण का एक फ़ायदा और एक नुकसान है, और वो पूरे दौर तक रहता है।",
+        "introRun": "इस दौर के गुण। अगली बार प्रेस्टीज करने पर फिर से चुन सकते हो।",
+        "pickedTag": "✓ चुना"
     },
-    "lore": {
-        "unlocksWith": "{{ordinal}} बार प्रेस्टीज करने पर अनलॉक होती हैं।"
+    "ascension": {
+        "title": "आरोहण",
+        "subtitleAscending": "दौर #{{count}} के लिए तैयार हो जाओ",
+        "beginRun": "दौर #{{count}} शुरू करो",
+        "withTraits": "गुण: {{traits}}",
+        "noTraits": "कोई गुण नहीं चुना",
+        "runComplete": "दौर #{{count}} पूरा",
+        "essenceGained": "इमोजी सार",
+        "unlockPerkTier": "🔓 टियर {{tier}} के पर्क अनलॉक",
+        "unlockTrait": "🔓 नया गुण: {{icon}} {{name}}",
+        "unlockTrials": "🔓 चुनौतियाँ अनलॉक",
+        "continue": "आगे बढ़ो",
+        "skip": "छोड़ो"
     }
 }

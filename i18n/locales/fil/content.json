@@ -2741,6 +2741,34 @@
         "flyingStart": {
             "name": "Mabilis na arangkada",
             "description": "30 minutong produksiyon ang ibinibigay ng Maagang simula sa halip na 5"
+        },
+        "oldHands": {
+            "name": "Beteranong kamay",
+            "description": "Simulan ang bawat run nang may 10 Kamay na gumuguhit"
+        },
+        "echo": {
+            "name": "Alingawngaw",
+            "description": "25% na mas mahalaga ang bawat tap"
+        },
+        "blueprints": {
+            "name": "Mga plano",
+            "description": "25% na mas mura ang upgrade ng gusali"
+        },
+        "polymath": {
+            "name": "Henyo sa lahat",
+            "description": "Pumili ng isa pang katangian sa bawat run"
+        },
+        "enlightenment": {
+            "name": "Kaliwanagan",
+            "description": "Bawat esensiyang hindi ginagastos ay nagpapalakas ng produksiyon nang 3%"
+        },
+        "ascendant": {
+            "name": "Umangat",
+            "description": "Pumili ng isa pang katangian sa bawat run"
+        },
+        "stargazer": {
+            "name": "Tagamasid ng bituin",
+            "description": "+3% produksiyon sa bawat bituin sa iyong langit"
         }
     },
     "trials": {
@@ -2812,6 +2840,38 @@
         "100": {
             "name": "Malungkot na sandaan",
             "description": "May 😭 sa tabi ng fun value sa Stats"
+        }
+    },
+    "traits": {
+        "tapper": {
+            "name": "Taga-tap",
+            "upside": "×3 ang halaga ng tap",
+            "downside": "Produksiyon ×0.6"
+        },
+        "idler": {
+            "name": "Tamad",
+            "upside": "Produksiyon ×1.4",
+            "downside": "×0.25 ang halaga ng tap"
+        },
+        "architect": {
+            "name": "Arkitekto",
+            "upside": "20% na mas mura ang gusali",
+            "downside": "×3 ang presyo ng upgrade ng gusali"
+        },
+        "gambler": {
+            "name": "Sugarol",
+            "upside": "Dobleng dalas lumabas ang effect emoji",
+            "downside": "Kalahati lang ang tagal ng magagandang effect"
+        },
+        "treasureHunter": {
+            "name": "Mangangaso ng kayamanan",
+            "upside": "3 beses ang tsansa ng makintab na emoji",
+            "downside": "Produksiyon ×0.85"
+        },
+        "comboArtist": {
+            "name": "Artista ng combo",
+            "upside": "+2 sa max combo mo",
+            "downside": "50% na mas mabilis maubos ang combo"
         }
     }
 }

@@ -2741,6 +2741,34 @@
         "flyingStart": {
             "name": "Mwanzo wa kasi",
             "description": "Mwanzo wa mapema unatoa dakika 30 za uzalishaji badala ya 5"
+        },
+        "oldHands": {
+            "name": "Wazoefu",
+            "description": "Anza kila mzunguko na Mikono ya kuchora 10"
+        },
+        "echo": {
+            "name": "Kiitikio",
+            "description": "Thamani ya kugusa ni zaidi kwa 25%"
+        },
+        "blueprints": {
+            "name": "Ramani za ujenzi",
+            "description": "Maboresho ya majengo ni nafuu kwa 25%"
+        },
+        "polymath": {
+            "name": "Mjuzi wa mengi",
+            "description": "Chagua sifa moja zaidi kwa kila mzunguko"
+        },
+        "enlightenment": {
+            "name": "Mwangaza",
+            "description": "Kila kiini ambacho hujatumia huongeza uzalishaji kwa 3%"
+        },
+        "ascendant": {
+            "name": "Aliyepaa",
+            "description": "Chagua sifa moja zaidi kwa kila mzunguko"
+        },
+        "stargazer": {
+            "name": "Mtazama nyota",
+            "description": "+3% uzalishaji kwa kila nyota angani mwako"
         }
     },
     "trials": {
@@ -2812,6 +2840,38 @@
         "100": {
             "name": "Mia ya huzuni",
             "description": "Takwimu zinaonyesha 😭 kando ya thamani ya furaha"
+        }
+    },
+    "traits": {
+        "tapper": {
+            "name": "Mgusaji",
+            "upside": "Thamani ya kugusa ×3",
+            "downside": "Uzalishaji ×0.6"
+        },
+        "idler": {
+            "name": "Mvivu",
+            "upside": "Uzalishaji ×1.4",
+            "downside": "Thamani ya kugusa ×0.25"
+        },
+        "architect": {
+            "name": "Mbunifu",
+            "upside": "Majengo ni nafuu kwa 20%",
+            "downside": "Maboresho ya majengo yanagharimu ×3"
+        },
+        "gambler": {
+            "name": "Mcheza kamari",
+            "upside": "Emoji za athari hutokea mara mbili zaidi",
+            "downside": "Athari nzuri hudumu nusu ya muda"
+        },
+        "treasureHunter": {
+            "name": "Mwindaji hazina",
+            "upside": "Uwezekano wa emoji zinazong'aa ni mara 3",
+            "downside": "Uzalishaji ×0.85"
+        },
+        "comboArtist": {
+            "name": "Fundi wa kombo",
+            "upside": "+2 kwa kombo yako ya juu",
+            "downside": "Kombo hupungua haraka zaidi kwa 50%"
         }
     }
 }

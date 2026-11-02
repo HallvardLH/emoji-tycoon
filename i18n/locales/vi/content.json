@@ -2741,6 +2741,34 @@
         "flyingStart": {
             "name": "Xuất phát như bay",
             "description": "Khởi đầu thuận lợi cho 30 phút sản lượng thay vì 5"
+        },
+        "oldHands": {
+            "name": "Tay lão luyện",
+            "description": "Bắt đầu mỗi lượt với 10 Bàn tay vẽ"
+        },
+        "echo": {
+            "name": "Tiếng vọng",
+            "description": "Mỗi lần chạm có giá trị hơn 25%"
+        },
+        "blueprints": {
+            "name": "Bản thiết kế",
+            "description": "Nâng cấp công trình rẻ hơn 25%"
+        },
+        "polymath": {
+            "name": "Bác học",
+            "description": "Chọn thêm một đặc tính mỗi lượt"
+        },
+        "enlightenment": {
+            "name": "Giác ngộ",
+            "description": "Mỗi tinh chất chưa tiêu tăng sản lượng 3%"
+        },
+        "ascendant": {
+            "name": "Thăng thiên",
+            "description": "Chọn thêm một đặc tính mỗi lượt"
+        },
+        "stargazer": {
+            "name": "Người ngắm sao",
+            "description": "+3% sản lượng cho mỗi ngôi sao trên bầu trời của bạn"
         }
     },
     "trials": {
@@ -2812,6 +2840,38 @@
         "100": {
             "name": "Trăm buồn",
             "description": "Thống kê hiện 😭 cạnh chỉ số vui"
+        }
+    },
+    "traits": {
+        "tapper": {
+            "name": "Thánh chạm",
+            "upside": "Mỗi lần chạm có giá trị ×3",
+            "downside": "Sản lượng ×0,6"
+        },
+        "idler": {
+            "name": "Kẻ lười",
+            "upside": "Sản lượng ×1,4",
+            "downside": "Mỗi lần chạm có giá trị ×0,25"
+        },
+        "architect": {
+            "name": "Kiến trúc sư",
+            "upside": "Công trình rẻ hơn 20%",
+            "downside": "Nâng cấp công trình đắt gấp ×3"
+        },
+        "gambler": {
+            "name": "Con bạc",
+            "upside": "Emoji hiệu ứng xuất hiện thường xuyên gấp đôi",
+            "downside": "Hiệu ứng tốt chỉ kéo dài một nửa"
+        },
+        "treasureHunter": {
+            "name": "Thợ săn kho báu",
+            "upside": "Tỉ lệ gặp emoji lấp lánh tăng gấp 3",
+            "downside": "Sản lượng ×0,85"
+        },
+        "comboArtist": {
+            "name": "Nghệ sĩ combo",
+            "upside": "+2 combo tối đa",
+            "downside": "Combo giảm nhanh hơn 50%"
         }
     }
 }

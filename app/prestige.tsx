@@ -9,7 +9,6 @@ import { prestige, essenceForEmojis, emojisForEssence, essenceRate, SLOWING_DOWN
 import { ESSENCE_CHARM_COST, RESPEC_COST, buyEssenceCharm, buyRespec } from "../scripts/game/gems/gemShop";
 import GemButton from "../components/gems/GemButton";
 import { perks, essenceBonusPerEssence, essenceForBonus } from "../scripts/game/prestige/perks";
-import { loreChapters } from "../scripts/game/prestige/lore";
 import { trials, Trial, TRIALS_UNLOCK_PRESTIGES, trialGoal, runEmojis, abandonTrial, formatGoal } from "../scripts/game/prestige/trials";
 import { formatDuration, formatNumber } from "../scripts/misc";
 import { Trans, useTranslation } from "react-i18next";
@@ -162,7 +161,7 @@ export default function PrestigeScreen() {
                     />
                 ))}
 
-                {/* Perks, traits and lore live on the ascension screen */}
+                {/* Perks and traits live on the ascension screen */}
                 <Pressable
                     accessibilityRole="button"
                     onPress={() => router.push("/ascension")}
@@ -170,9 +169,9 @@ export default function PrestigeScreen() {
                 >
                     <Text size={32} style={{ lineHeight: 40 }}>🌌</Text>
                     <View style={{ flex: 1, gap: 2 }}>
-                        <Text size={18} color={palette.ink}>{t("ascension.linkTitle")}</Text>
+                        <Text size={18} color={palette.ink}>{t("ascension.title")}</Text>
                         <Text font="body" size={13} color={palette.muted} style={{ lineHeight: 18 }}>
-                            {t("ascension.linkText", { owned: owned.length, total: perks.length, chapters: loreChapters.filter(chapter => prestiges >= chapter.id).length })}
+                            {t("perks.ownedCount", { owned: owned.length, total: perks.length })}
                         </Text>
                     </View>
                     <Text size={22} color={palette.violetDeep}>›</Text>

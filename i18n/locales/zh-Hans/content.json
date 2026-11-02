@@ -2741,6 +2741,34 @@
         "flyingStart": {
             "name": "飞速起步",
             "description": "抢先起步提供30分钟的产量，而不是5分钟"
+        },
+        "oldHands": {
+            "name": "老手",
+            "description": "每轮开始时拥有10个绘画之手"
+        },
+        "echo": {
+            "name": "回响",
+            "description": "点击价值提高25%"
+        },
+        "blueprints": {
+            "name": "蓝图",
+            "description": "建筑升级价格降低25%"
+        },
+        "polymath": {
+            "name": "博学者",
+            "description": "每轮可多选一个特质"
+        },
+        "enlightenment": {
+            "name": "开悟",
+            "description": "每点未花费的精华提升产量3%"
+        },
+        "ascendant": {
+            "name": "飞升者",
+            "description": "每轮可多选一个特质"
+        },
+        "stargazer": {
+            "name": "观星者",
+            "description": "你的天空中每有一颗星，产量+3%"
         }
     },
     "trials": {
@@ -2812,6 +2840,38 @@
         "100": {
             "name": "伤心一百",
             "description": "统计中的趣味值旁显示😭"
+        }
+    },
+    "traits": {
+        "tapper": {
+            "name": "点击狂",
+            "upside": "点击价值×3",
+            "downside": "产量×0.6"
+        },
+        "idler": {
+            "name": "闲人",
+            "upside": "产量×1.4",
+            "downside": "点击价值×0.25"
+        },
+        "architect": {
+            "name": "建筑师",
+            "upside": "建筑价格降低20%",
+            "downside": "建筑升级价格×3"
+        },
+        "gambler": {
+            "name": "赌徒",
+            "upside": "效果表情出现频率翻倍",
+            "downside": "正面效果持续时间减半"
+        },
+        "treasureHunter": {
+            "name": "寻宝者",
+            "upside": "闪光表情出现概率变为3倍",
+            "downside": "产量×0.85"
+        },
+        "comboArtist": {
+            "name": "连击大师",
+            "upside": "最高连击+2",
+            "downside": "连击衰减速度加快50%"
         }
     }
 }

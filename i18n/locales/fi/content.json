@@ -2741,6 +2741,34 @@
         "flyingStart": {
             "name": "Lentävä lähtö",
             "description": "Etumatka antaa 30 minuutin tuotannon 5 minuutin sijaan"
+        },
+        "oldHands": {
+            "name": "Vanhat kädet",
+            "description": "Aloita jokainen kierros 10 piirtävällä kädellä"
+        },
+        "echo": {
+            "name": "Kaiku",
+            "description": "Napautukset ovat 25 % arvokkaampia"
+        },
+        "blueprints": {
+            "name": "Pohjapiirrokset",
+            "description": "Laitosten päivitykset ovat 25 % halvempia"
+        },
+        "polymath": {
+            "name": "Monitaituri",
+            "description": "Valitse jokaiselle kierrokselle yksi piirre lisää"
+        },
+        "enlightenment": {
+            "name": "Valaistuminen",
+            "description": "Jokainen käyttämätön essenssi kasvattaa tuotantoa 3 %"
+        },
+        "ascendant": {
+            "name": "Kohonnut",
+            "description": "Valitse jokaiselle kierrokselle yksi piirre lisää"
+        },
+        "stargazer": {
+            "name": "Tähtientarkkailija",
+            "description": "+3 % tuotantoa jokaisesta taivaasi tähdestä"
         }
     },
     "trials": {
@@ -2812,6 +2840,38 @@
         "100": {
             "name": "Surullinen sata",
             "description": "Tilastoissa näkyy 😭 hauskuusarvon vieressä"
+        }
+    },
+    "traits": {
+        "tapper": {
+            "name": "Napauttaja",
+            "upside": "Napautusten arvo ×3",
+            "downside": "Tuotanto ×0,6"
+        },
+        "idler": {
+            "name": "Laiskuri",
+            "upside": "Tuotanto ×1,4",
+            "downside": "Napautusten arvo ×0,25"
+        },
+        "architect": {
+            "name": "Arkkitehti",
+            "upside": "Laitokset ovat 20 % halvempia",
+            "downside": "Laitosten päivitykset maksavat ×3"
+        },
+        "gambler": {
+            "name": "Uhkapeluri",
+            "upside": "Efektiemojeja ilmestyy kaksi kertaa useammin",
+            "downside": "Hyvät efektit kestävät puolet lyhyemmän ajan"
+        },
+        "treasureHunter": {
+            "name": "Aarteenmetsästäjä",
+            "upside": "Kiiltävät emojit ovat 3 kertaa todennäköisempiä",
+            "downside": "Tuotanto ×0,85"
+        },
+        "comboArtist": {
+            "name": "Kombotaiteilija",
+            "upside": "+2 kombon enimmäistasoon",
+            "downside": "Kombo hiipuu 50 % nopeammin"
         }
     }
 }

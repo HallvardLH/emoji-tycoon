@@ -821,9 +821,25 @@
         }
     },
     "traits": {
-        "unlocksWith": "Odblokowuje się przy {{ordinal}} prestiżu."
+        "unlocksWith": "Odblokowuje się przy {{ordinal}} prestiżu.",
+        "title": "Cechy",
+        "slots": "Wybrane: {{picked}} z {{slots}}",
+        "introAscending": "Wybierz, jak ma wyglądać następne podejście. Każda cecha ma zaletę i wadę i działa przez całe podejście.",
+        "introRun": "Cechy tego podejścia. Możesz wybrać ponownie przy następnym prestiżu.",
+        "pickedTag": "✓ WYBRANA"
     },
-    "lore": {
-        "unlocksWith": "Odblokowuje się przy {{ordinal}} prestiżu."
+    "ascension": {
+        "title": "Wzniesienie",
+        "subtitleAscending": "Przygotuj się na podejście #{{count}}",
+        "beginRun": "Zacznij podejście #{{count}}",
+        "withTraits": "Cechy: {{traits}}",
+        "noTraits": "Nie wybrano cech",
+        "runComplete": "Podejście #{{count}} ukończone",
+        "essenceGained": "esencja emoji",
+        "unlockPerkTier": "🔓 Odblokowano atuty poziomu {{tier}}",
+        "unlockTrait": "🔓 Nowa cecha: {{icon}} {{name}}",
+        "unlockTrials": "🔓 Odblokowano próby",
+        "continue": "Dalej",
+        "skip": "Pomiń"
     }
 }

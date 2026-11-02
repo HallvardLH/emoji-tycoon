@@ -2741,6 +2741,34 @@
         "flyingStart": {
             "name": "飛速起步",
             "description": "搶先起步改為提供 30 分鐘份的產量，而不是 5 分鐘"
+        },
+        "oldHands": {
+            "name": "老手",
+            "description": "每輪開始時擁有 10 個繪圖之手"
+        },
+        "echo": {
+            "name": "回響",
+            "description": "點擊價值提高 25%"
+        },
+        "blueprints": {
+            "name": "藍圖",
+            "description": "建築升級便宜 25%"
+        },
+        "polymath": {
+            "name": "博學家",
+            "description": "每輪可多選一個特質"
+        },
+        "enlightenment": {
+            "name": "開悟",
+            "description": "每個未花掉的精華提升產量 3%"
+        },
+        "ascendant": {
+            "name": "飛昇者",
+            "description": "每輪可多選一個特質"
+        },
+        "stargazer": {
+            "name": "觀星者",
+            "description": "你的天空中每有一顆星，產量 +3%"
         }
     },
     "trials": {
@@ -2812,6 +2840,38 @@
         "100": {
             "name": "悲傷的一百",
             "description": "統計頁的趣味值旁顯示 😭"
+        }
+    },
+    "traits": {
+        "tapper": {
+            "name": "點擊狂",
+            "upside": "點擊價值 ×3",
+            "downside": "產量 ×0.6"
+        },
+        "idler": {
+            "name": "閒人",
+            "upside": "產量 ×1.4",
+            "downside": "點擊價值 ×0.25"
+        },
+        "architect": {
+            "name": "建築師",
+            "upside": "建築便宜 20%",
+            "downside": "建築升級價格 ×3"
+        },
+        "gambler": {
+            "name": "賭徒",
+            "upside": "效果 Emoji 出現頻率變兩倍",
+            "downside": "好效果持續時間減半"
+        },
+        "treasureHunter": {
+            "name": "尋寶者",
+            "upside": "閃亮 Emoji 出現機率變 3 倍",
+            "downside": "產量 ×0.85"
+        },
+        "comboArtist": {
+            "name": "連擊大師",
+            "upside": "最大連擊 +2",
+            "downside": "連擊流失速度加快 50%"
         }
     }
 }

@@ -2741,6 +2741,34 @@
         "flyingStart": {
             "name": "Repülőrajt",
             "description": "A Kezdőlöket 5 helyett 30 percnyi termelést ad"
+        },
+        "oldHands": {
+            "name": "Régi motorosok",
+            "description": "Minden kört 10 Rajzoló kézzel kezdesz"
+        },
+        "echo": {
+            "name": "Visszhang",
+            "description": "A koppintások 25%-kal többet érnek"
+        },
+        "blueprints": {
+            "name": "Tervrajzok",
+            "description": "Az épületfejlesztések 25%-kal olcsóbbak"
+        },
+        "polymath": {
+            "name": "Polihisztor",
+            "description": "Minden körben eggyel több vonást választhatsz"
+        },
+        "enlightenment": {
+            "name": "Megvilágosodás",
+            "description": "Minden el nem költött esszencia 3%-kal növeli a termelést"
+        },
+        "ascendant": {
+            "name": "Felemelkedett",
+            "description": "Minden körben eggyel több vonást választhatsz"
+        },
+        "stargazer": {
+            "name": "Csillagnéző",
+            "description": "+3% termelés minden csillagért az egeden"
         }
     },
     "trials": {
@@ -2812,6 +2840,38 @@
         "100": {
             "name": "Szomorú száz",
             "description": "Az Adatoknál 😭 jelenik meg a mókaérték mellett"
+        }
+    },
+    "traits": {
+        "tapper": {
+            "name": "Koppintó",
+            "upside": "A koppintás ×3-at ér",
+            "downside": "Termelés ×0,6"
+        },
+        "idler": {
+            "name": "Henyélő",
+            "upside": "Termelés ×1,4",
+            "downside": "A koppintás ×0,25-öt ér"
+        },
+        "architect": {
+            "name": "Építész",
+            "upside": "Az épületek 20%-kal olcsóbbak",
+            "downside": "Épületfejlesztések ára ×3"
+        },
+        "gambler": {
+            "name": "Szerencsejátékos",
+            "upside": "Az effekt-emojik kétszer olyan gyakran jönnek",
+            "downside": "A jó effektek fele annyi ideig tartanak"
+        },
+        "treasureHunter": {
+            "name": "Kincsvadász",
+            "upside": "Háromszor akkora eséllyel jönnek csillogó emojik",
+            "downside": "Termelés ×0,85"
+        },
+        "comboArtist": {
+            "name": "Kombóművész",
+            "upside": "+2 a maximális kombóhoz",
+            "downside": "A kombó 50%-kal gyorsabban fogy"
         }
     }
 }

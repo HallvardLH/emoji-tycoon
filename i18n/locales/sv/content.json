@@ -2741,6 +2741,34 @@
         "flyingStart": {
             "name": "Flygande start",
             "description": "Försprång ger 30 minuters produktion i stället för 5"
+        },
+        "oldHands": {
+            "name": "Gamla rävar",
+            "description": "Börja varje runda med 10 Rithänder"
+        },
+        "echo": {
+            "name": "Eko",
+            "description": "Tryck är värda 25 % mer"
+        },
+        "blueprints": {
+            "name": "Ritningar",
+            "description": "Byggnadsuppgraderingar är 25 % billigare"
+        },
+        "polymath": {
+            "name": "Mångsysslare",
+            "description": "Välj en egenskap till varje runda"
+        },
+        "enlightenment": {
+            "name": "Upplysning",
+            "description": "Osparad essens ökar produktionen med 3 % styck"
+        },
+        "ascendant": {
+            "name": "Uppstigen",
+            "description": "Välj en egenskap till varje runda"
+        },
+        "stargazer": {
+            "name": "Stjärnskådare",
+            "description": "+3 % produktion för varje stjärna på din himmel"
         }
     },
     "trials": {
@@ -2812,6 +2840,38 @@
         "100": {
             "name": "Ledsna hundra",
             "description": "Statistiken visar 😭 vid kul-värdet"
+        }
+    },
+    "traits": {
+        "tapper": {
+            "name": "Tryckare",
+            "upside": "Tryck är värda ×3",
+            "downside": "Produktion ×0,6"
+        },
+        "idler": {
+            "name": "Latmask",
+            "upside": "Produktion ×1,4",
+            "downside": "Tryck är värda ×0,25"
+        },
+        "architect": {
+            "name": "Arkitekt",
+            "upside": "Byggnader är 20 % billigare",
+            "downside": "Byggnadsuppgraderingar kostar ×3"
+        },
+        "gambler": {
+            "name": "Chansare",
+            "upside": "Effekt-emojis dyker upp dubbelt så ofta",
+            "downside": "Bra effekter varar hälften så länge"
+        },
+        "treasureHunter": {
+            "name": "Skattjägare",
+            "upside": "Glänsande emojis är 3 gånger så vanliga",
+            "downside": "Produktion ×0,85"
+        },
+        "comboArtist": {
+            "name": "Kombokonstnär",
+            "upside": "+2 på din maxkombo",
+            "downside": "Kombon sjunker 50 % snabbare"
         }
     }
 }

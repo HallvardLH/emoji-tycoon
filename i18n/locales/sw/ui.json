@@ -717,9 +717,25 @@
         }
     },
     "traits": {
-        "unlocksWith": "Linafunguka kwenye heshima yako ya {{ordinal}}."
+        "unlocksWith": "Linafunguka kwenye heshima yako ya {{ordinal}}.",
+        "title": "Sifa",
+        "slots": "{{picked}} kati ya {{slots}} zimechaguliwa",
+        "introAscending": "Chagua jinsi mzunguko ujao utakavyochezwa. Kila sifa ina upande mzuri na upande mbaya, na hudumu mzunguko mzima.",
+        "introRun": "Sifa za mzunguko huu. Unaweza kuchagua tena utakapopata heshima tena.",
+        "pickedTag": "✓ Imechaguliwa"
     },
-    "lore": {
-        "unlocksWith": "Linafunguka kwenye heshima yako ya {{ordinal}}."
+    "ascension": {
+        "title": "Kupaa",
+        "subtitleAscending": "Jiandae kwa mzunguko #{{count}}",
+        "beginRun": "Anza mzunguko #{{count}}",
+        "withTraits": "Sifa: {{traits}}",
+        "noTraits": "Hakuna sifa zilizochaguliwa",
+        "runComplete": "Mzunguko #{{count}} umekamilika",
+        "essenceGained": "kiini cha emoji",
+        "unlockPerkTier": "🔓 Faida za ngazi {{tier}} zimefunguliwa",
+        "unlockTrait": "🔓 Sifa mpya: {{icon}} {{name}}",
+        "unlockTrials": "🔓 Majaribio yamefunguliwa",
+        "continue": "Endelea",
+        "skip": "Ruka"
     }
 }

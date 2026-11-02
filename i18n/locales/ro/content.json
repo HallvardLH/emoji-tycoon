@@ -2741,6 +2741,34 @@
         "flyingStart": {
             "name": "Start lansat",
             "description": "Avansul îți dă 30 de minute de producție în loc de 5"
+        },
+        "oldHands": {
+            "name": "Veterani",
+            "description": "Începi fiecare rundă cu 10 Mâini care desenează"
+        },
+        "echo": {
+            "name": "Ecou",
+            "description": "Atingerile valorează cu 25% mai mult"
+        },
+        "blueprints": {
+            "name": "Planuri",
+            "description": "Bonusurile clădirilor sunt cu 25% mai ieftine"
+        },
+        "polymath": {
+            "name": "Polimat",
+            "description": "Alegi încă o trăsătură în fiecare rundă"
+        },
+        "enlightenment": {
+            "name": "Iluminare",
+            "description": "Fiecare esență necheltuită crește producția cu 3%"
+        },
+        "ascendant": {
+            "name": "Ascendent",
+            "description": "Alegi încă o trăsătură în fiecare rundă"
+        },
+        "stargazer": {
+            "name": "Astronom",
+            "description": "+3% producție pentru fiecare stea de pe cerul tău"
         }
     },
     "trials": {
@@ -2812,6 +2840,38 @@
         "100": {
             "name": "O sută tristă",
             "description": "Statisticile arată 😭 lângă valoarea fun"
+        }
+    },
+    "traits": {
+        "tapper": {
+            "name": "Degete iuți",
+            "upside": "Atingerile valorează ×3",
+            "downside": "Producție ×0,6"
+        },
+        "idler": {
+            "name": "Leneș",
+            "upside": "Producție ×1,4",
+            "downside": "Atingerile valorează ×0,25"
+        },
+        "architect": {
+            "name": "Arhitect",
+            "upside": "Clădirile sunt cu 20% mai ieftine",
+            "downside": "Bonusurile clădirilor costă ×3"
+        },
+        "gambler": {
+            "name": "Jucător de noroc",
+            "upside": "Emoji-urile cu efect apar de două ori mai des",
+            "downside": "Efectele bune durează doar jumătate"
+        },
+        "treasureHunter": {
+            "name": "Vânător de comori",
+            "upside": "Emoji-urile strălucitoare apar de 3 ori mai des",
+            "downside": "Producție ×0,85"
+        },
+        "comboArtist": {
+            "name": "Maestru al combo-ului",
+            "upside": "+2 la combo-ul maxim",
+            "downside": "Combo-ul scade cu 50% mai repede"
         }
     }
 }

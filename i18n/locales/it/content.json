@@ -2741,6 +2741,34 @@
         "flyingStart": {
             "name": "Partenza lanciata",
             "description": "Vantaggio iniziale dà 30 minuti di produzione invece di 5"
+        },
+        "oldHands": {
+            "name": "Mani esperte",
+            "description": "Inizi ogni partita con 10 Mani che disegnano"
+        },
+        "echo": {
+            "name": "Eco",
+            "description": "I tocchi valgono il 25% in più"
+        },
+        "blueprints": {
+            "name": "Progetti",
+            "description": "Le migliorie degli edifici costano il 25% in meno"
+        },
+        "polymath": {
+            "name": "Eclettico",
+            "description": "Scegli un tratto in più in ogni partita"
+        },
+        "enlightenment": {
+            "name": "Illuminazione",
+            "description": "Ogni essenza non spesa aumenta la produzione del 3%"
+        },
+        "ascendant": {
+            "name": "Asceso",
+            "description": "Scegli un tratto in più in ogni partita"
+        },
+        "stargazer": {
+            "name": "Astronomo",
+            "description": "+3% di produzione per ogni stella nel tuo cielo"
         }
     },
     "trials": {
@@ -2812,6 +2840,38 @@
         "100": {
             "name": "Cento triste",
             "description": "Le statistiche mostrano 😭 accanto al valore fun"
+        }
+    },
+    "traits": {
+        "tapper": {
+            "name": "Dito veloce",
+            "upside": "I tocchi valgono ×3",
+            "downside": "Produzione ×0,6"
+        },
+        "idler": {
+            "name": "Pigrone",
+            "upside": "Produzione ×1,4",
+            "downside": "I tocchi valgono ×0,25"
+        },
+        "architect": {
+            "name": "Architetto",
+            "upside": "Gli edifici costano il 20% in meno",
+            "downside": "Migliorie degli edifici: costo ×3"
+        },
+        "gambler": {
+            "name": "Scommettitore",
+            "upside": "Gli emoji effetto appaiono due volte più spesso",
+            "downside": "Gli effetti positivi durano la metà"
+        },
+        "treasureHunter": {
+            "name": "Cacciatore di tesori",
+            "upside": "Emoji brillanti tre volte più probabili",
+            "downside": "Produzione ×0,85"
+        },
+        "comboArtist": {
+            "name": "Artista della combo",
+            "upside": "+2 alla tua combo massima",
+            "downside": "La combo si scarica il 50% più in fretta"
         }
     }
 }

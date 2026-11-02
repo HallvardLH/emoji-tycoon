@@ -717,9 +717,25 @@
         }
     },
     "traits": {
-        "unlocksWith": "Låses op ved din {{ordinal}} prestige."
+        "unlocksWith": "Låses op ved din {{ordinal}} prestige.",
+        "title": "Træk",
+        "slots": "{{picked}} af {{slots}} valgt",
+        "introAscending": "Vælg, hvordan næste runde skal spilles. Hvert træk har en god og en dårlig side og gælder hele runden.",
+        "introRun": "Denne rundes træk. Du kan vælge igen, næste gang du laver prestige.",
+        "pickedTag": "✓ VALGT"
     },
-    "lore": {
-        "unlocksWith": "Låses op ved din {{ordinal}} prestige."
+    "ascension": {
+        "title": "Opstigning",
+        "subtitleAscending": "Gør klar til runde #{{count}}",
+        "beginRun": "Start runde #{{count}}",
+        "withTraits": "Træk: {{traits}}",
+        "noTraits": "Ingen træk valgt",
+        "runComplete": "Runde #{{count}} gennemført",
+        "essenceGained": "emoji-essens",
+        "unlockPerkTier": "🔓 Fordele på trin {{tier}} låst op",
+        "unlockTrait": "🔓 Nyt træk: {{icon}} {{name}}",
+        "unlockTrials": "🔓 Prøvelser låst op",
+        "continue": "Fortsæt",
+        "skip": "Spring over"
     }
 }

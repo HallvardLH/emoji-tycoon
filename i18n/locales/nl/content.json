@@ -2741,6 +2741,34 @@
         "flyingStart": {
             "name": "Vliegende start",
             "description": "Voorsprong geeft 30 minuten productie in plaats van 5"
+        },
+        "oldHands": {
+            "name": "Oude rotten",
+            "description": "Begin elke ronde met 10 Tekenhanden"
+        },
+        "echo": {
+            "name": "Echo",
+            "description": "Tikken zijn 25% meer waard"
+        },
+        "blueprints": {
+            "name": "Bouwtekeningen",
+            "description": "Gebouwupgrades zijn 25% goedkoper"
+        },
+        "polymath": {
+            "name": "Duizendpoot",
+            "description": "Kies elke ronde één eigenschap extra"
+        },
+        "enlightenment": {
+            "name": "Verlichting",
+            "description": "Elke ongebruikte essentie verhoogt de productie met 3%"
+        },
+        "ascendant": {
+            "name": "Verhevene",
+            "description": "Kies elke ronde één eigenschap extra"
+        },
+        "stargazer": {
+            "name": "Sterrenkijker",
+            "description": "+3% productie voor elke ster aan je hemel"
         }
     },
     "trials": {
@@ -2812,6 +2840,38 @@
         "100": {
             "name": "Treurige honderd",
             "description": "Statistiek toont 😭 bij de funfactor"
+        }
+    },
+    "traits": {
+        "tapper": {
+            "name": "Tikker",
+            "upside": "Tikken zijn ×3 waard",
+            "downside": "Productie ×0,6"
+        },
+        "idler": {
+            "name": "Luiaard",
+            "upside": "Productie ×1,4",
+            "downside": "Tikken zijn ×0,25 waard"
+        },
+        "architect": {
+            "name": "Architect",
+            "upside": "Gebouwen zijn 20% goedkoper",
+            "downside": "Gebouwupgrades kosten ×3"
+        },
+        "gambler": {
+            "name": "Gokker",
+            "upside": "Effect-emoji's verschijnen twee keer zo vaak",
+            "downside": "Goede effecten duren half zo lang"
+        },
+        "treasureHunter": {
+            "name": "Schatzoeker",
+            "upside": "Glimmende emoji's zijn 3 keer zo waarschijnlijk",
+            "downside": "Productie ×0,85"
+        },
+        "comboArtist": {
+            "name": "Comboartiest",
+            "upside": "+2 op je maximale combo",
+            "downside": "De combo loopt 50% sneller leeg"
         }
     }
 }

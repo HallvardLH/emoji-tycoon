@@ -770,9 +770,25 @@
         }
     },
     "traits": {
-        "unlocksWith": "Si sblocca al tuo {{ordinal}} prestigio."
+        "unlocksWith": "Si sblocca al tuo {{ordinal}} prestigio.",
+        "title": "Tratti",
+        "slots": "{{picked}} su {{slots}} scelti",
+        "introAscending": "Scegli come giocare la prossima partita. Ogni tratto ha un pregio e un difetto, e resta per tutta la partita.",
+        "introRun": "I tratti di questa partita. Potrai sceglierli di nuovo al prossimo prestigio.",
+        "pickedTag": "✓ SCELTO"
     },
-    "lore": {
-        "unlocksWith": "Si sblocca al tuo {{ordinal}} prestigio."
+    "ascension": {
+        "title": "Ascensione",
+        "subtitleAscending": "Preparati alla partita #{{count}}",
+        "beginRun": "Inizia la partita #{{count}}",
+        "withTraits": "Tratti: {{traits}}",
+        "noTraits": "Nessun tratto scelto",
+        "runComplete": "Partita #{{count}} completata",
+        "essenceGained": "essenza di emoji",
+        "unlockPerkTier": "🔓 Vantaggi di grado {{tier}} sbloccati",
+        "unlockTrait": "🔓 Nuovo tratto: {{icon}} {{name}}",
+        "unlockTrials": "🔓 Sfide sbloccate",
+        "continue": "Continua",
+        "skip": "Salta"
     }
 }

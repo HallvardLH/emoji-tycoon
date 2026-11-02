@@ -10,7 +10,6 @@ import { BuildingNames } from "../scripts/game/buildings/buildingNamesType";
 import type { Perk } from "../scripts/game/prestige/perks";
 import type { Trial } from "../scripts/game/prestige/trials";
 import type { Trait } from "../scripts/game/prestige/traits";
-import type { LoreChapter } from "../scripts/game/prestige/lore";
 import type { FunValueEffect } from "../scripts/game/funValues";
 
 /**
@@ -109,14 +108,6 @@ export function getTraitUpside(trait: Trait) {
 
 export function getTraitDownside(trait: Trait) {
     return translate(`traits.${trait.id}.downside`, trait.downside);
-}
-
-export function getLoreTitle(chapter: LoreChapter) {
-    return translate(`lore.${chapter.id}.title`, chapter.title);
-}
-
-export function getLoreText(chapter: LoreChapter) {
-    return translate(`lore.${chapter.id}.text`, chapter.text);
 }
 
 /**

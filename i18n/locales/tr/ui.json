@@ -717,9 +717,25 @@
         }
     },
     "traits": {
-        "unlocksWith": "{{ordinal}} prestijinle açılır."
+        "unlocksWith": "{{ordinal}} prestijinle açılır.",
+        "title": "Özellikler",
+        "slots": "{{picked}}/{{slots}} seçildi",
+        "introAscending": "Sonraki turun nasıl oynanacağını seç. Her özelliğin bir artısı ve bir eksisi var ve tur boyunca kalır.",
+        "introRun": "Bu turun özellikleri. Bir sonraki prestijinde yeniden seçebilirsin.",
+        "pickedTag": "✓ SEÇİLDİ"
     },
-    "lore": {
-        "unlocksWith": "{{ordinal}} prestijinle açılır."
+    "ascension": {
+        "title": "Yükseliş",
+        "subtitleAscending": "Tur #{{count}} için hazırlan",
+        "beginRun": "Başla: tur #{{count}}",
+        "withTraits": "Özellikler: {{traits}}",
+        "noTraits": "Özellik seçilmedi",
+        "runComplete": "Tur #{{count}} tamamlandı",
+        "essenceGained": "emoji esansı",
+        "unlockPerkTier": "🔓 Kademe {{tier}} ayrıcalıkları açıldı",
+        "unlockTrait": "🔓 Yeni özellik: {{icon}} {{name}}",
+        "unlockTrials": "🔓 Sınavlar açıldı",
+        "continue": "Devam",
+        "skip": "Geç"
     }
 }

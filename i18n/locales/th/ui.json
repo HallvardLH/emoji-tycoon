@@ -665,9 +665,25 @@
         }
     },
     "traits": {
-        "unlocksWith": "ปลดล็อกเมื่อเพรสทีจ{{ordinal}}"
+        "unlocksWith": "ปลดล็อกเมื่อเพรสทีจ{{ordinal}}",
+        "title": "คุณลักษณะ",
+        "slots": "เลือกแล้ว {{picked}} จาก {{slots}}",
+        "introAscending": "เลือกสไตล์การเล่นของรอบถัดไป คุณลักษณะแต่ละอย่างมีทั้งข้อดีและข้อเสีย และจะอยู่ไปตลอดรอบ",
+        "introRun": "คุณลักษณะของรอบนี้ เลือกใหม่ได้เมื่อเพรสทีจครั้งถัดไป",
+        "pickedTag": "✓ เลือกแล้ว"
     },
-    "lore": {
-        "unlocksWith": "ปลดล็อกเมื่อเพรสทีจ{{ordinal}}"
+    "ascension": {
+        "title": "แอสเซนชัน",
+        "subtitleAscending": "เตรียมพร้อมสำหรับรอบที่ {{count}}",
+        "beginRun": "เริ่มรอบที่ {{count}}",
+        "withTraits": "คุณลักษณะ: {{traits}}",
+        "noTraits": "ไม่ได้เลือกคุณลักษณะ",
+        "runComplete": "จบรอบที่ {{count}}",
+        "essenceGained": "เอสเซนส์อีโมจิ",
+        "unlockPerkTier": "🔓 ปลดล็อกเพิร์กขั้น {{tier}}",
+        "unlockTrait": "🔓 คุณลักษณะใหม่: {{icon}} {{name}}",
+        "unlockTrials": "🔓 ปลดล็อกบททดสอบ",
+        "continue": "ไปต่อ",
+        "skip": "ข้าม"
     }
 }

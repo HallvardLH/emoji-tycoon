@@ -717,9 +717,25 @@
         }
     },
     "traits": {
-        "unlocksWith": "Låses opp ved din {{ordinal}} prestisje."
+        "unlocksWith": "Låses opp ved din {{ordinal}} prestisje.",
+        "title": "Egenskaper",
+        "slots": "{{picked}} av {{slots}} valgt",
+        "introAscending": "Velg hvordan neste runde skal spilles. Hver egenskap har en styrke og en svakhet, og varer hele runden.",
+        "introRun": "Egenskapene for denne runden. Du kan velge på nytt neste gang du tar prestisje.",
+        "pickedTag": "✓ VALGT"
     },
-    "lore": {
-        "unlocksWith": "Låses opp ved din {{ordinal}} prestisje."
+    "ascension": {
+        "title": "Oppstigning",
+        "subtitleAscending": "Gjør deg klar for runde #{{count}}",
+        "beginRun": "Start runde #{{count}}",
+        "withTraits": "Egenskaper: {{traits}}",
+        "noTraits": "Ingen egenskaper valgt",
+        "runComplete": "Runde #{{count}} fullført",
+        "essenceGained": "emojiessens",
+        "unlockPerkTier": "🔓 Fordeler på trinn {{tier}} låst opp",
+        "unlockTrait": "🔓 Ny egenskap: {{icon}} {{name}}",
+        "unlockTrials": "🔓 Utfordringer låst opp",
+        "continue": "Fortsett",
+        "skip": "Hopp over"
     }
 }

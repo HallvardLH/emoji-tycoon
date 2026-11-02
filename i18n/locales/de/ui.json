@@ -717,9 +717,25 @@
         }
     },
     "traits": {
-        "unlocksWith": "Wird mit deinem {{ordinal}} Prestige freigeschaltet."
+        "unlocksWith": "Wird mit deinem {{ordinal}} Prestige freigeschaltet.",
+        "title": "Eigenschaften",
+        "slots": "{{picked}} von {{slots}} gewählt",
+        "introAscending": "Wähle, wie der nächste Durchgang läuft. Jede Eigenschaft hat einen Vorteil und einen Nachteil und gilt für den ganzen Durchgang.",
+        "introRun": "Die Eigenschaften dieses Durchgangs. Beim nächsten Prestige kannst du neu wählen.",
+        "pickedTag": "✓ GEWÄHLT"
     },
-    "lore": {
-        "unlocksWith": "Wird mit deinem {{ordinal}} Prestige freigeschaltet."
+    "ascension": {
+        "title": "Aufstieg",
+        "subtitleAscending": "Mach dich bereit für Durchgang #{{count}}",
+        "beginRun": "Durchgang #{{count}} starten",
+        "withTraits": "Eigenschaften: {{traits}}",
+        "noTraits": "Keine Eigenschaften gewählt",
+        "runComplete": "Durchgang #{{count}} geschafft",
+        "essenceGained": "Emoji-Essenz",
+        "unlockPerkTier": "🔓 Perks der Stufe {{tier}} freigeschaltet",
+        "unlockTrait": "🔓 Neue Eigenschaft: {{icon}} {{name}}",
+        "unlockTrials": "🔓 Prüfungen freigeschaltet",
+        "continue": "Weiter",
+        "skip": "Überspringen"
     }
 }

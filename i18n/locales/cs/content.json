@@ -2741,6 +2741,34 @@
         "flyingStart": {
             "name": "Letmý start",
             "description": "Náskok dává 30 minut produkce místo 5"
+        },
+        "oldHands": {
+            "name": "Staré ruce",
+            "description": "Každé kolo začneš s 10 kreslicími rukama"
+        },
+        "echo": {
+            "name": "Ozvěna",
+            "description": "Ťuknutí mají o 25 % vyšší hodnotu"
+        },
+        "blueprints": {
+            "name": "Plány",
+            "description": "Vylepšení budov jsou o 25 % levnější"
+        },
+        "polymath": {
+            "name": "Polyhistor",
+            "description": "V každém kole vybereš o jeden rys víc"
+        },
+        "enlightenment": {
+            "name": "Osvícení",
+            "description": "Každá neutracená esence zvyšuje produkci o 3 %"
+        },
+        "ascendant": {
+            "name": "Povznesený",
+            "description": "V každém kole vybereš o jeden rys víc"
+        },
+        "stargazer": {
+            "name": "Hvězdář",
+            "description": "+3 % produkce za každou hvězdu na tvé obloze"
         }
     },
     "trials": {
@@ -2812,6 +2840,38 @@
         "100": {
             "name": "Smutná stovka",
             "description": "Ve statistikách je u faktoru zábavy 😭"
+        }
+    },
+    "traits": {
+        "tapper": {
+            "name": "Ťukač",
+            "upside": "Ťuknutí mají hodnotu ×3",
+            "downside": "Produkce ×0,6"
+        },
+        "idler": {
+            "name": "Lenoch",
+            "upside": "Produkce ×1,4",
+            "downside": "Ťuknutí mají hodnotu ×0,25"
+        },
+        "architect": {
+            "name": "Architekt",
+            "upside": "Budovy jsou o 20 % levnější",
+            "downside": "Vylepšení budov stojí ×3"
+        },
+        "gambler": {
+            "name": "Hazardér",
+            "upside": "Efektová emoji se objevují dvakrát častěji",
+            "downside": "Dobré efekty trvají jen poloviční dobu"
+        },
+        "treasureHunter": {
+            "name": "Lovec pokladů",
+            "upside": "Třpytivá emoji mají 3× větší šanci",
+            "downside": "Produkce ×0,85"
+        },
+        "comboArtist": {
+            "name": "Mistr komba",
+            "upside": "+2 k maximálnímu kombu",
+            "downside": "Kombo vyprchává o 50 % rychleji"
         }
     }
 }

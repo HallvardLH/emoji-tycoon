@@ -659,9 +659,25 @@
         }
     },
     "traits": {
-        "unlocksWith": "{{ordinal}}の転生で解放。"
+        "unlocksWith": "{{ordinal}}の転生で解放。",
+        "title": "特性",
+        "slots": "{{picked}} / {{slots}} 選択",
+        "introAscending": "次の周回の遊び方を選ぼう。特性にはそれぞれ長所と短所があり、周回が終わるまで続く。",
+        "introRun": "今回の周回の特性。次の転生でまた選べる。",
+        "pickedTag": "✓ 選択中"
     },
-    "lore": {
-        "unlocksWith": "{{ordinal}}の転生で解放。"
+    "ascension": {
+        "title": "昇華",
+        "subtitleAscending": "{{count}}周目の準備をしよう",
+        "beginRun": "{{count}}周目を始める",
+        "withTraits": "特性：{{traits}}",
+        "noTraits": "特性なし",
+        "runComplete": "{{count}}周目 完了",
+        "essenceGained": "絵文字エッセンス",
+        "unlockPerkTier": "🔓 ランク{{tier}}のパークを解放",
+        "unlockTrait": "🔓 新しい特性：{{icon}} {{name}}",
+        "unlockTrials": "🔓 試練を解放",
+        "continue": "続ける",
+        "skip": "スキップ"
     }
 }

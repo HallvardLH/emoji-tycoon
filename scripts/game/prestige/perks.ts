@@ -1,7 +1,7 @@
 import store from "../../redux/reduxStore";
 import { trialEffectSpawnMultiplier, trialProductionMultiplier, trialsCompletedCount } from "./trials";
 import { traitMultiplier, traitMaxComboBonus } from "./traits";
-import { chaptersUnlocked } from "./lore";
+import { starCount } from "./story";
 
 /**
  * Perks are bought with emoji essence and kept forever. Each prestige unlocks the
@@ -54,8 +54,8 @@ export const perks: Perk[] = [
     { id: "hallOfFame", tier: 6, icon: "🏆", name: "Hall of fame", description: "+10% production for every trial completed", cost: 2000 },
     { id: "flyingStart", tier: 6, icon: "🚀", name: "Flying start", description: "Head start gives 30 minutes of production instead of 5", cost: 1500, requires: "headStart" },
 
-    // Tier 7: the end of the story, and the deepest essence
-    { id: "loreKeeper", tier: 7, icon: "📜", name: "Lore keeper", description: "+3% production for every lore chapter unlocked", cost: 4000 },
+    // Tier 7: the deepest essence
+    { id: "stargazer", tier: 7, icon: "🔭", name: "Stargazer", description: "+3% production for every star in your sky", cost: 4000 },
     { id: "enlightenment", tier: 7, icon: "🪷", name: "Enlightenment", description: "Unspent essence boosts production by 3% each", cost: 6000, requires: "resonance" },
     { id: "ascendant", tier: 7, icon: "🌌", name: "Ascendant", description: "Pick one more trait for each run", cost: 5000, requires: "polymath" },
 ];
@@ -170,13 +170,13 @@ export function prestigeProductionMultiplier() {
         * neighbourhoodMultiplier()
         * momentumMultiplier()
         * hallOfFameMultiplier()
-        * loreKeeperMultiplier()
+        * stargazerMultiplier()
         * trialProductionMultiplier()
         * traitMultiplier("production");
 }
 
-/** Lore keeper: +3% per lore chapter unlocked */
-export const loreKeeperMultiplier = () => hasPerk("loreKeeper") ? 1 + chaptersUnlocked() * 0.03 : 1;
+/** Stargazer: +3% per star in the sky (one per prestige, see story.ts) */
+export const stargazerMultiplier = () => hasPerk("stargazer") ? 1 + starCount() * 0.03 : 1;
 
 /** Neighbourhood: +3% per kind of building owned, with `extraKinds` more for previews */
 export function neighbourhoodMultiplier(extraKinds = 0) {

@@ -666,9 +666,25 @@
         }
     },
     "traits": {
-        "unlocksWith": "Mở khóa ở lần danh vọng {{ordinal}}."
+        "unlocksWith": "Mở khóa ở lần danh vọng {{ordinal}}.",
+        "title": "Đặc tính",
+        "slots": "Đã chọn {{picked}}/{{slots}}",
+        "introAscending": "Chọn cách chơi cho lượt tới. Mỗi đặc tính có một mặt lợi và một mặt hại, và giữ nguyên suốt lượt.",
+        "introRun": "Đặc tính của lượt này. Bạn có thể chọn lại ở lần lên danh vọng tới.",
+        "pickedTag": "✓ ĐÃ CHỌN"
     },
-    "lore": {
-        "unlocksWith": "Mở khóa ở lần danh vọng {{ordinal}}."
+    "ascension": {
+        "title": "Phi thăng",
+        "subtitleAscending": "Sẵn sàng cho lượt #{{count}}",
+        "beginRun": "Bắt đầu lượt #{{count}}",
+        "withTraits": "Đặc tính: {{traits}}",
+        "noTraits": "Chưa chọn đặc tính",
+        "runComplete": "Hoàn thành lượt #{{count}}",
+        "essenceGained": "tinh chất emoji",
+        "unlockPerkTier": "🔓 Đã mở đặc quyền bậc {{tier}}",
+        "unlockTrait": "🔓 Đặc tính mới: {{icon}} {{name}}",
+        "unlockTrials": "🔓 Đã mở thử thách",
+        "continue": "Tiếp tục",
+        "skip": "Bỏ qua"
     }
 }

@@ -770,9 +770,25 @@
         }
     },
     "traits": {
-        "unlocksWith": "Se débloque à ton {{ordinal}} prestige."
+        "unlocksWith": "Se débloque à ton {{ordinal}} prestige.",
+        "title": "Traits",
+        "slots": "{{picked}} sur {{slots}} choisis",
+        "introAscending": "Choisis comment se jouera la prochaine partie. Chaque trait a un avantage et un inconvénient, et dure toute la partie.",
+        "introRun": "Les traits de cette partie. Tu pourras choisir à nouveau à ton prochain prestige.",
+        "pickedTag": "✓ CHOISI"
     },
-    "lore": {
-        "unlocksWith": "Se débloque à ton {{ordinal}} prestige."
+    "ascension": {
+        "title": "Ascension",
+        "subtitleAscending": "Prépare-toi pour la partie #{{count}}",
+        "beginRun": "Lancer la partie #{{count}}",
+        "withTraits": "Traits : {{traits}}",
+        "noTraits": "Aucun trait choisi",
+        "runComplete": "Partie #{{count}} terminée",
+        "essenceGained": "essence d'emoji",
+        "unlockPerkTier": "🔓 Atouts de rang {{tier}} débloqués",
+        "unlockTrait": "🔓 Nouveau trait : {{icon}} {{name}}",
+        "unlockTrials": "🔓 Épreuves débloquées",
+        "continue": "Continuer",
+        "skip": "Passer"
     }
 }

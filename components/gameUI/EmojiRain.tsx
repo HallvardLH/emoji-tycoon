@@ -4,6 +4,7 @@ import { useSelector } from "react-redux";
 import store, { RootState } from "../../scripts/redux/reduxStore";
 import { selectRandomEmoji } from "../../scripts/game/bigEmoji";
 import Emoji from "./Emoji";
+import { watchingChance } from "../../scripts/game/prestige/story";
 
 // How long a drop takes to fall one screen height
 const FALL_MS = 9000;
@@ -45,6 +46,8 @@ function dropCount() {
 
 /** The active effects' emojis while any are on, otherwise any emoji that can be on the Big Emoji */
 function pickEmoji() {
+    // Something is watching (story.ts)
+    if (Math.random() < watchingChance()) return "👀";
     const effects = store.getState().effects.effects;
     if (effects.length > 0) return effects[Math.floor(Math.random() * effects.length)].emoji;
     return selectRandomEmoji().emoji;

@@ -16,20 +16,19 @@ import CloseButton from "../components/generalUI/CloseButton";
 import SegmentedControl from "../components/generalUI/SegmentedControl";
 import PerkList from "../components/prestige/PerkList";
 import TraitList from "../components/prestige/TraitList";
-import LoreList from "../components/prestige/LoreList";
 import AscensionReveal from "../components/prestige/AscensionReveal";
 import { palette, radii, themedStyles } from "../components/misc/theme";
 import { toCaps } from "../scripts/utils";
 
 const percent = (value: number) => i18n.t("numbers.percent", { value: formatNumber(value) });
-type Tab = "perks" | "traits" | "lore";
+type Tab = "perks" | "traits";
 
 /**
- * Ascension: perks, traits and lore.
+ * Ascension: perks and traits.
  *
  * Right after a prestige, it opens with the reveal and holds the game until the
  * player begins the next run (nothing runs while ascending, see gameLoop.ts).
- * During a run it's opened from the prestige screen to buy perks and read the lore;
+ * During a run it's opened from the prestige screen to buy perks;
  * traits are only shown then, as a run keeps the ones it began with.
  */
 export default function AscensionScreen() {
@@ -60,16 +59,17 @@ export default function AscensionScreen() {
         );
     }
 
+    // Back to the game; opened straight from a link there's nothing to go back to
+    const leave = () => router.canGoBack() ? router.back() : router.replace("/");
     const onBegin = () => {
         beginRun();
-        router.back();
+        leave();
     };
 
     const pickedTraits = traits.filter(trait => picked.includes(trait.id));
     const tabs: { id: Tab, label: string, badge?: number }[] = [
         { id: "perks", label: t("perks.title") },
         { id: "traits", label: t("traits.title"), badge: ascending ? Math.max(0, traitSlots() - picked.length) : undefined },
-        { id: "lore", label: t("lore.title") },
     ];
 
     return (
@@ -77,11 +77,11 @@ export default function AscensionScreen() {
             <SafeAreaView edges={["top"]} style={styles.topBar}>
                 <View style={{ flex: 1 }}>
                     <Text size={30} style={{ lineHeight: 44 }}>{t("ascension.title")}</Text>
-                    <Text font="bold" size={13} color={palette.lilac}>
-                        {ascending ? t("ascension.subtitleAscending", { count: prestiges + 1 }) : t("ascension.subtitleRun")}
-                    </Text>
+                    {ascending ? (
+                        <Text font="bold" size={13} color={palette.lilac}>{t("ascension.subtitleAscending", { count: prestiges + 1 })}</Text>
+                    ) : null}
                 </View>
-                {!ascending ? <CloseButton size={44} accessibilityLabel={t("prestige.close")} onPress={() => router.back()} /> : null}
+                {!ascending ? <CloseButton size={44} accessibilityLabel={t("prestige.close")} onPress={leave} /> : null}
             </SafeAreaView>
 
             <View style={styles.header}>
@@ -101,7 +101,7 @@ export default function AscensionScreen() {
             </View>
 
             <ScrollView contentContainerStyle={styles.content}>
-                {tab === "perks" ? <PerkList /> : tab === "traits" ? <TraitList /> : <LoreList />}
+                {tab === "perks" ? <PerkList /> : <TraitList />}
             </ScrollView>
 
             {ascending ? (

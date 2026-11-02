@@ -721,9 +721,25 @@
         }
     },
     "traits": {
-        "unlocksWith": "তোমার {{ordinal}} প্রেস্টিজে আনলক হবে।"
+        "unlocksWith": "তোমার {{ordinal}} প্রেস্টিজে আনলক হবে।",
+        "title": "বৈশিষ্ট্য",
+        "slots": "{{slots}}টির মধ্যে {{picked}}টি বাছা",
+        "introAscending": "পরের দফা কেমন খেলবে, বেছে নাও। প্রতিটি বৈশিষ্ট্যের একটা ভালো দিক আর একটা খারাপ দিক আছে, আর তা পুরো দফা জুড়ে থাকে।",
+        "introRun": "এই দফার বৈশিষ্ট্য। পরের বার প্রেস্টিজ করলে আবার বাছতে পারবে।",
+        "pickedTag": "✓ বাছা"
     },
-    "lore": {
-        "unlocksWith": "তোমার {{ordinal}} প্রেস্টিজে আনলক হবে।"
+    "ascension": {
+        "title": "আরোহণ",
+        "subtitleAscending": "দফা #{{count}}-এর জন্য তৈরি হও",
+        "beginRun": "দফা #{{count}} শুরু করো",
+        "withTraits": "বৈশিষ্ট্য: {{traits}}",
+        "noTraits": "কোনো বৈশিষ্ট্য বাছা হয়নি",
+        "runComplete": "দফা #{{count}} শেষ",
+        "essenceGained": "ইমোজি নির্যাস",
+        "unlockPerkTier": "🔓 স্তর {{tier}}-এর সুবিধা আনলক হলো",
+        "unlockTrait": "🔓 নতুন বৈশিষ্ট্য: {{icon}} {{name}}",
+        "unlockTrials": "🔓 চ্যালেঞ্জ আনলক হলো",
+        "continue": "চালিয়ে যাও",
+        "skip": "এড়িয়ে যাও"
     }
 }

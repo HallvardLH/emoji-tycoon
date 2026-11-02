@@ -722,7 +722,6 @@
     "ascension": {
         "title": "Ascension",
         "subtitleAscending": "Get ready for run #{{count}}",
-        "subtitleRun": "Perks, traits and the story so far",
         "beginRun": "Begin run #{{count}}",
         "withTraits": "Traits: {{traits}}",
         "noTraits": "No traits picked",
@@ -731,11 +730,8 @@
         "unlockPerkTier": "🔓 Tier {{tier}} perks unlocked",
         "unlockTrait": "🔓 New trait: {{icon}} {{name}}",
         "unlockTrials": "🔓 Trials unlocked",
-        "newChapter": "A new chapter",
         "continue": "Continue",
-        "skip": "Skip",
-        "linkTitle": "Perks, traits & lore",
-        "linkText": "{{owned}} of {{total}} perks owned · {{chapters}} lore chapters"
+        "skip": "Skip"
     },
     "traits": {
         "title": "Traits",
@@ -744,12 +740,5 @@
         "introRun": "This run's traits. You can pick again the next time you prestige.",
         "unlocksWith": "Unlocks with your {{ordinal}} prestige.",
         "pickedTag": "✓ PICKED"
-    },
-    "lore": {
-        "title": "Lore",
-        "chapterCount": "{{read}} of {{total}} chapters",
-        "chapterCaps": "CHAPTER {{number}}",
-        "prologueCaps": "PROLOGUE",
-        "unlocksWith": "Unlocks with your {{ordinal}} prestige."
     }
 }

@@ -822,9 +822,25 @@
         }
     },
     "traits": {
-        "unlocksWith": "Відкривається, коли зробиш {{ordinal}} престиж."
+        "unlocksWith": "Відкривається, коли зробиш {{ordinal}} престиж.",
+        "title": "Риси",
+        "slots": "Обрано {{picked}} з {{slots}}",
+        "introAscending": "Обери, яким буде наступний забіг. Кожна риса має плюс і мінус та діє весь забіг.",
+        "introRun": "Риси цього забігу. Обрати знову можна під час наступного престижу.",
+        "pickedTag": "✓ Обрано"
     },
-    "lore": {
-        "unlocksWith": "Відкривається, коли зробиш {{ordinal}} престиж."
+    "ascension": {
+        "title": "Вознесіння",
+        "subtitleAscending": "Готуйся до забігу #{{count}}",
+        "beginRun": "Почати забіг #{{count}}",
+        "withTraits": "Риси: {{traits}}",
+        "noTraits": "Риси не обрано",
+        "runComplete": "Забіг #{{count}} завершено",
+        "essenceGained": "емодзі-есенція",
+        "unlockPerkTier": "🔓 Відкрито перки рівня {{tier}}",
+        "unlockTrait": "🔓 Нова риса: {{icon}} {{name}}",
+        "unlockTrials": "🔓 Відкрито випробування",
+        "continue": "Далі",
+        "skip": "Пропустити"
     }
 }

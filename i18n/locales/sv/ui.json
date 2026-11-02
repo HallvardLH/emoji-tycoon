@@ -718,9 +718,25 @@
         }
     },
     "traits": {
-        "unlocksWith": "Låses upp vid din {{ordinal}} prestige."
+        "unlocksWith": "Låses upp vid din {{ordinal}} prestige.",
+        "title": "Egenskaper",
+        "slots": "{{picked}} av {{slots}} valda",
+        "introAscending": "Välj hur nästa runda ska spelas. Varje egenskap har en fördel och en nackdel, och gäller hela rundan.",
+        "introRun": "Den här rundans egenskaper. Du kan välja igen nästa gång du gör prestige.",
+        "pickedTag": "✓ VALD"
     },
-    "lore": {
-        "unlocksWith": "Låses upp vid din {{ordinal}} prestige."
+    "ascension": {
+        "title": "Uppstigning",
+        "subtitleAscending": "Gör dig redo för runda #{{count}}",
+        "beginRun": "Starta runda #{{count}}",
+        "withTraits": "Egenskaper: {{traits}}",
+        "noTraits": "Inga egenskaper valda",
+        "runComplete": "Runda #{{count}} klar",
+        "essenceGained": "emojiessens",
+        "unlockPerkTier": "🔓 Förmåner på nivå {{tier}} upplåsta",
+        "unlockTrait": "🔓 Ny egenskap: {{icon}} {{name}}",
+        "unlockTrials": "🔓 Utmaningar upplåsta",
+        "continue": "Fortsätt",
+        "skip": "Hoppa över"
     }
 }

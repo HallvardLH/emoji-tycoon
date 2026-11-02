@@ -717,9 +717,25 @@
         }
     },
     "traits": {
-        "unlocksWith": "Ontgrendeld bij je {{ordinal}} prestige."
+        "unlocksWith": "Ontgrendeld bij je {{ordinal}} prestige.",
+        "title": "Eigenschappen",
+        "slots": "{{picked}} van {{slots}} gekozen",
+        "introAscending": "Kies hoe de volgende ronde speelt. Elke eigenschap heeft een plus- en een minpunt, en blijft de hele ronde.",
+        "introRun": "De eigenschappen van deze ronde. Bij je volgende prestige kun je opnieuw kiezen.",
+        "pickedTag": "✓ Gekozen"
     },
-    "lore": {
-        "unlocksWith": "Ontgrendeld bij je {{ordinal}} prestige."
+    "ascension": {
+        "title": "Opstijging",
+        "subtitleAscending": "Maak je klaar voor ronde #{{count}}",
+        "beginRun": "Begin ronde #{{count}}",
+        "withTraits": "Eigenschappen: {{traits}}",
+        "noTraits": "Geen eigenschappen gekozen",
+        "runComplete": "Ronde #{{count}} voltooid",
+        "essenceGained": "emoji-essentie",
+        "unlockPerkTier": "🔓 Voordelen van rang {{tier}} ontgrendeld",
+        "unlockTrait": "🔓 Nieuwe eigenschap: {{icon}} {{name}}",
+        "unlockTrials": "🔓 Uitdagingen ontgrendeld",
+        "continue": "Doorgaan",
+        "skip": "Overslaan"
     }
 }

@@ -925,9 +925,25 @@
         }
     },
     "traits": {
-        "unlocksWith": "يفتح مع المجد {{ordinal}}."
+        "unlocksWith": "يفتح مع المجد {{ordinal}}.",
+        "title": "السمات",
+        "slots": "اخترت {{picked}} من {{slots}}",
+        "introAscending": "اختر كيف تُلعب الجولة القادمة. لكل سمة ميزة وعيب، وتبقى طوال الجولة.",
+        "introRun": "سمات هذه الجولة. يمكنك الاختيار من جديد عندما تنال المجد في المرة القادمة.",
+        "pickedTag": "✓ مختارة"
     },
-    "lore": {
-        "unlocksWith": "يفتح مع المجد {{ordinal}}."
+    "ascension": {
+        "title": "الارتقاء",
+        "subtitleAscending": "استعد للجولة رقم {{count}}",
+        "beginRun": "ابدأ الجولة رقم {{count}}",
+        "withTraits": "السمات: {{traits}}",
+        "noTraits": "لم تختر أي سمة",
+        "runComplete": "اكتملت الجولة رقم {{count}}",
+        "essenceGained": "جوهر الإيموجي",
+        "unlockPerkTier": "🔓 فُتحت امتيازات المرتبة {{tier}}",
+        "unlockTrait": "🔓 سمة جديدة: {{icon}} {{name}}",
+        "unlockTrials": "🔓 فُتحت التحديات",
+        "continue": "متابعة",
+        "skip": "تخطي"
     }
 }

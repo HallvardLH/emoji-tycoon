@@ -718,9 +718,25 @@
         }
     },
     "traits": {
-        "unlocksWith": "Mabubuksan sa {{ordinal}} mong prestige."
+        "unlocksWith": "Mabubuksan sa {{ordinal}} mong prestige.",
+        "title": "Mga katangian",
+        "slots": "{{picked}} sa {{slots}} ang napili",
+        "introAscending": "Piliin kung paano lalaruin ang susunod na run. Bawat katangian ay may magandang epekto at masamang epekto, at mananatili ito buong run.",
+        "introRun": "Mga katangian ng run na ito. Puwede kang pumili ulit sa susunod mong prestige.",
+        "pickedTag": "✓ NAPILI"
     },
-    "lore": {
-        "unlocksWith": "Mabubuksan sa {{ordinal}} mong prestige."
+    "ascension": {
+        "title": "Pag-akyat",
+        "subtitleAscending": "Maghanda para sa run #{{count}}",
+        "beginRun": "Simulan ang run #{{count}}",
+        "withTraits": "Mga katangian: {{traits}}",
+        "noTraits": "Walang napiling katangian",
+        "runComplete": "Tapos ang run #{{count}}",
+        "essenceGained": "emoji esensiya",
+        "unlockPerkTier": "🔓 Bukas na ang Tier {{tier}} perks",
+        "unlockTrait": "🔓 Bagong katangian: {{icon}} {{name}}",
+        "unlockTrials": "🔓 Bukas na ang mga hamon",
+        "continue": "Magpatuloy",
+        "skip": "Laktawan"
     }
 }

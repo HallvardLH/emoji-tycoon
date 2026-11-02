@@ -717,9 +717,25 @@
         }
     },
     "traits": {
-        "unlocksWith": "Avautuu {{ordinal}} prestiisin jälkeen."
+        "unlocksWith": "Avautuu {{ordinal}} prestiisin jälkeen.",
+        "title": "Piirteet",
+        "slots": "{{picked}}/{{slots}} valittu",
+        "introAscending": "Valitse, miten seuraava kierros pelataan. Jokaisella piirteellä on hyvä ja huono puolensa, ja se on voimassa koko kierroksen.",
+        "introRun": "Tämän kierroksen piirteet. Voit valita uudelleen, kun teet seuraavan prestiisin.",
+        "pickedTag": "✓ VALITTU"
     },
-    "lore": {
-        "unlocksWith": "Avautuu {{ordinal}} prestiisin jälkeen."
+    "ascension": {
+        "title": "Nousu",
+        "subtitleAscending": "Valmistaudu kierrokseen #{{count}}",
+        "beginRun": "Aloita kierros #{{count}}",
+        "withTraits": "Piirteet: {{traits}}",
+        "noTraits": "Ei valittuja piirteitä",
+        "runComplete": "Kierros #{{count}} päättyi",
+        "essenceGained": "emojiessenssiä",
+        "unlockPerkTier": "🔓 Tason {{tier}} edut avattu",
+        "unlockTrait": "🔓 Uusi piirre: {{icon}} {{name}}",
+        "unlockTrials": "🔓 Haasteet avattu",
+        "continue": "Jatka",
+        "skip": "Ohita"
     }
 }
