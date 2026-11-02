@@ -174,11 +174,11 @@ None appear until **Good vibes** is bought. Like Cookie Clicker's golden cookie 
 
 | Emoji | Effect | Duration | On screen for |
 |---|---|---|---|
-| 🚀 | ×2 tapping | 20 s | 25 s |
-| 🦾 | ×3 tapping | 15 s | 25 s |
-| 🍀 | ×2 production | 30 s | 25 s |
-| 😈 | ×77 production (fun value 17 only, 5%) | 4 s | 10 s |
-| 💣 | ×0.5 production (bad, only after 1 M EPS) | 15 s | 15 s |
+| 🚀 | ×2 tapping | 10 s | 25 s |
+| 🦾 | ×3 tapping | 8 s | 25 s |
+| 🍀 | ×2 production | 15 s | 25 s |
+| 😈 | ×77 production (fun value 17 only, 5%) | 2 s | 10 s |
+| 💣 | ×0.5 production (bad, only after 1 M EPS) | 8 s | 15 s |
 | 🎁 | Gift: min(15 min of EPS, 10% of bank) + 0–999 | instant | 25 s |
 
 - **Spawning:** the chance rises with time since the last spawn. The first is possible at 100 s, the typical wait is about two minutes, and a spawn is guaranteed by 300 s. There's a 1% chance of a double.
