@@ -192,7 +192,7 @@ export const pettingZooUpgrades: UpgradeType[] = [
         tier: 0,
         categories: ["Percentage increase tap"],
         unlockCondition: "Building helper",
-        emojisPerTapPercentageIncrease: 0.1,
+        emojisPerTapPercentageIncrease: 0.02,
         id: 50000
     },
     {
@@ -205,7 +205,7 @@ export const pettingZooUpgrades: UpgradeType[] = [
         tier: 1,
         categories: ["Percentage increase tap"],
         unlockCondition: "Building helper",
-        emojisPerTapPercentageIncrease: 0.1,
+        emojisPerTapPercentageIncrease: 0.02,
         id: 50001
     },
     {
@@ -218,7 +218,7 @@ export const pettingZooUpgrades: UpgradeType[] = [
         tier: 2,
         categories: ["Percentage increase tap"],
         unlockCondition: "Building helper",
-        emojisPerTapPercentageIncrease: 0.1,
+        emojisPerTapPercentageIncrease: 0.02,
         id: 50002
     },
     {
@@ -231,7 +231,7 @@ export const pettingZooUpgrades: UpgradeType[] = [
         tier: 3,
         categories: ["Percentage increase tap"],
         unlockCondition: "Building helper",
-        emojisPerTapPercentageIncrease: 0.1,
+        emojisPerTapPercentageIncrease: 0.02,
         id: 50003
     },
     {
@@ -244,7 +244,7 @@ export const pettingZooUpgrades: UpgradeType[] = [
         tier: 4,
         categories: ["Percentage increase tap"],
         unlockCondition: "Building helper",
-        emojisPerTapPercentageIncrease: 0.1,
+        emojisPerTapPercentageIncrease: 0.02,
         id: 50004
     },
     {
@@ -257,7 +257,7 @@ export const pettingZooUpgrades: UpgradeType[] = [
         tier: 5,
         categories: ["Percentage increase tap"],
         unlockCondition: "Building helper",
-        emojisPerTapPercentageIncrease: 0.1,
+        emojisPerTapPercentageIncrease: 0.02,
         id: 50005
     },
     {
@@ -270,7 +270,7 @@ export const pettingZooUpgrades: UpgradeType[] = [
         tier: 6,
         categories: ["Percentage increase tap"],
         unlockCondition: "Building helper",
-        emojisPerTapPercentageIncrease: 0.1,
+        emojisPerTapPercentageIncrease: 0.02,
         id: 50006
     },
     {
@@ -283,7 +283,7 @@ export const pettingZooUpgrades: UpgradeType[] = [
         tier: 7,
         categories: ["Percentage increase tap"],
         unlockCondition: "Building helper",
-        emojisPerTapPercentageIncrease: 0.1,
+        emojisPerTapPercentageIncrease: 0.02,
         id: 50007
     },
     {
@@ -296,7 +296,7 @@ export const pettingZooUpgrades: UpgradeType[] = [
         tier: 8,
         categories: ["Percentage increase tap"],
         unlockCondition: "Building helper",
-        emojisPerTapPercentageIncrease: 0.1,
+        emojisPerTapPercentageIncrease: 0.02,
         id: 50008
     },
     {
@@ -309,7 +309,7 @@ export const pettingZooUpgrades: UpgradeType[] = [
         tier: 9,
         categories: ["Percentage increase tap"],
         unlockCondition: "Building helper",
-        emojisPerTapPercentageIncrease: 0.1,
+        emojisPerTapPercentageIncrease: 0.02,
         id: 50009
     }
 

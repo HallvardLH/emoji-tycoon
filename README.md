@@ -69,12 +69,12 @@ The header shows your bank, with the per-second rate at a fixed position under i
 
 **Emojis per tap (EPT):**
 ```
-EPT = (baseEPT  +  EPS × Σ tap-% of EPS)
+EPT = (baseEPT  +  Σ flat tap additions  +  EPS × Σ tap-% of EPS)
       × Π tap multipliers (upgrades, effects)
       × (1 + Σ tap % increases)
       × combo multiplier × fun value multiplier
 ```
-Tap multipliers boost the whole tap, including the share of production the "hands" add. Tap % increases (the Petting zoo and Sports center helpers) add up rather than compound. Active effects of the same kind add up too (see Effect emojis). (They used to boost only the base tap, which made "Tapping ×2" worth next to nothing once hands carried tapping.)
+Tap multipliers boost the whole tap, including the share of production the "hands" add. Flat tap additions come from the early Drawing hand tap upgrades (+1, +2, +4, +8, +16). Tap % increases (the Petting zoo and Sports center helpers, +2% each) add up rather than compound, rounded down to the nearest 1%. Active effects of the same kind add up too (see Effect emojis). (They used to boost only the base tap, which made "Tapping ×2" worth next to nothing once hands carried tapping.)
 
 ### Combo
 - **Hidden tap boost:** each tap adds 1 to it, and every 10 boost is one combo level (×1, ×2, ×3…). The multiplier applies to EPT.
@@ -139,7 +139,7 @@ Tap multipliers boost the whole tap, including the share of production the "hand
 ### Upgrades
 | Kind | Effect | Unlock | Price |
 |---|---|---|---|
-| **Standard building** | ×2 that building's EPS (some Drawing hand ones also multiply tapping: ×1.5, then ×1.25 from tier 12) | Own 5 / 10 / 15 / 20 / 30 / 40 / 50 / 60 / 75 / 90 / 100 / 125 / 150, then +25 per tier | 4 × the building's price at the unlock amount |
+| **Standard building** | ×2 that building's EPS. Drawing hand also has five tap upgrades (+1, +2, +4, +8, +16 emojis per tap) at tiers 0–4 | Own 5 / 10 / 15 / 20 / 30 / 40 / 50 / 60 / 75 / 90 / 100 / 125 / 150, then +25 per tier | 4 × the building's price at the unlock amount |
 | **Helper** | +X% total EPS or +X% tapping | Every 10 of a building | The building's price at 10t + 5 owned |
 | **Big Emoji ("hands")** | Tapping gains +1% of EPS (the first), then 0.1% less each (0.9%, 0.8%…) down to +0.1% (the 10th on) | Emojis earned from tapping ≥ 10^(tier+2) | `10^(tier+4) + taps × 10^tier` |
 | **Combo level** | Turns the combo on, then +1 max combo | Combo taps (see Combo) | Fixed, see table above |
@@ -149,9 +149,9 @@ Tap multipliers boost the whole tap, including the share of production the "hand
 
 Each building has its own themed set:
 - **Farm:** veggie helpers.
-- **Petting zoo:** animal helpers, +10% tapping each (added, not compounded).
+- **Petting zoo:** animal helpers, +2% tapping each (added, not compounded).
 - **Restaurant:** dish helpers, +1% total EPS each.
-- **Sports center:** athlete helpers, +10% tapping each (added, not compounded).
+- **Sports center:** athlete helpers, +2% tapping each (added, not compounded).
 - **Space station:** crew and sights helpers, +1% total EPS each.
 - **Candy kingdom:** sweet helpers, +1% total EPS each.
 - **Big Emoji:** 25 "hands" that turn demonic late on.

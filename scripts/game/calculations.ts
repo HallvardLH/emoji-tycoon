@@ -44,10 +44,9 @@ function computeEpt(inputs: Partial<TapInputs> = {}) {
         ...(inputs.tapMultipliers ?? bigEmoji.emojisPerTapMultipliers),
     ]);
 
-    // The helpers' tapping bonuses add up rather than compound (30 helpers at +10% compounded
-    // to ×17). Rounded down to the nearest 10%; the small epsilon keeps 1 + 0.1 × 3 from
-    // landing a hair under 1.3
-    const percentageIncrease = Math.floor(addUp(inputs.tapPercentages ?? bigEmoji.emojisPerTapPercentages) * 10 + 1e-9) / 10;
+    // The helpers' tapping bonuses add up rather than compound. Rounded down to the nearest 1%;
+    // the small epsilon keeps 1 + 0.02 × 3 from landing a hair under 1.06
+    const percentageIncrease = Math.floor(addUp(inputs.tapPercentages ?? bigEmoji.emojisPerTapPercentages) * 100 + 1e-9) / 100;
 
     // A share of emojis per second (eps) is added to emojis per tap (ept), so tapping keeps up with production.
     // Shares add up, no compounding here
