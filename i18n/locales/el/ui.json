@@ -116,10 +116,6 @@
         "title": "Κύρος",
         "close": "Κλείσιμο",
         "ordinal_ordinal_other": "{{count}}ο",
-        "celebrateCaption": "ΚΥΡΟΣ #{{count}}",
-        "celebrateTrialCaption": "ΚΥΡΟΣ #{{count}} · Η ΔΟΚΙΜΑΣΙΑ ΞΕΚΙΝΗΣΕ",
-        "celebrateTitle": "+{{essence}} ουσία",
-        "celebrateTierTitle": "+{{essence}} ουσία · ξεκλείδωσαν προνόμια βαθμίδας {{tier}}",
         "essenceCaption": "ΟΥΣΙΑ EMOJI",
         "essenceBonus": "+{{bonus}} παραγωγή ({{each}} η καθεμία)",
         "intro": "Όταν ζωγραφίσεις αρκετά emoji, η ίδια τους η ουσία αρχίζει να μαζεύεται γύρω σου: μια μαγική ύλη που αλλάζει σχήμα κάθε φορά που την κοιτάς. Κάθε αξόδευτη ουσία ανεβάζει την παραγωγή, και με την ουσία αγοράζεις προνόμια που κρατάνε για πάντα.",
@@ -719,5 +715,11 @@
             "secretHoarder": "Έχε στην τράπεζα emoji ({{amount}}) χωρίς κανένα κτίριο",
             "secretGems": "Έχε μαζί πετράδια: {{amount}}"
         }
+    },
+    "traits": {
+        "unlocksWith": "Ξεκλειδώνεται με το {{ordinal}} σου Κύρος."
+    },
+    "lore": {
+        "unlocksWith": "Ξεκλειδώνεται με το {{ordinal}} σου Κύρος."
     }
 }

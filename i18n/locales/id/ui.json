@@ -114,10 +114,6 @@
         "title": "Prestise",
         "close": "Tutup",
         "ordinal_ordinal_other": "ke-{{count}}",
-        "celebrateCaption": "PRESTISE #{{count}}",
-        "celebrateTrialCaption": "PRESTISE #{{count}} · TANTANGAN DIMULAI",
-        "celebrateTitle": "+{{essence}} esensi",
-        "celebrateTierTitle": "+{{essence}} esensi · perk tingkat {{tier}} terbuka",
         "essenceCaption": "ESENSI EMOJI",
         "essenceBonus": "+{{bonus}} produksi ({{each}} per esensi)",
         "intro": "Setelah cukup banyak emoji digambar, esensi mereka mulai berkumpul di sekitarmu: zat ajaib yang berubah bentuk setiap kali kamu melihatnya. Setiap esensi yang belum dipakai menaikkan produksi, dan esensi bisa membeli perk yang berlaku selamanya.",
@@ -667,5 +663,11 @@
             "secretHoarder": "Punya {{amount}} emoji di bank tanpa punya bangunan",
             "secretGems": "Punya {{amount}} permata sekaligus"
         }
+    },
+    "traits": {
+        "unlocksWith": "Terbuka di prestise {{ordinal}} kamu."
+    },
+    "lore": {
+        "unlocksWith": "Terbuka di prestise {{ordinal}} kamu."
     }
 }

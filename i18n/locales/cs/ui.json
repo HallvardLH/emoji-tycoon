@@ -120,10 +120,6 @@
         "title": "Prestiž",
         "close": "Zavřít",
         "ordinal_ordinal_other": "{{count}}.",
-        "celebrateCaption": "PRESTIŽ #{{count}}",
-        "celebrateTrialCaption": "PRESTIŽ #{{count}} · ZKOUŠKA ZAHÁJENA",
-        "celebrateTitle": "+{{essence}} esence",
-        "celebrateTierTitle": "+{{essence}} esence · odemčeny výhody úrovně {{tier}}",
         "essenceCaption": "EMOJI ESENCE",
         "essenceBonus": "+{{bonus}} produkce ({{each}} za kus)",
         "intro": "Když nakreslíš dost emoji, začne se kolem tebe hromadit jejich samotná esence: kouzelná látka, která mění tvar, kdykoli se na ni podíváš. Každá neutracená esence zvyšuje produkci a za esenci si koupíš výhody, které vydrží navždy.",
@@ -823,5 +819,11 @@
             "secretHoarder": "Měj v bance emoji ({{amount}}), aniž bys vlastnil jedinou budovu",
             "secretGems": "Měj naráz drahokamy: {{amount}}"
         }
+    },
+    "traits": {
+        "unlocksWith": "Odemkne se s tvou {{ordinal}} prestiží."
+    },
+    "lore": {
+        "unlocksWith": "Odemkne se s tvou {{ordinal}} prestiží."
     }
 }

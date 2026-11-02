@@ -114,10 +114,6 @@
         "title": "聲望",
         "close": "關閉",
         "ordinal_ordinal_other": "第 {{count}} 次",
-        "celebrateCaption": "第 {{count}} 次聲望",
-        "celebrateTrialCaption": "第 {{count}} 次聲望 · 試煉開始",
-        "celebrateTitle": "+{{essence}} 精華",
-        "celebrateTierTitle": "+{{essence}} 精華 · 已解鎖第 {{tier}} 階天賦",
         "essenceCaption": "Emoji 精華",
         "essenceBonus": "產量 +{{bonus}}（每個 {{each}}）",
         "intro": "畫出夠多的 Emoji 之後，它們的精華會開始聚集在你身邊：一種每次看它都會變換形狀的神奇物質。每個未花掉的精華都能提升產量，而精華也能用來購買永久有效的天賦。",
@@ -661,5 +657,11 @@
             "secretHoarder": "不擁有任何建築，銀行裡存有 {{amount}} 個 Emoji",
             "secretGems": "同時持有 {{amount}} 顆寶石"
         }
+    },
+    "traits": {
+        "unlocksWith": "{{ordinal}}聲望時解鎖。"
+    },
+    "lore": {
+        "unlocksWith": "{{ordinal}}聲望時解鎖。"
     }
 }

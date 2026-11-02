@@ -114,10 +114,6 @@
         "title": "프레스티지",
         "close": "닫기",
         "ordinal_ordinal_other": "{{count}}번째",
-        "celebrateCaption": "프레스티지 #{{count}}",
-        "celebrateTrialCaption": "프레스티지 #{{count}} · 시련 시작",
-        "celebrateTitle": "정수 +{{essence}}",
-        "celebrateTierTitle": "정수 +{{essence}} · {{tier}}단계 특전 해금",
         "essenceCaption": "이모지 정수",
         "essenceBonus": "생산량 +{{bonus}} (개당 {{each}})",
         "intro": "이모지를 충분히 그리고 나면 이모지의 정수가 당신 주위에 모여들기 시작해요. 바라볼 때마다 모양이 바뀌는 신비한 물질이죠. 쓰지 않은 정수는 하나하나 생산량을 높여 주고, 정수로는 영원히 유지되는 특전을 살 수 있어요.",
@@ -661,5 +657,11 @@
             "secretHoarder": "건물 하나 없이 은행에 이모지 {{amount}}개 모으기",
             "secretGems": "보석 {{amount}}개 동시 보유"
         }
+    },
+    "traits": {
+        "unlocksWith": "{{ordinal}} 프레스티지 때 해금돼요."
+    },
+    "lore": {
+        "unlocksWith": "{{ordinal}} 프레스티지 때 해금돼요."
     }
 }

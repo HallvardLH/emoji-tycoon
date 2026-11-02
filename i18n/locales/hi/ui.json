@@ -120,10 +120,6 @@
         "ordinal_ordinal_few": "{{count}}थी",
         "ordinal_ordinal_many": "{{count}}ठी",
         "ordinal_ordinal_other": "{{count}}वीं",
-        "celebrateCaption": "प्रेस्टीज #{{count}}",
-        "celebrateTrialCaption": "प्रेस्टीज #{{count}} · चुनौती शुरू",
-        "celebrateTitle": "+{{essence}} सार",
-        "celebrateTierTitle": "+{{essence}} सार · टियर {{tier}} के पर्क अनलॉक",
         "essenceCaption": "इमोजी सार",
         "essenceBonus": "+{{bonus}} उत्पादन (हर सार से {{each}})",
         "intro": "काफ़ी इमोजी बना लेने के बाद, उनका असली सार तुम्हारे आस-पास जमा होने लगता है: एक जादुई पदार्थ, जो हर बार देखने पर अपना रूप बदल लेता है। बिना खर्च किया हर सार उत्पादन बढ़ाता है, और सार से ऐसे पर्क खरीदे जा सकते हैं जो हमेशा साथ रहते हैं।",
@@ -723,5 +719,11 @@
             "secretHoarder": "बिना किसी इमारत के बैंक में {{amount}} इमोजी रखो",
             "secretGems": "एक साथ {{amount}} रत्न रखो"
         }
+    },
+    "traits": {
+        "unlocksWith": "{{ordinal}} बार प्रेस्टीज करने पर अनलॉक होती हैं।"
+    },
+    "lore": {
+        "unlocksWith": "{{ordinal}} बार प्रेस्टीज करने पर अनलॉक होती हैं।"
     }
 }

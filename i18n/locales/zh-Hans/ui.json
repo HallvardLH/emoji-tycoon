@@ -114,10 +114,6 @@
         "title": "声望",
         "close": "关闭",
         "ordinal_ordinal_other": "第{{count}}",
-        "celebrateCaption": "第{{count}}次声望",
-        "celebrateTrialCaption": "第{{count}}次声望 · 挑战开始",
-        "celebrateTitle": "+{{essence}}精华",
-        "celebrateTierTitle": "+{{essence}}精华 · 第{{tier}}阶天赋已解锁",
         "essenceCaption": "表情精华",
         "essenceBonus": "产量+{{bonus}}（每点{{each}}）",
         "intro": "画出足够多的表情后，它们的精华便开始在你身边聚集：这是一种神奇的物质，每次你看它，它都会变换形状。每点未花费的精华都能提升产量，精华还能购买永久生效的天赋。",
@@ -661,5 +657,11 @@
             "secretHoarder": "不拥有任何建筑，银行里存有{{amount}}个表情",
             "secretGems": "同时持有{{amount}}宝石"
         }
+    },
+    "traits": {
+        "unlocksWith": "{{ordinal}}次声望时解锁。"
+    },
+    "lore": {
+        "unlocksWith": "{{ordinal}}次声望时解锁。"
     }
 }

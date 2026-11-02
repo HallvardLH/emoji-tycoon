@@ -118,10 +118,6 @@
         "title": "Prestígio",
         "close": "Fechar",
         "ordinal_ordinal_other": "{{count}}º",
-        "celebrateCaption": "PRESTÍGIO Nº {{count}}",
-        "celebrateTrialCaption": "PRESTÍGIO Nº {{count}} · DESAFIO INICIADO",
-        "celebrateTitle": "+{{essence}} de essência",
-        "celebrateTierTitle": "+{{essence}} de essência · vantagens de nível {{tier}} liberadas",
         "essenceCaption": "ESSÊNCIA DE EMOJI",
         "essenceBonus": "+{{bonus}} de produção ({{each}} cada)",
         "intro": "Depois de desenhar emojis o bastante, a própria essência deles começa a se juntar ao seu redor: uma substância mágica que muda de forma toda vez que você olha para ela. Cada essência não gasta aumenta a produção, e a essência compra vantagens que duram para sempre.",
@@ -771,5 +767,11 @@
             "secretHoarder": "Tenha {{amount}} emojis no banco sem ter nenhum prédio",
             "secretGems": "Tenha {{amount}} gemas ao mesmo tempo"
         }
+    },
+    "traits": {
+        "unlocksWith": "Desbloqueia no seu {{ordinal}} prestígio."
+    },
+    "lore": {
+        "unlocksWith": "Desbloqueia no seu {{ordinal}} prestígio."
     }
 }

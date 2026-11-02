@@ -118,10 +118,6 @@
         "title": "Prestigio",
         "close": "Cerrar",
         "ordinal_ordinal_other": "{{count}}.º",
-        "celebrateCaption": "Prestigio n.º {{count}}",
-        "celebrateTrialCaption": "Prestigio n.º {{count}} · Desafío iniciado",
-        "celebrateTitle": "+{{essence}} de esencia",
-        "celebrateTierTitle": "+{{essence}} de esencia · ventajas de rango {{tier}} desbloqueadas",
         "essenceCaption": "Esencia emoji",
         "essenceBonus": "+{{bonus}} de producción ({{each}} cada una)",
         "intro": "Tras dibujar suficientes emojis, su misma esencia empieza a reunirse a tu alrededor: una sustancia mágica que cambia de forma cada vez que la miras. Cada esencia sin gastar aumenta la producción, y con esencia se compran ventajas que duran para siempre.",
@@ -771,5 +767,11 @@
             "secretHoarder": "Ten {{amount}} emojis en el banco sin tener ningún edificio",
             "secretGems": "Ten {{amount}} gemas a la vez"
         }
+    },
+    "traits": {
+        "unlocksWith": "Se desbloquea con tu {{ordinal}} prestigio."
+    },
+    "lore": {
+        "unlocksWith": "Se desbloquea con tu {{ordinal}} prestigio."
     }
 }

@@ -115,10 +115,6 @@
         "close": "Đóng",
         "ordinal_ordinal_one": "thứ {{count}}",
         "ordinal_ordinal_other": "thứ {{count}}",
-        "celebrateCaption": "DANH VỌNG #{{count}}",
-        "celebrateTrialCaption": "DANH VỌNG #{{count}} · BẮT ĐẦU THỬ THÁCH",
-        "celebrateTitle": "+{{essence}} tinh chất",
-        "celebrateTierTitle": "+{{essence}} tinh chất · mở khóa đặc quyền bậc {{tier}}",
         "essenceCaption": "TINH CHẤT EMOJI",
         "essenceBonus": "+{{bonus}} sản lượng ({{each}} mỗi đơn vị)",
         "intro": "Khi bạn đã vẽ đủ nhiều emoji, tinh chất của chúng bắt đầu tụ lại quanh bạn: một chất liệu kỳ diệu đổi hình dạng mỗi khi bạn nhìn vào. Mỗi đơn vị tinh chất chưa tiêu đều tăng sản lượng, và tinh chất mua được những đặc quyền tồn tại mãi mãi.",
@@ -668,5 +664,11 @@
             "secretHoarder": "Có {{amount}} emoji trong kho mà không sở hữu công trình nào",
             "secretGems": "Giữ cùng lúc {{amount}} đá quý"
         }
+    },
+    "traits": {
+        "unlocksWith": "Mở khóa ở lần danh vọng {{ordinal}}."
+    },
+    "lore": {
+        "unlocksWith": "Mở khóa ở lần danh vọng {{ordinal}}."
     }
 }

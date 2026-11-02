@@ -124,10 +124,6 @@
         "title": "المجد",
         "close": "إغلاق",
         "ordinal_ordinal_other": "رقم {{count}}",
-        "celebrateCaption": "المجد #{{count}}",
-        "celebrateTrialCaption": "المجد #{{count}} · بدأ التحدي",
-        "celebrateTitle": "+{{essence}} جوهر",
-        "celebrateTierTitle": "+{{essence}} جوهر · فتحت امتيازات المرتبة {{tier}}",
         "essenceCaption": "جوهر الإيموجي",
         "essenceBonus": "+{{bonus}} للإنتاج ({{each}} لكل جوهر)",
         "intro": "بعد أن ترسم ما يكفي من الإيموجي، يبدأ جوهرها نفسه بالتجمع حولك: مادة سحرية يتغير شكلها كلما نظرت إليها. كل جوهر لم تنفقه يعزز الإنتاج، وبالجوهر تشتري امتيازات تدوم إلى الأبد.",
@@ -927,5 +923,11 @@
             "secretHoarder": "احتفظ في البنك بإيموجي ({{amount}}) دون أن تملك أي مبنى",
             "secretGems": "احتفظ بماسات في آن واحد: {{amount}}"
         }
+    },
+    "traits": {
+        "unlocksWith": "يفتح مع المجد {{ordinal}}."
+    },
+    "lore": {
+        "unlocksWith": "يفتح مع المجد {{ordinal}}."
     }
 }

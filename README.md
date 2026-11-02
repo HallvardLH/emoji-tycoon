@@ -253,8 +253,9 @@ A secret number from 1–100, rolled on a new game and on reset, like Cookie Cli
 
 ### Prestige (emoji essence ✨)
 - **Earning essence:** the essence all-time emojis drawn are worth is `floor((total drawn / 2×10^8)^(1/4))`. Prestiging pays out what that's worth beyond the essence already earned, so each run has to go further to earn as much again. About 50 essence for the first prestige, at ~1 Qa drawn.
-- **What it does:** each *unspent* essence gives +2% production (2.5% with Resonance). Essence also buys perks, which gives up that bonus (Overflow gives half of it back).
-- **Resets:** bank, buildings, building upgrades, hands, effects. **Keeps:** collection, all-time stats, combo and effect emoji upgrades, fun value, essence, perks and trial rewards.
+- **What it does:** each *unspent* essence gives +2% production (2.5% with Resonance, 3% with Enlightenment). Essence also buys perks, which gives up that bonus (Overflow gives half of it back).
+- **Resets:** bank, buildings, building upgrades, hands, effects. **Keeps:** collection, all-time stats, combo and effect emoji upgrades, fun value, essence, perks, traits and trial rewards.
+- **Ascension** (`app/ascension.tsx`): prestiging opens a full-screen reveal (the essence counts up, what the prestige unlocked, and the new lore chapter), then the ascension menu with three tabs: Perks, Traits and Lore. The game holds while ascending (`prestige.ascending`: no production, play time or effects, see `gameLoop.ts`) until **Begin run**, which applies the run's head start (Head start, Old hands, a trial's stash) and traits (`beginRun()` in `prestige.ts`). It can't be swiped or backed out of, and closing the app mid-ascension returns to it. During a run the same menu opens from the prestige screen to buy perks and read the lore; traits are shown but locked.
 - **Perks:** each prestige unlocks the next tier (tier 1 after the first prestige, and so on):
 
 | Tier | Perk | Cost | Effect |
@@ -262,21 +263,41 @@ A secret number from 1–100, rolled on a new game and on reset, like Cookie Cli
 | 1 | Overtime ⏳ | 5 | Good effects last 50% longer |
 | 1 | Gift wrap 🎀 | 15 | Gifts give twice as much |
 | 1 | Head start 🎒 | 10 | Start every run with 5 minutes of your last run's best production |
+| 1 | Old hands 🧤 | 20 | Start every run with 10 Drawing hands |
 | 2 | Lucky streak 🍀 | 40 | Effect emojis appear 50% more often |
 | 2 | Shiny sense 🌟 | 30 | Shiny emojis twice as likely |
 | 2 | Resonance 🔮 | 60 | Unspent essence gives +2.5% each |
+| 2 | Echo 📣 | 50 | Taps are worth 25% more |
 | 3 | Collector's pride 📖 | 150 | +0.03% production per different emoji collected |
 | 3 | Bulk discount 🏷️ | 200 | Buildings 10% cheaper |
 | 3 | Magnet 🧲 | 120 | Effect emojis stay on screen twice as long |
+| 3 | Blueprints 📐 | 175 | Building upgrades 25% cheaper |
 | 4 | Neighbourhood 🏘️ | 500 | +3% production per kind of building owned |
 | 4 | Muscle memory ✋ | 400 | Keep Big Emoji hands when prestiging |
 | 4 | Steady hands 🔥 | 300 | Combo drains 20% slower |
+| 4 | Polymath 🧩 | 350 | +1 trait slot |
 | 5 | Momentum 🌊 | 800 | +1% production per 10 minutes played this run, up to +50% |
 | 5 | Second wind 💨 | 1,000 | +1 max combo |
 | 5 | Golden touch 👑 | 600 | Shiny emojis worth 5× as much |
 | 6 | Overflow 🫗 | 2,500 | Spent essence keeps half its production bonus |
 | 6 | Hall of fame 🏆 | 2,000 | +10% production per trial completed |
 | 6 | Flying start 🚀 | 1,500 | Head start gives 30 minutes instead of 5 (needs Head start) |
+| 7 | Lore keeper 📜 | 4,000 | +3% production per lore chapter unlocked |
+| 7 | Enlightenment 🪷 | 6,000 | Unspent essence gives +3% each (needs Resonance) |
+| 7 | Ascendant 🌌 | 5,000 | +1 trait slot (needs Polymath) |
+
+- **Traits** (`scripts/game/prestige/traits.ts`): free, picked while ascending, kept for the whole run. Each has an upside and a downside. One slot, plus one each from Polymath and Ascendant; picking past the limit replaces the oldest pick. A run keeps the traits of the run before unless they're changed.
+
+| Trait | Upside | Downside | From prestige |
+|---|---|---|---|
+| Tapper 👆 | Taps ×3 | Production ×0.6 | 1 |
+| Idler 😴 | Production ×1.4 | Taps ×0.25 | 1 |
+| Architect 🏗️ | Buildings 20% cheaper | Building upgrades ×3 | 1 |
+| Gambler 🎲 | Effect emojis twice as often | Good effects last half as long | 2 |
+| Treasure hunter 🔍 | Shiny emojis 3× as likely | Production ×0.85 | 3 |
+| Combo artist 🥁 | +2 max combo | Combo drains 50% faster | 4 |
+
+- **Lore** (`scripts/game/prestige/lore.ts`): the story of the Big Emoji and the First Emoji, a prologue plus a chapter per prestige (11 chapters). The ascension reveals each new one; the Lore tab keeps them all. English first: translations fall back to English, and `i18n:check` doesn't report the missing ones yet.
 
 Saves that bought the old offline perks (Night shift, Graveyard shift) get their essence back on load.
 
@@ -289,10 +310,10 @@ Saves that bought the old offline perks (Night shift, Graveyard shift) get their
 | Dark sky 🌑 | No effect emojis | 50% of last run | Effect emojis appear 25% more often |
 
 - **Run tracking:** play time this run (`prestige.runSeconds`, not counting time away), emojis drawn this run, and essence per hour played. Once the rate drops below 80% of the run's best, the screen suggests prestiging. The last 10 runs are kept in `prestige.history`.
-- **UI:** a ✨ chip on the home screen fills toward the next essence and shows what a prestige would pay. It opens `app/prestige.tsx`: the active trial, the reset (two-tap confirm) with run stats, trials, perk tiers and past runs.
+- **UI:** a ✨ chip on the home screen fills toward the next essence and shows what a prestige would pay. It opens `app/prestige.tsx`: the active trial, the reset (two-tap confirm) with run stats, gem extras, trials, a link to the ascension menu, and past runs.
 - **Pacing (balance sim, player tapping a quarter of the time, prestiging when it would double the essence bonus):**
   - The first prestige comes at about 19 h, with runs shrinking to about 5 h by the 6th.
-  - Runs lengthened again after about 100 h, once the first 12 perks were owned. Tiers 5 and 6 and the trials were added for that stretch but haven't been through the sim yet.
+  - Runs lengthened again after about 100 h, once the first 12 perks were owned. Tiers 5 to 7, the trials and the traits were added for that stretch but haven't been through the sim yet.
 
 ### Cheats (drawer)
 Development builds only: the 🧪 button and the drawer aren't in release builds. The drawer has these sections:

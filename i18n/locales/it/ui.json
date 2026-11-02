@@ -119,10 +119,6 @@
         "close": "Chiudi",
         "ordinal_ordinal_many": "{{count}}º",
         "ordinal_ordinal_other": "{{count}}º",
-        "celebrateCaption": "PRESTIGIO N. {{count}}",
-        "celebrateTrialCaption": "PRESTIGIO N. {{count}} · SFIDA INIZIATA",
-        "celebrateTitle": "+{{essence}} essenza",
-        "celebrateTierTitle": "+{{essence}} essenza · vantaggi di grado {{tier}} sbloccati",
         "essenceCaption": "ESSENZA DI EMOJI",
         "essenceBonus": "+{{bonus}} di produzione ({{each}} l'una)",
         "intro": "Dopo aver disegnato abbastanza emoji, la loro stessa essenza inizia a raccogliersi intorno a te: una sostanza magica che cambia forma ogni volta che la guardi. Ogni essenza non spesa aumenta la produzione, e con l'essenza compri vantaggi che durano per sempre.",
@@ -772,5 +768,11 @@
             "secretHoarder": "Abbi {{amount}} emoji in banca senza possedere edifici",
             "secretGems": "Possiedi {{amount}} gemme insieme"
         }
+    },
+    "traits": {
+        "unlocksWith": "Si sblocca al tuo {{ordinal}} prestigio."
+    },
+    "lore": {
+        "unlocksWith": "Si sblocca al tuo {{ordinal}} prestigio."
     }
 }

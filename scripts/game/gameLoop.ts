@@ -69,6 +69,8 @@ export function gameLoop() {
         awaySince = undefined;
     } else if (delta > AWAY_THRESHOLD_SECONDS) {
         registerAway(delta);
+    } else if (state.prestige.ascending) {
+        // Ascending (between a prestige and the next run): the run hasn't started yet
     } else {
         // Debug speed (cheat) runs production and play time faster
         const speed = getGameSpeed();
@@ -138,6 +140,11 @@ export function gameLoop() {
 }
 
 function everySecond() {
+    // Ascending: no effects, and no play time, until the run begins
+    if (store.getState().prestige.ascending) {
+        if (!isGameHidden()) updateLastSeen();
+        return;
+    }
     // The run's play time, for Momentum (perk) and the essence rate
     if (playedSeconds > 0) {
         store.dispatch(addRunSeconds(playedSeconds));

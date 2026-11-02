@@ -116,10 +116,6 @@
         "title": "Prestige",
         "close": "Sluiten",
         "ordinal_ordinal_other": "{{count}}e",
-        "celebrateCaption": "Prestige #{{count}}",
-        "celebrateTrialCaption": "Prestige #{{count}} · Uitdaging gestart",
-        "celebrateTitle": "+{{essence}} essentie",
-        "celebrateTierTitle": "+{{essence}} essentie · rang {{tier}}-voordelen ontgrendeld",
         "essenceCaption": "Emoji-essentie",
         "essenceBonus": "+{{bonus}} productie ({{each}} per stuk)",
         "intro": "Als je genoeg emoji's hebt getekend, begint hun pure essentie zich om je heen te verzamelen: een magische substantie die van vorm verandert zodra je ernaar kijkt. Elke ongebruikte essentie verhoogt je productie, en met essentie koop je voordelen die voor altijd blijven.",
@@ -719,5 +715,11 @@
             "secretHoarder": "Heb {{amount}} emoji's op de bank zonder een gebouw te bezitten",
             "secretGems": "Bezit {{amount}} juwelen tegelijk"
         }
+    },
+    "traits": {
+        "unlocksWith": "Ontgrendeld bij je {{ordinal}} prestige."
+    },
+    "lore": {
+        "unlocksWith": "Ontgrendeld bij je {{ordinal}} prestige."
     }
 }

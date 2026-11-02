@@ -116,10 +116,6 @@
         "title": "Heshima",
         "close": "Funga",
         "ordinal_ordinal_other": "{{count}}",
-        "celebrateCaption": "Heshima #{{count}}",
-        "celebrateTrialCaption": "Heshima #{{count}} · Jaribio limeanza",
-        "celebrateTitle": "+{{essence}} kiini",
-        "celebrateTierTitle": "+{{essence}} kiini · faida za ngazi {{tier}} zimefunguliwa",
         "essenceCaption": "Kiini cha emoji",
         "essenceBonus": "+{{bonus}} uzalishaji ({{each}} kila kimoja)",
         "intro": "Baada ya kuchora emoji za kutosha, kiini chake halisi kinaanza kukusanyika karibu nawe: dutu ya kichawi inayobadilika umbo kila unapoitazama. Kila kiini ambacho hujatumia huongeza uzalishaji, na kiini hununua faida zinazodumu milele.",
@@ -719,5 +715,11 @@
             "secretHoarder": "Kuwa na emoji {{amount}} benki bila kumiliki jengo lolote",
             "secretGems": "Kuwa na vito {{amount}} kwa wakati mmoja"
         }
+    },
+    "traits": {
+        "unlocksWith": "Linafunguka kwenye heshima yako ya {{ordinal}}."
+    },
+    "lore": {
+        "unlocksWith": "Linafunguka kwenye heshima yako ya {{ordinal}}."
     }
 }

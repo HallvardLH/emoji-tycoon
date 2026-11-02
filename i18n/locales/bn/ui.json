@@ -120,10 +120,6 @@
         "ordinal_ordinal_few": "{{count}}র্থ",
         "ordinal_ordinal_many": "{{count}}ষ্ঠ",
         "ordinal_ordinal_other": "{{count}}তম",
-        "celebrateCaption": "প্রেস্টিজ #{{count}}",
-        "celebrateTrialCaption": "প্রেস্টিজ #{{count}} · চ্যালেঞ্জ শুরু",
-        "celebrateTitle": "+{{essence}} নির্যাস",
-        "celebrateTierTitle": "+{{essence}} নির্যাস · স্তর {{tier}}-এর সুবিধা আনলক",
         "essenceCaption": "ইমোজি নির্যাস",
         "essenceBonus": "+{{bonus}} উৎপাদন (প্রতিটি {{each}})",
         "intro": "যথেষ্ট ইমোজি আঁকার পর তাদের আসল নির্যাস তোমার চারপাশে জমতে শুরু করে: এক জাদুকরী পদার্থ, যার দিকে তাকালেই সে আকার বদলায়। প্রতিটি খরচ না করা নির্যাস উৎপাদন বাড়ায়, আর নির্যাস দিয়ে কেনা যায় চিরকালের সুবিধা।",
@@ -723,5 +719,11 @@
             "secretHoarder": "কোনো ভবন ছাড়াই ব্যাংকে {{amount}} ইমোজি রাখো",
             "secretGems": "একসাথে {{amount}} রত্ন রাখো"
         }
+    },
+    "traits": {
+        "unlocksWith": "তোমার {{ordinal}} প্রেস্টিজে আনলক হবে।"
+    },
+    "lore": {
+        "unlocksWith": "তোমার {{ordinal}} প্রেস্টিজে আনলক হবে।"
     }
 }

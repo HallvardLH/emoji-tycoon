@@ -117,10 +117,6 @@
         "close": "Bezárás",
         "ordinal_ordinal_one": "{{count}}.",
         "ordinal_ordinal_other": "{{count}}.",
-        "celebrateCaption": "{{count}}. presztízs",
-        "celebrateTrialCaption": "{{count}}. presztízs · Próba elindítva",
-        "celebrateTitle": "+{{essence}} esszencia",
-        "celebrateTierTitle": "+{{essence}} esszencia · {{tier}}. szintű előnyök feloldva",
         "essenceCaption": "Emojiesszencia",
         "essenceBonus": "+{{bonus}} termelés (darabonként {{each}})",
         "intro": "Ha elég emojit rajzoltál, a lényegük, az esszenciájuk gyűlni kezd körülötted: egy varázslatos anyag, amely alakot vált, valahányszor ránézel. Minden el nem költött esszencia növeli a termelést, esszenciáért pedig örökre megmaradó előnyöket vehetsz.",
@@ -720,5 +716,11 @@
             "secretHoarder": "Legyen a bankban emoji ({{amount}}) úgy, hogy nincs egy épületed sem",
             "secretGems": "Legyen egyszerre drágakő: {{amount}}"
         }
+    },
+    "traits": {
+        "unlocksWith": "{{ordinal}} presztízsnél nyílik meg."
+    },
+    "lore": {
+        "unlocksWith": "{{ordinal}} presztízsnél nyílik meg."
     }
 }

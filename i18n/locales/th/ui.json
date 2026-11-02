@@ -114,10 +114,6 @@
         "title": "เพรสทีจ",
         "close": "ปิด",
         "ordinal_ordinal_other": "ครั้งที่ {{count}}",
-        "celebrateCaption": "เพรสทีจ #{{count}}",
-        "celebrateTrialCaption": "เพรสทีจ #{{count}} · เริ่มบททดสอบ",
-        "celebrateTitle": "+{{essence}} เอสเซนส์",
-        "celebrateTierTitle": "+{{essence}} เอสเซนส์ · ปลดล็อกเพิร์กขั้น {{tier}}",
         "essenceCaption": "เอสเซนส์อีโมจิ",
         "essenceBonus": "การผลิต +{{bonus}} (ชิ้นละ {{each}})",
         "intro": "เมื่อวาดอีโมจิมากพอ แก่นแท้ของพวกมันจะเริ่มมารวมตัวรอบตัวคุณ: สสารวิเศษที่เปลี่ยนรูปร่างทุกครั้งที่คุณมอง เอสเซนส์ทุกชิ้นที่ยังไม่ใช้จะช่วยเพิ่มการผลิต และเอสเซนส์ยังใช้ซื้อเพิร์กที่อยู่กับคุณตลอดไป",
@@ -667,5 +663,11 @@
             "secretHoarder": "มีอีโมจิ {{amount}} ในคลังโดยไม่มีอาคารสักหลัง",
             "secretGems": "มีเพชร {{amount}} พร้อมกัน"
         }
+    },
+    "traits": {
+        "unlocksWith": "ปลดล็อกเมื่อเพรสทีจ{{ordinal}}"
+    },
+    "lore": {
+        "unlocksWith": "ปลดล็อกเมื่อเพรสทีจ{{ordinal}}"
     }
 }

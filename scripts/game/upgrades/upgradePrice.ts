@@ -5,6 +5,7 @@ import { roundToPriceStep } from "../../utils";
 import { COMBO_LEVEL_PRICES } from "./upgradeData/nonBuilding/combo";
 import { EFFECT_EMOJI_PRICES } from "./upgradeData/nonBuilding/effectEmojis";
 import { getBuildingUnlockRequirement } from "./requirements";
+import { buildingUpgradePriceMultiplier } from "../prestige/perks";
 
 // Standard upgrades cost this many times the building at their unlock amount
 const STANDARD_UPGRADE_PRICE_FACTOR = 4;
@@ -16,7 +17,8 @@ function rawUpgradePrice(tier: number, variant: UpgradeVariantsType, buildingId?
                 // A few times what the building costs at the amount that unlocks the upgrade,
                 // so every tier is a real purchase rather than free once unlocked
                 const unlockPrice = getBaseBuildingPrice(buildingId) * Math.pow(BUILDING_PRICE_GROWTH, getBuildingUnlockRequirement(tier));
-                return STANDARD_UPGRADE_PRICE_FACTOR * unlockPrice;
+                // Blueprints (perk) and Architect (trait)
+                return STANDARD_UPGRADE_PRICE_FACTOR * unlockPrice * buildingUpgradePriceMultiplier();
             }
             break;
         case "Helper":

@@ -119,10 +119,6 @@
         "close": "Fermer",
         "ordinal_ordinal_one": "{{count}}er",
         "ordinal_ordinal_other": "{{count}}e",
-        "celebrateCaption": "PRESTIGE N°{{count}}",
-        "celebrateTrialCaption": "PRESTIGE N°{{count}} · ÉPREUVE LANCÉE",
-        "celebrateTitle": "+{{essence}} essence",
-        "celebrateTierTitle": "+{{essence}} essence · atouts de rang {{tier}} débloqués",
         "essenceCaption": "ESSENCE D'EMOJI",
         "essenceBonus": "+{{bonus}} de production ({{each}} chacune)",
         "intro": "Après avoir dessiné assez d'emojis, leur essence même commence à se rassembler autour de toi : une substance magique qui change de forme dès que tu la regardes. Chaque essence non dépensée booste la production, et l'essence permet d'acheter des atouts permanents.",
@@ -772,5 +768,11 @@
             "secretHoarder": "Aie {{amount}} emojis en banque sans posséder de bâtiment",
             "secretGems": "Possède {{amount}} gemmes en même temps"
         }
+    },
+    "traits": {
+        "unlocksWith": "Se débloque à ton {{ordinal}} prestige."
+    },
+    "lore": {
+        "unlocksWith": "Se débloque à ton {{ordinal}} prestige."
     }
 }

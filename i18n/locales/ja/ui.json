@@ -114,10 +114,6 @@
         "title": "転生",
         "close": "閉じる",
         "ordinal_ordinal_other": "{{count}}回目",
-        "celebrateCaption": "転生 #{{count}}",
-        "celebrateTrialCaption": "転生 #{{count}} · 試練開始",
-        "celebrateTitle": "エッセンス+{{essence}}",
-        "celebrateTierTitle": "エッセンス+{{essence}} · ランク{{tier}}のパーク解放",
         "essenceCaption": "絵文字エッセンス",
         "essenceBonus": "生産量+{{bonus}}（1つにつき{{each}}）",
         "intro": "絵文字をたくさん描くと、その本質があなたの周りに集まり始める。見るたびに形を変える、不思議な物質だ。使っていないエッセンスは1つごとに生産量をアップさせ、エッセンスでずっと続くパークを買える。",
@@ -661,5 +657,11 @@
             "secretHoarder": "建物を一つも持たずに絵文字を{{amount}}個ためる",
             "secretGems": "ジェムを同時に{{amount}}個持つ"
         }
+    },
+    "traits": {
+        "unlocksWith": "{{ordinal}}の転生で解放。"
+    },
+    "lore": {
+        "unlocksWith": "{{ordinal}}の転生で解放。"
     }
 }

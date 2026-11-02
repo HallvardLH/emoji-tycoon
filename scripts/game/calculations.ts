@@ -2,7 +2,7 @@ import store from "../redux/reduxStore";
 import { updateEmojisPerTap } from "../redux/bigEmojiSlice";
 import { updateEmojisPerSecond } from "../redux/valuesSlice";
 import { funProductionMultiplier, funTapMultiplier } from "./shorthands";
-import { prestigeProductionMultiplier } from "./prestige/perks";
+import { prestigeProductionMultiplier, prestigeTapMultiplier } from "./prestige/perks";
 import { trialTapMultiplier } from "./prestige/trials";
 import { formatPercentage } from "../misc";
 import { boostMultiplier } from "./gems/boost";
@@ -64,8 +64,8 @@ function computeEpt(inputs: Partial<TapInputs> = {}) {
     // The base tap (with the flat additions) plus the share of production ("hands"), all multiplied: tap multipliers,
     // percentage increases and the combo. (Tap multipliers used to boost only the base tap,
     // which made "Tapping ×2" add next to nothing once hands carried tapping.)
-    // Trials: Hands off makes taps worth nothing, Bare bones (reward) adds 50%
-    return (baseTap + epsBonus) * multiplier * percentageIncrease * tapBoost * funTapMultiplier() * trialTapMultiplier();
+    // Trials: Hands off makes taps worth nothing, Bare bones (reward) adds 50%. Echo (perk) and traits
+    return (baseTap + epsBonus) * multiplier * percentageIncrease * tapBoost * funTapMultiplier() * trialTapMultiplier() * prestigeTapMultiplier();
 }
 
 // Recalculates emojis per tap

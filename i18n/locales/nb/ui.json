@@ -116,10 +116,6 @@
         "title": "Prestisje",
         "close": "Lukk",
         "ordinal_ordinal_other": "{{count}}.",
-        "celebrateCaption": "PRESTISJE #{{count}}",
-        "celebrateTrialCaption": "PRESTISJE #{{count}} · UTFORDRING STARTET",
-        "celebrateTitle": "+{{essence}} essens",
-        "celebrateTierTitle": "+{{essence}} essens · trinn {{tier}}-fordeler låst opp",
         "essenceCaption": "EMOJIESSENS",
         "essenceBonus": "+{{bonus}} produksjon ({{each}} hver)",
         "intro": "Når du har tegnet nok emojier, begynner selve essensen deres å samle seg rundt deg: et magisk stoff som skifter form hver gang du ser på det. Hver essens du ikke har brukt, øker produksjonen, og med essens kan du kjøpe fordeler som varer for alltid.",
@@ -719,5 +715,11 @@
             "secretHoarder": "Ha {{amount}} emojier i banken uten å eie en eneste bygning",
             "secretGems": "Ha {{amount}} juveler samtidig"
         }
+    },
+    "traits": {
+        "unlocksWith": "Låses opp ved din {{ordinal}} prestisje."
+    },
+    "lore": {
+        "unlocksWith": "Låses opp ved din {{ordinal}} prestisje."
     }
 }

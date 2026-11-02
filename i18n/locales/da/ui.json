@@ -116,10 +116,6 @@
         "title": "Prestige",
         "close": "Luk",
         "ordinal_ordinal_other": "{{count}}.",
-        "celebrateCaption": "PRESTIGE #{{count}}",
-        "celebrateTrialCaption": "PRESTIGE #{{count}} · PRØVELSE STARTET",
-        "celebrateTitle": "+{{essence}} essens",
-        "celebrateTierTitle": "+{{essence}} essens · trin {{tier}}-fordele låst op",
         "essenceCaption": "EMOJI-ESSENS",
         "essenceBonus": "+{{bonus}} produktion ({{each}} hver)",
         "intro": "Når du har tegnet nok emojis, begynder selve deres essens at samle sig omkring dig: et magisk stof, der skifter form, hver gang du kigger på det. Hver ubrugt essens øger produktionen, og for essens kan du købe fordele, der varer for evigt.",
@@ -719,5 +715,11 @@
             "secretHoarder": "Hav {{amount}} emojis i banken uden at eje en eneste bygning",
             "secretGems": "Hav {{amount}} ædelsten på én gang"
         }
+    },
+    "traits": {
+        "unlocksWith": "Låses op ved din {{ordinal}} prestige."
+    },
+    "lore": {
+        "unlocksWith": "Låses op ved din {{ordinal}} prestige."
     }
 }

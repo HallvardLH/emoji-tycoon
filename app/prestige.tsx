@@ -5,16 +5,16 @@ import { SafeAreaView } from "react-native-safe-area-context";
 import { useSelector } from "react-redux";
 import store, { RootState } from "../scripts/redux/reduxStore";
 import { PastRun } from "../scripts/redux/prestigeSlice";
-import { prestige, purchasePerk, essenceForEmojis, emojisForEssence, essenceRate, SLOWING_DOWN_SHARE, ESSENCE_CHARM_BONUS } from "../scripts/game/prestige/prestige";
+import { prestige, essenceForEmojis, emojisForEssence, essenceRate, SLOWING_DOWN_SHARE, ESSENCE_CHARM_BONUS } from "../scripts/game/prestige/prestige";
 import { ESSENCE_CHARM_COST, RESPEC_COST, buyEssenceCharm, buyRespec } from "../scripts/game/gems/gemShop";
 import GemButton from "../components/gems/GemButton";
-import { perks, Perk, MAX_PERK_TIER, essenceBonusPerEssence, essenceForBonus, hasPerk } from "../scripts/game/prestige/perks";
+import { perks, essenceBonusPerEssence, essenceForBonus } from "../scripts/game/prestige/perks";
+import { loreChapters } from "../scripts/game/prestige/lore";
 import { trials, Trial, TRIALS_UNLOCK_PRESTIGES, trialGoal, runEmojis, abandonTrial, formatGoal } from "../scripts/game/prestige/trials";
-import { celebrateMilestone } from "../scripts/game/milestones";
 import { formatDuration, formatNumber } from "../scripts/misc";
 import { Trans, useTranslation } from "react-i18next";
 import i18n, { getLanguage } from "../i18n";
-import { getPerkName, getPerkDescription, getTrialName, getTrialRule, getTrialReward } from "../i18n/content";
+import { getTrialName, getTrialRule, getTrialReward } from "../i18n/content";
 import Text from "../components/generalUI/Text";
 import ChunkyButton from "../components/generalUI/ChunkyButton";
 import { palette, radii, themedStyles } from "../components/misc/theme";
@@ -66,16 +66,8 @@ export default function PrestigeScreen() {
     const onPrestige = (trial?: Trial) => {
         if (!confirm(trial?.id ?? "prestige")) return;
         const { essence: gained, gems } = prestige(trial?.id);
-        if (gained > 0) {
-            const count = prestiges + 1;
-            const gemsText = gems > 0 ? ` · +${gems} 💎` : "";
-            celebrateMilestone({
-                icon: trial?.icon ?? "✨",
-                caption: (trial ? toCaps(t("prestige.celebrateTrialCaption", { count })) : toCaps(t("prestige.celebrateCaption", { count }))) + gemsText,
-                title: count <= MAX_PERK_TIER ? t("prestige.celebrateTierTitle", { essence: gained, tier: count }) : t("prestige.celebrateTitle", { essence: gained }),
-                kind: "prestige",
-            });
-        }
+        // The ascension: the reveal, then perks, traits and lore before the next run
+        if (gained > 0) router.replace({ pathname: "/ascension", params: { essence: String(gained), gems: String(gems) } });
     };
 
     const trialRunning = !!activeTrial && !activeTrial.completed;
@@ -170,17 +162,21 @@ export default function PrestigeScreen() {
                     />
                 ))}
 
-                {/* Perks, one tier per prestige */}
-                <View style={styles.rowBetween}>
-                    <Text size={20}>{t("perks.title")}</Text>
-                    <Text font="bold" size={12} color={palette.lilac}>{t("perks.ownedCount", { owned: owned.length, total: perks.length })}</Text>
-                </View>
-                <Text font="bold" size={13} color={palette.lilac} style={{ marginTop: -8 }}>
-                    {hasPerk("overflow") ? t("perks.spentKeepsHalf") : t("perks.spentNoBonus")}
-                </Text>
-                {Array.from({ length: MAX_PERK_TIER }, (_, i) => i + 1).map(tier => (
-                    <PerkTier key={tier} tier={tier} unlocked={prestiges >= tier} essence={emojiEssence} owned={owned} />
-                ))}
+                {/* Perks, traits and lore live on the ascension screen */}
+                <Pressable
+                    accessibilityRole="button"
+                    onPress={() => router.push("/ascension")}
+                    style={({ pressed }) => [styles.card, styles.ascensionLink, pressed ? { opacity: 0.85 } : null]}
+                >
+                    <Text size={32} style={{ lineHeight: 40 }}>🌌</Text>
+                    <View style={{ flex: 1, gap: 2 }}>
+                        <Text size={18} color={palette.ink}>{t("ascension.linkTitle")}</Text>
+                        <Text font="body" size={13} color={palette.muted} style={{ lineHeight: 18 }}>
+                            {t("ascension.linkText", { owned: owned.length, total: perks.length, chapters: loreChapters.filter(chapter => prestiges >= chapter.id).length })}
+                        </Text>
+                    </View>
+                    <Text size={22} color={palette.violetDeep}>›</Text>
+                </Pressable>
 
                 {history && history.length > 0 ? <PastRuns history={history} prestiges={prestiges} /> : null}
             </ScrollView>
@@ -417,59 +413,6 @@ function PastRuns({ history, prestiges }: { history: PastRun[], prestiges: numbe
     );
 }
 
-function PerkTier({ tier, unlocked, essence, owned }: { tier: number, unlocked: boolean, essence: number, owned: string[] }) {
-    const { t } = useTranslation();
-    return (
-        <View style={styles.tier}>
-            <Text font="black" size={11} color={unlocked ? palette.sun : palette.lilac} style={styles.caps}>
-                {unlocked ? toCaps(t("perks.tierCaps", { tier })) : toCaps(t("perks.tierLockedCaps", { tier, ordinal: upper(ordinal(tier)) }))}
-            </Text>
-            {perks.filter(perk => perk.tier === tier).map(perk => (
-                <PerkCard key={perk.id} perk={perk} unlocked={unlocked} essence={essence} owned={owned} />
-            ))}
-        </View>
-    );
-}
-
-function PerkCard({ perk, unlocked, essence, owned }: { perk: Perk, unlocked: boolean, essence: number, owned: string[] }) {
-    const isOwned = owned.includes(perk.id);
-    const missing = perk.requires && !owned.includes(perk.requires) ? perks.find(p => p.id === perk.requires) : undefined;
-    const affordable = essence >= perk.cost;
-    const { t } = useTranslation();
-
-    return (
-        <View style={[styles.perk, isOwned ? styles.perkOwned : null, !unlocked ? styles.perkLocked : null]}>
-            <View style={[styles.perkIcon, isOwned ? { backgroundColor: palette.mint } : null]}>
-                <Text size={24} style={{ lineHeight: 30, opacity: unlocked ? 1 : 0.4 }}>{unlocked ? perk.icon : "🔒"}</Text>
-            </View>
-            <View style={{ flex: 1, gap: 2 }}>
-                <Text size={16} color={unlocked ? palette.ink : "#FFFFFF"}>{unlocked ? getPerkName(perk) : "???"}</Text>
-                <Text font="body" size={13} color={unlocked ? palette.muted : palette.lilac} style={{ lineHeight: 18 }}>
-                    {unlocked ? getPerkDescription(perk) : t("perks.hidden")}
-                </Text>
-                {unlocked && missing && !isOwned ? (
-                    <Text font="bold" size={12} color={palette.pop}>{t("perks.needsFirst", { perk: getPerkName(missing) })}</Text>
-                ) : null}
-            </View>
-            {isOwned ? (
-                <View style={styles.ownedTag}>
-                    <Text font="black" size={12} color={palette.greenText}>{toCaps(t("perks.ownedTag"))}</Text>
-                </View>
-            ) : unlocked ? (
-                <ChunkyButton
-                    width={84}
-                    height={40}
-                    labelSize={15}
-                    label={`✨ ${formatNumber(perk.cost)}`}
-                    accessibilityLabel={t("perks.buyLabel", { perk: getPerkName(perk), cost: perk.cost })}
-                    disabled={!affordable || !!missing}
-                    onPress={() => purchasePerk(perk.id)}
-                />
-            ) : null}
-        </View>
-    );
-}
-
 const styles = themedStyles(() => StyleSheet.create({
     screen: {
         flex: 1,
@@ -545,9 +488,6 @@ const styles = themedStyles(() => StyleSheet.create({
         alignItems: "center",
         paddingVertical: 4,
     },
-    tier: {
-        gap: 8,
-    },
     perk: {
         flexDirection: "row",
         alignItems: "center",
@@ -601,5 +541,10 @@ const styles = themedStyles(() => StyleSheet.create({
     },
     runNumber: {
         width: 30,
+    },
+    ascensionLink: {
+        flexDirection: "row",
+        alignItems: "center",
+        gap: 12,
     },
 }));

@@ -120,10 +120,6 @@
         "title": "Prestiż",
         "close": "Zamknij",
         "ordinal_ordinal_other": "{{count}}.",
-        "celebrateCaption": "PRESTIŻ #{{count}}",
-        "celebrateTrialCaption": "PRESTIŻ #{{count}} · PRÓBA ROZPOCZĘTA",
-        "celebrateTitle": "+{{essence}} esencji",
-        "celebrateTierTitle": "+{{essence}} esencji · odblokowano atuty poziomu {{tier}}",
         "essenceCaption": "ESENCJA EMOJI",
         "essenceBonus": "+{{bonus}} produkcji ({{each}} za każdą)",
         "intro": "Gdy narysujesz wystarczająco dużo emoji, wokół ciebie zaczyna zbierać się ich esencja: magiczna substancja, która zmienia kształt za każdym razem, gdy na nią spojrzysz. Każda niewydana esencja zwiększa produkcję, a za esencję kupisz atuty, które zostają na zawsze.",
@@ -823,5 +819,11 @@
             "secretHoarder": "Miej w banku emoji ({{amount}}) bez żadnego budynku",
             "secretGems": "Miej naraz klejnoty: {{amount}}"
         }
+    },
+    "traits": {
+        "unlocksWith": "Odblokowuje się przy {{ordinal}} prestiżu."
+    },
+    "lore": {
+        "unlocksWith": "Odblokowuje się przy {{ordinal}} prestiżu."
     }
 }

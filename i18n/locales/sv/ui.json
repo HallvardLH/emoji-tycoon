@@ -117,10 +117,6 @@
         "close": "Stäng",
         "ordinal_ordinal_one": "{{count}}:a",
         "ordinal_ordinal_other": "{{count}}:e",
-        "celebrateCaption": "PRESTIGE #{{count}}",
-        "celebrateTrialCaption": "PRESTIGE #{{count}} · UTMANING STARTAD",
-        "celebrateTitle": "+{{essence}} essens",
-        "celebrateTierTitle": "+{{essence}} essens · förmåner i nivå {{tier}} upplåsta",
         "essenceCaption": "EMOJIESSENS",
         "essenceBonus": "+{{bonus}} produktion ({{each}} styck)",
         "intro": "När du har ritat tillräckligt många emojis börjar deras innersta essens samlas runt dig: ett magiskt ämne som byter form varje gång du tittar på det. Varje osparad essens ökar produktionen, och för essens köper du förmåner som varar för evigt.",
@@ -720,5 +716,11 @@
             "secretHoarder": "Ha {{amount}} emojis på banken utan att äga en enda byggnad",
             "secretGems": "Ha {{amount}} juveler samtidigt"
         }
+    },
+    "traits": {
+        "unlocksWith": "Låses upp vid din {{ordinal}} prestige."
+    },
+    "lore": {
+        "unlocksWith": "Låses upp vid din {{ordinal}} prestige."
     }
 }

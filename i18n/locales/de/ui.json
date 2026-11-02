@@ -116,10 +116,6 @@
         "title": "Prestige",
         "close": "Schließen",
         "ordinal_ordinal_other": "{{count}}.",
-        "celebrateCaption": "Prestige #{{count}}",
-        "celebrateTrialCaption": "Prestige #{{count}} · Prüfung gestartet",
-        "celebrateTitle": "+{{essence}} Essenz",
-        "celebrateTierTitle": "+{{essence}} Essenz · Perks der Stufe {{tier}} freigeschaltet",
         "essenceCaption": "Emoji-Essenz",
         "essenceBonus": "+{{bonus}} Produktion ({{each}} pro Essenz)",
         "intro": "Hast du genug Emojis gezeichnet, sammelt sich ihre Essenz um dich: eine magische Substanz, die jedes Mal ihre Form ändert, wenn du hinsiehst. Jede nicht ausgegebene Essenz steigert die Produktion, und mit Essenz kaufst du Perks, die für immer bleiben.",
@@ -719,5 +715,11 @@
             "secretHoarder": "Hab {{amount}} Emojis auf der Bank, ohne ein Gebäude zu besitzen",
             "secretGems": "Besitze {{amount}} Juwelen gleichzeitig"
         }
+    },
+    "traits": {
+        "unlocksWith": "Wird mit deinem {{ordinal}} Prestige freigeschaltet."
+    },
+    "lore": {
+        "unlocksWith": "Wird mit deinem {{ordinal}} Prestige freigeschaltet."
     }
 }

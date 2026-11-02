@@ -119,10 +119,6 @@
         "close": "Închide",
         "ordinal_ordinal_one": "nr. {{count}}",
         "ordinal_ordinal_other": "nr. {{count}}",
-        "celebrateCaption": "PRESTIGIUL #{{count}}",
-        "celebrateTrialCaption": "PRESTIGIUL #{{count}} · PROBĂ ÎNCEPUTĂ",
-        "celebrateTitle": "+{{essence}} esență",
-        "celebrateTierTitle": "+{{essence}} esență · avantaje de treapta {{tier}} deblocate",
         "essenceCaption": "ESENȚĂ DE EMOJI",
         "essenceBonus": "+{{bonus}} producție ({{each}} fiecare)",
         "intro": "După ce desenezi destule emoji, însăși esența lor începe să se adune în jurul tău: o substanță magică ce își schimbă forma de fiecare dată când te uiți la ea. Fiecare esență necheltuită crește producția, iar cu esență cumperi avantaje care rămân pentru totdeauna.",
@@ -772,5 +768,11 @@
             "secretHoarder": "Ai în bancă emoji ({{amount}}) fără să deții vreo clădire",
             "secretGems": "Deține deodată nestemate: {{amount}}"
         }
+    },
+    "traits": {
+        "unlocksWith": "Se deblochează la prestigiul {{ordinal}}."
+    },
+    "lore": {
+        "unlocksWith": "Se deblochează la prestigiul {{ordinal}}."
     }
 }

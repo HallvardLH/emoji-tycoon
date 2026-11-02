@@ -1,5 +1,5 @@
 import store from "../../redux/reduxStore";
-import { completePrestige, addBonusEssence, setRunPeakEps, setRunBestEssenceRate, buyPerk, migratePrestige, refundPerks, setLastSeen, updateRemainingEmojisPrestigePerc, PRESTIGE_STATE_VERSION } from "../../redux/prestigeSlice";
+import { completePrestige, endAscension, addBonusEssence, setRunPeakEps, setRunBestEssenceRate, buyPerk, migratePrestige, refundPerks, setLastSeen, updateRemainingEmojisPrestigePerc, PRESTIGE_STATE_VERSION } from "../../redux/prestigeSlice";
 import { resetBuildings } from "../../redux/buildingsSlice";
 import { resetUpgrades, addUpgrade } from "../../redux/upgradesSlice";
 import { resetBigEmoji, addEmojisPerTapPercentageOfEps } from "../../redux/bigEmojiSlice";
@@ -9,10 +9,13 @@ import { isComboUpgradeId } from "../upgrades/upgradeData/nonBuilding/combo";
 import { isEffectEmojiUpgradeId } from "../upgrades/upgradeData/nonBuilding/effectEmojis";
 import { getUpgradeDataById } from "../upgrades/shorthands";
 import { calculateBuildingsEps, syncBuildingPrices } from "../buildings/buildings";
+import { updateBuildingValue } from "../buildings/shorthands";
+import { buildingIdOf } from "../buildings/buildingData";
+import { canBuyBuilding, unlockBuilding } from "../buildings/checks";
 import { calculateEpt } from "../calculations";
 import { pickNextEmoji } from "../bigEmoji";
 import { unlockUpgrades, canBuyUpgrade } from "../upgrades/checks";
-import { startingEmojis, hasPerk, perks, removedPerks, canBuyPerk } from "./perks";
+import { startingEmojis, startingDrawingHands, hasPerk, perks, removedPerks, canBuyPerk } from "./perks";
 import { registerAway } from "../offline";
 import { trials, trialGoal } from "./trials";
 import { setEssenceCharm } from "../../redux/gemsSlice";
@@ -77,6 +80,9 @@ export function calculateRemainingEmojisForNextPrestige() {
  * collection, all-time stats, combo level upgrades, the fun value and everything
  * prestige-related (essence, perks). Muscle memory also keeps the hands.
  *
+ * Then the ascension starts: the game waits on the ascension screen, where perks are
+ * bought, traits picked and the new lore chapter read, until beginRun().
+ *
  * @param trialId starts the new run under this trial (see trials.ts)
  * @returns the essence gained (with any Essence charm bonus) and the gems it paid,
  * or 0 essence if there was none to gain (nothing happens then)
@@ -120,10 +126,6 @@ export function prestige(trialId?: string) {
         }
     });
 
-    // Head start (perk), and a stash for trials that would leave no way to get going
-    const start = startingEmojis() + (trial?.startingEmojis ?? 0);
-    if (start > 0) store.dispatch(updateEmojis(start));
-
     syncBuildingPrices();
     calculateBuildingsEps();
     calculateEpt();
@@ -134,6 +136,38 @@ export function prestige(trialId?: string) {
 
     return { essence: essence + bonus, gems };
 }
+
+/**
+ * Ends the ascension and starts the next run, with what was picked during it: the run's
+ * head start (perks, and a trial's stash) and its traits, which change prices and production
+ */
+export function beginRun() {
+    const { prestige: prestigeState } = store.getState();
+    if (!prestigeState.ascending) return;
+    store.dispatch(endAscension());
+
+    // Head start (perk), and a stash for trials that would leave no way to get going
+    const trial = trials.find(t => t.id === prestigeState.activeTrial?.id);
+    const start = startingEmojis() + (trial?.startingEmojis ?? 0);
+    if (start > 0) store.dispatch(updateEmojis(store.getState().values.emojis + start));
+
+    // Old hands (perk)
+    const hands = startingDrawingHands();
+    if (hands > 0) {
+        updateBuildingValue(buildingIdOf("Drawing hand"), "amount", hands);
+        updateBuildingValue(buildingIdOf("Drawing hand"), "unlocked", true);
+    }
+
+    syncBuildingPrices();
+    calculateBuildingsEps();
+    calculateEpt();
+    unlockBuilding();
+    canBuyBuilding();
+    unlockUpgrades();
+    canBuyUpgrade();
+}
+
+export const isAscending = () => store.getState().prestige.ascending ?? false;
 
 /** Essence a prestige right now would give, with the fraction towards the next one */
 export function exactPendingEssence() {
@@ -176,11 +210,6 @@ export function purchasePerk(id: string) {
     const perk = perks.find(p => p.id === id);
     if (!perk || !canBuyPerk(perk)) return false;
     store.dispatch(buyPerk({ id, cost: perk.cost }));
-    // Bought right after prestiging, Head start still applies to this run
-    const { buildings, values } = store.getState();
-    if (id === "headStart" && buildings.buildings.every(building => building.amount === 0)) {
-        store.dispatch(updateEmojis(values.emojis + startingEmojis()));
-    }
     // Spent essence no longer boosts production, and some perks change prices
     syncBuildingPrices();
     calculateBuildingsEps();

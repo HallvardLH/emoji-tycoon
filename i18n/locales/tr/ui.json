@@ -116,10 +116,6 @@
         "title": "Prestij",
         "close": "Kapat",
         "ordinal_ordinal_other": "{{count}}.",
-        "celebrateCaption": "PRESTİJ #{{count}}",
-        "celebrateTrialCaption": "PRESTİJ #{{count}} · SINAV BAŞLADI",
-        "celebrateTitle": "+{{essence}} esans",
-        "celebrateTierTitle": "+{{essence}} esans · kademe {{tier}} ayrıcalıkları açıldı",
         "essenceCaption": "EMOJİ ESANSI",
         "essenceBonus": "+{{bonus}} üretim (her biri {{each}})",
         "intro": "Yeterince emoji çizdikten sonra, emojilerin esansı etrafında toplanmaya başlar: her baktığında şekil değiştiren büyülü bir madde. Harcanmamış her esans üretimi artırır ve esansla sonsuza dek kalıcı ayrıcalıklar alabilirsin.",
@@ -719,5 +715,11 @@
             "secretHoarder": "Hiç binan yokken bankada emoji olsun: {{amount}}",
             "secretGems": "Aynı anda sahip olunan elmas: {{amount}}"
         }
+    },
+    "traits": {
+        "unlocksWith": "{{ordinal}} prestijinle açılır."
+    },
+    "lore": {
+        "unlocksWith": "{{ordinal}} prestijinle açılır."
     }
 }

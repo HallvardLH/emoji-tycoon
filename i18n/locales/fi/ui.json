@@ -116,10 +116,6 @@
         "title": "Prestiisi",
         "close": "Sulje",
         "ordinal_ordinal_other": "{{count}}.",
-        "celebrateCaption": "Prestiisi #{{count}}",
-        "celebrateTrialCaption": "Prestiisi #{{count}} · haaste alkoi",
-        "celebrateTitle": "+{{essence}} essenssiä",
-        "celebrateTierTitle": "+{{essence}} essenssiä · tason {{tier}} edut avattu",
         "essenceCaption": "Emojiessenssi",
         "essenceBonus": "+{{bonus}} tuotantoa ({{each}} / kpl)",
         "intro": "Kun olet piirtänyt tarpeeksi emojeja, niiden syvin olemus alkaa kerääntyä ympärillesi: maaginen aine, joka muuttaa muotoaan aina, kun katsot sitä. Jokainen käyttämätön essenssi kasvattaa tuotantoa, ja essenssillä voit ostaa etuja, jotka säilyvät ikuisesti.",
@@ -719,5 +715,11 @@
             "secretHoarder": "Pidä pankissa emojeja ({{amount}}) omistamatta yhtään rakennusta",
             "secretGems": "Pidä jalokiviä yhtä aikaa: {{amount}}"
         }
+    },
+    "traits": {
+        "unlocksWith": "Avautuu {{ordinal}} prestiisin jälkeen."
+    },
+    "lore": {
+        "unlocksWith": "Avautuu {{ordinal}} prestiisin jälkeen."
     }
 }

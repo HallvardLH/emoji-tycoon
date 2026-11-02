@@ -117,10 +117,6 @@
         "close": "Isara",
         "ordinal_ordinal_one": "ika-{{count}}",
         "ordinal_ordinal_other": "ika-{{count}}",
-        "celebrateCaption": "Prestige #{{count}}",
-        "celebrateTrialCaption": "Prestige #{{count}} · Nagsimula ang hamon",
-        "celebrateTitle": "+{{essence}} esensiya",
-        "celebrateTierTitle": "+{{essence}} esensiya · bukas na ang tier {{tier}} perks",
         "essenceCaption": "Emoji esensiya",
         "essenceBonus": "+{{bonus}} produksiyon ({{each}} bawat isa)",
         "intro": "Kapag nakaguhit ka na ng sapat na emoji, nagsisimulang magtipon sa paligid mo ang mismong esensiya nila: isang mahiwagang bagay na nag-iiba ng hugis tuwing titingnan mo. Bawat esensiyang hindi ginagastos ay nagpapalakas ng produksiyon, at pambili ang esensiya ng perks na pang-habambuhay.",
@@ -720,5 +716,11 @@
             "secretHoarder": "Magkaroon ng {{amount}} emoji sa bangko nang walang kahit isang building",
             "secretGems": "Magkaroon ng {{amount}} gem nang sabay"
         }
+    },
+    "traits": {
+        "unlocksWith": "Mabubuksan sa {{ordinal}} mong prestige."
+    },
+    "lore": {
+        "unlocksWith": "Mabubuksan sa {{ordinal}} mong prestige."
     }
 }

@@ -30,6 +30,13 @@ interface PrestigeState {
     activeTrial?: ActiveTrial,
     /** Ids of the trials completed */
     trialsCompleted?: string[],
+    /**
+     * Between a prestige and the next run: the ascension screen is open, and nothing runs
+     * until the player begins the run. Saved, so closing the app mid-ascension returns to it
+     */
+    ascending?: boolean,
+    /** Ids of the traits this run is played with, picked while ascending (see traits.ts) */
+    traits?: string[],
 }
 
 export interface PastRun {
@@ -89,6 +96,14 @@ export const prestigeSlice = createSlice({
             state.runSeconds = 0;
             state.runBestEssenceRate = 0;
             state.activeTrial = action.payload.trial;
+            state.ascending = true;
+        },
+        /** The ascension is over: the next run begins */
+        endAscension: (state) => {
+            state.ascending = false;
+        },
+        setTraits: (state, action: PayloadAction<string[]>) => {
+            state.traits = action.payload;
         },
         /** Essence on top of what the emojis drawn are worth (the Essence charm, bought with gems) */
         addBonusEssence: (state, action: PayloadAction<number>) => {
@@ -152,6 +167,6 @@ export const prestigeSlice = createSlice({
     },
 });
 
-export const { completePrestige, addBonusEssence, addRunSeconds, setRunBestEssenceRate, completeTrial, abandonTrial, setRunPeakEps, buyPerk, cheatPrestige, refundPerks, setLastSeen, updateRemainingEmojisPrestigePerc, migratePrestige, resetPrestige } = prestigeSlice.actions;
+export const { completePrestige, endAscension, setTraits, addBonusEssence, addRunSeconds, setRunBestEssenceRate, completeTrial, abandonTrial, setRunPeakEps, buyPerk, cheatPrestige, refundPerks, setLastSeen, updateRemainingEmojisPrestigePerc, migratePrestige, resetPrestige } = prestigeSlice.actions;
 
 export default prestigeSlice.reducer;

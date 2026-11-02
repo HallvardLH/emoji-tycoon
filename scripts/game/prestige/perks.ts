@@ -1,5 +1,7 @@
 import store from "../../redux/reduxStore";
 import { trialEffectSpawnMultiplier, trialProductionMultiplier, trialsCompletedCount } from "./trials";
+import { traitMultiplier, traitMaxComboBonus } from "./traits";
+import { chaptersUnlocked } from "./lore";
 
 /**
  * Perks are bought with emoji essence and kept forever. Each prestige unlocks the
@@ -22,21 +24,25 @@ export const perks: Perk[] = [
     { id: "overtime", tier: 1, icon: "⏳", name: "Overtime", description: "Good effects last 50% longer", cost: 5 },
     { id: "giftWrap", tier: 1, icon: "🎀", name: "Gift wrap", description: "Gifts give twice as much", cost: 15 },
     { id: "headStart", tier: 1, icon: "🎒", name: "Head start", description: "Start every run with 5 minutes of your last run's best production", cost: 10 },
+    { id: "oldHands", tier: 1, icon: "🧤", name: "Old hands", description: "Start every run with 10 Drawing hands", cost: 20 },
 
     // Tier 2: effects and essence
     { id: "luckyStreak", tier: 2, icon: "🍀", name: "Lucky streak", description: "Effect emojis appear 50% more often", cost: 40 },
     { id: "shinySense", tier: 2, icon: "🌟", name: "Shiny sense", description: "Shiny emojis are twice as likely", cost: 30 },
     { id: "resonance", tier: 2, icon: "🔮", name: "Resonance", description: "Unspent essence boosts production by 2.5% each, up from 2%", cost: 60 },
+    { id: "echo", tier: 2, icon: "📣", name: "Echo", description: "Taps are worth 25% more", cost: 50 },
 
     // Tier 3: long-term multipliers
     { id: "collectorsPride", tier: 3, icon: "📖", name: "Collector's pride", description: "+0.03% production for every different emoji in your collection", cost: 150 },
     { id: "bulkDiscount", tier: 3, icon: "🏷️", name: "Bulk discount", description: "Buildings are 10% cheaper", cost: 200 },
     { id: "magnet", tier: 3, icon: "🧲", name: "Magnet", description: "Effect emojis stay on screen twice as long", cost: 120 },
+    { id: "blueprints", tier: 3, icon: "📐", name: "Blueprints", description: "Building upgrades are 25% cheaper", cost: 175 },
 
     // Tier 4: keeping the whole empire relevant
     { id: "neighbourhood", tier: 4, icon: "🏘️", name: "Neighbourhood", description: "+3% production for every kind of building you own", cost: 500 },
     { id: "muscleMemory", tier: 4, icon: "✋", name: "Muscle memory", description: "Keep your Big Emoji hands when you prestige", cost: 400 },
     { id: "steadyHands", tier: 4, icon: "🔥", name: "Steady hands", description: "The combo drains 20% slower", cost: 300 },
+    { id: "polymath", tier: 4, icon: "🧩", name: "Polymath", description: "Pick one more trait for each run", cost: 350 },
 
     // Tier 5: rewarding long runs and skill
     { id: "momentum", tier: 5, icon: "🌊", name: "Momentum", description: "+1% production for every 10 minutes played this run, up to +50%", cost: 800 },
@@ -47,6 +53,11 @@ export const perks: Perk[] = [
     { id: "overflow", tier: 6, icon: "💧", name: "Overflow", description: "Spent essence keeps half its production bonus", cost: 2500 },
     { id: "hallOfFame", tier: 6, icon: "🏆", name: "Hall of fame", description: "+10% production for every trial completed", cost: 2000 },
     { id: "flyingStart", tier: 6, icon: "🚀", name: "Flying start", description: "Head start gives 30 minutes of production instead of 5", cost: 1500, requires: "headStart" },
+
+    // Tier 7: the end of the story, and the deepest essence
+    { id: "loreKeeper", tier: 7, icon: "📜", name: "Lore keeper", description: "+3% production for every lore chapter unlocked", cost: 4000 },
+    { id: "enlightenment", tier: 7, icon: "🪷", name: "Enlightenment", description: "Unspent essence boosts production by 3% each", cost: 6000, requires: "resonance" },
+    { id: "ascendant", tier: 7, icon: "🌌", name: "Ascendant", description: "Pick one more trait for each run", cost: 5000, requires: "polymath" },
 ];
 
 /** Perks that no longer exist. Saves that bought them get the essence back (see startPrestige) */
@@ -78,18 +89,27 @@ export function canBuyPerk(perk: Perk) {
 // ---- What the perks do, read by the game wherever they apply ----
 
 /** Production bonus per unspent essence */
-export const essenceBonusPerEssence = () => hasPerk("resonance") ? 0.025 : 0.02;
+export const essenceBonusPerEssence = () => hasPerk("enlightenment") ? 0.03 : hasPerk("resonance") ? 0.025 : 0.02;
 
 export const giftMultiplier = () => hasPerk("giftWrap") ? 2 : 1;
 
-/** How much more often effect emojis spawn (Lucky streak, and the Dark sky trial reward) */
-export const effectSpawnRateMultiplier = () => (hasPerk("luckyStreak") ? 1.5 : 1) * trialEffectSpawnMultiplier();
+/** How much more often effect emojis spawn (Lucky streak, the Dark sky trial reward and Gambler, a trait) */
+export const effectSpawnRateMultiplier = () => (hasPerk("luckyStreak") ? 1.5 : 1) * trialEffectSpawnMultiplier() * traitMultiplier("effectSpawn");
 
-export const shinyChanceMultiplier = () => hasPerk("shinySense") ? 2 : 1;
+export const shinyChanceMultiplier = () => (hasPerk("shinySense") ? 2 : 1) * traitMultiplier("shinyChance");
 
-export const comboDrainMultiplier = () => hasPerk("steadyHands") ? 0.8 : 1;
+export const comboDrainMultiplier = () => (hasPerk("steadyHands") ? 0.8 : 1) * traitMultiplier("comboDrain");
 
-export const buildingPriceMultiplier = () => hasPerk("bulkDiscount") ? 0.9 : 1;
+export const buildingPriceMultiplier = () => (hasPerk("bulkDiscount") ? 0.9 : 1) * traitMultiplier("buildingPrice");
+
+/** What building upgrades cost: Blueprints (perk) and Architect (trait) */
+export const buildingUpgradePriceMultiplier = () => (hasPerk("blueprints") ? 0.75 : 1) * traitMultiplier("upgradePrice");
+
+/** Taps: Echo (perk) and traits */
+export const prestigeTapMultiplier = () => (hasPerk("echo") ? 1.25 : 1) * traitMultiplier("tap");
+
+/** Old hands: Drawing hands every run starts with */
+export const startingDrawingHands = () => hasPerk("oldHands") ? 10 : 0;
 
 /** Head start: 5 minutes of the last run's best production (at least a million), 30 with Flying start */
 export function startingEmojis() {
@@ -100,7 +120,7 @@ export function startingEmojis() {
 }
 
 /** Second wind: extra max combo */
-export const maxComboBonus = () => hasPerk("secondWind") ? 1 : 0;
+export const maxComboBonus = () => (hasPerk("secondWind") ? 1 : 0) + traitMaxComboBonus();
 
 /** Golden touch: what shiny emojis are worth */
 export const shinyRewardMultiplier = () => hasPerk("goldenTouch") ? 5 : 1;
@@ -119,7 +139,7 @@ export const hallOfFameMultiplier = () => hasPerk("hallOfFame") ? 1 + trialsComp
 export const hasChangingProductionPerk = () => hasPerk("collectorsPride") || hasPerk("momentum");
 
 /** Overtime: how much longer good effects last */
-export const goodEffectDurationMultiplier = () => hasPerk("overtime") ? 1.5 : 1;
+export const goodEffectDurationMultiplier = () => (hasPerk("overtime") ? 1.5 : 1) * traitMultiplier("goodEffectDuration");
 
 /** Magnet: how much longer effect emojis stay on screen */
 export const effectOnScreenMultiplier = () => hasPerk("magnet") ? 2 : 1;
@@ -150,8 +170,13 @@ export function prestigeProductionMultiplier() {
         * neighbourhoodMultiplier()
         * momentumMultiplier()
         * hallOfFameMultiplier()
-        * trialProductionMultiplier();
+        * loreKeeperMultiplier()
+        * trialProductionMultiplier()
+        * traitMultiplier("production");
 }
+
+/** Lore keeper: +3% per lore chapter unlocked */
+export const loreKeeperMultiplier = () => hasPerk("loreKeeper") ? 1 + chaptersUnlocked() * 0.03 : 1;
 
 /** Neighbourhood: +3% per kind of building owned, with `extraKinds` more for previews */
 export function neighbourhoodMultiplier(extraKinds = 0) {
