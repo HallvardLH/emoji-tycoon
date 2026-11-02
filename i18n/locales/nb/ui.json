@@ -29,6 +29,7 @@
         "effects": {
             "multiplyBuildingProduction": "• {{buildings}}: dobbel effektivitet.",
             "multiplyTap": "• Trykkene dine er verdt ×{{multiplier}} så mye.",
+            "addToTap": "• Hvert trykk gir {{amount}} flere emojier.",
             "percentageIncreaseTap": "• Trykkene dine er {{percent}} kraftigere.",
             "tapPercentageOfEps": "• Hvert trykk gir {{percent}} av den totale emojiproduksjonen din.",
             "percentageIncreaseProduction": "• Total emojiproduksjon økt med {{percent}}.",
@@ -48,6 +49,7 @@
         "chips": {
             "multiplyBuildingProduction": "{{buildings}} ×{{multiplier}}",
             "multiplyTap": "Trykk ×{{multiplier}}",
+            "addToTap": "Trykk +{{amount}}",
             "percentageIncreaseTap": "Trykk +{{percent}}",
             "percentageIncreaseProduction": "Produksjon +{{percent}}",
             "tapPercentageOfEps": "Trykk +{{percent}} av emojier/sek",

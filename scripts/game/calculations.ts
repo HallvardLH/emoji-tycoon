@@ -26,6 +26,7 @@ const compound = (percentages: number[]) => percentages
  */
 interface TapInputs {
     tapMultipliers: number[];
+    tapAdditions: number[];
     tapPercentages: number[];
     tapPercentagesOfEps: number[];
     /** Emojis per second, for the share of production that hands add to taps */
@@ -55,14 +56,17 @@ function computeEpt(inputs: Partial<TapInputs> = {}) {
     // Production without the gem boost: it's in the multiplier above, and would count twice
     const epsBonus = (inputs.eps ?? state.values.emojisPerSecond) / boostMultiplier() * totalPercentageOfEps;
 
+    // Flat emojis added to the base tap, e.g. Firm tap (+1)
+    const baseTap = bigEmoji.baseEmojisPerTap + (inputs.tapAdditions ?? bigEmoji.emojisPerTapAdditions ?? []).reduce((acc, add) => acc + add, 0);
+
     // For every 10 tap boost, multiply EPT
     const tapBoost = (Math.floor(bigEmoji.tapBoost / 10)) + 1;
 
-    // The base tap plus the share of production ("hands"), all multiplied: tap multipliers,
+    // The base tap (with the flat additions) plus the share of production ("hands"), all multiplied: tap multipliers,
     // percentage increases and the combo. (Tap multipliers used to boost only the base tap,
     // which made "Tapping ×2" add next to nothing once hands carried tapping.)
     // Trials: Hands off makes taps worth nothing, Bare bones (reward) adds 50%
-    return (bigEmoji.baseEmojisPerTap + epsBonus) * multiplier * percentageIncrease * tapBoost * funTapMultiplier() * trialTapMultiplier();
+    return (baseTap + epsBonus) * multiplier * percentageIncrease * tapBoost * funTapMultiplier() * trialTapMultiplier();
 }
 
 // Recalculates emojis per tap
@@ -111,6 +115,7 @@ export interface ProductionChanges {
     productionFactor?: number;
     epsPercentage?: number;
     tapMultiplier?: number;
+    tapAddition?: number;
     tapPercentage?: number;
     tapPercentageOfEps?: number;
 }
@@ -134,6 +139,7 @@ export function previewGains(changes: ProductionChanges) {
     const ept = computeEpt({
         eps,
         tapMultipliers: add(bigEmoji.emojisPerTapMultipliers, changes.tapMultiplier),
+        tapAdditions: add(bigEmoji.emojisPerTapAdditions ?? [], changes.tapAddition),
         tapPercentages: add(bigEmoji.emojisPerTapPercentages, changes.tapPercentage),
         tapPercentagesOfEps: add(bigEmoji.emojisPerTapPercentageOfEps, changes.tapPercentageOfEps),
     });

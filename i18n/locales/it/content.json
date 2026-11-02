@@ -313,6 +313,31 @@
             "description": "L'entanglement quantistico nelle dita ti fa disegnare emoji alla velocità della luce.",
             "quote": "Le mie dita sono in due posti contemporaneamente. E in entrambi ti odiano."
         },
+        "120": {
+            "name": "Tocco deciso",
+            "description": "Tocca con convinzione. Ogni tocco dà 1 emoji in più.",
+            "quote": "Né troppo forte. Né troppo piano. Giusto così."
+        },
+        "121": {
+            "name": "Doppio tocco",
+            "description": "Due dita, un tocco. Ogni tocco dà 2 emoji in più.",
+            "quote": "Pace, e il doppio delle emoji."
+        },
+        "122": {
+            "name": "Scrocchiare le nocche",
+            "description": "Le nocche riscaldate toccano più forte. Ogni tocco dà 4 emoji in più.",
+            "quote": "Crac. Crac. Crac. Tocco."
+        },
+        "123": {
+            "name": "Mano aperta",
+            "description": "Perché toccare con un dito quando puoi schiaffeggiare con cinque? Ogni tocco dà 8 emoji in più.",
+            "quote": "Lo schermo non ha fatto niente per meritarselo."
+        },
+        "124": {
+            "name": "Pugno a pugno",
+            "description": "La grande emoji ricambia il pugno. Ogni tocco dà 16 emoji in più.",
+            "quote": "Rispetto."
+        },
         "200": {
             "name": "Matite migliorate",
             "description": "Matite migliori per emoji più dettagliati.",

@@ -33,6 +33,7 @@
         "effects": {
             "multiplyBuildingProduction": "• {{buildings}}: dvojnásobná efektivita.",
             "multiplyTap": "• Ťuknutí mají ×{{multiplier}} větší hodnotu.",
+            "addToTap": "• Každé ťuknutí dá o {{amount}} emoji víc.",
             "percentageIncreaseTap": "• Ťukání je o {{percent}} silnější.",
             "tapPercentageOfEps": "• Ťuknutí ti dá {{percent}} celkové produkce emoji.",
             "percentageIncreaseProduction": "• Celková produkce emoji vzrostla o {{percent}}.",
@@ -52,6 +53,7 @@
         "chips": {
             "multiplyBuildingProduction": "{{buildings}} ×{{multiplier}}",
             "multiplyTap": "Ťukání ×{{multiplier}}",
+            "addToTap": "Ťukání +{{amount}}",
             "percentageIncreaseTap": "Ťukání +{{percent}}",
             "percentageIncreaseProduction": "Produkce +{{percent}}",
             "tapPercentageOfEps": "Ťuknutí +{{percent}} emoji/s",

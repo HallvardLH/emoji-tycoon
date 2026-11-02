@@ -313,6 +313,31 @@
             "description": "Rối lượng tử trong ngón tay giúp bạn vẽ emoji với tốc độ ánh sáng.",
             "quote": "Ngón tay tôi ở hai nơi cùng lúc. Cả hai đều ghét bạn."
         },
+        "120": {
+            "name": "Chạm dứt khoát",
+            "description": "Chạm có chủ đích. Mỗi lần chạm cho thêm 1 emoji.",
+            "quote": "Không quá mạnh. Không quá nhẹ. Vừa đủ."
+        },
+        "121": {
+            "name": "Chạm đôi",
+            "description": "Hai ngón, một lần chạm. Mỗi lần chạm cho thêm 2 emoji.",
+            "quote": "Hòa bình, và gấp đôi emoji."
+        },
+        "122": {
+            "name": "Bẻ khớp tay",
+            "description": "Khớp tay đã khởi động chạm mạnh hơn. Mỗi lần chạm cho thêm 4 emoji.",
+            "quote": "Rắc. Rắc. Rắc. Chạm."
+        },
+        "123": {
+            "name": "Lòng bàn tay",
+            "description": "Sao phải chạm bằng một ngón khi có thể vỗ bằng cả năm? Mỗi lần chạm cho thêm 8 emoji.",
+            "quote": "Màn hình đâu có làm gì để phải chịu thế này."
+        },
+        "124": {
+            "name": "Cụng tay",
+            "description": "Emoji lớn cụng tay lại với bạn. Mỗi lần chạm cho thêm 16 emoji.",
+            "quote": "Tôn trọng."
+        },
         "200": {
             "name": "Bút chì xịn hơn",
             "description": "Bút chì tốt hơn cho emoji chi tiết hơn.",

@@ -29,6 +29,7 @@
         "effects": {
             "multiplyBuildingProduction": "• {{buildings}} iki kat daha verimli.",
             "multiplyTap": "• Dokunuşlar ×{{multiplier}} değerinde.",
+            "addToTap": "• Her dokunuş {{amount}} emoji daha fazla verir.",
             "percentageIncreaseTap": "• Dokunmak {{percent}} daha güçlü.",
             "tapPercentageOfEps": "• Dokunmak, toplam emoji üretiminin {{percent}} kadarını kazandırır.",
             "percentageIncreaseProduction": "• Toplam emoji üretimi {{percent}} arttı.",
@@ -48,6 +49,7 @@
         "chips": {
             "multiplyBuildingProduction": "{{buildings}} ×{{multiplier}}",
             "multiplyTap": "Dokunma ×{{multiplier}}",
+            "addToTap": "Dokunma +{{amount}}",
             "percentageIncreaseTap": "Dokunma +{{percent}}",
             "percentageIncreaseProduction": "Üretim +{{percent}}",
             "tapPercentageOfEps": "Dokunuşa emoji/sn'nin {{percent}} kadarı",

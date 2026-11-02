@@ -313,6 +313,31 @@
             "description": "Inseparabilitatea cuantică din degete te lasă să desenezi emoji cu viteza luminii.",
             "quote": "Degetele mele sunt în două locuri deodată. În amândouă te urăsc."
         },
+        "120": {
+            "name": "Atingere fermă",
+            "description": "Atinge cu hotărâre. Fiecare atingere aduce încă 1 emoji.",
+            "quote": "Nici prea tare. Nici prea încet. Exact cum trebuie."
+        },
+        "121": {
+            "name": "Atingere dublă",
+            "description": "Două degete, o atingere. Fiecare atingere aduce încă 2 emoji.",
+            "quote": "Pace, și de două ori mai multe emoji."
+        },
+        "122": {
+            "name": "Trosnitul degetelor",
+            "description": "Încheieturile încălzite ating mai tare. Fiecare atingere aduce încă 4 emoji.",
+            "quote": "Trosc. Trosc. Trosc. Atingere."
+        },
+        "123": {
+            "name": "Palma deschisă",
+            "description": "De ce să atingi cu un deget când poți plesni cu cinci? Fiecare atingere aduce încă 8 emoji.",
+            "quote": "Ecranul n-a făcut nimic să merite asta."
+        },
+        "124": {
+            "name": "Salut cu pumnul",
+            "description": "Marele emoji îți răspunde la salut. Fiecare atingere aduce încă 16 emoji.",
+            "quote": "Respect."
+        },
         "200": {
             "name": "Creioane îmbunătățite",
             "description": "Creioane mai bune pentru emoji mai detaliate.",

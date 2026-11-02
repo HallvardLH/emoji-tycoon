@@ -313,6 +313,31 @@
             "description": "Sormiesi kvanttilomittuminen mahdollistaa emojien piirtämisen valon nopeudella.",
             "quote": "Sormeni ovat kahdessa paikassa yhtä aikaa. Kummassakin ne vihaavat sinua."
         },
+        "120": {
+            "name": "Napakka napautus",
+            "description": "Napauta tarkoituksella. Jokainen napautus antaa 1 emojin lisää.",
+            "quote": "Ei liian kovaa. Ei liian hellästi. Juuri sopivasti."
+        },
+        "121": {
+            "name": "Tuplanapautus",
+            "description": "Kaksi sormea, yksi napautus. Jokainen napautus antaa 2 emojia lisää.",
+            "quote": "Rauhaa, ja tuplasti emojeja."
+        },
+        "122": {
+            "name": "Rystysten naksautus",
+            "description": "Lämmitellyt rystyset napauttavat kovempaa. Jokainen napautus antaa 4 emojia lisää.",
+            "quote": "Naks. Naks. Naks. Napautus."
+        },
+        "123": {
+            "name": "Avokämmen",
+            "description": "Miksi napauttaa yhdellä sormella, kun voi läpsäistä viidellä? Jokainen napautus antaa 8 emojia lisää.",
+            "quote": "Näyttö ei tehnyt mitään ansaitakseen tätä."
+        },
+        "124": {
+            "name": "Nyrkkitervehdys",
+            "description": "Iso emoji tervehtii takaisin. Jokainen napautus antaa 16 emojia lisää.",
+            "quote": "Kunnioitusta."
+        },
         "200": {
             "name": "Paremmat lyijykynät",
             "description": "Paremmilla kynillä yksityiskohtaisempia emojeja.",

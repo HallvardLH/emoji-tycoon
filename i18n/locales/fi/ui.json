@@ -29,6 +29,7 @@
         "effects": {
             "multiplyBuildingProduction": "• {{buildings}}: tuplateho.",
             "multiplyTap": "• Napautukset ovat ×{{multiplier}} arvokkaampia.",
+            "addToTap": "• Jokainen napautus antaa {{amount}} emojia enemmän.",
             "percentageIncreaseTap": "• Napautukset ovat {{percent}} tehokkaampia.",
             "tapPercentageOfEps": "• Napautus tuottaa {{percent}} koko emojituotannostasi.",
             "percentageIncreaseProduction": "• Emojien kokonaistuotanto kasvaa {{percent}}.",
@@ -48,6 +49,7 @@
         "chips": {
             "multiplyBuildingProduction": "{{buildings}} ×{{multiplier}}",
             "multiplyTap": "Napautus ×{{multiplier}}",
+            "addToTap": "Napautus +{{amount}}",
             "percentageIncreaseTap": "Napautus +{{percent}}",
             "percentageIncreaseProduction": "Tuotanto +{{percent}}",
             "tapPercentageOfEps": "Napautus +{{percent}} emojeista/s",

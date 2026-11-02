@@ -31,6 +31,7 @@
         "effects": {
             "multiplyBuildingProduction": "• {{buildings}}: efficienza raddoppiata.",
             "multiplyTap": "• Ogni tocco vale ×{{multiplier}}.",
+            "addToTap": "• Ogni tocco dà {{amount}} emoji in più.",
             "percentageIncreaseTap": "• Potenza del tocco: +{{percent}}.",
             "tapPercentageOfEps": "• Ogni tocco frutta una quota pari a {{percent}} della tua produzione totale di emoji.",
             "percentageIncreaseProduction": "• Produzione totale di emoji: +{{percent}}.",
@@ -50,6 +51,7 @@
         "chips": {
             "multiplyBuildingProduction": "{{buildings}} ×{{multiplier}}",
             "multiplyTap": "Tocco ×{{multiplier}}",
+            "addToTap": "Tocco +{{amount}}",
             "percentageIncreaseTap": "Tocco +{{percent}}",
             "percentageIncreaseProduction": "Produzione +{{percent}}",
             "tapPercentageOfEps": "Tocchi +{{percent}} degli emoji/sec",

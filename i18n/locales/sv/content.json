@@ -313,6 +313,31 @@
             "description": "Kvantsammanflätning i fingrarna låter dig rita emojis i ljusets hastighet.",
             "quote": "Mina fingrar är på två ställen samtidigt. Båda hatar dig."
         },
+        "120": {
+            "name": "Bestämt tryck",
+            "description": "Tryck med mening. Varje tryck ger 1 emoji till.",
+            "quote": "Inte för hårt. Inte för mjukt. Precis lagom."
+        },
+        "121": {
+            "name": "Dubbeltryck",
+            "description": "Två fingrar, ett tryck. Varje tryck ger 2 emojier till.",
+            "quote": "Fred, och dubbelt så många emojier."
+        },
+        "122": {
+            "name": "Knäcka knogarna",
+            "description": "Uppvärmda knogar trycker hårdare. Varje tryck ger 4 emojier till.",
+            "quote": "Knäck. Knäck. Knäck. Tryck."
+        },
+        "123": {
+            "name": "Öppen handflata",
+            "description": "Varför trycka med ett finger när du kan klappa till med fem? Varje tryck ger 8 emojier till.",
+            "quote": "Skärmen har inte gjort något för att förtjäna det här."
+        },
+        "124": {
+            "name": "Knytnävshälsning",
+            "description": "Den stora emojin hälsar tillbaka. Varje tryck ger 16 emojier till.",
+            "quote": "Respekt."
+        },
         "200": {
             "name": "Bättre blyertspennor",
             "description": "Bättre pennor för mer detaljerade emojis.",

@@ -313,6 +313,31 @@
             "description": "Keterikatan kuantum di jarimu memungkinkan menggambar emoji secepat cahaya.",
             "quote": "Jariku ada di dua tempat sekaligus. Dua-duanya benci kamu."
         },
+        "120": {
+            "name": "Ketukan mantap",
+            "description": "Ketuk dengan sungguh-sungguh. Setiap ketukan memberi 1 emoji lebih banyak.",
+            "quote": "Tidak terlalu keras. Tidak terlalu pelan. Pas."
+        },
+        "121": {
+            "name": "Ketukan ganda",
+            "description": "Dua jari, satu ketukan. Setiap ketukan memberi 2 emoji lebih banyak.",
+            "quote": "Damai, dan emoji dua kali lipat."
+        },
+        "122": {
+            "name": "Meretakkan buku jari",
+            "description": "Buku jari yang sudah pemanasan mengetuk lebih keras. Setiap ketukan memberi 4 emoji lebih banyak.",
+            "quote": "Krek. Krek. Krek. Ketuk."
+        },
+        "123": {
+            "name": "Telapak terbuka",
+            "description": "Kenapa mengetuk dengan satu jari kalau bisa menampar dengan lima? Setiap ketukan memberi 8 emoji lebih banyak.",
+            "quote": "Layarnya tidak salah apa-apa."
+        },
+        "124": {
+            "name": "Tos kepalan",
+            "description": "Emoji besar membalas tos kepalanmu. Setiap ketukan memberi 16 emoji lebih banyak.",
+            "quote": "Respek."
+        },
         "200": {
             "name": "Pensil lebih bagus",
             "description": "Pensil yang lebih bagus untuk emoji yang lebih detail.",

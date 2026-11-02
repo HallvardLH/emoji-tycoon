@@ -27,6 +27,7 @@
         "effects": {
             "multiplyBuildingProduction": "• {{buildings}}: ประสิทธิภาพเพิ่มเป็น 2 เท่า",
             "multiplyTap": "• การแตะมีค่า ×{{multiplier}}",
+            "addToTap": "• ทุกการแตะได้อีโมจิเพิ่ม {{amount}} อัน",
             "percentageIncreaseTap": "• การแตะแรงขึ้น {{percent}}",
             "tapPercentageOfEps": "• การแตะได้รับ {{percent}} ของการผลิตอีโมจิทั้งหมด",
             "percentageIncreaseProduction": "• การผลิตอีโมจิทั้งหมดเพิ่มขึ้น {{percent}}",
@@ -46,6 +47,7 @@
         "chips": {
             "multiplyBuildingProduction": "{{buildings}} ×{{multiplier}}",
             "multiplyTap": "การแตะ ×{{multiplier}}",
+            "addToTap": "การแตะ +{{amount}}",
             "percentageIncreaseTap": "การแตะ +{{percent}}",
             "percentageIncreaseProduction": "การผลิต +{{percent}}",
             "tapPercentageOfEps": "แตะ +{{percent}} ของอีโมจิ/วิ",

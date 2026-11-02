@@ -313,6 +313,31 @@
             "description": "Parmaklarındaki kuantum dolanıklığı, ışık hızında emoji çizmeni sağlar.",
             "quote": "Parmaklarım aynı anda iki yerde. İkisi de senden nefret ediyor."
         },
+        "120": {
+            "name": "Sağlam dokunuş",
+            "description": "Kararlı dokun. Her dokunuş 1 emoji daha fazla verir.",
+            "quote": "Çok sert değil. Çok yumuşak değil. Tam kıvamında."
+        },
+        "121": {
+            "name": "Çift dokunuş",
+            "description": "İki parmak, tek dokunuş. Her dokunuş 2 emoji daha fazla verir.",
+            "quote": "Barış, ve iki kat emoji."
+        },
+        "122": {
+            "name": "Parmak çıtlatma",
+            "description": "Isınmış parmaklar daha sert dokunur. Her dokunuş 4 emoji daha fazla verir.",
+            "quote": "Çıt. Çıt. Çıt. Dokun."
+        },
+        "123": {
+            "name": "Açık avuç",
+            "description": "Beş parmakla şaplak atabilecekken neden tek parmakla dokunasın? Her dokunuş 8 emoji daha fazla verir.",
+            "quote": "Ekran bunu hak edecek hiçbir şey yapmadı."
+        },
+        "124": {
+            "name": "Yumruk tokuşturma",
+            "description": "Büyük emoji de yumruğunu tokuşturuyor. Her dokunuş 16 emoji daha fazla verir.",
+            "quote": "Saygılar."
+        },
         "200": {
             "name": "Gelişmiş kurşun kalemler",
             "description": "Daha detaylı emojiler için daha iyi kalemler.",

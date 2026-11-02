@@ -313,6 +313,31 @@
             "description": "L'intrication quantique de tes doigts te permet de dessiner des emojis à la vitesse de la lumière.",
             "quote": "Mes doigts sont à deux endroits à la fois. Et des deux côtés, ils te détestent."
         },
+        "120": {
+            "name": "Tape ferme",
+            "description": "Tapez avec conviction. Chaque tape rapporte 1 emoji de plus.",
+            "quote": "Pas trop fort. Pas trop doux. Juste comme il faut."
+        },
+        "121": {
+            "name": "Double tape",
+            "description": "Deux doigts, une tape. Chaque tape rapporte 2 emojis de plus.",
+            "quote": "La paix, et deux fois plus d'emojis."
+        },
+        "122": {
+            "name": "Craquer les doigts",
+            "description": "Des jointures échauffées tapent plus fort. Chaque tape rapporte 4 emojis de plus.",
+            "quote": "Crac. Crac. Crac. Tape."
+        },
+        "123": {
+            "name": "Main ouverte",
+            "description": "Pourquoi taper avec un doigt quand on peut claquer avec cinq ? Chaque tape rapporte 8 emojis de plus.",
+            "quote": "L'écran n'avait rien fait pour mériter ça."
+        },
+        "124": {
+            "name": "Check du poing",
+            "description": "Le grand emoji vous rend votre check. Chaque tape rapporte 16 emojis de plus.",
+            "quote": "Respect."
+        },
         "200": {
             "name": "Crayons améliorés",
             "description": "De meilleurs crayons pour des emojis plus détaillés.",

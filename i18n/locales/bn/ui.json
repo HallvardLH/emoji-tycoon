@@ -29,6 +29,7 @@
         "effects": {
             "multiplyBuildingProduction": "• {{buildings}}: দ্বিগুণ দক্ষতা।",
             "multiplyTap": "• প্রতিটি ট্যাপের মূল্য ×{{multiplier}}।",
+            "addToTap": "• প্রতিটি ট্যাপে {{amount}}টি বেশি ইমোজি পাওয়া যায়।",
             "percentageIncreaseTap": "• ট্যাপ {{percent}} বেশি শক্তিশালী।",
             "tapPercentageOfEps": "• প্রতি ট্যাপে মোট ইমোজি উৎপাদনের {{percent}} পাবে।",
             "percentageIncreaseProduction": "• মোট ইমোজি উৎপাদন {{percent}} বেড়েছে।",
@@ -48,6 +49,7 @@
         "chips": {
             "multiplyBuildingProduction": "{{buildings}} ×{{multiplier}}",
             "multiplyTap": "ট্যাপ ×{{multiplier}}",
+            "addToTap": "ট্যাপ +{{amount}}",
             "percentageIncreaseTap": "ট্যাপ +{{percent}}",
             "percentageIncreaseProduction": "উৎপাদন +{{percent}}",
             "tapPercentageOfEps": "ট্যাপে ইমোজি/সে-র +{{percent}}",

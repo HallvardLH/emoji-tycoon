@@ -29,6 +29,7 @@
         "effects": {
             "multiplyBuildingProduction": "• {{buildings}}: διπλάσια απόδοση.",
             "multiplyTap": "• Κάθε πάτημα αξίζει ×{{multiplier}}.",
+            "addToTap": "• Κάθε πάτημα δίνει {{amount}} emoji παραπάνω.",
             "percentageIncreaseTap": "• Το πάτημα είναι {{percent}} πιο δυνατό.",
             "tapPercentageOfEps": "• Κάθε πάτημα δίνει το {{percent}} της συνολικής σου παραγωγής emoji.",
             "percentageIncreaseProduction": "• Η συνολική παραγωγή emoji αυξάνεται κατά {{percent}}.",
@@ -48,6 +49,7 @@
         "chips": {
             "multiplyBuildingProduction": "{{buildings}} ×{{multiplier}}",
             "multiplyTap": "Πάτημα ×{{multiplier}}",
+            "addToTap": "Πάτημα +{{amount}}",
             "percentageIncreaseTap": "Πάτημα +{{percent}}",
             "percentageIncreaseProduction": "Παραγωγή +{{percent}}",
             "tapPercentageOfEps": "Πάτημα +{{percent}} των emoji/δευτ.",

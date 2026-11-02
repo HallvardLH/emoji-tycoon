@@ -313,6 +313,31 @@
             "description": "Mfungamano wa kwanta kwenye vidole vyako huruhusu kuchora emoji kwa kasi ya mwanga.",
             "quote": "Vidole vyangu viko sehemu mbili kwa wakati mmoja. Sehemu zote mbili zinakuchukia."
         },
+        "120": {
+            "name": "Mguso thabiti",
+            "description": "Gusa kwa makusudi. Kila mguso unatoa emoji 1 zaidi.",
+            "quote": "Si kwa nguvu sana. Si kwa upole sana. Sawasawa tu."
+        },
+        "121": {
+            "name": "Mguso maradufu",
+            "description": "Vidole viwili, mguso mmoja. Kila mguso unatoa emoji 2 zaidi.",
+            "quote": "Amani, na emoji mara mbili."
+        },
+        "122": {
+            "name": "Kuvunja vifundo",
+            "description": "Vifundo vilivyopashwa moto vinagusa kwa nguvu zaidi. Kila mguso unatoa emoji 4 zaidi.",
+            "quote": "Kwa. Kwa. Kwa. Gusa."
+        },
+        "123": {
+            "name": "Kiganja wazi",
+            "description": "Kwa nini kugusa kwa kidole kimoja wakati unaweza kupiga kofi kwa vitano? Kila mguso unatoa emoji 8 zaidi.",
+            "quote": "Skrini haikufanya chochote kustahili hili."
+        },
+        "124": {
+            "name": "Kugonga ngumi",
+            "description": "Emoji kubwa inakugonga ngumi pia. Kila mguso unatoa emoji 16 zaidi.",
+            "quote": "Heshima."
+        },
         "200": {
             "name": "Penseli bora",
             "description": "Penseli bora kwa emoji zenye maelezo zaidi.",

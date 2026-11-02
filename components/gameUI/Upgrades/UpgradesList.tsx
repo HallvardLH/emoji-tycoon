@@ -51,6 +51,7 @@ export function effectChips(upgrade: UpgradeType) {
         switch (category) {
             case "Multiply building production": return i18n.t("upgrades.chips.multiplyBuildingProduction", { buildings: getBuildingPluralName(upgrade.buildingId!), multiplier: upgrade.emojisPerSecondMultiplier });
             case "Multiply tap": return i18n.t("upgrades.chips.multiplyTap", { multiplier: upgrade.emojisPerTapMultiplier });
+            case "Add to tap": return i18n.t("upgrades.chips.addToTap", { amount: upgrade.emojisPerTapAddition });
             case "Percentage increase tap": return i18n.t("upgrades.chips.percentageIncreaseTap", { percent: formatPercentage(Math.round(upgrade.emojisPerTapPercentageIncrease! * 100)) });
             case "Percentage increase production": return i18n.t("upgrades.chips.percentageIncreaseProduction", { percent: formatPercentage(Math.round(upgrade.emojisPerSecondPercentageIncrease! * 100)) });
             case "Tap percentage of eps": return i18n.t("upgrades.chips.tapPercentageOfEps", { percent: formatPercentage(+(upgrade.emojisPerTapPercentageOfEps! * 100).toFixed(1)) });

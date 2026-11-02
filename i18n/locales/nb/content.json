@@ -313,6 +313,31 @@
             "description": "Kvantesammenfiltring i fingrene lar deg tegne emojier med lysets hastighet.",
             "quote": "Fingrene mine er to steder samtidig. Begge to hater deg."
         },
+        "120": {
+            "name": "Bestemt trykk",
+            "description": "Trykk med mening. Hvert trykk gir 1 emoji til.",
+            "quote": "Ikke for hardt. Ikke for mykt. Akkurat passe."
+        },
+        "121": {
+            "name": "Dobbelttrykk",
+            "description": "To fingre, ett trykk. Hvert trykk gir 2 emojier til.",
+            "quote": "Fred, og dobbelt så mange emojier."
+        },
+        "122": {
+            "name": "Knekke knoker",
+            "description": "Oppvarmede knoker trykker hardere. Hvert trykk gir 4 emojier til.",
+            "quote": "Knekk. Knekk. Knekk. Trykk."
+        },
+        "123": {
+            "name": "Åpen håndflate",
+            "description": "Hvorfor trykke med én finger når du kan klaske med fem? Hvert trykk gir 8 emojier til.",
+            "quote": "Skjermen har ikke gjort noe for å fortjene dette."
+        },
+        "124": {
+            "name": "Knyttnevehilsen",
+            "description": "Den store emojien hilser tilbake. Hvert trykk gir 16 emojier til.",
+            "quote": "Respekt."
+        },
         "200": {
             "name": "Bedre blyanter",
             "description": "Bedre blyanter for mer detaljerte emojier.",

@@ -313,6 +313,31 @@
             "description": "Quantenverschränkung in deinen Fingern lässt dich mit Lichtgeschwindigkeit zeichnen.",
             "quote": "Meine Finger sind an zwei Orten gleichzeitig. Beide hassen dich."
         },
+        "120": {
+            "name": "Fester Tipp",
+            "description": "Tippe mit Nachdruck. Jedes Tippen bringt 1 Emoji mehr.",
+            "quote": "Nicht zu fest. Nicht zu sanft. Genau richtig."
+        },
+        "121": {
+            "name": "Doppeltipp",
+            "description": "Zwei Finger, ein Tipp. Jedes Tippen bringt 2 Emojis mehr.",
+            "quote": "Frieden, und doppelt so viele Emojis."
+        },
+        "122": {
+            "name": "Fingerknacken",
+            "description": "Aufgewärmte Knöchel tippen kräftiger. Jedes Tippen bringt 4 Emojis mehr.",
+            "quote": "Knack. Knack. Knack. Tipp."
+        },
+        "123": {
+            "name": "Offene Hand",
+            "description": "Warum mit einem Finger tippen, wenn du mit fünf klatschen kannst? Jedes Tippen bringt 8 Emojis mehr.",
+            "quote": "Der Bildschirm hat das nicht verdient."
+        },
+        "124": {
+            "name": "Faustgruß",
+            "description": "Das große Emoji grüßt zurück. Jedes Tippen bringt 16 Emojis mehr.",
+            "quote": "Respekt."
+        },
         "200": {
             "name": "Bessere Bleistifte",
             "description": "Bessere Bleistifte für detailliertere Emojis.",

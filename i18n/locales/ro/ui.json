@@ -31,6 +31,7 @@
         "effects": {
             "multiplyBuildingProduction": "• {{buildings}}: eficiență dublă.",
             "multiplyTap": "• Atingerile valorează ×{{multiplier}}.",
+            "addToTap": "• Fiecare atingere aduce încă {{amount}} emoji.",
             "percentageIncreaseTap": "• Atingerile sunt cu {{percent}} mai puternice.",
             "tapPercentageOfEps": "• Fiecare atingere îți aduce {{percent}} din producția totală de emoji.",
             "percentageIncreaseProduction": "• Producția totală de emoji crește cu {{percent}}.",
@@ -50,6 +51,7 @@
         "chips": {
             "multiplyBuildingProduction": "{{buildings}} ×{{multiplier}}",
             "multiplyTap": "Atingeri ×{{multiplier}}",
+            "addToTap": "Atingeri +{{amount}}",
             "percentageIncreaseTap": "Atingeri +{{percent}}",
             "percentageIncreaseProduction": "Producție +{{percent}}",
             "tapPercentageOfEps": "Atingeri +{{percent}} din emoji/sec",

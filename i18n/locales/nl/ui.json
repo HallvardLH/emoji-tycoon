@@ -29,6 +29,7 @@
         "effects": {
             "multiplyBuildingProduction": "• {{buildings}}: twee keer zo efficiënt.",
             "multiplyTap": "• Tikken zijn ×{{multiplier}} zoveel waard.",
+            "addToTap": "• Elke tik levert {{amount}} emoji's meer op.",
             "percentageIncreaseTap": "• Tikken is {{percent}} krachtiger.",
             "tapPercentageOfEps": "• Tikken levert {{percent}} van je totale emoji-productie op.",
             "percentageIncreaseProduction": "• Totale emoji-productie met {{percent}} verhoogd.",
@@ -48,6 +49,7 @@
         "chips": {
             "multiplyBuildingProduction": "{{buildings}} ×{{multiplier}}",
             "multiplyTap": "Tikken ×{{multiplier}}",
+            "addToTap": "Tikken +{{amount}}",
             "percentageIncreaseTap": "Tikken +{{percent}}",
             "percentageIncreaseProduction": "Productie +{{percent}}",
             "tapPercentageOfEps": "Tik +{{percent}} van emoji's/sec",

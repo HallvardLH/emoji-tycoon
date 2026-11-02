@@ -27,6 +27,7 @@
         "effects": {
             "multiplyBuildingProduction": "• {{buildings}}：效率翻倍。",
             "multiplyTap": "• 點擊價值 ×{{multiplier}}。",
+            "addToTap": "• 每次點擊多得 {{amount}} 個表情。",
             "percentageIncreaseTap": "• 點擊威力提升 {{percent}}。",
             "tapPercentageOfEps": "• 每次點擊可獲得 Emoji 總產量的 {{percent}}。",
             "percentageIncreaseProduction": "• Emoji 總產量提升 {{percent}}。",
@@ -46,6 +47,7 @@
         "chips": {
             "multiplyBuildingProduction": "{{buildings}} ×{{multiplier}}",
             "multiplyTap": "點擊 ×{{multiplier}}",
+            "addToTap": "點擊 +{{amount}}",
             "percentageIncreaseTap": "點擊 +{{percent}}",
             "percentageIncreaseProduction": "產量 +{{percent}}",
             "tapPercentageOfEps": "點擊 +每秒產量的 {{percent}}",

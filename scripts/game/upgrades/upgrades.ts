@@ -6,7 +6,7 @@ import { updateBuildingValue } from "../buildings/shorthands";
 import { getBuilding, getBuildingIdFromName } from "../buildings/shorthands";
 import { updateEmojis } from "../../redux/valuesSlice";
 import { formatNumber, formatPercentage } from "../../misc";
-import { addTapMultiplier, addTapPercentage, addEmojisPerTapPercentageOfEps, setTapModifiers } from '../../redux/bigEmojiSlice';
+import { addTapMultiplier, addTapAddition, addTapPercentage, addEmojisPerTapPercentageOfEps, setTapModifiers } from '../../redux/bigEmojiSlice';
 import { calculateEpt } from "../calculations";
 import { getUpgradeDataById } from './shorthands';
 import { canBuyUpgrade } from './checks';
@@ -48,6 +48,11 @@ export function buyUpgrade(upgradeId: number) {
                 case "Multiply tap":
                     if (upgrade.emojisPerTapMultiplier) {
                         store.dispatch(addTapMultiplier(upgrade.emojisPerTapMultiplier));
+                    }
+                    break;
+                case "Add to tap":
+                    if (upgrade.emojisPerTapAddition) {
+                        store.dispatch(addTapAddition(upgrade.emojisPerTapAddition));
                     }
                     break;
                 case "Percentage increase tap":
@@ -103,6 +108,9 @@ export function getEffectText(upgradeId: number) {
                 break
             case "Multiply tap":
                 text += i18n.t("upgrades.effects.multiplyTap", { multiplier: upgrade.emojisPerTapMultiplier }) + "\n";
+                break
+            case "Add to tap":
+                text += i18n.t("upgrades.effects.addToTap", { amount: upgrade.emojisPerTapAddition }) + "\n";
                 break
             case "Percentage increase tap":
                 text += i18n.t("upgrades.effects.percentageIncreaseTap", { percent: formatPercentage(upgrade.emojisPerTapPercentageIncrease! * 100) }) + "\n";
@@ -173,6 +181,9 @@ export function getUpgradeBonus(upgradeId: number) {
             case "Multiply tap":
                 changes.tapMultiplier = upgrade.emojisPerTapMultiplier;
                 break;
+            case "Add to tap":
+                changes.tapAddition = upgrade.emojisPerTapAddition;
+                break;
             case "Percentage increase tap":
                 changes.tapPercentage = upgrade.emojisPerTapPercentageIncrease;
                 break;
@@ -213,6 +224,7 @@ export function getUpgradeBonus(upgradeId: number) {
  */
 export function syncTapModifiers() {
     const multipliers: number[] = [];
+    const additions: number[] = [];
     const percentages: number[] = [];
     const percentagesOfEps: number[] = [];
 
@@ -220,9 +232,10 @@ export function syncTapModifiers() {
         const upgrade = getUpgradeDataById(id);
         if (!upgrade) return;
         if (upgrade.categories.includes("Multiply tap") && upgrade.emojisPerTapMultiplier) multipliers.push(upgrade.emojisPerTapMultiplier);
+        if (upgrade.categories.includes("Add to tap") && upgrade.emojisPerTapAddition) additions.push(upgrade.emojisPerTapAddition);
         if (upgrade.categories.includes("Percentage increase tap") && upgrade.emojisPerTapPercentageIncrease) percentages.push(upgrade.emojisPerTapPercentageIncrease);
         if (upgrade.categories.includes("Tap percentage of eps") && upgrade.emojisPerTapPercentageOfEps) percentagesOfEps.push(upgrade.emojisPerTapPercentageOfEps);
     });
 
-    store.dispatch(setTapModifiers({ multipliers, percentages, percentagesOfEps }));
+    store.dispatch(setTapModifiers({ multipliers, additions, percentages, percentagesOfEps }));
 }

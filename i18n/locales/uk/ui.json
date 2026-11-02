@@ -33,6 +33,7 @@
         "effects": {
             "multiplyBuildingProduction": "• {{buildings}}: ефективність удвічі вища.",
             "multiplyTap": "• Тапи варті ×{{multiplier}}.",
+            "addToTap": "• Кожне натискання дає на {{amount}} емодзі більше.",
             "percentageIncreaseTap": "• Тапання потужніше на {{percent}}.",
             "tapPercentageOfEps": "• Тап дає {{percent}} від усього твого виробництва емодзі.",
             "percentageIncreaseProduction": "• Загальне виробництво емодзі зросло на {{percent}}.",
@@ -52,6 +53,7 @@
         "chips": {
             "multiplyBuildingProduction": "{{buildings}} ×{{multiplier}}",
             "multiplyTap": "Тапання ×{{multiplier}}",
+            "addToTap": "Тапання +{{amount}}",
             "percentageIncreaseTap": "Тапання +{{percent}}",
             "percentageIncreaseProduction": "Виробництво +{{percent}}",
             "tapPercentageOfEps": "Тапи +{{percent}} від емодзі/с",

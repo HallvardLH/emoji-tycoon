@@ -313,6 +313,31 @@
             "description": "Kwantumverstrengeling in je vingers laat je emoji's tekenen met de snelheid van het licht.",
             "quote": "Mijn vingers zijn op twee plekken tegelijk. Op beide plekken haten ze je."
         },
+        "120": {
+            "name": "Stevige tik",
+            "description": "Tik met overtuiging. Elke tik levert 1 emoji meer op.",
+            "quote": "Niet te hard. Niet te zacht. Precies goed."
+        },
+        "121": {
+            "name": "Dubbeltik",
+            "description": "Twee vingers, één tik. Elke tik levert 2 emoji's meer op.",
+            "quote": "Vrede, en twee keer zoveel emoji's."
+        },
+        "122": {
+            "name": "Knokkels kraken",
+            "description": "Opgewarmde knokkels tikken harder. Elke tik levert 4 emoji's meer op.",
+            "quote": "Krak. Krak. Krak. Tik."
+        },
+        "123": {
+            "name": "Open hand",
+            "description": "Waarom tikken met één vinger als je met vijf kunt meppen? Elke tik levert 8 emoji's meer op.",
+            "quote": "Het scherm heeft dit niet verdiend."
+        },
+        "124": {
+            "name": "Boks",
+            "description": "De grote emoji boksen terug. Elke tik levert 16 emoji's meer op.",
+            "quote": "Respect."
+        },
         "200": {
             "name": "Betere potloden",
             "description": "Betere potloden voor gedetailleerdere emoji's.",

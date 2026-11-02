@@ -313,6 +313,31 @@
             "description": "Kvantesammenfiltring i dine fingre lader dig tegne emojis med lysets hast.",
             "quote": "Mine fingre er to steder på én gang. Begge steder hader de dig."
         },
+        "120": {
+            "name": "Fast tryk",
+            "description": "Tryk med mening. Hvert tryk giver 1 emoji mere.",
+            "quote": "Ikke for hårdt. Ikke for blødt. Lige tilpas."
+        },
+        "121": {
+            "name": "Dobbelttryk",
+            "description": "To fingre, ét tryk. Hvert tryk giver 2 emojis mere.",
+            "quote": "Fred, og dobbelt så mange emojis."
+        },
+        "122": {
+            "name": "Knæk knoerne",
+            "description": "Opvarmede knoer trykker hårdere. Hvert tryk giver 4 emojis mere.",
+            "quote": "Knæk. Knæk. Knæk. Tryk."
+        },
+        "123": {
+            "name": "Åben hånd",
+            "description": "Hvorfor trykke med én finger, når du kan klaske med fem? Hvert tryk giver 8 emojis mere.",
+            "quote": "Skærmen har ikke gjort noget for at fortjene det her."
+        },
+        "124": {
+            "name": "Knytnævehilsen",
+            "description": "Den store emoji hilser igen. Hvert tryk giver 16 emojis mere.",
+            "quote": "Respekt."
+        },
         "200": {
             "name": "Bedre blyanter",
             "description": "Bedre blyanter til mere detaljerede emojis.",

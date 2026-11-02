@@ -29,6 +29,7 @@
         "effects": {
             "multiplyBuildingProduction": "• {{buildings}} sind doppelt so effizient.",
             "multiplyTap": "• Tippen ist ×{{multiplier}} so viel wert.",
+            "addToTap": "• Jedes Tippen bringt {{amount}} Emojis mehr.",
             "percentageIncreaseTap": "• Tippen ist {{percent}} stärker.",
             "tapPercentageOfEps": "• Tippen bringt {{percent}} deiner gesamten Emoji-Produktion.",
             "percentageIncreaseProduction": "• Gesamte Emoji-Produktion um {{percent}} erhöht.",
@@ -48,6 +49,7 @@
         "chips": {
             "multiplyBuildingProduction": "{{buildings}} ×{{multiplier}}",
             "multiplyTap": "Tippen ×{{multiplier}}",
+            "addToTap": "Tippen +{{amount}}",
             "percentageIncreaseTap": "Tippen +{{percent}}",
             "percentageIncreaseProduction": "Produktion +{{percent}}",
             "tapPercentageOfEps": "Tipps +{{percent}} der Emojis/Sek.",

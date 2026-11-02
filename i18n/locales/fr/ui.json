@@ -31,6 +31,7 @@
         "effects": {
             "multiplyBuildingProduction": "• {{buildings}} : efficacité doublée.",
             "multiplyTap": "• Chaque tapotement vaut ×{{multiplier}}.",
+            "addToTap": "• Chaque tape rapporte {{amount}} emojis de plus.",
             "percentageIncreaseTap": "• Tapoter est {{percent}} plus puissant.",
             "tapPercentageOfEps": "• Chaque tapotement rapporte {{percent}} de ta production totale d'emojis.",
             "percentageIncreaseProduction": "• Production totale d'emojis augmentée de {{percent}}.",
@@ -50,6 +51,7 @@
         "chips": {
             "multiplyBuildingProduction": "{{buildings}} ×{{multiplier}}",
             "multiplyTap": "Tapotement ×{{multiplier}}",
+            "addToTap": "Tapotement +{{amount}}",
             "percentageIncreaseTap": "Tapotement +{{percent}}",
             "percentageIncreaseProduction": "Production +{{percent}}",
             "tapPercentageOfEps": "Tapotement +{{percent}} des emojis/s",

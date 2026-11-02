@@ -27,6 +27,7 @@
         "effects": {
             "multiplyBuildingProduction": "• {{buildings}}: hiệu suất gấp đôi.",
             "multiplyTap": "• Mỗi lần chạm có giá trị ×{{multiplier}}.",
+            "addToTap": "• Mỗi lần chạm cho thêm {{amount}} emoji.",
             "percentageIncreaseTap": "• Chạm mạnh hơn {{percent}}.",
             "tapPercentageOfEps": "• Mỗi lần chạm nhận thêm {{percent}} tổng sản lượng emoji của bạn.",
             "percentageIncreaseProduction": "• Tổng sản lượng emoji tăng {{percent}}.",
@@ -46,6 +47,7 @@
         "chips": {
             "multiplyBuildingProduction": "{{buildings}} ×{{multiplier}}",
             "multiplyTap": "Chạm ×{{multiplier}}",
+            "addToTap": "Chạm +{{amount}}",
             "percentageIncreaseTap": "Chạm +{{percent}}",
             "percentageIncreaseProduction": "Sản lượng +{{percent}}",
             "tapPercentageOfEps": "Chạm +{{percent}} emoji/giây",

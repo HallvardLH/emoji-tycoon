@@ -27,6 +27,7 @@
         "effects": {
             "multiplyBuildingProduction": "• {{buildings}}：効率が2倍。",
             "multiplyTap": "• タップの価値が×{{multiplier}}。",
+            "addToTap": "• タップごとに絵文字が{{amount}}個増える。",
             "percentageIncreaseTap": "• タップの威力が{{percent}}アップ。",
             "tapPercentageOfEps": "• タップで絵文字総生産量の{{percent}}を獲得。",
             "percentageIncreaseProduction": "• 絵文字の総生産量が{{percent}}アップ。",
@@ -46,6 +47,7 @@
         "chips": {
             "multiplyBuildingProduction": "{{buildings}} ×{{multiplier}}",
             "multiplyTap": "タップ ×{{multiplier}}",
+            "addToTap": "タップ +{{amount}}",
             "percentageIncreaseTap": "タップ +{{percent}}",
             "percentageIncreaseProduction": "生産量 +{{percent}}",
             "tapPercentageOfEps": "タップ +毎秒生産の{{percent}}",

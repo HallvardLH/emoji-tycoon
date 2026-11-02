@@ -29,6 +29,7 @@
         "effects": {
             "multiplyBuildingProduction": "• {{buildings}}: ufanisi mara mbili.",
             "multiplyTap": "• Thamani ya kugusa ×{{multiplier}}.",
+            "addToTap": "• Kila mguso unatoa emoji {{amount}} zaidi.",
             "percentageIncreaseTap": "• Kugusa kuna nguvu zaidi kwa {{percent}}.",
             "tapPercentageOfEps": "• Kila mguso unakupa {{percent}} ya uzalishaji wako wote wa emoji.",
             "percentageIncreaseProduction": "• Uzalishaji wote wa emoji umeongezeka kwa {{percent}}.",
@@ -48,6 +49,7 @@
         "chips": {
             "multiplyBuildingProduction": "{{buildings}} ×{{multiplier}}",
             "multiplyTap": "Kugusa ×{{multiplier}}",
+            "addToTap": "Kugusa +{{amount}}",
             "percentageIncreaseTap": "Kugusa +{{percent}}",
             "percentageIncreaseProduction": "Uzalishaji +{{percent}}",
             "tapPercentageOfEps": "Mguso +{{percent}} ya emoji/sek",

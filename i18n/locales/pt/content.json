@@ -313,6 +313,31 @@
             "description": "O entrelaçamento quântico dos seus dedos permite desenhar emojis na velocidade da luz.",
             "quote": "Meus dedos estão em dois lugares ao mesmo tempo. Nos dois, eles odeiam você."
         },
+        "120": {
+            "name": "Toque firme",
+            "description": "Toque com vontade. Cada toque dá mais 1 emoji.",
+            "quote": "Nem forte demais. Nem fraco demais. Na medida certa."
+        },
+        "121": {
+            "name": "Toque duplo",
+            "description": "Dois dedos, um toque. Cada toque dá mais 2 emojis.",
+            "quote": "Paz, e o dobro de emojis."
+        },
+        "122": {
+            "name": "Estalar os dedos",
+            "description": "Dedos aquecidos tocam com mais força. Cada toque dá mais 4 emojis.",
+            "quote": "Créc. Créc. Créc. Toque."
+        },
+        "123": {
+            "name": "Mão aberta",
+            "description": "Por que tocar com um dedo se dá para dar um tapa com cinco? Cada toque dá mais 8 emojis.",
+            "quote": "A tela não fez nada para merecer isso."
+        },
+        "124": {
+            "name": "Soquinho",
+            "description": "O grande emoji devolve o soquinho. Cada toque dá mais 16 emojis.",
+            "quote": "Respeito."
+        },
         "200": {
             "name": "Lápis melhores",
             "description": "Lápis melhores para emojis mais detalhados.",

@@ -1,12 +1,19 @@
 import { buildingIdOf } from "../../../buildings/buildingData";
 import { BuildingNames } from "../../../buildings/buildingNamesType";
-import { UpgradeType, UnlockConditionType, UpgradeVariantsType } from "../UpgradeType";
+import { UpgradeType, UnlockConditionType, UpgradeVariantsType, UpgradeCateogoriesType } from "../UpgradeType";
 
 const baseDrawingHandUpgrade = {
     building: "Drawing hand" as BuildingNames,
     buildingId: buildingIdOf("Drawing hand"),
     unlockCondition: "Building amount" as UnlockConditionType,
     variant: "Standard building" as UpgradeVariantsType,
+};
+
+// Early tapping upgrades: each adds a flat amount to every tap, before tap multipliers.
+// Ids come from the position in the list and saves store ids, so these stay at the end
+const baseDrawingHandTapUpgrade = {
+    ...baseDrawingHandUpgrade,
+    categories: ["Add to tap" as UpgradeCateogoriesType],
 };
 
 export const drawingHandUpgrades: UpgradeType[] = [
@@ -16,9 +23,8 @@ export const drawingHandUpgrades: UpgradeType[] = [
         icon: "💪",
         description: "A stronger arm makes for drawing emojis faster.",
         quote: "It hurts, but it's worth it.",
-        categories: ["Multiply building production", "Multiply tap"],
+        categories: ["Multiply building production"],
         emojisPerSecondMultiplier: 2,
-        emojisPerTapMultiplier: 1.5,
         tier: 0,
     },
     {
@@ -29,7 +35,6 @@ export const drawingHandUpgrades: UpgradeType[] = [
         quote: "Flexible? Yeah, maybe. But still painful.",
         categories: ["Multiply building production"],
         emojisPerSecondMultiplier: 2,
-        emojisPerTapMultiplier: 0,
         tier: 1,
     },
     {
@@ -40,7 +45,6 @@ export const drawingHandUpgrades: UpgradeType[] = [
         quote: "Twice the pride, double the fall.",
         categories: ["Multiply building production"],
         emojisPerSecondMultiplier: 2,
-        emojisPerTapMultiplier: 0,
         tier: 2,
     },
     {
@@ -49,9 +53,8 @@ export const drawingHandUpgrades: UpgradeType[] = [
         icon: "💅",
         description: "Having nail polish makes you tap faster, didn't you know that?",
         quote: "And you'll look real cute!",
-        categories: ["Multiply building production", "Multiply tap"],
+        categories: ["Multiply building production"],
         emojisPerSecondMultiplier: 2,
-        emojisPerTapMultiplier: 1.5,
         tier: 3,
     },
     {
@@ -62,7 +65,6 @@ export const drawingHandUpgrades: UpgradeType[] = [
         quote: "Not hard at all? My wife divorced me when she saw me with my feet on the family tablet.",
         categories: ["Multiply building production"],
         emojisPerSecondMultiplier: 2,
-        emojisPerTapMultiplier: 0,
         tier: 4,
     },
     {
@@ -73,7 +75,6 @@ export const drawingHandUpgrades: UpgradeType[] = [
         quote: "mmmhmh thmpwuh mhhaaaam ehhmmmmuhm ahumhmhm",
         categories: ["Multiply building production"],
         emojisPerSecondMultiplier: 2,
-        emojisPerTapMultiplier: 0,
         tier: 5,
     },
     {
@@ -82,9 +83,8 @@ export const drawingHandUpgrades: UpgradeType[] = [
         icon: "👃",
         description: "Stick a crayon up your nose and draw with it!",
         quote: "*Sniff* Why does the screen smell like feet?",
-        categories: ["Multiply building production", "Multiply tap"],
+        categories: ["Multiply building production"],
         emojisPerSecondMultiplier: 2,
-        emojisPerTapMultiplier: 1.5,
         tier: 6,
     },
     {
@@ -95,7 +95,6 @@ export const drawingHandUpgrades: UpgradeType[] = [
         quote: "What? Huh? I can't hear- wha- huh... I really can't hear a darn th- what?!",
         categories: ["Multiply building production"],
         emojisPerSecondMultiplier: 2,
-        emojisPerTapMultiplier: 0,
         tier: 7,
     },
     {
@@ -106,7 +105,6 @@ export const drawingHandUpgrades: UpgradeType[] = [
         quote: "Not worth it. Hurts too much.",
         categories: ["Multiply building production"],
         emojisPerSecondMultiplier: 2,
-        emojisPerTapMultiplier: 0,
         tier: 8,
     },
     {
@@ -115,9 +113,8 @@ export const drawingHandUpgrades: UpgradeType[] = [
         icon: "🦵",
         description: "A stronger leg lets you draw emojis much faster with your feet.",
         quote: "My leg is huge now. Only the left one. I walk in circles.",
-        categories: ["Multiply building production", "Multiply tap"],
+        categories: ["Multiply building production"],
         emojisPerSecondMultiplier: 2,
-        emojisPerTapMultiplier: 1.5,
         tier: 9,
     },
     {
@@ -128,7 +125,6 @@ export const drawingHandUpgrades: UpgradeType[] = [
         quote: "Oxygen. Oxygen. Oxygen.",
         categories: ["Multiply building production"],
         emojisPerSecondMultiplier: 2,
-        emojisPerTapMultiplier: 0,
         tier: 10,
     },
     {
@@ -138,7 +134,6 @@ export const drawingHandUpgrades: UpgradeType[] = [
         description: "A bigger brain unleashes a grand wave of creativity doubling your emoji production!",
         categories: ["Multiply building production"],
         emojisPerSecondMultiplier: 2,
-        emojisPerTapMultiplier: 0,
         tier: 11,
     },
     {
@@ -147,9 +142,8 @@ export const drawingHandUpgrades: UpgradeType[] = [
         icon: "💇‍♂️",
         description: "Wield a paintbrush with your hair to create emojis. Who needs hands when you've got style?",
         quote: "Who needs hands? Me. I need hands. I'm going bald from this.",
-        categories: ["Multiply building production", "Multiply tap"],
+        categories: ["Multiply building production"],
         emojisPerSecondMultiplier: 2,
-        emojisPerTapMultiplier: 1.25,
         tier: 12,
     },
     {
@@ -159,7 +153,6 @@ export const drawingHandUpgrades: UpgradeType[] = [
         description: "Raise your eyebrows to draw emojis. It's a workout for your face and your creativity!",
         categories: ["Multiply building production"],
         emojisPerSecondMultiplier: 2,
-        emojisPerTapMultiplier: 0,
         tier: 13,
     },
     {
@@ -170,7 +163,6 @@ export const drawingHandUpgrades: UpgradeType[] = [
         quote: "Lie on your back, they said. A stretch and a sketch, they said. I can't get up.",
         categories: ["Multiply building production"],
         emojisPerSecondMultiplier: 2,
-        emojisPerTapMultiplier: 0,
         tier: 14,
     },
     {
@@ -178,9 +170,8 @@ export const drawingHandUpgrades: UpgradeType[] = [
         name: "Teeth",
         icon: "🦷",
         description: "Grip a pen with your teeth and draw emojis. Warning: May cause jaw fatigue!",
-        categories: ["Multiply building production", "Multiply tap"],
+        categories: ["Multiply building production"],
         emojisPerSecondMultiplier: 2,
-        emojisPerTapMultiplier: 1.25,
         tier: 15,
     },
     {
@@ -191,7 +182,6 @@ export const drawingHandUpgrades: UpgradeType[] = [
         quote: "I'm drawing with my belly button. My mother is so proud.",
         categories: ["Multiply building production"],
         emojisPerSecondMultiplier: 2,
-        emojisPerTapMultiplier: 0,
         tier: 16,
     },
     {
@@ -201,7 +191,6 @@ export const drawingHandUpgrades: UpgradeType[] = [
         description: "Every emoji you draw echoes, creating twice as many!",
         categories: ["Multiply building production"],
         emojisPerSecondMultiplier: 2,
-        emojisPerTapMultiplier: 0,
         tier: 17,
     },
     {
@@ -210,9 +199,8 @@ export const drawingHandUpgrades: UpgradeType[] = [
         icon: "🧙‍♂️",
         description: "Why use your hands when you can draw emojis with your mind?",
         quote: "I can move things with my mind, and you've got me drawing winky faces.",
-        categories: ["Multiply building production", "Multiply tap"],
+        categories: ["Multiply building production"],
         emojisPerSecondMultiplier: 2,
-        emojisPerTapMultiplier: 1.25,
         tier: 18,
     },
     {
@@ -221,9 +209,53 @@ export const drawingHandUpgrades: UpgradeType[] = [
         icon: "🌀",
         description: "Quantum entanglement in your fingers allows for drawing emojis at the speed of light.",
         quote: "My fingers are in two places at once. Both of them hate you.",
-        categories: ["Multiply building production", "Multiply tap"],
+        categories: ["Multiply building production"],
         emojisPerSecondMultiplier: 2,
-        emojisPerTapMultiplier: 1.25,
         tier: 19,
+    },
+    {
+        ...baseDrawingHandTapUpgrade,
+        name: "Firm tap",
+        icon: "👆",
+        description: "Tap with purpose. Every tap gives 1 more emoji.",
+        quote: "Not too hard. Not too soft. Just right.",
+        emojisPerTapAddition: 1,
+        tier: 0,
+    },
+    {
+        ...baseDrawingHandTapUpgrade,
+        name: "Double tap",
+        icon: "✌️",
+        description: "Two fingers, one tap. Every tap gives 2 more emojis.",
+        quote: "Peace, and twice the emojis.",
+        emojisPerTapAddition: 2,
+        tier: 1,
+    },
+    {
+        ...baseDrawingHandTapUpgrade,
+        name: "Knuckle cracking",
+        icon: "🤜",
+        description: "Warmed up knuckles tap harder. Every tap gives 4 more emojis.",
+        quote: "Crack. Crack. Crack. Tap.",
+        emojisPerTapAddition: 4,
+        tier: 2,
+    },
+    {
+        ...baseDrawingHandTapUpgrade,
+        name: "Open palm",
+        icon: "🖐️",
+        description: "Why tap with one finger when you can slap with five? Every tap gives 8 more emojis.",
+        quote: "The screen did nothing to deserve this.",
+        emojisPerTapAddition: 8,
+        tier: 3,
+    },
+    {
+        ...baseDrawingHandTapUpgrade,
+        name: "Fist bump",
+        icon: "👊",
+        description: "The big emoji bumps right back. Every tap gives 16 more emojis.",
+        quote: "Respect.",
+        emojisPerTapAddition: 16,
+        tier: 4,
     },
 ];

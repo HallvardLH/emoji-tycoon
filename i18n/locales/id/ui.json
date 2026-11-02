@@ -27,6 +27,7 @@
         "effects": {
             "multiplyBuildingProduction": "• {{buildings}}: efisiensi 2x lipat.",
             "multiplyTap": "• Nilai ketukan ×{{multiplier}}.",
+            "addToTap": "• Setiap ketukan memberi {{amount}} emoji lebih banyak.",
             "percentageIncreaseTap": "• Ketukan jadi {{percent}} lebih kuat.",
             "tapPercentageOfEps": "• Ketukan memberi {{percent}} dari total produksi emoji kamu.",
             "percentageIncreaseProduction": "• Total produksi emoji naik {{percent}}.",
@@ -46,6 +47,7 @@
         "chips": {
             "multiplyBuildingProduction": "{{buildings}} ×{{multiplier}}",
             "multiplyTap": "Ketukan ×{{multiplier}}",
+            "addToTap": "Ketukan +{{amount}}",
             "percentageIncreaseTap": "Ketukan +{{percent}}",
             "percentageIncreaseProduction": "Produksi +{{percent}}",
             "tapPercentageOfEps": "Ketukan +{{percent}} dari emoji/dtk",

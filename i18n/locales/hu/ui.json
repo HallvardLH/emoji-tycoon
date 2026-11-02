@@ -29,6 +29,7 @@
         "effects": {
             "multiplyBuildingProduction": "• {{buildings}}: dupla hatékonyság.",
             "multiplyTap": "• A koppintások ×{{multiplier}} értékűek.",
+            "addToTap": "• Minden koppintás {{amount}} emojival többet ad.",
             "percentageIncreaseTap": "• Koppintás ereje: +{{percent}}.",
             "tapPercentageOfEps": "• Koppintásonként a teljes emojitermelésedből kapsz: {{percent}}.",
             "percentageIncreaseProduction": "• Teljes emojitermelés: +{{percent}}.",
@@ -48,6 +49,7 @@
         "chips": {
             "multiplyBuildingProduction": "{{buildings}} ×{{multiplier}}",
             "multiplyTap": "Koppintás ×{{multiplier}}",
+            "addToTap": "Koppintás +{{amount}}",
             "percentageIncreaseTap": "Koppintás +{{percent}}",
             "percentageIncreaseProduction": "Termelés +{{percent}}",
             "tapPercentageOfEps": "Koppintás: az emoji/mp +{{percent}}",

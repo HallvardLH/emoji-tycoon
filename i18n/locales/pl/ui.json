@@ -33,6 +33,7 @@
         "effects": {
             "multiplyBuildingProduction": "• {{buildings}}: dwa razy większa wydajność.",
             "multiplyTap": "• Stuknięcia są warte ×{{multiplier}}.",
+            "addToTap": "• Każde stuknięcie daje o {{amount}} emoji więcej.",
             "percentageIncreaseTap": "• Stukanie jest silniejsze o {{percent}}.",
             "tapPercentageOfEps": "• Stuknięcie daje {{percent}} twojej łącznej produkcji emoji.",
             "percentageIncreaseProduction": "• Łączna produkcja emoji rośnie o {{percent}}.",
@@ -52,6 +53,7 @@
         "chips": {
             "multiplyBuildingProduction": "{{buildings}} ×{{multiplier}}",
             "multiplyTap": "Stukanie ×{{multiplier}}",
+            "addToTap": "Stukanie +{{amount}}",
             "percentageIncreaseTap": "Stukanie +{{percent}}",
             "percentageIncreaseProduction": "Produkcja +{{percent}}",
             "tapPercentageOfEps": "Stuknięcia +{{percent}} emoji/s",

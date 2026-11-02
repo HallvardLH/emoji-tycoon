@@ -313,6 +313,31 @@
             "description": "Kvantové provázání v prstech ti umožní kreslit emoji rychlostí světla.",
             "quote": "Moje prsty jsou na dvou místech zároveň. Na obou tě nesnášejí."
         },
+        "120": {
+            "name": "Pevné ťuknutí",
+            "description": "Ťukej s rozmyslem. Každé ťuknutí dá o 1 emoji víc.",
+            "quote": "Ne moc silně. Ne moc slabě. Akorát."
+        },
+        "121": {
+            "name": "Dvojité ťuknutí",
+            "description": "Dva prsty, jedno ťuknutí. Každé ťuknutí dá o 2 emoji víc.",
+            "quote": "Mír, a dvakrát víc emoji."
+        },
+        "122": {
+            "name": "Křupání kloubů",
+            "description": "Rozehřáté klouby ťukají silněji. Každé ťuknutí dá o 4 emoji víc.",
+            "quote": "Křup. Křup. Křup. Ťuk."
+        },
+        "123": {
+            "name": "Otevřená dlaň",
+            "description": "Proč ťukat jedním prstem, když můžeš plácnout pěti? Každé ťuknutí dá o 8 emoji víc.",
+            "quote": "Displej si tohle nezasloužil."
+        },
+        "124": {
+            "name": "Ťuk pěstí",
+            "description": "Velký emoji ti pěstí odpoví. Každé ťuknutí dá o 16 emoji víc.",
+            "quote": "Respekt."
+        },
         "200": {
             "name": "Lepší tužky",
             "description": "Lepší tužky pro detailnější emoji.",

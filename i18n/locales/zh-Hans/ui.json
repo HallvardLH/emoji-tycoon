@@ -27,6 +27,7 @@
         "effects": {
             "multiplyBuildingProduction": "• {{buildings}}：效率翻倍。",
             "multiplyTap": "• 点击价值 ×{{multiplier}}。",
+            "addToTap": "• 每次点击多得 {{amount}} 个表情。",
             "percentageIncreaseTap": "• 点击威力提升{{percent}}。",
             "tapPercentageOfEps": "• 每次点击额外获得表情总产量的{{percent}}。",
             "percentageIncreaseProduction": "• 表情总产量提升{{percent}}。",
@@ -46,6 +47,7 @@
         "chips": {
             "multiplyBuildingProduction": "{{buildings}} ×{{multiplier}}",
             "multiplyTap": "点击 ×{{multiplier}}",
+            "addToTap": "点击 +{{amount}}",
             "percentageIncreaseTap": "点击 +{{percent}}",
             "percentageIncreaseProduction": "产量 +{{percent}}",
             "tapPercentageOfEps": "点击+每秒产量的{{percent}}",

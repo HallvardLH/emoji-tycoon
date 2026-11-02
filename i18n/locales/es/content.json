@@ -313,6 +313,31 @@
             "description": "El entrelazamiento cuántico de tus dedos te permite dibujar emojis a la velocidad de la luz.",
             "quote": "Mis dedos están en dos sitios a la vez. En los dos te odian."
         },
+        "120": {
+            "name": "Toque firme",
+            "description": "Toca con decisión. Cada toque da 1 emoji más.",
+            "quote": "Ni muy fuerte. Ni muy suave. Justo lo necesario."
+        },
+        "121": {
+            "name": "Doble toque",
+            "description": "Dos dedos, un toque. Cada toque da 2 emojis más.",
+            "quote": "Paz, y el doble de emojis."
+        },
+        "122": {
+            "name": "Crujir los nudillos",
+            "description": "Los nudillos calentitos tocan más fuerte. Cada toque da 4 emojis más.",
+            "quote": "Crac. Crac. Crac. Toque."
+        },
+        "123": {
+            "name": "Palma abierta",
+            "description": "¿Por qué tocar con un dedo si puedes dar un manotazo con cinco? Cada toque da 8 emojis más.",
+            "quote": "La pantalla no hizo nada para merecer esto."
+        },
+        "124": {
+            "name": "Choque de puños",
+            "description": "El gran emoji te devuelve el choque. Cada toque da 16 emojis más.",
+            "quote": "Respeto."
+        },
         "200": {
             "name": "Lápices mejorados",
             "description": "Mejores lápices para emojis más detallados.",

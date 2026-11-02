@@ -37,6 +37,7 @@
         "effects": {
             "multiplyBuildingProduction": "• {{buildings}}: كفاءة مضاعفة.",
             "multiplyTap": "• قيمة النقرات ×{{multiplier}}.",
+            "addToTap": "• كل نقرة تمنح {{amount}} إيموجي إضافية.",
             "percentageIncreaseTap": "• النقر أقوى بنسبة {{percent}}.",
             "tapPercentageOfEps": "• كل نقرة تمنحك {{percent}} من إجمالي إنتاج الإيموجي.",
             "percentageIncreaseProduction": "• زيادة إجمالي إنتاج الإيموجي بنسبة {{percent}}.",
@@ -56,6 +57,7 @@
         "chips": {
             "multiplyBuildingProduction": "{{buildings}} ×{{multiplier}}",
             "multiplyTap": "النقر ×{{multiplier}}",
+            "addToTap": "النقر +{{amount}}",
             "percentageIncreaseTap": "النقر +{{percent}}",
             "percentageIncreaseProduction": "الإنتاج +{{percent}}",
             "tapPercentageOfEps": "النقرة +{{percent}} من الإنتاج/ث",
