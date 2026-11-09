@@ -55,6 +55,7 @@
         "effects": {
             "multiplyBuildingProduction": "• {{buildings}} are twice as efficient.",
             "multiplyTap": "• Taps are worth ×{{multiplier}} as much.",
+            "addToTap": "• Every tap gives {{amount}} more emojis.",
             "percentageIncreaseTap": "• Tapping is {{percent}} more powerful.",
             "tapPercentageOfEps": "• Tapping gains {{percent}} of your total emoji production.",
             "percentageIncreaseProduction": "• Total emoji production increased by {{percent}}.",
@@ -74,6 +75,7 @@
         "chips": {
             "multiplyBuildingProduction": "{{buildings}} ×{{multiplier}}",
             "multiplyTap": "Tapping ×{{multiplier}}",
+            "addToTap": "Tapping +{{amount}}",
             "percentageIncreaseTap": "Tapping +{{percent}}",
             "percentageIncreaseProduction": "Production +{{percent}}",
             "tapPercentageOfEps": "Taps +{{percent}} of emojis/sec",
@@ -143,10 +145,6 @@
         "ordinal_ordinal_two": "{{count}}nd",
         "ordinal_ordinal_few": "{{count}}rd",
         "ordinal_ordinal_other": "{{count}}th",
-        "celebrateCaption": "PRESTIGE #{{count}}",
-        "celebrateTrialCaption": "PRESTIGE #{{count}} · TRIAL STARTED",
-        "celebrateTitle": "+{{essence}} essence",
-        "celebrateTierTitle": "+{{essence}} essence · tier {{tier}} perks unlocked",
         "essenceCaption": "EMOJI ESSENCE",
         "essenceBonus": "+{{bonus}} production ({{each}} each)",
         "intro": "After drawing enough emojis, their very essence starts gathering around you: a magical substance that changes shape whenever you look at it. Every unspent essence boosts production, and essence buys perks that last forever.",
@@ -722,5 +720,27 @@
             "secretHoarder": "Have {{amount}} emojis in the bank without owning a building",
             "secretGems": "Hold {{amount}} gems at once"
         }
+    },
+    "ascension": {
+        "title": "Ascension",
+        "subtitleAscending": "Get ready for run #{{count}}",
+        "beginRun": "Begin run #{{count}}",
+        "withTraits": "Traits: {{traits}}",
+        "noTraits": "No traits picked",
+        "runComplete": "Run #{{count}} complete",
+        "essenceGained": "emoji essence",
+        "unlockPerkTier": "🔓 Tier {{tier}} perks unlocked",
+        "unlockTrait": "🔓 New trait: {{icon}} {{name}}",
+        "unlockTrials": "🔓 Trials unlocked",
+        "continue": "Continue",
+        "skip": "Skip"
+    },
+    "traits": {
+        "title": "Traits",
+        "slots": "{{picked}} of {{slots}} picked",
+        "introAscending": "Pick how the next run plays. Each trait has an upside and a downside, and stays for the whole run.",
+        "introRun": "This run's traits. You can pick again the next time you prestige.",
+        "unlocksWith": "Unlocks with your {{ordinal}} prestige.",
+        "pickedTag": "✓ PICKED"
     }
 }

@@ -313,6 +313,31 @@
             "description": "Kwantumverstrengeling in je vingers laat je emoji's tekenen met de snelheid van het licht.",
             "quote": "Mijn vingers zijn op twee plekken tegelijk. Op beide plekken haten ze je."
         },
+        "120": {
+            "name": "Stevige tik",
+            "description": "Tik met overtuiging. Elke tik levert 1 emoji meer op.",
+            "quote": "Niet te hard. Niet te zacht. Precies goed."
+        },
+        "121": {
+            "name": "Dubbeltik",
+            "description": "Twee vingers, één tik. Elke tik levert 2 emoji's meer op.",
+            "quote": "Vrede, en twee keer zoveel emoji's."
+        },
+        "122": {
+            "name": "Knokkels kraken",
+            "description": "Opgewarmde knokkels tikken harder. Elke tik levert 4 emoji's meer op.",
+            "quote": "Krak. Krak. Krak. Tik."
+        },
+        "123": {
+            "name": "Open hand",
+            "description": "Waarom tikken met één vinger als je met vijf kunt meppen? Elke tik levert 8 emoji's meer op.",
+            "quote": "Het scherm heeft dit niet verdiend."
+        },
+        "124": {
+            "name": "Boks",
+            "description": "De grote emoji boksen terug. Elke tik levert 16 emoji's meer op.",
+            "quote": "Respect."
+        },
         "200": {
             "name": "Betere potloden",
             "description": "Betere potloden voor gedetailleerdere emoji's.",
@@ -2716,6 +2741,34 @@
         "flyingStart": {
             "name": "Vliegende start",
             "description": "Voorsprong geeft 30 minuten productie in plaats van 5"
+        },
+        "oldHands": {
+            "name": "Oude rotten",
+            "description": "Begin elke ronde met 10 Tekenhanden"
+        },
+        "echo": {
+            "name": "Echo",
+            "description": "Tikken zijn 25% meer waard"
+        },
+        "blueprints": {
+            "name": "Bouwtekeningen",
+            "description": "Gebouwupgrades zijn 25% goedkoper"
+        },
+        "polymath": {
+            "name": "Duizendpoot",
+            "description": "Kies elke ronde één eigenschap extra"
+        },
+        "enlightenment": {
+            "name": "Verlichting",
+            "description": "Elke ongebruikte essentie verhoogt de productie met 3%"
+        },
+        "ascendant": {
+            "name": "Verhevene",
+            "description": "Kies elke ronde één eigenschap extra"
+        },
+        "stargazer": {
+            "name": "Sterrenkijker",
+            "description": "+3% productie voor elke ster aan je hemel"
         }
     },
     "trials": {
@@ -2787,6 +2840,38 @@
         "100": {
             "name": "Treurige honderd",
             "description": "Statistiek toont 😭 bij de funfactor"
+        }
+    },
+    "traits": {
+        "tapper": {
+            "name": "Tikker",
+            "upside": "Tikken zijn ×3 waard",
+            "downside": "Productie ×0,6"
+        },
+        "idler": {
+            "name": "Luiaard",
+            "upside": "Productie ×1,4",
+            "downside": "Tikken zijn ×0,25 waard"
+        },
+        "architect": {
+            "name": "Architect",
+            "upside": "Gebouwen zijn 20% goedkoper",
+            "downside": "Gebouwupgrades kosten ×3"
+        },
+        "gambler": {
+            "name": "Gokker",
+            "upside": "Effect-emoji's verschijnen twee keer zo vaak",
+            "downside": "Goede effecten duren half zo lang"
+        },
+        "treasureHunter": {
+            "name": "Schatzoeker",
+            "upside": "Glimmende emoji's zijn 3 keer zo waarschijnlijk",
+            "downside": "Productie ×0,85"
+        },
+        "comboArtist": {
+            "name": "Comboartiest",
+            "upside": "+2 op je maximale combo",
+            "downside": "De combo loopt 50% sneller leeg"
         }
     }
 }

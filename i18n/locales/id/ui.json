@@ -27,6 +27,7 @@
         "effects": {
             "multiplyBuildingProduction": "• {{buildings}}: efisiensi 2x lipat.",
             "multiplyTap": "• Nilai ketukan ×{{multiplier}}.",
+            "addToTap": "• Setiap ketukan memberi {{amount}} emoji lebih banyak.",
             "percentageIncreaseTap": "• Ketukan jadi {{percent}} lebih kuat.",
             "tapPercentageOfEps": "• Ketukan memberi {{percent}} dari total produksi emoji kamu.",
             "percentageIncreaseProduction": "• Total produksi emoji naik {{percent}}.",
@@ -46,6 +47,7 @@
         "chips": {
             "multiplyBuildingProduction": "{{buildings}} ×{{multiplier}}",
             "multiplyTap": "Ketukan ×{{multiplier}}",
+            "addToTap": "Ketukan +{{amount}}",
             "percentageIncreaseTap": "Ketukan +{{percent}}",
             "percentageIncreaseProduction": "Produksi +{{percent}}",
             "tapPercentageOfEps": "Ketukan +{{percent}} dari emoji/dtk",
@@ -112,10 +114,6 @@
         "title": "Prestise",
         "close": "Tutup",
         "ordinal_ordinal_other": "ke-{{count}}",
-        "celebrateCaption": "PRESTISE #{{count}}",
-        "celebrateTrialCaption": "PRESTISE #{{count}} · TANTANGAN DIMULAI",
-        "celebrateTitle": "+{{essence}} esensi",
-        "celebrateTierTitle": "+{{essence}} esensi · perk tingkat {{tier}} terbuka",
         "essenceCaption": "ESENSI EMOJI",
         "essenceBonus": "+{{bonus}} produksi ({{each}} per esensi)",
         "intro": "Setelah cukup banyak emoji digambar, esensi mereka mulai berkumpul di sekitarmu: zat ajaib yang berubah bentuk setiap kali kamu melihatnya. Setiap esensi yang belum dipakai menaikkan produksi, dan esensi bisa membeli perk yang berlaku selamanya.",
@@ -667,5 +665,27 @@
             "secretHoarder": "Punya {{amount}} emoji di bank tanpa punya bangunan",
             "secretGems": "Punya {{amount}} permata sekaligus"
         }
+    },
+    "traits": {
+        "unlocksWith": "Terbuka di prestise {{ordinal}} kamu.",
+        "title": "Sifat",
+        "slots": "{{picked}} dari {{slots}} dipilih",
+        "introAscending": "Pilih gaya main putaran berikutnya. Tiap sifat punya kelebihan dan kekurangan, dan berlaku sepanjang putaran.",
+        "introRun": "Sifat putaran ini. Kamu bisa memilih lagi saat prestise berikutnya.",
+        "pickedTag": "✓ DIPILIH"
+    },
+    "ascension": {
+        "title": "Kenaikan",
+        "subtitleAscending": "Bersiap untuk putaran #{{count}}",
+        "beginRun": "Mulai putaran #{{count}}",
+        "withTraits": "Sifat: {{traits}}",
+        "noTraits": "Tidak ada sifat dipilih",
+        "runComplete": "Putaran #{{count}} selesai",
+        "essenceGained": "esensi emoji",
+        "unlockPerkTier": "🔓 Perk tingkat {{tier}} terbuka",
+        "unlockTrait": "🔓 Sifat baru: {{icon}} {{name}}",
+        "unlockTrials": "🔓 Tantangan terbuka",
+        "continue": "Lanjut",
+        "skip": "Lewati"
     }
 }

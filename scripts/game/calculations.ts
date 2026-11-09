@@ -2,7 +2,7 @@ import store from "../redux/reduxStore";
 import { updateEmojisPerTap } from "../redux/bigEmojiSlice";
 import { updateEmojisPerSecond } from "../redux/valuesSlice";
 import { funProductionMultiplier, funTapMultiplier } from "./shorthands";
-import { prestigeProductionMultiplier } from "./prestige/perks";
+import { prestigeProductionMultiplier, prestigeTapMultiplier } from "./prestige/perks";
 import { trialTapMultiplier } from "./prestige/trials";
 import { formatPercentage } from "../misc";
 import { boostMultiplier } from "./gems/boost";
@@ -26,6 +26,7 @@ const compound = (percentages: number[]) => percentages
  */
 interface TapInputs {
     tapMultipliers: number[];
+    tapAdditions: number[];
     tapPercentages: number[];
     tapPercentagesOfEps: number[];
     /** Emojis per second, for the share of production that hands add to taps */
@@ -43,10 +44,9 @@ function computeEpt(inputs: Partial<TapInputs> = {}) {
         ...(inputs.tapMultipliers ?? bigEmoji.emojisPerTapMultipliers),
     ]);
 
-    // The helpers' tapping bonuses add up rather than compound (30 helpers at +10% compounded
-    // to ×17). Rounded down to the nearest 10%; the small epsilon keeps 1 + 0.1 × 3 from
-    // landing a hair under 1.3
-    const percentageIncrease = Math.floor(addUp(inputs.tapPercentages ?? bigEmoji.emojisPerTapPercentages) * 10 + 1e-9) / 10;
+    // The helpers' tapping bonuses add up rather than compound. Rounded down to the nearest 1%;
+    // the small epsilon keeps 1 + 0.02 × 3 from landing a hair under 1.06
+    const percentageIncrease = Math.floor(addUp(inputs.tapPercentages ?? bigEmoji.emojisPerTapPercentages) * 100 + 1e-9) / 100;
 
     // A share of emojis per second (eps) is added to emojis per tap (ept), so tapping keeps up with production.
     // Shares add up, no compounding here
@@ -55,14 +55,17 @@ function computeEpt(inputs: Partial<TapInputs> = {}) {
     // Production without the gem boost: it's in the multiplier above, and would count twice
     const epsBonus = (inputs.eps ?? state.values.emojisPerSecond) / boostMultiplier() * totalPercentageOfEps;
 
+    // Flat emojis added to the base tap, e.g. Firm tap (+1)
+    const baseTap = bigEmoji.baseEmojisPerTap + (inputs.tapAdditions ?? bigEmoji.emojisPerTapAdditions ?? []).reduce((acc, add) => acc + add, 0);
+
     // For every 10 tap boost, multiply EPT
     const tapBoost = (Math.floor(bigEmoji.tapBoost / 10)) + 1;
 
-    // The base tap plus the share of production ("hands"), all multiplied: tap multipliers,
+    // The base tap (with the flat additions) plus the share of production ("hands"), all multiplied: tap multipliers,
     // percentage increases and the combo. (Tap multipliers used to boost only the base tap,
     // which made "Tapping ×2" add next to nothing once hands carried tapping.)
-    // Trials: Hands off makes taps worth nothing, Bare bones (reward) adds 50%
-    return (bigEmoji.baseEmojisPerTap + epsBonus) * multiplier * percentageIncrease * tapBoost * funTapMultiplier() * trialTapMultiplier();
+    // Trials: Hands off makes taps worth nothing, Bare bones (reward) adds 50%. Echo (perk) and traits
+    return (baseTap + epsBonus) * multiplier * percentageIncrease * tapBoost * funTapMultiplier() * trialTapMultiplier() * prestigeTapMultiplier();
 }
 
 // Recalculates emojis per tap
@@ -111,6 +114,7 @@ export interface ProductionChanges {
     productionFactor?: number;
     epsPercentage?: number;
     tapMultiplier?: number;
+    tapAddition?: number;
     tapPercentage?: number;
     tapPercentageOfEps?: number;
 }
@@ -134,6 +138,7 @@ export function previewGains(changes: ProductionChanges) {
     const ept = computeEpt({
         eps,
         tapMultipliers: add(bigEmoji.emojisPerTapMultipliers, changes.tapMultiplier),
+        tapAdditions: add(bigEmoji.emojisPerTapAdditions ?? [], changes.tapAddition),
         tapPercentages: add(bigEmoji.emojisPerTapPercentages, changes.tapPercentage),
         tapPercentagesOfEps: add(bigEmoji.emojisPerTapPercentageOfEps, changes.tapPercentageOfEps),
     });

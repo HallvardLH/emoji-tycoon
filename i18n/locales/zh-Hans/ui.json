@@ -27,6 +27,7 @@
         "effects": {
             "multiplyBuildingProduction": "• {{buildings}}：效率翻倍。",
             "multiplyTap": "• 点击价值 ×{{multiplier}}。",
+            "addToTap": "• 每次点击多得 {{amount}} 个表情。",
             "percentageIncreaseTap": "• 点击威力提升{{percent}}。",
             "tapPercentageOfEps": "• 每次点击额外获得表情总产量的{{percent}}。",
             "percentageIncreaseProduction": "• 表情总产量提升{{percent}}。",
@@ -46,6 +47,7 @@
         "chips": {
             "multiplyBuildingProduction": "{{buildings}} ×{{multiplier}}",
             "multiplyTap": "点击 ×{{multiplier}}",
+            "addToTap": "点击 +{{amount}}",
             "percentageIncreaseTap": "点击 +{{percent}}",
             "percentageIncreaseProduction": "产量 +{{percent}}",
             "tapPercentageOfEps": "点击+每秒产量的{{percent}}",
@@ -112,10 +114,6 @@
         "title": "声望",
         "close": "关闭",
         "ordinal_ordinal_other": "第{{count}}",
-        "celebrateCaption": "第{{count}}次声望",
-        "celebrateTrialCaption": "第{{count}}次声望 · 挑战开始",
-        "celebrateTitle": "+{{essence}}精华",
-        "celebrateTierTitle": "+{{essence}}精华 · 第{{tier}}阶天赋已解锁",
         "essenceCaption": "表情精华",
         "essenceBonus": "产量+{{bonus}}（每点{{each}}）",
         "intro": "画出足够多的表情后，它们的精华便开始在你身边聚集：这是一种神奇的物质，每次你看它，它都会变换形状。每点未花费的精华都能提升产量，精华还能购买永久生效的天赋。",
@@ -661,5 +659,27 @@
             "secretHoarder": "不拥有任何建筑，银行里存有{{amount}}个表情",
             "secretGems": "同时持有{{amount}}宝石"
         }
+    },
+    "traits": {
+        "unlocksWith": "{{ordinal}}次声望时解锁。",
+        "title": "特质",
+        "slots": "已选{{picked}}/{{slots}}",
+        "introAscending": "选择下一轮的玩法。每个特质都有优点和缺点，并持续整轮。",
+        "introRun": "本轮的特质。下次声望时可以重新选择。",
+        "pickedTag": "✓ 已选择"
+    },
+    "ascension": {
+        "title": "飞升",
+        "subtitleAscending": "准备开始第{{count}}轮",
+        "beginRun": "开始第{{count}}轮",
+        "withTraits": "特质：{{traits}}",
+        "noTraits": "未选择特质",
+        "runComplete": "第{{count}}轮完成",
+        "essenceGained": "表情精华",
+        "unlockPerkTier": "🔓 已解锁第{{tier}}阶天赋",
+        "unlockTrait": "🔓 新特质：{{icon}} {{name}}",
+        "unlockTrials": "🔓 已解锁挑战",
+        "continue": "继续",
+        "skip": "跳过"
     }
 }

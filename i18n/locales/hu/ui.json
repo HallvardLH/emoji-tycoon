@@ -29,6 +29,7 @@
         "effects": {
             "multiplyBuildingProduction": "• {{buildings}}: dupla hatékonyság.",
             "multiplyTap": "• A koppintások ×{{multiplier}} értékűek.",
+            "addToTap": "• Minden koppintás {{amount}} emojival többet ad.",
             "percentageIncreaseTap": "• Koppintás ereje: +{{percent}}.",
             "tapPercentageOfEps": "• Koppintásonként a teljes emojitermelésedből kapsz: {{percent}}.",
             "percentageIncreaseProduction": "• Teljes emojitermelés: +{{percent}}.",
@@ -48,6 +49,7 @@
         "chips": {
             "multiplyBuildingProduction": "{{buildings}} ×{{multiplier}}",
             "multiplyTap": "Koppintás ×{{multiplier}}",
+            "addToTap": "Koppintás +{{amount}}",
             "percentageIncreaseTap": "Koppintás +{{percent}}",
             "percentageIncreaseProduction": "Termelés +{{percent}}",
             "tapPercentageOfEps": "Koppintás: az emoji/mp +{{percent}}",
@@ -115,10 +117,6 @@
         "close": "Bezárás",
         "ordinal_ordinal_one": "{{count}}.",
         "ordinal_ordinal_other": "{{count}}.",
-        "celebrateCaption": "{{count}}. presztízs",
-        "celebrateTrialCaption": "{{count}}. presztízs · Próba elindítva",
-        "celebrateTitle": "+{{essence}} esszencia",
-        "celebrateTierTitle": "+{{essence}} esszencia · {{tier}}. szintű előnyök feloldva",
         "essenceCaption": "Emojiesszencia",
         "essenceBonus": "+{{bonus}} termelés (darabonként {{each}})",
         "intro": "Ha elég emojit rajzoltál, a lényegük, az esszenciájuk gyűlni kezd körülötted: egy varázslatos anyag, amely alakot vált, valahányszor ránézel. Minden el nem költött esszencia növeli a termelést, esszenciáért pedig örökre megmaradó előnyöket vehetsz.",
@@ -720,5 +718,27 @@
             "secretHoarder": "Legyen a bankban emoji ({{amount}}) úgy, hogy nincs egy épületed sem",
             "secretGems": "Legyen egyszerre drágakő: {{amount}}"
         }
+    },
+    "traits": {
+        "unlocksWith": "{{ordinal}} presztízsnél nyílik meg.",
+        "title": "Vonások",
+        "slots": "{{picked}} / {{slots}} kiválasztva",
+        "introAscending": "Válaszd ki, milyen legyen a következő kör. Minden vonásnak van egy jó és egy rossz oldala, és az egész körre szól.",
+        "introRun": "Ennek a körnek a vonásai. A következő presztízsnél újra választhatsz.",
+        "pickedTag": "✓ Kiválasztva"
+    },
+    "ascension": {
+        "title": "Felemelkedés",
+        "subtitleAscending": "Készülj, jön a(z) {{count}}. kör",
+        "beginRun": "{{count}}. kör indítása",
+        "withTraits": "Vonások: {{traits}}",
+        "noTraits": "Nincs választott vonás",
+        "runComplete": "{{count}}. kör teljesítve",
+        "essenceGained": "emojiesszencia",
+        "unlockPerkTier": "🔓 {{tier}}. szintű előnyök feloldva",
+        "unlockTrait": "🔓 Új vonás: {{icon}} {{name}}",
+        "unlockTrials": "🔓 Próbák feloldva",
+        "continue": "Tovább",
+        "skip": "Kihagyás"
     }
 }

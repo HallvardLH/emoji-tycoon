@@ -33,6 +33,7 @@
         "effects": {
             "multiplyBuildingProduction": "• {{buildings}}: эффективность удвоена.",
             "multiplyTap": "• Тапы стоят ×{{multiplier}}.",
+            "addToTap": "• Каждое нажатие даёт на {{amount}} эмодзи больше.",
             "percentageIncreaseTap": "• Тапы мощнее на {{percent}}.",
             "tapPercentageOfEps": "• Тап дает {{percent}} от всего твоего производства эмодзи.",
             "percentageIncreaseProduction": "• Общее производство эмодзи выросло на {{percent}}.",
@@ -52,6 +53,7 @@
         "chips": {
             "multiplyBuildingProduction": "{{buildings}} ×{{multiplier}}",
             "multiplyTap": "Тапы ×{{multiplier}}",
+            "addToTap": "Тапы +{{amount}}",
             "percentageIncreaseTap": "Тапы +{{percent}}",
             "percentageIncreaseProduction": "Производство +{{percent}}",
             "tapPercentageOfEps": "Тап +{{percent}} от эмодзи/сек",
@@ -118,10 +120,6 @@
         "title": "Престиж",
         "close": "Закрыть",
         "ordinal_ordinal_other": "{{count}}-й",
-        "celebrateCaption": "ПРЕСТИЖ #{{count}}",
-        "celebrateTrialCaption": "ПРЕСТИЖ #{{count}} · ИСПЫТАНИЕ НАЧАТО",
-        "celebrateTitle": "+{{essence}} эссенции",
-        "celebrateTierTitle": "+{{essence}} эссенции · открыты перки уровня {{tier}}",
         "essenceCaption": "ЭССЕНЦИЯ ЭМОДЗИ",
         "essenceBonus": "+{{bonus}} к производству ({{each}} за каждую)",
         "intro": "Когда нарисовано достаточно эмодзи, вокруг тебя начинает собираться их суть: волшебная субстанция, которая меняет форму всякий раз, когда на нее смотришь. Каждая непотраченная единица эссенции усиливает производство, а за эссенцию можно купить перки, которые остаются навсегда.",
@@ -823,5 +821,27 @@
             "secretHoarder": "Держи в банке эмодзи ({{amount}}), не владея ни одним зданием",
             "secretGems": "Держи сразу кристаллов: {{amount}}"
         }
+    },
+    "traits": {
+        "unlocksWith": "Нужен {{ordinal}} престиж.",
+        "title": "Черты",
+        "slots": "Выбрано: {{picked}} из {{slots}}",
+        "introAscending": "Выбери, каким будет следующий забег. У каждой черты есть плюс и минус, и она действует весь забег.",
+        "introRun": "Черты этого забега. Выбрать заново можно при следующем престиже.",
+        "pickedTag": "✓ ВЫБРАНО"
+    },
+    "ascension": {
+        "title": "Вознесение",
+        "subtitleAscending": "Готовься к забегу #{{count}}",
+        "beginRun": "Начать забег #{{count}}",
+        "withTraits": "Черты: {{traits}}",
+        "noTraits": "Черты не выбраны",
+        "runComplete": "Забег #{{count}} завершен",
+        "essenceGained": "эссенция эмодзи",
+        "unlockPerkTier": "🔓 Открыты перки уровня {{tier}}",
+        "unlockTrait": "🔓 Новая черта: {{icon}} {{name}}",
+        "unlockTrials": "🔓 Открыты испытания",
+        "continue": "Далее",
+        "skip": "Пропустить"
     }
 }

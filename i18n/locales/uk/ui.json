@@ -33,6 +33,7 @@
         "effects": {
             "multiplyBuildingProduction": "• {{buildings}}: ефективність удвічі вища.",
             "multiplyTap": "• Тапи варті ×{{multiplier}}.",
+            "addToTap": "• Кожне натискання дає на {{amount}} емодзі більше.",
             "percentageIncreaseTap": "• Тапання потужніше на {{percent}}.",
             "tapPercentageOfEps": "• Тап дає {{percent}} від усього твого виробництва емодзі.",
             "percentageIncreaseProduction": "• Загальне виробництво емодзі зросло на {{percent}}.",
@@ -52,6 +53,7 @@
         "chips": {
             "multiplyBuildingProduction": "{{buildings}} ×{{multiplier}}",
             "multiplyTap": "Тапання ×{{multiplier}}",
+            "addToTap": "Тапання +{{amount}}",
             "percentageIncreaseTap": "Тапання +{{percent}}",
             "percentageIncreaseProduction": "Виробництво +{{percent}}",
             "tapPercentageOfEps": "Тапи +{{percent}} від емодзі/с",
@@ -119,10 +121,6 @@
         "close": "Закрити",
         "ordinal_ordinal_few": "{{count}}-й",
         "ordinal_ordinal_other": "{{count}}-й",
-        "celebrateCaption": "Престиж #{{count}}",
-        "celebrateTrialCaption": "Престиж #{{count}} · Випробування почалося",
-        "celebrateTitle": "+{{essence}} есенції",
-        "celebrateTierTitle": "+{{essence}} есенції · відкрито перки рівня {{tier}}",
         "essenceCaption": "Емодзі-есенція",
         "essenceBonus": "+{{bonus}} до виробництва ({{each}} кожна)",
         "intro": "Коли намальовано вже достатньо емодзі, навколо тебе починає збиратися сама їхня суть: чарівна субстанція, що змінює форму щоразу, як на неї глянеш. Кожна невитрачена есенція посилює виробництво, а за есенцію можна купити перки, які лишаються назавжди.",
@@ -824,5 +822,27 @@
             "secretHoarder": "Тримай у банку емодзі ({{amount}}), не маючи жодної будівлі",
             "secretGems": "Тримай одночасно самоцвітів: {{amount}}"
         }
+    },
+    "traits": {
+        "unlocksWith": "Відкривається, коли зробиш {{ordinal}} престиж.",
+        "title": "Риси",
+        "slots": "Обрано {{picked}} з {{slots}}",
+        "introAscending": "Обери, яким буде наступний забіг. Кожна риса має плюс і мінус та діє весь забіг.",
+        "introRun": "Риси цього забігу. Обрати знову можна під час наступного престижу.",
+        "pickedTag": "✓ Обрано"
+    },
+    "ascension": {
+        "title": "Вознесіння",
+        "subtitleAscending": "Готуйся до забігу #{{count}}",
+        "beginRun": "Почати забіг #{{count}}",
+        "withTraits": "Риси: {{traits}}",
+        "noTraits": "Риси не обрано",
+        "runComplete": "Забіг #{{count}} завершено",
+        "essenceGained": "емодзі-есенція",
+        "unlockPerkTier": "🔓 Відкрито перки рівня {{tier}}",
+        "unlockTrait": "🔓 Нова риса: {{icon}} {{name}}",
+        "unlockTrials": "🔓 Відкрито випробування",
+        "continue": "Далі",
+        "skip": "Пропустити"
     }
 }

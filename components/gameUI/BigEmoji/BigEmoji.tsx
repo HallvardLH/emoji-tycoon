@@ -1,6 +1,8 @@
 import React, { useState, useEffect, useRef, useCallback, useMemo } from 'react';
 import { StyleSheet, Pressable, Text, Animated, View, Easing, Platform } from 'react-native';
 import { useSelector } from 'react-redux';
+import Sky from "../Sky";
+import { starCount, showsFace, followsTaps, isBlinking, isStoryComplete, notifyBigEmojiTap } from "../../../scripts/game/prestige/story";
 import { RootState } from '../../../scripts/redux/reduxStore';
 import { tapEmoji, pickNextEmoji } from '../../../scripts/game/bigEmoji';
 import PulseAnimation from '../../animations/PulseAnimation';
@@ -125,6 +127,27 @@ export default function BigEmoji() {
     // The emoji on the disc comes straight from the store, so a reset or a save loading
     // in shows the right one (a local copy only changed on taps and went stale)
     const staticEmoji = bigEmoji.emoji;
+
+    // The story (see story.ts): the sky behind the Big Emoji, and its blinking
+    const stars = useSelector(() => starCount());
+    const face = useSelector(() => showsFace());
+    const gazes = useSelector(() => followsTaps());
+    const blinks = useSelector(() => isBlinking());
+    const winks = useSelector(() => isStoryComplete());
+    const prestigeCount = useSelector((state: RootState) => state.prestige.prestiges);
+    const [blink, setBlink] = useState<string | null>(null);
+    useEffect(() => {
+        if (!blinks) return;
+        let timeout: ReturnType<typeof setTimeout>;
+        const next = () => {
+            timeout = setTimeout(() => {
+                setBlink(winks ? "😉" : "😑");
+                timeout = setTimeout(() => { setBlink(null); next(); }, winks ? 700 : 170);
+            }, 45000 + Math.random() * 45000);
+        };
+        next();
+        return () => { clearTimeout(timeout); setBlink(null); };
+    }, [blinks, winks]);
 
     const [emojisPerTapDisplay, setEmojisPerTapDisplay] = useState<number>(emojisPerTap);
 
@@ -307,6 +330,13 @@ export default function BigEmoji() {
                 <Circle cx={SPOTLIGHT / 2} cy={SPOTLIGHT / 2} r={SPOTLIGHT / 2} fill="url(#spotlight)" />
             </Svg>
 
+            {/* Stars, one per prestige, and later the faint face they belong to (story.ts) */}
+            {stars > 0 || face ? (
+                <View style={styles.sky} pointerEvents="none">
+                    <Sky size={SKY} stars={stars} face={face} faceOpacity={Math.min(0.13, 0.06 + Math.max(0, prestigeCount - 4) * 0.01)} followTaps={gazes} />
+                </View>
+            ) : null}
+
             {/* Emoji shower behind the stage when the combo maxes out */}
             <ComboRain />
 
@@ -327,6 +357,7 @@ export default function BigEmoji() {
                 accessibilityLabel={i18n.t(bigEmoji.shiny ? "bigEmoji.tapShinyLabel" : "bigEmoji.tapLabel")}
                 onPress={() => {
                     onEmojiTap();
+                    notifyBigEmojiTap();
                     Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Rigid);
                 }}
                 // Squash down on press, then spring back with a wobble on release
@@ -346,7 +377,7 @@ export default function BigEmoji() {
                     {/* Static Emoji */}
                     <Animated.View style={staticEmojiStyle}>
                         <PulseAnimation maxSize={1.06} duration={4000}>
-                            <Text style={styles.bigEmoji}>{staticEmoji}</Text>
+                            <Text style={styles.bigEmoji}>{blink && !bigEmoji.shiny ? blink : staticEmoji}</Text>
                         </PulseAnimation>
                     </Animated.View>
 
@@ -532,6 +563,8 @@ function ComboMeter() {
 }
 
 const SPOTLIGHT = 500;
+// The sky's face is bigger than the Big Emoji's spotlight: its eyes peek out above the disc
+const SKY = 520;
 // How far tapped emojis float up with low gravity
 const LOW_GRAVITY_RISE = 260;
 // How far below the disc centre tapped emojis tumble to
@@ -546,6 +579,12 @@ const styles = themedStyles(() => StyleSheet.create({
         justifyContent: 'center',
         alignItems: 'center',
         gap: 22,
+    },
+    sky: {
+        position: 'absolute',
+        alignSelf: 'center',
+        top: '50%',
+        marginTop: -SKY / 2 - 40,
     },
     spotlight: {
         position: 'absolute',

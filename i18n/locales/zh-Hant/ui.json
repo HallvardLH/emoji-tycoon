@@ -27,6 +27,7 @@
         "effects": {
             "multiplyBuildingProduction": "• {{buildings}}：效率翻倍。",
             "multiplyTap": "• 點擊價值 ×{{multiplier}}。",
+            "addToTap": "• 每次點擊多得 {{amount}} 個表情。",
             "percentageIncreaseTap": "• 點擊威力提升 {{percent}}。",
             "tapPercentageOfEps": "• 每次點擊可獲得 Emoji 總產量的 {{percent}}。",
             "percentageIncreaseProduction": "• Emoji 總產量提升 {{percent}}。",
@@ -46,6 +47,7 @@
         "chips": {
             "multiplyBuildingProduction": "{{buildings}} ×{{multiplier}}",
             "multiplyTap": "點擊 ×{{multiplier}}",
+            "addToTap": "點擊 +{{amount}}",
             "percentageIncreaseTap": "點擊 +{{percent}}",
             "percentageIncreaseProduction": "產量 +{{percent}}",
             "tapPercentageOfEps": "點擊 +每秒產量的 {{percent}}",
@@ -112,10 +114,6 @@
         "title": "聲望",
         "close": "關閉",
         "ordinal_ordinal_other": "第 {{count}} 次",
-        "celebrateCaption": "第 {{count}} 次聲望",
-        "celebrateTrialCaption": "第 {{count}} 次聲望 · 試煉開始",
-        "celebrateTitle": "+{{essence}} 精華",
-        "celebrateTierTitle": "+{{essence}} 精華 · 已解鎖第 {{tier}} 階天賦",
         "essenceCaption": "Emoji 精華",
         "essenceBonus": "產量 +{{bonus}}（每個 {{each}}）",
         "intro": "畫出夠多的 Emoji 之後，它們的精華會開始聚集在你身邊：一種每次看它都會變換形狀的神奇物質。每個未花掉的精華都能提升產量，而精華也能用來購買永久有效的天賦。",
@@ -661,5 +659,27 @@
             "secretHoarder": "不擁有任何建築，銀行裡存有 {{amount}} 個 Emoji",
             "secretGems": "同時持有 {{amount}} 顆寶石"
         }
+    },
+    "traits": {
+        "unlocksWith": "{{ordinal}}聲望時解鎖。",
+        "title": "特質",
+        "slots": "已選 {{picked}}/{{slots}}",
+        "introAscending": "選擇下一輪的玩法。每個特質都有優點和缺點，並會持續整輪。",
+        "introRun": "本輪的特質。下次聲望時可以重新選擇。",
+        "pickedTag": "✓ 已選擇"
+    },
+    "ascension": {
+        "title": "飛昇",
+        "subtitleAscending": "準備開始第 {{count}} 輪",
+        "beginRun": "開始第 {{count}} 輪",
+        "withTraits": "特質：{{traits}}",
+        "noTraits": "未選擇特質",
+        "runComplete": "第 {{count}} 輪完成",
+        "essenceGained": "Emoji 精華",
+        "unlockPerkTier": "🔓 已解鎖第 {{tier}} 階天賦",
+        "unlockTrait": "🔓 新特質：{{icon}} {{name}}",
+        "unlockTrials": "🔓 已解鎖試煉",
+        "continue": "繼續",
+        "skip": "跳過"
     }
 }

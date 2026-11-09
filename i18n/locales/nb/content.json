@@ -313,6 +313,31 @@
             "description": "Kvantesammenfiltring i fingrene lar deg tegne emojier med lysets hastighet.",
             "quote": "Fingrene mine er to steder samtidig. Begge to hater deg."
         },
+        "120": {
+            "name": "Bestemt trykk",
+            "description": "Trykk med mening. Hvert trykk gir 1 emoji til.",
+            "quote": "Ikke for hardt. Ikke for mykt. Akkurat passe."
+        },
+        "121": {
+            "name": "Dobbelttrykk",
+            "description": "To fingre, ett trykk. Hvert trykk gir 2 emojier til.",
+            "quote": "Fred, og dobbelt så mange emojier."
+        },
+        "122": {
+            "name": "Knekke knoker",
+            "description": "Oppvarmede knoker trykker hardere. Hvert trykk gir 4 emojier til.",
+            "quote": "Knekk. Knekk. Knekk. Trykk."
+        },
+        "123": {
+            "name": "Åpen håndflate",
+            "description": "Hvorfor trykke med én finger når du kan klaske med fem? Hvert trykk gir 8 emojier til.",
+            "quote": "Skjermen har ikke gjort noe for å fortjene dette."
+        },
+        "124": {
+            "name": "Knyttnevehilsen",
+            "description": "Den store emojien hilser tilbake. Hvert trykk gir 16 emojier til.",
+            "quote": "Respekt."
+        },
         "200": {
             "name": "Bedre blyanter",
             "description": "Bedre blyanter for mer detaljerte emojier.",
@@ -2716,6 +2741,34 @@
         "flyingStart": {
             "name": "Flygende start",
             "description": "Forsprang gir 30 minutter produksjon i stedet for 5"
+        },
+        "oldHands": {
+            "name": "Gamle hender",
+            "description": "Start hver runde med 10 Tegnehender"
+        },
+        "echo": {
+            "name": "Ekko",
+            "description": "Trykk er verdt 25 % mer"
+        },
+        "blueprints": {
+            "name": "Blåkopier",
+            "description": "Bygningsoppgraderinger er 25 % billigere"
+        },
+        "polymath": {
+            "name": "Universalgeni",
+            "description": "Velg én egenskap til hver runde"
+        },
+        "enlightenment": {
+            "name": "Opplysning",
+            "description": "Ubrukt essens øker produksjonen med 3 % hver"
+        },
+        "ascendant": {
+            "name": "Oppsteget",
+            "description": "Velg én egenskap til hver runde"
+        },
+        "stargazer": {
+            "name": "Stjernekikker",
+            "description": "+3 % produksjon for hver stjerne på himmelen din"
         }
     },
     "trials": {
@@ -2787,6 +2840,38 @@
         "100": {
             "name": "Trist hundre",
             "description": "Statistikken viser 😭 ved moroverdien"
+        }
+    },
+    "traits": {
+        "tapper": {
+            "name": "Trykker",
+            "upside": "Trykk er verdt ×3",
+            "downside": "Produksjon ×0,6"
+        },
+        "idler": {
+            "name": "Latsabb",
+            "upside": "Produksjon ×1,4",
+            "downside": "Trykk er verdt ×0,25"
+        },
+        "architect": {
+            "name": "Arkitekt",
+            "upside": "Bygninger er 20 % billigere",
+            "downside": "Bygningsoppgraderinger koster ×3"
+        },
+        "gambler": {
+            "name": "Gambler",
+            "upside": "Effekt-emojier dukker opp dobbelt så ofte",
+            "downside": "Gode effekter varer halvparten så lenge"
+        },
+        "treasureHunter": {
+            "name": "Skattejeger",
+            "upside": "Skinnende emojier er 3 ganger så sannsynlige",
+            "downside": "Produksjon ×0,85"
+        },
+        "comboArtist": {
+            "name": "Kombokunstner",
+            "upside": "+2 på maks kombo",
+            "downside": "Komboen tømmes 50 % raskere"
         }
     }
 }

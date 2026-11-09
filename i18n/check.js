@@ -56,6 +56,7 @@ const { upgradeData } = require(path.join(root, "scripts/game/upgrades/upgradeDa
 const { effectData } = require(path.join(root, "scripts/game/effects/effectData.ts"));
 const { perks } = require(path.join(root, "scripts/game/prestige/perks.ts"));
 const { trials } = require(path.join(root, "scripts/game/prestige/trials.ts"));
+const { traits } = require(path.join(root, "scripts/game/prestige/traits.ts"));
 const { funValueEffects } = require(path.join(root, "scripts/game/funValues.ts"));
 const { languageTextStyles, GAME_FONTS } = require(path.join(__dirname, "fonts.ts"));
 
@@ -84,7 +85,7 @@ const isEmojiPart = (character) => /\p{Extended_Pictographic}|\p{Regional_Indica
 // Plural forms, by count (e.g. "_one") or by position (e.g. "_ordinal_one", for "1st")
 const PLURAL_SUFFIX = /(_ordinal)?_(zero|one|two|few|many|other)$/;
 
-const englishContent = { buildings: {}, upgrades: {}, effects: {}, perks: {}, trials: {}, funValues: {} };
+const englishContent = { buildings: {}, upgrades: {}, effects: {}, perks: {}, trials: {}, traits: {}, funValues: {} };
 for (const building of buildingData) {
     englishContent.buildings[building.buildingId] = {
         name: building.name,
@@ -104,6 +105,9 @@ for (const perk of perks) {
 }
 for (const trial of trials) {
     englishContent.trials[trial.id] = { name: trial.name, rule: trial.rule, reward: trial.reward };
+}
+for (const trait of traits) {
+    englishContent.traits[trait.id] = { name: trait.name, upside: trait.upside, downside: trait.downside };
 }
 // Fun value quirks have no id, so they are keyed by where their range starts
 for (const effect of funValueEffects) {

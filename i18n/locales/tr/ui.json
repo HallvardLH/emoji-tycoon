@@ -29,6 +29,7 @@
         "effects": {
             "multiplyBuildingProduction": "• {{buildings}} iki kat daha verimli.",
             "multiplyTap": "• Dokunuşlar ×{{multiplier}} değerinde.",
+            "addToTap": "• Her dokunuş {{amount}} emoji daha fazla verir.",
             "percentageIncreaseTap": "• Dokunmak {{percent}} daha güçlü.",
             "tapPercentageOfEps": "• Dokunmak, toplam emoji üretiminin {{percent}} kadarını kazandırır.",
             "percentageIncreaseProduction": "• Toplam emoji üretimi {{percent}} arttı.",
@@ -48,6 +49,7 @@
         "chips": {
             "multiplyBuildingProduction": "{{buildings}} ×{{multiplier}}",
             "multiplyTap": "Dokunma ×{{multiplier}}",
+            "addToTap": "Dokunma +{{amount}}",
             "percentageIncreaseTap": "Dokunma +{{percent}}",
             "percentageIncreaseProduction": "Üretim +{{percent}}",
             "tapPercentageOfEps": "Dokunuşa emoji/sn'nin {{percent}} kadarı",
@@ -114,10 +116,6 @@
         "title": "Prestij",
         "close": "Kapat",
         "ordinal_ordinal_other": "{{count}}.",
-        "celebrateCaption": "PRESTİJ #{{count}}",
-        "celebrateTrialCaption": "PRESTİJ #{{count}} · SINAV BAŞLADI",
-        "celebrateTitle": "+{{essence}} esans",
-        "celebrateTierTitle": "+{{essence}} esans · kademe {{tier}} ayrıcalıkları açıldı",
         "essenceCaption": "EMOJİ ESANSI",
         "essenceBonus": "+{{bonus}} üretim (her biri {{each}})",
         "intro": "Yeterince emoji çizdikten sonra, emojilerin esansı etrafında toplanmaya başlar: her baktığında şekil değiştiren büyülü bir madde. Harcanmamış her esans üretimi artırır ve esansla sonsuza dek kalıcı ayrıcalıklar alabilirsin.",
@@ -719,5 +717,27 @@
             "secretHoarder": "Hiç binan yokken bankada emoji olsun: {{amount}}",
             "secretGems": "Aynı anda sahip olunan elmas: {{amount}}"
         }
+    },
+    "traits": {
+        "unlocksWith": "{{ordinal}} prestijinle açılır.",
+        "title": "Özellikler",
+        "slots": "{{picked}}/{{slots}} seçildi",
+        "introAscending": "Sonraki turun nasıl oynanacağını seç. Her özelliğin bir artısı ve bir eksisi var ve tur boyunca kalır.",
+        "introRun": "Bu turun özellikleri. Bir sonraki prestijinde yeniden seçebilirsin.",
+        "pickedTag": "✓ SEÇİLDİ"
+    },
+    "ascension": {
+        "title": "Yükseliş",
+        "subtitleAscending": "Tur #{{count}} için hazırlan",
+        "beginRun": "Başla: tur #{{count}}",
+        "withTraits": "Özellikler: {{traits}}",
+        "noTraits": "Özellik seçilmedi",
+        "runComplete": "Tur #{{count}} tamamlandı",
+        "essenceGained": "emoji esansı",
+        "unlockPerkTier": "🔓 Kademe {{tier}} ayrıcalıkları açıldı",
+        "unlockTrait": "🔓 Yeni özellik: {{icon}} {{name}}",
+        "unlockTrials": "🔓 Sınavlar açıldı",
+        "continue": "Devam",
+        "skip": "Geç"
     }
 }

@@ -31,6 +31,7 @@
         "effects": {
             "multiplyBuildingProduction": "• {{buildings}} : efficacité doublée.",
             "multiplyTap": "• Chaque tapotement vaut ×{{multiplier}}.",
+            "addToTap": "• Chaque tape rapporte {{amount}} emojis de plus.",
             "percentageIncreaseTap": "• Tapoter est {{percent}} plus puissant.",
             "tapPercentageOfEps": "• Chaque tapotement rapporte {{percent}} de ta production totale d'emojis.",
             "percentageIncreaseProduction": "• Production totale d'emojis augmentée de {{percent}}.",
@@ -50,6 +51,7 @@
         "chips": {
             "multiplyBuildingProduction": "{{buildings}} ×{{multiplier}}",
             "multiplyTap": "Tapotement ×{{multiplier}}",
+            "addToTap": "Tapotement +{{amount}}",
             "percentageIncreaseTap": "Tapotement +{{percent}}",
             "percentageIncreaseProduction": "Production +{{percent}}",
             "tapPercentageOfEps": "Tapotement +{{percent}} des emojis/s",
@@ -117,10 +119,6 @@
         "close": "Fermer",
         "ordinal_ordinal_one": "{{count}}er",
         "ordinal_ordinal_other": "{{count}}e",
-        "celebrateCaption": "PRESTIGE N°{{count}}",
-        "celebrateTrialCaption": "PRESTIGE N°{{count}} · ÉPREUVE LANCÉE",
-        "celebrateTitle": "+{{essence}} essence",
-        "celebrateTierTitle": "+{{essence}} essence · atouts de rang {{tier}} débloqués",
         "essenceCaption": "ESSENCE D'EMOJI",
         "essenceBonus": "+{{bonus}} de production ({{each}} chacune)",
         "intro": "Après avoir dessiné assez d'emojis, leur essence même commence à se rassembler autour de toi : une substance magique qui change de forme dès que tu la regardes. Chaque essence non dépensée booste la production, et l'essence permet d'acheter des atouts permanents.",
@@ -772,5 +770,27 @@
             "secretHoarder": "Aie {{amount}} emojis en banque sans posséder de bâtiment",
             "secretGems": "Possède {{amount}} gemmes en même temps"
         }
+    },
+    "traits": {
+        "unlocksWith": "Se débloque à ton {{ordinal}} prestige.",
+        "title": "Traits",
+        "slots": "{{picked}} sur {{slots}} choisis",
+        "introAscending": "Choisis comment se jouera la prochaine partie. Chaque trait a un avantage et un inconvénient, et dure toute la partie.",
+        "introRun": "Les traits de cette partie. Tu pourras choisir à nouveau à ton prochain prestige.",
+        "pickedTag": "✓ CHOISI"
+    },
+    "ascension": {
+        "title": "Ascension",
+        "subtitleAscending": "Prépare-toi pour la partie #{{count}}",
+        "beginRun": "Lancer la partie #{{count}}",
+        "withTraits": "Traits : {{traits}}",
+        "noTraits": "Aucun trait choisi",
+        "runComplete": "Partie #{{count}} terminée",
+        "essenceGained": "essence d'emoji",
+        "unlockPerkTier": "🔓 Atouts de rang {{tier}} débloqués",
+        "unlockTrait": "🔓 Nouveau trait : {{icon}} {{name}}",
+        "unlockTrials": "🔓 Épreuves débloquées",
+        "continue": "Continuer",
+        "skip": "Passer"
     }
 }

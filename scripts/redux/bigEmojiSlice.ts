@@ -21,6 +21,8 @@ interface BigEmojiState {
     baseEmojisPerTap: number,
     emojisPerTap: number,
     emojisPerTapMultipliers: number[],
+    /** Flat emojis added to every tap, before tap multipliers */
+    emojisPerTapAdditions: number[],
     emojisPerTapPercentages: number[],
     emojisPerTapPercentageOfEps: number[],
 
@@ -41,6 +43,7 @@ const initialState: BigEmojiState = {
     baseEmojisPerTap: 1,
     emojisPerTap: 1,
     emojisPerTapMultipliers: [],
+    emojisPerTapAdditions: [],
     emojisPerTapPercentages: [],
     emojisPerTapPercentageOfEps: [],
 
@@ -75,6 +78,11 @@ export const bigEmojiSlice = createSlice({
             }
         },
 
+        addTapAddition: (state, action: PayloadAction<number>) => {
+            // Saves from before additions existed don't have the list
+            state.emojisPerTapAdditions = [...(state.emojisPerTapAdditions ?? []), action.payload];
+        },
+
         addTapPercentage: (state, action: PayloadAction<number>) => {
             state.emojisPerTapPercentages.push(action.payload);
         },
@@ -96,8 +104,9 @@ export const bigEmojiSlice = createSlice({
         },
 
         /** Replaces what upgrades add to tapping, rebuilt from the upgrades owned (see syncTapModifiers) */
-        setTapModifiers: (state, action: PayloadAction<{ multipliers: number[], percentages: number[], percentagesOfEps: number[] }>) => {
+        setTapModifiers: (state, action: PayloadAction<{ multipliers: number[], additions: number[], percentages: number[], percentagesOfEps: number[] }>) => {
             state.emojisPerTapMultipliers = action.payload.multipliers;
+            state.emojisPerTapAdditions = action.payload.additions;
             state.emojisPerTapPercentages = action.payload.percentages;
             state.emojisPerTapPercentageOfEps = action.payload.percentagesOfEps;
         },
@@ -114,6 +123,6 @@ export const bigEmojiSlice = createSlice({
     },
 });
 
-export const { updateBigEmoji, updateNextEmoji, updateEmojisPerTap, updateBaseEmojisPerTap, addTapMultiplier, removeTapMultiplier, addTapPercentage, removeTapPercentage, addEmojisPerTapPercentageOfEps, removeEmojisPerTapPercentageOfEps, setTapModifiers, updateTapBoost, resetBigEmoji } = bigEmojiSlice.actions;
+export const { updateBigEmoji, updateNextEmoji, updateEmojisPerTap, updateBaseEmojisPerTap, addTapMultiplier, removeTapMultiplier, addTapAddition, addTapPercentage, removeTapPercentage, addEmojisPerTapPercentageOfEps, removeEmojisPerTapPercentageOfEps, setTapModifiers, updateTapBoost, resetBigEmoji } = bigEmojiSlice.actions;
 
 export default bigEmojiSlice.reducer;

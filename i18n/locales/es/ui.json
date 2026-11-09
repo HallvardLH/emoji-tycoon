@@ -31,6 +31,7 @@
         "effects": {
             "multiplyBuildingProduction": "• {{buildings}}: el doble de eficiencia.",
             "multiplyTap": "• Cada toque vale ×{{multiplier}}.",
+            "addToTap": "• Cada toque da {{amount}} emojis más.",
             "percentageIncreaseTap": "• Tocar es un {{percent}} más potente.",
             "tapPercentageOfEps": "• Cada toque te da el {{percent}} de tu producción total de emojis.",
             "percentageIncreaseProduction": "• La producción total de emojis aumenta un {{percent}}.",
@@ -50,6 +51,7 @@
         "chips": {
             "multiplyBuildingProduction": "{{buildings}} ×{{multiplier}}",
             "multiplyTap": "Toques ×{{multiplier}}",
+            "addToTap": "Toques +{{amount}}",
             "percentageIncreaseTap": "Toques +{{percent}}",
             "percentageIncreaseProduction": "Producción +{{percent}}",
             "tapPercentageOfEps": "Toques +{{percent}} de emojis/s",
@@ -116,10 +118,6 @@
         "title": "Prestigio",
         "close": "Cerrar",
         "ordinal_ordinal_other": "{{count}}.º",
-        "celebrateCaption": "Prestigio n.º {{count}}",
-        "celebrateTrialCaption": "Prestigio n.º {{count}} · Desafío iniciado",
-        "celebrateTitle": "+{{essence}} de esencia",
-        "celebrateTierTitle": "+{{essence}} de esencia · ventajas de rango {{tier}} desbloqueadas",
         "essenceCaption": "Esencia emoji",
         "essenceBonus": "+{{bonus}} de producción ({{each}} cada una)",
         "intro": "Tras dibujar suficientes emojis, su misma esencia empieza a reunirse a tu alrededor: una sustancia mágica que cambia de forma cada vez que la miras. Cada esencia sin gastar aumenta la producción, y con esencia se compran ventajas que duran para siempre.",
@@ -771,5 +769,27 @@
             "secretHoarder": "Ten {{amount}} emojis en el banco sin tener ningún edificio",
             "secretGems": "Ten {{amount}} gemas a la vez"
         }
+    },
+    "traits": {
+        "unlocksWith": "Se desbloquea con tu {{ordinal}} prestigio.",
+        "title": "Rasgos",
+        "slots": "{{picked}} de {{slots}} elegidos",
+        "introAscending": "Elige cómo se juega la próxima partida. Cada rasgo tiene un lado bueno y uno malo, y dura toda la partida.",
+        "introRun": "Los rasgos de esta partida. Podrás elegir de nuevo la próxima vez que hagas prestigio.",
+        "pickedTag": "✓ ELEGIDO"
+    },
+    "ascension": {
+        "title": "Ascensión",
+        "subtitleAscending": "Prepárate para la partida #{{count}}",
+        "beginRun": "Empezar partida #{{count}}",
+        "withTraits": "Rasgos: {{traits}}",
+        "noTraits": "Ningún rasgo elegido",
+        "runComplete": "Partida #{{count}} completada",
+        "essenceGained": "esencia emoji",
+        "unlockPerkTier": "🔓 Ventajas de rango {{tier}} desbloqueadas",
+        "unlockTrait": "🔓 Nuevo rasgo: {{icon}} {{name}}",
+        "unlockTrials": "🔓 Desafíos desbloqueados",
+        "continue": "Continuar",
+        "skip": "Saltar"
     }
 }

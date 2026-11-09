@@ -29,6 +29,7 @@
         "effects": {
             "multiplyBuildingProduction": "• {{buildings}}: διπλάσια απόδοση.",
             "multiplyTap": "• Κάθε πάτημα αξίζει ×{{multiplier}}.",
+            "addToTap": "• Κάθε πάτημα δίνει {{amount}} emoji παραπάνω.",
             "percentageIncreaseTap": "• Το πάτημα είναι {{percent}} πιο δυνατό.",
             "tapPercentageOfEps": "• Κάθε πάτημα δίνει το {{percent}} της συνολικής σου παραγωγής emoji.",
             "percentageIncreaseProduction": "• Η συνολική παραγωγή emoji αυξάνεται κατά {{percent}}.",
@@ -48,6 +49,7 @@
         "chips": {
             "multiplyBuildingProduction": "{{buildings}} ×{{multiplier}}",
             "multiplyTap": "Πάτημα ×{{multiplier}}",
+            "addToTap": "Πάτημα +{{amount}}",
             "percentageIncreaseTap": "Πάτημα +{{percent}}",
             "percentageIncreaseProduction": "Παραγωγή +{{percent}}",
             "tapPercentageOfEps": "Πάτημα +{{percent}} των emoji/δευτ.",
@@ -114,10 +116,6 @@
         "title": "Κύρος",
         "close": "Κλείσιμο",
         "ordinal_ordinal_other": "{{count}}ο",
-        "celebrateCaption": "ΚΥΡΟΣ #{{count}}",
-        "celebrateTrialCaption": "ΚΥΡΟΣ #{{count}} · Η ΔΟΚΙΜΑΣΙΑ ΞΕΚΙΝΗΣΕ",
-        "celebrateTitle": "+{{essence}} ουσία",
-        "celebrateTierTitle": "+{{essence}} ουσία · ξεκλείδωσαν προνόμια βαθμίδας {{tier}}",
         "essenceCaption": "ΟΥΣΙΑ EMOJI",
         "essenceBonus": "+{{bonus}} παραγωγή ({{each}} η καθεμία)",
         "intro": "Όταν ζωγραφίσεις αρκετά emoji, η ίδια τους η ουσία αρχίζει να μαζεύεται γύρω σου: μια μαγική ύλη που αλλάζει σχήμα κάθε φορά που την κοιτάς. Κάθε αξόδευτη ουσία ανεβάζει την παραγωγή, και με την ουσία αγοράζεις προνόμια που κρατάνε για πάντα.",
@@ -719,5 +717,27 @@
             "secretHoarder": "Έχε στην τράπεζα emoji ({{amount}}) χωρίς κανένα κτίριο",
             "secretGems": "Έχε μαζί πετράδια: {{amount}}"
         }
+    },
+    "traits": {
+        "unlocksWith": "Ξεκλειδώνεται με το {{ordinal}} σου Κύρος.",
+        "title": "Γνωρίσματα",
+        "slots": "Διάλεξες {{picked}} από {{slots}}",
+        "introAscending": "Διάλεξε πώς θα παιχτεί ο επόμενος γύρος. Κάθε γνώρισμα έχει ένα πλεονέκτημα και ένα μειονέκτημα, και μένει για όλο τον γύρο.",
+        "introRun": "Τα γνωρίσματα αυτού του γύρου. Μπορείς να διαλέξεις ξανά την επόμενη φορά που θα κάνεις Κύρος.",
+        "pickedTag": "✓ ΕΠΙΛΕΓΜΕΝΟ"
+    },
+    "ascension": {
+        "title": "Ανάβαση",
+        "subtitleAscending": "Ετοιμάσου για τον γύρο #{{count}}",
+        "beginRun": "Ξεκίνα τον γύρο #{{count}}",
+        "withTraits": "Γνωρίσματα: {{traits}}",
+        "noTraits": "Δεν διάλεξες γνωρίσματα",
+        "runComplete": "Ο γύρος #{{count}} ολοκληρώθηκε",
+        "essenceGained": "ουσία emoji",
+        "unlockPerkTier": "🔓 Ξεκλειδώθηκαν τα προνόμια βαθμίδας {{tier}}",
+        "unlockTrait": "🔓 Νέο γνώρισμα: {{icon}} {{name}}",
+        "unlockTrials": "🔓 Ξεκλειδώθηκαν οι δοκιμασίες",
+        "continue": "Συνέχεια",
+        "skip": "Παράλειψη"
     }
 }

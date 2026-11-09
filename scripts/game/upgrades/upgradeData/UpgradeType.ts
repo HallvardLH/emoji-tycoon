@@ -2,7 +2,7 @@ import { BuildingNames } from "../../buildings/buildingNamesType";
 
 export type UnlockConditionType = "Building amount" | "Building helper" | "Emojis from tapping" | "Combo taps" | "Emojis earned";
 
-export type UpgradeCateogoriesType = "Multiply building production" | "Multiply tap" | "Percentage increase production" | "Percentage increase tap" | "Tap percentage of eps" | "Combo level" | "Effect emojis";
+export type UpgradeCateogoriesType = "Multiply building production" | "Multiply tap" | "Add to tap" | "Percentage increase production" | "Percentage increase tap" | "Tap percentage of eps" | "Combo level" | "Effect emojis";
 
 export type UpgradeVariantsType = "Standard building" | "Helper" | "Big emoji percentage" | "Combo level" | "Effect emojis";
 
@@ -20,6 +20,8 @@ export interface UpgradeType {
     emojisPerSecondMultiplier?: number,
     emojisPerSecondPercentageIncrease?: number,
     emojisPerTapMultiplier?: number,
+    /** Emojis added to every tap, before tap multipliers */
+    emojisPerTapAddition?: number,
     emojisPerTapPercentageIncrease?: number,
     emojisPerTapPercentageOfEps?: number;
     /** Effect emoji upgrades: how much more often effect emojis appear */

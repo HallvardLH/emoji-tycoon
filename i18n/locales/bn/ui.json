@@ -29,6 +29,7 @@
         "effects": {
             "multiplyBuildingProduction": "• {{buildings}}: দ্বিগুণ দক্ষতা।",
             "multiplyTap": "• প্রতিটি ট্যাপের মূল্য ×{{multiplier}}।",
+            "addToTap": "• প্রতিটি ট্যাপে {{amount}}টি বেশি ইমোজি পাওয়া যায়।",
             "percentageIncreaseTap": "• ট্যাপ {{percent}} বেশি শক্তিশালী।",
             "tapPercentageOfEps": "• প্রতি ট্যাপে মোট ইমোজি উৎপাদনের {{percent}} পাবে।",
             "percentageIncreaseProduction": "• মোট ইমোজি উৎপাদন {{percent}} বেড়েছে।",
@@ -48,6 +49,7 @@
         "chips": {
             "multiplyBuildingProduction": "{{buildings}} ×{{multiplier}}",
             "multiplyTap": "ট্যাপ ×{{multiplier}}",
+            "addToTap": "ট্যাপ +{{amount}}",
             "percentageIncreaseTap": "ট্যাপ +{{percent}}",
             "percentageIncreaseProduction": "উৎপাদন +{{percent}}",
             "tapPercentageOfEps": "ট্যাপে ইমোজি/সে-র +{{percent}}",
@@ -118,10 +120,6 @@
         "ordinal_ordinal_few": "{{count}}র্থ",
         "ordinal_ordinal_many": "{{count}}ষ্ঠ",
         "ordinal_ordinal_other": "{{count}}তম",
-        "celebrateCaption": "প্রেস্টিজ #{{count}}",
-        "celebrateTrialCaption": "প্রেস্টিজ #{{count}} · চ্যালেঞ্জ শুরু",
-        "celebrateTitle": "+{{essence}} নির্যাস",
-        "celebrateTierTitle": "+{{essence}} নির্যাস · স্তর {{tier}}-এর সুবিধা আনলক",
         "essenceCaption": "ইমোজি নির্যাস",
         "essenceBonus": "+{{bonus}} উৎপাদন (প্রতিটি {{each}})",
         "intro": "যথেষ্ট ইমোজি আঁকার পর তাদের আসল নির্যাস তোমার চারপাশে জমতে শুরু করে: এক জাদুকরী পদার্থ, যার দিকে তাকালেই সে আকার বদলায়। প্রতিটি খরচ না করা নির্যাস উৎপাদন বাড়ায়, আর নির্যাস দিয়ে কেনা যায় চিরকালের সুবিধা।",
@@ -723,5 +721,27 @@
             "secretHoarder": "কোনো ভবন ছাড়াই ব্যাংকে {{amount}} ইমোজি রাখো",
             "secretGems": "একসাথে {{amount}} রত্ন রাখো"
         }
+    },
+    "traits": {
+        "unlocksWith": "তোমার {{ordinal}} প্রেস্টিজে আনলক হবে।",
+        "title": "বৈশিষ্ট্য",
+        "slots": "{{slots}}টির মধ্যে {{picked}}টি বাছা",
+        "introAscending": "পরের দফা কেমন খেলবে, বেছে নাও। প্রতিটি বৈশিষ্ট্যের একটা ভালো দিক আর একটা খারাপ দিক আছে, আর তা পুরো দফা জুড়ে থাকে।",
+        "introRun": "এই দফার বৈশিষ্ট্য। পরের বার প্রেস্টিজ করলে আবার বাছতে পারবে।",
+        "pickedTag": "✓ বাছা"
+    },
+    "ascension": {
+        "title": "আরোহণ",
+        "subtitleAscending": "দফা #{{count}}-এর জন্য তৈরি হও",
+        "beginRun": "দফা #{{count}} শুরু করো",
+        "withTraits": "বৈশিষ্ট্য: {{traits}}",
+        "noTraits": "কোনো বৈশিষ্ট্য বাছা হয়নি",
+        "runComplete": "দফা #{{count}} শেষ",
+        "essenceGained": "ইমোজি নির্যাস",
+        "unlockPerkTier": "🔓 স্তর {{tier}}-এর সুবিধা আনলক হলো",
+        "unlockTrait": "🔓 নতুন বৈশিষ্ট্য: {{icon}} {{name}}",
+        "unlockTrials": "🔓 চ্যালেঞ্জ আনলক হলো",
+        "continue": "চালিয়ে যাও",
+        "skip": "এড়িয়ে যাও"
     }
 }

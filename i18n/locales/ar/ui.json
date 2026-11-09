@@ -37,6 +37,7 @@
         "effects": {
             "multiplyBuildingProduction": "• {{buildings}}: كفاءة مضاعفة.",
             "multiplyTap": "• قيمة النقرات ×{{multiplier}}.",
+            "addToTap": "• كل نقرة تمنح {{amount}} إيموجي إضافية.",
             "percentageIncreaseTap": "• النقر أقوى بنسبة {{percent}}.",
             "tapPercentageOfEps": "• كل نقرة تمنحك {{percent}} من إجمالي إنتاج الإيموجي.",
             "percentageIncreaseProduction": "• زيادة إجمالي إنتاج الإيموجي بنسبة {{percent}}.",
@@ -56,6 +57,7 @@
         "chips": {
             "multiplyBuildingProduction": "{{buildings}} ×{{multiplier}}",
             "multiplyTap": "النقر ×{{multiplier}}",
+            "addToTap": "النقر +{{amount}}",
             "percentageIncreaseTap": "النقر +{{percent}}",
             "percentageIncreaseProduction": "الإنتاج +{{percent}}",
             "tapPercentageOfEps": "النقرة +{{percent}} من الإنتاج/ث",
@@ -122,10 +124,6 @@
         "title": "المجد",
         "close": "إغلاق",
         "ordinal_ordinal_other": "رقم {{count}}",
-        "celebrateCaption": "المجد #{{count}}",
-        "celebrateTrialCaption": "المجد #{{count}} · بدأ التحدي",
-        "celebrateTitle": "+{{essence}} جوهر",
-        "celebrateTierTitle": "+{{essence}} جوهر · فتحت امتيازات المرتبة {{tier}}",
         "essenceCaption": "جوهر الإيموجي",
         "essenceBonus": "+{{bonus}} للإنتاج ({{each}} لكل جوهر)",
         "intro": "بعد أن ترسم ما يكفي من الإيموجي، يبدأ جوهرها نفسه بالتجمع حولك: مادة سحرية يتغير شكلها كلما نظرت إليها. كل جوهر لم تنفقه يعزز الإنتاج، وبالجوهر تشتري امتيازات تدوم إلى الأبد.",
@@ -927,5 +925,27 @@
             "secretHoarder": "احتفظ في البنك بإيموجي ({{amount}}) دون أن تملك أي مبنى",
             "secretGems": "احتفظ بماسات في آن واحد: {{amount}}"
         }
+    },
+    "traits": {
+        "unlocksWith": "يفتح مع المجد {{ordinal}}.",
+        "title": "السمات",
+        "slots": "اخترت {{picked}} من {{slots}}",
+        "introAscending": "اختر كيف تُلعب الجولة القادمة. لكل سمة ميزة وعيب، وتبقى طوال الجولة.",
+        "introRun": "سمات هذه الجولة. يمكنك الاختيار من جديد عندما تنال المجد في المرة القادمة.",
+        "pickedTag": "✓ مختارة"
+    },
+    "ascension": {
+        "title": "الارتقاء",
+        "subtitleAscending": "استعد للجولة رقم {{count}}",
+        "beginRun": "ابدأ الجولة رقم {{count}}",
+        "withTraits": "السمات: {{traits}}",
+        "noTraits": "لم تختر أي سمة",
+        "runComplete": "اكتملت الجولة رقم {{count}}",
+        "essenceGained": "جوهر الإيموجي",
+        "unlockPerkTier": "🔓 فُتحت امتيازات المرتبة {{tier}}",
+        "unlockTrait": "🔓 سمة جديدة: {{icon}} {{name}}",
+        "unlockTrials": "🔓 فُتحت التحديات",
+        "continue": "متابعة",
+        "skip": "تخطي"
     }
 }

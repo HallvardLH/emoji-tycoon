@@ -27,6 +27,7 @@
         "effects": {
             "multiplyBuildingProduction": "• {{buildings}}: 효율 2배.",
             "multiplyTap": "• 탭의 가치 ×{{multiplier}}.",
+            "addToTap": "• 탭할 때마다 이모지를 {{amount}}개 더 얻어요.",
             "percentageIncreaseTap": "• 탭 파워 {{percent}} 증가.",
             "tapPercentageOfEps": "• 탭할 때마다 총 이모지 생산량의 {{percent}}만큼 획득.",
             "percentageIncreaseProduction": "• 총 이모지 생산량 {{percent}} 증가.",
@@ -46,6 +47,7 @@
         "chips": {
             "multiplyBuildingProduction": "{{buildings}} ×{{multiplier}}",
             "multiplyTap": "탭 ×{{multiplier}}",
+            "addToTap": "탭 +{{amount}}",
             "percentageIncreaseTap": "탭 +{{percent}}",
             "percentageIncreaseProduction": "생산량 +{{percent}}",
             "tapPercentageOfEps": "탭당 초당 생산량의 +{{percent}}",
@@ -112,10 +114,6 @@
         "title": "프레스티지",
         "close": "닫기",
         "ordinal_ordinal_other": "{{count}}번째",
-        "celebrateCaption": "프레스티지 #{{count}}",
-        "celebrateTrialCaption": "프레스티지 #{{count}} · 시련 시작",
-        "celebrateTitle": "정수 +{{essence}}",
-        "celebrateTierTitle": "정수 +{{essence}} · {{tier}}단계 특전 해금",
         "essenceCaption": "이모지 정수",
         "essenceBonus": "생산량 +{{bonus}} (개당 {{each}})",
         "intro": "이모지를 충분히 그리고 나면 이모지의 정수가 당신 주위에 모여들기 시작해요. 바라볼 때마다 모양이 바뀌는 신비한 물질이죠. 쓰지 않은 정수는 하나하나 생산량을 높여 주고, 정수로는 영원히 유지되는 특전을 살 수 있어요.",
@@ -661,5 +659,27 @@
             "secretHoarder": "건물 하나 없이 은행에 이모지 {{amount}}개 모으기",
             "secretGems": "보석 {{amount}}개 동시 보유"
         }
+    },
+    "traits": {
+        "unlocksWith": "{{ordinal}} 프레스티지 때 해금돼요.",
+        "title": "특성",
+        "slots": "{{picked}}/{{slots}} 선택",
+        "introAscending": "다음 회차의 플레이 방식을 고르세요. 특성마다 장점과 단점이 있고, 회차가 끝날 때까지 유지돼요.",
+        "introRun": "이번 회차의 특성이에요. 다음에 프레스티지할 때 다시 고를 수 있어요.",
+        "pickedTag": "✓ 선택됨"
+    },
+    "ascension": {
+        "title": "승천",
+        "subtitleAscending": "{{count}}회차를 준비하세요",
+        "beginRun": "{{count}}회차 시작",
+        "withTraits": "특성: {{traits}}",
+        "noTraits": "선택한 특성 없음",
+        "runComplete": "{{count}}회차 완료",
+        "essenceGained": "이모지 정수",
+        "unlockPerkTier": "🔓 {{tier}}단계 특전 해금",
+        "unlockTrait": "🔓 새 특성: {{icon}} {{name}}",
+        "unlockTrials": "🔓 시련 해금",
+        "continue": "계속",
+        "skip": "건너뛰기"
     }
 }

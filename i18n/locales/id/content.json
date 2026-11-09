@@ -313,6 +313,31 @@
             "description": "Keterikatan kuantum di jarimu memungkinkan menggambar emoji secepat cahaya.",
             "quote": "Jariku ada di dua tempat sekaligus. Dua-duanya benci kamu."
         },
+        "120": {
+            "name": "Ketukan mantap",
+            "description": "Ketuk dengan sungguh-sungguh. Setiap ketukan memberi 1 emoji lebih banyak.",
+            "quote": "Tidak terlalu keras. Tidak terlalu pelan. Pas."
+        },
+        "121": {
+            "name": "Ketukan ganda",
+            "description": "Dua jari, satu ketukan. Setiap ketukan memberi 2 emoji lebih banyak.",
+            "quote": "Damai, dan emoji dua kali lipat."
+        },
+        "122": {
+            "name": "Meretakkan buku jari",
+            "description": "Buku jari yang sudah pemanasan mengetuk lebih keras. Setiap ketukan memberi 4 emoji lebih banyak.",
+            "quote": "Krek. Krek. Krek. Ketuk."
+        },
+        "123": {
+            "name": "Telapak terbuka",
+            "description": "Kenapa mengetuk dengan satu jari kalau bisa menampar dengan lima? Setiap ketukan memberi 8 emoji lebih banyak.",
+            "quote": "Layarnya tidak salah apa-apa."
+        },
+        "124": {
+            "name": "Tos kepalan",
+            "description": "Emoji besar membalas tos kepalanmu. Setiap ketukan memberi 16 emoji lebih banyak.",
+            "quote": "Respek."
+        },
         "200": {
             "name": "Pensil lebih bagus",
             "description": "Pensil yang lebih bagus untuk emoji yang lebih detail.",
@@ -2716,6 +2741,34 @@
         "flyingStart": {
             "name": "Start kilat",
             "description": "Start duluan memberi produksi 30 menit, bukan 5"
+        },
+        "oldHands": {
+            "name": "Tangan lama",
+            "description": "Mulai setiap putaran dengan 10 Tangan penggambar"
+        },
+        "echo": {
+            "name": "Gema",
+            "description": "Ketukan bernilai 25% lebih banyak"
+        },
+        "blueprints": {
+            "name": "Cetak biru",
+            "description": "Upgrade bangunan 25% lebih murah"
+        },
+        "polymath": {
+            "name": "Serba bisa",
+            "description": "Pilih satu sifat lagi di setiap putaran"
+        },
+        "enlightenment": {
+            "name": "Pencerahan",
+            "description": "Esensi yang belum dipakai menaikkan produksi 3% per esensi"
+        },
+        "ascendant": {
+            "name": "Transenden",
+            "description": "Pilih satu sifat lagi di setiap putaran"
+        },
+        "stargazer": {
+            "name": "Pengamat bintang",
+            "description": "+3% produksi untuk setiap bintang di langitmu"
         }
     },
     "trials": {
@@ -2787,6 +2840,38 @@
         "100": {
             "name": "Seratus sedih",
             "description": "Statistik menampilkan 😭 di samping nilai seru"
+        }
+    },
+    "traits": {
+        "tapper": {
+            "name": "Pengetuk",
+            "upside": "Ketukan bernilai ×3",
+            "downside": "Produksi ×0,6"
+        },
+        "idler": {
+            "name": "Santai",
+            "upside": "Produksi ×1,4",
+            "downside": "Ketukan bernilai ×0,25"
+        },
+        "architect": {
+            "name": "Arsitek",
+            "upside": "Bangunan 20% lebih murah",
+            "downside": "Biaya upgrade bangunan ×3"
+        },
+        "gambler": {
+            "name": "Penjudi",
+            "upside": "Emoji efek muncul dua kali lebih sering",
+            "downside": "Efek baik hanya bertahan separuh waktu"
+        },
+        "treasureHunter": {
+            "name": "Pemburu harta",
+            "upside": "Peluang emoji berkilau 3 kali lipat",
+            "downside": "Produksi ×0,85"
+        },
+        "comboArtist": {
+            "name": "Seniman kombo",
+            "upside": "+2 untuk kombo maksimalmu",
+            "downside": "Kombo berkurang 50% lebih cepat"
         }
     }
 }

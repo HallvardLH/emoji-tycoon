@@ -313,6 +313,31 @@
             "description": "Quantenverschränkung in deinen Fingern lässt dich mit Lichtgeschwindigkeit zeichnen.",
             "quote": "Meine Finger sind an zwei Orten gleichzeitig. Beide hassen dich."
         },
+        "120": {
+            "name": "Fester Tipp",
+            "description": "Tippe mit Nachdruck. Jedes Tippen bringt 1 Emoji mehr.",
+            "quote": "Nicht zu fest. Nicht zu sanft. Genau richtig."
+        },
+        "121": {
+            "name": "Doppeltipp",
+            "description": "Zwei Finger, ein Tipp. Jedes Tippen bringt 2 Emojis mehr.",
+            "quote": "Frieden, und doppelt so viele Emojis."
+        },
+        "122": {
+            "name": "Fingerknacken",
+            "description": "Aufgewärmte Knöchel tippen kräftiger. Jedes Tippen bringt 4 Emojis mehr.",
+            "quote": "Knack. Knack. Knack. Tipp."
+        },
+        "123": {
+            "name": "Offene Hand",
+            "description": "Warum mit einem Finger tippen, wenn du mit fünf klatschen kannst? Jedes Tippen bringt 8 Emojis mehr.",
+            "quote": "Der Bildschirm hat das nicht verdient."
+        },
+        "124": {
+            "name": "Faustgruß",
+            "description": "Das große Emoji grüßt zurück. Jedes Tippen bringt 16 Emojis mehr.",
+            "quote": "Respekt."
+        },
         "200": {
             "name": "Bessere Bleistifte",
             "description": "Bessere Bleistifte für detailliertere Emojis.",
@@ -2716,6 +2741,34 @@
         "flyingStart": {
             "name": "Fliegender Start",
             "description": "Vorsprung gibt 30 statt 5 Minuten Produktion"
+        },
+        "oldHands": {
+            "name": "Alte Hasen",
+            "description": "Starte jeden Durchgang mit 10 Zeichenhänden"
+        },
+        "echo": {
+            "name": "Echo",
+            "description": "Tipps sind 25 % mehr wert"
+        },
+        "blueprints": {
+            "name": "Baupläne",
+            "description": "Gebäude-Upgrades sind 25 % billiger"
+        },
+        "polymath": {
+            "name": "Universalgenie",
+            "description": "Wähle in jedem Durchgang eine Eigenschaft mehr"
+        },
+        "enlightenment": {
+            "name": "Erleuchtung",
+            "description": "Nicht ausgegebene Essenz steigert die Produktion um je 3 %"
+        },
+        "ascendant": {
+            "name": "Erhabener",
+            "description": "Wähle in jedem Durchgang eine Eigenschaft mehr"
+        },
+        "stargazer": {
+            "name": "Sterngucker",
+            "description": "+3 % Produktion für jeden Stern an deinem Himmel"
         }
     },
     "trials": {
@@ -2787,6 +2840,38 @@
         "100": {
             "name": "Trauriger Hunderter",
             "description": "Die Statistik zeigt 😭 beim Spaßfaktor"
+        }
+    },
+    "traits": {
+        "tapper": {
+            "name": "Tipper",
+            "upside": "Tipps sind ×3 wert",
+            "downside": "Produktion ×0,6"
+        },
+        "idler": {
+            "name": "Faulpelz",
+            "upside": "Produktion ×1,4",
+            "downside": "Tipps sind ×0,25 wert"
+        },
+        "architect": {
+            "name": "Architekt",
+            "upside": "Gebäude sind 20 % billiger",
+            "downside": "Gebäude-Upgrades kosten ×3"
+        },
+        "gambler": {
+            "name": "Zocker",
+            "upside": "Effekt-Emojis erscheinen doppelt so oft",
+            "downside": "Gute Effekte halten nur halb so lange"
+        },
+        "treasureHunter": {
+            "name": "Schatzsucher",
+            "upside": "Glänzende Emojis sind 3-mal so wahrscheinlich",
+            "downside": "Produktion ×0,85"
+        },
+        "comboArtist": {
+            "name": "Combo-Künstler",
+            "upside": "+2 auf deine maximale Combo",
+            "downside": "Die Combo sinkt 50 % schneller"
         }
     }
 }

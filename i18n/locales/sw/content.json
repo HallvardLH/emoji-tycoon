@@ -313,6 +313,31 @@
             "description": "Mfungamano wa kwanta kwenye vidole vyako huruhusu kuchora emoji kwa kasi ya mwanga.",
             "quote": "Vidole vyangu viko sehemu mbili kwa wakati mmoja. Sehemu zote mbili zinakuchukia."
         },
+        "120": {
+            "name": "Mguso thabiti",
+            "description": "Gusa kwa makusudi. Kila mguso unatoa emoji 1 zaidi.",
+            "quote": "Si kwa nguvu sana. Si kwa upole sana. Sawasawa tu."
+        },
+        "121": {
+            "name": "Mguso maradufu",
+            "description": "Vidole viwili, mguso mmoja. Kila mguso unatoa emoji 2 zaidi.",
+            "quote": "Amani, na emoji mara mbili."
+        },
+        "122": {
+            "name": "Kuvunja vifundo",
+            "description": "Vifundo vilivyopashwa moto vinagusa kwa nguvu zaidi. Kila mguso unatoa emoji 4 zaidi.",
+            "quote": "Kwa. Kwa. Kwa. Gusa."
+        },
+        "123": {
+            "name": "Kiganja wazi",
+            "description": "Kwa nini kugusa kwa kidole kimoja wakati unaweza kupiga kofi kwa vitano? Kila mguso unatoa emoji 8 zaidi.",
+            "quote": "Skrini haikufanya chochote kustahili hili."
+        },
+        "124": {
+            "name": "Kugonga ngumi",
+            "description": "Emoji kubwa inakugonga ngumi pia. Kila mguso unatoa emoji 16 zaidi.",
+            "quote": "Heshima."
+        },
         "200": {
             "name": "Penseli bora",
             "description": "Penseli bora kwa emoji zenye maelezo zaidi.",
@@ -2716,6 +2741,34 @@
         "flyingStart": {
             "name": "Mwanzo wa kasi",
             "description": "Mwanzo wa mapema unatoa dakika 30 za uzalishaji badala ya 5"
+        },
+        "oldHands": {
+            "name": "Wazoefu",
+            "description": "Anza kila mzunguko na Mikono ya kuchora 10"
+        },
+        "echo": {
+            "name": "Kiitikio",
+            "description": "Thamani ya kugusa ni zaidi kwa 25%"
+        },
+        "blueprints": {
+            "name": "Ramani za ujenzi",
+            "description": "Maboresho ya majengo ni nafuu kwa 25%"
+        },
+        "polymath": {
+            "name": "Mjuzi wa mengi",
+            "description": "Chagua sifa moja zaidi kwa kila mzunguko"
+        },
+        "enlightenment": {
+            "name": "Mwangaza",
+            "description": "Kila kiini ambacho hujatumia huongeza uzalishaji kwa 3%"
+        },
+        "ascendant": {
+            "name": "Aliyepaa",
+            "description": "Chagua sifa moja zaidi kwa kila mzunguko"
+        },
+        "stargazer": {
+            "name": "Mtazama nyota",
+            "description": "+3% uzalishaji kwa kila nyota angani mwako"
         }
     },
     "trials": {
@@ -2787,6 +2840,38 @@
         "100": {
             "name": "Mia ya huzuni",
             "description": "Takwimu zinaonyesha 😭 kando ya thamani ya furaha"
+        }
+    },
+    "traits": {
+        "tapper": {
+            "name": "Mgusaji",
+            "upside": "Thamani ya kugusa ×3",
+            "downside": "Uzalishaji ×0.6"
+        },
+        "idler": {
+            "name": "Mvivu",
+            "upside": "Uzalishaji ×1.4",
+            "downside": "Thamani ya kugusa ×0.25"
+        },
+        "architect": {
+            "name": "Mbunifu",
+            "upside": "Majengo ni nafuu kwa 20%",
+            "downside": "Maboresho ya majengo yanagharimu ×3"
+        },
+        "gambler": {
+            "name": "Mcheza kamari",
+            "upside": "Emoji za athari hutokea mara mbili zaidi",
+            "downside": "Athari nzuri hudumu nusu ya muda"
+        },
+        "treasureHunter": {
+            "name": "Mwindaji hazina",
+            "upside": "Uwezekano wa emoji zinazong'aa ni mara 3",
+            "downside": "Uzalishaji ×0.85"
+        },
+        "comboArtist": {
+            "name": "Fundi wa kombo",
+            "upside": "+2 kwa kombo yako ya juu",
+            "downside": "Kombo hupungua haraka zaidi kwa 50%"
         }
     }
 }

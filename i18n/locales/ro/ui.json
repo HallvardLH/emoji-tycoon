@@ -31,6 +31,7 @@
         "effects": {
             "multiplyBuildingProduction": "• {{buildings}}: eficiență dublă.",
             "multiplyTap": "• Atingerile valorează ×{{multiplier}}.",
+            "addToTap": "• Fiecare atingere aduce încă {{amount}} emoji.",
             "percentageIncreaseTap": "• Atingerile sunt cu {{percent}} mai puternice.",
             "tapPercentageOfEps": "• Fiecare atingere îți aduce {{percent}} din producția totală de emoji.",
             "percentageIncreaseProduction": "• Producția totală de emoji crește cu {{percent}}.",
@@ -50,6 +51,7 @@
         "chips": {
             "multiplyBuildingProduction": "{{buildings}} ×{{multiplier}}",
             "multiplyTap": "Atingeri ×{{multiplier}}",
+            "addToTap": "Atingeri +{{amount}}",
             "percentageIncreaseTap": "Atingeri +{{percent}}",
             "percentageIncreaseProduction": "Producție +{{percent}}",
             "tapPercentageOfEps": "Atingeri +{{percent}} din emoji/sec",
@@ -117,10 +119,6 @@
         "close": "Închide",
         "ordinal_ordinal_one": "nr. {{count}}",
         "ordinal_ordinal_other": "nr. {{count}}",
-        "celebrateCaption": "PRESTIGIUL #{{count}}",
-        "celebrateTrialCaption": "PRESTIGIUL #{{count}} · PROBĂ ÎNCEPUTĂ",
-        "celebrateTitle": "+{{essence}} esență",
-        "celebrateTierTitle": "+{{essence}} esență · avantaje de treapta {{tier}} deblocate",
         "essenceCaption": "ESENȚĂ DE EMOJI",
         "essenceBonus": "+{{bonus}} producție ({{each}} fiecare)",
         "intro": "După ce desenezi destule emoji, însăși esența lor începe să se adune în jurul tău: o substanță magică ce își schimbă forma de fiecare dată când te uiți la ea. Fiecare esență necheltuită crește producția, iar cu esență cumperi avantaje care rămân pentru totdeauna.",
@@ -772,5 +770,27 @@
             "secretHoarder": "Ai în bancă emoji ({{amount}}) fără să deții vreo clădire",
             "secretGems": "Deține deodată nestemate: {{amount}}"
         }
+    },
+    "traits": {
+        "unlocksWith": "Se deblochează la prestigiul {{ordinal}}.",
+        "title": "Trăsături",
+        "slots": "{{picked}} din {{slots}} alese",
+        "introAscending": "Alege cum se joacă runda următoare. Fiecare trăsătură are o parte bună și una rea și rămâne toată runda.",
+        "introRun": "Trăsăturile rundei acesteia. Poți alege din nou la următorul prestigiu.",
+        "pickedTag": "✓ ALEASĂ"
+    },
+    "ascension": {
+        "title": "Ascensiune",
+        "subtitleAscending": "Pregătește-te de runda #{{count}}",
+        "beginRun": "Începe runda #{{count}}",
+        "withTraits": "Trăsături: {{traits}}",
+        "noTraits": "Nicio trăsătură aleasă",
+        "runComplete": "Runda #{{count}} încheiată",
+        "essenceGained": "esență de emoji",
+        "unlockPerkTier": "🔓 Avantaje de treapta {{tier}} deblocate",
+        "unlockTrait": "🔓 Trăsătură nouă: {{icon}} {{name}}",
+        "unlockTrials": "🔓 Probe deblocate",
+        "continue": "Continuă",
+        "skip": "Sari peste"
     }
 }

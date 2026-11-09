@@ -29,6 +29,7 @@
         "effects": {
             "multiplyBuildingProduction": "• {{buildings}}: ufanisi mara mbili.",
             "multiplyTap": "• Thamani ya kugusa ×{{multiplier}}.",
+            "addToTap": "• Kila mguso unatoa emoji {{amount}} zaidi.",
             "percentageIncreaseTap": "• Kugusa kuna nguvu zaidi kwa {{percent}}.",
             "tapPercentageOfEps": "• Kila mguso unakupa {{percent}} ya uzalishaji wako wote wa emoji.",
             "percentageIncreaseProduction": "• Uzalishaji wote wa emoji umeongezeka kwa {{percent}}.",
@@ -48,6 +49,7 @@
         "chips": {
             "multiplyBuildingProduction": "{{buildings}} ×{{multiplier}}",
             "multiplyTap": "Kugusa ×{{multiplier}}",
+            "addToTap": "Kugusa +{{amount}}",
             "percentageIncreaseTap": "Kugusa +{{percent}}",
             "percentageIncreaseProduction": "Uzalishaji +{{percent}}",
             "tapPercentageOfEps": "Mguso +{{percent}} ya emoji/sek",
@@ -114,10 +116,6 @@
         "title": "Heshima",
         "close": "Funga",
         "ordinal_ordinal_other": "{{count}}",
-        "celebrateCaption": "Heshima #{{count}}",
-        "celebrateTrialCaption": "Heshima #{{count}} · Jaribio limeanza",
-        "celebrateTitle": "+{{essence}} kiini",
-        "celebrateTierTitle": "+{{essence}} kiini · faida za ngazi {{tier}} zimefunguliwa",
         "essenceCaption": "Kiini cha emoji",
         "essenceBonus": "+{{bonus}} uzalishaji ({{each}} kila kimoja)",
         "intro": "Baada ya kuchora emoji za kutosha, kiini chake halisi kinaanza kukusanyika karibu nawe: dutu ya kichawi inayobadilika umbo kila unapoitazama. Kila kiini ambacho hujatumia huongeza uzalishaji, na kiini hununua faida zinazodumu milele.",
@@ -719,5 +717,27 @@
             "secretHoarder": "Kuwa na emoji {{amount}} benki bila kumiliki jengo lolote",
             "secretGems": "Kuwa na vito {{amount}} kwa wakati mmoja"
         }
+    },
+    "traits": {
+        "unlocksWith": "Linafunguka kwenye heshima yako ya {{ordinal}}.",
+        "title": "Sifa",
+        "slots": "{{picked}} kati ya {{slots}} zimechaguliwa",
+        "introAscending": "Chagua jinsi mzunguko ujao utakavyochezwa. Kila sifa ina upande mzuri na upande mbaya, na hudumu mzunguko mzima.",
+        "introRun": "Sifa za mzunguko huu. Unaweza kuchagua tena utakapopata heshima tena.",
+        "pickedTag": "✓ Imechaguliwa"
+    },
+    "ascension": {
+        "title": "Kupaa",
+        "subtitleAscending": "Jiandae kwa mzunguko #{{count}}",
+        "beginRun": "Anza mzunguko #{{count}}",
+        "withTraits": "Sifa: {{traits}}",
+        "noTraits": "Hakuna sifa zilizochaguliwa",
+        "runComplete": "Mzunguko #{{count}} umekamilika",
+        "essenceGained": "kiini cha emoji",
+        "unlockPerkTier": "🔓 Faida za ngazi {{tier}} zimefunguliwa",
+        "unlockTrait": "🔓 Sifa mpya: {{icon}} {{name}}",
+        "unlockTrials": "🔓 Majaribio yamefunguliwa",
+        "continue": "Endelea",
+        "skip": "Ruka"
     }
 }

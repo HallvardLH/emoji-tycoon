@@ -313,6 +313,31 @@
             "description": "Az ujjaidban zajló kvantum-összefonódás révén fénysebességgel rajzolhatsz emojikat.",
             "quote": "Az ujjaim egyszerre két helyen vannak. Mindkét helyen utálnak téged."
         },
+        "120": {
+            "name": "Határozott koppintás",
+            "description": "Koppints céltudatosan. Minden koppintás 1 emojival többet ad.",
+            "quote": "Nem túl erősen. Nem túl gyengén. Épp jól."
+        },
+        "121": {
+            "name": "Dupla koppintás",
+            "description": "Két ujj, egy koppintás. Minden koppintás 2 emojival többet ad.",
+            "quote": "Béke, és kétszer annyi emoji."
+        },
+        "122": {
+            "name": "Ujjropogtatás",
+            "description": "A bemelegített ujjak erősebben koppintanak. Minden koppintás 4 emojival többet ad.",
+            "quote": "Reccs. Reccs. Reccs. Kopp."
+        },
+        "123": {
+            "name": "Nyitott tenyér",
+            "description": "Minek egy ujjal koppintani, ha öttel is csaphatsz? Minden koppintás 8 emojival többet ad.",
+            "quote": "A kijelző semmit sem tett, amivel ezt kiérdemelte volna."
+        },
+        "124": {
+            "name": "Ökölpacsi",
+            "description": "A nagy emoji visszapacsizik. Minden koppintás 16 emojival többet ad.",
+            "quote": "Respekt."
+        },
         "200": {
             "name": "Jobb ceruzák",
             "description": "Jobb ceruzák a részletesebb emojikért.",
@@ -2716,6 +2741,34 @@
         "flyingStart": {
             "name": "Repülőrajt",
             "description": "A Kezdőlöket 5 helyett 30 percnyi termelést ad"
+        },
+        "oldHands": {
+            "name": "Régi motorosok",
+            "description": "Minden kört 10 Rajzoló kézzel kezdesz"
+        },
+        "echo": {
+            "name": "Visszhang",
+            "description": "A koppintások 25%-kal többet érnek"
+        },
+        "blueprints": {
+            "name": "Tervrajzok",
+            "description": "Az épületfejlesztések 25%-kal olcsóbbak"
+        },
+        "polymath": {
+            "name": "Polihisztor",
+            "description": "Minden körben eggyel több vonást választhatsz"
+        },
+        "enlightenment": {
+            "name": "Megvilágosodás",
+            "description": "Minden el nem költött esszencia 3%-kal növeli a termelést"
+        },
+        "ascendant": {
+            "name": "Felemelkedett",
+            "description": "Minden körben eggyel több vonást választhatsz"
+        },
+        "stargazer": {
+            "name": "Csillagnéző",
+            "description": "+3% termelés minden csillagért az egeden"
         }
     },
     "trials": {
@@ -2787,6 +2840,38 @@
         "100": {
             "name": "Szomorú száz",
             "description": "Az Adatoknál 😭 jelenik meg a mókaérték mellett"
+        }
+    },
+    "traits": {
+        "tapper": {
+            "name": "Koppintó",
+            "upside": "A koppintás ×3-at ér",
+            "downside": "Termelés ×0,6"
+        },
+        "idler": {
+            "name": "Henyélő",
+            "upside": "Termelés ×1,4",
+            "downside": "A koppintás ×0,25-öt ér"
+        },
+        "architect": {
+            "name": "Építész",
+            "upside": "Az épületek 20%-kal olcsóbbak",
+            "downside": "Épületfejlesztések ára ×3"
+        },
+        "gambler": {
+            "name": "Szerencsejátékos",
+            "upside": "Az effekt-emojik kétszer olyan gyakran jönnek",
+            "downside": "A jó effektek fele annyi ideig tartanak"
+        },
+        "treasureHunter": {
+            "name": "Kincsvadász",
+            "upside": "Háromszor akkora eséllyel jönnek csillogó emojik",
+            "downside": "Termelés ×0,85"
+        },
+        "comboArtist": {
+            "name": "Kombóművész",
+            "upside": "+2 a maximális kombóhoz",
+            "downside": "A kombó 50%-kal gyorsabban fogy"
         }
     }
 }

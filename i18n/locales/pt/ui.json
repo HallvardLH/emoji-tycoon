@@ -31,6 +31,7 @@
         "effects": {
             "multiplyBuildingProduction": "• {{buildings}}: o dobro da eficiência.",
             "multiplyTap": "• Cada toque vale ×{{multiplier}}.",
+            "addToTap": "• Cada toque dá mais {{amount}} emojis.",
             "percentageIncreaseTap": "• Tocar fica {{percent}} mais poderoso.",
             "tapPercentageOfEps": "• Cada toque rende {{percent}} da sua produção total de emojis.",
             "percentageIncreaseProduction": "• Produção total de emojis aumentada em {{percent}}.",
@@ -50,6 +51,7 @@
         "chips": {
             "multiplyBuildingProduction": "{{buildings}} ×{{multiplier}}",
             "multiplyTap": "Toque ×{{multiplier}}",
+            "addToTap": "Toque +{{amount}}",
             "percentageIncreaseTap": "Toque +{{percent}}",
             "percentageIncreaseProduction": "Produção +{{percent}}",
             "tapPercentageOfEps": "Toques +{{percent}} dos emojis/s",
@@ -116,10 +118,6 @@
         "title": "Prestígio",
         "close": "Fechar",
         "ordinal_ordinal_other": "{{count}}º",
-        "celebrateCaption": "PRESTÍGIO Nº {{count}}",
-        "celebrateTrialCaption": "PRESTÍGIO Nº {{count}} · DESAFIO INICIADO",
-        "celebrateTitle": "+{{essence}} de essência",
-        "celebrateTierTitle": "+{{essence}} de essência · vantagens de nível {{tier}} liberadas",
         "essenceCaption": "ESSÊNCIA DE EMOJI",
         "essenceBonus": "+{{bonus}} de produção ({{each}} cada)",
         "intro": "Depois de desenhar emojis o bastante, a própria essência deles começa a se juntar ao seu redor: uma substância mágica que muda de forma toda vez que você olha para ela. Cada essência não gasta aumenta a produção, e a essência compra vantagens que duram para sempre.",
@@ -771,5 +769,27 @@
             "secretHoarder": "Tenha {{amount}} emojis no banco sem ter nenhum prédio",
             "secretGems": "Tenha {{amount}} gemas ao mesmo tempo"
         }
+    },
+    "traits": {
+        "unlocksWith": "Desbloqueia no seu {{ordinal}} prestígio.",
+        "title": "Traços",
+        "slots": "{{picked}} de {{slots}} escolhidos",
+        "introAscending": "Escolha como será a próxima rodada. Cada traço tem um lado bom e um lado ruim, e dura a rodada inteira.",
+        "introRun": "Os traços desta rodada. Você pode escolher de novo no próximo prestígio.",
+        "pickedTag": "✓ ESCOLHIDO"
+    },
+    "ascension": {
+        "title": "Ascensão",
+        "subtitleAscending": "Prepare-se para a rodada #{{count}}",
+        "beginRun": "Começar rodada #{{count}}",
+        "withTraits": "Traços: {{traits}}",
+        "noTraits": "Nenhum traço escolhido",
+        "runComplete": "Rodada #{{count}} concluída",
+        "essenceGained": "essência de emoji",
+        "unlockPerkTier": "🔓 Vantagens de nível {{tier}} desbloqueadas",
+        "unlockTrait": "🔓 Novo traço: {{icon}} {{name}}",
+        "unlockTrials": "🔓 Desafios desbloqueados",
+        "continue": "Continuar",
+        "skip": "Pular"
     }
 }

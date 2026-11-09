@@ -1,10 +1,10 @@
 import "../i18n";
 import "../scripts/screenshotMode";
 import "../scripts/screenshotHooks";
-import { Stack } from "expo-router";
+import { Stack, router, usePathname, useRootNavigationState } from "expo-router";
 import { Provider, useSelector } from "react-redux";
 import { StatusBar } from "expo-status-bar";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { View, StyleSheet, Platform } from "react-native";
 import store, { RootState, whenSaveLoaded } from "../scripts/redux/reduxStore";
 import { useTranslation } from "react-i18next";
@@ -148,7 +148,10 @@ function LocalizedApp() {
                     screens and switched to modals once on screen, which iOS can re-present */}
                 <Stack.Screen name="gems" options={{ headerShown: false, presentation: "modal" }} />
                 <Stack.Screen name="prestige" options={{ headerShown: false, presentation: "modal" }} />
+                {/* Can't be swiped away while ascending: the only way out is beginning the next run */}
+                <Stack.Screen name="ascension" options={{ headerShown: false, presentation: "fullScreenModal", gestureEnabled: false }} />
             </Stack>
+            <ResumeAscension />
             {/* Over every screen, as milestones can happen anywhere */}
             <MilestoneToast />
             <OfflineModal />
@@ -156,6 +159,19 @@ function LocalizedApp() {
             <ScreenshotCheatsTrigger />
         </View>
     );
+}
+
+/** Back to the ascension screen when the app was closed mid-ascension (between a prestige and the next run) */
+function ResumeAscension() {
+    const navigationReady = !!useRootNavigationState()?.key;
+    const pathname = usePathname();
+    const checked = useRef(false);
+    useEffect(() => {
+        if (!navigationReady || checked.current) return;
+        checked.current = true;
+        if (store.getState().prestige.ascending && pathname !== "/ascension") router.push("/ascension");
+    }, [navigationReady]);
+    return null;
 }
 
 const styles = themedStyles(() => StyleSheet.create({

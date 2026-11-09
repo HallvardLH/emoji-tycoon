@@ -29,6 +29,7 @@
         "effects": {
             "multiplyBuildingProduction": "• {{buildings}}: doble ang husay.",
             "multiplyTap": "• ×{{multiplier}} ang halaga ng bawat tap.",
+            "addToTap": "• Bawat tap ay nagbibigay ng {{amount}} pang emoji.",
             "percentageIncreaseTap": "• {{percent}} na mas malakas ang pag-tap.",
             "tapPercentageOfEps": "• Bawat tap ay nagbibigay ng {{percent}} ng kabuuang emoji production mo.",
             "percentageIncreaseProduction": "• Tumaas nang {{percent}} ang kabuuang emoji production.",
@@ -48,6 +49,7 @@
         "chips": {
             "multiplyBuildingProduction": "{{buildings}} ×{{multiplier}}",
             "multiplyTap": "Pag-tap ×{{multiplier}}",
+            "addToTap": "Pag-tap +{{amount}}",
             "percentageIncreaseTap": "Pag-tap +{{percent}}",
             "percentageIncreaseProduction": "Produksiyon +{{percent}}",
             "tapPercentageOfEps": "Tap +{{percent}} ng emoji/seg",
@@ -115,10 +117,6 @@
         "close": "Isara",
         "ordinal_ordinal_one": "ika-{{count}}",
         "ordinal_ordinal_other": "ika-{{count}}",
-        "celebrateCaption": "Prestige #{{count}}",
-        "celebrateTrialCaption": "Prestige #{{count}} · Nagsimula ang hamon",
-        "celebrateTitle": "+{{essence}} esensiya",
-        "celebrateTierTitle": "+{{essence}} esensiya · bukas na ang tier {{tier}} perks",
         "essenceCaption": "Emoji esensiya",
         "essenceBonus": "+{{bonus}} produksiyon ({{each}} bawat isa)",
         "intro": "Kapag nakaguhit ka na ng sapat na emoji, nagsisimulang magtipon sa paligid mo ang mismong esensiya nila: isang mahiwagang bagay na nag-iiba ng hugis tuwing titingnan mo. Bawat esensiyang hindi ginagastos ay nagpapalakas ng produksiyon, at pambili ang esensiya ng perks na pang-habambuhay.",
@@ -720,5 +718,27 @@
             "secretHoarder": "Magkaroon ng {{amount}} emoji sa bangko nang walang kahit isang building",
             "secretGems": "Magkaroon ng {{amount}} gem nang sabay"
         }
+    },
+    "traits": {
+        "unlocksWith": "Mabubuksan sa {{ordinal}} mong prestige.",
+        "title": "Mga katangian",
+        "slots": "{{picked}} sa {{slots}} ang napili",
+        "introAscending": "Piliin kung paano lalaruin ang susunod na run. Bawat katangian ay may magandang epekto at masamang epekto, at mananatili ito buong run.",
+        "introRun": "Mga katangian ng run na ito. Puwede kang pumili ulit sa susunod mong prestige.",
+        "pickedTag": "✓ NAPILI"
+    },
+    "ascension": {
+        "title": "Pag-akyat",
+        "subtitleAscending": "Maghanda para sa run #{{count}}",
+        "beginRun": "Simulan ang run #{{count}}",
+        "withTraits": "Mga katangian: {{traits}}",
+        "noTraits": "Walang napiling katangian",
+        "runComplete": "Tapos ang run #{{count}}",
+        "essenceGained": "emoji esensiya",
+        "unlockPerkTier": "🔓 Bukas na ang Tier {{tier}} perks",
+        "unlockTrait": "🔓 Bagong katangian: {{icon}} {{name}}",
+        "unlockTrials": "🔓 Bukas na ang mga hamon",
+        "continue": "Magpatuloy",
+        "skip": "Laktawan"
     }
 }

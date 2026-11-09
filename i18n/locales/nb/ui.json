@@ -29,6 +29,7 @@
         "effects": {
             "multiplyBuildingProduction": "• {{buildings}}: dobbel effektivitet.",
             "multiplyTap": "• Trykkene dine er verdt ×{{multiplier}} så mye.",
+            "addToTap": "• Hvert trykk gir {{amount}} flere emojier.",
             "percentageIncreaseTap": "• Trykkene dine er {{percent}} kraftigere.",
             "tapPercentageOfEps": "• Hvert trykk gir {{percent}} av den totale emojiproduksjonen din.",
             "percentageIncreaseProduction": "• Total emojiproduksjon økt med {{percent}}.",
@@ -48,6 +49,7 @@
         "chips": {
             "multiplyBuildingProduction": "{{buildings}} ×{{multiplier}}",
             "multiplyTap": "Trykk ×{{multiplier}}",
+            "addToTap": "Trykk +{{amount}}",
             "percentageIncreaseTap": "Trykk +{{percent}}",
             "percentageIncreaseProduction": "Produksjon +{{percent}}",
             "tapPercentageOfEps": "Trykk +{{percent}} av emojier/sek",
@@ -114,10 +116,6 @@
         "title": "Prestisje",
         "close": "Lukk",
         "ordinal_ordinal_other": "{{count}}.",
-        "celebrateCaption": "PRESTISJE #{{count}}",
-        "celebrateTrialCaption": "PRESTISJE #{{count}} · UTFORDRING STARTET",
-        "celebrateTitle": "+{{essence}} essens",
-        "celebrateTierTitle": "+{{essence}} essens · trinn {{tier}}-fordeler låst opp",
         "essenceCaption": "EMOJIESSENS",
         "essenceBonus": "+{{bonus}} produksjon ({{each}} hver)",
         "intro": "Når du har tegnet nok emojier, begynner selve essensen deres å samle seg rundt deg: et magisk stoff som skifter form hver gang du ser på det. Hver essens du ikke har brukt, øker produksjonen, og med essens kan du kjøpe fordeler som varer for alltid.",
@@ -719,5 +717,27 @@
             "secretHoarder": "Ha {{amount}} emojier i banken uten å eie en eneste bygning",
             "secretGems": "Ha {{amount}} juveler samtidig"
         }
+    },
+    "traits": {
+        "unlocksWith": "Låses opp ved din {{ordinal}} prestisje.",
+        "title": "Egenskaper",
+        "slots": "{{picked}} av {{slots}} valgt",
+        "introAscending": "Velg hvordan neste runde skal spilles. Hver egenskap har en styrke og en svakhet, og varer hele runden.",
+        "introRun": "Egenskapene for denne runden. Du kan velge på nytt neste gang du tar prestisje.",
+        "pickedTag": "✓ VALGT"
+    },
+    "ascension": {
+        "title": "Oppstigning",
+        "subtitleAscending": "Gjør deg klar for runde #{{count}}",
+        "beginRun": "Start runde #{{count}}",
+        "withTraits": "Egenskaper: {{traits}}",
+        "noTraits": "Ingen egenskaper valgt",
+        "runComplete": "Runde #{{count}} fullført",
+        "essenceGained": "emojiessens",
+        "unlockPerkTier": "🔓 Fordeler på trinn {{tier}} låst opp",
+        "unlockTrait": "🔓 Ny egenskap: {{icon}} {{name}}",
+        "unlockTrials": "🔓 Utfordringer låst opp",
+        "continue": "Fortsett",
+        "skip": "Hopp over"
     }
 }

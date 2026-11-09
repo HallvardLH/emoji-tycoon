@@ -29,6 +29,7 @@
         "effects": {
             "multiplyBuildingProduction": "• {{buildings}} är dubbelt så effektiva.",
             "multiplyTap": "• Dina tryck är värda ×{{multiplier}} så mycket.",
+            "addToTap": "• Varje tryck ger {{amount}} fler emojier.",
             "percentageIncreaseTap": "• Dina tryck är {{percent}} kraftfullare.",
             "tapPercentageOfEps": "• Varje tryck ger {{percent}} av din totala emojiproduktion.",
             "percentageIncreaseProduction": "• Total emojiproduktion ökar med {{percent}}.",
@@ -48,6 +49,7 @@
         "chips": {
             "multiplyBuildingProduction": "{{buildings}} ×{{multiplier}}",
             "multiplyTap": "Tryck ×{{multiplier}}",
+            "addToTap": "Tryck +{{amount}}",
             "percentageIncreaseTap": "Tryck +{{percent}}",
             "percentageIncreaseProduction": "Produktion +{{percent}}",
             "tapPercentageOfEps": "Tryck +{{percent}} av emojis/s",
@@ -115,10 +117,6 @@
         "close": "Stäng",
         "ordinal_ordinal_one": "{{count}}:a",
         "ordinal_ordinal_other": "{{count}}:e",
-        "celebrateCaption": "PRESTIGE #{{count}}",
-        "celebrateTrialCaption": "PRESTIGE #{{count}} · UTMANING STARTAD",
-        "celebrateTitle": "+{{essence}} essens",
-        "celebrateTierTitle": "+{{essence}} essens · förmåner i nivå {{tier}} upplåsta",
         "essenceCaption": "EMOJIESSENS",
         "essenceBonus": "+{{bonus}} produktion ({{each}} styck)",
         "intro": "När du har ritat tillräckligt många emojis börjar deras innersta essens samlas runt dig: ett magiskt ämne som byter form varje gång du tittar på det. Varje osparad essens ökar produktionen, och för essens köper du förmåner som varar för evigt.",
@@ -720,5 +718,27 @@
             "secretHoarder": "Ha {{amount}} emojis på banken utan att äga en enda byggnad",
             "secretGems": "Ha {{amount}} juveler samtidigt"
         }
+    },
+    "traits": {
+        "unlocksWith": "Låses upp vid din {{ordinal}} prestige.",
+        "title": "Egenskaper",
+        "slots": "{{picked}} av {{slots}} valda",
+        "introAscending": "Välj hur nästa runda ska spelas. Varje egenskap har en fördel och en nackdel, och gäller hela rundan.",
+        "introRun": "Den här rundans egenskaper. Du kan välja igen nästa gång du gör prestige.",
+        "pickedTag": "✓ VALD"
+    },
+    "ascension": {
+        "title": "Uppstigning",
+        "subtitleAscending": "Gör dig redo för runda #{{count}}",
+        "beginRun": "Starta runda #{{count}}",
+        "withTraits": "Egenskaper: {{traits}}",
+        "noTraits": "Inga egenskaper valda",
+        "runComplete": "Runda #{{count}} klar",
+        "essenceGained": "emojiessens",
+        "unlockPerkTier": "🔓 Förmåner på nivå {{tier}} upplåsta",
+        "unlockTrait": "🔓 Ny egenskap: {{icon}} {{name}}",
+        "unlockTrials": "🔓 Utmaningar upplåsta",
+        "continue": "Fortsätt",
+        "skip": "Hoppa över"
     }
 }

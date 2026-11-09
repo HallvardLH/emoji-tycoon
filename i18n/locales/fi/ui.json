@@ -29,6 +29,7 @@
         "effects": {
             "multiplyBuildingProduction": "• {{buildings}}: tuplateho.",
             "multiplyTap": "• Napautukset ovat ×{{multiplier}} arvokkaampia.",
+            "addToTap": "• Jokainen napautus antaa {{amount}} emojia enemmän.",
             "percentageIncreaseTap": "• Napautukset ovat {{percent}} tehokkaampia.",
             "tapPercentageOfEps": "• Napautus tuottaa {{percent}} koko emojituotannostasi.",
             "percentageIncreaseProduction": "• Emojien kokonaistuotanto kasvaa {{percent}}.",
@@ -48,6 +49,7 @@
         "chips": {
             "multiplyBuildingProduction": "{{buildings}} ×{{multiplier}}",
             "multiplyTap": "Napautus ×{{multiplier}}",
+            "addToTap": "Napautus +{{amount}}",
             "percentageIncreaseTap": "Napautus +{{percent}}",
             "percentageIncreaseProduction": "Tuotanto +{{percent}}",
             "tapPercentageOfEps": "Napautus +{{percent}} emojeista/s",
@@ -114,10 +116,6 @@
         "title": "Prestiisi",
         "close": "Sulje",
         "ordinal_ordinal_other": "{{count}}.",
-        "celebrateCaption": "Prestiisi #{{count}}",
-        "celebrateTrialCaption": "Prestiisi #{{count}} · haaste alkoi",
-        "celebrateTitle": "+{{essence}} essenssiä",
-        "celebrateTierTitle": "+{{essence}} essenssiä · tason {{tier}} edut avattu",
         "essenceCaption": "Emojiessenssi",
         "essenceBonus": "+{{bonus}} tuotantoa ({{each}} / kpl)",
         "intro": "Kun olet piirtänyt tarpeeksi emojeja, niiden syvin olemus alkaa kerääntyä ympärillesi: maaginen aine, joka muuttaa muotoaan aina, kun katsot sitä. Jokainen käyttämätön essenssi kasvattaa tuotantoa, ja essenssillä voit ostaa etuja, jotka säilyvät ikuisesti.",
@@ -719,5 +717,27 @@
             "secretHoarder": "Pidä pankissa emojeja ({{amount}}) omistamatta yhtään rakennusta",
             "secretGems": "Pidä jalokiviä yhtä aikaa: {{amount}}"
         }
+    },
+    "traits": {
+        "unlocksWith": "Avautuu {{ordinal}} prestiisin jälkeen.",
+        "title": "Piirteet",
+        "slots": "{{picked}}/{{slots}} valittu",
+        "introAscending": "Valitse, miten seuraava kierros pelataan. Jokaisella piirteellä on hyvä ja huono puolensa, ja se on voimassa koko kierroksen.",
+        "introRun": "Tämän kierroksen piirteet. Voit valita uudelleen, kun teet seuraavan prestiisin.",
+        "pickedTag": "✓ VALITTU"
+    },
+    "ascension": {
+        "title": "Nousu",
+        "subtitleAscending": "Valmistaudu kierrokseen #{{count}}",
+        "beginRun": "Aloita kierros #{{count}}",
+        "withTraits": "Piirteet: {{traits}}",
+        "noTraits": "Ei valittuja piirteitä",
+        "runComplete": "Kierros #{{count}} päättyi",
+        "essenceGained": "emojiessenssiä",
+        "unlockPerkTier": "🔓 Tason {{tier}} edut avattu",
+        "unlockTrait": "🔓 Uusi piirre: {{icon}} {{name}}",
+        "unlockTrials": "🔓 Haasteet avattu",
+        "continue": "Jatka",
+        "skip": "Ohita"
     }
 }

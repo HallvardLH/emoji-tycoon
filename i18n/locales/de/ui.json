@@ -29,6 +29,7 @@
         "effects": {
             "multiplyBuildingProduction": "• {{buildings}} sind doppelt so effizient.",
             "multiplyTap": "• Tippen ist ×{{multiplier}} so viel wert.",
+            "addToTap": "• Jedes Tippen bringt {{amount}} Emojis mehr.",
             "percentageIncreaseTap": "• Tippen ist {{percent}} stärker.",
             "tapPercentageOfEps": "• Tippen bringt {{percent}} deiner gesamten Emoji-Produktion.",
             "percentageIncreaseProduction": "• Gesamte Emoji-Produktion um {{percent}} erhöht.",
@@ -48,6 +49,7 @@
         "chips": {
             "multiplyBuildingProduction": "{{buildings}} ×{{multiplier}}",
             "multiplyTap": "Tippen ×{{multiplier}}",
+            "addToTap": "Tippen +{{amount}}",
             "percentageIncreaseTap": "Tippen +{{percent}}",
             "percentageIncreaseProduction": "Produktion +{{percent}}",
             "tapPercentageOfEps": "Tipps +{{percent}} der Emojis/Sek.",
@@ -114,10 +116,6 @@
         "title": "Prestige",
         "close": "Schließen",
         "ordinal_ordinal_other": "{{count}}.",
-        "celebrateCaption": "Prestige #{{count}}",
-        "celebrateTrialCaption": "Prestige #{{count}} · Prüfung gestartet",
-        "celebrateTitle": "+{{essence}} Essenz",
-        "celebrateTierTitle": "+{{essence}} Essenz · Perks der Stufe {{tier}} freigeschaltet",
         "essenceCaption": "Emoji-Essenz",
         "essenceBonus": "+{{bonus}} Produktion ({{each}} pro Essenz)",
         "intro": "Hast du genug Emojis gezeichnet, sammelt sich ihre Essenz um dich: eine magische Substanz, die jedes Mal ihre Form ändert, wenn du hinsiehst. Jede nicht ausgegebene Essenz steigert die Produktion, und mit Essenz kaufst du Perks, die für immer bleiben.",
@@ -719,5 +717,27 @@
             "secretHoarder": "Hab {{amount}} Emojis auf der Bank, ohne ein Gebäude zu besitzen",
             "secretGems": "Besitze {{amount}} Juwelen gleichzeitig"
         }
+    },
+    "traits": {
+        "unlocksWith": "Wird mit deinem {{ordinal}} Prestige freigeschaltet.",
+        "title": "Eigenschaften",
+        "slots": "{{picked}} von {{slots}} gewählt",
+        "introAscending": "Wähle, wie der nächste Durchgang läuft. Jede Eigenschaft hat einen Vorteil und einen Nachteil und gilt für den ganzen Durchgang.",
+        "introRun": "Die Eigenschaften dieses Durchgangs. Beim nächsten Prestige kannst du neu wählen.",
+        "pickedTag": "✓ GEWÄHLT"
+    },
+    "ascension": {
+        "title": "Aufstieg",
+        "subtitleAscending": "Mach dich bereit für Durchgang #{{count}}",
+        "beginRun": "Durchgang #{{count}} starten",
+        "withTraits": "Eigenschaften: {{traits}}",
+        "noTraits": "Keine Eigenschaften gewählt",
+        "runComplete": "Durchgang #{{count}} geschafft",
+        "essenceGained": "Emoji-Essenz",
+        "unlockPerkTier": "🔓 Perks der Stufe {{tier}} freigeschaltet",
+        "unlockTrait": "🔓 Neue Eigenschaft: {{icon}} {{name}}",
+        "unlockTrials": "🔓 Prüfungen freigeschaltet",
+        "continue": "Weiter",
+        "skip": "Überspringen"
     }
 }

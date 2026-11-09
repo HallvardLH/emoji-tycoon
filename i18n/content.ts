@@ -9,6 +9,7 @@ import { effectData } from "../scripts/game/effects/effectData";
 import { BuildingNames } from "../scripts/game/buildings/buildingNamesType";
 import type { Perk } from "../scripts/game/prestige/perks";
 import type { Trial } from "../scripts/game/prestige/trials";
+import type { Trait } from "../scripts/game/prestige/traits";
 import type { FunValueEffect } from "../scripts/game/funValues";
 
 /**
@@ -95,6 +96,18 @@ export function getTrialRule(trial: Trial) {
 /** What completing the trial gives, forever */
 export function getTrialReward(trial: Trial) {
     return translate(`trials.${trial.id}.reward`, trial.reward);
+}
+
+export function getTraitName(trait: Trait) {
+    return translate(`traits.${trait.id}.name`, trait.name);
+}
+
+export function getTraitUpside(trait: Trait) {
+    return translate(`traits.${trait.id}.upside`, trait.upside);
+}
+
+export function getTraitDownside(trait: Trait) {
+    return translate(`traits.${trait.id}.downside`, trait.downside);
 }
 
 /**

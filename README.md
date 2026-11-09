@@ -69,12 +69,12 @@ The header shows your bank, with the per-second rate at a fixed position under i
 
 **Emojis per tap (EPT):**
 ```
-EPT = (baseEPT  +  EPS × Σ tap-% of EPS)
+EPT = (baseEPT  +  Σ flat tap additions  +  EPS × Σ tap-% of EPS)
       × Π tap multipliers (upgrades, effects)
       × (1 + Σ tap % increases)
       × combo multiplier × fun value multiplier
 ```
-Tap multipliers boost the whole tap, including the share of production the "hands" add. Tap % increases (the Petting zoo and Sports center helpers) add up rather than compound. Active effects of the same kind add up too (see Effect emojis). (They used to boost only the base tap, which made "Tapping ×2" worth next to nothing once hands carried tapping.)
+Tap multipliers boost the whole tap, including the share of production the "hands" add. Flat tap additions come from the early Drawing hand tap upgrades (+1, +2, +4, +8, +16). Tap % increases (the Petting zoo and Sports center helpers, +2% each) add up rather than compound, rounded down to the nearest 1%. Active effects of the same kind add up too (see Effect emojis). (They used to boost only the base tap, which made "Tapping ×2" worth next to nothing once hands carried tapping.)
 
 ### Combo
 - **Hidden tap boost:** each tap adds 1 to it, and every 10 boost is one combo level (×1, ×2, ×3…). The multiplier applies to EPT.
@@ -139,7 +139,7 @@ Tap multipliers boost the whole tap, including the share of production the "hand
 ### Upgrades
 | Kind | Effect | Unlock | Price |
 |---|---|---|---|
-| **Standard building** | ×2 that building's EPS (some Drawing hand ones also multiply tapping: ×1.5, then ×1.25 from tier 12) | Own 5 / 10 / 15 / 20 / 30 / 40 / 50 / 60 / 75 / 90 / 100 / 125 / 150, then +25 per tier | 4 × the building's price at the unlock amount |
+| **Standard building** | ×2 that building's EPS. Drawing hand also has five tap upgrades (+1, +2, +4, +8, +16 emojis per tap) at tiers 0–4 | Own 5 / 10 / 15 / 20 / 30 / 40 / 50 / 60 / 75 / 90 / 100 / 125 / 150, then +25 per tier | 4 × the building's price at the unlock amount |
 | **Helper** | +X% total EPS or +X% tapping | Every 10 of a building | The building's price at 10t + 5 owned |
 | **Big Emoji ("hands")** | Tapping gains +1% of EPS (the first), then 0.1% less each (0.9%, 0.8%…) down to +0.1% (the 10th on) | Emojis earned from tapping ≥ 10^(tier+2) | `10^(tier+4) + taps × 10^tier` |
 | **Combo level** | Turns the combo on, then +1 max combo | Combo taps (see Combo) | Fixed, see table above |
@@ -149,9 +149,9 @@ Tap multipliers boost the whole tap, including the share of production the "hand
 
 Each building has its own themed set:
 - **Farm:** veggie helpers.
-- **Petting zoo:** animal helpers, +10% tapping each (added, not compounded).
+- **Petting zoo:** animal helpers, +2% tapping each (added, not compounded).
 - **Restaurant:** dish helpers, +1% total EPS each.
-- **Sports center:** athlete helpers, +10% tapping each (added, not compounded).
+- **Sports center:** athlete helpers, +2% tapping each (added, not compounded).
 - **Space station:** crew and sights helpers, +1% total EPS each.
 - **Candy kingdom:** sweet helpers, +1% total EPS each.
 - **Big Emoji:** 25 "hands" that turn demonic late on.
@@ -174,11 +174,11 @@ None appear until **Good vibes** is bought. Like Cookie Clicker's golden cookie 
 
 | Emoji | Effect | Duration | On screen for |
 |---|---|---|---|
-| 🚀 | ×2 tapping | 20 s | 25 s |
-| 🦾 | ×3 tapping | 15 s | 25 s |
-| 🍀 | ×2 production | 30 s | 25 s |
-| 😈 | ×77 production (fun value 17 only, 5%) | 4 s | 10 s |
-| 💣 | ×0.5 production (bad, only after 1 M EPS) | 15 s | 15 s |
+| 🚀 | ×2 tapping | 10 s | 25 s |
+| 🦾 | ×3 tapping | 8 s | 25 s |
+| 🍀 | ×2 production | 15 s | 25 s |
+| 😈 | ×77 production (fun value 17 only, 5%) | 2 s | 10 s |
+| 💣 | ×0.5 production (bad, only after 1 M EPS) | 8 s | 15 s |
 | 🎁 | Gift: min(15 min of EPS, 10% of bank) + 0–999 | instant | 25 s |
 
 - **Spawning:** the chance rises with time since the last spawn. The first is possible at 100 s, the typical wait is about two minutes, and a spawn is guaranteed by 300 s. There's a 1% chance of a double.
@@ -232,7 +232,7 @@ Ads come from AdMob (`scripts/admob.ts`, loaded by `scripts/ads.native.ts`; on t
 | Rewarded | Gem store: +2 gems (`scripts/game/gems/adRewards.ts`) | 5 a day |
 | Rewarded | Gem powers: +10 min of ×2 boost | 3 a day |
 | App open | Starting the game, or coming back after at least 1 min | Not in a new player's first session; only at the start if it's ready within 5 s |
-| Interstitial | After a prestige | Never the first prestige |
+| Interstitial | Beginning the next run after a prestige (`app/ascension.tsx`) | Never after the first prestige |
 
 App open ads and interstitials also wait 3 minutes after any full screen ad. Gem and boost ads aren't offered on the released web game, and ads the player doesn't ask for stay out of screenshot mode.
 
@@ -273,8 +273,9 @@ A secret number from 1–100, rolled on a new game and on reset, like Cookie Cli
 
 ### Prestige (emoji essence ✨)
 - **Earning essence:** the essence all-time emojis drawn are worth is `floor((total drawn / 2×10^8)^(1/4))`. Prestiging pays out what that's worth beyond the essence already earned, so each run has to go further to earn as much again. About 50 essence for the first prestige, at ~1 Qa drawn.
-- **What it does:** each *unspent* essence gives +2% production (2.5% with Resonance). Essence also buys perks, which gives up that bonus (Overflow gives half of it back).
-- **Resets:** bank, buildings, building upgrades, hands, effects. **Keeps:** collection, all-time stats, combo and effect emoji upgrades, fun value, essence, perks and trial rewards.
+- **What it does:** each *unspent* essence gives +2% production (2.5% with Resonance, 3% with Enlightenment). Essence also buys perks, which gives up that bonus (Overflow gives half of it back).
+- **Resets:** bank, buildings, building upgrades, hands, effects. **Keeps:** collection, all-time stats, combo and effect emoji upgrades, fun value, essence, perks, traits and trial rewards.
+- **Ascension** (`app/ascension.tsx`): prestiging opens a full-screen reveal (the essence counts up, what the prestige unlocked, and a new star lighting up in the sky), then the ascension menu with two tabs: Perks and Traits. The game holds while ascending (`prestige.ascending`: no production, play time or effects, see `gameLoop.ts`) until **Begin run**, which applies the run's head start (Head start, Old hands, a trial's stash) and traits (`beginRun()` in `prestige.ts`). It can't be swiped or backed out of, and closing the app mid-ascension returns to it. During a run the same menu opens from the prestige screen to buy perks; traits are shown but locked.
 - **Perks:** each prestige unlocks the next tier (tier 1 after the first prestige, and so on):
 
 | Tier | Perk | Cost | Effect |
@@ -282,21 +283,49 @@ A secret number from 1–100, rolled on a new game and on reset, like Cookie Cli
 | 1 | Overtime ⏳ | 5 | Good effects last 50% longer |
 | 1 | Gift wrap 🎀 | 15 | Gifts give twice as much |
 | 1 | Head start 🎒 | 10 | Start every run with 5 minutes of your last run's best production |
+| 1 | Old hands 🧤 | 20 | Start every run with 10 Drawing hands |
 | 2 | Lucky streak 🍀 | 40 | Effect emojis appear 50% more often |
 | 2 | Shiny sense 🌟 | 30 | Shiny emojis twice as likely |
 | 2 | Resonance 🔮 | 60 | Unspent essence gives +2.5% each |
+| 2 | Echo 📣 | 50 | Taps are worth 25% more |
 | 3 | Collector's pride 📖 | 150 | +0.03% production per different emoji collected |
 | 3 | Bulk discount 🏷️ | 200 | Buildings 10% cheaper |
 | 3 | Magnet 🧲 | 120 | Effect emojis stay on screen twice as long |
+| 3 | Blueprints 📐 | 175 | Building upgrades 25% cheaper |
 | 4 | Neighbourhood 🏘️ | 500 | +3% production per kind of building owned |
 | 4 | Muscle memory ✋ | 400 | Keep Big Emoji hands when prestiging |
 | 4 | Steady hands 🔥 | 300 | Combo drains 20% slower |
+| 4 | Polymath 🧩 | 350 | +1 trait slot |
 | 5 | Momentum 🌊 | 800 | +1% production per 10 minutes played this run, up to +50% |
 | 5 | Second wind 💨 | 1,000 | +1 max combo |
 | 5 | Golden touch 👑 | 600 | Shiny emojis worth 5× as much |
 | 6 | Overflow 🫗 | 2,500 | Spent essence keeps half its production bonus |
 | 6 | Hall of fame 🏆 | 2,000 | +10% production per trial completed |
 | 6 | Flying start 🚀 | 1,500 | Head start gives 30 minutes instead of 5 (needs Head start) |
+| 7 | Stargazer 🔭 | 4,000 | +3% production per star in the sky (one per prestige) |
+| 7 | Enlightenment 🪷 | 6,000 | Unspent essence gives +3% each (needs Resonance) |
+| 7 | Ascendant 🌌 | 5,000 | +1 trait slot (needs Polymath) |
+
+- **Traits** (`scripts/game/prestige/traits.ts`): free, picked while ascending, kept for the whole run. Each has an upside and a downside. One slot, plus one each from Polymath and Ascendant; picking past the limit replaces the oldest pick. A run keeps the traits of the run before unless they're changed.
+
+| Trait | Upside | Downside | From prestige |
+|---|---|---|---|
+| Tapper 👆 | Taps ×3 | Production ×0.6 | 1 |
+| Idler 😴 | Production ×1.4 | Taps ×0.25 | 1 |
+| Architect 🏗️ | Buildings 20% cheaper | Building upgrades ×3 | 1 |
+| Gambler 🎲 | Effect emojis twice as often | Good effects last half as long | 2 |
+| Treasure hunter 🔍 | Shiny emojis 3× as likely | Production ×0.85 | 3 |
+| Combo artist 🥁 | +2 max combo | Combo drains 50% faster | 4 |
+
+- **Story** (`scripts/game/prestige/story.ts`): told without words, as signs that build up over the game. Something has been watching the Big Emoji since the first tap: the First Emoji, a wobbly face drawn by a beginner.
+  1. **Watching:** now and then a pair of 👀 falls with the emoji rain (from your first Bank, or any prestige). A little more often as prestiges add up.
+  2. **Blinking:** the Big Emoji blinks (😑) every 45 to 90 seconds (from your first Temple of the Big Emoji in the sky, or the 2nd prestige).
+  3. **Stars:** each prestige lights a star in the sky behind the Big Emoji (`components/gameUI/Sky.tsx`). They look scattered at first.
+  4. **The face:** a faint, wobbly face shows through the sky, and the stars turn out to sit on its lines (from your first Emoji black hole, or the 4th prestige). It gets a little clearer with each prestige after.
+  5. **Its gaze:** the face's eyes wander, and look down at the Big Emoji whenever you tap it (from your first The first emoji, or the 8th prestige).
+  6. **Complete:** the 11th star finishes its smile, and the Big Emoji winks (😉) instead of blinking.
+
+  The building signs show in any run where the building is owned, and stay for good once enough prestiges have passed. The ascension's reveal shows the sky, with the new star arriving.
 
 Saves that bought the old offline perks (Night shift, Graveyard shift) get their essence back on load.
 
@@ -309,10 +338,10 @@ Saves that bought the old offline perks (Night shift, Graveyard shift) get their
 | Dark sky 🌑 | No effect emojis | 50% of last run | Effect emojis appear 25% more often |
 
 - **Run tracking:** play time this run (`prestige.runSeconds`, not counting time away), emojis drawn this run, and essence per hour played. Once the rate drops below 80% of the run's best, the screen suggests prestiging. The last 10 runs are kept in `prestige.history`.
-- **UI:** a ✨ chip on the home screen fills toward the next essence and shows what a prestige would pay. It opens `app/prestige.tsx`: the active trial, the reset (two-tap confirm) with run stats, trials, perk tiers and past runs.
+- **UI:** a ✨ chip on the home screen fills toward the next essence and shows what a prestige would pay. It opens `app/prestige.tsx`: the active trial, the reset (two-tap confirm) with run stats, gem extras, trials, a link to the ascension menu, and past runs.
 - **Pacing (balance sim, player tapping a quarter of the time, prestiging when it would double the essence bonus):**
   - The first prestige comes at about 19 h, with runs shrinking to about 5 h by the 6th.
-  - Runs lengthened again after about 100 h, once the first 12 perks were owned. Tiers 5 and 6 and the trials were added for that stretch but haven't been through the sim yet.
+  - Runs lengthened again after about 100 h, once the first 12 perks were owned. Tiers 5 to 7, the trials and the traits were added for that stretch but haven't been through the sim yet.
 
 ### Cheats (drawer)
 Development builds only: the 🧪 button and the drawer aren't in release builds. The drawer has these sections:

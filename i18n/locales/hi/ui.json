@@ -29,6 +29,7 @@
         "effects": {
             "multiplyBuildingProduction": "• {{buildings}}: दोगुनी कुशलता।",
             "multiplyTap": "• हर टैप का मूल्य ×{{multiplier}}।",
+            "addToTap": "• हर टैप पर {{amount}} इमोजी ज़्यादा मिलते हैं।",
             "percentageIncreaseTap": "• टैप {{percent}} ज़्यादा ताक़तवर होता है।",
             "tapPercentageOfEps": "• हर टैप से कुल इमोजी उत्पादन का {{percent}} मिलता है।",
             "percentageIncreaseProduction": "• कुल इमोजी उत्पादन में {{percent}} की बढ़त।",
@@ -48,6 +49,7 @@
         "chips": {
             "multiplyBuildingProduction": "{{buildings}} ×{{multiplier}}",
             "multiplyTap": "टैपिंग ×{{multiplier}}",
+            "addToTap": "टैपिंग +{{amount}}",
             "percentageIncreaseTap": "टैपिंग +{{percent}}",
             "percentageIncreaseProduction": "उत्पादन +{{percent}}",
             "tapPercentageOfEps": "टैप में +{{percent}} इमोजी/सेकंड",
@@ -118,10 +120,6 @@
         "ordinal_ordinal_few": "{{count}}थी",
         "ordinal_ordinal_many": "{{count}}ठी",
         "ordinal_ordinal_other": "{{count}}वीं",
-        "celebrateCaption": "प्रेस्टीज #{{count}}",
-        "celebrateTrialCaption": "प्रेस्टीज #{{count}} · चुनौती शुरू",
-        "celebrateTitle": "+{{essence}} सार",
-        "celebrateTierTitle": "+{{essence}} सार · टियर {{tier}} के पर्क अनलॉक",
         "essenceCaption": "इमोजी सार",
         "essenceBonus": "+{{bonus}} उत्पादन (हर सार से {{each}})",
         "intro": "काफ़ी इमोजी बना लेने के बाद, उनका असली सार तुम्हारे आस-पास जमा होने लगता है: एक जादुई पदार्थ, जो हर बार देखने पर अपना रूप बदल लेता है। बिना खर्च किया हर सार उत्पादन बढ़ाता है, और सार से ऐसे पर्क खरीदे जा सकते हैं जो हमेशा साथ रहते हैं।",
@@ -723,5 +721,27 @@
             "secretHoarder": "बिना किसी इमारत के बैंक में {{amount}} इमोजी रखो",
             "secretGems": "एक साथ {{amount}} रत्न रखो"
         }
+    },
+    "traits": {
+        "unlocksWith": "{{ordinal}} बार प्रेस्टीज करने पर अनलॉक होती हैं।",
+        "title": "गुण",
+        "slots": "{{slots}} में से {{picked}} चुने",
+        "introAscending": "चुनो कि अगला दौर कैसे खेला जाए। हर गुण का एक फ़ायदा और एक नुकसान है, और वो पूरे दौर तक रहता है।",
+        "introRun": "इस दौर के गुण। अगली बार प्रेस्टीज करने पर फिर से चुन सकते हो।",
+        "pickedTag": "✓ चुना"
+    },
+    "ascension": {
+        "title": "आरोहण",
+        "subtitleAscending": "दौर #{{count}} के लिए तैयार हो जाओ",
+        "beginRun": "दौर #{{count}} शुरू करो",
+        "withTraits": "गुण: {{traits}}",
+        "noTraits": "कोई गुण नहीं चुना",
+        "runComplete": "दौर #{{count}} पूरा",
+        "essenceGained": "इमोजी सार",
+        "unlockPerkTier": "🔓 टियर {{tier}} के पर्क अनलॉक",
+        "unlockTrait": "🔓 नया गुण: {{icon}} {{name}}",
+        "unlockTrials": "🔓 चुनौतियाँ अनलॉक",
+        "continue": "आगे बढ़ो",
+        "skip": "छोड़ो"
     }
 }

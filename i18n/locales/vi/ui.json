@@ -27,6 +27,7 @@
         "effects": {
             "multiplyBuildingProduction": "• {{buildings}}: hiệu suất gấp đôi.",
             "multiplyTap": "• Mỗi lần chạm có giá trị ×{{multiplier}}.",
+            "addToTap": "• Mỗi lần chạm cho thêm {{amount}} emoji.",
             "percentageIncreaseTap": "• Chạm mạnh hơn {{percent}}.",
             "tapPercentageOfEps": "• Mỗi lần chạm nhận thêm {{percent}} tổng sản lượng emoji của bạn.",
             "percentageIncreaseProduction": "• Tổng sản lượng emoji tăng {{percent}}.",
@@ -46,6 +47,7 @@
         "chips": {
             "multiplyBuildingProduction": "{{buildings}} ×{{multiplier}}",
             "multiplyTap": "Chạm ×{{multiplier}}",
+            "addToTap": "Chạm +{{amount}}",
             "percentageIncreaseTap": "Chạm +{{percent}}",
             "percentageIncreaseProduction": "Sản lượng +{{percent}}",
             "tapPercentageOfEps": "Chạm +{{percent}} emoji/giây",
@@ -113,10 +115,6 @@
         "close": "Đóng",
         "ordinal_ordinal_one": "thứ {{count}}",
         "ordinal_ordinal_other": "thứ {{count}}",
-        "celebrateCaption": "DANH VỌNG #{{count}}",
-        "celebrateTrialCaption": "DANH VỌNG #{{count}} · BẮT ĐẦU THỬ THÁCH",
-        "celebrateTitle": "+{{essence}} tinh chất",
-        "celebrateTierTitle": "+{{essence}} tinh chất · mở khóa đặc quyền bậc {{tier}}",
         "essenceCaption": "TINH CHẤT EMOJI",
         "essenceBonus": "+{{bonus}} sản lượng ({{each}} mỗi đơn vị)",
         "intro": "Khi bạn đã vẽ đủ nhiều emoji, tinh chất của chúng bắt đầu tụ lại quanh bạn: một chất liệu kỳ diệu đổi hình dạng mỗi khi bạn nhìn vào. Mỗi đơn vị tinh chất chưa tiêu đều tăng sản lượng, và tinh chất mua được những đặc quyền tồn tại mãi mãi.",
@@ -668,5 +666,27 @@
             "secretHoarder": "Có {{amount}} emoji trong kho mà không sở hữu công trình nào",
             "secretGems": "Giữ cùng lúc {{amount}} đá quý"
         }
+    },
+    "traits": {
+        "unlocksWith": "Mở khóa ở lần danh vọng {{ordinal}}.",
+        "title": "Đặc tính",
+        "slots": "Đã chọn {{picked}}/{{slots}}",
+        "introAscending": "Chọn cách chơi cho lượt tới. Mỗi đặc tính có một mặt lợi và một mặt hại, và giữ nguyên suốt lượt.",
+        "introRun": "Đặc tính của lượt này. Bạn có thể chọn lại ở lần lên danh vọng tới.",
+        "pickedTag": "✓ ĐÃ CHỌN"
+    },
+    "ascension": {
+        "title": "Phi thăng",
+        "subtitleAscending": "Sẵn sàng cho lượt #{{count}}",
+        "beginRun": "Bắt đầu lượt #{{count}}",
+        "withTraits": "Đặc tính: {{traits}}",
+        "noTraits": "Chưa chọn đặc tính",
+        "runComplete": "Hoàn thành lượt #{{count}}",
+        "essenceGained": "tinh chất emoji",
+        "unlockPerkTier": "🔓 Đã mở đặc quyền bậc {{tier}}",
+        "unlockTrait": "🔓 Đặc tính mới: {{icon}} {{name}}",
+        "unlockTrials": "🔓 Đã mở thử thách",
+        "continue": "Tiếp tục",
+        "skip": "Bỏ qua"
     }
 }

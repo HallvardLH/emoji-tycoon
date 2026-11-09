@@ -16,7 +16,7 @@ const sportsCenterHelperUpgrade = {
     ...baseSportsCenterUpgrade,
     categories: ["Percentage increase tap" as UpgradeCateogoriesType],
     unlockCondition: "Building helper" as UnlockConditionType,
-    emojisPerTapPercentageIncrease: 0.1,
+    emojisPerTapPercentageIncrease: 0.02,
     variant: "Helper" as UpgradeVariantsType,
 };
 

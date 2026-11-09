@@ -313,6 +313,31 @@
             "description": "L'intrication quantique de tes doigts te permet de dessiner des emojis à la vitesse de la lumière.",
             "quote": "Mes doigts sont à deux endroits à la fois. Et des deux côtés, ils te détestent."
         },
+        "120": {
+            "name": "Tape ferme",
+            "description": "Tapez avec conviction. Chaque tape rapporte 1 emoji de plus.",
+            "quote": "Pas trop fort. Pas trop doux. Juste comme il faut."
+        },
+        "121": {
+            "name": "Double tape",
+            "description": "Deux doigts, une tape. Chaque tape rapporte 2 emojis de plus.",
+            "quote": "La paix, et deux fois plus d'emojis."
+        },
+        "122": {
+            "name": "Craquer les doigts",
+            "description": "Des jointures échauffées tapent plus fort. Chaque tape rapporte 4 emojis de plus.",
+            "quote": "Crac. Crac. Crac. Tape."
+        },
+        "123": {
+            "name": "Main ouverte",
+            "description": "Pourquoi taper avec un doigt quand on peut claquer avec cinq ? Chaque tape rapporte 8 emojis de plus.",
+            "quote": "L'écran n'avait rien fait pour mériter ça."
+        },
+        "124": {
+            "name": "Check du poing",
+            "description": "Le grand emoji vous rend votre check. Chaque tape rapporte 16 emojis de plus.",
+            "quote": "Respect."
+        },
         "200": {
             "name": "Crayons améliorés",
             "description": "De meilleurs crayons pour des emojis plus détaillés.",
@@ -2716,6 +2741,34 @@
         "flyingStart": {
             "name": "Départ lancé",
             "description": "Longueur d'avance donne 30 minutes de production au lieu de 5"
+        },
+        "oldHands": {
+            "name": "Mains expertes",
+            "description": "Commence chaque partie avec 10 Mains dessinatrices"
+        },
+        "echo": {
+            "name": "Écho",
+            "description": "Les tapotements valent 25 % de plus"
+        },
+        "blueprints": {
+            "name": "Plans d'architecte",
+            "description": "Les améliorations de bâtiments coûtent 25 % moins cher"
+        },
+        "polymath": {
+            "name": "Touche-à-tout",
+            "description": "Choisis un trait de plus à chaque partie"
+        },
+        "enlightenment": {
+            "name": "Illumination",
+            "description": "Chaque essence non dépensée booste la production de 3 %"
+        },
+        "ascendant": {
+            "name": "Transcendant",
+            "description": "Choisis un trait de plus à chaque partie"
+        },
+        "stargazer": {
+            "name": "Astronome",
+            "description": "+3 % de production par étoile dans ton ciel"
         }
     },
     "trials": {
@@ -2787,6 +2840,38 @@
         "100": {
             "name": "Triste centaine",
             "description": "Les stats affichent 😭 à côté de la valeur fun"
+        }
+    },
+    "traits": {
+        "tapper": {
+            "name": "Tapoteur",
+            "upside": "Les tapotements valent ×3",
+            "downside": "Production ×0,6"
+        },
+        "idler": {
+            "name": "Flemmard",
+            "upside": "Production ×1,4",
+            "downside": "Les tapotements valent ×0,25"
+        },
+        "architect": {
+            "name": "Architecte",
+            "upside": "Les bâtiments coûtent 20 % moins cher",
+            "downside": "Les améliorations de bâtiments coûtent ×3"
+        },
+        "gambler": {
+            "name": "Parieur",
+            "upside": "Les emojis d'effet apparaissent deux fois plus souvent",
+            "downside": "Les bons effets durent deux fois moins longtemps"
+        },
+        "treasureHunter": {
+            "name": "Chasseur de trésors",
+            "upside": "Les emojis brillants sont 3 fois plus probables",
+            "downside": "Production ×0,85"
+        },
+        "comboArtist": {
+            "name": "Artiste du combo",
+            "upside": "+2 à ton combo max",
+            "downside": "Le combo se vide 50 % plus vite"
         }
     }
 }

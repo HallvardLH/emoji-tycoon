@@ -29,6 +29,7 @@
         "effects": {
             "multiplyBuildingProduction": "• {{buildings}} er dobbelt så effektive.",
             "multiplyTap": "• Tryk er ×{{multiplier}} så meget værd.",
+            "addToTap": "• Hvert tryk giver {{amount}} flere emojis.",
             "percentageIncreaseTap": "• Tryk er {{percent}} kraftigere.",
             "tapPercentageOfEps": "• Tryk giver {{percent}} af din samlede emoji-produktion.",
             "percentageIncreaseProduction": "• Samlet emoji-produktion øget med {{percent}}.",
@@ -48,6 +49,7 @@
         "chips": {
             "multiplyBuildingProduction": "{{buildings}} ×{{multiplier}}",
             "multiplyTap": "Tryk ×{{multiplier}}",
+            "addToTap": "Tryk +{{amount}}",
             "percentageIncreaseTap": "Tryk +{{percent}}",
             "percentageIncreaseProduction": "Produktion +{{percent}}",
             "tapPercentageOfEps": "Tryk +{{percent}} af emojis/sek.",
@@ -114,10 +116,6 @@
         "title": "Prestige",
         "close": "Luk",
         "ordinal_ordinal_other": "{{count}}.",
-        "celebrateCaption": "PRESTIGE #{{count}}",
-        "celebrateTrialCaption": "PRESTIGE #{{count}} · PRØVELSE STARTET",
-        "celebrateTitle": "+{{essence}} essens",
-        "celebrateTierTitle": "+{{essence}} essens · trin {{tier}}-fordele låst op",
         "essenceCaption": "EMOJI-ESSENS",
         "essenceBonus": "+{{bonus}} produktion ({{each}} hver)",
         "intro": "Når du har tegnet nok emojis, begynder selve deres essens at samle sig omkring dig: et magisk stof, der skifter form, hver gang du kigger på det. Hver ubrugt essens øger produktionen, og for essens kan du købe fordele, der varer for evigt.",
@@ -719,5 +717,27 @@
             "secretHoarder": "Hav {{amount}} emojis i banken uden at eje en eneste bygning",
             "secretGems": "Hav {{amount}} ædelsten på én gang"
         }
+    },
+    "traits": {
+        "unlocksWith": "Låses op ved din {{ordinal}} prestige.",
+        "title": "Træk",
+        "slots": "{{picked}} af {{slots}} valgt",
+        "introAscending": "Vælg, hvordan næste runde skal spilles. Hvert træk har en god og en dårlig side og gælder hele runden.",
+        "introRun": "Denne rundes træk. Du kan vælge igen, næste gang du laver prestige.",
+        "pickedTag": "✓ VALGT"
+    },
+    "ascension": {
+        "title": "Opstigning",
+        "subtitleAscending": "Gør klar til runde #{{count}}",
+        "beginRun": "Start runde #{{count}}",
+        "withTraits": "Træk: {{traits}}",
+        "noTraits": "Ingen træk valgt",
+        "runComplete": "Runde #{{count}} gennemført",
+        "essenceGained": "emoji-essens",
+        "unlockPerkTier": "🔓 Fordele på trin {{tier}} låst op",
+        "unlockTrait": "🔓 Nyt træk: {{icon}} {{name}}",
+        "unlockTrials": "🔓 Prøvelser låst op",
+        "continue": "Fortsæt",
+        "skip": "Spring over"
     }
 }

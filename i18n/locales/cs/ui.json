@@ -33,6 +33,7 @@
         "effects": {
             "multiplyBuildingProduction": "• {{buildings}}: dvojnásobná efektivita.",
             "multiplyTap": "• Ťuknutí mají ×{{multiplier}} větší hodnotu.",
+            "addToTap": "• Každé ťuknutí dá o {{amount}} emoji víc.",
             "percentageIncreaseTap": "• Ťukání je o {{percent}} silnější.",
             "tapPercentageOfEps": "• Ťuknutí ti dá {{percent}} celkové produkce emoji.",
             "percentageIncreaseProduction": "• Celková produkce emoji vzrostla o {{percent}}.",
@@ -52,6 +53,7 @@
         "chips": {
             "multiplyBuildingProduction": "{{buildings}} ×{{multiplier}}",
             "multiplyTap": "Ťukání ×{{multiplier}}",
+            "addToTap": "Ťukání +{{amount}}",
             "percentageIncreaseTap": "Ťukání +{{percent}}",
             "percentageIncreaseProduction": "Produkce +{{percent}}",
             "tapPercentageOfEps": "Ťuknutí +{{percent}} emoji/s",
@@ -118,10 +120,6 @@
         "title": "Prestiž",
         "close": "Zavřít",
         "ordinal_ordinal_other": "{{count}}.",
-        "celebrateCaption": "PRESTIŽ #{{count}}",
-        "celebrateTrialCaption": "PRESTIŽ #{{count}} · ZKOUŠKA ZAHÁJENA",
-        "celebrateTitle": "+{{essence}} esence",
-        "celebrateTierTitle": "+{{essence}} esence · odemčeny výhody úrovně {{tier}}",
         "essenceCaption": "EMOJI ESENCE",
         "essenceBonus": "+{{bonus}} produkce ({{each}} za kus)",
         "intro": "Když nakreslíš dost emoji, začne se kolem tebe hromadit jejich samotná esence: kouzelná látka, která mění tvar, kdykoli se na ni podíváš. Každá neutracená esence zvyšuje produkci a za esenci si koupíš výhody, které vydrží navždy.",
@@ -823,5 +821,27 @@
             "secretHoarder": "Měj v bance emoji ({{amount}}), aniž bys vlastnil jedinou budovu",
             "secretGems": "Měj naráz drahokamy: {{amount}}"
         }
+    },
+    "traits": {
+        "unlocksWith": "Odemkne se s tvou {{ordinal}} prestiží.",
+        "title": "Rysy",
+        "slots": "Vybráno {{picked}} z {{slots}}",
+        "introAscending": "Vyber, jak se bude hrát příští kolo. Každý rys má své plus i minus a platí po celé kolo.",
+        "introRun": "Rysy tohoto kola. Při příští prestiži můžeš vybrat znovu.",
+        "pickedTag": "✓ VYBRÁNO"
+    },
+    "ascension": {
+        "title": "Vzestup",
+        "subtitleAscending": "Připrav se na kolo #{{count}}",
+        "beginRun": "Začít kolo #{{count}}",
+        "withTraits": "Rysy: {{traits}}",
+        "noTraits": "Žádné vybrané rysy",
+        "runComplete": "Kolo #{{count}} dokončeno",
+        "essenceGained": "emoji esence",
+        "unlockPerkTier": "🔓 Odemčeny výhody úrovně {{tier}}",
+        "unlockTrait": "🔓 Nový rys: {{icon}} {{name}}",
+        "unlockTrials": "🔓 Odemčeny zkoušky",
+        "continue": "Pokračovat",
+        "skip": "Přeskočit"
     }
 }

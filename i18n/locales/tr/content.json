@@ -313,6 +313,31 @@
             "description": "Parmaklarındaki kuantum dolanıklığı, ışık hızında emoji çizmeni sağlar.",
             "quote": "Parmaklarım aynı anda iki yerde. İkisi de senden nefret ediyor."
         },
+        "120": {
+            "name": "Sağlam dokunuş",
+            "description": "Kararlı dokun. Her dokunuş 1 emoji daha fazla verir.",
+            "quote": "Çok sert değil. Çok yumuşak değil. Tam kıvamında."
+        },
+        "121": {
+            "name": "Çift dokunuş",
+            "description": "İki parmak, tek dokunuş. Her dokunuş 2 emoji daha fazla verir.",
+            "quote": "Barış, ve iki kat emoji."
+        },
+        "122": {
+            "name": "Parmak çıtlatma",
+            "description": "Isınmış parmaklar daha sert dokunur. Her dokunuş 4 emoji daha fazla verir.",
+            "quote": "Çıt. Çıt. Çıt. Dokun."
+        },
+        "123": {
+            "name": "Açık avuç",
+            "description": "Beş parmakla şaplak atabilecekken neden tek parmakla dokunasın? Her dokunuş 8 emoji daha fazla verir.",
+            "quote": "Ekran bunu hak edecek hiçbir şey yapmadı."
+        },
+        "124": {
+            "name": "Yumruk tokuşturma",
+            "description": "Büyük emoji de yumruğunu tokuşturuyor. Her dokunuş 16 emoji daha fazla verir.",
+            "quote": "Saygılar."
+        },
         "200": {
             "name": "Gelişmiş kurşun kalemler",
             "description": "Daha detaylı emojiler için daha iyi kalemler.",
@@ -2716,6 +2741,34 @@
         "flyingStart": {
             "name": "Uçarak başlangıç",
             "description": "Erken başlangıç 5 yerine 30 dakikalık üretim verir"
+        },
+        "oldHands": {
+            "name": "Eski kurtlar",
+            "description": "Her tura 10 Çizen elle başla"
+        },
+        "echo": {
+            "name": "Yankı",
+            "description": "Dokunuşlar %25 daha değerli"
+        },
+        "blueprints": {
+            "name": "Planlar",
+            "description": "Bina yükseltmeleri %25 daha ucuz"
+        },
+        "polymath": {
+            "name": "Çok yönlü",
+            "description": "Her turda bir özellik daha seç"
+        },
+        "enlightenment": {
+            "name": "Aydınlanma",
+            "description": "Harcanmamış her esans üretimi %3 artırır"
+        },
+        "ascendant": {
+            "name": "Yükselen",
+            "description": "Her turda bir özellik daha seç"
+        },
+        "stargazer": {
+            "name": "Yıldız gözcüsü",
+            "description": "Gökyüzündeki her yıldız için +%3 üretim"
         }
     },
     "trials": {
@@ -2787,6 +2840,38 @@
         "100": {
             "name": "Hüzünlü yüz",
             "description": "İstatistiklerde eğlence değerinin yanında 😭 görünür"
+        }
+    },
+    "traits": {
+        "tapper": {
+            "name": "Parmak ustası",
+            "upside": "Dokunuşlar ×3 değerinde",
+            "downside": "Üretim ×0,6"
+        },
+        "idler": {
+            "name": "Tembel",
+            "upside": "Üretim ×1,4",
+            "downside": "Dokunuşlar ×0,25 değerinde"
+        },
+        "architect": {
+            "name": "Mimar",
+            "upside": "Binalar %20 daha ucuz",
+            "downside": "Bina yükseltmelerinin fiyatı ×3"
+        },
+        "gambler": {
+            "name": "Kumarbaz",
+            "upside": "Efekt emojileri iki kat sık çıkar",
+            "downside": "İyi efektler yarı süre sürer"
+        },
+        "treasureHunter": {
+            "name": "Hazine avcısı",
+            "upside": "Parlak emoji çıkma ihtimali 3 katı",
+            "downside": "Üretim ×0,85"
+        },
+        "comboArtist": {
+            "name": "Kombo ustası",
+            "upside": "Maksimum komboya +2",
+            "downside": "Kombo %50 daha hızlı azalır"
         }
     }
 }
