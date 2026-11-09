@@ -358,7 +358,9 @@
     "ads": {
         "watchCaps": "REKLAM İZLE",
         "loadingCaps": "REKLAM YÜKLENİYOR...",
-        "failed": "Reklam sonuna kadar oynatılamadı. Bağlantını kontrol et ve tekrar dene."
+        "failed": "Reklam sonuna kadar oynatılamadı. Bağlantını kontrol et ve tekrar dene.",
+        "leftTodayCaps": "BUGÜN KALAN: {{left}}",
+        "tomorrowCaps": "YARIN TEKRAR GEL"
     },
     "reset": {
         "title": "Baştan başla?",

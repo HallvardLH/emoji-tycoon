@@ -359,7 +359,9 @@
     "ads": {
         "watchCaps": "Manood ng ad",
         "loadingCaps": "Naglo-load ang ad...",
-        "failed": "Hindi natapos ang ad. Tingnan ang koneksiyon mo at subukan ulit."
+        "failed": "Hindi natapos ang ad. Tingnan ang koneksiyon mo at subukan ulit.",
+        "leftTodayCaps": "NATITIRA NGAYON: {{left}}",
+        "tomorrowCaps": "BUMALIK BUKAS"
     },
     "reset": {
         "title": "Magsimula ulit?",

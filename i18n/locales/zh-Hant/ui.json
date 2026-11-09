@@ -319,7 +319,9 @@
     "ads": {
         "watchCaps": "觀看廣告",
         "loadingCaps": "廣告載入中...",
-        "failed": "廣告沒有播放完畢。請檢查網路連線後再試一次。"
+        "failed": "廣告沒有播放完畢。請檢查網路連線後再試一次。",
+        "leftTodayCaps": "今日剩餘:{{left}}",
+        "tomorrowCaps": "明天再來"
     },
     "reset": {
         "title": "要重新開始嗎？",

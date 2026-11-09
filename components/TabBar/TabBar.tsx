@@ -16,6 +16,8 @@ import * as Haptics from "../../scripts/game/haptics";
 import { BottomTabBarProps } from "expo-router/js-tabs";
 import { Tab } from "../../scripts/redux/tabsSlice";
 import { useTranslation } from "react-i18next";
+import AdBanner from "../ads/AdBanner";
+import { AUTOMATIC_ADS_ENABLED } from "../../scripts/monetization";
 
 type TabData = {
     // Identifies the tab, see labelKey for the displayed label
@@ -66,6 +68,8 @@ export default function TabBar({ state, emitter, navigateToTab }: BottomTabBarPr
     const translateX = slide.interpolate({ inputRange: [0, 1], outputRange: [0, tabWidth || 1] });
 
     return (
+        <View>
+        {AUTOMATIC_ADS_ENABLED && <AdBanner />}
         <View style={[styles.container, { paddingBottom: Math.max(insets.bottom, 10) }]}>
             {tabWidth > 0 && activeIndex >= 0 && (
                 <>
@@ -118,6 +122,7 @@ export default function TabBar({ state, emitter, navigateToTab }: BottomTabBarPr
                 );
             })}
             </View>
+        </View>
         </View>
     );
 }

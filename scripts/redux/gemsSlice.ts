@@ -7,8 +7,12 @@ import { createSlice, PayloadAction } from '@reduxjs/toolkit';
  * Saves from before a field existed load without it, so read the optional ones
  * with a default (the save is merged in one slice at a time, not field by field).
  */
+export type AdReward = "gems" | "boost";
+
 interface GemsState {
     gems: number;
+    /** Rewarded ads watched today for each reward (see adRewards.ts) */
+    adRewards?: { day: string, counts: Partial<Record<AdReward, number>> };
     /** Gem rewards already paid, by key ("trophy:taps1", "bank:2", "prestige:3"), so each pays once ever */
     rewarded?: string[];
     /** When the gem boost (×2 production and taps) runs out, as a timestamp in ms */
@@ -50,6 +54,12 @@ export const gemsSlice = createSlice({
             action.payload.forEach(key => { if (!rewarded.includes(key)) rewarded.push(key); });
             state.rewarded = rewarded;
         },
+        countAdReward: (state, action: PayloadAction<{ day: string, reward: AdReward }>) => {
+            const { day, reward } = action.payload;
+            const counts = state.adRewards?.day === day ? state.adRewards.counts : {};
+            counts[reward] = (counts[reward] ?? 0) + 1;
+            state.adRewards = { day, counts };
+        },
         setBoostUntil: (state, action: PayloadAction<number>) => {
             state.boostUntil = action.payload;
         },
@@ -80,6 +90,7 @@ export const {
     addGems,
     spendGems,
     markRewarded,
+    countAdReward,
     setBoostUntil,
     setComboKeeperUntil,
     setShowerReadyAt,

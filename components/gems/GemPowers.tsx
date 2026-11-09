@@ -6,7 +6,7 @@ import Text from "../generalUI/Text";
 import GemButton from "./GemButton";
 import { formatNumber } from "../../scripts/misc";
 import {
-    BOOST_COST, BOOST_SECONDS, BOOST_MAX_SECONDS, buyBoost, canBuyBoost,
+    BOOST_COST, BOOST_SECONDS, BOOST_MAX_SECONDS, buyBoost, canBuyBoost, AD_BOOST_SECONDS, canGetAdBoost,
     TIME_WARPS, buyTimeWarp, canBuyTimeWarp, timeWarpEmojis,
     SHOWER_COST, SHOWER_EFFECTS, SHOWER_COOLDOWN_SECONDS, buyShower, canBuyShower, showerCooldownLeft,
     COMBO_KEEPER_COST, COMBO_KEEPER_SECONDS, buyComboKeeper, canBuyComboKeeper,
@@ -14,6 +14,9 @@ import {
 } from "../../scripts/game/gems/gemShop";
 import { boostSecondsLeft, comboKeeperSecondsLeft, formatCountdown, BOOST_MULTIPLIER } from "../../scripts/game/gems/boost";
 import { hasCombo } from "../../scripts/game/tapBoost";
+import { adRewardsLeft, watchAdForBoost } from "../../scripts/game/gems/adRewards";
+import { AD_REWARDS_ENABLED } from "../../scripts/monetization";
+import ChunkyButton from "../generalUI/ChunkyButton";
 import { palette, radii, themedStyles } from "../misc/theme";
 import { useTranslation } from "react-i18next";
 import { toCaps } from "../../scripts/utils";
@@ -47,6 +50,21 @@ export default function GemPowers() {
     const warpOn = canBuyTimeWarp();
     const discoveryOn = canBuyDiscovery();
 
+    // A shorter boost for watching a rewarded ad
+    const adBoostsLeft = adRewardsLeft("boost");
+    const [watchingAd, setWatchingAd] = useState(false);
+    const [adFailed, setAdFailed] = useState(false);
+    const watchAd = async () => {
+        if (watchingAd) return;
+        setWatchingAd(true);
+        setAdFailed(false);
+        try {
+            setAdFailed(!(await watchAdForBoost()));
+        } finally {
+            setWatchingAd(false);
+        }
+    };
+
     return (
         <View style={styles.list}>
             <Power
@@ -54,7 +72,17 @@ export default function GemPowers() {
                 name={t("gemPowers.boost.name", { multiplier: BOOST_MULTIPLIER })}
                 description={t("gemPowers.boost.description", { multiplier: BOOST_MULTIPLIER, minutes: BOOST_SECONDS / 60, hours: BOOST_MAX_SECONDS / 3600 })}
                 status={boostLeft > 0 ? `⚡ ${toCaps(t("gemPowers.boost.statusCaps", { time: formatCountdown(boostLeft) }))}` : undefined}
+                notice={adFailed ? t("ads.failed") : undefined}
             >
+                {AD_REWARDS_ENABLED && (
+                    <ChunkyButton
+                        label={adBoostsLeft > 0 ? `📺 ${t("gemPowers.boost.extend", { minutes: AD_BOOST_SECONDS / 60 })}` : `📺 ${toCaps(t("ads.tomorrowCaps"))}`}
+                        labelSize={14}
+                        height={40}
+                        disabled={watchingAd || adBoostsLeft <= 0 || !canGetAdBoost()}
+                        onPress={watchAd}
+                    />
+                )}
                 <GemButton
                     cost={BOOST_COST}
                     label={boostLeft > 0 ? t("gemPowers.boost.extend", { minutes: BOOST_SECONDS / 60 }) : t("gemPowers.boost.buy")}
@@ -142,7 +170,7 @@ export default function GemPowers() {
     );
 }
 
-function Power({ icon, name, description, status, children }: { icon: string, name: string, description: string, status?: string, children: ReactNode }) {
+function Power({ icon, name, description, status, notice, children }: { icon: string, name: string, description: string, status?: string, notice?: string, children: ReactNode }) {
     return (
         <View style={styles.power}>
             <View style={styles.head}>
@@ -155,6 +183,7 @@ function Power({ icon, name, description, status, children }: { icon: string, na
                 </View>
             </View>
             {status ? <Text font="black" size={12} color={palette.greenText}>{status}</Text> : null}
+            {notice ? <Text font="bold" size={12} color={palette.pop}>{notice}</Text> : null}
             <View style={styles.actions}>{children}</View>
         </View>
     );

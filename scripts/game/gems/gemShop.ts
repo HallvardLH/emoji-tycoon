@@ -152,7 +152,18 @@ export function buyBoost(): GemBuyResult {
     return "bought";
 }
 
-export const canBuyComboKeeper = () => hasCombo() && comboKeeperSecondsLeft() + COMBO_KEEPER_SECONDS <= COMBO_KEEPER_MAX_SECONDS;
+/** Boost time for watching a rewarded ad (see adRewards.ts) */
+export const AD_BOOST_SECONDS = 10 * MINUTE;
+
+export const canGetAdBoost = () => boostSecondsLeft() + AD_BOOST_SECONDS <= BOOST_MAX_SECONDS;
+
+export function grantAdBoost() {
+    store.dispatch(setBoostUntil(extend(boostSecondsLeft(), AD_BOOST_SECONDS, BOOST_MAX_SECONDS)));
+    calculateEmojisPerSecond();
+    calculateEpt();
+}
+
+export const canBuyComboKeeper =() => hasCombo() && comboKeeperSecondsLeft() + COMBO_KEEPER_SECONDS <= COMBO_KEEPER_MAX_SECONDS;
 
 /** The combo doesn't drain for 10 minutes */
 export function buyComboKeeper(): GemBuyResult {

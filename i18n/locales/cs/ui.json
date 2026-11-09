@@ -424,7 +424,9 @@
     "ads": {
         "watchCaps": "PODÍVAT SE NA REKLAMU",
         "loadingCaps": "NAČÍTÁM REKLAMU...",
-        "failed": "Reklama se nepřehrála do konce. Zkontroluj připojení a zkus to znovu."
+        "failed": "Reklama se nepřehrála do konce. Zkontroluj připojení a zkus to znovu.",
+        "leftTodayCaps": "DNES ZBÝVÁ: {{left}}",
+        "tomorrowCaps": "VRAŤ SE ZÍTRA"
     },
     "reset": {
         "title": "Začít znovu?",

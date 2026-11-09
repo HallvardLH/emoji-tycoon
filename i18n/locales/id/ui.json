@@ -325,7 +325,9 @@
     "ads": {
         "watchCaps": "TONTON IKLAN",
         "loadingCaps": "MEMUAT IKLAN...",
-        "failed": "Iklan tidak diputar sampai habis. Periksa koneksimu dan coba lagi."
+        "failed": "Iklan tidak diputar sampai habis. Periksa koneksimu dan coba lagi.",
+        "leftTodayCaps": "SISA HARI INI: {{left}}",
+        "tomorrowCaps": "KEMBALI BESOK"
     },
     "reset": {
         "title": "Mulai ulang?",

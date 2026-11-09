@@ -358,7 +358,9 @@
     "ads": {
         "watchCaps": "Bekijk een advertentie",
         "loadingCaps": "Advertentie laden...",
-        "failed": "De advertentie is niet tot het einde afgespeeld. Controleer je verbinding en probeer het opnieuw."
+        "failed": "De advertentie is niet tot het einde afgespeeld. Controleer je verbinding en probeer het opnieuw.",
+        "leftTodayCaps": "VANDAAG NOG: {{left}}",
+        "tomorrowCaps": "KOM MORGEN TERUG"
     },
     "reset": {
         "title": "Opnieuw beginnen?",

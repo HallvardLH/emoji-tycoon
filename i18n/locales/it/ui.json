@@ -392,7 +392,9 @@
     "ads": {
         "watchCaps": "GUARDA UNA PUBBLICITÀ",
         "loadingCaps": "CARICAMENTO...",
-        "failed": "La pubblicità non è arrivata alla fine. Controlla la connessione e riprova."
+        "failed": "La pubblicità non è arrivata alla fine. Controlla la connessione e riprova.",
+        "leftTodayCaps": "RIMASTI OGGI: {{left}}",
+        "tomorrowCaps": "TORNA DOMANI"
     },
     "reset": {
         "title": "Ricominciare?",

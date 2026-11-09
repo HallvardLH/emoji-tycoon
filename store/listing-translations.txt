@@ -15,7 +15,7 @@ Notes for the reviewer
 - Spanish is neutral, for es-419, es-ES and es-US (no vosotros, no regional slang).
 - Portuguese is Brazilian (pt-BR). For pt-PT, "você" and the gerunds would need changing.
 - French has a non-breaking space before ! ? : ;
-- The English full description says you can "collect the production you missed by watching a short ad" and "Contains ads". Ads are currently switched off (ADS_ENABLED = false), so the translations mirror the English, but the English and every translation should drop that part until ads are on. A version without ads is given at the end of each language.
+- The English full description says you can "collect the production you missed by watching a short ad" and "Contains ads". Ads are on, so use this version. A version without ads is given at the end of each language, for if they're ever switched off.
 
 
 ===================================================================

@@ -358,7 +358,9 @@
     "ads": {
         "watchCaps": "SE EN REKLAME",
         "loadingCaps": "LASTER REKLAME...",
-        "failed": "Reklamen ble ikke spilt av helt til slutt. Sjekk tilkoblingen og prøv igjen."
+        "failed": "Reklamen ble ikke spilt av helt til slutt. Sjekk tilkoblingen og prøv igjen.",
+        "leftTodayCaps": "IGJEN I DAG: {{left}}",
+        "tomorrowCaps": "KOM TILBAKE I MORGEN"
     },
     "reset": {
         "title": "Begynne på nytt?",

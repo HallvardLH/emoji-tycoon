@@ -359,7 +359,9 @@
     "ads": {
         "watchCaps": "SE EN REKLAM",
         "loadingCaps": "LADDAR REKLAM...",
-        "failed": "Reklamen spelades inte klart. Kontrollera anslutningen och försök igen."
+        "failed": "Reklamen spelades inte klart. Kontrollera anslutningen och försök igen.",
+        "leftTodayCaps": "KVAR IDAG: {{left}}",
+        "tomorrowCaps": "KOM TILLBAKA IMORGON"
     },
     "reset": {
         "title": "Börja om?",

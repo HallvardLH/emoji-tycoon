@@ -1,25 +1,28 @@
 import { useSyncExternalStore } from "react";
+import { Platform } from "react-native";
 import store from "./redux/reduxStore";
 import { addGems, spendGems as spendGemsAction } from "./redux/gemsSlice";
 import { showRewardedAd } from "./ads";
 import { buyProduct } from "./purchases";
 import { GemPack, PurchaseResult } from "./game/gemPacks";
+import { SCREENSHOT_MODE } from "./screenshotMode";
 
 /**
- * Rewarded ads (see ads.native.ts) and gems, the premium currency, bought
+ * Ads (see ads.native.ts) and gems, the premium currency, bought
  * in the gem store (see purchases.native.ts)
  */
 
+/** Whether the game has ads at all. Switches off every ad and ad option */
+export const ADS_ENABLED = true;
+
+/** The banner, app open ads and interstitials, which show unasked. Kept out of the store images */
+export const AUTOMATIC_ADS_ENABLED = ADS_ENABLED && !SCREENSHOT_MODE;
+
 /**
- * Whether the game offers rewarded ads. Off until AdMob approves the account:
- * until then no ad would ever load, so the ad options are hidden
- *
- * TODO when AdMob approves: set this to true. It brings back the "📺 Watch an ad"
- * button in the welcome back popup (OfflineModal.tsx), preloading the ad at start
- * (app/_layout.tsx) and the ad privacy option in settings (Settings.tsx).
- * Also listed in CLAUDE.md.
+ * Gems and boosts for watching an ad. Not on the released web game, where
+ * a rewarded ad is a stand-in that pays straight away (see ads.ts)
  */
-export const ADS_ENABLED = false;
+export const AD_REWARDS_ENABLED = ADS_ENABLED && (Platform.OS !== "web" || __DEV__);
 
 /**
  * Shows a rewarded ad

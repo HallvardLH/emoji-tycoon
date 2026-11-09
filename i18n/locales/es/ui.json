@@ -391,7 +391,9 @@
     "ads": {
         "watchCaps": "Ver un anuncio",
         "loadingCaps": "Cargando anuncio...",
-        "failed": "El anuncio no se reprodujo hasta el final. Revisa tu conexión y vuelve a intentarlo."
+        "failed": "El anuncio no se reprodujo hasta el final. Revisa tu conexión y vuelve a intentarlo.",
+        "leftTodayCaps": "QUEDAN HOY: {{left}}",
+        "tomorrowCaps": "VUELVE MAÑANA"
     },
     "reset": {
         "title": "¿Empezar de nuevo?",

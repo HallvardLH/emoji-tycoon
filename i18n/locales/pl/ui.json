@@ -424,7 +424,9 @@
     "ads": {
         "watchCaps": "OBEJRZYJ REKLAMĘ",
         "loadingCaps": "WCZYTYWANIE REKLAMY...",
-        "failed": "Reklama nie została odtworzona do końca. Sprawdź połączenie i spróbuj ponownie."
+        "failed": "Reklama nie została odtworzona do końca. Sprawdź połączenie i spróbuj ponownie.",
+        "leftTodayCaps": "DZIŚ POZOSTAŁO: {{left}}",
+        "tomorrowCaps": "WRÓĆ JUTRO"
     },
     "reset": {
         "title": "Zacząć od nowa?",

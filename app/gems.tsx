@@ -6,7 +6,8 @@ import { useSelector } from "react-redux";
 import { RootState } from "../scripts/redux/reduxStore";
 import { GEM_PACKS, GemPack } from "../scripts/game/gemPacks";
 import { GEM_COST, GEM_MULTIPLIER } from "../scripts/game/offline";
-import { buyGemPack, setGemStoreOpen } from "../scripts/monetization";
+import { AD_REWARDS_ENABLED, buyGemPack, setGemStoreOpen } from "../scripts/monetization";
+import { AD_GEMS, adRewardsLeft, watchAdForGems } from "../scripts/game/gems/adRewards";
 import { loadProducts } from "../scripts/purchases";
 import { celebrateMilestone } from "../scripts/game/milestones";
 import { formatNumber } from "../scripts/misc";
@@ -78,6 +79,51 @@ function AppThemes() {
     );
 }
 
+/** Gems for watching a rewarded ad, a few times a day */
+function WatchAdForGems() {
+    const { t } = useTranslation();
+    const left = useSelector(() => adRewardsLeft("gems"));
+    const [busy, setBusy] = useState(false);
+    const [failed, setFailed] = useState(false);
+
+    const watch = async () => {
+        if (busy) return;
+        setBusy(true);
+        setFailed(false);
+        try {
+            if (await watchAdForGems()) {
+                celebrateMilestone({ icon: "💎", caption: toCaps(t("gems.thankYouCaps")), title: t("gems.gemsAdded", { count: AD_GEMS, amount: formatNumber(AD_GEMS) }), kind: "gems" });
+            } else {
+                setFailed(true);
+            }
+        } finally {
+            setBusy(false);
+        }
+    };
+
+    const sublabel = busy ? t("ads.loadingCaps")
+        : left > 0 ? `${t("ads.watchCaps")} · ${t("ads.leftTodayCaps", { left })}`
+        : t("ads.tomorrowCaps");
+
+    return (
+        <View style={styles.notice}>
+            <ChunkyButton
+                label={`📺 +${AD_GEMS} 💎`}
+                sublabel={toCaps(sublabel)}
+                height={56}
+                width="100%"
+                disabled={busy || left <= 0}
+                onPress={watch}
+            />
+            {failed ? (
+                <Text font="bold" size={13} color={palette.pop} style={[styles.center, { marginTop: 8 }]}>
+                    {t("ads.failed")}
+                </Text>
+            ) : null}
+        </View>
+    );
+}
+
 /** The gem store: gem packs bought for real money, and what gems are for */
 export default function GemStoreScreen() {
     const router = useRouter();
@@ -136,6 +182,8 @@ export default function GemStoreScreen() {
                         </Text>
                     </View>
                 </View>
+
+                {AD_REWARDS_ENABLED && <WatchAdForGems />}
 
                 {prices === null ? (
                     <View style={styles.notice}>

@@ -1,7 +1,7 @@
 import Constants, { ExecutionEnvironment } from "expo-constants";
 
 /**
- * Rewarded ads on Android and iOS: AdMob (see admob.ts), except in Expo Go
+ * Ads on Android and iOS: AdMob (see admob.ts), except in Expo Go
  *
  * Expo Go doesn't include AdMob's native code, and just importing the library
  * crashes the app at start. So Expo Go never loads it, and there no ad ever loads.
@@ -19,6 +19,20 @@ export function preloadRewardedAd(): Promise<boolean> {
 /** @returns whether the player watched it to the end and earned the reward */
 export async function showRewardedAd(): Promise<boolean> {
     return admob ? admob.showRewardedAd() : false;
+}
+
+export function preloadInterstitialAd() {
+    admob?.preloadInterstitialAd();
+}
+
+/** Shows an interstitial at a natural break in the game, if one's ready and it's been a while */
+export function showInterstitialAd() {
+    admob?.showInterstitialAd();
+}
+
+/** Shows app open ads from now on, when the game starts and when the player comes back to it */
+export function startAppOpenAds() {
+    admob?.startAppOpenAds();
 }
 
 /** Whether the player needs a way to change their ad consent (a row in Settings) */

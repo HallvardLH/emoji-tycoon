@@ -358,7 +358,9 @@
     "ads": {
         "watchCaps": "Katso mainos",
         "loadingCaps": "Ladataan mainosta...",
-        "failed": "Mainos ei toistunut loppuun. Tarkista yhteytesi ja yritä uudelleen."
+        "failed": "Mainos ei toistunut loppuun. Tarkista yhteytesi ja yritä uudelleen.",
+        "leftTodayCaps": "TÄNÄÄN JÄLJELLÄ: {{left}}",
+        "tomorrowCaps": "PALAA HUOMENNA"
     },
     "reset": {
         "title": "Aloitetaanko alusta?",

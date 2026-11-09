@@ -358,7 +358,9 @@
     "ads": {
         "watchCaps": "Tazama tangazo",
         "loadingCaps": "Tangazo linapakia...",
-        "failed": "Tangazo halikucheza hadi mwisho. Angalia muunganisho wako na ujaribu tena."
+        "failed": "Tangazo halikucheza hadi mwisho. Angalia muunganisho wako na ujaribu tena.",
+        "leftTodayCaps": "ZILIZOBAKI LEO: {{left}}",
+        "tomorrowCaps": "RUDI KESHO"
     },
     "reset": {
         "title": "Kuanza upya?",

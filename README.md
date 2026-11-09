@@ -223,11 +223,31 @@ A save's first check (an old save, or after a reset) unlocks what's already earn
 Sound effects, vibration (phones only, read through `scripts/game/haptics.ts`, which wraps expo-haptics), reduce animations, **Privacy choices** (only where ad consent applies, see below), reset, and the app version. Settings survive a reset.
 
 ### Ads and consent
-Rewarded ads come from AdMob (`scripts/ads.native.ts`; the web stub `scripts/ads.ts` always succeeds). Before any ad is requested, Google's User Messaging Platform (UMP) asks for consent where the law requires it (EEA, UK, some US states): the form shows on the first start, and ads load only once UMP says they can. Ads are personalised only when the player allowed it (or no consent is needed). Players change their choice from Settings → Privacy choices. If UMP can't be reached, the answer from an earlier start is used.
+Ads come from AdMob (`scripts/admob.ts`, loaded by `scripts/ads.native.ts`; on the web `scripts/ads.ts` has no banner, app open ads or interstitials, and its stand-in rewarded ad always succeeds).
+
+| Ad | Where | Limits |
+|---|---|---|
+| Banner | Just above the tab bar (`components/ads/`) | Takes no room until an ad has loaded |
+| Rewarded | Welcome back claim | None |
+| Rewarded | Gem store: +2 gems (`scripts/game/gems/adRewards.ts`) | 5 a day |
+| Rewarded | Gem powers: +10 min of ×2 boost | 3 a day |
+| App open | Starting the game, or coming back after at least 1 min | Not in a new player's first session; only at the start if it's ready within 5 s |
+| Interstitial | After a prestige | Never the first prestige |
+
+App open ads and interstitials also wait 3 minutes after any full screen ad. Gem and boost ads aren't offered on the released web game, and ads the player doesn't ask for stay out of screenshot mode.
+
+Before any ad is requested, Google's User Messaging Platform (UMP) asks for consent where the law requires it (EEA, UK, some US states): the form shows on the first start, and ads load only once UMP says they can. Ads are personalised only when the player allowed it (or no consent is needed). Players change their choice from Settings → Privacy choices. If UMP can't be reached, the answer from an earlier start is used.
 
 **AdMob setup:**
 - **Apps:** Android `ca-app-pub-5996643289244524~1864050818` and iOS `ca-app-pub-5996643289244524~2471214614`, both in `app.json`. Each shows limited ads until it's linked to its store listing in AdMob ("Add store").
-- **Rewarded ad units:** Android `…/4107070776`, iOS `…/9948133975` (`scripts/ads.native.ts` picks by platform; development builds use Google's test unit).
+- **Ad units** (`scripts/admob.ts` picks by platform; development builds use Google's test units):
+
+  | Format | Android | iOS |
+  |---|---|---|
+  | Rewarded | `…/4107070776` | `…/9948133975` |
+  | Banner | `…/5949551318` | `…/3778508530` |
+  | App open | `…/8160781681` | `…/9090719978` |
+  | Interstitial | `…/4221536673` | `…/8376229092` |
 - **European consent message:** "Emoji Tycoon consent", published for both apps, with Consent, Do not consent (every country) and Manage options, linking to https://iagogames.com/privacy.
 - **iOS tracking (ATT):** `app.json` sets the prompt text (`userTrackingUsageDescription`). Google's IDFA explainer message for the iOS app, which shows before Apple's prompt, is published in AdMob.
 - **US state regulations:** no message yet.

@@ -11,8 +11,8 @@ import { useTranslation } from "react-i18next";
 import { useLocales } from "expo-localization";
 import { applyLanguagePreference } from "../i18n";
 import { gameLoop } from "../scripts/game/gameLoop";
-import { preloadRewardedAd } from "../scripts/ads";
-import { ADS_ENABLED } from "../scripts/monetization";
+import { preloadInterstitialAd, preloadRewardedAd, startAppOpenAds } from "../scripts/ads";
+import { ADS_ENABLED, AUTOMATIC_ADS_ENABLED } from "../scripts/monetization";
 import Header from "../components/header/Header";
 import MilestoneToast from "../components/gameUI/MilestoneToast";
 import OfflineModal from "../components/gameUI/OfflineModal";
@@ -67,7 +67,10 @@ export default function RootLayout() {
     }, []);
 
     // Ready before the welcome back screen asks for one
-    useEffect(() => { if (ADS_ENABLED) preloadRewardedAd(); }, []);
+    useEffect(() => {
+        if (ADS_ENABLED) preloadRewardedAd();
+        if (AUTOMATIC_ADS_ENABLED) preloadInterstitialAd();
+    }, []);
 
     // The save loads asynchronously (slowly on some phones). Nothing runs or shows until it's
     // in: the game's startup checks, migrations and the welcome back offer all read it, and
@@ -79,6 +82,8 @@ export default function RootLayout() {
             if (cancelled) return;
             // The app theme (gems) colours everything, so it's on before anything shows
             applyPalette(themeById(store.getState().gems.theme).colours);
+            // Not during a new player's very first session
+            if (AUTOMATIC_ADS_ENABLED && store.getState().prestige.lastSeen) startAppOpenAds();
             setSaveLoaded(true);
         });
         return () => { cancelled = true; };

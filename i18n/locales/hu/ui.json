@@ -359,7 +359,9 @@
     "ads": {
         "watchCaps": "Reklám megnézése",
         "loadingCaps": "Reklám betöltése...",
-        "failed": "A reklám nem ment le a végéig. Ellenőrizd a kapcsolatot, és próbáld újra."
+        "failed": "A reklám nem ment le a végéig. Ellenőrizd a kapcsolatot, és próbáld újra.",
+        "leftTodayCaps": "MA MÉG: {{left}}",
+        "tomorrowCaps": "GYERE VISSZA HOLNAP"
     },
     "reset": {
         "title": "Újrakezded?",

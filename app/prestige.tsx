@@ -11,6 +11,8 @@ import GemButton from "../components/gems/GemButton";
 import { perks, Perk, MAX_PERK_TIER, essenceBonusPerEssence, essenceForBonus, hasPerk } from "../scripts/game/prestige/perks";
 import { trials, Trial, TRIALS_UNLOCK_PRESTIGES, trialGoal, runEmojis, abandonTrial, formatGoal } from "../scripts/game/prestige/trials";
 import { celebrateMilestone } from "../scripts/game/milestones";
+import { showInterstitialAd } from "../scripts/ads";
+import { AUTOMATIC_ADS_ENABLED } from "../scripts/monetization";
 import { formatDuration, formatNumber } from "../scripts/misc";
 import { Trans, useTranslation } from "react-i18next";
 import i18n, { getLanguage } from "../i18n";
@@ -23,6 +25,7 @@ import CloseButton from "../components/generalUI/CloseButton";
 
 // How long the "tap again" confirmation stays armed
 const CONFIRM_MS = 3000;
+const PRESTIGE_AD_DELAY_MS = 2500;
 const ordinal = (n: number) => i18n.t("prestige.ordinal", { count: n, ordinal: true });
 const percent = (value: number) => i18n.t("numbers.percent", { value: formatNumber(value) });
 // Small caps lines are written in capitals; uppercasing values in them follows the language's rules
@@ -75,6 +78,8 @@ export default function PrestigeScreen() {
                 title: count <= MAX_PERK_TIER ? t("prestige.celebrateTierTitle", { essence: gained, tier: count }) : t("prestige.celebrateTitle", { essence: gained }),
                 kind: "prestige",
             });
+            // A natural break, once the celebration has been seen. Never on the first one
+            if (AUTOMATIC_ADS_ENABLED && count > 1) setTimeout(showInterstitialAd, PRESTIGE_AD_DELAY_MS);
         }
     };
 

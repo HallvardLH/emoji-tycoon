@@ -392,7 +392,9 @@
     "ads": {
         "watchCaps": "REGARDER UNE PUB",
         "loadingCaps": "CHARGEMENT DE LA PUB...",
-        "failed": "La pub n'est pas allée jusqu'au bout. Vérifie ta connexion et réessaie."
+        "failed": "La pub n'est pas allée jusqu'au bout. Vérifie ta connexion et réessaie.",
+        "leftTodayCaps": "RESTANT AUJOURD'HUI : {{left}}",
+        "tomorrowCaps": "REVIENS DEMAIN"
     },
     "reset": {
         "title": "Recommencer ?",

@@ -358,7 +358,9 @@
     "ads": {
         "watchCaps": "Werbung ansehen",
         "loadingCaps": "Werbung lädt...",
-        "failed": "Die Werbung wurde nicht bis zum Ende abgespielt. Prüfe deine Verbindung und versuch es noch einmal."
+        "failed": "Die Werbung wurde nicht bis zum Ende abgespielt. Prüfe deine Verbindung und versuch es noch einmal.",
+        "leftTodayCaps": "HEUTE NOCH: {{left}}",
+        "tomorrowCaps": "KOMM MORGEN WIEDER"
     },
     "reset": {
         "title": "Neu anfangen?",

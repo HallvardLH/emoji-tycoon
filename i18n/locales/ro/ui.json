@@ -392,7 +392,9 @@
     "ads": {
         "watchCaps": "URMĂREȘTE O RECLAMĂ",
         "loadingCaps": "SE ÎNCARCĂ RECLAMA...",
-        "failed": "Reclama nu a rulat până la capăt. Verifică-ți conexiunea și încearcă din nou."
+        "failed": "Reclama nu a rulat până la capăt. Verifică-ți conexiunea și încearcă din nou.",
+        "leftTodayCaps": "RĂMASE AZI: {{left}}",
+        "tomorrowCaps": "REVINO MÂINE"
     },
     "reset": {
         "title": "O iei de la capăt?",

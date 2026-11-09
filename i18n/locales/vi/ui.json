@@ -326,7 +326,9 @@
     "ads": {
         "watchCaps": "XEM QUẢNG CÁO",
         "loadingCaps": "ĐANG TẢI QUẢNG CÁO...",
-        "failed": "Quảng cáo chưa phát hết. Hãy kiểm tra kết nối và thử lại."
+        "failed": "Quảng cáo chưa phát hết. Hãy kiểm tra kết nối và thử lại.",
+        "leftTodayCaps": "CÒN LẠI HÔM NAY: {{left}}",
+        "tomorrowCaps": "QUAY LẠI VÀO NGÀY MAI"
     },
     "reset": {
         "title": "Chơi lại từ đầu?",

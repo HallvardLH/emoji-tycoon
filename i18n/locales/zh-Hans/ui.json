@@ -319,7 +319,9 @@
     "ads": {
         "watchCaps": "观看广告",
         "loadingCaps": "广告加载中...",
-        "failed": "广告未能播放完毕。请检查网络连接后重试。"
+        "failed": "广告未能播放完毕。请检查网络连接后重试。",
+        "leftTodayCaps": "今日剩余:{{left}}",
+        "tomorrowCaps": "明天再来"
     },
     "reset": {
         "title": "重新开始？",

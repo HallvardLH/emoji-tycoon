@@ -358,7 +358,9 @@
     "ads": {
         "watchCaps": "SE EN REKLAME",
         "loadingCaps": "INDLÆSER REKLAME...",
-        "failed": "Reklamen blev ikke afspillet til ende. Tjek din forbindelse, og prøv igen."
+        "failed": "Reklamen blev ikke afspillet til ende. Tjek din forbindelse, og prøv igen.",
+        "leftTodayCaps": "TILBAGE I DAG: {{left}}",
+        "tomorrowCaps": "KOM IGEN I MORGEN"
     },
     "reset": {
         "title": "Start forfra?",

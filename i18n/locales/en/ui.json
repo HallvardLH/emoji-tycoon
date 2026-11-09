@@ -361,7 +361,9 @@
     "ads": {
         "watchCaps": "WATCH AN AD",
         "loadingCaps": "LOADING AD…",
-        "failed": "The ad didn't play to the end. Check your connection and try again."
+        "failed": "The ad didn't play to the end. Check your connection and try again.",
+        "leftTodayCaps": "{{left}} LEFT TODAY",
+        "tomorrowCaps": "COME BACK TOMORROW"
     },
     "reset": {
         "title": "Start over?",
